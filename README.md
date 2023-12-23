@@ -2,4 +2,4 @@
 
 ## preview
 
-![](https://github.com/anthonychian/shadowverse-client/blob/main/demo.mp4)
+![](https://github.com/anthonychian/shadowverse-client/blob/main/demogif.gif)
