@@ -12,11 +12,11 @@ html,
   filter: saturate(1.15) hue-rotate(345deg);
 }
 
-#root * {
+/* #root * {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
 @keyframes fade-in {
   from {
