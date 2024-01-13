@@ -2,8 +2,9 @@ import React, { useState, useEffect, useRef } from "react";
 import { Decal, useTexture } from "@react-three/drei";
 import { useDrag } from "@use-gesture/react";
 import { useThree } from "@react-three/fiber";
-import { Form, Textarea, Label, Input } from "r3f-form";
+import { Input } from "r3f-form";
 import { Text } from "r3f-form/Input";
+import { cardImage } from "../../decks/getCards";
 
 export default function Card({ cardName, idx }) {
   const initialCardPos = (idx) => {
@@ -56,23 +57,7 @@ export default function Card({ cardName, idx }) {
         return [-0.25, -0.75, 0.1];
     }
   };
-  const cardImage = (cardName) => {
-    switch (cardName) {
-      case "Bellringer Angel":
-        return "../textures/BP01-159EN.png";
-      case "Dragon Oracle":
-        return "../textures/SD04-002EN.png";
-      case "Aiela, Dragon Knight":
-        return "../textures/BP01-P16EN.png";
-      case "Shenlong":
-        return "../textures/BP01-P17EN.png";
-      case "Dragon Warrior":
-        return "../textures/SD04-003EN.png";
 
-      default:
-        return "../textures/BP01-159EN.png";
-    }
-  };
   const initialXPos = (idx) => {
     switch (idx) {
       case 1:

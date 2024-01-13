@@ -1,15 +1,15 @@
 .VoicelinesContainer {
   /* background-color: white; */
   color: white;
-  position: fixed;
-  bottom: 1%;
-  right: -10%;
+  /* position: fixed; */
+  /* bottom: 1%;
+  right: -10%; */
   height: 10%;
   width: 500px;
   display: flex;
   flex-direction: row;
   gap: 1em;
-  /* justify-content: space-evenly; */
+  justify-content: center;
   align-items: center;
 }
 

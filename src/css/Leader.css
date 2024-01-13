@@ -1,8 +1,8 @@
 /* default styles */
 .LeaderImage {
-  width: 500px;
-  /* background-color: blue; */
-
+  width: 300px;
+  pointer-events: none;
+  user-select: none;
   /* display: block; */
   /* margin-left: auto;
   margin-right: auto;
@@ -11,7 +11,13 @@
   position: relative; */
 }
 .LeaderContainer {
-  /* background-color: green; */
+  pointer-events: none;
+  position: fixed;
+  user-select: none;
+  top: 41%;
+  left: 40%;
+  /* position: absolute; */
+  /* background-color: transparent; */
   /* top: 30vh; */
   /* display: block; */
   /* position: absolute; */

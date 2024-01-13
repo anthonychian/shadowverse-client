@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import Home from "../components/Home";
-import imageCernunnos from "../assets/leaders/Cernunnos/Cernunnos.png";
-import imageMizuchi from "../assets/leaders/Mizuchi/Mizuchi.png";
-import imageForte from "../assets/leaders/Forte/Forte.png";
-import imagePompom from "../assets/leaders/Pompom/Pompom.png";
-import imageDaria from "../assets/leaders/Daria/Daria.png";
-import imageAlbert from "../assets/leaders/Albert/Albert.png";
-import imageAria from "../assets/leaders/Aria/Aria.png";
-import imageExella from "../assets/leaders/Exella/Exella.png";
-import imageRola from "../assets/leaders/Rola/Rola.png";
+import Home from "./Home";
+import imageCernunnos from "../../assets/leaders/Cernunnos/Cernunnos.png";
+import imageMizuchi from "../../assets/leaders/Mizuchi/Mizuchi.png";
+import imageForte from "../../assets/leaders/Forte/Forte.png";
+import imagePompom from "../../assets/leaders/Pompom/Pompom.png";
+import imageDaria from "../../assets/leaders/Daria/Daria.png";
+import imageAlbert from "../../assets/leaders/Albert/Albert.png";
+import imageAria from "../../assets/leaders/Aria/Aria.png";
+import imageExella from "../../assets/leaders/Exella/Exella.png";
+import imageRola from "../../assets/leaders/Rola/Rola.png";
 
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";

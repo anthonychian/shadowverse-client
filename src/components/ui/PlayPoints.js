@@ -4,19 +4,19 @@ import RemoveIcon from "@mui/icons-material/Remove";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import IconButton from "@mui/material/IconButton";
-import "../css/PlayPoints.css";
+import "../../css/PlayPoints.css";
 
-import limitAudio from "../assets/buttons/limit.wav";
-import playpointsAudio from "../assets/buttons/counter2.mp3";
-import NextTurnCernunnos from "../assets/leaders/Cernunnos/NextTurn.mp3";
-import NextTurnMizuchi from "../assets/leaders/Mizuchi/NextTurn.mp3";
-import NextTurnForte from "../assets/leaders/Forte/NextTurn.mp3";
-import NextTurnPompom from "../assets/leaders/Pompom/NextTurn.mp3";
-import NextTurnDaria from "../assets/leaders/Daria/NextTurn.mp3";
-import NextTurnAlbert from "../assets/leaders/Albert/NextTurn.mp3";
-import NextTurnAria from "../assets/leaders/Aria/NextTurn.mp3";
-import NextTurnExella from "../assets/leaders/Exella/NextTurn.mp3";
-import NextTurnRola from "../assets/leaders/Rola/NextTurn.mp3";
+import limitAudio from "../../assets/buttons/limit.wav";
+import playpointsAudio from "../../assets/buttons/counter2.mp3";
+import NextTurnCernunnos from "../../assets/leaders/Cernunnos/NextTurn.mp3";
+import NextTurnMizuchi from "../../assets/leaders/Mizuchi/NextTurn.mp3";
+import NextTurnForte from "../../assets/leaders/Forte/NextTurn.mp3";
+import NextTurnPompom from "../../assets/leaders/Pompom/NextTurn.mp3";
+import NextTurnDaria from "../../assets/leaders/Daria/NextTurn.mp3";
+import NextTurnAlbert from "../../assets/leaders/Albert/NextTurn.mp3";
+import NextTurnAria from "../../assets/leaders/Aria/NextTurn.mp3";
+import NextTurnExella from "../../assets/leaders/Exella/NextTurn.mp3";
+import NextTurnRola from "../../assets/leaders/Rola/NextTurn.mp3";
 
 export default function Scoreboard({ name }) {
   let counter = new Audio(playpointsAudio);
