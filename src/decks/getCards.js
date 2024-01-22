@@ -31,10 +31,10 @@ export const cardImage = (cardName) => {
     case "Riko Kashimoto [Planned Perfection]":
       return "../textures/CP01-079EN.png";
     case "Bahamut":
-      return "../textures/BP02-103EN.png";
+      return "../textures/BP02-104EN.png";
     case "Hishi Akebono":
       return "../textures/CP01-052EN.png";
     default:
-      return "../textures/BP01-159EN.png";
+      return "";
   }
 };

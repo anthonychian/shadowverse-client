@@ -10,7 +10,7 @@
 }
 .fieldHand {
   display: flex;
-  width: 50%;
+  width: 70%;
   flex-direction: column;
 }
 .scoreDeckEmotes {

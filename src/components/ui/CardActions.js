@@ -14,7 +14,8 @@ export default function CardActions() {
   return (
     <div
       style={{
-        height: "200px",
+        paddingTop: "90%",
+        height: "30%",
         width: "70%",
         display: "flex",
         flexDirection: "row",

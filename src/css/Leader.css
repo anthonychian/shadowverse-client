@@ -1,6 +1,6 @@
 /* default styles */
 .LeaderImage {
-  width: 300px;
+  width: 600px;
   pointer-events: none;
   user-select: none;
   /* display: block; */
@@ -12,10 +12,10 @@
 }
 .LeaderContainer {
   pointer-events: none;
-  position: fixed;
   user-select: none;
-  top: 41%;
-  left: 40%;
+  position: fixed;
+  /* top: 41%;
+  left: 40%; */
   /* position: absolute; */
   /* background-color: transparent; */
   /* top: 30vh; */

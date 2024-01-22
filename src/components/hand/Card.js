@@ -1,19 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { cardImage } from "../../decks/getCards";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 
-export default function Card({ name }) {
+export default function Card({ name, constraintsRef }) {
+  const [isDragging, setDragging] = useState(false);
+
   return (
     <motion.div
-      whileHover={{ scale: 2.0 }}
-      whileTap={{
-        scale: 0.8,
-        rotate: -90,
-        borderRadius: "100%"
+      style={{
+        height: "160px",
       }}
+      onDragStart={() => setDragging(true)}
+      onDragEnd={() => setDragging(false)}
+      whileHover={{ translateY: -25, scale: 1.3, cursor: "grabbing" }}
     >
-      <img height={"200px"} src={cardImage(name)} alt={name} />
+      <img
+        style={{ pointerEvents: "none" }}
+        height={"100%"}
+        src={cardImage(name)}
+        alt={name}
+      />
     </motion.div>
-  )
-  
+  );
 }
