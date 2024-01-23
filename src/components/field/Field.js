@@ -1,34 +1,59 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
+
 import {
   placeToFieldFromHand,
   addToHandFromField,
+  placeToTopOfDeckFromField,
+  moveCardOnField,
 } from "../../redux/CardSlice";
 import { useDispatch, useSelector } from "react-redux";
 import Card from "../hand/Card";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+// import img from "../../assets/pin_bellringer_angel.png";
 
-export default function Field({ ready, setReady }) {
+export default function Field({
+  ready,
+  setReady,
+  readyToPlaceOnFieldFromHand,
+  setReadyToPlaceOnFieldFromHand,
+}) {
+  // const img = require("../../assets/pin_bellringer_angel.png");
   const dispatch = useDispatch();
   const reduxField = useSelector((state) => state.card.field);
   const reduxCurrentCard = useSelector((state) => state.card.currentCard);
   const [contextMenu, setContextMenu] = React.useState(null);
   const [index, setIndex] = useState(0);
   const [name, setName] = useState("");
+  const [readyToMoveOnField, setReadyToMoveOnField] = useState(false);
 
-  const handleClick = (index) => {
-    setReady(false);
-    dispatch(
-      placeToFieldFromHand({
-        card: reduxCurrentCard,
-        index: index,
-      })
-    );
+  const handleClick = (indexClicked) => {
+    if (reduxField[indexClicked] === 0) {
+      setReady(false);
+      if (readyToPlaceOnFieldFromHand) {
+        setReadyToPlaceOnFieldFromHand(false);
+        dispatch(
+          placeToFieldFromHand({
+            card: reduxCurrentCard,
+            index: indexClicked,
+          })
+        );
+      }
+      if (readyToMoveOnField) {
+        setReadyToMoveOnField(false);
+        dispatch(
+          moveCardOnField({
+            card: name,
+            prevIndex: index,
+            index: indexClicked,
+          })
+        );
+      }
+    } else console.log("there is already a card here");
   };
 
   const handleContextMenu = (event, index, name) => {
-    console.log("INDEX", index);
     setIndex(index);
     setName(name);
     event.preventDefault();
@@ -53,6 +78,21 @@ export default function Field({ ready, setReady }) {
       })
     );
   };
+  const handleCardToTopDeck = () => {
+    handleClose();
+    dispatch(
+      placeToTopOfDeckFromField({
+        card: name,
+        index: index,
+      })
+    );
+  };
+
+  const handleMoveOnField = () => {
+    handleClose();
+    setReady(true);
+    setReadyToMoveOnField(true);
+  };
 
   return (
     <>
@@ -67,13 +107,17 @@ export default function Field({ ready, setReady }) {
         }
       >
         <MenuItem onClick={() => handleCardToHand()}>Hand</MenuItem>
-        <MenuItem onClick={handleClose}>Top of Deck</MenuItem>
+        <MenuItem onClick={() => handleMoveOnField()}>Move</MenuItem>
+        <MenuItem onClick={() => handleCardToTopDeck()}>Top of Deck</MenuItem>
         <MenuItem onClick={handleClose}>Graveyard</MenuItem>
       </Menu>
       <div
         style={{
-          height: "80vh",
-          backgroundColor: "rgba(0, 0, 0, 0.20)",
+          height: "30vh",
+          minHeight: "375px",
+          minWidth: "600px",
+          // cursor: `url(${img}), auto`,
+          backgroundColor: "rgba(0, 0, 0, 0.60)",
           // backgroundColor: "rgba(255, 0, 0, 0.15)",
           display: "grid",
           gridTemplateColumns: "repeat(5, 1fr)",
@@ -86,14 +130,17 @@ export default function Field({ ready, setReady }) {
             {ready && (
               <motion.div
                 key={`enemy1-${idx}`}
-                whileHover={{
-                  backgroundColor: "rgba(255, 252, 160, 0.2)",
-                }}
+                whileHover={
+                  {
+                    // backgroundColor: "rgba(255, 252, 160, 0.2)",
+                  }
+                }
                 // onClick={() => dispatch(placeToFieldFromHand())}
                 style={{
                   height: "160px",
                   width: "115px",
-                  backgroundColor: "rgba(0, 0, 0, 0.20)",
+                  backgroundColor: "rgba(255, 255, 255, 0.1)",
+                  // backgroundColor: "rgba(0, 0, 0, 0.20)",
                   // backgroundColor: "rgba(255, 0, 0, 0.15)",
                 }}
               >
@@ -106,7 +153,8 @@ export default function Field({ ready, setReady }) {
                 style={{
                   height: "160px",
                   width: "115px",
-                  backgroundColor: "rgba(0, 0, 0, 0.20)",
+                  backgroundColor: "rgba(255, 255, 255, 0.1)",
+                  // backgroundColor: "rgba(0, 0, 0, 0.20)",
                 }}
               >
                 {/* <Card name={x} /> */}
@@ -117,8 +165,11 @@ export default function Field({ ready, setReady }) {
       </div>
       <div
         style={{
-          height: "80vh",
-          backgroundColor: "rgba(0, 0, 0, 0.20)",
+          height: "30vh",
+          minHeight: "375px",
+          minWidth: "600px",
+          // cursor: `url(${img}), auto`,
+          backgroundColor: "rgba(0, 0, 0, 0.60)",
           // backgroundColor: "rgba(0, 0, 255, 0.15)",
           display: "grid",
           gridTemplateColumns: "repeat(5, 1fr)",
@@ -135,17 +186,22 @@ export default function Field({ ready, setReady }) {
                 }
                 key={`player1-${idx}`}
                 whileHover={{
-                  backgroundColor: "rgba(255, 252, 160, 0.2)",
+                  backgroundColor: "rgba(255, 252, 160, 0.3)",
                 }}
                 style={{
                   height: "160px",
                   width: "115px",
-                  backgroundColor: "rgba(0, 0, 255, 0.15)",
+                  // backgroundColor: "rgba(0, 0, 0, 0.20)",
+                  backgroundColor: "rgba(0, 0, 255, 0.20)",
                 }}
                 onClick={() => handleClick(idx)}
               >
                 {x !== 0 && (
-                  <Card key={`card1-${idx}`} name={reduxField[idx]} />
+                  <Card
+                    onField={true}
+                    key={`card1-${idx}`}
+                    name={reduxField[idx]}
+                  />
                 )}
               </motion.div>
             )}
@@ -158,11 +214,16 @@ export default function Field({ ready, setReady }) {
                 style={{
                   height: "160px",
                   width: "115px",
-                  backgroundColor: "rgba(0, 0, 0, 0.20)",
+                  // backgroundColor: "rgba(0, 0, 0, 0.20)",
+                  backgroundColor: "rgba(255, 255, 255, 0.1)",
                 }}
               >
                 {x !== 0 && (
-                  <Card key={`card2-${idx}`} name={reduxField[idx]} />
+                  <Card
+                    onField={true}
+                    key={`card2-${idx}`}
+                    name={reduxField[idx]}
+                  />
                 )}
               </motion.div>
             )}

@@ -16,7 +16,7 @@ export default function Home({ name }) {
       wallpaper = require("../../assets/leaders/Mizuchi/Wallpaper.png");
       break;
     case "Forte":
-      wallpaper = require("../../assets/leaders/Forte/Wallpaper.png");
+      wallpaper = require("../../assets/wallpapers/forteEvo.png");
       break;
     case "Pompom":
       wallpaper = require("../../assets/leaders/Pompom/Wallpaper.jpg");

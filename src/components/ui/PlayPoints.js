@@ -60,40 +60,7 @@ export default function Scoreboard({ name }) {
       ? setCurrentPlayPoints(maxPlayPoints + 1)
       : setCurrentPlayPoints(10);
     counter.play();
-    // NextTurn.play();
   };
-
-  // switch (name) {
-  //   case "Cernunnos":
-  //     NextTurn = new Audio(NextTurnCernunnos);
-  //     break;
-  //   case "Mizuchi":
-  //     NextTurn = new Audio(NextTurnMizuchi);
-  //     break;
-  //   case "Forte":
-  //     NextTurn = new Audio(NextTurnForte);
-  //     break;
-  //   case "Pompom":
-  //     NextTurn = new Audio(NextTurnPompom);
-  //     break;
-  //   case "Daria":
-  //     NextTurn = new Audio(NextTurnDaria);
-  //     break;
-  //   case "Albert":
-  //     NextTurn = new Audio(NextTurnAlbert);
-  //     break;
-  //   case "Aria":
-  //     NextTurn = new Audio(NextTurnAria);
-  //     break;
-  //   case "Exella":
-  //     NextTurn = new Audio(NextTurnExella);
-  //     break;
-  //   case "Rola":
-  //     NextTurn = new Audio(NextTurnRola);
-  //     break;
-  //   default:
-  //     NextTurn = new Audio(NextTurnCernunnos);
-  // }
 
   useEffect(() => {
     setCurrentPlayPoints(0);

@@ -1,5 +1,4 @@
 .PlayPointsContainer {
-  /* background-color: orange; */
   color: white;
   width: 25%;
   /* height: 90%;
@@ -57,10 +56,12 @@
   align-items: center;
 }
 .buttonsContainer {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2em;
+  gap: 1em;
+  padding-left: 4em;
 }
 
 .IncDecContainer {

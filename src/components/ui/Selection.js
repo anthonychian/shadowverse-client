@@ -21,43 +21,47 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  bgcolor: "green",
-  border: "2px solid #000",
+  // bgcolor: "black",
+  backgroundColor: "rgba(0, 0, 0, 1)",
+  // border: "2px solid #000",
   boxShadow: 24,
   p: 4,
-  width: "90%",
+  width: "55%",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
 };
 
-export default function Selection() {
+export default function Selection({ setSelectedOption }) {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  const [selectedOption, setSelectedOption] = useState("Forte");
 
   function selectLeader(e) {
     setSelectedOption(e.target.alt);
   }
 
   return (
-    <div style={{ backgroundColor: "transparent" }}>
+    <>
       <IconButton
         onClick={handleOpen}
         sx={{
           color: "white",
           position: "fixed",
-          left: "5%",
+          left: "1%",
+          top: "1%",
           zIndex: "10",
-          backgroundColor: "rgba(0, 0, 0, 0.6)",
+          backgroundColor: "rgba(0, 0, 0, 1)",
         }}
       >
         <MenuIcon
-          sx={{ color: "white", width: "50px", height: "50px" }}
+          sx={{
+            color: "white",
+            width: "50px",
+            height: "50px",
+          }}
         ></MenuIcon>
       </IconButton>
-      {/* 'rgb(0, 0, 0, 0)' */}
       <Modal
         open={open}
         onClose={handleClose}
@@ -65,7 +69,10 @@ export default function Selection() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Card sx={{ backgroundColor: "pink" }} variant="outlined">
+          <Card
+            sx={{ backgroundColor: "rgba(0, 0, 0, 0.7)" }}
+            variant="outlined"
+          >
             <IconButton
               sx={{ color: "white", backgroundColor: "rgba(0, 0, 0, 0.6)" }}
               onClick={(e) => selectLeader(e)}
@@ -123,7 +130,6 @@ export default function Selection() {
           </Card>
         </Box>
       </Modal>
-      <Home name={selectedOption} />
-    </div>
+    </>
   );
 }

@@ -2,11 +2,18 @@ import React, { useEffect, useState } from "react";
 import Card from "./Card";
 import { Reorder } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
-import { setCurrentCard } from "../../redux/CardSlice";
+import {
+  setCurrentCard,
+  placeToTopOfDeckFromHand,
+} from "../../redux/CardSlice";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 
-export default function Hand({ constraintsRef, ready, setReady }) {
+export default function Hand({
+  constraintsRef,
+  setReady,
+  setReadyToPlaceOnFieldFromHand,
+}) {
   const reduxHand = useSelector((state) => state.card.hand);
   const [items, setItems] = useState(reduxHand);
   const dispatch = useDispatch();
@@ -38,10 +45,14 @@ export default function Hand({ constraintsRef, ready, setReady }) {
     setContextMenu(null);
   };
   const handleCardToField = (e) => {
-    // console.log(e);
     handleClose();
     setReady(true);
+    setReadyToPlaceOnFieldFromHand(true);
     dispatch(setCurrentCard(name));
+  };
+  const handleCardToTopOfDeck = (e) => {
+    handleClose();
+    dispatch(placeToTopOfDeckFromHand(name));
   };
 
   return (
@@ -57,7 +68,9 @@ export default function Hand({ constraintsRef, ready, setReady }) {
         }
       >
         <MenuItem onClick={(event) => handleCardToField(event)}>Field</MenuItem>
-        <MenuItem onClick={handleClose}>Top of Deck</MenuItem>
+        <MenuItem onClick={(event) => handleCardToTopOfDeck(event)}>
+          Top of Deck
+        </MenuItem>
         <MenuItem onClick={handleClose}>Graveyard</MenuItem>
       </Menu>
       <Reorder.Group
