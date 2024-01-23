@@ -71,7 +71,7 @@ export default function Hand({
         <MenuItem onClick={(event) => handleCardToTopOfDeck(event)}>
           Top of Deck
         </MenuItem>
-        <MenuItem onClick={handleClose}>Graveyard</MenuItem>
+        {/* <MenuItem onClick={handleClose}>Graveyard</MenuItem> */}
       </Menu>
       <Reorder.Group
         style={{

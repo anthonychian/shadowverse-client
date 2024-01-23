@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
 
 import {
   placeToFieldFromHand,
@@ -109,7 +109,7 @@ export default function Field({
         <MenuItem onClick={() => handleCardToHand()}>Hand</MenuItem>
         <MenuItem onClick={() => handleMoveOnField()}>Move</MenuItem>
         <MenuItem onClick={() => handleCardToTopDeck()}>Top of Deck</MenuItem>
-        <MenuItem onClick={handleClose}>Graveyard</MenuItem>
+        {/* <MenuItem onClick={handleClose}>Graveyard</MenuItem> */}
       </Menu>
       <div
         style={{

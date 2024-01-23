@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Home from "./Home";
 import imageCernunnos from "../../assets/leaders/Cernunnos/Cernunnos.png";
 import imageMizuchi from "../../assets/leaders/Mizuchi/Mizuchi.png";
 import imageForte from "../../assets/leaders/Forte/Forte.png";

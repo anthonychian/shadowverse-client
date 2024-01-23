@@ -6,8 +6,6 @@ import Scoreboard from "./components/ui/Scoreboard";
 import Voicelines from "./components/ui/Voicelines";
 import PlayPoints from "./components/ui/PlayPoints";
 import Hand from "./components/hand/Hand";
-import Deck from "./components/field/Deck";
-// import CardDeck from "./components/deck/Deck";
 import Field from "./components/field/Field";
 import CardActions from "./components/ui/CardActions";
 import { motion } from "framer-motion";
@@ -50,8 +48,7 @@ function App() {
       <div className={"scoreDeckEmotes"}>
         <Scoreboard name={selectedOption} />
         <Selection setSelectedOption={setSelectedOption} />
-        {/* <CardDeck /> */}
-        {/* <Deck /> */}
+
         <Leader name={selectedOption} />
         <CardActions />
         <Voicelines name={selectedOption} />
