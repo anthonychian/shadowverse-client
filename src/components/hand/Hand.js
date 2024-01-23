@@ -77,7 +77,8 @@ export default function Hand({
         style={{
           display: "flex",
           alignItems: "center",
-          minHeight: "160px",
+          height: "25%",
+          minHeight: "200px",
           justifyContent: "center",
           // backgroundColor: "black",
         }}

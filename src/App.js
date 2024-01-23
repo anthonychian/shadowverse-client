@@ -11,12 +11,14 @@ import CardActions from "./components/ui/CardActions";
 import { motion } from "framer-motion";
 
 function App() {
-  let wallpaper = require("../src/assets/wallpapers/forteEvo.png");
+  const initialWallpaper = require("../src/assets/wallpapers/forteEvo.png");
+  const [wallpaper, setWallpaper] = useState(initialWallpaper);
   const [selectedOption, setSelectedOption] = useState("Exella");
   const constraintsRef = useRef(null);
   const [ready, setReady] = useState(false);
   const [readyToPlaceOnFieldFromHand, setReadyToPlaceOnFieldFromHand] =
     useState(false);
+
   return (
     <div
       onContextMenu={(e) => e.nativeEvent.preventDefault()}
@@ -47,8 +49,10 @@ function App() {
       </motion.div>
       <div className={"scoreDeckEmotes"}>
         <Scoreboard name={selectedOption} />
-        <Selection setSelectedOption={setSelectedOption} />
-
+        <Selection
+          setSelectedOption={setSelectedOption}
+          setWallpaper={setWallpaper}
+        />
         <Leader name={selectedOption} />
         <CardActions />
         <Voicelines name={selectedOption} />

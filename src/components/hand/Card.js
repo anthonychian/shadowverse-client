@@ -12,6 +12,9 @@ export default function Card({ name, constraintsRef, onField = false }) {
   return (
     <motion.div
       onTap={handleTap}
+      whileTap={{
+        transitionDuration: "3s",
+      }}
       animate={isOpen ? { rotate: -90 } : { rotate: 0 }}
       style={{
         height: "160px",

@@ -113,8 +113,8 @@ export default function Field({
       </Menu>
       <div
         style={{
-          height: "30vh",
-          minHeight: "375px",
+          height: "50vh",
+          minHeight: "300px",
           minWidth: "600px",
           // cursor: `url(${img}), auto`,
           backgroundColor: "rgba(0, 0, 0, 0.60)",
@@ -165,8 +165,8 @@ export default function Field({
       </div>
       <div
         style={{
-          height: "30vh",
-          minHeight: "375px",
+          height: "50vh",
+          minHeight: "300px",
           minWidth: "600px",
           // cursor: `url(${img}), auto`,
           backgroundColor: "rgba(0, 0, 0, 0.60)",
