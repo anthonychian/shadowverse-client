@@ -13,7 +13,7 @@ export const CardSlice = createSlice({
   },
   reducers: {
     drawFromDeck: (state) => {
-      if (state.deck.length > 0) {
+      if (state.deck.length > 0 && state.hand.length < 8) {
         const card = state.deck[0];
         state.deck = state.deck.slice(1);
         console.log(`Removed ${card} from deck`);
@@ -23,7 +23,7 @@ export const CardSlice = createSlice({
     },
     drawFourFromDeck: (state) => {
       for (let i = 0; i < 4; i++) {
-        if (state.deck.length > 0) {
+        if (state.deck.length > 0 && state.hand.length < 8) {
           const card = state.deck[0];
           state.deck = state.deck.slice(1);
           console.log(`Removed ${card} from deck`);
@@ -62,54 +62,73 @@ export const CardSlice = createSlice({
       const card = action.payload;
       state.hand = state.hand.filter((cardInHand) => card !== cardInHand);
       console.log(`Removed ${card} from hand`);
-      state.deck = [action.payload, ...state.deck];
+      state.deck = [card, ...state.deck];
       console.log(`Added ${card} to top of deck`);
     },
+    placeToBotOfDeckFromHand: (state, action) => {
+      const card = action.payload;
+      state.hand = state.hand.filter((cardInHand) => card !== cardInHand);
+      console.log(`Removed ${card} from hand`);
+      state.deck = [...state.deck, card];
+      console.log(`Added ${card} to bottom of deck`);
+    },
     placeToTopOfDeckFromField: (state, action) => {
-      state.deck = [action.payload.card, ...state.deck];
-      console.log("Added card to top of deck");
+      const card = action.payload.card;
+      const cardIndex = action.payload.index;
       const newField = [
-        ...state.field.slice(0, action.payload.index),
+        ...state.field.slice(0, cardIndex),
         0,
-        ...state.field.slice(action.payload.index + 1),
+        ...state.field.slice(cardIndex + 1),
       ];
       state.field = newField;
-      console.log("Removed card from field");
-      console.log(state.deck);
+      console.log(`Removed ${card} from field`);
+      state.deck = [card, ...state.deck];
+      console.log(`Added ${card} to top of deck`);
     },
-    // HAVE NOT TESTED
-    addToHandFromGrave: (state, action) => {
-      state.grave = state.grave.filter((card) => action.payload !== card);
-      console.log("Removed card from grave");
-      state.hand = [...state.hand, action.payload];
-      console.log("Added card to hand");
+    placeToBotOfDeckFromField: (state, action) => {
+      const card = action.payload.card;
+      const cardIndex = action.payload.index;
+      const newField = [
+        ...state.field.slice(0, cardIndex),
+        0,
+        ...state.field.slice(cardIndex + 1),
+      ];
+      state.field = newField;
+      console.log(`Removed ${card} from field`);
+      state.deck = [...state.deck, card];
+      console.log(`Added ${card} to bot of deck`);
     },
     moveCardOnField: (state, action) => {
+      const card = action.payload.card;
+      const prevIndex = action.payload.prevIndex;
+      const newIndex = action.payload.index;
       const field = [
-        ...state.field.slice(0, action.payload.prevIndex),
+        ...state.field.slice(0, prevIndex),
         0,
-        ...state.field.slice(action.payload.prevIndex + 1),
+        ...state.field.slice(prevIndex + 1),
       ];
       state.field = field;
-      console.log("Removed card from field");
+      console.log(`Removed ${card} from field`);
       const newField = [
-        ...state.field.slice(0, action.payload.index),
-        action.payload.card,
-        ...state.field.slice(action.payload.index + 1),
+        ...state.field.slice(0, newIndex),
+        card,
+        ...state.field.slice(newIndex + 1),
       ];
       state.field = newField;
-      console.log("Added card to field");
+      console.log(`Added ${card} to field`);
     },
     addToHandFromField: (state, action) => {
-      state.hand = [...state.hand, action.payload.card];
-      console.log("Added card to hand");
+      const card = action.payload.card;
+      const cardIndex = action.payload.index;
       const newField = [
-        ...state.field.slice(0, action.payload.index),
+        ...state.field.slice(0, cardIndex),
         0,
-        ...state.field.slice(action.payload.index + 1),
+        ...state.field.slice(cardIndex + 1),
       ];
       state.field = newField;
-      console.log("Removed card from field");
+      console.log(`Removed ${card} from field`);
+      state.hand = [...state.hand, card];
+      console.log(`Added ${card} to hand`);
     },
     placeToFieldFromHand: (state, action) => {
       const idx = state.hand.indexOf(action.payload.card);
@@ -126,6 +145,16 @@ export const CardSlice = createSlice({
       ];
       state.field = newField;
       console.log("Added card to field");
+    },
+    reorderCardsInHand: (state, action) => {
+      state.hand = action.payload;
+    },
+    // HAVE NOT TESTED
+    addToHandFromGrave: (state, action) => {
+      state.grave = state.grave.filter((card) => action.payload !== card);
+      console.log("Removed card from grave");
+      state.hand = [...state.hand, action.payload];
+      console.log("Added card to hand");
     },
     reset: (state) => {
       state.hand = [];
@@ -145,8 +174,11 @@ export const {
   addToHandFromField,
   addToHandFromGrave,
   placeToTopOfDeckFromHand,
+  placeToBotOfDeckFromHand,
   placeToTopOfDeckFromField,
+  placeToBotOfDeckFromField,
   moveCardOnField,
+  reorderCardsInHand,
   mulligan,
   mulliganFour,
   setCurrentCard,

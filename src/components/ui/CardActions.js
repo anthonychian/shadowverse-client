@@ -4,7 +4,7 @@ import {
   reset,
   shuffleDeck,
   drawFourFromDeck,
-  mulligan,
+  mulliganFour,
 } from "../../redux/CardSlice";
 import { useDispatch } from "react-redux";
 import Button from "@mui/material/Button";
@@ -14,10 +14,11 @@ export default function CardActions() {
   return (
     <div
       style={{
-        paddingTop: "90%",
-        height: "30%",
+        paddingTop: "110%",
+        height: "10%",
         width: "70%",
         display: "flex",
+        // gap: 10,
         flexDirection: "row",
         flexWrap: "wrap",
         alignItems: "center",
@@ -25,35 +26,28 @@ export default function CardActions() {
       }}
     >
       <Button
-        style={{ fontSize: "70%", width: "130px" }}
+        style={{ fontSize: 12, width: "130px" }}
         onClick={() => dispatch(shuffleDeck())}
         variant="contained"
       >
         Shuffle Deck
       </Button>
       <Button
-        style={{ fontSize: "70%", width: "130px" }}
-        onClick={() => dispatch(drawFromDeck())}
-        variant="contained"
-      >
-        Draw
-      </Button>
-      <Button
-        style={{ fontSize: "70%", width: "130px" }}
+        style={{ fontSize: 12, width: "130px" }}
         onClick={() => dispatch(drawFourFromDeck())}
         variant="contained"
       >
         Draw 4
       </Button>
       <Button
-        style={{ fontSize: "70%", width: "130px" }}
-        onClick={() => dispatch(mulligan())}
+        style={{ fontSize: 12, width: "130px" }}
+        onClick={() => dispatch(mulliganFour())}
         variant="contained"
       >
-        Mulligan
+        Mulligan 4
       </Button>
       <Button
-        style={{ fontSize: "70%", width: "130px" }}
+        style={{ fontSize: 12, width: "130px" }}
         onClick={() => dispatch(reset())}
         variant="contained"
       >

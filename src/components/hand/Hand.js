@@ -3,8 +3,10 @@ import Card from "./Card";
 import { Reorder } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  setCurrentCard,
   placeToTopOfDeckFromHand,
+  placeToBotOfDeckFromHand,
+  reorderCardsInHand,
+  setCurrentCard,
 } from "../../redux/CardSlice";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
@@ -13,6 +15,9 @@ export default function Hand({
   constraintsRef,
   setReady,
   setReadyToPlaceOnFieldFromHand,
+  ready,
+  setDragging,
+  setHovering,
 }) {
   const reduxHand = useSelector((state) => state.card.hand);
   const [items, setItems] = useState(reduxHand);
@@ -25,11 +30,17 @@ export default function Hand({
   const arrToObjArr = (arr) => {
     return arr.map((x, idx) => ({ idx: idx, name: x }));
   };
+  const objArrToArr = (obj) => {
+    let res = [];
+    obj.map((card) => res.push(card.name));
+    return res;
+  };
 
   const [contextMenu, setContextMenu] = React.useState(null);
   const [name, setName] = useState("");
 
   const handleContextMenu = (event, name) => {
+    dispatch(reorderCardsInHand(objArrToArr(items)));
     setName(name);
     event.preventDefault();
     setContextMenu(
@@ -54,6 +65,10 @@ export default function Hand({
     handleClose();
     dispatch(placeToTopOfDeckFromHand(name));
   };
+  const handleCardToBotOfDeck = (e) => {
+    handleClose();
+    dispatch(placeToBotOfDeckFromHand(name));
+  };
 
   return (
     <>
@@ -70,6 +85,9 @@ export default function Hand({
         <MenuItem onClick={(event) => handleCardToField(event)}>Field</MenuItem>
         <MenuItem onClick={(event) => handleCardToTopOfDeck(event)}>
           Top of Deck
+        </MenuItem>
+        <MenuItem onClick={(event) => handleCardToBotOfDeck(event)}>
+          Bot of Deck
         </MenuItem>
         {/* <MenuItem onClick={handleClose}>Graveyard</MenuItem> */}
       </Menu>
@@ -88,12 +106,19 @@ export default function Hand({
       >
         {items.map((card) => (
           <Reorder.Item
-            onContextMenu={(e) => handleContextMenu(e, card.name)}
+            onContextMenu={(e) => {
+              if (!ready) handleContextMenu(e, card.name);
+            }}
             drag
             key={card.idx}
             value={card}
           >
-            <Card name={card.name} constraintsRef={constraintsRef} />
+            <Card
+              name={card.name}
+              constraintsRef={constraintsRef}
+              setDragging={setDragging}
+              setHovering={setHovering}
+            />
           </Reorder.Item>
         ))}
       </Reorder.Group>

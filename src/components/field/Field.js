@@ -5,6 +5,7 @@ import {
   placeToFieldFromHand,
   addToHandFromField,
   placeToTopOfDeckFromField,
+  placeToBotOfDeckFromField,
   moveCardOnField,
 } from "../../redux/CardSlice";
 import { useDispatch, useSelector } from "react-redux";
@@ -14,8 +15,10 @@ import MenuItem from "@mui/material/MenuItem";
 // import img from "../../assets/pin_bellringer_angel.png";
 
 export default function Field({
+  dragging,
   ready,
   setReady,
+  setHovering,
   readyToPlaceOnFieldFromHand,
   setReadyToPlaceOnFieldFromHand,
 }) {
@@ -87,6 +90,15 @@ export default function Field({
       })
     );
   };
+  const handleCardToBotDeck = () => {
+    handleClose();
+    dispatch(
+      placeToBotOfDeckFromField({
+        card: name,
+        index: index,
+      })
+    );
+  };
 
   const handleMoveOnField = () => {
     handleClose();
@@ -109,6 +121,7 @@ export default function Field({
         <MenuItem onClick={() => handleCardToHand()}>Hand</MenuItem>
         <MenuItem onClick={() => handleMoveOnField()}>Move</MenuItem>
         <MenuItem onClick={() => handleCardToTopDeck()}>Top of Deck</MenuItem>
+        <MenuItem onClick={() => handleCardToBotDeck()}>Bot of Deck</MenuItem>
         {/* <MenuItem onClick={handleClose}>Graveyard</MenuItem> */}
       </Menu>
       <div
@@ -181,9 +194,10 @@ export default function Field({
           <>
             {ready && (
               <motion.div
-                onContextMenu={(e) =>
-                  handleContextMenu(e, idx, reduxField[idx])
-                }
+                onContextMenu={(e) => {
+                  if (x !== 0 && !ready)
+                    handleContextMenu(e, idx, reduxField[idx]);
+                }}
                 key={`player1-${idx}`}
                 whileHover={{
                   backgroundColor: "rgba(255, 252, 160, 0.3)",
@@ -195,21 +209,23 @@ export default function Field({
                   backgroundColor: "rgba(0, 0, 255, 0.20)",
                 }}
                 onClick={() => handleClick(idx)}
+                // onPointerEnter={(e) => handleTest(e, idx)}
               >
                 {x !== 0 && (
                   <Card
                     onField={true}
                     key={`card1-${idx}`}
                     name={reduxField[idx]}
+                    setHovering={setHovering}
                   />
                 )}
               </motion.div>
             )}
             {!ready && (
               <motion.div
-                onContextMenu={(e) =>
-                  handleContextMenu(e, idx, reduxField[idx])
-                }
+                onContextMenu={(e) => {
+                  if (x !== 0) handleContextMenu(e, idx, reduxField[idx]);
+                }}
                 key={`player2-${idx}`}
                 style={{
                   height: "160px",
@@ -223,6 +239,7 @@ export default function Field({
                     onField={true}
                     key={`card2-${idx}`}
                     name={reduxField[idx]}
+                    setHovering={setHovering}
                   />
                 )}
               </motion.div>
@@ -233,3 +250,36 @@ export default function Field({
     </>
   );
 }
+
+// const handleTest = (event, indexClicked) => {
+//   event.preventDefault();
+//   console.log("HANDLE TEST");
+//   const bounds = event.target.getBoundingClientRect();
+//   const x = event.clientX - bounds.left;
+//   const y = event.clientY - bounds.top;
+//   console.log({ x: x, y: y });
+//   if (!dragging) {
+//     if (reduxField[indexClicked] === 0) {
+//       setReady(false);
+//       if (readyToPlaceOnFieldFromHand) {
+//         setReadyToPlaceOnFieldFromHand(false);
+//         dispatch(
+//           placeToFieldFromHand({
+//             card: reduxCurrentCard,
+//             index: indexClicked,
+//           })
+//         );
+//       }
+//       if (readyToMoveOnField) {
+//         setReadyToMoveOnField(false);
+//         dispatch(
+//           moveCardOnField({
+//             card: name,
+//             prevIndex: index,
+//             index: indexClicked,
+//           })
+//         );
+//       }
+//     } else console.log("there is already a card here");
+//   }
+// };

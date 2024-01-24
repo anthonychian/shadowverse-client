@@ -9,6 +9,9 @@ import Hand from "./components/hand/Hand";
 import Field from "./components/field/Field";
 import CardActions from "./components/ui/CardActions";
 import { motion } from "framer-motion";
+import { useSelector } from "react-redux";
+import ZoomedCard from "./components/ui/ZoomedCard";
+import Deck from "./components/field/Deck";
 
 function App() {
   const initialWallpaper = require("../src/assets/wallpapers/forteEvo.png");
@@ -16,8 +19,11 @@ function App() {
   const [selectedOption, setSelectedOption] = useState("Exella");
   const constraintsRef = useRef(null);
   const [ready, setReady] = useState(false);
+  const [dragging, setDragging] = useState(false);
+  const [hovering, setHovering] = useState(false);
   const [readyToPlaceOnFieldFromHand, setReadyToPlaceOnFieldFromHand] =
     useState(false);
+  const reduxCurrentCard = useSelector((state) => state.card.currentCard);
 
   return (
     <div
@@ -29,6 +35,7 @@ function App() {
         backgroundSize: "cover",
       }}
     >
+      <ZoomedCard name={reduxCurrentCard} hovering={hovering} />
       <PlayPoints name={selectedOption} />
       <motion.div
         onContextMenu={(e) => e.nativeEvent.preventDefault()}
@@ -36,13 +43,18 @@ function App() {
         ref={constraintsRef}
       >
         <Field
+          dragging={dragging}
           ready={ready}
           setReady={setReady}
+          setHovering={setHovering}
           readyToPlaceOnFieldFromHand={readyToPlaceOnFieldFromHand}
           setReadyToPlaceOnFieldFromHand={setReadyToPlaceOnFieldFromHand}
         />
         <Hand
+          setDragging={setDragging}
+          setHovering={setHovering}
           constraintsRef={constraintsRef}
+          ready={ready}
           setReady={setReady}
           setReadyToPlaceOnFieldFromHand={setReadyToPlaceOnFieldFromHand}
         />
@@ -54,7 +66,8 @@ function App() {
           setWallpaper={setWallpaper}
         />
         <Leader name={selectedOption} />
-        <CardActions />
+        <Deck />
+        {/* <CardActions /> */}
         <Voicelines name={selectedOption} />
       </div>
     </div>
