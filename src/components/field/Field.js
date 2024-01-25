@@ -7,12 +7,15 @@ import {
   placeToTopOfDeckFromField,
   placeToBotOfDeckFromField,
   moveCardOnField,
+  placeToCemetaryFromField,
+  placeToFieldFromCemetary,
 } from "../../redux/CardSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { Menu, MenuItem } from "@mui/material";
 import Card from "../hand/Card";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-// import img from "../../assets/pin_bellringer_angel.png";
+import Deck from "./Deck";
+import Cemetary from "./Cemetary";
+const img = require("../../assets/pin_bellringer_angel.png");
 
 export default function Field({
   dragging,
@@ -30,8 +33,9 @@ export default function Field({
   const [index, setIndex] = useState(0);
   const [name, setName] = useState("");
   const [readyToMoveOnField, setReadyToMoveOnField] = useState(false);
+  const [readyFromCemetary, setReadyFromCemetary] = useState(false);
 
-  const handleClick = (indexClicked) => {
+  const handleClick = (name, indexClicked) => {
     if (reduxField[indexClicked] === 0) {
       setReady(false);
       if (readyToPlaceOnFieldFromHand) {
@@ -49,6 +53,15 @@ export default function Field({
           moveCardOnField({
             card: name,
             prevIndex: index,
+            index: indexClicked,
+          })
+        );
+      }
+      if (readyFromCemetary) {
+        setReadyFromCemetary(false);
+        dispatch(
+          placeToFieldFromCemetary({
+            card: name,
             index: indexClicked,
           })
         );
@@ -72,7 +85,7 @@ export default function Field({
   const handleClose = () => {
     setContextMenu(null);
   };
-  const handleCardToHand = () => {
+  const handleCardToHandFromField = () => {
     handleClose();
     dispatch(
       addToHandFromField({
@@ -100,6 +113,30 @@ export default function Field({
     );
   };
 
+  const handleCardToCemetaryFromField = () => {
+    handleClose();
+    dispatch(
+      placeToCemetaryFromField({
+        card: name,
+        index: index,
+      })
+    );
+  };
+  // const handleCardToFieldFromCementary = () => {
+  //   handleClose();
+  //   setReady(true);
+  //   setReadyFromCemetary(true);
+  // };
+
+  // const handleCardToHandFromCemetary = () => {
+  //   handleClose();
+  //   dispatch(
+  //     addToHandFromCemetary({
+  //       card: name,
+  //     })
+  //   );
+  // };
+
   const handleMoveOnField = () => {
     handleClose();
     setReady(true);
@@ -118,168 +155,206 @@ export default function Field({
             : undefined
         }
       >
-        <MenuItem onClick={() => handleCardToHand()}>Hand</MenuItem>
+        <MenuItem onClick={() => handleCardToHandFromField()}>Hand</MenuItem>
+        <MenuItem onClick={() => handleCardToCemetaryFromField()}>
+          Cemetary
+        </MenuItem>
         <MenuItem onClick={() => handleMoveOnField()}>Move</MenuItem>
         <MenuItem onClick={() => handleCardToTopDeck()}>Top of Deck</MenuItem>
         <MenuItem onClick={() => handleCardToBotDeck()}>Bot of Deck</MenuItem>
         {/* <MenuItem onClick={handleClose}>Graveyard</MenuItem> */}
       </Menu>
+
+      {/* Enemy Field (1-5) & Ex Area (6-10) */}
+
       <div
         style={{
-          height: "50vh",
-          minHeight: "300px",
-          minWidth: "600px",
-          // cursor: `url(${img}), auto`,
-          backgroundColor: "rgba(0, 0, 0, 0.60)",
-          // backgroundColor: "rgba(255, 0, 0, 0.15)",
-          display: "grid",
-          gridTemplateColumns: "repeat(5, 1fr)",
-          alignItems: "center",
-          justifyItems: "center",
+          display: "flex",
+          flexDirection: "row",
+          width: "100%",
+          minHeight: "330px",
         }}
       >
-        {reduxField.map((x, idx) => (
-          <>
-            {ready && (
-              <motion.div
-                key={`enemy1-${idx}`}
-                whileHover={
-                  {
-                    // backgroundColor: "rgba(255, 252, 160, 0.2)",
+        {/* Enemy Deck and Cemetary */}
+
+        <div
+          style={{
+            height: "40vh",
+            width: "175px",
+            display: "flex",
+            flexDirection: "column",
+            backgroundColor: "rgba(0, 0, 0, 0.60)",
+            alignItems: "center",
+            justifyContent: "space-evenly",
+          }}
+        >
+          <Deck ready={ready} />
+          <div
+            style={{
+              height: "160px",
+              width: "115px",
+              backgroundColor: "rgba(255, 255, 255, 0.1)",
+              cursor: `url(${img}) 55 55, auto`,
+            }}
+          />
+        </div>
+
+        <div
+          style={{
+            height: "40vh",
+            minHeight: "330px",
+            minWidth: "600px",
+            width: "100%",
+            backgroundColor: "rgba(0, 0, 0, 0.60)",
+            // backgroundColor: "rgba(0, 0, 255, 0.15)",
+            display: "grid",
+            gridTemplateColumns: "repeat(5, 1fr)",
+            alignItems: "center",
+            justifyItems: "center",
+            zIndex: 10,
+          }}
+        >
+          {reduxField.map((x, idx) => (
+            <>
+              {ready && (
+                <motion.div
+                  key={`enemy1-${idx}`}
+                  whileHover={
+                    {
+                      // backgroundColor: "rgba(255, 252, 160, 0.2)",
+                    }
                   }
-                }
-                // onClick={() => dispatch(placeToFieldFromHand())}
-                style={{
-                  height: "160px",
-                  width: "115px",
-                  backgroundColor: "rgba(255, 255, 255, 0.1)",
-                  // backgroundColor: "rgba(0, 0, 0, 0.20)",
-                  // backgroundColor: "rgba(255, 0, 0, 0.15)",
-                }}
-              >
-                {/* <Card name={x} /> */}
-              </motion.div>
-            )}
-            {!ready && (
-              <motion.div
-                key={`enemy2-${idx}`}
-                style={{
-                  height: "160px",
-                  width: "115px",
-                  backgroundColor: "rgba(255, 255, 255, 0.1)",
-                  // backgroundColor: "rgba(0, 0, 0, 0.20)",
-                }}
-              >
-                {/* <Card name={x} /> */}
-              </motion.div>
-            )}
-          </>
-        ))}
+                  // onClick={() => dispatch(placeToFieldFromHand())}
+                  style={{
+                    height: "160px",
+                    width: "115px",
+                    backgroundColor: "rgba(255, 255, 255, 0.1)",
+                    // backgroundColor: "rgba(0, 0, 0, 0.20)",
+                    // backgroundColor: "rgba(255, 0, 0, 0.15)",
+                  }}
+                >
+                  {/* <Card name={x} /> */}
+                </motion.div>
+              )}
+              {!ready && (
+                <motion.div
+                  key={`enemy2-${idx}`}
+                  style={{
+                    height: "160px",
+                    width: "115px",
+                    backgroundColor: "rgba(255, 255, 255, 0.1)",
+                    // backgroundColor: "rgba(0, 0, 0, 0.20)",
+                  }}
+                >
+                  {/* <Card name={x} /> */}
+                </motion.div>
+              )}
+            </>
+          ))}
+        </div>
       </div>
+
+      {/* Player Field (1-5) & Ex Area (6-10) */}
       <div
         style={{
-          height: "50vh",
-          minHeight: "300px",
-          minWidth: "600px",
-          // cursor: `url(${img}), auto`,
-          backgroundColor: "rgba(0, 0, 0, 0.60)",
-          // backgroundColor: "rgba(0, 0, 255, 0.15)",
-          display: "grid",
-          gridTemplateColumns: "repeat(5, 1fr)",
-          alignItems: "center",
-          justifyItems: "center",
+          display: "flex",
+          flexDirection: "row",
+          width: "100%",
+          minHeight: "330px",
         }}
       >
-        {reduxField.map((x, idx) => (
-          <>
-            {ready && (
-              <motion.div
-                onContextMenu={(e) => {
-                  if (x !== 0 && !ready)
-                    handleContextMenu(e, idx, reduxField[idx]);
-                }}
-                key={`player1-${idx}`}
-                whileHover={{
-                  backgroundColor: "rgba(255, 252, 160, 0.3)",
-                }}
-                style={{
-                  height: "160px",
-                  width: "115px",
-                  // backgroundColor: "rgba(0, 0, 0, 0.20)",
-                  backgroundColor: "rgba(0, 0, 255, 0.20)",
-                }}
-                onClick={() => handleClick(idx)}
-                // onPointerEnter={(e) => handleTest(e, idx)}
-              >
-                {x !== 0 && (
-                  <Card
-                    onField={true}
-                    key={`card1-${idx}`}
-                    name={reduxField[idx]}
-                    setHovering={setHovering}
-                  />
-                )}
-              </motion.div>
-            )}
-            {!ready && (
-              <motion.div
-                onContextMenu={(e) => {
-                  if (x !== 0) handleContextMenu(e, idx, reduxField[idx]);
-                }}
-                key={`player2-${idx}`}
-                style={{
-                  height: "160px",
-                  width: "115px",
-                  // backgroundColor: "rgba(0, 0, 0, 0.20)",
-                  backgroundColor: "rgba(255, 255, 255, 0.1)",
-                }}
-              >
-                {x !== 0 && (
-                  <Card
-                    onField={true}
-                    key={`card2-${idx}`}
-                    name={reduxField[idx]}
-                    setHovering={setHovering}
-                  />
-                )}
-              </motion.div>
-            )}
-          </>
-        ))}
+        <div
+          style={{
+            height: "40vh",
+            minHeight: "330px",
+            minWidth: "600px",
+            width: "100%",
+            backgroundColor: "rgba(0, 0, 0, 0.60)",
+            // backgroundColor: "rgba(0, 0, 255, 0.15)",
+            display: "grid",
+            gridTemplateColumns: "repeat(5, 1fr)",
+            alignItems: "center",
+            justifyItems: "center",
+            zIndex: 10,
+          }}
+        >
+          {reduxField.map((card, idx) => (
+            <>
+              {ready && (
+                <motion.div
+                  onContextMenu={(e) => {
+                    if (card !== 0 && !ready) handleContextMenu(e, idx, card);
+                  }}
+                  key={`player1-${idx}`}
+                  whileHover={{
+                    backgroundColor: "rgba(255, 252, 160, 0.3)",
+                  }}
+                  style={{
+                    height: "160px",
+                    width: "115px",
+                    // backgroundColor: "rgba(0, 0, 0, 0.20)",
+                    backgroundColor: "rgba(0, 0, 255, 0.20)",
+                  }}
+                  onClick={() => handleClick(reduxCurrentCard, idx)}
+                >
+                  {card !== 0 && (
+                    <Card
+                      onField={true}
+                      key={`card1-${idx}`}
+                      name={card}
+                      setHovering={setHovering}
+                    />
+                  )}
+                </motion.div>
+              )}
+              {!ready && (
+                <motion.div
+                  onContextMenu={(e) => {
+                    if (card !== 0) handleContextMenu(e, idx, card);
+                  }}
+                  key={`player2-${idx}`}
+                  style={{
+                    height: "160px",
+                    width: "115px",
+                    // backgroundColor: "rgba(0, 0, 0, 0.20)",
+                    backgroundColor: "rgba(255, 255, 255, 0.1)",
+                  }}
+                >
+                  {card !== 0 && (
+                    <Card
+                      onField={true}
+                      key={`card2-${idx}`}
+                      name={card}
+                      setHovering={setHovering}
+                    />
+                  )}
+                </motion.div>
+              )}
+            </>
+          ))}
+        </div>
+
+        {/* Deck and Cementary */}
+        <div
+          style={{
+            height: "40vh",
+            width: "175px",
+            display: "flex",
+            flexDirection: "column",
+            backgroundColor: "rgba(0, 0, 0, 0.60)",
+            alignItems: "center",
+            justifyContent: "space-evenly",
+          }}
+        >
+          <Cemetary
+            setReadyFromCemetary={setReadyFromCemetary}
+            setReady={setReady}
+            setHovering={setHovering}
+            ready={ready}
+          />
+          <Deck ready={ready} />
+        </div>
       </div>
     </>
   );
 }
-
-// const handleTest = (event, indexClicked) => {
-//   event.preventDefault();
-//   console.log("HANDLE TEST");
-//   const bounds = event.target.getBoundingClientRect();
-//   const x = event.clientX - bounds.left;
-//   const y = event.clientY - bounds.top;
-//   console.log({ x: x, y: y });
-//   if (!dragging) {
-//     if (reduxField[indexClicked] === 0) {
-//       setReady(false);
-//       if (readyToPlaceOnFieldFromHand) {
-//         setReadyToPlaceOnFieldFromHand(false);
-//         dispatch(
-//           placeToFieldFromHand({
-//             card: reduxCurrentCard,
-//             index: indexClicked,
-//           })
-//         );
-//       }
-//       if (readyToMoveOnField) {
-//         setReadyToMoveOnField(false);
-//         dispatch(
-//           moveCardOnField({
-//             card: name,
-//             prevIndex: index,
-//             index: indexClicked,
-//           })
-//         );
-//       }
-//     } else console.log("there is already a card here");
-//   }
-// };

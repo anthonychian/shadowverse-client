@@ -13,7 +13,8 @@
 .LeaderContainer {
   pointer-events: none;
   user-select: none;
-  position: fixed;
+  top: 20%;
+  position: absolute;
   /* top: 41%;
   left: 40%; */
   /* position: absolute; */

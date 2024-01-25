@@ -7,11 +7,10 @@ import Voicelines from "./components/ui/Voicelines";
 import PlayPoints from "./components/ui/PlayPoints";
 import Hand from "./components/hand/Hand";
 import Field from "./components/field/Field";
-import CardActions from "./components/ui/CardActions";
+// import CardActions from "./components/ui/CardActions";
 import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
 import ZoomedCard from "./components/ui/ZoomedCard";
-import Deck from "./components/field/Deck";
 
 function App() {
   const initialWallpaper = require("../src/assets/wallpapers/forteEvo.png");
@@ -30,6 +29,7 @@ function App() {
       onContextMenu={(e) => e.nativeEvent.preventDefault()}
       className={"canvas"}
       style={{
+        minHeight: "100vh",
         background: "url(" + wallpaper + ") center center fixed",
         // background: "url(" + wallpaper + ") no-repeat center center fixed",
         backgroundSize: "cover",
@@ -66,8 +66,6 @@ function App() {
           setWallpaper={setWallpaper}
         />
         <Leader name={selectedOption} />
-        <Deck />
-        {/* <CardActions /> */}
         <Voicelines name={selectedOption} />
       </div>
     </div>

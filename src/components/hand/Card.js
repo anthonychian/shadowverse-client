@@ -10,17 +10,20 @@ export default function Card({
   constraintsRef,
   onField = false,
   setHovering,
+  ready,
 }) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [rotate, setRotate] = useState(false);
   const dispatch = useDispatch();
   const img = require("../../assets/pin_bellringer_angel.png");
   const handleTap = () => {
-    if (onField) setIsOpen(!isOpen);
+    if (onField) setRotate(!rotate);
   };
 
   const handleHoverStart = () => {
-    setHovering(true);
-    dispatch(setCurrentCard(name));
+    if (!ready) {
+      setHovering(true);
+      dispatch(setCurrentCard(name));
+    }
   };
 
   const handleHoverEnd = () => {
@@ -30,10 +33,8 @@ export default function Card({
   return (
     <motion.div
       onTap={handleTap}
-      whileTap={{
-        transitionDuration: "3s",
-      }}
-      animate={isOpen ? { rotate: -90 } : { rotate: 0 }}
+      whileTap={onField ? { transitionDuration: "3s" } : {}}
+      animate={rotate ? { rotate: -90 } : { rotate: 0 }}
       style={{
         height: "160px",
       }}

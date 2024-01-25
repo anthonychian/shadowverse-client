@@ -6,10 +6,10 @@ export const CardSlice = createSlice({
   initialState: {
     deck: dragonDeck,
     hand: [],
-    grave: [],
     field: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     enemyField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     currentCard: {},
+    cemetary: [],
   },
   reducers: {
     drawFromDeck: (state) => {
@@ -58,6 +58,7 @@ export const CardSlice = createSlice({
     shuffleDeck: (state) => {
       state.deck = state.deck.toSorted(() => Math.random() - 0.5);
     },
+    // FIX THIS
     placeToTopOfDeckFromHand: (state, action) => {
       const card = action.payload;
       state.hand = state.hand.filter((cardInHand) => card !== cardInHand);
@@ -65,6 +66,7 @@ export const CardSlice = createSlice({
       state.deck = [card, ...state.deck];
       console.log(`Added ${card} to top of deck`);
     },
+    // FIX THIS
     placeToBotOfDeckFromHand: (state, action) => {
       const card = action.payload;
       state.hand = state.hand.filter((cardInHand) => card !== cardInHand);
@@ -130,39 +132,77 @@ export const CardSlice = createSlice({
       state.hand = [...state.hand, card];
       console.log(`Added ${card} to hand`);
     },
+    // test
     placeToFieldFromHand: (state, action) => {
-      const idx = state.hand.indexOf(action.payload.card);
-      if (idx === -1) {
-        return [...state.hand];
-      }
-      state.hand = state.hand.filter((el, i) => i !== idx);
-      console.log("Removed card from hand");
-
+      const card = action.payload.card;
+      const cardIndex = state.hand.indexOf(card);
+      const newIndex = action.payload.index;
+      state.hand = state.hand.filter((_, i) => i !== cardIndex);
+      console.log(`Removed ${card} from hand`);
       const newField = [
-        ...state.field.slice(0, action.payload.index),
-        action.payload.card,
-        ...state.field.slice(action.payload.index + 1),
+        ...state.field.slice(0, newIndex),
+        card,
+        ...state.field.slice(newIndex + 1),
       ];
       state.field = newField;
-      console.log("Added card to field");
+      console.log(`Added ${card} to field`);
     },
     reorderCardsInHand: (state, action) => {
       state.hand = action.payload;
     },
-    // HAVE NOT TESTED
-    addToHandFromGrave: (state, action) => {
-      state.grave = state.grave.filter((card) => action.payload !== card);
-      console.log("Removed card from grave");
-      state.hand = [...state.hand, action.payload];
-      console.log("Added card to hand");
+    // HAVE NOT TESTED CEMETARY
+    addToHandFromCemetary: (state, action) => {
+      const card = action.payload;
+      const cardIndex = state.cemetary.indexOf(card);
+      state.cemetary = state.cemetary.filter((_, i) => i !== cardIndex);
+      console.log(`Removed ${card} from cemetary`);
+      state.hand = [...state.hand, card];
+      console.log(`Added ${card} to hand`);
+    },
+    placeToCemetaryFromField: (state, action) => {
+      const card = action.payload.card;
+      const cardIndex = action.payload.index;
+      const newField = [
+        ...state.field.slice(0, cardIndex),
+        0,
+        ...state.field.slice(cardIndex + 1),
+      ];
+      state.field = newField;
+      console.log(`Removed ${card} from field`);
+      state.cemetary = [card, ...state.cemetary];
+      console.log(`Added ${card} to cemetary`);
+    },
+    placeToCemetaryFromHand: (state, action) => {
+      const card = action.payload;
+      const cardIndex = state.hand.indexOf(card);
+      state.hand = state.hand.filter((_, i) => i !== cardIndex);
+      console.log(`Removed ${card} from hand`);
+      state.cemetary = [card, ...state.cemetary];
+      console.log(`Added ${card} to cemetary`);
+    },
+    placeToFieldFromCemetary: (state, action) => {
+      const card = action.payload.card;
+      const cardIndex = state.cemetary.indexOf(card);
+      const newIndex = action.payload.index;
+      state.cemetary = state.cemetary.filter((_, i) => i !== cardIndex);
+      console.log("CEMETARY", state.cemetary);
+      console.log(`Removed ${card} from cemetary`);
+      const newField = [
+        ...state.field.slice(0, newIndex),
+        card,
+        ...state.field.slice(newIndex + 1),
+      ];
+      state.field = newField;
+      console.log(`Added ${card} to field`);
+      console.log("FIELD", state.field);
     },
     reset: (state) => {
       state.hand = [];
       state.deck = dragonDeck;
-      state.grave = [];
       state.field = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
       state.enemyField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
       state.currentCard = {};
+      state.cemetary = [];
     },
   },
 });
@@ -171,12 +211,15 @@ export const {
   drawFromDeck,
   drawFourFromDeck,
   placeToFieldFromHand,
+  placeToFieldFromCemetary,
   addToHandFromField,
-  addToHandFromGrave,
+  addToHandFromCemetary,
   placeToTopOfDeckFromHand,
   placeToBotOfDeckFromHand,
   placeToTopOfDeckFromField,
   placeToBotOfDeckFromField,
+  placeToCemetaryFromField,
+  placeToCemetaryFromHand,
   moveCardOnField,
   reorderCardsInHand,
   mulligan,

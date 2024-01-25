@@ -7,6 +7,7 @@ import {
   placeToBotOfDeckFromHand,
   reorderCardsInHand,
   setCurrentCard,
+  placeToCemetaryFromHand,
 } from "../../redux/CardSlice";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
@@ -55,17 +56,22 @@ export default function Hand({
   const handleClose = () => {
     setContextMenu(null);
   };
-  const handleCardToField = (e) => {
+  const handleCardToField = () => {
     handleClose();
     setReady(true);
     setReadyToPlaceOnFieldFromHand(true);
     dispatch(setCurrentCard(name));
   };
-  const handleCardToTopOfDeck = (e) => {
+  const handleCardToCemetary = () => {
+    handleClose();
+    console.log(name);
+    dispatch(placeToCemetaryFromHand(name));
+  };
+  const handleCardToTopOfDeck = () => {
     handleClose();
     dispatch(placeToTopOfDeckFromHand(name));
   };
-  const handleCardToBotOfDeck = (e) => {
+  const handleCardToBotOfDeck = () => {
     handleClose();
     dispatch(placeToBotOfDeckFromHand(name));
   };
@@ -82,20 +88,16 @@ export default function Hand({
             : undefined
         }
       >
-        <MenuItem onClick={(event) => handleCardToField(event)}>Field</MenuItem>
-        <MenuItem onClick={(event) => handleCardToTopOfDeck(event)}>
-          Top of Deck
-        </MenuItem>
-        <MenuItem onClick={(event) => handleCardToBotOfDeck(event)}>
-          Bot of Deck
-        </MenuItem>
-        {/* <MenuItem onClick={handleClose}>Graveyard</MenuItem> */}
+        <MenuItem onClick={handleCardToField}>Field</MenuItem>
+        <MenuItem onClick={handleCardToCemetary}>Cemetary</MenuItem>
+        <MenuItem onClick={handleCardToTopOfDeck}>Top of Deck</MenuItem>
+        <MenuItem onClick={handleCardToBotOfDeck}>Bot of Deck</MenuItem>
       </Menu>
       <Reorder.Group
         style={{
           display: "flex",
           alignItems: "center",
-          height: "25%",
+          height: "20vh",
           minHeight: "200px",
           justifyContent: "center",
           // backgroundColor: "black",

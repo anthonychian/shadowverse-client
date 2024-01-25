@@ -9,11 +9,8 @@ import imageAria from "../../assets/leaders/Aria/Aria.png";
 import imageExella from "../../assets/leaders/Exella/Exella.png";
 import imageRola from "../../assets/leaders/Rola/Rola.png";
 
-import Box from "@mui/material/Box";
-import Modal from "@mui/material/Modal";
-import Card from "@mui/material/Card";
+import { Box, Modal, Card, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import IconButton from "@mui/material/IconButton";
 
 const style = {
   position: "relative",
