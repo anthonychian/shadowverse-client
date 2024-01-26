@@ -15,6 +15,7 @@ import { Menu, MenuItem } from "@mui/material";
 import Card from "../hand/Card";
 import Deck from "./Deck";
 import Cemetary from "./Cemetary";
+import cardback from "../../assets/cardbacks/sleeve_5010011.png";
 const img = require("../../assets/pin_bellringer_angel.png");
 
 export default function Field({
@@ -188,7 +189,13 @@ export default function Field({
             justifyContent: "space-evenly",
           }}
         >
-          <Deck ready={ready} />
+          <div
+            style={{
+              cursor: `url(${img}) 55 55, auto`,
+            }}
+          >
+            <img height={"160px"} src={cardback} alt={"cardback"} />
+          </div>
           <div
             style={{
               height: "160px",

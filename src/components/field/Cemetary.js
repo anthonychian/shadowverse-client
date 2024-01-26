@@ -69,6 +69,7 @@ export default function Cemetary({
   };
 
   const handleCardToHandFromCemetary = () => {
+    handleModalClose();
     handleClose();
     dispatch(addToHandFromCemetary(name));
   };
