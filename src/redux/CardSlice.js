@@ -1,15 +1,21 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { dragonDeck } from "../decks/dragonDeck";
+import { dragonDeckEvo } from "../decks/dragonDeckEvo";
 
 export const CardSlice = createSlice({
   name: "card",
   initialState: {
     deck: dragonDeck,
+    evoDeck: dragonDeckEvo.map((card) => {
+      return { card: card, status: false };
+    }),
     hand: [],
     field: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     enemyField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-    currentCard: {},
-    cemetary: [],
+    currentCard: "",
+    currentEvo: "",
+    cemetery: [],
+    evoField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
   },
   reducers: {
     drawFromDeck: (state) => {
@@ -55,21 +61,24 @@ export const CardSlice = createSlice({
     setCurrentCard: (state, action) => {
       state.currentCard = action.payload;
     },
+    setCurrentEvo: (state, action) => {
+      state.currentCard = action.payload;
+    },
     shuffleDeck: (state) => {
       state.deck = state.deck.toSorted(() => Math.random() - 0.5);
     },
-    // FIX THIS
     placeToTopOfDeckFromHand: (state, action) => {
       const card = action.payload;
-      state.hand = state.hand.filter((cardInHand) => card !== cardInHand);
+      const cardIndex = state.hand.indexOf(card);
+      state.hand = state.hand.filter((_, i) => i !== cardIndex);
       console.log(`Removed ${card} from hand`);
       state.deck = [card, ...state.deck];
       console.log(`Added ${card} to top of deck`);
     },
-    // FIX THIS
     placeToBotOfDeckFromHand: (state, action) => {
       const card = action.payload;
-      state.hand = state.hand.filter((cardInHand) => card !== cardInHand);
+      const cardIndex = state.hand.indexOf(card);
+      state.hand = state.hand.filter((_, i) => i !== cardIndex);
       console.log(`Removed ${card} from hand`);
       state.deck = [...state.deck, card];
       console.log(`Added ${card} to bottom of deck`);
@@ -132,7 +141,6 @@ export const CardSlice = createSlice({
       state.hand = [...state.hand, card];
       console.log(`Added ${card} to hand`);
     },
-    // test
     placeToFieldFromHand: (state, action) => {
       const card = action.payload.card;
       const cardIndex = state.hand.indexOf(card);
@@ -150,16 +158,15 @@ export const CardSlice = createSlice({
     reorderCardsInHand: (state, action) => {
       state.hand = action.payload;
     },
-    // HAVE NOT TESTED CEMETARY
-    addToHandFromCemetary: (state, action) => {
+    addToHandFromCemetery: (state, action) => {
       const card = action.payload;
-      const cardIndex = state.cemetary.indexOf(card);
-      state.cemetary = state.cemetary.filter((_, i) => i !== cardIndex);
-      console.log(`Removed ${card} from cemetary`);
+      const cardIndex = state.cemetery.indexOf(card);
+      state.cemetery = state.cemetery.filter((_, i) => i !== cardIndex);
+      console.log(`Removed ${card} from cemetery`);
       state.hand = [...state.hand, card];
       console.log(`Added ${card} to hand`);
     },
-    placeToCemetaryFromField: (state, action) => {
+    placeToCemeteryFromField: (state, action) => {
       const card = action.payload.card;
       const cardIndex = action.payload.index;
       const newField = [
@@ -169,24 +176,23 @@ export const CardSlice = createSlice({
       ];
       state.field = newField;
       console.log(`Removed ${card} from field`);
-      state.cemetary = [card, ...state.cemetary];
-      console.log(`Added ${card} to cemetary`);
+      state.cemetery = [card, ...state.cemetery];
+      console.log(`Added ${card} to cemetery`);
     },
-    placeToCemetaryFromHand: (state, action) => {
+    placeToCemeteryFromHand: (state, action) => {
       const card = action.payload;
       const cardIndex = state.hand.indexOf(card);
       state.hand = state.hand.filter((_, i) => i !== cardIndex);
       console.log(`Removed ${card} from hand`);
-      state.cemetary = [card, ...state.cemetary];
-      console.log(`Added ${card} to cemetary`);
+      state.cemetery = [card, ...state.cemetery];
+      console.log(`Added ${card} to cemetery`);
     },
-    placeToFieldFromCemetary: (state, action) => {
+    placeToFieldFromCemetery: (state, action) => {
       const card = action.payload.card;
-      const cardIndex = state.cemetary.indexOf(card);
+      const cardIndex = state.cemetery.indexOf(card);
       const newIndex = action.payload.index;
-      state.cemetary = state.cemetary.filter((_, i) => i !== cardIndex);
-      console.log("CEMETARY", state.cemetary);
-      console.log(`Removed ${card} from cemetary`);
+      state.cemetery = state.cemetery.filter((_, i) => i !== cardIndex);
+      console.log(`Removed ${card} from cemetery`);
       const newField = [
         ...state.field.slice(0, newIndex),
         card,
@@ -194,7 +200,59 @@ export const CardSlice = createSlice({
       ];
       state.field = newField;
       console.log(`Added ${card} to field`);
-      console.log("FIELD", state.field);
+    },
+    evolveCardOnField: (state, action) => {
+      const card = action.payload.card;
+      const newIndex = action.payload.index;
+      let cardIndex;
+      for (let i = 0; i < state.evoDeck.length; i++) {
+        if (state.evoDeck[i].card === card) {
+          cardIndex = i;
+          break;
+        }
+      }
+      state.evoDeck = state.evoDeck.filter((_, i) => i !== cardIndex);
+      console.log(`Removed ${card} from evolve deck`);
+      const newField = [
+        ...state.evoField.slice(0, newIndex),
+        card,
+        ...state.evoField.slice(newIndex + 1),
+      ];
+      state.evoField = newField;
+      console.log(`Added ${card} to evolve field`);
+    },
+    feedCardOnField: (state, action) => {
+      const card = action.payload.card;
+      const newIndex = action.payload.index;
+      let cardIndex;
+      for (let i = 0; i < state.evoDeck.length; i++) {
+        if (state.evoDeck[i].card === card) {
+          cardIndex = i;
+          break;
+        }
+      }
+      state.evoDeck = state.evoDeck.filter((_, i) => i !== cardIndex);
+      console.log(`Removed ${card} from evolve deck`);
+      const newField = [
+        ...state.evoField.slice(0, newIndex),
+        card,
+        ...state.evoField.slice(newIndex + 1),
+      ];
+      state.evoField = newField;
+      console.log(`Added ${card} to evolve field`);
+    },
+    backToEvolveDeck: (state, action) => {
+      const card = action.payload.card;
+      const cardIndex = action.payload.index;
+      const newField = [
+        ...state.evoField.slice(0, cardIndex),
+        0,
+        ...state.evoField.slice(cardIndex + 1),
+      ];
+      state.evoField = newField;
+      console.log(`Removed ${card} to from evolve field`);
+      state.evoDeck = [...state.evoDeck, { card: card, status: true }];
+      console.log(`Added ${card} to hand`);
     },
     reset: (state) => {
       state.hand = [];
@@ -202,7 +260,11 @@ export const CardSlice = createSlice({
       state.field = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
       state.enemyField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
       state.currentCard = {};
-      state.cemetary = [];
+      state.cemetery = [];
+      state.evoDeck = dragonDeckEvo.map((card) => {
+        return { card: card, status: false };
+      });
+      state.evoField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     },
   },
 });
@@ -211,20 +273,23 @@ export const {
   drawFromDeck,
   drawFourFromDeck,
   placeToFieldFromHand,
-  placeToFieldFromCemetary,
+  placeToFieldFromCemetery,
   addToHandFromField,
-  addToHandFromCemetary,
+  addToHandFromCemetery,
   placeToTopOfDeckFromHand,
   placeToBotOfDeckFromHand,
   placeToTopOfDeckFromField,
   placeToBotOfDeckFromField,
-  placeToCemetaryFromField,
-  placeToCemetaryFromHand,
+  placeToCemeteryFromField,
+  placeToCemeteryFromHand,
   moveCardOnField,
   reorderCardsInHand,
   mulligan,
   mulliganFour,
   setCurrentCard,
+  setCurrentEvo,
   shuffleDeck,
+  evolveCardOnField,
+  feedCardOnField,
   reset,
 } = CardSlice.actions;

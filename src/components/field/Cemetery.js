@@ -4,7 +4,7 @@ import { cardImage } from "../../decks/getCards";
 import { Menu, MenuItem, Modal, Box } from "@mui/material";
 import CardMUI from "@mui/material/Card";
 import Card from "../hand/Card";
-import { addToHandFromCemetary, setCurrentCard } from "../../redux/CardSlice";
+import { addToHandFromCemetery, setCurrentCard } from "../../redux/CardSlice";
 // import cardback from "../../assets/cardbacks/sleeve_5010011.png";
 
 const img = require("../../assets/pin_bellringer_angel.png");
@@ -26,18 +26,18 @@ const style = {
   alignItems: "center",
 };
 
-export default function Cemetary({
+export default function Cemetery({
   setHovering,
-  setReadyFromCemetary,
+  setReadyFromCemetery,
   setReady,
   ready,
 }) {
   const [open, setOpen] = useState(false);
   const [name, setName] = useState("");
   const [contextMenu, setContextMenu] = React.useState(null);
-  const reduxCemetary = useSelector((state) => state.card.cemetary);
+  const reduxCemetery = useSelector((state) => state.card.cemetery);
   const handleModalOpen = () => {
-    if (reduxCemetary.length > 0 && !ready) setOpen(true);
+    if (reduxCemetery.length > 0 && !ready) setOpen(true);
   };
   const handleModalClose = () => setOpen(false);
   const dispatch = useDispatch();
@@ -45,7 +45,6 @@ export default function Cemetary({
   const handleContextMenu = (event, name) => {
     setName(name);
     dispatch(setCurrentCard(name));
-    console.log(name);
     event.preventDefault();
     setContextMenu(
       contextMenu === null
@@ -61,22 +60,18 @@ export default function Cemetary({
     setContextMenu(null);
   };
 
-  const handleCardToFieldFromCementary = () => {
+  const handleCardToFieldFromCemetery = () => {
     handleModalClose();
     handleClose();
     setReady(true);
-    setReadyFromCemetary(true);
+    setReadyFromCemetery(true);
   };
 
-  const handleCardToHandFromCemetary = () => {
+  const handleCardToHandFromCemetery = () => {
     handleModalClose();
     handleClose();
-    dispatch(addToHandFromCemetary(name));
+    dispatch(addToHandFromCemetery(name));
   };
-
-  //   useEffect(() => {
-  //     console.log(reduxCemetary);
-  //   }, [reduxCemetary]);
 
   return (
     <>
@@ -89,10 +84,10 @@ export default function Cemetary({
           cursor: `url(${img}) 55 55, auto`,
         }}
       >
-        {reduxCemetary && reduxCemetary.length > 0 && (
+        {reduxCemetery && reduxCemetery.length > 0 && (
           <img
             height={"160px"}
-            src={cardImage(reduxCemetary[0])}
+            src={cardImage(reduxCemetery[0])}
             alt={"cardback"}
           />
         )}
@@ -121,7 +116,7 @@ export default function Cemetary({
             }}
             variant="outlined"
           >
-            {reduxCemetary.map((card, idx) => (
+            {reduxCemetery.map((card, idx) => (
               <div
                 key={`card-${idx}`}
                 onContextMenu={(e) => {
@@ -130,6 +125,7 @@ export default function Cemetary({
               >
                 <Card
                   //   key={`card-${idx}`}
+                  ready={ready}
                   name={card}
                   setHovering={setHovering}
                 />
@@ -139,7 +135,7 @@ export default function Cemetary({
         </Box>
       </Modal>
 
-      {reduxCemetary.length > 0 && (
+      {reduxCemetery.length > 0 && (
         <Menu
           open={contextMenu !== null}
           onClose={handleClose}
@@ -158,8 +154,8 @@ export default function Cemetary({
             horizontal: "left",
           }}
         >
-          <MenuItem onClick={handleCardToHandFromCemetary}>Hand</MenuItem>
-          <MenuItem onClick={handleCardToFieldFromCementary}>Field</MenuItem>
+          <MenuItem onClick={handleCardToHandFromCemetery}>Hand</MenuItem>
+          <MenuItem onClick={handleCardToFieldFromCemetery}>Field</MenuItem>
         </Menu>
       )}
     </>

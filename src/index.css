@@ -8,7 +8,9 @@
   user-select: none !important;
 }
 
-body,
+body {
+  filter: saturate(1.15) hue-rotate(345deg);
+}
 html,
 #root {
   width: 100%;
@@ -18,10 +20,6 @@ html,
   padding: 0;
   overflow: hidden;
   background-color: black;
-}
-
-#root {
-  filter: saturate(1.15) hue-rotate(345deg);
 }
 
 /* #root * {

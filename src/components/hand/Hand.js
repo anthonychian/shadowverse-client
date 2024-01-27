@@ -7,7 +7,7 @@ import {
   placeToBotOfDeckFromHand,
   reorderCardsInHand,
   setCurrentCard,
-  placeToCemetaryFromHand,
+  placeToCemeteryFromHand,
 } from "../../redux/CardSlice";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
@@ -62,10 +62,10 @@ export default function Hand({
     setReadyToPlaceOnFieldFromHand(true);
     dispatch(setCurrentCard(name));
   };
-  const handleCardToCemetary = () => {
+  const handleCardToCemetery = () => {
     handleClose();
     console.log(name);
-    dispatch(placeToCemetaryFromHand(name));
+    dispatch(placeToCemeteryFromHand(name));
   };
   const handleCardToTopOfDeck = () => {
     handleClose();
@@ -89,12 +89,13 @@ export default function Hand({
         }
       >
         <MenuItem onClick={handleCardToField}>Field</MenuItem>
-        <MenuItem onClick={handleCardToCemetary}>Cemetary</MenuItem>
+        <MenuItem onClick={handleCardToCemetery}>Cemetery</MenuItem>
         <MenuItem onClick={handleCardToTopOfDeck}>Top of Deck</MenuItem>
         <MenuItem onClick={handleCardToBotOfDeck}>Bot of Deck</MenuItem>
       </Menu>
       <Reorder.Group
         style={{
+          zIndex: 100,
           display: "flex",
           alignItems: "center",
           height: "20vh",
@@ -120,6 +121,7 @@ export default function Hand({
               constraintsRef={constraintsRef}
               setDragging={setDragging}
               setHovering={setHovering}
+              ready={ready}
             />
           </Reorder.Item>
         ))}

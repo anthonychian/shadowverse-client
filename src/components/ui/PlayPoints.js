@@ -84,7 +84,7 @@ export default function Scoreboard({ name }) {
                 </div>
               )
             ) : (
-              <div></div>
+              <div key={`${idx}`}></div>
             )
           )}
         </div>

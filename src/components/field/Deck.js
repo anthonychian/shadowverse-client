@@ -55,7 +55,7 @@ export default function Deck({ ready }) {
     <>
       <div
         onContextMenu={(e) => {
-          handleContextMenu(e);
+          if (!ready) handleContextMenu(e);
         }}
         onClick={() => {
           if (!ready) dispatch(drawFromDeck());

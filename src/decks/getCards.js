@@ -34,6 +34,18 @@ export const cardImage = (cardName) => {
       return "../textures/BP02-104EN.png";
     case "Hishi Akebono":
       return "../textures/CP01-052EN.png";
+    case "Dark Dragoon Forte Evolved U":
+      return "../textures/BP01-U04EN.png";
+    case "Dragon Warrior Evolved":
+      return "../textures/SD04-004EN.png";
+    case "Bahamut Evolved":
+      return "../textures/BP02-105EN.png";
+    case "Shenlong Evolved":
+      return "../textures/BP01-087EN.png";
+    case "Bellringer Angel Evolved":
+      return "../textures/BP01-160EN.png";
+    case "Carrot":
+      return "../textures/CP01-085EN.png";
     default:
       return "";
   }
