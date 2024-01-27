@@ -1,17 +1,16 @@
 .PlayPointsContainer {
   color: white;
-  width: 25%;
-  /* height: 90%;
-  max-height: 700px; */
+   height: 80%;
+  /* max-height: 700px; */
   display: flex;
   flex-direction: column;
   gap: 1em;
-  justify-content: center;
+  justify-content:center;
   align-items: center;
-  font-family: "Marshland_Beauty";
+  font-family: "EB Garamond", serif;
   -webkit-text-stroke-color: black;
   /* position: fixed; */
-  top: 10%;
+  /* bottom: 50%; */
 }
 
 /* medium - tablet styles */
@@ -48,7 +47,7 @@
   background-color: rgba(0, 0, 0, 0.6);
   outline: 7px ridge rgba(0, 0, 0, 0.6);
   border-radius: 2rem;
-  height: 70%;
+  height: 100%;
   max-width: 120px;
   width: 70%;
   display: flex;

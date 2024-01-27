@@ -30,6 +30,7 @@ export default function EvoDeck({
   ready,
 }) {
   const [open, setOpen] = useState(false);
+  const [showEvo, setShowEvo] = useState(true);
   const [contextMenu, setContextMenu] = React.useState(null);
   const reduxEvoDeck = useSelector((state) => state.card.evoDeck);
   const handleModalOpen = () => {
@@ -39,6 +40,7 @@ export default function EvoDeck({
   const dispatch = useDispatch();
 
   const handleContextMenu = (event, name) => {
+    setShowEvo(name === "Carrot")
     dispatch(setCurrentEvo(name));
     console.log("set current evo to", name);
     event.preventDefault();
@@ -109,12 +111,14 @@ export default function EvoDeck({
           >
             {reduxEvoDeck.map((card, idx) => (
               <div
+              style={{width: '115px'}}
                 key={`card-${idx}`}
                 onContextMenu={(e) => {
                   handleContextMenu(e, card.card);
                 }}
               >
                 <Card
+
                   name={card.card}
                   evolvedUsed={card.status}
                   ready={ready}
@@ -132,7 +136,7 @@ export default function EvoDeck({
         anchorReference="anchorPosition"
         anchorPosition={
           contextMenu !== null
-            ? { top: contextMenu.mouseY - 120, left: contextMenu.mouseX - 35 }
+            ? { top: contextMenu.mouseY - 100, left: contextMenu.mouseX - 40 }
             : undefined
         }
         anchorOrigin={{
@@ -144,8 +148,8 @@ export default function EvoDeck({
           horizontal: "left",
         }}
       >
-        <MenuItem onClick={handleEvolve}>Evolve</MenuItem>
-        <MenuItem onClick={handleFeed}>Feed</MenuItem>
+        {showEvo ? <MenuItem onClick={handleFeed}>Feed</MenuItem> 
+        : <MenuItem onClick={handleEvolve}>Evolve</MenuItem>}
       </Menu>
     </>
   );

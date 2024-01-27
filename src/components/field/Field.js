@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 
 import {
@@ -11,6 +11,7 @@ import {
   placeToFieldFromCemetery,
   evolveCardOnField,
   feedCardOnField,
+  backToEvolveDeck,
 } from "../../redux/CardSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { Menu, MenuItem } from "@mui/material";
@@ -30,7 +31,6 @@ export default function Field({
   readyToPlaceOnFieldFromHand,
   setReadyToPlaceOnFieldFromHand,
 }) {
-  // const img = require("../../assets/pin_bellringer_angel.png");
   const dispatch = useDispatch();
   const reduxField = useSelector((state) => state.card.field);
   const reduxCurrentCard = useSelector((state) => state.card.currentCard);
@@ -44,11 +44,6 @@ export default function Field({
   const [readyFromCemetery, setReadyFromCemetery] = useState(false);
   const [readyToEvo, setReadyToEvo] = useState(false);
   const [readyToFeed, setReadyToFeed] = useState(false);
-
-  // useEffect(() => {
-  //   console.log("READY TO EVO", readyToEvo);
-  //   console.log("READY TO FEED", readyToFeed);
-  // }, [readyToEvo, readyToFeed]);
 
   const handleClick = (name, indexClicked) => {
     if (reduxField[indexClicked] === 0 && !readyToEvo && !readyToFeed) {
@@ -83,9 +78,7 @@ export default function Field({
     } else if (
       (readyToFeed || readyToEvo) &&
       reduxField[indexClicked] !== 0 &&
-      reduxEvoField[indexClicked] === 0
-    ) {
-      console.log("SUCCESS");
+      reduxEvoField[indexClicked] === 0) {
       if (readyToEvo) {
         setReadyToEvo(false);
         dispatch(
@@ -101,13 +94,30 @@ export default function Field({
           feedCardOnField({
             card: name,
             index: indexClicked,
+            carrots: 1,
           })
         );
       }
+    } else if (
+      readyToFeed &&
+      reduxField[indexClicked] !== 0 &&
+      reduxEvoField[indexClicked].slice(0, 6) === "Carrot") {
+        dispatch(
+          feedCardOnField({
+            card: name,
+            index: indexClicked,
+            carrots: 2,
+          })
+        );
+
     } else {
       console.log("there is already a card here");
       setReadyToEvo(false);
       setReadyToFeed(false);
+      // remove these ???
+      setReadyFromCemetery(false);
+      setReadyToPlaceOnFieldFromHand(false);
+      setReadyToMoveOnField(false);
     }
     setReady(false);
   };
@@ -126,8 +136,8 @@ export default function Field({
     );
   };
   const handleEvoContextMenu = (event, index, name) => {
-    // setIndex(index);
-    // setName(name);
+    setIndex(index);
+    setName(name);
     event.preventDefault();
     setContextEvoMenu(
       contextEvoMenu === null
@@ -188,6 +198,16 @@ export default function Field({
     setReadyToMoveOnField(true);
   };
 
+  const handleReturnToEvolveDeck = () => {
+    handleEvoClose();
+    dispatch(
+      backToEvolveDeck({
+        card: name,
+        index: index,
+      })
+    );
+  }
+
   return (
     <>
       <Menu
@@ -222,7 +242,7 @@ export default function Field({
         <MenuItem onClick={() => handleReturnToEvolveDeck()}>Return</MenuItem>
       </Menu>
 
-      {/* Enemy Field (1-5) & Ex Area (6-10) */}
+      {/* Enemy */}
 
       <div
         style={{
@@ -240,7 +260,9 @@ export default function Field({
             width: "175px",
             display: "flex",
             flexDirection: "column",
-            backgroundColor: "rgba(0, 0, 0, 0.60)",
+            backgroundColor: 'black',
+            // backgroundColor: "#131219",
+            // backgroundColor: "rgba(0, 0, 0, 0.60)",
             alignItems: "center",
             justifyContent: "space-evenly",
           }}
@@ -257,19 +279,22 @@ export default function Field({
               height: "160px",
               width: "115px",
               backgroundColor: "rgba(255, 255, 255, 0.1)",
+              borderRadius: "10px", border: "4px solid #0000",
               cursor: `url(${img}) 55 55, auto`,
             }}
           />
         </div>
 
+        {/* Enemy Field (1-5) & Ex Area (6-10) */}
         <div
           style={{
             height: "40vh",
             minHeight: "330px",
             minWidth: "600px",
             width: "100%",
-            backgroundColor: "rgba(0, 0, 0, 0.60)",
-            // backgroundColor: "rgba(0, 0, 255, 0.15)",
+            backgroundColor: 'black',
+            // backgroundColor: "#131219",
+            // backgroundColor: "rgba(0, 0, 0, 0.60)",
             display: "grid",
             gridTemplateColumns: "repeat(5, 1fr)",
             alignItems: "center",
@@ -284,6 +309,7 @@ export default function Field({
                 height: "160px",
                 width: "115px",
                 backgroundColor: "rgba(255, 255, 255, 0.1)",
+                borderRadius: "10px", border: "4px solid #0000",
                 // backgroundColor: "rgba(0, 0, 0, 0.20)",
                 // backgroundColor: "rgba(255, 0, 0, 0.15)",
               }}
@@ -292,9 +318,35 @@ export default function Field({
             </motion.div>
           ))}
         </div>
+        {/* Enemy Evolve Deck */}
+        <div
+          style={{
+            height: "40vh",
+            width: "175px",
+            display: "flex",
+            flexDirection: "column",
+            backgroundColor: 'black',
+            // backgroundColor: "#131219",
+            // backgroundColor: "rgba(0, 0, 0, 0.60)",
+            alignItems: "center",
+            justifyContent: "space-evenly",
+           
+            cursor: `url(${img}) 55 55, auto`,
+          }}
+        >
+          <div
+            style={{
+              height: "160px",
+              width: "115px",
+              cursor: `url(${img}) 55 55, auto`,
+            }}
+          >
+            <img height={"160px"} src={cardback} alt={"cardback"} />
+          </div>
+        </div>
       </div>
 
-      {/* Player Field (1-5) & Ex Area (6-10) */}
+      {/* Player */}
 
       <div
         style={{
@@ -305,17 +357,19 @@ export default function Field({
           cursor: ready && `url(${img}) 55 55, auto`,
         }}
       >
+         {/* Player Evolve Deck */}
         <div
           style={{
             height: "40vh",
             width: "175px",
             display: "flex",
             flexDirection: "column",
-            backgroundColor: "rgba(0, 0, 0, 0.60)",
+            backgroundColor: 'black',
+            // backgroundColor: "#131219",
+            // backgroundColor: "rgba(0, 0, 0, 0.60)",
             alignItems: "center",
             justifyContent: "space-evenly",
-            borderRadius: "10px",
-            border: "2.5px solid #0000",
+           
             cursor: `url(${img}) 55 55, auto`,
           }}
         >
@@ -327,16 +381,16 @@ export default function Field({
             ready={ready}
           />
         </div>
-
+        {/* Player Field (1-5) & Ex Area (6-10) */}
         <div
           style={{
             height: "40vh",
             minHeight: "330px",
             minWidth: "600px",
             width: "100%",
-            backgroundColor: "black",
+            backgroundColor: 'black',
+            // backgroundColor: "#131219",
             // backgroundColor: "rgba(0, 0, 0, 0.60)",
-            // backgroundColor: "rgba(0, 0, 255, 0.15)",
             display: "grid",
             gridTemplateColumns: "repeat(5, 1fr)",
             alignItems: "center",
@@ -352,27 +406,26 @@ export default function Field({
                     handleClick(reduxCurrentCard, idx);
                   }}
                   key={`player1-${idx}`}
-                  whileHover={
-                    {
-                      // backgroundColor: "rgba(255, 252, 160, 0.3)",
-                    }
-                  }
                   style={{
                     height: "160px",
                     width: "115px",
                     backgroundColor: "rgba(255, 255, 255, 0.1)",
+                    borderRadius: "10px", border: "4px solid #0000",
                   }}
                   className={
                     (reduxField[idx] !== 0 &&
                       reduxEvoField[idx] === 0 &&
-                      (readyToEvo || readyToFeed)) ||
-                    (reduxField[idx] === 0 &&
-                      !readyToEvo &&
-                      !readyToFeed &&
-                      "box")
+                      (readyToEvo || readyToFeed))
+                      ? "box"
+                      : (reduxField[idx] === 0 &&
+                        !readyToEvo &&
+                        !readyToFeed
+                      ? "box"
+                      : "none"
+                      )
                   }
                 >
-                  {card !== 0 && reduxEvoField[idx] === 0 && (
+                  {reduxField[idx] !== 0 && reduxEvoField[idx] === 0 && (
                     <Card
                       onField={true}
                       key={`card1-${idx}`}
@@ -388,6 +441,7 @@ export default function Field({
                       name={reduxEvoField[idx]}
                       setHovering={setHovering}
                       ready={ready}
+                      cardBeneath={reduxField[idx]}
                     />
                   )}
                 </motion.div>
@@ -395,22 +449,23 @@ export default function Field({
               {!ready && (
                 <motion.div
                   onContextMenu={(e) => {
-                    if (card !== 0 && reduxEvoField[idx] === 0)
-                      handleContextMenu(e, idx, card);
-                    else handleEvoContextMenu(e, idx, card);
+                    if (reduxField[idx] !== 0 && reduxEvoField[idx] === 0)
+                      handleContextMenu(e, idx, reduxField[idx]);
+                    else handleEvoContextMenu(e, idx, reduxEvoField[idx]);
                   }}
                   key={`player2-${idx}`}
                   style={{
                     height: "160px",
                     width: "115px",
                     backgroundColor: "rgba(255, 255, 255, 0.1)",
+                    borderRadius: "10px", border: "4px solid #0000"
                   }}
                 >
-                  {card !== 0 && reduxEvoField[idx] === 0 && (
+                  {reduxField[idx] !== 0 && reduxEvoField[idx] === 0 && (
                     <Card
                       onField={true}
                       key={`card2-${idx}`}
-                      name={card}
+                      name={reduxField[idx]}
                       setHovering={setHovering}
                       ready={ready}
                     />
@@ -422,6 +477,7 @@ export default function Field({
                       name={reduxEvoField[idx]}
                       setHovering={setHovering}
                       ready={ready}
+                      cardBeneath={reduxField[idx]}
                     />
                   )}
                 </motion.div>
@@ -430,14 +486,16 @@ export default function Field({
           ))}
         </div>
 
-        {/* Deck and Cementery */}
+        {/* Player Deck and Cementery */}
         <div
           style={{
             height: "40vh",
             width: "175px",
             display: "flex",
             flexDirection: "column",
-            backgroundColor: "rgba(0, 0, 0, 0.60)",
+            backgroundColor: "black",
+            // backgroundColor: "#131219",
+            // backgroundColor: "rgba(0, 0, 0, 0.60)",
             alignItems: "center",
             justifyContent: "space-evenly",
             cursor: `url(${img}) 55 55, auto`,

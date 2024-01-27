@@ -19,7 +19,7 @@ export const CardSlice = createSlice({
   },
   reducers: {
     drawFromDeck: (state) => {
-      if (state.deck.length > 0 && state.hand.length < 8) {
+      if (state.deck.length > 0 && state.hand.length < 10) {
         const card = state.deck[0];
         state.deck = state.deck.slice(1);
         console.log(`Removed ${card} from deck`);
@@ -29,7 +29,7 @@ export const CardSlice = createSlice({
     },
     drawFourFromDeck: (state) => {
       for (let i = 0; i < 4; i++) {
-        if (state.deck.length > 0 && state.hand.length < 8) {
+        if (state.deck.length > 0 && state.hand.length < 10) {
           const card = state.deck[0];
           state.deck = state.deck.slice(1);
           console.log(`Removed ${card} from deck`);
@@ -224,6 +224,7 @@ export const CardSlice = createSlice({
     feedCardOnField: (state, action) => {
       const card = action.payload.card;
       const newIndex = action.payload.index;
+      const carrots = action.payload.carrots;
       let cardIndex;
       for (let i = 0; i < state.evoDeck.length; i++) {
         if (state.evoDeck[i].card === card) {
@@ -233,13 +234,27 @@ export const CardSlice = createSlice({
       }
       state.evoDeck = state.evoDeck.filter((_, i) => i !== cardIndex);
       console.log(`Removed ${card} from evolve deck`);
-      const newField = [
-        ...state.evoField.slice(0, newIndex),
-        card,
-        ...state.evoField.slice(newIndex + 1),
-      ];
-      state.evoField = newField;
-      console.log(`Added ${card} to evolve field`);
+      
+      if (carrots === 1) {
+        const newField = [
+          ...state.evoField.slice(0, newIndex),
+          'Carrot-1',
+          ...state.evoField.slice(newIndex + 1),
+        ];
+        state.evoField = newField;
+        console.log('Added Carrot-1 to evolve field');
+      } else {
+        const numOfCarrots = Number(state.evoField[newIndex].slice(-1))
+        console.log ('numOfCarrots', numOfCarrots)
+        const newField = [
+          ...state.evoField.slice(0, newIndex),
+          `Carrot-${numOfCarrots + 1}`,
+          ...state.evoField.slice(newIndex + 1),
+        ];
+        state.evoField = newField;
+        console.log(`Added Carrot-${numOfCarrots + 1} to evolve field`);
+      }
+      
     },
     backToEvolveDeck: (state, action) => {
       const card = action.payload.card;
@@ -250,9 +265,15 @@ export const CardSlice = createSlice({
         ...state.evoField.slice(cardIndex + 1),
       ];
       state.evoField = newField;
-      console.log(`Removed ${card} to from evolve field`);
-      state.evoDeck = [...state.evoDeck, { card: card, status: true }];
-      console.log(`Added ${card} to hand`);
+      console.log(`Removed ${card} from evolve field`);
+      if (card.slice(0, 6) === "Carrot") {
+        const numOfCarrots = Number(card.slice(-1))
+        for (let i = 0; i < numOfCarrots; i++)
+          state.evoDeck = [...state.evoDeck, { card: "Carrot", status: true }];
+      } else {
+        state.evoDeck = [...state.evoDeck, { card: card, status: true }];
+      }
+      console.log(`Added ${card} to evolve deck`);
     },
     reset: (state) => {
       state.hand = [];
@@ -291,5 +312,6 @@ export const {
   shuffleDeck,
   evolveCardOnField,
   feedCardOnField,
+  backToEvolveDeck,
   reset,
 } = CardSlice.actions;

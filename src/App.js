@@ -11,9 +11,9 @@ import Field from "./components/field/Field";
 import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
 import ZoomedCard from "./components/ui/ZoomedCard";
+import initialWallpaper from  "../src/assets/wallpapers/forteEvo.png"
 
 function App() {
-  const initialWallpaper = require("../src/assets/wallpapers/forteEvo.png");
   const [wallpaper, setWallpaper] = useState(initialWallpaper);
   const [selectedOption, setSelectedOption] = useState("Exella");
   const constraintsRef = useRef(null);
@@ -35,11 +35,13 @@ function App() {
         backgroundSize: "cover",
       }}
     >
-      <ZoomedCard name={reduxCurrentCard} hovering={hovering} />
-      <PlayPoints name={selectedOption} />
+      <div className={"leftSideCanvas"}>
+        <ZoomedCard name={reduxCurrentCard} hovering={hovering} />
+        <PlayPoints name={selectedOption} />
+      </div>
       <motion.div
         onContextMenu={(e) => e.nativeEvent.preventDefault()}
-        className={"fieldHand"}
+        className={"centerCanvas"}
         ref={constraintsRef}
       >
         <Field
@@ -59,7 +61,7 @@ function App() {
           setReadyToPlaceOnFieldFromHand={setReadyToPlaceOnFieldFromHand}
         />
       </motion.div>
-      <div className={"scoreDeckEmotes"}>
+      <div className={"rightSideCanvas"}>
         <Scoreboard name={selectedOption} />
         <Selection
           setSelectedOption={setSelectedOption}
