@@ -35,7 +35,7 @@ export default function Field({
   const reduxField = useSelector((state) => state.card.field);
   const reduxCurrentCard = useSelector((state) => state.card.currentCard);
   const reduxEvoField = useSelector((state) => state.card.evoField);
-  const reduxEvoDeck = useSelector((state) => state.card.evoDeck);
+  // const reduxEvoDeck = useSelector((state) => state.card.evoDeck);
   const [contextMenu, setContextMenu] = React.useState(null);
   const [contextEvoMenu, setContextEvoMenu] = React.useState(null);
   const [index, setIndex] = useState(0);
@@ -78,7 +78,8 @@ export default function Field({
     } else if (
       (readyToFeed || readyToEvo) &&
       reduxField[indexClicked] !== 0 &&
-      reduxEvoField[indexClicked] === 0) {
+      reduxEvoField[indexClicked] === 0
+    ) {
       if (readyToEvo) {
         setReadyToEvo(false);
         dispatch(
@@ -101,20 +102,19 @@ export default function Field({
     } else if (
       readyToFeed &&
       reduxField[indexClicked] !== 0 &&
-      reduxEvoField[indexClicked].slice(0, 6) === "Carrot") {
-        dispatch(
-          feedCardOnField({
-            card: name,
-            index: indexClicked,
-            carrots: 2,
-          })
-        );
-
+      reduxEvoField[indexClicked].slice(0, 6) === "Carrot"
+    ) {
+      dispatch(
+        feedCardOnField({
+          card: name,
+          index: indexClicked,
+          carrots: 2,
+        })
+      );
     } else {
       console.log("there is already a card here");
       setReadyToEvo(false);
       setReadyToFeed(false);
-      // remove these ???
       setReadyFromCemetery(false);
       setReadyToPlaceOnFieldFromHand(false);
       setReadyToMoveOnField(false);
@@ -206,7 +206,7 @@ export default function Field({
         index: index,
       })
     );
-  }
+  };
 
   return (
     <>
@@ -227,7 +227,6 @@ export default function Field({
         <MenuItem onClick={() => handleMoveOnField()}>Move</MenuItem>
         <MenuItem onClick={() => handleCardToTopDeck()}>Top of Deck</MenuItem>
         <MenuItem onClick={() => handleCardToBotDeck()}>Bot of Deck</MenuItem>
-        {/* <MenuItem onClick={handleClose}>Graveyard</MenuItem> */}
       </Menu>
       <Menu
         open={contextEvoMenu !== null}
@@ -250,19 +249,21 @@ export default function Field({
           flexDirection: "row",
           width: "100%",
           minHeight: "330px",
+          alignItems: "end",
         }}
       >
         {/* Enemy Deck and Cemetery */}
 
         <div
           style={{
-            height: "40vh",
+            height: "35vh",
+            minHeight: "330px",
             width: "175px",
             display: "flex",
             flexDirection: "column",
-            backgroundColor: 'black',
+            // backgroundColor: "black",
             // backgroundColor: "#131219",
-            // backgroundColor: "rgba(0, 0, 0, 0.60)",
+            backgroundColor: "rgba(0, 0, 0, 0.60)",
             alignItems: "center",
             justifyContent: "space-evenly",
           }}
@@ -278,8 +279,11 @@ export default function Field({
             style={{
               height: "160px",
               width: "115px",
-              backgroundColor: "rgba(255, 255, 255, 0.1)",
-              borderRadius: "10px", border: "4px solid #0000",
+              // backgroundColor: "rgba(255, 255, 255, 0.1)",
+              // backgroundColor: "#131219",
+              borderRadius: "10px",
+              // border: "4px solid #0000",
+              border: "4px solid #1a20d6c8",
               cursor: `url(${img}) 55 55, auto`,
             }}
           />
@@ -288,13 +292,13 @@ export default function Field({
         {/* Enemy Field (1-5) & Ex Area (6-10) */}
         <div
           style={{
-            height: "40vh",
+            height: "35vh",
             minHeight: "330px",
             minWidth: "600px",
             width: "100%",
-            backgroundColor: 'black',
+            // backgroundColor: "black",
             // backgroundColor: "#131219",
-            // backgroundColor: "rgba(0, 0, 0, 0.60)",
+            backgroundColor: "rgba(0, 0, 0, 0.60)",
             display: "grid",
             gridTemplateColumns: "repeat(5, 1fr)",
             alignItems: "center",
@@ -308,8 +312,12 @@ export default function Field({
               style={{
                 height: "160px",
                 width: "115px",
-                backgroundColor: "rgba(255, 255, 255, 0.1)",
-                borderRadius: "10px", border: "4px solid #0000",
+                // backgroundColor: "rgba(255, 255, 255, 0.1)",
+                backgroundColor: "#131219",
+                borderRadius: "10px",
+                // border: "4px solid #0000",
+                // border: "4px solid #1a20d6c8",
+                border: "4px solid #555559",
                 // backgroundColor: "rgba(0, 0, 0, 0.20)",
                 // backgroundColor: "rgba(255, 0, 0, 0.15)",
               }}
@@ -321,16 +329,17 @@ export default function Field({
         {/* Enemy Evolve Deck */}
         <div
           style={{
-            height: "40vh",
+            height: "35vh",
+            minHeight: "330px",
             width: "175px",
             display: "flex",
             flexDirection: "column",
-            backgroundColor: 'black',
+            // backgroundColor: "black",
             // backgroundColor: "#131219",
-            // backgroundColor: "rgba(0, 0, 0, 0.60)",
+            backgroundColor: "rgba(0, 0, 0, 0.60)",
             alignItems: "center",
             justifyContent: "space-evenly",
-           
+
             cursor: `url(${img}) 55 55, auto`,
           }}
         >
@@ -357,19 +366,20 @@ export default function Field({
           cursor: ready && `url(${img}) 55 55, auto`,
         }}
       >
-         {/* Player Evolve Deck */}
+        {/* Player Evolve Deck */}
         <div
           style={{
-            height: "40vh",
+            height: "35vh",
+            minHeight: "330px",
             width: "175px",
             display: "flex",
             flexDirection: "column",
-            backgroundColor: 'black',
+            // backgroundColor: "black",
             // backgroundColor: "#131219",
-            // backgroundColor: "rgba(0, 0, 0, 0.60)",
+            backgroundColor: "rgba(0, 0, 0, 0.60)",
             alignItems: "center",
             justifyContent: "space-evenly",
-           
+
             cursor: `url(${img}) 55 55, auto`,
           }}
         >
@@ -384,13 +394,13 @@ export default function Field({
         {/* Player Field (1-5) & Ex Area (6-10) */}
         <div
           style={{
-            height: "40vh",
+            height: "35vh",
             minHeight: "330px",
             minWidth: "600px",
             width: "100%",
-            backgroundColor: 'black',
+            // backgroundColor: "black",
             // backgroundColor: "#131219",
-            // backgroundColor: "rgba(0, 0, 0, 0.60)",
+            backgroundColor: "rgba(0, 0, 0, 0.60)",
             display: "grid",
             gridTemplateColumns: "repeat(5, 1fr)",
             alignItems: "center",
@@ -409,20 +419,18 @@ export default function Field({
                   style={{
                     height: "160px",
                     width: "115px",
-                    backgroundColor: "rgba(255, 255, 255, 0.1)",
-                    borderRadius: "10px", border: "4px solid #0000",
+                    // backgroundColor: "rgba(255, 255, 255, 0.1)",
+                    backgroundColor: "#131219",
+                    borderRadius: "10px",
                   }}
                   className={
-                    (reduxField[idx] !== 0 &&
-                      reduxEvoField[idx] === 0 &&
-                      (readyToEvo || readyToFeed))
+                    reduxField[idx] !== 0 &&
+                    reduxEvoField[idx] === 0 &&
+                    (readyToEvo || readyToFeed)
                       ? "box"
-                      : (reduxField[idx] === 0 &&
-                        !readyToEvo &&
-                        !readyToFeed
+                      : reduxField[idx] === 0 && !readyToEvo && !readyToFeed
                       ? "box"
                       : "none"
-                      )
                   }
                 >
                   {reduxField[idx] !== 0 && reduxEvoField[idx] === 0 && (
@@ -457,8 +465,11 @@ export default function Field({
                   style={{
                     height: "160px",
                     width: "115px",
-                    backgroundColor: "rgba(255, 255, 255, 0.1)",
-                    borderRadius: "10px", border: "4px solid #0000"
+                    // backgroundColor: "rgba(255, 255, 255, 0.1)",
+                    borderRadius: "10px",
+                    backgroundColor: "#131219",
+                    // border: "4px solid #0000",
+                    border: "4px solid #555559",
                   }}
                 >
                   {reduxField[idx] !== 0 && reduxEvoField[idx] === 0 && (
@@ -489,13 +500,15 @@ export default function Field({
         {/* Player Deck and Cementery */}
         <div
           style={{
-            height: "40vh",
+            height: "35vh",
+            minHeight: "330px",
             width: "175px",
             display: "flex",
             flexDirection: "column",
-            backgroundColor: "black",
+            // backgroundColor: "black",
             // backgroundColor: "#131219",
-            // backgroundColor: "rgba(0, 0, 0, 0.60)",
+            zIndex: 1,
+            backgroundColor: "rgba(0, 0, 0, 0.60)",
             alignItems: "center",
             justifyContent: "space-evenly",
             cursor: `url(${img}) 55 55, auto`,

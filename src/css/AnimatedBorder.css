@@ -9,8 +9,8 @@
   /* background: padding-box, */
   /* background: linear-gradient(#cda7e2, #6524ce) padding-box, */
   /* background: linear-gradient(#131219, #000000cc) padding-box, */
-    background: linear-gradient(#131219, #131219) padding-box,
-      linear-gradient(
+  background: linear-gradient(#131219, #131219) padding-box,
+    linear-gradient(
         var(--angle),
         #f79533,
         #f37055,
@@ -34,15 +34,7 @@
   border: 4px solid #0000;
   /* background: linear-gradient(#131219, transparent) padding-box, */
   background: linear-gradient(#131219, #131219) padding-box,
-      linear-gradient(
-        var(--angle),
-
-        #a166ab,
-        #5073b8,
-        #1098ad,
-        #07b39b,
-        #6fba82
-      )
+    linear-gradient(var(--angle), #a166ab, #5073b8, #1098ad, #07b39b, #6fba82)
       border-box;
 
   animation: 0.5s rotate linear infinite;
@@ -58,4 +50,12 @@
   syntax: "<angle>";
   initial-value: 0deg;
   inherits: false;
+}
+
+.none {
+  height: "160px";
+  width: "115px";
+  background-color: "#131219";
+  border-radius: "10px";
+  border: 4px solid #555559;
 }

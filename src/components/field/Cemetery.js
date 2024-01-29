@@ -80,8 +80,10 @@ export default function Cemetery({
         style={{
           height: "160px",
           width: "115px",
-          backgroundColor: "rgba(255, 255, 255, 0.1)",
-          borderRadius: "10px", border: "4px solid #0000",
+          // backgroundColor: "#131219",
+          borderRadius: "10px",
+          // border: "4px solid #0000",
+          border: "4px solid #1a20d6c8",
           cursor: `url(${img}) 55 55, auto`,
         }}
       >

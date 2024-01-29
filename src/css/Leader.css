@@ -1,8 +1,10 @@
 /* default styles */
 .LeaderImage {
-  width: 500px;
+  min-width: 300px;
+  width: 70%;
   pointer-events: none;
   user-select: none;
+  z-index: -100;
   /* display: block; */
   /* margin-left: auto;
   margin-right: auto;
@@ -13,12 +15,15 @@
 .LeaderContainer {
   pointer-events: none;
   user-select: none;
-  top: 20%;
+  top: 30%;
+  left: 100;
   position: absolute;
+  z-index: 0;
+
   /* top: 41%;
   left: 40%; */
   /* position: absolute; */
-  /* background-color: transparent; */
+  /* background-color: black; */
   /* top: 30vh; */
   /* display: block; */
   /* position: absolute; */
