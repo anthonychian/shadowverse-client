@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Menu, MenuItem, Modal, Box } from "@mui/material";
 import CardMUI from "@mui/material/Card";
 import Card from "../hand/Card";
-import { setCurrentEvo } from "../../redux/CardSlice";
+import { setCurrentEvo, restoreEvoCard } from "../../redux/CardSlice";
 import cardback from "../../assets/cardbacks/sleeve_5010011.png";
 
 const img = require("../../assets/pin_bellringer_angel.png");
@@ -31,18 +31,23 @@ export default function EvoDeck({
 }) {
   const [open, setOpen] = useState(false);
   const [showEvo, setShowEvo] = useState(true);
+  const [evoStatus, setEvoStatus] = useState(false);
   const [contextMenu, setContextMenu] = React.useState(null);
+  const [name, setName] = useState("");
   const reduxEvoDeck = useSelector((state) => state.card.evoDeck);
+  const reduxCurrentEvo = useSelector((state) => state.card.currentEvo);
   const handleModalOpen = () => {
     setOpen(true);
   };
   const handleModalClose = () => setOpen(false);
   const dispatch = useDispatch();
 
-  const handleContextMenu = (event, name) => {
-    setShowEvo(name === "Carrot")
-    dispatch(setCurrentEvo(name));
-    console.log("set current evo to", name);
+  const handleContextMenu = (event, card) => {
+    setShowEvo(card.card === "Carrot");
+    setEvoStatus(card.status);
+    setName(card.card);
+    dispatch(setCurrentEvo(card.card));
+    console.log("set current evo to", card.card);
     event.preventDefault();
     setContextMenu(
       contextMenu === null
@@ -70,6 +75,11 @@ export default function EvoDeck({
     handleClose();
     setReady(true);
     setReadyToFeed(true);
+  };
+
+  const handleFlipEvo = () => {
+    handleClose();
+    dispatch(restoreEvoCard(name));
   };
 
   return (
@@ -111,14 +121,13 @@ export default function EvoDeck({
           >
             {reduxEvoDeck.map((card, idx) => (
               <div
-              style={{width: '115px'}}
+                style={{ width: "115px" }}
                 key={`card-${idx}`}
                 onContextMenu={(e) => {
-                  handleContextMenu(e, card.card);
+                  handleContextMenu(e, card);
                 }}
               >
                 <Card
-
                   name={card.card}
                   evolvedUsed={card.status}
                   ready={ready}
@@ -148,8 +157,13 @@ export default function EvoDeck({
           horizontal: "left",
         }}
       >
-        {showEvo ? <MenuItem onClick={handleFeed}>Feed</MenuItem> 
-        : <MenuItem onClick={handleEvolve}>Evolve</MenuItem>}
+        {showEvo && !evoStatus ? (
+          <MenuItem onClick={handleFeed}>Feed</MenuItem>
+        ) : !showEvo && !evoStatus ? (
+          <MenuItem onClick={handleEvolve}>Evolve</MenuItem>
+        ) : (
+          <MenuItem onClick={handleFlipEvo}>Flip</MenuItem>
+        )}
       </Menu>
     </>
   );

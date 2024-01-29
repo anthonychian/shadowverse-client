@@ -234,18 +234,18 @@ export const CardSlice = createSlice({
       }
       state.evoDeck = state.evoDeck.filter((_, i) => i !== cardIndex);
       console.log(`Removed ${card} from evolve deck`);
-      
+
       if (carrots === 1) {
         const newField = [
           ...state.evoField.slice(0, newIndex),
-          'Carrot-1',
+          "Carrot-1",
           ...state.evoField.slice(newIndex + 1),
         ];
         state.evoField = newField;
-        console.log('Added Carrot-1 to evolve field');
+        console.log("Added Carrot-1 to evolve field");
       } else {
-        const numOfCarrots = Number(state.evoField[newIndex].slice(-1))
-        console.log ('numOfCarrots', numOfCarrots)
+        const numOfCarrots = Number(state.evoField[newIndex].slice(-1));
+        console.log("numOfCarrots", numOfCarrots);
         const newField = [
           ...state.evoField.slice(0, newIndex),
           `Carrot-${numOfCarrots + 1}`,
@@ -254,7 +254,6 @@ export const CardSlice = createSlice({
         state.evoField = newField;
         console.log(`Added Carrot-${numOfCarrots + 1} to evolve field`);
       }
-      
     },
     backToEvolveDeck: (state, action) => {
       const card = action.payload.card;
@@ -267,12 +266,30 @@ export const CardSlice = createSlice({
       state.evoField = newField;
       console.log(`Removed ${card} from evolve field`);
       if (card.slice(0, 6) === "Carrot") {
-        const numOfCarrots = Number(card.slice(-1))
+        const numOfCarrots = Number(card.slice(-1));
         for (let i = 0; i < numOfCarrots; i++)
           state.evoDeck = [...state.evoDeck, { card: "Carrot", status: true }];
       } else {
         state.evoDeck = [...state.evoDeck, { card: card, status: true }];
       }
+      console.log(`Added ${card} to evolve deck`);
+    },
+    restoreEvoCard: (state, action) => {
+      const card = action.payload;
+      console.log(card);
+      let cardIndex;
+      for (let i = 0; i < state.evoDeck.length; i++) {
+        if (
+          state.evoDeck[i].card === card &&
+          state.evoDeck[i].status === true
+        ) {
+          cardIndex = i;
+          break;
+        }
+      }
+      state.evoDeck = state.evoDeck.filter((_, i) => i !== cardIndex);
+      console.log(`Removed ${card} from evolve deck`);
+      state.evoDeck = [...state.evoDeck, { card: card, status: false }];
       console.log(`Added ${card} to evolve deck`);
     },
     reset: (state) => {
@@ -313,5 +330,6 @@ export const {
   evolveCardOnField,
   feedCardOnField,
   backToEvolveDeck,
+  restoreEvoCard,
   reset,
 } = CardSlice.actions;

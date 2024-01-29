@@ -5,7 +5,7 @@ import { setCurrentCard } from "../../redux/CardSlice";
 import { useDispatch } from "react-redux";
 import cancel from "../../assets/logo/cancel.png";
 import carrot from "../../assets/logo/carrot.png";
-import img from "../../assets/pin_bellringer_angel.png"
+import img from "../../assets/pin_bellringer_angel.png";
 export default function Card({
   name,
   setDragging,
@@ -15,7 +15,7 @@ export default function Card({
   evolvedUsed = false,
   cardBeneath,
 }) {
-  let numOfCarrots = 0
+  let numOfCarrots = 0;
   const [rotate, setRotate] = useState(false);
   const dispatch = useDispatch();
   const handleTap = () => {
@@ -34,14 +34,13 @@ export default function Card({
   };
 
   const updateNumberOfCarrots = () => {
-    if (name === "Carrot" ) {
-      numOfCarrots = 1
-    } else if (Number(name.slice(-1)) > 0) {
-      numOfCarrots =  Number(name.slice(-1))
+    if (name === "Carrot") {
+      numOfCarrots = 1;
+    } else if (Number(name?.slice(-1)) > 0) {
+      numOfCarrots = Number(name.slice(-1));
     }
-
-  }
-  updateNumberOfCarrots()
+  };
+  updateNumberOfCarrots();
 
   return (
     <motion.div
@@ -63,8 +62,16 @@ export default function Card({
         }
       }
     >
-      {Number(name.slice(-1)) > 0 ? <img style={{opacity: 1}}height={"100%"} src={cardImage(cardBeneath)} alt={name} />
-      : <img height={"100%"} src={cardImage(name)} alt={name} />}
+      {Number(name?.slice(-1)) > 0 ? (
+        <img
+          style={{ opacity: 1 }}
+          height={"100%"}
+          src={cardImage(cardBeneath)}
+          alt={name}
+        />
+      ) : (
+        <img height={"100%"} src={cardImage(name)} alt={name} />
+      )}
       {evolvedUsed && (
         <img
           src={cancel}
@@ -73,42 +80,43 @@ export default function Card({
             position: "relative",
             height: "100px",
             width: "100px",
-            opacity: .45,
+            opacity: 0.45,
             left: "7%",
             bottom: "90%",
             zIndex: 1,
           }}
         />
       )}
-      
-      
-      {numOfCarrots > 0 && onField && <div style={{
-        width: '50px', 
-        position: "relative",
-        left: "45%",
-        bottom: "120%",
-        fontFamily: "EB Garamond", 
-        color: 'white', 
-        backgroundColor: 'rgba(0, 0, 0, 0.5)',
-        borderRadius: '10px',
-        border: '4px solid #0000',
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}>
-        <img
-          src={carrot}
-          alt={"carrot"}
-          style={{
 
-            height: "20px",
-            width: "20px",
+      {numOfCarrots > 0 && onField && (
+        <div
+          style={{
+            width: "50px",
+            position: "relative",
+            left: "45%",
+            bottom: "120%",
+            fontFamily: "EB Garamond",
+            color: "white",
+            backgroundColor: "rgba(0, 0, 0, 0.5)",
+            borderRadius: "10px",
+            border: "4px solid #0000",
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "center",
+            alignItems: "center",
           }}
-        />
-        <div style={{fontSize: 15 }}>x {numOfCarrots} </div>
-      </div>}
-      
+        >
+          <img
+            src={carrot}
+            alt={"carrot"}
+            style={{
+              height: "20px",
+              width: "20px",
+            }}
+          />
+          <div style={{ fontSize: 15 }}>x {numOfCarrots} </div>
+        </div>
+      )}
     </motion.div>
   );
 }
