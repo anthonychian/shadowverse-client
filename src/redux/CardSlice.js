@@ -5,7 +5,7 @@ import { dragonDeckEvo } from "../decks/dragonDeckEvo";
 export const CardSlice = createSlice({
   name: "card",
   initialState: {
-    deck: dragonDeck,
+    deck: dragonDeck.toSorted(() => Math.random() - 0.5),
     evoDeck: dragonDeckEvo.map((card) => {
       return { card: card, status: false };
     }),
@@ -294,10 +294,11 @@ export const CardSlice = createSlice({
     },
     reset: (state) => {
       state.hand = [];
-      state.deck = dragonDeck;
+      state.deck = dragonDeck.toSorted(() => Math.random() - 0.5);
       state.field = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
       state.enemyField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-      state.currentCard = {};
+      state.currentCard = "";
+      state.currentEvo = "";
       state.cemetery = [];
       state.evoDeck = dragonDeckEvo.map((card) => {
         return { card: card, status: false };
