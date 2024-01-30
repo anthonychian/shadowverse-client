@@ -1,0 +1,23 @@
+.VoicelinesContainer {
+  /* background-color: white; */
+  color: white;
+  /* position: fixed; */
+  /* bottom: 1%;
+  right: -10%; */
+
+  height: 10%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
+/* medium - tablet styles */
+@media screen and (max-width: 1000px) {
+  .VoicelinesContainer {
+    /* width: 100vh; */
+    /* width: 50%; */
+  }
+}
