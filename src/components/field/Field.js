@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 import {
@@ -12,16 +12,33 @@ import {
   evolveCardOnField,
   feedCardOnField,
   backToEvolveDeck,
+  setEnemyField,
+  setEnemyEvoField,
+  setEnemyEngaged,
+  setEnemyCemetery,
+  setEnemyEvoDeck,
+  setEnemyCustomValues,
+  setEngaged,
+  showAtk,
+  showDef,
+  hideAtk,
+  hideDef,
+  clearValuesAtIndex,
+  clearEngagedAtIndex,
 } from "../../redux/CardSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { Menu, MenuItem } from "@mui/material";
 import Card from "../hand/Card";
 import Deck from "./Deck";
 import Cemetery from "./Cemetery";
+import EnemyCemetery from "./EnemyCemetery";
 import cardback from "../../assets/cardbacks/sleeve_5010011.png";
 import EvoDeck from "./EvoDeck";
+import EnemyEvoDeck from "./EnemyEvoDeck";
 import img from "../../assets/pin_bellringer_angel.png";
 import "../../css/AnimatedBorder.css";
+
+import { socket } from "../../sockets";
 
 export default function Field({
   dragging,
@@ -35,7 +52,16 @@ export default function Field({
   const reduxField = useSelector((state) => state.card.field);
   const reduxCurrentCard = useSelector((state) => state.card.currentCard);
   const reduxEvoField = useSelector((state) => state.card.evoField);
-  // const reduxEvoDeck = useSelector((state) => state.card.evoDeck);
+  const reduxEngaged = useSelector((state) => state.card.engagedField);
+  const reduxCustomValues = useSelector((state) => state.card.customValues);
+  const reduxEnemyCustomValues = useSelector(
+    (state) => state.card.enemyCustomValues
+  );
+  const reduxEnemyField = useSelector((state) => state.card.enemyField);
+  const reduxEnemyEvoField = useSelector((state) => state.card.enemyEvoField);
+  const reduxEnemyEngaged = useSelector(
+    (state) => state.card.enemyEngagedField
+  );
   const [contextMenu, setContextMenu] = React.useState(null);
   const [contextEvoMenu, setContextEvoMenu] = React.useState(null);
   const [index, setIndex] = useState(0);
@@ -44,6 +70,23 @@ export default function Field({
   const [readyFromCemetery, setReadyFromCemetery] = useState(false);
   const [readyToEvo, setReadyToEvo] = useState(false);
   const [readyToFeed, setReadyToFeed] = useState(false);
+
+  useEffect(() => {
+    socket.on("receive msg", (data) => {
+      if (data.type === "field") dispatch(setEnemyField(data.data));
+      else if (data.type === "evoField") dispatch(setEnemyEvoField(data.data));
+      else if (data.type === "engaged") dispatch(setEnemyEngaged(data.data));
+      else if (data.type === "cemetery") dispatch(setEnemyCemetery(data.data));
+      else if (data.type === "evoDeck") dispatch(setEnemyEvoDeck(data.data));
+      else if (data.type === "values")
+        dispatch(setEnemyCustomValues(data.data));
+    });
+  }, [socket]);
+
+  const cardPos = (idx) => {
+    if (idx < 5) return idx + 5;
+    else return idx - 5;
+  };
 
   const handleClick = (name, indexClicked) => {
     if (reduxField[indexClicked] === 0 && !readyToEvo && !readyToFeed) {
@@ -65,6 +108,8 @@ export default function Field({
             index: indexClicked,
           })
         );
+        dispatch(clearValuesAtIndex(index));
+        dispatch(clearEngagedAtIndex(index));
       }
       if (readyFromCemetery) {
         setReadyFromCemetery(false);
@@ -162,6 +207,8 @@ export default function Field({
         index: index,
       })
     );
+    dispatch(clearValuesAtIndex(index));
+    dispatch(clearEngagedAtIndex(index));
   };
   const handleCardToTopDeck = () => {
     handleClose();
@@ -171,6 +218,8 @@ export default function Field({
         index: index,
       })
     );
+    dispatch(clearValuesAtIndex(index));
+    dispatch(clearEngagedAtIndex(index));
   };
   const handleCardToBotDeck = () => {
     handleClose();
@@ -180,6 +229,8 @@ export default function Field({
         index: index,
       })
     );
+    dispatch(clearValuesAtIndex(index));
+    dispatch(clearEngagedAtIndex(index));
   };
 
   const handleCardToCemeteryFromField = () => {
@@ -190,6 +241,35 @@ export default function Field({
         index: index,
       })
     );
+    dispatch(clearValuesAtIndex(index));
+    dispatch(clearEngagedAtIndex(index));
+  };
+
+  const handleEngage = () => {
+    handleClose();
+    handleEvoClose();
+    dispatch(setEngaged(index));
+  };
+
+  const handleShowAtk = () => {
+    handleClose();
+    handleEvoClose();
+    dispatch(showAtk(index));
+  };
+  const handleHideAtk = () => {
+    handleClose();
+    handleEvoClose();
+    dispatch(hideAtk(index));
+  };
+  const handleShowDef = () => {
+    handleClose();
+    handleEvoClose();
+    dispatch(showDef(index));
+  };
+  const handleHideDef = () => {
+    handleClose();
+    handleEvoClose();
+    dispatch(hideDef(index));
   };
 
   const handleMoveOnField = () => {
@@ -220,13 +300,24 @@ export default function Field({
             : undefined
         }
       >
-        <MenuItem onClick={() => handleCardToHandFromField()}>Hand</MenuItem>
-        <MenuItem onClick={() => handleCardToCemeteryFromField()}>
-          Cemetery
-        </MenuItem>
-        <MenuItem onClick={() => handleMoveOnField()}>Move</MenuItem>
-        <MenuItem onClick={() => handleCardToTopDeck()}>Top of Deck</MenuItem>
-        <MenuItem onClick={() => handleCardToBotDeck()}>Bot of Deck</MenuItem>
+        <MenuItem onClick={handleCardToHandFromField}>Hand</MenuItem>
+        <MenuItem onClick={handleCardToCemeteryFromField}>Cemetery</MenuItem>
+        <MenuItem onClick={handleEngage}>Engage</MenuItem>
+        {!reduxCustomValues[index].showAtk && (
+          <MenuItem onClick={handleShowAtk}>Modify Atk</MenuItem>
+        )}
+        {reduxCustomValues[index].showAtk && (
+          <MenuItem onClick={handleHideAtk}>Hide Atk</MenuItem>
+        )}
+        {!reduxCustomValues[index].showDef && (
+          <MenuItem onClick={handleShowDef}>Modify Def</MenuItem>
+        )}
+        {reduxCustomValues[index].showDef && (
+          <MenuItem onClick={handleHideDef}>Hide Def</MenuItem>
+        )}
+        <MenuItem onClick={handleMoveOnField}>Move</MenuItem>
+        <MenuItem onClick={handleCardToTopDeck}>Top of Deck</MenuItem>
+        <MenuItem onClick={handleCardToBotDeck}>Bot of Deck</MenuItem>
       </Menu>
       <Menu
         open={contextEvoMenu !== null}
@@ -239,6 +330,18 @@ export default function Field({
         }
       >
         <MenuItem onClick={() => handleReturnToEvolveDeck()}>Return</MenuItem>
+        {!reduxCustomValues[index].showAtk && (
+          <MenuItem onClick={handleShowAtk}>Modify Atk</MenuItem>
+        )}
+        {reduxCustomValues[index].showAtk && (
+          <MenuItem onClick={handleHideAtk}>Hide Atk</MenuItem>
+        )}
+        {!reduxCustomValues[index].showDef && (
+          <MenuItem onClick={handleShowDef}>Modify Def</MenuItem>
+        )}
+        {reduxCustomValues[index].showDef && (
+          <MenuItem onClick={handleHideDef}>Hide Def</MenuItem>
+        )}
       </Menu>
 
       {/* Enemy */}
@@ -275,18 +378,7 @@ export default function Field({
           >
             <img height={"160px"} src={cardback} alt={"cardback"} />
           </div>
-          <div
-            style={{
-              height: "160px",
-              width: "115px",
-              // backgroundColor: "rgba(255, 255, 255, 0.1)",
-              // backgroundColor: "#131219",
-              borderRadius: "10px",
-              // border: "4px solid #0000",
-              border: "4px solid #1a20d6c8",
-              cursor: `url(${img}) 55 55, auto`,
-            }}
-          />
+          <EnemyCemetery setHovering={setHovering} ready={ready} />
         </div>
 
         {/* Enemy Field (1-5) & Ex Area (6-10) */}
@@ -303,7 +395,7 @@ export default function Field({
             gridTemplateColumns: "repeat(5, 1fr)",
             alignItems: "center",
             justifyItems: "center",
-            zIndex: 10,
+            zIndex: 0,
           }}
         >
           {reduxField.map((x, idx) => (
@@ -312,6 +404,7 @@ export default function Field({
               style={{
                 height: "160px",
                 width: "115px",
+                // position: "relative",
                 // backgroundColor: "rgba(255, 255, 255, 0.1)",
                 backgroundColor: "#131219",
                 borderRadius: "10px",
@@ -322,7 +415,38 @@ export default function Field({
                 // backgroundColor: "rgba(255, 0, 0, 0.15)",
               }}
             >
-              {/* <Card name={x} /> */}
+              {reduxEnemyField[cardPos(idx)] !== 0 &&
+                reduxEnemyEvoField[cardPos(idx)] === 0 && (
+                  <Card
+                    atkVal={reduxEnemyCustomValues[cardPos(idx)].atk}
+                    defVal={reduxEnemyCustomValues[cardPos(idx)].def}
+                    showAtk={reduxEnemyCustomValues[cardPos(idx)].showAtk}
+                    showDef={reduxEnemyCustomValues[cardPos(idx)].showDef}
+                    engaged={reduxEnemyEngaged[cardPos(idx)]}
+                    onField={true}
+                    key={`enemy-card-${cardPos(idx)}`}
+                    name={reduxEnemyField[cardPos(idx)]}
+                    setHovering={setHovering}
+                    ready={ready}
+                    onEnemyField={true}
+                  />
+                )}
+              {reduxEnemyEvoField[cardPos(idx)] !== 0 && (
+                <Card
+                  atkVal={reduxEnemyCustomValues[cardPos(idx)].atk}
+                  defVal={reduxEnemyCustomValues[cardPos(idx)].def}
+                  showAtk={reduxEnemyCustomValues[cardPos(idx)].showAtk}
+                  showDef={reduxEnemyCustomValues[cardPos(idx)].showDef}
+                  engaged={reduxEnemyEngaged[cardPos(idx)]}
+                  onField={true}
+                  key={`enemy-evo-${cardPos(idx)}`}
+                  name={reduxEnemyEvoField[cardPos(idx)]}
+                  setHovering={setHovering}
+                  ready={ready}
+                  cardBeneath={reduxEnemyField[cardPos(idx)]}
+                  onEnemyField={true}
+                />
+              )}
             </motion.div>
           ))}
         </div>
@@ -343,7 +467,8 @@ export default function Field({
             cursor: `url(${img}) 55 55, auto`,
           }}
         >
-          <div
+          <EnemyEvoDeck setHovering={setHovering} ready={ready} />
+          {/* <div
             style={{
               height: "160px",
               width: "115px",
@@ -351,7 +476,7 @@ export default function Field({
             }}
           >
             <img height={"160px"} src={cardback} alt={"cardback"} />
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -405,7 +530,7 @@ export default function Field({
             gridTemplateColumns: "repeat(5, 1fr)",
             alignItems: "center",
             justifyItems: "center",
-            zIndex: 10,
+            zIndex: 0,
           }}
         >
           {reduxField.map((card, idx) => (
@@ -435,6 +560,10 @@ export default function Field({
                 >
                   {reduxField[idx] !== 0 && reduxEvoField[idx] === 0 && (
                     <Card
+                      showAtk={reduxCustomValues[idx].showAtk}
+                      showDef={reduxCustomValues[idx].showDef}
+                      engaged={reduxEngaged[idx]}
+                      idx={idx}
                       onField={true}
                       key={`card1-${idx}`}
                       name={card}
@@ -444,6 +573,10 @@ export default function Field({
                   )}
                   {reduxEvoField[idx] !== 0 && (
                     <Card
+                      showAtk={reduxCustomValues[idx].showAtk}
+                      showDef={reduxCustomValues[idx].showDef}
+                      engaged={reduxEngaged[idx]}
+                      idx={idx}
                       onField={true}
                       key={`evo1-${idx}`}
                       name={reduxEvoField[idx]}
@@ -459,7 +592,8 @@ export default function Field({
                   onContextMenu={(e) => {
                     if (reduxField[idx] !== 0 && reduxEvoField[idx] === 0)
                       handleContextMenu(e, idx, reduxField[idx]);
-                    else handleEvoContextMenu(e, idx, reduxEvoField[idx]);
+                    else if (reduxField[idx] !== 0)
+                      handleEvoContextMenu(e, idx, reduxEvoField[idx]);
                   }}
                   key={`player2-${idx}`}
                   style={{
@@ -474,6 +608,10 @@ export default function Field({
                 >
                   {reduxField[idx] !== 0 && reduxEvoField[idx] === 0 && (
                     <Card
+                      showAtk={reduxCustomValues[idx].showAtk}
+                      showDef={reduxCustomValues[idx].showDef}
+                      engaged={reduxEngaged[idx]}
+                      idx={idx}
                       onField={true}
                       key={`card2-${idx}`}
                       name={reduxField[idx]}
@@ -483,6 +621,10 @@ export default function Field({
                   )}
                   {reduxEvoField[idx] !== 0 && (
                     <Card
+                      showAtk={reduxCustomValues[idx].showAtk}
+                      showDef={reduxCustomValues[idx].showDef}
+                      engaged={reduxEngaged[idx]}
+                      idx={idx}
                       onField={true}
                       key={`evo2-${idx}`}
                       name={reduxEvoField[idx]}
@@ -507,7 +649,7 @@ export default function Field({
             flexDirection: "column",
             // backgroundColor: "black",
             // backgroundColor: "#131219",
-            zIndex: 1,
+            zIndex: 0,
             backgroundColor: "rgba(0, 0, 0, 0.60)",
             alignItems: "center",
             justifyContent: "space-evenly",
@@ -520,7 +662,7 @@ export default function Field({
             setHovering={setHovering}
             ready={ready}
           />
-          <Deck ready={ready} />
+          <Deck setHovering={setHovering} ready={ready} />
         </div>
       </div>
     </>

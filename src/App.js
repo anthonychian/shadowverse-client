@@ -7,13 +7,19 @@ import Voicelines from "./components/ui/Voicelines";
 import PlayPoints from "./components/ui/PlayPoints";
 import Hand from "./components/hand/Hand";
 import Field from "./components/field/Field";
-// import CardActions from "./components/ui/CardActions";
 import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
 import ZoomedCard from "./components/ui/ZoomedCard";
 import initialWallpaper from "../src/assets/wallpapers/forteEvo.png";
 
+// import io from "socket.io-client";
+// const socket = io.connect("http://localhost:3001");
+
 function App() {
+  // const sendMsg = () => {
+  //   socket.emit("send msg", { name: "ex" });
+  // };
+
   const [wallpaper, setWallpaper] = useState(initialWallpaper);
   const [selectedOption, setSelectedOption] = useState("Exella");
   const constraintsRef = useRef(null);

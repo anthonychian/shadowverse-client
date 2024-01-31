@@ -2,6 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 import { dragonDeck } from "../decks/dragonDeck";
 import { dragonDeckEvo } from "../decks/dragonDeckEvo";
 
+import { socket } from "../sockets";
+
 export const CardSlice = createSlice({
   name: "card",
   initialState: {
@@ -11,11 +13,73 @@ export const CardSlice = createSlice({
     }),
     hand: [],
     field: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    evoField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     enemyField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    enemyEvoField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     currentCard: "",
     currentEvo: "",
     cemetery: [],
-    evoField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    enemyCemetery: [],
+    enemyEvoDeck: [
+      { card: "", status: false },
+      { card: "", status: false },
+      { card: "", status: false },
+      { card: "", status: false },
+      { card: "", status: false },
+      { card: "", status: false },
+      { card: "", status: false },
+      { card: "", status: false },
+      { card: "", status: false },
+      { card: "", status: false },
+    ],
+    engagedField: [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+    ],
+    enemyEngagedField: [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+    ],
+    customValues: [
+      { showAtk: false, atk: 0, showDef: false, def: 0 },
+      { showAtk: false, atk: 0, showDef: false, def: 0 },
+      { showAtk: false, atk: 0, showDef: false, def: 0 },
+      { showAtk: false, atk: 0, showDef: false, def: 0 },
+      { showAtk: false, atk: 0, showDef: false, def: 0 },
+      { showAtk: false, atk: 0, showDef: false, def: 0 },
+      { showAtk: false, atk: 0, showDef: false, def: 0 },
+      { showAtk: false, atk: 0, showDef: false, def: 0 },
+      { showAtk: false, atk: 0, showDef: false, def: 0 },
+      { showAtk: false, atk: 0, showDef: false, def: 0 },
+    ],
+    enemyCustomValues: [
+      { showAtk: false, atk: 0, showDef: false, def: 0 },
+      { showAtk: false, atk: 0, showDef: false, def: 0 },
+      { showAtk: false, atk: 0, showDef: false, def: 0 },
+      { showAtk: false, atk: 0, showDef: false, def: 0 },
+      { showAtk: false, atk: 0, showDef: false, def: 0 },
+      { showAtk: false, atk: 0, showDef: false, def: 0 },
+      { showAtk: false, atk: 0, showDef: false, def: 0 },
+      { showAtk: false, atk: 0, showDef: false, def: 0 },
+      { showAtk: false, atk: 0, showDef: false, def: 0 },
+      { showAtk: false, atk: 0, showDef: false, def: 0 },
+    ],
   },
   reducers: {
     drawFromDeck: (state) => {
@@ -58,6 +122,117 @@ export const CardSlice = createSlice({
         }
       }
     },
+    setEngaged: (state, action) => {
+      let index = action.payload;
+      const newEngaged = [
+        ...state.engagedField.slice(0, index),
+        !state.engagedField[index],
+        ...state.engagedField.slice(index + 1),
+      ];
+      state.engagedField = newEngaged;
+      socket.emit("send msg", { type: "engaged", data: state.engagedField });
+    },
+    clearEngagedAtIndex: (state, action) => {
+      let index = action.payload;
+      const newEngaged = [
+        ...state.engagedField.slice(0, index),
+        false,
+        ...state.engagedField.slice(index + 1),
+      ];
+      state.engagedField = newEngaged;
+      socket.emit("send msg", { type: "engaged", data: state.engagedField });
+    },
+    showAtk: (state, action) => {
+      let index = action.payload;
+      let item = state.customValues[index];
+      item.showAtk = true;
+      const newCustomValues = [
+        ...state.customValues.slice(0, index),
+        item,
+        ...state.customValues.slice(index + 1),
+      ];
+      state.customValues = newCustomValues;
+    },
+    hideAtk: (state, action) => {
+      let index = action.payload;
+      let item = state.customValues[index];
+      item.showAtk = false;
+      item.atk = 0;
+      const newCustomValues = [
+        ...state.customValues.slice(0, index),
+        item,
+        ...state.customValues.slice(index + 1),
+      ];
+      state.customValues = newCustomValues;
+      socket.emit("send msg", { type: "values", data: state.customValues });
+    },
+    modifyAtk: (state, action) => {
+      let newValue = action.payload.value;
+      let index = action.payload.index;
+      let item = state.customValues[index];
+      item.atk = newValue;
+      item.showAtk = true;
+      const newCustomValues = [
+        ...state.customValues.slice(0, index),
+        item,
+        ...state.customValues.slice(index + 1),
+      ];
+      state.customValues = newCustomValues;
+      socket.emit("send msg", { type: "values", data: state.customValues });
+    },
+    showDef: (state, action) => {
+      let index = action.payload;
+      let item = state.customValues[index];
+      item.showDef = true;
+      const newCustomValues = [
+        ...state.customValues.slice(0, index),
+        item,
+        ...state.customValues.slice(index + 1),
+      ];
+      state.customValues = newCustomValues;
+    },
+    hideDef: (state, action) => {
+      let index = action.payload;
+      let item = state.customValues[index];
+      item.showDef = false;
+      item.def = 0;
+      const newCustomValues = [
+        ...state.customValues.slice(0, index),
+        item,
+        ...state.customValues.slice(index + 1),
+      ];
+      state.customValues = newCustomValues;
+      socket.emit("send msg", { type: "values", data: state.customValues });
+    },
+    modifyDef: (state, action) => {
+      let newValue = action.payload.value;
+      let index = action.payload.index;
+      let item = state.customValues[index];
+      item.def = newValue;
+      item.showDef = true;
+      const newCustomValues = [
+        ...state.customValues.slice(0, index),
+        item,
+        ...state.customValues.slice(index + 1),
+      ];
+      state.customValues = newCustomValues;
+      socket.emit("send msg", { type: "values", data: state.customValues });
+    },
+    clearValuesAtIndex: (state, action) => {
+      let index = action.payload;
+      let item = state.customValues[index];
+      item.atk = 0;
+      item.def = 0;
+      item.showAtk = false;
+      item.showDef = false;
+      const newCustomValues = [
+        ...state.customValues.slice(0, index),
+        item,
+        ...state.customValues.slice(index + 1),
+      ];
+      state.customValues = newCustomValues;
+      socket.emit("send msg", { type: "values", data: state.customValues });
+    },
     setCurrentCard: (state, action) => {
       state.currentCard = action.payload;
     },
@@ -95,6 +270,7 @@ export const CardSlice = createSlice({
       console.log(`Removed ${card} from field`);
       state.deck = [card, ...state.deck];
       console.log(`Added ${card} to top of deck`);
+      socket.emit("send msg", { type: "field", data: state.field });
     },
     placeToBotOfDeckFromField: (state, action) => {
       const card = action.payload.card;
@@ -108,6 +284,7 @@ export const CardSlice = createSlice({
       console.log(`Removed ${card} from field`);
       state.deck = [...state.deck, card];
       console.log(`Added ${card} to bot of deck`);
+      socket.emit("send msg", { type: "field", data: state.field });
     },
     moveCardOnField: (state, action) => {
       const card = action.payload.card;
@@ -127,6 +304,15 @@ export const CardSlice = createSlice({
       ];
       state.field = newField;
       console.log(`Added ${card} to field`);
+      socket.emit("send msg", { type: "field", data: state.field });
+    },
+    addToHandFromDeck: (state, action) => {
+      const card = action.payload;
+      const cardIndex = state.deck.indexOf(card);
+      state.deck = state.deck.filter((_, i) => i !== cardIndex);
+      console.log(`Removed ${card} from deck`);
+      state.hand = [...state.hand, card];
+      console.log(`Added ${card} to hand`);
     },
     addToHandFromField: (state, action) => {
       const card = action.payload.card;
@@ -140,6 +326,7 @@ export const CardSlice = createSlice({
       console.log(`Removed ${card} from field`);
       state.hand = [...state.hand, card];
       console.log(`Added ${card} to hand`);
+      socket.emit("send msg", { type: "field", data: state.field });
     },
     placeToFieldFromHand: (state, action) => {
       const card = action.payload.card;
@@ -154,6 +341,8 @@ export const CardSlice = createSlice({
       ];
       state.field = newField;
       console.log(`Added ${card} to field`);
+
+      socket.emit("send msg", { type: "field", data: state.field });
     },
     reorderCardsInHand: (state, action) => {
       state.hand = action.payload;
@@ -165,6 +354,7 @@ export const CardSlice = createSlice({
       console.log(`Removed ${card} from cemetery`);
       state.hand = [...state.hand, card];
       console.log(`Added ${card} to hand`);
+      socket.emit("send msg", { type: "cemetery", data: state.cemetery });
     },
     placeToCemeteryFromField: (state, action) => {
       const card = action.payload.card;
@@ -178,6 +368,8 @@ export const CardSlice = createSlice({
       console.log(`Removed ${card} from field`);
       state.cemetery = [card, ...state.cemetery];
       console.log(`Added ${card} to cemetery`);
+      socket.emit("send msg", { type: "field", data: state.field });
+      socket.emit("send msg", { type: "cemetery", data: state.cemetery });
     },
     placeToCemeteryFromHand: (state, action) => {
       const card = action.payload;
@@ -186,6 +378,7 @@ export const CardSlice = createSlice({
       console.log(`Removed ${card} from hand`);
       state.cemetery = [card, ...state.cemetery];
       console.log(`Added ${card} to cemetery`);
+      socket.emit("send msg", { type: "cemetery", data: state.cemetery });
     },
     placeToFieldFromCemetery: (state, action) => {
       const card = action.payload.card;
@@ -200,6 +393,8 @@ export const CardSlice = createSlice({
       ];
       state.field = newField;
       console.log(`Added ${card} to field`);
+      socket.emit("send msg", { type: "field", data: state.field });
+      socket.emit("send msg", { type: "cemetery", data: state.cemetery });
     },
     evolveCardOnField: (state, action) => {
       const card = action.payload.card;
@@ -220,6 +415,8 @@ export const CardSlice = createSlice({
       ];
       state.evoField = newField;
       console.log(`Added ${card} to evolve field`);
+      socket.emit("send msg", { type: "evoField", data: state.evoField });
+      socket.emit("send msg", { type: "evoDeck", data: state.evoDeck });
     },
     feedCardOnField: (state, action) => {
       const card = action.payload.card;
@@ -254,6 +451,8 @@ export const CardSlice = createSlice({
         state.evoField = newField;
         console.log(`Added Carrot-${numOfCarrots + 1} to evolve field`);
       }
+      socket.emit("send msg", { type: "evoField", data: state.evoField });
+      socket.emit("send msg", { type: "evoDeck", data: state.evoDeck });
     },
     backToEvolveDeck: (state, action) => {
       const card = action.payload.card;
@@ -273,6 +472,8 @@ export const CardSlice = createSlice({
         state.evoDeck = [...state.evoDeck, { card: card, status: true }];
       }
       console.log(`Added ${card} to evolve deck`);
+      socket.emit("send msg", { type: "evoField", data: state.evoField });
+      socket.emit("send msg", { type: "evoDeck", data: state.evoDeck });
     },
     restoreEvoCard: (state, action) => {
       const card = action.payload;
@@ -291,6 +492,25 @@ export const CardSlice = createSlice({
       console.log(`Removed ${card} from evolve deck`);
       state.evoDeck = [...state.evoDeck, { card: card, status: false }];
       console.log(`Added ${card} to evolve deck`);
+      socket.emit("send msg", { type: "evoDeck", data: state.evoDeck });
+    },
+    setEnemyField: (state, action) => {
+      state.enemyField = action.payload;
+    },
+    setEnemyEvoField: (state, action) => {
+      state.enemyEvoField = action.payload;
+    },
+    setEnemyEngaged: (state, action) => {
+      state.enemyEngagedField = action.payload;
+    },
+    setEnemyCemetery: (state, action) => {
+      state.enemyCemetery = action.payload;
+    },
+    setEnemyEvoDeck: (state, action) => {
+      state.enemyEvoDeck = action.payload;
+    },
+    setEnemyCustomValues: (state, action) => {
+      state.enemyCustomValues = action.payload;
     },
     reset: (state) => {
       state.hand = [];
@@ -313,6 +533,7 @@ export const {
   drawFourFromDeck,
   placeToFieldFromHand,
   placeToFieldFromCemetery,
+  addToHandFromDeck,
   addToHandFromField,
   addToHandFromCemetery,
   placeToTopOfDeckFromHand,
@@ -332,5 +553,20 @@ export const {
   feedCardOnField,
   backToEvolveDeck,
   restoreEvoCard,
+  setEnemyField,
+  setEnemyEvoField,
+  setEnemyEngaged,
+  setEngaged,
+  clearEngagedAtIndex,
+  setEnemyCemetery,
+  setEnemyEvoDeck,
+  setEnemyCustomValues,
+  showAtk,
+  showDef,
+  modifyAtk,
+  hideAtk,
+  hideDef,
+  modifyDef,
+  clearValuesAtIndex,
   reset,
 } = CardSlice.actions;
