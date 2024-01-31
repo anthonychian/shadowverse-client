@@ -5,8 +5,7 @@ import CardMUI from "@mui/material/Card";
 import Card from "../hand/Card";
 import { setCurrentEvo, restoreEvoCard } from "../../redux/CardSlice";
 import cardback from "../../assets/cardbacks/sleeve_5010011.png";
-
-const img = require("../../assets/pin_bellringer_angel.png");
+import img from "../../assets/pin_bellringer_angel.png";
 
 const style = {
   position: "relative",

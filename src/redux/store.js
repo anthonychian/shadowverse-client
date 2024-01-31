@@ -1,5 +1,6 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { CardSlice } from "./CardSlice";
+import { DeckSlice } from "./DeckSlice";
 
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
@@ -21,6 +22,7 @@ const persistConfig = {
 };
 const rootReducer = combineReducers({
   card: CardSlice.reducer,
+  deck: DeckSlice.reducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

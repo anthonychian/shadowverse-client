@@ -7,10 +7,12 @@ import { socket } from "../sockets";
 export const CardSlice = createSlice({
   name: "card",
   initialState: {
-    deck: dragonDeck.toSorted(() => Math.random() - 0.5),
-    evoDeck: dragonDeckEvo.map((card) => {
-      return { card: card, status: false };
-    }),
+    // deck: dragonDeck.toSorted(() => Math.random() - 0.5),
+    // evoDeck: dragonDeckEvo.map((card) => {
+    //   return { card: card, status: false };
+    // }),
+    deck: [],
+    evoDeck: [],
     hand: [],
     field: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     evoField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -82,6 +84,12 @@ export const CardSlice = createSlice({
     ],
   },
   reducers: {
+    setDeck: (state, action) => {
+      state.deck = action.payload;
+    },
+    setEvoDeck: (state, action) => {
+      state.evoDeck = action.payload;
+    },
     drawFromDeck: (state) => {
       if (state.deck.length > 0 && state.hand.length < 10) {
         const card = state.deck[0];
@@ -568,5 +576,7 @@ export const {
   hideDef,
   modifyDef,
   clearValuesAtIndex,
+  setDeck,
+  setEvoDeck,
   reset,
 } = CardSlice.actions;
