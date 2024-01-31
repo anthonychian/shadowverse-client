@@ -70,6 +70,7 @@ export default function Field({
   const [readyFromCemetery, setReadyFromCemetery] = useState(false);
   const [readyToEvo, setReadyToEvo] = useState(false);
   const [readyToFeed, setReadyToFeed] = useState(false);
+  const [room, setRoom] = useState(socket.id);
 
   useEffect(() => {
     socket.on("receive msg", (data) => {
@@ -290,6 +291,21 @@ export default function Field({
 
   return (
     <>
+      <div
+        style={{
+          backgroundColor: "black",
+          color: "white",
+          height: "45px",
+          width: "300px",
+          position: "absolute",
+          fontSize: "23px",
+          bottom: 0,
+          left: 0,
+          pointerEvents: "auto",
+        }}
+      >
+        {room}
+      </div>
       <Menu
         open={contextMenu !== null}
         onClose={handleClose}

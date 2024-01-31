@@ -4,8 +4,10 @@ import Button from "@mui/material/Button";
 import initialWallpaper from "../../src/assets/wallpapers/forteEvo.png";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { setDeck, setEvoDeck } from "../redux/CardSlice";
+import { setDeck, setEvoDeck, setRoom } from "../redux/CardSlice";
 import cardback from "../assets/cardbacks/sleeve_5010011.png";
+
+import { socket } from "../sockets";
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -13,6 +15,31 @@ export default function Home() {
   const navigate = useNavigate();
   const reduxDecks = useSelector((state) => state.deck.decks);
   const [showSelected, setShowSelected] = useState([]);
+  //   const [id, setId] = useState(socket.id);
+  const [roomNumber, setRoomNumber] = useState("");
+
+  const handleCreateRoom = () => {
+    if (Object.keys(selectedDeck).length !== 0) {
+      if (socket.id) {
+        dispatch(setRoom(socket.id));
+        socket.emit("join_room", socket.id);
+        handleNavigateToGame();
+      }
+    }
+  };
+  const handleJoinRoom = () => {
+    if (Object.keys(selectedDeck).length !== 0) {
+      if (roomNumber !== "") {
+        dispatch(setRoom(roomNumber));
+        socket.emit("join_room", roomNumber);
+        handleNavigateToGame();
+      }
+    }
+  };
+
+  const handleRoomNumberInput = (event) => {
+    setRoomNumber(event.target.value);
+  };
 
   useEffect(() => {
     setShowSelected(new Array(reduxDecks.length).fill(false));
@@ -22,18 +49,16 @@ export default function Home() {
     navigate("/deck");
   };
   const handleNavigateToGame = () => {
-    if (Object.keys(selectedDeck).length !== 0) {
-      dispatch(setDeck(selectedDeck.deck));
+    dispatch(setDeck(selectedDeck.deck.toSorted(() => Math.random() - 0.5)));
 
-      dispatch(
-        setEvoDeck(
-          selectedDeck.evoDeck.map((card) => {
-            return { card: card, status: false };
-          })
-        )
-      );
-      navigate("/game");
-    }
+    dispatch(
+      setEvoDeck(
+        selectedDeck.evoDeck.map((card) => {
+          return { card: card, status: false };
+        })
+      )
+    );
+    navigate("/game");
   };
   const handleSelectDeck = (deck, idx) => {
     setSelectedDeck(deck);
@@ -88,12 +113,25 @@ export default function Home() {
               Create Deck
             </Button>
             <Button
-              onClick={handleNavigateToGame}
+              onClick={handleCreateRoom}
               style={{ backgroundColor: "white", color: "black" }}
               variant="contained"
             >
-              Join with Room Code
+              Create Room
             </Button>
+            <Button
+              onClick={handleJoinRoom}
+              style={{ backgroundColor: "white", color: "black" }}
+              variant="contained"
+            >
+              Join Room
+            </Button>
+            <input
+              type="text"
+              value={roomNumber}
+              onChange={handleRoomNumberInput}
+              placeholder="Room Code..."
+            />
           </Stack>
         </div>
 
