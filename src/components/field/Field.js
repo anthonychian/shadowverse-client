@@ -362,7 +362,7 @@ export default function Field({
         {!isToken(name) && (
           <MenuItem onClick={handleCardToCemeteryFromField}>Cemetery</MenuItem>
         )}
-        {!isToken(name) && <MenuItem onClick={handleEngage}>Engage</MenuItem>}
+        <MenuItem onClick={handleEngage}>Engage</MenuItem>
         {!reduxCustomValues[index].showAtk && (
           <MenuItem onClick={handleShowAtk}>Modify Atk</MenuItem>
         )}
