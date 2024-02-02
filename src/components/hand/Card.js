@@ -6,6 +6,9 @@ import { useDispatch } from "react-redux";
 import cancel from "../../assets/logo/cancel.png";
 import carrot from "../../assets/logo/carrot.png";
 import img from "../../assets/pin_bellringer_angel.png";
+import atkImg from "../../assets/logo/atk.png";
+import defImg from "../../assets/logo/def.png";
+
 import "../../css/Card.css";
 
 export default function Card({
@@ -61,7 +64,11 @@ export default function Card({
   const handleHoverStart = () => {
     if (!ready) {
       setHovering(true);
-      dispatch(setCurrentCard(name));
+      if (name.slice(0, 6) === "Carrot") {
+        dispatch(setCurrentCard(cardBeneath));
+      } else {
+        dispatch(setCurrentCard(name));
+      }
     }
   };
 
@@ -83,7 +90,7 @@ export default function Card({
   return (
     <>
       <motion.div
-        whileTap={onField ? {} : { transitionDuration: "5s" }}
+        // whileTap={onField ? {} : { transitionDuration: "5s" }}
         animate={rotate ? { rotate: -90 } : { rotate: 0 }}
         style={{
           height: "160px",
@@ -95,6 +102,9 @@ export default function Card({
         onDragEnd={() => setDragging(false)}
         whileHover={
           !ready && {
+            boxShadow:
+              "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 1.0)",
+            zIndex: 100,
             translateY: -25,
             scale: 1.3,
             cursor: `url(${img}) 55 55, auto`,
@@ -112,22 +122,72 @@ export default function Card({
           <img height={"100%"} src={cardImage(name)} alt={name} />
         )}
         {showAtk && (
-          <input
-            value={atk}
-            onChange={handleAtkInput}
-            type="number"
-            min={0}
-            className={"atkInputNum"}
-          />
+          <>
+            <input
+              value={atk}
+              onChange={handleAtkInput}
+              type="number"
+              min={0}
+              className={"atkInputNum"}
+            />
+            <div
+              style={{
+                position: "absolute",
+                top: "75%",
+                right: atk > 9 ? "50%" : "60%",
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <img height={"40px"} src={atkImg} alt="atk" />
+              <span
+                style={{
+                  color: "white",
+                  fontSize: "25px",
+                  textShadow: "-1px 1px 0 #000",
+                  position: "relative",
+                  top: "50%",
+                  right: "50%",
+                }}
+              >
+                {atk}
+              </span>
+            </div>
+          </>
         )}
         {showDef && (
-          <input
-            value={def}
-            onChange={handleDefInput}
-            type="number"
-            min={0}
-            className={"defInputNum"}
-          />
+          <>
+            <input
+              value={def}
+              onChange={handleDefInput}
+              type="number"
+              min={0}
+              className={"defInputNum"}
+            />
+            <div
+              style={{
+                position: "absolute",
+                top: "75%",
+                left: "70%",
+                display: "flex",
+                alignItems: "center",
+              }}
+            >
+              <img height={"40px"} src={defImg} alt="atk" />
+              <span
+                style={{
+                  color: "white",
+                  fontSize: "25px",
+                  textShadow: "-1px 1px 0 #000",
+                  position: "relative",
+                  top: "50%",
+                  right: "50%",
+                }}
+              >
+                {def}
+              </span>
+            </div>
+          </>
         )}
         {evolvedUsed && (
           <img

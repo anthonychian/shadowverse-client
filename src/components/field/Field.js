@@ -633,6 +633,8 @@ export default function Field({
                     <Card
                       showAtk={reduxCustomValues[idx].showAtk}
                       showDef={reduxCustomValues[idx].showDef}
+                      atkVal={reduxCustomValues[idx].atk}
+                      defVal={reduxCustomValues[idx].def}
                       engaged={reduxEngaged[idx]}
                       idx={idx}
                       onField={true}
@@ -647,6 +649,8 @@ export default function Field({
                       showAtk={reduxCustomValues[idx].showAtk}
                       showDef={reduxCustomValues[idx].showDef}
                       engaged={reduxEngaged[idx]}
+                      atkVal={reduxCustomValues[idx].atk}
+                      defVal={reduxCustomValues[idx].def}
                       idx={idx}
                       onField={true}
                       key={`evo1-${idx}`}
