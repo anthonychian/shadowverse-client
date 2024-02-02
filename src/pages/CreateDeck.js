@@ -32,7 +32,10 @@ export default function CreateDeck() {
   const [mainDeckSelected, setMainDeckSelected] = useState(true);
   const [evoDeckSelected, setEvoDeckSelected] = useState(false);
   const [name, setName] = useState("");
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+  const [textInput, setTextInput] = useState("");
+  const [filteredAllCards, setFilteredAllCards] = useState(allCards);
+  const [filteredAllCardsEvo, setFilteredAllCardsEvo] = useState(allCardsEvo);
 
   const handleNameChange = (event) => {
     setName(event.target.value);
@@ -54,6 +57,22 @@ export default function CreateDeck() {
       })
     );
     navigate("/");
+  };
+
+  const handleTextInput = (event) => {
+    const text = event.target.value;
+    setTextInput(text);
+    if (mainDeckSelected) {
+      const filteredCards = allCards.filter((card) =>
+        card.toLowerCase().includes(text.toLowerCase())
+      );
+      setFilteredAllCards(filteredCards);
+    } else {
+      const filteredCards = allCardsEvo.filter((card) =>
+        card.toLowerCase().includes(text.toLowerCase())
+      );
+      setFilteredAllCardsEvo(filteredCards);
+    }
   };
 
   const handleCardSelection = (card) => {
@@ -139,9 +158,9 @@ export default function CreateDeck() {
         background: "url(" + initialWallpaper + ") center center fixed",
         backgroundSize: "cover",
         display: "flex",
-        flexDirection: "row",
-        flexWrap: "wrap",
-        justifyContent: "center",
+        flexDirection: "column",
+        // flexWrap: "wrap",
+        // justifyContent: "center",
         alignItems: "center",
         overflow: "auto",
       }}
@@ -149,8 +168,8 @@ export default function CreateDeck() {
       <div
         style={{
           marginTop: "1%",
-          paddingBottom: "1%",
-          height: "60%",
+          paddingBottom: "3%",
+          minHeight: "500px",
           width: "80%",
           backgroundColor: "rgba(50, 50, 50, 0.60)",
           borderRadius: "10px",
@@ -158,7 +177,6 @@ export default function CreateDeck() {
           display: "flex",
           flexDirection: "column",
           gap: "1em",
-          //   flexWrap: "wrap",
           alignItems: "center",
           justifyContent: "center",
         }}
@@ -263,7 +281,7 @@ export default function CreateDeck() {
         {mainDeckSelected && (
           <div
             style={{
-              height: "70%",
+              height: "100%",
               width: "60%",
               padding: "1em",
               backgroundColor: "rgba(0, 0, 0, 0.75)",
@@ -328,6 +346,18 @@ export default function CreateDeck() {
         )}
       </div>
 
+      <input
+        style={{
+          marginTop: "1%",
+          width: "30%",
+          fontSize: "20px",
+          fontFamily: "Noto Serif JP, serif",
+        }}
+        type="text"
+        value={textInput}
+        onChange={handleTextInput}
+        placeholder="Search for cards..."
+      />
       <InfiniteScroll
         dataLength={allCards.length} //This is important field to render the next data
         //   next={fetchData}
@@ -343,17 +373,11 @@ export default function CreateDeck() {
           paddingTop: "5%",
           paddingBottom: "10%",
         }}
-        hasMore={true}
-        loader={<h4>Loading...</h4>}
-        endMessage={
-          <p style={{ textAlign: "center" }}>
-            <b>Yay! You have seen it all</b>
-          </p>
-        }
       >
         {mainDeckSelected &&
-          allCards.map((name, idx) => (
+          filteredAllCards.map((name, idx) => (
             <motion.div
+              key={idx}
               onTap={() => handleCardSelection(name)}
               onContextMenu={() => handleCardRemove(name)}
               whileHover={{
@@ -365,7 +389,6 @@ export default function CreateDeck() {
               }}
             >
               <img
-                key={idx}
                 width={"224px"}
                 height={"312px"}
                 src={cardImage(name)}
@@ -374,7 +397,7 @@ export default function CreateDeck() {
             </motion.div>
           ))}
         {evoDeckSelected &&
-          allCardsEvo.map((name, idx) => (
+          filteredAllCardsEvo.map((name, idx) => (
             <motion.div
               onTap={() => handleEvoCardSelection(name)}
               onContextMenu={() => handleEvoCardRemove(name)}

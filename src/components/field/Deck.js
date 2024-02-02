@@ -144,7 +144,7 @@ export default function Deck({ ready, setHovering }) {
         <MenuItem onClick={() => handleViewDeck()}>View Deck</MenuItem>
         <MenuItem onClick={() => handleDraw()}>Draw Four</MenuItem>
         <MenuItem onClick={() => handleMulligan()}>Mulligan Four</MenuItem>
-        <MenuItem onClick={(event) => handleReset(event)}>Reset</MenuItem>
+        {/* <MenuItem onClick={(event) => handleReset(event)}>Reset</MenuItem> */}
       </Menu>
 
       <Menu

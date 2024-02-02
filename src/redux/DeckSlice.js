@@ -16,4 +16,4 @@ export const DeckSlice = createSlice({
   },
 });
 
-export const { createDeck } = DeckSlice.actions;
+export const { createDeck, deleteDeck } = DeckSlice.actions;

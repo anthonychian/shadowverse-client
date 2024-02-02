@@ -5,18 +5,43 @@ import initialWallpaper from "../../src/assets/wallpapers/forteEvo.png";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setDeck, setEvoDeck, setRoom } from "../redux/CardSlice";
-import cardback from "../assets/cardbacks/sleeve_5010011.png";
+import { deleteDeck } from "../redux/DeckSlice";
 
+import { cardImage } from "../decks/getCards";
 import { socket } from "../sockets";
+import { Menu, MenuItem, Modal, Box } from "@mui/material";
+import CardMUI from "@mui/material/Card";
+
+const style = {
+  position: "relative",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  backgroundColor: "transparent",
+  boxShadow: 24,
+  p: 3,
+  width: "55%",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+};
 
 export default function Home() {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const [selectedDeck, setSelectedDeck] = useState({});
-  const navigate = useNavigate();
   const reduxDecks = useSelector((state) => state.deck.decks);
   const [showSelected, setShowSelected] = useState([]);
-  //   const [id, setId] = useState(socket.id);
+  const [contextMenu, setContextMenu] = React.useState(null);
   const [roomNumber, setRoomNumber] = useState("");
+  const [name, setName] = useState("");
+  const [open, setOpen] = useState(false);
+
+  const handleModalOpen = () => {
+    handleClose();
+    if (selectedDeck.deck.length > 0) setOpen(true);
+  };
+  const handleModalClose = () => setOpen(false);
 
   const handleCreateRoom = () => {
     if (Object.keys(selectedDeck).length !== 0) {
@@ -35,6 +60,28 @@ export default function Home() {
         handleNavigateToGame();
       }
     }
+  };
+
+  const handleDeleteDeck = () => {
+    handleClose();
+    dispatch(deleteDeck(name));
+  };
+
+  const handleClose = () => {
+    setContextMenu(null);
+  };
+  const handleContextMenu = (event, deck, idx) => {
+    setName(deck.name);
+    event.preventDefault();
+    setContextMenu(
+      contextMenu === null
+        ? {
+            mouseX: event.clientX + 2,
+            mouseY: event.clientY - 6,
+          }
+        : null
+    );
+    handleSelectDeck(deck, idx);
   };
 
   const handleRoomNumberInput = (event) => {
@@ -149,6 +196,9 @@ export default function Home() {
             reduxDecks.map((deck, idx) => (
               <div
                 key={idx}
+                onContextMenu={(e) => {
+                  handleContextMenu(e, deck, idx);
+                }}
                 onClick={() => handleSelectDeck(deck, idx)}
                 style={{
                   //   position: "relative",
@@ -161,16 +211,66 @@ export default function Home() {
                     : "transparent",
                 }}
               >
-                <img height={"160px"} src={cardback} alt={"cardback"} />
+                {/* <img height={"160px"} src={cardback} alt={"cardback"} /> */}
                 <div
                   style={{
-                    // position: "absolute",
-                    // top: 60,
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    position: "relative",
+                  }}
+                >
+                  <div
+                    style={{
+                      transform: "rotate(-25deg)",
+                      position: "absolute",
+                      right: "20%",
+                      zIndex: 1,
+                    }}
+                  >
+                    <img
+                      height={"160px"}
+                      src={cardImage(deck.deck[0])}
+                      alt={"cardback"}
+                    />
+                  </div>
+                  <div style={{ zIndex: 2 }}>
+                    <img
+                      height={"160px"}
+                      src={cardImage(
+                        deck.deck[Math.floor(deck.deck.length / 2)]
+                      )}
+                      alt={"cardback"}
+                    />
+                  </div>
+                  <div
+                    style={{
+                      transform: "rotate(25deg)",
+                      position: "absolute",
+                      left: "20%",
+                      zIndex: 3,
+                    }}
+                  >
+                    <img
+                      height={"160px"}
+                      src={cardImage(deck.deck[deck.deck.length - 1])}
+                      alt={"cardback"}
+                    />
+                  </div>
+                </div>
+
+                <div
+                  style={{
+                    position: "relative",
+                    bottom: 35,
+                    zIndex: 10,
                     height: "35px",
                     width: "120px",
-                    backgroundColor: "black",
-                    color: "white",
+                    backgroundColor: "white",
+                    color: "black",
                     fontSize: "17px",
+                    borderRadius: "10px",
+                    border: "4px solid #0000",
                     fontFamily: "Noto Serif JP,serif",
                     display: "inline-block",
                     textOverflow: "ellipsis",
@@ -186,6 +286,61 @@ export default function Home() {
             ))}
         </div>
       </div>
+      <Menu
+        open={contextMenu !== null}
+        onClose={handleClose}
+        anchorReference="anchorPosition"
+        anchorPosition={
+          contextMenu !== null
+            ? { top: contextMenu.mouseY - 150, left: contextMenu.mouseX - 35 }
+            : undefined
+        }
+        anchorOrigin={{
+          vertical: "top",
+          horizontal: "left",
+        }}
+        transformOrigin={{
+          vertical: "top",
+          horizontal: "left",
+        }}
+      >
+        <MenuItem onClick={handleModalOpen}>View</MenuItem>
+        <MenuItem onClick={handleDeleteDeck}>Delete</MenuItem>
+      </Menu>
+      <Modal
+        open={open}
+        onClose={handleModalClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <CardMUI
+            sx={{
+              //   backgroundColor: "rgba(255, 255, 255, 0.1)",
+              backgroundColor: "rgba(0, 0, 0, 0.7)",
+              //   backgroundColor: "black",
+              minHeight: "250px",
+              padding: "3%",
+              height: "400px",
+              overflowY: "scroll",
+              width: "100%",
+              display: "flex",
+              flexDirection: "row",
+              flexWrap: "wrap",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+            variant="outlined"
+          >
+            {selectedDeck.deck?.length > 0 &&
+              selectedDeck.deck.map((card, idx) => (
+                <div key={`card-${idx}`}>
+                  <img height={"160px"} src={cardImage(card)} alt={card} />
+                </div>
+              ))}
+          </CardMUI>
+        </Box>
+      </Modal>
     </div>
   );
 }
