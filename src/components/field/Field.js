@@ -346,6 +346,7 @@ export default function Field({
         }
       >
         <MenuItem onClick={() => handleReturnToEvolveDeck()}>Return</MenuItem>
+        <MenuItem onClick={handleEngage}>Engage</MenuItem>
         {!reduxCustomValues[index].showAtk && (
           <MenuItem onClick={handleShowAtk}>Modify Atk</MenuItem>
         )}
