@@ -27,8 +27,8 @@ export default function Card({
   let numOfCarrots = 0;
   const [rotate, setRotate] = useState(false);
   const dispatch = useDispatch();
-  const [atk, setAtk] = useState(atkVal);
-  const [def, setDef] = useState(defVal);
+  const [atk, setAtk] = useState(0);
+  const [def, setDef] = useState(0);
 
   useEffect(() => {
     if (rotate !== engaged) setRotate(engaged);

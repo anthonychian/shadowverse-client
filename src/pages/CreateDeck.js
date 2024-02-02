@@ -171,8 +171,8 @@ export default function CreateDeck() {
       <div
         style={{
           marginTop: "1%",
-          paddingBottom: "3%",
-          minHeight: "500px",
+          paddingBottom: "1%",
+          minHeight: "550px",
           width: "80%",
           backgroundColor: "rgba(50, 50, 50, 0.60)",
           borderRadius: "10px",

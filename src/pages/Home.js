@@ -186,9 +186,10 @@ export default function Home() {
           style={{
             // backgroundColor: "yellow",
             display: "flex",
+            flexDirection: "row",
+            overflowX: "auto",
             alignItems: "center",
-            justifyContent: "center",
-            height: "60%",
+            height: "50%",
             width: "80%",
           }}
         >
@@ -201,7 +202,6 @@ export default function Home() {
                 }}
                 onClick={() => handleSelectDeck(deck, idx)}
                 style={{
-                  //   position: "relative",
                   height: "160px",
                   width: "115px",
                   borderRadius: "10px",
