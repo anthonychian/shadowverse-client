@@ -140,6 +140,7 @@ export default function Home() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "space-around",
+          overflow: "hidden",
         }}
       >
         <div
@@ -191,6 +192,8 @@ export default function Home() {
             alignItems: "center",
             height: "50%",
             width: "80%",
+            // gap: "3em",
+            justifyContent: reduxDecks.length > 2 ? "start" : "center",
           }}
         >
           {reduxDecks.length > 0 &&
