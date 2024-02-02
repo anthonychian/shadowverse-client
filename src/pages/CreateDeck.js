@@ -78,7 +78,8 @@ export default function CreateDeck() {
   const handleCardSelection = (card) => {
     if (deck.length < 50) {
       if (deckMap.has(card)) {
-        if (deckMap.get(card) === 3 && card !== "Carrot") {
+        if (deckMap.get(card) === 2 && card === "Shenlong") return;
+        if (deckMap.get(card) === 3) {
           return;
         } else {
           deckMap.set(card, deckMap.get(card) + 1);
