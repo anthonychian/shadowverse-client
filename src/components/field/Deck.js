@@ -180,12 +180,10 @@ export default function Deck({ ready, setHovering }) {
         <Box sx={style}>
           <CardMUI
             sx={{
-              //   backgroundColor: "rgba(255, 255, 255, 0.1)",
               backgroundColor: "rgba(0, 0, 0, 0.7)",
-              //   backgroundColor: "black",
               minHeight: "250px",
               padding: "3%",
-              height: "400px",
+              height: "500px",
               overflowY: "scroll",
               width: "100%",
               display: "flex",

@@ -1,7 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { dragonDeck } from "../decks/dragonDeck";
-import { dragonDeckEvo } from "../decks/dragonDeckEvo";
-
 import { socket } from "../sockets";
 
 export const CardSlice = createSlice({
@@ -330,6 +327,38 @@ export const CardSlice = createSlice({
         room: state.room,
       });
     },
+    placeTokenOnField: (state, action) => {
+      const card = action.payload.card;
+      const newIndex = action.payload.index;
+      const newField = [
+        ...state.field.slice(0, newIndex),
+        card,
+        ...state.field.slice(newIndex + 1),
+      ];
+      state.field = newField;
+      console.log(`Added ${card} to field`);
+      socket.emit("send msg", {
+        type: "field",
+        data: state.field,
+        room: state.room,
+      });
+    },
+    removeTokenOnField: (state, action) => {
+      const card = action.payload.card;
+      const prevIndex = action.payload.index;
+      const field = [
+        ...state.field.slice(0, prevIndex),
+        0,
+        ...state.field.slice(prevIndex + 1),
+      ];
+      state.field = field;
+      console.log(`Removed ${card} from field`);
+      socket.emit("send msg", {
+        type: "field",
+        data: state.field,
+        room: state.room,
+      });
+    },
     moveCardOnField: (state, action) => {
       const card = action.payload.card;
       const prevIndex = action.payload.prevIndex;
@@ -621,15 +650,13 @@ export const CardSlice = createSlice({
     },
     reset: (state) => {
       state.hand = [];
-      state.deck = dragonDeck.toSorted(() => Math.random() - 0.5);
+      state.deck = [];
       state.field = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
       state.enemyField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
       state.currentCard = "";
       state.currentEvo = "";
       state.cemetery = [];
-      state.evoDeck = dragonDeckEvo.map((card) => {
-        return { card: card, status: false };
-      });
+      state.evoDeck = [];
       state.evoField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     },
   },
@@ -649,6 +676,8 @@ export const {
   placeToBotOfDeckFromField,
   placeToCemeteryFromField,
   placeToCemeteryFromHand,
+  placeTokenOnField,
+  removeTokenOnField,
   moveCardOnField,
   reorderCardsInHand,
   mulligan,

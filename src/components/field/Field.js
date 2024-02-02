@@ -9,6 +9,8 @@ import {
   moveCardOnField,
   placeToCemeteryFromField,
   placeToFieldFromCemetery,
+  placeTokenOnField,
+  removeTokenOnField,
   evolveCardOnField,
   feedCardOnField,
   backToEvolveDeck,
@@ -37,8 +39,9 @@ import EvoDeck from "./EvoDeck";
 import EnemyEvoDeck from "./EnemyEvoDeck";
 import img from "../../assets/pin_bellringer_angel.png";
 import "../../css/AnimatedBorder.css";
-
+import { useNavigate } from "react-router-dom";
 import { socket } from "../../sockets";
+import Token from "./Token";
 
 export default function Field({
   dragging,
@@ -49,6 +52,7 @@ export default function Field({
   setReadyToPlaceOnFieldFromHand,
 }) {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const reduxField = useSelector((state) => state.card.field);
   const reduxCurrentCard = useSelector((state) => state.card.currentCard);
   const reduxEvoField = useSelector((state) => state.card.evoField);
@@ -62,6 +66,8 @@ export default function Field({
   const reduxEnemyEngaged = useSelector(
     (state) => state.card.enemyEngagedField
   );
+  const reduxCurrentDeck = useSelector((state) => state.card.deck);
+  const reduxCurrentRoom = useSelector((state) => state.card.room);
   const [contextMenu, setContextMenu] = React.useState(null);
   const [contextEvoMenu, setContextEvoMenu] = React.useState(null);
   const [index, setIndex] = useState(0);
@@ -70,7 +76,7 @@ export default function Field({
   const [readyFromCemetery, setReadyFromCemetery] = useState(false);
   const [readyToEvo, setReadyToEvo] = useState(false);
   const [readyToFeed, setReadyToFeed] = useState(false);
-  const [room, setRoom] = useState(socket.id);
+  const [tokenReady, setTokenReady] = useState(false);
 
   useEffect(() => {
     socket.on("receive msg", (data) => {
@@ -84,9 +90,19 @@ export default function Field({
     });
   }, [socket]);
 
+  useEffect(() => {
+    if (reduxCurrentDeck.length === 0) {
+      navigate("/");
+    }
+  }, [reduxCurrentDeck]);
+
   const cardPos = (idx) => {
     if (idx < 5) return idx + 5;
     else return idx - 5;
+  };
+
+  const isToken = (name) => {
+    return name.slice(-5) === "TOKEN";
   };
 
   const handleClick = (name, indexClicked) => {
@@ -99,6 +115,17 @@ export default function Field({
             index: indexClicked,
           })
         );
+      }
+      if (tokenReady) {
+        setTokenReady(false);
+        dispatch(
+          placeTokenOnField({
+            card: name,
+            index: indexClicked,
+          })
+        );
+        dispatch(clearValuesAtIndex(index));
+        dispatch(clearEngagedAtIndex(index));
       }
       if (readyToMoveOnField) {
         setReadyToMoveOnField(false);
@@ -164,6 +191,7 @@ export default function Field({
       setReadyFromCemetery(false);
       setReadyToPlaceOnFieldFromHand(false);
       setReadyToMoveOnField(false);
+      setTokenReady(false);
     }
     setReady(false);
   };
@@ -233,6 +261,15 @@ export default function Field({
     dispatch(clearValuesAtIndex(index));
     dispatch(clearEngagedAtIndex(index));
   };
+  const handleRemoveTokenFromField = () => {
+    handleClose();
+    dispatch(
+      removeTokenOnField({
+        card: name,
+        index: index,
+      })
+    );
+  };
 
   const handleCardToCemeteryFromField = () => {
     handleClose();
@@ -296,7 +333,7 @@ export default function Field({
           backgroundColor: "black",
           color: "white",
           height: "45px",
-          width: "300px",
+          minWidth: "150px",
           position: "absolute",
           fontSize: "23px",
           bottom: 0,
@@ -304,7 +341,7 @@ export default function Field({
           pointerEvents: "auto",
         }}
       >
-        {room}
+        {reduxCurrentRoom}
       </div>
       <Menu
         open={contextMenu !== null}
@@ -316,9 +353,16 @@ export default function Field({
             : undefined
         }
       >
-        <MenuItem onClick={handleCardToHandFromField}>Hand</MenuItem>
-        <MenuItem onClick={handleCardToCemeteryFromField}>Cemetery</MenuItem>
-        <MenuItem onClick={handleEngage}>Engage</MenuItem>
+        {isToken(name) && (
+          <MenuItem onClick={handleRemoveTokenFromField}>Remove</MenuItem>
+        )}
+        {!isToken(name) && (
+          <MenuItem onClick={handleCardToHandFromField}>Hand</MenuItem>
+        )}
+        {!isToken(name) && (
+          <MenuItem onClick={handleCardToCemeteryFromField}>Cemetery</MenuItem>
+        )}
+        {!isToken(name) && <MenuItem onClick={handleEngage}>Engage</MenuItem>}
         {!reduxCustomValues[index].showAtk && (
           <MenuItem onClick={handleShowAtk}>Modify Atk</MenuItem>
         )}
@@ -332,8 +376,12 @@ export default function Field({
           <MenuItem onClick={handleHideDef}>Hide Def</MenuItem>
         )}
         <MenuItem onClick={handleMoveOnField}>Move</MenuItem>
-        <MenuItem onClick={handleCardToTopDeck}>Top of Deck</MenuItem>
-        <MenuItem onClick={handleCardToBotDeck}>Bot of Deck</MenuItem>
+        {!isToken(name) && (
+          <MenuItem onClick={handleCardToTopDeck}>Top of Deck</MenuItem>
+        )}
+        {!isToken(name) && (
+          <MenuItem onClick={handleCardToBotDeck}>Bot of Deck</MenuItem>
+        )}
       </Menu>
       <Menu
         open={contextEvoMenu !== null}
@@ -531,6 +579,12 @@ export default function Field({
             setReady={setReady}
             setHovering={setHovering}
             ready={ready}
+          />
+          <Token
+            setReady={setReady}
+            setHovering={setHovering}
+            ready={ready}
+            setTokenReady={setTokenReady}
           />
         </div>
         {/* Player Field (1-5) & Ex Area (6-10) */}

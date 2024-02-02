@@ -939,19 +939,6 @@ export const cardImage = (cardName) => {
     case "Angelic Barrage":
       return "../textures/PR-018EN.png";
 
-    // case "Dark Dragoon Forte Evolved U":
-    //   return "../textures/BP01-U04EN.png";
-    // case "Dragon Warrior Evolved":
-    //   return "../textures/SD04-004EN.png";
-    // case "Bahamut Evolved":
-    //   return "../textures/BP02-105EN.png";
-    // case "Shenlong Evolved":
-    //   return "../textures/BP01-087EN.png";
-    // case "Bellringer Angel Evolved":
-    //   return "../textures/BP01-160EN.png";
-    // case "Carrot":
-    //   return "../textures/CP01-085EN.png";
-
     case "Cosmos Fang Evolved":
       return "../textures/BP03-003EN.png";
     case "Slade Blossoming Wolf Evolved":
@@ -1183,6 +1170,58 @@ export const cardImage = (cardName) => {
     case "Healing Angel Evolved":
       return "../textures/BP01-178EN.png";
 
+    case "Gargantuan Ghost TOKEN":
+      return "../textures/BP03-T01EN.png";
+    case "Crystalia Eve TOKEN":
+      return "../textures/BP02-T01EN.png";
+    case "Shield Guardian TOKEN":
+      return "../textures/BP02-T02EN.png";
+    case "Leonidas's Resolve TOKEN":
+      return "../textures/BP02-T03EN.png";
+    case "Magical Pawn TOKEN":
+      return "../textures/BP02-T04EN.png";
+    case "Megalorca TOKEN":
+      return "../textures/BP02-T05EN.png";
+    case "Hellflame Dragon TOKEN":
+      return "../textures/BP02-T06EN.png";
+    case "Draconic Weapon TOKEN":
+      return "../textures/BP02-T07EN.png";
+    case "Ephemeral Moon TOKEN":
+      return "../textures/BP02-T08EN.png";
+    case "Thorn Burst TOKEN":
+      return "../textures/BP01-T01EN.png";
+    case "Fairy Wisp TOKEN":
+      return "../textures/BP01-T02EN.png";
+    case "Fairy TOKEN":
+      return "../textures/BP01-T03EN.png";
+    case "Otohime's Bodyguard TOKEN":
+      return "../textures/BP01-T04EN.png";
+    case "Knight TOKEN":
+      return "../textures/BP01-T05EN.png";
+    case "Viking TOKEN":
+      return "../textures/BP01-T06EN.png";
+    case "Steelclad Knight TOKEN":
+      return "../textures/BP01-T07EN.png";
+    case "Strikeform Golem TOKEN":
+      return "../textures/BP01-T08EN.png";
+    case "Guardform Golem TOKEN":
+      return "../textures/BP01-T09EN.png";
+    case "Magic Sediment TOKEN":
+      return "../textures/BP01-T10EN.png";
+    case "Dragon TOKEN":
+      return "../textures/BP01-T11EN.png";
+    case "Mimi TOKEN":
+      return "../textures/BP01-T12EN.png";
+    case "Coco TOKEN":
+      return "../textures/BP01-T13EN.png";
+    case "Ghost TOKEN":
+      return "../textures/BP01-T14EN.png";
+    case "Forest Bat TOKEN":
+      return "../textures/BP01-T15EN.png";
+    case "Holy Falcon TOKEN":
+      return "../textures/BP01-T16EN.png";
+    case "Holy Tiger TOKEN":
+      return "../textures/BP01-T17EN.png";
     default:
       return "";
   }

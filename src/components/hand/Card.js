@@ -27,8 +27,8 @@ export default function Card({
   let numOfCarrots = 0;
   const [rotate, setRotate] = useState(false);
   const dispatch = useDispatch();
-  const [atk, setAtk] = useState(0);
-  const [def, setDef] = useState(0);
+  const [atk, setAtk] = useState(atkVal);
+  const [def, setDef] = useState(defVal);
 
   useEffect(() => {
     if (rotate !== engaged) setRotate(engaged);
@@ -58,13 +58,6 @@ export default function Card({
     );
   };
 
-  // const handleTap = () => {
-  //   if (onField && !ready) {
-  //     setRotate(!rotate);
-  //     dispatch(setEngaged(idx));
-  //   }
-  // };
-
   const handleHoverStart = () => {
     if (!ready) {
       setHovering(true);
@@ -90,13 +83,11 @@ export default function Card({
   return (
     <>
       <motion.div
-        // onTap={handleTap}
         whileTap={onField ? {} : { transitionDuration: "5s" }}
         animate={rotate ? { rotate: -90 } : { rotate: 0 }}
         style={{
           height: "160px",
           position: "relative",
-          // rotate: rotate ? -90 : 0,
         }}
         onHoverStart={() => handleHoverStart()}
         onHoverEnd={() => handleHoverEnd()}

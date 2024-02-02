@@ -78,7 +78,7 @@ export default function CreateDeck() {
   const handleCardSelection = (card) => {
     if (deck.length < 50) {
       if (deckMap.has(card)) {
-        if (deckMap.get(card) === 3) {
+        if (deckMap.get(card) === 3 && card !== "Carrot") {
           return;
         } else {
           deckMap.set(card, deckMap.get(card) + 1);
@@ -87,6 +87,8 @@ export default function CreateDeck() {
         deckMap.set(card, 1);
       }
       if (deckMap.get(card) === 4) {
+        return;
+      } else if (deckMap.get(card) === 1 && card === "Shenlong") {
         return;
       } else {
         setDeck((deck) => [...deck, card]);
@@ -124,7 +126,7 @@ export default function CreateDeck() {
   const handleEvoCardSelection = (card) => {
     if (evoDeck.length < 10) {
       if (evoDeckMap.has(card)) {
-        if (evoDeckMap.get(card) === 3) {
+        if (evoDeckMap.get(card) === 3 && card !== "Carrot") {
           return;
         } else {
           evoDeckMap.set(card, evoDeckMap.get(card) + 1);
@@ -132,7 +134,7 @@ export default function CreateDeck() {
       } else {
         evoDeckMap.set(card, 1);
       }
-      if (evoDeckMap.get(card) === 4) {
+      if (evoDeckMap.get(card) === 4 && card !== "Carrot") {
         return;
       } else {
         setEvoDeck((deck) => [...deck, card]);
@@ -399,6 +401,7 @@ export default function CreateDeck() {
         {evoDeckSelected &&
           filteredAllCardsEvo.map((name, idx) => (
             <motion.div
+              key={idx}
               onTap={() => handleEvoCardSelection(name)}
               onContextMenu={() => handleEvoCardRemove(name)}
               whileHover={{
@@ -410,7 +413,7 @@ export default function CreateDeck() {
               }}
             >
               <img
-                key={idx}
+                // key={idx}
                 width={"224px"}
                 height={"312px"}
                 src={cardImage(name)}
