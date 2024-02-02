@@ -94,7 +94,13 @@ export default function Token({ ready, setReady, setTokenReady, setHovering }) {
                   <Card ready={ready} name={card} setHovering={setHovering} />
                 </div>
               ) : (
-                <Skeleton variant="rectangular" width={160} height={115} />
+                <Skeleton
+                  sx={{ bgcolor: "grey.900" }}
+                  animation="wave"
+                  variant="rounded"
+                  width={160}
+                  height={115}
+                />
               )
             )}
           </CardMUI>

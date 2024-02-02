@@ -402,7 +402,13 @@ export default function CreateDeck() {
                 />
               </motion.div>
             ) : (
-              <Skeleton variant="rectangular" width={224} height={312} />
+              <Skeleton
+                sx={{ bgcolor: "grey.900" }}
+                animation="wave"
+                variant="rounded"
+                width={224}
+                height={312}
+              />
             )
           )}
         {evoDeckSelected &&
