@@ -9,18 +9,20 @@ import { motion } from "framer-motion";
 import { useDispatch } from "react-redux";
 import { createDeck } from "../redux/DeckSlice";
 import { useNavigate } from "react-router-dom";
-
-import Radio from "@mui/material/Radio";
-import RadioGroup from "@mui/material/RadioGroup";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import FormControl from "@mui/material/FormControl";
-import Button from "@mui/material/Button";
-import TextField from "@mui/material/TextField";
-import Dialog from "@mui/material/Dialog";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
+import {
+  Radio,
+  RadioGroup,
+  FormControlLabel,
+  FormControl,
+  Button,
+  TextField,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogTitle,
+  Skeleton,
+} from "@mui/material";
 
 export default function CreateDeck() {
   const dispatch = useDispatch();
@@ -378,27 +380,31 @@ export default function CreateDeck() {
         }}
       >
         {mainDeckSelected &&
-          filteredAllCards.map((name, idx) => (
-            <motion.div
-              key={idx}
-              onTap={() => handleCardSelection(name)}
-              onContextMenu={() => handleCardRemove(name)}
-              whileHover={{
-                translateY: -25,
-                scale: 1.3,
-                cursor: `url(${img}) 55 55, auto`,
-                boxShadow:
-                  "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 1.0)",
-              }}
-            >
-              <img
-                width={"224px"}
-                height={"312px"}
-                src={cardImage(name)}
-                alt={name}
-              />
-            </motion.div>
-          ))}
+          filteredAllCards.map((name, idx) =>
+            name ? (
+              <motion.div
+                key={idx}
+                onTap={() => handleCardSelection(name)}
+                onContextMenu={() => handleCardRemove(name)}
+                whileHover={{
+                  translateY: -25,
+                  scale: 1.3,
+                  cursor: `url(${img}) 55 55, auto`,
+                  boxShadow:
+                    "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 1.0)",
+                }}
+              >
+                <img
+                  width={"224px"}
+                  height={"312px"}
+                  src={cardImage(name)}
+                  alt={name}
+                />
+              </motion.div>
+            ) : (
+              <Skeleton variant="rectangular" width={224} height={312} />
+            )
+          )}
         {evoDeckSelected &&
           filteredAllCardsEvo.map((name, idx) => (
             <motion.div
