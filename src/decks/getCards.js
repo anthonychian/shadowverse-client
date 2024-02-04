@@ -717,9 +717,9 @@ export const cardImage = (cardName) => {
     case "Novice Trooper":
       return "../textures/BP01-048EN.png";
     case "Forge Weaponry":
-      return "../textures/BP01-050EN.png";
+      return "../textures/BP01-049EN.png";
     case "Onslaught":
-      return "../textures/BP01-026EN.png";
+      return "../textures/BP01-050EN.png";
     case "Arch Summoner Erasmus":
       return "../textures/BP01-051EN.png";
     case "Merlin":

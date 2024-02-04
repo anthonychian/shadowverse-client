@@ -1,8 +1,34 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import initialWallpaper from "../../src/assets/wallpapers/forteEvo.png";
-import { allCards } from "../decks/AllCards";
-import { allCardsEvo } from "../decks/AllCardsEvo";
+import {
+  allCards,
+  set3,
+  setUMA,
+  set2,
+  set1,
+  forest,
+  sword,
+  rune,
+  dragon,
+  abyss,
+  haven,
+  neutral,
+} from "../decks/AllCards";
+import {
+  allCardsEvo,
+  set3Evo,
+  setUMAEvo,
+  set2Evo,
+  set1Evo,
+  forestEvo,
+  swordEvo,
+  runeEvo,
+  dragonEvo,
+  abyssEvo,
+  havenEvo,
+  neutralEvo,
+} from "../decks/AllCardsEvo";
 import { cardImage } from "../decks/getCards";
 import img from "../assets/pin_bellringer_angel.png";
 import { motion } from "framer-motion";
@@ -38,6 +64,18 @@ export default function CreateDeck() {
   const [textInput, setTextInput] = useState("");
   const [filteredAllCards, setFilteredAllCards] = useState(allCards);
   const [filteredAllCardsEvo, setFilteredAllCardsEvo] = useState(allCardsEvo);
+  const [buttonFilterSet, setButtonFilterSet] = useState("all");
+  const [buttonFilterClass, setButtonFilterClass] = useState("all");
+  const [buttonFilterSetEvo, setButtonFilterSetEvo] = useState("all evo");
+  const [buttonFilterClassEvo, setButtonFilterClassEvo] = useState("all evo");
+
+  useEffect(() => {
+    const filtered = handleSelectButtonFilter();
+    const filteredEvo = handleSelectButtonFilterEvo();
+    setFilteredAllCards(filtered);
+    setFilteredAllCardsEvo(filteredEvo);
+    handleTextInput(textInput);
+  }, [buttonFilterSet, buttonFilterClass, mainDeckSelected]);
 
   const handleNameChange = (event) => {
     setName(event.target.value);
@@ -61,20 +99,97 @@ export default function CreateDeck() {
     navigate("/");
   };
 
-  const handleTextInput = (event) => {
-    const text = event.target.value;
+  // const createHashMapFromDeck = (deck) => {
+  //   console.log(deckMap)
+  // }
+
+  const handleTextInput = (text) => {
     setTextInput(text);
     if (mainDeckSelected) {
-      const filteredCards = allCards.filter((card) =>
+      const filtered = handleSelectButtonFilter();
+      const filteredCards = filtered.filter((card) =>
         card.toLowerCase().includes(text.toLowerCase())
       );
       setFilteredAllCards(filteredCards);
     } else {
-      const filteredCards = allCardsEvo.filter((card) =>
+      const filteredEvo = handleSelectButtonFilterEvo();
+      const filteredCards = filteredEvo.filter((card) =>
         card.toLowerCase().includes(text.toLowerCase())
       );
       setFilteredAllCardsEvo(filteredCards);
     }
+  };
+
+  const getCardsFromName = (name) => {
+    switch (name) {
+      case "set 3":
+        return set3;
+      case "uma":
+        return setUMA;
+      case "set 2":
+        return set2;
+      case "set 1":
+        return set1;
+      case "set 3 evo":
+        return set3Evo;
+      case "uma evo":
+        return setUMAEvo;
+      case "set 2 evo":
+        return set2Evo;
+      case "set 1 evo":
+        return set1Evo;
+      case "forest":
+        return forest;
+      case "forest evo":
+        return forestEvo;
+      case "sword":
+        return sword;
+      case "sword evo":
+        return swordEvo;
+      case "rune":
+        return rune;
+      case "rune evo":
+        return runeEvo;
+      case "dragon":
+        return dragon;
+      case "dragon evo":
+        return dragonEvo;
+      case "abyss":
+        return abyss;
+      case "abyss evo":
+        return abyssEvo;
+      case "haven":
+        return haven;
+      case "haven evo":
+        return havenEvo;
+      case "neutral":
+        return neutral;
+      case "neutral evo":
+        return neutralEvo;
+      case "all":
+        return allCards;
+      case "all evo":
+        return allCardsEvo;
+      default:
+        return allCards;
+    }
+  };
+
+  const handleSelectButtonFilter = () => {
+    const setCards = getCardsFromName(buttonFilterSet);
+    const classCards = getCardsFromName(buttonFilterClass);
+    const merged = setCards.filter(
+      (setCard) => classCards.indexOf(setCard) > -1
+    );
+    return merged;
+  };
+  const handleSelectButtonFilterEvo = () => {
+    const setCards = getCardsFromName(buttonFilterSetEvo);
+    const classCards = getCardsFromName(buttonFilterClassEvo);
+    const merged = setCards.filter(
+      (setCard) => classCards.indexOf(setCard) > -1
+    );
+    return merged;
   };
 
   const handleCardSelection = (card) => {
@@ -172,16 +287,15 @@ export default function CreateDeck() {
     >
       <div
         style={{
-          marginTop: "1%",
+          // marginTop: "1%",
           paddingBottom: "1%",
-          minHeight: "550px",
-          width: "80%",
+          minHeight: "450px",
+          width: "80vw",
           backgroundColor: "rgba(50, 50, 50, 0.60)",
           borderRadius: "10px",
           border: "4px solid #0000",
           display: "flex",
           flexDirection: "column",
-          gap: "1em",
           alignItems: "center",
           justifyContent: "center",
         }}
@@ -204,16 +318,16 @@ export default function CreateDeck() {
                 style={{
                   color: "white",
                   fontSize: "32px",
-                  fontFamily: "Noto Serif JP,serif",
+                  fontFamily: "Noto Serif JP, serif",
                 }}
               >
                 Main Deck
               </div>
               <div
                 style={{
-                  color: "white",
+                  color: deck.length < 40 ? "white" : "gold",
                   fontSize: "17px",
-                  fontFamily: "Noto Serif JP,serif",
+                  fontFamily: "Noto Serif JP, serif",
                   textAlign: "center",
                 }}
               >
@@ -298,15 +412,41 @@ export default function CreateDeck() {
             }}
           >
             {deck.length > 0 &&
-              deck.map((name, idx) => (
-                <img
-                  key={idx}
-                  width={"110px"}
-                  height={"150px"}
-                  src={cardImage(name)}
-                  alt={name}
-                />
-              ))}
+              Array.from(deckMap.entries()).map((entry, idx) => {
+                const [key, value] = entry;
+                return (
+                  <div
+                    style={{ position: "relative" }}
+                    onClick={() => handleCardRemove(key)}
+                  >
+                    <img
+                      key={idx}
+                      width={"110px"}
+                      height={"150px"}
+                      src={cardImage(key)}
+                      alt={key}
+                    />
+                    <div
+                      style={{
+                        position: "absolute",
+                        bottom: "75%",
+                        backgroundColor: "rgba(0, 0, 0, 0.6)",
+                        height: "40px",
+                        width: "40px",
+                        color: "white",
+                        fontSize: "20px",
+                        fontFamily: "Noto Serif JP, serif",
+                        borderRadius: "7px",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}
+                    >
+                      {value}
+                    </div>
+                  </div>
+                );
+              })}
           </div>
         )}
 
@@ -326,21 +466,48 @@ export default function CreateDeck() {
             }}
           >
             {evoDeck.length > 0 &&
-              evoDeck.map((name, idx) => (
-                <img
-                  key={idx}
-                  width={"110px"}
-                  height={"150px"}
-                  src={cardImage(name)}
-                  alt={name}
-                />
-              ))}
+              Array.from(evoDeckMap.entries()).map((entry, idx) => {
+                const [key, value] = entry;
+                return (
+                  <div
+                    style={{ position: "relative" }}
+                    onClick={() => handleEvoCardRemove(key)}
+                  >
+                    <img
+                      key={idx}
+                      width={"110px"}
+                      height={"150px"}
+                      src={cardImage(key)}
+                      alt={key}
+                    />
+                    <div
+                      style={{
+                        position: "absolute",
+                        bottom: "75%",
+                        backgroundColor: "rgba(0, 0, 0, 0.6)",
+                        height: "40px",
+                        width: "40px",
+                        color: "white",
+                        fontSize: "20px",
+                        fontFamily: "Noto Serif JP, serif",
+                        borderRadius: "7px",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}
+                    >
+                      {value}
+                    </div>
+                  </div>
+                );
+              })}
           </div>
         )}
         {deck.length > 39 && evoDeck && (
           <Button
             style={{
               backgroundColor: "white",
+              marginTop: "1em",
               color: "black",
             }}
             variant="contained"
@@ -353,6 +520,7 @@ export default function CreateDeck() {
 
       <input
         style={{
+          padding: ".3em",
           marginTop: "1%",
           width: "30%",
           fontSize: "20px",
@@ -360,14 +528,323 @@ export default function CreateDeck() {
         }}
         type="text"
         value={textInput}
-        onChange={handleTextInput}
+        onChange={(event) => handleTextInput(event.target.value)}
         placeholder="Search for cards..."
       />
+
+      <div
+        style={{
+          backgroundColor: "rgba(50, 50, 50, 0.60)",
+          marginTop: "1em",
+          padding: "1em",
+        }}
+      >
+        <div
+          style={{
+            // backgroundColor: "rgba(50, 50, 50, 0.60)",
+            // marginTop: "1em",
+            padding: "1em",
+            // height: "200px",
+            width: "80vw",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-evenly",
+            flexWrap: "wrap",
+          }}
+        >
+          <Button
+            onClick={() => {
+              setButtonFilterSet("all");
+              setButtonFilterSetEvo("all evo");
+            }}
+            style={{
+              fontFamily: "Noto Serif JP,serif",
+              textTransform: "none",
+              fontWeight: "bold",
+              backgroundColor: buttonFilterSet === "all" ? "#131219" : "white",
+              border:
+                buttonFilterSet === "all"
+                  ? "3px solid gold"
+                  : "3px solid white",
+              color: buttonFilterSet === "all" ? "gold" : "#131219",
+            }}
+            variant="contained"
+          >
+            All
+          </Button>
+          <Button
+            onClick={() => {
+              setButtonFilterSet("set 3");
+              setButtonFilterSetEvo("set 3 evo");
+            }}
+            style={{
+              fontFamily: "Noto Serif JP,serif",
+              textTransform: "none",
+              fontWeight: "bold",
+              backgroundColor:
+                buttonFilterSet === "set 3" ? "#131219" : "white",
+              border:
+                buttonFilterSet === "set 3"
+                  ? "3px solid gold"
+                  : "3px solid white",
+              color: buttonFilterSet === "set 3" ? "gold" : "#131219",
+            }}
+            variant="contained"
+          >
+            Flame of Lævateinn
+          </Button>
+          <Button
+            onClick={() => {
+              setButtonFilterSet("uma");
+              setButtonFilterSetEvo("uma evo");
+            }}
+            style={{
+              fontFamily: "Noto Serif JP,serif",
+              textTransform: "none",
+              fontWeight: "bold",
+              backgroundColor: buttonFilterSet === "uma" ? "#131219" : "white",
+              border:
+                buttonFilterSet === "uma"
+                  ? "3px solid gold"
+                  : "3px solid white",
+              color: buttonFilterSet === "uma" ? "gold" : "#131219",
+            }}
+            variant="contained"
+          >
+            Umamusume
+          </Button>
+          <Button
+            onClick={() => {
+              setButtonFilterSet("set 2");
+              setButtonFilterSetEvo("set 2 evo");
+            }}
+            style={{
+              fontFamily: "Noto Serif JP,serif",
+              textTransform: "none",
+              fontWeight: "bold",
+              backgroundColor:
+                buttonFilterSet === "set 2" ? "#131219" : "white",
+              border:
+                buttonFilterSet === "set 2"
+                  ? "3px solid gold"
+                  : "3px solid white",
+              color: buttonFilterSet === "set 2" ? "gold" : "#131219",
+            }}
+            variant="contained"
+          >
+            Reign of Bahamut
+          </Button>
+          <Button
+            onClick={() => {
+              setButtonFilterSet("set 1");
+              setButtonFilterSetEvo("set 1 evo");
+            }}
+            style={{
+              fontFamily: "Noto Serif JP,serif",
+              textTransform: "none",
+              fontWeight: "bold",
+              backgroundColor:
+                buttonFilterSet === "set 1" ? "#131219" : "white",
+              border:
+                buttonFilterSet === "set 1"
+                  ? "3px solid gold"
+                  : "3px solid white",
+              color: buttonFilterSet === "set 1" ? "gold" : "#131219",
+            }}
+            variant="contained"
+          >
+            Advent of Genesis
+          </Button>
+        </div>
+
+        <div
+          style={{
+            // backgroundColor: "rgba(50, 50, 50, 0.60)",
+            // marginTop: "1em",
+            padding: "1em",
+            // height: "200px",
+            width: "80vw",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-evenly",
+            flexWrap: "wrap",
+          }}
+        >
+          <Button
+            onClick={() => {
+              setButtonFilterClass("all");
+              setButtonFilterClassEvo("all evo");
+            }}
+            style={{
+              fontFamily: "Noto Serif JP,serif",
+              textTransform: "none",
+              fontWeight: "bold",
+              backgroundColor:
+                buttonFilterClass === "all" ? "#131219" : "white",
+              border:
+                buttonFilterClass === "all"
+                  ? "3px solid gold"
+                  : "3px solid white",
+              color: buttonFilterClass === "all" ? "gold" : "#131219",
+            }}
+            variant="contained"
+          >
+            All
+          </Button>
+          <Button
+            onClick={() => {
+              setButtonFilterClass("forest");
+              setButtonFilterClassEvo("forest evo");
+            }}
+            style={{
+              fontFamily: "Noto Serif JP,serif",
+              textTransform: "none",
+              fontWeight: "bold",
+              backgroundColor:
+                buttonFilterClass === "forest" ? "#131219" : "white",
+              border:
+                buttonFilterClass === "forest"
+                  ? "3px solid gold"
+                  : "3px solid white",
+              color: buttonFilterClass === "forest" ? "gold" : "#131219",
+            }}
+            variant="contained"
+          >
+            Forest
+          </Button>
+          <Button
+            onClick={() => {
+              setButtonFilterClass("sword");
+              setButtonFilterClassEvo("sword evo");
+            }}
+            style={{
+              fontFamily: "Noto Serif JP,serif",
+              textTransform: "none",
+              fontWeight: "bold",
+              backgroundColor:
+                buttonFilterClass === "sword" ? "#131219" : "white",
+              border:
+                buttonFilterClass === "sword"
+                  ? "3px solid gold"
+                  : "3px solid white",
+              color: buttonFilterClass === "sword" ? "gold" : "#131219",
+            }}
+            variant="contained"
+          >
+            Swordcraft
+          </Button>
+          <Button
+            onClick={() => {
+              setButtonFilterClass("rune");
+              setButtonFilterClassEvo("rune evo");
+            }}
+            style={{
+              fontFamily: "Noto Serif JP,serif",
+              textTransform: "none",
+              fontWeight: "bold",
+              backgroundColor:
+                buttonFilterClass === "rune" ? "#131219" : "white",
+              border:
+                buttonFilterClass === "rune"
+                  ? "3px solid gold"
+                  : "3px solid white",
+              color: buttonFilterClass === "rune" ? "gold" : "#131219",
+            }}
+            variant="contained"
+          >
+            Runecraft
+          </Button>
+          <Button
+            onClick={() => {
+              setButtonFilterClass("dragon");
+              setButtonFilterClassEvo("dragon evo");
+            }}
+            style={{
+              fontFamily: "Noto Serif JP,serif",
+              textTransform: "none",
+              fontWeight: "bold",
+              backgroundColor:
+                buttonFilterClass === "dragon" ? "#131219" : "white",
+              border:
+                buttonFilterClass === "dragon"
+                  ? "3px solid gold"
+                  : "3px solid white",
+              color: buttonFilterClass === "dragon" ? "gold" : "#131219",
+            }}
+            variant="contained"
+          >
+            Dragoncraft
+          </Button>
+          <Button
+            onClick={() => {
+              setButtonFilterClass("abyss");
+              setButtonFilterClassEvo("abyss evo");
+            }}
+            style={{
+              fontFamily: "Noto Serif JP,serif",
+              textTransform: "none",
+              fontWeight: "bold",
+              backgroundColor:
+                buttonFilterClass === "abyss" ? "#131219" : "white",
+              border:
+                buttonFilterClass === "abyss"
+                  ? "3px solid gold"
+                  : "3px solid white",
+              color: buttonFilterClass === "abyss" ? "gold" : "#131219",
+            }}
+            variant="contained"
+          >
+            Abysscraft
+          </Button>
+          <Button
+            onClick={() => {
+              setButtonFilterClass("haven");
+              setButtonFilterClassEvo("haven evo");
+            }}
+            style={{
+              fontFamily: "Noto Serif JP,serif",
+              textTransform: "none",
+              fontWeight: "bold",
+              backgroundColor:
+                buttonFilterClass === "haven" ? "#131219" : "white",
+              border:
+                buttonFilterClass === "haven"
+                  ? "3px solid gold"
+                  : "3px solid white",
+              color: buttonFilterClass === "haven" ? "gold" : "#131219",
+            }}
+            variant="contained"
+          >
+            Havencraft
+          </Button>
+          <Button
+            onClick={() => {
+              setButtonFilterClass("neutral");
+              setButtonFilterClassEvo("neutral evo");
+            }}
+            style={{
+              fontFamily: "Noto Serif JP,serif",
+              textTransform: "none",
+              fontWeight: "bold",
+              backgroundColor:
+                buttonFilterClass === "neutral" ? "#131219" : "white",
+              border:
+                buttonFilterClass === "neutral"
+                  ? "3px solid gold"
+                  : "3px solid white",
+              color: buttonFilterClass === "neutral" ? "gold" : "#131219",
+            }}
+            variant="contained"
+          >
+            Neutral
+          </Button>
+        </div>
+      </div>
+
       <InfiniteScroll
         dataLength={allCards.length} //This is important field to render the next data
         //   next={fetchData}
         style={{
-          //   backgroundColor: "yellow",
           width: "80vw",
           display: "flex",
           flexWrap: "wrap",
@@ -375,8 +852,9 @@ export default function CreateDeck() {
           flexDirection: "row",
           justifyContent: "center",
           alignItems: "center",
-          paddingTop: "5%",
+          paddingTop: "3%",
           paddingBottom: "10%",
+          overflow: "visible",
         }}
       >
         {mainDeckSelected &&
