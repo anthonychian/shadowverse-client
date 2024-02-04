@@ -155,26 +155,49 @@ export default function Home() {
           <Stack spacing={2} direction="column">
             <Button
               onClick={handleNavigateToDeck}
-              style={{ backgroundColor: "white", color: "black" }}
+              style={{
+                fontFamily: "Noto Serif JP,serif",
+                textTransform: "none",
+                fontWeight: "bold",
+                backgroundColor: "white",
+                color: "black",
+              }}
               variant="contained"
             >
               Create Deck
             </Button>
             <Button
               onClick={handleCreateRoom}
-              style={{ backgroundColor: "white", color: "black" }}
+              style={{
+                fontFamily: "Noto Serif JP,serif",
+                textTransform: "none",
+                fontWeight: "bold",
+                backgroundColor: "white",
+                color: "black",
+              }}
               variant="contained"
             >
               Create Room
             </Button>
             <Button
               onClick={handleJoinRoom}
-              style={{ backgroundColor: "white", color: "black" }}
+              style={{
+                fontFamily: "Noto Serif JP,serif",
+                textTransform: "none",
+                fontWeight: "bold",
+                backgroundColor: "white",
+                color: "black",
+              }}
               variant="contained"
             >
               Join Room
             </Button>
             <input
+              style={{
+                padding: ".3em",
+                fontSize: "15px",
+                fontFamily: "Noto Serif JP, serif",
+              }}
               type="text"
               value={roomNumber}
               onChange={handleRoomNumberInput}
