@@ -8,9 +8,11 @@ import {
   reorderCardsInHand,
   setCurrentCard,
   placeToCemeteryFromHand,
+  setShowEnemyHand,
 } from "../../redux/CardSlice";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import { socket } from "../../sockets";
 
 export default function Hand({
   constraintsRef,
@@ -22,6 +24,7 @@ export default function Hand({
 }) {
   const reduxHand = useSelector((state) => state.card.hand);
   const [items, setItems] = useState(reduxHand);
+  const reduxRoom = useSelector((state) => state.card.room);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -75,6 +78,14 @@ export default function Hand({
     handleClose();
     dispatch(placeToBotOfDeckFromHand(name));
   };
+  const handleShowHand = () => {
+    handleClose();
+    socket.emit("send msg", {
+      type: "showHand",
+      data: true,
+      room: reduxRoom,
+    });
+  };
 
   return (
     <>
@@ -92,6 +103,7 @@ export default function Hand({
         <MenuItem onClick={handleCardToCemetery}>Cemetery</MenuItem>
         <MenuItem onClick={handleCardToTopOfDeck}>Top of Deck</MenuItem>
         <MenuItem onClick={handleCardToBotOfDeck}>Bot of Deck</MenuItem>
+        <MenuItem onClick={handleShowHand}>Show Hand</MenuItem>
       </Menu>
       <Reorder.Group
         style={{
@@ -122,6 +134,7 @@ export default function Hand({
               setDragging={setDragging}
               setHovering={setHovering}
               ready={ready}
+              inHand={true}
             />
           </Reorder.Item>
         ))}

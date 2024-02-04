@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-
 import {
   placeToFieldFromHand,
   addToHandFromField,
@@ -27,9 +25,18 @@ import {
   hideDef,
   clearValuesAtIndex,
   clearEngagedAtIndex,
+  setEnemyHand,
+  setShowEnemyHand,
+  setEnemyDeckSize,
+  setEnemyEvoPoints,
+  setEnemyPlayPoints,
+  setEnemyHealth,
+  setEnemyLeader,
 } from "../../redux/CardSlice";
+import { motion } from "framer-motion";
+import CardMUI from "@mui/material/Card";
 import { useDispatch, useSelector } from "react-redux";
-import { Menu, MenuItem } from "@mui/material";
+import { Menu, MenuItem, Modal, Box, Typography } from "@mui/material";
 import Card from "../hand/Card";
 import Deck from "./Deck";
 import Cemetery from "./Cemetery";
@@ -42,6 +49,17 @@ import "../../css/AnimatedBorder.css";
 import { useNavigate } from "react-router-dom";
 import { socket } from "../../sockets";
 import Token from "./Token";
+
+const style = {
+  position: "relative",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  backgroundColor: "transparent",
+  boxShadow: 24,
+  p: 3,
+  width: "55%",
+};
 
 export default function Field({
   dragging,
@@ -68,6 +86,9 @@ export default function Field({
   );
   const reduxCurrentDeck = useSelector((state) => state.card.deck);
   const reduxCurrentRoom = useSelector((state) => state.card.room);
+  const reduxEnemyHand = useSelector((state) => state.card.enemyHand);
+  const reduxEnemyDeckSize = useSelector((state) => state.card.enemyDeckSize);
+  const reduxShowEnemyHand = useSelector((state) => state.card.showEnemyHand);
   const [contextMenu, setContextMenu] = React.useState(null);
   const [contextEvoMenu, setContextEvoMenu] = React.useState(null);
   const [index, setIndex] = useState(0);
@@ -77,6 +98,7 @@ export default function Field({
   const [readyToEvo, setReadyToEvo] = useState(false);
   const [readyToFeed, setReadyToFeed] = useState(false);
   const [tokenReady, setTokenReady] = useState(false);
+  const [showOpponentDeckSize, setShowOpponentDeckSize] = useState(false);
 
   useEffect(() => {
     socket.on("receive msg", (data) => {
@@ -87,6 +109,15 @@ export default function Field({
       else if (data.type === "evoDeck") dispatch(setEnemyEvoDeck(data.data));
       else if (data.type === "values")
         dispatch(setEnemyCustomValues(data.data));
+      else if (data.type === "hand") dispatch(setEnemyHand(data.data));
+      else if (data.type === "deckSize") dispatch(setEnemyDeckSize(data.data));
+      else if (data.type === "evoPoints")
+        dispatch(setEnemyEvoPoints(data.data));
+      else if (data.type === "playPoints")
+        dispatch(setEnemyPlayPoints(data.data));
+      else if (data.type === "health") dispatch(setEnemyHealth(data.data));
+      else if (data.type === "leader") dispatch(setEnemyLeader(data.data));
+      else if (data.type === "showHand") dispatch(setShowEnemyHand(data.data));
     });
   }, [socket]);
 
@@ -95,6 +126,10 @@ export default function Field({
       navigate("/");
     }
   }, [reduxCurrentDeck]);
+
+  const handleModalClose = () => {
+    dispatch(setShowEnemyHand(false));
+  };
 
   const cardPos = (idx) => {
     if (idx < 5) return idx + 5;
@@ -289,6 +324,13 @@ export default function Field({
     dispatch(setEngaged(index));
   };
 
+  const handleMouseEnter = () => {
+    setShowOpponentDeckSize(!showOpponentDeckSize);
+  };
+  const handleMouseLeave = () => {
+    setShowOpponentDeckSize(!showOpponentDeckSize);
+  };
+
   const handleShowAtk = () => {
     handleClose();
     handleEvoClose();
@@ -409,7 +451,68 @@ export default function Field({
         )}
       </Menu>
 
+      <Modal
+        open={reduxShowEnemyHand}
+        onClose={handleModalClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <Typography
+            sx={{
+              color: "white",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              fontFamily: "Noto Serif JP, serif",
+              fontSize: "20px",
+            }}
+            id="modal-modal-title"
+            variant="h6"
+            component="h2"
+          >
+            Viewing Opponent's Hand
+          </Typography>
+          <CardMUI
+            sx={{
+              backgroundColor: "rgba(0, 0, 0, 0.7)",
+              minHeight: "250px",
+              padding: "3%",
+              width: "100%",
+              display: "flex",
+              flexDirection: "row",
+              flexWrap: "wrap",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+            variant="outlined"
+          >
+            {reduxEnemyHand.map((card, idx) => (
+              <div key={`card-${idx}`}>
+                <Card name={card} setHovering={setHovering} />
+              </div>
+            ))}
+          </CardMUI>
+        </Box>
+      </Modal>
+
       {/* Enemy */}
+      <div
+        style={{
+          // backgroundColor: "yellow",
+          display: "flex",
+          flexDirection: "row",
+          width: "100%",
+          minHeight: "130px",
+          justifyContent: "center",
+          alignItems: "center",
+          // zIndex: 100,
+        }}
+      >
+        {reduxEnemyHand.map((_, idx) => (
+          <img key={idx} height={"160px"} src={cardback} alt={"cardback"} />
+        ))}
+      </div>
 
       <div
         style={{
@@ -429,20 +532,44 @@ export default function Field({
             width: "175px",
             display: "flex",
             flexDirection: "column",
-            // backgroundColor: "black",
-            // backgroundColor: "#131219",
             backgroundColor: "rgba(0, 0, 0, 0.60)",
             alignItems: "center",
             justifyContent: "space-evenly",
           }}
         >
-          <div
+          <div style={{ position: "relative" }}>
+            <div
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              style={{
+                cursor: `url(${img}) 55 55, auto`,
+              }}
+            >
+              <img height={"160px"} src={cardback} alt={"cardback"} />
+            </div>
+            {showOpponentDeckSize && (
+              <div
+                style={{
+                  position: "absolute",
+                  top: "5%",
+                  right: reduxEnemyDeckSize > 9 ? "37%" : "43%",
+                  color: "rgba(255, 255, 255, 0.75)",
+                  fontSize: "30px",
+                  fontFamily: "Noto Serif JP, serif",
+                }}
+              >
+                {reduxEnemyDeckSize}
+              </div>
+            )}
+          </div>
+
+          {/* <div
             style={{
               cursor: `url(${img}) 55 55, auto`,
             }}
           >
             <img height={"160px"} src={cardback} alt={"cardback"} />
-          </div>
+          </div> */}
           <EnemyCemetery setHovering={setHovering} ready={ready} />
         </div>
 
@@ -529,7 +656,7 @@ export default function Field({
             alignItems: "center",
             justifyContent: "space-evenly",
 
-            cursor: `url(${img}) 55 55, auto`,
+            // cursor: `url(${img}) 55 55, auto`,
           }}
         >
           <EnemyEvoDeck setHovering={setHovering} ready={ready} />
@@ -570,7 +697,7 @@ export default function Field({
             alignItems: "center",
             justifyContent: "space-evenly",
 
-            cursor: `url(${img}) 55 55, auto`,
+            // cursor: `url(${img}) 55 55, auto`,
           }}
         >
           <EvoDeck
@@ -741,7 +868,27 @@ export default function Field({
             setHovering={setHovering}
             ready={ready}
           />
-          <Deck setHovering={setHovering} ready={ready} />
+          <div
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            style={{ position: "relative" }}
+          >
+            <Deck setHovering={setHovering} ready={ready} />
+            {showOpponentDeckSize && (
+              <div
+                style={{
+                  position: "absolute",
+                  top: "65%",
+                  right: reduxCurrentDeck.length > 9 ? "35%" : "43%",
+                  color: "rgba(255, 255, 255, 0.75)",
+                  fontSize: "30px",
+                  fontFamily: "Noto Serif JP, serif",
+                }}
+              >
+                {reduxCurrentDeck.length}
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </>

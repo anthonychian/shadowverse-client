@@ -1,6 +1,7 @@
 .Home {
   text-align: center;
   height: 100vh;
+  width: 100vw;
 }
 .canvas {
   text-align: center;
@@ -8,27 +9,28 @@
   width: 100vw;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
 }
 .centerCanvas {
   display: flex;
   height: 100vh;
-  width: 60%;
+  width: 60vw;
   max-width: 880px;
   flex-direction: column;
   align-items: center;
 }
 .rightSideCanvas {
-  width: 20%;
+  width: 20vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: end;
   justify-content: space-between;
+  /* background-color: orange; */
 }
 
 .leftSideCanvas {
-  width: 20%;
+  width: 20vw;
   height: 100vh;
   display: flex;
   align-items: center;

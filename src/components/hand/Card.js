@@ -26,6 +26,7 @@ export default function Card({
   atkVal,
   defVal,
   onEnemyField = false,
+  inHand = false,
 }) {
   let numOfCarrots = 0;
   const [rotate, setRotate] = useState(false);
@@ -105,8 +106,9 @@ export default function Card({
             boxShadow:
               "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 1.0)",
             zIndex: 100,
-            translateY: -25,
-            scale: 1.3,
+            // translateY: -25,
+            translateY: inHand ? -80 : -25,
+            scale: inHand ? 1.5 : 1.3,
             cursor: `url(${img}) 55 55, auto`,
           }
         }

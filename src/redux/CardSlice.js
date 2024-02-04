@@ -7,6 +7,17 @@ export const CardSlice = createSlice({
     deck: [],
     evoDeck: [],
     hand: [],
+    enemyHand: [],
+    showEnemyHand: false,
+    enemyDeckSize: 0,
+    enemyLeader: "",
+    leader: "",
+    evoPoints: 0,
+    enemyEvoPoints: 0,
+    playPoints: { available: 0, max: 0 },
+    enemyPlayPoints: { available: 0, max: 0 },
+    playerHealth: 20,
+    enemyHealth: 20,
     field: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     evoField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     enemyField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -84,8 +95,53 @@ export const CardSlice = createSlice({
     setDeck: (state, action) => {
       state.deck = action.payload;
     },
+    setPlayPoints: (state, action) => {
+      state.playPoints = action.payload;
+      socket.emit("send msg", {
+        type: "playPoints",
+        data: state.playPoints,
+        room: state.room,
+      });
+    },
+    setLeader: (state, action) => {
+      state.leader = action.payload;
+      socket.emit("send msg", {
+        type: "leader",
+        data: state.leader,
+        room: state.room,
+      });
+    },
+    setHealth: (state, action) => {
+      state.playerHealth = action.payload;
+      socket.emit("send msg", {
+        type: "health",
+        data: state.playerHealth,
+        room: state.room,
+      });
+    },
+    setShowEnemyHand: (state, action) => {
+      state.showEnemyHand = action.payload;
+    },
+    setEvoPoints: (state, action) => {
+      state.evoPoints = action.payload;
+    },
     setEvoDeck: (state, action) => {
       state.evoDeck = action.payload;
+    },
+    setEnemyHand: (state, action) => {
+      state.enemyHand = action.payload;
+    },
+    setEnemyDeckSize: (state, action) => {
+      state.enemyDeckSize = action.payload;
+    },
+    setEnemyEvoPoints: (state, action) => {
+      state.enemyEvoPoints = action.payload;
+    },
+    setEnemyPlayPoints: (state, action) => {
+      state.enemyPlayPoints = action.payload;
+    },
+    setEnemyHealth: (state, action) => {
+      state.enemyHealth = action.payload;
     },
     drawFromDeck: (state) => {
       if (state.deck.length > 0 && state.hand.length < 10) {
@@ -94,17 +150,39 @@ export const CardSlice = createSlice({
         console.log(`Removed ${card} from deck`);
         state.hand = [...state.hand, card];
         console.log(`Added ${card} to hand`);
+        socket.emit("send msg", {
+          type: "hand",
+          data: state.hand,
+          room: state.room,
+        });
+        socket.emit("send msg", {
+          type: "deckSize",
+          data: state.deck.length,
+          room: state.room,
+        });
       }
     },
     drawFourFromDeck: (state) => {
-      for (let i = 0; i < 4; i++) {
-        if (state.deck.length > 0 && state.hand.length < 10) {
-          const card = state.deck[0];
-          state.deck = state.deck.slice(1);
-          console.log(`Removed ${card} from deck`);
-          state.hand = [...state.hand, card];
-          console.log(`Added ${card} to hand`);
+      if (state.deck.length > 0 && state.hand.length < 10) {
+        for (let i = 0; i < 4; i++) {
+          if (state.deck.length > 0 && state.hand.length < 10) {
+            const card = state.deck[0];
+            state.deck = state.deck.slice(1);
+            console.log(`Removed ${card} from deck`);
+            state.hand = [...state.hand, card];
+            console.log(`Added ${card} to hand`);
+          }
         }
+        socket.emit("send msg", {
+          type: "hand",
+          data: state.hand,
+          room: state.room,
+        });
+        socket.emit("send msg", {
+          type: "deckSize",
+          data: state.deck.length,
+          room: state.room,
+        });
       }
     },
     mulligan: (state) => {
@@ -114,17 +192,39 @@ export const CardSlice = createSlice({
         console.log(`Removed ${card} from hand`);
         state.deck = [...state.deck, card];
         console.log(`Added ${card} to deck`);
+        socket.emit("send msg", {
+          type: "hand",
+          data: state.hand,
+          room: state.room,
+        });
+        socket.emit("send msg", {
+          type: "deckSize",
+          data: state.deck.length,
+          room: state.room,
+        });
       }
     },
     mulliganFour: (state) => {
-      for (let i = 0; i < 4; i++) {
-        if (state.hand.length > 0) {
-          const card = state.hand[0];
-          state.hand = state.hand.slice(1);
-          console.log(`Removed ${card} from hand`);
-          state.deck = [...state.deck, card];
-          console.log(`Added ${card} to deck`);
+      if (state.hand.length > 0) {
+        for (let i = 0; i < 4; i++) {
+          if (state.hand.length > 0) {
+            const card = state.hand[0];
+            state.hand = state.hand.slice(1);
+            console.log(`Removed ${card} from hand`);
+            state.deck = [...state.deck, card];
+            console.log(`Added ${card} to deck`);
+          }
         }
+        socket.emit("send msg", {
+          type: "hand",
+          data: state.hand,
+          room: state.room,
+        });
+        socket.emit("send msg", {
+          type: "deckSize",
+          data: state.deck.length,
+          room: state.room,
+        });
       }
     },
     setEngaged: (state, action) => {
@@ -282,6 +382,16 @@ export const CardSlice = createSlice({
       console.log(`Removed ${card} from hand`);
       state.deck = [card, ...state.deck];
       console.log(`Added ${card} to top of deck`);
+      socket.emit("send msg", {
+        type: "hand",
+        data: state.hand,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "deckSize",
+        data: state.deck.length,
+        room: state.room,
+      });
     },
     placeToBotOfDeckFromHand: (state, action) => {
       const card = action.payload;
@@ -290,6 +400,16 @@ export const CardSlice = createSlice({
       console.log(`Removed ${card} from hand`);
       state.deck = [...state.deck, card];
       console.log(`Added ${card} to bottom of deck`);
+      socket.emit("send msg", {
+        type: "hand",
+        data: state.hand,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "deckSize",
+        data: state.deck.length,
+        room: state.room,
+      });
     },
     placeToTopOfDeckFromField: (state, action) => {
       const card = action.payload.card;
@@ -308,6 +428,11 @@ export const CardSlice = createSlice({
         data: state.field,
         room: state.room,
       });
+      socket.emit("send msg", {
+        type: "deckSize",
+        data: state.deck.length,
+        room: state.room,
+      });
     },
     placeToBotOfDeckFromField: (state, action) => {
       const card = action.payload.card;
@@ -324,6 +449,11 @@ export const CardSlice = createSlice({
       socket.emit("send msg", {
         type: "field",
         data: state.field,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "deckSize",
+        data: state.deck.length,
         room: state.room,
       });
     },
@@ -390,6 +520,16 @@ export const CardSlice = createSlice({
       console.log(`Removed ${card} from deck`);
       state.hand = [...state.hand, card];
       console.log(`Added ${card} to hand`);
+      socket.emit("send msg", {
+        type: "hand",
+        data: state.hand,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "deckSize",
+        data: state.deck.length,
+        room: state.room,
+      });
     },
     addToHandFromField: (state, action) => {
       const card = action.payload.card;
@@ -406,6 +546,11 @@ export const CardSlice = createSlice({
       socket.emit("send msg", {
         type: "field",
         data: state.field,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "hand",
+        data: state.hand,
         room: state.room,
       });
     },
@@ -428,6 +573,11 @@ export const CardSlice = createSlice({
         data: state.field,
         room: state.room,
       });
+      socket.emit("send msg", {
+        type: "hand",
+        data: state.hand,
+        room: state.room,
+      });
     },
     reorderCardsInHand: (state, action) => {
       state.hand = action.payload;
@@ -442,6 +592,11 @@ export const CardSlice = createSlice({
       socket.emit("send msg", {
         type: "cemetery",
         data: state.cemetery,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "hand",
+        data: state.hand,
         room: state.room,
       });
     },
@@ -478,6 +633,11 @@ export const CardSlice = createSlice({
       socket.emit("send msg", {
         type: "cemetery",
         data: state.cemetery,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "hand",
+        data: state.hand,
         room: state.room,
       });
     },
@@ -648,6 +808,9 @@ export const CardSlice = createSlice({
     setEnemyCustomValues: (state, action) => {
       state.enemyCustomValues = action.payload;
     },
+    setEnemyLeader: (state, action) => {
+      state.enemyLeader = action.payload;
+    },
     reset: (state) => {
       state.hand = [];
       state.deck = [];
@@ -707,5 +870,16 @@ export const {
   setDeck,
   setEvoDeck,
   setRoom,
+  setEnemyHand,
+  setEnemyDeckSize,
+  setEnemyEvoPoints,
+  setEnemyPlayPoints,
+  setEnemyHealth,
+  setEvoPoints,
+  setPlayPoints,
+  setHealth,
+  setLeader,
+  setEnemyLeader,
+  setShowEnemyHand,
   reset,
 } = CardSlice.actions;

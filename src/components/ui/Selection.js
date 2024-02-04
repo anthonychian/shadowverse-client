@@ -1,16 +1,28 @@
 import React, { useState } from "react";
-import imageCernunnos from "../../assets/leaders/Cernunnos/Cernunnos.png";
-import imageMizuchi from "../../assets/leaders/Mizuchi/Mizuchi.png";
+import imageRamina from "../../assets/leaders/Ramina/Ramina.png";
+import imageJeanne from "../../assets/leaders/Jeanne/Jeanne.png";
 import imageForte from "../../assets/leaders/Forte/Forte.png";
-import imagePompom from "../../assets/leaders/Pompom/Pompom.png";
+import imageGalmieux from "../../assets/leaders/Galmieux/Galmieux.png";
+import imageKuon from "../../assets/leaders/Kuon/Kuon.png";
 import imageDaria from "../../assets/leaders/Daria/Daria.png";
+import imagePompom from "../../assets/leaders/Pompom/Pompom.png";
 import imageAlbert from "../../assets/leaders/Albert/Albert.png";
 import imageAria from "../../assets/leaders/Aria/Aria.png";
+import imageCC from "../../assets/leaders/CC/CC.png";
 import imageExella from "../../assets/leaders/Exella/Exella.png";
-import imageRola from "../../assets/leaders/Rola/Rola.png";
+import imageItsurugi from "../../assets/leaders/Itsurugi/Itsurugi.png";
+
+import forte from "../../../src/assets/wallpapers/forte.png";
+import luci from "../../../src/assets/wallpapers/luci.jpg";
+import dshift from "../../../src/assets/wallpapers/dshift.png";
+import alice from "../../../src/assets/wallpapers/alice.jpeg";
+import pompom from "../../../src/assets/wallpapers/pompom.jpg";
+import dark from "../../../src/assets/wallpapers/darkforest.jpg";
 
 import { Box, Modal, Card, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import { useDispatch } from "react-redux";
+import { setLeader } from "../../redux/CardSlice";
 
 const style = {
   position: "relative",
@@ -29,18 +41,16 @@ const style = {
 };
 
 export default function Selection({ setWallpaper, setSelectedOption }) {
+  const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  const forte = require("../../../src/assets/wallpapers/forteEvo.png");
-  const luci = require("../../../src/assets/wallpapers/luci.jpg");
-  const daria = require("../../../src/assets/wallpapers/daria.png");
-  const luna = require("../../../src/assets/wallpapers/luna.jpg");
-  const pompom = require("../../../src/assets/wallpapers/pompom.jpg");
 
-  function selectLeader(e) {
-    setSelectedOption(e.target.alt);
-  }
+  const selectLeader = (e) => {
+    const leader = e.target.alt;
+    setSelectedOption(leader);
+    dispatch(setLeader(leader));
+  };
 
   return (
     <>
@@ -90,16 +100,35 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
                 setWallpaper(forte);
               }}
             >
-              <img width="100px" src={imageMizuchi} alt="Mizuchi" />
+              <img width="100px" src={imageGalmieux} alt="Galmieux" />
             </IconButton>
             <IconButton
               sx={{ color: "white", backgroundColor: "rgba(0, 0, 0, 0.6)" }}
               onClick={(e) => {
                 selectLeader(e);
-                setWallpaper(luna);
+                setWallpaper(luci);
               }}
             >
-              <img width="100px" src={imageCernunnos} alt="imageCernunnos" />
+              <img width="100px" src={imageJeanne} alt="Jeanne" />
+            </IconButton>
+
+            <IconButton
+              sx={{ color: "white", backgroundColor: "rgba(0, 0, 0, 0.6)" }}
+              onClick={(e) => {
+                selectLeader(e);
+                setWallpaper(luci);
+              }}
+            >
+              <img width="100px" src={imageRamina} alt="Ramina" />
+            </IconButton>
+            <IconButton
+              sx={{ color: "white", backgroundColor: "rgba(0, 0, 0, 0.6)" }}
+              onClick={(e) => {
+                selectLeader(e);
+                setWallpaper(pompom);
+              }}
+            >
+              <img width="100px" src={imageAlbert} alt="Albert" />
             </IconButton>
             <IconButton
               sx={{ color: "white", backgroundColor: "rgba(0, 0, 0, 0.6)" }}
@@ -114,7 +143,7 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
               sx={{ color: "white", backgroundColor: "rgba(0, 0, 0, 0.6)" }}
               onClick={(e) => {
                 selectLeader(e);
-                setWallpaper(daria);
+                setWallpaper(dshift);
               }}
             >
               <img width="100px" src={imageDaria} alt="Daria" />
@@ -123,16 +152,26 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
               sx={{ color: "white", backgroundColor: "rgba(0, 0, 0, 0.6)" }}
               onClick={(e) => {
                 selectLeader(e);
-                setWallpaper(luci);
+                setWallpaper(dshift);
               }}
             >
-              <img width="100px" src={imageAlbert} alt="Albert" />
+              <img width="100px" src={imageKuon} alt="Kuon" />
+            </IconButton>
+
+            <IconButton
+              sx={{ color: "white", backgroundColor: "rgba(0, 0, 0, 0.6)" }}
+              onClick={(e) => {
+                selectLeader(e);
+                setWallpaper(alice);
+              }}
+            >
+              <img width="100px" src={imageCC} alt="CC" />
             </IconButton>
             <IconButton
               sx={{ color: "white", backgroundColor: "rgba(0, 0, 0, 0.6)" }}
               onClick={(e) => {
                 selectLeader(e);
-                setWallpaper(luna);
+                setWallpaper(alice);
               }}
             >
               <img width="100px" src={imageAria} alt="Aria" />
@@ -141,19 +180,19 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
               sx={{ color: "white", backgroundColor: "rgba(0, 0, 0, 0.6)" }}
               onClick={(e) => {
                 selectLeader(e);
-                setWallpaper(luna);
+                setWallpaper(dark);
               }}
             >
-              <img width="100px" src={imageExella} alt="Exella" />
+              <img width="100px" src={imageItsurugi} alt="Itsurugi" />
             </IconButton>
             <IconButton
               sx={{ color: "white", backgroundColor: "rgba(0, 0, 0, 0.6)" }}
               onClick={(e) => {
                 selectLeader(e);
-                setWallpaper(forte);
+                setWallpaper(dark);
               }}
             >
-              <img width="100px" src={imageRola} alt="Rola" />
+              <img width="100px" src={imageExella} alt="Exella" />
             </IconButton>
           </Card>
         </Box>

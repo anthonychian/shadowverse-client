@@ -1,27 +1,36 @@
 import React from "react";
-import imageCernunnos from "../../assets/leaders/Cernunnos/Cernunnos.png";
-import imageMizuchi from "../../assets/leaders/Mizuchi/Mizuchi.png";
+import imageRamina from "../../assets/leaders/Ramina/Ramina.png";
+import imageJeanne from "../../assets/leaders/Jeanne/Jeanne.png";
 import imageForte from "../../assets/leaders/Forte/Forte.png";
-import imagePompom from "../../assets/leaders/Pompom/Pompom.png";
+import imageGalmieux from "../../assets/leaders/Galmieux/Galmieux.png";
+import imageKuon from "../../assets/leaders/Kuon/Kuon.png";
 import imageDaria from "../../assets/leaders/Daria/Daria.png";
+import imagePompom from "../../assets/leaders/Pompom/Pompom.png";
 import imageAlbert from "../../assets/leaders/Albert/Albert.png";
 import imageAria from "../../assets/leaders/Aria/Aria.png";
+import imageCC from "../../assets/leaders/CC/CC.png";
 import imageExella from "../../assets/leaders/Exella/Exella.png";
-import imageRola from "../../assets/leaders/Rola/Rola.png";
+import imageItsurugi from "../../assets/leaders/Itsurugi/Itsurugi.png";
 
 import "../../css/Leader.css";
 
 export default function Leader({ name }) {
   let image;
   switch (name) {
-    case "Cernunnos":
-      image = imageCernunnos;
-      break;
-    case "Mizuchi":
-      image = imageMizuchi;
+    case "Galmieux":
+      image = imageGalmieux;
       break;
     case "Forte":
       image = imageForte;
+      break;
+    case "Jeanne":
+      image = imageJeanne;
+      break;
+    case "Ramina":
+      image = imageRamina;
+      break;
+    case "Albert":
+      image = imageAlbert;
       break;
     case "Pompom":
       image = imagePompom;
@@ -29,20 +38,23 @@ export default function Leader({ name }) {
     case "Daria":
       image = imageDaria;
       break;
-    case "Albert":
-      image = imageAlbert;
+    case "Kuon":
+      image = imageKuon;
+      break;
+    case "CC":
+      image = imageCC;
       break;
     case "Aria":
       image = imageAria;
       break;
+    case "Itsurugi":
+      image = imageItsurugi;
+      break;
     case "Exella":
       image = imageExella;
       break;
-    case "Rola":
-      image = imageRola;
-      break;
     default:
-      image = imageCernunnos;
+      image = imageGalmieux;
   }
   return (
     <div className="LeaderContainer">

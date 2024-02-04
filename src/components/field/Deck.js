@@ -113,9 +113,6 @@ export default function Deck({ ready, setHovering }) {
           if (!ready) dispatch(drawFromDeck());
         }}
         style={{
-          // position: "absolute",
-          // top: "58%",
-          // right: "25%",
           cursor: `url(${img}) 55 55, auto`,
         }}
       >

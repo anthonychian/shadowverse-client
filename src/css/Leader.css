@@ -1,68 +1,16 @@
 /* default styles */
 .LeaderImage {
-  min-width: 300px;
-  width: 70%;
-  pointer-events: none;
-  user-select: none;
-  z-index: -100;
-  /* display: block; */
-  /* margin-left: auto;
-  margin-right: auto;
-  justify-content: center;
-  align-items: center;
-  position: relative; */
+  min-width: 350px;
+  width: 50%;
+  position: absolute;
+  /* pointer-events: none;
+  user-select: none; */
 }
 .LeaderContainer {
-  pointer-events: none;
-  user-select: none;
-  top: 30%;
-  left: 100;
-  position: absolute;
-  z-index: 0;
-
-  /* top: 41%;
-  left: 40%; */
-  /* position: absolute; */
-  /* background-color: black; */
-  /* top: 30vh; */
-  /* display: block; */
-  /* position: absolute; */
-  /* width: 100vw; */
-  /* height: 50%; */
-  /* left: 30%; */
-  /* background-color: pink; */
+  bottom: 60%;
+  right: 20%;
+  position: relative;
 }
-
-/* medium - tablet styles */
-@media screen and (max-width: 1000px) {
-  .LeaderImage {
-    /* width: 500px;
-    position: relative; */
-    /* top: 30vh; */
-    /* background-color: green; */
-  }
-}
-
-/* small - mobile styles */
-@media screen and (max-width: 600px) {
-  .LeaderImage {
-    /* width: 500px;
-    position: relative; */
-    /* top: 40vh; */
-    /* background-color: red; */
-  }
-}
-
-/* extra small styles */
-@media screen and (max-width: 400px) {
-  .LeaderImage {
-    /* width: 500px;
-    position: relative; */
-    /* top: 40vh; */
-    /* background-color: cyan; */
-  }
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .LeaderImage {
     animation: slidein infinite 1.5s linear alternate;

@@ -163,7 +163,7 @@ export const cardImage = (cardName) => {
     case "Bejeweled Shrine":
       return "../textures/BP03-106EN.png";
     case "Alice, Wonderland Explorer":
-      return "../textures/BP03-107EN.png";
+      return "../textures/WI2023-001EN.png";
     case "Angel of Chaos":
       return "../textures/BP03-109EN.png";
     case "Rapunzel":

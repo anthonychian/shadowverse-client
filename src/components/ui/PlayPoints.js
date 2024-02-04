@@ -5,23 +5,11 @@ import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import IconButton from "@mui/material/IconButton";
 import "../../css/PlayPoints.css";
-
-import limitAudio from "../../assets/buttons/limit.wav";
-import playpointsAudio from "../../assets/buttons/counter2.mp3";
-// import NextTurnCernunnos from "../../assets/leaders/Cernunnos/NextTurn.mp3";
-// import NextTurnMizuchi from "../../assets/leaders/Mizuchi/NextTurn.mp3";
-// import NextTurnForte from "../../assets/leaders/Forte/NextTurn.mp3";
-// import NextTurnPompom from "../../assets/leaders/Pompom/NextTurn.mp3";
-// import NextTurnDaria from "../../assets/leaders/Daria/NextTurn.mp3";
-// import NextTurnAlbert from "../../assets/leaders/Albert/NextTurn.mp3";
-// import NextTurnAria from "../../assets/leaders/Aria/NextTurn.mp3";
-// import NextTurnExella from "../../assets/leaders/Exella/NextTurn.mp3";
-// import NextTurnRola from "../../assets/leaders/Rola/NextTurn.mp3";
+import { useDispatch } from "react-redux";
+import { setPlayPoints } from "../../redux/CardSlice";
 
 export default function Scoreboard({ name }) {
-  let counter = new Audio(playpointsAudio);
-  let limit = new Audio(limitAudio);
-  // let NextTurn;
+  const dispatch = useDispatch();
 
   const [maxPlayPoints, setMaxPlayPoints] = useState(0);
   const [currentPlayPoints, setCurrentPlayPoints] = useState(0);
@@ -32,25 +20,21 @@ export default function Scoreboard({ name }) {
     currentPlayPoints < maxPlayPoints
       ? setCurrentPlayPoints(currentPlayPoints + 1)
       : setCurrentPlayPoints(currentPlayPoints);
-    counter.play();
   };
   const decrementCurrent = () => {
     currentPlayPoints > 0
       ? setCurrentPlayPoints(currentPlayPoints - 1)
       : setCurrentPlayPoints(0);
-    currentPlayPoints > 0 ? counter.play() : limit.play();
   };
   const incrementMax = () => {
     maxPlayPoints < 10
       ? setMaxPlayPoints(maxPlayPoints + 1)
       : setMaxPlayPoints(10);
-    counter.play();
   };
   const decrementMax = () => {
     maxPlayPoints > 0
       ? setMaxPlayPoints(maxPlayPoints - 1)
       : setMaxPlayPoints(0);
-    maxPlayPoints > 0 ? counter.play() : limit.play();
   };
   const incrementBoth = () => {
     maxPlayPoints < 10
@@ -59,17 +43,19 @@ export default function Scoreboard({ name }) {
     currentPlayPoints < 10 && maxPlayPoints + 1 < 10
       ? setCurrentPlayPoints(maxPlayPoints + 1)
       : setCurrentPlayPoints(10);
-    counter.play();
   };
 
   useEffect(() => {
-    setCurrentPlayPoints(0);
-    setMaxPlayPoints(0);
-  }, [name]);
+    dispatch(
+      setPlayPoints({
+        available: currentPlayPoints,
+        max: maxPlayPoints,
+      })
+    );
+  }, [currentPlayPoints, maxPlayPoints]);
 
   return (
     <div className="PlayPointsContainer">
-      {/* <div className="LeftContainer"> */}
       <div className="CircleContainer">
         <div className="circles">
           {[...Array(10)].map((x, idx) =>

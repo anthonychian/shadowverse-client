@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
-import initialWallpaper from "../../src/assets/wallpapers/forteEvo.png";
+import initialWallpaper from "../../src/assets/wallpapers/forte.png";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setDeck, setEvoDeck, setRoom } from "../redux/CardSlice";

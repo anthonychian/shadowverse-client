@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
-import initialWallpaper from "../../src/assets/wallpapers/forteEvo.png";
+import initialWallpaper from "../../src/assets/wallpapers/forte.png";
 import {
   allCards,
   set3,
@@ -98,10 +98,6 @@ export default function CreateDeck() {
     );
     navigate("/");
   };
-
-  // const createHashMapFromDeck = (deck) => {
-  //   console.log(deckMap)
-  // }
 
   const handleTextInput = (text) => {
     setTextInput(text);

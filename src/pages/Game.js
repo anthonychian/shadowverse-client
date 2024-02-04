@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
 import "../css/Game.css";
 import Selection from "../components/ui/Selection";
-import Leader from "../components/ui/Leader";
-import Scoreboard from "../components/ui/Scoreboard";
+import PlayerUI from "../components/ui/PlayerUI";
+import EnemyUI from "../components/ui/EnemyUI";
 import Voicelines from "../components/ui/Voicelines";
 import PlayPoints from "../components/ui/PlayPoints";
 import Hand from "../components/hand/Hand";
@@ -10,11 +10,11 @@ import Field from "../components/field/Field";
 import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
 import ZoomedCard from "../components/ui/ZoomedCard";
-import initialWallpaper from "../../src/assets/wallpapers/forteEvo.png";
+import initialWallpaper from "../../src/assets/wallpapers/forte.png";
 
 export default function Game() {
   const [wallpaper, setWallpaper] = useState(initialWallpaper);
-  const [selectedOption, setSelectedOption] = useState("Exella");
+  const [selectedOption, setSelectedOption] = useState("Galmieux");
   const constraintsRef = useRef(null);
   const [ready, setReady] = useState(false);
   const [dragging, setDragging] = useState(false);
@@ -34,6 +34,10 @@ export default function Game() {
         backgroundSize: "cover",
       }}
     >
+      <Selection
+        setSelectedOption={setSelectedOption}
+        setWallpaper={setWallpaper}
+      />
       {/* Left side  */}
       <div className={"leftSideCanvas"}>
         <ZoomedCard name={reduxCurrentCard} hovering={hovering} />
@@ -66,12 +70,9 @@ export default function Game() {
 
       {/* Right side */}
       <div className={"rightSideCanvas"}>
-        <Scoreboard name={selectedOption} />
-        <Selection
-          setSelectedOption={setSelectedOption}
-          setWallpaper={setWallpaper}
-        />
-        <Leader name={selectedOption} />
+        <EnemyUI />
+        <PlayerUI name={selectedOption} />
+        {/* <Leader name={selectedOption} /> */}
         <Voicelines name={selectedOption} />
       </div>
     </div>

@@ -1,21 +1,17 @@
 .ScoreboardContainer {
-  /* background-color: cyan; */
+  background-color: yellow;
   color: white;
   font-size: 100px;
   width: 70%;
   height: 30%;
   cursor: "pointer";
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   gap: 0.2em;
   align-items: center;
   font-family: "Noto Serif JP", serif;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
-
-  /* position: fixed; */
-  top: 5%;
-  right: 0%;
 }
 .PlayerScoreboard {
   background-color: rgba(0, 255, 0, 0.3);
@@ -28,80 +24,11 @@
   justify-content: space-evenly;
   align-items: center;
 }
-.EnemyScoreboard {
-  background-color: rgba(255, 0, 0, 0.3);
-  outline: 7px ridge rgba(0, 0, 0, 0.6);
-  /* position: absolute; */
-  user-select: none;
-  top: 0;
-  width: 500px;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-.EnemyScoreboardContainer {
-  /* background-color: yellow; */
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
+
 .PlayerScoreboardContainer {
   /* background-color: yellow; */
   width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-}
-
-/* medium - tablet styles */
-@media screen and (max-width: 1000px) {
-  .ScoreboardContainer {
-    font-size: 100px;
-    /* width: 400px; */
-  }
-  .PlayerScoreboard {
-    width: 400px;
-  }
-  .EnemyScoreboard {
-    width: 400px;
-  }
-}
-
-/* small - mobile styles */
-@media screen and (max-width: 600px) {
-  .ScoreboardContainer {
-    font-size: 80px;
-    /* width: 250px; */
-  }
-  .PlayerScoreboard {
-    width: 250px;
-  }
-  .EnemyScoreboard {
-    width: 250px;
-  }
-}
-
-/* extra small styles */
-@media screen and (max-width: 400px) {
-  .ScoreboardContainer {
-    font-size: 80px;
-    /* width: 250px; */
-  }
-  .PlayerScoreboard {
-    width: 250px;
-  }
-  .EnemyScoreboard {
-    width: 250px;
-  }
-}
-
-.pointsWhite {
-  color: white;
-  pointer-events: none;
-}
-
-.pointsRed {
-  color: red;
-  pointer-events: none;
 }

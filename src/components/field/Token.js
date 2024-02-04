@@ -6,6 +6,7 @@ import { Menu, MenuItem, Modal, Box, Skeleton } from "@mui/material";
 import { setCurrentCard } from "../../redux/CardSlice";
 import CardMUI from "@mui/material/Card";
 import Card from "../hand/Card";
+import img from "../../assets/pin_bellringer_angel.png";
 
 const style = {
   position: "relative",
@@ -57,8 +58,21 @@ export default function Token({ ready, setReady, setTokenReady, setHovering }) {
 
   return (
     <>
-      <div onClick={handleModalOpen}>
+      <div
+        onClick={handleModalOpen}
+        style={{
+          cursor: `url(${img}) 55 55, auto`,
+        }}
+      >
         <img height={"50px"} src={token} alt={"token"} />
+        <div
+          style={{
+            width: "50px",
+            color: "white",
+          }}
+        >
+          Token
+        </div>
       </div>
       <Modal
         open={open}
