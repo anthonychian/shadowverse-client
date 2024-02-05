@@ -42,6 +42,7 @@ import Deck from "./Deck";
 import Cemetery from "./Cemetery";
 import EnemyCemetery from "./EnemyCemetery";
 import cardback from "../../assets/cardbacks/sleeve_5010011.png";
+import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import EvoDeck from "./EvoDeck";
 import EnemyEvoDeck from "./EnemyEvoDeck";
 import img from "../../assets/pin_bellringer_angel.png";
@@ -374,17 +375,29 @@ export default function Field({
         style={{
           backgroundColor: "black",
           color: "white",
-          height: "45px",
+          height: "40px",
           minWidth: "150px",
           position: "absolute",
-          fontSize: "23px",
-          bottom: 0,
+          fontSize: "20px ",
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: ".5em",
+          bottom: 3,
           left: 0,
-          pointerEvents: "auto",
+          // pointerEvents: "auto",
         }}
       >
-        {reduxCurrentRoom}
+        <div>{reduxCurrentRoom}</div>
+        <ContentCopyIcon
+          sx={{ cursor: "pointer", fontSize: "20px" }}
+          onClick={() => {
+            navigator.clipboard.writeText(reduxCurrentRoom);
+          }}
+        />
       </div>
+
       <Menu
         open={contextMenu !== null}
         onClose={handleClose}
