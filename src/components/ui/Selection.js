@@ -19,7 +19,20 @@ import alice from "../../../src/assets/wallpapers/alice.jpeg";
 import pompom from "../../../src/assets/wallpapers/pompom.jpg";
 import dark from "../../../src/assets/wallpapers/darkforest.jpg";
 
-import { Box, Modal, Card, IconButton } from "@mui/material";
+import {
+  Box,
+  Modal,
+  Card,
+  IconButton,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Drawer,
+  Divider,
+  List,
+} from "@mui/material";
+
 import MenuIcon from "@mui/icons-material/Menu";
 import { useDispatch } from "react-redux";
 import { setLeader } from "../../redux/CardSlice";
@@ -42,8 +55,9 @@ const style = {
 
 export default function Selection({ setWallpaper, setSelectedOption }) {
   const dispatch = useDispatch();
+  const [drawerOpen, setDrawerOpen] = useState(false);
   const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
+  const handleOpen = () => setDrawerOpen(true);
   const handleClose = () => setOpen(false);
 
   const selectLeader = (e) => {
@@ -52,8 +66,49 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
     dispatch(setLeader(leader));
   };
 
+  const toggleDrawer = () => (event) => {
+    setDrawerOpen(false);
+  };
+
   return (
     <>
+      <Drawer
+        anchor={"left"}
+        open={drawerOpen}
+        PaperProps={{
+          sx: {
+            backgroundColor: "silver",
+            color: "black",
+          },
+        }}
+        // onClose={toggleDrawer(anchor, false)}
+      >
+        <Box
+          // sx={{}}
+          role="presentation"
+          onClick={toggleDrawer}
+          onKeyDown={toggleDrawer}
+        >
+          <List>
+            <ListItem key={"text"} disablePadding>
+              <ListItemButton>
+                <ListItemIcon></ListItemIcon>
+                <ListItemText primary={"Change Class"} />
+              </ListItemButton>
+            </ListItem>
+          </List>
+          <Divider />
+
+          <List>
+            <ListItem key={"text"} disablePadding>
+              <ListItemButton>
+                <ListItemIcon></ListItemIcon>
+                <ListItemText primary={"Change Class"} />
+              </ListItemButton>
+            </ListItem>
+          </List>
+        </Box>
+      </Drawer>
       <IconButton
         onClick={handleOpen}
         sx={{
@@ -71,7 +126,7 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
             width: "50px",
             height: "50px",
           }}
-        ></MenuIcon>
+        />
       </IconButton>
       <Modal
         open={open}

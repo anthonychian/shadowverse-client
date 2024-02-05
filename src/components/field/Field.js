@@ -72,6 +72,8 @@ export default function Field({
 }) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  // redux state
   const reduxField = useSelector((state) => state.card.field);
   const reduxCurrentCard = useSelector((state) => state.card.currentCard);
   const reduxEvoField = useSelector((state) => state.card.evoField);
@@ -90,8 +92,10 @@ export default function Field({
   const reduxEnemyHand = useSelector((state) => state.card.enemyHand);
   const reduxEnemyDeckSize = useSelector((state) => state.card.enemyDeckSize);
   const reduxShowEnemyHand = useSelector((state) => state.card.showEnemyHand);
-  const [contextMenu, setContextMenu] = React.useState(null);
-  const [contextEvoMenu, setContextEvoMenu] = React.useState(null);
+
+  // useState
+  const [contextMenu, setContextMenu] = useState(null);
+  const [contextEvoMenu, setContextEvoMenu] = useState(null);
   const [index, setIndex] = useState(0);
   const [name, setName] = useState("");
   const [readyToMoveOnField, setReadyToMoveOnField] = useState(false);
