@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import initialWallpaper from "../../src/assets/wallpapers/forte.png";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import ReplyIcon from "@mui/icons-material/Reply";
+import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
+
 import {
   allCards,
   set3,
@@ -994,6 +998,30 @@ export default function CreateDeck() {
           </CardMUI>
         </Box>
       </Modal>
+      <div
+        style={{
+          // backgroundColor: "black",
+          color: "white",
+          height: "40px",
+          minWidth: "150px",
+          position: "absolute",
+          fontSize: "18px ",
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: ".5em",
+          top: 10,
+          left: 10,
+          cursor: "pointer",
+        }}
+        onClick={() => navigate("/")}
+      >
+        {/* <ArrowBackIcon sx={{ fontSize: "50px" }} /> */}
+        <ReplyIcon sx={{ fontSize: "40px" }} />
+        {/* <KeyboardBackspaceIcon sx={{ fontSize: "50px" }} /> */}
+        Back to Home
+      </div>
     </div>
   );
 }

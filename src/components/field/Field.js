@@ -36,7 +36,7 @@ import {
 import { motion } from "framer-motion";
 import CardMUI from "@mui/material/Card";
 import { useDispatch, useSelector } from "react-redux";
-import { Menu, MenuItem, Modal, Box, Typography } from "@mui/material";
+import { Menu, MenuItem, Modal, Box, Typography, Tooltip } from "@mui/material";
 import Card from "../hand/Card";
 import Deck from "./Deck";
 import Cemetery from "./Cemetery";
@@ -390,12 +390,14 @@ export default function Field({
         }}
       >
         <div>{reduxCurrentRoom}</div>
-        <ContentCopyIcon
-          sx={{ cursor: "pointer", fontSize: "20px" }}
-          onClick={() => {
-            navigator.clipboard.writeText(reduxCurrentRoom);
-          }}
-        />
+        <Tooltip title="Copy" placement="top">
+          <ContentCopyIcon
+            sx={{ cursor: "pointer", fontSize: "20px" }}
+            onClick={() => {
+              navigator.clipboard.writeText(reduxCurrentRoom);
+            }}
+          />
+        </Tooltip>
       </div>
 
       <Menu
