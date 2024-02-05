@@ -11,6 +11,7 @@ import imageAria from "../../assets/leaders/Aria/Aria.png";
 import imageCC from "../../assets/leaders/CC/CC.png";
 import imageExella from "../../assets/leaders/Exella/Exella.png";
 import imageItsurugi from "../../assets/leaders/Itsurugi/Itsurugi.png";
+import dragon from "../../assets/logo/dragon.png";
 
 import forte from "../../../src/assets/wallpapers/forte.png";
 import luci from "../../../src/assets/wallpapers/luci.jpg";
@@ -34,7 +35,10 @@ import {
 } from "@mui/material";
 
 import MenuIcon from "@mui/icons-material/Menu";
+import SettingsIcon from "@mui/icons-material/Settings";
+import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 import { setLeader } from "../../redux/CardSlice";
 
 const style = {
@@ -55,10 +59,9 @@ const style = {
 
 export default function Selection({ setWallpaper, setSelectedOption }) {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [open, setOpen] = useState(false);
-  const handleOpen = () => setDrawerOpen(true);
-  const handleClose = () => setOpen(false);
 
   const selectLeader = (e) => {
     const leader = e.target.alt;
@@ -66,9 +69,13 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
     dispatch(setLeader(leader));
   };
 
-  const toggleDrawer = () => (event) => {
-    setDrawerOpen(false);
-  };
+  const exitToHome = () => navigate("/");
+
+  const handleModalOpen = () => setOpen(true);
+  const handleModalClose = () => setOpen(false);
+
+  const handleDrawerOpen = () => setDrawerOpen(true);
+  const handleDrawerClose = () => setDrawerOpen(false);
 
   return (
     <>
@@ -77,23 +84,38 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
         open={drawerOpen}
         PaperProps={{
           sx: {
-            backgroundColor: "silver",
-            color: "black",
+            backgroundColor: "#131219",
+            color: "white",
           },
         }}
-        // onClose={toggleDrawer(anchor, false)}
+        onClose={handleDrawerClose}
       >
         <Box
-          // sx={{}}
+          sx={{ width: 270 }}
           role="presentation"
-          onClick={toggleDrawer}
-          onKeyDown={toggleDrawer}
+          onClick={handleDrawerClose}
+          onKeyDown={handleDrawerClose}
         >
           <List>
             <ListItem key={"text"} disablePadding>
-              <ListItemButton>
-                <ListItemIcon></ListItemIcon>
+              <ListItemButton onClick={handleModalOpen}>
+                <ListItemIcon>
+                  <img src={dragon} height={30} alt={dragon} />
+                </ListItemIcon>
                 <ListItemText primary={"Change Class"} />
+              </ListItemButton>
+            </ListItem>
+          </List>
+
+          <Divider />
+
+          <List>
+            <ListItem key={"text"} disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  <SettingsIcon sx={{ color: "white" }} />
+                </ListItemIcon>
+                <ListItemText primary={"Settings"} />
               </ListItemButton>
             </ListItem>
           </List>
@@ -101,16 +123,19 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
 
           <List>
             <ListItem key={"text"} disablePadding>
-              <ListItemButton>
-                <ListItemIcon></ListItemIcon>
-                <ListItemText primary={"Change Class"} />
+              <ListItemButton onClick={exitToHome}>
+                <ListItemIcon>
+                  <ExitToAppIcon sx={{ color: "white" }} />
+                </ListItemIcon>
+                <ListItemText primary={"Exit Game"} />
               </ListItemButton>
             </ListItem>
           </List>
         </Box>
       </Drawer>
+
       <IconButton
-        onClick={handleOpen}
+        onClick={handleDrawerOpen}
         sx={{
           color: "white",
           position: "fixed",
@@ -130,17 +155,38 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
       </IconButton>
       <Modal
         open={open}
-        onClose={handleClose}
+        onClose={handleModalClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
+        <Box
+          sx={{
+            position: "relative",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            backgroundColor: "rgba(0, 0, 0, 1)",
+            boxShadow: 24,
+            p: 4,
+            width: "40%",
+          }}
+        >
           <Card
-            sx={{ backgroundColor: "rgba(0, 0, 0, 0.7)" }}
+            sx={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "center",
+              alignItems: "center",
+              backgroundColor: "rgba(0, 0, 0, 0.7)",
+            }}
             variant="outlined"
           >
             <IconButton
-              sx={{ color: "white", backgroundColor: "rgba(0, 0, 0, 0.6)" }}
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
               onClick={(e) => {
                 selectLeader(e);
                 setWallpaper(forte);
@@ -149,7 +195,11 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
               <img width="100px" src={imageForte} alt="Forte" />
             </IconButton>
             <IconButton
-              sx={{ color: "white", backgroundColor: "rgba(0, 0, 0, 0.6)" }}
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
               onClick={(e) => {
                 selectLeader(e);
                 setWallpaper(forte);
@@ -158,7 +208,11 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
               <img width="100px" src={imageGalmieux} alt="Galmieux" />
             </IconButton>
             <IconButton
-              sx={{ color: "white", backgroundColor: "rgba(0, 0, 0, 0.6)" }}
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
               onClick={(e) => {
                 selectLeader(e);
                 setWallpaper(luci);
@@ -168,7 +222,11 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
             </IconButton>
 
             <IconButton
-              sx={{ color: "white", backgroundColor: "rgba(0, 0, 0, 0.6)" }}
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
               onClick={(e) => {
                 selectLeader(e);
                 setWallpaper(luci);
@@ -177,7 +235,11 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
               <img width="100px" src={imageRamina} alt="Ramina" />
             </IconButton>
             <IconButton
-              sx={{ color: "white", backgroundColor: "rgba(0, 0, 0, 0.6)" }}
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
               onClick={(e) => {
                 selectLeader(e);
                 setWallpaper(pompom);
@@ -186,7 +248,11 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
               <img width="100px" src={imageAlbert} alt="Albert" />
             </IconButton>
             <IconButton
-              sx={{ color: "white", backgroundColor: "rgba(0, 0, 0, 0.6)" }}
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
               onClick={(e) => {
                 selectLeader(e);
                 setWallpaper(pompom);
@@ -195,7 +261,11 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
               <img width="100px" src={imagePompom} alt="Pompom" />
             </IconButton>
             <IconButton
-              sx={{ color: "white", backgroundColor: "rgba(0, 0, 0, 0.6)" }}
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
               onClick={(e) => {
                 selectLeader(e);
                 setWallpaper(dshift);
@@ -204,7 +274,11 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
               <img width="100px" src={imageDaria} alt="Daria" />
             </IconButton>
             <IconButton
-              sx={{ color: "white", backgroundColor: "rgba(0, 0, 0, 0.6)" }}
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
               onClick={(e) => {
                 selectLeader(e);
                 setWallpaper(dshift);
@@ -214,7 +288,11 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
             </IconButton>
 
             <IconButton
-              sx={{ color: "white", backgroundColor: "rgba(0, 0, 0, 0.6)" }}
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
               onClick={(e) => {
                 selectLeader(e);
                 setWallpaper(alice);
@@ -223,7 +301,11 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
               <img width="100px" src={imageCC} alt="CC" />
             </IconButton>
             <IconButton
-              sx={{ color: "white", backgroundColor: "rgba(0, 0, 0, 0.6)" }}
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
               onClick={(e) => {
                 selectLeader(e);
                 setWallpaper(alice);
@@ -232,7 +314,11 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
               <img width="100px" src={imageAria} alt="Aria" />
             </IconButton>
             <IconButton
-              sx={{ color: "white", backgroundColor: "rgba(0, 0, 0, 0.6)" }}
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
               onClick={(e) => {
                 selectLeader(e);
                 setWallpaper(dark);
@@ -241,7 +327,11 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
               <img width="100px" src={imageItsurugi} alt="Itsurugi" />
             </IconButton>
             <IconButton
-              sx={{ color: "white", backgroundColor: "rgba(0, 0, 0, 0.6)" }}
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
               onClick={(e) => {
                 selectLeader(e);
                 setWallpaper(dark);

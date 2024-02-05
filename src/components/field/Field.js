@@ -5,6 +5,8 @@ import {
   placeToTopOfDeckFromField,
   placeToBotOfDeckFromField,
   moveCardOnField,
+  transferToOpponentField,
+  receiveFromOpponentField,
   placeToCemeteryFromField,
   placeToFieldFromCemetery,
   placeTokenOnField,
@@ -123,6 +125,8 @@ export default function Field({
       else if (data.type === "health") dispatch(setEnemyHealth(data.data));
       else if (data.type === "leader") dispatch(setEnemyLeader(data.data));
       else if (data.type === "showHand") dispatch(setShowEnemyHand(data.data));
+      else if (data.type === "transfer")
+        dispatch(receiveFromOpponentField(data.data));
     });
   }, [socket]);
 
@@ -363,6 +367,16 @@ export default function Field({
     setReadyToMoveOnField(true);
   };
 
+  const handleTransfer = () => {
+    handleClose();
+    dispatch(
+      transferToOpponentField({
+        card: name,
+        prevIndex: index,
+      })
+    );
+  };
+
   const handleReturnToEvolveDeck = () => {
     handleEvoClose();
     dispatch(
@@ -437,6 +451,7 @@ export default function Field({
           <MenuItem onClick={handleHideDef}>Hide Def</MenuItem>
         )}
         <MenuItem onClick={handleMoveOnField}>Move</MenuItem>
+        <MenuItem onClick={handleTransfer}>Transfer</MenuItem>
         {!isToken(name) && (
           <MenuItem onClick={handleCardToTopDeck}>Top of Deck</MenuItem>
         )}

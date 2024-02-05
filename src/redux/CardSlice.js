@@ -513,6 +513,57 @@ export const CardSlice = createSlice({
         room: state.room,
       });
     },
+    receiveFromOpponentField: (state, action) => {
+      const card = action.payload;
+      let index;
+      for (let i = 0; i < 5; i++) {
+        if (state.field[i] === 0) {
+          index = i;
+          break;
+        }
+      }
+      const newField = [
+        ...state.field.slice(0, index),
+        card,
+        ...state.field.slice(index + 1),
+      ];
+      state.field = newField;
+      console.log(`Added ${card} to field`);
+      socket.emit("send msg", {
+        type: "field",
+        data: state.field,
+        room: state.room,
+      });
+    },
+    transferToOpponentField: (state, action) => {
+      if (
+        state.enemyField[0] === 0 ||
+        state.enemyField[1] === 0 ||
+        state.enemyField[2] === 0 ||
+        state.enemyField[3] === 0 ||
+        state.enemyField[4] === 0
+      ) {
+        const card = action.payload.card;
+        const prevIndex = action.payload.prevIndex;
+        const field = [
+          ...state.field.slice(0, prevIndex),
+          0,
+          ...state.field.slice(prevIndex + 1),
+        ];
+        state.field = field;
+        socket.emit("send msg", {
+          type: "field",
+          data: state.field,
+          room: state.room,
+        });
+        console.log(`Removed ${card} from field`);
+        socket.emit("send msg", {
+          type: "transfer",
+          data: card,
+          room: state.room,
+        });
+      }
+    },
     addToHandFromDeck: (state, action) => {
       const card = action.payload;
       const cardIndex = state.deck.indexOf(card);
@@ -842,6 +893,8 @@ export const {
   placeTokenOnField,
   removeTokenOnField,
   moveCardOnField,
+  transferToOpponentField,
+  receiveFromOpponentField,
   reorderCardsInHand,
   mulligan,
   mulliganFour,
