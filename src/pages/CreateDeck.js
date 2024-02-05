@@ -30,6 +30,7 @@ import {
   neutralEvo,
 } from "../decks/AllCardsEvo";
 import { cardImage } from "../decks/getCards";
+import CardMUI from "@mui/material/Card";
 import img from "../assets/pin_bellringer_angel.png";
 import { motion } from "framer-motion";
 import { useDispatch } from "react-redux";
@@ -48,6 +49,8 @@ import {
   DialogContentText,
   DialogTitle,
   Skeleton,
+  Modal,
+  Box,
 } from "@mui/material";
 
 export default function CreateDeck() {
@@ -60,7 +63,9 @@ export default function CreateDeck() {
   const [mainDeckSelected, setMainDeckSelected] = useState(true);
   const [evoDeckSelected, setEvoDeckSelected] = useState(false);
   const [name, setName] = useState("");
+  const [cardName, setCardName] = useState("");
   const [open, setOpen] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
   const [textInput, setTextInput] = useState("");
   const [filteredAllCards, setFilteredAllCards] = useState(allCards);
   const [filteredAllCardsEvo, setFilteredAllCardsEvo] = useState(allCardsEvo);
@@ -98,6 +103,12 @@ export default function CreateDeck() {
     );
     navigate("/");
   };
+
+  const handleModalOpen = (name) => {
+    setCardName(name);
+    setOpenModal(true);
+  };
+  const handleModalClose = () => setOpenModal(false);
 
   const handleTextInput = (text) => {
     setTextInput(text);
@@ -859,11 +870,12 @@ export default function CreateDeck() {
               <motion.div
                 key={idx}
                 onTap={() => handleCardSelection(name)}
-                onContextMenu={() => handleCardRemove(name)}
+                onContextMenu={() => handleModalOpen(name)}
                 whileHover={{
                   translateY: -25,
                   scale: 1.3,
                   cursor: `url(${img}) 55 55, auto`,
+                  // boxShadow: 100,
                   boxShadow:
                     "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 1.0)",
                 }}
@@ -890,7 +902,7 @@ export default function CreateDeck() {
             <motion.div
               key={idx}
               onTap={() => handleEvoCardSelection(name)}
-              onContextMenu={() => handleEvoCardRemove(name)}
+              onContextMenu={() => handleModalOpen(name)}
               whileHover={{
                 translateY: -25,
                 scale: 1.3,
@@ -946,6 +958,42 @@ export default function CreateDeck() {
           </Button>
         </DialogActions>
       </Dialog>
+      <Modal
+        open={openModal}
+        onClose={handleModalClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box
+          sx={{
+            position: "relative",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            backgroundColor: "transparent",
+            boxShadow: 24,
+            // p: 3,
+            width: "30%",
+            border: "none",
+          }}
+        >
+          <CardMUI
+            sx={{
+              backgroundColor: "transparent",
+              width: "100%",
+              height: "80vh",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              border: "none",
+              overflow: "visible",
+            }}
+            variant="outlined"
+          >
+            <img height={"100%"} src={cardImage(cardName)} alt={cardName} />
+          </CardMUI>
+        </Box>
+      </Modal>
     </div>
   );
 }
