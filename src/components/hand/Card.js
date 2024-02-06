@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { cardImage } from "../../decks/getCards";
 import { motion } from "framer-motion";
-import { modifyAtk, modifyDef, setCurrentCard, modifyCounter } from "../../redux/CardSlice";
+import {
+  modifyAtk,
+  modifyDef,
+  setCurrentCard,
+  modifyCounter,
+} from "../../redux/CardSlice";
 import { useDispatch } from "react-redux";
 import cancel from "../../assets/logo/cancel.png";
 import carrot from "../../assets/logo/carrot.png";
@@ -19,6 +24,7 @@ export default function Card({
   setHovering,
   onField = false,
   evolvedUsed = false,
+  opponentField = false,
   cardBeneath,
   engaged,
   showAtk,
@@ -46,8 +52,8 @@ export default function Card({
   }, [atkVal, defVal]);
 
   useEffect(() => {
-    setCounter(Number(counterVal))
-  }, [counterVal])
+    setCounter(Number(counterVal));
+  }, [counterVal]);
 
   const handleAtkInput = (event) => {
     setAtk(Number(event.target.value));
@@ -76,7 +82,7 @@ export default function Card({
         index: idx,
       })
     );
-  }
+  };
 
   const handleHoverStart = () => {
     if (!ready) {
@@ -128,31 +134,34 @@ export default function Card({
           }
         }
       >
-        {counterVal > 0 && <>
-          <input
-            value={counter}
-            onChange={handleCounterInput}
-            type="number"
-            min={0}
-            className={"counterInput"}
-          />
-          <div
-            style={{
-              position: "absolute",
-              top: "25%",
-              right: "30%",
-              borderRadius: '50px',
-              color: "white",
-              fontSize: "30px",
-              fontFamily: "Noto Serif JP, serif",
-              backgroundColor: "rgba(0, 0, 0, 0.5)",
-              height: '50px',
-              width: '50px',
-            }}
-          >
-            {counter}
-          </div>
-        </>}
+        {counterVal > 0 && (
+          <>
+            <input
+              disabled={opponentField ? true : false}
+              value={counter}
+              onChange={handleCounterInput}
+              type="number"
+              min={0}
+              className={"counterInput"}
+            />
+            <div
+              style={{
+                position: "absolute",
+                top: "25%",
+                right: "30%",
+                borderRadius: "50px",
+                color: "white",
+                fontSize: "30px",
+                fontFamily: "Noto Serif JP, serif",
+                backgroundColor: "rgba(0, 0, 0, 0.5)",
+                height: "50px",
+                width: "50px",
+              }}
+            >
+              {counter}
+            </div>
+          </>
+        )}
         {numOfCarrots > 0 && name !== "Carrot" ? (
           <img
             style={{ opacity: 1 }}
@@ -166,6 +175,7 @@ export default function Card({
         {showAtk && (
           <>
             <input
+              disabled={opponentField ? true : false}
               value={atk}
               onChange={handleAtkInput}
               type="number"
@@ -200,6 +210,7 @@ export default function Card({
         {showDef && (
           <>
             <input
+              disabled={opponentField ? true : false}
               value={def}
               onChange={handleDefInput}
               type="number"

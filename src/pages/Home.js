@@ -46,8 +46,9 @@ export default function Home() {
   const handleCreateRoom = () => {
     if (Object.keys(selectedDeck).length !== 0) {
       if (socket.id) {
-        dispatch(setRoom(socket.id));
-        socket.emit("join_room", socket.id);
+        const random = Math.floor(Math.random() * 1000000000);
+        dispatch(setRoom(random));
+        socket.emit("join_room", random);
         handleNavigateToGame();
       }
     }

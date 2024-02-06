@@ -699,6 +699,7 @@ export default function Field({
                     showDef={reduxEnemyCustomValues[cardPos(idx)].showDef}
                     engaged={reduxEnemyEngaged[cardPos(idx)]}
                     counterVal={reduxEnemyCounterField[cardPos(idx)]}
+                    opponentField={true}
                     onField={true}
                     key={`enemy-card-${cardPos(idx)}`}
                     name={reduxEnemyField[cardPos(idx)]}
