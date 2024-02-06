@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import initialWallpaper from "../../src/assets/wallpapers/forte.png";
+import wallpaper3 from "../../src/assets/wallpapers/3.png";
 import ReplyIcon from "@mui/icons-material/Reply";
 
 import {
@@ -284,7 +285,7 @@ export default function CreateDeck() {
       style={{
         height: "100vh",
         width: "100vw",
-        background: "url(" + initialWallpaper + ") center center fixed",
+        background: "url(" + wallpaper3 + ") center center fixed",
         backgroundSize: "cover",
         display: "flex",
         flexDirection: "column",

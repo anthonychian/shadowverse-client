@@ -1,0 +1,26 @@
+/* default styles */
+.LeaderContainerHome {
+  height: 100vh;
+  width: 50vw;
+  left: 10%;
+}
+.LeaderImageHome {
+  width: 50vw;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .LeaderImageHome {
+    animation: slidein infinite 1.5s ease-in-out alternate;
+  }
+}
+
+/* animations */
+@keyframes slidein {
+  from {
+    margin-top: 5vh;
+  }
+
+  to {
+    margin-top: 10vh;
+  }
+}
