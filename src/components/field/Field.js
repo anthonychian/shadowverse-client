@@ -27,6 +27,9 @@ import {
   hideDef,
   modifyCounter,
   clearValuesAtIndex,
+  moveValuesAtIndex,
+  moveCountersAtIndex,
+  moveEngagedAtIndex,
   clearCountersAtIndex,
   clearEngagedAtIndex,
   setEnemyHand,
@@ -97,8 +100,9 @@ export default function Field({
   const reduxEnemyDeckSize = useSelector((state) => state.card.enemyDeckSize);
   const reduxShowEnemyHand = useSelector((state) => state.card.showEnemyHand);
   const reduxCounterField = useSelector((state) => state.card.counterField);
-  const reduxEnemyCounterField= useSelector((state) => state.card.enemyCounterField);
-
+  const reduxEnemyCounterField = useSelector(
+    (state) => state.card.enemyCounterField
+  );
 
   // useState
   const [contextMenu, setContextMenu] = useState(null);
@@ -132,8 +136,7 @@ export default function Field({
       else if (data.type === "showHand") dispatch(setShowEnemyHand(data.data));
       else if (data.type === "transfer")
         dispatch(receiveFromOpponentField(data.data));
-      else if (data.type === "counter")
-      dispatch(setEnemyCounter(data.data));
+      else if (data.type === "counter") dispatch(setEnemyCounter(data.data));
     });
   }, [socket]);
 
@@ -184,6 +187,24 @@ export default function Field({
         dispatch(
           moveCardOnField({
             card: name,
+            prevIndex: index,
+            index: indexClicked,
+          })
+        );
+        dispatch(
+          moveValuesAtIndex({
+            prevIndex: index,
+            index: indexClicked,
+          })
+        );
+        dispatch(
+          moveCountersAtIndex({
+            prevIndex: index,
+            index: indexClicked,
+          })
+        );
+        dispatch(
+          moveEngagedAtIndex({
             prevIndex: index,
             index: indexClicked,
           })
@@ -353,35 +374,51 @@ export default function Field({
   //   setShowOpponentDeckSize(!showOpponentDeckSize);
   // };
 
-  const handleShowAtk = () => {
+  const handleShowAtkDef = () => {
     handleClose();
     handleEvoClose();
     dispatch(showAtk(index));
+    dispatch(showDef(index));
   };
-  const handleHideAtk = () => {
+
+  const handleHideAtkDef = () => {
     handleClose();
     handleEvoClose();
     dispatch(hideAtk(index));
-  };
-  const handleShowDef = () => {
-    handleClose();
-    handleEvoClose();
-    dispatch(showDef(index));
-  };
-  const handleHideDef = () => {
-    handleClose();
-    handleEvoClose();
     dispatch(hideDef(index));
   };
+  // const handleShowAtk = () => {
+  //   handleClose();
+  //   handleEvoClose();
+  //   dispatch(showAtk(index));
+  // };
+  // const handleShowDef = () => {
+  //   handleClose();
+  //   handleEvoClose();
+  //   dispatch(showDef(index));
+  // };
+  // const handleHideAtk = () => {
+  //   handleClose();
+  //   handleEvoClose();
+  //   dispatch(hideAtk(index));
+  // };
+  // const handleHideDef = () => {
+  //   handleClose();
+  //   handleEvoClose();
+  //   dispatch(hideDef(index));
+  // };
+
   const handleAddCounter = () => {
     handleClose();
     handleEvoClose();
-    dispatch(modifyCounter({
-      value: 1,
-      index: index,
-    }));
+    dispatch(
+      modifyCounter({
+        value: 1,
+        index: index,
+      })
+    );
   };
-  
+
   const handleMoveOnField = () => {
     handleClose();
     setReady(true);
@@ -460,18 +497,14 @@ export default function Field({
         )}
         <MenuItem onClick={handleEngage}>Engage</MenuItem>
         {!reduxCustomValues[index].showAtk && (
-          <MenuItem onClick={handleShowAtk}>Modify Atk</MenuItem>
+          <MenuItem onClick={handleShowAtkDef}>Modify Atk/Def</MenuItem>
         )}
-        {/* {reduxCustomValues[index].showAtk && (
-          <MenuItem onClick={handleHideAtk}>Hide Atk</MenuItem>
-        )} */}
-        {!reduxCustomValues[index].showDef && (
-          <MenuItem onClick={handleShowDef}>Modify Def</MenuItem>
+        {reduxCustomValues[index].showAtk && (
+          <MenuItem onClick={handleHideAtkDef}>Hide Atk/Def</MenuItem>
         )}
-        {reduxCounterField[index] > -1 && (<MenuItem onClick={handleAddCounter}>Add Counter</MenuItem>)}
-        {/* {reduxCustomValues[index].showDef && (
-          <MenuItem onClick={handleHideDef}>Hide Def</MenuItem>
-        )} */}
+        {reduxCounterField[index] < 1 && (
+          <MenuItem onClick={handleAddCounter}>Add Counter</MenuItem>
+        )}
         <MenuItem onClick={handleMoveOnField}>Move</MenuItem>
         <MenuItem onClick={handleTransfer}>Transfer</MenuItem>
         {!isToken(name) && (
@@ -494,16 +527,10 @@ export default function Field({
         <MenuItem onClick={() => handleReturnToEvolveDeck()}>Return</MenuItem>
         <MenuItem onClick={handleEngage}>Engage</MenuItem>
         {!reduxCustomValues[index].showAtk && (
-          <MenuItem onClick={handleShowAtk}>Modify Atk</MenuItem>
+          <MenuItem onClick={handleShowAtkDef}>Modify Atk/Def</MenuItem>
         )}
         {reduxCustomValues[index].showAtk && (
-          <MenuItem onClick={handleHideAtk}>Hide Atk</MenuItem>
-        )}
-        {!reduxCustomValues[index].showDef && (
-          <MenuItem onClick={handleShowDef}>Modify Def</MenuItem>
-        )}
-        {reduxCustomValues[index].showDef && (
-          <MenuItem onClick={handleHideDef}>Hide Def</MenuItem>
+          <MenuItem onClick={handleHideAtkDef}>Hide Atk/Def</MenuItem>
         )}
       </Menu>
 
@@ -604,18 +631,18 @@ export default function Field({
               <img height={"160px"} src={cardback} alt={"cardback"} />
             </div>
             {/* {showOpponentDeckSize && ( */}
-              <div
-                style={{
-                  position: "absolute",
-                  top: "5%",
-                  right: reduxEnemyDeckSize > 9 ? "37%" : "43%",
-                  color: "rgba(255, 255, 255, 0.75)",
-                  fontSize: "30px",
-                  fontFamily: "Noto Serif JP, serif",
-                }}
-              >
-                {reduxEnemyDeckSize}
-              </div>
+            <div
+              style={{
+                position: "absolute",
+                top: "5%",
+                right: reduxEnemyDeckSize > 9 ? "37%" : "43%",
+                color: "rgba(255, 255, 255, 0.75)",
+                fontSize: "30px",
+                fontFamily: "Noto Serif JP, serif",
+              }}
+            >
+              {reduxEnemyDeckSize}
+            </div>
             {/* )} */}
           </div>
 
@@ -937,18 +964,18 @@ export default function Field({
           >
             <Deck setHovering={setHovering} ready={ready} />
             {/* {showOpponentDeckSize && ( */}
-              <div
-                style={{
-                  position: "absolute",
-                  top: "65%",
-                  right: reduxCurrentDeck.length > 9 ? "35%" : "43%",
-                  color: "rgba(255, 255, 255, 0.75)",
-                  fontSize: "30px",
-                  fontFamily: "Noto Serif JP, serif",
-                }}
-              >
-                {reduxCurrentDeck.length}
-              </div>
+            <div
+              style={{
+                position: "absolute",
+                top: "65%",
+                right: reduxCurrentDeck.length > 9 ? "35%" : "43%",
+                color: "rgba(255, 255, 255, 0.75)",
+                fontSize: "30px",
+                fontFamily: "Noto Serif JP, serif",
+              }}
+            >
+              {reduxCurrentDeck.length}
+            </div>
             {/* )} */}
           </div>
         </div>

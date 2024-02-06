@@ -273,11 +273,43 @@ export const CardSlice = createSlice({
         room: state.room,
       });
     },
+    moveEngagedAtIndex: (state, action) => {
+      const prevIndex = action.payload.prevIndex;
+      const index = action.payload.index;
+      const prevItem = state.engagedField[prevIndex];
+      const newEngaged = [
+        ...state.engagedField.slice(0, index),
+        prevItem,
+        ...state.engagedField.slice(index + 1),
+      ];
+      state.engagedField = newEngaged;
+      socket.emit("send msg", {
+        type: "engaged",
+        data: state.engagedField,
+        room: state.room,
+      });
+    },
     clearCountersAtIndex: (state, action) => {
       let index = action.payload;
       const newCounters = [
         ...state.counterField.slice(0, index),
-        false,
+        0,
+        ...state.counterField.slice(index + 1),
+      ];
+      state.counterField = newCounters;
+      socket.emit("send msg", {
+        type: "counter",
+        data: state.counterField,
+        room: state.room,
+      });
+    },
+    moveCountersAtIndex: (state, action) => {
+      const prevIndex = action.payload.prevIndex;
+      const index = action.payload.index;
+      const prevItem = state.counterField[prevIndex];
+      const newCounters = [
+        ...state.counterField.slice(0, index),
+        prevItem,
         ...state.counterField.slice(index + 1),
       ];
       state.counterField = newCounters;
@@ -362,8 +394,8 @@ export const CardSlice = createSlice({
       });
     },
     modifyDef: (state, action) => {
-      let newValue = action.payload.value;
-      let index = action.payload.index;
+      const newValue = action.payload.value;
+      const index = action.payload.index;
       let item = state.customValues[index];
       item.def = newValue;
       item.showDef = true;
@@ -380,7 +412,7 @@ export const CardSlice = createSlice({
       });
     },
     clearValuesAtIndex: (state, action) => {
-      let index = action.payload;
+      const index = action.payload;
       let item = state.customValues[index];
       item.atk = 0;
       item.def = 0;
@@ -389,6 +421,22 @@ export const CardSlice = createSlice({
       const newCustomValues = [
         ...state.customValues.slice(0, index),
         item,
+        ...state.customValues.slice(index + 1),
+      ];
+      state.customValues = newCustomValues;
+      socket.emit("send msg", {
+        type: "values",
+        data: state.customValues,
+        room: state.room,
+      });
+    },
+    moveValuesAtIndex: (state, action) => {
+      const prevIndex = action.payload.prevIndex;
+      const index = action.payload.index;
+      const prevItem = state.customValues[prevIndex];
+      const newCustomValues = [
+        ...state.customValues.slice(0, index),
+        prevItem,
         ...state.customValues.slice(index + 1),
       ];
       state.customValues = newCustomValues;
@@ -575,7 +623,7 @@ export const CardSlice = createSlice({
           ...state.field.slice(prevIndex + 1),
         ];
         state.field = field;
-        
+
         console.log(`Removed ${card} from field`);
 
         let index;
@@ -906,7 +954,7 @@ export const CardSlice = createSlice({
       state.enemyLeader = action.payload;
     },
     setEnemyCounter: (state, action) => {
-      state.enemyCounterField = action.payload
+      state.enemyCounterField = action.payload;
     },
     reset: (state) => {
       state.hand = [];
@@ -956,7 +1004,9 @@ export const {
   setEnemyEngaged,
   setEngaged,
   clearEngagedAtIndex,
+  moveEngagedAtIndex,
   clearCountersAtIndex,
+  moveCountersAtIndex,
   setEnemyCemetery,
   setEnemyEvoDeck,
   setEnemyCustomValues,
@@ -967,6 +1017,7 @@ export const {
   hideDef,
   modifyDef,
   clearValuesAtIndex,
+  moveValuesAtIndex,
   setDeck,
   setEvoDeck,
   setRoom,
