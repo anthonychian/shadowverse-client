@@ -25,7 +25,9 @@ import {
   showDef,
   hideAtk,
   hideDef,
+  modifyCounter,
   clearValuesAtIndex,
+  clearCountersAtIndex,
   clearEngagedAtIndex,
   setEnemyHand,
   setShowEnemyHand,
@@ -34,6 +36,7 @@ import {
   setEnemyPlayPoints,
   setEnemyHealth,
   setEnemyLeader,
+  setEnemyCounter,
 } from "../../redux/CardSlice";
 import { motion } from "framer-motion";
 import CardMUI from "@mui/material/Card";
@@ -65,7 +68,6 @@ const style = {
 };
 
 export default function Field({
-  dragging,
   ready,
   setReady,
   setHovering,
@@ -94,6 +96,9 @@ export default function Field({
   const reduxEnemyHand = useSelector((state) => state.card.enemyHand);
   const reduxEnemyDeckSize = useSelector((state) => state.card.enemyDeckSize);
   const reduxShowEnemyHand = useSelector((state) => state.card.showEnemyHand);
+  const reduxCounterField = useSelector((state) => state.card.counterField);
+  const reduxEnemyCounterField= useSelector((state) => state.card.enemyCounterField);
+
 
   // useState
   const [contextMenu, setContextMenu] = useState(null);
@@ -105,7 +110,7 @@ export default function Field({
   const [readyToEvo, setReadyToEvo] = useState(false);
   const [readyToFeed, setReadyToFeed] = useState(false);
   const [tokenReady, setTokenReady] = useState(false);
-  const [showOpponentDeckSize, setShowOpponentDeckSize] = useState(false);
+  // const [showOpponentDeckSize, setShowOpponentDeckSize] = useState(false);
 
   useEffect(() => {
     socket.on("receive msg", (data) => {
@@ -127,6 +132,8 @@ export default function Field({
       else if (data.type === "showHand") dispatch(setShowEnemyHand(data.data));
       else if (data.type === "transfer")
         dispatch(receiveFromOpponentField(data.data));
+      else if (data.type === "counter")
+      dispatch(setEnemyCounter(data.data));
     });
   }, [socket]);
 
@@ -170,6 +177,7 @@ export default function Field({
         );
         dispatch(clearValuesAtIndex(index));
         dispatch(clearEngagedAtIndex(index));
+        dispatch(clearCountersAtIndex(index));
       }
       if (readyToMoveOnField) {
         setReadyToMoveOnField(false);
@@ -182,6 +190,7 @@ export default function Field({
         );
         dispatch(clearValuesAtIndex(index));
         dispatch(clearEngagedAtIndex(index));
+        dispatch(clearCountersAtIndex(index));
       }
       if (readyFromCemetery) {
         setReadyFromCemetery(false);
@@ -282,6 +291,7 @@ export default function Field({
     );
     dispatch(clearValuesAtIndex(index));
     dispatch(clearEngagedAtIndex(index));
+    dispatch(clearCountersAtIndex(index));
   };
   const handleCardToTopDeck = () => {
     handleClose();
@@ -293,6 +303,7 @@ export default function Field({
     );
     dispatch(clearValuesAtIndex(index));
     dispatch(clearEngagedAtIndex(index));
+    dispatch(clearCountersAtIndex(index));
   };
   const handleCardToBotDeck = () => {
     handleClose();
@@ -304,6 +315,7 @@ export default function Field({
     );
     dispatch(clearValuesAtIndex(index));
     dispatch(clearEngagedAtIndex(index));
+    dispatch(clearCountersAtIndex(index));
   };
   const handleRemoveTokenFromField = () => {
     handleClose();
@@ -325,6 +337,7 @@ export default function Field({
     );
     dispatch(clearValuesAtIndex(index));
     dispatch(clearEngagedAtIndex(index));
+    dispatch(clearCountersAtIndex(index));
   };
 
   const handleEngage = () => {
@@ -333,12 +346,12 @@ export default function Field({
     dispatch(setEngaged(index));
   };
 
-  const handleMouseEnter = () => {
-    setShowOpponentDeckSize(!showOpponentDeckSize);
-  };
-  const handleMouseLeave = () => {
-    setShowOpponentDeckSize(!showOpponentDeckSize);
-  };
+  // const handleMouseEnter = () => {
+  //   setShowOpponentDeckSize(!showOpponentDeckSize);
+  // };
+  // const handleMouseLeave = () => {
+  //   setShowOpponentDeckSize(!showOpponentDeckSize);
+  // };
 
   const handleShowAtk = () => {
     handleClose();
@@ -360,7 +373,15 @@ export default function Field({
     handleEvoClose();
     dispatch(hideDef(index));
   };
-
+  const handleAddCounter = () => {
+    handleClose();
+    handleEvoClose();
+    dispatch(modifyCounter({
+      value: 1,
+      index: index,
+    }));
+  };
+  
   const handleMoveOnField = () => {
     handleClose();
     setReady(true);
@@ -441,15 +462,16 @@ export default function Field({
         {!reduxCustomValues[index].showAtk && (
           <MenuItem onClick={handleShowAtk}>Modify Atk</MenuItem>
         )}
-        {reduxCustomValues[index].showAtk && (
+        {/* {reduxCustomValues[index].showAtk && (
           <MenuItem onClick={handleHideAtk}>Hide Atk</MenuItem>
-        )}
+        )} */}
         {!reduxCustomValues[index].showDef && (
           <MenuItem onClick={handleShowDef}>Modify Def</MenuItem>
         )}
-        {reduxCustomValues[index].showDef && (
+        {reduxCounterField[index] > -1 && (<MenuItem onClick={handleAddCounter}>Add Counter</MenuItem>)}
+        {/* {reduxCustomValues[index].showDef && (
           <MenuItem onClick={handleHideDef}>Hide Def</MenuItem>
-        )}
+        )} */}
         <MenuItem onClick={handleMoveOnField}>Move</MenuItem>
         <MenuItem onClick={handleTransfer}>Transfer</MenuItem>
         {!isToken(name) && (
@@ -573,15 +595,15 @@ export default function Field({
         >
           <div style={{ position: "relative" }}>
             <div
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
+              // onMouseEnter={handleMouseEnter}
+              // onMouseLeave={handleMouseLeave}
               style={{
                 cursor: `url(${img}) 55 55, auto`,
               }}
             >
               <img height={"160px"} src={cardback} alt={"cardback"} />
             </div>
-            {showOpponentDeckSize && (
+            {/* {showOpponentDeckSize && ( */}
               <div
                 style={{
                   position: "absolute",
@@ -594,7 +616,7 @@ export default function Field({
               >
                 {reduxEnemyDeckSize}
               </div>
-            )}
+            {/* )} */}
           </div>
 
           {/* <div
@@ -649,6 +671,7 @@ export default function Field({
                     showAtk={reduxEnemyCustomValues[cardPos(idx)].showAtk}
                     showDef={reduxEnemyCustomValues[cardPos(idx)].showDef}
                     engaged={reduxEnemyEngaged[cardPos(idx)]}
+                    counterVal={reduxEnemyCounterField[cardPos(idx)]}
                     onField={true}
                     key={`enemy-card-${cardPos(idx)}`}
                     name={reduxEnemyField[cardPos(idx)]}
@@ -664,6 +687,7 @@ export default function Field({
                   showAtk={reduxEnemyCustomValues[cardPos(idx)].showAtk}
                   showDef={reduxEnemyCustomValues[cardPos(idx)].showDef}
                   engaged={reduxEnemyEngaged[cardPos(idx)]}
+                  counterVal={reduxEnemyCounterField[cardPos(idx)]}
                   onField={true}
                   key={`enemy-evo-${cardPos(idx)}`}
                   name={reduxEnemyEvoField[cardPos(idx)]}
@@ -797,6 +821,7 @@ export default function Field({
                       atkVal={reduxCustomValues[idx].atk}
                       defVal={reduxCustomValues[idx].def}
                       engaged={reduxEngaged[idx]}
+                      counterVal={reduxCounterField[idx]}
                       idx={idx}
                       onField={true}
                       key={`card1-${idx}`}
@@ -809,9 +834,10 @@ export default function Field({
                     <Card
                       showAtk={reduxCustomValues[idx].showAtk}
                       showDef={reduxCustomValues[idx].showDef}
-                      engaged={reduxEngaged[idx]}
                       atkVal={reduxCustomValues[idx].atk}
                       defVal={reduxCustomValues[idx].def}
+                      engaged={reduxEngaged[idx]}
+                      counterVal={reduxCounterField[idx]}
                       idx={idx}
                       onField={true}
                       key={`evo1-${idx}`}
@@ -849,6 +875,7 @@ export default function Field({
                       atkVal={reduxCustomValues[idx].atk}
                       defVal={reduxCustomValues[idx].def}
                       engaged={reduxEngaged[idx]}
+                      counterVal={reduxCounterField[idx]}
                       idx={idx}
                       onField={true}
                       key={`card2-${idx}`}
@@ -864,6 +891,7 @@ export default function Field({
                       atkVal={reduxCustomValues[idx].atk}
                       defVal={reduxCustomValues[idx].def}
                       engaged={reduxEngaged[idx]}
+                      counterVal={reduxCounterField[idx]}
                       idx={idx}
                       onField={true}
                       key={`evo2-${idx}`}
@@ -903,12 +931,12 @@ export default function Field({
             ready={ready}
           />
           <div
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
+            // onMouseEnter={handleMouseEnter}
+            // onMouseLeave={handleMouseLeave}
             style={{ position: "relative" }}
           >
             <Deck setHovering={setHovering} ready={ready} />
-            {showOpponentDeckSize && (
+            {/* {showOpponentDeckSize && ( */}
               <div
                 style={{
                   position: "absolute",
@@ -921,7 +949,7 @@ export default function Field({
               >
                 {reduxCurrentDeck.length}
               </div>
-            )}
+            {/* )} */}
           </div>
         </div>
       </div>

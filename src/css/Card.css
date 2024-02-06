@@ -7,8 +7,6 @@
   font-size: 20px;
   font-family: "Noto Serif JP", serif;
   text-align: center;
-  /* background-color: rgb(99, 99, 238);
-  color: white; */
   background-color: transparent;
   color: transparent;
   border: none;
@@ -25,8 +23,22 @@
   font-size: 20px;
   font-family: "Noto Serif JP", serif;
   text-align: center;
-  /* background-color: red;
-  color: "white", */
+  background-color: transparent;
+  color: transparent;
+  border: none;
+  outline: none;
+  transform: rotateY(180deg);
+}
+
+.counterInput {
+  position: absolute;
+  top: 50px;
+  left: 65px;
+  z-index: 100;
+  width: 40px;
+  font-size: 20px;
+  font-family: "Noto Serif JP", serif;
+  text-align: center;
   background-color: transparent;
   color: transparent;
   border: none;

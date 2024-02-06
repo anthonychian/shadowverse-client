@@ -22,6 +22,8 @@ export const CardSlice = createSlice({
     evoField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     enemyField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     enemyEvoField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    counterField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    enemyCounterField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     currentCard: "",
     currentEvo: "",
     room: "",
@@ -143,6 +145,22 @@ export const CardSlice = createSlice({
     setEnemyHealth: (state, action) => {
       state.enemyHealth = action.payload;
     },
+    modifyCounter: (state, action) => {
+      let newValue = action.payload.value;
+      let index = action.payload.index;
+      const newCounters = [
+        ...state.counterField.slice(0, index),
+        newValue,
+        ...state.counterField.slice(index + 1),
+      ];
+      state.counterField = newCounters;
+      console.log(`Set counters to ${newValue}`);
+      socket.emit("send msg", {
+        type: "counter",
+        data: state.counterField,
+        room: state.room,
+      });
+    },
     drawFromDeck: (state) => {
       if (state.deck.length > 0 && state.hand.length < 10) {
         const card = state.deck[0];
@@ -252,6 +270,20 @@ export const CardSlice = createSlice({
       socket.emit("send msg", {
         type: "engaged",
         data: state.engagedField,
+        room: state.room,
+      });
+    },
+    clearCountersAtIndex: (state, action) => {
+      let index = action.payload;
+      const newCounters = [
+        ...state.counterField.slice(0, index),
+        false,
+        ...state.counterField.slice(index + 1),
+      ];
+      state.counterField = newCounters;
+      socket.emit("send msg", {
+        type: "counter",
+        data: state.counterField,
         room: state.room,
       });
     },
@@ -526,11 +558,6 @@ export const CardSlice = createSlice({
       copy[index] = card;
       state.field = copy;
       console.log(`Added ${card} to field`);
-      // socket.emit("send msg", {
-      //   type: "field",
-      //   data: state.field,
-      //   room: state.room,
-      // });
     },
     transferToOpponentField: (state, action) => {
       if (
@@ -548,11 +575,7 @@ export const CardSlice = createSlice({
           ...state.field.slice(prevIndex + 1),
         ];
         state.field = field;
-        socket.emit("send msg", {
-          type: "field",
-          data: state.field,
-          room: state.room,
-        });
+        
         console.log(`Removed ${card} from field`);
 
         let index;
@@ -569,9 +592,12 @@ export const CardSlice = createSlice({
         ];
         state.enemyField = newField;
         console.log(`Added ${card} to enemy field`);
-        // let copy = [...state.field];
-        // copy[index] = card;
-        // state.enemyField = copy;
+
+        socket.emit("send msg", {
+          type: "field",
+          data: state.field,
+          room: state.room,
+        });
         socket.emit("send msg", {
           type: "transfer",
           data: card,
@@ -879,6 +905,9 @@ export const CardSlice = createSlice({
     setEnemyLeader: (state, action) => {
       state.enemyLeader = action.payload;
     },
+    setEnemyCounter: (state, action) => {
+      state.enemyCounterField = action.payload
+    },
     reset: (state) => {
       state.hand = [];
       state.deck = [];
@@ -927,6 +956,7 @@ export const {
   setEnemyEngaged,
   setEngaged,
   clearEngagedAtIndex,
+  clearCountersAtIndex,
   setEnemyCemetery,
   setEnemyEvoDeck,
   setEnemyCustomValues,
@@ -951,5 +981,7 @@ export const {
   setLeader,
   setEnemyLeader,
   setShowEnemyHand,
+  setEnemyCounter,
+  modifyCounter,
   reset,
 } = CardSlice.actions;

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { cardImage } from "../../decks/getCards";
 import { motion } from "framer-motion";
-import { modifyAtk, modifyDef, setCurrentCard } from "../../redux/CardSlice";
+import { modifyAtk, modifyDef, setCurrentCard, modifyCounter } from "../../redux/CardSlice";
 import { useDispatch } from "react-redux";
 import cancel from "../../assets/logo/cancel.png";
 import carrot from "../../assets/logo/carrot.png";
@@ -25,7 +25,8 @@ export default function Card({
   showDef,
   atkVal,
   defVal,
-  onEnemyField = false,
+  counterVal,
+  // onEnemyField = false,
   inHand = false,
 }) {
   let numOfCarrots = 0;
@@ -33,6 +34,7 @@ export default function Card({
   const dispatch = useDispatch();
   const [atk, setAtk] = useState(0);
   const [def, setDef] = useState(0);
+  const [counter, setCounter] = useState(0);
 
   useEffect(() => {
     if (rotate !== engaged) setRotate(engaged);
@@ -42,6 +44,10 @@ export default function Card({
     setAtk(Number(atkVal));
     setDef(Number(defVal));
   }, [atkVal, defVal]);
+
+  useEffect(() => {
+    setCounter(Number(counterVal))
+  }, [counterVal])
 
   const handleAtkInput = (event) => {
     setAtk(Number(event.target.value));
@@ -61,6 +67,16 @@ export default function Card({
       })
     );
   };
+
+  const handleCounterInput = (event) => {
+    setCounter(Number(event.target.value));
+    dispatch(
+      modifyCounter({
+        value: event.target.value,
+        index: idx,
+      })
+    );
+  }
 
   const handleHoverStart = () => {
     if (!ready) {
@@ -106,13 +122,37 @@ export default function Card({
             boxShadow:
               "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 1.0)",
             zIndex: 100,
-            // translateY: -25,
             translateY: inHand ? -80 : -25,
             scale: inHand ? 1.5 : 1.3,
             cursor: `url(${img}) 55 55, auto`,
           }
         }
       >
+        {counterVal > 0 && <>
+          <input
+            value={counter}
+            onChange={handleCounterInput}
+            type="number"
+            min={0}
+            className={"counterInput"}
+          />
+          <div
+            style={{
+              position: "absolute",
+              top: "25%",
+              right: "30%",
+              borderRadius: '50px',
+              color: "white",
+              fontSize: "30px",
+              fontFamily: "Noto Serif JP, serif",
+              backgroundColor: "rgba(0, 0, 0, 0.5)",
+              height: '50px',
+              width: '50px',
+            }}
+          >
+            {counter}
+          </div>
+        </>}
         {numOfCarrots > 0 && name !== "Carrot" ? (
           <img
             style={{ opacity: 1 }}
