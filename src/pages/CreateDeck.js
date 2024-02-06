@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import initialWallpaper from "../../src/assets/wallpapers/forte.png";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import ReplyIcon from "@mui/icons-material/Reply";
-import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 
 import {
   allCards,

@@ -522,18 +522,15 @@ export const CardSlice = createSlice({
           break;
         }
       }
-      const newField = [
-        ...state.field.slice(0, index),
-        card,
-        ...state.field.slice(index + 1),
-      ];
-      state.field = newField;
+      let copy = [...state.field];
+      copy[index] = card;
+      state.field = copy;
       console.log(`Added ${card} to field`);
-      socket.emit("send msg", {
-        type: "field",
-        data: state.field,
-        room: state.room,
-      });
+      // socket.emit("send msg", {
+      //   type: "field",
+      //   data: state.field,
+      //   room: state.room,
+      // });
     },
     transferToOpponentField: (state, action) => {
       if (
@@ -557,11 +554,31 @@ export const CardSlice = createSlice({
           room: state.room,
         });
         console.log(`Removed ${card} from field`);
+
+        let index;
+        for (let i = 0; i < 5; i++) {
+          if (state.enemyField[i] === 0) {
+            index = i;
+            break;
+          }
+        }
+        const newField = [
+          ...state.enemyField.slice(0, index),
+          card,
+          ...state.enemyField.slice(index + 1),
+        ];
+        state.enemyField = newField;
+        console.log(`Added ${card} to enemy field`);
+        // let copy = [...state.field];
+        // copy[index] = card;
+        // state.enemyField = copy;
         socket.emit("send msg", {
           type: "transfer",
           data: card,
           room: state.room,
         });
+      } else {
+        console.log("there are no open slots to transfer");
       }
     },
     addToHandFromDeck: (state, action) => {
