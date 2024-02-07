@@ -39,7 +39,7 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { setLeader } from "../../redux/CardSlice";
+import { setLeader, reset } from "../../redux/CardSlice";
 
 const style = {
   position: "relative",
@@ -69,7 +69,10 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
     dispatch(setLeader(leader));
   };
 
-  const exitToHome = () => navigate("/");
+  const exitToHome = () => {
+    dispatch(reset());
+    navigate("/");
+  };
 
   const handleModalOpen = () => setOpen(true);
   const handleModalClose = () => setOpen(false);

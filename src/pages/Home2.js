@@ -291,9 +291,11 @@ export default function Home2() {
               flexDirection: "row",
               overflowX: "auto",
               alignItems: "center",
+              paddingLeft: "1em",
+              paddingRight: "3em",
               // height: "50%",
               width: "80%",
-              // gap: "3em",
+              gap: "1em",
               justifyContent: reduxDecks.length > 2 ? "start" : "center",
             }}
           >
@@ -390,36 +392,47 @@ export default function Home2() {
                 </div>
               ))}
           </div>
-
-          <Button
-            onClick={handleNavigateToDeck}
-            sx={{
+          <div
+            style={{
+              // backgroundColor: "red",
+              height: "300px",
+              width: "200px",
               display: "flex",
-              flexDirection: "column",
               justifyContent: "center",
               alignItems: "center",
-              height: "100px",
-              width: "70px",
-              "&:hover": { boxShadow: "0 0 40px 17px #48abe0" },
             }}
           >
-            <img height={"130px"} src={cardback} alt={"cardback"} />
-            <div
-              style={{
-                height: "35px",
-                width: "100px",
-                color: "white",
-                fontSize: "17px",
-                border: "4px solid #0000",
-                // backgroundColor: "#131219",
-                fontFamily: "Noto Serif JP,serif",
-                display: "inline-block",
-                textAlign: "center",
+            <Button
+              onClick={handleNavigateToDeck}
+              sx={{
+                // backgroundColor: "green",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                height: "90px",
+                width: "80px",
+                "&:hover": { boxShadow: "0 0 40px 17px #48abe0" },
               }}
             >
-              NEW DECK
-            </div>
-          </Button>
+              <img height={"130px"} src={cardback} alt={"cardback"} />
+              <div
+                style={{
+                  height: "35px",
+                  width: "100px",
+                  color: "white",
+                  fontSize: "17px",
+                  border: "4px solid #0000",
+                  // backgroundColor: "#131219",
+                  fontFamily: "Noto Serif JP,serif",
+                  display: "inline-block",
+                  textAlign: "center",
+                }}
+              >
+                NEW DECK
+              </div>
+            </Button>
+          </div>
         </div>
       </div>
 

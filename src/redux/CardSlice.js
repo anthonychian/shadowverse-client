@@ -655,9 +655,35 @@ export const CardSlice = createSlice({
         console.log("there are no open slots to transfer");
       }
     },
+    addToTopOfDeckFromDeck: (state, action) => {
+      const card = action.payload.card;
+      const cardIndex = action.payload.index;
+      state.deck = state.deck.filter((_, i) => i !== cardIndex);
+      console.log(`Removed ${card} from deck`);
+      state.deck = [card, ...state.deck];
+      console.log(`Added ${card} to top of deck`);
+      socket.emit("send msg", {
+        type: "deckSize",
+        data: state.deck.length,
+        room: state.room,
+      });
+    },
+    addToBotOfDeckFromDeck: (state, action) => {
+      const card = action.payload.card;
+      const cardIndex = action.payload.index;
+      state.deck = state.deck.filter((_, i) => i !== cardIndex);
+      console.log(`Removed ${card} from deck`);
+      state.deck = [...state.deck, card];
+      console.log(`Added ${card} to bot of deck`);
+      socket.emit("send msg", {
+        type: "deckSize",
+        data: state.deck.length,
+        room: state.room,
+      });
+    },
     addToHandFromDeck: (state, action) => {
-      const card = action.payload;
-      const cardIndex = state.deck.indexOf(card);
+      const card = action.payload.card;
+      const cardIndex = action.payload.index;
       state.deck = state.deck.filter((_, i) => i !== cardIndex);
       console.log(`Removed ${card} from deck`);
       state.hand = [...state.hand, card];
@@ -957,15 +983,91 @@ export const CardSlice = createSlice({
       state.enemyCounterField = action.payload;
     },
     reset: (state) => {
-      state.hand = [];
       state.deck = [];
+      state.evoDeck = [];
+      state.hand = [];
+      state.enemyHand = [];
+      state.showEnemyHand = false;
+      state.enemyDeckSize = 0;
+      state.enemyLeader = "";
+      state.leader = "";
+      state.evoPoints = 0;
+      state.enemyEvoPoints = 0;
+      state.playPoints = { available: 0, max: 0 };
+      state.enemyPlayPoints = { available: 0, max: 0 };
+      state.playerHealth = 20;
+      state.enemyHealth = 20;
       state.field = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      state.evoField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
       state.enemyField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      state.enemyEvoField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      state.counterField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      state.enemyCounterField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
       state.currentCard = "";
       state.currentEvo = "";
+      state.room = "";
       state.cemetery = [];
-      state.evoDeck = [];
-      state.evoField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      state.enemyCemetery = [];
+      state.enemyEvoDeck = [
+        { card: "", status: false },
+        { card: "", status: false },
+        { card: "", status: false },
+        { card: "", status: false },
+        { card: "", status: false },
+        { card: "", status: false },
+        { card: "", status: false },
+        { card: "", status: false },
+        { card: "", status: false },
+        { card: "", status: false },
+      ];
+      state.engagedField = [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+      ];
+      state.enemyEngagedField = [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+      ];
+      state.customValues = [
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+      ];
+      state.enemyCustomValues = [
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+      ];
     },
   },
 });
@@ -985,6 +1087,8 @@ export const {
   placeToCemeteryFromField,
   placeToCemeteryFromHand,
   placeTokenOnField,
+  addToTopOfDeckFromDeck,
+  addToBotOfDeckFromDeck,
   removeTokenOnField,
   moveCardOnField,
   transferToOpponentField,

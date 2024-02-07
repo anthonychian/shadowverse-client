@@ -7,6 +7,8 @@ import {
   mulliganFour,
   drawFourFromDeck,
   addToHandFromDeck,
+  addToTopOfDeckFromDeck,
+  addToBotOfDeckFromDeck,
 } from "../../redux/CardSlice";
 import { Menu, MenuItem, Modal, Box } from "@mui/material";
 import CardMUI from "@mui/material/Card";
@@ -25,6 +27,7 @@ const style = {
   p: 3,
   width: "55%",
   display: "flex",
+  flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
 };
@@ -33,14 +36,29 @@ export default function Deck({ ready, setHovering }) {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
   const [name, setName] = useState("");
+  const [index, setIndex] = useState(0);
   const [contextMenu, setContextMenu] = React.useState(null);
   const [cardContextMenu, setCardContextMenu] = React.useState(null);
+  const [reveal, setReveal] = useState(false);
+  const [textInput, setTextInput] = useState();
   const reduxDeck = useSelector((state) => state.card.deck);
-
+  const [partialDeck, setPartialDeck] = useState([]);
   const handleModalOpen = () => {
     if (reduxDeck.length > 0 && !ready) setOpen(true);
   };
-  const handleModalClose = () => setOpen(false);
+
+  const handleModalClose = () => {
+    setOpen(false);
+    if (reveal) {
+      setReveal(false);
+      setTextInput();
+      setPartialDeck([]);
+    }
+  };
+
+  const handleTextInput = (text) => {
+    setTextInput(text);
+  };
 
   const handleContextMenu = (event) => {
     event.preventDefault();
@@ -55,6 +73,7 @@ export default function Deck({ ready, setHovering }) {
   };
   const handleCardContextMenu = (event, name) => {
     setName(name);
+    setIndex(index);
     event.preventDefault();
     setCardContextMenu(
       cardContextMenu === null
@@ -76,6 +95,11 @@ export default function Deck({ ready, setHovering }) {
     handleClose();
     handleModalOpen();
   };
+  const handleRevealDeck = () => {
+    handleClose();
+    setReveal(true);
+    handleModalOpen();
+  };
 
   const handleShuffle = () => {
     handleClose();
@@ -95,13 +119,47 @@ export default function Deck({ ready, setHovering }) {
   const handleAddFromDeckToHand = () => {
     handleModalOpen();
     handleCardClose();
-    dispatch(addToHandFromDeck(name));
+    dispatch(addToHandFromDeck({ card: name, index: index }));
   };
 
-  const handleReset = () => {
-    handleClose();
-    dispatch(reset());
+  const handleToHandFromRevealed = () => {
+    handleModalOpen();
+    handleCardClose();
+    const cardIndex = partialDeck.indexOf(name);
+    setPartialDeck(partialDeck.filter((_, i) => i !== cardIndex));
+    dispatch(addToHandFromDeck({ card: name, index: index }));
   };
+
+  const handleToTopOfDeck = () => {
+    handleModalOpen();
+    handleCardClose();
+    const cardIndex = partialDeck.indexOf(name);
+    setPartialDeck(partialDeck.filter((_, i) => i !== cardIndex));
+    dispatch(addToTopOfDeckFromDeck({ card: name, index: index }));
+  };
+
+  const handleToBotOfDeck = () => {
+    handleModalOpen();
+    handleCardClose();
+    const cardIndex = partialDeck.indexOf(name);
+    setPartialDeck(partialDeck.filter((_, i) => i !== cardIndex));
+    dispatch(addToBotOfDeckFromDeck({ card: name, index: index }));
+  };
+
+  const handleSubmit = () => {
+    const num = Number(textInput);
+    if (num < reduxDeck.length) {
+      setPartialDeck(reduxDeck.slice(0, num));
+      console.log(reduxDeck.slice(0, num));
+    } else {
+      setPartialDeck(reduxDeck);
+    }
+  };
+
+  // const handleReset = () => {
+  //   handleClose();
+  //   dispatch(reset());
+  // };
 
   return (
     <>
@@ -139,6 +197,7 @@ export default function Deck({ ready, setHovering }) {
       >
         <MenuItem onClick={() => handleShuffle()}>Shuffle</MenuItem>
         <MenuItem onClick={() => handleViewDeck()}>View Deck</MenuItem>
+        <MenuItem onClick={() => handleRevealDeck()}>Look At Top</MenuItem>
         <MenuItem onClick={() => handleDraw()}>Draw Four</MenuItem>
         <MenuItem onClick={() => handleMulligan()}>Mulligan Four</MenuItem>
         {/* <MenuItem onClick={(event) => handleReset(event)}>Reset</MenuItem> */}
@@ -165,7 +224,18 @@ export default function Deck({ ready, setHovering }) {
           horizontal: "left",
         }}
       >
-        <MenuItem onClick={() => handleAddFromDeckToHand()}>Hand</MenuItem>
+        {!reveal && (
+          <MenuItem onClick={() => handleAddFromDeckToHand()}>Hand</MenuItem>
+        )}
+        {reveal && (
+          <MenuItem onClick={() => handleToHandFromRevealed()}>Hand</MenuItem>
+        )}
+        {reveal && (
+          <MenuItem onClick={() => handleToTopOfDeck()}>Top of Deck</MenuItem>
+        )}
+        {reveal && (
+          <MenuItem onClick={() => handleToBotOfDeck()}>Bot of Deck</MenuItem>
+        )}
       </Menu>
 
       <Modal
@@ -175,6 +245,42 @@ export default function Deck({ ready, setHovering }) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
+          {reveal && (
+            <div
+              style={{
+                padding: "1em",
+                width: "100%",
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: ".5em",
+              }}
+            >
+              <input
+                style={{
+                  width: "15%",
+                  fontSize: "18px",
+                  fontFamily: "Noto Serif JP, serif",
+                }}
+                type="number"
+                min={0}
+                value={textInput}
+                onChange={(event) => handleTextInput(event.target.value)}
+                placeholder="# of Cards"
+              />
+              <button
+                onClick={handleSubmit}
+                style={{
+                  fontFamily: "Noto Serif JP, serif",
+                  height: "30px",
+                  width: "80px",
+                }}
+              >
+                Submit
+              </button>
+            </div>
+          )}
           <CardMUI
             sx={{
               backgroundColor: "rgba(0, 0, 0, 0.7)",
@@ -191,16 +297,28 @@ export default function Deck({ ready, setHovering }) {
             }}
             variant="outlined"
           >
-            {reduxDeck.map((card, idx) => (
-              <div
-                key={`card-${idx}`}
-                onContextMenu={(e) => {
-                  handleCardContextMenu(e, card);
-                }}
-              >
-                <Card ready={ready} name={card} setHovering={setHovering} />
-              </div>
-            ))}
+            {!reveal &&
+              reduxDeck.map((card, idx) => (
+                <div
+                  key={`card-${idx}`}
+                  onContextMenu={(e) => {
+                    handleCardContextMenu(e, card);
+                  }}
+                >
+                  <Card ready={ready} name={card} setHovering={setHovering} />
+                </div>
+              ))}
+            {reveal &&
+              partialDeck.map((card, idx) => (
+                <div
+                  key={`card-${idx}`}
+                  onContextMenu={(e) => {
+                    handleCardContextMenu(e, card);
+                  }}
+                >
+                  <Card ready={ready} name={card} setHovering={setHovering} />
+                </div>
+              ))}
           </CardMUI>
         </Box>
       </Modal>
