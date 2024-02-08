@@ -123,11 +123,16 @@ export const CardSlice = createSlice({
         room: state.room,
       });
     },
-    setShowEnemyHand: (state, action) => {
-      state.showEnemyHand = action.payload;
-    },
     setEvoPoints: (state, action) => {
       state.evoPoints = action.payload;
+      socket.emit("send msg", {
+        type: "evoPoints",
+        data: state.evoPoints,
+        room: state.room,
+      });
+    },
+    setShowEnemyHand: (state, action) => {
+      state.showEnemyHand = action.payload;
     },
     setEvoDeck: (state, action) => {
       state.evoDeck = action.payload;
@@ -656,6 +661,31 @@ export const CardSlice = createSlice({
       } else {
         console.log("there are no open slots to transfer");
       }
+    },
+    addToFieldFromDeck: (state, action) => {
+      const card = action.payload.card;
+      const cardIndex = action.payload.cardIndex;
+      const newIndex = action.payload.index;
+      state.deck = state.deck.filter((_, i) => i !== cardIndex);
+      console.log(`Removed ${card} from deck`);
+      const newField = [
+        ...state.field.slice(0, newIndex),
+        card,
+        ...state.field.slice(newIndex + 1),
+      ];
+      state.field = newField;
+      console.log(`Added ${card} to field`);
+
+      socket.emit("send msg", {
+        type: "field",
+        data: state.field,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "deckSize",
+        data: state.deck.length,
+        room: state.room,
+      });
     },
     addToTopOfDeckFromDeck: (state, action) => {
       const card = action.payload.card;

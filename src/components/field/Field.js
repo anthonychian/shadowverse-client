@@ -437,35 +437,32 @@ export default function Field({
 
   return (
     <>
-    <Tooltip title="Copy" placement="top">
-      <div
-        style={{
-          backgroundColor: "black",
-          color: "white",
-          height: "40px",
-          minWidth: "150px",
-          position: "absolute",
-          fontSize: "20px ",
-          display: "flex",
-          flexDirection: "row",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: ".5em",
-          bottom: 3,
-          left: 0,
-          // pointerEvents: "auto",
-          cursor: "pointer", 
-        }}
-        onClick={() => {
-          navigator.clipboard.writeText(reduxCurrentRoom);
-        }}
-      >
+      <Tooltip title="Copy" placement="top">
+        <div
+          style={{
+            backgroundColor: "black",
+            color: "white",
+            height: "40px",
+            minWidth: "150px",
+            position: "absolute",
+            fontSize: "20px ",
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: ".5em",
+            bottom: 3,
+            left: 0,
+            // pointerEvents: "auto",
+            cursor: "pointer",
+          }}
+          onClick={() => {
+            navigator.clipboard.writeText(reduxCurrentRoom);
+          }}
+        >
           <div>{reduxCurrentRoom}</div>
-          
-            <ContentCopyIcon
-              sx={{fontSize: "20px" }}
-            />
-          
+
+          <ContentCopyIcon sx={{ fontSize: "20px" }} />
         </div>
       </Tooltip>
       <Menu

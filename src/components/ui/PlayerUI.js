@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
-import IconButton from "@mui/material/IconButton";
+import { IconButton, Badge } from "@mui/material/";
 import { useDispatch, useSelector } from "react-redux";
-import { setHealth } from "../../redux/CardSlice";
+import { setHealth, setEvoPoints } from "../../redux/CardSlice";
 import Leader from "./Leader";
 import sword from "../../assets/logo/sword.png";
 import forest from "../../assets/logo/forest.png";
@@ -14,6 +14,7 @@ import rune from "../../assets/logo/rune.png";
 
 export default function PlayerUI({ name }) {
   const dispatch = useDispatch();
+  const [ep, setEP] = useState(0);
   const [playerHealth, setPlayerHealth] = useState(20);
   const reduxCurrentPlayPoints = useSelector(
     (state) => state.card.playPoints.available
@@ -31,6 +32,19 @@ export default function PlayerUI({ name }) {
   const decrementPlayerPoints = () => {
     playerHealth > 0 ? setPlayerHealth(playerHealth - 1) : setPlayerHealth(0);
   };
+
+  const handleEP = (event) => {
+    setEP(Number(event.target.value));
+    dispatch(setEvoPoints(Number(event.target.value)));
+  };
+
+  // const incrementEP = () => {
+  //   setEP((ep) => ep + 1);
+  // };
+
+  // const decrementEP = () => {
+  //   ep > 0 ? setEP((ep) => ep - 1) : setEP(0);
+  // };
 
   const getClassFromLeader = (name) => {
     switch (name) {
@@ -65,31 +79,31 @@ export default function PlayerUI({ name }) {
   const getColorFromLeader = (name) => {
     switch (name) {
       case "Forte":
-        return "rgba(255, 165, 0, 0.3)";
+        return "rgba(255, 165, 0, 0.5)";
       case "Galmieux":
-        return "rgba(255, 165, 0, 0.3)";
+        return "rgba(255, 165, 0, 0.5)";
       case "Jeanne":
-        return "rgba(192, 192, 192, 0.3)";
+        return "rgba(192, 192, 192, 0.5)";
       case "Ramina":
-        return "rgba(192, 192, 192, 0.3)";
+        return "rgba(192, 192, 192, 0.5)";
       case "CC":
-        return "rgba(0, 255, 0, 0.3)";
+        return "rgba(0, 255, 0, 0.5)";
       case "Aria":
-        return "rgba(0, 255, 0, 0.3)";
+        return "rgba(0, 255, 0, 0.5)";
       case "Pompom":
-        return "rgba(255, 255, 0, 0.3)";
+        return "rgba(255, 255, 0, 0.5)";
       case "Albert":
-        return "rgba(255, 255, 0, 0.3)";
+        return "rgba(255, 255, 0, 0.5)";
       case "Itsurugi":
-        return "rgba(255, 0, 0, 0.3)";
+        return "rgba(255, 0, 0, 0.5)";
       case "Exella":
-        return "rgba(255, 0, 0, 0.3)";
+        return "rgba(255, 0, 0, 0.5)";
       case "Kuon":
-        return "rgba(103, 128, 159, 0.3)";
+        return "rgba(103, 128, 159, 0.5)";
       case "Daria":
-        return "rgba(103, 128, 159, 0.3)";
+        return "rgba(103, 128, 159, 0.5)";
       default:
-        return "rgba(255, 165, 0, 0.3)";
+        return "rgba(255, 165, 0, 0.5)";
     }
   };
 
@@ -170,9 +184,9 @@ export default function PlayerUI({ name }) {
               height: "50px",
               width: "150px",
               display: "flex",
-              justifyContent: "center",
+              justifyContent: "space-evenly",
               alignItems: "center",
-              backgroundColor: "rgba(0, 0, 255, 0.3)",
+              backgroundColor: "rgba(0, 0, 255, 0.5)",
               fontFamily: "Noto Serif JP, serif",
               fontSize: "30px",
               outline: "7px ridge rgba(0, 0, 0, 0.6)",
@@ -180,9 +194,52 @@ export default function PlayerUI({ name }) {
             }}
           >
             {reduxCurrentPlayPoints} / {reduxMaxPlayPoints}
+            <div>
+              <Badge color="info" size="small" badgeContent={ep}>
+                <div
+                  style={{
+                    fontFamily: "Noto Serif JP, serif",
+                    fontSize: "17px",
+                  }}
+                >
+                  EP
+                </div>
+                <input
+                  value={ep}
+                  onChange={handleEP}
+                  type="number"
+                  min={0}
+                  style={{
+                    position: "absolute",
+                    top: "0px",
+                    left: "30px",
+                    zIndex: "100",
+                    width: "15px",
+                    fontSize: "20px",
+                    fontFamily: "Noto Serif JP, serif",
+                    textAlign: "center",
+                    backgroundColor: "transparent",
+                    color: "transparent",
+                    border: "none",
+                    outline: "none",
+                    transform: "rotateY(180deg)",
+                  }}
+                />
+              </Badge>
+            </div>
           </div>
         </div>
       </div>
+      {/* <div
+        style={{
+          fontFamily: "Noto Serif JP, serif",
+          backgroundColor: "black",
+          fontSize: "30px",
+          color: "white",
+        }}
+      >
+        3 EP
+      </div> */}
     </div>
   );
 }

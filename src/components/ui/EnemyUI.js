@@ -1,4 +1,5 @@
 import React from "react";
+import { Badge } from "@mui/material/";
 import { useSelector } from "react-redux";
 import Leader from "./Leader";
 import sword from "../../assets/logo/sword.png";
@@ -16,37 +17,37 @@ export default function EnemyUI() {
     (state) => state.card.enemyPlayPoints.max
   );
   const reduxEnemyHealth = useSelector((state) => state.card.enemyHealth);
-
   const reduxEnemyLeader = useSelector((state) => state.card.enemyLeader);
+  const reduxEnemyEvoPoints = useSelector((state) => state.card.enemyEvoPoints);
 
   const getColorFromLeader = (name) => {
     switch (name) {
       case "Forte":
-        return "rgba(255, 165, 0, 0.3)";
+        return "rgba(255, 165, 0, 0.5)";
       case "Galmieux":
-        return "rgba(255, 165, 0, 0.3)";
+        return "rgba(255, 165, 0, 0.5)";
       case "Jeanne":
-        return "rgba(192, 192, 192, 0.3)";
+        return "rgba(192, 192, 192, 0.5)";
       case "Ramina":
-        return "rgba(192, 192, 192, 0.3)";
+        return "rgba(192, 192, 192, 0.5)";
       case "CC":
-        return "rgba(0, 255, 0, 0.3)";
+        return "rgba(0, 255, 0, 0.5)";
       case "Aria":
-        return "rgba(0, 255, 0, 0.3)";
+        return "rgba(0, 255, 0, 0.5)";
       case "Pompom":
-        return "rgba(255, 255, 0, 0.3)";
+        return "rgba(255, 255, 0, 0.5)";
       case "Albert":
-        return "rgba(255, 255, 0, 0.3)";
+        return "rgba(255, 255, 0, 0.5)";
       case "Itsurugi":
-        return "rgba(246, 36, 89, 0.3)";
+        return "rgba(246, 36, 89, 0.5)";
       case "Exella":
-        return "rgba(246, 36, 89, 0.3)";
+        return "rgba(246, 36, 89, 0.5)";
       case "Kuon":
-        return "rgba(103, 128, 159, 0.3)";
+        return "rgba(103, 128, 159, 0.5)";
       case "Daria":
-        return "rgba(103, 128, 159, 0.3)";
+        return "rgba(103, 128, 159, 0.5)";
       default:
-        return "rgba(255, 165, 0, 0.3)";
+        return "rgba(255, 165, 0, 0.5)";
     }
   };
   const getClassFromLeader = (name) => {
@@ -131,9 +132,9 @@ export default function EnemyUI() {
             height: "50px",
             width: "150px",
             display: "flex",
-            justifyContent: "center",
+            justifyContent: "space-evenly",
             alignItems: "center",
-            backgroundColor: "rgba(0, 0, 255, 0.3)",
+            backgroundColor: "rgba(0, 0, 255, 0.5)",
             fontFamily: "Noto Serif JP, serif",
             fontSize: "30px",
             outline: "7px ridge rgba(0, 0, 0, 0.6)",
@@ -141,6 +142,18 @@ export default function EnemyUI() {
           }}
         >
           {reduxCurrentEnemyPlayPoints} / {reduxMaxEnemyPlayPoints}
+          <div>
+            <Badge color="info" size="small" badgeContent={reduxEnemyEvoPoints}>
+              <div
+                style={{
+                  fontFamily: "Noto Serif JP, serif",
+                  fontSize: "17px",
+                }}
+              >
+                EP
+              </div>
+            </Badge>
+          </div>
         </div>
       </div>
     </div>
