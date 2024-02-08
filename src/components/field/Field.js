@@ -348,6 +348,9 @@ export default function Field({
         index: index,
       })
     );
+    dispatch(clearValuesAtIndex(index));
+    dispatch(clearEngagedAtIndex(index));
+    dispatch(clearCountersAtIndex(index));
   };
 
   const handleCardToCemetery = () => {
