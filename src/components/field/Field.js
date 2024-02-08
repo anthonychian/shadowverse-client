@@ -767,13 +767,9 @@ export default function Field({
             width: "175px",
             display: "flex",
             flexDirection: "column",
-            // backgroundColor: "black",
-            // backgroundColor: "#131219",
             backgroundColor: "rgba(0, 0, 0, 0.60)",
             alignItems: "center",
             justifyContent: "space-evenly",
-
-            // cursor: `url(${img}) 55 55, auto`,
           }}
         >
           <EvoDeck
@@ -804,7 +800,7 @@ export default function Field({
             gridTemplateColumns: "repeat(5, 1fr)",
             alignItems: "center",
             justifyItems: "center",
-            zIndex: 0,
+            zIndex: 1,
           }}
         >
           {reduxField.map((card, idx) => (
@@ -951,7 +947,7 @@ export default function Field({
           <div
             // onMouseEnter={handleMouseEnter}
             // onMouseLeave={handleMouseLeave}
-            style={{ position: "relative" }}
+            style={{ zIndex: -1, position: "relative" }}
           >
             <Deck setHovering={setHovering} ready={ready} />
             {/* {showOpponentDeckSize && ( */}

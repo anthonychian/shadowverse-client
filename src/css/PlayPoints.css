@@ -44,6 +44,7 @@
   bottom: 0;
 }
 .CircleContainer {
+  /* background-color: #131219; */
   background-color: rgba(0, 0, 0, 0.6);
   outline: 7px ridge rgba(0, 0, 0, 0.6);
   border-radius: 2rem;
