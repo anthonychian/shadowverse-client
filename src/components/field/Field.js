@@ -434,6 +434,7 @@ export default function Field({
 
   return (
     <>
+    <Tooltip title="Copy" placement="top">
       <div
         style={{
           backgroundColor: "black",
@@ -450,19 +451,20 @@ export default function Field({
           bottom: 3,
           left: 0,
           // pointerEvents: "auto",
+          cursor: "pointer", 
+        }}
+        onClick={() => {
+          navigator.clipboard.writeText(reduxCurrentRoom);
         }}
       >
-        <div>{reduxCurrentRoom}</div>
-        <Tooltip title="Copy" placement="top">
-          <ContentCopyIcon
-            sx={{ cursor: "pointer", fontSize: "20px" }}
-            onClick={() => {
-              navigator.clipboard.writeText(reduxCurrentRoom);
-            }}
-          />
-        </Tooltip>
-      </div>
-
+          <div>{reduxCurrentRoom}</div>
+          
+            <ContentCopyIcon
+              sx={{fontSize: "20px" }}
+            />
+          
+        </div>
+      </Tooltip>
       <Menu
         open={contextMenu !== null}
         onClose={handleClose}

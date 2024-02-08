@@ -9,6 +9,7 @@ import {
   addToHandFromDeck,
   addToTopOfDeckFromDeck,
   addToBotOfDeckFromDeck,
+  addToBanishFromDeck,
 } from "../../redux/CardSlice";
 import { Menu, MenuItem, Modal, Box } from "@mui/material";
 import CardMUI from "@mui/material/Card";
@@ -40,7 +41,7 @@ export default function Deck({ ready, setHovering }) {
   const [contextMenu, setContextMenu] = React.useState(null);
   const [cardContextMenu, setCardContextMenu] = React.useState(null);
   const [reveal, setReveal] = useState(false);
-  const [textInput, setTextInput] = useState();
+  const [textInput, setTextInput] = useState("");
   const reduxDeck = useSelector((state) => state.card.deck);
   const [partialDeck, setPartialDeck] = useState([]);
   const handleModalOpen = () => {
@@ -51,7 +52,7 @@ export default function Deck({ ready, setHovering }) {
     setOpen(false);
     if (reveal) {
       setReveal(false);
-      setTextInput();
+      setTextInput("");
       setPartialDeck([]);
     }
   };
@@ -74,7 +75,6 @@ export default function Deck({ ready, setHovering }) {
   const handleCardContextMenu = (event, name, index) => {
     setName(name);
     setIndex(index);
-    console.log("SETTING CARD TO ", name, index);
     event.preventDefault();
     setCardContextMenu(
       cardContextMenu === null
@@ -118,33 +118,44 @@ export default function Deck({ ready, setHovering }) {
   };
 
   const handleAddFromDeckToHand = () => {
-    handleModalOpen();
     handleCardClose();
     dispatch(addToHandFromDeck({ card: name, index: index }));
   };
 
   const handleToHandFromRevealed = () => {
-    handleModalOpen();
     handleCardClose();
-    const cardIndex = partialDeck.indexOf(name);
-    setPartialDeck(partialDeck.filter((_, i) => i !== cardIndex));
+    setPartialDeck(partialDeck.filter((_, i) => i !== index));
     dispatch(addToHandFromDeck({ card: name, index: index }));
   };
 
-  const handleToTopOfDeck = () => {
-    console.log("WHY IS THIS THE CARD", name, index);
-    handleModalOpen();
+  const handleToBanish = () => {
     handleCardClose();
-    // const cardIndex = partialDeck.indexOf(name);
     setPartialDeck(partialDeck.filter((_, i) => i !== index));
+    dispatch(addToBanishFromDeck({ card: name, index: index }));
+  };
+
+  const handleBanishAll = () => {
+    const length = partialDeck.length
+    for (let i = 0; i < length; i++)
+      dispatch(addToBanishFromDeck({ card: partialDeck[i], index: i }));
+    setPartialDeck([])
+  }
+  
+
+  const handleToTopOfDeck = () => {
+    handleCardClose();
+    let deck = partialDeck.filter((_, i) => i !== index)
+    setPartialDeck([name, ...deck]);
     dispatch(addToTopOfDeckFromDeck({ card: name, index: index }));
   };
 
   const handleToBotOfDeck = () => {
-    handleModalOpen();
     handleCardClose();
-    // const cardIndex = partialDeck.indexOf(name);
-    setPartialDeck(partialDeck.filter((_, i) => i !== index));
+    let deck = partialDeck.filter((_, i) => i !== index)
+    if (partialDeck.length === reduxDeck.length)
+      setPartialDeck([...deck, name]);
+    else 
+      setPartialDeck([...deck])
     dispatch(addToBotOfDeckFromDeck({ card: name, index: index }));
   };
 
@@ -152,7 +163,6 @@ export default function Deck({ ready, setHovering }) {
     const num = Number(textInput);
     if (num < reduxDeck.length) {
       setPartialDeck(reduxDeck.slice(0, num));
-      // console.log(reduxDeck.slice(0, num));
     } else {
       setPartialDeck(reduxDeck);
     }
@@ -238,6 +248,9 @@ export default function Deck({ ready, setHovering }) {
         {reveal && (
           <MenuItem onClick={() => handleToBotOfDeck()}>Bot of Deck</MenuItem>
         )}
+        {reveal && (
+          <MenuItem onClick={() => handleToBanish()}>Banish</MenuItem>
+        )}
       </Menu>
 
       <Modal
@@ -281,6 +294,16 @@ export default function Deck({ ready, setHovering }) {
               >
                 Submit
               </button>
+              {partialDeck.length > 0 && <button
+                onClick={handleBanishAll}
+                style={{
+                  fontFamily: "Noto Serif JP, serif",
+                  height: "30px",
+                  width: "120px",
+                }}
+              >
+                Banish All
+              </button>}
             </div>
           )}
           <CardMUI

@@ -660,8 +660,6 @@ export const CardSlice = createSlice({
     addToTopOfDeckFromDeck: (state, action) => {
       const card = action.payload.card;
       const cardIndex = action.payload.index;
-      console.log("SHOULD BE THIS CARD", card);
-      console.log("IS THIS CARD", state.deck[cardIndex], cardIndex);
       state.deck = state.deck.filter((_, i) => i !== cardIndex);
       console.log(`Removed ${card} from deck`);
       state.deck = [card, ...state.deck];
@@ -679,6 +677,24 @@ export const CardSlice = createSlice({
       console.log(`Removed ${card} from deck`);
       state.deck = [...state.deck, card];
       console.log(`Added ${card} to bot of deck`);
+      socket.emit("send msg", {
+        type: "deckSize",
+        data: state.deck.length,
+        room: state.room,
+      });
+    },
+    addToBanishFromDeck: (state, action) => {
+      const card = action.payload.card;
+      const cardIndex = action.payload.index;
+      state.deck = state.deck.filter((_, i) => i !== cardIndex);
+      console.log(`Removed ${card} from deck`);
+      state.banish = [card, ...state.banish];
+      console.log(`Added ${card} to banished`);
+      socket.emit("send msg", {
+        type: "banish",
+        data: state.banish,
+        room: state.room,
+      });
       socket.emit("send msg", {
         type: "deckSize",
         data: state.deck.length,
@@ -1120,6 +1136,7 @@ export const {
   placeToBanishFromField,
   addToTopOfDeckFromDeck,
   addToBotOfDeckFromDeck,
+  addToBanishFromDeck,
   removeTokenOnField,
   moveCardOnField,
   transferToOpponentField,
