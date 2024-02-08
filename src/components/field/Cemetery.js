@@ -1,8 +1,18 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { cardImage } from "../../decks/getCards";
-import { Menu, MenuItem, Modal, Box } from "@mui/material";
+import {
+  Menu,
+  MenuItem,
+  Modal,
+  Box,
+  Radio,
+  RadioGroup,
+  FormControlLabel,
+  FormControl,
+} from "@mui/material";
 import CardMUI from "@mui/material/Card";
+import cancel from "../../assets/logo/cancel.png";
 import Card from "../hand/Card";
 import { addToHandFromCemetery, setCurrentCard } from "../../redux/CardSlice";
 // import cardback from "../../assets/cardbacks/sleeve_5010011.png";
@@ -19,6 +29,7 @@ const style = {
   p: 3,
   width: "55%",
   display: "flex",
+  flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
 };
@@ -32,9 +43,15 @@ export default function Cemetery({
   const [open, setOpen] = useState(false);
   const [name, setName] = useState("");
   const [contextMenu, setContextMenu] = React.useState(null);
+  const [cemeterySelected, setCemeterySelected] = useState(true);
+  const [banishSelected, setBanishSelected] = useState(false);
+
   const reduxCemetery = useSelector((state) => state.card.cemetery);
+  const reduxBanish = useSelector((state) => state.card.banish);
+
   const handleModalOpen = () => {
-    if (reduxCemetery.length > 0 && !ready) setOpen(true);
+    if ((reduxCemetery.length > 0 || reduxBanish.length > 0) && !ready)
+      setOpen(true);
   };
   const handleModalClose = () => setOpen(false);
   const dispatch = useDispatch();
@@ -70,6 +87,15 @@ export default function Cemetery({
     dispatch(addToHandFromCemetery(name));
   };
 
+  const handleCemeterySelected = () => {
+    setCemeterySelected(true);
+    setBanishSelected(false);
+  };
+  const handleBanishSelected = () => {
+    setCemeterySelected(false);
+    setBanishSelected(true);
+  };
+
   return (
     <>
       <div
@@ -100,6 +126,30 @@ export default function Cemetery({
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
+          <FormControl>
+            <RadioGroup
+              row
+              aria-labelledby="demo-row-radio-buttons-group-label"
+              name="row-radio-buttons-group"
+            >
+              <FormControlLabel
+                checked={cemeterySelected}
+                onChange={handleCemeterySelected}
+                sx={{ fontFamily: "Noto Serif JP, serif", color: "white" }}
+                value={cemeterySelected}
+                control={<Radio />}
+                label="Cemetery"
+              />
+              <FormControlLabel
+                checked={banishSelected}
+                onChange={handleBanishSelected}
+                sx={{ fontFamily: "Noto Serif JP, serif", color: "white" }}
+                value={banishSelected}
+                control={<Radio />}
+                label="Banish"
+              />
+            </RadioGroup>
+          </FormControl>
           <CardMUI
             sx={{
               //   backgroundColor: "rgba(255, 255, 255, 0.1)",
@@ -116,21 +166,33 @@ export default function Cemetery({
             }}
             variant="outlined"
           >
-            {reduxCemetery.map((card, idx) => (
-              <div
-                key={`card-${idx}`}
-                onContextMenu={(e) => {
-                  handleContextMenu(e, card);
-                }}
-              >
-                <Card
-                  //   key={`card-${idx}`}
-                  ready={ready}
-                  name={card}
-                  setHovering={setHovering}
-                />
-              </div>
-            ))}
+            {cemeterySelected &&
+              reduxCemetery.map((card, idx) => (
+                <div
+                  key={`card-${idx}`}
+                  onContextMenu={(e) => {
+                    handleContextMenu(e, card);
+                  }}
+                >
+                  <Card
+                    //   key={`card-${idx}`}
+                    ready={ready}
+                    name={card}
+                    setHovering={setHovering}
+                  />
+                </div>
+              ))}
+            {banishSelected &&
+              reduxBanish.map((card, idx) => (
+                <div key={`card-${idx}`} style={{ width: "115px" }}>
+                  <Card
+                    evolvedUsed={true}
+                    ready={ready}
+                    name={card}
+                    setHovering={setHovering}
+                  />
+                </div>
+              ))}
           </CardMUI>
         </Box>
       </Modal>

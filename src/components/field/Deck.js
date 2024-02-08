@@ -71,9 +71,10 @@ export default function Deck({ ready, setHovering }) {
         : null
     );
   };
-  const handleCardContextMenu = (event, name) => {
+  const handleCardContextMenu = (event, name, index) => {
     setName(name);
     setIndex(index);
+    console.log("SETTING CARD TO ", name, index);
     event.preventDefault();
     setCardContextMenu(
       cardContextMenu === null
@@ -131,18 +132,19 @@ export default function Deck({ ready, setHovering }) {
   };
 
   const handleToTopOfDeck = () => {
+    console.log("WHY IS THIS THE CARD", name, index);
     handleModalOpen();
     handleCardClose();
-    const cardIndex = partialDeck.indexOf(name);
-    setPartialDeck(partialDeck.filter((_, i) => i !== cardIndex));
+    // const cardIndex = partialDeck.indexOf(name);
+    setPartialDeck(partialDeck.filter((_, i) => i !== index));
     dispatch(addToTopOfDeckFromDeck({ card: name, index: index }));
   };
 
   const handleToBotOfDeck = () => {
     handleModalOpen();
     handleCardClose();
-    const cardIndex = partialDeck.indexOf(name);
-    setPartialDeck(partialDeck.filter((_, i) => i !== cardIndex));
+    // const cardIndex = partialDeck.indexOf(name);
+    setPartialDeck(partialDeck.filter((_, i) => i !== index));
     dispatch(addToBotOfDeckFromDeck({ card: name, index: index }));
   };
 
@@ -150,7 +152,7 @@ export default function Deck({ ready, setHovering }) {
     const num = Number(textInput);
     if (num < reduxDeck.length) {
       setPartialDeck(reduxDeck.slice(0, num));
-      console.log(reduxDeck.slice(0, num));
+      // console.log(reduxDeck.slice(0, num));
     } else {
       setPartialDeck(reduxDeck);
     }
@@ -302,7 +304,7 @@ export default function Deck({ ready, setHovering }) {
                 <div
                   key={`card-${idx}`}
                   onContextMenu={(e) => {
-                    handleCardContextMenu(e, card);
+                    handleCardContextMenu(e, card, idx);
                   }}
                 >
                   <Card ready={ready} name={card} setHovering={setHovering} />
@@ -313,7 +315,7 @@ export default function Deck({ ready, setHovering }) {
                 <div
                   key={`card-${idx}`}
                   onContextMenu={(e) => {
-                    handleCardContextMenu(e, card);
+                    handleCardContextMenu(e, card, idx);
                   }}
                 >
                   <Card ready={ready} name={card} setHovering={setHovering} />

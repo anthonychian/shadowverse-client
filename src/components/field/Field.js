@@ -10,6 +10,7 @@ import {
   placeToCemeteryFromField,
   placeToFieldFromCemetery,
   placeTokenOnField,
+  placeToBanishFromField,
   removeTokenOnField,
   evolveCardOnField,
   feedCardOnField,
@@ -40,6 +41,7 @@ import {
   setEnemyHealth,
   setEnemyLeader,
   setEnemyCounter,
+  setEnemyBanish,
 } from "../../redux/CardSlice";
 import { motion } from "framer-motion";
 import CardMUI from "@mui/material/Card";
@@ -114,7 +116,6 @@ export default function Field({
   const [readyToEvo, setReadyToEvo] = useState(false);
   const [readyToFeed, setReadyToFeed] = useState(false);
   const [tokenReady, setTokenReady] = useState(false);
-  // const [showOpponentDeckSize, setShowOpponentDeckSize] = useState(false);
 
   useEffect(() => {
     socket.on("receive msg", (data) => {
@@ -137,6 +138,7 @@ export default function Field({
       else if (data.type === "transfer")
         dispatch(receiveFromOpponentField(data.data));
       else if (data.type === "counter") dispatch(setEnemyCounter(data.data));
+      else if (data.type === "banish") dispatch(setEnemyBanish(data.data));
     });
   }, [socket]);
 
@@ -348,10 +350,22 @@ export default function Field({
     );
   };
 
-  const handleCardToCemeteryFromField = () => {
+  const handleCardToCemetery = () => {
     handleClose();
     dispatch(
       placeToCemeteryFromField({
+        card: name,
+        index: index,
+      })
+    );
+    dispatch(clearValuesAtIndex(index));
+    dispatch(clearEngagedAtIndex(index));
+    dispatch(clearCountersAtIndex(index));
+  };
+  const handleCardToBanish = () => {
+    handleClose();
+    dispatch(
+      placeToBanishFromField({
         card: name,
         index: index,
       })
@@ -367,13 +381,6 @@ export default function Field({
     dispatch(setEngaged(index));
   };
 
-  // const handleMouseEnter = () => {
-  //   setShowOpponentDeckSize(!showOpponentDeckSize);
-  // };
-  // const handleMouseLeave = () => {
-  //   setShowOpponentDeckSize(!showOpponentDeckSize);
-  // };
-
   const handleShowAtkDef = () => {
     handleClose();
     handleEvoClose();
@@ -387,26 +394,6 @@ export default function Field({
     dispatch(hideAtk(index));
     dispatch(hideDef(index));
   };
-  // const handleShowAtk = () => {
-  //   handleClose();
-  //   handleEvoClose();
-  //   dispatch(showAtk(index));
-  // };
-  // const handleShowDef = () => {
-  //   handleClose();
-  //   handleEvoClose();
-  //   dispatch(showDef(index));
-  // };
-  // const handleHideAtk = () => {
-  //   handleClose();
-  //   handleEvoClose();
-  //   dispatch(hideAtk(index));
-  // };
-  // const handleHideDef = () => {
-  //   handleClose();
-  //   handleEvoClose();
-  //   dispatch(hideDef(index));
-  // };
 
   const handleAddCounter = () => {
     handleClose();
@@ -493,7 +480,7 @@ export default function Field({
           <MenuItem onClick={handleCardToHandFromField}>Hand</MenuItem>
         )}
         {!isToken(name) && (
-          <MenuItem onClick={handleCardToCemeteryFromField}>Cemetery</MenuItem>
+          <MenuItem onClick={handleCardToCemetery}>Cemetery</MenuItem>
         )}
         <MenuItem onClick={handleEngage}>Engage</MenuItem>
         {!reduxCustomValues[index].showAtk && (
@@ -507,6 +494,7 @@ export default function Field({
         )}
         <MenuItem onClick={handleMoveOnField}>Move</MenuItem>
         <MenuItem onClick={handleTransfer}>Transfer</MenuItem>
+        <MenuItem onClick={handleCardToBanish}>Banish</MenuItem>
         {!isToken(name) && (
           <MenuItem onClick={handleCardToTopDeck}>Top of Deck</MenuItem>
         )}

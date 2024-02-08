@@ -1,7 +1,14 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { cardImage } from "../../decks/getCards";
-import { Modal, Box } from "@mui/material";
+import {
+  Modal,
+  Box,
+  Radio,
+  RadioGroup,
+  FormControlLabel,
+  FormControl,
+} from "@mui/material";
 import CardMUI from "@mui/material/Card";
 import Card from "../hand/Card";
 
@@ -17,17 +24,31 @@ const style = {
   p: 3,
   width: "55%",
   display: "flex",
+  flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
 };
 
 export default function EnemyCemetery({ setHovering, ready }) {
   const [open, setOpen] = useState(false);
+  const [cemeterySelected, setCemeterySelected] = useState(true);
+  const [banishSelected, setBanishSelected] = useState(false);
+
   const reduxEnemyCemetery = useSelector((state) => state.card.enemyCemetery);
+  const reduxEnemyBanish = useSelector((state) => state.card.enemyBanish);
+
   const handleModalOpen = () => {
     if (reduxEnemyCemetery.length > 0 && !ready) setOpen(true);
   };
   const handleModalClose = () => setOpen(false);
+  const handleCemeterySelected = () => {
+    setCemeterySelected(true);
+    setBanishSelected(false);
+  };
+  const handleBanishSelected = () => {
+    setCemeterySelected(false);
+    setBanishSelected(true);
+  };
 
   return (
     <>
@@ -57,6 +78,30 @@ export default function EnemyCemetery({ setHovering, ready }) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
+          <FormControl>
+            <RadioGroup
+              row
+              aria-labelledby="demo-row-radio-buttons-group-label"
+              name="row-radio-buttons-group"
+            >
+              <FormControlLabel
+                checked={cemeterySelected}
+                onChange={handleCemeterySelected}
+                sx={{ fontFamily: "Noto Serif JP, serif", color: "white" }}
+                value={cemeterySelected}
+                control={<Radio />}
+                label="Cemetery"
+              />
+              <FormControlLabel
+                checked={banishSelected}
+                onChange={handleBanishSelected}
+                sx={{ fontFamily: "Noto Serif JP, serif", color: "white" }}
+                value={banishSelected}
+                control={<Radio />}
+                label="Banish"
+              />
+            </RadioGroup>
+          </FormControl>
           <CardMUI
             sx={{
               backgroundColor: "rgba(0, 0, 0, 0.7)",
@@ -71,11 +116,23 @@ export default function EnemyCemetery({ setHovering, ready }) {
             }}
             variant="outlined"
           >
-            {reduxEnemyCemetery.map((card, idx) => (
-              <div key={`card-${idx}`}>
-                <Card ready={ready} name={card} setHovering={setHovering} />
-              </div>
-            ))}
+            {cemeterySelected &&
+              reduxEnemyCemetery.map((card, idx) => (
+                <div key={`card-${idx}`}>
+                  <Card ready={ready} name={card} setHovering={setHovering} />
+                </div>
+              ))}
+            {banishSelected &&
+              reduxEnemyBanish.map((card, idx) => (
+                <div key={`card-${idx}`} style={{ width: "115px" }}>
+                  <Card
+                    ready={ready}
+                    name={card}
+                    evolvedUsed={true}
+                    setHovering={setHovering}
+                  />
+                </div>
+              ))}
           </CardMUI>
         </Box>
       </Modal>

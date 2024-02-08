@@ -29,6 +29,8 @@ export const CardSlice = createSlice({
     room: "",
     cemetery: [],
     enemyCemetery: [],
+    banish: [],
+    enemyBanish: [],
     enemyEvoDeck: [
       { card: "", status: false },
       { card: "", status: false },
@@ -658,6 +660,8 @@ export const CardSlice = createSlice({
     addToTopOfDeckFromDeck: (state, action) => {
       const card = action.payload.card;
       const cardIndex = action.payload.index;
+      console.log("SHOULD BE THIS CARD", card);
+      console.log("IS THIS CARD", state.deck[cardIndex], cardIndex);
       state.deck = state.deck.filter((_, i) => i !== cardIndex);
       console.log(`Removed ${card} from deck`);
       state.deck = [card, ...state.deck];
@@ -833,6 +837,29 @@ export const CardSlice = createSlice({
         room: state.room,
       });
     },
+    placeToBanishFromField: (state, action) => {
+      const card = action.payload.card;
+      const cardIndex = action.payload.index;
+      const newField = [
+        ...state.field.slice(0, cardIndex),
+        0,
+        ...state.field.slice(cardIndex + 1),
+      ];
+      state.field = newField;
+      console.log(`Removed ${card} from field`);
+      state.banish = [card, ...state.banish];
+      console.log(`Added ${card} to banished`);
+      socket.emit("send msg", {
+        type: "field",
+        data: state.field,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "banish",
+        data: state.banish,
+        room: state.room,
+      });
+    },
     evolveCardOnField: (state, action) => {
       const card = action.payload.card;
       const newIndex = action.payload.index;
@@ -970,6 +997,9 @@ export const CardSlice = createSlice({
     setEnemyCemetery: (state, action) => {
       state.enemyCemetery = action.payload;
     },
+    setEnemyBanish: (state, action) => {
+      state.enemyBanish = action.payload;
+    },
     setEnemyEvoDeck: (state, action) => {
       state.enemyEvoDeck = action.payload;
     },
@@ -1087,6 +1117,7 @@ export const {
   placeToCemeteryFromField,
   placeToCemeteryFromHand,
   placeTokenOnField,
+  placeToBanishFromField,
   addToTopOfDeckFromDeck,
   addToBotOfDeckFromDeck,
   removeTokenOnField,
@@ -1112,6 +1143,7 @@ export const {
   clearCountersAtIndex,
   moveCountersAtIndex,
   setEnemyCemetery,
+  setEnemyBanish,
   setEnemyEvoDeck,
   setEnemyCustomValues,
   showAtk,
