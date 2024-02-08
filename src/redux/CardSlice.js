@@ -662,6 +662,7 @@ export const CardSlice = createSlice({
         console.log("there are no open slots to transfer");
       }
     },
+
     addToFieldFromDeck: (state, action) => {
       const card = action.payload.card;
       const cardIndex = action.payload.cardIndex;
@@ -707,6 +708,24 @@ export const CardSlice = createSlice({
       console.log(`Removed ${card} from deck`);
       state.deck = [...state.deck, card];
       console.log(`Added ${card} to bot of deck`);
+      socket.emit("send msg", {
+        type: "deckSize",
+        data: state.deck.length,
+        room: state.room,
+      });
+    },
+    addToCemeteryFromDeck: (state, action) => {
+      const card = action.payload.card;
+      const cardIndex = action.payload.index;
+      state.deck = state.deck.filter((_, i) => i !== cardIndex);
+      console.log(`Removed ${card} from deck`);
+      state.cemetery = [card, ...state.cemetery];
+      console.log(`Added ${card} to cemtery`);
+      socket.emit("send msg", {
+        type: "cemtery",
+        data: state.cemetery,
+        room: state.room,
+      });
       socket.emit("send msg", {
         type: "deckSize",
         data: state.deck.length,
@@ -1168,6 +1187,7 @@ export const {
   placeToBanishFromField,
   addToTopOfDeckFromDeck,
   addToBotOfDeckFromDeck,
+  addToCemeteryFromDeck,
   addToBanishFromDeck,
   removeTokenOnField,
   moveCardOnField,

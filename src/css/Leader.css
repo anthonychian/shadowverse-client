@@ -3,11 +3,12 @@
   min-width: 350px;
   width: 50%;
   position: absolute;
+  z-index: 1;
   /* pointer-events: none;
   user-select: none; */
 }
 .LeaderContainer {
-  bottom: 60%;
+  bottom: 30%;
   right: 20%;
   position: relative;
 }

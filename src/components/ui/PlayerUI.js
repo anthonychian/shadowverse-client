@@ -211,9 +211,9 @@ export default function PlayerUI({ name }) {
                   min={0}
                   style={{
                     position: "absolute",
+                    zIndex: 10,
                     top: "0px",
                     left: "30px",
-                    zIndex: "100",
                     width: "15px",
                     fontSize: "20px",
                     fontFamily: "Noto Serif JP, serif",
@@ -230,16 +230,6 @@ export default function PlayerUI({ name }) {
           </div>
         </div>
       </div>
-      {/* <div
-        style={{
-          fontFamily: "Noto Serif JP, serif",
-          backgroundColor: "black",
-          fontSize: "30px",
-          color: "white",
-        }}
-      >
-        3 EP
-      </div> */}
     </div>
   );
 }

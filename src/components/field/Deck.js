@@ -3,12 +3,12 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   drawFromDeck,
   shuffleDeck,
-  reset,
   mulliganFour,
   drawFourFromDeck,
   addToHandFromDeck,
   addToTopOfDeckFromDeck,
   addToBotOfDeckFromDeck,
+  addToCemeteryFromDeck,
   addToBanishFromDeck,
 } from "../../redux/CardSlice";
 import { Menu, MenuItem, Modal, Box } from "@mui/material";
@@ -135,27 +135,32 @@ export default function Deck({ ready, setHovering }) {
   };
 
   const handleBanishAll = () => {
-    const length = partialDeck.length
+    const length = partialDeck.length;
     for (let i = 0; i < length; i++)
       dispatch(addToBanishFromDeck({ card: partialDeck[i], index: i }));
-    setPartialDeck([])
-  }
-  
+    setPartialDeck([]);
+  };
+
+  const handleCemeteryAll = () => {
+    const length = partialDeck.length;
+    for (let i = 0; i < length; i++)
+      dispatch(addToCemeteryFromDeck({ card: partialDeck[i], index: i }));
+    setPartialDeck([]);
+  };
 
   const handleToTopOfDeck = () => {
     handleCardClose();
-    let deck = partialDeck.filter((_, i) => i !== index)
+    let deck = partialDeck.filter((_, i) => i !== index);
     setPartialDeck([name, ...deck]);
     dispatch(addToTopOfDeckFromDeck({ card: name, index: index }));
   };
 
   const handleToBotOfDeck = () => {
     handleCardClose();
-    let deck = partialDeck.filter((_, i) => i !== index)
+    let deck = partialDeck.filter((_, i) => i !== index);
     if (partialDeck.length === reduxDeck.length)
       setPartialDeck([...deck, name]);
-    else 
-      setPartialDeck([...deck])
+    else setPartialDeck([...deck]);
     dispatch(addToBotOfDeckFromDeck({ card: name, index: index }));
   };
 
@@ -248,9 +253,7 @@ export default function Deck({ ready, setHovering }) {
         {reveal && (
           <MenuItem onClick={() => handleToBotOfDeck()}>Bot of Deck</MenuItem>
         )}
-        {reveal && (
-          <MenuItem onClick={() => handleToBanish()}>Banish</MenuItem>
-        )}
+        {reveal && <MenuItem onClick={() => handleToBanish()}>Banish</MenuItem>}
       </Menu>
 
       <Modal
@@ -294,16 +297,30 @@ export default function Deck({ ready, setHovering }) {
               >
                 Submit
               </button>
-              {partialDeck.length > 0 && <button
-                onClick={handleBanishAll}
-                style={{
-                  fontFamily: "Noto Serif JP, serif",
-                  height: "30px",
-                  width: "120px",
-                }}
-              >
-                Banish All
-              </button>}
+              {partialDeck.length > 0 && (
+                <button
+                  onClick={handleCemeteryAll}
+                  style={{
+                    fontFamily: "Noto Serif JP, serif",
+                    height: "30px",
+                    width: "120px",
+                  }}
+                >
+                  Cemetery All
+                </button>
+              )}
+              {partialDeck.length > 0 && (
+                <button
+                  onClick={handleBanishAll}
+                  style={{
+                    fontFamily: "Noto Serif JP, serif",
+                    height: "30px",
+                    width: "120px",
+                  }}
+                >
+                  Banish All
+                </button>
+              )}
             </div>
           )}
           <CardMUI

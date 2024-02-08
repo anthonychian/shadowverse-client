@@ -36,6 +36,16 @@ export default function Scoreboard({ name }) {
       ? setMaxPlayPoints(maxPlayPoints - 1)
       : setMaxPlayPoints(0);
   };
+  const decrementMultiple = (idx) => {
+    if (currentPlayPoints === idx) {
+      setCurrentPlayPoints(idx - 1);
+    } else {
+      setCurrentPlayPoints(idx);
+    }
+  };
+  const incrementMultiple = (idx) => {
+    setCurrentPlayPoints(idx);
+  };
   const incrementBoth = () => {
     maxPlayPoints < 10
       ? setMaxPlayPoints(maxPlayPoints + 1)
@@ -61,11 +71,19 @@ export default function Scoreboard({ name }) {
           {[...Array(10)].map((x, idx) =>
             maxPlayPoints >= 10 - idx ? (
               currentPlayPoints >= 10 - idx ? (
-                <div key={`circle-${idx}`} className="circle">
+                <div
+                  onClick={() => decrementMultiple(10 - idx)}
+                  key={`circle-${idx}`}
+                  className="circle"
+                >
                   {10 - idx}
                 </div>
               ) : (
-                <div key={`circleFaded-${idx}`} className="circleFaded">
+                <div
+                  onClick={() => incrementMultiple(10 - idx)}
+                  key={`circleFaded-${idx}`}
+                  className="circleFaded"
+                >
                   {10 - idx}
                 </div>
               )
