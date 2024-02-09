@@ -45,6 +45,7 @@ import {
   setEnemyCounter,
   setEnemyBanish,
   setEnemyViewingDeck,
+  setEnemyViewingHand,
   setEnemyViewingCemetery,
   setEnemyViewingEvoDeck,
   setEnemyViewingCemeteryOpponent,
@@ -92,6 +93,7 @@ export default function Field({
   const navigate = useNavigate();
 
   // redux state
+  const reduxRoom = useSelector((state) => state.card.room);
   const reduxField = useSelector((state) => state.card.field);
   const reduxCurrentCard = useSelector((state) => state.card.currentCard);
   const reduxEvoField = useSelector((state) => state.card.evoField);
@@ -152,6 +154,8 @@ export default function Field({
         dispatch(receiveFromOpponentField(data.data));
       else if (data.type === "counter") dispatch(setEnemyCounter(data.data));
       else if (data.type === "banish") dispatch(setEnemyBanish(data.data));
+      else if (data.type === "viewingHand")
+        dispatch(setEnemyViewingHand(data.data));
       else if (data.type === "viewingDeck")
         dispatch(setEnemyViewingDeck(data.data));
       else if (data.type === "viewingTopCards")
@@ -175,6 +179,11 @@ export default function Field({
 
   const handleModalClose = () => {
     dispatch(setShowEnemyHand(false));
+    // socket.emit("send msg", {
+    //   type: "viewingHand",
+    //   data: false,
+    //   room: reduxRoom,
+    // });
   };
 
   const handleShowCardModalClose = () => {
@@ -635,9 +644,9 @@ export default function Field({
             variant="outlined"
           >
             <motion.div
-              initial={{ scale: 1.0, rotateY: 0 }}
-              transition={{ duration: 2.0 }}
-              animate={{ scale: 4.0, rotateY: 360 }}
+              initial={{ scale: 1.0, rotateY: 180 }}
+              transition={{ duration: 0.8 }}
+              animate={{ scale: 4.5, rotateY: 0 }}
             >
               <img
                 height={"160px"}

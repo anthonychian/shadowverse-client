@@ -993,7 +993,14 @@ export default function CreateDeck() {
             }}
             variant="outlined"
           >
-            <img height={"100%"} src={cardImage(cardName)} alt={cardName} />
+            {/* <img height={"100%"} src={cardImage(cardName)} alt={cardName} /> */}
+            <motion.div
+              initial={{ scale: 1.0, rotateY: 180 }}
+              transition={{ duration: 0.8 }}
+              animate={{ scale: 4.5, rotateY: 0 }}
+            >
+              <img height={"160px"} src={cardImage(cardName)} alt={cardName} />
+            </motion.div>
           </CardMUI>
         </Box>
       </Modal>

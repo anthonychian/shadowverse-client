@@ -37,6 +37,10 @@ export default function EnemyUI() {
   const reduxEnemyViewingTopCards = useSelector(
     (state) => state.card.enemyViewingTopCards
   );
+  const reduxEnemyViewingHand = useSelector(
+    (state) => state.card.enemyViewingHand
+  );
+
   const getColorFromLeader = (name) => {
     switch (name) {
       case "Forte":
@@ -178,7 +182,7 @@ export default function EnemyUI() {
             fontWeight: "bold",
             fontFamily: "Noto Serif JP, serif",
           }}
-          message={"Viewing Enemy Cemetery"}
+          message={"Viewing Opponent's Cemetery"}
         />
       </Snackbar>
       <Snackbar
@@ -196,7 +200,7 @@ export default function EnemyUI() {
             fontWeight: "bold",
             fontFamily: "Noto Serif JP, serif",
           }}
-          message={"Viewing Enemy Evo Deck"}
+          message={"Viewing Opponent's Evo Deck"}
         />
       </Snackbar>
       <Snackbar
@@ -215,6 +219,24 @@ export default function EnemyUI() {
             fontFamily: "Noto Serif JP, serif",
           }}
           message={"Viewing Top Cards"}
+        />
+      </Snackbar>
+      <Snackbar
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+        open={reduxEnemyViewingHand}
+      >
+        <SnackbarContent
+          style={{
+            backgroundColor: "rgba(0, 0, 0, 0.7)",
+            color: "white",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            fontSize: "30px",
+            fontWeight: "bold",
+            fontFamily: "Noto Serif JP, serif",
+          }}
+          message={"Viewing Opponent's Hand"}
         />
       </Snackbar>
       <Leader name={reduxEnemyLeader} />
