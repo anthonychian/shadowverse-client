@@ -14,7 +14,11 @@ import {
 import CardMUI from "@mui/material/Card";
 import cancel from "../../assets/logo/cancel.png";
 import Card from "../hand/Card";
-import { addToHandFromCemetery, setCurrentCard } from "../../redux/CardSlice";
+import {
+  addToHandFromCemetery,
+  setCurrentCard,
+  setViewingCemetery,
+} from "../../redux/CardSlice";
 // import cardback from "../../assets/cardbacks/sleeve_5010011.png";
 
 const img = require("../../assets/pin_bellringer_angel.png");
@@ -40,6 +44,7 @@ export default function Cemetery({
   setReady,
   ready,
 }) {
+  const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
   const [name, setName] = useState("");
   const [contextMenu, setContextMenu] = React.useState(null);
@@ -50,11 +55,15 @@ export default function Cemetery({
   const reduxBanish = useSelector((state) => state.card.banish);
 
   const handleModalOpen = () => {
-    if ((reduxCemetery.length > 0 || reduxBanish.length > 0) && !ready)
+    if ((reduxCemetery.length > 0 || reduxBanish.length > 0) && !ready) {
       setOpen(true);
+      dispatch(setViewingCemetery(true));
+    }
   };
-  const handleModalClose = () => setOpen(false);
-  const dispatch = useDispatch();
+  const handleModalClose = () => {
+    setOpen(false);
+    dispatch(setViewingCemetery(false));
+  };
 
   const handleContextMenu = (event, name) => {
     setName(name);

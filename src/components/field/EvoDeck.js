@@ -3,7 +3,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { Menu, MenuItem, Modal, Box } from "@mui/material";
 import CardMUI from "@mui/material/Card";
 import Card from "../hand/Card";
-import { setCurrentEvo, restoreEvoCard } from "../../redux/CardSlice";
+import {
+  setCurrentEvo,
+  restoreEvoCard,
+  setViewingEvoDeck,
+} from "../../redux/CardSlice";
 import cardback from "../../assets/cardbacks/sleeve_5010011.png";
 import img from "../../assets/pin_bellringer_angel.png";
 
@@ -28,18 +32,21 @@ export default function EvoDeck({
   setReady,
   ready,
 }) {
+  const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
   const [showEvo, setShowEvo] = useState(true);
   const [evoStatus, setEvoStatus] = useState(false);
   const [contextMenu, setContextMenu] = React.useState(null);
   const [name, setName] = useState("");
   const reduxEvoDeck = useSelector((state) => state.card.evoDeck);
-  const reduxCurrentEvo = useSelector((state) => state.card.currentEvo);
   const handleModalOpen = () => {
     setOpen(true);
+    dispatch(setViewingEvoDeck(true));
   };
-  const handleModalClose = () => setOpen(false);
-  const dispatch = useDispatch();
+  const handleModalClose = () => {
+    setOpen(false);
+    dispatch(setViewingEvoDeck(false));
+  };
 
   const handleContextMenu = (event, card) => {
     setShowEvo(card.card === "Carrot");

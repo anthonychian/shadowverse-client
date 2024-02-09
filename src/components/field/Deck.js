@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { socket } from "../../sockets";
 import { useDispatch, useSelector } from "react-redux";
 import {
   drawFromDeck,
@@ -10,6 +11,8 @@ import {
   addToBotOfDeckFromDeck,
   addToCemeteryFromDeck,
   addToBanishFromDeck,
+  setViewingDeck,
+  setViewingTopCards,
 } from "../../redux/CardSlice";
 import { Menu, MenuItem, Modal, Box } from "@mui/material";
 import CardMUI from "@mui/material/Card";
@@ -42,10 +45,23 @@ export default function Deck({ ready, setHovering }) {
   const [cardContextMenu, setCardContextMenu] = React.useState(null);
   const [reveal, setReveal] = useState(false);
   const [textInput, setTextInput] = useState("");
-  const reduxDeck = useSelector((state) => state.card.deck);
   const [partialDeck, setPartialDeck] = useState([]);
+
+  const reduxDeck = useSelector((state) => state.card.deck);
+  const reduxRoom = useSelector((state) => state.card.room);
+
   const handleModalOpen = () => {
-    if (reduxDeck.length > 0 && !ready) setOpen(true);
+    if (reduxDeck.length > 0 && !ready) {
+      setOpen(true);
+      dispatch(setViewingDeck(true));
+    }
+  };
+
+  const handleModalRevealOpen = () => {
+    if (reduxDeck.length > 0 && !ready) {
+      setOpen(true);
+      dispatch(setViewingTopCards(true));
+    }
   };
 
   const handleModalClose = () => {
@@ -54,6 +70,9 @@ export default function Deck({ ready, setHovering }) {
       setReveal(false);
       setTextInput("");
       setPartialDeck([]);
+      dispatch(setViewingTopCards(false));
+    } else {
+      dispatch(setViewingDeck(false));
     }
   };
 
@@ -99,7 +118,7 @@ export default function Deck({ ready, setHovering }) {
   const handleRevealDeck = () => {
     handleClose();
     setReveal(true);
-    handleModalOpen();
+    handleModalRevealOpen();
   };
 
   const handleShuffle = () => {
@@ -119,13 +138,34 @@ export default function Deck({ ready, setHovering }) {
 
   const handleAddFromDeckToHand = () => {
     handleCardClose();
+    handleModalClose();
     dispatch(addToHandFromDeck({ card: name, index: index }));
+    socket.emit("send msg", {
+      type: "showCard",
+      data: true,
+      room: reduxRoom,
+    });
+    socket.emit("send msg", {
+      type: "cardRevealed",
+      data: name,
+      room: reduxRoom,
+    });
   };
 
   const handleToHandFromRevealed = () => {
     handleCardClose();
     setPartialDeck(partialDeck.filter((_, i) => i !== index));
     dispatch(addToHandFromDeck({ card: name, index: index }));
+    socket.emit("send msg", {
+      type: "showCard",
+      data: true,
+      room: reduxRoom,
+    });
+    socket.emit("send msg", {
+      type: "cardRevealed",
+      data: name,
+      room: reduxRoom,
+    });
   };
 
   const handleToBanish = () => {
@@ -145,6 +185,13 @@ export default function Deck({ ready, setHovering }) {
     const length = partialDeck.length;
     for (let i = 0; i < length; i++)
       dispatch(addToCemeteryFromDeck({ card: partialDeck[i], index: i }));
+    setPartialDeck([]);
+  };
+
+  const handleBotDeckAll = () => {
+    const length = partialDeck.length;
+    for (let i = 0; i < length; i++)
+      dispatch(addToBotOfDeckFromDeck({ card: partialDeck[i], index: 0 }));
     setPartialDeck([]);
   };
 
@@ -297,6 +344,19 @@ export default function Deck({ ready, setHovering }) {
               >
                 Submit
               </button>
+              {partialDeck.length > 0 && (
+                <button
+                  onClick={handleBotDeckAll}
+                  style={{
+                    fontFamily: "Noto Serif JP, serif",
+                    height: "30px",
+                    width: "120px",
+                  }}
+                >
+                  Bot Deck All
+                </button>
+              )}
+
               {partialDeck.length > 0 && (
                 <button
                   onClick={handleCemeteryAll}

@@ -35,6 +35,8 @@ import {
   clearEngagedAtIndex,
   setEnemyHand,
   setShowEnemyHand,
+  setShowEnemyCard,
+  setEnemyCard,
   setEnemyDeckSize,
   setEnemyEvoPoints,
   setEnemyPlayPoints,
@@ -42,7 +44,14 @@ import {
   setEnemyLeader,
   setEnemyCounter,
   setEnemyBanish,
+  setEnemyViewingDeck,
+  setEnemyViewingCemetery,
+  setEnemyViewingEvoDeck,
+  setEnemyViewingCemeteryOpponent,
+  setEnemyViewingEvoDeckOpponent,
+  setEnemyViewingTopCards,
 } from "../../redux/CardSlice";
+import { cardImage } from "../../decks/getCards";
 import { motion } from "framer-motion";
 import CardMUI from "@mui/material/Card";
 import { useDispatch, useSelector } from "react-redux";
@@ -101,6 +110,8 @@ export default function Field({
   const reduxEnemyHand = useSelector((state) => state.card.enemyHand);
   const reduxEnemyDeckSize = useSelector((state) => state.card.enemyDeckSize);
   const reduxShowEnemyHand = useSelector((state) => state.card.showEnemyHand);
+  const reduxShowEnemyCard = useSelector((state) => state.card.showEnemyCard);
+  const reduxEnemyCard = useSelector((state) => state.card.enemyCard);
   const reduxCounterField = useSelector((state) => state.card.counterField);
   const reduxEnemyCounterField = useSelector(
     (state) => state.card.enemyCounterField
@@ -135,10 +146,24 @@ export default function Field({
       else if (data.type === "health") dispatch(setEnemyHealth(data.data));
       else if (data.type === "leader") dispatch(setEnemyLeader(data.data));
       else if (data.type === "showHand") dispatch(setShowEnemyHand(data.data));
+      else if (data.type === "showCard") dispatch(setShowEnemyCard(data.data));
+      else if (data.type === "cardRevealed") dispatch(setEnemyCard(data.data));
       else if (data.type === "transfer")
         dispatch(receiveFromOpponentField(data.data));
       else if (data.type === "counter") dispatch(setEnemyCounter(data.data));
       else if (data.type === "banish") dispatch(setEnemyBanish(data.data));
+      else if (data.type === "viewingDeck")
+        dispatch(setEnemyViewingDeck(data.data));
+      else if (data.type === "viewingTopCards")
+        dispatch(setEnemyViewingTopCards(data.data));
+      else if (data.type === "viewingCemetery")
+        dispatch(setEnemyViewingCemetery(data.data));
+      else if (data.type === "viewingEvoDeck")
+        dispatch(setEnemyViewingEvoDeck(data.data));
+      else if (data.type === "viewingCemeteryOpponent")
+        dispatch(setEnemyViewingCemeteryOpponent(data.data));
+      else if (data.type === "viewingEvoDeckOpponent")
+        dispatch(setEnemyViewingEvoDeckOpponent(data.data));
     });
   }, [socket]);
 
@@ -150,6 +175,10 @@ export default function Field({
 
   const handleModalClose = () => {
     dispatch(setShowEnemyHand(false));
+  };
+
+  const handleShowCardModalClose = () => {
+    dispatch(setShowEnemyCard(false));
   };
 
   const cardPos = (idx) => {
@@ -524,6 +553,8 @@ export default function Field({
         )}
       </Menu>
 
+      {/* Show Enemy Hand Modal */}
+
       <Modal
         open={reduxShowEnemyHand}
         onClose={handleModalClose}
@@ -565,6 +596,55 @@ export default function Field({
                 <Card name={card} setHovering={setHovering} />
               </div>
             ))}
+          </CardMUI>
+        </Box>
+      </Modal>
+
+      {/* Show Enemy Card Modal */}
+
+      <Modal
+        open={reduxShowEnemyCard}
+        onClose={handleShowCardModalClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box
+          sx={{
+            position: "relative",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            backgroundColor: "transparent",
+            boxShadow: 24,
+            // p: 3,
+            width: "30%",
+            border: "none",
+          }}
+        >
+          <CardMUI
+            sx={{
+              backgroundColor: "transparent",
+              width: "100%",
+              height: "80vh",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              border: "none",
+              overflow: "visible",
+            }}
+            variant="outlined"
+          >
+            <motion.div
+              initial={{ scale: 1.0, rotateY: 0 }}
+              transition={{ duration: 2.0 }}
+              animate={{ scale: 4.0, rotateY: 360 }}
+            >
+              <img
+                height={"160px"}
+                src={cardImage(reduxEnemyCard)}
+                alt={reduxEnemyCard}
+              />
+            </motion.div>
           </CardMUI>
         </Box>
       </Modal>

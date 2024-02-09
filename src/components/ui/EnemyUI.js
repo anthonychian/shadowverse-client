@@ -1,5 +1,5 @@
 import React from "react";
-import { Badge } from "@mui/material/";
+import { Badge, Snackbar, SnackbarContent } from "@mui/material/";
 import { useSelector } from "react-redux";
 import Leader from "./Leader";
 import sword from "../../assets/logo/sword.png";
@@ -19,7 +19,24 @@ export default function EnemyUI() {
   const reduxEnemyHealth = useSelector((state) => state.card.enemyHealth);
   const reduxEnemyLeader = useSelector((state) => state.card.enemyLeader);
   const reduxEnemyEvoPoints = useSelector((state) => state.card.enemyEvoPoints);
-
+  const reduxEnemyViewingDeck = useSelector(
+    (state) => state.card.enemyViewingDeck
+  );
+  const reduxEnemyViewingCemetery = useSelector(
+    (state) => state.card.enemyViewingCemetery
+  );
+  const reduxEnemyViewingEvoDeck = useSelector(
+    (state) => state.card.enemyViewingEvoDeck
+  );
+  const reduxEnemyViewingCemeteryOpponent = useSelector(
+    (state) => state.card.enemyViewingCemeteryOpponent
+  );
+  const reduxEnemyViewingEvoDeckOpponent = useSelector(
+    (state) => state.card.enemyViewingEvoDeckOpponent
+  );
+  const reduxEnemyViewingTopCards = useSelector(
+    (state) => state.card.enemyViewingTopCards
+  );
   const getColorFromLeader = (name) => {
     switch (name) {
       case "Forte":
@@ -92,6 +109,114 @@ export default function EnemyUI() {
         gap: "1em",
       }}
     >
+      <Snackbar
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+        open={reduxEnemyViewingDeck}
+      >
+        <SnackbarContent
+          style={{
+            backgroundColor: "rgba(0, 0, 0, 0.7)",
+            color: "white",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            fontSize: "30px",
+            fontWeight: "bold",
+            fontFamily: "Noto Serif JP, serif",
+          }}
+          message={"Viewing Deck"}
+        />
+      </Snackbar>
+      <Snackbar
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+        open={reduxEnemyViewingCemetery}
+      >
+        <SnackbarContent
+          style={{
+            backgroundColor: "rgba(0, 0, 0, 0.7)",
+            color: "white",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            fontSize: "30px",
+            fontWeight: "bold",
+            fontFamily: "Noto Serif JP, serif",
+          }}
+          message={"Viewing Cemetery"}
+        />
+      </Snackbar>
+      <Snackbar
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+        open={reduxEnemyViewingEvoDeck}
+      >
+        <SnackbarContent
+          style={{
+            backgroundColor: "rgba(0, 0, 0, 0.7)",
+            color: "white",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            fontSize: "30px",
+            fontWeight: "bold",
+            fontFamily: "Noto Serif JP, serif",
+          }}
+          message={"Viewing Evolve Deck"}
+        />
+      </Snackbar>
+      <Snackbar
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+        open={reduxEnemyViewingCemeteryOpponent}
+      >
+        <SnackbarContent
+          style={{
+            backgroundColor: "rgba(0, 0, 0, 0.7)",
+            color: "white",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            fontSize: "30px",
+            fontWeight: "bold",
+            fontFamily: "Noto Serif JP, serif",
+          }}
+          message={"Viewing Enemy Cemetery"}
+        />
+      </Snackbar>
+      <Snackbar
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+        open={reduxEnemyViewingEvoDeckOpponent}
+      >
+        <SnackbarContent
+          style={{
+            backgroundColor: "rgba(0, 0, 0, 0.7)",
+            color: "white",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            fontSize: "30px",
+            fontWeight: "bold",
+            fontFamily: "Noto Serif JP, serif",
+          }}
+          message={"Viewing Enemy Evo Deck"}
+        />
+      </Snackbar>
+      <Snackbar
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+        open={reduxEnemyViewingTopCards}
+      >
+        <SnackbarContent
+          style={{
+            backgroundColor: "rgba(0, 0, 0, 0.7)",
+            color: "white",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            fontSize: "30px",
+            fontWeight: "bold",
+            fontFamily: "Noto Serif JP, serif",
+          }}
+          message={"Viewing Top Cards"}
+        />
+      </Snackbar>
       <Leader name={reduxEnemyLeader} />
       <div style={{ opacity: 0.75 }}>
         <img

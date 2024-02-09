@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { cardImage } from "../../decks/getCards";
 import {
   Modal,
@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import CardMUI from "@mui/material/Card";
 import Card from "../hand/Card";
+import { setViewingCemeteryOpponent } from "../../redux/CardSlice";
 
 const img = require("../../assets/pin_bellringer_angel.png");
 
@@ -30,6 +31,7 @@ const style = {
 };
 
 export default function EnemyCemetery({ setHovering, ready }) {
+  const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
   const [cemeterySelected, setCemeterySelected] = useState(true);
   const [banishSelected, setBanishSelected] = useState(false);
@@ -38,9 +40,15 @@ export default function EnemyCemetery({ setHovering, ready }) {
   const reduxEnemyBanish = useSelector((state) => state.card.enemyBanish);
 
   const handleModalOpen = () => {
-    if (reduxEnemyCemetery.length > 0 && !ready) setOpen(true);
+    if (reduxEnemyCemetery.length > 0 && !ready) {
+      setOpen(true);
+      dispatch(setViewingCemeteryOpponent(true));
+    }
   };
-  const handleModalClose = () => setOpen(false);
+  const handleModalClose = () => {
+    setOpen(false);
+    dispatch(setViewingCemeteryOpponent(false));
+  };
   const handleCemeterySelected = () => {
     setCemeterySelected(true);
     setBanishSelected(false);

@@ -9,6 +9,12 @@ export const CardSlice = createSlice({
     hand: [],
     enemyHand: [],
     showEnemyHand: false,
+    enemyViewingDeck: false,
+    enemyViewingTopCards: false,
+    enemyViewingCemetery: false,
+    enemyViewingEvoDeck: false,
+    enemyViewingCemeteryOpponent: false,
+    enemyViewingEvoDeckOpponent: false,
     enemyDeckSize: 0,
     enemyLeader: "",
     leader: "",
@@ -133,6 +139,72 @@ export const CardSlice = createSlice({
     },
     setShowEnemyHand: (state, action) => {
       state.showEnemyHand = action.payload;
+    },
+    setShowEnemyCard: (state, action) => {
+      state.showEnemyCard = action.payload;
+    },
+    setEnemyCard: (state, action) => {
+      state.enemyCard = action.payload;
+    },
+    setViewingDeck: (state, action) => {
+      socket.emit("send msg", {
+        type: "viewingDeck",
+        data: action.payload,
+        room: state.room,
+      });
+    },
+    setEnemyViewingDeck: (state, action) => {
+      state.enemyViewingDeck = action.payload;
+    },
+    setViewingTopCards: (state, action) => {
+      socket.emit("send msg", {
+        type: "viewingTopCards",
+        data: action.payload,
+        room: state.room,
+      });
+    },
+    setEnemyViewingTopCards: (state, action) => {
+      state.enemyViewingTopCards = action.payload;
+    },
+    setViewingCemetery: (state, action) => {
+      socket.emit("send msg", {
+        type: "viewingCemetery",
+        data: action.payload,
+        room: state.room,
+      });
+    },
+    setEnemyViewingCemetery: (state, action) => {
+      state.enemyViewingCemetery = action.payload;
+    },
+    setViewingEvoDeck: (state, action) => {
+      socket.emit("send msg", {
+        type: "viewingEvoDeck",
+        data: action.payload,
+        room: state.room,
+      });
+    },
+    setEnemyViewingEvoDeck: (state, action) => {
+      state.enemyViewingEvoDeck = action.payload;
+    },
+    setViewingCemeteryOpponent: (state, action) => {
+      socket.emit("send msg", {
+        type: "viewingCemeteryOpponent",
+        data: action.payload,
+        room: state.room,
+      });
+    },
+    setEnemyViewingCemeteryOpponent: (state, action) => {
+      state.enemyViewingCemeteryOpponent = action.payload;
+    },
+    setViewingEvoDeckOpponent: (state, action) => {
+      socket.emit("send msg", {
+        type: "viewingEvoDeckOpponent",
+        data: action.payload,
+        room: state.room,
+      });
+    },
+    setEnemyViewingEvoDeckOpponent: (state, action) => {
+      state.enemyViewingEvoDeckOpponent = action.payload;
     },
     setEvoDeck: (state, action) => {
       state.evoDeck = action.payload;
@@ -1083,6 +1155,8 @@ export const CardSlice = createSlice({
       state.hand = [];
       state.enemyHand = [];
       state.showEnemyHand = false;
+      state.showEnemyCard = false;
+      state.enemyCard = "";
       state.enemyDeckSize = 0;
       state.enemyLeader = "";
       state.leader = "";
@@ -1237,7 +1311,21 @@ export const {
   setLeader,
   setEnemyLeader,
   setShowEnemyHand,
+  setViewingDeck,
+  setViewingTopCards,
+  setViewingCemetery,
+  setViewingEvoDeck,
+  setViewingCemeteryOpponent,
+  setViewingEvoDeckOpponent,
+  setEnemyViewingDeck,
+  setEnemyViewingCemetery,
+  setEnemyViewingEvoDeck,
+  setEnemyViewingCemeteryOpponent,
+  setEnemyViewingEvoDeckOpponent,
+  setEnemyViewingTopCards,
   setEnemyCounter,
   modifyCounter,
+  setShowEnemyCard,
+  setEnemyCard,
   reset,
 } = CardSlice.actions;

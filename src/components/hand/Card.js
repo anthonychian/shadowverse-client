@@ -114,6 +114,8 @@ export default function Card({
     <>
       <motion.div
         // whileTap={onField ? {} : { transitionDuration: "5s" }}
+        // initial={{ scale: 2.5 }}
+        // transition={{ duration: 0.5 }}
         animate={rotate ? { rotate: -90 } : { rotate: 0 }}
         style={{
           height: "160px",

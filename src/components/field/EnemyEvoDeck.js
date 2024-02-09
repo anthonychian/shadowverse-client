@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Modal, Box } from "@mui/material";
 import CardMUI from "@mui/material/Card";
 import Card from "../hand/Card";
 import cardback from "../../assets/cardbacks/sleeve_5010011.png";
+import { setViewingEvoDeckOpponent } from "../../redux/CardSlice";
 
 const img = require("../../assets/pin_bellringer_angel.png");
 
@@ -22,13 +23,18 @@ const style = {
 };
 
 export default function EnemyEvoDeck({ setHovering, ready }) {
+  const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
   const reduxEnemyEvoDeck = useSelector((state) => state.card.enemyEvoDeck);
 
   const handleModalOpen = () => {
     setOpen(true);
+    dispatch(setViewingEvoDeckOpponent(true));
   };
-  const handleModalClose = () => setOpen(false);
+  const handleModalClose = () => {
+    setOpen(false);
+    dispatch(setViewingEvoDeckOpponent(false));
+  };
 
   return (
     <>
