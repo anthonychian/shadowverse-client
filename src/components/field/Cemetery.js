@@ -24,21 +24,6 @@ import {
 
 const img = require("../../assets/pin_bellringer_angel.png");
 
-const style = {
-  position: "relative",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  backgroundColor: "transparent",
-  boxShadow: 24,
-  p: 3,
-  width: "55%",
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  alignItems: "center",
-};
-
 export default function Cemetery({
   setHovering,
   setReadyFromCemetery,
@@ -146,7 +131,22 @@ export default function Cemetery({
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
+        <Box
+          sx={{
+            position: "relative",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            backgroundColor: "transparent",
+            boxShadow: 24,
+            p: 3,
+            width: "55%",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           <FormControl>
             <RadioGroup
               row
@@ -173,15 +173,6 @@ export default function Cemetery({
           </FormControl>
           <CardMUI
             sx={{
-              // backgroundColor: "rgba(0, 0, 0, 0.7)",
-              // minHeight: "250px",
-              // padding: "3%",
-              // width: "100%",
-              // display: "flex",
-              // flexDirection: "row",
-              // flexWrap: "wrap",
-              // justifyContent: "center",
-              // alignItems: "center",
               backgroundColor: "rgba(0, 0, 0, 0.7)",
               minHeight: "250px",
               padding: "3%",
