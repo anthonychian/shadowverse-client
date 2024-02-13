@@ -123,6 +123,13 @@ export default function Home() {
   const handleNavigateToDeck = () => {
     navigate("/deck");
   };
+
+  const handleEditDeck = () => {
+    navigate("/deck", {
+      state: { deckName: name },
+    });
+  };
+
   const handleNavigateToGame = () => {
     dispatch(setDeck(selectedDeck.deck.toSorted(() => Math.random() - 0.5)));
 
@@ -466,6 +473,7 @@ export default function Home() {
         }}
       >
         <MenuItem onClick={handleModalOpen}>Preview</MenuItem>
+        <MenuItem onClick={handleEditDeck}>Edit</MenuItem>
         <MenuItem onClick={handleDeleteDeck}>Delete</MenuItem>
       </Menu>
       <Modal

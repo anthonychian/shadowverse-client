@@ -36,9 +36,9 @@ import { cardImage } from "../decks/getCards";
 import CardMUI from "@mui/material/Card";
 import img from "../assets/pin_bellringer_angel.png";
 import { motion } from "framer-motion";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { createDeck } from "../redux/DeckSlice";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import {
   Radio,
   RadioGroup,
@@ -57,6 +57,11 @@ import {
 } from "@mui/material";
 
 export default function CreateDeck() {
+  const location = useLocation();
+  const reduxDecks = useSelector((state) => state.deck.decks);
+  const deckName = location?.state?.deckName;
+  const deckEdit = reduxDecks.filter((decks) => decks.name === deckName);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [deck, setDeck] = useState([]);
@@ -84,6 +89,28 @@ export default function CreateDeck() {
     setFilteredAllCardsEvo(filteredEvo);
     handleTextInput(textInput);
   }, [buttonFilterSet, buttonFilterClass, mainDeckSelected]);
+
+  useEffect(() => {
+    if (deckEdit.length > 0) {
+      if (deckEdit[0].deck.length > 0) {
+        handleFillDeckMap(deckEdit[0].deck);
+      }
+      if (deckEdit[0].evoDeck.length > 0) {
+        handleFillEvoDeckMap(deckEdit[0].evoDeck);
+      }
+    }
+  }, []);
+
+  const handleFillDeckMap = (deck) => {
+    for (let i = 0; i < deck.length; i++) {
+      handleCardSelection(deck[i]);
+    }
+  };
+  const handleFillEvoDeckMap = (deck) => {
+    for (let i = 0; i < deck.length; i++) {
+      handleEvoCardSelection(deck[i]);
+    }
+  };
 
   const handleNameChange = (event) => {
     setName(event.target.value);
