@@ -171,11 +171,11 @@ export default function Field({
     });
   }, [socket]);
 
-  useEffect(() => {
-    if (reduxCurrentDeck.length === 0) {
-      navigate("/");
-    }
-  }, [reduxCurrentDeck]);
+  // useEffect(() => {
+  //   if (reduxCurrentDeck.length === 0) {
+  //     navigate("/");
+  //   }
+  // }, [reduxCurrentDeck]);
 
   const handleModalClose = () => {
     dispatch(setShowEnemyHand(false));
@@ -218,9 +218,9 @@ export default function Field({
             index: indexClicked,
           })
         );
-        dispatch(clearValuesAtIndex(index));
-        dispatch(clearEngagedAtIndex(index));
-        dispatch(clearCountersAtIndex(index));
+        // dispatch(clearValuesAtIndex(index));
+        // dispatch(clearEngagedAtIndex(index));
+        // dispatch(clearCountersAtIndex(index));
       }
       if (readyToMoveOnField) {
         setReadyToMoveOnField(false);
@@ -1050,7 +1050,7 @@ export default function Field({
                 fontFamily: "Noto Serif JP, serif",
               }}
             >
-              {reduxCurrentDeck.length}
+              {reduxCurrentDeck.length || 0}
             </div>
             {/* )} */}
           </div>

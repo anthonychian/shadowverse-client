@@ -198,19 +198,6 @@ export default function Home2() {
           }}
         >
           <Stack spacing={5} direction="column">
-            {/* <Button
-              onClick={handleNavigateToDeck}
-              style={{
-                fontFamily: "Noto Serif JP,serif",
-                textTransform: "none",
-                fontWeight: "bold",
-                backgroundColor: "white",
-                color: "black",
-              }}
-              variant="contained"
-            >
-              Create Deck
-            </Button> */}
             <Button
               onClick={handleCreateRoom}
               sx={{

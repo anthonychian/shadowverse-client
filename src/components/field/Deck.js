@@ -177,14 +177,15 @@ export default function Deck({ ready, setHovering }) {
   const handleBanishAll = () => {
     const length = partialDeck.length;
     for (let i = 0; i < length; i++)
-      dispatch(addToBanishFromDeck({ card: partialDeck[i], index: i }));
+      dispatch(addToBanishFromDeck({ card: partialDeck[i], index: 0 }));
     setPartialDeck([]);
   };
 
   const handleCemeteryAll = () => {
     const length = partialDeck.length;
+    console.log("length", length);
     for (let i = 0; i < length; i++)
-      dispatch(addToCemeteryFromDeck({ card: partialDeck[i], index: i }));
+      dispatch(addToCemeteryFromDeck({ card: partialDeck[i], index: 0 }));
     setPartialDeck([]);
   };
 

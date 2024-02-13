@@ -40,7 +40,10 @@ export default function EnemyCemetery({ setHovering, ready }) {
   const reduxEnemyBanish = useSelector((state) => state.card.enemyBanish);
 
   const handleModalOpen = () => {
-    if (reduxEnemyCemetery.length > 0 && !ready) {
+    if (
+      (reduxEnemyCemetery.length > 0 || reduxEnemyBanish.length > 0) &&
+      !ready
+    ) {
       setOpen(true);
       dispatch(setViewingCemeteryOpponent(true));
     }

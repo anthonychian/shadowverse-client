@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { cardImage } from "../../decks/getCards";
+import { socket } from "../../sockets";
 import {
   Menu,
   MenuItem,
@@ -53,6 +54,7 @@ export default function Cemetery({
 
   const reduxCemetery = useSelector((state) => state.card.cemetery);
   const reduxBanish = useSelector((state) => state.card.banish);
+  const reduxRoom = useSelector((state) => state.card.room);
 
   const handleModalOpen = () => {
     if ((reduxCemetery.length > 0 || reduxBanish.length > 0) && !ready) {
@@ -94,6 +96,16 @@ export default function Cemetery({
     handleModalClose();
     handleClose();
     dispatch(addToHandFromCemetery(name));
+    socket.emit("send msg", {
+      type: "showCard",
+      data: true,
+      room: reduxRoom,
+    });
+    socket.emit("send msg", {
+      type: "cardRevealed",
+      data: name,
+      room: reduxRoom,
+    });
   };
 
   const handleCemeterySelected = () => {
@@ -161,11 +173,20 @@ export default function Cemetery({
           </FormControl>
           <CardMUI
             sx={{
-              //   backgroundColor: "rgba(255, 255, 255, 0.1)",
+              // backgroundColor: "rgba(0, 0, 0, 0.7)",
+              // minHeight: "250px",
+              // padding: "3%",
+              // width: "100%",
+              // display: "flex",
+              // flexDirection: "row",
+              // flexWrap: "wrap",
+              // justifyContent: "center",
+              // alignItems: "center",
               backgroundColor: "rgba(0, 0, 0, 0.7)",
-              //   backgroundColor: "black",
               minHeight: "250px",
               padding: "3%",
+              height: "500px",
+              overflowY: "scroll",
               width: "100%",
               display: "flex",
               flexDirection: "row",
