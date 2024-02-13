@@ -458,7 +458,6 @@ export default function CreateDeck() {
                   >
                     <img
                       key={idx}
-                      loading="lazy"
                       width={"110px"}
                       height={"150px"}
                       src={cardImage(key)}
@@ -513,7 +512,6 @@ export default function CreateDeck() {
                   >
                     <img
                       key={idx}
-                      loading="lazy"
                       width={"110px"}
                       height={"150px"}
                       src={cardImage(key)}
