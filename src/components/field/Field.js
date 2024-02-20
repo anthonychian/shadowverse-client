@@ -146,7 +146,7 @@ export default function Field({
     false,
   ]);
   const [initialArrowPos, setInitialArrowPos] = useState({});
-  const [distance, setDistance] = useState({});
+  const [distance, setDistance] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     socket.on("receive msg", (data) => {
@@ -219,10 +219,13 @@ export default function Field({
       let arr = [...showArrow];
       arr[idx] = false;
       setShowArrow(arr);
-      // dispatch(setArrow({ show: false }));
       let distanceX = initialArrowPos.x - event.clientX;
       let distanceY = initialArrowPos.y - event.clientY;
       dispatch(setArrow({ x: distanceX, y: distanceY, idx: idx, show: true }));
+      setDistance({
+        x: 0,
+        y: 0,
+      });
     }
   };
 
@@ -234,7 +237,6 @@ export default function Field({
         x: distanceX,
         y: distanceY,
       });
-      // dispatch(setArrow({ x: distanceX, y: distanceY, idx: idx, show: true }));
     }
   };
 
