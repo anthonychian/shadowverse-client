@@ -51,6 +51,8 @@ import {
   setEnemyViewingCemeteryOpponent,
   setEnemyViewingEvoDeckOpponent,
   setEnemyViewingTopCards,
+  setArrow,
+  setEnemyArrow,
 } from "../../redux/CardSlice";
 import { cardImage } from "../../decks/getCards";
 import { motion } from "framer-motion";
@@ -67,9 +69,10 @@ import EvoDeck from "./EvoDeck";
 import EnemyEvoDeck from "./EnemyEvoDeck";
 import img from "../../assets/pin_bellringer_angel.png";
 import "../../css/AnimatedBorder.css";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { socket } from "../../sockets";
 import Token from "./Token";
+import { PerfectArrow } from "./PerfectArrow";
 
 const style = {
   position: "relative",
@@ -90,10 +93,10 @@ export default function Field({
   setReadyToPlaceOnFieldFromHand,
 }) {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   // redux state
-  const reduxRoom = useSelector((state) => state.card.room);
+  // const reduxRoom = useSelector((state) => state.card.room);
   const reduxField = useSelector((state) => state.card.field);
   const reduxCurrentCard = useSelector((state) => state.card.currentCard);
   const reduxEvoField = useSelector((state) => state.card.evoField);
@@ -118,6 +121,7 @@ export default function Field({
   const reduxEnemyCounterField = useSelector(
     (state) => state.card.enemyCounterField
   );
+  const reduxEnemyArrow = useSelector((state) => state.card.enemyArrow);
 
   // useState
   const [contextMenu, setContextMenu] = useState(null);
@@ -129,6 +133,20 @@ export default function Field({
   const [readyToEvo, setReadyToEvo] = useState(false);
   const [readyToFeed, setReadyToFeed] = useState(false);
   const [tokenReady, setTokenReady] = useState(false);
+  const [showArrow, setShowArrow] = useState([
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+  ]);
+  const [initialArrowPos, setInitialArrowPos] = useState({});
+  const [distance, setDistance] = useState({});
 
   useEffect(() => {
     socket.on("receive msg", (data) => {
@@ -168,6 +186,7 @@ export default function Field({
         dispatch(setEnemyViewingCemeteryOpponent(data.data));
       else if (data.type === "viewingEvoDeckOpponent")
         dispatch(setEnemyViewingEvoDeckOpponent(data.data));
+      else if (data.type === "arrow") dispatch(setEnemyArrow(data.data));
     });
   }, [socket]);
 
@@ -186,6 +205,39 @@ export default function Field({
     // });
   };
 
+  const handleShowArrow = (event, idx) => {
+    if (!showArrow[idx] && event.button === 0) {
+      dispatch(setArrow({ show: true }));
+      setInitialArrowPos({ x: event.clientX, y: event.clientY });
+      let arr = [...showArrow];
+      arr[idx] = true;
+      setShowArrow(arr);
+    }
+  };
+  const handleHideArrow = (event, idx) => {
+    if (event.button === 0) {
+      let arr = [...showArrow];
+      arr[idx] = false;
+      setShowArrow(arr);
+      // dispatch(setArrow({ show: false }));
+      let distanceX = initialArrowPos.x - event.clientX;
+      let distanceY = initialArrowPos.y - event.clientY;
+      dispatch(setArrow({ x: distanceX, y: distanceY, idx: idx, show: true }));
+    }
+  };
+
+  const handleMouseMove = (event, idx) => {
+    if (showArrow[idx]) {
+      let distanceX = initialArrowPos.x - event.clientX;
+      let distanceY = initialArrowPos.y - event.clientY;
+      setDistance({
+        x: distanceX,
+        y: distanceY,
+      });
+      // dispatch(setArrow({ x: distanceX, y: distanceY, idx: idx, show: true }));
+    }
+  };
+
   const handleShowCardModalClose = () => {
     dispatch(setShowEnemyCard(false));
   };
@@ -200,6 +252,7 @@ export default function Field({
   };
 
   const handleClick = (name, indexClicked) => {
+    dispatch(setEnemyArrow({ idx: -1, show: false }));
     if (reduxField[indexClicked] === 0 && !readyToEvo && !readyToFeed) {
       if (readyToPlaceOnFieldFromHand) {
         setReadyToPlaceOnFieldFromHand(false);
@@ -701,8 +754,6 @@ export default function Field({
         >
           <div style={{ position: "relative" }}>
             <div
-              // onMouseEnter={handleMouseEnter}
-              // onMouseLeave={handleMouseLeave}
               style={{
                 cursor: `url(${img}) 55 55, auto`,
               }}
@@ -749,7 +800,7 @@ export default function Field({
             gridTemplateColumns: "repeat(5, 1fr)",
             alignItems: "center",
             justifyItems: "center",
-            zIndex: 0,
+            // zIndex: 0,
           }}
         >
           {reduxField.map((x, idx) => (
@@ -769,6 +820,14 @@ export default function Field({
                 // backgroundColor: "rgba(255, 0, 0, 0.15)",
               }}
             >
+              {reduxEnemyArrow.show && reduxEnemyArrow.idx === idx && (
+                <PerfectArrow
+                  idx={reduxEnemyArrow.idx}
+                  distance={{ x: reduxEnemyArrow.x, y: reduxEnemyArrow.y }}
+                  onEnemyField={true}
+                />
+              )}
+
               {reduxEnemyField[cardPos(idx)] !== 0 &&
                 reduxEnemyEvoField[cardPos(idx)] === 0 && (
                   <Card
@@ -889,7 +948,7 @@ export default function Field({
             gridTemplateColumns: "repeat(5, 1fr)",
             alignItems: "center",
             justifyItems: "center",
-            zIndex: 1,
+            // zIndex: 0,
           }}
         >
           {reduxField.map((card, idx) => (
@@ -953,13 +1012,16 @@ export default function Field({
                 </motion.div>
               )}
               {!ready && (
-                <motion.div
+                <div
                   onContextMenu={(e) => {
                     if (reduxField[idx] !== 0 && reduxEvoField[idx] === 0)
                       handleContextMenu(e, idx, reduxField[idx]);
                     else if (reduxField[idx] !== 0)
                       handleEvoContextMenu(e, idx, reduxEvoField[idx]);
                   }}
+                  onMouseDown={(event) => handleShowArrow(event, idx)}
+                  onMouseUp={(event) => handleHideArrow(event, idx)}
+                  onMouseMove={(event) => handleMouseMove(event, idx)}
                   key={`player2-${idx}`}
                   style={{
                     height: "160px",
@@ -971,6 +1033,10 @@ export default function Field({
                     border: "4px solid #555559",
                   }}
                 >
+                  {showArrow[idx] &&
+                    (reduxField[idx] !== 0 || reduxEvoField[idx] !== 0) && (
+                      <PerfectArrow idx={idx} distance={distance} />
+                    )}
                   {reduxField[idx] !== 0 && reduxEvoField[idx] === 0 && (
                     <Card
                       showAtk={reduxCustomValues[idx].showAtk}
@@ -1004,7 +1070,7 @@ export default function Field({
                       cardBeneath={reduxField[idx]}
                     />
                   )}
-                </motion.div>
+                </div>
               )}
             </div>
           ))}
@@ -1033,11 +1099,7 @@ export default function Field({
             setHovering={setHovering}
             ready={ready}
           />
-          <div
-            // onMouseEnter={handleMouseEnter}
-            // onMouseLeave={handleMouseLeave}
-            style={{ zIndex: -1, position: "relative" }}
-          >
+          <div style={{ zIndex: -1, position: "relative" }}>
             <Deck setHovering={setHovering} ready={ready} />
             {/* {showOpponentDeckSize && ( */}
             <div

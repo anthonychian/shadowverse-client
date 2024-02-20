@@ -9,6 +9,7 @@ export const CardSlice = createSlice({
     hand: [],
     enemyHand: [],
     showEnemyHand: false,
+    enemyArrow: { idx: -1, show: false },
     enemyViewingHand: false,
     enemyViewingDeck: false,
     enemyViewingTopCards: false,
@@ -145,6 +146,17 @@ export const CardSlice = createSlice({
         data: action.payload,
         room: state.room,
       });
+    },
+    setArrow: (state, action) => {
+      // console.log(action.payload);
+      socket.emit("send msg", {
+        type: "arrow",
+        data: action.payload,
+        room: state.room,
+      });
+    },
+    setEnemyArrow: (state, action) => {
+      state.enemyArrow = action.payload;
     },
     setShowEnemyCard: (state, action) => {
       state.showEnemyCard = action.payload;
@@ -1188,6 +1200,7 @@ export const CardSlice = createSlice({
       state.enemyBanish = [];
       state.cemetery = [];
       state.enemyCemetery = [];
+      state.enemyArrow = { idx: -1, show: false };
       state.enemyEvoDeck = [
         { card: "", status: false },
         { card: "", status: false },
@@ -1320,6 +1333,8 @@ export const {
   setLeader,
   setEnemyLeader,
   setShowEnemyHand,
+  setArrow,
+  setEnemyArrow,
   setViewingDeck,
   setViewingTopCards,
   setViewingCemetery,

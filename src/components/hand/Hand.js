@@ -8,7 +8,7 @@ import {
   reorderCardsInHand,
   setCurrentCard,
   placeToCemeteryFromHand,
-  setShowEnemyHand,
+  setEnemyArrow,
 } from "../../redux/CardSlice";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
@@ -44,6 +44,7 @@ export default function Hand({
   const [name, setName] = useState("");
 
   const handleContextMenu = (event, name) => {
+    dispatch(setEnemyArrow({ idx: -1, show: false }));
     dispatch(reorderCardsInHand(objArrToArr(items)));
     setName(name);
     event.preventDefault();

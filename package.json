@@ -19,6 +19,7 @@
     "@testing-library/user-event": "^13.5.0",
     "@use-gesture/react": "^10.3.0",
     "framer-motion": "^10.18.0",
+    "perfect-arrows": "^0.3.7",
     "r3f-form": "^3.0.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

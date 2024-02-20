@@ -14,13 +14,15 @@
 .centerCanvas {
   display: flex;
   height: 100vh;
-  width: 60vw;
+  /* width: 60vw; */
+  width: 880px;
   max-width: 880px;
   flex-direction: column;
   align-items: center;
 }
 .rightSideCanvas {
-  width: 20vw;
+  /* width: 20vw; */
+  width: 350px;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -30,7 +32,8 @@
 }
 
 .leftSideCanvas {
-  width: 20vw;
+  /* width: 20vw; */
+  width: 350px;
   height: 100vh;
   display: flex;
   align-items: center;
