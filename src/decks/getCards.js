@@ -484,9 +484,9 @@ export const cardImage = (cardName) => {
     case "Enstatued Seraph":
       return "../textures/BP02-088EN.png";
     case "Kaguya":
-      return "../textures/BP02-091EN.png";
+      return "../textures/BP02-089EN.png";
     case "Tribunal of Good and Evil":
-      return "../textures/BP02-078EN.png";
+      return "../textures/BP02-091EN.png";
     case "Elana's Prayer":
       return "../textures/BP02-092EN.png";
 
