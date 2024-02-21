@@ -8,6 +8,7 @@ export const CardSlice = createSlice({
     evoDeck: [],
     hand: [],
     enemyHand: [],
+    showDice: false,
     showEnemyHand: false,
     enemyArrow: { idx: -1, show: false },
     enemyViewingHand: false,
@@ -19,6 +20,7 @@ export const CardSlice = createSlice({
     enemyViewingEvoDeckOpponent: false,
     enemyDeckSize: 0,
     enemyLeader: "",
+    enemyDice: { show: false, roll: 1 },
     leader: "",
     evoPoints: 0,
     enemyEvoPoints: 0,
@@ -146,6 +148,19 @@ export const CardSlice = createSlice({
         data: action.payload,
         room: state.room,
       });
+    },
+    setShowDice: (state, action) => {
+      state.showDice = action.payload;
+    },
+    setDice: (state, action) => {
+      socket.emit("send msg", {
+        type: "dice",
+        data: action.payload,
+        room: state.room,
+      });
+    },
+    setEnemyDice: (state, action) => {
+      state.enemyDice = action.payload;
     },
     setArrow: (state, action) => {
       // console.log(action.payload);
@@ -1175,6 +1190,8 @@ export const CardSlice = createSlice({
       state.evoDeck = [];
       state.hand = [];
       state.enemyHand = [];
+      state.showDice = false;
+      state.enemyDice = { show: false, roll: 1 };
       state.showEnemyHand = false;
       state.showEnemyCard = false;
       state.enemyCard = "";
@@ -1352,5 +1369,8 @@ export const {
   modifyCounter,
   setShowEnemyCard,
   setEnemyCard,
+  setDice,
+  setShowDice,
+  setEnemyDice,
   reset,
 } = CardSlice.actions;

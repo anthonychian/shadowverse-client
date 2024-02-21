@@ -3,7 +3,7 @@ import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import { IconButton, Badge } from "@mui/material/";
 import { useDispatch, useSelector } from "react-redux";
-import { setHealth, setEvoPoints } from "../../redux/CardSlice";
+import { setHealth, setEvoPoints, setDice } from "../../redux/CardSlice";
 import Leader from "./Leader";
 import sword from "../../assets/logo/sword.png";
 import forest from "../../assets/logo/forest.png";
@@ -11,6 +11,8 @@ import abyss from "../../assets/logo/abyss.png";
 import dragon from "../../assets/logo/dragon.png";
 import haven from "../../assets/logo/haven.png";
 import rune from "../../assets/logo/rune.png";
+import Dice from "react-dice-roll";
+import { motion } from "framer-motion";
 
 export default function PlayerUI({ name }) {
   const dispatch = useDispatch();
@@ -20,6 +22,7 @@ export default function PlayerUI({ name }) {
     (state) => state.card.playPoints.available
   );
   const reduxMaxPlayPoints = useSelector((state) => state.card.playPoints.max);
+  const reduxShowDice = useSelector((state) => state.card.showDice);
 
   useEffect(() => {
     dispatch(setHealth(playerHealth));
@@ -36,6 +39,11 @@ export default function PlayerUI({ name }) {
   const handleEP = (event) => {
     setEP(Number(event.target.value));
     dispatch(setEvoPoints(Number(event.target.value)));
+  };
+
+  const handleDiceRoll = (value) => {
+    console.log(value);
+    dispatch(setDice({ show: true, roll: value }));
   };
 
   // const incrementEP = () => {
@@ -118,6 +126,17 @@ export default function PlayerUI({ name }) {
         gap: "1em",
       }}
     >
+      <div style={{ height: "60px", width: "60px" }}>
+        {reduxShowDice && (
+          <motion.div>
+            <Dice
+              size={60}
+              faceBg={"transparent"}
+              onRoll={(value) => handleDiceRoll(value)}
+            />
+          </motion.div>
+        )}
+      </div>
       <Leader name={name} />
       <div style={{ opacity: 0.75 }}>
         <img height={70} width={70} src={getClassFromLeader(name)} alt={name} />

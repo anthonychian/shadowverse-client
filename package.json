@@ -22,6 +22,7 @@
     "perfect-arrows": "^0.3.7",
     "r3f-form": "^3.0.2",
     "react": "^18.2.0",
+    "react-dice-roll": "^1.2.2",
     "react-dom": "^18.2.0",
     "react-infinite-scroll-component": "^6.1.0",
     "react-native-animated-border": "^1.0.2",

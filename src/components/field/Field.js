@@ -53,6 +53,7 @@ import {
   setEnemyViewingTopCards,
   setArrow,
   setEnemyArrow,
+  setEnemyDice,
 } from "../../redux/CardSlice";
 import { cardImage } from "../../decks/getCards";
 import { motion } from "framer-motion";
@@ -73,6 +74,7 @@ import "../../css/AnimatedBorder.css";
 import { socket } from "../../sockets";
 import Token from "./Token";
 import { PerfectArrow } from "./PerfectArrow";
+import ShowDice from "./ShowDice";
 
 const style = {
   position: "relative",
@@ -187,6 +189,7 @@ export default function Field({
       else if (data.type === "viewingEvoDeckOpponent")
         dispatch(setEnemyViewingEvoDeckOpponent(data.data));
       else if (data.type === "arrow") dispatch(setEnemyArrow(data.data));
+      else if (data.type === "dice") dispatch(setEnemyDice(data.data));
     });
   }, [socket]);
 
@@ -929,12 +932,15 @@ export default function Field({
             setHovering={setHovering}
             ready={ready}
           />
+          {/* <div style={{display: 'flex', flexDirection: 'row'}}> */}
           <Token
             setReady={setReady}
             setHovering={setHovering}
             ready={ready}
             setTokenReady={setTokenReady}
           />
+          <ShowDice />
+          {/* </div> */}
         </div>
         {/* Player Field (1-5) & Ex Area (6-10) */}
         <div
