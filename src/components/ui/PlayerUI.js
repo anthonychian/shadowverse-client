@@ -87,29 +87,29 @@ export default function PlayerUI({ name }) {
   const getColorFromLeader = (name) => {
     switch (name) {
       case "Forte":
-        return "rgba(255, 165, 0, 0.5)";
+        return "linear-gradient(to right, rgb(252, 74, 26), rgb(247, 183, 51))";
       case "Galmieux":
-        return "rgba(255, 165, 0, 0.5)";
+        return "linear-gradient(to right, rgb(252, 74, 26), rgb(247, 183, 51))";
       case "Jeanne":
-        return "rgba(192, 192, 192, 0.5)";
+        return "linear-gradient(to top, rgb(251, 194, 235) 0%, rgb(166, 193, 238) 100%)";
       case "Ramina":
-        return "rgba(192, 192, 192, 0.5)";
+        return "linear-gradient(to top, rgb(251, 194, 235) 0%, rgb(166, 193, 238) 100%)";
       case "CC":
-        return "rgba(0, 255, 0, 0.5)";
+        return "linear-gradient(-60deg, #16a085 0%, #f4d03f 100%)";
       case "Aria":
-        return "rgba(0, 255, 0, 0.5)";
+        return "linear-gradient(-60deg, #16a085 0%, #f4d03f 100%)";
       case "Pompom":
-        return "rgba(255, 255, 0, 0.5)";
+        return "radial-gradient(929px at 0.6% 1.3%, rgb(248, 251, 10) 0%, rgb(248, 47, 47) 82.6%)";
       case "Albert":
-        return "rgba(255, 255, 0, 0.5)";
+        return "radial-gradient(929px at 0.6% 1.3%, rgb(248, 251, 10) 0%, rgb(248, 47, 47) 82.6%)";
       case "Itsurugi":
-        return "rgba(255, 0, 0, 0.5)";
+        return "linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(247, 30, 30) 100.3%)";
       case "Exella":
-        return "rgba(255, 0, 0, 0.5)";
+        return "linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(247, 30, 30) 100.3%)";
       case "Kuon":
-        return "rgba(103, 128, 159, 0.5)";
+        return "linear-gradient(181deg, rgb(2, 0, 97) 15%, rgb(97, 149, 219) 158.5%)";
       case "Daria":
-        return "rgba(103, 128, 159, 0.5)";
+        return "linear-gradient(181deg, rgb(2, 0, 97) 15%, rgb(97, 149, 219) 158.5%)";
       default:
         return "rgba(255, 165, 0, 0.5)";
     }
@@ -163,8 +163,8 @@ export default function PlayerUI({ name }) {
           <div
             style={{
               fontFamily: "Noto Serif JP, serif",
-              backgroundColor: getColorFromLeader(name),
-              outline: "7px ridge rgba(0, 0, 0, 0.6)",
+              background: getColorFromLeader(name),
+              outline: "7px ridge rgba(0, 0, 0, 1.0)",
               userSelect: "none",
               height: "60px",
               width: "150px",
@@ -172,6 +172,7 @@ export default function PlayerUI({ name }) {
               justifyContent: "space-evenly",
               alignItems: "center",
               fontSize: "45px",
+              zIndex: 1,
             }}
           >
             <IconButton
@@ -205,11 +206,13 @@ export default function PlayerUI({ name }) {
               display: "flex",
               justifyContent: "space-evenly",
               alignItems: "center",
-              backgroundColor: "rgba(0, 0, 255, 0.5)",
+              background:
+                "linear-gradient(to right, rgb(5, 117, 230), rgb(2, 27, 121))",
               fontFamily: "Noto Serif JP, serif",
               fontSize: "30px",
-              outline: "7px ridge rgba(0, 0, 0, 0.6)",
+              outline: "7px ridge rgba(0, 0, 0, 1.0)",
               color: "white",
+              zIndex: 1,
             }}
           >
             {reduxCurrentPlayPoints} / {reduxMaxPlayPoints}
