@@ -13,7 +13,6 @@ import {
   FormControl,
 } from "@mui/material";
 import CardMUI from "@mui/material/Card";
-import cancel from "../../assets/logo/cancel.png";
 import Card from "../hand/Card";
 import {
   addToHandFromCemetery,

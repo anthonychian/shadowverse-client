@@ -80,7 +80,7 @@ import impressedExella from "../../assets/leaders/Exella/Impressed.mp3";
 import tauntExella from "../../assets/leaders/Exella/Taunt.mp3";
 
 export default function Voicelines({ name }) {
-  let greeting, thanks, apology, impressed, taunt, start;
+  let greeting, thanks, apology, impressed, taunt;
   const buttonBackgroundColor = "rgba(0, 0, 0, 0.6)";
 
   switch (name) {

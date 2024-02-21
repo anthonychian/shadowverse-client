@@ -12,7 +12,6 @@ import korwa from "../../src/assets/wallpapers/Korwa.png";
 import tsubaki from "../../src/assets/wallpapers/Tsubaki.png";
 import buttonImage from "../../src/assets/buttons/variant1.png";
 import shadowverse from "../../src/assets/wallpapers/SVElogo.png";
-import shadowverse2 from "../../src/assets/wallpapers/logo.png";
 import cardback from "../assets/cardbacks/sleeve_5010011.png";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";

@@ -825,13 +825,16 @@ export default function Field({
                 // backgroundColor: "rgba(255, 0, 0, 0.15)",
               }}
             >
-              {reduxEnemyArrow.show && reduxEnemyArrow.idx === idx && (
-                <PerfectArrow
-                  idx={reduxEnemyArrow.idx}
-                  distance={{ x: reduxEnemyArrow.x, y: reduxEnemyArrow.y }}
-                  onEnemyField={true}
-                />
-              )}
+              {reduxEnemyArrow.show &&
+                reduxEnemyArrow.idx === idx &&
+                (reduxEnemyField[idx] !== 0 ||
+                  reduxEnemyEvoField[idx] !== 0) && (
+                  <PerfectArrow
+                    idx={reduxEnemyArrow.idx}
+                    distance={{ x: reduxEnemyArrow.x, y: reduxEnemyArrow.y }}
+                    onEnemyField={true}
+                  />
+                )}
 
               {reduxEnemyField[cardPos(idx)] !== 0 &&
                 reduxEnemyEvoField[cardPos(idx)] === 0 && (

@@ -41,22 +41,6 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { setLeader, reset } from "../../redux/CardSlice";
 
-const style = {
-  position: "relative",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  // bgcolor: "black",
-  backgroundColor: "rgba(0, 0, 0, 1)",
-  // border: "2px solid #000",
-  boxShadow: 24,
-  p: 4,
-  width: "55%",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-};
-
 export default function Selection({ setWallpaper, setSelectedOption }) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
