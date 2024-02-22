@@ -84,7 +84,7 @@ export default function EnemyUI() {
       case "Daria":
         return "linear-gradient(181deg, rgb(2, 0, 97) 15%, rgb(97, 149, 219) 158.5%)";
       default:
-        return "rgba(255, 165, 0, 0.5)";
+        return "linear-gradient(to right, rgb(252, 74, 26), rgb(247, 183, 51))";
     }
   };
   const getClassFromLeader = (name) => {

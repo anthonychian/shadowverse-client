@@ -210,7 +210,7 @@ export default function Field({
 
   const handleShowArrow = (event, idx) => {
     if (!showArrow[idx] && event.button === 0) {
-      dispatch(setArrow({ show: true }));
+      // dispatch(setArrow({ show: true }));
       setInitialArrowPos({ x: event.clientX, y: event.clientY });
       let arr = [...showArrow];
       arr[idx] = true;
@@ -224,7 +224,11 @@ export default function Field({
       setShowArrow(arr);
       let distanceX = initialArrowPos.x - event.clientX;
       let distanceY = initialArrowPos.y - event.clientY;
-      dispatch(setArrow({ x: distanceX, y: distanceY, idx: idx, show: true }));
+      if (distanceX > 40 || distanceY > 80) {
+        dispatch(
+          setArrow({ x: distanceX, y: distanceY, idx: idx, show: true })
+        );
+      }
       setDistance({
         x: 0,
         y: 0,
@@ -580,7 +584,7 @@ export default function Field({
         {!isToken(name) && (
           <MenuItem onClick={handleCardToCemetery}>Cemetery</MenuItem>
         )}
-        <MenuItem onClick={handleEngage}>Engage</MenuItem>
+        {/* <MenuItem onClick={handleEngage}>Engage</MenuItem> */}
         {!reduxCustomValues[index].showAtk && (
           <MenuItem onClick={handleShowAtkDef}>Modify Atk/Def</MenuItem>
         )}
@@ -611,12 +615,15 @@ export default function Field({
         }
       >
         <MenuItem onClick={() => handleReturnToEvolveDeck()}>Return</MenuItem>
-        <MenuItem onClick={handleEngage}>Engage</MenuItem>
+        {/* <MenuItem onClick={handleEngage}>Engage</MenuItem> */}
         {!reduxCustomValues[index].showAtk && (
           <MenuItem onClick={handleShowAtkDef}>Modify Atk/Def</MenuItem>
         )}
         {reduxCustomValues[index].showAtk && (
           <MenuItem onClick={handleHideAtkDef}>Hide Atk/Def</MenuItem>
+        )}
+        {reduxCounterField[index] < 1 && (
+          <MenuItem onClick={handleAddCounter}>Add Counter</MenuItem>
         )}
       </Menu>
 

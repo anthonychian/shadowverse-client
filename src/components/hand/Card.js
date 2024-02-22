@@ -6,6 +6,7 @@ import {
   modifyDef,
   setCurrentCard,
   modifyCounter,
+  setEngaged,
 } from "../../redux/CardSlice";
 import { useDispatch } from "react-redux";
 import cancel from "../../assets/logo/cancel.png";
@@ -41,6 +42,7 @@ export default function Card({
   const [atk, setAtk] = useState(0);
   const [def, setDef] = useState(0);
   const [counter, setCounter] = useState(0);
+  const [hoverInput, setHoverInput] = useState(false);
 
   useEffect(() => {
     if (rotate !== engaged) setRotate(engaged);
@@ -55,7 +57,15 @@ export default function Card({
     setCounter(Number(counterVal));
   }, [counterVal]);
 
+  const handleTap = () => {
+    if (onField && !ready && !hoverInput) {
+      setRotate(!rotate);
+      dispatch(setEngaged(idx));
+    }
+  };
+
   const handleAtkInput = (event) => {
+    // event.stopPropagation();
     setAtk(Number(event.target.value));
     dispatch(
       modifyAtk({
@@ -65,6 +75,7 @@ export default function Card({
     );
   };
   const handleDefInput = (event) => {
+    // event.stopPropagation();
     setDef(Number(event.target.value));
     dispatch(
       modifyDef({
@@ -99,6 +110,14 @@ export default function Card({
     setHovering(false);
   };
 
+  const handleStartHoverInput = () => {
+    setHoverInput(true);
+  };
+
+  const handleEndHoverInput = () => {
+    setHoverInput(false);
+  };
+
   const updateNumberOfCarrots = () => {
     if (name !== 0) {
       if (name === "Carrot") {
@@ -113,9 +132,7 @@ export default function Card({
   return (
     <>
       <motion.div
-        // whileTap={onField ? {} : { transitionDuration: "5s" }}
-        // initial={{ scale: 2.5 }}
-        // transition={{ duration: 0.5 }}
+        onTap={handleTap}
         animate={rotate ? { rotate: -90 } : { rotate: 0 }}
         style={{
           height: "160px",
@@ -145,6 +162,8 @@ export default function Card({
               type="number"
               min={0}
               className={"counterInput"}
+              onMouseEnter={handleStartHoverInput}
+              onMouseLeave={handleEndHoverInput}
             />
             <div
               style={{
@@ -183,6 +202,8 @@ export default function Card({
               type="number"
               min={0}
               className={"atkInputNum"}
+              onMouseEnter={handleStartHoverInput}
+              onMouseLeave={handleEndHoverInput}
             />
             <div
               style={{
@@ -218,6 +239,8 @@ export default function Card({
               type="number"
               min={0}
               className={"defInputNum"}
+              onMouseEnter={handleStartHoverInput}
+              onMouseLeave={handleEndHoverInput}
             />
             <div
               style={{
