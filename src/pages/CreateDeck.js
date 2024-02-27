@@ -36,7 +36,7 @@ import CardMUI from "@mui/material/Card";
 import img from "../assets/pin_bellringer_angel.png";
 import { motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
-import { createDeck } from "../redux/DeckSlice";
+import { createDeck, deleteDeck } from "../redux/DeckSlice";
 import { useNavigate, useLocation } from "react-router-dom";
 import {
   Radio,
@@ -123,6 +123,9 @@ export default function CreateDeck() {
   };
 
   const handleSubmit = () => {
+    if (deckName.length > 0) {
+      dispatch(deleteDeck(deckName));
+    }
     dispatch(
       createDeck({
         name: name,
@@ -130,6 +133,7 @@ export default function CreateDeck() {
         evoDeck: evoDeck,
       })
     );
+
     navigate("/");
   };
 
@@ -231,7 +235,7 @@ export default function CreateDeck() {
   const handleCardSelection = (card) => {
     if (deck.length < 50) {
       if (deckMap.has(card)) {
-        if (deckMap.get(card) === 2 && card === "Shenlong") return;
+        if (deckMap.get(card) === 1 && card === "Shenlong") return;
         if (deckMap.get(card) === 3) {
           return;
         } else {
@@ -240,13 +244,7 @@ export default function CreateDeck() {
       } else {
         deckMap.set(card, 1);
       }
-      if (deckMap.get(card) === 4) {
-        return;
-      } else if (deckMap.get(card) === 1 && card === "Shenlong") {
-        return;
-      } else {
-        setDeck((deck) => [...deck, card]);
-      }
+      setDeck((deck) => [...deck, card]);
     }
   };
   const handleCardRemove = (card) => {
@@ -288,11 +286,7 @@ export default function CreateDeck() {
       } else {
         evoDeckMap.set(card, 1);
       }
-      if (evoDeckMap.get(card) === 4 && card !== "Carrot") {
-        return;
-      } else {
-        setEvoDeck((deck) => [...deck, card]);
-      }
+      setEvoDeck((deck) => [...deck, card]);
     }
   };
 
@@ -898,6 +892,12 @@ export default function CreateDeck() {
             name ? (
               <motion.div
                 key={idx}
+                whileTap={
+                  deckMap.get(name) === 3 ||
+                  (deckMap.get(name) === 1 && name === "Shenlong")
+                    ? {}
+                    : { opacity: 0.3 }
+                }
                 onTap={() => handleCardSelection(name)}
                 onContextMenu={() => handleModalOpen(name)}
                 whileHover={{
@@ -914,6 +914,12 @@ export default function CreateDeck() {
                   height={"312px"}
                   src={cardImage(name)}
                   alt={name}
+                  style={
+                    deckMap.get(name) === 3 ||
+                    (deckMap.get(name) === 1 && name === "Shenlong")
+                      ? { filter: "grayscale(100%)" }
+                      : {}
+                  }
                 />
               </motion.div>
             ) : (
@@ -931,6 +937,12 @@ export default function CreateDeck() {
             <motion.div
               key={idx}
               onTap={() => handleEvoCardSelection(name)}
+              whileTap={
+                deckMap.get(name) === 3 ||
+                (deckMap.get(name) === 1 && name === "Shenlong")
+                  ? {}
+                  : { opacity: 0.3 }
+              }
               onContextMenu={() => handleModalOpen(name)}
               whileHover={{
                 translateY: -25,
@@ -941,11 +953,16 @@ export default function CreateDeck() {
               }}
             >
               <img
-                // key={idx}
                 width={"224px"}
                 height={"312px"}
                 src={cardImage(name)}
                 alt={name}
+                style={
+                  deckMap.get(name) === 3 ||
+                  (deckMap.get(name) === 1 && name === "Shenlong")
+                    ? { filter: "grayscale(100%)" }
+                    : {}
+                }
               />
             </motion.div>
           ))}
