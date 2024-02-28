@@ -123,9 +123,8 @@ export default function CreateDeck() {
   };
 
   const handleSubmit = () => {
-    if (deckName.length > 0) {
-      dispatch(deleteDeck(deckName));
-    }
+    dispatch(deleteDeck(deckName));
+
     dispatch(
       createDeck({
         name: name,
