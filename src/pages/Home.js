@@ -38,6 +38,8 @@ export default function Home() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [selectedDeck, setSelectedDeck] = useState({});
+  const [deckMap] = useState(new Map());
+  const [evoDeckMap] = useState(new Map());
   const reduxDecks = useSelector((state) => state.deck.decks);
   const [showSelected, setShowSelected] = useState([]);
   const [contextMenu, setContextMenu] = useState(null);
@@ -141,7 +143,39 @@ export default function Home() {
     );
     navigate("/game");
   };
+
+  const handleCardSelection = (card) => {
+    if (deckMap.has(card)) {
+      if (deckMap.get(card) === 1 && card === "Shenlong") return;
+      if (deckMap.get(card) === 3) {
+        return;
+      } else {
+        deckMap.set(card, deckMap.get(card) + 1);
+      }
+    } else {
+      deckMap.set(card, 1);
+    }
+    setDeck((deck) => [...deck, card]);
+  };
+  const handleEvoCardSelection = (card) => {
+    if (evoDeckMap.has(card)) {
+      if (evoDeckMap.get(card) === 3 && card !== "Carrot") {
+        return;
+      } else {
+        evoDeckMap.set(card, evoDeckMap.get(card) + 1);
+      }
+    } else {
+      evoDeckMap.set(card, 1);
+    }
+    setEvoDeck((deck) => [...deck, card]);
+  };
   const handleSelectDeck = (deck, idx) => {
+    for (let i = 0; i < deck.deck.length; i++) {
+      handleCardSelection(deck.deck[i]);
+    }
+    for (let i = 0; i < deck.evoDeck.length; i++) {
+      handleEvoCardSelection(deck.evoDeck[i]);
+    }
     setSelectedDeck(deck);
     let res = [];
     for (let i = 0; i < reduxDecks.length; i++) {
@@ -539,19 +573,71 @@ export default function Home() {
             variant="outlined"
           >
             {mainDeckSelected &&
-              selectedDeck.deck?.length > 0 &&
-              selectedDeck.deck.map((card, idx) => (
-                <div key={`card-${idx}`}>
-                  <img height={"160px"} src={cardImage(card)} alt={card} />
-                </div>
-              ))}
+              Array.from(deckMap.entries()).map((entry, idx) => {
+                const [key, value] = entry;
+                return (
+                  <div style={{ position: "relative" }}>
+                    <img
+                      key={idx}
+                      width={"110px"}
+                      height={"150px"}
+                      src={cardImage(key)}
+                      alt={key}
+                    />
+                    <div
+                      style={{
+                        position: "absolute",
+                        bottom: "75%",
+                        backgroundColor: "rgba(0, 0, 0, 0.6)",
+                        height: "40px",
+                        width: "40px",
+                        color: "white",
+                        fontSize: "20px",
+                        fontFamily: "Noto Serif JP, serif",
+                        borderRadius: "7px",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}
+                    >
+                      {value}
+                    </div>
+                  </div>
+                );
+              })}
             {evoDeckSelected &&
-              selectedDeck.evoDeck?.length > 0 &&
-              selectedDeck.evoDeck.map((card, idx) => (
-                <div key={`card-${idx}`}>
-                  <img height={"160px"} src={cardImage(card)} alt={card} />
-                </div>
-              ))}
+              Array.from(evoDeckMap.entries()).map((entry, idx) => {
+                const [key, value] = entry;
+                return (
+                  <div style={{ position: "relative" }}>
+                    <img
+                      key={idx}
+                      width={"110px"}
+                      height={"150px"}
+                      src={cardImage(key)}
+                      alt={key}
+                    />
+                    <div
+                      style={{
+                        position: "absolute",
+                        bottom: "75%",
+                        backgroundColor: "rgba(0, 0, 0, 0.6)",
+                        height: "40px",
+                        width: "40px",
+                        color: "white",
+                        fontSize: "20px",
+                        fontFamily: "Noto Serif JP, serif",
+                        borderRadius: "7px",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      }}
+                    >
+                      {value}
+                    </div>
+                  </div>
+                );
+              })}
           </CardMUI>
         </Box>
       </Modal>
