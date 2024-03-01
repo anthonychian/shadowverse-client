@@ -936,7 +936,11 @@ export default function CreateDeck() {
             <motion.div
               key={idx}
               onTap={() => handleEvoCardSelection(name)}
-              whileTap={evoDeckMap.get(name) === 3 ? {} : { opacity: 0.3 }}
+              whileTap={
+                evoDeckMap.get(name) === 3 && name !== "Carrot"
+                  ? {}
+                  : { opacity: 0.3 }
+              }
               onContextMenu={() => handleModalOpen(name)}
               whileHover={{
                 translateY: -25,
@@ -952,7 +956,7 @@ export default function CreateDeck() {
                 src={cardImage(name)}
                 alt={name}
                 style={
-                  evoDeckMap.get(name) === 3
+                  evoDeckMap.get(name) === 3 && name !== "Carrot"
                     ? { filter: "grayscale(100%)" }
                     : {}
                 }
