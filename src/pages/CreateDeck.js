@@ -937,7 +937,8 @@ export default function CreateDeck() {
               key={idx}
               onTap={() => handleEvoCardSelection(name)}
               whileTap={
-                evoDeckMap.get(name) === 3 && name !== "Carrot"
+                (evoDeckMap.get(name) === 3 && name !== "Carrot") ||
+                evoDeckMap.get(name) === 10
                   ? {}
                   : { opacity: 0.3 }
               }
@@ -956,7 +957,8 @@ export default function CreateDeck() {
                 src={cardImage(name)}
                 alt={name}
                 style={
-                  evoDeckMap.get(name) === 3 && name !== "Carrot"
+                  (evoDeckMap.get(name) === 3 && name !== "Carrot") ||
+                  evoDeckMap.get(name) === 10
                     ? { filter: "grayscale(100%)" }
                     : {}
                 }
