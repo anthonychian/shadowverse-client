@@ -38,8 +38,8 @@ export default function Home() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [selectedDeck, setSelectedDeck] = useState({});
-  const [deckMap] = useState(new Map());
-  const [evoDeckMap] = useState(new Map());
+  const [deckMap, setDeckMap] = useState(new Map());
+  const [evoDeckMap, setEvoDeckMap] = useState(new Map());
   const reduxDecks = useSelector((state) => state.deck.decks);
   const [showSelected, setShowSelected] = useState([]);
   const [contextMenu, setContextMenu] = useState(null);
@@ -170,12 +170,15 @@ export default function Home() {
     setEvoDeck((deck) => [...deck, card]);
   };
   const handleSelectDeck = (deck, idx) => {
+    deckMap.clear();
+    evoDeckMap.clear();
     for (let i = 0; i < deck.deck.length; i++) {
       handleCardSelection(deck.deck[i]);
     }
     for (let i = 0; i < deck.evoDeck.length; i++) {
       handleEvoCardSelection(deck.evoDeck[i]);
     }
+
     setSelectedDeck(deck);
     let res = [];
     for (let i = 0; i < reduxDecks.length; i++) {
