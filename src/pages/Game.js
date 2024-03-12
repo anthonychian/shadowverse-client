@@ -30,7 +30,7 @@ export default function Game() {
       style={{
         minHeight: "100vh",
         minWidth: "100vw",
-        background: "url(" + wallpaper + ") no-repeat center center fixed",
+        background: "url(" + wallpaper + ") center center fixed",
         // background: "url(" + wallpaper + ") ",
         backgroundSize: "cover",
       }}

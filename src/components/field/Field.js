@@ -70,7 +70,7 @@ import EvoDeck from "./EvoDeck";
 import EnemyEvoDeck from "./EnemyEvoDeck";
 import img from "../../assets/pin_bellringer_angel.png";
 import "../../css/AnimatedBorder.css";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { socket } from "../../sockets";
 import Token from "./Token";
 import { PerfectArrow } from "./PerfectArrow";
@@ -95,10 +95,10 @@ export default function Field({
   setReadyToPlaceOnFieldFromHand,
 }) {
   const dispatch = useDispatch();
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   // redux state
-  // const reduxRoom = useSelector((state) => state.card.room);
+  const reduxRoom = useSelector((state) => state.card.room);
   const reduxField = useSelector((state) => state.card.field);
   const reduxCurrentCard = useSelector((state) => state.card.currentCard);
   const reduxEvoField = useSelector((state) => state.card.evoField);
@@ -193,11 +193,11 @@ export default function Field({
     });
   }, [socket]);
 
-  // useEffect(() => {
-  //   if (reduxCurrentDeck.length === 0) {
-  //     navigate("/");
-  //   }
-  // }, [reduxCurrentDeck]);
+  useEffect(() => {
+    if (reduxCurrentRoom.length === 0) {
+      navigate("/");
+    }
+  }, [reduxCurrentRoom]);
 
   const handleModalClose = () => {
     dispatch(setShowEnemyHand(false));
