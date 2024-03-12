@@ -83,6 +83,8 @@ export default function EnemyUI() {
         return "linear-gradient(181deg, rgb(2, 0, 97) 15%, rgb(97, 149, 219) 158.5%)";
       case "Daria":
         return "linear-gradient(181deg, rgb(2, 0, 97) 15%, rgb(97, 149, 219) 158.5%)";
+      case "Maruzensky":
+        return "linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(247, 30, 30) 100.3%)";
       default:
         return "linear-gradient(to right, rgb(252, 74, 26), rgb(247, 183, 51))";
     }
@@ -113,6 +115,8 @@ export default function EnemyUI() {
         return rune;
       case "Daria":
         return rune;
+      case "Maruzensky":
+        return abyss;
       default:
         return dragon;
     }

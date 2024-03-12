@@ -1,24 +1,24 @@
 import React, { useState } from "react";
-import imageRamina from "../../assets/leaders/Ramina/Ramina.png";
-import imageJeanne from "../../assets/leaders/Jeanne/Jeanne.png";
-import imageForte from "../../assets/leaders/Forte/Forte.png";
-import imageGalmieux from "../../assets/leaders/Galmieux/Galmieux.png";
-import imageKuon from "../../assets/leaders/Kuon/Kuon.png";
-import imageDaria from "../../assets/leaders/Daria/Daria.png";
-import imagePompom from "../../assets/leaders/Pompom/Pompom.png";
-import imageAlbert from "../../assets/leaders/Albert/Albert.png";
-import imageAria from "../../assets/leaders/Aria/Aria.png";
-import imageCC from "../../assets/leaders/CC/CC.png";
-import imageExella from "../../assets/leaders/Exella/Exella.png";
-import imageItsurugi from "../../assets/leaders/Itsurugi/Itsurugi.png";
+import imageRamina from "../../assets/leaders/Ramina.png";
+import imageJeanne from "../../assets/leaders/Jeanne.png";
+import imageForte from "../../assets/leaders/Forte.png";
+import imageGalmieux from "../../assets/leaders/Galmieux.png";
+import imageKuon from "../../assets/leaders/Kuon.png";
+import imageDaria from "../../assets/leaders/Daria.png";
+import imagePompom from "../../assets/leaders/Pompom.png";
+import imageAlbert from "../../assets/leaders/Albert.png";
+import imageAria from "../../assets/leaders/Aria.png";
+import imageCC from "../../assets/leaders/CC.png";
+import imageExella from "../../assets/leaders/Exella.png";
+import imageItsurugi from "../../assets/leaders/Itsurugi.png";
+import imageMaru from "../../assets/leaders/Maru.png";
 import dragon from "../../assets/logo/dragon.png";
 
 import forte from "../../../src/assets/wallpapers/forte.png";
-import luci from "../../../src/assets/wallpapers/luci.jpg";
-import dshift from "../../../src/assets/wallpapers/dshift.png";
-import alice from "../../../src/assets/wallpapers/alice.jpeg";
-import pompom from "../../../src/assets/wallpapers/pompom.jpg";
-import dark from "../../../src/assets/wallpapers/darkforest.jpg";
+import runecraft from "../../../src/assets/wallpapers/runecraft.png";
+import alice from "../../../src/assets/wallpapers/alice.png";
+import albert from "../../../src/assets/wallpapers/albert.png";
+import dark from "../../../src/assets/wallpapers/darkforest.png";
 
 import {
   Box,
@@ -202,7 +202,7 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
               }}
               onClick={(e) => {
                 selectLeader(e);
-                setWallpaper(luci);
+                setWallpaper(alice);
               }}
             >
               <img width="100px" src={imageJeanne} alt="Jeanne" />
@@ -216,7 +216,7 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
               }}
               onClick={(e) => {
                 selectLeader(e);
-                setWallpaper(luci);
+                setWallpaper(alice);
               }}
             >
               <img width="100px" src={imageRamina} alt="Ramina" />
@@ -229,7 +229,7 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
               }}
               onClick={(e) => {
                 selectLeader(e);
-                setWallpaper(pompom);
+                setWallpaper(albert);
               }}
             >
               <img width="100px" src={imageAlbert} alt="Albert" />
@@ -242,7 +242,7 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
               }}
               onClick={(e) => {
                 selectLeader(e);
-                setWallpaper(pompom);
+                setWallpaper(albert);
               }}
             >
               <img width="100px" src={imagePompom} alt="Pompom" />
@@ -255,7 +255,7 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
               }}
               onClick={(e) => {
                 selectLeader(e);
-                setWallpaper(dshift);
+                setWallpaper(runecraft);
               }}
             >
               <img width="100px" src={imageDaria} alt="Daria" />
@@ -268,7 +268,7 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
               }}
               onClick={(e) => {
                 selectLeader(e);
-                setWallpaper(dshift);
+                setWallpaper(runecraft);
               }}
             >
               <img width="100px" src={imageKuon} alt="Kuon" />
@@ -325,6 +325,19 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
               }}
             >
               <img width="100px" src={imageExella} alt="Exella" />
+            </IconButton>
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectLeader(e);
+                setWallpaper(dark);
+              }}
+            >
+              <img width="100px" src={imageMaru} alt="Maruzensky" />
             </IconButton>
           </Card>
         </Box>

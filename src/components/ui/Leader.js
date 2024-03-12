@@ -1,16 +1,17 @@
 import React from "react";
-import imageRamina from "../../assets/leaders/Ramina/Ramina.png";
-import imageJeanne from "../../assets/leaders/Jeanne/Jeanne.png";
-import imageForte from "../../assets/leaders/Forte/Forte.png";
-import imageGalmieux from "../../assets/leaders/Galmieux/Galmieux.png";
-import imageKuon from "../../assets/leaders/Kuon/Kuon.png";
-import imageDaria from "../../assets/leaders/Daria/Daria.png";
-import imagePompom from "../../assets/leaders/Pompom/Pompom.png";
-import imageAlbert from "../../assets/leaders/Albert/Albert.png";
-import imageAria from "../../assets/leaders/Aria/Aria.png";
-import imageCC from "../../assets/leaders/CC/CC.png";
-import imageExella from "../../assets/leaders/Exella/Exella.png";
-import imageItsurugi from "../../assets/leaders/Itsurugi/Itsurugi.png";
+import imageRamina from "../../assets/leaders/Ramina.png";
+import imageJeanne from "../../assets/leaders/Jeanne.png";
+import imageForte from "../../assets/leaders/Forte.png";
+import imageGalmieux from "../../assets/leaders/Galmieux.png";
+import imageKuon from "../../assets/leaders/Kuon.png";
+import imageDaria from "../../assets/leaders/Daria.png";
+import imagePompom from "../../assets/leaders/Pompom.png";
+import imageAlbert from "../../assets/leaders/Albert.png";
+import imageAria from "../../assets/leaders/Aria.png";
+import imageCC from "../../assets/leaders/CC.png";
+import imageExella from "../../assets/leaders/Exella.png";
+import imageItsurugi from "../../assets/leaders/Itsurugi.png";
+import imageMaru from "../../assets/leaders/Maru.png";
 
 import "../../css/Leader.css";
 
@@ -52,6 +53,9 @@ export default function Leader({ name }) {
       break;
     case "Exella":
       image = imageExella;
+      break;
+    case "Maruzensky":
+      image = imageMaru;
       break;
     default:
       image = imageGalmieux;

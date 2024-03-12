@@ -79,6 +79,12 @@ import apologyExella from "../../assets/leaders/Exella/Apology.mp3";
 import impressedExella from "../../assets/leaders/Exella/Impressed.mp3";
 import tauntExella from "../../assets/leaders/Exella/Taunt.mp3";
 
+import greetingMaru from "../../assets/leaders/Maru/Greeting.mp3";
+import thanksMaru from "../../assets/leaders/Maru/Thanks.mp3";
+import apologyMaru from "../../assets/leaders/Maru/Apology.mp3";
+import impressedMaru from "../../assets/leaders/Maru/Impressed.mp3";
+import tauntMaru from "../../assets/leaders/Maru/Taunt.mp3";
+
 export default function Voicelines({ name }) {
   let greeting, thanks, apology, impressed, taunt;
   const buttonBackgroundColor = "rgba(0, 0, 0, 0.6)";
@@ -168,6 +174,13 @@ export default function Voicelines({ name }) {
       apology = new Audio(apologyExella);
       impressed = new Audio(impressedExella);
       taunt = new Audio(tauntExella);
+      break;
+    case "Maruzensky":
+      greeting = new Audio(greetingMaru);
+      thanks = new Audio(thanksMaru);
+      apology = new Audio(apologyMaru);
+      impressed = new Audio(impressedMaru);
+      taunt = new Audio(tauntMaru);
       break;
     default:
   }
