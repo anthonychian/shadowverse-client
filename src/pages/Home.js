@@ -10,6 +10,7 @@ import jeanne from "../../src/assets/wallpapers/Jeanne.png";
 import kuon from "../../src/assets/wallpapers/Kuon.png";
 import korwa from "../../src/assets/wallpapers/Korwa.png";
 import tsubaki from "../../src/assets/wallpapers/Tsubaki.png";
+import grimnir from "../../src/assets/wallpapers/Grimnir.png";
 import buttonImage from "../../src/assets/buttons/variant1.png";
 import shadowverse from "../../src/assets/wallpapers/SVElogo.png";
 import cardback from "../assets/cardbacks/sleeve_5010011.png";
@@ -48,6 +49,7 @@ export default function Home() {
   const [open, setOpen] = useState(false);
   const [wallpaper, setWallpaper] = useState(null);
   const [leaderImage, setLeaderImage] = useState(null);
+  const [leaderNum, setLeaderNum] = useState(0);
   const [mainDeckSelected, setMainDeckSelected] = useState(true);
   const [evoDeckSelected, setEvoDeckSelected] = useState(false);
 
@@ -205,7 +207,8 @@ export default function Home() {
   };
 
   const randomLeader = () => {
-    const num = Math.floor(Math.random() * (5 - 1 + 1) + 1);
+    const num = Math.floor(Math.random() * 6 + 1);
+    setLeaderNum(num);
     switch (num) {
       case 1:
         return galmieux;
@@ -217,6 +220,8 @@ export default function Home() {
         return jeanne;
       case 5:
         return tsubaki;
+      case 6:
+        return grimnir;
       default:
         return galmieux;
     }
@@ -227,7 +232,7 @@ export default function Home() {
       onContextMenu={(e) => e.nativeEvent.preventDefault()}
       style={{
         minHeight: "100vh",
-        background: "url(" + wallpaper + ") center center fixed",
+        background: "url(" + wallpaper + ") no-repeat center center fixed",
         backgroundSize: "cover",
         display: "flex",
         // justifyContent: "center",
@@ -488,7 +493,12 @@ export default function Home() {
       </div>
 
       <div className="LeaderContainerHome">
-        <img className="LeaderImageHome" src={leaderImage} alt={"leader"} />
+        <img
+          className="LeaderImageHome"
+          src={leaderImage}
+          alt={"leader"}
+          style={leaderNum === 6 ? { paddingTop: "100px" } : {}}
+        />
       </div>
       <Menu
         open={contextMenu !== null}
