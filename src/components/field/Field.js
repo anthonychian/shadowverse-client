@@ -733,6 +733,7 @@ export default function Field({
           minHeight: "130px",
           justifyContent: "center",
           alignItems: "center",
+          paddingBottom: "2em",
           // zIndex: 100,
         }}
       >
@@ -759,7 +760,8 @@ export default function Field({
             width: "175px",
             display: "flex",
             flexDirection: "column",
-            backgroundColor: "rgba(0, 0, 0, 0.60)",
+            // backgroundColor: "rgba(0, 0, 0, 0.60)",
+            // background: "linear-gradient(to bottom, #09203f 0%, #537895 100%)",
             alignItems: "center",
             justifyContent: "space-evenly",
           }}
@@ -807,7 +809,8 @@ export default function Field({
             width: "100%",
             // backgroundColor: "black",
             // backgroundColor: "#131219",
-            backgroundColor: "rgba(0, 0, 0, 0.60)",
+            // backgroundColor: "rgba(0, 0, 0, 0.60)",
+            // background: "linear-gradient(to bottom, #09203f 0%, #537895 100%)",
             display: "grid",
             gridTemplateColumns: "repeat(5, 1fr)",
             alignItems: "center",
@@ -815,21 +818,43 @@ export default function Field({
             // zIndex: 0,
           }}
         >
+          {/* <span
+            style={{
+              fontFamily: "Noto Serif JP, serif",
+              fontSize: "1.2em",
+              color: "#E0FFFF",
+              textShadow: "1px 1px 10px #E0FFFF, 1px 1px 10px #ccc",
+              position: "absolute",
+              top: "35%",
+              width: "50px",
+              pointerEvents: "none",
+            }}
+          >
+            Field
+          </span>
+          <span
+            style={{
+              fontFamily: "Noto Serif JP, serif",
+              fontSize: "1.2em",
+              color: "#E0FFFF",
+              textShadow: "1px 1px 10px #E0FFFF, 1px 1px 10px #ccc",
+              position: "absolute",
+              top: "18%",
+              width: "100px",
+              pointerEvents: "none",
+            }}
+          >
+            EX Area
+          </span> */}
           {reduxField.map((x, idx) => (
             <motion.div
               key={`enemy1-${idx}`}
               style={{
                 height: "160px",
                 width: "115px",
-                // position: "relative",
-                // backgroundColor: "rgba(255, 255, 255, 0.1)",
-                backgroundColor: "#131219",
-                borderRadius: "10px",
-                // border: "4px solid #0000",
-                // border: "4px solid #1a20d6c8",
-                border: "4px solid #555559",
-                // backgroundColor: "rgba(0, 0, 0, 0.20)",
-                // backgroundColor: "rgba(255, 0, 0, 0.15)",
+                // backgroundColor: "#131219",
+                // borderRadius: "10px",
+                // border: "4px solid #555559",
               }}
             >
               {reduxEnemyArrow.show &&
@@ -891,7 +916,8 @@ export default function Field({
             flexDirection: "column",
             // backgroundColor: "black",
             // backgroundColor: "#131219",
-            backgroundColor: "rgba(0, 0, 0, 0.60)",
+            // background: "linear-gradient(to bottom, #09203f 0%, #537895 100%)",
+            // backgroundColor: "rgba(0, 0, 0, 0.60)",
             alignItems: "center",
             justifyContent: "space-evenly",
 
@@ -930,7 +956,8 @@ export default function Field({
             width: "175px",
             display: "flex",
             flexDirection: "column",
-            backgroundColor: "rgba(0, 0, 0, 0.60)",
+            // background: "linear-gradient(to top, #09203f 0%, #537895 100%)",
+            // backgroundColor: "rgba(0, 0, 0, 0.60)",
             alignItems: "center",
             justifyContent: "space-evenly",
           }}
@@ -961,7 +988,9 @@ export default function Field({
             width: "100%",
             // backgroundColor: "black",
             // backgroundColor: "#131219",
-            backgroundColor: "rgba(0, 0, 0, 0.60)",
+            // backgroundColor: "rgba(0, 0, 0, 0.60)",
+            // padding: "2em",
+            // background: "linear-gradient(to top, #09203f 0%, #537895 100%)",
             display: "grid",
             gridTemplateColumns: "repeat(5, 1fr)",
             alignItems: "center",
@@ -969,6 +998,34 @@ export default function Field({
             // zIndex: 0,
           }}
         >
+          <span
+            style={{
+              fontFamily: "Noto Serif JP, serif",
+              fontSize: "1.2em",
+              color: "#E0FFFF",
+              textShadow: "1px 1px 10px #E0FFFF, 1px 1px 10px #ccc",
+              position: "absolute",
+              bottom: "45%",
+              width: "50px",
+              pointerEvents: "none",
+            }}
+          >
+            Field
+          </span>
+          <span
+            style={{
+              fontFamily: "Noto Serif JP, serif",
+              fontSize: "1.2em",
+              color: "#E0FFFF",
+              textShadow: "1px 1px 10px #E0FFFF, 1px 1px 10px #ccc",
+              position: "absolute",
+              bottom: "28%",
+              width: "100px",
+              pointerEvents: "none",
+            }}
+          >
+            EX Area
+          </span>
           {reduxField.map((card, idx) => (
             <div key={`card-${idx}`}>
               {ready && (
@@ -981,8 +1038,8 @@ export default function Field({
                     height: "160px",
                     width: "115px",
                     // backgroundColor: "rgba(255, 255, 255, 0.1)",
-                    backgroundColor: "#131219",
-                    borderRadius: "10px",
+                    // backgroundColor: "#131219",
+                    // borderRadius: "10px",
                   }}
                   className={
                     reduxField[idx] !== 0 &&
@@ -1045,10 +1102,9 @@ export default function Field({
                     height: "160px",
                     width: "115px",
                     // backgroundColor: "rgba(255, 255, 255, 0.1)",
-                    borderRadius: "10px",
-                    backgroundColor: "#131219",
-                    // border: "4px solid #0000",
-                    border: "4px solid #555559",
+                    // borderRadius: "10px",
+                    // backgroundColor: "#131219",
+                    // border: "4px solid #555559",
                   }}
                 >
                   {showArrow[idx] &&
@@ -1105,7 +1161,8 @@ export default function Field({
             // backgroundColor: "black",
             // backgroundColor: "#131219",
             zIndex: 0,
-            backgroundColor: "rgba(0, 0, 0, 0.60)",
+            // background: "linear-gradient(to top, #09203f 0%, #537895 100%)",
+            // backgroundColor: "rgba(0, 0, 0, 0.60)",
             alignItems: "center",
             justifyContent: "space-evenly",
             cursor: `url(${img}) 55 55, auto`,

@@ -10,7 +10,8 @@ import Field from "../components/field/Field";
 import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
 import ZoomedCard from "../components/ui/ZoomedCard";
-import initialWallpaper from "../../src/assets/wallpapers/forte.png";
+// import initialWallpaper from "../../src/assets/wallpapers/forte.png";
+import initialWallpaper from "../../src/assets/wallpapers/3.png";
 
 export default function Game() {
   const [wallpaper, setWallpaper] = useState(initialWallpaper);
@@ -37,7 +38,7 @@ export default function Game() {
     >
       <Selection
         setSelectedOption={setSelectedOption}
-        setWallpaper={setWallpaper}
+        // setWallpaper={setWallpaper}
       />
       {/* Left side  */}
       <div className={"leftSideCanvas"}>
@@ -49,6 +50,11 @@ export default function Game() {
       <motion.div
         onContextMenu={(e) => e.nativeEvent.preventDefault()}
         className={"centerCanvas"}
+        style={{
+          // background: "linear-gradient(to top, #09203f 0%, #537895 100%)"
+          background:
+            "radial-gradient(circle, rgba(60,105,134,1) 0%, rgba(18,53,87,1) 70%, rgba(18,41,87,1) 84%, rgba(11,26,55,1) 100%)",
+        }}
         ref={constraintsRef}
       >
         <Field

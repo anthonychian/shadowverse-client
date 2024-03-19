@@ -58,7 +58,7 @@ export default function Card({
   }, [counterVal]);
 
   const handleTap = () => {
-    if (onField && !ready && !hoverInput) {
+    if (onField && !opponentField && !ready && !hoverInput) {
       setRotate(!rotate);
       dispatch(setEngaged(idx));
     }

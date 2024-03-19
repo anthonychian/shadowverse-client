@@ -7,34 +7,34 @@ export function PerfectArrow({ idx, distance, onEnemyField = false }) {
   let p1 = { x: 0, y: 0 };
   switch (idx) {
     case 0:
-      p1 = { x: 75, y: 250 };
+      p1 = { x: 30, y: 250 };
       break;
     case 1:
-      p1 = { x: 200, y: 250 };
+      p1 = { x: 175, y: 250 };
       break;
     case 2:
       p1 = { x: 325, y: 250 };
       break;
     case 3:
-      p1 = { x: 450, y: 250 };
+      p1 = { x: 475, y: 250 };
       break;
     case 4:
-      p1 = { x: 575, y: 250 };
+      p1 = { x: 620, y: 250 };
       break;
     case 5:
-      p1 = { x: 75, y: 85 };
+      p1 = { x: 30, y: 85 };
       break;
     case 6:
-      p1 = { x: 200, y: 85 };
+      p1 = { x: 175, y: 85 };
       break;
     case 7:
       p1 = { x: 325, y: 85 };
       break;
     case 8:
-      p1 = { x: 450, y: 85 };
+      p1 = { x: 475, y: 85 };
       break;
     case 9:
-      p1 = { x: 575, y: 85 };
+      p1 = { x: 620, y: 85 };
       break;
     default:
       p1 = { x: 75, y: 250 };

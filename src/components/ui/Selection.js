@@ -41,7 +41,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { setLeader, reset } from "../../redux/CardSlice";
 
-export default function Selection({ setWallpaper, setSelectedOption }) {
+export default function Selection({ setSelectedOption }) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -176,7 +176,7 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
               }}
               onClick={(e) => {
                 selectLeader(e);
-                setWallpaper(forte);
+                // setWallpaper(forte);
               }}
             >
               <img width="100px" src={imageForte} alt="Forte" />
@@ -189,7 +189,7 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
               }}
               onClick={(e) => {
                 selectLeader(e);
-                setWallpaper(forte);
+                // setWallpaper(forte);
               }}
             >
               <img width="100px" src={imageGalmieux} alt="Galmieux" />
@@ -202,7 +202,7 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
               }}
               onClick={(e) => {
                 selectLeader(e);
-                setWallpaper(alice);
+                // setWallpaper(alice);
               }}
             >
               <img width="100px" src={imageJeanne} alt="Jeanne" />
@@ -216,7 +216,7 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
               }}
               onClick={(e) => {
                 selectLeader(e);
-                setWallpaper(alice);
+                // setWallpaper(alice);
               }}
             >
               <img width="100px" src={imageRamina} alt="Ramina" />
@@ -229,7 +229,7 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
               }}
               onClick={(e) => {
                 selectLeader(e);
-                setWallpaper(albert);
+                // setWallpaper(albert);
               }}
             >
               <img width="100px" src={imageAlbert} alt="Albert" />
@@ -242,7 +242,7 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
               }}
               onClick={(e) => {
                 selectLeader(e);
-                setWallpaper(albert);
+                // setWallpaper(albert);
               }}
             >
               <img width="100px" src={imagePompom} alt="Pompom" />
@@ -255,7 +255,7 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
               }}
               onClick={(e) => {
                 selectLeader(e);
-                setWallpaper(runecraft);
+                // setWallpaper(runecraft);
               }}
             >
               <img width="100px" src={imageDaria} alt="Daria" />
@@ -268,7 +268,7 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
               }}
               onClick={(e) => {
                 selectLeader(e);
-                setWallpaper(runecraft);
+                // setWallpaper(runecraft);
               }}
             >
               <img width="100px" src={imageKuon} alt="Kuon" />
@@ -282,7 +282,7 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
               }}
               onClick={(e) => {
                 selectLeader(e);
-                setWallpaper(alice);
+                // setWallpaper(alice);
               }}
             >
               <img width="100px" src={imageCC} alt="CC" />
@@ -295,7 +295,7 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
               }}
               onClick={(e) => {
                 selectLeader(e);
-                setWallpaper(alice);
+                // setWallpaper(alice);
               }}
             >
               <img width="100px" src={imageAria} alt="Aria" />
@@ -308,7 +308,7 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
               }}
               onClick={(e) => {
                 selectLeader(e);
-                setWallpaper(dark);
+                // setWallpaper(dark);
               }}
             >
               <img width="100px" src={imageItsurugi} alt="Itsurugi" />
@@ -321,7 +321,7 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
               }}
               onClick={(e) => {
                 selectLeader(e);
-                setWallpaper(dark);
+                // setWallpaper(dark);
               }}
             >
               <img width="100px" src={imageExella} alt="Exella" />
@@ -334,7 +334,7 @@ export default function Selection({ setWallpaper, setSelectedOption }) {
               }}
               onClick={(e) => {
                 selectLeader(e);
-                setWallpaper(dark);
+                // setWallpaper(dark);
               }}
             >
               <img width="100px" src={imageMaru} alt="Maruzensky" />

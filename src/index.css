@@ -10,6 +10,7 @@
 
 body {
   filter: saturate(1.15) hue-rotate(345deg);
+  overflow: hidden;
 }
 html,
 #root {
@@ -18,8 +19,8 @@ html,
   max-height: 100vh;
   margin: 0;
   padding: 0;
-  overflow: hidden;
   background-color: black;
+  overflow: hidden;
 }
 
 /* #root * {

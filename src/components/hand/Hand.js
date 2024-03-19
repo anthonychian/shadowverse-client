@@ -110,11 +110,12 @@ export default function Hand({
         style={{
           zIndex: 100,
           display: "flex",
+          // height: "20vh",
+          minHeight: "160px",
           alignItems: "center",
-          height: "20vh",
-          minHeight: "200px",
           justifyContent: "center",
-          // backgroundColor: "black",
+          // bottom: "-5%",
+          // position: "absolute",
         }}
         axis="x"
         values={items}

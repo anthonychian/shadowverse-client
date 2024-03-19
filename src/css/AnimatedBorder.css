@@ -4,12 +4,14 @@
   align-items: center; */
   /* padding: 12px; */
   z-index: 0;
-  border-radius: 10px;
-  border: 4px solid #0000;
+  border-radius: "10px";
+  border: 4px solid transparent;
+  /* border-radius: 10px;
+  border: 4px solid #0000; */
   /* background: padding-box, */
   /* background: linear-gradient(#cda7e2, #6524ce) padding-box, */
   /* background: linear-gradient(#131219, #000000cc) padding-box, */
-  background: linear-gradient(#131219, #131219) padding-box,
+  /* background: linear-gradient(#131219, #131219) padding-box,
     linear-gradient(
         var(--angle),
         #f79533,
@@ -22,7 +24,7 @@
         #6fba82
       )
       border-box;
-  animation: 3s rotate linear infinite;
+  animation: 3s rotate linear infinite; */
 }
 .box:hover {
   /* display: flex; */
@@ -32,8 +34,10 @@
   /* padding: 12px; */
   border-radius: 10px;
   border: 4px solid #0000;
-  background: linear-gradient(#131219, #131219) padding-box,
-    linear-gradient(var(--angle), #a166ab, #5073b8, #1098ad, #07b39b, #6fba82)
+  background: linear-gradient(#09203f 0%, rgba(60, 105, 134, 1) 100%)
+      padding-box,
+    /* background: linear-gradient(#131219, #000000cc) padding-box, */
+      linear-gradient(var(--angle), #a166ab, #5073b8, #1098ad, #07b39b, #6fba82)
       border-box;
 
   animation: 0.5s rotate linear infinite;
@@ -56,5 +60,5 @@
   width: "115px";
   background-color: "#131219";
   border-radius: "10px";
-  border: 4px solid #555559;
+  border: 4px solid transparent;
 }
