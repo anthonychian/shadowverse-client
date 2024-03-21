@@ -10,7 +10,7 @@
 
 body {
   filter: saturate(1.15) hue-rotate(345deg);
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 html,
 #root {
