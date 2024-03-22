@@ -801,7 +801,7 @@ export const cardImage = (cardName) => {
     case "Dread Dragon":
       return "../textures/BP01-097EN.png";
     case "Blazing Breath":
-      return "../textures/BP01-098EN.png";
+      return "../textures/PR-124EN.png";
     case "Dragon Wings":
       return "../textures/BP01-099EN.png";
     case "Dragon Emissary":
