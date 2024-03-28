@@ -11,6 +11,8 @@ export const CardSlice = createSlice({
     showDice: false,
     showEnemyHand: false,
     enemyArrow: { idx: -1, show: false },
+    leaderActive: false,
+    enemyLeaderActive: false,
     enemyViewingHand: false,
     enemyViewingDeck: false,
     enemyViewingTopCards: false,
@@ -1185,6 +1187,12 @@ export const CardSlice = createSlice({
     setEnemyCounter: (state, action) => {
       state.enemyCounterField = action.payload;
     },
+    setEnemyLeaderActive: (state, action) => {
+      state.enemyLeaderActive = action.payload;
+    },
+    setLeaderActive: (state, action) => {
+      state.leaderActive = action.payload;
+    },
     reset: (state) => {
       state.deck = [];
       state.evoDeck = [];
@@ -1372,5 +1380,7 @@ export const {
   setDice,
   setShowDice,
   setEnemyDice,
+  setEnemyLeaderActive,
+  setLeaderActive,
   reset,
 } = CardSlice.actions;

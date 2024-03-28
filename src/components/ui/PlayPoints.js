@@ -3,9 +3,11 @@ import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { socket } from "../../sockets";
 import IconButton from "@mui/material/IconButton";
 import "../../css/PlayPoints.css";
-import { useDispatch } from "react-redux";
+import { setLeaderActive } from "../../redux/CardSlice";
+import { useDispatch, useSelector } from "react-redux";
 import { setPlayPoints } from "../../redux/CardSlice";
 
 export default function Scoreboard({ name }) {
@@ -13,8 +15,27 @@ export default function Scoreboard({ name }) {
 
   const [maxPlayPoints, setMaxPlayPoints] = useState(0);
   const [currentPlayPoints, setCurrentPlayPoints] = useState(0);
+  const reduxRoom = useSelector((state) => state.card.room);
 
   const buttonBackgroundColor = "rgba(0, 0, 0, 0.6)";
+
+  const nextTurn = () => {
+    incrementBoth();
+    dispatch(setLeaderActive(true));
+    socket.emit("send msg", {
+      type: "leaderActive",
+      data: true,
+      room: reduxRoom,
+    });
+  };
+  const endTurn = () => {
+    dispatch(setLeaderActive(false));
+    socket.emit("send msg", {
+      type: "leaderActive",
+      data: false,
+      room: reduxRoom,
+    });
+  };
 
   const incrementCurrent = () => {
     currentPlayPoints < maxPlayPoints
@@ -180,8 +201,13 @@ export default function Scoreboard({ name }) {
           </div>
         </div>
         <div className="nextTurnContainer">
-          <div className="buttonText" onClick={() => incrementBoth()}>
+          <div className="buttonText" onClick={() => nextTurn()}>
             Next Turn
+          </div>
+        </div>
+        <div className="endTurnContainer">
+          <div className="buttonText" onClick={() => endTurn()}>
+            End Turn
           </div>
         </div>
       </div>

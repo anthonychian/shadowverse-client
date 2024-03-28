@@ -15,7 +15,7 @@ import imageMaru from "../../assets/leaders/Maru.png";
 
 import "../../css/Leader.css";
 
-export default function Leader({ name }) {
+export default function Leader({ name, active }) {
   let image;
   switch (name) {
     case "Galmieux":
@@ -62,7 +62,11 @@ export default function Leader({ name }) {
   }
   return (
     <div className="LeaderContainer">
-      <img src={image} className="LeaderImage" alt="Leader" />
+      {active ? (
+        <img src={image} className="LeaderImageActive" alt="Leader" />
+      ) : (
+        <img src={image} className="LeaderImageInactive" alt="Leader" />
+      )}
     </div>
   );
 }

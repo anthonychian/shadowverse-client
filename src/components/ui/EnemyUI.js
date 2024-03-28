@@ -23,6 +23,9 @@ export default function EnemyUI() {
   const reduxEnemyHealth = useSelector((state) => state.card.enemyHealth);
   const reduxEnemyLeader = useSelector((state) => state.card.enemyLeader);
   const reduxEnemyEvoPoints = useSelector((state) => state.card.enemyEvoPoints);
+  const reduxEnemyLeaderActive = useSelector(
+    (state) => state.card.enemyLeaderActive
+  );
   const reduxEnemyViewingDeck = useSelector(
     (state) => state.card.enemyViewingDeck
   );
@@ -276,7 +279,7 @@ export default function EnemyUI() {
           </motion.div>
         )}
       </div>
-      <Leader name={reduxEnemyLeader} />
+      <Leader name={reduxEnemyLeader} active={reduxEnemyLeaderActive} />
       <div style={{ opacity: 0.75 }}>
         <img
           height={70}

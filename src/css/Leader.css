@@ -1,5 +1,5 @@
 /* default styles */
-.LeaderImage {
+.LeaderImageActive {
   min-width: 350px;
   width: 50%;
   position: absolute;
@@ -7,13 +7,21 @@
   /* pointer-events: none;
   user-select: none; */
 }
+.LeaderImageInactive {
+  min-width: 350px;
+  margin-top: 5vh;
+  width: 50%;
+  position: absolute;
+  z-index: 1;
+  filter: brightness(30%);
+}
 .LeaderContainer {
   bottom: 30%;
   right: 20%;
   position: relative;
 }
 @media (prefers-reduced-motion: no-preference) {
-  .LeaderImage {
+  .LeaderImageActive {
     animation: slidein infinite 1.5s linear alternate;
   }
 }

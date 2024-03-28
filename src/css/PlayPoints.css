@@ -58,7 +58,7 @@
 .buttonsContainer {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   gap: 1em;
   padding-left: 4em;
@@ -115,7 +115,12 @@
 }
 
 .circle {
-  background-color: green;
+  background: radial-gradient(
+    circle at -1% 57.5%,
+    rgb(19, 170, 82) 0%,
+    rgb(0, 102, 43) 90%
+  );
+  /* background-color: green; */
   outline: 5px ridge rgba(0, 0, 0, 0.9);
   border-radius: 2rem;
   display: flex;
@@ -145,19 +150,27 @@
   cursor: pointer;
 }
 .nextTurnContainer {
-  /* position: fixed; */
-  /* bottom: 2%; */
-  /* left: 30%; */
   user-select: none;
-  background-color: green;
+  background: radial-gradient(
+    circle at -1% 57.5%,
+    rgb(19, 170, 82) 0%,
+    rgb(0, 102, 43) 90%
+  );
+  /* background-color: green; */
   outline: 5px ridge rgba(0, 0, 0, 0.9);
   border-radius: 2rem;
   width: 45px;
   height: 45px;
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center; */
+  cursor: pointer;
+}
+.endTurnContainer {
+  user-select: none;
+  background: linear-gradient(to right, rgb(5, 117, 230), rgb(2, 27, 121));
+  /* background-color: blue; */
+  outline: 5px ridge rgba(0, 0, 0, 0.9);
+  border-radius: 2rem;
+  width: 45px;
+  height: 45px;
   cursor: pointer;
 }
 .buttonText {

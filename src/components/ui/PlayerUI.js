@@ -23,6 +23,7 @@ export default function PlayerUI({ name }) {
   );
   const reduxMaxPlayPoints = useSelector((state) => state.card.playPoints.max);
   const reduxShowDice = useSelector((state) => state.card.showDice);
+  const reduxLeaderActive = useSelector((state) => state.card.leaderActive);
 
   useEffect(() => {
     dispatch(setHealth(playerHealth));
@@ -141,7 +142,7 @@ export default function PlayerUI({ name }) {
           </motion.div>
         )}
       </div>
-      <Leader name={name} />
+      <Leader name={name} active={reduxLeaderActive} />
       <div style={{ opacity: 0.75 }}>
         <img height={70} width={70} src={getClassFromLeader(name)} alt={name} />
       </div>

@@ -54,6 +54,7 @@ import {
   setArrow,
   setEnemyArrow,
   setEnemyDice,
+  setEnemyLeaderActive,
 } from "../../redux/CardSlice";
 import { cardImage } from "../../decks/getCards";
 import { motion } from "framer-motion";
@@ -190,6 +191,8 @@ export default function Field({
         dispatch(setEnemyViewingEvoDeckOpponent(data.data));
       else if (data.type === "arrow") dispatch(setEnemyArrow(data.data));
       else if (data.type === "dice") dispatch(setEnemyDice(data.data));
+      else if (data.type === "leaderActive")
+        dispatch(setEnemyLeaderActive(data.data));
     });
   }, [socket]);
 
