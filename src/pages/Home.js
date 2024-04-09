@@ -571,7 +571,7 @@ export default function Home() {
           </FormControl>
           <CardMUI
             sx={{
-              backgroundColor: "#131219",
+              backgroundColor: "rgba(0, 0, 0, 1)",
               minHeight: "250px",
               padding: "3%",
               height: "400px",
