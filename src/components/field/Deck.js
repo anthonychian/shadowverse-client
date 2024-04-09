@@ -73,6 +73,7 @@ export default function Deck({ ready, setHovering }) {
       dispatch(setViewingTopCards(false));
     } else {
       dispatch(setViewingDeck(false));
+      dispatch(shuffleDeck());
     }
   };
 
