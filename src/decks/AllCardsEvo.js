@@ -1,4 +1,34 @@
 export const allCardsEvo = [
+  "Deepwood Anomaly Evolved",
+  "King Elephant Evolved",
+  "Sukuna, Brave and Small Evolved",
+  "Fita the Gentle Elf Evolved",
+  "Mars, Silent Flame General Evolved",
+  "Barbarossa Evolved",
+  "Shrouded Assassin Evolved",
+  "Tristan of the Round Table Evolved",
+  "Wordwielder Ginger Evolved",
+  "Europa Evolved",
+  "Magic Illusionist Evolved",
+  "Dazzling Healer Evolved",
+  "Python Evolved",
+  "Lævateinn Dragon, Defense Form Evolved",
+  "Lævateinn Dragon, Blast Form Evolved",
+  "Star Phoenix Evolved",
+  "Cetus Evolved",
+  "Hippocampus Evolved",
+  "Howling Demon Evolved",
+  "Stheno Evolved",
+  "Fenrir Evolved",
+  "Frogbat Evolved",
+  "Dark Jeanne Evolved",
+  "Zoe, Princess of Goldenia Evolved",
+  "Star Priestess Evolved",
+  "Israfil Evolved",
+  "Grimnir, War Cyclone Evolved",
+  "Goblin Princess Evolved",
+  "Owlcat Evolved",
+
   "Cosmos Fang Evolved",
   "Slade Blossoming Wolf Evolved",
   "Gerbera Bear Evolved",
@@ -243,6 +273,10 @@ export const set1Evo = [
 ];
 
 export const forestEvo = [
+  "Deepwood Anomaly Evolved",
+  "King Elephant Evolved",
+  "Sukuna, Brave and Small Evolved",
+  "Fita the Gentle Elf Evolved",
   "Cosmos Fang Evolved",
   "Slade Blossoming Wolf Evolved",
   "Gerbera Bear Evolved",
@@ -262,6 +296,10 @@ export const forestEvo = [
 ];
 
 export const swordEvo = [
+  "Mars, Silent Flame General Evolved",
+  "Barbarossa Evolved",
+  "Shrouded Assassin Evolved",
+  "Tristan of the Round Table Evolved",
   "Valiant Fencer Evolved",
   "Amerro, Spear Knight Evolved",
   "Mach Knight Evolved",
@@ -281,6 +319,10 @@ export const swordEvo = [
 ];
 
 export const runeEvo = [
+  "Wordwielder Ginger Evolved",
+  "Europa Evolved",
+  "Magic Illusionist Evolved",
+  "Dazzling Healer Evolved",
   "Mystic King Evolved",
   "Milady, Mystic Queen Evolved",
   "Magical Knight Evolved",
@@ -300,6 +342,12 @@ export const runeEvo = [
 ];
 
 export const dragonEvo = [
+  "Python Evolved",
+  "Lævateinn Dragon, Defense Form Evolved",
+  "Lævateinn Dragon, Blast Form Evolved",
+  "Star Phoenix Evolved",
+  "Cetus Evolved",
+  "Hippocampus Evolved",
   "Lævateinn Dragon Evolved",
   "Lævateinn Dragon Attack Form Evolved",
   "Draconir, Knuckle Dragon Evolved",
@@ -320,6 +368,10 @@ export const dragonEvo = [
 ];
 
 export const abyssEvo = [
+  "Howling Demon Evolved",
+  "Stheno Evolved",
+  "Fenrir Evolved",
+  "Frogbat Evolved",
   "Masquerade Ghost Evolved",
   "Baccherus, Peppy Ghostie Evolved",
   "Trombone Devil Evolved",
@@ -339,6 +391,9 @@ export const abyssEvo = [
 ];
 
 export const havenEvo = [
+  "Dark Jeanne Evolved",
+  "Zoe, Princess of Goldenia Evolved",
+  "Star Priestess Evolved",
   "Diamond Master Evolved",
   "Wingy Chirpy Gemstone Evolved",
   "Ruby Falcon Evolved",
@@ -358,6 +413,10 @@ export const havenEvo = [
 ];
 
 export const neutralEvo = [
+  "Israfil Evolved",
+  "Grimnir, War Cyclone Evolved",
+  "Goblin Princess Evolved",
+  "Owlcat Evolved",
   "Alice, Wonderland Explorer Evolved",
   "Garuel, Seraphic Leo Evolved",
   "Humpty Dumpty Evolved",

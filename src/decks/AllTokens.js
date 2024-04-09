@@ -1,4 +1,6 @@
 export const allTokens = [
+  "Serpent TOKEN",
+  "Goblin King TOKEN",
   "Gargantuan Ghost TOKEN",
   "Crystalia Eve TOKEN",
   "Shield Guardian TOKEN",
