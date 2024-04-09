@@ -364,7 +364,7 @@ export const cardImage = (cardName) => {
     case "Bejeweled Shrine":
       return "../textures/BP03-106EN.png";
     case "Alice, Wonderland Explorer":
-      return "../textures/WI2023-001EN.png";
+      return "../textures/BP03-107EN.png";
     case "Angel of Chaos":
       return "../textures/BP03-109EN.png";
     case "Rapunzel":
@@ -1002,7 +1002,7 @@ export const cardImage = (cardName) => {
     case "Dread Dragon":
       return "../textures/BP01-097EN.png";
     case "Blazing Breath":
-      return "../textures/PR-124EN.png";
+      return "../textures/BP01-098EN.png";
     case "Dragon Wings":
       return "../textures/BP01-099EN.png";
     case "Dragon Emissary":
