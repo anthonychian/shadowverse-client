@@ -5,6 +5,7 @@ import ReplyIcon from "@mui/icons-material/Reply";
 
 import {
   allCards,
+  set4,
   set3,
   setUMA,
   set2,
@@ -19,6 +20,7 @@ import {
 } from "../decks/AllCards";
 import {
   allCardsEvo,
+  set4Evo,
   set3Evo,
   setUMAEvo,
   set2Evo,
@@ -161,6 +163,8 @@ export default function CreateDeck() {
 
   const getCardsFromName = (name) => {
     switch (name) {
+      case "set 4":
+        return set4;
       case "set 3":
         return set3;
       case "uma":
@@ -171,6 +175,8 @@ export default function CreateDeck() {
         return set1;
       case "set 3 evo":
         return set3Evo;
+      case "set 4 evo":
+        return set4Evo;
       case "uma evo":
         return setUMAEvo;
       case "set 2 evo":
@@ -600,6 +606,27 @@ export default function CreateDeck() {
             variant="contained"
           >
             All
+          </Button>
+          <Button
+            onClick={() => {
+              setButtonFilterSet("set 4");
+              setButtonFilterSetEvo("set 4 evo");
+            }}
+            style={{
+              fontFamily: "Noto Serif JP,serif",
+              textTransform: "none",
+              fontWeight: "bold",
+              backgroundColor:
+                buttonFilterSet === "set 4" ? "#131219" : "white",
+              border:
+                buttonFilterSet === "set 4"
+                  ? "3px solid gold"
+                  : "3px solid white",
+              color: buttonFilterSet === "set 4" ? "gold" : "#131219",
+            }}
+            variant="contained"
+          >
+            Cosmic Mythos
           </Button>
           <Button
             onClick={() => {

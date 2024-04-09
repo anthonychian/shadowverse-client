@@ -147,6 +147,38 @@ export const allCardsEvo = [
   "Healing Angel Evolved",
 ];
 
+export const set4Evo = [
+  "Deepwood Anomaly Evolved",
+  "King Elephant Evolved",
+  "Sukuna, Brave and Small Evolved",
+  "Fita the Gentle Elf Evolved",
+  "Mars, Silent Flame General Evolved",
+  "Barbarossa Evolved",
+  "Shrouded Assassin Evolved",
+  "Tristan of the Round Table Evolved",
+  "Wordwielder Ginger Evolved",
+  "Europa Evolved",
+  "Magic Illusionist Evolved",
+  "Dazzling Healer Evolved",
+  "Python Evolved",
+  "Lævateinn Dragon, Defense Form Evolved",
+  "Lævateinn Dragon, Blast Form Evolved",
+  "Star Phoenix Evolved",
+  "Cetus Evolved",
+  "Hippocampus Evolved",
+  "Howling Demon Evolved",
+  "Stheno Evolved",
+  "Fenrir Evolved",
+  "Frogbat Evolved",
+  "Dark Jeanne Evolved",
+  "Zoe, Princess of Goldenia Evolved",
+  "Star Priestess Evolved",
+  "Israfil Evolved",
+  "Grimnir, War Cyclone Evolved",
+  "Goblin Princess Evolved",
+  "Owlcat Evolved",
+];
+
 export const set3Evo = [
   "Cosmos Fang Evolved",
   "Slade Blossoming Wolf Evolved",
