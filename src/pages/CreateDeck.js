@@ -395,7 +395,7 @@ export default function CreateDeck() {
               </div>
               <div
                 style={{
-                  color: "white",
+                  color: deck.length < 10 ? "white" : "gold",
                   fontSize: "17px",
                   fontFamily: "Noto Serif JP,serif",
                   textAlign: "center",
