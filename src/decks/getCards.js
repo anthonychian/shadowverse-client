@@ -1434,7 +1434,7 @@ export const cardImage = (cardName) => {
 
     case "Serpent TOKEN":
       return "../textures/BP04-T01EN.png";
-    case "Golbin King TOKEN":
+    case "Goblin King TOKEN":
       return "../textures/BP04-T02EN.png";
     case "Gargantuan Ghost TOKEN":
       return "../textures/BP03-T01EN.png";
