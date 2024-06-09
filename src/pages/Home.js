@@ -39,8 +39,8 @@ export default function Home() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [selectedDeck, setSelectedDeck] = useState({});
-  const [deckMap, setDeckMap] = useState(new Map());
-  const [evoDeckMap, setEvoDeckMap] = useState(new Map());
+  const [deckMap] = useState(new Map());
+  const [evoDeckMap] = useState(new Map());
   const reduxDecks = useSelector((state) => state.deck.decks);
   const [showSelected, setShowSelected] = useState([]);
   const [contextMenu, setContextMenu] = useState(null);
@@ -52,6 +52,12 @@ export default function Home() {
   const [leaderNum, setLeaderNum] = useState(0);
   const [mainDeckSelected, setMainDeckSelected] = useState(true);
   const [evoDeckSelected, setEvoDeckSelected] = useState(false);
+
+  useEffect(() => {
+    socket.on("start_game", () => {
+      handleNavigateToGame();
+    });
+  }, [socket]);
 
   useEffect(() => {
     setWallpaper(randomWallpaper());
@@ -81,18 +87,21 @@ export default function Home() {
     if (Object.keys(selectedDeck).length !== 0) {
       if (socket.id) {
         const roomNumber = parseInt(Math.random() * 10000000);
+        setRoomNumber(roomNumber.toString());
         dispatch(setRoom(roomNumber.toString()));
-        socket.emit("join_room", roomNumber.toString());
-        handleNavigateToGame();
+        socket.emit("create_room", roomNumber.toString());
+        console.log(roomNumber);
+        // handleNavigateToGame();
       }
     }
   };
   const handleJoinRoom = () => {
     if (Object.keys(selectedDeck).length !== 0) {
       if (roomNumber !== "") {
-        dispatch(setRoom(roomNumber));
-        socket.emit("join_room", roomNumber);
-        handleNavigateToGame();
+        setRoomNumber(roomNumber.toString());
+        dispatch(setRoom(roomNumber.toString()));
+        socket.emit("join_room", roomNumber.toString());
+        // handleNavigateToGame();
       }
     }
   };
@@ -134,15 +143,6 @@ export default function Home() {
   };
 
   const handleNavigateToGame = () => {
-    dispatch(setDeck(selectedDeck.deck.toSorted(() => Math.random() - 0.5)));
-
-    dispatch(
-      setEvoDeck(
-        selectedDeck.evoDeck.map((card) => {
-          return { card: card, status: false };
-        })
-      )
-    );
     navigate("/game");
   };
 
@@ -180,14 +180,24 @@ export default function Home() {
     for (let i = 0; i < deck.evoDeck.length; i++) {
       handleEvoCardSelection(deck.evoDeck[i]);
     }
-
-    setSelectedDeck(deck);
+    const newDeck = deck;
+    setSelectedDeck(newDeck);
     let res = [];
     for (let i = 0; i < reduxDecks.length; i++) {
       if (i === idx) res.push(true);
       else res.push(false);
     }
     setShowSelected(res);
+
+    dispatch(setDeck(newDeck.deck.toSorted(() => Math.random() - 0.5)));
+
+    dispatch(
+      setEvoDeck(
+        newDeck.evoDeck.map((card) => {
+          return { card: card, status: false };
+        })
+      )
+    );
   };
 
   const randomWallpaper = () => {
@@ -491,6 +501,23 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {roomNumber !== "" && (
+        <div
+          style={{
+            position: "absolute",
+            top: "0%",
+            left: "50%",
+            height: "40px",
+            // width: "40px",
+            color: "white",
+            fontSize: "50px",
+            fontFamily: "Noto Serif JP, serif",
+            borderRadius: "7px",
+          }}
+        >
+          Joining Room: 1/2 players...
+        </div>
+      )}
 
       <div className="LeaderContainerHome">
         <img
