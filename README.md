@@ -18,44 +18,44 @@ An online multiplayer card game simulator for Shadowverse Evolve. Features deck 
 
 ## Home Page
 
-![](https://github.com/anthonychian/shadowverse-client/blob/main/git_images/shadowverse0.png)
+![](https://github.com/anthonychian/shadowverse-client/blob/main/public/git_images/shadowverse0.png)
 
 ## Deck Creation
 
-![](https://github.com/anthonychian/shadowverse-client/blob/main/git_images/shadowverse2.png)
+![](https://github.com/anthonychian/shadowverse-client/blob/main/public/git_images/shadowverse2.png)
 
 ## Multiplayer
 
-![](https://github.com/anthonychian/shadowverse-client/blob/main/git_images/shadowverse1.png)
+![](https://github.com/anthonychian/shadowverse-client/blob/main/public/git_images/shadowverse1.png)
 
 # Quick Guide
 
 ## Deck Select
 
-![](https://github.com/anthonychian/shadowverse-client/blob/main/git_images/deck_select1.gif)
-![](https://github.com/anthonychian/shadowverse-client/blob/main/git_images/deck_select2.gif)
+![](https://github.com/anthonychian/shadowverse-client/blob/main/public/git_images/deck_select1.gif)
+![](https://github.com/anthonychian/shadowverse-client/blob/main/public/git_images/deck_select2.gif)
 
 ## Deck Creation
 
-![](https://github.com/anthonychian/shadowverse-client/blob/main/git_images/deck_creation1.gif)
-![](https://github.com/anthonychian/shadowverse-client/blob/main/git_images/deck_creation2.gif)
+![](https://github.com/anthonychian/shadowverse-client/blob/main/public/git_images/deck_creation1.gif)
+![](https://github.com/anthonychian/shadowverse-client/blob/main/public/git_images/deck_creation2.gif)
 
 ## Deck Options
 
-![](https://github.com/anthonychian/shadowverse-client/blob/main/git_images/deck_options.gif)
+![](https://github.com/anthonychian/shadowverse-client/blob/main/public/git_images/deck_options.gif)
 
 ## Hand Options
 
-![](https://github.com/anthonychian/shadowverse-client/blob/main/git_images/hand_options.gif)
+![](https://github.com/anthonychian/shadowverse-client/blob/main/public/git_images/hand_options.gif)
 
 ## Field Options
 
-![](https://github.com/anthonychian/shadowverse-client/blob/main/git_images/field_options.gif)
+![](https://github.com/anthonychian/shadowverse-client/blob/main/public/git_images/field_options.gif)
 
 ## Evolve
 
-![](https://github.com/anthonychian/shadowverse-client/blob/main/git_images/evolve.gif)
+![](https://github.com/anthonychian/shadowverse-client/blob/main/public/git_images/evolve.gif)
 
 ## Attack
 
-![](https://github.com/anthonychian/shadowverse-client/blob/main/git_images/attack.gif)
+![](https://github.com/anthonychian/shadowverse-client/blob/main/public/git_images/attack.gif)
