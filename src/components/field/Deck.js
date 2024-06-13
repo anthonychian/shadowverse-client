@@ -293,6 +293,9 @@ export default function Deck({ ready, setHovering }) {
         {!reveal && (
           <MenuItem onClick={() => handleAddFromDeckToHand()}>Hand</MenuItem>
         )}
+        {!reveal && (
+          <MenuItem onClick={() => handleToBanish()}>Banish</MenuItem>
+        )}
         {reveal && (
           <MenuItem onClick={() => handleToHandFromRevealed()}>Hand</MenuItem>
         )}

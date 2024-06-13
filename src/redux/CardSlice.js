@@ -947,6 +947,24 @@ export const CardSlice = createSlice({
         room: state.room,
       });
     },
+    addToHandFromBanish: (state, action) => {
+      const card = action.payload;
+      const cardIndex = state.banish.indexOf(card);
+      state.banish = state.banish.filter((_, i) => i !== cardIndex);
+      console.log(`Removed ${card} from banish`);
+      state.hand = [...state.hand, card];
+      console.log(`Added ${card} to hand`);
+      socket.emit("send msg", {
+        type: "banish",
+        data: state.banish,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "hand",
+        data: state.hand,
+        room: state.room,
+      });
+    },
     placeToCemeteryFromField: (state, action) => {
       const card = action.payload.card;
       const cardIndex = action.payload.index;
@@ -1009,6 +1027,30 @@ export const CardSlice = createSlice({
       socket.emit("send msg", {
         type: "cemetery",
         data: state.cemetery,
+        room: state.room,
+      });
+    },
+    placeToFieldFromBanish: (state, action) => {
+      const card = action.payload.card;
+      const cardIndex = state.banish.indexOf(card);
+      const newIndex = action.payload.index;
+      state.banish = state.banish.filter((_, i) => i !== cardIndex);
+      console.log(`Removed ${card} from banish`);
+      const newField = [
+        ...state.field.slice(0, newIndex),
+        card,
+        ...state.field.slice(newIndex + 1),
+      ];
+      state.field = newField;
+      console.log(`Added ${card} to field`);
+      socket.emit("send msg", {
+        type: "field",
+        data: state.field,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "banish",
+        data: state.banish,
         room: state.room,
       });
     },
@@ -1295,9 +1337,11 @@ export const {
   drawFourFromDeck,
   placeToFieldFromHand,
   placeToFieldFromCemetery,
+  placeToFieldFromBanish,
   addToHandFromDeck,
   addToHandFromField,
   addToHandFromCemetery,
+  addToHandFromBanish,
   placeToTopOfDeckFromHand,
   placeToBotOfDeckFromHand,
   placeToTopOfDeckFromField,

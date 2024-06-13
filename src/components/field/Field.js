@@ -9,6 +9,7 @@ import {
   receiveFromOpponentField,
   placeToCemeteryFromField,
   placeToFieldFromCemetery,
+  placeToFieldFromBanish,
   placeTokenOnField,
   placeToBanishFromField,
   removeTokenOnField,
@@ -133,6 +134,7 @@ export default function Field({
   const [name, setName] = useState("");
   const [readyToMoveOnField, setReadyToMoveOnField] = useState(false);
   const [readyFromCemetery, setReadyFromCemetery] = useState(false);
+  const [readyFromBanish, setReadyFromBanish] = useState(false);
   const [readyToEvo, setReadyToEvo] = useState(false);
   const [readyToFeed, setReadyToFeed] = useState(false);
   const [tokenReady, setTokenReady] = useState(false);
@@ -327,6 +329,15 @@ export default function Field({
           })
         );
       }
+      if (readyFromBanish) {
+        setReadyFromBanish(false);
+        dispatch(
+          placeToFieldFromBanish({
+            card: name,
+            index: indexClicked,
+          })
+        );
+      }
     } else if (
       (readyToFeed || readyToEvo) &&
       reduxField[indexClicked] !== 0 &&
@@ -368,10 +379,15 @@ export default function Field({
       setReadyToEvo(false);
       setReadyToFeed(false);
       setReadyFromCemetery(false);
+      setReadyFromBanish(false);
       setReadyToPlaceOnFieldFromHand(false);
       setReadyToMoveOnField(false);
       setTokenReady(false);
     }
+    setReady(false);
+  };
+
+  const cancelClick = () => {
     setReady(false);
   };
 
@@ -1036,6 +1052,9 @@ export default function Field({
                   onClick={() => {
                     handleClick(reduxCurrentCard, idx);
                   }}
+                  onContextMenu={() => {
+                    cancelClick();
+                  }}
                   key={`player1-${idx}`}
                   style={{
                     height: "160px",
@@ -1173,6 +1192,7 @@ export default function Field({
         >
           <Cemetery
             setReadyFromCemetery={setReadyFromCemetery}
+            setReadyFromBanish={setReadyFromBanish}
             setReady={setReady}
             setHovering={setHovering}
             ready={ready}

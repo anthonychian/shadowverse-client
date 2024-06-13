@@ -16,6 +16,7 @@ import CardMUI from "@mui/material/Card";
 import Card from "../hand/Card";
 import {
   addToHandFromCemetery,
+  addToHandFromBanish,
   setCurrentCard,
   setViewingCemetery,
 } from "../../redux/CardSlice";
@@ -26,6 +27,7 @@ const img = require("../../assets/pin_bellringer_angel.png");
 export default function Cemetery({
   setHovering,
   setReadyFromCemetery,
+  setReadyFromBanish,
   setReady,
   ready,
 }) {
@@ -80,6 +82,29 @@ export default function Cemetery({
     handleModalClose();
     handleClose();
     dispatch(addToHandFromCemetery(name));
+    socket.emit("send msg", {
+      type: "showCard",
+      data: true,
+      room: reduxRoom,
+    });
+    socket.emit("send msg", {
+      type: "cardRevealed",
+      data: name,
+      room: reduxRoom,
+    });
+  };
+
+  const handleCardToFieldFromBanish = () => {
+    handleModalClose();
+    handleClose();
+    setReady(true);
+    setReadyFromBanish(true);
+  };
+
+  const handleCardToHandFromBanish = () => {
+    handleModalClose();
+    handleClose();
+    dispatch(addToHandFromBanish(name));
     socket.emit("send msg", {
       type: "showCard",
       data: true,
@@ -204,7 +229,14 @@ export default function Cemetery({
               ))}
             {banishSelected &&
               reduxBanish.map((card, idx) => (
-                <div key={`card-${idx}`} style={{ width: "115px" }}>
+                //<div key={`card-${idx}`} style={{ width: "115px" }}>
+                <div
+                  key={`card-${idx}`}
+                  style={{ width: "115px" }}
+                  onContextMenu={(e) => {
+                    handleContextMenu(e, card);
+                  }}
+                >
                   <Card
                     evolvedUsed={true}
                     ready={ready}
@@ -217,7 +249,7 @@ export default function Cemetery({
         </Box>
       </Modal>
 
-      {reduxCemetery.length > 0 && (
+      {(reduxCemetery.length > 0 || reduxBanish.length > 0) && (
         <Menu
           open={contextMenu !== null}
           onClose={handleClose}
@@ -236,8 +268,18 @@ export default function Cemetery({
             horizontal: "left",
           }}
         >
-          <MenuItem onClick={handleCardToHandFromCemetery}>Hand</MenuItem>
-          <MenuItem onClick={handleCardToFieldFromCemetery}>Field</MenuItem>
+          {cemeterySelected && (
+            <MenuItem onClick={handleCardToHandFromCemetery}>Hand</MenuItem>
+          )}
+          {cemeterySelected && (
+            <MenuItem onClick={handleCardToFieldFromCemetery}>Field</MenuItem>
+          )}
+          {banishSelected && (
+            <MenuItem onClick={handleCardToHandFromBanish}>Hand</MenuItem>
+          )}
+          {banishSelected && (
+            <MenuItem onClick={handleCardToFieldFromBanish}>Field</MenuItem>
+          )}
         </Menu>
       )}
     </>
