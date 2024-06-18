@@ -1,4 +1,38 @@
 export const allCardsEvo = [
+  "Izudia, Omen of Unkilling Evolved",
+  "Apostle of Unkilling Evolved",
+  "Noah, Vengeful Puppeteer Evolved",
+  "Flower Doll Evolved",
+
+  "Octrice, Omen of Usurpation Evolved",
+  "Apostle of Usurpation Evolved",
+  "Geno, Machine Artisan Evolved",
+  "Captain Meteo Evolved",
+
+  "Raio, Omen of Truth Evolved",
+  "Apostle of Truth Evolved",
+  "Iron Staff Mechanic Evolved",
+
+  "Galmieux, Omen of Disdain Evolved",
+  "Apostle of Disdain Evolved",
+  "Cursed Stone Evolved",
+  "Airship Whale Evolved",
+
+  "Rulenye, Omen of Silence Evolved",
+  "Apostle of Silence Evolved",
+  "Masked Puppet Evolved",
+  "Servant of Lust Evolved",
+
+  "Marwynn, Omen of Repose Evolved",
+  "Apostle of Repose Evolved",
+  "Unidentified Subject Evolved",
+  "Demon's Epitaph Evolved",
+
+  "Mjerrabaine, Omen of One Evolved",
+  "Apostle of Craving Evolved",
+  "Rosa, Mech Wing Maiden Evolved",
+  "Cat Cannoneer Evolved",
+
   "Deepwood Anomaly Evolved",
   "King Elephant Evolved",
   "Sukuna, Brave and Small Evolved",
@@ -145,6 +179,42 @@ export const allCardsEvo = [
   "Goblin Evolved",
   "Goliath Evolved",
   "Healing Angel Evolved",
+];
+
+export const set5Evo = [
+  "Izudia, Omen of Unkilling Evolved",
+  "Apostle of Unkilling Evolved",
+  "Noah, Vengeful Puppeteer Evolved",
+  "Flower Doll Evolved",
+
+  "Octrice, Omen of Usurpation Evolved",
+  "Apostle of Usurpation Evolved",
+  "Geno, Machine Artisan Evolved",
+  "Captain Meteo Evolved",
+
+  "Raio, Omen of Truth Evolved",
+  "Apostle of Truth Evolved",
+  "Iron Staff Mechanic Evolved",
+
+  "Galmieux, Omen of Disdain Evolved",
+  "Apostle of Disdain Evolved",
+  "Cursed Stone Evolved",
+  "Airship Whale Evolved",
+
+  "Rulenye, Omen of Silence Evolved",
+  "Apostle of Silence Evolved",
+  "Masked Puppet Evolved",
+  "Servant of Lust Evolved",
+
+  "Marwynn, Omen of Repose Evolved",
+  "Apostle of Repose Evolved",
+  "Unidentified Subject Evolved",
+  "Demon's Epitaph Evolved",
+
+  "Mjerrabaine, Omen of One Evolved",
+  "Apostle of Craving Evolved",
+  "Rosa, Mech Wing Maiden Evolved",
+  "Cat Cannoneer Evolved",
 ];
 
 export const set4Evo = [
@@ -305,6 +375,10 @@ export const set1Evo = [
 ];
 
 export const forestEvo = [
+  "Izudia, Omen of Unkilling Evolved",
+  "Apostle of Unkilling Evolved",
+  "Noah, Vengeful Puppeteer Evolved",
+  "Flower Doll Evolved",
   "Deepwood Anomaly Evolved",
   "King Elephant Evolved",
   "Sukuna, Brave and Small Evolved",
@@ -328,6 +402,10 @@ export const forestEvo = [
 ];
 
 export const swordEvo = [
+  "Octrice, Omen of Usurpation Evolved",
+  "Apostle of Usurpation Evolved",
+  "Geno, Machine Artisan Evolved",
+  "Captain Meteo Evolved",
   "Mars, Silent Flame General Evolved",
   "Barbarossa Evolved",
   "Shrouded Assassin Evolved",
@@ -351,6 +429,9 @@ export const swordEvo = [
 ];
 
 export const runeEvo = [
+  "Raio, Omen of Truth Evolved",
+  "Apostle of Truth Evolved",
+  "Iron Staff Mechanic Evolved",
   "Wordwielder Ginger Evolved",
   "Europa Evolved",
   "Magic Illusionist Evolved",
@@ -374,6 +455,10 @@ export const runeEvo = [
 ];
 
 export const dragonEvo = [
+  "Galmieux, Omen of Disdain Evolved",
+  "Apostle of Disdain Evolved",
+  "Cursed Stone Evolved",
+  "Airship Whale Evolved",
   "Python Evolved",
   "Lævateinn Dragon, Defense Form Evolved",
   "Lævateinn Dragon, Blast Form Evolved",
@@ -400,6 +485,10 @@ export const dragonEvo = [
 ];
 
 export const abyssEvo = [
+  "Rulenye, Omen of Silence Evolved",
+  "Apostle of Silence Evolved",
+  "Masked Puppet Evolved",
+  "Servant of Lust Evolved",
   "Howling Demon Evolved",
   "Stheno Evolved",
   "Fenrir Evolved",
@@ -423,6 +512,10 @@ export const abyssEvo = [
 ];
 
 export const havenEvo = [
+  "Marwynn, Omen of Repose Evolved",
+  "Apostle of Repose Evolved",
+  "Unidentified Subject Evolved",
+  "Demon's Epitaph Evolved",
   "Dark Jeanne Evolved",
   "Zoe, Princess of Goldenia Evolved",
   "Star Priestess Evolved",
@@ -445,6 +538,10 @@ export const havenEvo = [
 ];
 
 export const neutralEvo = [
+  "Mjerrabaine, Omen of One Evolved",
+  "Apostle of Craving Evolved",
+  "Rosa, Mech Wing Maiden Evolved",
+  "Cat Cannoneer Evolved",
   "Israfil Evolved",
   "Grimnir, War Cyclone Evolved",
   "Goblin Princess Evolved",

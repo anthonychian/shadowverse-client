@@ -1,5 +1,190 @@
 export const cardImage = (cardName) => {
   switch (cardName) {
+    case "Izudia, Omen of Unkilling":
+      return "../textures/BP05-001EN.png";
+    case "Spinaria, Keeper of Enigmas":
+      return "../textures/BP05-003EN.png";
+    case "Apostle of Unkilling":
+      return "../textures/BP05-004EN.png";
+    case "Morton the Manipulator":
+      return "../textures/BP05-006EN.png";
+    case "Fairy Torrent":
+      return "../textures/BP05-007EN.png";
+    case "Disciple of Unkilling":
+      return "../textures/BP05-008EN.png";
+    case "Noah, Vengeful Puppeteer":
+      return "../textures/BP05-009EN.png";
+    case "Mark of the Unkilling":
+      return "../textures/BP05-011EN.png";
+    case "Servant of Unkilling":
+      return "../textures/BP05-012EN.png";
+    case "Mechanical Bowman":
+      return "../textures/BP05-013EN.png";
+    case "Flower Doll":
+      return "../textures/BP05-014EN.png";
+    case "Automaton Soldier":
+      return "../textures/BP05-016EN.png";
+    case "Mark of the Six":
+      return "../textures/BP05-017EN.png";
+
+    case "Octrice, Omen of Usurpation":
+      return "../textures/BP05-018EN.png";
+    case "Magna Legacy":
+      return "../textures/BP05-020EN.png";
+    case "Apostle of Usurpation":
+      return "../textures/BP05-021EN.png";
+    case "Empyreal Swordsman":
+      return "../textures/BP05-023EN.png";
+    case "Confront Adversity":
+      return "../textures/BP05-024EN.png";
+    case "Disciple of Usurpation":
+      return "../textures/BP05-025EN.png";
+    case "Fervent Maachine Soldier":
+      return "../textures/BP05-026EN.png";
+    case "Geno, Machine Artisan":
+      return "../textures/BP05-027EN.png";
+    case "Servant of Usurpation":
+      return "../textures/BP05-029EN.png";
+    case "Captain Meteo":
+      return "../textures/BP05-030EN.png";
+    case "Gravikinetic Warrior":
+      return "../textures/BP05-032EN.png";
+    case "Usurping Spineblade":
+      return "../textures/BP05-033EN.png";
+    case "Avaritia":
+      return "../textures/BP05-034EN.png";
+
+    case "Raio, Omen of Truth":
+      return "../textures/BP05-035EN.png";
+    case "Lishenna, Omen of Destruction":
+      return "../textures/BP05-037EN.png";
+    case "Apostle of Truth":
+      return "../textures/BP05-038EN.png";
+    case "Safira, Synthetic Beast":
+      return "../textures/BP05-040EN.png";
+    case "Destructive Refrain":
+      return "../textures/BP05-041EN.png";
+    case "Iron Staff Mechanic":
+      return "../textures/BP05-042EN.png";
+    case "Truth's Adjudication":
+      return "../textures/BP05-044EN.png";
+    case "Monochromatic Destruction":
+      return "../textures/BP05-045EN.png";
+    case "Disciple of Truth":
+      return "../textures/BP05-046EN.png";
+    case "Disciple of Destruction":
+      return "../textures/BP05-047EN.png";
+    case "Servant of Destruction":
+      return "../textures/BP05-048EN.png";
+    case "Honest Cohort":
+      return "../textures/BP05-050EN.png";
+    case "Metaproduction":
+      return "../textures/BP05-051EN.png";
+
+    case "Galmieux, Omen of Disdain":
+      return "../textures/BP05-052EN.png";
+    case "Electromagical Rhino":
+      return "../textures/BP05-054EN.png";
+    case "Apostle of Disdain":
+      return "../textures/BP05-055EN.png";
+    case "God Bullet Golem":
+      return "../textures/BP05-057EN.png";
+    case "Disdain Rending":
+      return "../textures/BP05-058EN.png";
+    case "Disciple of Disdain":
+      return "../textures/BP05-059EN.png";
+    case "Cursed Stone":
+      return "../textures/BP05-060EN.png";
+    case "Amethyst Giant":
+      return "../textures/BP05-062EN.png";
+    case "Servant of Disdain":
+      return "../textures/BP05-063EN.png";
+    case "Silver Automaton":
+      return "../textures/BP05-064EN.png";
+    case "Airship Whale":
+      return "../textures/BP05-065EN.png";
+    case "Colossal Construct":
+      return "../textures/BP05-067EN.png";
+    case "Total Domination":
+      return "../textures/BP05-068EN.png";
+
+    case "Valnareik, Omen of Lust":
+      return "../textures/BP05-069EN.png";
+    case "Rulenye, Omen of Silence":
+      return "../textures/BP05-070EN.png";
+    case "Apostle of Lust":
+      return "../textures/BP05-072EN.png";
+    case "Apostle of Silence":
+      return "../textures/BP05-073EN.png";
+    case "Disciple of Lust":
+      return "../textures/BP05-075EN.png";
+    case "Masked Puppet":
+      return "../textures/BP05-076EN.png";
+    case "Wings of Lust":
+      return "../textures/BP05-078EN.png";
+    case "Silent Purge":
+      return "../textures/BP05-079EN.png";
+    case "Servant of Lust":
+      return "../textures/BP05-080EN.png";
+    case "Servant of Silence":
+      return "../textures/BP05-082EN.png";
+    case "Hamelin":
+      return "../textures/BP05-083EN.png";
+    case "Embracing Wings":
+      return "../textures/BP05-084EN.png";
+    case "Thundering Roar":
+      return "../textures/BP05-085EN.png";
+
+    case "Marwynn, Omen of Repose":
+      return "../textures/BP05-086EN.png";
+    case "Deus Ex Machina":
+      return "../textures/BP05-088EN.png";
+    case "Apostle of Repose":
+      return "../textures/BP05-089EN.png";
+    case "Hakrabi":
+      return "../textures/BP05-091EN.png";
+    case "Ancient Protector":
+      return "../textures/BP05-092EN.png";
+    case "Disciple of Repose":
+      return "../textures/BP05-093EN.png";
+    case "Unidentified Subject":
+      return "../textures/BP05-094EN.png";
+    case "Silver Cog Spinner":
+      return "../textures/BP05-096EN.png";
+    case "Servant of Repose":
+      return "../textures/BP05-097EN.png";
+    case "Demon's Epitaph":
+      return "../textures/BP05-098EN.png";
+    case "The Saviors":
+      return "../textures/BP05-100EN.png";
+    case "Realm of Repose":
+      return "../textures/BP05-101EN.png";
+    case "Ancient Amplifier":
+      return "../textures/BP05-102EN.png";
+
+    case "Mjerrabaine, Omen of One":
+      return "../textures/BP05-103EN.png";
+    case "Gilnelise, Omen of Craving":
+      return "../textures/BP05-105EN.png";
+    case "Apostle of Craving":
+      return "../textures/BP05-106EN.png";
+    case "Lyrial, Archer Throne":
+      return "../textures/BP05-108EN.png";
+    case "Feena, Dynamite Daredevil":
+      return "../textures/BP05-109EN.png";
+    case "Rosa, Mech Wing Maiden":
+      return "../textures/BP05-110EN.png";
+    case "Enlightenment":
+      return "../textures/BP05-112EN.png";
+    case "Craving's Splendor":
+      return "../textures/BP05-113EN.png";
+    case "Cat Cannoneer":
+      return "../textures/BP05-114EN.png";
+    case "Steel Demolitionist":
+      return "../textures/BP05-116EN.png";
+    case "Gliesaray":
+      return "../textures/BP05-117EN.png";
+
     case "Cassiopeia":
       return "../textures/BP04-001EN.png";
     case "C.C. Woodland Witch":
@@ -1140,6 +1325,62 @@ export const cardImage = (cardName) => {
     case "Angelic Barrage":
       return "../textures/PR-018EN.png";
 
+    case "Izudia, Omen of Unkilling Evolved":
+      return "../textures/BP05-002EN.png";
+    case "Apostle of Unkilling Evolved":
+      return "../textures/BP05-005EN.png";
+    case "Noah, Vengeful Puppeteer Evolved":
+      return "../textures/BP05-010EN.png";
+    case "Flower Doll Evolved":
+      return "../textures/BP05-015EN.png";
+    case "Octrice, Omen of Usurpation Evolved":
+      return "../textures/BP05-019EN.png";
+    case "Apostle of Usurpation Evolved":
+      return "../textures/BP05-022EN.png";
+    case "Geno, Machine Artisan Evolved":
+      return "../textures/BP05-028EN.png";
+    case "Captain Meteo Evolved":
+      return "../textures/BP05-031EN.png";
+    case "Raio, Omen of Truth Evolved":
+      return "../textures/BP05-036EN.png";
+    case "Apostle of Truth Evolved":
+      return "../textures/BP05-039EN.png";
+    case "Iron Staff Mechanic Evolved":
+      return "../textures/BP05-043EN.png";
+    case "Galmieux, Omen of Disdain Evolved":
+      return "../textures/BP05-053EN.png";
+    case "Apostle of Disdain Evolved":
+      return "../textures/BP05-056EN.png";
+    case "Cursed Stone Evolved":
+      return "../textures/BP05-061EN.png";
+    case "Airship Whale Evolved":
+      return "../textures/BP05-066EN.png";
+    case "Rulenye, Omen of Silence Evolved":
+      return "../textures/BP05-071EN.png";
+    case "Apostle of Silence Evolved":
+      return "../textures/BP05-074EN.png";
+
+    case "Masked Puppet Evolved":
+      return "../textures/BP05-077EN.png";
+    case "Servant of Lust Evolved":
+      return "../textures/BP05-081EN.png";
+    case "Marwynn, Omen of Repose Evolved":
+      return "../textures/BP05-087EN.png";
+    case "Apostle of Repose Evolved":
+      return "../textures/BP05-090EN.png";
+    case "Unidentified Subject Evolved":
+      return "../textures/BP05-095EN.png";
+    case "Demon's Epitaph Evolved":
+      return "../textures/BP05-099EN.png";
+    case "Mjerrabaine, Omen of One Evolved":
+      return "../textures/BP05-104EN.png";
+    case "Apostle of Craving Evolved":
+      return "../textures/BP05-107EN.png";
+    case "Rosa, Mech Wing Maiden Evolved":
+      return "../textures/BP05-111EN.png";
+    case "Cat Cannoneer Evolved":
+      return "../textures/BP05-115EN.png";
+
     case "Deepwood Anomaly Evolved":
       return "../textures/BP04-004EN.png";
     case "King Elephant Evolved":
@@ -1432,6 +1673,16 @@ export const cardImage = (cardName) => {
     case "Healing Angel Evolved":
       return "../textures/BP01-178EN.png";
 
+    case "Destruction in White TOKEN":
+      return "../textures/BP05-T01EN.png";
+    case "Destruction in Black TOKEN":
+      return "../textures/BP05-T02EN.png";
+    case "Puppet TOKEN":
+      return "../textures/BP05-T03EN.png";
+    case "Ancient Artifact TOKEN":
+      return "../textures/BP05-T04EN.png";
+    case "Mystic Artifact TOKEN":
+      return "../textures/BP05-T05EN.png";
     case "Serpent TOKEN":
       return "../textures/BP04-T01EN.png";
     case "Goblin King TOKEN":

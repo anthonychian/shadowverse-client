@@ -609,6 +609,27 @@ export default function CreateDeck() {
           </Button>
           <Button
             onClick={() => {
+              setButtonFilterSet("set 5");
+              setButtonFilterSetEvo("set 5 evo");
+            }}
+            style={{
+              fontFamily: "Noto Serif JP,serif",
+              textTransform: "none",
+              fontWeight: "bold",
+              backgroundColor:
+                buttonFilterSet === "set 5" ? "#131219" : "white",
+              border:
+                buttonFilterSet === "set 5"
+                  ? "3px solid gold"
+                  : "3px solid white",
+              color: buttonFilterSet === "set 5" ? "gold" : "#131219",
+            }}
+            variant="contained"
+          >
+            Omens Eternal
+          </Button>
+          <Button
+            onClick={() => {
               setButtonFilterSet("set 4");
               setButtonFilterSetEvo("set 4 evo");
             }}
