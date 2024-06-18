@@ -1,4 +1,9 @@
 export const allTokens = [
+  "Destruction in White TOKEN",
+  "Destruction in Black TOKEN",
+  "Puppet TOKEN",
+  "Ancient Artifact TOKEN",
+  "Mystic Artifact TOKEN",
   "Serpent TOKEN",
   "Goblin King TOKEN",
   "Gargantuan Ghost TOKEN",
