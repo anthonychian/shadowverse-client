@@ -719,9 +719,13 @@ export const CardSlice = createSlice({
           break;
         }
       }
-      let copy = [...state.field];
-      copy[index] = card;
-      state.field = copy;
+      const field = [
+        ...state.field.slice(0, index),
+        card,
+        ...state.field.slice(index + 1),
+      ];
+      state.field = field;
+
       console.log(`Added ${card} to field`);
     },
     transferToOpponentField: (state, action) => {

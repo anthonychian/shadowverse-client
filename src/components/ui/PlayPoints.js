@@ -6,7 +6,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { socket } from "../../sockets";
 import IconButton from "@mui/material/IconButton";
 import "../../css/PlayPoints.css";
-import { setLeaderActive } from "../../redux/CardSlice";
+import { setLeaderActive, drawFromDeck } from "../../redux/CardSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { setPlayPoints } from "../../redux/CardSlice";
 
@@ -22,6 +22,7 @@ export default function Scoreboard({ name }) {
   const nextTurn = () => {
     incrementBoth();
     dispatch(setLeaderActive(true));
+    dispatch(drawFromDeck());
     socket.emit("send msg", {
       type: "leaderActive",
       data: true,
