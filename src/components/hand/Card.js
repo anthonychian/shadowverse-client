@@ -65,7 +65,6 @@ export default function Card({
   };
 
   const handleAtkInput = (event) => {
-    // event.stopPropagation();
     setAtk(Number(event.target.value));
     dispatch(
       modifyAtk({
@@ -75,7 +74,6 @@ export default function Card({
     );
   };
   const handleDefInput = (event) => {
-    // event.stopPropagation();
     setDef(Number(event.target.value));
     dispatch(
       modifyDef({
@@ -86,10 +84,12 @@ export default function Card({
   };
 
   const handleCounterInput = (event) => {
-    setCounter(Number(event.target.value));
+    const num = event.target.value;
+    if (Number(num) === 0) setHoverInput(false);
+    setCounter(Number(num));
     dispatch(
       modifyCounter({
-        value: event.target.value,
+        value: num,
         index: idx,
       })
     );
@@ -112,10 +112,12 @@ export default function Card({
 
   const handleStartHoverInput = () => {
     setHoverInput(true);
+    console.log("true");
   };
 
   const handleEndHoverInput = () => {
     setHoverInput(false);
+    console.log("false");
   };
 
   const updateNumberOfCarrots = () => {

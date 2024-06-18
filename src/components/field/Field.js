@@ -913,6 +913,7 @@ export default function Field({
                   showDef={reduxEnemyCustomValues[cardPos(idx)].showDef}
                   engaged={reduxEnemyEngaged[cardPos(idx)]}
                   counterVal={reduxEnemyCounterField[cardPos(idx)]}
+                  opponentField={true}
                   onField={true}
                   key={`enemy-evo-${cardPos(idx)}`}
                   name={reduxEnemyEvoField[cardPos(idx)]}
