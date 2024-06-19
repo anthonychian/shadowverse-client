@@ -5,6 +5,7 @@ import ReplyIcon from "@mui/icons-material/Reply";
 
 import {
   allCards,
+  set5,
   set4,
   set3,
   setUMA,
@@ -20,6 +21,7 @@ import {
 } from "../decks/AllCards";
 import {
   allCardsEvo,
+  set5Evo,
   set4Evo,
   set3Evo,
   setUMAEvo,
@@ -163,6 +165,8 @@ export default function CreateDeck() {
 
   const getCardsFromName = (name) => {
     switch (name) {
+      case "set 5":
+        return set5;
       case "set 4":
         return set4;
       case "set 3":
@@ -173,10 +177,12 @@ export default function CreateDeck() {
         return set2;
       case "set 1":
         return set1;
-      case "set 3 evo":
-        return set3Evo;
+      case "set 5 evo":
+        return set5Evo;
       case "set 4 evo":
         return set4Evo;
+      case "set 3 evo":
+        return set3Evo;
       case "uma evo":
         return setUMAEvo;
       case "set 2 evo":
