@@ -5,6 +5,7 @@ import wallpaper1 from "../../src/assets/wallpapers/1.png";
 import wallpaper2 from "../../src/assets/wallpapers/2.png";
 import wallpaper3 from "../../src/assets/wallpapers/3.png";
 import wallpaper4 from "../../src/assets/wallpapers/4.png";
+import wallpaper5 from "../../src/assets/wallpapers/forte.png";
 import galmieux from "../../src/assets/wallpapers/Galmieux.png";
 import jeanne from "../../src/assets/wallpapers/Jeanne.png";
 import kuon from "../../src/assets/wallpapers/Kuon.png";
@@ -52,6 +53,8 @@ export default function Home() {
   const [leaderNum, setLeaderNum] = useState(0);
   const [mainDeckSelected, setMainDeckSelected] = useState(true);
   const [evoDeckSelected, setEvoDeckSelected] = useState(false);
+  const [hoverCard, setHoverCard] = useState("");
+  const [hover, setHover] = useState(false);
 
   useEffect(() => {
     socket.on("start_game", () => {
@@ -72,6 +75,18 @@ export default function Home() {
     setMainDeckSelected(true);
     setEvoDeckSelected(false);
   };
+
+  const handleStartHover = (key) => {
+    console.log("hovering");
+    setHover(true);
+    setHoverCard(key);
+  };
+  const handleEndHover = () => {
+    console.log("not hovering");
+    setHover(false);
+    setHoverCard("");
+  };
+
   const handleEvoDeckSelected = () => {
     setMainDeckSelected(false);
     setEvoDeckSelected(true);
@@ -241,7 +256,9 @@ export default function Home() {
     <div
       onContextMenu={(e) => e.nativeEvent.preventDefault()}
       style={{
-        minHeight: "100vh",
+        height: "100vh",
+        width: "100vw",
+        // minHeight: "100vh",
         background: "url(" + wallpaper + ") no-repeat center center fixed",
         backgroundSize: "cover",
         display: "flex",
@@ -564,7 +581,7 @@ export default function Home() {
             backgroundColor: "transparent",
             boxShadow: 24,
             p: 3,
-            width: "55%",
+            width: "40%",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
@@ -612,11 +629,31 @@ export default function Home() {
             }}
             variant="outlined"
           >
+            {/* Hover card image */}
+            {hover && (
+              <div
+                style={{
+                  width: "98vw",
+                  position: "absolute",
+                }}
+              >
+                <img
+                  width={"410px"}
+                  height={"600px"}
+                  src={cardImage(hoverCard)}
+                  alt={hoverCard}
+                />
+              </div>
+            )}
             {mainDeckSelected &&
               Array.from(deckMap.entries()).map((entry, idx) => {
                 const [key, value] = entry;
                 return (
-                  <div style={{ position: "relative" }}>
+                  <div
+                    onMouseEnter={() => handleStartHover(key)}
+                    onMouseLeave={() => handleEndHover()}
+                    style={{ position: "relative" }}
+                  >
                     <img
                       key={idx}
                       width={"110px"}
@@ -649,7 +686,11 @@ export default function Home() {
               Array.from(evoDeckMap.entries()).map((entry, idx) => {
                 const [key, value] = entry;
                 return (
-                  <div style={{ position: "relative" }}>
+                  <div
+                    onMouseEnter={() => handleStartHover(key)}
+                    onMouseLeave={() => handleEndHover()}
+                    style={{ position: "relative" }}
+                  >
                     <img
                       key={idx}
                       width={"110px"}

@@ -14,12 +14,6 @@ import imageItsurugi from "../../assets/leaders/Itsurugi.png";
 import imageMaru from "../../assets/leaders/Maru.png";
 import dragon from "../../assets/logo/dragon.png";
 
-import forte from "../../../src/assets/wallpapers/forte.png";
-import runecraft from "../../../src/assets/wallpapers/runecraft.png";
-import alice from "../../../src/assets/wallpapers/alice.png";
-import albert from "../../../src/assets/wallpapers/albert.png";
-import dark from "../../../src/assets/wallpapers/darkforest.png";
-
 import {
   Box,
   Modal,
