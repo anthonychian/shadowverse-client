@@ -5,7 +5,6 @@ import wallpaper1 from "../../src/assets/wallpapers/1.png";
 import wallpaper2 from "../../src/assets/wallpapers/2.png";
 import wallpaper3 from "../../src/assets/wallpapers/3.png";
 import wallpaper4 from "../../src/assets/wallpapers/4.png";
-import wallpaper5 from "../../src/assets/wallpapers/forte.png";
 import galmieux from "../../src/assets/wallpapers/Galmieux.png";
 import jeanne from "../../src/assets/wallpapers/Jeanne.png";
 import kuon from "../../src/assets/wallpapers/Kuon.png";
@@ -258,8 +257,7 @@ export default function Home() {
       style={{
         height: "100vh",
         width: "100vw",
-        // minHeight: "100vh",
-        background: "url(" + wallpaper + ") no-repeat center center fixed",
+        background: "url(" + wallpaper3 + ") center center fixed",
         backgroundSize: "cover",
         display: "flex",
         // justifyContent: "center",
