@@ -1347,8 +1347,10 @@ export const cardImage = (cardName) => {
       return "../textures/BP05-039EN.png";
     case "Iron Staff Mechanic Evolved":
       return "../textures/BP05-043EN.png";
+    case "Servant of Destruction Evolved":
+      return "../textures/BP05-049EN.png";
     case "Galmieux, Omen of Disdain Evolved":
-      return "../textures/BP05-053EN.png";
+      return "../textures/BP05-U04EN.png";
     case "Apostle of Disdain Evolved":
       return "../textures/BP05-056EN.png";
     case "Cursed Stone Evolved":

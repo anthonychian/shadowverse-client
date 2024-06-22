@@ -12,6 +12,7 @@ export const allCardsEvo = [
   "Raio, Omen of Truth Evolved",
   "Apostle of Truth Evolved",
   "Iron Staff Mechanic Evolved",
+  "Servant of Destruction Evolved",
 
   "Galmieux, Omen of Disdain Evolved",
   "Apostle of Disdain Evolved",
@@ -195,6 +196,7 @@ export const set5Evo = [
   "Raio, Omen of Truth Evolved",
   "Apostle of Truth Evolved",
   "Iron Staff Mechanic Evolved",
+  "Servant of Destruction Evolved",
 
   "Galmieux, Omen of Disdain Evolved",
   "Apostle of Disdain Evolved",
@@ -432,6 +434,7 @@ export const runeEvo = [
   "Raio, Omen of Truth Evolved",
   "Apostle of Truth Evolved",
   "Iron Staff Mechanic Evolved",
+  "Servant of Destruction Evolved",
   "Wordwielder Ginger Evolved",
   "Europa Evolved",
   "Magic Illusionist Evolved",
