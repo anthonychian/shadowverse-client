@@ -710,24 +710,6 @@ export const CardSlice = createSlice({
         room: state.room,
       });
     },
-    receiveFromOpponentField: (state, action) => {
-      const card = action.payload;
-      let index;
-      for (let i = 0; i < 5; i++) {
-        if (state.field[i] === 0) {
-          index = i;
-          break;
-        }
-      }
-      const field = [
-        ...state.field.slice(0, index),
-        card,
-        ...state.field.slice(index + 1),
-      ];
-      state.field = field;
-
-      console.log(`Added ${card} to field`);
-    },
     transferToOpponentField: (state, action) => {
       if (
         state.enemyField[0] === 0 ||
@@ -765,11 +747,13 @@ export const CardSlice = createSlice({
         socket.emit("send msg", {
           type: "field",
           data: state.field,
+          // data: state.field,
           room: state.room,
         });
         socket.emit("send msg", {
           type: "transfer",
-          data: card,
+          data: state.enemyField,
+          // data: card,
           room: state.room,
         });
       } else {
@@ -1206,6 +1190,9 @@ export const CardSlice = createSlice({
         room: state.room,
       });
     },
+    setField: (state, action) => {
+      state.field = action.payload;
+    },
     setEnemyField: (state, action) => {
       state.enemyField = action.payload;
     },
@@ -1361,7 +1348,6 @@ export const {
   removeTokenOnField,
   moveCardOnField,
   transferToOpponentField,
-  receiveFromOpponentField,
   reorderCardsInHand,
   mulligan,
   mulliganFour,
@@ -1372,6 +1358,7 @@ export const {
   feedCardOnField,
   backToEvolveDeck,
   restoreEvoCard,
+  setField,
   setEnemyField,
   setEnemyEvoField,
   setEnemyEngaged,

@@ -6,7 +6,6 @@ import {
   placeToBotOfDeckFromField,
   moveCardOnField,
   transferToOpponentField,
-  receiveFromOpponentField,
   placeToCemeteryFromField,
   placeToFieldFromCemetery,
   placeToFieldFromBanish,
@@ -56,6 +55,7 @@ import {
   setEnemyArrow,
   setEnemyDice,
   setEnemyLeaderActive,
+  setField,
 } from "../../redux/CardSlice";
 import { cardImage } from "../../decks/getCards";
 import { motion } from "framer-motion";
@@ -173,8 +173,7 @@ export default function Field({
       else if (data.type === "showHand") dispatch(setShowEnemyHand(data.data));
       else if (data.type === "showCard") dispatch(setShowEnemyCard(data.data));
       else if (data.type === "cardRevealed") dispatch(setEnemyCard(data.data));
-      else if (data.type === "transfer")
-        dispatch(receiveFromOpponentField(data.data));
+      else if (data.type === "transfer") dispatch(setField(data.data));
       else if (data.type === "counter") dispatch(setEnemyCounter(data.data));
       else if (data.type === "banish") dispatch(setEnemyBanish(data.data));
       else if (data.type === "viewingHand")

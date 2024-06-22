@@ -76,12 +76,10 @@ export default function Home() {
   };
 
   const handleStartHover = (key) => {
-    console.log("hovering");
     setHover(true);
     setHoverCard(key);
   };
   const handleEndHover = () => {
-    console.log("not hovering");
     setHover(false);
     setHoverCard("");
   };
@@ -594,6 +592,7 @@ export default function Home() {
               name="row-radio-buttons-group"
             >
               <FormControlLabel
+                key={"main deck"}
                 checked={mainDeckSelected}
                 onChange={handleMainDeckSelected}
                 sx={{ fontFamily: "Noto Serif JP, serif", color: "white" }}
@@ -602,6 +601,7 @@ export default function Home() {
                 label="Main Deck"
               />
               <FormControlLabel
+                key={"evo deck"}
                 checked={evoDeckSelected}
                 onChange={handleEvoDeckSelected}
                 sx={{ fontFamily: "Noto Serif JP, serif", color: "white" }}
@@ -648,6 +648,7 @@ export default function Home() {
                 const [key, value] = entry;
                 return (
                   <div
+                    key={idx}
                     onMouseEnter={() => handleStartHover(key)}
                     onMouseLeave={() => handleEndHover()}
                     style={{ position: "relative" }}
@@ -685,12 +686,13 @@ export default function Home() {
                 const [key, value] = entry;
                 return (
                   <div
+                    key={idx * 2}
                     onMouseEnter={() => handleStartHover(key)}
                     onMouseLeave={() => handleEndHover()}
                     style={{ position: "relative" }}
                   >
                     <img
-                      key={idx}
+                      key={idx * 2}
                       width={"110px"}
                       height={"150px"}
                       src={cardImage(key)}
