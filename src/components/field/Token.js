@@ -79,6 +79,11 @@ export default function Token({ ready, setReady, setTokenReady, setHovering }) {
         onClose={handleModalClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
+        sx={{
+          "& > .MuiBackdrop-root": {
+            backgroundColor: "transparent",
+          },
+        }}
       >
         <Box sx={style}>
           <CardMUI

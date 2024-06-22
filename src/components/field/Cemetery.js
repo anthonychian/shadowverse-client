@@ -154,6 +154,11 @@ export default function Cemetery({
         onClose={handleModalClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
+        sx={{
+          "& > .MuiBackdrop-root": {
+            backgroundColor: "transparent",
+          },
+        }}
       >
         <Box
           sx={{

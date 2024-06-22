@@ -107,6 +107,11 @@ export default function EvoDeck({
         onClose={handleModalClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
+        sx={{
+          "& > .MuiBackdrop-root": {
+            backgroundColor: "transparent",
+          },
+        }}
       >
         <Box sx={style}>
           <CardMUI
@@ -116,7 +121,7 @@ export default function EvoDeck({
               //   backgroundColor: "black",
               minHeight: "250px",
               padding: "3%",
-              width: "100%",
+              width: "90%",
               display: "flex",
               flexDirection: "row",
               flexWrap: "wrap",
