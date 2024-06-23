@@ -818,9 +818,26 @@ export const CardSlice = createSlice({
       state.deck = state.deck.filter((_, i) => i !== cardIndex);
       console.log(`Removed ${card} from deck`);
       state.cemetery = [card, ...state.cemetery];
-      console.log(`Added ${card} to cemtery`);
+      console.log(`Added ${card} to cemetery`);
       socket.emit("send msg", {
-        type: "cemtery",
+        type: "cemetery",
+        data: state.cemetery,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "deckSize",
+        data: state.deck.length,
+        room: state.room,
+      });
+    },
+    addToCemeteryFromTopOfDeck: (state) => {
+      const card = state.deck[0];
+      state.deck = state.deck.slice(1);
+      console.log(`Removed ${card} from deck`);
+      state.cemetery = [card, ...state.cemetery];
+      console.log(`Added ${card} to cemetery`);
+      socket.emit("send msg", {
+        type: "cemetery",
         data: state.cemetery,
         room: state.room,
       });
@@ -1344,6 +1361,7 @@ export const {
   addToTopOfDeckFromDeck,
   addToBotOfDeckFromDeck,
   addToCemeteryFromDeck,
+  addToCemeteryFromTopOfDeck,
   addToBanishFromDeck,
   removeTokenOnField,
   moveCardOnField,

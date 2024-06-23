@@ -10,6 +10,7 @@ import {
   addToTopOfDeckFromDeck,
   addToBotOfDeckFromDeck,
   addToCemeteryFromDeck,
+  addToCemeteryFromTopOfDeck,
   addToBanishFromDeck,
   setViewingDeck,
   setViewingTopCards,
@@ -125,38 +126,31 @@ export default function Deck({ ready, setHovering }) {
   };
 
   const handleViewDeck = () => {
-    handleClose();
     handlePopoverClose();
     handleModalOpen();
   };
   const handleRevealDeck = () => {
-    handleClose();
     setReveal(true);
     handlePopoverClose();
     handleModalRevealOpen();
   };
 
   const handleShuffle = () => {
-    handleClose();
-    handlePopoverClose();
+    // handlePopoverClose();
     dispatch(shuffleDeck());
   };
 
   const handleMulligan = () => {
-    handleClose();
-    handlePopoverClose();
+    // handlePopoverClose();
     dispatch(mulliganFour());
   };
 
   const handleDraw = () => {
-    handleClose();
-    handlePopoverClose();
     dispatch(drawFromDeck());
   };
 
   const handleDrawFour = () => {
-    handleClose();
-    handlePopoverClose();
+    // handlePopoverClose();
     dispatch(drawFourFromDeck());
   };
 
@@ -220,6 +214,10 @@ export default function Deck({ ready, setHovering }) {
     setPartialDeck([]);
   };
 
+  const handleMill = () => {
+    dispatch(addToCemeteryFromTopOfDeck());
+  };
+
   const handleToTopOfDeck = () => {
     handleCardClose();
     let deck = partialDeck.filter((_, i) => i !== index);
@@ -270,9 +268,9 @@ export default function Deck({ ready, setHovering }) {
 
       <Popover
         id="mouse-over-popover"
-        // sx={{
-        //   pointerEvents: "none",
-        // }}
+        sx={{
+          pointerEvents: "none",
+        }}
         open={popoverOpen}
         anchorEl={anchorEl}
         anchorOrigin={{
@@ -283,32 +281,17 @@ export default function Deck({ ready, setHovering }) {
           vertical: "top",
           horizontal: "left",
         }}
-        // onClose={handlePopoverClose}
         disableRestoreFocus
       >
         <Menu
-          // open={contextMenu !== null}
           open={popoverOpen}
           anchorEl={anchorEl}
           onClose={handlePopoverClose}
           onMouseLeave={() => handlePopoverClose()}
-          // anchorReference="anchorPosition"
-          // anchorPosition={
-          //   contextMenu !== null
-          //     ? { top: contextMenu.mouseY - 220, left: contextMenu.mouseX - 65 }
-          //     : undefined
-          // }
-          // anchorOrigin={{
-          //   vertical: "top",
-          //   horizontal: "left",
-          // }}
-          // transformOrigin={{
-          //   vertical: "top",
-          //   horizontal: "left",
-          // }}
         >
           <div onMouseLeave={() => handlePopoverClose()}>
             <MenuItem onClick={() => handleDraw()}>Draw</MenuItem>
+            <MenuItem onClick={() => handleMill()}>Mill</MenuItem>
             <MenuItem onClick={() => handleShuffle()}>Shuffle</MenuItem>
             <MenuItem onClick={() => handleViewDeck()}>View Deck</MenuItem>
             <MenuItem onClick={() => handleRevealDeck()}>Look At Top</MenuItem>
