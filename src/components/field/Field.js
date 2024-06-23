@@ -1197,7 +1197,7 @@ export default function Field({
             // backgroundColor: "rgba(0, 0, 0, 0.60)",
             alignItems: "center",
             justifyContent: "space-evenly",
-            cursor: `url(${img}) 55 55, auto`,
+            // cursor: `url(${img}) 55 55, auto`,
           }}
         >
           <Cemetery

@@ -14,7 +14,8 @@ import {
   setViewingDeck,
   setViewingTopCards,
 } from "../../redux/CardSlice";
-import { Menu, MenuItem, Modal, Box } from "@mui/material";
+import { Menu, MenuItem, Modal, Box, Popover } from "@mui/material";
+
 import CardMUI from "@mui/material/Card";
 import Card from "../hand/Card";
 import cardback from "../../assets/cardbacks/sleeve_5010011.png";
@@ -49,6 +50,17 @@ export default function Deck({ ready, setHovering }) {
 
   const reduxDeck = useSelector((state) => state.card.deck);
   const reduxRoom = useSelector((state) => state.card.room);
+
+  // popover
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const popoverOpen = Boolean(anchorEl);
+  const handlePopoverOpen = (event) => {
+    setAnchorEl(event.target);
+  };
+
+  const handlePopoverClose = () => {
+    setAnchorEl(null);
+  };
 
   const handleModalOpen = () => {
     if (reduxDeck.length > 0 && !ready) {
@@ -114,26 +126,37 @@ export default function Deck({ ready, setHovering }) {
 
   const handleViewDeck = () => {
     handleClose();
+    handlePopoverClose();
     handleModalOpen();
   };
   const handleRevealDeck = () => {
     handleClose();
     setReveal(true);
+    handlePopoverClose();
     handleModalRevealOpen();
   };
 
   const handleShuffle = () => {
     handleClose();
+    handlePopoverClose();
     dispatch(shuffleDeck());
   };
 
   const handleMulligan = () => {
     handleClose();
+    handlePopoverClose();
     dispatch(mulliganFour());
   };
 
   const handleDraw = () => {
     handleClose();
+    handlePopoverClose();
+    dispatch(drawFromDeck());
+  };
+
+  const handleDrawFour = () => {
+    handleClose();
+    handlePopoverClose();
     dispatch(drawFourFromDeck());
   };
 
@@ -230,9 +253,11 @@ export default function Deck({ ready, setHovering }) {
   return (
     <>
       <div
-        onContextMenu={(e) => {
-          if (!ready) handleContextMenu(e);
-        }}
+        onMouseEnter={(event) => handlePopoverOpen(event)}
+        // onMouseLeave={handlePopoverClose}
+        // onContextMenu={(e) => {
+        //   if (!ready) handleContextMenu(e);
+        // }}
         onClick={() => {
           if (!ready) dispatch(drawFromDeck());
         }}
@@ -243,32 +268,56 @@ export default function Deck({ ready, setHovering }) {
         <img height={"160px"} src={cardback} alt={"cardback"} />
       </div>
 
-      <Menu
-        open={contextMenu !== null}
-        onClose={handleClose}
-        anchorReference="anchorPosition"
-        anchorPosition={
-          contextMenu !== null
-            ? { top: contextMenu.mouseY - 220, left: contextMenu.mouseX - 65 }
-            : undefined
-        }
+      <Popover
+        id="mouse-over-popover"
+        // sx={{
+        //   pointerEvents: "none",
+        // }}
+        open={popoverOpen}
+        anchorEl={anchorEl}
         anchorOrigin={{
-          vertical: "top",
+          vertical: "bottom",
           horizontal: "left",
         }}
         transformOrigin={{
           vertical: "top",
           horizontal: "left",
         }}
+        // onClose={handlePopoverClose}
+        disableRestoreFocus
       >
-        <MenuItem onClick={() => handleShuffle()}>Shuffle</MenuItem>
-        <MenuItem onClick={() => handleViewDeck()}>View Deck</MenuItem>
-        <MenuItem onClick={() => handleRevealDeck()}>Look At Top</MenuItem>
-        <MenuItem onClick={() => handleDraw()}>Draw Four</MenuItem>
-        <MenuItem onClick={() => handleMulligan()}>Mulligan Four</MenuItem>
-        {/* <MenuItem onClick={(event) => handleReset(event)}>Reset</MenuItem> */}
-      </Menu>
-
+        <Menu
+          // open={contextMenu !== null}
+          open={popoverOpen}
+          anchorEl={anchorEl}
+          onClose={handlePopoverClose}
+          onMouseLeave={() => handlePopoverClose()}
+          // anchorReference="anchorPosition"
+          // anchorPosition={
+          //   contextMenu !== null
+          //     ? { top: contextMenu.mouseY - 220, left: contextMenu.mouseX - 65 }
+          //     : undefined
+          // }
+          // anchorOrigin={{
+          //   vertical: "top",
+          //   horizontal: "left",
+          // }}
+          // transformOrigin={{
+          //   vertical: "top",
+          //   horizontal: "left",
+          // }}
+        >
+          <div onMouseLeave={() => handlePopoverClose()}>
+            <MenuItem onClick={() => handleDraw()}>Draw</MenuItem>
+            <MenuItem onClick={() => handleShuffle()}>Shuffle</MenuItem>
+            <MenuItem onClick={() => handleViewDeck()}>View Deck</MenuItem>
+            <MenuItem onClick={() => handleRevealDeck()}>Look At Top</MenuItem>
+            <MenuItem onClick={() => handleDrawFour()}>Draw Four</MenuItem>
+            <MenuItem onClick={() => handleMulligan()}>Mulligan Four</MenuItem>
+            {/* <MenuItem onClick={(event) => handleReset(event)}>Reset</MenuItem> */}
+          </div>
+        </Menu>
+      </Popover>
       <Menu
         open={cardContextMenu !== null}
         onClose={handleCardClose}
