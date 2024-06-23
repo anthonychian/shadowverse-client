@@ -280,7 +280,7 @@ export const cardImage = (cardName) => {
     case "Python":
       return "../textures/BP04-059EN.png";
     case "Prime Dragon Keeper":
-      return "../textures/BP04-063EN.png";
+      return "../textures/BP04-U04EN.png";
     case "Star Phoenix":
       return "../textures/BP04-064EN.png";
     case "Lightning Blast":
