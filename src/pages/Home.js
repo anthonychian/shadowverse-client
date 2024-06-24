@@ -14,6 +14,7 @@ import grimnir from "../../src/assets/wallpapers/Grimnir.png";
 import buttonImage from "../../src/assets/buttons/variant1.png";
 import shadowverse from "../../src/assets/wallpapers/SVElogo.png";
 import cardback from "../assets/cardbacks/sleeve_5010011.png";
+import donate from "../assets/buttons/donate_btn.webp";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setDeck, setEvoDeck, setRoom } from "../redux/CardSlice";
@@ -531,7 +532,27 @@ export default function Home() {
           Joining Room: 1/2 players...
         </div>
       )}
+      <div
+        style={{
+          position: "absolute",
+          bottom: "15%",
+          right: "1%",
+          height: "10px",
+          // width: "40px",
+          color: "white",
 
+          fontFamily: "Noto Serif JP, serif",
+          borderRadius: "7px",
+        }}
+      >
+        <a
+          href="https://ko-fi.com/anthonychian"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          <img height={"40px"} src={donate} alt={"donate"} />
+        </a>
+      </div>
       <div className="LeaderContainerHome">
         <img
           className="LeaderImageHome"
