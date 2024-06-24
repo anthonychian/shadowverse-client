@@ -359,6 +359,8 @@ export const cardImage = (cardName) => {
       return "../textures/BP04-111EN.png";
     case "Mist Shaman":
       return "../textures/BP04-112EN.png";
+    case "Mist Shaman Evolved":
+      return "../textures/BP04-113EN.png";
     case "Octobishop":
       return "../textures/BP04-114EN.png";
     case "Candelabra of Prayers":
