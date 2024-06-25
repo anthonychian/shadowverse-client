@@ -3,14 +3,12 @@ import "../css/Game.css";
 import Selection from "../components/ui/Selection";
 import PlayerUI from "../components/ui/PlayerUI";
 import EnemyUI from "../components/ui/EnemyUI";
-import Voicelines from "../components/ui/Voicelines";
 import PlayPoints from "../components/ui/PlayPoints";
 import Hand from "../components/hand/Hand";
 import Field from "../components/field/Field";
 import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
 import ZoomedCard from "../components/ui/ZoomedCard";
-// import initialWallpaper from "../../src/assets/wallpapers/forte.png";
 import initialWallpaper from "../../src/assets/wallpapers/3.png";
 
 export default function Game() {
@@ -80,7 +78,7 @@ export default function Game() {
         <EnemyUI />
         <PlayerUI name={selectedOption} />
         {/* <Leader name={selectedOption} /> */}
-        <Voicelines name={selectedOption} />
+        {/* <Voicelines name={selectedOption} /> */}
       </div>
     </div>
   );

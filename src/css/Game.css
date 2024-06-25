@@ -23,11 +23,12 @@
 .rightSideCanvas {
   /* width: 20vw; */
   width: 350px;
-  height: 100vh;
+  height: 60vh;
   display: flex;
   flex-direction: column;
+  gap: 30vh;
   align-items: end;
-  justify-content: space-between;
+  justify-content: space-evenly;
   /* background-color: orange; */
 }
 
