@@ -333,7 +333,9 @@ export default function Home() {
               }}
             >
               <img height={60} src={buttonImage} alt={"button"} />
-              <div style={{ position: "absolute", fontSize: "20px" }}>TEST</div>
+              <div style={{ position: "absolute", fontSize: "20px" }}>
+                JOIN GAME
+              </div>
             </Button>
             <input
               style={{
