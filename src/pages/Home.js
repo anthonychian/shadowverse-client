@@ -333,9 +333,7 @@ export default function Home() {
               }}
             >
               <img height={60} src={buttonImage} alt={"button"} />
-              <div style={{ position: "absolute", fontSize: "20px" }}>
-                JOIN ROOM
-              </div>
+              <div style={{ position: "absolute", fontSize: "20px" }}>TEST</div>
             </Button>
             <input
               style={{
