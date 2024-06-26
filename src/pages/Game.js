@@ -77,8 +77,6 @@ export default function Game() {
       <div className={"rightSideCanvas"}>
         <EnemyUI />
         <PlayerUI name={selectedOption} />
-        {/* <Leader name={selectedOption} /> */}
-        {/* <Voicelines name={selectedOption} /> */}
       </div>
     </div>
   );
