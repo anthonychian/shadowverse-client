@@ -334,7 +334,7 @@ export default function Home() {
             >
               <img height={60} src={buttonImage} alt={"button"} />
               <div style={{ position: "absolute", fontSize: "20px" }}>
-                JOIN GAME
+                JOIN ROOM
               </div>
             </Button>
             <input
