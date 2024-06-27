@@ -86,7 +86,7 @@ export default function Deck({ ready, setHovering }) {
       dispatch(setViewingTopCards(false));
     } else {
       dispatch(setViewingDeck(false));
-      dispatch(shuffleDeck());
+      // dispatch(shuffleDeck());
     }
   };
 
@@ -108,6 +108,7 @@ export default function Deck({ ready, setHovering }) {
   const handleCardContextMenu = (event, name, index) => {
     setName(name);
     setIndex(index);
+    console.log(index);
     event.preventDefault();
     setCardContextMenu(
       cardContextMenu === null

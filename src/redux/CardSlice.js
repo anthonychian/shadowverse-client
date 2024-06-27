@@ -868,7 +868,8 @@ export const CardSlice = createSlice({
     addToHandFromDeck: (state, action) => {
       const card = action.payload.card;
       const cardIndex = action.payload.index;
-      state.deck = state.deck.filter((_, i) => i !== cardIndex);
+      const newDeck = state.deck.filter((_, i) => i !== cardIndex);
+      state.deck = newDeck;
       console.log(`Removed ${card} from deck`);
       state.hand = [...state.hand, card];
       console.log(`Added ${card} to hand`);
