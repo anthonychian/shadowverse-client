@@ -22,7 +22,7 @@ export default function Scoreboard({ name }) {
   const nextTurn = () => {
     incrementBoth();
     dispatch(setLeaderActive(true));
-    dispatch(drawFromDeck());
+    // dispatch(drawFromDeck());
     socket.emit("send msg", {
       type: "leaderActive",
       data: true,
