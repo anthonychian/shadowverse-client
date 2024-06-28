@@ -7,6 +7,17 @@
 .LeaderImageHome {
   width: 50vw;
 }
+.cardHover {
+  width: 410px;
+  height: 600px;
+}
+/* medium - tablet styles */
+@media screen and (max-width: 1600px) {
+  .cardHover {
+    width: 246px;
+    height: 360px;
+  }
+}
 
 @media (prefers-reduced-motion: no-preference) {
   .LeaderImageHome {

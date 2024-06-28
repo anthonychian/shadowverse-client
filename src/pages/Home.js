@@ -652,16 +652,25 @@ export default function Home() {
             {hover && (
               <div
                 style={{
-                  width: "98vw",
+                  width: "100vw",
+                  // backgroundColor: "yellow",
                   position: "absolute",
                 }}
               >
-                <img
-                  width={"410px"}
-                  height={"600px"}
-                  src={cardImage(hoverCard)}
-                  alt={hoverCard}
-                />
+                <div
+                  style={{
+                    width: "410px",
+                    position: "relative",
+                    left: "7%",
+                    // backgroundColor: "green",
+                  }}
+                >
+                  <img
+                    className="cardHover"
+                    src={cardImage(hoverCard)}
+                    alt={hoverCard}
+                  />
+                </div>
               </div>
             )}
             {mainDeckSelected &&
