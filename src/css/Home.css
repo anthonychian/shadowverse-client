@@ -6,6 +6,8 @@
 }
 .LeaderImageHome {
   width: 50vw;
+  min-width: 1000px;
+  bottom: 0%;
 }
 .cardHover {
   width: 410px;
