@@ -1,7 +1,7 @@
 export const cardImage = (cardName) => {
   switch (cardName) {
     case "Izudia, Omen of Unkilling":
-      return "../textures/BP05-U01EN.png";
+      return "../textures/BP05-001EN.png";
     case "Spinaria, Keeper of Enigmas":
       return "../textures/BP05-003EN.png";
     case "Apostle of Unkilling":
@@ -28,7 +28,7 @@ export const cardImage = (cardName) => {
       return "../textures/BP05-017EN.png";
 
     case "Octrice, Omen of Usurpation":
-      return "../textures/BP05-U02EN.png";
+      return "../textures/BP05-018EN.png";
     case "Magna Legacy":
       return "../textures/BP05-020EN.png";
     case "Apostle of Usurpation":
@@ -136,7 +136,7 @@ export const cardImage = (cardName) => {
       return "../textures/BP05-085EN.png";
 
     case "Marwynn, Omen of Repose":
-      return "../textures/BP05-U06EN.png";
+      return "../textures/BP05-086EN.png";
     case "Deus Ex Machina":
       return "../textures/BP05-088EN.png";
     case "Apostle of Repose":
@@ -1326,7 +1326,7 @@ export const cardImage = (cardName) => {
       return "../textures/PR-018EN.png";
 
     case "Izudia, Omen of Unkilling Evolved":
-      return "../textures/BP05-002EN.png";
+      return "../textures/BP05-U01EN.png";
     case "Apostle of Unkilling Evolved":
       return "../textures/BP05-005EN.png";
     case "Noah, Vengeful Puppeteer Evolved":
@@ -1334,7 +1334,7 @@ export const cardImage = (cardName) => {
     case "Flower Doll Evolved":
       return "../textures/BP05-015EN.png";
     case "Octrice, Omen of Usurpation Evolved":
-      return "../textures/BP05-019EN.png";
+      return "../textures/BP05-U02EN.png";
     case "Apostle of Usurpation Evolved":
       return "../textures/BP05-022EN.png";
     case "Geno, Machine Artisan Evolved":
@@ -1367,7 +1367,7 @@ export const cardImage = (cardName) => {
     case "Servant of Lust Evolved":
       return "../textures/BP05-081EN.png";
     case "Marwynn, Omen of Repose Evolved":
-      return "../textures/BP05-087EN.png";
+      return "../textures/BP05-U06EN.png";
     case "Apostle of Repose Evolved":
       return "../textures/BP05-090EN.png";
     case "Unidentified Subject Evolved":
