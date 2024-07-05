@@ -11,6 +11,7 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route path="/game" element={<Game />} />
         <Route path="/deck" element={<CreateDeck />} />
+        <Route path="/deck/:id" element={<CreateDeck />} />
       </Routes>
     </Router>
   );

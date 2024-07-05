@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import InfiniteScroll from "react-infinite-scroll-component";
 import wallpaper3 from "../../src/assets/wallpapers/3.png";
 import ReplyIcon from "@mui/icons-material/Reply";
@@ -65,6 +66,8 @@ export default function CreateDeck() {
   const deckName = location?.state?.deckName;
   const deckEdit = reduxDecks.filter((decks) => decks.name === deckName);
 
+  const { id } = useParams();
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [deck, setDeck] = useState([]);
@@ -101,6 +104,19 @@ export default function CreateDeck() {
       if (deckEdit[0].evoDeck.length > 0) {
         handleFillEvoDeckMap(deckEdit[0].evoDeck);
       }
+
+      let encodedObject = encodeURIComponent(JSON.stringify(deckEdit));
+      console.log("TEST", encodedObject);
+    }
+    if (id) {
+      let decodedObject = JSON.parse(decodeURIComponent(id));
+      if (decodedObject[0].deck.length > 0) {
+        handleFillDeckMap(decodedObject[0].deck);
+      }
+      if (decodedObject[0].evoDeck.length > 0) {
+        handleFillEvoDeckMap(decodedObject[0].evoDeck);
+      }
+      // let encodedObject = encodeURIComponent(JSON.stringify(myObject));
     }
   }, []);
 

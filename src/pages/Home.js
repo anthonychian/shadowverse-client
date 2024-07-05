@@ -636,7 +636,7 @@ export default function Home() {
             sx={{
               backgroundColor: "rgba(0, 0, 0, 1)",
               minHeight: "250px",
-              padding: "3%",
+              padding: "2em",
               height: "400px",
               overflowY: "scroll",
               width: "100%",
@@ -645,6 +645,7 @@ export default function Home() {
               flexWrap: "wrap",
               justifyContent: "center",
               alignItems: "center",
+              gap: "3px",
             }}
             variant="outlined"
           >
@@ -681,7 +682,11 @@ export default function Home() {
                     key={idx}
                     onMouseEnter={() => handleStartHover(key)}
                     onMouseLeave={() => handleEndHover()}
-                    style={{ position: "relative" }}
+                    style={{
+                      position: "relative",
+                      display: "flex",
+                      justifyContent: "end",
+                    }}
                   >
                     <img
                       key={idx}
@@ -693,12 +698,13 @@ export default function Home() {
                     <div
                       style={{
                         position: "absolute",
-                        bottom: "75%",
-                        backgroundColor: "rgba(0, 0, 0, 0.6)",
-                        height: "40px",
-                        width: "40px",
+                        bottom: "0",
+                        // marginRight: "3px",
+                        backgroundColor: "rgba(0, 0, 0, 0.7)",
+                        height: "35px",
+                        width: "35px",
                         color: "white",
-                        fontSize: "20px",
+                        fontSize: "25px",
                         fontFamily: "Noto Serif JP, serif",
                         borderRadius: "7px",
                         display: "flex",
