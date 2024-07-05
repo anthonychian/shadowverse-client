@@ -465,6 +465,7 @@ export default function CreateDeck() {
           <div
             style={{
               height: "100%",
+              minHeight: "200px",
               width: "60%",
               padding: "1em",
               backgroundColor: "rgba(0, 0, 0, 0.75)",
@@ -523,12 +524,14 @@ export default function CreateDeck() {
         {evoDeckSelected && (
           <div
             style={{
-              height: "70%",
+              height: "100%",
+              minHeight: "200px",
               width: "60%",
               padding: "1em",
               backgroundColor: "rgba(0, 0, 0, 0.75)",
               display: "flex",
               flexWrap: "wrap",
+              gap: "3px",
               alignItems: "center",
               justifyContent: "center",
               overflow: "auto",
