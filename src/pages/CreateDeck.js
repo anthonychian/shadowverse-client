@@ -104,11 +104,6 @@ export default function CreateDeck() {
       if (deckEdit[0].evoDeck.length > 0) {
         handleFillEvoDeckMap(deckEdit[0].evoDeck);
       }
-      // let encodedObject = JSON.stringify(deckEdit);
-      // let encoded = btoa(encodedObject);
-      // let decoded = atob(encoded);
-      // console.log("encoded", encoded);
-      // console.log("decoded", decoded);
     }
     if (id) {
       try {
@@ -149,7 +144,8 @@ export default function CreateDeck() {
   };
 
   const handleSubmit = () => {
-    const encoded = btoa(JSON.stringify(deckEdit));
+    const encodedObject = JSON.stringify(deckEdit);
+    const encoded = btoa(encodedObject);
     const url = `http://sveclient.xyz/deck/${encoded}`;
     dispatch(deleteDeck(deckName));
 
