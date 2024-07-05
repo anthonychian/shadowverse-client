@@ -19,10 +19,12 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { setDeck, setEvoDeck, setRoom } from "../redux/CardSlice";
 import { deleteDeck } from "../redux/DeckSlice";
-
 import { cardImage } from "../decks/getCards";
 import { socket } from "../sockets";
-// import { Menu, MenuItem, Modal, Box } from "@mui/material";
+import Snackbar from "@mui/material/Snackbar";
+import IconButton from "@mui/material/IconButton";
+import CloseIcon from "@mui/icons-material/Close";
+
 import {
   Menu,
   MenuItem,
@@ -55,6 +57,8 @@ export default function Home() {
   const [evoDeckSelected, setEvoDeckSelected] = useState(false);
   const [hoverCard, setHoverCard] = useState("");
   const [hover, setHover] = useState(false);
+
+  const [openSnack, setOpenSnack] = useState(false);
 
   useEffect(() => {
     socket.on("start_game", () => {
@@ -117,6 +121,13 @@ export default function Home() {
         // handleNavigateToGame();
       }
     }
+  };
+
+  const handleShareDeck = () => {
+    handleClose();
+    handleOpenSnack();
+    if (selectedDeck.deck.length > 0)
+      navigator.clipboard.writeText(selectedDeck.url);
   };
 
   const handleDeleteDeck = () => {
@@ -250,6 +261,31 @@ export default function Home() {
     }
   };
 
+  const handleOpenSnack = () => {
+    setOpenSnack(true);
+  };
+
+  const handleCloseSnack = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpenSnack(false);
+  };
+
+  const action = (
+    <React.Fragment>
+      <IconButton
+        size="small"
+        aria-label="close"
+        color="inherit"
+        onClick={handleCloseSnack}
+      >
+        <CloseIcon fontSize="small" />
+      </IconButton>
+    </React.Fragment>
+  );
+
   return (
     <div
       onContextMenu={(e) => e.nativeEvent.preventDefault()}
@@ -264,6 +300,13 @@ export default function Home() {
         flexDirection: "row",
       }}
     >
+      <Snackbar
+        open={openSnack}
+        autoHideDuration={6000}
+        onClose={handleCloseSnack}
+        message="Copied link to clipboard"
+        action={action}
+      />
       <div
         style={{
           height: "100vh",
@@ -581,6 +624,7 @@ export default function Home() {
       >
         <MenuItem onClick={handleModalOpen}>Preview</MenuItem>
         <MenuItem onClick={handleEditDeck}>Edit</MenuItem>
+        <MenuItem onClick={handleShareDeck}>Share</MenuItem>
         <MenuItem onClick={handleDeleteDeck}>Delete</MenuItem>
       </Menu>
       <Modal
@@ -699,7 +743,6 @@ export default function Home() {
                       style={{
                         position: "absolute",
                         bottom: "0",
-                        // marginRight: "3px",
                         backgroundColor: "rgba(0, 0, 0, 0.7)",
                         height: "35px",
                         width: "35px",

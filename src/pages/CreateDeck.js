@@ -104,19 +104,25 @@ export default function CreateDeck() {
       if (deckEdit[0].evoDeck.length > 0) {
         handleFillEvoDeckMap(deckEdit[0].evoDeck);
       }
-
-      let encodedObject = encodeURIComponent(JSON.stringify(deckEdit));
-      console.log("TEST", encodedObject);
+      // let encodedObject = JSON.stringify(deckEdit);
+      // let encoded = btoa(encodedObject);
+      // let decoded = atob(encoded);
+      // console.log("encoded", encoded);
+      // console.log("decoded", decoded);
     }
     if (id) {
-      let decodedObject = JSON.parse(decodeURIComponent(id));
-      if (decodedObject[0].deck.length > 0) {
-        handleFillDeckMap(decodedObject[0].deck);
+      try {
+        let decodedObject = JSON.parse(atob(id));
+
+        if (decodedObject[0].deck.length > 0) {
+          handleFillDeckMap(decodedObject[0].deck);
+        }
+        if (decodedObject[0].evoDeck.length > 0) {
+          handleFillEvoDeckMap(decodedObject[0].evoDeck);
+        }
+      } catch {
+        navigate("/deck");
       }
-      if (decodedObject[0].evoDeck.length > 0) {
-        handleFillEvoDeckMap(decodedObject[0].evoDeck);
-      }
-      // let encodedObject = encodeURIComponent(JSON.stringify(myObject));
     }
   }, []);
 
@@ -143,13 +149,16 @@ export default function CreateDeck() {
   };
 
   const handleSubmit = () => {
+    const encoded = btoa(JSON.stringify(deckEdit));
+    const url = `http://sveclient.xyz/deck/${encoded}`;
     dispatch(deleteDeck(deckName));
 
     dispatch(
       createDeck({
-        name: name,
-        deck: deck,
-        evoDeck: evoDeck,
+        name,
+        deck,
+        evoDeck,
+        url,
       })
     );
 
@@ -344,15 +353,14 @@ export default function CreateDeck() {
     >
       <div
         style={{
-          // marginTop: "1%",
           paddingBottom: "1%",
-          minHeight: "450px",
           width: "80vw",
           backgroundColor: "rgba(50, 50, 50, 0.60)",
           borderRadius: "10px",
           border: "4px solid #0000",
           display: "flex",
           flexDirection: "column",
+          gap: "1em",
           alignItems: "center",
           justifyContent: "center",
         }}
@@ -433,8 +441,10 @@ export default function CreateDeck() {
             row
             aria-labelledby="demo-row-radio-buttons-group-label"
             name="row-radio-buttons-group"
+            key="radio-group"
           >
             <FormControlLabel
+              key="deck-1"
               checked={mainDeckSelected}
               onChange={handleMainDeckSelected}
               sx={{ fontFamily: "Noto Serif JP, serif", color: "white" }}
@@ -443,6 +453,7 @@ export default function CreateDeck() {
               label="Main Deck"
             />
             <FormControlLabel
+              key="deck-2"
               checked={evoDeckSelected}
               onChange={handleEvoDeckSelected}
               sx={{ fontFamily: "Noto Serif JP, serif", color: "white" }}
@@ -463,6 +474,7 @@ export default function CreateDeck() {
               backgroundColor: "rgba(0, 0, 0, 0.75)",
               display: "flex",
               flexWrap: "wrap",
+              gap: "3px",
               alignItems: "center",
               justifyContent: "center",
               overflow: "auto",
@@ -473,7 +485,11 @@ export default function CreateDeck() {
                 const [key, value] = entry;
                 return (
                   <div
-                    style={{ position: "relative" }}
+                    style={{
+                      position: "relative",
+                      display: "flex",
+                      justifyContent: "end",
+                    }}
                     onClick={() => handleCardRemove(key)}
                   >
                     <img
@@ -486,12 +502,12 @@ export default function CreateDeck() {
                     <div
                       style={{
                         position: "absolute",
-                        bottom: "75%",
-                        backgroundColor: "rgba(0, 0, 0, 0.6)",
-                        height: "40px",
-                        width: "40px",
+                        bottom: "0",
+                        backgroundColor: "rgba(0, 0, 0, 0.7)",
+                        height: "35px",
+                        width: "35px",
                         color: "white",
-                        fontSize: "20px",
+                        fontSize: "25px",
                         fontFamily: "Noto Serif JP, serif",
                         borderRadius: "7px",
                         display: "flex",
@@ -561,17 +577,26 @@ export default function CreateDeck() {
           </div>
         )}
         {deck.length > 39 && evoDeck && (
+          // <div style={{ paddingTop: "1em" }}>
           <Button
             style={{
               backgroundColor: "white",
-              marginTop: "1em",
+              // marginTop: "0em",
               color: "black",
+              textTransform: "none",
+              fontFamily: "Noto Serif JP, serif",
+              fontWeight: "bold",
+
+              // border: "3px solid gold",
+              // backgroundColor: "#131219",
+              // color: "gold",
             }}
             variant="contained"
             onClick={handleClickOpen}
           >
             Create Deck
           </Button>
+          // </div>
         )}
       </div>
 
@@ -605,6 +630,7 @@ export default function CreateDeck() {
             width: "80vw",
             display: "flex",
             alignItems: "center",
+            gap: "1em",
             justifyContent: "space-evenly",
             flexWrap: "wrap",
           }}
@@ -761,6 +787,7 @@ export default function CreateDeck() {
             // backgroundColor: "rgba(50, 50, 50, 0.60)",
             // marginTop: "1em",
             padding: "1em",
+            gap: "1em",
             // height: "200px",
             width: "80vw",
             display: "flex",
