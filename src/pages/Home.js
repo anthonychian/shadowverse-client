@@ -768,7 +768,11 @@ export default function Home() {
                     key={idx * 2}
                     onMouseEnter={() => handleStartHover(key)}
                     onMouseLeave={() => handleEndHover()}
-                    style={{ position: "relative" }}
+                    style={{
+                      position: "relative",
+                      display: "flex",
+                      justifyContent: "end",
+                    }}
                   >
                     <img
                       key={idx * 2}
@@ -780,12 +784,12 @@ export default function Home() {
                     <div
                       style={{
                         position: "absolute",
-                        bottom: "75%",
-                        backgroundColor: "rgba(0, 0, 0, 0.6)",
-                        height: "40px",
-                        width: "40px",
+                        bottom: "0",
+                        backgroundColor: "rgba(0, 0, 0, 0.7)",
+                        height: "35px",
+                        width: "35px",
                         color: "white",
-                        fontSize: "20px",
+                        fontSize: "25px",
                         fontFamily: "Noto Serif JP, serif",
                         borderRadius: "7px",
                         display: "flex",
