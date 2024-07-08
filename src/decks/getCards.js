@@ -250,7 +250,7 @@ export const cardImage = (cardName) => {
     case "Star Reader Stella":
       return "../textures/BP04-041EN.png";
     case "Europa":
-      return "../textures/BP04-U03EN.png";
+      return "../textures/BP04-042EN.png";
     case "Chain of Calling":
       return "../textures/BP04-044EN.png";
     case "Noble Instruction":
@@ -791,7 +791,7 @@ export const cardImage = (cardName) => {
     case "Sun Oracle Pascale":
       return "../textures/BP02-037EN.png";
     case "Anne, Belle oF Mysteria":
-      return "../textures/BP02-U03EN.png";
+      return "../textures/BP02-038EN.png";
     case "Grea the Dragonborn":
       return "../textures/BP02-040EN.png";
     case "Rimewind":
@@ -813,7 +813,7 @@ export const cardImage = (cardName) => {
     case "Red-Hot Ritual":
       return "../textures/BP02-051EN.png";
     case "Imperial Dragoon":
-      return "../textures/BP02-U04EN.png";
+      return "../textures/BP02-052EN.png";
     case "Dragonsong Flute":
       return "../textures/BP02-054EN.png";
     case "Neptune":
@@ -1402,7 +1402,7 @@ export const cardImage = (cardName) => {
     case "Wordwielder Ginger Evolved":
       return "../textures/BP04-039EN.png";
     case "Europa Evolved":
-      return "../textures/BP04-043EN.png";
+      return "../textures/BP04-U03EN.png";
     case "Magic Illusionist Evolved":
       return "../textures/BP04-048EN.png";
     case "Dazzling Healer Evolved":
@@ -1537,13 +1537,13 @@ export const cardImage = (cardName) => {
     case "Daria Dimensional Witch Evolved":
       return "../textures/BP02-036EN.png";
     case "Anne, Belle oF Mysteria Evolved":
-      return "../textures/BP02-039EN.png";
+      return "../textures/BP02-U03EN.png";
     case "Remi & Rami, Witchy Duo Evolved":
       return "../textures/BP02-043EN.png";
     case "Craig, Wizard of Mysteria Evolved":
       return "../textures/BP02-047EN.png";
     case "Imperial Dragoon Evolved":
-      return "../textures/BP02-053EN.png";
+      return "../textures/BP02-U04EN.png";
     case "Neptune Evolved":
       return "../textures/BP02-056EN.png";
     case "Siegfried Evolved":
