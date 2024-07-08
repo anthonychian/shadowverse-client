@@ -650,7 +650,7 @@ export default function Home() {
             outline: "none",
           }}
         >
-          <FormControl>
+          {/* <FormControl>
             <RadioGroup
               row
               aria-labelledby="demo-row-radio-buttons-group-label"
@@ -675,112 +675,105 @@ export default function Home() {
                 label="Evolve Deck"
               />
             </RadioGroup>
-          </FormControl>
+          </FormControl> */}
           <CardMUI
             sx={{
               backgroundColor: "rgba(0, 0, 0, 1)",
               minHeight: "250px",
               padding: "2em",
-              height: "400px",
-              overflowY: "scroll",
+              // height: "400px",
+              maxHeight: "500px",
+              overflowY: "auto",
               width: "100%",
               display: "flex",
               flexDirection: "row",
               flexWrap: "wrap",
-              justifyContent: "center",
               alignItems: "center",
               gap: "3px",
             }}
             variant="outlined"
           >
             {/* Hover card image */}
-            {hover && (
-              <div
-                style={{
-                  width: "100vw",
-                  // backgroundColor: "yellow",
-                  position: "absolute",
-                }}
-              >
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                width: "100vw",
+              }}
+            >
+              {hover && (
                 <div
                   style={{
-                    width: "410px",
-                    position: "relative",
-                    left: "7%",
-                    // backgroundColor: "green",
+                    width: "100vw",
+
+                    display: "flex",
+                    justifyContent: "center",
+                    position: "absolute",
+                    height: "100vh",
                   }}
                 >
-                  <img
-                    className="cardHover"
-                    src={cardImage(hoverCard)}
-                    alt={hoverCard}
-                  />
-                </div>
-              </div>
-            )}
-            {mainDeckSelected &&
-              Array.from(deckMap.entries()).map((entry, idx) => {
-                const [key, value] = entry;
-                return (
                   <div
-                    key={idx}
-                    onMouseEnter={() => handleStartHover(key)}
-                    onMouseLeave={() => handleEndHover()}
+                    style={{
+                      width: "100vw",
+                      height: "100%",
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: "410px",
+                        position: "relative",
+                        left: "6%",
+                        top: "46%",
+                      }}
+                    >
+                      <img
+                        className="cardHover"
+                        src={cardImage(hoverCard)}
+                        alt={hoverCard}
+                      />
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+            {Array.from(deckMap.entries()).map((entry, idx) => {
+              const [key, value] = entry;
+              return (
+                <div
+                  key={idx}
+                  onMouseEnter={() => handleStartHover(key)}
+                  onMouseLeave={() => handleEndHover()}
+                  style={{
+                    position: "relative",
+                    display: "flex",
+                    // justifyContent: "end",
+                  }}
+                >
+                  <div
                     style={{
                       position: "relative",
                       display: "flex",
-                      justifyContent: "end",
+                      justifyContent: "center",
                     }}
                   >
                     <img
                       key={idx}
-                      width={"110px"}
-                      height={"150px"}
+                      className="cardSizeInPreview"
+                      // style={{ aspectRatio: 110 / 150, maxHeight: "120px" }}
+                      // width={"110px"}
+                      // height={"150px"}
                       src={cardImage(key)}
                       alt={key}
                     />
-                    <div
-                      style={{
-                        position: "absolute",
-                        bottom: "0",
-                        backgroundColor: "rgba(0, 0, 0, 0.7)",
-                        height: "35px",
-                        width: "35px",
-                        color: "white",
-                        fontSize: "25px",
-                        fontFamily: "Noto Serif JP, serif",
-                        borderRadius: "7px",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                      }}
-                    >
-                      {value}
-                    </div>
                   </div>
-                );
-              })}
-            {evoDeckSelected &&
-              Array.from(evoDeckMap.entries()).map((entry, idx) => {
-                const [key, value] = entry;
-                return (
                   <div
-                    key={idx * 2}
-                    onMouseEnter={() => handleStartHover(key)}
-                    onMouseLeave={() => handleEndHover()}
                     style={{
                       position: "relative",
                       display: "flex",
                       justifyContent: "end",
                     }}
                   >
-                    <img
-                      key={idx * 2}
-                      width={"110px"}
-                      height={"150px"}
-                      src={cardImage(key)}
-                      alt={key}
-                    />
                     <div
                       style={{
                         position: "absolute",
@@ -800,8 +793,59 @@ export default function Home() {
                       {value}
                     </div>
                   </div>
-                );
-              })}
+                </div>
+              );
+            })}
+            <div
+              style={{
+                aspectRatio: 110 / 150,
+                maxHeight: "30px",
+                width: "100%",
+              }}
+            ></div>
+            {Array.from(evoDeckMap.entries()).map((entry, idx) => {
+              const [key, value] = entry;
+              return (
+                <div
+                  key={idx * 2}
+                  onMouseEnter={() => handleStartHover(key)}
+                  onMouseLeave={() => handleEndHover()}
+                  style={{
+                    position: "relative",
+                    display: "flex",
+                    justifyContent: "end",
+                  }}
+                >
+                  <img
+                    key={idx * 2}
+                    className="cardSizeInPreview"
+                    // style={{ aspectRatio: 110 / 150, maxHeight: "120px" }}
+                    // width={"110px"}
+                    // height={"150px"}
+                    src={cardImage(key)}
+                    alt={key}
+                  />
+                  <div
+                    style={{
+                      position: "absolute",
+                      bottom: "0",
+                      backgroundColor: "rgba(0, 0, 0, 0.7)",
+                      height: "35px",
+                      width: "35px",
+                      color: "white",
+                      fontSize: "25px",
+                      fontFamily: "Noto Serif JP, serif",
+                      borderRadius: "7px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    }}
+                  >
+                    {value}
+                  </div>
+                </div>
+              );
+            })}
           </CardMUI>
         </Box>
       </Modal>

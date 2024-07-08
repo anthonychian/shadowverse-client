@@ -13,6 +13,17 @@
   width: 410px;
   height: 600px;
 }
+
+.cardSizeInPreview {
+  aspect-ratio: 110 / 150;
+  max-height: 150px;
+}
+@media screen and (max-width: 2000px) {
+  .cardSizeInPreview {
+    aspect-ratio: 110 / 150;
+    max-height: 120px;
+  }
+}
 /* medium - tablet styles */
 @media screen and (max-width: 1600px) {
   .cardHover {
