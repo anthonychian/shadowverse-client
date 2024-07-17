@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import InfiniteScroll from "react-infinite-scroll-component";
 import wallpaper3 from "../../src/assets/wallpapers/3.png";
 import ReplyIcon from "@mui/icons-material/Reply";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import {
   allCards,
@@ -1008,7 +1009,7 @@ export default function CreateDeck() {
                     "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 1.0)",
                 }}
               >
-                <img
+                <LazyLoadImage
                   width={"224px"}
                   height={"312px"}
                   src={cardImage(name)}
@@ -1051,7 +1052,7 @@ export default function CreateDeck() {
                   "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 1.0)",
               }}
             >
-              <img
+              <LazyLoadImage
                 width={"224px"}
                 height={"312px"}
                 src={cardImage(name)}
