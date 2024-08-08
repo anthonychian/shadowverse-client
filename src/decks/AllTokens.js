@@ -1,4 +1,7 @@
 export const allTokens = [
+  "Celestial Shikigami TOKEN",
+  "Paper Shikigami TOKEN",
+  "One-Tailed Fox TOKEN",
   "Destruction in White TOKEN",
   "Destruction in Black TOKEN",
   "Puppet TOKEN",

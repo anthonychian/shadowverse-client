@@ -1,5 +1,184 @@
 export const cardImage = (cardName) => {
   switch (cardName) {
+    case "Lymaga, Forest Champion":
+      return "../textures/BP06-U01EN.png";
+    case "Amataz, Fairy Blader":
+      return "../textures/BP06-003EN.png";
+    case "Greenbrier Elf":
+      return "../textures/BP06-004EN.png";
+    case "Wildwood Matriarch":
+      return "../textures/BP06-005EN.png";
+    case "Fairy Dragon":
+      return "../textures/BP06-007EN.png";
+    case "Woodland Cleaver":
+      return "../textures/BP06-008EN.png";
+    case "Assault Jaguar":
+      return "../textures/BP06-010EN.png";
+    case "Spiritshine":
+      return "../textures/BP06-011EN.png";
+    case "Greenwood Guardian":
+      return "../textures/BP06-012EN.png";
+    case "Crossbow Sniper":
+      return "../textures/BP06-013EN.png";
+    case "Mallet Monkey":
+      return "../textures/BP06-014EN.png";
+    case "Elven Sentry":
+      return "../textures/BP06-016EN.png";
+    case "Synchronized Slash":
+      return "../textures/BP06-017EN.png";
+    case "Kagemitsu, Matchless Blade":
+      return "../textures/BP06-018EN.png";
+    case "Ralmia, Sonic Racer":
+      return "../textures/BP06-U02EN.png";
+    case "Steadfast Samurai":
+      return "../textures/BP06-021EN.png";
+    case "Hero of Antiquity":
+      return "../textures/BP06-022EN.png";
+    case "Courtly Dance":
+      return "../textures/BP06-024EN.png";
+    case "Quickdraw Maven":
+      return "../textures/BP06-025EN.png";
+    case "Twinsword Master":
+      return "../textures/BP06-027EN.png";
+    case "Grand Acquisition":
+      return "../textures/BP06-028EN.png";
+    case "Samurai Outlaw":
+      return "../textures/BP06-029EN.png";
+    case "Adept Thief":
+      return "../textures/BP06-031EN.png";
+    case "Petalwink Paladin":
+      return "../textures/BP06-032EN.png";
+    case "Levin Scholar":
+      return "../textures/BP06-033EN.png";
+    case "Breakneck Draw":
+      return "../textures/BP06-034EN.png";
+    case "Kuon, Founder of Onmyodo":
+      return "../textures/BP06-U03EN.png";
+    case "Mysteria, Magic Founder":
+      return "../textures/BP06-036EN.png";
+    case "Curse Crafter":
+      return "../textures/BP06-038EN.png";
+    case "Hulking Giant":
+      return "../textures/BP06-040EN.png";
+    case "Shikigami Summons":
+      return "../textures/BP06-041EN.png";
+    case "Demoncaller":
+      return "../textures/BP06-042EN.png";
+    case "Traditional Sorcerer":
+      return "../textures/BP06-044EN.png";
+    case "Crimson Meteor Storm":
+      return "../textures/BP06-045EN.png";
+    case "Talisman Disciple":
+      return "../textures/BP06-046EN.png";
+    case "Charming Gentlemouse":
+      return "../textures/BP06-047EN.png";
+    case "Passionate Potioneer":
+      return "../textures/BP06-049EN.png";
+    case "Golem's Rampage":
+      return "../textures/BP06-050EN.png";
+    case "Mirror of Truth":
+      return "../textures/BP06-051EN.png";
+    case "Garyu, Surpreme Dragonkin":
+      return "../textures/BP06-052EN.png";
+    case "Filene, Whitefrost Dragonewt":
+      return "../textures/BP06-U04EN.png";
+    case "Phoenix Empress":
+      return "../textures/BP06-055EN.png";
+    case "Wyrm God of the Skies":
+      return "../textures/BP06-056EN.png";
+    case "Whitefrost Whisper":
+      return "../textures/BP06-058EN.png";
+    case "Ice Dancing Dragonewt":
+      return "../textures/BP06-059EN.png";
+    case "Jadelong Tactician":
+      return "../textures/BP06-061EN.png";
+    case "Aquascale Stalwart":
+      return "../textures/BP06-062EN.png";
+    case "Swordwhip Dragoon":
+      return "../textures/BP06-063EN.png";
+    case "Dragonblader":
+      return "../textures/BP06-064EN.png";
+    case "Trident Merman":
+      return "../textures/BP06-066EN.png";
+    case "Dragon Chef":
+      return "../textures/BP06-067EN.png";
+    case "Flamewinged Might":
+      return "../textures/BP06-068EN.png";
+    case "Ginsetsu, Great Fox":
+      return "../textures/BP06-U05EN.png";
+    case "Aragavy the Berserker":
+      return "../textures/BP06-071EN.png";
+    case "Shuten-Doji":
+      return "../textures/BP06-072EN.png";
+    case "Bear Pelt Warrior":
+      return "../textures/BP06-074EN.png";
+    case "Yuzuki, Righteous Demon":
+      return "../textures/BP06-075EN.png";
+    case "Kasha":
+      return "../textures/BP06-076EN.png";
+    case "Cougar Pelt Warrior":
+      return "../textures/BP06-077EN.png";
+    case "Unleash the Nightmare":
+      return "../textures/BP06-079EN.png";
+    case "Zashiki-Warashi":
+      return "../textures/BP06-080EN.png";
+    case "Antelope Pelt Warrior":
+      return "../textures/BP06-082EN.png";
+    case "Rookie Succubus":
+      return "../textures/BP06-083EN.png";
+    case "Demonic Procession":
+      return "../textures/BP06-084EN.png";
+    case "Berserker's Pelt":
+      return "../textures/BP06-085EN.png";
+    case "Wilbert, Grand Knight":
+      return "../textures/BP06-086EN.png";
+    case "Karula, Arts Master":
+      return "../textures/BP06-U06EN.png";
+    case "Saintly Leader":
+      return "../textures/BP06-089EN.png";
+    case "Phantom Blade Wielder":
+      return "../textures/BP06-090EN.png";
+    case "Manifest Devotion":
+      return "../textures/BP06-092EN.png";
+    case "Holy Lancer":
+      return "../textures/BP06-093EN.png";
+    case "Boost Kicker":
+      return "../textures/BP06-095EN.png";
+    case "Feather Sanctuary":
+      return "../textures/BP06-096EN.png";
+    case "Winged Staff Priestess":
+      return "../textures/BP06-097EN.png";
+    case "Gravity Grappler":
+      return "../textures/BP06-098EN.png";
+    case "Barrage Brawler":
+      return "../textures/BP06-099EN.png";
+    case "Holy Counterattack":
+      return "../textures/BP06-101EN.png";
+    case "Focus":
+      return "../textures/BP06-102EN.png";
+    case "Mammoth God's Colosseum":
+      return "../textures/BP06-103EN.png";
+    case "Badb Catha":
+      return "../textures/BP06-U07EN.png";
+    case "Mithra, Daybreak Diety":
+      return "../textures/BP06-106EN.png";
+    case "Fall from Grace":
+      return "../textures/BP06-108EN.png";
+    case "Colosseum on High":
+      return "../textures/BP06-109EN.png";
+    case "Chaht, Ringside Announcer":
+      return "../textures/BP06-110EN.png";
+    case "Clash of Heroes":
+      return "../textures/BP06-112EN.png";
+    case "Biofrabrication":
+      return "../textures/BP06-113EN.png";
+    case "Sweet-Tooth Sleuth":
+      return "../textures/BP06-114EN.png";
+    case "Bazooka Goblins":
+      return "../textures/BP06-115EN.png";
+    case "Sentry Gate":
+      return "../textures/BP06-117EN.png";
+
     case "Izudia, Omen of Unkilling":
       return "../textures/BP05-001EN.png";
     case "Spinaria, Keeper of Enigmas":
@@ -1325,6 +1504,63 @@ export const cardImage = (cardName) => {
     case "Angelic Barrage":
       return "../textures/PR-018EN.png";
 
+    case "Lymaga, Forest Champion Evolved":
+      return "../textures/BP06-002EN.png";
+    case "Wildwood Matriarch Evolved":
+      return "../textures/BP06-006EN.png";
+    case "Woodland Cleaver Evolved":
+      return "../textures/BP06-009EN.png";
+    case "Mallet Monkey Evolved":
+      return "../textures/BP06-015EN.png";
+    case "Ralmia, Sonic Racer Evolved":
+      return "../textures/BP06-U02EN.png";
+    case "Hero of Antiquity Evolved":
+      return "../textures/BP06-023EN.png";
+    case "Quickdraw Maven Evolved":
+      return "../textures/BP06-026EN.png";
+    case "Samurai Outlaw Evolved":
+      return "../textures/BP06-030EN.png";
+    case "Mysteria, Magic Founder Evolved":
+      return "../textures/BP06-037EN.png";
+    case "Curse Crafter Evolved":
+      return "../textures/BP06-039EN.png";
+    case "Demoncaller Evolved":
+      return "../textures/BP06-043EN.png";
+    case "Charming Gentlemouse Evolved":
+      return "../textures/BP06-048EN.png";
+    case "Garyu, Surpreme Dragonkin Evolved":
+      return "../textures/BP06-053EN.png";
+    case "Wyrm God of the Skies Evolved":
+      return "../textures/BP06-057EN.png";
+    case "Ice Dancing Dragonewt Evolved":
+      return "../textures/BP05-061EN.png";
+    case "Dragonblader Evolved":
+      return "../textures/BP06-060EN.png";
+    case "Ginsetsu, Great Fox Evolved":
+      return "../textures/BP06-070EN.png";
+    case "Shuten-Doji Evolved":
+      return "../textures/BP06-073EN.png";
+    case "Cougar Pelt Warrior Evolved":
+      return "../textures/BP06-078EN.png";
+    case "Zashiki-Warashi Evolved":
+      return "../textures/BP06-081EN.png";
+    case "Karula, Arts Master Evolved":
+      return "../textures/BP06-088EN.png";
+    case "Phantom Blade Wielder Evolved":
+      return "../textures/BP06-091EN.png";
+    case "Holy Lancer Evolved":
+      return "../textures/BP06-094EN.png";
+    case "Barrage Brawler Evolved":
+      return "../textures/BP06-099EN.png";
+    case "Badb Catha Evolved":
+      return "../textures/BP06-105EN.png";
+    case "Mithra, Daybreak Diety Evolved":
+      return "../textures/BP06-107EN.png";
+    case "Chaht, Ringside Announcer Evolved":
+      return "../textures/BP06-111EN.png";
+    case "Bazooka Goblins Evolved":
+      return "../textures/BP06-116EN.png";
+
     case "Izudia, Omen of Unkilling Evolved":
       return "../textures/BP05-U01EN.png";
     case "Apostle of Unkilling Evolved":
@@ -1675,6 +1911,12 @@ export const cardImage = (cardName) => {
     case "Healing Angel Evolved":
       return "../textures/BP01-178EN.png";
 
+    case "Celestial Shikigami TOKEN":
+      return "../textures/BP06-T01EN.png";
+    case "Paper Shikigami TOKEN":
+      return "../textures/BP06-T02EN.png";
+    case "One-Tailed Fox TOKEN":
+      return "../textures/BP06-T03EN.png";
     case "Destruction in White TOKEN":
       return "../textures/BP05-T01EN.png";
     case "Destruction in Black TOKEN":

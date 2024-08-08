@@ -1,4 +1,39 @@
 export const allCardsEvo = [
+  "Lymaga, Forest Champion Evolved",
+  "Wildwood Matriarch Evolved",
+  "Woodland Cleaver Evolved",
+  "Mallet Monkey Evolved",
+
+  "Ralmia, Sonic Racer Evolved",
+  "Hero of Antiquity Evolved",
+  "Quickdraw Maven Evolved",
+  "Samurai Outlaw Evolved",
+
+  "Mysteria, Magic Founder Evolved",
+  "Curse Crafter Evolved",
+  "Demoncaller Evolved",
+  "Charming Gentlemouse Evolved",
+
+  "Garyu, Surpreme Dragonkin Evolved",
+  "Wyrm God of the Skies Evolved",
+  "Ice Dancing Dragonewt Evolved",
+  "Dragonblader Evolved",
+
+  "Ginsetsu, Great Fox Evolved",
+  "Shuten-Doji Evolved",
+  "Cougar Pelt Warrior Evolved",
+  "Zashiki-Warashi Evolved",
+
+  "Karula, Arts Master Evolved",
+  "Phantom Blade Wielder Evolved",
+  "Holy Lancer Evolved",
+  "Barrage Brawler Evolved",
+
+  "Badb Catha Evolved",
+  "Mithra, Daybreak Diety Evolved",
+  "Chaht, Ringside Announcer Evolved",
+  "Bazooka Goblins Evolved",
+
   "Izudia, Omen of Unkilling Evolved",
   "Apostle of Unkilling Evolved",
   "Noah, Vengeful Puppeteer Evolved",
@@ -183,6 +218,42 @@ export const allCardsEvo = [
   "Healing Angel Evolved",
 ];
 
+export const set6Evo = [
+  "Lymaga, Forest Champion Evolved",
+  "Wildwood Matriarch Evolved",
+  "Woodland Cleaver Evolved",
+  "Mallet Monkey Evolved",
+
+  "Ralmia, Sonic Racer Evolved",
+  "Hero of Antiquity Evolved",
+  "Quickdraw Maven Evolved",
+  "Samurai Outlaw Evolved",
+
+  "Mysteria, Magic Founder Evolved",
+  "Curse Crafter Evolved",
+  "Demoncaller Evolved",
+  "Charming Gentlemouse Evolved",
+
+  "Garyu, Surpreme Dragonkin Evolved",
+  "Wyrm God of the Skies Evolved",
+  "Ice Dancing Dragonewt Evolved",
+  "Dragonblader Evolved",
+
+  "Ginsetsu, Great Fox Evolved",
+  "Shuten-Doji Evolved",
+  "Cougar Pelt Warrior Evolved",
+  "Zashiki-Warashi Evolved",
+
+  "Karula, Arts Master Evolved",
+  "Phantom Blade Wielder Evolved",
+  "Holy Lancer Evolved",
+  "Barrage Brawler Evolved",
+
+  "Badb Catha Evolved",
+  "Mithra, Daybreak Diety Evolved",
+  "Chaht, Ringside Announcer Evolved",
+  "Bazooka Goblins Evolved",
+];
 export const set5Evo = [
   "Izudia, Omen of Unkilling Evolved",
   "Apostle of Unkilling Evolved",
@@ -379,6 +450,10 @@ export const set1Evo = [
 ];
 
 export const forestEvo = [
+  "Lymaga, Forest Champion Evolved",
+  "Wildwood Matriarch Evolved",
+  "Woodland Cleaver Evolved",
+  "Mallet Monkey Evolved",
   "Izudia, Omen of Unkilling Evolved",
   "Apostle of Unkilling Evolved",
   "Noah, Vengeful Puppeteer Evolved",
@@ -406,6 +481,10 @@ export const forestEvo = [
 ];
 
 export const swordEvo = [
+  "Ralmia, Sonic Racer Evolved",
+  "Hero of Antiquity Evolved",
+  "Quickdraw Maven Evolved",
+  "Samurai Outlaw Evolved",
   "Octrice, Omen of Usurpation Evolved",
   "Apostle of Usurpation Evolved",
   "Geno, Machine Artisan Evolved",
@@ -433,6 +512,10 @@ export const swordEvo = [
 ];
 
 export const runeEvo = [
+  "Mysteria, Magic Founder Evolved",
+  "Curse Crafter Evolved",
+  "Demoncaller Evolved",
+  "Charming Gentlemouse Evolved",
   "Raio, Omen of Truth Evolved",
   "Apostle of Truth Evolved",
   "Iron Staff Mechanic Evolved",
@@ -460,6 +543,10 @@ export const runeEvo = [
 ];
 
 export const dragonEvo = [
+  "Garyu, Surpreme Dragonkin Evolved",
+  "Wyrm God of the Skies Evolved",
+  "Ice Dancing Dragonewt Evolved",
+  "Dragonblader Evolved",
   "Galmieux, Omen of Disdain Evolved",
   "Apostle of Disdain Evolved",
   "Cursed Stone Evolved",
@@ -490,6 +577,10 @@ export const dragonEvo = [
 ];
 
 export const abyssEvo = [
+  "Ginsetsu, Great Fox Evolved",
+  "Shuten-Doji Evolved",
+  "Cougar Pelt Warrior Evolved",
+  "Zashiki-Warashi Evolved",
   "Rulenye, Omen of Silence Evolved",
   "Apostle of Silence Evolved",
   "Masked Puppet Evolved",
@@ -517,6 +608,10 @@ export const abyssEvo = [
 ];
 
 export const havenEvo = [
+  "Karula, Arts Master Evolved",
+  "Phantom Blade Wielder Evolved",
+  "Holy Lancer Evolved",
+  "Barrage Brawler Evolved",
   "Marwynn, Omen of Repose Evolved",
   "Apostle of Repose Evolved",
   "Unidentified Subject Evolved",
@@ -544,6 +639,10 @@ export const havenEvo = [
 ];
 
 export const neutralEvo = [
+  "Badb Catha Evolved",
+  "Mithra, Daybreak Diety Evolved",
+  "Chaht, Ringside Announcer Evolved",
+  "Bazooka Goblins Evolved",
   "Mjerrabaine, Omen of One Evolved",
   "Apostle of Craving Evolved",
   "Rosa, Mech Wing Maiden Evolved",

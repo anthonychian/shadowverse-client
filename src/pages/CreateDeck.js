@@ -7,6 +7,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import {
   allCards,
+  set6,
   set5,
   set4,
   set3,
@@ -23,6 +24,7 @@ import {
 } from "../decks/AllCards";
 import {
   allCardsEvo,
+  set6Evo,
   set5Evo,
   set4Evo,
   set3Evo,
@@ -187,6 +189,8 @@ export default function CreateDeck() {
 
   const getCardsFromName = (name) => {
     switch (name) {
+      case "set 6":
+        return set6;
       case "set 5":
         return set5;
       case "set 4":
@@ -199,6 +203,8 @@ export default function CreateDeck() {
         return set2;
       case "set 1":
         return set1;
+      case "set 6 evo":
+        return set6Evo;
       case "set 5 evo":
         return set5Evo;
       case "set 4 evo":
@@ -658,6 +664,27 @@ export default function CreateDeck() {
             variant="contained"
           >
             All
+          </Button>
+          <Button
+            onClick={() => {
+              setButtonFilterSet("set 6");
+              setButtonFilterSetEvo("set 6 evo");
+            }}
+            style={{
+              fontFamily: "Noto Serif JP,serif",
+              textTransform: "none",
+              fontWeight: "bold",
+              backgroundColor:
+                buttonFilterSet === "set 6" ? "#131219" : "white",
+              border:
+                buttonFilterSet === "set 6"
+                  ? "3px solid gold"
+                  : "3px solid white",
+              color: buttonFilterSet === "set 6" ? "gold" : "#131219",
+            }}
+            variant="contained"
+          >
+            Paragons of the Colosseum
           </Button>
           <Button
             onClick={() => {
