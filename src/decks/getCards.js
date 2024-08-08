@@ -159,7 +159,7 @@ export const cardImage = (cardName) => {
     case "Mammoth God's Colosseum":
       return "../textures/BP06-103EN.png";
     case "Badb Catha":
-      return "../textures/BP06-U07EN.png";
+      return "../textures/BP06-104EN.png";
     case "Mithra, Daybreak Diety":
       return "../textures/BP06-106EN.png";
     case "Fall from Grace":
