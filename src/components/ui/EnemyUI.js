@@ -78,7 +78,7 @@ export default function EnemyUI() {
         return "linear-gradient(110.3deg, rgb(238, 179, 123) 8.7%, rgb(216, 103, 77) 47.5%, rgb(114, 43, 54) 89.1%)";
       case "Albert":
         return "linear-gradient(110.3deg, rgb(238, 179, 123) 8.7%, rgb(216, 103, 77) 47.5%, rgb(114, 43, 54) 89.1%)";
-      case "Itsurugi":
+      case "Amy":
         return "linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(247, 30, 30) 100.3%)";
       case "Exella":
         return "linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(247, 30, 30) 100.3%)";
@@ -110,7 +110,7 @@ export default function EnemyUI() {
         return sword;
       case "Albert":
         return sword;
-      case "Itsurugi":
+      case "Amy":
         return abyss;
       case "Exella":
         return abyss;

@@ -10,7 +10,7 @@ import imageAlbert from "../../assets/leaders/Albert.png";
 import imageAria from "../../assets/leaders/Aria.png";
 import imageCC from "../../assets/leaders/CC.png";
 import imageExella from "../../assets/leaders/Exella.png";
-import imageItsurugi from "../../assets/leaders/Itsurugi.png";
+import imageAmy from "../../assets/leaders/Amy.png";
 import imageMaru from "../../assets/leaders/Maru.png";
 import dragon from "../../assets/logo/dragon.png";
 
@@ -305,7 +305,7 @@ export default function Selection({ setSelectedOption }) {
                 // setWallpaper(dark);
               }}
             >
-              <img width="100px" src={imageItsurugi} alt="Itsurugi" />
+              <img width="100px" src={imageAmy} alt="Amy" />
             </IconButton>
             <IconButton
               sx={{
