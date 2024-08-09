@@ -953,6 +953,24 @@ export const CardSlice = createSlice({
         room: state.room,
       });
     },
+    addToBanishFromCemetery: (state, action) => {
+      const card = action.payload;
+      const cardIndex = state.cemetery.indexOf(card);
+      state.cemetery = state.cemetery.filter((_, i) => i !== cardIndex);
+      console.log(`Removed ${card} from cemetery`);
+      state.banish = [card, ...state.banish];
+      console.log(`Added ${card} to banished`);
+      socket.emit("send msg", {
+        type: "cemetery",
+        data: state.cemetery,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "banish",
+        data: state.banish,
+        room: state.room,
+      });
+    },
     addToHandFromBanish: (state, action) => {
       const card = action.payload;
       const cardIndex = state.banish.indexOf(card);
@@ -1350,6 +1368,7 @@ export const {
   addToHandFromDeck,
   addToHandFromField,
   addToHandFromCemetery,
+  addToBanishFromCemetery,
   addToHandFromBanish,
   placeToTopOfDeckFromHand,
   placeToBotOfDeckFromHand,

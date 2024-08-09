@@ -17,6 +17,7 @@ import Card from "../hand/Card";
 import {
   addToHandFromCemetery,
   addToHandFromBanish,
+  addToBanishFromCemetery,
   setCurrentCard,
   setViewingCemetery,
 } from "../../redux/CardSlice";
@@ -76,6 +77,11 @@ export default function Cemetery({
     handleClose();
     setReady(true);
     setReadyFromCemetery(true);
+  };
+
+  const handleCardToBanishFromCemetery = () => {
+    handleClose();
+    dispatch(addToBanishFromCemetery(name));
   };
 
   const handleCardToHandFromCemetery = () => {
@@ -278,6 +284,9 @@ export default function Cemetery({
           )}
           {cemeterySelected && (
             <MenuItem onClick={handleCardToFieldFromCemetery}>Field</MenuItem>
+          )}
+          {cemeterySelected && (
+            <MenuItem onClick={handleCardToBanishFromCemetery}>Banish</MenuItem>
           )}
           {banishSelected && (
             <MenuItem onClick={handleCardToHandFromBanish}>Hand</MenuItem>
