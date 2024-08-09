@@ -1,7 +1,7 @@
 export const cardImage = (cardName) => {
   switch (cardName) {
     case "Lymaga, Forest Champion":
-      return "../textures/BP06-U01EN.png";
+      return "../textures/BP06-001EN.png";
     case "Amataz, Fairy Blader":
       return "../textures/BP06-003EN.png";
     case "Greenbrier Elf":
@@ -29,7 +29,7 @@ export const cardImage = (cardName) => {
     case "Kagemitsu, Matchless Blade":
       return "../textures/BP06-018EN.png";
     case "Ralmia, Sonic Racer":
-      return "../textures/BP06-U02EN.png";
+      return "../textures/BP06-019EN.png";
     case "Steadfast Samurai":
       return "../textures/BP06-021EN.png";
     case "Hero of Antiquity":
@@ -105,7 +105,7 @@ export const cardImage = (cardName) => {
     case "Flamewinged Might":
       return "../textures/BP06-068EN.png";
     case "Ginsetsu, Great Fox":
-      return "../textures/BP06-U05EN.png";
+      return "../textures/BP06-069EN.png";
     case "Aragavy the Berserker":
       return "../textures/BP06-071EN.png";
     case "Shuten-Doji":
@@ -133,7 +133,7 @@ export const cardImage = (cardName) => {
     case "Wilbert, Grand Knight":
       return "../textures/BP06-086EN.png";
     case "Karula, Arts Master":
-      return "../textures/BP06-U06EN.png";
+      return "../textures/BP06-087EN.png";
     case "Saintly Leader":
       return "../textures/BP06-089EN.png";
     case "Phantom Blade Wielder":
@@ -1505,7 +1505,7 @@ export const cardImage = (cardName) => {
       return "../textures/PR-018EN.png";
 
     case "Lymaga, Forest Champion Evolved":
-      return "../textures/BP06-002EN.png";
+      return "../textures/BP06-U01EN.png";
     case "Wildwood Matriarch Evolved":
       return "../textures/BP06-006EN.png";
     case "Woodland Cleaver Evolved":
@@ -1537,7 +1537,7 @@ export const cardImage = (cardName) => {
     case "Dragonblader Evolved":
       return "../textures/BP06-060EN.png";
     case "Ginsetsu, Great Fox Evolved":
-      return "../textures/BP06-070EN.png";
+      return "../textures/BP06-U05EN.png";
     case "Shuten-Doji Evolved":
       return "../textures/BP06-073EN.png";
     case "Cougar Pelt Warrior Evolved":
@@ -1545,7 +1545,7 @@ export const cardImage = (cardName) => {
     case "Zashiki-Warashi Evolved":
       return "../textures/BP06-081EN.png";
     case "Karula, Arts Master Evolved":
-      return "../textures/BP06-088EN.png";
+      return "../textures/BP06-U06EN.png";
     case "Phantom Blade Wielder Evolved":
       return "../textures/BP06-091EN.png";
     case "Holy Lancer Evolved":
@@ -1553,7 +1553,7 @@ export const cardImage = (cardName) => {
     case "Barrage Brawler Evolved":
       return "../textures/BP06-099EN.png";
     case "Badb Catha Evolved":
-      return "../textures/BP06-105EN.png";
+      return "../textures/BP06-U07EN.png";
     case "Mithra, Daybreak Diety Evolved":
       return "../textures/BP06-107EN.png";
     case "Chaht, Ringside Announcer Evolved":
