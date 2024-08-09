@@ -69,7 +69,7 @@ export default function PlayerUI({ name }) {
         return forest;
       case "Aria":
         return forest;
-      case "Pompom":
+      case "Dionne":
         return sword;
       case "Albert":
         return sword;
@@ -101,7 +101,7 @@ export default function PlayerUI({ name }) {
         return "linear-gradient(-60deg, #16a085 0%, #f4d03f 100%)";
       case "Aria":
         return "linear-gradient(-60deg, #16a085 0%, #f4d03f 100%)";
-      case "Pompom":
+      case "Dionne":
         return "linear-gradient(110.3deg, rgb(238, 179, 123) 8.7%, rgb(216, 103, 77) 47.5%, rgb(114, 43, 54) 89.1%)";
       case "Albert":
         return "linear-gradient(110.3deg, rgb(238, 179, 123) 8.7%, rgb(216, 103, 77) 47.5%, rgb(114, 43, 54) 89.1%)";

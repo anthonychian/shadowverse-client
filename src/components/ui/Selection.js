@@ -5,7 +5,7 @@ import imageForte from "../../assets/leaders/Forte.png";
 import imageGalmieux from "../../assets/leaders/Galmieux.png";
 import imageKuon from "../../assets/leaders/Kuon.png";
 import imageDaria from "../../assets/leaders/Daria.png";
-import imagePompom from "../../assets/leaders/Pompom.png";
+import imageDionne from "../../assets/leaders/Dionne.png";
 import imageAlbert from "../../assets/leaders/Albert.png";
 import imageAria from "../../assets/leaders/Aria.png";
 import imageCC from "../../assets/leaders/CC.png";
@@ -239,7 +239,7 @@ export default function Selection({ setSelectedOption }) {
                 // setWallpaper(albert);
               }}
             >
-              <img width="100px" src={imagePompom} alt="Pompom" />
+              <img width="100px" src={imageDionne} alt="Dionne" />
             </IconButton>
             <IconButton
               sx={{
