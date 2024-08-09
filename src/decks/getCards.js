@@ -1551,7 +1551,7 @@ export const cardImage = (cardName) => {
     case "Holy Lancer Evolved":
       return "../textures/BP06-094EN.png";
     case "Barrage Brawler Evolved":
-      return "../textures/BP06-099EN.png";
+      return "../textures/BP06-100EN.png";
     case "Badb Catha Evolved":
       return "../textures/BP06-U07EN.png";
     case "Mithra, Daybreak Diety Evolved":
