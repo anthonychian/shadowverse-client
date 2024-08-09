@@ -102,9 +102,9 @@ export default function PlayerUI({ name }) {
       case "Aria":
         return "linear-gradient(-60deg, #16a085 0%, #f4d03f 100%)";
       case "Pompom":
-        return "radial-gradient(929px at 0.6% 1.3%, rgb(248, 251, 10) 0%, rgb(248, 47, 47) 82.6%)";
+        return "linear-gradient(110.3deg, rgb(238, 179, 123) 8.7%, rgb(216, 103, 77) 47.5%, rgb(114, 43, 54) 89.1%)";
       case "Albert":
-        return "radial-gradient(929px at 0.6% 1.3%, rgb(248, 251, 10) 0%, rgb(248, 47, 47) 82.6%)";
+        return "linear-gradient(110.3deg, rgb(238, 179, 123) 8.7%, rgb(216, 103, 77) 47.5%, rgb(114, 43, 54) 89.1%)";
       case "Itsurugi":
         return "linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(247, 30, 30) 100.3%)";
       case "Exella":
