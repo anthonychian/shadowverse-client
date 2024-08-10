@@ -1533,9 +1533,9 @@ export const cardImage = (cardName) => {
     case "Wyrm God of the Skies Evolved":
       return "../textures/BP06-057EN.png";
     case "Ice Dancing Dragonewt Evolved":
-      return "../textures/BP05-061EN.png";
-    case "Dragonblader Evolved":
       return "../textures/BP06-060EN.png";
+    case "Dragonblader Evolved":
+      return "../textures/BP06-065EN.png";
     case "Ginsetsu, Great Fox Evolved":
       return "../textures/BP06-U05EN.png";
     case "Shuten-Doji Evolved":
