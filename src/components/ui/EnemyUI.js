@@ -69,7 +69,7 @@ export default function EnemyUI() {
       case "Jeanne":
         return "linear-gradient(to top, #c79081 0%, #dfa579 100%)";
       case "Ramina":
-        return "linear-gradient(to top, rgb(251, 194, 235) 0%, rgb(166, 193, 238) 100%)";
+        return "linear-gradient(to top, #c79081 0%, #dfa579 100%)";
       case "CC":
         return "linear-gradient(-60deg, #16a085 0%, #f4d03f 100%)";
       case "Aria":

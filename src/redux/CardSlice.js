@@ -563,6 +563,23 @@ export const CardSlice = createSlice({
         room: state.room,
       });
     },
+    duplicateCardOnField: (state, action) => {
+      const card = action.payload.card;
+      const newIndex = action.payload.index;
+
+      const newField = [
+        ...state.field.slice(0, newIndex),
+        card,
+        ...state.field.slice(newIndex + 1),
+      ];
+      state.field = newField;
+      console.log(`Added ${card} to field`);
+      socket.emit("send msg", {
+        type: "field",
+        data: state.field,
+        room: state.room,
+      });
+    },
     setCurrentCard: (state, action) => {
       state.currentCard = action.payload;
     },
@@ -1455,5 +1472,6 @@ export const {
   setEnemyDice,
   setEnemyLeaderActive,
   setLeaderActive,
+  duplicateCardOnField,
   reset,
 } = CardSlice.actions;

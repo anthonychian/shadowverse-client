@@ -21,12 +21,12 @@ import {
   setEnemyCemetery,
   setEnemyEvoDeck,
   setEnemyCustomValues,
-  setEngaged,
   showAtk,
   showDef,
   hideAtk,
   hideDef,
   modifyCounter,
+  duplicateCardOnField,
   clearValuesAtIndex,
   moveValuesAtIndex,
   moveCountersAtIndex,
@@ -133,6 +133,7 @@ export default function Field({
   const [index, setIndex] = useState(0);
   const [name, setName] = useState("");
   const [readyToMoveOnField, setReadyToMoveOnField] = useState(false);
+  const [readyToDuplicateOnField, setReadyToDuplicateOnField] = useState(false);
   const [readyFromCemetery, setReadyFromCemetery] = useState(false);
   const [readyFromBanish, setReadyFromBanish] = useState(false);
   const [readyToEvo, setReadyToEvo] = useState(false);
@@ -320,6 +321,18 @@ export default function Field({
         dispatch(clearEngagedAtIndex(index));
         dispatch(clearCountersAtIndex(index));
       }
+      if (readyToDuplicateOnField) {
+        setReadyToDuplicateOnField(false);
+        dispatch(
+          duplicateCardOnField({
+            card: name,
+            index: indexClicked,
+          })
+        );
+        dispatch(clearValuesAtIndex(index));
+        dispatch(clearEngagedAtIndex(index));
+        dispatch(clearCountersAtIndex(index));
+      }
       if (readyFromCemetery) {
         setReadyFromCemetery(false);
         dispatch(
@@ -471,6 +484,11 @@ export default function Field({
     dispatch(clearEngagedAtIndex(index));
     dispatch(clearCountersAtIndex(index));
   };
+  const handleDuplicateToken = () => {
+    handleClose();
+    setReady(true);
+    setReadyToDuplicateOnField(true);
+  };
 
   const handleCardToCemetery = () => {
     handleClose();
@@ -495,12 +513,6 @@ export default function Field({
     dispatch(clearValuesAtIndex(index));
     dispatch(clearEngagedAtIndex(index));
     dispatch(clearCountersAtIndex(index));
-  };
-
-  const handleEngage = () => {
-    handleClose();
-    handleEvoClose();
-    dispatch(setEngaged(index));
   };
 
   const handleShowAtkDef = () => {
@@ -597,13 +609,16 @@ export default function Field({
         {isToken(name) && (
           <MenuItem onClick={handleRemoveTokenFromField}>Remove</MenuItem>
         )}
+        {isToken(name) && (
+          <MenuItem onClick={handleDuplicateToken}>Duplicate</MenuItem>
+        )}
         {!isToken(name) && (
           <MenuItem onClick={handleCardToHandFromField}>Hand</MenuItem>
         )}
         {!isToken(name) && (
           <MenuItem onClick={handleCardToCemetery}>Cemetery</MenuItem>
         )}
-        {/* <MenuItem onClick={handleEngage}>Engage</MenuItem> */}
+
         {!reduxCustomValues[index].showAtk && (
           <MenuItem onClick={handleShowAtkDef}>Modify Atk/Def</MenuItem>
         )}
@@ -615,7 +630,9 @@ export default function Field({
         )}
         <MenuItem onClick={handleMoveOnField}>Move</MenuItem>
         <MenuItem onClick={handleTransfer}>Transfer</MenuItem>
-        <MenuItem onClick={handleCardToBanish}>Banish</MenuItem>
+        {!isToken(name) && (
+          <MenuItem onClick={handleCardToBanish}>Banish</MenuItem>
+        )}
         {!isToken(name) && (
           <MenuItem onClick={handleCardToTopDeck}>Top of Deck</MenuItem>
         )}
@@ -634,7 +651,7 @@ export default function Field({
         }
       >
         <MenuItem onClick={() => handleReturnToEvolveDeck()}>Return</MenuItem>
-        {/* <MenuItem onClick={handleEngage}>Engage</MenuItem> */}
+
         {!reduxCustomValues[index].showAtk && (
           <MenuItem onClick={handleShowAtkDef}>Modify Atk/Def</MenuItem>
         )}
