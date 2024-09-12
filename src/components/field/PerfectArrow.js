@@ -3,48 +3,65 @@ import { getArrow } from "perfect-arrows";
 import { useDispatch } from "react-redux";
 import { setEnemyArrow } from "../../redux/CardSlice";
 
-export function PerfectArrow({ idx, distance, onEnemyField = false }) {
+export function PerfectArrow({ pos, idx, distance, onEnemyField = false }) {
   let p1 = { x: 0, y: 0 };
   switch (idx) {
     case 0:
-      p1 = { x: 30, y: 250 };
+      p1 = { x: 300 * adjustArrowPositionX(), y: 250 };
       break;
     case 1:
-      p1 = { x: 175, y: 250 };
+      p1 = { x: 500 * adjustArrowPositionX(), y: 250 };
       break;
     case 2:
-      p1 = { x: 325, y: 250 };
+      p1 = { x: 650 * adjustArrowPositionX(), y: 250 };
       break;
     case 3:
-      p1 = { x: 475, y: 250 };
+      p1 = { x: 750 * adjustArrowPositionX(), y: 250 };
       break;
     case 4:
-      p1 = { x: 620, y: 250 };
+      p1 = { x: 850 * adjustArrowPositionX(), y: 250 };
       break;
     case 5:
-      p1 = { x: 30, y: 85 };
+      p1 = { x: 300 * adjustArrowPositionX(), y: 85 };
       break;
     case 6:
-      p1 = { x: 175, y: 85 };
+      p1 = { x: 500 * adjustArrowPositionX(), y: 85 };
       break;
     case 7:
-      p1 = { x: 325, y: 85 };
+      p1 = { x: 650 * adjustArrowPositionX(), y: 85 };
       break;
     case 8:
-      p1 = { x: 475, y: 85 };
+      p1 = { x: 750 * adjustArrowPositionX(), y: 85 };
       break;
     case 9:
-      p1 = { x: 620, y: 85 };
+      p1 = { x: 850 * adjustArrowPositionX(), y: 85 };
       break;
     default:
-      p1 = { x: 75, y: 250 };
+      p1 = { x: 850 * adjustArrowPositionX(), y: 85 };
   }
-  p1.y += onEnemyField ? 30 : 0;
-  let p2 = { x: p1.x - distance.x, y: p1.y + distance.y };
+
+  let p2 = {
+    x: p1.x - distance.x * adjustArrowPositionY(),
+    y: p1.y + distance.y * adjustArrowPositionY(),
+  };
 
   const arrow = getArrow(p1.x, p1.y, p2.x, p2.y, {
     // padStart: 20,
   });
+
+  function getWindowDimensions() {
+    const { innerWidth: width, innerHeight: height } = window;
+    return {
+      width,
+      height,
+    };
+  }
+  function adjustArrowPositionX() {
+    return pos.x / getWindowDimensions().width;
+  }
+  function adjustArrowPositionY() {
+    return pos.y / getWindowDimensions().height;
+  }
 
   const [sx, sy, cx, cy, ex, ey, ae] = arrow;
 
@@ -57,10 +74,13 @@ export function PerfectArrow({ idx, distance, onEnemyField = false }) {
         onClick={() => dispatch(setEnemyArrow({ idx: -1, show: false }))}
         viewBox="0 0 630 700"
         style={{
-          width: 630,
-          height: 700,
+          // width: 630,
+          // height: 700,
+          width: "1000",
+          height: "90%",
           position: "absolute",
-          top: "10%",
+          // top: "10%",
+          top: "0%",
           left: 0,
           right: 0,
           marginLeft: "auto",

@@ -216,6 +216,7 @@ export default function Field({
     if (!showArrow[idx] && event.button === 0) {
       // dispatch(setArrow({ show: true }));
       setInitialArrowPos({ x: event.clientX, y: event.clientY });
+      console.log(event.clientX, event.clientY);
       let arr = [...showArrow];
       arr[idx] = true;
       setShowArrow(arr);
@@ -890,6 +891,7 @@ export default function Field({
                 (reduxEnemyField[idx] !== 0 ||
                   reduxEnemyEvoField[idx] !== 0) && (
                   <PerfectArrow
+                    pos={initialArrowPos}
                     idx={reduxEnemyArrow.idx}
                     distance={{ x: reduxEnemyArrow.x, y: reduxEnemyArrow.y }}
                     onEnemyField={true}
@@ -1141,7 +1143,11 @@ export default function Field({
                 >
                   {showArrow[idx] &&
                     (reduxField[idx] !== 0 || reduxEvoField[idx] !== 0) && (
-                      <PerfectArrow idx={idx} distance={distance} />
+                      <PerfectArrow
+                        pos={initialArrowPos}
+                        idx={idx}
+                        distance={distance}
+                      />
                     )}
                   {reduxField[idx] !== 0 && reduxEvoField[idx] === 0 && (
                     <Card

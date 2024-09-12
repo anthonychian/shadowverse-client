@@ -42,7 +42,7 @@
 }
 
 /* medium - tablet styles */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1700px) {
   .centerCanvas {
     display: flex;
     height: 100vh;
