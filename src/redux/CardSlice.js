@@ -39,6 +39,7 @@ export const CardSlice = createSlice({
     currentCard: "",
     currentEvo: "",
     room: "",
+    chatLog: [],
     cemetery: [],
     enemyCemetery: [],
     banish: [],
@@ -165,7 +166,6 @@ export const CardSlice = createSlice({
       state.enemyDice = action.payload;
     },
     setArrow: (state, action) => {
-      // console.log(action.payload);
       socket.emit("send msg", {
         type: "arrow",
         data: action.payload,
@@ -262,6 +262,9 @@ export const CardSlice = createSlice({
     setEnemyHealth: (state, action) => {
       state.enemyHealth = action.payload;
     },
+    setEnemyLog: (state, action) => {
+      state.chatLog = [...state.chatLog, `(Player 2): ${action.payload}`];
+    },
     modifyCounter: (state, action) => {
       let newValue = action.payload.value;
       let index = action.payload.index;
@@ -271,7 +274,15 @@ export const CardSlice = createSlice({
         ...state.counterField.slice(index + 1),
       ];
       state.counterField = newCounters;
-      console.log(`Set counters to ${newValue}`);
+      state.chatLog = [
+        ...state.chatLog,
+        `(Me): Set ${state.field[index]} counter to ${newValue}`,
+      ];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Set ${state.field[index]} counter to ${newValue}`,
+        room: state.room,
+      });
       socket.emit("send msg", {
         type: "counter",
         data: state.counterField,
@@ -282,9 +293,17 @@ export const CardSlice = createSlice({
       if (state.deck.length > 0 && state.hand.length < 10) {
         const card = state.deck[0];
         state.deck = state.deck.slice(1);
-        console.log(`Removed ${card} from deck`);
+        // state.chatLog = [...state.chatLog, `Removed ${card} from deck`];
         state.hand = [...state.hand, card];
-        console.log(`Added ${card} to hand`);
+        state.chatLog = [
+          ...state.chatLog,
+          `(Me): (Draw) Added ${card} to hand`,
+        ];
+        socket.emit("send msg", {
+          type: "log",
+          data: `Draw 1 card`,
+          room: state.room,
+        });
         socket.emit("send msg", {
           type: "hand",
           data: state.hand,
@@ -303,30 +322,19 @@ export const CardSlice = createSlice({
           if (state.deck.length > 0 && state.hand.length < 10) {
             const card = state.deck[0];
             state.deck = state.deck.slice(1);
-            console.log(`Removed ${card} from deck`);
+            // state.chatLog = [...state.chatLog, `Removed ${card} from deck`];
             state.hand = [...state.hand, card];
-            console.log(`Added ${card} to hand`);
+            state.chatLog = [
+              ...state.chatLog,
+              `(Me): (Draw) Added ${card} to hand`,
+            ];
           }
         }
         socket.emit("send msg", {
-          type: "hand",
-          data: state.hand,
+          type: "log",
+          data: `Draw 4 cards`,
           room: state.room,
         });
-        socket.emit("send msg", {
-          type: "deckSize",
-          data: state.deck.length,
-          room: state.room,
-        });
-      }
-    },
-    mulligan: (state) => {
-      if (state.hand.length > 0) {
-        const card = state.hand[0];
-        state.hand = state.hand.slice(1);
-        console.log(`Removed ${card} from hand`);
-        state.deck = [...state.deck, card];
-        console.log(`Added ${card} to deck`);
         socket.emit("send msg", {
           type: "hand",
           data: state.hand,
@@ -345,11 +353,19 @@ export const CardSlice = createSlice({
           if (state.hand.length > 0) {
             const card = state.hand[0];
             state.hand = state.hand.slice(1);
-            console.log(`Removed ${card} from hand`);
+            // state.chatLog = [...state.chatLog, `Removed ${card} from hand`];
             state.deck = [...state.deck, card];
-            console.log(`Added ${card} to deck`);
+            state.chatLog = [
+              ...state.chatLog,
+              `(Me): (Mulligan) Added ${card} to deck`,
+            ];
           }
         }
+        socket.emit("send msg", {
+          type: "log",
+          data: `Mulligan 4 cards`,
+          room: state.room,
+        });
         socket.emit("send msg", {
           type: "hand",
           data: state.hand,
@@ -573,7 +589,12 @@ export const CardSlice = createSlice({
         ...state.field.slice(newIndex + 1),
       ];
       state.field = newField;
-      console.log(`Added ${card} to field`);
+      state.chatLog = [...state.chatLog, `(Me): Added ${card} to field`];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Added ${card} to field`,
+        room: state.room,
+      });
       socket.emit("send msg", {
         type: "field",
         data: state.field,
@@ -588,14 +609,30 @@ export const CardSlice = createSlice({
     },
     shuffleDeck: (state) => {
       state.deck = state.deck.toSorted(() => Math.random() - 0.5);
+      state.chatLog = [...state.chatLog, `(Me): Shuffled deck`];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Shuffled deck`,
+        room: state.room,
+      });
     },
     placeToTopOfDeckFromHand: (state, action) => {
       const card = action.payload;
       const cardIndex = state.hand.indexOf(card);
       state.hand = state.hand.filter((_, i) => i !== cardIndex);
-      console.log(`Removed ${card} from hand`);
+      state.chatLog = [...state.chatLog, `(Me): Removed ${card} from hand`];
       state.deck = [card, ...state.deck];
-      console.log(`Added ${card} to top of deck`);
+      state.chatLog = [...state.chatLog, `(Me): Added ${card} to top of deck`];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Removed 1 card from hand`,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "log",
+        data: `Added 1 card to top of deck`,
+        room: state.room,
+      });
       socket.emit("send msg", {
         type: "hand",
         data: state.hand,
@@ -611,9 +648,22 @@ export const CardSlice = createSlice({
       const card = action.payload;
       const cardIndex = state.hand.indexOf(card);
       state.hand = state.hand.filter((_, i) => i !== cardIndex);
-      console.log(`Removed ${card} from hand`);
+      state.chatLog = [...state.chatLog, `(Me): Removed ${card} from hand`];
       state.deck = [...state.deck, card];
-      console.log(`Added ${card} to bottom of deck`);
+      state.chatLog = [
+        ...state.chatLog,
+        `(Me): Added ${card} to bottom of deck`,
+      ];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Removed 1 card from hand`,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "log",
+        data: `Added 1 card to bot of deck`,
+        room: state.room,
+      });
       socket.emit("send msg", {
         type: "hand",
         data: state.hand,
@@ -634,9 +684,19 @@ export const CardSlice = createSlice({
         ...state.field.slice(cardIndex + 1),
       ];
       state.field = newField;
-      console.log(`Removed ${card} from field`);
+      state.chatLog = [...state.chatLog, `(Me): Removed ${card} from field`];
       state.deck = [card, ...state.deck];
-      console.log(`Added ${card} to top of deck`);
+      state.chatLog = [...state.chatLog, `(Me): Added ${card} to top of deck`];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Removed ${card} from field`,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "log",
+        data: `Added ${card} to top of deck`,
+        room: state.room,
+      });
       socket.emit("send msg", {
         type: "field",
         data: state.field,
@@ -657,9 +717,19 @@ export const CardSlice = createSlice({
         ...state.field.slice(cardIndex + 1),
       ];
       state.field = newField;
-      console.log(`Removed ${card} from field`);
+      state.chatLog = [...state.chatLog, `(Me): Removed ${card} from field`];
       state.deck = [...state.deck, card];
-      console.log(`Added ${card} to bot of deck`);
+      state.chatLog = [...state.chatLog, `(Me): Added ${card} to bot of deck`];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Removed ${card} from field`,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "log",
+        data: `Added ${card} to bot of deck`,
+        room: state.room,
+      });
       socket.emit("send msg", {
         type: "field",
         data: state.field,
@@ -680,7 +750,12 @@ export const CardSlice = createSlice({
         ...state.field.slice(newIndex + 1),
       ];
       state.field = newField;
-      console.log(`Added ${card} to field`);
+      state.chatLog = [...state.chatLog, `(Me): Added ${card} to field`];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Added ${card} to field`,
+        room: state.room,
+      });
       socket.emit("send msg", {
         type: "field",
         data: state.field,
@@ -696,7 +771,12 @@ export const CardSlice = createSlice({
         ...state.field.slice(prevIndex + 1),
       ];
       state.field = field;
-      console.log(`Removed ${card} from field`);
+      state.chatLog = [...state.chatLog, `(Me): Removed ${card} from field`];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Removed ${card} from field`,
+        room: state.room,
+      });
       socket.emit("send msg", {
         type: "field",
         data: state.field,
@@ -713,14 +793,18 @@ export const CardSlice = createSlice({
         ...state.field.slice(prevIndex + 1),
       ];
       state.field = field;
-      console.log(`Removed ${card} from field`);
       const newField = [
         ...state.field.slice(0, newIndex),
         card,
         ...state.field.slice(newIndex + 1),
       ];
       state.field = newField;
-      console.log(`Added ${card} to field`);
+      state.chatLog = [...state.chatLog, `(Me): Moved ${card} on field`];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Moved ${card} on field`,
+        room: state.room,
+      });
       socket.emit("send msg", {
         type: "field",
         data: state.field,
@@ -744,8 +828,7 @@ export const CardSlice = createSlice({
         ];
         state.field = field;
 
-        console.log(`Removed ${card} from field`);
-
+        state.chatLog = [...state.chatLog, `(Me): Removed ${card} from field`];
         let index;
         for (let i = 0; i < 5; i++) {
           if (state.enemyField[i] === 0) {
@@ -759,18 +842,28 @@ export const CardSlice = createSlice({
           ...state.enemyField.slice(index + 1),
         ];
         state.enemyField = newField;
-        console.log(`Added ${card} to enemy field`);
-
+        state.chatLog = [
+          ...state.chatLog,
+          `(Me): Added ${card} to enemy field`,
+        ];
+        socket.emit("send msg", {
+          type: "log",
+          data: `Removed ${card} from field`,
+          room: state.room,
+        });
+        socket.emit("send msg", {
+          type: "log",
+          data: `Added ${card} to enemy field`,
+          room: state.room,
+        });
         socket.emit("send msg", {
           type: "field",
           data: state.field,
-          // data: state.field,
           room: state.room,
         });
         socket.emit("send msg", {
           type: "transfer",
           data: state.enemyField,
-          // data: card,
           room: state.room,
         });
       } else {
@@ -783,15 +876,24 @@ export const CardSlice = createSlice({
       const cardIndex = action.payload.cardIndex;
       const newIndex = action.payload.index;
       state.deck = state.deck.filter((_, i) => i !== cardIndex);
-      console.log(`Removed ${card} from deck`);
+      state.chatLog = [...state.chatLog, `(Me): Removed ${card} from deck`];
       const newField = [
         ...state.field.slice(0, newIndex),
         card,
         ...state.field.slice(newIndex + 1),
       ];
       state.field = newField;
-      console.log(`Added ${card} to field`);
-
+      state.chatLog = [...state.chatLog, `(Me): Added ${card} to field`];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Removed ${card} from deck`,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "log",
+        data: `Added ${card} to field`,
+        room: state.room,
+      });
       socket.emit("send msg", {
         type: "field",
         data: state.field,
@@ -807,9 +909,13 @@ export const CardSlice = createSlice({
       const card = action.payload.card;
       const cardIndex = action.payload.index;
       state.deck = state.deck.filter((_, i) => i !== cardIndex);
-      console.log(`Removed ${card} from deck`);
       state.deck = [card, ...state.deck];
-      console.log(`Added ${card} to top of deck`);
+      state.chatLog = [...state.chatLog, `(Me): Moved ${card} to top of deck`];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Moved 1 card to top of deck`,
+        room: state.room,
+      });
       socket.emit("send msg", {
         type: "deckSize",
         data: state.deck.length,
@@ -820,9 +926,13 @@ export const CardSlice = createSlice({
       const card = action.payload.card;
       const cardIndex = action.payload.index;
       state.deck = state.deck.filter((_, i) => i !== cardIndex);
-      console.log(`Removed ${card} from deck`);
       state.deck = [...state.deck, card];
-      console.log(`Added ${card} to bot of deck`);
+      state.chatLog = [...state.chatLog, `(Me): Moved ${card} to bot of deck`];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Moved 1 card to bot of deck`,
+        room: state.room,
+      });
       socket.emit("send msg", {
         type: "deckSize",
         data: state.deck.length,
@@ -833,9 +943,19 @@ export const CardSlice = createSlice({
       const card = action.payload.card;
       const cardIndex = action.payload.index;
       state.deck = state.deck.filter((_, i) => i !== cardIndex);
-      console.log(`Removed ${card} from deck`);
+      state.chatLog = [...state.chatLog, `(Me): Removed ${card} from deck`];
       state.cemetery = [card, ...state.cemetery];
-      console.log(`Added ${card} to cemetery`);
+      state.chatLog = [...state.chatLog, `(Me): Added ${card} to cemetery`];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Removed ${card} from deck`,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "log",
+        data: `Added ${card} to cemetery`,
+        room: state.room,
+      });
       socket.emit("send msg", {
         type: "cemetery",
         data: state.cemetery,
@@ -850,9 +970,13 @@ export const CardSlice = createSlice({
     addToCemeteryFromTopOfDeck: (state) => {
       const card = state.deck[0];
       state.deck = state.deck.slice(1);
-      console.log(`Removed ${card} from deck`);
       state.cemetery = [card, ...state.cemetery];
-      console.log(`Added ${card} to cemetery`);
+      state.chatLog = [...state.chatLog, `(Me): Mill ${card} to cemetery`];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Mill ${card} to cemetery`,
+        room: state.room,
+      });
       socket.emit("send msg", {
         type: "cemetery",
         data: state.cemetery,
@@ -868,9 +992,19 @@ export const CardSlice = createSlice({
       const card = action.payload.card;
       const cardIndex = action.payload.index;
       state.deck = state.deck.filter((_, i) => i !== cardIndex);
-      console.log(`Removed ${card} from deck`);
+      state.chatLog = [...state.chatLog, `(Me): Removed ${card} from deck`];
       state.banish = [card, ...state.banish];
-      console.log(`Added ${card} to banished`);
+      state.chatLog = [...state.chatLog, `(Me): Added ${card} to banished`];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Removed ${card} from deck`,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "log",
+        data: `Added ${card} to banished`,
+        room: state.room,
+      });
       socket.emit("send msg", {
         type: "banish",
         data: state.banish,
@@ -887,9 +1021,19 @@ export const CardSlice = createSlice({
       const cardIndex = action.payload.index;
       const newDeck = state.deck.filter((_, i) => i !== cardIndex);
       state.deck = newDeck;
-      console.log(`Removed ${card} from deck`);
+      state.chatLog = [...state.chatLog, `(Me): Removed ${card} from deck`];
       state.hand = [...state.hand, card];
-      console.log(`Added ${card} to hand`);
+      state.chatLog = [...state.chatLog, `(Me): Added ${card} to hand`];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Removed ${card} from deck`,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "log",
+        data: `Added ${card} to hand`,
+        room: state.room,
+      });
       socket.emit("send msg", {
         type: "hand",
         data: state.hand,
@@ -910,9 +1054,19 @@ export const CardSlice = createSlice({
         ...state.field.slice(cardIndex + 1),
       ];
       state.field = newField;
-      console.log(`Removed ${card} from field`);
+      state.chatLog = [...state.chatLog, `(Me): Removed ${card} from field`];
       state.hand = [...state.hand, card];
-      console.log(`Added ${card} to hand`);
+      state.chatLog = [...state.chatLog, `(Me): Added ${card} to hand`];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Removed ${card} from field`,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "log",
+        data: `Added ${card} to hand`,
+        room: state.room,
+      });
       socket.emit("send msg", {
         type: "field",
         data: state.field,
@@ -929,15 +1083,24 @@ export const CardSlice = createSlice({
       const cardIndex = state.hand.indexOf(card);
       const newIndex = action.payload.index;
       state.hand = state.hand.filter((_, i) => i !== cardIndex);
-      console.log(`Removed ${card} from hand`);
+      state.chatLog = [...state.chatLog, `(Me): Removed ${card} from hand`];
       const newField = [
         ...state.field.slice(0, newIndex),
         card,
         ...state.field.slice(newIndex + 1),
       ];
       state.field = newField;
-      console.log(`Added ${card} to field`);
-
+      state.chatLog = [...state.chatLog, `(Me): Added ${card} to field`];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Removed ${card} from hand`,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "log",
+        data: `Added ${card} to field`,
+        room: state.room,
+      });
       socket.emit("send msg", {
         type: "field",
         data: state.field,
@@ -956,9 +1119,19 @@ export const CardSlice = createSlice({
       const card = action.payload;
       const cardIndex = state.cemetery.indexOf(card);
       state.cemetery = state.cemetery.filter((_, i) => i !== cardIndex);
-      console.log(`Removed ${card} from cemetery`);
+      state.chatLog = [...state.chatLog, `(Me): Removed ${card} from cemetery`];
       state.hand = [...state.hand, card];
-      console.log(`Added ${card} to hand`);
+      state.chatLog = [...state.chatLog, `(Me): Added ${card} to hand`];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Removed ${card} from cemetery`,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "log",
+        data: `Added ${card} to hand`,
+        room: state.room,
+      });
       socket.emit("send msg", {
         type: "cemetery",
         data: state.cemetery,
@@ -974,9 +1147,19 @@ export const CardSlice = createSlice({
       const card = action.payload;
       const cardIndex = state.cemetery.indexOf(card);
       state.cemetery = state.cemetery.filter((_, i) => i !== cardIndex);
-      console.log(`Removed ${card} from cemetery`);
+      state.chatLog = [...state.chatLog, `(Me): Removed ${card} from cemetery`];
       state.banish = [card, ...state.banish];
-      console.log(`Added ${card} to banished`);
+      state.chatLog = [...state.chatLog, `(Me): Added ${card} to banished`];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Removed ${card} from cemetery`,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "log",
+        data: `Added ${card} to banished`,
+        room: state.room,
+      });
       socket.emit("send msg", {
         type: "cemetery",
         data: state.cemetery,
@@ -992,9 +1175,19 @@ export const CardSlice = createSlice({
       const card = action.payload;
       const cardIndex = state.banish.indexOf(card);
       state.banish = state.banish.filter((_, i) => i !== cardIndex);
-      console.log(`Removed ${card} from banish`);
+      state.chatLog = [...state.chatLog, `(Me): Removed ${card} from banish`];
       state.hand = [...state.hand, card];
-      console.log(`Added ${card} to hand`);
+      state.chatLog = [...state.chatLog, `(Me): Added ${card} to hand`];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Removed ${card} from banish`,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "log",
+        data: `Added ${card} to hand`,
+        room: state.room,
+      });
       socket.emit("send msg", {
         type: "banish",
         data: state.banish,
@@ -1015,9 +1208,19 @@ export const CardSlice = createSlice({
         ...state.field.slice(cardIndex + 1),
       ];
       state.field = newField;
-      console.log(`Removed ${card} from field`);
+      state.chatLog = [...state.chatLog, `(Me): Removed ${card} from field`];
       state.cemetery = [card, ...state.cemetery];
-      console.log(`Added ${card} to cemetery`);
+      state.chatLog = [...state.chatLog, `(Me): Added ${card} to cemetery`];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Removed ${card} from field`,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "log",
+        data: `Added ${card} to cemetery`,
+        room: state.room,
+      });
       socket.emit("send msg", {
         type: "field",
         data: state.field,
@@ -1033,9 +1236,19 @@ export const CardSlice = createSlice({
       const card = action.payload;
       const cardIndex = state.hand.indexOf(card);
       state.hand = state.hand.filter((_, i) => i !== cardIndex);
-      console.log(`Removed ${card} from hand`);
+      state.chatLog = [...state.chatLog, `(Me): Removed ${card} from hand`];
       state.cemetery = [card, ...state.cemetery];
-      console.log(`Added ${card} to cemetery`);
+      state.chatLog = [...state.chatLog, `(Me): Added ${card} to cemetery`];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Removed ${card} from hand`,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "log",
+        data: `Added ${card} to cemetery`,
+        room: state.room,
+      });
       socket.emit("send msg", {
         type: "cemetery",
         data: state.cemetery,
@@ -1052,14 +1265,24 @@ export const CardSlice = createSlice({
       const cardIndex = state.cemetery.indexOf(card);
       const newIndex = action.payload.index;
       state.cemetery = state.cemetery.filter((_, i) => i !== cardIndex);
-      console.log(`Removed ${card} from cemetery`);
+      state.chatLog = [...state.chatLog, `(Me): Removed ${card} from cemetery`];
       const newField = [
         ...state.field.slice(0, newIndex),
         card,
         ...state.field.slice(newIndex + 1),
       ];
       state.field = newField;
-      console.log(`Added ${card} to field`);
+      state.chatLog = [...state.chatLog, `(Me): Added ${card} to field`];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Removed ${card} from cemetery`,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "log",
+        data: `Added ${card} to field`,
+        room: state.room,
+      });
       socket.emit("send msg", {
         type: "field",
         data: state.field,
@@ -1076,14 +1299,24 @@ export const CardSlice = createSlice({
       const cardIndex = state.banish.indexOf(card);
       const newIndex = action.payload.index;
       state.banish = state.banish.filter((_, i) => i !== cardIndex);
-      console.log(`Removed ${card} from banish`);
+      state.chatLog = [...state.chatLog, `(Me): Removed ${card} from banish`];
       const newField = [
         ...state.field.slice(0, newIndex),
         card,
         ...state.field.slice(newIndex + 1),
       ];
       state.field = newField;
-      console.log(`Added ${card} to field`);
+      state.chatLog = [...state.chatLog, `(Me): Added ${card} to field`];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Removed ${card} from banish`,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "log",
+        data: `Added ${card} to field`,
+        room: state.room,
+      });
       socket.emit("send msg", {
         type: "field",
         data: state.field,
@@ -1104,9 +1337,19 @@ export const CardSlice = createSlice({
         ...state.field.slice(cardIndex + 1),
       ];
       state.field = newField;
-      console.log(`Removed ${card} from field`);
+      state.chatLog = [...state.chatLog, `(Me): Removed ${card} from field`];
       state.banish = [card, ...state.banish];
-      console.log(`Added ${card} to banished`);
+      state.chatLog = [...state.chatLog, `(Me): Added ${card} to banished`];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Removed ${card} from field`,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "log",
+        data: `Added ${card} to banished`,
+        room: state.room,
+      });
       socket.emit("send msg", {
         type: "field",
         data: state.field,
@@ -1129,14 +1372,27 @@ export const CardSlice = createSlice({
         }
       }
       state.evoDeck = state.evoDeck.filter((_, i) => i !== cardIndex);
-      console.log(`Removed ${card} from evolve deck`);
+      state.chatLog = [
+        ...state.chatLog,
+        `(Me): Removed ${card} from evolve deck`,
+      ];
       const newField = [
         ...state.evoField.slice(0, newIndex),
         card,
         ...state.evoField.slice(newIndex + 1),
       ];
       state.evoField = newField;
-      console.log(`Added ${card} to evolve field`);
+      state.chatLog = [...state.chatLog, `(Me): Added ${card} to field`];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Removed ${card} from evolve deck`,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "log",
+        data: `Added ${card} to field`,
+        room: state.room,
+      });
       socket.emit("send msg", {
         type: "evoField",
         data: state.evoField,
@@ -1160,8 +1416,6 @@ export const CardSlice = createSlice({
         }
       }
       state.evoDeck = state.evoDeck.filter((_, i) => i !== cardIndex);
-      console.log(`Removed ${card} from evolve deck`);
-
       if (carrots === 1) {
         const newField = [
           ...state.evoField.slice(0, newIndex),
@@ -1169,7 +1423,6 @@ export const CardSlice = createSlice({
           ...state.evoField.slice(newIndex + 1),
         ];
         state.evoField = newField;
-        console.log("Added Carrot-1 to evolve field");
       } else {
         const numOfCarrots = Number(state.evoField[newIndex].slice(-1));
         console.log("numOfCarrots", numOfCarrots);
@@ -1179,8 +1432,16 @@ export const CardSlice = createSlice({
           ...state.evoField.slice(newIndex + 1),
         ];
         state.evoField = newField;
-        console.log(`Added Carrot-${numOfCarrots + 1} to evolve field`);
       }
+      state.chatLog = [
+        ...state.chatLog,
+        `(Me): Fed ${state.field[newIndex]} 1 Carrot`,
+      ];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Fed ${state.field[newIndex]} 1 Carrot`,
+        room: state.room,
+      });
       socket.emit("send msg", {
         type: "evoField",
         data: state.evoField,
@@ -1201,7 +1462,7 @@ export const CardSlice = createSlice({
         ...state.evoField.slice(cardIndex + 1),
       ];
       state.evoField = newField;
-      console.log(`Removed ${card} from evolve field`);
+      state.chatLog = [...state.chatLog, `(Me): Removed ${card} from field`];
       if (card.slice(0, 6) === "Carrot") {
         const numOfCarrots = Number(card.slice(-1));
         for (let i = 0; i < numOfCarrots; i++)
@@ -1209,7 +1470,20 @@ export const CardSlice = createSlice({
       } else {
         state.evoDeck = [...state.evoDeck, { card: card, status: true }];
       }
-      console.log(`Added ${card} to evolve deck`);
+      state.chatLog = [
+        ...state.chatLog,
+        `(Me): Added used ${card} to evolve deck`,
+      ];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Removed ${card} from field`,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "log",
+        data: `Added used ${card} to evolve deck`,
+        room: state.room,
+      });
       socket.emit("send msg", {
         type: "evoField",
         data: state.evoField,
@@ -1234,9 +1508,16 @@ export const CardSlice = createSlice({
         }
       }
       state.evoDeck = state.evoDeck.filter((_, i) => i !== cardIndex);
-      console.log(`Removed ${card} from evolve deck`);
       state.evoDeck = [...state.evoDeck, { card: card, status: false }];
-      console.log(`Added ${card} to evolve deck`);
+      state.chatLog = [
+        ...state.chatLog,
+        `(Me): Restored ${card} in evolve deck`,
+      ];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Restored ${card} in evolve deck`,
+        room: state.room,
+      });
       socket.emit("send msg", {
         type: "evoDeck",
         data: state.evoDeck,
@@ -1404,7 +1685,6 @@ export const {
   moveCardOnField,
   transferToOpponentField,
   reorderCardsInHand,
-  mulligan,
   mulliganFour,
   setCurrentCard,
   setCurrentEvo,
@@ -1442,6 +1722,7 @@ export const {
   setEnemyEvoPoints,
   setEnemyPlayPoints,
   setEnemyHealth,
+  setEnemyLog,
   setEvoPoints,
   setPlayPoints,
   setHealth,

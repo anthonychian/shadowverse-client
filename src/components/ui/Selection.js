@@ -26,16 +26,28 @@ import {
   Drawer,
   Divider,
   List,
+  Button,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogTitle,
+  Typography,
 } from "@mui/material";
 
 import MenuIcon from "@mui/icons-material/Menu";
 import SettingsIcon from "@mui/icons-material/Settings";
+import ChatIcon from "@mui/icons-material/Chat";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { setLeader, reset } from "../../redux/CardSlice";
+import { useSelector } from "react-redux";
 
 export default function Selection({ setSelectedOption }) {
+  // redux state
+  const reduxChatLog = useSelector((state) => state.card.chatLog);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [drawerOpen, setDrawerOpen] = useState(false);
@@ -57,6 +69,26 @@ export default function Selection({ setSelectedOption }) {
 
   const handleDrawerOpen = () => setDrawerOpen(true);
   const handleDrawerClose = () => setDrawerOpen(false);
+
+  const [openDialog, setOpenDialog] = useState(false);
+
+  const handleOpenDialog = () => {
+    setOpenDialog(true);
+  };
+
+  const handleCloseDialog = () => {
+    setOpenDialog(false);
+  };
+
+  const descriptionElementRef = React.useRef(null);
+  React.useEffect(() => {
+    if (openDialog) {
+      const { current: descriptionElement } = descriptionElementRef;
+      if (descriptionElement !== null) {
+        descriptionElement.focus();
+      }
+    }
+  }, [openDialog]);
 
   return (
     <>
@@ -92,6 +124,18 @@ export default function Selection({ setSelectedOption }) {
 
           <List>
             <ListItem key={"text"} disablePadding>
+              <ListItemButton onClick={handleOpenDialog}>
+                <ListItemIcon>
+                  <ChatIcon sx={{ color: "white" }} />
+                </ListItemIcon>
+                <ListItemText primary={"Game Log"} />
+              </ListItemButton>
+            </ListItem>
+          </List>
+          <Divider />
+
+          <List>
+            <ListItem key={"text"} disablePadding>
               <ListItemButton>
                 <ListItemIcon>
                   <SettingsIcon sx={{ color: "white" }} />
@@ -114,6 +158,44 @@ export default function Selection({ setSelectedOption }) {
           </List>
         </Box>
       </Drawer>
+
+      <Dialog
+        open={openDialog}
+        onClose={handleCloseDialog}
+        scroll={"paper"}
+        aria-labelledby="scroll-dialog-title"
+        aria-describedby="scroll-dialog-description"
+      >
+        <DialogTitle id="scroll-dialog-title">Game Log</DialogTitle>
+        <DialogContent>
+          <DialogContentText
+            id="scroll-dialog-description"
+            ref={descriptionElementRef}
+            tabIndex={-1}
+          >
+            {reduxChatLog.map((x) =>
+              x[1] === "M" ? (
+                <Typography
+                  variant="body1"
+                  style={{ color: "red", whiteSpace: "pre-line" }}
+                >
+                  {x}
+                </Typography>
+              ) : (
+                <Typography
+                  variant="body1"
+                  style={{ color: "blue", whiteSpace: "pre-line" }}
+                >
+                  {x}
+                </Typography>
+              )
+            )}
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleCloseDialog}>Cancel</Button>
+        </DialogActions>
+      </Dialog>
 
       <IconButton
         onClick={handleDrawerOpen}

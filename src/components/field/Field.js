@@ -54,6 +54,7 @@ import {
   setArrow,
   setEnemyArrow,
   setEnemyDice,
+  setEnemyLog,
   setEnemyLeaderActive,
   setField,
 } from "../../redux/CardSlice";
@@ -195,7 +196,11 @@ export default function Field({
       else if (data.type === "dice") dispatch(setEnemyDice(data.data));
       else if (data.type === "leaderActive")
         dispatch(setEnemyLeaderActive(data.data));
+      else if (data.type === "log") dispatch(setEnemyLog(data.data));
     });
+    return () => {
+      socket.off("receive msg");
+    };
   }, [socket]);
 
   useEffect(() => {
@@ -329,9 +334,9 @@ export default function Field({
             index: indexClicked,
           })
         );
-        dispatch(clearValuesAtIndex(index));
-        dispatch(clearEngagedAtIndex(index));
-        dispatch(clearCountersAtIndex(index));
+        dispatch(clearValuesAtIndex(indexClicked));
+        dispatch(clearEngagedAtIndex(indexClicked));
+        dispatch(clearCountersAtIndex(indexClicked));
       }
       if (readyFromCemetery) {
         setReadyFromCemetery(false);
