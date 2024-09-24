@@ -265,6 +265,26 @@ export const CardSlice = createSlice({
     setEnemyLog: (state, action) => {
       state.chatLog = [...state.chatLog, `(Player 2): ${action.payload}`];
     },
+    setViewingCardsLog: (state, action) => {
+      let number = action.payload.number;
+      state.chatLog = [
+        ...state.chatLog,
+        `(Me): Looked at top ${number} cards of deck`,
+      ];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Looked at top ${number} cards of deck`,
+        room: state.room,
+      });
+    },
+    setViewingDeckLog: (state, action) => {
+      state.chatLog = [...state.chatLog, `(Me): Viewed deck`];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Viewed deck`,
+        room: state.room,
+      });
+    },
     modifyCounter: (state, action) => {
       let newValue = action.payload.value;
       let index = action.payload.index;
@@ -1723,6 +1743,8 @@ export const {
   setEnemyPlayPoints,
   setEnemyHealth,
   setEnemyLog,
+  setViewingCardsLog,
+  setViewingDeckLog,
   setEvoPoints,
   setPlayPoints,
   setHealth,

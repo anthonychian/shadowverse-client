@@ -14,6 +14,8 @@ import {
   addToBanishFromDeck,
   setViewingDeck,
   setViewingTopCards,
+  setViewingCardsLog,
+  setViewingDeckLog,
 } from "../../redux/CardSlice";
 import { Menu, MenuItem, Modal, Box, Popover } from "@mui/material";
 
@@ -129,6 +131,7 @@ export default function Deck({ ready, setHovering }) {
   const handleViewDeck = () => {
     handlePopoverClose();
     handleModalOpen();
+    dispatch(setViewingDeckLog());
   };
   const handleRevealDeck = () => {
     setReveal(true);
@@ -237,6 +240,8 @@ export default function Deck({ ready, setHovering }) {
 
   const handleSubmit = () => {
     const num = Number(textInput);
+    dispatch(setViewingCardsLog({ number: num }));
+
     if (num < reduxDeck.length) {
       setPartialDeck(reduxDeck.slice(0, num));
     } else {
