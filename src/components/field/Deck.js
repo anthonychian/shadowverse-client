@@ -249,11 +249,6 @@ export default function Deck({ ready, setHovering }) {
     }
   };
 
-  // const handleReset = () => {
-  //   handleClose();
-  //   dispatch(reset());
-  // };
-
   return (
     <>
       <div

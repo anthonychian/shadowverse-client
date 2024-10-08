@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import imageRamina from "../../assets/leaders/Ramina.png";
 import imageJeanne from "../../assets/leaders/Jeanne.png";
 import imageForte from "../../assets/leaders/Forte.png";
@@ -15,6 +16,9 @@ import imageMaru from "../../assets/leaders/Maru.png";
 import imageRin from "../../assets/leaders/Rin.png";
 import imageMio from "../../assets/leaders/Mio.png";
 import dragon from "../../assets/logo/dragon.png";
+
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 
 import {
   Box,
@@ -41,30 +45,28 @@ import MenuIcon from "@mui/icons-material/Menu";
 import SettingsIcon from "@mui/icons-material/Settings";
 import ChatIcon from "@mui/icons-material/Chat";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
-import { useDispatch } from "react-redux";
+import ReplayIcon from "@mui/icons-material/Replay";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { setLeader, reset } from "../../redux/CardSlice";
-import { useSelector } from "react-redux";
+import {
+  setLeader,
+  reset,
+  exitGame,
+  setRematchStatus,
+} from "../../redux/CardSlice";
 
 export default function Selection({ setSelectedOption }) {
   // redux state
   const reduxChatLog = useSelector((state) => state.card.chatLog);
+  const reduxEnemyRematchStatus = useSelector(
+    (state) => state.card.enemyRematchStatus
+  );
+  const img = require("../../assets/pin_bellringer_angel.png");
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [open, setOpen] = useState(false);
-
-  const selectLeader = (e) => {
-    const leader = e.target.alt;
-    setSelectedOption(leader);
-    dispatch(setLeader(leader));
-  };
-
-  const exitToHome = () => {
-    dispatch(reset());
-    navigate("/");
-  };
 
   const handleModalOpen = () => setOpen(true);
   const handleModalClose = () => setOpen(false);
@@ -74,6 +76,44 @@ export default function Selection({ setSelectedOption }) {
 
   const [openDialog, setOpenDialog] = useState(false);
 
+  const [rematchOpenDialog, setRematchOpenDialog] = useState(false);
+
+  const [rematchNotify, setRematchNotify] = useState(false);
+
+  const [acceptRematch, setAcceptRematch] = useState(false);
+
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down("md"));
+
+  const selectLeader = (e) => {
+    const leader = e.target.alt;
+    setSelectedOption(leader);
+    dispatch(setLeader(leader));
+  };
+
+  const handleRematch = () => {
+    if (acceptRematch && reduxEnemyRematchStatus) {
+      dispatch(reset());
+      setAcceptRematch(false);
+      setRematchNotify(true);
+    }
+  };
+
+  const exitToHome = () => {
+    dispatch(exitGame());
+    navigate("/");
+  };
+
+  const handleAcceptRematchUI = () => {
+    setAcceptRematch(true);
+    dispatch(setRematchStatus(true));
+  };
+  const handleDeclineRematchUI = () => {
+    setAcceptRematch(false);
+    handleCloseRematchDialog();
+    dispatch(setRematchStatus(false));
+  };
+
   const handleOpenDialog = () => {
     setOpenDialog(true);
   };
@@ -82,8 +122,16 @@ export default function Selection({ setSelectedOption }) {
     setOpenDialog(false);
   };
 
+  const handleOpenRematchDialog = () => {
+    setRematchOpenDialog(true);
+  };
+
+  const handleCloseRematchDialog = () => {
+    setRematchOpenDialog(false);
+  };
+
   const descriptionElementRef = React.useRef(null);
-  React.useEffect(() => {
+  useEffect(() => {
     if (openDialog) {
       const { current: descriptionElement } = descriptionElementRef;
       if (descriptionElement !== null) {
@@ -91,6 +139,19 @@ export default function Selection({ setSelectedOption }) {
       }
     }
   }, [openDialog]);
+
+  useEffect(() => {
+    if (reduxEnemyRematchStatus) setRematchOpenDialog(true);
+    else setRematchOpenDialog(false);
+  }, [reduxEnemyRematchStatus]);
+
+  useEffect(() => {
+    handleRematch();
+  }, [acceptRematch]);
+
+  useEffect(() => {
+    handleRematch();
+  }, [reduxEnemyRematchStatus]);
 
   return (
     <>
@@ -150,6 +211,18 @@ export default function Selection({ setSelectedOption }) {
 
           <List>
             <ListItem key={"text"} disablePadding>
+              <ListItemButton onClick={handleOpenRematchDialog}>
+                <ListItemIcon>
+                  <ReplayIcon sx={{ color: "white" }} />
+                </ListItemIcon>
+                <ListItemText primary={"Rematch"} />
+              </ListItemButton>
+            </ListItem>
+          </List>
+          <Divider />
+
+          <List>
+            <ListItem key={"text"} disablePadding>
               <ListItemButton onClick={exitToHome}>
                 <ListItemIcon>
                   <ExitToAppIcon sx={{ color: "white" }} />
@@ -160,6 +233,107 @@ export default function Selection({ setSelectedOption }) {
           </List>
         </Box>
       </Drawer>
+
+      <Dialog
+        fullScreen={fullScreen}
+        open={rematchOpenDialog}
+        onClose={handleCloseRematchDialog}
+        aria-labelledby="responsive-dialog-title"
+      >
+        {/* has not sent or received a rematch request */}
+        {!acceptRematch && !reduxEnemyRematchStatus && (
+          <DialogTitle id="responsive-dialog-title">
+            {"Rematch Request"}
+          </DialogTitle>
+        )}
+
+        {/* has sent a rematch request */}
+        {acceptRematch && !reduxEnemyRematchStatus && (
+          <DialogTitle id="responsive-dialog-title">
+            {"Sent Rematch Request"}
+          </DialogTitle>
+        )}
+
+        {/* has received a rematch request */}
+        {!acceptRematch && reduxEnemyRematchStatus && (
+          <DialogTitle id="responsive-dialog-title">
+            {"Rematch Request Received"}
+          </DialogTitle>
+        )}
+        <DialogContent>
+          {/* has not sent or received a rematch request */}
+          {!acceptRematch && !reduxEnemyRematchStatus && (
+            <DialogContentText>
+              Send a Rematch Request to your Opponent?
+            </DialogContentText>
+          )}
+
+          {/* has sent a rematch request */}
+          {acceptRematch && !reduxEnemyRematchStatus && (
+            <DialogContentText>
+              Waiting for Opponent to accept Rematch Request...
+            </DialogContentText>
+          )}
+
+          {/* has received a rematch request */}
+          {!acceptRematch && reduxEnemyRematchStatus && (
+            <DialogContentText>
+              Opponent has asked for a Rematch
+            </DialogContentText>
+          )}
+
+          {/* has sent a rematch request */}
+          {acceptRematch && !reduxEnemyRematchStatus && (
+            <motion.div
+              transition={{ duration: 7, repeat: Infinity }}
+              animate={{ rotateY: 360 }}
+            >
+              <img height={"160px"} src={img} alt={"bellringer"} />
+            </motion.div>
+          )}
+
+          {/* has received a rematch request */}
+          {!acceptRematch && reduxEnemyRematchStatus && (
+            <motion.div
+              transition={{ duration: 7, repeat: Infinity }}
+              animate={{ rotateY: 360 }}
+            >
+              <img height={"160px"} src={img} alt={"bellringer"} />
+            </motion.div>
+          )}
+        </DialogContent>
+
+        <DialogActions>
+          {/* has not sent or received a rematch request */}
+          {!acceptRematch && !reduxEnemyRematchStatus && (
+            <Button autoFocus onClick={handleCloseRematchDialog}>
+              Disagree
+            </Button>
+          )}
+          {!acceptRematch && !reduxEnemyRematchStatus && (
+            <Button onClick={handleAcceptRematchUI} autoFocus>
+              Agree
+            </Button>
+          )}
+          {/* has sent a rematch request */}
+          {acceptRematch && !reduxEnemyRematchStatus && (
+            <Button onClick={handleDeclineRematchUI} autoFocus>
+              Cancel
+            </Button>
+          )}
+          {/* has received a rematch request */}
+          {!acceptRematch && reduxEnemyRematchStatus && (
+            <Button autoFocus onClick={handleCloseRematchDialog}>
+              Disagree
+            </Button>
+          )}
+          {!acceptRematch && reduxEnemyRematchStatus && (
+            <Button autoFocus onClick={handleAcceptRematchUI}>
+              Aggree
+            </Button>
+          )}
+        </DialogActions>
+      </Dialog>
 
       <Dialog
         open={openDialog}

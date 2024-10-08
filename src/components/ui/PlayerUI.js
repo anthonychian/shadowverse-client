@@ -23,6 +23,7 @@ export default function PlayerUI({ name }) {
   const reduxCurrentPlayPoints = useSelector(
     (state) => state.card.playPoints.available
   );
+  const reduxCurrentHealth = useSelector((state) => state.card.playerHealth);
   const reduxMaxPlayPoints = useSelector((state) => state.card.playPoints.max);
   const reduxShowDice = useSelector((state) => state.card.showDice);
   const reduxLeaderActive = useSelector((state) => state.card.leaderActive);
@@ -30,6 +31,10 @@ export default function PlayerUI({ name }) {
   useEffect(() => {
     dispatch(setHealth(playerHealth));
   }, [playerHealth]);
+
+  useEffect(() => {
+    setPlayerHealth(reduxCurrentHealth);
+  }, [reduxCurrentHealth]);
 
   const incrementPlayerPoints = () => {
     setPlayerHealth(playerHealth + 1);

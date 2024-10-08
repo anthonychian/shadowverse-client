@@ -46,13 +46,6 @@ export default function CardActions() {
       >
         Mulligan 4
       </Button>
-      <Button
-        style={{ fontSize: 12, width: "130px" }}
-        onClick={() => dispatch(reset())}
-        variant="contained"
-      >
-        Reset
-      </Button>
     </div>
   );
 }

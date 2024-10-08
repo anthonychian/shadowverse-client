@@ -51,6 +51,7 @@ import {
   setEnemyViewingCemeteryOpponent,
   setEnemyViewingEvoDeckOpponent,
   setEnemyViewingTopCards,
+  setEnemyRematchStatus,
   setArrow,
   setEnemyArrow,
   setEnemyDice,
@@ -197,6 +198,8 @@ export default function Field({
       else if (data.type === "leaderActive")
         dispatch(setEnemyLeaderActive(data.data));
       else if (data.type === "log") dispatch(setEnemyLog(data.data));
+      else if (data.type === "rematch")
+        dispatch(setEnemyRematchStatus(data.data));
     });
     return () => {
       socket.off("receive msg");

@@ -6,6 +6,8 @@ export const CardSlice = createSlice({
   initialState: {
     deck: [],
     evoDeck: [],
+    initialDeck: [],
+    initialEvoDeck: [],
     hand: [],
     enemyHand: [],
     showDice: false,
@@ -23,6 +25,8 @@ export const CardSlice = createSlice({
     enemyDeckSize: 0,
     enemyLeader: "",
     enemyDice: { show: false, roll: 1 },
+    rematchStatus: false,
+    enemyRematchStatus: false,
     leader: "",
     evoPoints: 0,
     enemyEvoPoints: 0,
@@ -111,6 +115,7 @@ export const CardSlice = createSlice({
     },
     setDeck: (state, action) => {
       state.deck = action.payload;
+      state.initialDeck = action.payload;
     },
     setPlayPoints: (state, action) => {
       state.playPoints = action.payload;
@@ -143,6 +148,17 @@ export const CardSlice = createSlice({
         data: state.evoPoints,
         room: state.room,
       });
+    },
+    setRematchStatus: (state, action) => {
+      state.rematchStatus = action.payload;
+      socket.emit("send msg", {
+        type: "rematch",
+        data: state.rematchStatus,
+        room: state.room,
+      });
+    },
+    setEnemyRematchStatus: (state, action) => {
+      state.enemyRematchStatus = action.payload;
     },
     setShowEnemyHand: (state, action) => {
       state.showEnemyHand = action.payload;
@@ -246,6 +262,7 @@ export const CardSlice = createSlice({
     },
     setEvoDeck: (state, action) => {
       state.evoDeck = action.payload;
+      state.initialEvoDeck = action.payload;
     },
     setEnemyHand: (state, action) => {
       state.enemyHand = action.payload;
@@ -1580,9 +1597,13 @@ export const CardSlice = createSlice({
     setLeaderActive: (state, action) => {
       state.leaderActive = action.payload;
     },
+    exitGame: (state) => {
+      state.room = "";
+    },
     reset: (state) => {
-      state.deck = [];
-      state.evoDeck = [];
+      state.deck = state.initialDeck;
+      state.deck = state.deck.toSorted(() => Math.random() - 0.5);
+      state.evoDeck = state.initialEvoDeck;
       state.hand = [];
       state.enemyHand = [];
       state.showDice = false;
@@ -1591,8 +1612,8 @@ export const CardSlice = createSlice({
       state.showEnemyCard = false;
       state.enemyCard = "";
       state.enemyDeckSize = 0;
-      state.enemyLeader = "";
-      state.leader = "";
+      // state.enemyLeader = "";
+      // state.leader = "";
       state.evoPoints = 0;
       state.enemyEvoPoints = 0;
       state.playPoints = { available: 0, max: 0 };
@@ -1607,7 +1628,9 @@ export const CardSlice = createSlice({
       state.enemyCounterField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
       state.currentCard = "";
       state.currentEvo = "";
-      state.room = "";
+      // state.room = "";
+      state.rematchStatus = false;
+      state.enemyRematchStatus = false;
       state.banish = [];
       state.enemyBanish = [];
       state.cemetery = [];
@@ -1777,4 +1800,7 @@ export const {
   setLeaderActive,
   duplicateCardOnField,
   reset,
+  exitGame,
+  setRematchStatus,
+  setEnemyRematchStatus,
 } = CardSlice.actions;
