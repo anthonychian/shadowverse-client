@@ -11,6 +11,8 @@ import abyss from "../../assets/logo/abyss.png";
 import dragon from "../../assets/logo/dragon.png";
 import haven from "../../assets/logo/haven.png";
 import rune from "../../assets/logo/rune.png";
+import uma from "../../assets/logo/carrot.png";
+import idol from "../../assets/logo/idol.png";
 import Dice from "react-dice-roll";
 import { motion } from "framer-motion";
 
@@ -82,7 +84,11 @@ export default function PlayerUI({ name }) {
       case "Daria":
         return rune;
       case "Maruzensky":
-        return abyss;
+        return uma;
+      case "Rin":
+        return idol;
+      case "Mio":
+        return idol;
       default:
         return dragon;
     }
@@ -115,6 +121,10 @@ export default function PlayerUI({ name }) {
         return "linear-gradient(181deg, rgb(2, 0, 97) 15%, rgb(97, 149, 219) 158.5%)";
       case "Maruzensky":
         return "linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(247, 30, 30) 100.3%)";
+      case "Rin":
+        return "linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%)";
+      case "Mio":
+        return "linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%)";
       default:
         return "linear-gradient(to right, rgb(252, 74, 26), rgb(247, 183, 51))";
     }

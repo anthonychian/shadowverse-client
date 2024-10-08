@@ -12,6 +12,8 @@ import imageCC from "../../assets/leaders/CC.png";
 import imageExella from "../../assets/leaders/Exella.png";
 import imageAmy from "../../assets/leaders/Amy.png";
 import imageMaru from "../../assets/leaders/Maru.png";
+import imageRin from "../../assets/leaders/Rin.png";
+import imageMio from "../../assets/leaders/Mio.png";
 
 import "../../css/Leader.css";
 
@@ -56,6 +58,12 @@ export default function Leader({ name, active }) {
       break;
     case "Maruzensky":
       image = imageMaru;
+      break;
+    case "Rin":
+      image = imageRin;
+      break;
+    case "Mio":
+      image = imageMio;
       break;
     default:
       image = imageGalmieux;

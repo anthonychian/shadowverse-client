@@ -12,6 +12,8 @@ import imageCC from "../../assets/leaders/CC.png";
 import imageExella from "../../assets/leaders/Exella.png";
 import imageAmy from "../../assets/leaders/Amy.png";
 import imageMaru from "../../assets/leaders/Maru.png";
+import imageRin from "../../assets/leaders/Rin.png";
+import imageMio from "../../assets/leaders/Mio.png";
 import dragon from "../../assets/logo/dragon.png";
 
 import {
@@ -252,7 +254,6 @@ export default function Selection({ setSelectedOption }) {
               }}
               onClick={(e) => {
                 selectLeader(e);
-                // setWallpaper(forte);
               }}
             >
               <img width="100px" src={imageForte} alt="Forte" />
@@ -265,7 +266,6 @@ export default function Selection({ setSelectedOption }) {
               }}
               onClick={(e) => {
                 selectLeader(e);
-                // setWallpaper(forte);
               }}
             >
               <img width="100px" src={imageGalmieux} alt="Galmieux" />
@@ -278,7 +278,6 @@ export default function Selection({ setSelectedOption }) {
               }}
               onClick={(e) => {
                 selectLeader(e);
-                // setWallpaper(alice);
               }}
             >
               <img width="100px" src={imageJeanne} alt="Jeanne" />
@@ -292,7 +291,6 @@ export default function Selection({ setSelectedOption }) {
               }}
               onClick={(e) => {
                 selectLeader(e);
-                // setWallpaper(alice);
               }}
             >
               <img width="100px" src={imageRamina} alt="Ramina" />
@@ -305,7 +303,6 @@ export default function Selection({ setSelectedOption }) {
               }}
               onClick={(e) => {
                 selectLeader(e);
-                // setWallpaper(albert);
               }}
             >
               <img width="100px" src={imageAlbert} alt="Albert" />
@@ -318,7 +315,6 @@ export default function Selection({ setSelectedOption }) {
               }}
               onClick={(e) => {
                 selectLeader(e);
-                // setWallpaper(albert);
               }}
             >
               <img width="100px" src={imageDionne} alt="Dionne" />
@@ -331,7 +327,6 @@ export default function Selection({ setSelectedOption }) {
               }}
               onClick={(e) => {
                 selectLeader(e);
-                // setWallpaper(runecraft);
               }}
             >
               <img width="100px" src={imageDaria} alt="Daria" />
@@ -344,7 +339,6 @@ export default function Selection({ setSelectedOption }) {
               }}
               onClick={(e) => {
                 selectLeader(e);
-                // setWallpaper(runecraft);
               }}
             >
               <img width="100px" src={imageKuon} alt="Kuon" />
@@ -358,7 +352,6 @@ export default function Selection({ setSelectedOption }) {
               }}
               onClick={(e) => {
                 selectLeader(e);
-                // setWallpaper(alice);
               }}
             >
               <img width="100px" src={imageCC} alt="CC" />
@@ -371,7 +364,6 @@ export default function Selection({ setSelectedOption }) {
               }}
               onClick={(e) => {
                 selectLeader(e);
-                // setWallpaper(alice);
               }}
             >
               <img width="100px" src={imageAria} alt="Aria" />
@@ -384,7 +376,6 @@ export default function Selection({ setSelectedOption }) {
               }}
               onClick={(e) => {
                 selectLeader(e);
-                // setWallpaper(dark);
               }}
             >
               <img width="100px" src={imageAmy} alt="Amy" />
@@ -397,7 +388,6 @@ export default function Selection({ setSelectedOption }) {
               }}
               onClick={(e) => {
                 selectLeader(e);
-                // setWallpaper(dark);
               }}
             >
               <img width="100px" src={imageExella} alt="Exella" />
@@ -410,10 +400,33 @@ export default function Selection({ setSelectedOption }) {
               }}
               onClick={(e) => {
                 selectLeader(e);
-                // setWallpaper(dark);
               }}
             >
               <img width="100px" src={imageMaru} alt="Maruzensky" />
+            </IconButton>
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectLeader(e);
+              }}
+            >
+              <img width="100px" src={imageRin} alt="Rin" />
+            </IconButton>
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectLeader(e);
+              }}
+            >
+              <img width="100px" src={imageMio} alt="Mio" />
             </IconButton>
           </Card>
         </Box>
