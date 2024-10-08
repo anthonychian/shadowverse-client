@@ -1,4 +1,8 @@
 export const allTokens = [
+  "Cute Earrings TOKEN",
+  "Cool Earrings TOKEN",
+  "Passion Earrings TOKEN",
+
   "Celestial Shikigami TOKEN",
   "Paper Shikigami TOKEN",
   "One-Tailed Fox TOKEN",

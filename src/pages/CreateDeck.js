@@ -7,6 +7,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import {
   allCards,
+  setIDOL,
   set6,
   set5,
   set4,
@@ -24,6 +25,7 @@ import {
 } from "../decks/AllCards";
 import {
   allCardsEvo,
+  setIDOLEvo,
   set6Evo,
   set5Evo,
   set4Evo,
@@ -189,6 +191,8 @@ export default function CreateDeck() {
 
   const getCardsFromName = (name) => {
     switch (name) {
+      case "idol":
+        return setIDOL;
       case "set 6":
         return set6;
       case "set 5":
@@ -203,6 +207,8 @@ export default function CreateDeck() {
         return set2;
       case "set 1":
         return set1;
+      case "idol evo":
+        return setIDOLEvo;
       case "set 6 evo":
         return set6Evo;
       case "set 5 evo":
@@ -664,6 +670,26 @@ export default function CreateDeck() {
             variant="contained"
           >
             All
+          </Button>
+          <Button
+            onClick={() => {
+              setButtonFilterSet("idol");
+              setButtonFilterSetEvo("idol evo");
+            }}
+            style={{
+              fontFamily: "Noto Serif JP,serif",
+              textTransform: "none",
+              fontWeight: "bold",
+              backgroundColor: buttonFilterSet === "idol" ? "#131219" : "white",
+              border:
+                buttonFilterSet === "idol"
+                  ? "3px solid gold"
+                  : "3px solid white",
+              color: buttonFilterSet === "idol" ? "gold" : "#131219",
+            }}
+            variant="contained"
+          >
+            iM@S CG
           </Button>
           <Button
             onClick={() => {

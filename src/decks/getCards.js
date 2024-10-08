@@ -1,5 +1,231 @@
 export const cardImage = (cardName) => {
   switch (cardName) {
+    case "Uzuki Shimamura [P.C.S.]":
+      return "../textures/CSD02a-001EN.png";
+    case "Kyoko Igarashi [P.C.S.]":
+      return "../textures/CSD02a-002EN.png";
+    case "Miho Kohinata [P.C.S.]":
+      return "../textures/CSD02a-003EN.png";
+    case "Chika Yokoyama":
+      return "../textures/CSD02a-004EN.png";
+    case "Momoka Sakurai":
+      return "../textures/CSD02a-005EN.png";
+    case "Akiha Ikebukuro":
+      return "../textures/CSD02a-007EN.png";
+    case "Nene Kurihara":
+      return "../textures/CSD02a-009EN.png";
+    case "Karin Domyoji":
+      return "../textures/CSD02a-011EN.png";
+
+    case "Rin Shibuya [Triad Primus]":
+      return "../textures/CSD02b-001EN.png";
+    case "Nao Kamiya [Over the Rainbow]":
+      return "../textures/CSD02b-002EN.png";
+    case "Karen Hojo [Song for Life]":
+      return "../textures/CSD02b-003EN.png";
+    case "Yasuha Okazaki":
+      return "../textures/CSD02b-004EN.png";
+    case "Yukimi Sajo":
+      return "../textures/CSD02b-005EN.png";
+    case "Kako Takafuji":
+      return "../textures/CSD02b-007EN.png";
+    case "Chizuru Matsuo":
+      return "../textures/CSD02b-009EN.png";
+    case "Seira Mizuki":
+      return "../textures/CSD02b-010EN.png";
+
+    case "Mio Honda [Positive Passion]":
+      return "../textures/CSD02c-001EN.png";
+    case "Aiko Takamori [Handmade Hapiness]":
+      return "../textures/CSD02c-002EN.png";
+    case "Akane Hino [Positive Passion]":
+      return "../textures/CSD02c-003EN.png";
+    case "Kaoru Ryuzaki":
+      return "../textures/CSD02c-004EN.png";
+    case "Suzuho Ueda":
+      return "../textures/CSD02c-005EN.png";
+    case "Miria Akagi":
+      return "../textures/CSD02c-007EN.png";
+    case "Miu Yaguchi":
+      return "../textures/CSD02c-009EN.png";
+    case "Kumiko Matsuyama":
+      return "../textures/CSD02c-010EN.png";
+
+    case "Aiko Takamori":
+      return "../textures/CP02-001EN.png";
+    case "Miku Maekawa":
+      return "../textures/CP02-U01aEN.png";
+    case "Yuzu Kitami":
+      return "../textures/CP02-004EN.png";
+    case "Anastasia":
+      return "../textures/CP02-U02EN.png";
+    case "Brand New Beat":
+      return "../textures/CP02-007EN.png";
+    case "Shinobu Kudo":
+      return "../textures/CP02-008EN.png";
+    case "Yumi Aiba":
+      return "../textures/CP02-009EN.png";
+    case "Goddess by the Sunlit Sea":
+      return "../textures/CP02-011EN.png";
+    case "Honoka Ayase":
+      return "../textures/CP02-012EN.png";
+    case "Azuki Momoi":
+      return "../textures/CP02-013EN.png";
+    case "Kana Imai":
+      return "../textures/CP02-014EN.png";
+    case "Otaha Umeki":
+      return "../textures/CP02-016EN.png";
+    case "A Single Vessel":
+      return "../textures/CP02-017EN.png";
+
+    case "Kyoko Igarashi":
+      return "../textures/CP02-018EN.png";
+    case "Nagi Hisakawa":
+      return "../textures/CP02-020EN.png";
+    case "Rin Shibuya":
+      return "../textures/CP02-021EN.png";
+    case "Mio Honda":
+      return "../textures/CP02-022EN.png";
+    case "Uzuki Shimamura":
+      return "../textures/CP02-023EN.png";
+    case "Anzu Futaba":
+      return "../textures/CP02-025EN.png";
+    case "Karen Hojo":
+      return "../textures/CP02-026EN.png";
+    case "Sparkling Days":
+      return "../textures/CP02-028EN.png";
+    case "Nao Kamiya":
+      return "../textures/CP02-029EN.png";
+    case "Mayu Sakuma":
+      return "../textures/CP02-030EN.png";
+    case "Kirari Moroboshi":
+      return "../textures/CP02-031EN.png";
+    case "Miho Kohinata":
+      return "../textures/CP02-032EN.png";
+    case "Angelic Maid":
+      return "../textures/CP02-034EN.png";
+
+    case "Mizuki Kawashima":
+      return "../textures/CP02-035EN.png";
+    case "Shiki Ichinose":
+      return "../textures/CP02-036EN.png";
+    case "Syuko Shiomi":
+      return "../textures/CP02-U06bEN.png";
+    case "Kanade Hayami":
+      return "../textures/CP02-039EN.png";
+    case "Center Street":
+      return "../textures/CP02-041EN.png";
+    case "Hina Araki":
+      return "../textures/CP02-042EN.png";
+    case "Frederica Miyamoto":
+      return "../textures/CP02-044EN.png";
+    case "Precocious Little Devil":
+      return "../textures/CP02-045EN.png";
+    case "Sarina Matsumoto":
+      return "../textures/CP02-046EN.png";
+    case "Rika Jougasaki":
+      return "../textures/CP02-047EN.png";
+    case "Sae Kobayakawa":
+      return "../textures/CP02-049EN.png";
+    case "Tomoe Murakami":
+      return "../textures/CP02-050EN.png";
+    case "Full Bloom Panorama":
+      return "../textures/CP02-051EN.png";
+
+    case "Akari Tsujino":
+      return "../textures/CP02-052EN.png";
+    case "Yui Ohtsuki":
+      return "../textures/CP02-053EN.png";
+    case "Fumika Sagisawa":
+      return "../textures/CP02-U08aEN.png";
+    case "Akira Sunazuka":
+      return "../textures/CP02-056EN.png";
+    case "Tsukasa Kiryu":
+      return "../textures/CP02-057EN.png";
+    case "Arisu Tachibana":
+      return "../textures/CP02-059EN.png";
+    case "Yuka Nakano":
+      return "../textures/CP02-060EN.png";
+    case "Unbound Emotion":
+      return "../textures/CP02-062EN.png";
+    case "Tokiko Zaizen":
+      return "../textures/CP02-063EN.png";
+    case "Noriko Shiina":
+      return "../textures/CP02-064EN.png";
+    case "Yukari Mizumoto":
+      return "../textures/CP02-065EN.png";
+    case "Noa Takamine":
+      return "../textures/CP02-066EN.png";
+    case "Mode Estivale":
+      return "../textures/CP02-068EN.png";
+
+    case "Ranko Kanzaki":
+      return "../textures/CP02-069EN.png";
+    case "Sachiko Koshimizu":
+      return "../textures/CP02-U10EN.png";
+    case "Takumi Mukai":
+      return "../textures/CP02-072EN.png";
+    case "Chitose Kurosaki":
+      return "../textures/CP02-074EN.png";
+    case "Whispers of a Dream":
+      return "../textures/CP02-075EN.png";
+    case "Chiyo Shirayuki":
+      return "../textures/CP02-076EN.png";
+    case "Aki Yamato":
+      return "../textures/CP02-077EN.png";
+    case "My Life, My Sounds":
+      return "../textures/CP02-079EN.png";
+    case "Ryo Matsunaga":
+      return "../textures/CP02-080EN.png";
+    case "Mirei Hayasaka":
+      return "../textures/CP02-081EN.png";
+    case "Rina Fujimoto":
+      return "../textures/CP02-082EN.png";
+    case "Syoko Hoshi":
+      return "../textures/CP02-083EN.png";
+    case "Last Daylight":
+      return "../textures/CP02-085EN.png";
+
+    case "Kaede Takagaki":
+      return "../textures/CP02-U11EN.png";
+    case "Shin Sato":
+      return "../textures/CP02-087EN.png";
+    case "Nana Abe":
+      return "../textures/CP02-089EN.png";
+    case "Akane Hino":
+      return "../textures/CP02-091EN.png";
+    case "Classroom Lily":
+      return "../textures/CP02-092EN.png";
+    case "Risa Matoba":
+      return "../textures/CP02-093EN.png";
+    case "Haru Yuuki":
+      return "../textures/CP02-094EN.png";
+    case "Psychic Maiden":
+      return "../textures/CP02-096EN.png";
+    case "Natalia":
+      return "../textures/CP02-097EN.png";
+    case "Shizuku Oikawa":
+      return "../textures/CP02-098EN.png";
+    case "Layla":
+      return "../textures/CP02-099EN.png";
+    case "Sanae Katagiri":
+      return "../textures/CP02-101EN.png";
+    case "Winter Night Prayer":
+      return "../textures/CP02-102EN.png";
+
+    case "New Generations":
+      return "../textures/CP02-U13bEN.png";
+    case "New Wave":
+      return "../textures/CP02-104EN.png";
+    case "Master Trainer":
+      return "../textures/CP02-105EN.png";
+    case "Expert Trainer":
+      return "../textures/CP02-106EN.png";
+    case "Trainer":
+      return "../textures/CP02-107EN.png";
+    case "Rookie Trainer":
+      return "../textures/CP02-108EN.png";
+
     case "Lymaga, Forest Champion":
       return "../textures/BP06-001EN.png";
     case "Amataz, Fairy Blader":
@@ -1504,6 +1730,81 @@ export const cardImage = (cardName) => {
     case "Angelic Barrage":
       return "../textures/PR-018EN.png";
 
+    case "Momoka Sakurai Evolved":
+      return "../textures/CSD02a-006EN.png";
+    case "Akiha Ikebukuro Evolved":
+      return "../textures/CSD02a-008EN.png";
+    case "Nene Kurihara Evolved":
+      return "../textures/CSD02a-010EN.png";
+
+    case "Yukimi Sajo Evolved":
+      return "../textures/CSD02b-006EN.png";
+    case "Kako Takafuji Evolved":
+      return "../textures/CSD02b-008EN.png";
+    case "Seira Mizuki Evolved":
+      return "../textures/CSD02b-011EN.png";
+
+    case "Suzuho Ueda Evolved":
+      return "../textures/CSD02c-006EN.png";
+    case "Miria Akagi Evolved":
+      return "../textures/CSD02c-008EN.png";
+    case "Kumiko Matsuyama Evolved":
+      return "../textures/CSD02c-011EN.png";
+
+    case "Aiko Takamori Evolved":
+      return "../textures/CP02-002EN.png";
+    case "Yuzu Kitami Evolved":
+      return "../textures/CP02-005EN.png";
+    case "Yumi Aiba Evolved":
+      return "../textures/CP02-010EN.png";
+    case "Kana Imai Evolved":
+      return "../textures/CP02-015EN.png";
+
+    case "Kyoko Igarashi Evolved":
+      return "../textures/CP02-U03EN.png";
+    case "Uzuki Shimamura Evolved":
+      return "../textures/CP02-024EN.png";
+    case "Karen Hojo Evolved":
+      return "../textures/CP02-027EN.png";
+    case "Miho Kohinata Evolved":
+      return "../textures/CP02-033EN.png";
+
+    case "Shiki Ichinose Evolved":
+      return "../textures/CP02-U05EN.png";
+    case "Kanade Hayami Evolved":
+      return "../textures/CP02-040EN.png";
+    case "Hina Araki Evolved":
+      return "../textures/CP02-043EN.png";
+    case "Rika Jougasaki Evolved":
+      return "../textures/CP02-048EN.png";
+
+    case "Yui Ohtsuki Evolved":
+      return "../textures/CP02-U07EN.png";
+    case "Tsukasa Kiryu Evolved":
+      return "../textures/CP02-058EN.png";
+    case "Yuka Nakano Evolved":
+      return "../textures/CP02-061EN.png";
+    case "Noa Takamine Evolved":
+      return "../textures/CP02-067EN.png";
+
+    case "Ranko Kanzaki Evolved":
+      return "../textures/CP02-U09bEN.png";
+    case "Takumi Mukai Evolved":
+      return "../textures/CP02-073EN.png";
+    case "Aki Yamato Evolved":
+      return "../textures/CP02-078EN.png";
+    case "Syoko Hoshi Evolved":
+      return "../textures/CP02-084EN.png";
+
+    case "Shin Sato Evolved":
+      return "../textures/CP02-U12aEN.png";
+    case "Nana Abe Evolved":
+      return "../textures/CP02-090EN.png";
+    case "Haru Yuuki Evolved":
+      return "../textures/CP02-095EN.png";
+    case "Layla Evolved":
+      return "../textures/CP02-100EN.png";
+
     case "Lymaga, Forest Champion Evolved":
       return "../textures/BP06-U01EN.png";
     case "Wildwood Matriarch Evolved":
@@ -1911,6 +2212,12 @@ export const cardImage = (cardName) => {
     case "Healing Angel Evolved":
       return "../textures/BP01-178EN.png";
 
+    case "Cute Earrings TOKEN":
+      return "../textures/CP02-T01EN.png";
+    case "Cool Earrings TOKEN":
+      return "../textures/CP02-T04EN.png";
+    case "Passion Earrings TOKEN":
+      return "../textures/CP02-T07EN.png";
     case "Celestial Shikigami TOKEN":
       return "../textures/BP06-T01EN.png";
     case "Paper Shikigami TOKEN":

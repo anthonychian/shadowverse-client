@@ -1,4 +1,46 @@
 export const allCardsEvo = [
+  "Momoka Sakurai Evolved",
+  "Akiha Ikebukuro Evolved",
+  "Nene Kurihara Evolved",
+
+  "Yukimi Sajo Evolved",
+  "Kako Takafuji Evolved",
+  "Seira Mizuki Evolved",
+
+  "Suzuho Ueda Evolved",
+  "Miria Akagi Evolved",
+  "Kumiko Matsuyama Evolved",
+
+  "Aiko Takamori Evolved",
+  "Yuzu Kitami Evolved",
+  "Yumi Aiba Evolved",
+  "Kana Imai Evolved",
+
+  "Kyoko Igarashi Evolved",
+  "Uzuki Shimamura Evolved",
+  "Karen Hojo Evolved",
+  "Miho Kohinata Evolved",
+
+  "Shiki Ichinose Evolved",
+  "Kanade Hayami Evolved",
+  "Hina Araki Evolved",
+  "Rika Jougasaki Evolved",
+
+  "Yui Ohtsuki Evolved",
+  "Tsukasa Kiryu Evolved",
+  "Yuka Nakano Evolved",
+  "Noa Takamine Evolved",
+
+  "Ranko Kanzaki Evolved",
+  "Takumi Mukai Evolved",
+  "Aki Yamato Evolved",
+  "Syoko Hoshi Evolved",
+
+  "Shin Sato Evolved",
+  "Nana Abe Evolved",
+  "Haru Yuuki Evolved",
+  "Layla Evolved",
+
   "Lymaga, Forest Champion Evolved",
   "Wildwood Matriarch Evolved",
   "Woodland Cleaver Evolved",
@@ -216,6 +258,50 @@ export const allCardsEvo = [
   "Goblin Evolved",
   "Goliath Evolved",
   "Healing Angel Evolved",
+];
+
+export const setIDOLEvo = [
+  "Momoka Sakurai Evolved",
+  "Akiha Ikebukuro Evolved",
+  "Nene Kurihara Evolved",
+
+  "Yukimi Sajo Evolved",
+  "Kako Takafuji Evolved",
+  "Seira Mizuki Evolved",
+
+  "Suzuho Ueda Evolved",
+  "Miria Akagi Evolved",
+  "Kumiko Matsuyama Evolved",
+
+  "Aiko Takamori Evolved",
+  "Yuzu Kitami Evolved",
+  "Yumi Aiba Evolved",
+  "Kana Imai Evolved",
+
+  "Kyoko Igarashi Evolved",
+  "Uzuki Shimamura Evolved",
+  "Karen Hojo Evolved",
+  "Miho Kohinata Evolved",
+
+  "Shiki Ichinose Evolved",
+  "Kanade Hayami Evolved",
+  "Hina Araki Evolved",
+  "Rika Jougasaki Evolved",
+
+  "Yui Ohtsuki Evolved",
+  "Tsukasa Kiryu Evolved",
+  "Yuka Nakano Evolved",
+  "Noa Takamine Evolved",
+
+  "Ranko Kanzaki Evolved",
+  "Takumi Mukai Evolved",
+  "Aki Yamato Evolved",
+  "Syoko Hoshi Evolved",
+
+  "Shin Sato Evolved",
+  "Nana Abe Evolved",
+  "Haru Yuuki Evolved",
+  "Layla Evolved",
 ];
 
 export const set6Evo = [
@@ -450,6 +536,15 @@ export const set1Evo = [
 ];
 
 export const forestEvo = [
+  "Momoka Sakurai Evolved",
+
+  "Suzuho Ueda Evolved",
+
+  "Aiko Takamori Evolved",
+  "Yuzu Kitami Evolved",
+  "Yumi Aiba Evolved",
+  "Kana Imai Evolved",
+
   "Lymaga, Forest Champion Evolved",
   "Wildwood Matriarch Evolved",
   "Woodland Cleaver Evolved",
@@ -481,6 +576,14 @@ export const forestEvo = [
 ];
 
 export const swordEvo = [
+  "Miria Akagi Evolved",
+  "Kumiko Matsuyama Evolved",
+
+  "Kyoko Igarashi Evolved",
+  "Uzuki Shimamura Evolved",
+  "Karen Hojo Evolved",
+  "Miho Kohinata Evolved",
+
   "Ralmia, Sonic Racer Evolved",
   "Hero of Antiquity Evolved",
   "Quickdraw Maven Evolved",
@@ -512,6 +615,15 @@ export const swordEvo = [
 ];
 
 export const runeEvo = [
+  "Akiha Ikebukuro Evolved",
+
+  "Seira Mizuki Evolved",
+
+  "Shiki Ichinose Evolved",
+  "Kanade Hayami Evolved",
+  "Hina Araki Evolved",
+  "Rika Jougasaki Evolved",
+
   "Mysteria, Magic Founder Evolved",
   "Curse Crafter Evolved",
   "Demoncaller Evolved",
@@ -543,6 +655,13 @@ export const runeEvo = [
 ];
 
 export const dragonEvo = [
+  "Nene Kurihara Evolved",
+
+  "Yui Ohtsuki Evolved",
+  "Tsukasa Kiryu Evolved",
+  "Yuka Nakano Evolved",
+  "Noa Takamine Evolved",
+
   "Garyu, Surpreme Dragonkin Evolved",
   "Wyrm God of the Skies Evolved",
   "Ice Dancing Dragonewt Evolved",
@@ -577,6 +696,13 @@ export const dragonEvo = [
 ];
 
 export const abyssEvo = [
+  "Yukimi Sajo Evolved",
+
+  "Ranko Kanzaki Evolved",
+  "Takumi Mukai Evolved",
+  "Aki Yamato Evolved",
+  "Syoko Hoshi Evolved",
+
   "Ginsetsu, Great Fox Evolved",
   "Shuten-Doji Evolved",
   "Cougar Pelt Warrior Evolved",
@@ -608,6 +734,13 @@ export const abyssEvo = [
 ];
 
 export const havenEvo = [
+  "Kako Takafuji Evolved",
+
+  "Shin Sato Evolved",
+  "Nana Abe Evolved",
+  "Haru Yuuki Evolved",
+  "Layla Evolved",
+
   "Karula, Arts Master Evolved",
   "Phantom Blade Wielder Evolved",
   "Holy Lancer Evolved",
