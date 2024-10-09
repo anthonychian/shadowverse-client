@@ -1599,11 +1599,9 @@ export const CardSlice = createSlice({
     },
     exitGame: (state) => {
       state.room = "";
-    },
-    reset: (state) => {
-      state.deck = state.initialDeck;
-      state.deck = state.deck.toSorted(() => Math.random() - 0.5);
-      state.evoDeck = state.initialEvoDeck;
+      state.chatLog = [];
+      state.deck = [];
+      state.evoDeck = [];
       state.hand = [];
       state.enemyHand = [];
       state.showDice = false;
@@ -1612,8 +1610,10 @@ export const CardSlice = createSlice({
       state.showEnemyCard = false;
       state.enemyCard = "";
       state.enemyDeckSize = 0;
-      // state.enemyLeader = "";
-      // state.leader = "";
+      state.enemyLeader = "";
+      state.leaderActive = false;
+      state.enemyLeaderActive = false;
+      state.leader = "";
       state.evoPoints = 0;
       state.enemyEvoPoints = 0;
       state.playPoints = { available: 0, max: 0 };
@@ -1628,7 +1628,102 @@ export const CardSlice = createSlice({
       state.enemyCounterField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
       state.currentCard = "";
       state.currentEvo = "";
-      // state.room = "";
+      state.rematchStatus = false;
+      state.enemyRematchStatus = false;
+      state.banish = [];
+      state.enemyBanish = [];
+      state.cemetery = [];
+      state.enemyCemetery = [];
+      state.enemyArrow = { idx: -1, show: false };
+      state.enemyEvoDeck = [
+        { card: "", status: false },
+        { card: "", status: false },
+        { card: "", status: false },
+        { card: "", status: false },
+        { card: "", status: false },
+        { card: "", status: false },
+        { card: "", status: false },
+        { card: "", status: false },
+        { card: "", status: false },
+        { card: "", status: false },
+      ];
+      state.engagedField = [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+      ];
+      state.enemyEngagedField = [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+      ];
+      state.customValues = [
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+      ];
+      state.enemyCustomValues = [
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+        { showAtk: false, atk: 0, showDef: false, def: 0 },
+      ];
+    },
+    reset: (state) => {
+      state.deck = state.initialDeck;
+      state.deck = state.deck.toSorted(() => Math.random() - 0.5);
+      state.evoDeck = state.initialEvoDeck;
+      state.hand = [];
+      state.enemyHand = [];
+      state.showDice = false;
+      state.enemyDice = { show: false, roll: 1 };
+      state.showEnemyHand = false;
+      state.showEnemyCard = false;
+      state.enemyCard = "";
+      state.enemyDeckSize = 0;
+      state.leaderActive = false;
+      state.enemyLeaderActive = false;
+      state.evoPoints = 0;
+      state.enemyEvoPoints = 0;
+      state.playPoints = { available: 0, max: 0 };
+      state.enemyPlayPoints = { available: 0, max: 0 };
+      state.playerHealth = 20;
+      state.enemyHealth = 20;
+      state.field = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      state.evoField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      state.enemyField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      state.enemyEvoField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      state.counterField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      state.enemyCounterField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      state.currentCard = "";
+      state.currentEvo = "";
       state.rematchStatus = false;
       state.enemyRematchStatus = false;
       state.banish = [];

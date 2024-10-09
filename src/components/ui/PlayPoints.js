@@ -6,15 +6,17 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { socket } from "../../sockets";
 import IconButton from "@mui/material/IconButton";
 import "../../css/PlayPoints.css";
-import { setLeaderActive, drawFromDeck } from "../../redux/CardSlice";
+import { setLeaderActive } from "../../redux/CardSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { setPlayPoints } from "../../redux/CardSlice";
 
 export default function Scoreboard({ name }) {
   const dispatch = useDispatch();
 
-  const [maxPlayPoints, setMaxPlayPoints] = useState(0);
-  const [currentPlayPoints, setCurrentPlayPoints] = useState(0);
+  const reduxMaxPlayPoints = useSelector((state) => state.card.playPoints.max);
+  const reduxCurrentPlayPoints = useSelector(
+    (state) => state.card.playPoints.available
+  );
   const reduxRoom = useSelector((state) => state.card.room);
 
   const buttonBackgroundColor = "rgba(0, 0, 0, 0.6)";
@@ -39,60 +41,108 @@ export default function Scoreboard({ name }) {
   };
 
   const incrementCurrent = () => {
-    currentPlayPoints < maxPlayPoints
-      ? setCurrentPlayPoints(currentPlayPoints + 1)
-      : setCurrentPlayPoints(currentPlayPoints);
+    if (reduxCurrentPlayPoints < reduxMaxPlayPoints) {
+      dispatch(
+        setPlayPoints({
+          available: reduxCurrentPlayPoints + 1,
+          max: reduxMaxPlayPoints,
+        })
+      );
+    }
   };
   const decrementCurrent = () => {
-    currentPlayPoints > 0
-      ? setCurrentPlayPoints(currentPlayPoints - 1)
-      : setCurrentPlayPoints(0);
+    reduxCurrentPlayPoints > 0
+      ? dispatch(
+          setPlayPoints({
+            available: reduxCurrentPlayPoints - 1,
+            max: reduxMaxPlayPoints,
+          })
+        )
+      : dispatch(
+          setPlayPoints({
+            available: 0,
+            max: reduxMaxPlayPoints,
+          })
+        );
   };
   const incrementMax = () => {
-    maxPlayPoints < 10
-      ? setMaxPlayPoints(maxPlayPoints + 1)
-      : setMaxPlayPoints(10);
+    reduxMaxPlayPoints < 10
+      ? dispatch(
+          setPlayPoints({
+            available: reduxCurrentPlayPoints,
+            max: reduxMaxPlayPoints + 1,
+          })
+        )
+      : dispatch(
+          setPlayPoints({
+            available: reduxCurrentPlayPoints,
+            max: 10,
+          })
+        );
   };
   const decrementMax = () => {
-    maxPlayPoints > 0
-      ? setMaxPlayPoints(maxPlayPoints - 1)
-      : setMaxPlayPoints(0);
+    reduxMaxPlayPoints > 0
+      ? dispatch(
+          setPlayPoints({
+            available: reduxCurrentPlayPoints,
+            max: reduxMaxPlayPoints - 1,
+          })
+        )
+      : dispatch(
+          setPlayPoints({
+            available: reduxCurrentPlayPoints,
+            max: 0,
+          })
+        );
   };
   const decrementMultiple = (idx) => {
-    if (currentPlayPoints === idx) {
-      setCurrentPlayPoints(idx - 1);
+    if (reduxCurrentPlayPoints === idx) {
+      dispatch(
+        setPlayPoints({
+          available: idx - 1,
+          max: reduxMaxPlayPoints,
+        })
+      );
     } else {
-      setCurrentPlayPoints(idx);
+      dispatch(
+        setPlayPoints({
+          available: idx,
+          max: reduxMaxPlayPoints,
+        })
+      );
     }
   };
   const incrementMultiple = (idx) => {
-    setCurrentPlayPoints(idx);
-  };
-  const incrementBoth = () => {
-    maxPlayPoints < 10
-      ? setMaxPlayPoints(maxPlayPoints + 1)
-      : setMaxPlayPoints(10);
-    currentPlayPoints < 10 && maxPlayPoints + 1 < 10
-      ? setCurrentPlayPoints(maxPlayPoints + 1)
-      : setCurrentPlayPoints(10);
-  };
-
-  useEffect(() => {
     dispatch(
       setPlayPoints({
-        available: currentPlayPoints,
-        max: maxPlayPoints,
+        available: idx,
+        max: reduxMaxPlayPoints,
       })
     );
-  }, [currentPlayPoints, maxPlayPoints]);
+  };
+  const incrementBoth = () => {
+    reduxMaxPlayPoints < 10
+      ? dispatch(
+          setPlayPoints({
+            available: reduxMaxPlayPoints + 1,
+            max: reduxMaxPlayPoints + 1,
+          })
+        )
+      : dispatch(
+          setPlayPoints({
+            available: 10,
+            max: 10,
+          })
+        );
+  };
 
   return (
     <div className="PlayPointsContainer">
       <div className="CircleContainer">
         <div className="circles">
           {[...Array(10)].map((x, idx) =>
-            maxPlayPoints >= 10 - idx ? (
-              currentPlayPoints >= 10 - idx ? (
+            reduxMaxPlayPoints >= 10 - idx ? (
+              reduxCurrentPlayPoints >= 10 - idx ? (
                 <div
                   onClick={() => decrementMultiple(10 - idx)}
                   key={`circle-${idx}`}
@@ -117,7 +167,7 @@ export default function Scoreboard({ name }) {
       </div>
       <div className="IncDecContainer">
         <div className="inc">
-          {maxPlayPoints < 10 ? (
+          {reduxMaxPlayPoints < 10 ? (
             <IconButton
               sx={{ color: "white", backgroundColor: buttonBackgroundColor }}
               onClick={() => incrementMax()}
@@ -138,7 +188,8 @@ export default function Scoreboard({ name }) {
         </div>
 
         <div className="dec">
-          {maxPlayPoints > 0 && maxPlayPoints > currentPlayPoints ? (
+          {reduxMaxPlayPoints > 0 &&
+          reduxMaxPlayPoints > reduxCurrentPlayPoints ? (
             <IconButton
               sx={{ color: "white", backgroundColor: buttonBackgroundColor }}
               onClick={() => decrementMax()}
@@ -160,7 +211,7 @@ export default function Scoreboard({ name }) {
       <div className="buttonsContainer">
         <div className="pointsContainer">
           <div className="upArrowContainer">
-            {currentPlayPoints < 10 && maxPlayPoints > 0 ? (
+            {reduxCurrentPlayPoints < 10 && reduxMaxPlayPoints > 0 ? (
               <IconButton
                 sx={{ color: "white", backgroundColor: buttonBackgroundColor }}
                 onClick={() => incrementCurrent()}
@@ -180,10 +231,10 @@ export default function Scoreboard({ name }) {
             )}
           </div>
           <div className="points">
-            {currentPlayPoints}/{maxPlayPoints}
+            {reduxCurrentPlayPoints}/{reduxMaxPlayPoints}
           </div>
           <div className="downArrowContainer">
-            {maxPlayPoints > 0 ? (
+            {reduxMaxPlayPoints > 0 ? (
               <IconButton
                 sx={{ color: "white", backgroundColor: buttonBackgroundColor }}
                 onClick={() => decrementCurrent()}
