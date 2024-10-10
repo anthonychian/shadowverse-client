@@ -1561,6 +1561,44 @@ export const CardSlice = createSlice({
         room: state.room,
       });
     },
+    createLessonTokens: (state) => {
+      let cardsInEX = false;
+
+      for (let i = 6; i < 10; i++) {
+        if (state.field[i] !== 0) {
+          cardsInEX = true;
+          break;
+        }
+      }
+      if (!cardsInEX) {
+        const card = "Cool Earrings TOKEN";
+
+        const newField = [
+          ...state.field.slice(0, 5),
+          card,
+          card,
+          card,
+          card,
+          card,
+        ];
+
+        state.field = newField;
+
+        for (let i = 0; i < 5; i++) {
+          state.chatLog = [...state.chatLog, `(Me): Added ${card} to field`];
+          socket.emit("send msg", {
+            type: "log",
+            data: `Added ${card} to field`,
+            room: state.room,
+          });
+        }
+        socket.emit("send msg", {
+          type: "field",
+          data: state.field,
+          room: state.room,
+        });
+      }
+    },
     setField: (state, action) => {
       state.field = action.payload;
     },
@@ -1898,4 +1936,5 @@ export const {
   exitGame,
   setRematchStatus,
   setEnemyRematchStatus,
+  createLessonTokens,
 } = CardSlice.actions;

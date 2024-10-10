@@ -77,6 +77,7 @@ import "../../css/AnimatedBorder.css";
 import { useNavigate } from "react-router-dom";
 import { socket } from "../../sockets";
 import Token from "./Token";
+import Lesson from "./Lesson";
 import { PerfectArrow } from "./PerfectArrow";
 import ShowDice from "./ShowDice";
 
@@ -1012,8 +1013,6 @@ export default function Field({
             width: "175px",
             display: "flex",
             flexDirection: "column",
-            // background: "linear-gradient(to top, #09203f 0%, #537895 100%)",
-            // backgroundColor: "rgba(0, 0, 0, 0.60)",
             alignItems: "center",
             justifyContent: "space-evenly",
           }}
@@ -1025,15 +1024,23 @@ export default function Field({
             setHovering={setHovering}
             ready={ready}
           />
-          {/* <div style={{display: 'flex', flexDirection: 'row'}}> */}
-          <Token
-            setReady={setReady}
-            setHovering={setHovering}
-            ready={ready}
-            setTokenReady={setTokenReady}
-          />
           <ShowDice />
-          {/* </div> */}
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-evenly",
+              flexDirection: "row",
+              width: "100%",
+            }}
+          >
+            <Token
+              setReady={setReady}
+              setHovering={setHovering}
+              ready={ready}
+              setTokenReady={setTokenReady}
+            />
+            <Lesson />
+          </div>
         </div>
         {/* Player Field (1-5) & Ex Area (6-10) */}
         <div
