@@ -13,6 +13,7 @@ import imageExella from "../../assets/leaders/Exella.png";
 import imageAmy from "../../assets/leaders/Amy.png";
 import imageMaru from "../../assets/leaders/Maru.png";
 import imageRin from "../../assets/leaders/Rin.png";
+import imageUzuki from "../../assets/leaders/Uzuki.png";
 import imageMio from "../../assets/leaders/Mio.png";
 
 import "../../css/Leader.css";
@@ -61,6 +62,9 @@ export default function Leader({ name, active }) {
       break;
     case "Rin":
       image = imageRin;
+      break;
+    case "Uzuki":
+      image = imageUzuki;
       break;
     case "Mio":
       image = imageMio;

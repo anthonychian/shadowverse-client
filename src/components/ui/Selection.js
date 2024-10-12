@@ -14,6 +14,7 @@ import imageExella from "../../assets/leaders/Exella.png";
 import imageAmy from "../../assets/leaders/Amy.png";
 import imageMaru from "../../assets/leaders/Maru.png";
 import imageRin from "../../assets/leaders/Rin.png";
+import imageUzuki from "../../assets/leaders/Uzuki.png";
 import imageMio from "../../assets/leaders/Mio.png";
 import dragon from "../../assets/logo/dragon.png";
 
@@ -589,6 +590,18 @@ export default function Selection({ setSelectedOption }) {
               }}
             >
               <img width="100px" src={imageRin} alt="Rin" />
+            </IconButton>
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectLeader(e);
+              }}
+            >
+              <img width="100px" src={imageUzuki} alt="Uzuki" />
             </IconButton>
             <IconButton
               sx={{

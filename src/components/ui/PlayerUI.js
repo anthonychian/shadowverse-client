@@ -12,7 +12,9 @@ import dragon from "../../assets/logo/dragon.png";
 import haven from "../../assets/logo/haven.png";
 import rune from "../../assets/logo/rune.png";
 import uma from "../../assets/logo/carrot.png";
-import idol from "../../assets/logo/idol.png";
+import cool from "../../assets/logo/cool.png";
+import cute from "../../assets/logo/cute.png";
+import passion from "../../assets/logo/passion.png";
 import Dice from "react-dice-roll";
 import { motion } from "framer-motion";
 
@@ -92,9 +94,11 @@ export default function PlayerUI({ name }) {
       case "Maruzensky":
         return uma;
       case "Rin":
-        return idol;
+        return cool;
+      case "Uzuki":
+        return cute;
       case "Mio":
-        return idol;
+        return passion;
       default:
         return dragon;
     }
@@ -128,6 +132,8 @@ export default function PlayerUI({ name }) {
       case "Maruzensky":
         return "linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(247, 30, 30) 100.3%)";
       case "Rin":
+        return "linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%)";
+      case "Uzuki":
         return "linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%)";
       case "Mio":
         return "linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%)";
