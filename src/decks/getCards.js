@@ -494,7 +494,7 @@ export const cardImage = (cardName) => {
       return "../textures/BP05-055EN.png";
     case "God Bullet Golem":
       return "../textures/BP05-057EN.png";
-    case "Disdain Rending":
+    case "Disdainful Rending":
       return "../textures/BP05-058EN.png";
     case "Disciple of Disdain":
       return "../textures/BP05-059EN.png";
