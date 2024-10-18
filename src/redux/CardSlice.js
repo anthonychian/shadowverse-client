@@ -1571,7 +1571,11 @@ export const CardSlice = createSlice({
         }
       }
       if (!cardsInEX) {
-        const card = "Cool Earrings TOKEN";
+        let card;
+        let chance = Math.random();
+        if (chance < 0.2 && chance > 0.1) card = "Enchanted Slippers TOKEN";
+        else if (chance <= 0.1) card = "Enchanted Dress TOKEN";
+        else card = "Cool Earrings TOKEN";
 
         const newField = [
           ...state.field.slice(0, 5),

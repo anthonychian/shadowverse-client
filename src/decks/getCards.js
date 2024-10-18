@@ -2212,6 +2212,10 @@ export const cardImage = (cardName) => {
     case "Healing Angel Evolved":
       return "../textures/BP01-178EN.png";
 
+    case "Enchanted Slippers TOKEN":
+      return "../textures/PR-153EN.png";
+    case "Enchanted Dress TOKEN":
+      return "../textures/PR-154EN.png";
     case "Cute Earrings TOKEN":
       return "../textures/CP02-T01EN.png";
     case "Cool Earrings TOKEN":
