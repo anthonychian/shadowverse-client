@@ -351,7 +351,7 @@ export default function Selection({ setSelectedOption }) {
             tabIndex={-1}
           >
             {reduxChatLog.map((x) =>
-              x[1] === "M" ? (
+              x[9] === "M" ? (
                 <Typography
                   variant="body1"
                   style={{ color: "red", whiteSpace: "pre-line" }}
