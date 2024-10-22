@@ -3,6 +3,7 @@ import "../css/Game.css";
 import Selection from "../components/ui/Selection";
 import PlayerUI from "../components/ui/PlayerUI";
 import EnemyUI from "../components/ui/EnemyUI";
+import ChatUI from "../components/ui/ChatUI";
 import PlayPoints from "../components/ui/PlayPoints";
 import Hand from "../components/hand/Hand";
 import Field from "../components/field/Field";
@@ -76,7 +77,9 @@ export default function Game() {
       {/* Right side */}
       <div className={"rightSideCanvas"}>
         <EnemyUI />
+
         <PlayerUI name={selectedOption} />
+        <ChatUI />
       </div>
     </div>
   );

@@ -56,6 +56,7 @@ import {
   setEnemyArrow,
   setEnemyDice,
   setEnemyLog,
+  setEnemyChat,
   setEnemyLeaderActive,
   setField,
 } from "../../redux/CardSlice";
@@ -199,6 +200,7 @@ export default function Field({
       else if (data.type === "leaderActive")
         dispatch(setEnemyLeaderActive(data.data));
       else if (data.type === "log") dispatch(setEnemyLog(data.data));
+      else if (data.type === "chat") dispatch(setEnemyChat(data.data));
       else if (data.type === "rematch")
         dispatch(setEnemyRematchStatus(data.data));
     });

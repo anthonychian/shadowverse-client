@@ -58,7 +58,7 @@ import {
 
 export default function Selection({ setSelectedOption }) {
   // redux state
-  const reduxChatLog = useSelector((state) => state.card.chatLog);
+  const reduxChatLog = useSelector((state) => state.card.gameLog);
   const reduxEnemyRematchStatus = useSelector(
     (state) => state.card.enemyRematchStatus
   );
