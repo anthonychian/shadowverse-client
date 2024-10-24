@@ -49,7 +49,9 @@ export default function ChatUI() {
       <Dialog
         PaperProps={{ style: { pointerEvents: "auto" } }}
         disableEnforceFocus
-        style={{ pointerEvents: "none" }}
+        style={{
+          pointerEvents: "none",
+        }}
         hideBackdrop
         open={open}
         onClose={handleClick}
@@ -59,7 +61,14 @@ export default function ChatUI() {
         <DialogTitle style={{ cursor: "move" }} id="draggable-dialog-title">
           Chat
         </DialogTitle>
-        <DialogContent style={{ height: "150px", width: "300px" }}>
+        <DialogContent
+          style={{
+            height: "150px",
+            width: "300px",
+            display: "flex",
+            flexDirection: "column-reverse",
+          }}
+        >
           <DialogContentText>
             {reduxChatLog.map((x) =>
               x[9] === "M" ? (
