@@ -48,7 +48,7 @@ export default function ChatUI() {
       </Button>
       <Dialog
         PaperProps={{ style: { pointerEvents: "auto" } }}
-        // disableEnforceFocus
+        disableEnforceFocus
         style={{ pointerEvents: "none" }}
         hideBackdrop
         open={open}
