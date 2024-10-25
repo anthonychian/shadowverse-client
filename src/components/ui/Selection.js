@@ -344,7 +344,13 @@ export default function Selection({ setSelectedOption }) {
         aria-describedby="scroll-dialog-description"
       >
         <DialogTitle id="scroll-dialog-title">Game Log</DialogTitle>
-        <DialogContent>
+        <DialogContent
+          style={{
+            maxHeight: "80vh",
+            display: "flex",
+            flexDirection: "column-reverse",
+          }}
+        >
           <DialogContentText
             id="scroll-dialog-description"
             ref={descriptionElementRef}
