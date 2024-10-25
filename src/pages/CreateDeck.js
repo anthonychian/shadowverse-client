@@ -1172,15 +1172,15 @@ export default function CreateDeck() {
             backgroundColor: "transparent",
             boxShadow: 24,
             // p: 3,
-            width: "30%",
+            width: "0",
             border: "none",
           }}
         >
           <CardMUI
             sx={{
               backgroundColor: "transparent",
-              width: "100%",
-              height: "80vh",
+              // width: "100%",
+              // height: "80vh",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
