@@ -22,7 +22,7 @@ export default function PlayerUI({ name }) {
   const dispatch = useDispatch();
   const [ep, setEP] = useState(0);
   const [playerHealth, setPlayerHealth] = useState(20);
-
+  const reduxCurrentEP = useSelector((state) => state.card.evoPoints);
   const reduxCurrentHealth = useSelector((state) => state.card.playerHealth);
   const reduxMaxPlayPoints = useSelector((state) => state.card.playPoints.max);
   const reduxCurrentPlayPoints = useSelector(
@@ -39,6 +39,10 @@ export default function PlayerUI({ name }) {
     setPlayerHealth(reduxCurrentHealth);
   }, [reduxCurrentHealth]);
 
+  useEffect(() => {
+    setEP(reduxCurrentEP);
+  }, [reduxCurrentEP]);
+
   const incrementPlayerPoints = () => {
     setPlayerHealth(playerHealth + 1);
   };
@@ -48,7 +52,7 @@ export default function PlayerUI({ name }) {
   };
 
   const handleEP = (event) => {
-    setEP(Number(event.target.value));
+    // setEP(Number(event.target.value));
     dispatch(setEvoPoints(Number(event.target.value)));
   };
 

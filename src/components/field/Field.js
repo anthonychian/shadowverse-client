@@ -748,7 +748,7 @@ export default function Field({
             backgroundColor: "transparent",
             boxShadow: 24,
             // p: 3,
-            width: "30%",
+            width: 0,
             border: "none",
           }}
         >
@@ -756,7 +756,7 @@ export default function Field({
             sx={{
               backgroundColor: "transparent",
               width: "100%",
-              height: "80vh",
+              // height: "80vh",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
@@ -766,6 +766,25 @@ export default function Field({
             variant="outlined"
           >
             <motion.div
+              variants={{
+                start: {
+                  scale: 4.5,
+                  rotateY: [0, 360],
+                  transition: {
+                    duration: 0.8,
+                    ease: "linear",
+                  },
+                },
+              }}
+              animate={["start"]}
+            >
+              <img
+                height={"160px"}
+                src={cardImage(reduxEnemyCard)}
+                alt={reduxEnemyCard}
+              />
+            </motion.div>
+            {/* <motion.div
               initial={{ scale: 1.0, rotateY: 180 }}
               transition={{ duration: 0.8 }}
               animate={{ scale: 4.5, rotateY: 0 }}
@@ -775,7 +794,7 @@ export default function Field({
                 src={cardImage(reduxEnemyCard)}
                 alt={reduxEnemyCard}
               />
-            </motion.div>
+            </motion.div> */}
           </CardMUI>
         </Box>
       </Modal>
