@@ -10,7 +10,7 @@ import imageDionne from "../../assets/leaders/Dionne.png";
 import imageAlbert from "../../assets/leaders/Albert.png";
 import imageAria from "../../assets/leaders/Aria.png";
 import imageCC from "../../assets/leaders/CC.png";
-import imageExella from "../../assets/leaders/Exella.png";
+import imageMono from "../../assets/leaders/Mono.png";
 import imageAmy from "../../assets/leaders/Amy.png";
 import imageMaru from "../../assets/leaders/Maru.png";
 import imageRin from "../../assets/leaders/Rin.png";
@@ -605,7 +605,7 @@ export default function Selection({ setSelectedOption }) {
                 selectLeader(e);
               }}
             >
-              <img width="100px" src={imageExella} alt="Exella" />
+              <img width="100px" src={imageMono} alt="Mono" />
             </IconButton>
             <IconButton
               sx={{

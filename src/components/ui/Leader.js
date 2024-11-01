@@ -9,7 +9,7 @@ import imageDionne from "../../assets/leaders/Dionne.png";
 import imageAlbert from "../../assets/leaders/Albert.png";
 import imageAria from "../../assets/leaders/Aria.png";
 import imageCC from "../../assets/leaders/CC.png";
-import imageExella from "../../assets/leaders/Exella.png";
+import imageMono from "../../assets/leaders/Mono.png";
 import imageAmy from "../../assets/leaders/Amy.png";
 import imageMaru from "../../assets/leaders/Maru.png";
 import imageRin from "../../assets/leaders/Rin.png";
@@ -54,8 +54,8 @@ export default function Leader({ name, active }) {
     case "Amy":
       image = imageAmy;
       break;
-    case "Exella":
-      image = imageExella;
+    case "Mono":
+      image = imageMono;
       break;
     case "Maruzensky":
       image = imageMaru;
