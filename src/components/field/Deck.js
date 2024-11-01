@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { socket } from "../../sockets";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -21,7 +21,18 @@ import { Menu, MenuItem, Modal, Box, Popover } from "@mui/material";
 
 import CardMUI from "@mui/material/Card";
 import Card from "../hand/Card";
-import cardback from "../../assets/cardbacks/sleeve_5010011.png";
+import defaultCardBack from "../../assets/cardbacks/default.png";
+import chloeCardBack from "../../assets/cardbacks/chloe.jpg";
+import erikaCardBack from "../../assets/cardbacks/erika.jpg";
+import fileneCardBack from "../../assets/cardbacks/filene.jfif";
+import galmieuxCardBack from "../../assets/cardbacks/galmieux.jpg";
+import ginsetsuCardBack from "../../assets/cardbacks/ginsetsu.jpg";
+import isabelleCardBack from "../../assets/cardbacks/isabelle.jpg";
+import israfilCardBack from "../../assets/cardbacks/israfil.jpg";
+import kyoriCardBack from "../../assets/cardbacks/kyori.jpg";
+import monoCardBack from "../../assets/cardbacks/mono.jpg";
+import technolordCardBack from "../../assets/cardbacks/technolord.jpg";
+import tetraCardBack from "../../assets/cardbacks/tetra.jpg";
 
 const img = require("../../assets/pin_bellringer_angel.png");
 
@@ -56,6 +67,9 @@ export default function Deck({
   const [reveal, setReveal] = useState(false);
   const [textInput, setTextInput] = useState("");
   const [partialDeck, setPartialDeck] = useState([]);
+
+  const [cardback, setCardback] = useState();
+  const reduxCardBack = useSelector((state) => state.card.cardback);
 
   const reduxDeck = useSelector((state) => state.card.deck);
   const reduxRoom = useSelector((state) => state.card.room);
@@ -260,6 +274,46 @@ export default function Deck({
       setPartialDeck(reduxDeck);
     }
   };
+
+  useEffect(() => {
+    switch (reduxCardBack) {
+      case "Chloe":
+        setCardback(chloeCardBack);
+        break;
+      case "Erika":
+        setCardback(erikaCardBack);
+        break;
+      case "Filene":
+        setCardback(fileneCardBack);
+        break;
+      case "Galmieux":
+        setCardback(galmieuxCardBack);
+        break;
+      case "Ginsetsu":
+        setCardback(ginsetsuCardBack);
+        break;
+      case "Isabelle":
+        setCardback(isabelleCardBack);
+        break;
+      case "Israfil":
+        setCardback(israfilCardBack);
+        break;
+      case "Kyori":
+        setCardback(kyoriCardBack);
+        break;
+      case "Mono":
+        setCardback(monoCardBack);
+        break;
+      case "Technolord":
+        setCardback(technolordCardBack);
+        break;
+      case "Tetra":
+        setCardback(tetraCardBack);
+        break;
+      default:
+        setCardback(defaultCardBack);
+    }
+  }, [reduxCardBack]);
 
   return (
     <>

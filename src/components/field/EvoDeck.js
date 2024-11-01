@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Menu, MenuItem, Modal, Box } from "@mui/material";
 import CardMUI from "@mui/material/Card";
@@ -8,9 +8,19 @@ import {
   restoreEvoCard,
   setViewingEvoDeck,
 } from "../../redux/CardSlice";
-import cardback from "../../assets/cardbacks/sleeve_5010011.png";
 import img from "../../assets/pin_bellringer_angel.png";
-
+import defaultCardBack from "../../assets/cardbacks/default.png";
+import chloeCardBack from "../../assets/cardbacks/chloe.jpg";
+import erikaCardBack from "../../assets/cardbacks/erika.jpg";
+import fileneCardBack from "../../assets/cardbacks/filene.jfif";
+import galmieuxCardBack from "../../assets/cardbacks/galmieux.jpg";
+import ginsetsuCardBack from "../../assets/cardbacks/ginsetsu.jpg";
+import isabelleCardBack from "../../assets/cardbacks/isabelle.jpg";
+import israfilCardBack from "../../assets/cardbacks/israfil.jpg";
+import kyoriCardBack from "../../assets/cardbacks/kyori.jpg";
+import monoCardBack from "../../assets/cardbacks/mono.jpg";
+import technolordCardBack from "../../assets/cardbacks/technolord.jpg";
+import tetraCardBack from "../../assets/cardbacks/tetra.jpg";
 const style = {
   position: "relative",
   top: "50%",
@@ -38,7 +48,9 @@ export default function EvoDeck({
   const [evoStatus, setEvoStatus] = useState(false);
   const [contextMenu, setContextMenu] = React.useState(null);
   const [name, setName] = useState("");
+  const [cardback, setCardback] = useState();
   const reduxEvoDeck = useSelector((state) => state.card.evoDeck);
+  const reduxCardBack = useSelector((state) => state.card.cardback);
   const handleModalOpen = () => {
     setOpen(true);
     dispatch(setViewingEvoDeck(true));
@@ -87,6 +99,46 @@ export default function EvoDeck({
     handleClose();
     dispatch(restoreEvoCard(name));
   };
+
+  useEffect(() => {
+    switch (reduxCardBack) {
+      case "Chloe":
+        setCardback(chloeCardBack);
+        break;
+      case "Erika":
+        setCardback(erikaCardBack);
+        break;
+      case "Filene":
+        setCardback(fileneCardBack);
+        break;
+      case "Galmieux":
+        setCardback(galmieuxCardBack);
+        break;
+      case "Ginsetsu":
+        setCardback(ginsetsuCardBack);
+        break;
+      case "Isabelle":
+        setCardback(isabelleCardBack);
+        break;
+      case "Israfil":
+        setCardback(israfilCardBack);
+        break;
+      case "Kyori":
+        setCardback(kyoriCardBack);
+        break;
+      case "Mono":
+        setCardback(monoCardBack);
+        break;
+      case "Technolord":
+        setCardback(technolordCardBack);
+        break;
+      case "Tetra":
+        setCardback(tetraCardBack);
+        break;
+      default:
+        setCardback(defaultCardBack);
+    }
+  }, [reduxCardBack]);
 
   return (
     <>

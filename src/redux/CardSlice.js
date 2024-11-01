@@ -8,6 +8,8 @@ export const CardSlice = createSlice({
     evoDeck: [],
     initialDeck: [],
     initialEvoDeck: [],
+    cardback: "",
+    enemyCardback: "",
     hand: [],
     enemyHand: [],
     showDice: false,
@@ -125,6 +127,17 @@ export const CardSlice = createSlice({
         data: state.playPoints,
         room: state.room,
       });
+    },
+    setCardBack: (state, action) => {
+      state.cardback = action.payload;
+      socket.emit("send msg", {
+        type: "cardback",
+        data: state.cardback,
+        room: state.room,
+      });
+    },
+    setEnemyCardBack: (state, action) => {
+      state.enemyCardback = action.payload;
     },
     setLeader: (state, action) => {
       state.leader = action.payload;
@@ -2284,6 +2297,8 @@ export const {
   setPlayPoints,
   setHealth,
   setLeader,
+  setCardBack,
+  setEnemyCardBack,
   setEnemyLeader,
   setShowEnemyHand,
   setArrow,

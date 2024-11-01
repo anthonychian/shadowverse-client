@@ -13,7 +13,7 @@ import tsubaki from "../../src/assets/wallpapers/Tsubaki.png";
 import grimnir from "../../src/assets/wallpapers/Grimnir.png";
 import buttonImage from "../../src/assets/buttons/variant1.png";
 import shadowverse from "../../src/assets/wallpapers/SVElogo.png";
-import cardback from "../assets/cardbacks/sleeve_5010011.png";
+import cardback from "../assets/cardbacks/default.png";
 import donate from "../assets/buttons/donate_btn.webp";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";

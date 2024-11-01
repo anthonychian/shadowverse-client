@@ -1,11 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Modal, Box } from "@mui/material";
 import CardMUI from "@mui/material/Card";
 import Card from "../hand/Card";
-import cardback from "../../assets/cardbacks/sleeve_5010011.png";
 import { setViewingEvoDeckOpponent } from "../../redux/CardSlice";
-
+import defaultCardBack from "../../assets/cardbacks/default.png";
+import chloeCardBack from "../../assets/cardbacks/chloe.jpg";
+import erikaCardBack from "../../assets/cardbacks/erika.jpg";
+import fileneCardBack from "../../assets/cardbacks/filene.jfif";
+import galmieuxCardBack from "../../assets/cardbacks/galmieux.jpg";
+import ginsetsuCardBack from "../../assets/cardbacks/ginsetsu.jpg";
+import isabelleCardBack from "../../assets/cardbacks/isabelle.jpg";
+import israfilCardBack from "../../assets/cardbacks/israfil.jpg";
+import kyoriCardBack from "../../assets/cardbacks/kyori.jpg";
+import monoCardBack from "../../assets/cardbacks/mono.jpg";
+import technolordCardBack from "../../assets/cardbacks/technolord.jpg";
+import tetraCardBack from "../../assets/cardbacks/tetra.jpg";
 const img = require("../../assets/pin_bellringer_angel.png");
 
 const style = {
@@ -25,6 +35,8 @@ const style = {
 export default function EnemyEvoDeck({ setHovering, ready }) {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
+  const [cardback, setCardback] = useState();
+  const reduxEnemyCardBack = useSelector((state) => state.card.enemyCardback);
   const reduxEnemyEvoDeck = useSelector((state) => state.card.enemyEvoDeck);
 
   const handleModalOpen = () => {
@@ -35,6 +47,46 @@ export default function EnemyEvoDeck({ setHovering, ready }) {
     setOpen(false);
     dispatch(setViewingEvoDeckOpponent(false));
   };
+
+  useEffect(() => {
+    switch (reduxEnemyCardBack) {
+      case "Chloe":
+        setCardback(chloeCardBack);
+        break;
+      case "Erika":
+        setCardback(erikaCardBack);
+        break;
+      case "Filene":
+        setCardback(fileneCardBack);
+        break;
+      case "Galmieux":
+        setCardback(galmieuxCardBack);
+        break;
+      case "Ginsetsu":
+        setCardback(ginsetsuCardBack);
+        break;
+      case "Isabelle":
+        setCardback(isabelleCardBack);
+        break;
+      case "Israfil":
+        setCardback(israfilCardBack);
+        break;
+      case "Kyori":
+        setCardback(kyoriCardBack);
+        break;
+      case "Mono":
+        setCardback(monoCardBack);
+        break;
+      case "Technolord":
+        setCardback(technolordCardBack);
+        break;
+      case "Tetra":
+        setCardback(tetraCardBack);
+        break;
+      default:
+        setCardback(defaultCardBack);
+    }
+  }, [reduxEnemyCardBack]);
 
   return (
     <>

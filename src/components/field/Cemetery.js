@@ -21,7 +21,7 @@ import {
   setCurrentCard,
   setViewingCemetery,
 } from "../../redux/CardSlice";
-// import cardback from "../../assets/cardbacks/sleeve_5010011.png";
+// import cardback from "../../assets/cardbacks/default.png";
 
 const img = require("../../assets/pin_bellringer_angel.png");
 

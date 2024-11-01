@@ -17,6 +17,18 @@ import imageRin from "../../assets/leaders/Rin.png";
 import imageUzuki from "../../assets/leaders/Uzuki.png";
 import imageMio from "../../assets/leaders/Mio.png";
 import dragon from "../../assets/logo/dragon.png";
+import defaultCardBack from "../../assets/cardbacks/default.png";
+import chloeCardBack from "../../assets/cardbacks/chloe.jpg";
+import erikaCardBack from "../../assets/cardbacks/erika.jpg";
+import fileneCardBack from "../../assets/cardbacks/filene.jfif";
+import galmieuxCardBack from "../../assets/cardbacks/galmieux.jpg";
+import ginsetsuCardBack from "../../assets/cardbacks/ginsetsu.jpg";
+import isabelleCardBack from "../../assets/cardbacks/isabelle.jpg";
+import israfilCardBack from "../../assets/cardbacks/israfil.jpg";
+import kyoriCardBack from "../../assets/cardbacks/kyori.jpg";
+import monoCardBack from "../../assets/cardbacks/mono.jpg";
+import technolordCardBack from "../../assets/cardbacks/technolord.jpg";
+import tetraCardBack from "../../assets/cardbacks/tetra.jpg";
 
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
@@ -51,6 +63,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import {
   setLeader,
+  setCardBack,
   reset,
   exitGame,
   setRematchStatus,
@@ -68,9 +81,13 @@ export default function Selection({ setSelectedOption }) {
   const navigate = useNavigate();
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [open, setOpen] = useState(false);
+  const [openCardBack, setOpenCardBack] = useState(false);
 
   const handleModalOpen = () => setOpen(true);
   const handleModalClose = () => setOpen(false);
+
+  const handleCardBackModalOpen = () => setOpenCardBack(true);
+  const handleCardBackModalClose = () => setOpenCardBack(false);
 
   const handleDrawerOpen = () => setDrawerOpen(true);
   const handleDrawerClose = () => setDrawerOpen(false);
@@ -90,6 +107,10 @@ export default function Selection({ setSelectedOption }) {
     const leader = e.target.alt;
     setSelectedOption(leader);
     dispatch(setLeader(leader));
+  };
+  const selectCardBack = (e) => {
+    const cardback = e.target.alt;
+    dispatch(setCardBack(cardback));
   };
 
   const handleRematch = () => {
@@ -180,6 +201,19 @@ export default function Selection({ setSelectedOption }) {
                   <img src={dragon} height={30} alt={dragon} />
                 </ListItemIcon>
                 <ListItemText primary={"Change Class"} />
+              </ListItemButton>
+            </ListItem>
+          </List>
+
+          <Divider />
+
+          <List>
+            <ListItem key={"text"} disablePadding>
+              <ListItemButton onClick={handleCardBackModalOpen}>
+                <ListItemIcon>
+                  <img src={defaultCardBack} height={30} alt={"cardback"} />
+                </ListItemIcon>
+                <ListItemText primary={"Change Cardback"} />
               </ListItemButton>
             </ListItem>
           </List>
@@ -620,6 +654,171 @@ export default function Selection({ setSelectedOption }) {
               }}
             >
               <img width="100px" src={imageMio} alt="Mio" />
+            </IconButton>
+          </Card>
+        </Box>
+      </Modal>
+      <Modal
+        open={openCardBack}
+        onClose={handleCardBackModalClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box
+          sx={{
+            position: "relative",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            backgroundColor: "rgba(0, 0, 0, 1)",
+            boxShadow: 24,
+            p: 4,
+            width: "40%",
+          }}
+        >
+          <Card
+            sx={{
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "center",
+              alignItems: "center",
+              backgroundColor: "rgba(0, 0, 0, 0.7)",
+            }}
+            variant="outlined"
+          >
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectCardBack(e);
+              }}
+            >
+              <img width="100px" src={chloeCardBack} alt="Chloe" />
+            </IconButton>
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectCardBack(e);
+              }}
+            >
+              <img width="100px" src={erikaCardBack} alt="Erika" />
+            </IconButton>
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectCardBack(e);
+              }}
+            >
+              <img width="100px" src={fileneCardBack} alt="Filene" />
+            </IconButton>
+
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectCardBack(e);
+              }}
+            >
+              <img width="100px" src={galmieuxCardBack} alt="Galmieux" />
+            </IconButton>
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectCardBack(e);
+              }}
+            >
+              <img width="100px" src={ginsetsuCardBack} alt="Ginsetsu" />
+            </IconButton>
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectCardBack(e);
+              }}
+            >
+              <img width="100px" src={isabelleCardBack} alt="Isabelle" />
+            </IconButton>
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectCardBack(e);
+              }}
+            >
+              <img width="100px" src={israfilCardBack} alt="Israfil" />
+            </IconButton>
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectCardBack(e);
+              }}
+            >
+              <img width="100px" src={kyoriCardBack} alt="Kyori" />
+            </IconButton>
+
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectCardBack(e);
+              }}
+            >
+              <img width="100px" src={monoCardBack} alt="Mono" />
+            </IconButton>
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectCardBack(e);
+              }}
+            >
+              <img width="100px" src={technolordCardBack} alt="Technolord" />
+            </IconButton>
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectCardBack(e);
+              }}
+            >
+              <img width="100px" src={tetraCardBack} alt="Tetra" />
             </IconButton>
           </Card>
         </Box>

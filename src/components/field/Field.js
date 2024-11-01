@@ -60,6 +60,7 @@ import {
   setEnemyChat,
   setEnemyLeaderActive,
   setField,
+  setEnemyCardBack,
 } from "../../redux/CardSlice";
 import { cardImage } from "../../decks/getCards";
 import { motion } from "framer-motion";
@@ -70,7 +71,7 @@ import Card from "../hand/Card";
 import Deck from "./Deck";
 import Cemetery from "./Cemetery";
 import EnemyCemetery from "./EnemyCemetery";
-import cardback from "../../assets/cardbacks/sleeve_5010011.png";
+// import cardback from "../../assets/cardbacks/default.png";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import EvoDeck from "./EvoDeck";
 import EnemyEvoDeck from "./EnemyEvoDeck";
@@ -82,6 +83,18 @@ import Token from "./Token";
 import Lesson from "./Lesson";
 import { PerfectArrow } from "./PerfectArrow";
 import ShowDice from "./ShowDice";
+import defaultCardBack from "../../assets/cardbacks/default.png";
+import chloeCardBack from "../../assets/cardbacks/chloe.jpg";
+import erikaCardBack from "../../assets/cardbacks/erika.jpg";
+import fileneCardBack from "../../assets/cardbacks/filene.jfif";
+import galmieuxCardBack from "../../assets/cardbacks/galmieux.jpg";
+import ginsetsuCardBack from "../../assets/cardbacks/ginsetsu.jpg";
+import isabelleCardBack from "../../assets/cardbacks/isabelle.jpg";
+import israfilCardBack from "../../assets/cardbacks/israfil.jpg";
+import kyoriCardBack from "../../assets/cardbacks/kyori.jpg";
+import monoCardBack from "../../assets/cardbacks/mono.jpg";
+import technolordCardBack from "../../assets/cardbacks/technolord.jpg";
+import tetraCardBack from "../../assets/cardbacks/tetra.jpg";
 
 const style = {
   position: "relative",
@@ -131,8 +144,10 @@ export default function Field({
     (state) => state.card.enemyCounterField
   );
   const reduxEnemyArrow = useSelector((state) => state.card.enemyArrow);
+  const reduxEnemyCardBack = useSelector((state) => state.card.enemyCardback);
 
   // useState
+  const [cardback, setCardback] = useState();
   const [contextMenu, setContextMenu] = useState(null);
   const [contextEvoMenu, setContextEvoMenu] = useState(null);
   const [index, setIndex] = useState(0);
@@ -204,6 +219,7 @@ export default function Field({
         dispatch(setEnemyLeaderActive(data.data));
       else if (data.type === "log") dispatch(setEnemyLog(data.data));
       else if (data.type === "chat") dispatch(setEnemyChat(data.data));
+      else if (data.type === "cardback") dispatch(setEnemyCardBack(data.data));
       else if (data.type === "rematch")
         dispatch(setEnemyRematchStatus(data.data));
     });
@@ -592,6 +608,46 @@ export default function Field({
     );
   };
 
+  useEffect(() => {
+    switch (reduxEnemyCardBack) {
+      case "Chloe":
+        setCardback(chloeCardBack);
+        break;
+      case "Erika":
+        setCardback(erikaCardBack);
+        break;
+      case "Filene":
+        setCardback(fileneCardBack);
+        break;
+      case "Galmieux":
+        setCardback(galmieuxCardBack);
+        break;
+      case "Ginsetsu":
+        setCardback(ginsetsuCardBack);
+        break;
+      case "Isabelle":
+        setCardback(isabelleCardBack);
+        break;
+      case "Israfil":
+        setCardback(israfilCardBack);
+        break;
+      case "Kyori":
+        setCardback(kyoriCardBack);
+        break;
+      case "Mono":
+        setCardback(monoCardBack);
+        break;
+      case "Technolord":
+        setCardback(technolordCardBack);
+        break;
+      case "Tetra":
+        setCardback(tetraCardBack);
+        break;
+      default:
+        setCardback(defaultCardBack);
+    }
+  }, [reduxEnemyCardBack]);
+
   return (
     <>
       <Tooltip title="Copy" placement="top">
@@ -884,13 +940,6 @@ export default function Field({
             {/* )} */}
           </div>
 
-          {/* <div
-            style={{
-              cursor: `url(${img}) 55 55, auto`,
-            }}
-          >
-            <img height={"160px"} src={cardback} alt={"cardback"} />
-          </div> */}
           <EnemyCemetery setHovering={setHovering} ready={ready} />
         </div>
 
@@ -1021,15 +1070,6 @@ export default function Field({
           }}
         >
           <EnemyEvoDeck setHovering={setHovering} ready={ready} />
-          {/* <div
-            style={{
-              height: "160px",
-              width: "115px",
-              cursor: `url(${img}) 55 55, auto`,
-            }}
-          >
-            <img height={"160px"} src={cardback} alt={"cardback"} />
-          </div> */}
         </div>
       </div>
 
