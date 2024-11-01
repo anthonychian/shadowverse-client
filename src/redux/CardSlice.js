@@ -1570,6 +1570,46 @@ export const CardSlice = createSlice({
         room: state.room,
       });
     },
+    placeToFieldFromDeck: (state, action) => {
+      const card = action.payload.card;
+      // const cardIndex = state.deck.indexOf(card);
+      const cardIndex = action.payload.deckIndex;
+      const newIndex = action.payload.index;
+      state.deck = state.deck.filter((_, i) => i !== cardIndex);
+      const date = new Date().toLocaleTimeString("it-IT", {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+      state.gameLog = [
+        ...state.gameLog,
+        `[${date}] (Me): Removed ${card} from deck`,
+      ];
+      const newField = [
+        ...state.field.slice(0, newIndex),
+        card,
+        ...state.field.slice(newIndex + 1),
+      ];
+      state.field = newField;
+      state.gameLog = [
+        ...state.gameLog,
+        `[${date}] (Me): Added ${card} to field`,
+      ];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Removed ${card} from deck`,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "log",
+        data: `Added ${card} to field`,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "field",
+        data: state.field,
+        room: state.room,
+      });
+    },
     placeToFieldFromCemetery: (state, action) => {
       const card = action.payload.card;
       const cardIndex = state.cemetery.indexOf(card);
@@ -2173,6 +2213,7 @@ export const {
   drawFromDeck,
   drawFourFromDeck,
   placeToFieldFromHand,
+  placeToFieldFromDeck,
   placeToFieldFromCemetery,
   placeToFieldFromBanish,
   addToHandFromDeck,

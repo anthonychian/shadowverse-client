@@ -7,6 +7,7 @@ import {
   moveCardOnField,
   transferToOpponentField,
   placeToCemeteryFromField,
+  placeToFieldFromDeck,
   placeToFieldFromCemetery,
   placeToFieldFromBanish,
   placeTokenOnField,
@@ -135,9 +136,11 @@ export default function Field({
   const [contextMenu, setContextMenu] = useState(null);
   const [contextEvoMenu, setContextEvoMenu] = useState(null);
   const [index, setIndex] = useState(0);
+  const [deckIndex, setDeckIndex] = useState(0);
   const [name, setName] = useState("");
   const [readyToMoveOnField, setReadyToMoveOnField] = useState(false);
   const [readyToDuplicateOnField, setReadyToDuplicateOnField] = useState(false);
+  const [readyFromDeck, setReadyFromDeck] = useState(false);
   const [readyFromCemetery, setReadyFromCemetery] = useState(false);
   const [readyFromBanish, setReadyFromBanish] = useState(false);
   const [readyToEvo, setReadyToEvo] = useState(false);
@@ -343,6 +346,18 @@ export default function Field({
         dispatch(clearValuesAtIndex(indexClicked));
         dispatch(clearEngagedAtIndex(indexClicked));
         dispatch(clearCountersAtIndex(indexClicked));
+      }
+      if (readyFromDeck) {
+        setReadyFromDeck(false);
+        console.log("name", name);
+        console.log("indexClicked", indexClicked);
+        dispatch(
+          placeToFieldFromDeck({
+            card: name,
+            index: indexClicked,
+            deckIndex: deckIndex,
+          })
+        );
       }
       if (readyFromCemetery) {
         setReadyFromCemetery(false);
@@ -1270,7 +1285,13 @@ export default function Field({
             ready={ready}
           />
           <div style={{ zIndex: -1, position: "relative" }}>
-            <Deck setHovering={setHovering} ready={ready} />
+            <Deck
+              setHovering={setHovering}
+              ready={ready}
+              setReadyFromDeck={setReadyFromDeck}
+              setReady={setReady}
+              setDeckIndex={setDeckIndex}
+            />
             {/* {showOpponentDeckSize && ( */}
             <div
               style={{

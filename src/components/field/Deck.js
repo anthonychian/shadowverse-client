@@ -40,7 +40,13 @@ const style = {
   alignItems: "center",
 };
 
-export default function Deck({ ready, setHovering }) {
+export default function Deck({
+  ready,
+  setHovering,
+  setReadyFromDeck,
+  setReady,
+  setDeckIndex,
+}) {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
   const [name, setName] = useState("");
@@ -110,7 +116,8 @@ export default function Deck({ ready, setHovering }) {
   const handleCardContextMenu = (event, name, index) => {
     setName(name);
     setIndex(index);
-    console.log(index);
+    setDeckIndex(index);
+    // console.log(index);
     event.preventDefault();
     setCardContextMenu(
       cardContextMenu === null
@@ -121,9 +128,7 @@ export default function Deck({ ready, setHovering }) {
         : null
     );
   };
-  const handleClose = () => {
-    setContextMenu(null);
-  };
+
   const handleCardClose = () => {
     setCardContextMenu(null);
   };
@@ -172,6 +177,13 @@ export default function Deck({ ready, setHovering }) {
       data: name,
       room: reduxRoom,
     });
+  };
+
+  const handleCardToFieldFromDeck = () => {
+    handleCardClose();
+    handleModalClose();
+    setReady(true);
+    setReadyFromDeck(true);
   };
 
   const handleToHandFromRevealed = () => {
@@ -253,10 +265,6 @@ export default function Deck({ ready, setHovering }) {
     <>
       <div
         onMouseEnter={(event) => handlePopoverOpen(event)}
-        // onMouseLeave={handlePopoverClose}
-        // onContextMenu={(e) => {
-        //   if (!ready) handleContextMenu(e);
-        // }}
         onClick={() => {
           if (!ready) dispatch(drawFromDeck());
         }}
@@ -327,7 +335,7 @@ export default function Deck({ ready, setHovering }) {
           <MenuItem onClick={() => handleAddFromDeckToHand()}>Hand</MenuItem>
         )}
         {!reveal && (
-          <MenuItem onClick={() => handleToBanish()}>Banish</MenuItem>
+          <MenuItem onClick={() => handleCardToFieldFromDeck()}>Field</MenuItem>
         )}
         {reveal && (
           <MenuItem onClick={() => handleToHandFromRevealed()}>Hand</MenuItem>
@@ -338,7 +346,7 @@ export default function Deck({ ready, setHovering }) {
         {reveal && (
           <MenuItem onClick={() => handleToBotOfDeck()}>Bot of Deck</MenuItem>
         )}
-        {reveal && <MenuItem onClick={() => handleToBanish()}>Banish</MenuItem>}
+        <MenuItem onClick={() => handleToBanish()}>Banish</MenuItem>
       </Menu>
 
       <Modal
