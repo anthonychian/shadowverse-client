@@ -193,8 +193,8 @@ export default function CreateDeck() {
 
   const getCardsFromName = (name) => {
     switch (name) {
-      // case "set 7":
-      //   return set7;
+      case "set 7":
+        return set7;
       case "idol":
         return setIDOL;
       case "set 6":
@@ -211,8 +211,8 @@ export default function CreateDeck() {
         return set2;
       case "set 1":
         return set1;
-      // case "set 7 evo":
-      //   return set7Evo;
+      case "set 7 evo":
+        return set7Evo;
       case "idol evo":
         return setIDOLEvo;
       case "set 6 evo":
@@ -677,7 +677,7 @@ export default function CreateDeck() {
           >
             All
           </Button>
-          {/* <Button
+          <Button
             onClick={() => {
               setButtonFilterSet("set 7");
               setButtonFilterSetEvo("set 7 evo");
@@ -697,7 +697,7 @@ export default function CreateDeck() {
             variant="contained"
           >
             Verdant Steel
-          </Button> */}
+          </Button>
           <Button
             onClick={() => {
               setButtonFilterSet("idol");

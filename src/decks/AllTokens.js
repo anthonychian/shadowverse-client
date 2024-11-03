@@ -1,7 +1,7 @@
 export const allTokens = [
-  // "Assembly Droid TOKEN",
-  // "Repair Mode TOKEN",
-  // "Naterran Great Tree TOKEN",
+  "Assembly Droid TOKEN",
+  "Repair Mode TOKEN",
+  "Naterran Great Tree TOKEN",
 
   "Cute Earrings TOKEN",
   "Cool Earrings TOKEN",
