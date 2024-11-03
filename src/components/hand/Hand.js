@@ -9,7 +9,6 @@ import {
   setCurrentCard,
   placeToCemeteryFromHand,
   setEnemyArrow,
-  setCardSelectedInHand,
 } from "../../redux/CardSlice";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";

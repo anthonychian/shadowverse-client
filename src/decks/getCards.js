@@ -1918,56 +1918,56 @@ export const cardImage = (cardName) => {
     case "Ladica, the Stoneclaw Evolved":
       return "../textures/bp07-u01.png";
     case "Setus, the Beastblade Evolved":
-      return "../textures/bp07-005.png";
+      return "../textures/bp07-006.png";
     case "Blossom Spirit Evolved":
-      return "../textures/bp07-008.png";
+      return "../textures/bp07-009.png";
     case "Forest Hermit Evolved":
-      return "../textures/bp07-014.png";
+      return "../textures/bp07-015.png";
 
     case "Bayleon, Sovereign Light Evolved":
-      return "../textures/bp07-018.png";
+      return "../textures/bp07-019.png";
     case "Leod, the Crescent Blade Evolved":
-      return "../textures/bp07-022.png";
+      return "../textures/bp07-023.png";
     case "Troya, Thunder of Hagelberg Evolved":
-      return "../textures/bp07-025.png";
+      return "../textures/bp07-026.png";
     case "Dauntless Commander Evolved":
-      return "../textures/bp07-031.png";
+      return "../textures/bp07-032.png";
 
     case "Tetra, Sapphire Rebel Evolved":
-      return "../textures/bp07-035.png";
+      return "../textures/bp07-036.png";
     case "Eleanor, Cosmic Flower Evolved":
-      return "../textures/bp07-039.png";
+      return "../textures/bp07-040.png";
     case "Displacer Bot Evolved":
-      return "../textures/bp07-042.png";
+      return "../textures/bp07-043.png";
     case "Magiblade Witch Evolved":
-      return "../textures/bp07-048.png";
+      return "../textures/bp07-049.png";
 
     case "Valdain, Cursed Shadow Evolved":
       return "../textures/bp07-u04.png";
     case "Marion, Elegant Dragonewt Evolved":
-      return "../textures/bp07-056.png";
+      return "../textures/bp07-057.png";
     case "Hoarfrost Triceratops Evolved":
-      return "../textures/bp07-060.png";
+      return "../textures/bp07-061.png";
     case "Doting Dragoneer Evolved":
-      return "../textures/bp07-065.png";
+      return "../textures/bp07-066.png";
 
     case "Mono, Garnet Rebel Evolved":
       return "../textures/bp07-u05.png";
     case "Doublame, Duke and Dame Evolved":
-      return "../textures/bp07-073.png";
+      return "../textures/bp07-074.png";
     case "Nicola, Forbidden Strength Evolved":
-      return "../textures/bp07-076.png";
+      return "../textures/bp07-077.png";
     case "Berserk Demon Evolved":
-      return "../textures/bp07-082.png";
+      return "../textures/bp07-083.png";
 
     case "Limonia, Flawed Saint Evolved":
-      return "../textures/bp07-086.png";
+      return "../textures/bp07-087.png";
     case "Marione, Light of Balance Evolved":
-      return "../textures/bp07-090.png";
+      return "../textures/bp07-091.png";
     case "Robofalcon Evolved":
-      return "../textures/bp07-094.png";
+      return "../textures/bp07-095.png";
     case "Black Bishop Evolved":
-      return "../textures/bp07-098.png";
+      return "../textures/bp07-099.png";
 
     case "Viridia Magna Evolved":
       return "../textures/bp07-105.png";
