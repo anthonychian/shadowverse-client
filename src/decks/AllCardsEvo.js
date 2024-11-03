@@ -608,10 +608,10 @@ export const set1Evo = [
 ];
 
 export const forestEvo = [
-  // "Ladica, the Stoneclaw Evolved",
-  // "Setus, the Beastblade Evolved",
-  // "Blossom Spirit Evolved",
-  // "Forest Hermit Evolved",
+  "Ladica, the Stoneclaw Evolved",
+  "Setus, the Beastblade Evolved",
+  "Blossom Spirit Evolved",
+  "Forest Hermit Evolved",
 
   "Momoka Sakurai Evolved",
   "Suzuho Ueda Evolved",
@@ -651,10 +651,10 @@ export const forestEvo = [
 ];
 
 export const swordEvo = [
-  // "Bayleon, Sovereign Light Evolved",
-  // "Leod, the Crescent Blade Evolved",
-  // "Troya, Thunder of Hagelberg Evolved",
-  // "Dauntless Commander Evolved",
+  "Bayleon, Sovereign Light Evolved",
+  "Leod, the Crescent Blade Evolved",
+  "Troya, Thunder of Hagelberg Evolved",
+  "Dauntless Commander Evolved",
 
   "Miria Akagi Evolved",
   "Kumiko Matsuyama Evolved",
@@ -694,10 +694,10 @@ export const swordEvo = [
 ];
 
 export const runeEvo = [
-  // "Tetra, Sapphire Rebel Evolved",
-  // "Eleanor, Cosmic Flower Evolved",
-  // "Displacer Bot Evolved",
-  // "Magiblade Witch Evolved",
+  "Tetra, Sapphire Rebel Evolved",
+  "Eleanor, Cosmic Flower Evolved",
+  "Displacer Bot Evolved",
+  "Magiblade Witch Evolved",
 
   "Akiha Ikebukuro Evolved",
   "Seira Mizuki Evolved",
@@ -737,10 +737,10 @@ export const runeEvo = [
 ];
 
 export const dragonEvo = [
-  // "Valdain, Cursed Shadow Evolved",
-  // "Marion, Elegant Dragonewt Evolved",
-  // "Hoarfrost Triceratops Evolved",
-  // "Doting Dragoneer Evolved",
+  "Valdain, Cursed Shadow Evolved",
+  "Marion, Elegant Dragonewt Evolved",
+  "Hoarfrost Triceratops Evolved",
+  "Doting Dragoneer Evolved",
 
   "Nene Kurihara Evolved",
   "Yui Ohtsuki Evolved",
@@ -782,10 +782,10 @@ export const dragonEvo = [
 ];
 
 export const abyssEvo = [
-  // "Mono, Garnet Rebel Evolved",
-  // "Doublame, Duke and Dame Evolved",
-  // "Nicola, Forbidden Strength Evolved",
-  // "Berserk Demon Evolved",
+  "Mono, Garnet Rebel Evolved",
+  "Doublame, Duke and Dame Evolved",
+  "Nicola, Forbidden Strength Evolved",
+  "Berserk Demon Evolved",
 
   "Yukimi Sajo Evolved",
   "Ranko Kanzaki Evolved",
@@ -824,10 +824,10 @@ export const abyssEvo = [
 ];
 
 export const havenEvo = [
-  // "Limonia, Flawed Saint Evolved",
-  // "Marione, Light of Balance Evolved",
-  // "Robofalcon Evolved",
-  // "Black Bishop Evolved",
+  "Limonia, Flawed Saint Evolved",
+  "Marione, Light of Balance Evolved",
+  "Robofalcon Evolved",
+  "Black Bishop Evolved",
 
   "Kako Takafuji Evolved",
   "Shin Sato Evolved",
@@ -866,10 +866,10 @@ export const havenEvo = [
 ];
 
 export const neutralEvo = [
-  // "Viridia Magna Evolved",
-  // "Maisha, Hero of Purgation Evolved",
-  // "Robogoblin Evolved",
-  // "Aldis, Trendsetting Seraph Evolved",
+  "Viridia Magna Evolved",
+  "Maisha, Hero of Purgation Evolved",
+  "Robogoblin Evolved",
+  "Aldis, Trendsetting Seraph Evolved",
 
   "Badb Catha Evolved",
   "Mithra, Daybreak Diety Evolved",
