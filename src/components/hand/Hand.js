@@ -121,7 +121,7 @@ export default function Hand({
         values={items}
         onReorder={setItems}
       >
-        {items.map((card) => (
+        {items.map((card, index) => (
           <Reorder.Item
             onContextMenu={(e) => {
               if (!ready) handleContextMenu(e, card.name);
@@ -132,6 +132,8 @@ export default function Hand({
           >
             <Card
               name={card.name}
+              inHandIndex={index}
+              handLength={items.length}
               constraintsRef={constraintsRef}
               setDragging={setDragging}
               setHovering={setHovering}

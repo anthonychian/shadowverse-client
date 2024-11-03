@@ -8,7 +8,7 @@ import {
   modifyCounter,
   setEngaged,
 } from "../../redux/CardSlice";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import cancel from "../../assets/logo/cancel.png";
 import carrot from "../../assets/logo/carrot.png";
 import img from "../../assets/pin_bellringer_angel.png";
@@ -34,7 +34,9 @@ export default function Card({
   defVal,
   counterVal,
   // onEnemyField = false,
+  handLength,
   inHand = false,
+  inHandIndex = -1,
 }) {
   let numOfCarrots = 0;
   const [rotate, setRotate] = useState(false);
@@ -43,6 +45,10 @@ export default function Card({
   const [def, setDef] = useState(0);
   const [counter, setCounter] = useState(0);
   const [hoverInput, setHoverInput] = useState(false);
+
+  const reduxEnemyCardSelectedInHand = useSelector(
+    (state) => state.card.enemyCardSelectedInHand
+  );
 
   useEffect(() => {
     if (rotate !== engaged) setRotate(engaged);
@@ -193,7 +199,21 @@ export default function Card({
             alt={name}
           />
         ) : (
-          <img height={"100%"} src={cardImage(name)} alt={name} />
+          <img
+            style={
+              inHand &&
+              (reduxEnemyCardSelectedInHand - handLength + 1) * -1 ===
+                inHandIndex
+                ? {
+                    filter:
+                      "sepia() saturate(4) hue-rotate(315deg) brightness(100%) opacity(5)",
+                  }
+                : {}
+            }
+            height={"100%"}
+            src={cardImage(name)}
+            alt={name}
+          />
         )}
         {showAtk && (
           <>

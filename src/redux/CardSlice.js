@@ -14,6 +14,8 @@ export const CardSlice = createSlice({
     enemyHand: [],
     showDice: false,
     showEnemyHand: false,
+    cardSelectedInHand: -1,
+    enemyCardSelectedInHand: -1,
     enemyArrow: { idx: -1, show: false },
     leaderActive: false,
     enemyLeaderActive: false,
@@ -207,6 +209,17 @@ export const CardSlice = createSlice({
       //   data: `Rolled a dice and got ${action.payload.roll}`,
       //   room: state.room,
       // });
+    },
+    setCardSelectedInHand: (state, action) => {
+      state.cardSelectedInHand = action.payload;
+      socket.emit("send msg", {
+        type: "cardSelected",
+        data: action.payload,
+        room: state.room,
+      });
+    },
+    setEnemyCardSelectedInHand: (state, action) => {
+      state.enemyCardSelectedInHand = action.payload;
     },
     setArrow: (state, action) => {
       socket.emit("send msg", {
@@ -2031,6 +2044,8 @@ export const CardSlice = createSlice({
       state.evoDeck = [];
       state.hand = [];
       state.enemyHand = [];
+      state.cardSelectedInHand = -1;
+      state.enemyCardSelectedInHand = -1;
       state.showDice = false;
       state.enemyDice = { show: false, roll: 1 };
       state.showEnemyHand = false;
@@ -2136,6 +2151,8 @@ export const CardSlice = createSlice({
       state.showEnemyHand = false;
       state.showEnemyCard = false;
       state.enemyCard = "";
+      state.cardSelectedInHand = -1;
+      state.enemyCardSelectedInHand = -1;
       state.enemyDeckSize = 0;
       state.leaderActive = false;
       state.enemyLeaderActive = false;
@@ -2319,6 +2336,8 @@ export const {
   setEnemyViewingEvoDeckOpponent,
   setEnemyViewingTopCards,
   setEnemyCounter,
+  setCardSelectedInHand,
+  setEnemyCardSelectedInHand,
   modifyCounter,
   setShowEnemyCard,
   setEnemyCard,

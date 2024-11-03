@@ -61,6 +61,8 @@ import {
   setEnemyLeaderActive,
   setField,
   setEnemyCardBack,
+  setCardSelectedInHand,
+  setEnemyCardSelectedInHand,
 } from "../../redux/CardSlice";
 import { cardImage } from "../../decks/getCards";
 import { motion } from "framer-motion";
@@ -145,6 +147,9 @@ export default function Field({
   );
   const reduxEnemyArrow = useSelector((state) => state.card.enemyArrow);
   const reduxEnemyCardBack = useSelector((state) => state.card.enemyCardback);
+  const reduxCardSelectedInHand = useSelector(
+    (state) => state.card.cardSelectedInHand
+  );
 
   // useState
   const [cardback, setCardback] = useState();
@@ -222,6 +227,8 @@ export default function Field({
       else if (data.type === "cardback") dispatch(setEnemyCardBack(data.data));
       else if (data.type === "rematch")
         dispatch(setEnemyRematchStatus(data.data));
+      else if (data.type === "cardSelected")
+        dispatch(setEnemyCardSelectedInHand(data.data));
     });
     return () => {
       socket.off("receive msg");
@@ -608,6 +615,11 @@ export default function Field({
     );
   };
 
+  const handleSelectEnemyCardInHand = (idx) => {
+    if (idx === reduxCardSelectedInHand) dispatch(setCardSelectedInHand(-1));
+    else dispatch(setCardSelectedInHand(idx));
+  };
+
   useEffect(() => {
     switch (reduxEnemyCardBack) {
       case "Chloe":
@@ -888,7 +900,21 @@ export default function Field({
         }}
       >
         {reduxEnemyHand.map((_, idx) => (
-          <img key={idx} height={"160px"} src={cardback} alt={"cardback"} />
+          <img
+            style={
+              reduxCardSelectedInHand === idx
+                ? {
+                    filter:
+                      "sepia() saturate(4) hue-rotate(315deg) brightness(100%) opacity(5)",
+                  }
+                : {}
+            }
+            key={idx}
+            height={"160px"}
+            src={cardback}
+            alt={"cardback"}
+            onClick={() => handleSelectEnemyCardInHand(idx)}
+          />
         ))}
       </div>
 
