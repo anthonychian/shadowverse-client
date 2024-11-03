@@ -138,7 +138,7 @@ export const cardImage = (cardName) => {
     case "Limonia, Flawed Saint":
       return "../textures/bp07-086.png";
     case "Lapis, Glorious Seraph":
-      return "../textures/u06.png";
+      return "../textures/bp07-u06.png";
     case "Father Refinement":
       return "../textures/bp07-089.png";
     case "Marione, Light of Balance":
@@ -169,9 +169,9 @@ export const cardImage = (cardName) => {
     case "Mechawing Angel":
       return "../textures/bp07-106.png";
     case "Desert Pathfinder":
-      return "../textures/bp07-108.png";
+      return "../textures/bp07-107.png";
     case "Maisha, Hero of Purgation":
-      return "../textures/bp07-109.png";
+      return "../textures/bp07-108.png";
     case "Robogoblin":
       return "../textures/bp07-110.png";
     case "Alchemical Confectioner":
@@ -181,7 +181,7 @@ export const cardImage = (cardName) => {
     case "Aldis, Trendsetting Seraph":
       return "../textures/bp07-114.png";
     case "Mechagun Wielder":
-      return "../textures/bp07-115.png";
+      return "../textures/bp07-116.png";
     case "Extreme Carrot":
       return "../textures/bp07-117.png";
 
@@ -1970,13 +1970,13 @@ export const cardImage = (cardName) => {
       return "../textures/bp07-098.png";
 
     case "Viridia Magna Evolved":
-      return "../textures/bp07-104.png";
+      return "../textures/bp07-105.png";
     case "Maisha, Hero of Purgation Evolved":
       return "../textures/bp07-109.png";
     case "Robogoblin Evolved":
-      return "../textures/bp07-110.png";
+      return "../textures/bp07-111.png";
     case "Aldis, Trendsetting Seraph Evolved":
-      return "../textures/bp07-114.png";
+      return "../textures/bp07-115.png";
 
     case "Momoka Sakurai Evolved":
       return "../textures/CSD02a-006EN.png";

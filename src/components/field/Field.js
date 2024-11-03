@@ -241,6 +241,10 @@ export default function Field({
     }
   }, [reduxCurrentRoom]);
 
+  useEffect(() => {
+    dispatch(setCardSelectedInHand(-1));
+  }, [reduxEnemyHand]);
+
   const handleModalClose = () => {
     dispatch(setShowEnemyHand(false));
     // socket.emit("send msg", {
