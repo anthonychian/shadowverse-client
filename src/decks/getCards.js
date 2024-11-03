@@ -32,7 +32,7 @@ export const cardImage = (cardName) => {
     case "Mistolina, Forest Princess":
       return "../textures/bp07-020.png";
     case "Tsubaki of the Demon Blade":
-      return "../textures/bp07-U02.png";
+      return "../textures/bp07-u02.png";
     case "Leod, the Crescent Blade":
       return "../textures/bp07-022.png";
     case "King's Might":
@@ -59,7 +59,7 @@ export const cardImage = (cardName) => {
     case "Belphomet, Lord of Aiolon":
       return "../textures/bp07-037.png";
     case "Riley, Hydroshaman":
-      return "../textures/bp07-U03.png";
+      return "../textures/bp07-u03.png";
     case "Eleanor, Cosmic Flower":
       return "../textures/bp07-039.png";
     case "Delta Cannon":
@@ -138,7 +138,7 @@ export const cardImage = (cardName) => {
     case "Limonia, Flawed Saint":
       return "../textures/bp07-086.png";
     case "Lapis, Glorious Seraph":
-      return "../textures/bp07-U06.png";
+      return "../textures/u06.png";
     case "Father Refinement":
       return "../textures/bp07-089.png";
     case "Marione, Light of Balance":
@@ -163,7 +163,7 @@ export const cardImage = (cardName) => {
       return "../textures/bp07-102.png";
 
     case "Technolord":
-      return "../textures/bp07-U07.png";
+      return "../textures/bp07-u07.png";
     case "Viridia Magna":
       return "../textures/bp07-104.png";
     case "Mechawing Angel":
@@ -1916,7 +1916,7 @@ export const cardImage = (cardName) => {
       return "../textures/PR-018EN.png";
 
     case "Ladica, the Stoneclaw Evolved":
-      return "../textures/bp07-U01.png";
+      return "../textures/bp07-u01.png";
     case "Setus, the Beastblade Evolved":
       return "../textures/bp07-005.png";
     case "Blossom Spirit Evolved":
@@ -1943,7 +1943,7 @@ export const cardImage = (cardName) => {
       return "../textures/bp07-048.png";
 
     case "Valdain, Cursed Shadow Evolved":
-      return "../textures/bp07-U04.png";
+      return "../textures/bp07-u04.png";
     case "Marion, Elegant Dragonewt Evolved":
       return "../textures/bp07-056.png";
     case "Hoarfrost Triceratops Evolved":
@@ -1952,7 +1952,7 @@ export const cardImage = (cardName) => {
       return "../textures/bp07-065.png";
 
     case "Mono, Garnet Rebel Evolved":
-      return "../textures/bp07-U05.png";
+      return "../textures/bp07-u05.png";
     case "Doublame, Duke and Dame Evolved":
       return "../textures/bp07-073.png";
     case "Nicola, Forbidden Strength Evolved":
