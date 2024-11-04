@@ -682,7 +682,7 @@ export default function Home() {
               minHeight: "250px",
               padding: "2em",
               // height: "400px",
-              maxHeight: "500px",
+              maxHeight: "750px",
               overflowY: "auto",
               width: "100%",
               display: "flex",
