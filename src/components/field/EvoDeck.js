@@ -65,7 +65,7 @@ export default function EvoDeck({
     setEvoStatus(card.status);
     setName(card.card);
     dispatch(setCurrentEvo(card.card));
-    console.log("set current evo to", card.card);
+    // console.log("set current evo to", card.card);
     event.preventDefault();
     setContextMenu(
       contextMenu === null

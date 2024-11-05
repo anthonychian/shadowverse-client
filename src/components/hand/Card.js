@@ -118,12 +118,10 @@ export default function Card({
 
   const handleStartHoverInput = () => {
     setHoverInput(true);
-    console.log("true");
   };
 
   const handleEndHoverInput = () => {
     setHoverInput(false);
-    console.log("false");
   };
 
   const updateNumberOfCarrots = () => {

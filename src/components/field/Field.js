@@ -5,6 +5,7 @@ import {
   placeToTopOfDeckFromField,
   placeToBotOfDeckFromField,
   moveCardOnField,
+  moveEvoAndBaseOnField,
   transferToOpponentField,
   placeToCemeteryFromField,
   placeToFieldFromDeck,
@@ -159,6 +160,7 @@ export default function Field({
   const [deckIndex, setDeckIndex] = useState(0);
   const [name, setName] = useState("");
   const [readyToMoveOnField, setReadyToMoveOnField] = useState(false);
+  const [readyToMoveEvoOnField, setReadyToMoveEvoOnField] = useState(false);
   const [readyToDuplicateOnField, setReadyToDuplicateOnField] = useState(false);
   const [readyFromDeck, setReadyFromDeck] = useState(false);
   const [readyFromCemetery, setReadyFromCemetery] = useState(false);
@@ -258,7 +260,7 @@ export default function Field({
     if (!showArrow[idx] && event.button === 0) {
       // dispatch(setArrow({ show: true }));
       setInitialArrowPos({ x: event.clientX, y: event.clientY });
-      console.log(event.clientX, event.clientY);
+      // console.log(event.clientX, event.clientY);
       let arr = [...showArrow];
       arr[idx] = true;
       setShowArrow(arr);
@@ -336,6 +338,38 @@ export default function Field({
         dispatch(
           moveCardOnField({
             card: name,
+            prevIndex: index,
+            index: indexClicked,
+          })
+        );
+        dispatch(
+          moveValuesAtIndex({
+            prevIndex: index,
+            index: indexClicked,
+          })
+        );
+        dispatch(
+          moveCountersAtIndex({
+            prevIndex: index,
+            index: indexClicked,
+          })
+        );
+        dispatch(
+          moveEngagedAtIndex({
+            prevIndex: index,
+            index: indexClicked,
+          })
+        );
+        dispatch(clearValuesAtIndex(index));
+        dispatch(clearEngagedAtIndex(index));
+        dispatch(clearCountersAtIndex(index));
+      }
+      if (readyToMoveEvoOnField) {
+        setReadyToMoveEvoOnField(false);
+        dispatch(
+          moveEvoAndBaseOnField({
+            card: name,
+            evoCard: name,
             prevIndex: index,
             index: indexClicked,
           })
@@ -448,6 +482,7 @@ export default function Field({
       setReadyFromBanish(false);
       setReadyToPlaceOnFieldFromHand(false);
       setReadyToMoveOnField(false);
+      setReadyToMoveEvoOnField(false);
       setTokenReady(false);
     }
     setReady(false);
@@ -597,6 +632,11 @@ export default function Field({
     handleClose();
     setReady(true);
     setReadyToMoveOnField(true);
+  };
+  const handleMoveEvoOnField = () => {
+    handleEvoClose();
+    setReady(true);
+    setReadyToMoveEvoOnField(true);
   };
 
   const handleTransfer = () => {
@@ -749,7 +789,7 @@ export default function Field({
         }
       >
         <MenuItem onClick={() => handleReturnToEvolveDeck()}>Return</MenuItem>
-
+        <MenuItem onClick={handleMoveEvoOnField}>Move</MenuItem>
         {!reduxCustomValues[index].showAtk && (
           <MenuItem onClick={handleShowAtkDef}>Modify Atk/Def</MenuItem>
         )}

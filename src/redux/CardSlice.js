@@ -1010,6 +1010,63 @@ export const CardSlice = createSlice({
         room: state.room,
       });
     },
+    moveEvoAndBaseOnField: (state, action) => {
+      // console.log(action.payload.card);
+      // console.log(action.payload.evoCard);
+      // base
+      const card = state.field[action.payload.prevIndex];
+      const prevIndex = action.payload.prevIndex;
+      const newIndex = action.payload.index;
+      const field = [
+        ...state.field.slice(0, prevIndex),
+        0,
+        ...state.field.slice(prevIndex + 1),
+      ];
+      state.field = field;
+      const newField = [
+        ...state.field.slice(0, newIndex),
+        card,
+        ...state.field.slice(newIndex + 1),
+      ];
+      state.field = newField;
+      // evo
+      const evoCard = action.payload.evoCard;
+      const evoField = [
+        ...state.evoField.slice(0, prevIndex),
+        0,
+        ...state.evoField.slice(prevIndex + 1),
+      ];
+      state.evoField = evoField;
+      const newEvoField = [
+        ...state.evoField.slice(0, newIndex),
+        evoCard,
+        ...state.evoField.slice(newIndex + 1),
+      ];
+      state.evoField = newEvoField;
+      const date = new Date().toLocaleTimeString("it-IT", {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+      state.gameLog = [
+        ...state.gameLog,
+        `[${date}] (Me): Moved ${evoCard} on field`,
+      ];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Moved ${evoCard} on field`,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "field",
+        data: state.field,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "evoField",
+        data: state.evoField,
+        room: state.room,
+      });
+    },
     transferToOpponentField: (state, action) => {
       if (
         state.enemyField[0] === 0 ||
@@ -2268,6 +2325,7 @@ export const {
   addToBanishFromDeck,
   removeTokenOnField,
   moveCardOnField,
+  moveEvoAndBaseOnField,
   transferToOpponentField,
   reorderCardsInHand,
   mulliganFour,
