@@ -107,7 +107,7 @@ export default function Home() {
         setRoomNumber(roomNumber.toString());
         dispatch(setRoom(roomNumber.toString()));
         socket.emit("create_room", roomNumber.toString());
-        console.log(roomNumber);
+        // console.log(roomNumber);
         // handleNavigateToGame();
       }
     }

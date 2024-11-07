@@ -212,11 +212,27 @@ export const CardSlice = createSlice({
     },
     setCardSelectedInHand: (state, action) => {
       state.cardSelectedInHand = action.payload;
+      const logIndex = (action.payload - state.enemyHand.length) * -1;
       socket.emit("send msg", {
         type: "cardSelected",
         data: action.payload,
         room: state.room,
       });
+      if (action.payload !== -1) {
+        const date = new Date().toLocaleTimeString("it-IT", {
+          hour: "2-digit",
+          minute: "2-digit",
+        });
+        state.gameLog = [
+          ...state.gameLog,
+          `[${date}] (Me): Selected card #${logIndex} in opponent's hand`,
+        ];
+        socket.emit("send msg", {
+          type: "log",
+          data: `Selected card #${logIndex} in your hand`,
+          room: state.room,
+        });
+      }
     },
     setEnemyCardSelectedInHand: (state, action) => {
       state.enemyCardSelectedInHand = action.payload;
@@ -1615,9 +1631,25 @@ export const CardSlice = createSlice({
         room: state.room,
       });
     },
+    shuffleCards: (state, action) => {
+      const date = new Date().toLocaleTimeString("it-IT", {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+      state.gameLog = [
+        ...state.gameLog,
+        `[${date}] (Me): Shuffled cards in hand`,
+      ];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Shuffled cards in hand`,
+        room: state.room,
+      });
+    },
     placeToCemeteryFromHand: (state, action) => {
-      const card = action.payload;
-      const cardIndex = state.hand.indexOf(card);
+      const card = action.payload.name;
+      const cardIndex = action.payload.index;
+      // const cardIndex = state.hand.indexOf(card);
       state.hand = state.hand.filter((_, i) => i !== cardIndex);
       const date = new Date().toLocaleTimeString("it-IT", {
         hour: "2-digit",
@@ -1625,7 +1657,7 @@ export const CardSlice = createSlice({
       });
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Removed ${card} from hand`,
+        `[${date}] (Me): Removed ${card} (#${cardIndex + 1}) from hand`,
       ];
       state.cemetery = [card, ...state.cemetery];
       state.gameLog = [
@@ -1634,7 +1666,7 @@ export const CardSlice = createSlice({
       ];
       socket.emit("send msg", {
         type: "log",
-        data: `Removed ${card} from hand`,
+        data: `Removed ${card} (#${cardIndex + 1}) from hand`,
         room: state.room,
       });
       socket.emit("send msg", {
@@ -2410,4 +2442,5 @@ export const {
   setRematchStatus,
   setEnemyRematchStatus,
   createLessonTokens,
+  shuffleCards,
 } = CardSlice.actions;

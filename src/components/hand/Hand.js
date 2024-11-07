@@ -9,6 +9,7 @@ import {
   setCurrentCard,
   placeToCemeteryFromHand,
   setEnemyArrow,
+  shuffleCards,
 } from "../../redux/CardSlice";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
@@ -24,12 +25,20 @@ export default function Hand({
 }) {
   const reduxHand = useSelector((state) => state.card.hand);
   const [items, setItems] = useState(reduxHand);
+  const [shuffled, setShuffled] = useState(false);
   const reduxRoom = useSelector((state) => state.card.room);
   const dispatch = useDispatch();
 
   useEffect(() => {
     setItems(arrToObjArr(reduxHand));
   }, [reduxHand]);
+
+  useEffect(() => {
+    if (shuffled) {
+      setShuffled(false);
+      dispatch(shuffleCards());
+    }
+  }, [items]);
 
   const arrToObjArr = (arr) => {
     return arr.map((x, idx) => ({ idx: idx, name: x }));
@@ -42,11 +51,13 @@ export default function Hand({
 
   const [contextMenu, setContextMenu] = React.useState(null);
   const [name, setName] = useState("");
+  const [cardIndex, setCardIndex] = useState(-1);
 
-  const handleContextMenu = (event, name) => {
+  const handleContextMenu = (event, name, index) => {
     dispatch(setEnemyArrow({ idx: -1, show: false }));
-    dispatch(reorderCardsInHand(objArrToArr(items)));
+    // dispatch(reorderCardsInHand(objArrToArr(items)));
     setName(name);
+    setCardIndex(index);
     event.preventDefault();
     setContextMenu(
       contextMenu === null
@@ -69,7 +80,7 @@ export default function Hand({
   const handleCardToCemetery = () => {
     handleClose();
     console.log(name);
-    dispatch(placeToCemeteryFromHand(name));
+    dispatch(placeToCemeteryFromHand({ name: name, index: cardIndex }));
   };
   const handleCardToTopOfDeck = () => {
     handleClose();
@@ -124,11 +135,12 @@ export default function Hand({
         {items.map((card, index) => (
           <Reorder.Item
             onContextMenu={(e) => {
-              if (!ready) handleContextMenu(e, card.name);
+              if (!ready) handleContextMenu(e, card.name, index);
             }}
             drag
             key={card.idx}
             value={card}
+            onDragEnd={(e) => setShuffled(true)}
           >
             <Card
               name={card.name}
