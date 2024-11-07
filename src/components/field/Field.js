@@ -86,18 +86,27 @@ import Token from "./Token";
 import Lesson from "./Lesson";
 import { PerfectArrow } from "./PerfectArrow";
 import ShowDice from "./ShowDice";
+
 import defaultCardBack from "../../assets/cardbacks/default.png";
-import chloeCardBack from "../../assets/cardbacks/chloe.jpg";
-import erikaCardBack from "../../assets/cardbacks/erika.jpg";
-import fileneCardBack from "../../assets/cardbacks/filene.jfif";
-import galmieuxCardBack from "../../assets/cardbacks/galmieux.jpg";
+import fileneCardBack from "../../assets/cardbacks/filene.png";
+import galmieuxCardBack from "../../assets/cardbacks/galmieux.png";
 import ginsetsuCardBack from "../../assets/cardbacks/ginsetsu.jpg";
-import isabelleCardBack from "../../assets/cardbacks/isabelle.jpg";
-import israfilCardBack from "../../assets/cardbacks/israfil.jpg";
-import kyoriCardBack from "../../assets/cardbacks/kyori.jpg";
-import monoCardBack from "../../assets/cardbacks/mono.jpg";
-import technolordCardBack from "../../assets/cardbacks/technolord.jpg";
-import tetraCardBack from "../../assets/cardbacks/tetra.jpg";
+import kuonCardBack from "../../assets/cardbacks/kuon.png";
+import ladicaCardBack from "../../assets/cardbacks/ladica.png";
+import lishennaCardBack from "../../assets/cardbacks/lishenna.png";
+import machina1CardBack from "../../assets/cardbacks/machina1.png";
+import machina2CardBack from "../../assets/cardbacks/machina2.png";
+import mistolinaCardBack from "../../assets/cardbacks/mistolina.png";
+import monoCardBack from "../../assets/cardbacks/mono.png";
+import naturaCardBack from "../../assets/cardbacks/natura.png";
+import piercyeCardBack from "../../assets/cardbacks/piercye.png";
+import ralmiaCardBack from "../../assets/cardbacks/ralmia.png";
+import shikiCardBack from "../../assets/cardbacks/shiki.png";
+import shutenCardBack from "../../assets/cardbacks/shuten.png";
+import tetraCardBack from "../../assets/cardbacks/tetra.png";
+import viridiaCardBack from "../../assets/cardbacks/viridia.png";
+import wingsCardBack from "../../assets/cardbacks/wings.png";
+import yokaiCardBack from "../../assets/cardbacks/yokai.png";
 
 const style = {
   position: "relative",
@@ -666,12 +675,6 @@ export default function Field({
 
   useEffect(() => {
     switch (reduxEnemyCardBack) {
-      case "Chloe":
-        setCardback(chloeCardBack);
-        break;
-      case "Erika":
-        setCardback(erikaCardBack);
-        break;
       case "Filene":
         setCardback(fileneCardBack);
         break;
@@ -681,23 +684,53 @@ export default function Field({
       case "Ginsetsu":
         setCardback(ginsetsuCardBack);
         break;
-      case "Isabelle":
-        setCardback(isabelleCardBack);
+      case "Kuon":
+        setCardback(kuonCardBack);
         break;
-      case "Israfil":
-        setCardback(israfilCardBack);
+      case "Ladica":
+        setCardback(ladicaCardBack);
         break;
-      case "Kyori":
-        setCardback(kyoriCardBack);
+      case "Lishenna":
+        setCardback(lishennaCardBack);
+        break;
+      case "Machina1":
+        setCardback(machina1CardBack);
+        break;
+      case "Machina2":
+        setCardback(machina2CardBack);
+        break;
+      case "Mistolina":
+        setCardback(mistolinaCardBack);
         break;
       case "Mono":
         setCardback(monoCardBack);
         break;
-      case "Technolord":
-        setCardback(technolordCardBack);
+      case "Natura":
+        setCardback(naturaCardBack);
+        break;
+      case "Piercye":
+        setCardback(piercyeCardBack);
+        break;
+      case "Ralmia":
+        setCardback(ralmiaCardBack);
+        break;
+      case "Shikigami":
+        setCardback(shikiCardBack);
+        break;
+      case "Shuten":
+        setCardback(shutenCardBack);
         break;
       case "Tetra":
         setCardback(tetraCardBack);
+        break;
+      case "Viridia":
+        setCardback(viridiaCardBack);
+        break;
+      case "Wings":
+        setCardback(wingsCardBack);
+        break;
+      case "Yokai":
+        setCardback(yokaiCardBack);
         break;
       default:
         setCardback(defaultCardBack);
@@ -997,10 +1030,12 @@ export default function Field({
             {/* {showOpponentDeckSize && ( */}
             <div
               style={{
+                width: "50px",
                 position: "absolute",
+                backgroundColor: "rgba(0, 0, 0, 0.4)",
                 top: "5%",
-                right: reduxEnemyDeckSize > 9 ? "37%" : "43%",
-                color: "rgba(255, 255, 255, 0.75)",
+                right: "30%",
+                color: "rgba(255, 255, 255, 1)",
                 fontSize: "30px",
                 fontFamily: "Noto Serif JP, serif",
               }}
@@ -1406,9 +1441,11 @@ export default function Field({
             <div
               style={{
                 position: "absolute",
+                width: "50px",
+                backgroundColor: "rgba(0, 0, 0, 0.4)",
                 top: "65%",
-                right: reduxCurrentDeck.length > 9 ? "35%" : "43%",
-                color: "rgba(255, 255, 255, 0.75)",
+                right: "30%",
+                color: "rgba(255, 255, 255, 1)",
                 fontSize: "30px",
                 fontFamily: "Noto Serif JP, serif",
               }}
