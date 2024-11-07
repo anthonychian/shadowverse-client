@@ -43,11 +43,11 @@ export default function Hand({
   const arrToObjArr = (arr) => {
     return arr.map((x, idx) => ({ idx: idx, name: x }));
   };
-  const objArrToArr = (obj) => {
-    let res = [];
-    obj.map((card) => res.push(card.name));
-    return res;
-  };
+  // const objArrToArr = (obj) => {
+  //   let res = [];
+  //   obj.map((card) => res.push(card.name));
+  //   return res;
+  // };
 
   const [contextMenu, setContextMenu] = React.useState(null);
   const [name, setName] = useState("");

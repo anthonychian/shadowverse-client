@@ -983,8 +983,9 @@ export default function Field({
                 ? {
                     filter:
                       "sepia() saturate(4) hue-rotate(315deg) brightness(100%) opacity(5)",
+                    cursor: `url(${img}) 55 55, auto`,
                   }
-                : {}
+                : { cursor: `url(${img}) 55 55, auto` }
             }
             key={idx}
             height={"160px"}
@@ -1021,9 +1022,9 @@ export default function Field({
         >
           <div style={{ position: "relative" }}>
             <div
-              style={{
-                cursor: `url(${img}) 55 55, auto`,
-              }}
+            // style={{
+            //   cursor: `url(${img}) 55 55, auto`,
+            // }}
             >
               <img height={"160px"} src={cardback} alt={"cardback"} />
             </div>
