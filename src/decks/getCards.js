@@ -1899,7 +1899,7 @@ export const cardImage = (cardName) => {
     case "Execution":
       return "../textures/BP01-169EN.png";
     case "Trail of Light":
-      return "../textures/BP01-170EN.png";
+      return "../textures/PR-020EN.png";
     case "Goblin":
       return "../textures/BP01-171EN.png";
     case "Fighter":
