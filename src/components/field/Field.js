@@ -1133,7 +1133,6 @@ export default function Field({
                     name={reduxEnemyField[cardPos(idx)]}
                     setHovering={setHovering}
                     ready={ready}
-                    onEnemyField={true}
                   />
                 )}
               {reduxEnemyEvoField[cardPos(idx)] !== 0 && (
@@ -1151,7 +1150,6 @@ export default function Field({
                   setHovering={setHovering}
                   ready={ready}
                   cardBeneath={reduxEnemyField[cardPos(idx)]}
-                  onEnemyField={true}
                 />
               )}
             </motion.div>

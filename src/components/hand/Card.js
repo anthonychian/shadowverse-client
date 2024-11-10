@@ -33,13 +33,11 @@ export default function Card({
   atkVal,
   defVal,
   counterVal,
-  // onEnemyField = false,
   handLength,
   inHand = false,
   inHandIndex = -1,
 }) {
   let numOfCarrots = 0;
-  const [rotate, setRotate] = useState(false);
   const dispatch = useDispatch();
   const [atk, setAtk] = useState(0);
   const [def, setDef] = useState(0);
@@ -49,10 +47,6 @@ export default function Card({
   const reduxEnemyCardSelectedInHand = useSelector(
     (state) => state.card.enemyCardSelectedInHand
   );
-
-  useEffect(() => {
-    if (rotate !== engaged) setRotate(engaged);
-  }, [engaged]);
 
   useEffect(() => {
     setAtk(Number(atkVal));
@@ -65,7 +59,6 @@ export default function Card({
 
   const handleTap = () => {
     if (onField && !opponentField && !ready && !hoverInput) {
-      setRotate(!rotate);
       dispatch(setEngaged(idx));
     }
   };
@@ -139,11 +132,12 @@ export default function Card({
     <>
       <motion.div
         onTap={handleTap}
-        animate={rotate ? { rotate: -90 } : { rotate: 0 }}
         style={{
           height: "160px",
           position: "relative",
         }}
+        animate={engaged ? { rotate: -90 } : { rotate: 0 }}
+        initial={false}
         onHoverStart={() => handleHoverStart()}
         onHoverEnd={() => handleHoverEnd()}
         onDragStart={() => setDragging(true)}
@@ -221,6 +215,7 @@ export default function Card({
               onChange={handleAtkInput}
               type="number"
               min={0}
+              max={99}
               className={"atkInputNum"}
               onMouseEnter={handleStartHoverInput}
               onMouseLeave={handleEndHoverInput}
