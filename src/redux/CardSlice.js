@@ -237,6 +237,18 @@ export const CardSlice = createSlice({
     setEnemyCardSelectedInHand: (state, action) => {
       state.enemyCardSelectedInHand = action.payload;
     },
+    setCardSelectedOnField: (state, action) => {
+      state.cardSelectedOnField = action.payload;
+      // const logIndex = (action.payload - state.enemyHand.length) * -1;
+      socket.emit("send msg", {
+        type: "cardSelectedField",
+        data: action.payload,
+        room: state.room,
+      });
+    },
+    setEnemyCardSelectedOnField: (state, action) => {
+      state.enemyCardSelectedOnField = action.payload;
+    },
     setArrow: (state, action) => {
       socket.emit("send msg", {
         type: "arrow",
@@ -2135,6 +2147,8 @@ export const CardSlice = createSlice({
       state.enemyHand = [];
       state.cardSelectedInHand = -1;
       state.enemyCardSelectedInHand = -1;
+      state.cardSelectedOnField = -1;
+      state.enemyCardSelectedOnField = -1;
       state.showDice = false;
       state.enemyDice = { show: false, roll: 1 };
       state.showEnemyHand = false;
@@ -2242,6 +2256,8 @@ export const CardSlice = createSlice({
       state.enemyCard = "";
       state.cardSelectedInHand = -1;
       state.enemyCardSelectedInHand = -1;
+      state.cardSelectedOnField = -1;
+      state.enemyCardSelectedOnField = -1;
       state.enemyDeckSize = 0;
       state.leaderActive = false;
       state.enemyLeaderActive = false;
@@ -2428,6 +2444,8 @@ export const {
   setEnemyCounter,
   setCardSelectedInHand,
   setEnemyCardSelectedInHand,
+  setCardSelectedOnField,
+  setEnemyCardSelectedOnField,
   modifyCounter,
   setShowEnemyCard,
   setEnemyCard,

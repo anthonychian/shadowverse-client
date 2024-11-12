@@ -64,6 +64,8 @@ import {
   setEnemyCardBack,
   setCardSelectedInHand,
   setEnemyCardSelectedInHand,
+  setCardSelectedOnField,
+  setEnemyCardSelectedOnField,
 } from "../../redux/CardSlice";
 import { cardImage } from "../../decks/getCards";
 import { motion } from "framer-motion";
@@ -160,6 +162,12 @@ export default function Field({
   const reduxCardSelectedInHand = useSelector(
     (state) => state.card.cardSelectedInHand
   );
+  const reduxCardSelectedOnField = useSelector(
+    (state) => state.card.cardSelectedOnField
+  );
+  const reduxEnemyCardSelectedOnField = useSelector(
+    (state) => state.card.enemyCardSelectedOnField
+  );
 
   // useState
   const [cardback, setCardback] = useState();
@@ -240,6 +248,8 @@ export default function Field({
         dispatch(setEnemyRematchStatus(data.data));
       else if (data.type === "cardSelected")
         dispatch(setEnemyCardSelectedInHand(data.data));
+      else if (data.type === "cardSelectedField")
+        dispatch(setEnemyCardSelectedOnField(data.data));
     });
     return () => {
       socket.off("receive msg");
@@ -255,6 +265,10 @@ export default function Field({
   useEffect(() => {
     dispatch(setCardSelectedInHand(-1));
   }, [reduxEnemyHand]);
+
+  useEffect(() => {
+    dispatch(setCardSelectedOnField(-1));
+  }, [reduxEnemyField]);
 
   const handleModalClose = () => {
     dispatch(setShowEnemyHand(false));
@@ -310,7 +324,8 @@ export default function Field({
   };
 
   const cardPos = (idx) => {
-    if (idx < 5) return idx + 5;
+    if (idx === -1) return -1;
+    else if (idx < 5) return idx + 5;
     else return idx - 5;
   };
 
@@ -671,6 +686,12 @@ export default function Field({
   const handleSelectEnemyCardInHand = (idx) => {
     if (idx === reduxCardSelectedInHand) dispatch(setCardSelectedInHand(-1));
     else dispatch(setCardSelectedInHand(idx));
+  };
+
+  const handleSelectEnemyCardOnField = (idx) => {
+    console.log(idx);
+    if (idx === reduxCardSelectedOnField) dispatch(setCardSelectedOnField(-1));
+    else dispatch(setCardSelectedOnField(idx));
   };
 
   useEffect(() => {
@@ -1105,6 +1126,7 @@ export default function Field({
                 // borderRadius: "10px",
                 // border: "4px solid #555559",
               }}
+              onClick={() => handleSelectEnemyCardOnField(cardPos(idx))}
             >
               {reduxEnemyArrow.show &&
                 reduxEnemyArrow.idx === idx &&
@@ -1129,6 +1151,7 @@ export default function Field({
                     counterVal={reduxEnemyCounterField[cardPos(idx)]}
                     opponentField={true}
                     onField={true}
+                    idx={idx}
                     key={`enemy-card-${cardPos(idx)}`}
                     name={reduxEnemyField[cardPos(idx)]}
                     setHovering={setHovering}
@@ -1145,6 +1168,7 @@ export default function Field({
                   counterVal={reduxEnemyCounterField[cardPos(idx)]}
                   opponentField={true}
                   onField={true}
+                  idx={idx}
                   key={`enemy-evo-${cardPos(idx)}`}
                   name={reduxEnemyEvoField[cardPos(idx)]}
                   setHovering={setHovering}
@@ -1350,10 +1374,6 @@ export default function Field({
                   style={{
                     height: "160px",
                     width: "115px",
-                    // backgroundColor: "rgba(255, 255, 255, 0.1)",
-                    // borderRadius: "10px",
-                    // backgroundColor: "#131219",
-                    // border: "4px solid #555559",
                   }}
                 >
                   {showArrow[idx] &&

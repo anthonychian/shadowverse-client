@@ -48,6 +48,13 @@ export default function Card({
     (state) => state.card.enemyCardSelectedInHand
   );
 
+  const reduxCardSelectedOnField = useSelector(
+    (state) => state.card.cardSelectedOnField
+  );
+  const reduxEnemyCardSelectedOnField = useSelector(
+    (state) => state.card.enemyCardSelectedOnField
+  );
+
   useEffect(() => {
     setAtk(Number(atkVal));
     setDef(Number(defVal));
@@ -95,6 +102,7 @@ export default function Card({
   };
 
   const handleHoverStart = () => {
+    console.log("index: " + idx);
     if (!ready) {
       setHovering(true);
       if (name.slice(0, 6) === "Carrot") {
@@ -103,6 +111,12 @@ export default function Card({
         dispatch(setCurrentCard(name));
       }
     }
+  };
+
+  const cardPos = (idx) => {
+    if (idx === -1) return -1;
+    else if (idx < 5) return idx + 5;
+    else return idx - 5;
   };
 
   const handleHoverEnd = () => {
@@ -151,6 +165,13 @@ export default function Card({
             scale: inHand ? 1.5 : 1.3,
             cursor: `url(${img}) 55 55, auto`,
           }
+        }
+        className={
+          cardPos(reduxCardSelectedOnField) === idx && opponentField
+            ? "box2"
+            : reduxEnemyCardSelectedOnField === idx && !opponentField
+            ? "box2"
+            : ""
         }
       >
         {counterVal > 0 && (
