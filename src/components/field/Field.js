@@ -54,8 +54,8 @@ import {
   setEnemyViewingEvoDeckOpponent,
   setEnemyViewingTopCards,
   setEnemyRematchStatus,
-  setArrow,
-  setEnemyArrow,
+  // setArrow,
+  // setEnemyArrow,
   setEnemyDice,
   setEnemyLog,
   setEnemyChat,
@@ -86,7 +86,7 @@ import { useNavigate } from "react-router-dom";
 import { socket } from "../../sockets";
 import Token from "./Token";
 import Lesson from "./Lesson";
-import { PerfectArrow } from "./PerfectArrow";
+// import { PerfectArrow } from "./PerfectArrow";
 import ShowDice from "./ShowDice";
 
 import defaultCardBack from "../../assets/cardbacks/default.png";
@@ -157,16 +157,13 @@ export default function Field({
   const reduxEnemyCounterField = useSelector(
     (state) => state.card.enemyCounterField
   );
-  const reduxEnemyArrow = useSelector((state) => state.card.enemyArrow);
+  // const reduxEnemyArrow = useSelector((state) => state.card.enemyArrow);
   const reduxEnemyCardBack = useSelector((state) => state.card.enemyCardback);
   const reduxCardSelectedInHand = useSelector(
     (state) => state.card.cardSelectedInHand
   );
   const reduxCardSelectedOnField = useSelector(
     (state) => state.card.cardSelectedOnField
-  );
-  const reduxEnemyCardSelectedOnField = useSelector(
-    (state) => state.card.enemyCardSelectedOnField
   );
 
   // useState
@@ -185,20 +182,20 @@ export default function Field({
   const [readyToEvo, setReadyToEvo] = useState(false);
   const [readyToFeed, setReadyToFeed] = useState(false);
   const [tokenReady, setTokenReady] = useState(false);
-  const [showArrow, setShowArrow] = useState([
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-  ]);
-  const [initialArrowPos, setInitialArrowPos] = useState({});
-  const [distance, setDistance] = useState({ x: 0, y: 0 });
+  // const [showArrow, setShowArrow] = useState([
+  //   false,
+  //   false,
+  //   false,
+  //   false,
+  //   false,
+  //   false,
+  //   false,
+  //   false,
+  //   false,
+  //   false,
+  // ]);
+  // const [initialArrowPos, setInitialArrowPos] = useState({});
+  // const [distance, setDistance] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     socket.on("receive msg", (data) => {
@@ -237,7 +234,7 @@ export default function Field({
         dispatch(setEnemyViewingCemeteryOpponent(data.data));
       else if (data.type === "viewingEvoDeckOpponent")
         dispatch(setEnemyViewingEvoDeckOpponent(data.data));
-      else if (data.type === "arrow") dispatch(setEnemyArrow(data.data));
+      // else if (data.type === "arrow") dispatch(setEnemyArrow(data.data));
       else if (data.type === "dice") dispatch(setEnemyDice(data.data));
       else if (data.type === "leaderActive")
         dispatch(setEnemyLeaderActive(data.data));
@@ -279,45 +276,43 @@ export default function Field({
     // });
   };
 
-  const handleShowArrow = (event, idx) => {
-    if (!showArrow[idx] && event.button === 0) {
-      // dispatch(setArrow({ show: true }));
-      setInitialArrowPos({ x: event.clientX, y: event.clientY });
-      // console.log(event.clientX, event.clientY);
-      let arr = [...showArrow];
-      arr[idx] = true;
-      setShowArrow(arr);
-    }
-  };
-  const handleHideArrow = (event, idx) => {
-    if (event.button === 0) {
-      let arr = [...showArrow];
-      arr[idx] = false;
-      setShowArrow(arr);
-      let distanceX = initialArrowPos.x - event.clientX;
-      let distanceY = initialArrowPos.y - event.clientY;
-      if (distanceX > 40 || distanceY > 80) {
-        dispatch(
-          setArrow({ x: distanceX, y: distanceY, idx: idx, show: true })
-        );
-      }
-      setDistance({
-        x: 0,
-        y: 0,
-      });
-    }
-  };
+  // const handleShowArrow = (event, idx) => {
+  //   if (!showArrow[idx] && event.button === 0) {
+  //     setInitialArrowPos({ x: event.clientX, y: event.clientY });
+  //     let arr = [...showArrow];
+  //     arr[idx] = true;
+  //     setShowArrow(arr);
+  //   }
+  // };
+  // const handleHideArrow = (event, idx) => {
+  //   if (event.button === 0) {
+  //     let arr = [...showArrow];
+  //     arr[idx] = false;
+  //     setShowArrow(arr);
+  //     let distanceX = initialArrowPos.x - event.clientX;
+  //     let distanceY = initialArrowPos.y - event.clientY;
+  //     if (distanceX > 40 || distanceY > 80) {
+  //       dispatch(
+  //         setArrow({ x: distanceX, y: distanceY, idx: idx, show: true })
+  //       );
+  //     }
+  //     setDistance({
+  //       x: 0,
+  //       y: 0,
+  //     });
+  //   }
+  // };
 
-  const handleMouseMove = (event, idx) => {
-    if (showArrow[idx]) {
-      let distanceX = initialArrowPos.x - event.clientX;
-      let distanceY = initialArrowPos.y - event.clientY;
-      setDistance({
-        x: distanceX,
-        y: distanceY,
-      });
-    }
-  };
+  // const handleMouseMove = (event, idx) => {
+  //   if (showArrow[idx]) {
+  //     let distanceX = initialArrowPos.x - event.clientX;
+  //     let distanceY = initialArrowPos.y - event.clientY;
+  //     setDistance({
+  //       x: distanceX,
+  //       y: distanceY,
+  //     });
+  //   }
+  // };
 
   const handleShowCardModalClose = () => {
     dispatch(setShowEnemyCard(false));
@@ -334,7 +329,7 @@ export default function Field({
   };
 
   const handleClick = (name, indexClicked) => {
-    dispatch(setEnemyArrow({ idx: -1, show: false }));
+    // dispatch(setEnemyArrow({ idx: -1, show: false }));
     if (reduxField[indexClicked] === 0 && !readyToEvo && !readyToFeed) {
       if (readyToPlaceOnFieldFromHand) {
         setReadyToPlaceOnFieldFromHand(false);
@@ -689,7 +684,6 @@ export default function Field({
   };
 
   const handleSelectEnemyCardOnField = (idx) => {
-    console.log(idx);
     if (idx === reduxCardSelectedOnField) dispatch(setCardSelectedOnField(-1));
     else dispatch(setCardSelectedOnField(idx));
   };
@@ -1128,7 +1122,7 @@ export default function Field({
               }}
               onClick={() => handleSelectEnemyCardOnField(cardPos(idx))}
             >
-              {reduxEnemyArrow.show &&
+              {/* {reduxEnemyArrow.show &&
                 reduxEnemyArrow.idx === idx &&
                 (reduxEnemyField[idx] !== 0 ||
                   reduxEnemyEvoField[idx] !== 0) && (
@@ -1138,7 +1132,7 @@ export default function Field({
                     distance={{ x: reduxEnemyArrow.x, y: reduxEnemyArrow.y }}
                     onEnemyField={true}
                   />
-                )}
+                )} */}
 
               {reduxEnemyField[cardPos(idx)] !== 0 &&
                 reduxEnemyEvoField[cardPos(idx)] === 0 && (
@@ -1367,23 +1361,23 @@ export default function Field({
                     else if (reduxField[idx] !== 0)
                       handleEvoContextMenu(e, idx, reduxEvoField[idx]);
                   }}
-                  onMouseDown={(event) => handleShowArrow(event, idx)}
-                  onMouseUp={(event) => handleHideArrow(event, idx)}
-                  onMouseMove={(event) => handleMouseMove(event, idx)}
+                  // onMouseDown={(event) => handleShowArrow(event, idx)}
+                  // onMouseUp={(event) => handleHideArrow(event, idx)}
+                  // onMouseMove={(event) => handleMouseMove(event, idx)}
                   key={`player2-${idx}`}
                   style={{
                     height: "160px",
                     width: "115px",
                   }}
                 >
-                  {showArrow[idx] &&
+                  {/* {showArrow[idx] &&
                     (reduxField[idx] !== 0 || reduxEvoField[idx] !== 0) && (
                       <PerfectArrow
                         pos={initialArrowPos}
                         idx={idx}
                         distance={distance}
                       />
-                    )}
+                    )} */}
                   {reduxField[idx] !== 0 && reduxEvoField[idx] === 0 && (
                     <Card
                       showAtk={reduxCustomValues[idx].showAtk}
