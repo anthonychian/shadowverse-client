@@ -171,6 +171,10 @@ export default function Card({
             ? "box2"
             : reduxEnemyCardSelectedOnField === idx && !opponentField
             ? "box2"
+            : inHand &&
+              (reduxEnemyCardSelectedInHand - handLength + 1) * -1 ===
+                inHandIndex
+            ? "box2"
             : ""
         }
       >
@@ -213,16 +217,16 @@ export default function Card({
           />
         ) : (
           <img
-            style={
-              inHand &&
-              (reduxEnemyCardSelectedInHand - handLength + 1) * -1 ===
-                inHandIndex
-                ? {
-                    filter:
-                      "sepia() saturate(4) hue-rotate(315deg) brightness(100%) opacity(5)",
-                  }
-                : {}
-            }
+            // style={
+            //   inHand &&
+            //   (reduxEnemyCardSelectedInHand - handLength + 1) * -1 ===
+            //     inHandIndex
+            //     ? {
+            //         filter:
+            //           "sepia() saturate(4) hue-rotate(315deg) brightness(100%) opacity(5)",
+            //       }
+            //     : {}
+            // }
             height={"100%"}
             src={cardImage(name)}
             alt={name}
