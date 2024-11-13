@@ -141,22 +141,22 @@ export default function Scoreboard({ name }) {
       <div className="CircleContainer">
         <div className="circles">
           {[...Array(10)].map((x, idx) =>
-            reduxMaxPlayPoints >= 10 - idx ? (
-              reduxCurrentPlayPoints >= 10 - idx ? (
+            reduxMaxPlayPoints >= idx + 1 ? (
+              reduxCurrentPlayPoints >= idx + 1 ? (
                 <div
-                  onClick={() => decrementMultiple(10 - idx)}
+                  onClick={() => decrementMultiple(idx + 1)}
                   key={`circle-${idx}`}
                   className="circle"
                 >
-                  {10 - idx}
+                  {idx + 1}
                 </div>
               ) : (
                 <div
-                  onClick={() => incrementMultiple(10 - idx)}
+                  onClick={() => incrementMultiple(idx + 1)}
                   key={`circleFaded-${idx}`}
                   className="circleFaded"
                 >
-                  {10 - idx}
+                  {idx + 1}
                 </div>
               )
             ) : (

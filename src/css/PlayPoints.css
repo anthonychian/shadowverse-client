@@ -110,8 +110,11 @@
 .circles {
   height: 100%;
   position: relative;
-  top: 5%;
+  /* top: 5%; */
   user-select: none;
+  bottom: 7%;
+  flex-direction: column-reverse;
+  display: flex;
 }
 
 .circle {
