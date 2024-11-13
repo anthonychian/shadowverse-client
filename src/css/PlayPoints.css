@@ -1,7 +1,7 @@
 .PlayPointsContainer {
   color: white;
   height: 85%;
-  /* max-height: 700px; */
+  max-height: 820px;
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -77,6 +77,7 @@
   justify-content: center;
   align-items: center;
   user-select: none;
+  padding: 0 0.2em;
 }
 
 .pointsContainer {
@@ -130,7 +131,7 @@
   margin-top: 30%;
   width: 45px;
   height: 45px;
-  font-size: 25px;
+  font-size: 1.8em;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -145,7 +146,7 @@
   margin-top: 30%;
   width: 45px;
   height: 45px;
-  font-size: 25px;
+  font-size: 1.8em;
   border-radius: 50%;
   display: flex;
   justify-content: center;
