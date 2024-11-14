@@ -18,22 +18,21 @@ An online multiplayer card game simulator for Shadowverse Evolve. Features deck 
 
 ## Home Page
 
-![](https://github.com/anthonychian/shadowverse-client/blob/main/public/git_images/shadowverse0.png)
+![](https://github.com/anthonychian/shadowverse-client/blob/main/public/git_images/shadowverse1.JPG)
 
 ## Deck Creation
 
-![](https://github.com/anthonychian/shadowverse-client/blob/main/public/git_images/shadowverse2.png)
+![](https://github.com/anthonychian/shadowverse-client/blob/main/public/git_images/shadowverse2.JPG)
 
 ## Multiplayer
 
-![](https://github.com/anthonychian/shadowverse-client/blob/main/public/git_images/shadowverse1.png)
+![](https://github.com/anthonychian/shadowverse-client/blob/main/public/git_images/shadowverse3.JPG)
 
 # Quick Guide
 
 ## Deck Select
 
-![](https://github.com/anthonychian/shadowverse-client/blob/main/public/git_images/deck_select1.gif)
-![](https://github.com/anthonychian/shadowverse-client/blob/main/public/git_images/deck_select2.gif)
+![](https://github.com/anthonychian/shadowverse-client/blob/main/public/git_images/deck_select.gif)
 
 ## Deck Creation
 
@@ -56,6 +55,39 @@ An online multiplayer card game simulator for Shadowverse Evolve. Features deck 
 
 ![](https://github.com/anthonychian/shadowverse-client/blob/main/public/git_images/evolve.gif)
 
-## Attack
+## Targetting
 
-![](https://github.com/anthonychian/shadowverse-client/blob/main/public/git_images/attack.gif)
+![](https://github.com/anthonychian/shadowverse-client/blob/main/public/git_images/hand_select.gif)
+![](https://github.com/anthonychian/shadowverse-client/blob/main/public/git_images/field_selct.gif)
+
+## Engage/Refresh
+
+![](https://github.com/anthonychian/shadowverse-client/blob/main/public/git_images/engage.gif)
+
+## Life Counter
+
+![](https://github.com/anthonychian/shadowverse-client/blob/main/public/git_images/life_counter.gif)
+
+## Play Points
+
+![](https://github.com/anthonychian/shadowverse-client/blob/main/public/git_images/play_points.gif)
+
+## Evolve Points
+
+![](https://github.com/anthonychian/shadowverse-client/blob/main/public/git_images/evolve_points.gif)
+
+## Leader
+
+![](https://github.com/anthonychian/shadowverse-client/blob/main/public/git_images/leader.gif)
+
+## Cardbacks
+
+![](https://github.com/anthonychian/shadowverse-client/blob/main/public/git_images/cardbacks.gif)
+
+## Game Log
+
+![](https://github.com/anthonychian/shadowverse-client/blob/main/public/git_images/game_log.gif)
+
+## Chat
+
+![](https://github.com/anthonychian/shadowverse-client/blob/main/public/git_images/chat.gif)
