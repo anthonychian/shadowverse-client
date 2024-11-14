@@ -25,16 +25,7 @@ import Snackbar from "@mui/material/Snackbar";
 import IconButton from "@mui/material/IconButton";
 import CloseIcon from "@mui/icons-material/Close";
 
-import {
-  Menu,
-  MenuItem,
-  Modal,
-  Box,
-  Radio,
-  RadioGroup,
-  FormControlLabel,
-  FormControl,
-} from "@mui/material";
+import { Menu, MenuItem, Modal, Box } from "@mui/material";
 import CardMUI from "@mui/material/Card";
 import "../css/Home.css";
 
@@ -650,32 +641,6 @@ export default function Home() {
             outline: "none",
           }}
         >
-          {/* <FormControl>
-            <RadioGroup
-              row
-              aria-labelledby="demo-row-radio-buttons-group-label"
-              name="row-radio-buttons-group"
-            >
-              <FormControlLabel
-                key={"main deck"}
-                checked={mainDeckSelected}
-                onChange={handleMainDeckSelected}
-                sx={{ fontFamily: "Noto Serif JP, serif", color: "white" }}
-                value={mainDeckSelected}
-                control={<Radio />}
-                label="Main Deck"
-              />
-              <FormControlLabel
-                key={"evo deck"}
-                checked={evoDeckSelected}
-                onChange={handleEvoDeckSelected}
-                sx={{ fontFamily: "Noto Serif JP, serif", color: "white" }}
-                value={evoDeckSelected}
-                control={<Radio />}
-                label="Evolve Deck"
-              />
-            </RadioGroup>
-          </FormControl> */}
           <CardMUI
             sx={{
               backgroundColor: "rgba(0, 0, 0, 1)",

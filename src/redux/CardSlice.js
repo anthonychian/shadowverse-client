@@ -49,6 +49,7 @@ export const CardSlice = createSlice({
     room: "",
     gameLog: [],
     chatLog: [],
+    lastChatMessage: "",
     cemetery: [],
     enemyCemetery: [],
     banish: [],
@@ -378,6 +379,9 @@ export const CardSlice = createSlice({
         ...state.chatLog,
         `[${date}] (Player 2): ${action.payload}`,
       ];
+    },
+    setLastChatMessage: (state, action) => {
+      state.lastChatMessage = action.payload;
     },
     setViewingCardsLog: (state, action) => {
       let number = action.payload.number;
@@ -2141,6 +2145,7 @@ export const CardSlice = createSlice({
       state.room = "";
       state.gameLog = [];
       state.chatLog = [];
+      state.lastChatMessage = [];
       state.deck = [];
       state.evoDeck = [];
       state.hand = [];
@@ -2415,6 +2420,7 @@ export const {
   setEnemyHealth,
   setEnemyLog,
   setChat,
+  setLastChatMessage,
   setEnemyChat,
   setViewingCardsLog,
   setViewingDeckLog,

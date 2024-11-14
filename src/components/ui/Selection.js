@@ -351,12 +351,12 @@ export default function Selection({ setSelectedOption }) {
           {/* has not sent or received a rematch request */}
           {!acceptRematch && !reduxEnemyRematchStatus && (
             <Button autoFocus onClick={handleCloseRematchDialog}>
-              Disagree
+              No
             </Button>
           )}
           {!acceptRematch && !reduxEnemyRematchStatus && (
             <Button onClick={handleAcceptRematchUI} autoFocus>
-              Agree
+              Yes
             </Button>
           )}
           {/* has sent a rematch request */}
@@ -368,12 +368,12 @@ export default function Selection({ setSelectedOption }) {
           {/* has received a rematch request */}
           {!acceptRematch && reduxEnemyRematchStatus && (
             <Button autoFocus onClick={handleCloseRematchDialog}>
-              Disagree
+              No
             </Button>
           )}
           {!acceptRematch && reduxEnemyRematchStatus && (
             <Button autoFocus onClick={handleAcceptRematchUI}>
-              Aggree
+              Yes
             </Button>
           )}
         </DialogActions>

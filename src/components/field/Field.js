@@ -59,6 +59,7 @@ import {
   setEnemyDice,
   setEnemyLog,
   setEnemyChat,
+  setLastChatMessage,
   setEnemyLeaderActive,
   setField,
   setEnemyCardBack,
@@ -239,7 +240,6 @@ export default function Field({
       else if (data.type === "leaderActive")
         dispatch(setEnemyLeaderActive(data.data));
       else if (data.type === "log") dispatch(setEnemyLog(data.data));
-      else if (data.type === "chat") dispatch(setEnemyChat(data.data));
       else if (data.type === "cardback") dispatch(setEnemyCardBack(data.data));
       else if (data.type === "rematch")
         dispatch(setEnemyRematchStatus(data.data));
@@ -247,6 +247,10 @@ export default function Field({
         dispatch(setEnemyCardSelectedInHand(data.data));
       else if (data.type === "cardSelectedField")
         dispatch(setEnemyCardSelectedOnField(data.data));
+      else if (data.type === "chat") {
+        dispatch(setEnemyChat(data.data));
+        dispatch(setLastChatMessage(data.data));
+      }
     });
     return () => {
       socket.off("receive msg");

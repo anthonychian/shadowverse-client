@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Draggable from "react-draggable";
 import ChatIcon from "@mui/icons-material/Chat";
+import { Snackbar, IconButton, SnackbarContent } from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
 import {
   Button,
   Dialog,
@@ -13,6 +15,7 @@ import {
 } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { setChat } from "../../redux/CardSlice";
+
 function PaperComponent(props) {
   return (
     <Draggable
@@ -25,11 +28,21 @@ function PaperComponent(props) {
 }
 
 export default function ChatUI() {
-  const [open, setOpen] = React.useState(false);
   const dispatch = useDispatch();
 
-  const reduxChatLog = useSelector((state) => state.card.chatLog);
+  const [open, setOpen] = useState(false);
+  const [openSnack, setOpenSnack] = useState(false);
   const [chatMessage, setChatMessage] = useState("");
+
+  const reduxChatLog = useSelector((state) => state.card.chatLog);
+  const reduxLastChatMessage = useSelector(
+    (state) => state.card.lastChatMessage
+  );
+
+  useEffect(() => {
+    setOpenSnack(true);
+  }, [reduxLastChatMessage]);
+
   const handleClick = () => {
     setOpen(!open);
   };
@@ -41,8 +54,51 @@ export default function ChatUI() {
     }
   };
 
+  const handleCloseSnack = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpenSnack(false);
+  };
+
+  const action = (
+    <React.Fragment>
+      <IconButton
+        size="small"
+        aria-label="close"
+        color="inherit"
+        onClick={handleCloseSnack}
+      >
+        <CloseIcon fontSize="small" />
+      </IconButton>
+    </React.Fragment>
+  );
+
   return (
     <React.Fragment>
+      {reduxLastChatMessage !== "" && !open && (
+        <Snackbar
+          open={openSnack}
+          anchorOrigin={{
+            vertical: "bottom",
+            horizontal: "right",
+          }}
+          autoHideDuration={6000}
+          onClose={handleCloseSnack}
+          // message={reduxLastChatMessage}
+          // action={action}
+        >
+          <SnackbarContent
+            style={{
+              backgroundColor: "white",
+              color: "black",
+            }}
+            message={<span id="client-snackbar">{reduxLastChatMessage}</span>}
+            action={action}
+          />
+        </Snackbar>
+      )}
       <Button variant="outlined" onClick={handleClick}>
         <ChatIcon sx={{ color: "white" }} />
       </Button>
