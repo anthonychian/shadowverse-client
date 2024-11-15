@@ -1,189 +1,189 @@
 export const cardImage = (cardName) => {
   switch (cardName) {
     case "Ladica, the Stoneclaw":
-      return "../textures/bp07-001.png";
+      return "../textures/BP07-001EN.png";
     case "Cynthia, the Queen's Blade":
-      return "../textures/bp07-003.png";
+      return "../textures/BP07-003EN.png";
     case "Primal Giant":
-      return "../textures/bp07-004.png";
+      return "../textures/BP07-004EN.png";
     case "Setus, the Beastblade":
-      return "../textures/bp07-005.png";
+      return "../textures/BP07-005EN.png";
     case "Send 'Em Packing":
-      return "../textures/bp07-007.png";
+      return "../textures/BP07-007EN.png";
     case "Blossom Spirit":
-      return "../textures/bp07-008.png";
+      return "../textures/BP07-008EN.png";
     case "Avatar of Fruition":
-      return "../textures/bp07-010.png";
+      return "../textures/BP07-010EN.png";
     case "Divine Smithing":
-      return "../textures/bp07-011.png";
+      return "../textures/BP07-011EN.png";
     case "Chesire Cat":
-      return "../textures/bp07-012.png";
+      return "../textures/BP07-012EN.png";
     case "Ghastly Treant":
-      return "../textures/bp07-013.png";
+      return "../textures/BP07-013EN.png";
     case "Forest Hermit":
-      return "../textures/bp07-014.png";
-    case "Strange Hatter":
-      return "../textures/bp07-016.png";
+      return "../textures/BP07-014EN.png";
+    case "Marvelously Mad Hatter":
+      return "../textures/BP07-016EN.png";
     case "Fertile Aether":
-      return "../textures/bp07-017.png";
+      return "../textures/BP07-017EN.png";
 
     case "Bayleon, Sovereign Light":
-      return "../textures/bp07-018.png";
+      return "../textures/BP07-018EN.png";
     case "Mistolina, Forest Princess":
-      return "../textures/bp07-020.png";
+      return "../textures/BP07-020EN.png";
     case "Tsubaki of the Demon Blade":
-      return "../textures/bp07-u02.png";
+      return "../textures/BP07-U02EN.png";
     case "Leod, the Crescent Blade":
-      return "../textures/bp07-022.png";
+      return "../textures/BP07-022EN.png";
     case "King's Might":
-      return "../textures/bp07-024.png";
+      return "../textures/BP07-024EN.png";
     case "Troya, Thunder of Hagelberg":
-      return "../textures/bp07-025.png";
+      return "../textures/BP07-025EN.png";
     case "Valse, Champion Deadeye":
-      return "../textures/bp07-027.png";
+      return "../textures/BP07-027EN.png";
     case "Princess's Strike":
-      return "../textures/bp07-028.png";
+      return "../textures/BP07-028EN.png";
     case "Swift Tigress":
-      return "../textures/bp07-029.png";
+      return "../textures/BP07-029EN.png";
     case "Lupine Axeman":
-      return "../textures/bp07-030.png";
+      return "../textures/BP07-030EN.png";
     case "Dauntless Commander":
-      return "../textures/bp07-031.png";
+      return "../textures/BP07-031EN.png";
     case "Tempered Aether":
-      return "../textures/bp07-033.png";
+      return "../textures/BP07-033EN.png";
     case "Elegance in Action":
-      return "../textures/bp07-034.png";
+      return "../textures/BP07-034EN.png";
 
     case "Tetra, Sapphire Rebel":
-      return "../textures/bp07-035.png";
+      return "../textures/BP07-035EN.png";
     case "Belphomet, Lord of Aiolon":
-      return "../textures/bp07-037.png";
+      return "../textures/BP07-037EN.png";
     case "Riley, Hydroshaman":
-      return "../textures/bp07-u03.png";
+      return "../textures/BP07-U03EN.png";
     case "Eleanor, Cosmic Flower":
-      return "../textures/bp07-039.png";
+      return "../textures/BP07-039EN.png";
     case "Delta Cannon":
-      return "../textures/bp07-041.png";
+      return "../textures/BP07-041EN.png";
     case "Displacer Bot":
-      return "../textures/bp07-042.png";
+      return "../textures/BP07-042EN.png";
     case "Mechanized Lifeform":
-      return "../textures/bp07-044.png";
+      return "../textures/BP07-044EN.png";
     case "Splendid Conjury":
-      return "../textures/bp07-045.png";
+      return "../textures/BP07-045EN.png";
     case "Mechastaff Sorcerer":
-      return "../textures/bp07-046.png";
+      return "../textures/BP07-046EN.png";
     case "Prototype Warrior":
-      return "../textures/bp07-047.png";
+      return "../textures/BP07-047EN.png";
     case "Magiblade Witch":
-      return "../textures/bp07-048.png";
+      return "../textures/BP07-048EN.png";
     case "Presto Chango":
-      return "../textures/bp07-050.png";
+      return "../textures/BP07-050EN.png";
     case "Sagacious Core":
-      return "../textures/bp07-051.png";
+      return "../textures/BP07-051EN.png";
 
     case "Valdain, Cursed Shadow":
-      return "../textures/bp07-052.png";
+      return "../textures/BP07-052EN.png";
     case "Neptune, Tidemistress":
-      return "../textures/bp07-054.png";
+      return "../textures/BP07-054EN.png";
     case "Wildfire Tyrannosaur":
-      return "../textures/bp07-055.png";
+      return "../textures/BP07-055EN.png";
     case "Marion, Elegant Dragonewt":
-      return "../textures/bp07-056.png";
+      return "../textures/BP07-056EN.png";
     case "Shadow's Corrosion":
-      return "../textures/bp07-058.png";
+      return "../textures/BP07-058EN.png";
     case "Bubbleborne Mermaid":
-      return "../textures/bp07-059.png";
+      return "../textures/BP07-059EN.png";
     case "Hoarfrost Triceratops":
-      return "../textures/bp07-060.png";
+      return "../textures/BP07-060EN.png";
     case "Whirlwind Pteranodon":
-      return "../textures/bp07-062.png";
+      return "../textures/BP07-062EN.png";
     case "Dragonewt Needler":
-      return "../textures/bp07-063.png";
+      return "../textures/BP07-063EN.png";
     case "Lightning Velociraptor":
-      return "../textures/bp07-064.png";
+      return "../textures/BP07-064EN.png";
     case "Doting Dragoneer":
-      return "../textures/bp07-065.png";
+      return "../textures/BP07-065EN.png";
     case "Boomfish":
-      return "../textures/bp07-067.png";
+      return "../textures/BP07-067EN.png";
     case "Feral Aether":
-      return "../textures/bp07-068.png";
+      return "../textures/BP07-068EN.png";
 
     case "Mono, Garnet Rebel":
-      return "../textures/bp07-069.png";
+      return "../textures/BP07-069EN.png";
     case "Kudlak":
-      return "../textures/bp07-071.png";
+      return "../textures/BP07-071EN.png";
     case "Aenea, Amethyst Rebel":
-      return "../textures/bp07-072.png";
+      return "../textures/BP07-072EN.png";
     case "Doublame, Duke and Dame":
-      return "../textures/bp07-073.png";
+      return "../textures/BP07-073EN.png";
     case "Alpha Drive":
-      return "../textures/bp07-075.png";
+      return "../textures/BP07-075EN.png";
     case "Nicola, Forbidden Strength":
-      return "../textures/bp07-076.png";
+      return "../textures/BP07-076EN.png";
     case "Hellblaze Demon":
-      return "../textures/bp07-078.png";
+      return "../textures/BP07-078EN.png";
     case "Forbidden Art":
-      return "../textures/bp07-079.png";
+      return "../textures/BP07-079EN.png";
     case "Robozombie":
-      return "../textures/bp07-080.png";
+      return "../textures/BP07-080EN.png";
     case "Bone Drone":
-      return "../textures/bp07-081.png";
+      return "../textures/BP07-081EN.png";
     case "Berserk Demon":
-      return "../textures/bp07-082.png";
+      return "../textures/BP07-082EN.png";
     case "Ghostwriter":
-      return "../textures/bp07-084.png";
+      return "../textures/BP07-084EN.png";
     case "Sanguine Core":
-      return "../textures/bp07-085.png";
+      return "../textures/BP07-085EN.png";
 
     case "Limonia, Flawed Saint":
-      return "../textures/bp07-086.png";
+      return "../textures/BP07-086EN.png";
     case "Lapis, Glorious Seraph":
-      return "../textures/bp07-u06.png";
+      return "../textures/BP07-U06EN.png";
     case "Father Refinement":
-      return "../textures/bp07-089.png";
+      return "../textures/BP07-089EN.png";
     case "Marione, Light of Balance":
-      return "../textures/bp07-090.png";
+      return "../textures/BP07-090EN.png";
     case "Augmentation Bestowal":
-      return "../textures/bp07-092.png";
-    case "Rabbitia Administrator":
-      return "../textures/bp07-093.png";
+      return "../textures/BP07-092EN.png";
+    case "Bunny-Eared Administrator":
+      return "../textures/BP07-093EN.png";
     case "Robofalcon":
-      return "../textures/bp07-094.png";
+      return "../textures/BP07-094EN.png";
     case "Marcotte, Heretical Sister":
-      return "../textures/bp07-096.png";
+      return "../textures/BP07-096EN.png";
     case "Ironknuckle Nun":
-      return "../textures/bp07-097.png";
-    case "Black Bishop":
-      return "../textures/bp07-098.png";
+      return "../textures/BP07-097EN.png";
+    case "Dark Bishop":
+      return "../textures/BP07-098EN.png";
     case "Meowskers, Ruff-Tuff Major":
-      return "../textures/bp07-100.png";
+      return "../textures/BP07-100EN.png";
     case "Saintly Core":
-      return "../textures/bp07-101.png";
-    case "Snnneak Attack!":
-      return "../textures/bp07-102.png";
+      return "../textures/BP07-101EN.png";
+    case "Meowskers Ambush!":
+      return "../textures/BP07-102EN.png";
 
     case "Technolord":
-      return "../textures/bp07-u07.png";
+      return "../textures/BP07-U07EN.png";
     case "Viridia Magna":
-      return "../textures/bp07-104.png";
+      return "../textures/BP07-104EN.png";
     case "Mechawing Angel":
-      return "../textures/bp07-106.png";
+      return "../textures/BP07-106EN.png";
     case "Desert Pathfinder":
-      return "../textures/bp07-107.png";
+      return "../textures/BP07-107EN.png";
     case "Maisha, Hero of Purgation":
-      return "../textures/bp07-108.png";
+      return "../textures/BP07-108EN.png";
     case "Robogoblin":
-      return "../textures/bp07-110.png";
-    case "Alchemical Confectioner":
-      return "../textures/bp07-112.png";
+      return "../textures/BP07-110EN.png";
+    case "Colorful Cook":
+      return "../textures/BP07-112EN.png";
     case "Purgation's Blade":
-      return "../textures/bp07-113.png";
+      return "../textures/BP07-113EN.png";
     case "Aldis, Trendsetting Seraph":
-      return "../textures/bp07-114.png";
+      return "../textures/BP07-114EN.png";
     case "Mechagun Wielder":
-      return "../textures/bp07-116.png";
+      return "../textures/BP07-116EN.png";
     case "Extreme Carrot":
-      return "../textures/bp07-117.png";
+      return "../textures/BP07-117EN.png";
 
     case "Uzuki Shimamura [P.C.S.]":
       return "../textures/CSD02a-001EN.png";
@@ -1916,67 +1916,67 @@ export const cardImage = (cardName) => {
       return "../textures/PR-018EN.png";
 
     case "Ladica, the Stoneclaw Evolved":
-      return "../textures/bp07-u01.png";
+      return "../textures/BP07-U01EN.png";
     case "Setus, the Beastblade Evolved":
-      return "../textures/bp07-006.png";
+      return "../textures/BP07-006EN.png";
     case "Blossom Spirit Evolved":
-      return "../textures/bp07-009.png";
+      return "../textures/BP07-009EN.png";
     case "Forest Hermit Evolved":
-      return "../textures/bp07-015.png";
+      return "../textures/BP07-015EN.png";
 
     case "Bayleon, Sovereign Light Evolved":
-      return "../textures/bp07-019.png";
+      return "../textures/BP07-019EN.png";
     case "Leod, the Crescent Blade Evolved":
-      return "../textures/bp07-023.png";
+      return "../textures/BP07-023EN.png";
     case "Troya, Thunder of Hagelberg Evolved":
-      return "../textures/bp07-026.png";
+      return "../textures/BP07-026EN.png";
     case "Dauntless Commander Evolved":
-      return "../textures/bp07-032.png";
+      return "../textures/BP07-032EN.png";
 
     case "Tetra, Sapphire Rebel Evolved":
-      return "../textures/bp07-036.png";
+      return "../textures/BP07-036EN.png";
     case "Eleanor, Cosmic Flower Evolved":
-      return "../textures/bp07-040.png";
+      return "../textures/BP07-040EN.png";
     case "Displacer Bot Evolved":
-      return "../textures/bp07-043.png";
+      return "../textures/BP07-043EN.png";
     case "Magiblade Witch Evolved":
-      return "../textures/bp07-049.png";
+      return "../textures/BP07-049EN.png";
 
     case "Valdain, Cursed Shadow Evolved":
-      return "../textures/bp07-u04.png";
+      return "../textures/BP07-U04EN.png";
     case "Marion, Elegant Dragonewt Evolved":
-      return "../textures/bp07-057.png";
+      return "../textures/BP07-057EN.png";
     case "Hoarfrost Triceratops Evolved":
-      return "../textures/bp07-061.png";
+      return "../textures/BP07-061EN.png";
     case "Doting Dragoneer Evolved":
-      return "../textures/bp07-066.png";
+      return "../textures/BP07-066EN.png";
 
     case "Mono, Garnet Rebel Evolved":
-      return "../textures/bp07-u05.png";
+      return "../textures/BP07-U05EN.png";
     case "Doublame, Duke and Dame Evolved":
-      return "../textures/bp07-074.png";
+      return "../textures/BP07-074EN.png";
     case "Nicola, Forbidden Strength Evolved":
-      return "../textures/bp07-077.png";
+      return "../textures/BP07-077EN.png";
     case "Berserk Demon Evolved":
-      return "../textures/bp07-083.png";
+      return "../textures/BP07-083EN.png";
 
     case "Limonia, Flawed Saint Evolved":
-      return "../textures/bp07-087.png";
+      return "../textures/BP07-087EN.png";
     case "Marione, Light of Balance Evolved":
-      return "../textures/bp07-091.png";
+      return "../textures/BP07-091EN.png";
     case "Robofalcon Evolved":
-      return "../textures/bp07-095.png";
-    case "Black Bishop Evolved":
-      return "../textures/bp07-099.png";
+      return "../textures/BP07-095EN.png";
+    case "Dark Bishop Evolved":
+      return "../textures/BP07-099EN.png";
 
     case "Viridia Magna Evolved":
-      return "../textures/bp07-105.png";
+      return "../textures/BP07-105EN.png";
     case "Maisha, Hero of Purgation Evolved":
-      return "../textures/bp07-109.png";
+      return "../textures/BP07-109EN.png";
     case "Robogoblin Evolved":
-      return "../textures/bp07-111.png";
+      return "../textures/BP07-111EN.png";
     case "Aldis, Trendsetting Seraph Evolved":
-      return "../textures/bp07-115.png";
+      return "../textures/BP07-115EN.png";
 
     case "Momoka Sakurai Evolved":
       return "../textures/CSD02a-006EN.png";

@@ -27,7 +27,7 @@ export const allCardsEvo = [
   "Limonia, Flawed Saint Evolved",
   "Marione, Light of Balance Evolved",
   "Robofalcon Evolved",
-  "Black Bishop Evolved",
+  "Dark Bishop Evolved",
 
   "Viridia Magna Evolved",
   "Maisha, Hero of Purgation Evolved",
@@ -324,7 +324,7 @@ export const set7Evo = [
   "Limonia, Flawed Saint Evolved",
   "Marione, Light of Balance Evolved",
   "Robofalcon Evolved",
-  "Black Bishop Evolved",
+  "Dark Bishop Evolved",
 
   "Viridia Magna Evolved",
   "Maisha, Hero of Purgation Evolved",
@@ -827,7 +827,7 @@ export const havenEvo = [
   "Limonia, Flawed Saint Evolved",
   "Marione, Light of Balance Evolved",
   "Robofalcon Evolved",
-  "Black Bishop Evolved",
+  "Dark Bishop Evolved",
 
   "Kako Takafuji Evolved",
   "Shin Sato Evolved",
