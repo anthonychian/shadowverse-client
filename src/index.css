@@ -9,7 +9,7 @@
 }
 
 body {
-  filter: saturate(1.15) hue-rotate(345deg);
+  /* filter: saturate(1.15) hue-rotate(345deg); */
   /* overflow: hidden; */
 }
 html,
