@@ -1,6 +1,6 @@
 # Shadowverse Evolve Online Simulator
 
-An online multiplayer card game simulator for Shadowverse Evolve. Features deck creation with 1000+ cards, 1v1 battles with real-time player communication, card database. Made using React, Javascript, HTML/CSS, Node.js, Express, Socket.IO. Hosted on Vercel and Glitch.
+Shadowverse Evolve Online Simulator. An online multiplayer card game simulator for Shadowverse Evolve. Features deck creation with 1000+ cards, 1v1 battles with real-time player communication, card database. Made using React, Javascript, HTML/CSS, Node.js, Express, Socket.IO. Hosted on Vercel and Glitch.
 
 # 💻 [Play Shadowverse](https://sveclient.xyz/)
 
