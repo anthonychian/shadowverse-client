@@ -164,6 +164,8 @@ export const cardImage = (cardName) => {
 
     case "Technolord":
       return "../textures/BP07-U07EN.png";
+    case "Technolord (b)":
+      return "../textures/BP07-103EN.png";
     case "Viridia Magna":
       return "../textures/BP07-104EN.png";
     case "Mechawing Angel":
