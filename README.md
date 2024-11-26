@@ -2,7 +2,7 @@
 
 An online multiplayer card game simulator for Shadowverse Evolve. Features deck creation with 1000+ cards, 1v1 battles with real-time player communication, card database. Made using React, Javascript, HTML/CSS, Node.js, Express, Socket.IO. Hosted on Vercel and Glitch.
 
-# 💻 [Play Shadowverse](https://shadowverse-client.vercel.app/)
+# 💻 [Play Shadowverse](https://sveclient.xyz/)
 
 - [How to play Shadowverse Evolve](https://github.com/anthonychian/shadowverse-client#how-to-play)
 
@@ -58,7 +58,7 @@ An online multiplayer card game simulator for Shadowverse Evolve. Features deck 
 ## Targetting
 
 ![](https://github.com/anthonychian/shadowverse-client/blob/main/public/git_images/hand_select.gif)
-![](https://github.com/anthonychian/shadowverse-client/blob/main/public/git_images/field_selct.gif)
+![](https://github.com/anthonychian/shadowverse-client/blob/main/public/git_images/field_select.gif)
 
 ## Engage/Refresh
 
