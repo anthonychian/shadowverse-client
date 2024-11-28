@@ -427,7 +427,13 @@ export default function Field({
             index: indexClicked,
           })
         );
-        dispatch(clearValuesAtIndex(indexClicked));
+        dispatch(
+          moveValuesAtIndex({
+            prevIndex: index,
+            index: indexClicked,
+          })
+        );
+        // dispatch(clearValuesAtIndex(indexClicked));
         dispatch(clearEngagedAtIndex(indexClicked));
         dispatch(clearCountersAtIndex(indexClicked));
       }
