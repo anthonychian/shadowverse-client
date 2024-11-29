@@ -40,7 +40,7 @@ export default function ChatUI() {
   );
 
   useEffect(() => {
-    setOpenSnack(true);
+    if (reduxLastChatMessage !== "") setOpenSnack(true);
   }, [reduxLastChatMessage]);
 
   const handleClick = () => {

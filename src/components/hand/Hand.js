@@ -117,7 +117,7 @@ export default function Hand({
         <MenuItem onClick={handleCardToBotOfDeck}>Bot of Deck</MenuItem>
         <MenuItem onClick={handleShowHand}>Show Hand</MenuItem>
       </Menu>
-      <Reorder.Group
+      <div
         style={{
           zIndex: 100,
           display: "flex",
@@ -128,12 +128,12 @@ export default function Hand({
           // bottom: "-5%",
           // position: "absolute",
         }}
-        axis="x"
-        values={items}
-        onReorder={setItems}
+        // axis="x"
+        // values={items}
+        // onReorder={setItems}
       >
         {items.map((card, index) => (
-          <Reorder.Item
+          <div
             onContextMenu={(e) => {
               if (!ready) handleContextMenu(e, card.name, index);
             }}
@@ -152,9 +152,9 @@ export default function Hand({
               ready={ready}
               inHand={true}
             />
-          </Reorder.Item>
+          </div>
         ))}
-      </Reorder.Group>
+      </div>
     </>
   );
 }
