@@ -79,13 +79,15 @@ export default function CreateDeck() {
   const navigate = useNavigate();
   const [deck, setDeck] = useState([]);
   const [evoDeck, setEvoDeck] = useState([]);
-  const [deckMap] = useState(new Map());
-  const [evoDeckMap] = useState(new Map());
+  const [deckMap, setDeckMap] = useState(new Map());
+  const [evoDeckMap, setEvoDeckMap] = useState(new Map());
   const [mainDeckSelected, setMainDeckSelected] = useState(true);
   const [evoDeckSelected, setEvoDeckSelected] = useState(false);
   const [name, setName] = useState("");
   const [cardName, setCardName] = useState("");
+  const [importTextFieldVal, setImportTextFieldVal] = useState();
   const [open, setOpen] = useState(false);
+  const [openImport, setOpenImport] = useState(false);
   const [openModal, setOpenModal] = useState(false);
   const [textInput, setTextInput] = useState("");
   const [filteredAllCards, setFilteredAllCards] = useState(allCards);
@@ -142,18 +144,69 @@ export default function CreateDeck() {
   const handleNameChange = (event) => {
     setName(event.target.value);
   };
+  const handleDeckImport = (event) => {
+    setImportTextFieldVal(event.target.value);
+    const val = event.target.value.split("\n");
+    if (mainDeckSelected) {
+      handleFillDeckMap(val);
+    } else {
+      handleFillEvoDeckMap(val);
+    }
+  };
+  const handleClearImport = () => {
+    // setDefaultImportTextFieldVal(handleDeckImportFormat);
+    if (mainDeckSelected) {
+      setDeck([]);
+      setDeckMap(new Map());
+      // setDefaultMain();
+    } else {
+      setEvoDeck([]);
+      setEvoDeckMap(new Map());
+      // setDefaultEvo();
+    }
+  };
+
+  const handleDeckImportFormat = () => {
+    let formattedDeck;
+
+    if (mainDeckSelected) {
+      formattedDeck = deck.map((x) => x + "\n");
+      const iterator = formattedDeck.values();
+      let str = "";
+      for (const value of iterator) {
+        str += value;
+      }
+      formattedDeck = str;
+    } else {
+      formattedDeck = evoDeck.map((x) => x + "\n");
+      const iterator = formattedDeck.values();
+      let str = "";
+      for (const value of iterator) {
+        str += value;
+      }
+      formattedDeck = str;
+    }
+    formattedDeck = formattedDeck.slice(0, -1);
+    return formattedDeck;
+  };
+
   const handleClickOpen = () => {
     setOpen(true);
   };
-
+  const handleClickOpenImport = () => {
+    setOpenImport(true);
+  };
   const handleClose = () => {
     setOpen(false);
+  };
+  const handleCloseImport = () => {
+    setOpenImport(false);
   };
 
   const handleSubmit = () => {
     const encodedObject = JSON.stringify(deckEdit);
     const encoded = btoa(encodedObject);
-    const url = `http://sveclient.xyz/deck/${encoded}`;
+    // const url = handleDeckImportFormat();
     dispatch(deleteDeck(deckName));
 
     dispatch(
@@ -161,7 +214,7 @@ export default function CreateDeck() {
         name,
         deck,
         evoDeck,
-        url,
+        // url,
       })
     );
 
@@ -1184,6 +1237,49 @@ export default function CreateDeck() {
           </Button>
         </DialogActions>
       </Dialog>
+      <Dialog
+        open={openImport}
+        onClose={handleCloseImport}
+        PaperProps={{
+          component: "form",
+          //   onSubmit: (event) => {
+          //     event.preventDefault();
+          //     console.log(event.currentTarget);
+          //     handleClose();
+          //   },
+        }}
+      >
+        <DialogTitle>Import Deck</DialogTitle>
+        <DialogContent>
+          {mainDeckSelected ? (
+            <DialogContentText>
+              Enter the contents for this deck. This will create the main deck
+              for you.
+            </DialogContentText>
+          ) : (
+            <DialogContentText>
+              Enter the contents for this deck. This will create the evolve deck
+              for you.
+            </DialogContentText>
+          )}
+          <TextField
+            autoFocus
+            required
+            margin="dense"
+            id="name"
+            name="deck"
+            value={importTextFieldVal}
+            defaultValue={handleDeckImportFormat()}
+            multiline="true"
+            fullWidth
+            variant="standard"
+            onChange={handleDeckImport}
+          />
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClearImport}>Clear</Button>
+        </DialogActions>
+      </Dialog>
       <Modal
         open={openModal}
         onClose={handleModalClose}
@@ -1250,6 +1346,43 @@ export default function CreateDeck() {
         <ReplyIcon sx={{ fontSize: "40px" }} />
         {/* <KeyboardBackspaceIcon sx={{ fontSize: "50px" }} /> */}
         Back to Home
+      </div>
+      <div
+        style={{
+          // backgroundColor: "black",
+          color: "white",
+          height: "40px",
+          minWidth: "150px",
+          position: "absolute",
+          fontSize: "18px ",
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: ".5em",
+          top: 10,
+          right: 10,
+          cursor: "pointer",
+        }}
+      >
+        <Button
+          style={{
+            backgroundColor: "white",
+            // marginTop: "0em",
+            color: "black",
+            textTransform: "none",
+            fontFamily: "Noto Serif JP, serif",
+            fontWeight: "bold",
+
+            // border: "3px solid gold",
+            // backgroundColor: "#131219",
+            // color: "gold",
+          }}
+          variant="contained"
+          onClick={handleClickOpenImport}
+        >
+          Import
+        </Button>
       </div>
     </div>
   );

@@ -114,12 +114,12 @@ export default function Home() {
     }
   };
 
-  const handleShareDeck = () => {
-    handleClose();
-    handleOpenSnack();
-    if (selectedDeck.deck.length > 0)
-      navigator.clipboard.writeText(selectedDeck.url);
-  };
+  // const handleShareDeck = () => {
+  //   handleClose();
+  //   handleOpenSnack();
+  //   if (selectedDeck.deck.length > 0)
+  //     navigator.clipboard.writeText(selectedDeck.url);
+  // };
 
   const handleDeleteDeck = () => {
     handleClose();
@@ -615,7 +615,7 @@ export default function Home() {
       >
         <MenuItem onClick={handleModalOpen}>Preview</MenuItem>
         <MenuItem onClick={handleEditDeck}>Edit</MenuItem>
-        <MenuItem onClick={handleShareDeck}>Share</MenuItem>
+        {/* <MenuItem onClick={handleShareDeck}>Share</MenuItem> */}
         <MenuItem onClick={handleDeleteDeck}>Delete</MenuItem>
       </Menu>
       <Modal
