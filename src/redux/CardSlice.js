@@ -777,7 +777,15 @@ export const CardSlice = createSlice({
       state.currentCard = action.payload;
     },
     shuffleDeck: (state) => {
-      state.deck = state.deck.toSorted(() => Math.random() - 0.5);
+      //state.deck = state.deck.toSorted(() => Math.random() - 0.5);
+      
+      for (let v = 0; v > 2; v++){
+        for (let i = state.deck.length - 1; i > 0; i--) {
+          const randomIndex = Math.floor(Math.random() * (i + 1));
+          [state.deck[i], state.deck[randomIndex]] = [state.deck[randomIndex], state.deck[i]];
+        }
+      }
+
       const date = new Date().toLocaleTimeString("it-IT", {
         hour: "2-digit",
         minute: "2-digit",
