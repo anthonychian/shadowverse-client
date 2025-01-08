@@ -1,5 +1,10 @@
 export const cardImage = (cardName) => {
   switch (cardName) {
+    case "Determined Doll, Orchis":
+      return "../textures/BP08-003a.png";
+    case "Orchis, the Doll of Revenge":
+      return "../textures/BP08-003b.png";
+
     case "Ladica, the Stoneclaw":
       return "../textures/BP07-001EN.png";
     case "Cynthia, the Queen's Blade":

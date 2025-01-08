@@ -4,6 +4,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import wallpaper3 from "../../src/assets/wallpapers/3.png";
 import ReplyIcon from "@mui/icons-material/Reply";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import swap from "../assets/logo/swap_icon.png";
 
 import {
   allCards,
@@ -129,6 +130,23 @@ export default function CreateDeck() {
       }
     }
   }, []);
+
+  const isDoubleEvo = (cardName) => {
+    if (
+      cardName === "Determined Doll, Orchis" ||
+      cardName === "Orchis, the Doll of Revenge"
+    )
+      return true;
+    else return false;
+  };
+
+  const handleDoubleEvoClick = () => {
+    if (cardName === "Determined Doll, Orchis") {
+      setCardName("Orchis, the Doll of Revenge");
+    } else if (cardName === "Orchis, the Doll of Revenge") {
+      setCardName("Determined Doll, Orchis");
+    }
+  };
 
   const handleFillDeckMap = (deck) => {
     for (let i = 0; i < deck.length; i++) {
@@ -1319,6 +1337,24 @@ export default function CreateDeck() {
               animate={{ scale: 4.5, rotateY: 0 }}
             >
               <img height={"160px"} src={cardImage(cardName)} alt={cardName} />
+              {/* Double Sided Evo */}
+              {isDoubleEvo(cardName) && (
+                <div
+                  style={{
+                    position: "absolute",
+                    top: "-5%",
+                    left: "80%",
+                  }}
+                >
+                  <img
+                    height={"30px"}
+                    src={swap}
+                    alt="swap"
+                    onClick={handleDoubleEvoClick}
+                    style={{ cursor: `url(${img}) 55 55, auto` }}
+                  />
+                </div>
+              )}
             </motion.div>
           </CardMUI>
         </Box>

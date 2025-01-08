@@ -71,6 +71,7 @@ export default function EnemyCemetery({ setHovering, ready }) {
           borderRadius: "10px",
           border: "4px solid #1a20d6c8",
           cursor: `url(${img}) 55 55, auto`,
+          position: "relative",
         }}
       >
         {reduxEnemyCemetery && reduxEnemyCemetery.length > 0 && (
@@ -80,6 +81,20 @@ export default function EnemyCemetery({ setHovering, ready }) {
             alt={"cardback"}
           />
         )}
+        <div
+          style={{
+            width: "50px",
+            position: "absolute",
+            backgroundColor: "rgba(0, 0, 0, 0.4)",
+            top: "70%",
+            right: "30%",
+            color: "rgba(255, 255, 255, 1)",
+            fontSize: "30px",
+            fontFamily: "Noto Serif JP, serif",
+          }}
+        >
+          {reduxEnemyCemetery.length || 0}
+        </div>
       </div>
 
       <Modal

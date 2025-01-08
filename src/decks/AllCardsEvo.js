@@ -1,4 +1,7 @@
 export const allCardsEvo = [
+  // "Determined Doll, Orchis",
+  // "Orchis, the Doll of Revenge",
+
   "Ladica, the Stoneclaw Evolved",
   "Setus, the Beastblade Evolved",
   "Blossom Spirit Evolved",
@@ -296,6 +299,9 @@ export const allCardsEvo = [
 ];
 
 export const set7Evo = [
+  // "Determined Doll, Orchis",
+  // "Orchis, the Doll of Revenge",
+
   "Ladica, the Stoneclaw Evolved",
   "Setus, the Beastblade Evolved",
   "Blossom Spirit Evolved",
