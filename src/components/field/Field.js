@@ -1250,7 +1250,7 @@ export default function Field({
               ready={ready}
               setTokenReady={setTokenReady}
             />
-            <Lesson />
+            {/* <Lesson /> */}
           </div>
         </div>
         {/* Player Field (1-5) & Ex Area (6-10) */}
