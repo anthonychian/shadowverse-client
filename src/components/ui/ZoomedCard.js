@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { cardImage } from "../../decks/getCards";
 import { cardEffect } from "../../decks/getEffect";
+import { cardIcon } from "../../decks/getIcon";
 
 export default function ZoomedCard({ hovering, name }) {
   const [imageDimensions, setImageDimensions] = useState({ width: 0, height: 0 });
@@ -21,151 +22,295 @@ export default function ZoomedCard({ hovering, name }) {
       return (
         <span key={index}>
           {parts.map((word, idx) => {
-            if (word.includes("[evolve]")) {
-              return (
-                <span
-                  key={idx}
-                  style={{
-                    backgroundColor: "grey",
-                    padding: "2px 2px",
-                    borderRadius: "3px",
-                    color: "gold", 
-                    marginRight: "5px", 
-                  }}
-                >
-                  {word}
-                </span>
-              );
-            }
-            if (word.includes("[cost")) {
-              return (
-                <span
-                  key={idx}
-                  style={{
-                    backgroundColor: "green",
-                    padding: "2px 2px",
-                    borderRadius: "3px",
-                    color: "white",  
-                    marginRight: "5px",  
-                  }}
-                >
-                  {word}
-                </span>
-              );
-            }
-            if (word.includes("[lastwords]")) {
-              return (
-                <span
-                  key={idx}
-                  style={{
-                    backgroundColor: "purple",
-                    padding: "2px 2px",
-                    borderRadius: "3px",
-                    color: "white", 
-                    marginRight: "5px", 
-                  }}
-                >
-                  {word}
-                </span>
-              );
-            }
+            
             if (word.includes("[fanfare]")) {
               return (
-                <span
+                <img
                   key={idx}
+                  src={cardIcon("Fanfare")} // Replace with your image path or URL
+                  alt="fanfare"
                   style={{
-                    backgroundColor: "orange",
-                    padding: "2px 2px",
-                    borderRadius: "3px",
-                    color: "white", 
-                    marginRight: "5px",  
+                    height: "15px", // Adjust size as needed
+                    verticalAlign: "text-bottom",
                   }}
-                >
-                  {word}
-                </span>
+                />
               );
             }
-            if (word.includes("[defense]")) {
+            if (word.includes("[evolve]")) {
               return (
-                <span
+                <img
                   key={idx}
+                  src={cardIcon("Evolve")} // Replace with your image path or URL
+                  alt="test"
                   style={{
-                    backgroundColor: "red",
-                    padding: "2px 2px",
-                    borderRadius: "3px",
-                    color: "white", 
-                    marginRight: "5px",  
+                    height: "15px", // Adjust size as needed
+                    verticalAlign: "text-bottom",
                   }}
-                >
-                  {word}
-                </span>
-              );
-            }
-            if (word.includes("[attack]")) {
-              return (
-                <span
-                  key={idx}
-                  style={{
-                    backgroundColor: "blue",
-                    padding: "2px 2px",
-                    borderRadius: "3px",
-                    color: "black",  
-                    marginRight: "5px", 
-                  }}
-                >
-                  {word}
-                </span>
+                />
               );
             }
             if (word.includes("[act]")) {
               return (
-                <span
+                <img
                   key={idx}
+                  src={cardIcon("Act")} // Replace with your image path or URL
+                  alt="test"
                   style={{
-                    backgroundColor: "#419c86",
-                    padding: "2px 2px",
-                    borderRadius: "3px",
-                    color: "black",  
-                    marginRight: "5px",
+                    height: "15px", // Adjust size as needed
+                    verticalAlign: "text-bottom",
                   }}
-                >
-                  {word}
-                </span>
+                />
+              );
+            }
+            if (word.includes("[attack]")) {
+              return (
+                <img
+                  key={idx}
+                  src={cardIcon("Attack")} // Replace with your image path or URL
+                  alt="test"
+                  style={{
+                    height: "15px", // Adjust size as needed
+                    verticalAlign: "text-bottom",
+                  }}
+                />
+              );
+            }
+            if (word.includes("[feed]")) {
+              return (
+                <img
+                  key={idx}
+                  src={cardIcon("Carrot")} // Replace with your image path or URL
+                  alt="test"
+                  style={{
+                    height: "15px", // Adjust size as needed
+                    verticalAlign: "text-bottom",
+                  }}
+                />
+              );
+            }
+            if (word.includes("[defense]")) {
+              return (
+                <img
+                  key={idx}
+                  src={cardIcon("Defense")} // Replace with your image path or URL
+                  alt="test"
+                  style={{
+                    height: "15px", // Adjust size as needed
+                    verticalAlign: "text-bottom",
+                  }}
+                />
               );
             }
             if (word.includes("[engage]")) {
               return (
-                <span
+                <img
                   key={idx}
+                  src={cardIcon("Engage")} // Replace with your image path or URL
+                  alt="test"
                   style={{
-                    backgroundColor: "grey",
-                    padding: "2px 2px",
-                    borderRadius: "3px",
-                    color: "white",  
-                    marginRight: "5px",  
+                    height: "15px", // Adjust size as needed
+                    verticalAlign: "text-bottom",
                   }}
-                >
-                  {word}
-                </span>
+                />
               );
             }
-            if (word.includes("[quick]") || word.includes("[q]")) {
+            if (word.includes("[lastwords]")) {
               return (
-                <span
+                <img
                   key={idx}
+                  src={cardIcon("Lastwords")} // Replace with your image path or URL
+                  alt="test"
                   style={{
-                    backgroundColor: "#b3a527",
-                    padding: "2px 2px",
-                    borderRadius: "3px",
-                    color: "black",  
-                    marginRight: "5px",  
+                    height: "15px", // Adjust size as needed
+                    verticalAlign: "text-bottom",
                   }}
-                >
-                  {word}
-                </span>
+                />
               );
             }
-            return `${word} `;  
+            if (word.includes("[q]")) {
+              return (
+                <img
+                  key={idx}
+                  src={cardIcon("Q")} // Replace with your image path or URL
+                  alt="test"
+                  style={{
+                    height: "15px", // Adjust size as needed
+                    verticalAlign: "text-bottom",
+                  }}
+                />
+              );
+            }
+            if (word.includes("[quick]")) {
+              return (
+                <img
+                  key={idx}
+                  src={cardIcon("Quick")} // Replace with your image path or URL
+                  alt="test"
+                  style={{
+                    height: "15px", // Adjust size as needed
+                    verticalAlign: "text-bottom",
+                  }}
+                />
+              );
+            }
+            if (word.includes("[cost00]")) {
+              return (
+                <img
+                  key={idx}
+                  src={cardIcon("Cost00")} // Replace with your image path or URL
+                  alt="test"
+                  style={{
+                    height: "15px", // Adjust size as needed
+                    verticalAlign: "text-bottom",
+                  }}
+                />
+              );
+            }
+            if (word.includes("[cost01]")) {
+              return (
+                <img
+                  key={idx}
+                  src={cardIcon("Cost01")} // Replace with your image path or URL
+                  alt="test"
+                  style={{
+                    height: "15px", // Adjust size as needed
+                    verticalAlign: "text-bottom",
+                  }}
+                />
+              );
+            }
+            if (word.includes("[cost02]")) {
+              return (
+                <img
+                  key={idx}
+                  src={cardIcon("Cost02")} // Replace with your image path or URL
+                  alt="test"
+                  style={{
+                    height: "15px", // Adjust size as needed
+                    verticalAlign: "text-bottom",
+                  }}
+                />
+              );
+            }
+            if (word.includes("[cost03]")) {
+              return (
+                <img
+                  key={idx}
+                  src={cardIcon("Cost03")} // Replace with your image path or URL
+                  alt="test"
+                  style={{
+                    height: "15px", // Adjust size as needed
+                    verticalAlign: "text-bottom",
+                  }}
+                />
+              );
+            }
+            if (word.includes("[cost04]")) {
+              return (
+                <img
+                  key={idx}
+                  src={cardIcon("Cost04")} // Replace with your image path or URL
+                  alt="test"
+                  style={{
+                    height: "15px", // Adjust size as needed
+                    verticalAlign: "text-bottom",
+                  }}
+                />
+              );
+            }
+            if (word.includes("[cost05]")) {
+              return (
+                <img
+                  key={idx}
+                  src={cardIcon("Cost05")} // Replace with your image path or URL
+                  alt="test"
+                  style={{
+                    height: "15px", // Adjust size as needed
+                    verticalAlign: "text-bottom",
+                  }}
+                />
+              );
+            }
+            if (word.includes("[cost06]")) {
+              return (
+                <img
+                  key={idx}
+                  src={cardIcon("Cost06")} // Replace with your image path or URL
+                  alt="cost 6"
+                  style={{
+                    height: "15px", // Adjust size as needed
+                    verticalAlign: "text-bottom",
+                  }}
+                />
+              );
+            }
+            if (word.includes("[cost07]")) {
+              return (
+                <img
+                  key={idx}
+                  src={cardIcon("Cost07")} // Replace with your image path or URL
+                  alt="cost 7"
+                  style={{
+                    height: "15px", // Adjust size as needed
+                    verticalAlign: "text-bottom",
+                  }}
+                />
+              );
+            }
+            if (word.includes("[cost08]")) {
+              return (
+                <img
+                  key={idx}
+                  src={cardIcon("Cost08")} // Replace with your image path or URL
+                  alt="cost 8"
+                  style={{
+                    height: "15px", // Adjust size as needed
+                    verticalAlign: "text-bottom",
+                  }}
+                />
+              );
+            }
+            if (word.includes("[cost09]")) {
+              return (
+                <img
+                  key={idx}
+                  src={cardIcon("Cost09")} // Replace with your image path or URL
+                  alt="cost 9"
+                  style={{
+                    height: "15px", // Adjust size as needed
+                    verticalAlign: "text-bottom",
+                  }}
+                />
+              );
+            }
+            if (word.includes("[cost10]")) {
+              return (
+                <img
+                  key={idx}
+                  src={cardIcon("Cost10")} // Replace with your image path or URL
+                  alt="cost 10"
+                  style={{
+                    height: "15px", // Adjust size as needed
+                    verticalAlign: "text-bottom",
+                  }}
+                />
+              );
+            }
+            if (word.includes("[cost0X]")) {
+              return (
+                <img
+                  key={idx}
+                  src={cardIcon("CostX")} // Replace with your image path or URL
+                  alt="costX"
+                  style={{
+                    height: "15px", // Adjust size as needed
+                    verticalAlign: "text-bottom",
+                  }}
+                />
+              );
+            }
+
+            return <span key={idx}> {word} </span>;  
           })}
           <br />
         </span>
