@@ -102,7 +102,6 @@ export default function Card({
   };
 
   const handleHoverStart = () => {
-    console.log("index: " + idx);
     if (!ready) {
       setHovering(true);
       if (name.slice(0, 6) === "Carrot") {

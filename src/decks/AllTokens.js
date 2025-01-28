@@ -1,4 +1,8 @@
 export const allTokens = [
+  "Lloyd TOKEN",
+  "Victoria TOKEN",
+  "Otohime's Vanguard TOKEN",
+
   "Assembly Droid TOKEN",
   "Repair Mode TOKEN",
   "Naterran Great Tree TOKEN",

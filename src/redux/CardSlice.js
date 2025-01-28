@@ -2057,6 +2057,16 @@ export const CardSlice = createSlice({
         room: state.room,
       });
     },
+    switchEvoCard: (state, action) => {
+      const card = action.payload.name;
+      const idx = action.payload.idx;
+      let newCard;
+      if (card === "Orchis, Resolute Puppet")
+        newCard = "Orchis, Vengeful Puppet";
+      if (card === "Orchis, Vengeful Puppet")
+        newCard = "Orchis, Resolute Puppet";
+      state.evoDeck[idx].card = newCard;
+    },
     createLessonTokens: (state) => {
       let cardsInEX = false;
 
@@ -2389,6 +2399,7 @@ export const {
   feedCardOnField,
   backToEvolveDeck,
   restoreEvoCard,
+  switchEvoCard,
   setField,
   setEnemyField,
   setEnemyEvoField,

@@ -1,9 +1,184 @@
 export const cardImage = (cardName) => {
   switch (cardName) {
-    case "Determined Doll, Orchis":
-      return "../textures/BP08-003a.png";
-    case "Orchis, the Doll of Revenge":
-      return "../textures/BP08-003b.png";
+    case "Forest Oracle Pascale":
+      return "../textures/bp08-001.png";
+    case "Orchis, Puppet Girl":
+      return "../textures/BP08-U01.png";
+    case "Zwei, Murderous Puppet":
+      return "../textures/bp08-004.png";
+    case "Lycoris, Poisoner Princess":
+      return "../textures/bp08-006.png";
+    case "Lina & Lena, Twin Souls":
+      return "../textures/bp08-007.png";
+    case "Michelle, the Mind Reader":
+      return "../textures/bp08-008.png";
+    case "Liam, Master of Puppets":
+      return "../textures/bp08-010.png";
+    case "Heartless Battle":
+      return "../textures/bp08-011.png";
+    case "Junk":
+      return "../textures/bp08-012.png";
+    case "Insane Dark Elf":
+      return "../textures/bp08-013.png";
+    case "Zealot of Unkilling":
+      return "../textures/bp08-015.png";
+    case "Knower of History":
+      return "../textures/bp08-016.png";
+    case "Ward of Unkilling":
+      return "../textures/bp08-017.png";
+    case "Aether of the Warrior Wing":
+      return "../textures/bp08-018.png";
+    case "Dionne, Dancing Blade":
+      return "../textures/bp08-019.png";
+    case "Roland the Incorruptible":
+      return "../textures/bp08-021.png";
+    case "Swordflash Panther":
+      return "../textures/bp08-023.png";
+    case "Durandal the Incorruptible":
+      return "../textures/bp08-024.png";
+    case "Azord, Duke of the Mists":
+      return "../textures/bp08-025.png";
+    case "Madlance Centaur":
+      return "../textures/bp08-027.png";
+    case "Dance of Usurpation":
+      return "../textures/bp08-028.png";
+    case "Phantom Assassin":
+      return "../textures/bp08-029.png";
+    case "Zealot of Usurpation":
+      return "../textures/bp08-030.png";
+    case "Wardog":
+      return "../textures/bp08-031.png";
+    case "Mana Pistol Merc":
+      return "../textures/bp08-032.png";
+    case "Godsend Stride":
+      return "../textures/bp08-034.png";
+    case "Sweet-Tooth Medusa":
+      return "../textures/bp08-035.png";
+    case "Prophetless of Creation":
+      return "../textures/BP08-U03.png";
+    case "Unbodied Witch":
+      return "../textures/bp08-038.png";
+    case "Lovely Heart Monika":
+      return "../textures/bp08-040.png";
+    case "Edict of Truth":
+      return "../textures/bp08-041.png";
+    case "Elusa, Magic Wunderkind":
+      return "../textures/bp08-042.png";
+    case "Morra, Monika's Familiar":
+      return "../textures/bp08-044.png";
+    case "Veridic Discovery":
+      return "../textures/bp08-045.png";
+    case "Moonshade Mage":
+      return "../textures/bp08-046.png";
+    case "Zealot of Truth":
+      return "../textures/bp08-047.png";
+    case "Rabbit Mage":
+      return "../textures/bp08-048.png";
+    case "Zealot of Destruction":
+      return "../textures/bp08-050.png";
+    case "Joy of Destruction":
+      return "../textures/bp08-051.png";
+    case "Dragon Empress Otohime":
+      return "../textures/bp08-052.png";
+    case "Azi Dahaka":
+      return "../textures/bp08-053.png";
+    case "Annerose":
+      return "../textures/bp08-055.png";
+    case "Ouroboros":
+      return "../textures/bp08-057.png";
+    case "Powerforge":
+      return "../textures/bp08-058.png";
+    case "Elios, Loyal Dragoon":
+      return "../textures/bp08-059.png";
+    case "Dragonsoul Princess":
+      return "../textures/bp08-061.png";
+    case "Vile Violet Dragon":
+      return "../textures/bp08-062.png";
+    case "Zealot of Disdain":
+      return "../textures/bp08-063.png";
+    case "Righteous Dragoon":
+      return "../textures/bp08-064.png";
+    case "Geovore":
+      return "../textures/bp08-065.png";
+    case "Marionette Dragon":
+      return "../textures/bp08-067.png";
+    case "Sneer of Disdain":
+      return "../textures/bp08-068.png";
+    case "Crimson Rose Queen":
+      return "../textures/bp08-069.png";
+    case "Nepthys":
+      return "../textures/BP08-U05.png";
+    case "Tartarus the Tormentor":
+      return "../textures/bp08-072.png";
+    case "Vuella, One-Winged Demon":
+      return "../textures/bp08-074.png";
+    case "Sonata of Silence":
+      return "../textures/bp08-075.png";
+    case "Chris Pumpkinhead":
+      return "../textures/bp08-076.png";
+    case "Salome":
+      return "../textures/bp08-078.png";
+    case "Kiss of Lust":
+      return "../textures/bp08-079.png";
+    case "Arion":
+      return "../textures/bp08-080.png";
+    case "Marian the Mummy":
+      return "../textures/bp08-081.png";
+    case "Zealot of Silence":
+      return "../textures/bp08-083.png";
+    case "Zealot of Lust":
+      return "../textures/bp08-084.png";
+    case "Manifest Malice":
+      return "../textures/bp08-085.png";
+    case "Holylord Eachtar":
+      return "../textures/bp08-086.png";
+    case "Godsworn Alexiel":
+      return "../textures/BP08-087.png";
+    case "Eidolon of Madness":
+      return "../textures/bp08-089.png";
+    case "Sekhmet":
+      return "../textures/bp08-091.png";
+    case "Vengeful Radiance":
+      return "../textures/bp08-092.png";
+    case "Collete, Holy Gunner":
+      return "../textures/bp08-093.png";
+    case "Battlefield Inquisitor":
+      return "../textures/bp08-095.png";
+    case "Manifestation of Repose":
+      return "../textures/bp08-096.png";
+    case "Malevolent Al-mi'raj":
+      return "../textures/bp08-097.png";
+    case "Zealot of Repose":
+      return "../textures/bp08-098.png";
+    case "Temple Windbear":
+      return "../textures/bp08-099.png";
+    case "Angel of the Iron Steed":
+      return "../textures/bp08-101.png";
+    case "Forgotten Sanctuary":
+      return "../textures/bp08-102.png";
+
+    case "Alterplane Arbiter":
+      return "../textures/bp08-103.png";
+    case "Sylvia, the Condemner":
+      return "../textures/bp08-105.png";
+    case "Sahaquiel":
+      return "../textures/bp08-106.png";
+    case "Tart Man":
+      return "../textures/BP08-U07.png";
+    case "Slash of the One":
+      return "../textures/bp08-109.png";
+    case "Reina, Evolution's Herald":
+      return "../textures/bp08-110.png";
+    case "Ephemera, Sword Angel":
+      return "../textures/bp08-112.png";
+    case "Treasure Map":
+      return "../textures/bp08-113.png";
+    case "Steelclad Minotaur":
+      return "../textures/bp08-114.png";
+    case "High Enchantress":
+      return "../textures/bp08-115.png";
+    case "Happy Pig":
+      return "../textures/bp08-117.png";
 
     case "Ladica, the Stoneclaw":
       return "../textures/BP07-001EN.png";
@@ -1922,6 +2097,66 @@ export const cardImage = (cardName) => {
     case "Angelic Barrage":
       return "../textures/PR-018EN.png";
 
+    case "Orchis, Resolute Puppet":
+      return "../textures/bp08-003a.png";
+    case "Orchis, Vengeful Puppet":
+      return "../textures/bp08-003b.png";
+    case "Zwei, Murderous Puppet Evolved":
+      return "../textures/bp08-005.png";
+    case "Michelle, the Mind Reader Evolved":
+      return "../textures/bp08-009.png";
+    case "Insane Dark Elf Evolved":
+      return "../textures/bp08-014.png";
+    case "Dionne, Dancing Blade Evolved":
+      return "../textures/BP08-U02.png";
+    case "Roland the Incorruptible Evolved":
+      return "../textures/bp08-022.png";
+    case "Azord, Duke of the Mists Evolved":
+      return "../textures/bp08-026.png";
+    case "Mana Pistol Merc Evolved":
+      return "../textures/bp08-033.png";
+    case "Sweet-Tooth Medusa Evolved":
+      return "../textures/bp08-036.png";
+    case "Unbodied Witch Evolved":
+      return "../textures/bp08-039.png";
+    case "Elusa, Magic Wunderkind Evolved":
+      return "../textures/bp08-043.png";
+    case "Rabbit Mage Evolved":
+      return "../textures/bp08-049.png";
+    case "Azi Dahaka Evolved":
+      return "../textures/BP08-U04.png";
+    case "Annerose Evolved":
+      return "../textures/bp08-056.png";
+    case "Elios, Loyal Dragoon Evolved":
+      return "../textures/bp08-060.png";
+    case "Geovore Evolved":
+      return "../textures/bp08-066.png";
+    case "Crimson Rose Queen Evolved":
+      return "../textures/bp08-070.png";
+    case "Tartarus the Tormentor Evolved":
+      return "../textures/bp08-073.png";
+    case "Chris Pumpkinhead Evolved":
+      return "../textures/bp08-077.png";
+    case "Marian the Mummy Evolved":
+      return "../textures/bp08-082.png";
+    case "Godsworn Alexiel Evolved":
+      return "../textures/BP08-U06.png";
+    case "Eidolon of Madness Evolved":
+      return "../textures/bp08-090.png";
+    case "Collete, Holy Gunner Evolved":
+      return "../textures/bp08-094.png";
+    case "Temple Windbear Evolved":
+      return "../textures/bp08-100.png";
+
+    case "Alterplane Arbiter Evolved":
+      return "../textures/bp08-104.png";
+    case "Sahaquiel Evolved":
+      return "../textures/bp08-107.png";
+    case "Reina, Evolution's Herald Evolved":
+      return "../textures/bp08-111.png";
+    case "High Enchantress Evolved":
+      return "../textures/bp08-116.png";
+
     case "Ladica, the Stoneclaw Evolved":
       return "../textures/BP07-U01EN.png";
     case "Setus, the Beastblade Evolved":
@@ -2466,6 +2701,13 @@ export const cardImage = (cardName) => {
       return "../textures/BP01-175EN.png";
     case "Healing Angel Evolved":
       return "../textures/BP01-178EN.png";
+
+    case "Lloyd TOKEN":
+      return "../textures/BP08-T01EN.png";
+    case "Victoria TOKEN":
+      return "../textures/BP08-T02EN.png";
+    case "Otohime's Vanguard TOKEN":
+      return "../textures/BP08-T03EN.png";
 
     case "Assembly Droid TOKEN":
       return "../textures/BP07-T01EN.png";

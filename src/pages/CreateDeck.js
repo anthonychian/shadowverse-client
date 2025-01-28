@@ -8,6 +8,7 @@ import swap from "../assets/logo/swap_icon.png";
 
 import {
   allCards,
+  set8,
   setIDOL,
   set7,
   set6,
@@ -27,6 +28,7 @@ import {
 } from "../decks/AllCards";
 import {
   allCardsEvo,
+  set8Evo,
   setIDOLEvo,
   set7Evo,
   set6Evo,
@@ -133,18 +135,18 @@ export default function CreateDeck() {
 
   const isDoubleEvo = (cardName) => {
     if (
-      cardName === "Determined Doll, Orchis" ||
-      cardName === "Orchis, the Doll of Revenge"
+      cardName === "Orchis, Resolute Puppet" ||
+      cardName === "Orchis, Vengeful Puppet"
     )
       return true;
     else return false;
   };
 
   const handleDoubleEvoClick = () => {
-    if (cardName === "Determined Doll, Orchis") {
-      setCardName("Orchis, the Doll of Revenge");
-    } else if (cardName === "Orchis, the Doll of Revenge") {
-      setCardName("Determined Doll, Orchis");
+    if (cardName === "Orchis, Resolute Puppet") {
+      setCardName("Orchis, Vengeful Puppet");
+    } else if (cardName === "Orchis, Vengeful Puppet") {
+      setCardName("Orchis, Resolute Puppet");
     }
   };
 
@@ -172,15 +174,12 @@ export default function CreateDeck() {
     }
   };
   const handleClearImport = () => {
-    // setDefaultImportTextFieldVal(handleDeckImportFormat);
     if (mainDeckSelected) {
       setDeck([]);
       setDeckMap(new Map());
-      // setDefaultMain();
     } else {
       setEvoDeck([]);
       setEvoDeckMap(new Map());
-      // setDefaultEvo();
     }
   };
 
@@ -264,6 +263,8 @@ export default function CreateDeck() {
 
   const getCardsFromName = (name) => {
     switch (name) {
+      case "set 8":
+        return set8;
       case "set 7":
         return set7;
       case "idol":
@@ -282,6 +283,8 @@ export default function CreateDeck() {
         return set2;
       case "set 1":
         return set1;
+      case "set 8 evo":
+        return set8Evo;
       case "set 7 evo":
         return set7Evo;
       case "idol evo":
@@ -358,6 +361,7 @@ export default function CreateDeck() {
     if (deck.length < 50) {
       if (deckMap.has(card)) {
         if (deckMap.get(card) === 1 && card === "Shenlong") return;
+        if (deckMap.get(card) === 1 && card === "Cursed Crafter") return;
         if (deckMap.get(card) === 3) {
           return;
         } else {
@@ -726,6 +730,7 @@ export default function CreateDeck() {
             gap: "1em",
             justifyContent: "space-evenly",
             flexWrap: "wrap",
+            columns: "100px",
           }}
         >
           <Button
@@ -747,6 +752,27 @@ export default function CreateDeck() {
             variant="contained"
           >
             All
+          </Button>
+          <Button
+            onClick={() => {
+              setButtonFilterSet("set 8");
+              setButtonFilterSetEvo("set 8 evo");
+            }}
+            style={{
+              fontFamily: "Noto Serif JP,serif",
+              textTransform: "none",
+              fontWeight: "bold",
+              backgroundColor:
+                buttonFilterSet === "set 8" ? "#131219" : "white",
+              border:
+                buttonFilterSet === "set 8"
+                  ? "3px solid gold"
+                  : "3px solid white",
+              color: buttonFilterSet === "set 8" ? "gold" : "#131219",
+            }}
+            variant="contained"
+          >
+            Alterchaotica
           </Button>
           <Button
             onClick={() => {

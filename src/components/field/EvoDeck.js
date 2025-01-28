@@ -6,6 +6,7 @@ import Card from "../hand/Card";
 import {
   setCurrentEvo,
   restoreEvoCard,
+  switchEvoCard,
   setViewingEvoDeck,
 } from "../../redux/CardSlice";
 import img from "../../assets/pin_bellringer_angel.png";
@@ -55,9 +56,11 @@ export default function EvoDeck({
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
   const [showEvo, setShowEvo] = useState(true);
+  const [doubleSided, setDoubleSided] = useState(true);
   const [evoStatus, setEvoStatus] = useState(false);
   const [contextMenu, setContextMenu] = React.useState(null);
   const [name, setName] = useState("");
+  const [idx, setIdx] = useState(0);
   const [cardback, setCardback] = useState();
   const reduxEvoDeck = useSelector((state) => state.card.evoDeck);
   const reduxCardBack = useSelector((state) => state.card.cardback);
@@ -70,10 +73,16 @@ export default function EvoDeck({
     dispatch(setViewingEvoDeck(false));
   };
 
-  const handleContextMenu = (event, card) => {
+  const handleContextMenu = (event, card, idx) => {
     setShowEvo(card.card === "Carrot");
+    setDoubleSided(
+      card.card === "Orchis, Resolute Puppet" ||
+        card.card === "Orchis, Vengeful Puppet"
+    );
     setEvoStatus(card.status);
     setName(card.card);
+    setIdx(idx);
+    console.log(idx);
     dispatch(setCurrentEvo(card.card));
     // console.log("set current evo to", card.card);
     event.preventDefault();
@@ -108,6 +117,11 @@ export default function EvoDeck({
   const handleFlipEvo = () => {
     handleClose();
     dispatch(restoreEvoCard(name));
+  };
+
+  const handleSwitchSide = () => {
+    handleClose();
+    dispatch(switchEvoCard({ name: name, idx: idx }));
   };
 
   useEffect(() => {
@@ -221,7 +235,7 @@ export default function EvoDeck({
                 style={{ width: "115px" }}
                 key={`card-${idx}`}
                 onContextMenu={(e) => {
-                  handleContextMenu(e, card);
+                  handleContextMenu(e, card, idx);
                 }}
               >
                 <Card
@@ -260,6 +274,9 @@ export default function EvoDeck({
           <MenuItem onClick={handleEvolve}>Evolve</MenuItem>
         ) : (
           <MenuItem onClick={handleFlipEvo}>Flip</MenuItem>
+        )}
+        {doubleSided && !evoStatus && (
+          <MenuItem onClick={handleSwitchSide}>Switch Side</MenuItem>
         )}
       </Menu>
     </>

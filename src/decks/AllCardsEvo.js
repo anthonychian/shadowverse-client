@@ -1,6 +1,39 @@
 export const allCardsEvo = [
-  // "Determined Doll, Orchis",
-  // "Orchis, the Doll of Revenge",
+  "Orchis, Resolute Puppet",
+  // "Orchis, Vengeful Puppet",
+  "Zwei, Murderous Puppet Evolved",
+  "Michelle, the Mind Reader Evolved",
+  "Insane Dark Elf Evolved",
+
+  "Dionne, Dancing Blade Evolved",
+  "Roland the Incorruptible Evolved",
+  "Azord, Duke of the Mists Evolved",
+  "Mana Pistol Merc Evolved",
+
+  "Sweet-Tooth Medusa Evolved",
+  "Unbodied Witch Evolved",
+  "Elusa, Magic Wunderkind Evolved",
+  "Rabbit Mage Evolved",
+
+  "Azi Dahaka Evolved",
+  "Annerose Evolved",
+  "Elios, Loyal Dragoon Evolved",
+  "Geovore Evolved",
+
+  "Crimson Rose Queen Evolved",
+  "Tartarus the Tormentor Evolved",
+  "Chris Pumpkinhead Evolved",
+  "Marian the Mummy Evolved",
+
+  "Godsworn Alexiel Evolved",
+  "Eidolon of Madness Evolved",
+  "Collete, Holy Gunner Evolved",
+  "Temple Windbear Evolved",
+
+  "Alterplane Arbiter Evolved",
+  "Sahaquiel Evolved",
+  "Reina, Evolution's Herald Evolved",
+  "High Enchantress Evolved",
 
   "Ladica, the Stoneclaw Evolved",
   "Setus, the Beastblade Evolved",
@@ -298,10 +331,45 @@ export const allCardsEvo = [
   "Healing Angel Evolved",
 ];
 
-export const set7Evo = [
-  // "Determined Doll, Orchis",
-  // "Orchis, the Doll of Revenge",
+export const set8Evo = [
+  "Orchis, Resolute Puppet",
+  // "Orchis, Vengeful Puppet",
+  "Zwei, Murderous Puppet Evolved",
+  "Michelle, the Mind Reader Evolved",
+  "Insane Dark Elf Evolved",
 
+  "Dionne, Dancing Blade Evolved",
+  "Roland the Incorruptible Evolved",
+  "Azord, Duke of the Mists Evolved",
+  "Mana Pistol Merc Evolved",
+
+  "Sweet-Tooth Medusa Evolved",
+  "Unbodied Witch Evolved",
+  "Elusa, Magic Wunderkind Evolved",
+  "Rabbit Mage Evolved",
+
+  "Azi Dahaka Evolved",
+  "Annerose Evolved",
+  "Elios, Loyal Dragoon Evolved",
+  "Geovore Evolved",
+
+  "Crimson Rose Queen Evolved",
+  "Tartarus the Tormentor Evolved",
+  "Chris Pumpkinhead Evolved",
+  "Marian the Mummy Evolved",
+
+  "Godsworn Alexiel Evolved",
+  "Eidolon of Madness Evolved",
+  "Collete, Holy Gunner Evolved",
+  "Temple Windbear Evolved",
+
+  "Alterplane Arbiter Evolved",
+  "Sahaquiel Evolved",
+  "Reina, Evolution's Herald Evolved",
+  "High Enchantress Evolved",
+];
+
+export const set7Evo = [
   "Ladica, the Stoneclaw Evolved",
   "Setus, the Beastblade Evolved",
   "Blossom Spirit Evolved",
@@ -614,6 +682,12 @@ export const set1Evo = [
 ];
 
 export const forestEvo = [
+  "Orchis, Resolute Puppet",
+  // "Orchis, Vengeful Puppet",
+  "Zwei, Murderous Puppet Evolved",
+  "Michelle, the Mind Reader Evolved",
+  "Insane Dark Elf Evolved",
+
   "Ladica, the Stoneclaw Evolved",
   "Setus, the Beastblade Evolved",
   "Blossom Spirit Evolved",
@@ -657,6 +731,11 @@ export const forestEvo = [
 ];
 
 export const swordEvo = [
+  "Dionne, Dancing Blade Evolved",
+  "Roland the Incorruptible Evolved",
+  "Azord, Duke of the Mists Evolved",
+  "Mana Pistol Merc Evolved",
+
   "Bayleon, Sovereign Light Evolved",
   "Leod, the Crescent Blade Evolved",
   "Troya, Thunder of Hagelberg Evolved",
@@ -700,6 +779,11 @@ export const swordEvo = [
 ];
 
 export const runeEvo = [
+  "Sweet-Tooth Medusa Evolved",
+  "Unbodied Witch Evolved",
+  "Elusa, Magic Wunderkind Evolved",
+  "Rabbit Mage Evolved",
+
   "Tetra, Sapphire Rebel Evolved",
   "Eleanor, Cosmic Flower Evolved",
   "Displacer Bot Evolved",
@@ -743,6 +827,11 @@ export const runeEvo = [
 ];
 
 export const dragonEvo = [
+  "Azi Dahaka Evolved",
+  "Annerose Evolved",
+  "Elios, Loyal Dragoon Evolved",
+  "Geovore Evolved",
+
   "Valdain, Cursed Shadow Evolved",
   "Marion, Elegant Dragonewt Evolved",
   "Hoarfrost Triceratops Evolved",
@@ -788,6 +877,11 @@ export const dragonEvo = [
 ];
 
 export const abyssEvo = [
+  "Crimson Rose Queen Evolved",
+  "Tartarus the Tormentor Evolved",
+  "Chris Pumpkinhead Evolved",
+  "Marian the Mummy Evolved",
+
   "Mono, Garnet Rebel Evolved",
   "Doublame, Duke and Dame Evolved",
   "Nicola, Forbidden Strength Evolved",
@@ -830,6 +924,11 @@ export const abyssEvo = [
 ];
 
 export const havenEvo = [
+  "Godsworn Alexiel Evolved",
+  "Eidolon of Madness Evolved",
+  "Collete, Holy Gunner Evolved",
+  "Temple Windbear Evolved",
+
   "Limonia, Flawed Saint Evolved",
   "Marione, Light of Balance Evolved",
   "Robofalcon Evolved",
@@ -872,6 +971,11 @@ export const havenEvo = [
 ];
 
 export const neutralEvo = [
+  "Alterplane Arbiter Evolved",
+  "Sahaquiel Evolved",
+  "Reina, Evolution's Herald Evolved",
+  "High Enchantress Evolved",
+
   "Viridia Magna Evolved",
   "Maisha, Hero of Purgation Evolved",
   "Robogoblin Evolved",
@@ -881,22 +985,28 @@ export const neutralEvo = [
   "Mithra, Daybreak Diety Evolved",
   "Chaht, Ringside Announcer Evolved",
   "Bazooka Goblins Evolved",
+
   "Mjerrabaine, Omen of One Evolved",
   "Apostle of Craving Evolved",
   "Rosa, Mech Wing Maiden Evolved",
   "Cat Cannoneer Evolved",
+
   "Israfil Evolved",
   "Grimnir, War Cyclone Evolved",
   "Goblin Princess Evolved",
   "Owlcat Evolved",
+
   "Alice, Wonderland Explorer Evolved",
   "Garuel, Seraphic Leo Evolved",
   "Humpty Dumpty Evolved",
   "Harbringer of the Night Evolved",
+
   "Carrot",
+
   "Bahamut Evolved",
   "Archangel Reina Evolved",
   "Unicorn Dancer Unicorn Evolved",
+
   "Sektor Evolved",
   "Lucifer Evolved",
   "Urd Evolved",
