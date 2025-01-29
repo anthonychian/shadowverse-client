@@ -2703,11 +2703,11 @@ export const cardImage = (cardName) => {
       return "../textures/BP01-178EN.png";
 
     case "Lloyd TOKEN":
-      return "../textures/BP08-T01EN.png";
+      return "../textures/BP08-T01.png";
     case "Victoria TOKEN":
-      return "../textures/BP08-T02EN.png";
+      return "../textures/BP08-T02.png";
     case "Otohime's Vanguard TOKEN":
-      return "../textures/BP08-T03EN.png";
+      return "../textures/BP08-T03.png";
 
     case "Assembly Droid TOKEN":
       return "../textures/BP07-T01EN.png";
