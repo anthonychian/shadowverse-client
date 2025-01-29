@@ -2098,9 +2098,9 @@ export const cardImage = (cardName) => {
       return "../textures/PR-018EN.png";
 
     case "Orchis, Resolute Puppet":
-      return "../textures/bp08-003a.png";
+      return "../textures/bp08-003front.png";
     case "Orchis, Vengeful Puppet":
-      return "../textures/bp08-003b.png";
+      return "../textures/bp08-003back.png";
     case "Zwei, Murderous Puppet Evolved":
       return "../textures/bp08-005.png";
     case "Michelle, the Mind Reader Evolved":
