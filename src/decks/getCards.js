@@ -133,7 +133,7 @@ export const cardImage = (cardName) => {
     case "Holylord Eachtar":
       return "../textures/bp08-086.png";
     case "Godsworn Alexiel":
-      return "../textures/BP08-087.png";
+      return "../textures/bp08-087.png";
     case "Eidolon of Madness":
       return "../textures/bp08-089.png";
     case "Sekhmet":
