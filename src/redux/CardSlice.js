@@ -2025,19 +2025,31 @@ export const CardSlice = createSlice({
       });
     },
     restoreEvoCard: (state, action) => {
-      const card = action.payload;
-      let cardIndex;
+      const card = action.payload.name;
+      const idx = action.payload.idx;
+
+      state.evoDeck = state.evoDeck.filter((_, i) => i !== idx);
+      let cardIndex = -1;
       for (let i = 0; i < state.evoDeck.length; i++) {
-        if (
-          state.evoDeck[i].card === card &&
-          state.evoDeck[i].status === true
-        ) {
+        if (state.evoDeck[i].status === true) {
           cardIndex = i;
           break;
         }
       }
-      state.evoDeck = state.evoDeck.filter((_, i) => i !== cardIndex);
-      state.evoDeck = [...state.evoDeck, { card: card, status: false }];
+
+      if (cardIndex !== -1) {
+        state.evoDeck = [
+          ...state.evoDeck.slice(0, cardIndex),
+          {
+            card: card,
+            status: false,
+          },
+          ...state.evoDeck.slice(cardIndex),
+        ];
+      } else {
+        state.evoDeck = [...state.evoDeck, { card: card, status: false }];
+      }
+
       const date = new Date().toLocaleTimeString("it-IT", {
         hour: "2-digit",
         minute: "2-digit",

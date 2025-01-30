@@ -116,7 +116,7 @@ export default function EvoDeck({
 
   const handleFlipEvo = () => {
     handleClose();
-    dispatch(restoreEvoCard(name));
+    dispatch(restoreEvoCard({ name: name, idx: idx }));
   };
 
   const handleSwitchSide = () => {
