@@ -21,7 +21,7 @@ export const allCardsEvo = [
   "Geovore Evolved",
 
   "Crimson Rose Queen Evolved",
-  "Tartarus the Tormentor Evolved",
+  "Tartarus, the Tormentor Evolved",
   "Chris Pumpkinhead Evolved",
   "Marian the Mummy Evolved",
 
@@ -354,7 +354,7 @@ export const set8Evo = [
   "Geovore Evolved",
 
   "Crimson Rose Queen Evolved",
-  "Tartarus the Tormentor Evolved",
+  "Tartarus, the Tormentor Evolved",
   "Chris Pumpkinhead Evolved",
   "Marian the Mummy Evolved",
 
@@ -878,7 +878,7 @@ export const dragonEvo = [
 
 export const abyssEvo = [
   "Crimson Rose Queen Evolved",
-  "Tartarus the Tormentor Evolved",
+  "Tartarus, the Tormentor Evolved",
   "Chris Pumpkinhead Evolved",
   "Marian the Mummy Evolved",
 
