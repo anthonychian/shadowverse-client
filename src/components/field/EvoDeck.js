@@ -5,7 +5,7 @@ import CardMUI from "@mui/material/Card";
 import Card from "../hand/Card";
 import {
   setCurrentEvo,
-  restoreEvoCard,
+  flipEvoCard,
   switchEvoCard,
   setViewingEvoDeck,
 } from "../../redux/CardSlice";
@@ -116,7 +116,7 @@ export default function EvoDeck({
 
   const handleFlipEvo = () => {
     handleClose();
-    dispatch(restoreEvoCard({ name: name, idx: idx }));
+    dispatch(flipEvoCard({ name: name, idx: idx, status: evoStatus }));
   };
 
   const handleSwitchSide = () => {
@@ -268,13 +268,13 @@ export default function EvoDeck({
           horizontal: "left",
         }}
       >
-        {showEvo && !evoStatus ? (
+        {showEvo && !evoStatus && (
           <MenuItem onClick={handleFeed}>Feed</MenuItem>
-        ) : !showEvo && !evoStatus ? (
-          <MenuItem onClick={handleEvolve}>Evolve</MenuItem>
-        ) : (
-          <MenuItem onClick={handleFlipEvo}>Flip</MenuItem>
         )}
+        {!showEvo && !evoStatus && (
+          <MenuItem onClick={handleEvolve}>Evolve</MenuItem>
+        )}
+        {!doubleSided && <MenuItem onClick={handleFlipEvo}>Flip</MenuItem>}
         {doubleSided && !evoStatus && (
           <MenuItem onClick={handleSwitchSide}>Switch Side</MenuItem>
         )}

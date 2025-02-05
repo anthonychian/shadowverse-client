@@ -2024,9 +2024,10 @@ export const CardSlice = createSlice({
         room: state.room,
       });
     },
-    restoreEvoCard: (state, action) => {
+    flipEvoCard: (state, action) => {
       const card = action.payload.name;
       const idx = action.payload.idx;
+      const status = action.payload.status;
 
       state.evoDeck = state.evoDeck.filter((_, i) => i !== idx);
       let cardIndex = -1;
@@ -2047,7 +2048,7 @@ export const CardSlice = createSlice({
           ...state.evoDeck.slice(cardIndex),
         ];
       } else {
-        state.evoDeck = [...state.evoDeck, { card: card, status: false }];
+        state.evoDeck = [...state.evoDeck, { card: card, status: !status }];
       }
 
       const date = new Date().toLocaleTimeString("it-IT", {
@@ -2056,11 +2057,11 @@ export const CardSlice = createSlice({
       });
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Restored ${card} in evolve deck`,
+        `[${date}] (Me): Flipped ${card} in evolve deck`,
       ];
       socket.emit("send msg", {
         type: "log",
-        data: `Restored ${card} in evolve deck`,
+        data: `Flipped ${card} in evolve deck`,
         room: state.room,
       });
       socket.emit("send msg", {
@@ -2410,7 +2411,7 @@ export const {
   evolveCardOnField,
   feedCardOnField,
   backToEvolveDeck,
-  restoreEvoCard,
+  flipEvoCard,
   switchEvoCard,
   setField,
   setEnemyField,
