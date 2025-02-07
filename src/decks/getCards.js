@@ -1708,7 +1708,7 @@ export const cardImage = (cardName) => {
       return "../textures/SD05-001EN.png";
     case "Alucard":
       return "../textures/SD05-002EN.png";
-    case "Playful Necomancer":
+    case "Playful Necromancer":
       return "../textures/SD05-003EN.png";
     case "Midnight Vampire":
       return "../textures/SD05-005EN.png";
@@ -2608,7 +2608,7 @@ export const cardImage = (cardName) => {
       return "../textures/SD06-010EN.png";
     case "Guardian Nun Evolved":
       return "../textures/SD06-012EN.png";
-    case "Playful Necomancer Evolved":
+    case "Playful Necromancer Evolved":
       return "../textures/SD05-004EN.png";
     case "Lesser Mummy Evolved":
       return "../textures/SD05-011EN.png";
