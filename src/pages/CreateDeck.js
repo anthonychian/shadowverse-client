@@ -361,7 +361,7 @@ export default function CreateDeck() {
     if (deck.length < 50) {
       if (deckMap.has(card)) {
         if (deckMap.get(card) === 1 && card === "Shenlong") return;
-        if (deckMap.get(card) === 1 && card === "Cursed Crafter") return;
+        if (deckMap.get(card) === 1 && card === "Curse Crafter") return;
         if (deckMap.get(card) === 3) {
           return;
         } else {
