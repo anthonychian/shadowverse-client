@@ -2030,26 +2030,15 @@ export const CardSlice = createSlice({
       const status = action.payload.status;
 
       state.evoDeck = state.evoDeck.filter((_, i) => i !== idx);
-      let cardIndex = -1;
-      for (let i = 0; i < state.evoDeck.length; i++) {
-        if (state.evoDeck[i].status === true) {
-          cardIndex = i;
-          break;
-        }
-      }
 
-      if (cardIndex !== -1) {
-        state.evoDeck = [
-          ...state.evoDeck.slice(0, cardIndex),
-          {
-            card: card,
-            status: false,
-          },
-          ...state.evoDeck.slice(cardIndex),
-        ];
-      } else {
-        state.evoDeck = [...state.evoDeck, { card: card, status: !status }];
-      }
+      state.evoDeck = [
+        ...state.evoDeck.slice(0, idx),
+        {
+          card: card,
+          status: !status,
+        },
+        ...state.evoDeck.slice(idx),
+      ];
 
       const date = new Date().toLocaleTimeString("it-IT", {
         hour: "2-digit",
