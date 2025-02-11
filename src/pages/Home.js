@@ -49,11 +49,17 @@ export default function Home() {
   const [hoverCard, setHoverCard] = useState("");
   const [hover, setHover] = useState(false);
 
+  const [activeUsers, setActiveUsers] = useState(0);
+
   const [openSnack, setOpenSnack] = useState(false);
 
   useEffect(() => {
     socket.on("start_game", () => {
       handleNavigateToGame();
+    });
+
+    socket.on("active_users", (data) => {
+      setActiveUsers(data);
     });
   }, [socket]);
 
@@ -554,7 +560,7 @@ export default function Home() {
           style={{
             position: "absolute",
             top: "0%",
-            left: "50%",
+            left: "40%",
             height: "40px",
             // width: "40px",
             color: "white",
@@ -564,6 +570,36 @@ export default function Home() {
           }}
         >
           Joining Room: 1/2 players...
+        </div>
+      )}
+      <div align="center">
+        <script
+          type="text/javascript"
+          src="https://www.freevisitorcounters.com/auth.php?id=03cba67bcd9273ea58c8bd1ac26e8b31e2a75922"
+        ></script>
+        <script
+          type="text/javascript"
+          src="https://www.freevisitorcounters.com/en/home/counter/1299974/t/0"
+        ></script>
+      </div>
+      {activeUsers !== 0 && (
+        <div
+          style={{
+            position: "absolute",
+            top: "5%",
+            right: "4%",
+            // color: "white",
+            fontSize: 30,
+            // fontFamily: "Noto Serif JP, serif",
+            fontFamily: "Share Tech Mono, monospace",
+            color: " #daf6ff",
+            textShadow:
+              "0 0 20px rgba(10, 175, 230, 1),  0 0 20px rgba(10, 175, 230, 0)",
+            background:
+              "radial-gradient(ellipse at center,  #0a2e38  0%, #000000 70%)",
+          }}
+        >
+          {activeUsers} users online
         </div>
       )}
       <div
