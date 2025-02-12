@@ -19,25 +19,26 @@ import imageMio from "../../assets/leaders/Mio.png";
 import dragon from "../../assets/logo/dragon.png";
 
 import defaultCardBack from "../../assets/cardbacks/default.png";
+import aeneaCardBack from "../../assets/cardbacks/aenea.png";
+import dionneCardBack from "../../assets/cardbacks/dionne.png";
+import dragonCardBack from "../../assets/cardbacks/dragon.png";
 import fileneCardBack from "../../assets/cardbacks/filene.png";
 import galmieuxCardBack from "../../assets/cardbacks/galmieux.png";
-import ginsetsuCardBack from "../../assets/cardbacks/ginsetsu.jpg";
+import jeanneCardBack from "../../assets/cardbacks/jeanne.png";
 import kuonCardBack from "../../assets/cardbacks/kuon.png";
 import ladicaCardBack from "../../assets/cardbacks/ladica.png";
 import lishennaCardBack from "../../assets/cardbacks/lishenna.png";
-import machina1CardBack from "../../assets/cardbacks/machina1.png";
-import machina2CardBack from "../../assets/cardbacks/machina2.png";
+import lishenna2CardBack from "../../assets/cardbacks/lishenna2.png";
 import mistolinaCardBack from "../../assets/cardbacks/mistolina.png";
 import monoCardBack from "../../assets/cardbacks/mono.png";
-import naturaCardBack from "../../assets/cardbacks/natura.png";
+import orchisCardBack from "../../assets/cardbacks/orchis.png";
 import piercyeCardBack from "../../assets/cardbacks/piercye.png";
-import ralmiaCardBack from "../../assets/cardbacks/ralmia.png";
+import rosequeenCardBack from "../../assets/cardbacks/rosequeen.png";
 import shikiCardBack from "../../assets/cardbacks/shiki.png";
 import shutenCardBack from "../../assets/cardbacks/shuten.png";
-import tetraCardBack from "../../assets/cardbacks/tetra.png";
+import tidalgunnerCardBack from "../../assets/cardbacks/tidalgunner.png";
 import viridiaCardBack from "../../assets/cardbacks/viridia.png";
-import wingsCardBack from "../../assets/cardbacks/wings.png";
-import yokaiCardBack from "../../assets/cardbacks/yokai.png";
+import wilbertCardBack from "../../assets/cardbacks/wilbert.png";
 
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
@@ -705,6 +706,45 @@ export default function Selection({ setSelectedOption }) {
                 selectCardBack(e);
               }}
             >
+              <img width="100px" src={aeneaCardBack} alt="Aenea" />
+            </IconButton>
+
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectCardBack(e);
+              }}
+            >
+              <img width="100px" src={dionneCardBack} alt="Dionne" />
+            </IconButton>
+
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectCardBack(e);
+              }}
+            >
+              <img width="100px" src={dragonCardBack} alt="Dragon" />
+            </IconButton>
+
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectCardBack(e);
+              }}
+            >
               <img width="100px" src={fileneCardBack} alt="Filene" />
             </IconButton>
 
@@ -720,6 +760,7 @@ export default function Selection({ setSelectedOption }) {
             >
               <img width="100px" src={galmieuxCardBack} alt="Galmieux" />
             </IconButton>
+
             <IconButton
               sx={{
                 "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
@@ -730,8 +771,9 @@ export default function Selection({ setSelectedOption }) {
                 selectCardBack(e);
               }}
             >
-              <img width="100px" src={ginsetsuCardBack} alt="Ginsetsu" />
+              <img width="100px" src={jeanneCardBack} alt="Jeanne" />
             </IconButton>
+
             <IconButton
               sx={{
                 "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
@@ -768,6 +810,7 @@ export default function Selection({ setSelectedOption }) {
             >
               <img width="100px" src={lishennaCardBack} alt="Lishenna" />
             </IconButton>
+
             <IconButton
               sx={{
                 "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
@@ -778,20 +821,9 @@ export default function Selection({ setSelectedOption }) {
                 selectCardBack(e);
               }}
             >
-              <img width="100px" src={machina1CardBack} alt="Machina1" />
+              <img width="100px" src={lishenna2CardBack} alt="Lishenna2" />
             </IconButton>
-            <IconButton
-              sx={{
-                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
-                color: "white",
-                backgroundColor: "rgba(0, 0, 0, 0.6)",
-              }}
-              onClick={(e) => {
-                selectCardBack(e);
-              }}
-            >
-              <img width="100px" src={machina2CardBack} alt="Machina2" />
-            </IconButton>
+
             <IconButton
               sx={{
                 "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
@@ -816,6 +848,7 @@ export default function Selection({ setSelectedOption }) {
             >
               <img width="100px" src={monoCardBack} alt="Mono" />
             </IconButton>
+
             <IconButton
               sx={{
                 "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
@@ -826,8 +859,9 @@ export default function Selection({ setSelectedOption }) {
                 selectCardBack(e);
               }}
             >
-              <img width="100px" src={naturaCardBack} alt="Natura" />
+              <img width="100px" src={orchisCardBack} alt="Orchis" />
             </IconButton>
+
             <IconButton
               sx={{
                 "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
@@ -840,6 +874,7 @@ export default function Selection({ setSelectedOption }) {
             >
               <img width="100px" src={piercyeCardBack} alt="Piercye" />
             </IconButton>
+
             <IconButton
               sx={{
                 "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
@@ -850,8 +885,9 @@ export default function Selection({ setSelectedOption }) {
                 selectCardBack(e);
               }}
             >
-              <img width="100px" src={ralmiaCardBack} alt="Ralmia" />
+              <img width="100px" src={rosequeenCardBack} alt="RoseQueen" />
             </IconButton>
+
             <IconButton
               sx={{
                 "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
@@ -864,6 +900,7 @@ export default function Selection({ setSelectedOption }) {
             >
               <img width="100px" src={shikiCardBack} alt="Shikigami" />
             </IconButton>
+
             <IconButton
               sx={{
                 "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
@@ -876,6 +913,7 @@ export default function Selection({ setSelectedOption }) {
             >
               <img width="100px" src={shutenCardBack} alt="Shuten" />
             </IconButton>
+
             <IconButton
               sx={{
                 "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
@@ -886,8 +924,9 @@ export default function Selection({ setSelectedOption }) {
                 selectCardBack(e);
               }}
             >
-              <img width="100px" src={tetraCardBack} alt="Tetra" />
+              <img width="100px" src={tidalgunnerCardBack} alt="TidalGunner" />
             </IconButton>
+
             <IconButton
               sx={{
                 "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
@@ -900,6 +939,7 @@ export default function Selection({ setSelectedOption }) {
             >
               <img width="100px" src={viridiaCardBack} alt="Viridia" />
             </IconButton>
+
             <IconButton
               sx={{
                 "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
@@ -910,19 +950,7 @@ export default function Selection({ setSelectedOption }) {
                 selectCardBack(e);
               }}
             >
-              <img width="100px" src={wingsCardBack} alt="Wings" />
-            </IconButton>
-            <IconButton
-              sx={{
-                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
-                color: "white",
-                backgroundColor: "rgba(0, 0, 0, 0.6)",
-              }}
-              onClick={(e) => {
-                selectCardBack(e);
-              }}
-            >
-              <img width="100px" src={yokaiCardBack} alt="Yokai" />
+              <img width="100px" src={wilbertCardBack} alt="Wilbert" />
             </IconButton>
           </Card>
         </Box>

@@ -23,25 +23,26 @@ import CardMUI from "@mui/material/Card";
 import Card from "../hand/Card";
 
 import defaultCardBack from "../../assets/cardbacks/default.png";
+import aeneaCardBack from "../../assets/cardbacks/aenea.png";
+import dionneCardBack from "../../assets/cardbacks/dionne.png";
+import dragonCardBack from "../../assets/cardbacks/dragon.png";
 import fileneCardBack from "../../assets/cardbacks/filene.png";
 import galmieuxCardBack from "../../assets/cardbacks/galmieux.png";
-import ginsetsuCardBack from "../../assets/cardbacks/ginsetsu.jpg";
+import jeanneCardBack from "../../assets/cardbacks/jeanne.png";
 import kuonCardBack from "../../assets/cardbacks/kuon.png";
 import ladicaCardBack from "../../assets/cardbacks/ladica.png";
 import lishennaCardBack from "../../assets/cardbacks/lishenna.png";
-import machina1CardBack from "../../assets/cardbacks/machina1.png";
-import machina2CardBack from "../../assets/cardbacks/machina2.png";
+import lishenna2CardBack from "../../assets/cardbacks/lishenna2.png";
 import mistolinaCardBack from "../../assets/cardbacks/mistolina.png";
 import monoCardBack from "../../assets/cardbacks/mono.png";
-import naturaCardBack from "../../assets/cardbacks/natura.png";
+import orchisCardBack from "../../assets/cardbacks/orchis.png";
 import piercyeCardBack from "../../assets/cardbacks/piercye.png";
-import ralmiaCardBack from "../../assets/cardbacks/ralmia.png";
+import rosequeenCardBack from "../../assets/cardbacks/rosequeen.png";
 import shikiCardBack from "../../assets/cardbacks/shiki.png";
 import shutenCardBack from "../../assets/cardbacks/shuten.png";
-import tetraCardBack from "../../assets/cardbacks/tetra.png";
+import tidalgunnerCardBack from "../../assets/cardbacks/tidalgunner.png";
 import viridiaCardBack from "../../assets/cardbacks/viridia.png";
-import wingsCardBack from "../../assets/cardbacks/wings.png";
-import yokaiCardBack from "../../assets/cardbacks/yokai.png";
+import wilbertCardBack from "../../assets/cardbacks/wilbert.png";
 
 const img = require("../../assets/pin_bellringer_angel.png");
 
@@ -286,14 +287,23 @@ export default function Deck({
 
   useEffect(() => {
     switch (reduxCardBack) {
+      case "Aenea":
+        setCardback(aeneaCardBack);
+        break;
+      case "Dionne":
+        setCardback(dionneCardBack);
+        break;
+      case "Dragon":
+        setCardback(dragonCardBack);
+        break;
       case "Filene":
         setCardback(fileneCardBack);
         break;
       case "Galmieux":
         setCardback(galmieuxCardBack);
         break;
-      case "Ginsetsu":
-        setCardback(ginsetsuCardBack);
+      case "Jeanne":
+        setCardback(jeanneCardBack);
         break;
       case "Kuon":
         setCardback(kuonCardBack);
@@ -304,11 +314,8 @@ export default function Deck({
       case "Lishenna":
         setCardback(lishennaCardBack);
         break;
-      case "Machina1":
-        setCardback(machina1CardBack);
-        break;
-      case "Machina2":
-        setCardback(machina2CardBack);
+      case "Lishenna2":
+        setCardback(lishenna2CardBack);
         break;
       case "Mistolina":
         setCardback(mistolinaCardBack);
@@ -316,14 +323,14 @@ export default function Deck({
       case "Mono":
         setCardback(monoCardBack);
         break;
-      case "Natura":
-        setCardback(naturaCardBack);
+      case "Orchis":
+        setCardback(orchisCardBack);
         break;
       case "Piercye":
         setCardback(piercyeCardBack);
         break;
-      case "Ralmia":
-        setCardback(ralmiaCardBack);
+      case "RoseQueen":
+        setCardback(rosequeenCardBack);
         break;
       case "Shikigami":
         setCardback(shikiCardBack);
@@ -331,17 +338,14 @@ export default function Deck({
       case "Shuten":
         setCardback(shutenCardBack);
         break;
-      case "Tetra":
-        setCardback(tetraCardBack);
+      case "TidalGunner":
+        setCardback(tidalgunnerCardBack);
         break;
       case "Viridia":
         setCardback(viridiaCardBack);
         break;
-      case "Wings":
-        setCardback(wingsCardBack);
-        break;
-      case "Yokai":
-        setCardback(yokaiCardBack);
+      case "Wilbert":
+        setCardback(wilbertCardBack);
         break;
       default:
         setCardback(defaultCardBack);
