@@ -1171,7 +1171,8 @@ export default function CreateDeck() {
                 key={idx}
                 whileTap={
                   deckMap.get(name) === 3 ||
-                  (deckMap.get(name) === 1 && name === "Shenlong")
+                  (deckMap.get(name) === 1 && name === "Shenlong") ||
+                  (deckMap.get(name) === 1 && name === "Curse Crafter")
                     ? {}
                     : { opacity: 0.3 }
                 }
