@@ -8,10 +8,10 @@ import imageKuon from "../../assets/leaders/Kuon.png";
 import imageDaria from "../../assets/leaders/Daria.png";
 import imageDionne from "../../assets/leaders/Dionne.png";
 import imageAlbert from "../../assets/leaders/Albert.png";
-import imageAria from "../../assets/leaders/Aria.png";
+import imageOrchis from "../../assets/leaders/Orchis.png";
 import imageCC from "../../assets/leaders/CC.png";
 import imageMono from "../../assets/leaders/Mono.png";
-import imageAmy from "../../assets/leaders/Amy.png";
+import imageVania from "../../assets/leaders/Vania.png";
 import imageMaru from "../../assets/leaders/Maru.png";
 import imageRin from "../../assets/leaders/Rin.png";
 import imageUzuki from "../../assets/leaders/Uzuki.png";
@@ -590,7 +590,7 @@ export default function Selection({ setSelectedOption }) {
                 selectLeader(e);
               }}
             >
-              <img width="100px" src={imageAria} alt="Aria" />
+              <img width="100px" src={imageOrchis} alt="Orchis" />
             </IconButton>
             <IconButton
               sx={{
@@ -602,7 +602,7 @@ export default function Selection({ setSelectedOption }) {
                 selectLeader(e);
               }}
             >
-              <img width="100px" src={imageAmy} alt="Amy" />
+              <img width="100px" src={imageVania} alt="Vania" />
             </IconButton>
             <IconButton
               sx={{

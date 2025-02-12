@@ -7,10 +7,10 @@ import imageKuon from "../../assets/leaders/Kuon.png";
 import imageDaria from "../../assets/leaders/Daria.png";
 import imageDionne from "../../assets/leaders/Dionne.png";
 import imageAlbert from "../../assets/leaders/Albert.png";
-import imageAria from "../../assets/leaders/Aria.png";
+import imageOrchis from "../../assets/leaders/Orchis.png";
 import imageCC from "../../assets/leaders/CC.png";
 import imageMono from "../../assets/leaders/Mono.png";
-import imageAmy from "../../assets/leaders/Amy.png";
+import imageVania from "../../assets/leaders/Vania.png";
 import imageMaru from "../../assets/leaders/Maru.png";
 import imageRin from "../../assets/leaders/Rin.png";
 import imageUzuki from "../../assets/leaders/Uzuki.png";
@@ -48,11 +48,11 @@ export default function Leader({ name, active }) {
     case "CC":
       image = imageCC;
       break;
-    case "Aria":
-      image = imageAria;
+    case "Orchis":
+      image = imageOrchis;
       break;
-    case "Amy":
-      image = imageAmy;
+    case "Vania":
+      image = imageVania;
       break;
     case "Mono":
       image = imageMono;

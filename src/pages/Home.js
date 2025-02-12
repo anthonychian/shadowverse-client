@@ -3,7 +3,8 @@ import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import wallpaper from "../../src/assets/wallpapers/3.png";
 import galmieux from "../../src/assets/wallpapers/Galmieux.png";
-import jeanne from "../../src/assets/wallpapers/Jeanne.png";
+import viridia from "../../src/assets/wallpapers/viridia.png";
+import piercye from "../../src/assets/wallpapers/piercye.png";
 import kuon from "../../src/assets/wallpapers/Kuon.png";
 import korwa from "../../src/assets/wallpapers/Korwa.png";
 import tsubaki from "../../src/assets/wallpapers/Tsubaki.png";
@@ -47,11 +48,11 @@ export default function Home() {
   const [leaderNum, setLeaderNum] = useState(0);
   const [hoverCard, setHoverCard] = useState("");
   const [hover, setHover] = useState(false);
+  const [openSnack, setOpenSnack] = useState(false);
 
   const reduxDecks = useSelector((state) => state.deck.decks);
   const reduxActiveUsers = useSelector((state) => state.card.activeUsers);
-
-  const [openSnack, setOpenSnack] = useState(false);
+  const numLeaders = 7;
 
   useEffect(() => {
     socket.on("start_game", () => {
@@ -201,7 +202,7 @@ export default function Home() {
   };
 
   const randomLeader = () => {
-    const num = Math.floor(Math.random() * 6 + 1);
+    const num = Math.floor(Math.random() * numLeaders + 1);
     setLeaderNum(num);
     switch (num) {
       case 1:
@@ -211,11 +212,13 @@ export default function Home() {
       case 3:
         return korwa;
       case 4:
-        return jeanne;
+        return viridia;
       case 5:
         return tsubaki;
       case 6:
         return grimnir;
+      case 7:
+        return piercye;
       default:
         return galmieux;
     }
