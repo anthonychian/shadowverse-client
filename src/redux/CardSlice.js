@@ -47,6 +47,7 @@ export const CardSlice = createSlice({
     currentCard: "",
     currentEvo: "",
     room: "",
+    activeUsers: 0,
     gameLog: [],
     chatLog: [],
     lastChatMessage: "",
@@ -116,6 +117,9 @@ export const CardSlice = createSlice({
     ],
   },
   reducers: {
+    setActiveUsers: (state, action) => {
+      state.activeUsers = action.payload;
+    },
     setRoom: (state, action) => {
       state.room = action.payload;
     },
@@ -2426,6 +2430,7 @@ export const {
   setDeck,
   setEvoDeck,
   setRoom,
+  setActiveUsers,
   setEnemyHand,
   setEnemyDeckSize,
   setEnemyEvoPoints,

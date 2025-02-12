@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
-import wallpaper1 from "../../src/assets/wallpapers/1.png";
-import wallpaper2 from "../../src/assets/wallpapers/2.png";
-import wallpaper3 from "../../src/assets/wallpapers/3.png";
-import wallpaper4 from "../../src/assets/wallpapers/4.png";
+import wallpaper from "../../src/assets/wallpapers/3.png";
 import galmieux from "../../src/assets/wallpapers/Galmieux.png";
 import jeanne from "../../src/assets/wallpapers/Jeanne.png";
 import kuon from "../../src/assets/wallpapers/Kuon.png";
@@ -17,7 +14,12 @@ import cardback from "../assets/cardbacks/default.png";
 import donate from "../assets/buttons/donate_btn.webp";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { setDeck, setEvoDeck, setRoom } from "../redux/CardSlice";
+import {
+  setDeck,
+  setEvoDeck,
+  setRoom,
+  setActiveUsers,
+} from "../redux/CardSlice";
 import { deleteDeck } from "../redux/DeckSlice";
 import { cardImage } from "../decks/getCards";
 import { socket } from "../sockets";
@@ -35,21 +37,19 @@ export default function Home() {
   const [selectedDeck, setSelectedDeck] = useState({});
   const [deckMap] = useState(new Map());
   const [evoDeckMap] = useState(new Map());
-  const reduxDecks = useSelector((state) => state.deck.decks);
+
   const [showSelected, setShowSelected] = useState([]);
   const [contextMenu, setContextMenu] = useState(null);
   const [roomNumber, setRoomNumber] = useState("");
   const [name, setName] = useState("");
   const [open, setOpen] = useState(false);
-  const [wallpaper, setWallpaper] = useState(null);
   const [leaderImage, setLeaderImage] = useState(null);
   const [leaderNum, setLeaderNum] = useState(0);
-  const [mainDeckSelected, setMainDeckSelected] = useState(true);
-  const [evoDeckSelected, setEvoDeckSelected] = useState(false);
   const [hoverCard, setHoverCard] = useState("");
   const [hover, setHover] = useState(false);
 
-  const [activeUsers, setActiveUsers] = useState(0);
+  const reduxDecks = useSelector((state) => state.deck.decks);
+  const reduxActiveUsers = useSelector((state) => state.card.activeUsers);
 
   const [openSnack, setOpenSnack] = useState(false);
 
@@ -59,23 +59,17 @@ export default function Home() {
     });
 
     socket.on("active_users", (data) => {
-      setActiveUsers(data);
+      dispatch(setActiveUsers(data));
     });
   }, [socket]);
 
   useEffect(() => {
-    setWallpaper(randomWallpaper());
     setLeaderImage(randomLeader());
   }, []);
 
   useEffect(() => {
     setShowSelected(new Array(reduxDecks.length).fill(false));
   }, [reduxDecks]);
-
-  const handleMainDeckSelected = () => {
-    setMainDeckSelected(true);
-    setEvoDeckSelected(false);
-  };
 
   const handleStartHover = (key) => {
     setHover(true);
@@ -84,11 +78,6 @@ export default function Home() {
   const handleEndHover = () => {
     setHover(false);
     setHoverCard("");
-  };
-
-  const handleEvoDeckSelected = () => {
-    setMainDeckSelected(false);
-    setEvoDeckSelected(true);
   };
 
   const handleModalOpen = () => {
@@ -104,8 +93,6 @@ export default function Home() {
         setRoomNumber(roomNumber.toString());
         dispatch(setRoom(roomNumber.toString()));
         socket.emit("create_room", roomNumber.toString());
-        // console.log(roomNumber);
-        // handleNavigateToGame();
       }
     }
   };
@@ -115,17 +102,9 @@ export default function Home() {
         setRoomNumber(roomNumber.toString());
         dispatch(setRoom(roomNumber.toString()));
         socket.emit("join_room", roomNumber.toString());
-        // handleNavigateToGame();
       }
     }
   };
-
-  // const handleShareDeck = () => {
-  //   handleClose();
-  //   handleOpenSnack();
-  //   if (selectedDeck.deck.length > 0)
-  //     navigator.clipboard.writeText(selectedDeck.url);
-  // };
 
   const handleDeleteDeck = () => {
     handleClose();
@@ -221,22 +200,6 @@ export default function Home() {
     );
   };
 
-  const randomWallpaper = () => {
-    const num = Math.floor(Math.random() * (4 - 1 + 1) + 1);
-    switch (num) {
-      case 1:
-        return wallpaper1;
-      case 2:
-        return wallpaper2;
-      case 3:
-        return wallpaper3;
-      case 4:
-        return wallpaper4;
-      default:
-        return wallpaper3;
-    }
-  };
-
   const randomLeader = () => {
     const num = Math.floor(Math.random() * 6 + 1);
     setLeaderNum(num);
@@ -256,10 +219,6 @@ export default function Home() {
       default:
         return galmieux;
     }
-  };
-
-  const handleOpenSnack = () => {
-    setOpenSnack(true);
   };
 
   const handleCloseSnack = (event, reason) => {
@@ -289,7 +248,7 @@ export default function Home() {
       style={{
         height: "100vh",
         width: "100vw",
-        background: "url(" + wallpaper3 + ") center center fixed",
+        background: "url(" + wallpaper + ") center center fixed",
         backgroundSize: "cover",
         display: "flex",
         // justifyContent: "center",
@@ -582,7 +541,7 @@ export default function Home() {
           src="https://www.freevisitorcounters.com/en/home/counter/1299974/t/0"
         ></script>
       </div>
-      {activeUsers !== 0 && (
+      {reduxActiveUsers !== 0 && (
         <div
           style={{
             position: "absolute",
@@ -599,7 +558,7 @@ export default function Home() {
               "radial-gradient(ellipse at center,  #0a2e38  0%, #000000 70%)",
           }}
         >
-          {activeUsers} users online
+          {reduxActiveUsers} users online
         </div>
       )}
       <div
