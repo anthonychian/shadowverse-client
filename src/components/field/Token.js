@@ -14,18 +14,19 @@ const style = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   backgroundColor: "transparent",
-  boxShadow: 24,
-  p: 3,
   width: "40%",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
+  flexDirection: "column",
 };
 
 export default function Token({ ready, setReady, setTokenReady, setHovering }) {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
   const [contextMenu, setContextMenu] = React.useState(null);
+  const [textInput, setTextInput] = useState("");
+  const [filteredTokens, setFilteredTokens] = useState(allTokens);
 
   const handleModalOpen = () => {
     if (!ready) setOpen(true);
@@ -54,6 +55,15 @@ export default function Token({ ready, setReady, setTokenReady, setHovering }) {
     handleClose();
     setReady(true);
     setTokenReady(true);
+  };
+
+  const handleTextInput = (text) => {
+    setTextInput(text);
+
+    const filtered = allTokens.filter((card) =>
+      card.toLowerCase().includes(text.toLowerCase())
+    );
+    setFilteredTokens(filtered);
   };
 
   return (
@@ -86,6 +96,19 @@ export default function Token({ ready, setReady, setTokenReady, setHovering }) {
         }}
       >
         <Box sx={style}>
+          <input
+            style={{
+              padding: ".3em",
+              marginTop: "1%",
+              width: "30%",
+              fontSize: "20px",
+              fontFamily: "Noto Serif JP, serif",
+            }}
+            type="text"
+            value={textInput}
+            onChange={(event) => handleTextInput(event.target.value)}
+            placeholder="Search for tokens..."
+          />
           <CardMUI
             sx={{
               backgroundColor: "rgba(0, 0, 0, 0.7)",
@@ -102,7 +125,7 @@ export default function Token({ ready, setReady, setTokenReady, setHovering }) {
             }}
             variant="outlined"
           >
-            {allTokens.map((card, idx) =>
+            {filteredTokens.map((card, idx) =>
               card ? (
                 <div
                   key={`token-${idx}`}

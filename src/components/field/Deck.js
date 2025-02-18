@@ -52,13 +52,11 @@ const style = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   backgroundColor: "transparent",
-  boxShadow: 24,
-  p: 3,
-  width: "55%",
+  width: "40%",
   display: "flex",
-  flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
+  flexDirection: "column",
 };
 
 export default function Deck({
@@ -529,7 +527,7 @@ export default function Deck({
             sx={{
               backgroundColor: "rgba(0, 0, 0, 0.7)",
               minHeight: "250px",
-              padding: "3%",
+              padding: "7%",
               height: "500px",
               overflowY: "scroll",
               width: "100%",
