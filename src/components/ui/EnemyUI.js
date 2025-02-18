@@ -16,6 +16,21 @@ import cool from "../../assets/logo/cool.png";
 import cute from "../../assets/logo/cute.png";
 import passion from "../../assets/logo/passion.png";
 
+import { styled } from "@mui/material/styles";
+import Rating from "@mui/material/Rating";
+import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
+import FiberManualRecordOutlinedIcon from "@mui/icons-material/FiberManualRecordOutlined";
+
+const StyledRating = styled(Rating)({
+  "& .MuiRating-iconFilled": {
+    color:
+      "radial-gradient(circle at 10% 20%, rgb(255, 200, 124) 0%, rgb(252, 251, 121) 90%);",
+  },
+  "& .MuiRating-iconHover": {
+    color: "#fec13f",
+  },
+});
+
 export default function EnemyUI() {
   const dispatch = useDispatch();
   const reduxCurrentEnemyPlayPoints = useSelector(
@@ -348,7 +363,7 @@ export default function EnemyUI() {
           }}
         >
           {reduxCurrentEnemyPlayPoints} / {reduxMaxEnemyPlayPoints}
-          <div>
+          {/* <div>
             <Badge color="info" size="small" badgeContent={reduxEnemyEvoPoints}>
               <div
                 style={{
@@ -359,7 +374,40 @@ export default function EnemyUI() {
                 EP
               </div>
             </Badge>
+          </div> */}
+        </div>
+        <div
+          style={{
+            height: "30px",
+            width: "150px",
+            display: "flex",
+            justifyContent: "space-evenly",
+            alignItems: "center",
+            background:
+              "linear-gradient(to right, rgb(5, 117, 230), rgb(2, 27, 121))",
+            fontFamily: "Noto Serif JP, serif",
+            fontSize: "30px",
+            outline: "3px ridge rgba(0, 0, 0, 1.0)",
+            color: "white",
+            zIndex: 1,
+          }}
+        >
+          <div
+            style={{
+              fontFamily: "Noto Serif JP, serif",
+              fontSize: "17px",
+            }}
+          >
+            EP
           </div>
+          <StyledRating
+            name="customized-color"
+            value={reduxEnemyEvoPoints}
+            readOnly={true}
+            max={3}
+            icon={<FiberManualRecordIcon fontSize="inherit" />}
+            emptyIcon={<FiberManualRecordOutlinedIcon fontSize="inherit" />}
+          />
         </div>
       </div>
     </div>

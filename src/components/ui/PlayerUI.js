@@ -18,6 +18,21 @@ import passion from "../../assets/logo/passion.png";
 import Dice from "react-dice-roll";
 import { motion } from "framer-motion";
 
+import { styled } from "@mui/material/styles";
+import Rating from "@mui/material/Rating";
+import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
+import FiberManualRecordOutlinedIcon from "@mui/icons-material/FiberManualRecordOutlined";
+
+const StyledRating = styled(Rating)({
+  "& .MuiRating-iconFilled": {
+    color:
+      "radial-gradient(circle at 10% 20%, rgb(255, 200, 124) 0%, rgb(252, 251, 121) 90%);",
+  },
+  "& .MuiRating-iconHover": {
+    color: "#fec13f",
+  },
+});
+
 export default function PlayerUI({ name }) {
   const dispatch = useDispatch();
   const [ep, setEP] = useState(0);
@@ -51,9 +66,10 @@ export default function PlayerUI({ name }) {
     playerHealth > 0 ? setPlayerHealth(playerHealth - 1) : setPlayerHealth(0);
   };
 
-  const handleEP = (event) => {
-    // setEP(Number(event.target.value));
-    dispatch(setEvoPoints(Number(event.target.value)));
+  const handleEP = (newValue) => {
+    setEP(newValue);
+    dispatch(setEvoPoints(newValue));
+    console.log(newValue);
   };
 
   const handleDiceRoll = (value) => {
@@ -232,7 +248,7 @@ export default function PlayerUI({ name }) {
           </div>
           <div
             style={{
-              height: "50px",
+              height: "40px",
               width: "150px",
               display: "flex",
               justifyContent: "space-evenly",
@@ -247,7 +263,7 @@ export default function PlayerUI({ name }) {
             }}
           >
             {reduxCurrentPlayPoints} / {reduxMaxPlayPoints}
-            <div>
+            {/* <div>
               <Badge color="info" size="small" badgeContent={ep}>
                 <div
                   style={{
@@ -257,6 +273,7 @@ export default function PlayerUI({ name }) {
                 >
                   EP
                 </div>
+
                 <input
                   value={ep}
                   onChange={handleEP}
@@ -279,7 +296,44 @@ export default function PlayerUI({ name }) {
                   }}
                 />
               </Badge>
+            </div> */}
+          </div>
+          <div
+            style={{
+              height: "30px",
+              width: "150px",
+              display: "flex",
+              justifyContent: "space-evenly",
+              alignItems: "center",
+              background:
+                "linear-gradient(to right, rgb(5, 117, 230), rgb(2, 27, 121))",
+              fontFamily: "Noto Serif JP, serif",
+              fontSize: "30px",
+              outline: "3px ridge rgba(0, 0, 0, 1.0)",
+              color: "white",
+              zIndex: 1,
+            }}
+          >
+            <div
+              style={{
+                fontFamily: "Noto Serif JP, serif",
+                fontSize: "17px",
+              }}
+            >
+              EP
             </div>
+            <StyledRating
+              name="customized-color"
+              value={ep}
+              // precision={1}
+              max={3}
+              // onChange={(event) => handleEP(event)}
+              onChange={(event, newValue) => {
+                handleEP(newValue);
+              }}
+              icon={<FiberManualRecordIcon fontSize="inherit" />}
+              emptyIcon={<FiberManualRecordOutlinedIcon fontSize="inherit" />}
+            />
           </div>
         </div>
       </div>
