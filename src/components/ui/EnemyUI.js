@@ -159,6 +159,7 @@ export default function EnemyUI() {
   return (
     <div
       style={{
+        paddingTop: "1em",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
