@@ -444,7 +444,8 @@ export const CardSlice = createSlice({
       });
     },
     drawFromDeck: (state) => {
-      if (state.deck.length > 0 && state.hand.length < 10) {
+      // if (state.deck.length > 0 && state.hand.length < 10) {
+      if (state.deck.length > 0) {
         const card = state.deck[0];
         state.deck = state.deck.slice(1);
         // state.gameLog = [...state.gameLog, `Removed ${card} from deck`];
