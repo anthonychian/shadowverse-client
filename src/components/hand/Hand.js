@@ -103,9 +103,9 @@ export default function Hand({
         style={{
           zIndex: 100,
           display: "flex",
-          height: "20em",
+          // height: "20em",
           width: "50vw",
-          alignItems: "end",
+          alignItems: "start",
           justifyContent: "center",
           overflowX: reduxHand.length > 9 ? "auto" : "visible",
           overflowY: reduxHand.length > 9 ? "clip" : "visible",
