@@ -17,7 +17,7 @@ export default function Game() {
   const [selectedOption, setSelectedOption] = useState("Galmieux");
   const constraintsRef = useRef(null);
   const [ready, setReady] = useState(false);
-  const [dragging, setDragging] = useState(false);
+  // const [dragging, setDragging] = useState(false);
   const [hovering, setHovering] = useState(false);
   const [readyToPlaceOnFieldFromHand, setReadyToPlaceOnFieldFromHand] =
     useState(false);
@@ -57,7 +57,7 @@ export default function Game() {
         ref={constraintsRef}
       >
         <Field
-          dragging={dragging}
+          // dragging={dragging}
           ready={ready}
           setReady={setReady}
           setHovering={setHovering}
@@ -65,7 +65,7 @@ export default function Game() {
           setReadyToPlaceOnFieldFromHand={setReadyToPlaceOnFieldFromHand}
         />
         <Hand
-          setDragging={setDragging}
+          // setDragging={setDragging}
           setHovering={setHovering}
           constraintsRef={constraintsRef}
           ready={ready}

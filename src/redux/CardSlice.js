@@ -476,22 +476,20 @@ export const CardSlice = createSlice({
       }
     },
     drawFourFromDeck: (state) => {
-      if (state.deck.length > 0 && state.hand.length < 10) {
+      if (state.deck.length > 3) {
         for (let i = 0; i < 4; i++) {
-          if (state.deck.length > 0 && state.hand.length < 10) {
-            const card = state.deck[0];
-            state.deck = state.deck.slice(1);
-            // state.gameLog = [...state.gameLog, `Removed ${card} from deck`];
-            state.hand = [...state.hand, card];
-            const date = new Date().toLocaleTimeString("it-IT", {
-              hour: "2-digit",
-              minute: "2-digit",
-            });
-            state.gameLog = [
-              ...state.gameLog,
-              `[${date}] (Me): (Draw) Added ${card} to hand`,
-            ];
-          }
+          const card = state.deck[0];
+          state.deck = state.deck.slice(1);
+          // state.gameLog = [...state.gameLog, `Removed ${card} from deck`];
+          state.hand = [...state.hand, card];
+          const date = new Date().toLocaleTimeString("it-IT", {
+            hour: "2-digit",
+            minute: "2-digit",
+          });
+          state.gameLog = [
+            ...state.gameLog,
+            `[${date}] (Me): (Draw) Added ${card} to hand`,
+          ];
         }
         socket.emit("send msg", {
           type: "log",
@@ -1492,9 +1490,6 @@ export const CardSlice = createSlice({
         room: state.room,
       });
     },
-    reorderCardsInHand: (state, action) => {
-      state.hand = action.payload;
-    },
     addToHandFromCemetery: (state, action) => {
       const card = action.payload;
       const cardIndex = state.cemetery.indexOf(card);
@@ -1652,21 +1647,21 @@ export const CardSlice = createSlice({
         room: state.room,
       });
     },
-    shuffleCards: (state, action) => {
-      const date = new Date().toLocaleTimeString("it-IT", {
-        hour: "2-digit",
-        minute: "2-digit",
-      });
-      state.gameLog = [
-        ...state.gameLog,
-        `[${date}] (Me): Shuffled cards in hand`,
-      ];
-      socket.emit("send msg", {
-        type: "log",
-        data: `Shuffled cards in hand`,
-        room: state.room,
-      });
-    },
+    // shuffleCards: (state, action) => {
+    //   const date = new Date().toLocaleTimeString("it-IT", {
+    //     hour: "2-digit",
+    //     minute: "2-digit",
+    //   });
+    //   state.gameLog = [
+    //     ...state.gameLog,
+    //     `[${date}] (Me): Shuffled cards in hand`,
+    //   ];
+    //   socket.emit("send msg", {
+    //     type: "log",
+    //     data: `Shuffled cards in hand`,
+    //     room: state.room,
+    //   });
+    // },
     placeToCemeteryFromHand: (state, action) => {
       const card = action.payload.name;
       const cardIndex = action.payload.index;
@@ -2397,7 +2392,6 @@ export const {
   moveCardOnField,
   moveEvoAndBaseOnField,
   transferToOpponentField,
-  reorderCardsInHand,
   mulliganFour,
   setCurrentCard,
   setCurrentEvo,
@@ -2485,5 +2479,5 @@ export const {
   setRematchStatus,
   setEnemyRematchStatus,
   createLessonTokens,
-  shuffleCards,
+  // shuffleCards,
 } = CardSlice.actions;

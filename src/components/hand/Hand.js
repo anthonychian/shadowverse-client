@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
-import { Reorder } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
 import {
   placeToTopOfDeckFromHand,
   placeToBotOfDeckFromHand,
-  reorderCardsInHand,
   setCurrentCard,
   placeToCemeteryFromHand,
   setEnemyArrow,
-  shuffleCards,
 } from "../../redux/CardSlice";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
@@ -20,12 +17,10 @@ export default function Hand({
   setReady,
   setReadyToPlaceOnFieldFromHand,
   ready,
-  setDragging,
   setHovering,
 }) {
   const reduxHand = useSelector((state) => state.card.hand);
   const [items, setItems] = useState(reduxHand);
-  const [shuffled, setShuffled] = useState(false);
   const reduxRoom = useSelector((state) => state.card.room);
   const dispatch = useDispatch();
 
@@ -33,21 +28,9 @@ export default function Hand({
     setItems(arrToObjArr(reduxHand));
   }, [reduxHand]);
 
-  useEffect(() => {
-    if (shuffled) {
-      setShuffled(false);
-      dispatch(shuffleCards());
-    }
-  }, [items]);
-
   const arrToObjArr = (arr) => {
     return arr.map((x, idx) => ({ idx: idx, name: x }));
   };
-  // const objArrToArr = (obj) => {
-  //   let res = [];
-  //   obj.map((card) => res.push(card.name));
-  //   return res;
-  // };
 
   const [contextMenu, setContextMenu] = React.useState(null);
   const [name, setName] = useState("");
@@ -55,7 +38,6 @@ export default function Hand({
 
   const handleContextMenu = (event, name, index) => {
     dispatch(setEnemyArrow({ idx: -1, show: false }));
-    // dispatch(reorderCardsInHand(objArrToArr(items)));
     setName(name);
     setCardIndex(index);
     event.preventDefault();
@@ -121,33 +103,27 @@ export default function Hand({
         style={{
           zIndex: 100,
           display: "flex",
-          // height: "20vh",
-          minHeight: "160px",
-          alignItems: "center",
+          height: "20em",
+          width: "50vw",
+          alignItems: "end",
           justifyContent: "center",
-          // bottom: "-5%",
-          // position: "absolute",
+          overflowX: reduxHand.length > 9 ? "auto" : "visible",
+          overflowY: reduxHand.length > 9 ? "clip" : "visible",
         }}
-        // axis="x"
-        // values={items}
-        // onReorder={setItems}
       >
         {items.map((card, index) => (
           <div
             onContextMenu={(e) => {
               if (!ready) handleContextMenu(e, card.name, index);
             }}
-            drag
             key={card.idx}
             value={card}
-            onDragEnd={(e) => setShuffled(true)}
           >
             <Card
               name={card.name}
               inHandIndex={index}
               handLength={items.length}
               constraintsRef={constraintsRef}
-              setDragging={setDragging}
               setHovering={setHovering}
               ready={ready}
               inHand={true}

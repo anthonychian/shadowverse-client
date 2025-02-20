@@ -20,7 +20,7 @@ import "../../css/Card.css";
 export default function Card({
   name,
   idx,
-  setDragging,
+  // setDragging,
   ready,
   setHovering,
   onField = false,
@@ -153,8 +153,6 @@ export default function Card({
         initial={false}
         onHoverStart={() => handleHoverStart()}
         onHoverEnd={() => handleHoverEnd()}
-        onDragStart={() => setDragging(true)}
-        onDragEnd={() => setDragging(false)}
         whileHover={
           !ready && {
             boxShadow:
@@ -163,6 +161,7 @@ export default function Card({
             translateY: inHand ? -80 : -25,
             scale: inHand ? 1.5 : 1.3,
             cursor: `url(${img}) 55 55, auto`,
+            overlay: "auto",
           }
         }
         className={
