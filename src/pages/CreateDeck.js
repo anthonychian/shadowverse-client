@@ -1194,7 +1194,8 @@ export default function CreateDeck() {
                   alt={name}
                   style={
                     deckMap.get(name) === 3 ||
-                    (deckMap.get(name) === 1 && name === "Shenlong")
+                    (deckMap.get(name) === 1 && name === "Shenlong") ||
+                    (deckMap.get(name) === 1 && name === "Curse Crafter")
                       ? { filter: "grayscale(100%)" }
                       : {}
                   }
