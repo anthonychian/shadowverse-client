@@ -6,6 +6,7 @@ import {
   shuffleDeck,
   mulliganFour,
   drawFourFromDeck,
+  shuffleCards,
   addToHandFromDeck,
   addToTopOfDeckFromDeck,
   addToBotOfDeckFromDeck,
@@ -183,6 +184,18 @@ export default function Deck({
   const handleDrawFour = () => {
     // handlePopoverClose();
     dispatch(drawFourFromDeck());
+  };
+
+  const handleShuffleHand = () => {
+    dispatch(shuffleCards());
+  };
+
+  const handleShowHand = () => {
+    socket.emit("send msg", {
+      type: "showHand",
+      data: true,
+      room: reduxRoom,
+    });
   };
 
   const handleAddFromDeckToHand = () => {
@@ -390,11 +403,15 @@ export default function Deck({
           <div onMouseLeave={() => handlePopoverClose()}>
             <MenuItem onClick={() => handleDraw()}>Draw</MenuItem>
             <MenuItem onClick={() => handleMill()}>Mill</MenuItem>
-            <MenuItem onClick={() => handleShuffle()}>Shuffle</MenuItem>
+            <MenuItem onClick={() => handleShuffle()}>Shuffle Deck</MenuItem>
             <MenuItem onClick={() => handleViewDeck()}>View Deck</MenuItem>
             <MenuItem onClick={() => handleRevealDeck()}>Look At Top</MenuItem>
+            <MenuItem onClick={() => handleShowHand()}>Show Hand</MenuItem>
             <MenuItem onClick={() => handleDrawFour()}>Draw Four</MenuItem>
             <MenuItem onClick={() => handleMulligan()}>Mulligan Four</MenuItem>
+            <MenuItem onClick={() => handleShuffleHand()}>
+              Shuffle Hand
+            </MenuItem>
             {/* <MenuItem onClick={(event) => handleReset(event)}>Reset</MenuItem> */}
           </div>
         </Menu>

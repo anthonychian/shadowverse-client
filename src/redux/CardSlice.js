@@ -45,6 +45,7 @@ export const CardSlice = createSlice({
     counterField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     enemyCounterField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     currentCard: "",
+    currentCardIndex: -1,
     currentEvo: "",
     room: "",
     activeUsers: 0,
@@ -776,11 +777,22 @@ export const CardSlice = createSlice({
     setCurrentCard: (state, action) => {
       state.currentCard = action.payload;
     },
+    setCurrentCardIndex: (state, action) => {
+      state.currentCardIndex = action.payload;
+    },
     setCurrentEvo: (state, action) => {
       state.currentCard = action.payload;
     },
     shuffleDeck: (state) => {
-      state.deck = state.deck.toSorted(() => Math.random() - 0.5);
+      // state.deck = state.deck.toSorted(() => Math.random() - 0.5);
+      function shuffleDeck(deck) {
+        for (let i = deck.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [deck[i], deck[j]] = [deck[j], deck[i]];
+        }
+        return deck;
+      }
+      state.deck = shuffleDeck(state.deck);
       const date = new Date().toLocaleTimeString("it-IT", {
         hour: "2-digit",
         minute: "2-digit",
@@ -793,8 +805,8 @@ export const CardSlice = createSlice({
       });
     },
     placeToTopOfDeckFromHand: (state, action) => {
-      const card = action.payload;
-      const cardIndex = state.hand.indexOf(card);
+      const card = action.payload.name;
+      const cardIndex = action.payload.index;
       state.hand = state.hand.filter((_, i) => i !== cardIndex);
       const date = new Date().toLocaleTimeString("it-IT", {
         hour: "2-digit",
@@ -831,8 +843,8 @@ export const CardSlice = createSlice({
       });
     },
     placeToBotOfDeckFromHand: (state, action) => {
-      const card = action.payload;
-      const cardIndex = state.hand.indexOf(card);
+      const card = action.payload.name;
+      const cardIndex = action.payload.index;
       state.hand = state.hand.filter((_, i) => i !== cardIndex);
       const date = new Date().toLocaleTimeString("it-IT", {
         hour: "2-digit",
@@ -865,6 +877,72 @@ export const CardSlice = createSlice({
       socket.emit("send msg", {
         type: "deckSize",
         data: state.deck.length,
+        room: state.room,
+      });
+    },
+    placeToTopOfDeckFromCemetery: (state, action) => {
+      const card = action.payload.name;
+      const cardIndex = action.payload.index;
+      state.cemetery = state.cemetery.filter((_, i) => i !== cardIndex);
+      const date = new Date().toLocaleTimeString("it-IT", {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+      state.gameLog = [
+        ...state.gameLog,
+        `[${date}] (Me): Removed ${card} from cemetery`,
+      ];
+      state.deck = [card, ...state.deck];
+      state.gameLog = [
+        ...state.gameLog,
+        `[${date}] (Me): Added ${card} to top of deck`,
+      ];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Removed ${card} from cemetery`,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "log",
+        data: `Added ${card} to hand`,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "cemetery",
+        data: state.cemetery,
+        room: state.room,
+      });
+    },
+    placeToBotOfDeckFromCemetery: (state, action) => {
+      const card = action.payload.name;
+      const cardIndex = action.payload.index;
+      state.cemetery = state.cemetery.filter((_, i) => i !== cardIndex);
+      const date = new Date().toLocaleTimeString("it-IT", {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+      state.gameLog = [
+        ...state.gameLog,
+        `[${date}] (Me): Removed ${card} from cemetery`,
+      ];
+      state.deck = [...state.deck, card];
+      state.gameLog = [
+        ...state.gameLog,
+        `[${date}] (Me): Added ${card} to top of deck`,
+      ];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Removed ${card} from cemetery`,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "log",
+        data: `Added ${card} to hand`,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "cemetery",
+        data: state.cemetery,
         room: state.room,
       });
     },
@@ -1448,7 +1526,7 @@ export const CardSlice = createSlice({
     },
     placeToFieldFromHand: (state, action) => {
       const card = action.payload.card;
-      const cardIndex = state.hand.indexOf(card);
+      const cardIndex = action.payload.indexInHand;
       const newIndex = action.payload.index;
       state.hand = state.hand.filter((_, i) => i !== cardIndex);
       const date = new Date().toLocaleTimeString("it-IT", {
@@ -1491,8 +1569,8 @@ export const CardSlice = createSlice({
       });
     },
     addToHandFromCemetery: (state, action) => {
-      const card = action.payload;
-      const cardIndex = state.cemetery.indexOf(card);
+      const card = action.payload.name;
+      const cardIndex = action.payload.index;
       state.cemetery = state.cemetery.filter((_, i) => i !== cardIndex);
       const date = new Date().toLocaleTimeString("it-IT", {
         hour: "2-digit",
@@ -1529,8 +1607,8 @@ export const CardSlice = createSlice({
       });
     },
     addToBanishFromCemetery: (state, action) => {
-      const card = action.payload;
-      const cardIndex = state.cemetery.indexOf(card);
+      const card = action.payload.name;
+      const cardIndex = action.payload.index;
       state.cemetery = state.cemetery.filter((_, i) => i !== cardIndex);
       const date = new Date().toLocaleTimeString("it-IT", {
         hour: "2-digit",
@@ -1567,8 +1645,8 @@ export const CardSlice = createSlice({
       });
     },
     addToHandFromBanish: (state, action) => {
-      const card = action.payload;
-      const cardIndex = state.banish.indexOf(card);
+      const card = action.payload.name;
+      const cardIndex = action.payload.index;
       state.banish = state.banish.filter((_, i) => i !== cardIndex);
       const date = new Date().toLocaleTimeString("it-IT", {
         hour: "2-digit",
@@ -1647,25 +1725,38 @@ export const CardSlice = createSlice({
         room: state.room,
       });
     },
-    // shuffleCards: (state, action) => {
-    //   const date = new Date().toLocaleTimeString("it-IT", {
-    //     hour: "2-digit",
-    //     minute: "2-digit",
-    //   });
-    //   state.gameLog = [
-    //     ...state.gameLog,
-    //     `[${date}] (Me): Shuffled cards in hand`,
-    //   ];
-    //   socket.emit("send msg", {
-    //     type: "log",
-    //     data: `Shuffled cards in hand`,
-    //     room: state.room,
-    //   });
-    // },
+    shuffleCards: (state, action) => {
+      // state.hand = state.hand.toSorted(() => Math.random() - 0.5);
+      function shuffleDeck(deck) {
+        for (let i = deck.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [deck[i], deck[j]] = [deck[j], deck[i]];
+        }
+        return deck;
+      }
+      state.hand = shuffleDeck(state.hand);
+      const date = new Date().toLocaleTimeString("it-IT", {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+      state.gameLog = [
+        ...state.gameLog,
+        `[${date}] (Me): Shuffled cards in hand`,
+      ];
+      socket.emit("send msg", {
+        type: "log",
+        data: `Shuffled cards in hand`,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "hand",
+        data: state.hand,
+        room: state.room,
+      });
+    },
     placeToCemeteryFromHand: (state, action) => {
       const card = action.payload.name;
       const cardIndex = action.payload.index;
-      // const cardIndex = state.hand.indexOf(card);
       state.hand = state.hand.filter((_, i) => i !== cardIndex);
       const date = new Date().toLocaleTimeString("it-IT", {
         hour: "2-digit",
@@ -1703,7 +1794,6 @@ export const CardSlice = createSlice({
     },
     placeToFieldFromDeck: (state, action) => {
       const card = action.payload.card;
-      // const cardIndex = state.deck.indexOf(card);
       const cardIndex = action.payload.deckIndex;
       const newIndex = action.payload.index;
       state.deck = state.deck.filter((_, i) => i !== cardIndex);
@@ -1743,7 +1833,7 @@ export const CardSlice = createSlice({
     },
     placeToFieldFromCemetery: (state, action) => {
       const card = action.payload.card;
-      const cardIndex = state.cemetery.indexOf(card);
+      const cardIndex = action.payload.indexInHand;
       const newIndex = action.payload.index;
       state.cemetery = state.cemetery.filter((_, i) => i !== cardIndex);
       const date = new Date().toLocaleTimeString("it-IT", {
@@ -1787,7 +1877,7 @@ export const CardSlice = createSlice({
     },
     placeToFieldFromBanish: (state, action) => {
       const card = action.payload.card;
-      const cardIndex = state.banish.indexOf(card);
+      const cardIndex = action.payload.indexInHand;
       const newIndex = action.payload.index;
       state.banish = state.banish.filter((_, i) => i !== cardIndex);
       const date = new Date().toLocaleTimeString("it-IT", {
@@ -2377,6 +2467,8 @@ export const {
   addToHandFromBanish,
   placeToTopOfDeckFromHand,
   placeToBotOfDeckFromHand,
+  placeToTopOfDeckFromCemetery,
+  placeToBotOfDeckFromCemetery,
   placeToTopOfDeckFromField,
   placeToBotOfDeckFromField,
   placeToCemeteryFromField,
@@ -2394,6 +2486,7 @@ export const {
   transferToOpponentField,
   mulliganFour,
   setCurrentCard,
+  setCurrentCardIndex,
   setCurrentEvo,
   shuffleDeck,
   evolveCardOnField,
@@ -2479,5 +2572,5 @@ export const {
   setRematchStatus,
   setEnemyRematchStatus,
   createLessonTokens,
-  // shuffleCards,
+  shuffleCards,
 } = CardSlice.actions;

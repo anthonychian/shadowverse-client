@@ -137,6 +137,9 @@ export default function Field({
   const reduxRoom = useSelector((state) => state.card.room);
   const reduxField = useSelector((state) => state.card.field);
   const reduxCurrentCard = useSelector((state) => state.card.currentCard);
+  const reduxCurrentCardIndex = useSelector(
+    (state) => state.card.currentCardIndex
+  );
   const reduxEvoField = useSelector((state) => state.card.evoField);
   const reduxEngaged = useSelector((state) => state.card.engagedField);
   const reduxCustomValues = useSelector((state) => state.card.customValues);
@@ -341,6 +344,7 @@ export default function Field({
         dispatch(
           placeToFieldFromHand({
             card: reduxCurrentCard,
+            indexInHand: reduxCurrentCardIndex,
             index: indexClicked,
           })
         );
@@ -455,6 +459,7 @@ export default function Field({
         dispatch(
           placeToFieldFromCemetery({
             card: name,
+            indexInHand: reduxCurrentCardIndex,
             index: indexClicked,
           })
         );
@@ -464,6 +469,7 @@ export default function Field({
         dispatch(
           placeToFieldFromBanish({
             card: name,
+            indexInHand: reduxCurrentCardIndex,
             index: indexClicked,
           })
         );

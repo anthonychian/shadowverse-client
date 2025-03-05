@@ -5,6 +5,7 @@ import {
   placeToTopOfDeckFromHand,
   placeToBotOfDeckFromHand,
   setCurrentCard,
+  setCurrentCardIndex,
   placeToCemeteryFromHand,
   setEnemyArrow,
 } from "../../redux/CardSlice";
@@ -21,7 +22,6 @@ export default function Hand({
 }) {
   const reduxHand = useSelector((state) => state.card.hand);
   const [items, setItems] = useState(reduxHand);
-  const reduxRoom = useSelector((state) => state.card.room);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -58,6 +58,7 @@ export default function Hand({
     setReady(true);
     setReadyToPlaceOnFieldFromHand(true);
     dispatch(setCurrentCard(name));
+    dispatch(setCurrentCardIndex(cardIndex));
   };
   const handleCardToCemetery = () => {
     handleClose();
@@ -66,19 +67,11 @@ export default function Hand({
   };
   const handleCardToTopOfDeck = () => {
     handleClose();
-    dispatch(placeToTopOfDeckFromHand(name));
+    dispatch(placeToTopOfDeckFromHand({ name: name, index: cardIndex }));
   };
   const handleCardToBotOfDeck = () => {
     handleClose();
-    dispatch(placeToBotOfDeckFromHand(name));
-  };
-  const handleShowHand = () => {
-    handleClose();
-    socket.emit("send msg", {
-      type: "showHand",
-      data: true,
-      room: reduxRoom,
-    });
+    dispatch(placeToBotOfDeckFromHand({ name: name, index: cardIndex }));
   };
 
   return (
@@ -97,7 +90,7 @@ export default function Hand({
         <MenuItem onClick={handleCardToCemetery}>Cemetery</MenuItem>
         <MenuItem onClick={handleCardToTopOfDeck}>Top of Deck</MenuItem>
         <MenuItem onClick={handleCardToBotOfDeck}>Bot of Deck</MenuItem>
-        <MenuItem onClick={handleShowHand}>Show Hand</MenuItem>
+        {/* <MenuItem onClick={handleShowHand}>Show Hand</MenuItem> */}
       </Menu>
       <div
         style={{

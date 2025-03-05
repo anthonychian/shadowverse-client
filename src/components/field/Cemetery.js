@@ -18,7 +18,10 @@ import {
   addToHandFromCemetery,
   addToHandFromBanish,
   addToBanishFromCemetery,
+  placeToTopOfDeckFromCemetery,
+  placeToBotOfDeckFromCemetery,
   setCurrentCard,
+  setCurrentCardIndex,
   setViewingCemetery,
 } from "../../redux/CardSlice";
 // import cardback from "../../assets/cardbacks/default.png";
@@ -38,6 +41,7 @@ export default function Cemetery({
   const [contextMenu, setContextMenu] = React.useState(null);
   const [cemeterySelected, setCemeterySelected] = useState(true);
   const [banishSelected, setBanishSelected] = useState(false);
+  const [cardIndex, setCardIndex] = useState(-1);
 
   const reduxCemetery = useSelector((state) => state.card.cemetery);
   const reduxBanish = useSelector((state) => state.card.banish);
@@ -54,9 +58,11 @@ export default function Cemetery({
     dispatch(setViewingCemetery(false));
   };
 
-  const handleContextMenu = (event, name) => {
+  const handleContextMenu = (event, name, index) => {
     setName(name);
+    setCardIndex(index);
     dispatch(setCurrentCard(name));
+    dispatch(setCurrentCardIndex(index));
     event.preventDefault();
     setContextMenu(
       contextMenu === null
@@ -72,6 +78,15 @@ export default function Cemetery({
     setContextMenu(null);
   };
 
+  const handleToTopOfDeckFromCemetery = () => {
+    handleClose();
+    dispatch(placeToTopOfDeckFromCemetery({ name: name, index: cardIndex }));
+  };
+  const handleToBotOfDeckFromCemetery = () => {
+    handleClose();
+    dispatch(placeToBotOfDeckFromCemetery({ name: name, index: cardIndex }));
+  };
+
   const handleCardToFieldFromCemetery = () => {
     handleModalClose();
     handleClose();
@@ -81,13 +96,13 @@ export default function Cemetery({
 
   const handleCardToBanishFromCemetery = () => {
     handleClose();
-    dispatch(addToBanishFromCemetery(name));
+    dispatch(addToBanishFromCemetery({ name: name, index: cardIndex }));
   };
 
   const handleCardToHandFromCemetery = () => {
     handleModalClose();
     handleClose();
-    dispatch(addToHandFromCemetery(name));
+    dispatch(addToHandFromCemetery({ name: name, index: cardIndex }));
     socket.emit("send msg", {
       type: "showCard",
       data: true,
@@ -110,7 +125,7 @@ export default function Cemetery({
   const handleCardToHandFromBanish = () => {
     handleModalClose();
     handleClose();
-    dispatch(addToHandFromBanish(name));
+    dispatch(addToHandFromBanish({ name: name, index: cardIndex }));
     socket.emit("send msg", {
       type: "showCard",
       data: true,
@@ -238,11 +253,11 @@ export default function Cemetery({
             variant="outlined"
           >
             {cemeterySelected &&
-              reduxCemetery.map((card, idx) => (
+              reduxCemetery.map((card, index) => (
                 <div
-                  key={`card-${idx}`}
+                  key={`card-${index}`}
                   onContextMenu={(e) => {
-                    handleContextMenu(e, card);
+                    handleContextMenu(e, card, index);
                   }}
                 >
                   <Card
@@ -254,13 +269,13 @@ export default function Cemetery({
                 </div>
               ))}
             {banishSelected &&
-              reduxBanish.map((card, idx) => (
+              reduxBanish.map((card, index) => (
                 //<div key={`card-${idx}`} style={{ width: "115px" }}>
                 <div
-                  key={`card-${idx}`}
+                  key={`card-${index}`}
                   style={{ width: "115px" }}
                   onContextMenu={(e) => {
-                    handleContextMenu(e, card);
+                    handleContextMenu(e, card, index);
                   }}
                 >
                   <Card
@@ -299,6 +314,16 @@ export default function Cemetery({
           )}
           {cemeterySelected && (
             <MenuItem onClick={handleCardToFieldFromCemetery}>Field</MenuItem>
+          )}
+          {cemeterySelected && (
+            <MenuItem onClick={handleToTopOfDeckFromCemetery}>
+              Top of Deck
+            </MenuItem>
+          )}
+          {cemeterySelected && (
+            <MenuItem onClick={handleToBotOfDeckFromCemetery}>
+              Bot of Deck
+            </MenuItem>
           )}
           {cemeterySelected && (
             <MenuItem onClick={handleCardToBanishFromCemetery}>Banish</MenuItem>
