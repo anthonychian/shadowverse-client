@@ -489,7 +489,7 @@ export const CardSlice = createSlice({
       state.baneField = newField;
 
       socket.emit("send msg", {
-        type: "aura",
+        type: "bane",
         data: state.baneField,
         room: state.room,
       });
@@ -505,7 +505,7 @@ export const CardSlice = createSlice({
       state.wardField = newField;
 
       socket.emit("send msg", {
-        type: "aura",
+        type: "ward",
         data: state.wardField,
         room: state.room,
       });
@@ -2400,6 +2400,12 @@ export const CardSlice = createSlice({
     setEnemyAura: (state, action) => {
       state.enemyAuraField = action.payload;
     },
+    setEnemyBane: (state, action) => {
+      state.enemyBaneField = action.payload;
+    },
+    setEnemyWard: (state, action) => {
+      state.enemyWardField = action.payload;
+    },
     setEnemyLeaderActive: (state, action) => {
       state.enemyLeaderActive = action.payload;
     },
@@ -2720,6 +2726,8 @@ export const {
   setEnemyViewingTopCards,
   setEnemyCounter,
   setEnemyAura,
+  setEnemyBane,
+  setEnemyWard,
   setCardSelectedInHand,
   setEnemyCardSelectedInHand,
   setCardSelectedOnField,

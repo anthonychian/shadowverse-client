@@ -53,6 +53,8 @@ import {
   setEnemyLeader,
   setEnemyCounter,
   setEnemyAura,
+  setEnemyBane,
+  setEnemyWard,
   setEnemyBanish,
   setEnemyViewingDeck,
   setEnemyViewingHand,
@@ -225,6 +227,8 @@ export default function Field({
       else if (data.type === "transfer") dispatch(setField(data.data));
       else if (data.type === "counter") dispatch(setEnemyCounter(data.data));
       else if (data.type === "aura") dispatch(setEnemyAura(data.data));
+      else if (data.type === "bane") dispatch(setEnemyBane(data.data));
+      else if (data.type === "ward") dispatch(setEnemyWard(data.data));
       else if (data.type === "banish") dispatch(setEnemyBanish(data.data));
       else if (data.type === "viewingHand")
         dispatch(setEnemyViewingHand(data.data));
