@@ -925,15 +925,18 @@ export default function Field({
           <MenuItem onClick={handleRemoveWard}>Remove Ward</MenuItem>
         )}
         <MenuItem onClick={handleMoveOnField}>Move</MenuItem>
-        <MenuItem onClick={handleTransfer}>Transfer</MenuItem>
-        {!isToken(name) && (
-          <MenuItem onClick={handleCardToBanish}>Banish</MenuItem>
-        )}
         {!isToken(name) && (
           <MenuItem onClick={handleCardToTopDeck}>Top of Deck</MenuItem>
         )}
         {!isToken(name) && (
           <MenuItem onClick={handleCardToBotDeck}>Bot of Deck</MenuItem>
+        )}
+        {!isToken(name) && (
+          <MenuItem onClick={handleCardToBanish}>Banish</MenuItem>
+        )}
+
+        {!isToken(name) && (
+          <MenuItem onClick={handleTransfer}>Transfer</MenuItem>
         )}
       </Menu>
       <Menu
@@ -954,8 +957,41 @@ export default function Field({
         {reduxCustomValues[index].showAtk && (
           <MenuItem onClick={handleHideAtkDef}>Hide Atk/Def</MenuItem>
         )}
-        {reduxCounterField[index] < 1 && (
+        {!reduxCustomStatus[index] && (
+          <MenuItem onClick={handleShowStatus}>Add Status</MenuItem>
+        )}
+        {reduxCustomStatus[index] && (
+          <MenuItem onClick={handleHideStatus}>Hide Status</MenuItem>
+        )}
+        {reduxCounterField[index] < 1 && reduxCustomStatus[index] && (
           <MenuItem onClick={handleAddCounter}>Add Counter</MenuItem>
+        )}
+        {reduxAuraField[index] === 0 &&
+          reduxBaneField[index] === 0 &&
+          reduxWardField[index] === 0 &&
+          reduxCustomStatus[index] && (
+            <MenuItem onClick={handleAddAura}>Add Aura</MenuItem>
+          )}
+        {reduxAuraField[index] === 0 &&
+          reduxBaneField[index] === 0 &&
+          reduxWardField[index] === 0 &&
+          reduxCustomStatus[index] && (
+            <MenuItem onClick={handleAddBane}>Add Bane</MenuItem>
+          )}
+        {reduxAuraField[index] === 0 &&
+          reduxBaneField[index] === 0 &&
+          reduxWardField[index] === 0 &&
+          reduxCustomStatus[index] && (
+            <MenuItem onClick={handleAddWard}>Add Ward</MenuItem>
+          )}
+        {reduxAuraField[index] === 1 && reduxCustomStatus[index] && (
+          <MenuItem onClick={handleRemoveAura}>Remove Aura</MenuItem>
+        )}
+        {reduxBaneField[index] === 1 && reduxCustomStatus[index] && (
+          <MenuItem onClick={handleRemoveBane}>Remove Bane</MenuItem>
+        )}
+        {reduxWardField[index] === 1 && reduxCustomStatus[index] && (
+          <MenuItem onClick={handleRemoveWard}>Remove Ward</MenuItem>
         )}
       </Menu>
 
