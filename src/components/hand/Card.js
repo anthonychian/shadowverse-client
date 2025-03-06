@@ -33,6 +33,9 @@ export default function Card({
   atkVal,
   defVal,
   counterVal,
+  aura,
+  bane,
+  ward,
   handLength,
   inHand = false,
   inHandIndex = -1,
@@ -173,6 +176,12 @@ export default function Card({
               (reduxEnemyCardSelectedInHand - handLength + 1) * -1 ===
                 inHandIndex
             ? "box2"
+            : aura === 1
+            ? "aura"
+            : bane === 1
+            ? "bane"
+            : ward === 1
+            ? "ward"
             : ""
         }
       >

@@ -28,11 +28,18 @@ import {
   hideAtk,
   hideDef,
   modifyCounter,
+  addAura,
+  addBane,
+  addWard,
+  showStatus,
+  hideStatus,
   duplicateCardOnField,
   clearValuesAtIndex,
   moveValuesAtIndex,
   moveCountersAtIndex,
   moveEngagedAtIndex,
+  clearStatusAtIndex,
+  moveStatusAtIndex,
   clearCountersAtIndex,
   clearEngagedAtIndex,
   setEnemyHand,
@@ -45,6 +52,7 @@ import {
   setEnemyHealth,
   setEnemyLeader,
   setEnemyCounter,
+  setEnemyAura,
   setEnemyBanish,
   setEnemyViewingDeck,
   setEnemyViewingHand,
@@ -142,6 +150,7 @@ export default function Field({
   );
   const reduxEvoField = useSelector((state) => state.card.evoField);
   const reduxEngaged = useSelector((state) => state.card.engagedField);
+  const reduxCustomStatus = useSelector((state) => state.card.customStatus);
   const reduxCustomValues = useSelector((state) => state.card.customValues);
   const reduxEnemyCustomValues = useSelector(
     (state) => state.card.enemyCustomValues
@@ -162,7 +171,12 @@ export default function Field({
   const reduxEnemyCounterField = useSelector(
     (state) => state.card.enemyCounterField
   );
-  // const reduxEnemyArrow = useSelector((state) => state.card.enemyArrow);
+  const reduxAuraField = useSelector((state) => state.card.auraField);
+  const reduxEnemyAuraField = useSelector((state) => state.card.enemyAuraField);
+  const reduxBaneField = useSelector((state) => state.card.baneField);
+  const reduxEnemyBaneField = useSelector((state) => state.card.enemyBaneField);
+  const reduxWardField = useSelector((state) => state.card.wardField);
+  const reduxEnemyWardField = useSelector((state) => state.card.enemyWardField);
   const reduxEnemyCardBack = useSelector((state) => state.card.enemyCardback);
   const reduxCardSelectedInHand = useSelector(
     (state) => state.card.cardSelectedInHand
@@ -187,20 +201,6 @@ export default function Field({
   const [readyToEvo, setReadyToEvo] = useState(false);
   const [readyToFeed, setReadyToFeed] = useState(false);
   const [tokenReady, setTokenReady] = useState(false);
-  // const [showArrow, setShowArrow] = useState([
-  //   false,
-  //   false,
-  //   false,
-  //   false,
-  //   false,
-  //   false,
-  //   false,
-  //   false,
-  //   false,
-  //   false,
-  // ]);
-  // const [initialArrowPos, setInitialArrowPos] = useState({});
-  // const [distance, setDistance] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     socket.on("receive msg", (data) => {
@@ -224,6 +224,7 @@ export default function Field({
       else if (data.type === "cardRevealed") dispatch(setEnemyCard(data.data));
       else if (data.type === "transfer") dispatch(setField(data.data));
       else if (data.type === "counter") dispatch(setEnemyCounter(data.data));
+      else if (data.type === "aura") dispatch(setEnemyAura(data.data));
       else if (data.type === "banish") dispatch(setEnemyBanish(data.data));
       else if (data.type === "viewingHand")
         dispatch(setEnemyViewingHand(data.data));
@@ -277,50 +278,7 @@ export default function Field({
 
   const handleModalClose = () => {
     dispatch(setShowEnemyHand(false));
-    // socket.emit("send msg", {
-    //   type: "viewingHand",
-    //   data: false,
-    //   room: reduxRoom,
-    // });
   };
-
-  // const handleShowArrow = (event, idx) => {
-  //   if (!showArrow[idx] && event.button === 0) {
-  //     setInitialArrowPos({ x: event.clientX, y: event.clientY });
-  //     let arr = [...showArrow];
-  //     arr[idx] = true;
-  //     setShowArrow(arr);
-  //   }
-  // };
-  // const handleHideArrow = (event, idx) => {
-  //   if (event.button === 0) {
-  //     let arr = [...showArrow];
-  //     arr[idx] = false;
-  //     setShowArrow(arr);
-  //     let distanceX = initialArrowPos.x - event.clientX;
-  //     let distanceY = initialArrowPos.y - event.clientY;
-  //     if (distanceX > 40 || distanceY > 80) {
-  //       dispatch(
-  //         setArrow({ x: distanceX, y: distanceY, idx: idx, show: true })
-  //       );
-  //     }
-  //     setDistance({
-  //       x: 0,
-  //       y: 0,
-  //     });
-  //   }
-  // };
-
-  // const handleMouseMove = (event, idx) => {
-  //   if (showArrow[idx]) {
-  //     let distanceX = initialArrowPos.x - event.clientX;
-  //     let distanceY = initialArrowPos.y - event.clientY;
-  //     setDistance({
-  //       x: distanceX,
-  //       y: distanceY,
-  //     });
-  //   }
-  // };
 
   const handleShowCardModalClose = () => {
     dispatch(setShowEnemyCard(false));
@@ -337,7 +295,6 @@ export default function Field({
   };
 
   const handleClick = (name, indexClicked) => {
-    // dispatch(setEnemyArrow({ idx: -1, show: false }));
     if (reduxField[indexClicked] === 0 && !readyToEvo && !readyToFeed) {
       if (readyToPlaceOnFieldFromHand) {
         setReadyToPlaceOnFieldFromHand(false);
@@ -388,9 +345,16 @@ export default function Field({
             index: indexClicked,
           })
         );
+        dispatch(
+          moveStatusAtIndex({
+            prevIndex: index,
+            index: indexClicked,
+          })
+        );
         dispatch(clearValuesAtIndex(index));
         dispatch(clearEngagedAtIndex(index));
         dispatch(clearCountersAtIndex(index));
+        dispatch(clearStatusAtIndex(index));
       }
       if (readyToMoveEvoOnField) {
         setReadyToMoveEvoOnField(false);
@@ -420,9 +384,16 @@ export default function Field({
             index: indexClicked,
           })
         );
+        dispatch(
+          moveStatusAtIndex({
+            prevIndex: index,
+            index: indexClicked,
+          })
+        );
         dispatch(clearValuesAtIndex(index));
         dispatch(clearEngagedAtIndex(index));
         dispatch(clearCountersAtIndex(index));
+        dispatch(clearStatusAtIndex(index));
       }
       if (readyToDuplicateOnField) {
         setReadyToDuplicateOnField(false);
@@ -571,6 +542,7 @@ export default function Field({
     dispatch(clearValuesAtIndex(index));
     dispatch(clearEngagedAtIndex(index));
     dispatch(clearCountersAtIndex(index));
+    dispatch(clearStatusAtIndex(index));
   };
   const handleCardToTopDeck = () => {
     handleClose();
@@ -583,6 +555,7 @@ export default function Field({
     dispatch(clearValuesAtIndex(index));
     dispatch(clearEngagedAtIndex(index));
     dispatch(clearCountersAtIndex(index));
+    dispatch(clearStatusAtIndex(index));
   };
   const handleCardToBotDeck = () => {
     handleClose();
@@ -595,6 +568,7 @@ export default function Field({
     dispatch(clearValuesAtIndex(index));
     dispatch(clearEngagedAtIndex(index));
     dispatch(clearCountersAtIndex(index));
+    dispatch(clearStatusAtIndex(index));
   };
   const handleRemoveTokenFromField = () => {
     handleClose();
@@ -607,6 +581,7 @@ export default function Field({
     dispatch(clearValuesAtIndex(index));
     dispatch(clearEngagedAtIndex(index));
     dispatch(clearCountersAtIndex(index));
+    dispatch(clearStatusAtIndex(index));
   };
   const handleDuplicateToken = () => {
     handleClose();
@@ -625,6 +600,7 @@ export default function Field({
     dispatch(clearValuesAtIndex(index));
     dispatch(clearEngagedAtIndex(index));
     dispatch(clearCountersAtIndex(index));
+    dispatch(clearStatusAtIndex(index));
   };
   const handleCardToBanish = () => {
     handleClose();
@@ -637,6 +613,7 @@ export default function Field({
     dispatch(clearValuesAtIndex(index));
     dispatch(clearEngagedAtIndex(index));
     dispatch(clearCountersAtIndex(index));
+    dispatch(clearStatusAtIndex(index));
   };
 
   const handleShowAtkDef = () => {
@@ -653,6 +630,18 @@ export default function Field({
     dispatch(hideDef(index));
   };
 
+  const handleShowStatus = () => {
+    // handleClose();
+    // handleEvoClose();
+    dispatch(showStatus(index));
+  };
+
+  const handleHideStatus = () => {
+    // handleClose();
+    // handleEvoClose();
+    dispatch(hideStatus(index));
+  };
+
   const handleAddCounter = () => {
     handleClose();
     handleEvoClose();
@@ -662,6 +651,70 @@ export default function Field({
         index: index,
       })
     );
+  };
+
+  const handleAddAura = () => {
+    handleClose();
+    handleEvoClose();
+    dispatch(
+      addAura({
+        value: 1,
+        index: index,
+      })
+    );
+  };
+  const handleRemoveAura = () => {
+    handleClose();
+    handleEvoClose();
+    dispatch(
+      addAura({
+        value: 0,
+        index: index,
+      })
+    );
+    dispatch(hideStatus(index));
+  };
+  const handleAddBane = () => {
+    handleClose();
+    handleEvoClose();
+    dispatch(
+      addBane({
+        value: 1,
+        index: index,
+      })
+    );
+  };
+  const handleRemoveBane = () => {
+    handleClose();
+    handleEvoClose();
+    dispatch(
+      addBane({
+        value: 0,
+        index: index,
+      })
+    );
+    dispatch(hideStatus(index));
+  };
+  const handleAddWard = () => {
+    handleClose();
+    handleEvoClose();
+    dispatch(
+      addWard({
+        value: 1,
+        index: index,
+      })
+    );
+  };
+  const handleRemoveWard = () => {
+    handleClose();
+    handleEvoClose();
+    dispatch(
+      addWard({
+        value: 0,
+        index: index,
+      })
+    );
+    dispatch(hideStatus(index));
   };
 
   const handleMoveOnField = () => {
@@ -831,8 +884,41 @@ export default function Field({
         {reduxCustomValues[index].showAtk && (
           <MenuItem onClick={handleHideAtkDef}>Hide Atk/Def</MenuItem>
         )}
-        {reduxCounterField[index] < 1 && (
+        {!reduxCustomStatus[index] && (
+          <MenuItem onClick={handleShowStatus}>Add Status</MenuItem>
+        )}
+        {reduxCustomStatus[index] && (
+          <MenuItem onClick={handleHideStatus}>Hide Status</MenuItem>
+        )}
+        {reduxCounterField[index] < 1 && reduxCustomStatus[index] && (
           <MenuItem onClick={handleAddCounter}>Add Counter</MenuItem>
+        )}
+        {reduxAuraField[index] === 0 &&
+          reduxBaneField[index] === 0 &&
+          reduxWardField[index] === 0 &&
+          reduxCustomStatus[index] && (
+            <MenuItem onClick={handleAddAura}>Add Aura</MenuItem>
+          )}
+        {reduxAuraField[index] === 0 &&
+          reduxBaneField[index] === 0 &&
+          reduxWardField[index] === 0 &&
+          reduxCustomStatus[index] && (
+            <MenuItem onClick={handleAddBane}>Add Bane</MenuItem>
+          )}
+        {reduxAuraField[index] === 0 &&
+          reduxBaneField[index] === 0 &&
+          reduxWardField[index] === 0 &&
+          reduxCustomStatus[index] && (
+            <MenuItem onClick={handleAddWard}>Add Ward</MenuItem>
+          )}
+        {reduxAuraField[index] === 1 && reduxCustomStatus[index] && (
+          <MenuItem onClick={handleRemoveAura}>Remove Aura</MenuItem>
+        )}
+        {reduxBaneField[index] === 1 && reduxCustomStatus[index] && (
+          <MenuItem onClick={handleRemoveBane}>Remove Bane</MenuItem>
+        )}
+        {reduxWardField[index] === 1 && reduxCustomStatus[index] && (
+          <MenuItem onClick={handleRemoveWard}>Remove Ward</MenuItem>
         )}
         <MenuItem onClick={handleMoveOnField}>Move</MenuItem>
         <MenuItem onClick={handleTransfer}>Transfer</MenuItem>
@@ -1164,6 +1250,9 @@ export default function Field({
                     showDef={reduxEnemyCustomValues[cardPos(idx)].showDef}
                     engaged={reduxEnemyEngaged[cardPos(idx)]}
                     counterVal={reduxEnemyCounterField[cardPos(idx)]}
+                    aura={reduxEnemyAuraField[cardPos(idx)]}
+                    bane={reduxEnemyBaneField[cardPos(idx)]}
+                    ward={reduxEnemyWardField[cardPos(idx)]}
                     opponentField={true}
                     onField={true}
                     idx={idx}
@@ -1181,6 +1270,9 @@ export default function Field({
                   showDef={reduxEnemyCustomValues[cardPos(idx)].showDef}
                   engaged={reduxEnemyEngaged[cardPos(idx)]}
                   counterVal={reduxEnemyCounterField[cardPos(idx)]}
+                  aura={reduxEnemyAuraField[cardPos(idx)]}
+                  bane={reduxEnemyBaneField[cardPos(idx)]}
+                  ward={reduxEnemyWardField[cardPos(idx)]}
                   opponentField={true}
                   onField={true}
                   idx={idx}
@@ -1347,6 +1439,9 @@ export default function Field({
                       defVal={reduxCustomValues[idx].def}
                       engaged={reduxEngaged[idx]}
                       counterVal={reduxCounterField[idx]}
+                      aura={reduxAuraField[idx]}
+                      bane={reduxBaneField[idx]}
+                      ward={reduxWardField[idx]}
                       idx={idx}
                       onField={true}
                       key={`card1-${idx}`}
@@ -1407,6 +1502,9 @@ export default function Field({
                       defVal={reduxCustomValues[idx].def}
                       engaged={reduxEngaged[idx]}
                       counterVal={reduxCounterField[idx]}
+                      aura={reduxAuraField[idx]}
+                      bane={reduxBaneField[idx]}
+                      ward={reduxWardField[idx]}
                       idx={idx}
                       onField={true}
                       key={`card2-${idx}`}
@@ -1423,6 +1521,9 @@ export default function Field({
                       defVal={reduxCustomValues[idx].def}
                       engaged={reduxEngaged[idx]}
                       counterVal={reduxCounterField[idx]}
+                      aura={reduxAuraField[idx]}
+                      bane={reduxBaneField[idx]}
+                      ward={reduxWardField[idx]}
                       idx={idx}
                       onField={true}
                       key={`evo2-${idx}`}

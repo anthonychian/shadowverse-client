@@ -44,6 +44,12 @@ export const CardSlice = createSlice({
     enemyEvoField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     counterField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     enemyCounterField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    auraField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    enemyAuraField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    baneField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    enemyBaneField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    wardField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    enemyWardField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     currentCard: "",
     currentCardIndex: -1,
     currentEvo: "",
@@ -81,6 +87,18 @@ export const CardSlice = createSlice({
       false,
     ],
     enemyEngagedField: [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+    ],
+    customStatus: [
       false,
       false,
       false,
@@ -444,6 +462,54 @@ export const CardSlice = createSlice({
         room: state.room,
       });
     },
+    addAura: (state, action) => {
+      let value = action.payload.value;
+      let index = action.payload.index;
+      const newField = [
+        ...state.auraField.slice(0, index),
+        value,
+        ...state.auraField.slice(index + 1),
+      ];
+      state.auraField = newField;
+
+      socket.emit("send msg", {
+        type: "aura",
+        data: state.auraField,
+        room: state.room,
+      });
+    },
+    addBane: (state, action) => {
+      let value = action.payload.value;
+      let index = action.payload.index;
+      const newField = [
+        ...state.baneField.slice(0, index),
+        value,
+        ...state.baneField.slice(index + 1),
+      ];
+      state.baneField = newField;
+
+      socket.emit("send msg", {
+        type: "aura",
+        data: state.baneField,
+        room: state.room,
+      });
+    },
+    addWard: (state, action) => {
+      let value = action.payload.value;
+      let index = action.payload.index;
+      const newField = [
+        ...state.wardField.slice(0, index),
+        value,
+        ...state.wardField.slice(index + 1),
+      ];
+      state.wardField = newField;
+
+      socket.emit("send msg", {
+        type: "aura",
+        data: state.wardField,
+        room: state.room,
+      });
+    },
     drawFromDeck: (state) => {
       // if (state.deck.length > 0 && state.hand.length < 10) {
       if (state.deck.length > 0) {
@@ -558,6 +624,82 @@ export const CardSlice = createSlice({
         room: state.room,
       });
     },
+    moveStatusAtIndex: (state, action) => {
+      const prevIndex = action.payload.prevIndex;
+      const index = action.payload.index;
+      const prevStatus = state.customStatus[prevIndex];
+      const prevAura = state.auraField[prevIndex];
+      const prevBane = state.baneField[prevIndex];
+      const prevWard = state.wardField[prevIndex];
+
+      const newCustomStatus = [
+        ...state.customStatus.slice(0, index),
+        prevStatus,
+        ...state.customStatus.slice(index + 1),
+      ];
+      state.customStatus = newCustomStatus;
+
+      const newAuraField = [
+        ...state.auraField.slice(0, index),
+        prevAura,
+        ...state.auraField.slice(index + 1),
+      ];
+      state.auraField = newAuraField;
+      const newBaneField = [
+        ...state.baneField.slice(0, index),
+        prevBane,
+        ...state.baneField.slice(index + 1),
+      ];
+      state.baneField = newBaneField;
+      const newWardField = [
+        ...state.wardField.slice(0, index),
+        prevWard,
+        ...state.wardField.slice(index + 1),
+      ];
+      state.wardField = newWardField;
+    },
+    clearStatusAtIndex: (state, action) => {
+      let index = action.payload;
+      const newCustomStatus = [
+        ...state.customStatus.slice(0, index),
+        false,
+        ...state.customStatus.slice(index + 1),
+      ];
+      state.customStatus = newCustomStatus;
+      const newAuraField = [
+        ...state.auraField.slice(0, index),
+        0,
+        ...state.auraField.slice(index + 1),
+      ];
+      state.auraField = newAuraField;
+      const newBaneField = [
+        ...state.baneField.slice(0, index),
+        0,
+        ...state.baneField.slice(index + 1),
+      ];
+      state.baneField = newBaneField;
+      const newWardField = [
+        ...state.wardField.slice(0, index),
+        0,
+        ...state.wardField.slice(index + 1),
+      ];
+      state.wardField = newWardField;
+      socket.emit("send msg", {
+        type: "aura",
+        data: state.auraField,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "bane",
+        data: state.baneField,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "ward",
+        data: state.wardField,
+        room: state.room,
+      });
+    },
     clearEngagedAtIndex: (state, action) => {
       let index = action.payload;
       const newEngaged = [
@@ -617,6 +759,24 @@ export const CardSlice = createSlice({
         data: state.counterField,
         room: state.room,
       });
+    },
+    showStatus: (state, action) => {
+      let index = action.payload;
+      const newCustomStatus = [
+        ...state.customStatus.slice(0, index),
+        true,
+        ...state.customStatus.slice(index + 1),
+      ];
+      state.customStatus = newCustomStatus;
+    },
+    hideStatus: (state, action) => {
+      let index = action.payload;
+      const newCustomStatus = [
+        ...state.customStatus.slice(0, index),
+        false,
+        ...state.customStatus.slice(index + 1),
+      ];
+      state.customStatus = newCustomStatus;
     },
     showAtk: (state, action) => {
       let index = action.payload;
@@ -2237,6 +2397,9 @@ export const CardSlice = createSlice({
     setEnemyCounter: (state, action) => {
       state.enemyCounterField = action.payload;
     },
+    setEnemyAura: (state, action) => {
+      state.enemyAuraField = action.payload;
+    },
     setEnemyLeaderActive: (state, action) => {
       state.enemyLeaderActive = action.payload;
     },
@@ -2503,6 +2666,8 @@ export const {
   moveEngagedAtIndex,
   clearCountersAtIndex,
   moveCountersAtIndex,
+  clearStatusAtIndex,
+  moveStatusAtIndex,
   setEnemyCemetery,
   setEnemyBanish,
   setEnemyEvoDeck,
@@ -2554,11 +2719,17 @@ export const {
   setEnemyViewingEvoDeckOpponent,
   setEnemyViewingTopCards,
   setEnemyCounter,
+  setEnemyAura,
   setCardSelectedInHand,
   setEnemyCardSelectedInHand,
   setCardSelectedOnField,
   setEnemyCardSelectedOnField,
   modifyCounter,
+  addAura,
+  addBane,
+  addWard,
+  showStatus,
+  hideStatus,
   setShowEnemyCard,
   setEnemyCard,
   setDice,

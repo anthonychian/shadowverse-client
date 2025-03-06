@@ -28,6 +28,62 @@
   animation: 0.5s rotate linear infinite;
 }
 
+.aura {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -0.2em;
+  margin-right: -0.2em;
+  border-radius: 10px;
+  border: 4px solid #0000;
+  animation: 2.5s aura linear infinite;
+}
+.bane {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -0.2em;
+  margin-right: -0.2em;
+  border-radius: 10px;
+  border: 4px solid #0000;
+  animation: 2.5s bane linear infinite;
+}
+.ward {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -0.2em;
+  margin-right: -0.2em;
+  border-radius: 10px;
+  border: 4px solid #0000;
+  animation: 2.5s ward linear infinite;
+}
+
+@keyframes aura {
+  from {
+    box-shadow: 0 0 10px -10px rgb(255, 200, 124);
+  }
+  to {
+    box-shadow: 0 0 10px 10px rgb(252, 207, 49);
+  }
+}
+@keyframes bane {
+  from {
+    box-shadow: 0 0 10px -10px rgb(100, 0, 0);
+  }
+  to {
+    box-shadow: 0 0 10px 10px rgb(200, 0, 0);
+  }
+}
+@keyframes ward {
+  from {
+    box-shadow: 0 0 10px -10px rgb(182, 244, 146);
+  }
+  to {
+    box-shadow: 0 0 10px 10px rgb(51, 139, 147);
+  }
+}
+
 @keyframes rotate {
   to {
     --angle: 360deg;
