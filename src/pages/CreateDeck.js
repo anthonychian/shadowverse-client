@@ -8,6 +8,7 @@ import swap from "../assets/logo/swap_icon.png";
 
 import {
   allCards,
+  set9,
   set8,
   setIDOL,
   set7,
@@ -28,6 +29,7 @@ import {
 } from "../decks/AllCards";
 import {
   allCardsEvo,
+  set9Evo,
   set8Evo,
   setIDOLEvo,
   set7Evo,
@@ -134,12 +136,22 @@ export default function CreateDeck() {
   }, []);
 
   const isDoubleEvo = (cardName) => {
-    if (
+    return (
       cardName === "Orchis, Resolute Puppet" ||
-      cardName === "Orchis, Vengeful Puppet"
-    )
-      return true;
-    else return false;
+      cardName === "Orchis, Vengeful Puppet" ||
+      cardName === "Paula, Gentle Warmth" ||
+      cardName === "Paula, Passionate Warmth" ||
+      cardName === "Celia, Hope's Strategist" ||
+      cardName === "Celia, Despair's Messenger" ||
+      cardName === "Mysterian Whitewyrm" ||
+      cardName === "Mysterian Blackwyrm" ||
+      cardName === "Virtuous Lindworm" ||
+      cardName === "Inquitous Lindworm" ||
+      cardName === "Kind Queen Vania" ||
+      cardName === "Blood Queen Vania" ||
+      cardName === "Cerynelan Lighthind" ||
+      cardName === "Cerynelan Darkhind"
+    );
   };
 
   const handleDoubleEvoClick = () => {
@@ -147,6 +159,36 @@ export default function CreateDeck() {
       setCardName("Orchis, Vengeful Puppet");
     } else if (cardName === "Orchis, Vengeful Puppet") {
       setCardName("Orchis, Resolute Puppet");
+    }
+    if (cardName === "Paula, Gentle Warmth") {
+      setCardName("Paula, Passionate Warmth");
+    } else if (cardName === "Paula, Passionate Warmth") {
+      setCardName("Paula, Gentle Warmth");
+    }
+    if (cardName === "Celia, Hope's Strategist") {
+      setCardName("Celia, Despair's Messenger");
+    } else if (cardName === "Celia, Despair's Messenger") {
+      setCardName("Celia, Hope's Strategist");
+    }
+    if (cardName === "Mysterian Whitewyrm") {
+      setCardName("Mysterian Blackwyrm");
+    } else if (cardName === "Mysterian Blackwyrm") {
+      setCardName("Mysterian Whitewyrm");
+    }
+    if (cardName === "Virtuous Lindworm") {
+      setCardName("Inquitous Lindworm");
+    } else if (cardName === "Inquitous Lindworm") {
+      setCardName("Virtuous Lindworm");
+    }
+    if (cardName === "Kind Queen Vania") {
+      setCardName("Blood Queen Vania");
+    } else if (cardName === "Blood Queen Vania") {
+      setCardName("Kind Queen Vania");
+    }
+    if (cardName === "Cerynelan Lighthind") {
+      setCardName("Cerynelan Darkhind");
+    } else if (cardName === "Cerynelan Darkhind") {
+      setCardName("Cerynelan Lighthind");
     }
   };
 
@@ -263,6 +305,8 @@ export default function CreateDeck() {
 
   const getCardsFromName = (name) => {
     switch (name) {
+      case "set 9":
+        return set9;
       case "set 8":
         return set8;
       case "set 7":
@@ -283,6 +327,8 @@ export default function CreateDeck() {
         return set2;
       case "set 1":
         return set1;
+      case "set 9 evo":
+        return set9Evo;
       case "set 8 evo":
         return set8Evo;
       case "set 7 evo":
@@ -752,6 +798,27 @@ export default function CreateDeck() {
             variant="contained"
           >
             All
+          </Button>
+          <Button
+            onClick={() => {
+              setButtonFilterSet("set 9");
+              setButtonFilterSetEvo("set 9 evo");
+            }}
+            style={{
+              fontFamily: "Noto Serif JP,serif",
+              textTransform: "none",
+              fontWeight: "bold",
+              backgroundColor:
+                buttonFilterSet === "set 9" ? "#131219" : "white",
+              border:
+                buttonFilterSet === "set 9"
+                  ? "3px solid gold"
+                  : "3px solid white",
+              color: buttonFilterSet === "set 9" ? "gold" : "#131219",
+            }}
+            variant="contained"
+          >
+            Duet of Dawn and Dusk
           </Button>
           <Button
             onClick={() => {

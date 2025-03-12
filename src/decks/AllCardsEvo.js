@@ -1,6 +1,44 @@
 export const allCardsEvo = [
+  "White Vanara Evolved",
+  "Paula, Gentle Warmth",
+  "Storied Falconer Evolved",
+  "Grasshopper Conductor Evolved",
+
+  "Celia, Hope's Strategist",
+  "Innocent Princess Prim Evolved",
+  "Dario, Demon Count Evolved",
+  "Axe Princess Evolved",
+
+  "Ceridwen, Eternity Hunter Evolved",
+  "Mysterian Whitewyrm",
+  "Bergent, Onion Patchmaster Evolved",
+  "Witch of Foresight Evolved",
+  "Grea, Mysterian Dragoness Evolved",
+  "Mysterian Summoner Vayle Evolved",
+
+  "Jerva of Draconic Mail Evolved",
+  "Virtuous Lindworm",
+  "Dragoncleaver Roy Evolved",
+  "Heroic Dragonslayer Evolved",
+  "Romelia, Lightning Striker Evolved",
+  "Katakura Kojuro Evolved",
+
+  "Kind Queen Vania",
+  "Oldblood King Evolved",
+  "Big Soul Hunter Evolved",
+  "Orator of the Bones Evolved",
+
+  "Jeanne, Beacon of Salvation Evolved",
+  "Cerynelan Lighthind",
+  "Jeweled Priestess Evolved",
+  "Lycaon Evolved",
+
+  "Marduk",
+  "Paradise Vanguard",
+  "Suttungr",
+  "Valkyrie of Chaos",
+
   "Orchis, Resolute Puppet",
-  // "Orchis, Vengeful Puppet",
   "Zwei, Murderous Puppet Evolved",
   "Michelle, the Mind Reader Evolved",
   "Insane Dark Elf Evolved",
@@ -331,9 +369,49 @@ export const allCardsEvo = [
   "Healing Angel Evolved",
 ];
 
+export const set9Evo = [
+  "White Vanara Evolved",
+  "Paula, Gentle Warmth",
+  "Storied Falconer Evolved",
+  "Grasshopper Conductor Evolved",
+
+  "Celia, Hope's Strategist",
+  "Innocent Princess Prim Evolved",
+  "Dario, Demon Count Evolved",
+  "Axe Princess Evolved",
+
+  "Ceridwen, Eternity Hunter Evolved",
+  "Mysterian Whitewyrm",
+  "Bergent, Onion Patchmaster Evolved",
+  "Witch of Foresight Evolved",
+  "Grea, Mysterian Dragoness Evolved",
+  "Mysterian Summoner Vayle Evolved",
+
+  "Jerva of Draconic Mail Evolved",
+  "Virtuous Lindworm",
+  "Dragoncleaver Roy Evolved",
+  "Heroic Dragonslayer Evolved",
+  "Romelia, Lightning Striker Evolved",
+  "Katakura Kojuro Evolved",
+
+  "Kind Queen Vania",
+  "Oldblood King Evolved",
+  "Big Soul Hunter Evolved",
+  "Orator of the Bones Evolved",
+
+  "Jeanne, Beacon of Salvation Evolved",
+  "Cerynelan Lighthind",
+  "Jeweled Priestess Evolved",
+  "Lycaon Evolved",
+
+  "Marduk Evolved",
+  "Paradise Vanguard Evolved",
+  "Suttungr Evolved",
+  "Valkyrie of Chaos Evolved",
+];
+
 export const set8Evo = [
   "Orchis, Resolute Puppet",
-  // "Orchis, Vengeful Puppet",
   "Zwei, Murderous Puppet Evolved",
   "Michelle, the Mind Reader Evolved",
   "Insane Dark Elf Evolved",
@@ -682,8 +760,12 @@ export const set1Evo = [
 ];
 
 export const forestEvo = [
+  "White Vanara Evolved",
+  "Paula, Gentle Warmth",
+  "Storied Falconer Evolved",
+  "Grasshopper Conductor Evolved",
+
   "Orchis, Resolute Puppet",
-  // "Orchis, Vengeful Puppet",
   "Zwei, Murderous Puppet Evolved",
   "Michelle, the Mind Reader Evolved",
   "Insane Dark Elf Evolved",
@@ -731,6 +813,11 @@ export const forestEvo = [
 ];
 
 export const swordEvo = [
+  "Celia, Hope's Strategist",
+  "Innocent Princess Prim Evolved",
+  "Dario, Demon Count Evolved",
+  "Axe Princess Evolved",
+
   "Dionne, Dancing Blade Evolved",
   "Roland the Incorruptible Evolved",
   "Azord, Duke of the Mists Evolved",
@@ -779,6 +866,13 @@ export const swordEvo = [
 ];
 
 export const runeEvo = [
+  "Ceridwen, Eternity Hunter Evolved",
+  "Mysterian Whitewyrm",
+  "Bergent, Onion Patchmaster Evolved",
+  "Witch of Foresight Evolved",
+  "Grea, Mysterian Dragoness Evolved",
+  "Mysterian Summoner Vayle Evolved",
+
   "Sweet-Tooth Medusa Evolved",
   "Unbodied Witch Evolved",
   "Elusa, Magic Wunderkind Evolved",
@@ -827,6 +921,13 @@ export const runeEvo = [
 ];
 
 export const dragonEvo = [
+  "Jerva of Draconic Mail Evolved",
+  "Virtuous Lindworm",
+  "Dragoncleaver Roy Evolved",
+  "Heroic Dragonslayer Evolved",
+  "Romelia, Lightning Striker Evolved",
+  "Katakura Kojuro Evolved",
+
   "Azi Dahaka Evolved",
   "Annerose Evolved",
   "Elios, Loyal Dragoon Evolved",
@@ -877,6 +978,11 @@ export const dragonEvo = [
 ];
 
 export const abyssEvo = [
+  "Kind Queen Vania",
+  "Oldblood King Evolved",
+  "Big Soul Hunter Evolved",
+  "Orator of the Bones Evolved",
+
   "Crimson Rose Queen Evolved",
   "Tartarus, the Tormentor Evolved",
   "Chris Pumpkinhead Evolved",
@@ -924,6 +1030,11 @@ export const abyssEvo = [
 ];
 
 export const havenEvo = [
+  "Jeanne, Beacon of Salvation Evolved",
+  "Cerynelan Lighthind",
+  "Jeweled Priestess Evolved",
+  "Lycaon Evolved",
+
   "Godsworn Alexiel Evolved",
   "Eidolon of Madness Evolved",
   "Collete, Holy Gunner Evolved",
@@ -971,6 +1082,11 @@ export const havenEvo = [
 ];
 
 export const neutralEvo = [
+  "Marduk Evolved",
+  "Paradise Vanguard Evolved",
+  "Suttungr Evolved",
+  "Valkyrie of Chaos Evolved",
+
   "Alterplane Arbiter Evolved",
   "Sahaquiel Evolved",
   "Reina, Evolution's Herald Evolved",

@@ -74,12 +74,28 @@ export default function EvoDeck({
     dispatch(setViewingEvoDeck(false));
   };
 
+  const isDoubleEvo = (cardName) => {
+    return (
+      cardName === "Orchis, Resolute Puppet" ||
+      cardName === "Orchis, Vengeful Puppet" ||
+      cardName === "Paula, Gentle Warmth" ||
+      cardName === "Paula, Passionate Warmth" ||
+      cardName === "Celia, Hope's Strategist" ||
+      cardName === "Celia, Despair's Messenger" ||
+      cardName === "Mysterian Whitewyrm" ||
+      cardName === "Mysterian Blackwyrm" ||
+      cardName === "Virtuous Lindworm" ||
+      cardName === "Inquitous Lindworm" ||
+      cardName === "Kind Queen Vania" ||
+      cardName === "Blood Queen Vania" ||
+      cardName === "Cerynelan Lighthind" ||
+      cardName === "Cerynelan Darkhind"
+    );
+  };
+
   const handleContextMenu = (event, card, idx) => {
     setShowEvo(card.card === "Carrot");
-    setDoubleSided(
-      card.card === "Orchis, Resolute Puppet" ||
-        card.card === "Orchis, Vengeful Puppet"
-    );
+    setDoubleSided(isDoubleEvo(card.card));
     setEvoStatus(card.status);
     setName(card.card);
     setIdx(idx);
