@@ -2125,13 +2125,7 @@ export const CardSlice = createSlice({
     evolveCardOnField: (state, action) => {
       const card = action.payload.card;
       const newIndex = action.payload.index;
-      let cardIndex;
-      for (let i = 0; i < state.evoDeck.length; i++) {
-        if (state.evoDeck[i].card === card) {
-          cardIndex = i;
-          break;
-        }
-      }
+      const cardIndex = action.payload.indexInEvolveDeck;
       state.evoDeck = state.evoDeck.filter((_, i) => i !== cardIndex);
       const date = new Date().toLocaleTimeString("it-IT", {
         hour: "2-digit",
@@ -2173,16 +2167,11 @@ export const CardSlice = createSlice({
       });
     },
     feedCardOnField: (state, action) => {
-      const card = action.payload.card;
+      // const card = action.payload.card;
       const newIndex = action.payload.index;
       const carrots = action.payload.carrots;
-      let cardIndex;
-      for (let i = 0; i < state.evoDeck.length; i++) {
-        if (state.evoDeck[i].card === card) {
-          cardIndex = i;
-          break;
-        }
-      }
+      const cardIndex = action.payload.indexInEvolveDeck;
+
       state.evoDeck = state.evoDeck.filter((_, i) => i !== cardIndex);
       if (carrots === 1) {
         const newField = [

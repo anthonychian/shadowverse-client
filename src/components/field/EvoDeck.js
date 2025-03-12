@@ -8,6 +8,7 @@ import {
   flipEvoCard,
   switchEvoCard,
   setViewingEvoDeck,
+  setCurrentCardIndex,
 } from "../../redux/CardSlice";
 import img from "../../assets/pin_bellringer_angel.png";
 
@@ -101,6 +102,7 @@ export default function EvoDeck({
     setIdx(idx);
     console.log(idx);
     dispatch(setCurrentEvo(card.card));
+    dispatch(setCurrentCardIndex(idx));
     // console.log("set current evo to", card.card);
     event.preventDefault();
     setContextMenu(

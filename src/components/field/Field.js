@@ -459,6 +459,7 @@ export default function Field({
         dispatch(
           evolveCardOnField({
             card: name,
+            indexInEvolveDeck: reduxCurrentCardIndex,
             index: indexClicked,
           })
         );
@@ -470,6 +471,7 @@ export default function Field({
             card: name,
             index: indexClicked,
             carrots: 1,
+            indexInEvolveDeck: reduxCurrentCardIndex,
           })
         );
       }
