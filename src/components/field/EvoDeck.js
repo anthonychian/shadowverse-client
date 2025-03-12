@@ -294,7 +294,7 @@ export default function EvoDeck({
         {!showEvo && !evoStatus && (
           <MenuItem onClick={handleEvolve}>Evolve</MenuItem>
         )}
-        {!doubleSided && <MenuItem onClick={handleFlipEvo}>Flip</MenuItem>}
+        {<MenuItem onClick={handleFlipEvo}>Flip</MenuItem>}
         {doubleSided && !evoStatus && (
           <MenuItem onClick={handleSwitchSide}>Switch Side</MenuItem>
         )}
