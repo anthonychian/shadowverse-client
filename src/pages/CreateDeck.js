@@ -408,7 +408,7 @@ export default function CreateDeck() {
       if (deckMap.has(card)) {
         if (deckMap.get(card) === 1 && card === "Shenlong") return;
         if (deckMap.get(card) === 1 && card === "Curse Crafter") return;
-        if (deckMap.get(card) === 3) {
+        if (deckMap.get(card) === 3 && card !== "Onion Patch") {
           return;
         } else {
           deckMap.set(card, deckMap.get(card) + 1);
