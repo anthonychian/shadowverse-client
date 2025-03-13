@@ -2304,8 +2304,23 @@ export const CardSlice = createSlice({
       let newCard;
       if (card === "Orchis, Resolute Puppet")
         newCard = "Orchis, Vengeful Puppet";
-      if (card === "Orchis, Vengeful Puppet")
+      else if (card === "Orchis, Vengeful Puppet")
         newCard = "Orchis, Resolute Puppet";
+      else if ("Paula, Gentle Warmth") newCard = "Paula, Passionate Warmth";
+      else if ("Paula, Passionate Warmth") newCard = "Paula, Gentle Warmth";
+      else if ("Celia, Hope's Strategist")
+        newCard = "Celia, Despair's Messenger";
+      else if ("Celia, Despair's Messenger")
+        newCard = "Celia, Hope's Strategist";
+      else if ("Mysterian Whitewyrm") newCard = "Mysterian Blackwyrm";
+      else if ("Mysterian Blackwyrm") newCard = "Mysterian Whitewyrm";
+      else if ("Virtuous Lindworm") newCard = "Iniquitous Lindworm";
+      else if ("Iniquitous Lindworm") newCard = "Virtuous Lindworm";
+      else if ("Kind Queen Vania") newCard = "Blood Queen Vania";
+      else if ("Blood Queen Vania") newCard = "Kind Queen Vania";
+      else if ("Cerynelan Lighthind") newCard = "Cerynelan Darkhind";
+      else if ("Cerynelan Darkhind") newCard = "Cerynelan Lighthind";
+
       state.evoDeck[idx].card = newCard;
     },
     createLessonTokens: (state) => {

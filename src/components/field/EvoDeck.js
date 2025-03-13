@@ -86,7 +86,7 @@ export default function EvoDeck({
       cardName === "Mysterian Whitewyrm" ||
       cardName === "Mysterian Blackwyrm" ||
       cardName === "Virtuous Lindworm" ||
-      cardName === "Inquitous Lindworm" ||
+      cardName === "Iniquitous Lindworm" ||
       cardName === "Kind Queen Vania" ||
       cardName === "Blood Queen Vania" ||
       cardName === "Cerynelan Lighthind" ||

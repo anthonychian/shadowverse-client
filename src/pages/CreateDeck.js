@@ -146,7 +146,7 @@ export default function CreateDeck() {
       cardName === "Mysterian Whitewyrm" ||
       cardName === "Mysterian Blackwyrm" ||
       cardName === "Virtuous Lindworm" ||
-      cardName === "Inquitous Lindworm" ||
+      cardName === "Iniquitous Lindworm" ||
       cardName === "Kind Queen Vania" ||
       cardName === "Blood Queen Vania" ||
       cardName === "Cerynelan Lighthind" ||
@@ -176,8 +176,8 @@ export default function CreateDeck() {
       setCardName("Mysterian Whitewyrm");
     }
     if (cardName === "Virtuous Lindworm") {
-      setCardName("Inquitous Lindworm");
-    } else if (cardName === "Inquitous Lindworm") {
+      setCardName("Iniquitous Lindworm");
+    } else if (cardName === "Iniquitous Lindworm") {
       setCardName("Virtuous Lindworm");
     }
     if (cardName === "Kind Queen Vania") {

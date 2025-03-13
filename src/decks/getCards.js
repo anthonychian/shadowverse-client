@@ -2346,7 +2346,7 @@ export const cardImage = (cardName) => {
       return "../textures/bp09-u04.png";
     case "Virtuous Lindworm":
       return "../textures/bp09-056.png";
-    case "Inquitous Lindworm":
+    case "Iniquitous Lindworm":
       return "../textures/bp09-056_ura.png";
     case "Dragoncleaver Roy Evolved":
       return "../textures/bp09-060.png";
