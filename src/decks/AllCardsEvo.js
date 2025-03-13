@@ -33,10 +33,10 @@ export const allCardsEvo = [
   "Jeweled Priestess Evolved",
   "Lycaon Evolved",
 
-  "Marduk",
-  "Paradise Vanguard",
-  "Suttungr",
-  "Valkyrie of Chaos",
+  "Marduk Evolved",
+  "Paradise Vanguard Evolved",
+  "Suttungr Evolved",
+  "Valkyrie of Chaos Evolved",
 
   "Orchis, Resolute Puppet",
   "Zwei, Murderous Puppet Evolved",
