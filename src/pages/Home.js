@@ -150,9 +150,9 @@ export default function Home() {
   const handleCardSelection = (card) => {
     if (deckMap.has(card)) {
       if (deckMap.get(card) === 1 && card === "Shenlong") return;
-      if (deckMap.get(card) === 3) {
-        return;
-      } else {
+      else if (deckMap.get(card) === 1 && card === "Curse Crafter") return;
+      else if (deckMap.get(card) === 3 && card !== "Onion Patch") return;
+      else {
         deckMap.set(card, deckMap.get(card) + 1);
       }
     } else {
@@ -534,16 +534,6 @@ export default function Home() {
           Joining Room: 1/2 players...
         </div>
       )}
-      <div align="center">
-        <script
-          type="text/javascript"
-          src="https://www.freevisitorcounters.com/auth.php?id=03cba67bcd9273ea58c8bd1ac26e8b31e2a75922"
-        ></script>
-        <script
-          type="text/javascript"
-          src="https://www.freevisitorcounters.com/en/home/counter/1299974/t/0"
-        ></script>
-      </div>
       {reduxActiveUsers !== 0 && (
         <div
           style={{
