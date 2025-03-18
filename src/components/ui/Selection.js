@@ -39,6 +39,7 @@ import shutenCardBack from "../../assets/cardbacks/shuten.png";
 import tidalgunnerCardBack from "../../assets/cardbacks/tidalgunner.png";
 import viridiaCardBack from "../../assets/cardbacks/viridia.png";
 import wilbertCardBack from "../../assets/cardbacks/wilbert.png";
+import { cardImage } from "../../decks/getCards";
 
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
@@ -386,6 +387,11 @@ export default function Selection({ setSelectedOption }) {
         scroll={"paper"}
         aria-labelledby="scroll-dialog-title"
         aria-describedby="scroll-dialog-description"
+        sx={{
+          "& .MuiDialog-paper": {
+            borderRadius: "15px",
+          },
+        }}
       >
         <DialogTitle id="scroll-dialog-title">Game Log</DialogTitle>
         <DialogContent
@@ -401,20 +407,116 @@ export default function Selection({ setSelectedOption }) {
             tabIndex={-1}
           >
             {reduxChatLog.map((x) =>
-              x[9] === "M" ? (
-                <Typography
-                  variant="body1"
-                  style={{ color: "red", whiteSpace: "pre-line" }}
-                >
-                  {x}
-                </Typography>
+              x.text[9] === "M" ? (
+                // Player 1 Log UI
+                <>
+                  <div
+                    style={{
+                      borderRadius: "15px",
+                      padding: "1em",
+                      margin: "1em",
+                      height: x.card ? "200px" : "50px",
+                      background: "#E5F8FE",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: x.card ? "start" : "center",
+                      gap: "1em",
+                    }}
+                  >
+                    {x.card && (
+                      <div>
+                        <img
+                          style={{
+                            height: "160px",
+                          }}
+                          src={cardImage(x.card)}
+                          alt={x.card}
+                        />
+                      </div>
+                    )}
+                    <Typography
+                      variant="body1"
+                      style={{
+                        fontWeight: "bold",
+                        whiteSpace: "pre-line",
+                      }}
+                    >
+                      {x.text}
+                    </Typography>
+                  </div>
+                </>
               ) : (
-                <Typography
-                  variant="body1"
-                  style={{ color: "blue", whiteSpace: "pre-line" }}
-                >
-                  {x}
-                </Typography>
+                // Player 2 Game Log UI
+                <>
+                  <div
+                    style={{
+                      borderRadius: "15px",
+                      padding: "1em",
+                      margin: "1em",
+                      height: x.card ? "200px" : "50px",
+                      background: "#FFEEEF",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: x.card ? "start" : "center",
+                      gap: "1em",
+                    }}
+                  >
+                    {x.card && (
+                      <div>
+                        <img
+                          style={{
+                            height: "160px",
+                          }}
+                          src={cardImage(x.card)}
+                          alt={x.card}
+                        />
+                      </div>
+                    )}
+                    <Typography
+                      variant="body1"
+                      style={{
+                        fontWeight: "bold",
+                        whiteSpace: "pre-line",
+                      }}
+                    >
+                      {x.text}
+                    </Typography>
+                  </div>
+                </>
+                // <>
+                //   <div
+                //     style={{
+                //       borderRadius: "15px",
+                //       padding: "1em",
+                //       margin: "1em",
+                //       height: "200px",
+                //       background: "#FFEEEF",
+                //       display: "flex",
+                //       alignItems: "center",
+                //       justifyContent: "start",
+                //       gap: "1em",
+                //     }}
+                //   >
+                //     <div>
+                //       <img
+                //         style={{
+                //           height: "160px",
+                //         }}
+                //         src={cardImage(x.card)}
+                //         alt={x.card}
+                //       />
+                //     </div>
+                //     <Typography
+                //       variant="body1"
+                //       style={{
+                //         fontWeight: "bold",
+                //         whiteSpace: "pre-line",
+                //       }}
+                //     >
+                //       {x.text}
+                //     </Typography>
+                //   </div>
+                // </>
               )
             )}
           </DialogContentText>

@@ -216,9 +216,15 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   `[${date}] (Me): Rolled a dice and got ${action.payload.roll}`,
+      // ];
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Rolled a dice and got ${action.payload.roll}`,
+        {
+          text: `[${date}] (Me): Rolled a dice and got ${action.payload.roll}`,
+        },
       ];
       socket.emit("send msg", {
         type: "dice",
@@ -233,9 +239,15 @@ export const CardSlice = createSlice({
       });
       state.enemyDice = action.payload;
       if (state.enemyDice.show) {
+        // state.gameLog = [
+        //   ...state.gameLog,
+        //   `[${date}] (Player 2): Rolled a dice and got ${action.payload.roll}`,
+        // ];
         state.gameLog = [
           ...state.gameLog,
-          `[${date}] (Player 2): Rolled a dice and got ${action.payload.roll}`,
+          {
+            text: `[${date}] (Player 2): Rolled a dice and got ${action.payload.roll}`,
+          },
         ];
       }
     },
@@ -252,13 +264,21 @@ export const CardSlice = createSlice({
           hour: "2-digit",
           minute: "2-digit",
         });
+        // state.gameLog = [
+        //   ...state.gameLog,
+        //   `[${date}] (Me): Selected card #${logIndex} in opponent's hand`,
+        // ];
         state.gameLog = [
           ...state.gameLog,
-          `[${date}] (Me): Selected card #${logIndex} in opponent's hand`,
+          {
+            text: `[${date}] (Me): Selected card #${logIndex} in opponent's hand`,
+          },
         ];
         socket.emit("send msg", {
           type: "log",
-          data: `Selected card #${logIndex} in your hand`,
+          data: {
+            text: `Selected card #${logIndex} in your hand`,
+          },
           room: state.room,
         });
       }
@@ -381,10 +401,26 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      state.gameLog = [
-        ...state.gameLog,
-        `[${date}] (Player 2): ${action.payload}`,
-      ];
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   `[${date}] (Player 2): ${action.payload}`,
+      // ];
+      if (action.payload.card) {
+        state.gameLog = [
+          ...state.gameLog,
+          {
+            text: `[${date}] (Player 2): ${action.payload.text}`,
+            card: action.payload.card,
+          },
+        ];
+      } else {
+        state.gameLog = [
+          ...state.gameLog,
+          {
+            text: `[${date}] (Player 2): ${action.payload.text}`,
+          },
+        ];
+      }
     },
     setChat: (state, action) => {
       const date = new Date().toLocaleTimeString("it-IT", {
@@ -417,13 +453,21 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   `[${date}] (Me): Looked at top ${number} cards of deck`,
+      // ];
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Looked at top ${number} cards of deck`,
+        {
+          text: `[${date}] (Me): Looked at top ${number} cards of deck`,
+        },
       ];
       socket.emit("send msg", {
         type: "log",
-        data: `Looked at top ${number} cards of deck`,
+        data: {
+          text: `Looked at top ${number} cards of deck`,
+        },
         room: state.room,
       });
     },
@@ -432,10 +476,18 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      state.gameLog = [...state.gameLog, `[${date}] (Me): Viewed deck`];
+      // state.gameLog = [...state.gameLog, `[${date}] (Me): Viewed deck`];
+      state.gameLog = [
+        ...state.gameLog,
+        {
+          text: `[${date}] (Me): Viewed deck`,
+        },
+      ];
       socket.emit("send msg", {
         type: "log",
-        data: `Viewed deck`,
+        data: {
+          text: `Viewed deck`,
+        },
         room: state.room,
       });
     },
@@ -452,13 +504,19 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   `[${date}] (Me): Set ${state.field[index]} counter to ${newValue}`,
+      // ];
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Set ${state.field[index]} counter to ${newValue}`,
+        {
+          text: `[${date}] (Me): Set ${state.field[index]} counter to ${newValue}`,
+        },
       ];
       socket.emit("send msg", {
         type: "log",
-        data: `Set ${state.field[index]} counter to ${newValue}`,
+        data: { text: `Set ${state.field[index]} counter to ${newValue}` },
         room: state.room,
       });
       socket.emit("send msg", {
@@ -516,23 +574,28 @@ export const CardSlice = createSlice({
       });
     },
     drawFromDeck: (state) => {
-      // if (state.deck.length > 0 && state.hand.length < 10) {
       if (state.deck.length > 0) {
         const card = state.deck[0];
         state.deck = state.deck.slice(1);
-        // state.gameLog = [...state.gameLog, `Removed ${card} from deck`];
         state.hand = [...state.hand, card];
         const date = new Date().toLocaleTimeString("it-IT", {
           hour: "2-digit",
           minute: "2-digit",
         });
+        // state.gameLog = [
+        //   ...state.gameLog,
+        //   `[${date}] (Me): (Draw) Added ${card} to hand`,
+        // ];
         state.gameLog = [
           ...state.gameLog,
-          `[${date}] (Me): (Draw) Added ${card} to hand`,
+          {
+            text: `[${date}] (Me): (Draw) Added ${card} to hand`,
+            card,
+          },
         ];
         socket.emit("send msg", {
           type: "log",
-          data: `Draw 1 card`,
+          data: { text: `Draw 1 card` },
           room: state.room,
         });
         socket.emit("send msg", {
@@ -552,20 +615,26 @@ export const CardSlice = createSlice({
         for (let i = 0; i < 4; i++) {
           const card = state.deck[0];
           state.deck = state.deck.slice(1);
-          // state.gameLog = [...state.gameLog, `Removed ${card} from deck`];
           state.hand = [...state.hand, card];
           const date = new Date().toLocaleTimeString("it-IT", {
             hour: "2-digit",
             minute: "2-digit",
           });
+          // state.gameLog = [
+          //   ...state.gameLog,
+          //   `[${date}] (Me): (Draw) Added ${card} to hand`,
+          // ];
           state.gameLog = [
             ...state.gameLog,
-            `[${date}] (Me): (Draw) Added ${card} to hand`,
+            {
+              text: `[${date}] (Me): (Draw) Added ${card} to hand`,
+              card,
+            },
           ];
         }
         socket.emit("send msg", {
           type: "log",
-          data: `Draw 4 cards`,
+          data: { text: `Draw 4 cards` },
           room: state.room,
         });
         socket.emit("send msg", {
@@ -586,21 +655,27 @@ export const CardSlice = createSlice({
           if (state.hand.length > 0) {
             const card = state.hand[0];
             state.hand = state.hand.slice(1);
-            // state.gameLog = [...state.gameLog, `Removed ${card} from hand`];
             state.deck = [...state.deck, card];
             const date = new Date().toLocaleTimeString("it-IT", {
               hour: "2-digit",
               minute: "2-digit",
             });
+            // state.gameLog = [
+            //   ...state.gameLog,
+            //   `[${date}] (Me): (Mulligan) Added ${card} to deck`,
+            // ];
             state.gameLog = [
               ...state.gameLog,
-              `[${date}] (Me): (Mulligan) Added ${card} to deck`,
+              {
+                text: `[${date}] (Me): (Mulligan) Added ${card} to deck`,
+                card,
+              },
             ];
           }
         }
         socket.emit("send msg", {
           type: "log",
-          data: `Mulligan 4 cards`,
+          data: { text: `Mulligan 4 cards` },
           room: state.room,
         });
         socket.emit("send msg", {
@@ -924,13 +999,20 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   `[${date}] (Me): Added ${card} to field`,
+      // ];
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Added ${card} to field`,
+        {
+          text: `[${date}] (Me): Added ${card} to field`,
+          card,
+        },
       ];
       socket.emit("send msg", {
         type: "log",
-        data: `Added ${card} to field`,
+        data: { text: `Added ${card} to field`, card },
         room: state.room,
       });
       socket.emit("send msg", {
@@ -962,10 +1044,16 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      state.gameLog = [...state.gameLog, `[${date}] (Me): Shuffled deck`];
+      // state.gameLog = [...state.gameLog, `[${date}] (Me): Shuffled deck`];
+      state.gameLog = [
+        ...state.gameLog,
+        {
+          text: `[${date}] (Me): Shuffled deck`,
+        },
+      ];
       socket.emit("send msg", {
         type: "log",
-        data: `Shuffled deck`,
+        data: { text: `Shuffled deck` },
         room: state.room,
       });
     },
@@ -977,23 +1065,22 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      state.gameLog = [
-        ...state.gameLog,
-        `[${date}] (Me): Removed ${card} from hand`,
-      ];
       state.deck = [card, ...state.deck];
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   `[${date}] (Me): Added ${card} to top of deck`,
+      // ];
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Added ${card} to top of deck`,
+        {
+          text: `[${date}] (Me): Added ${card} to top of deck from hand`,
+          card,
+        },
       ];
+
       socket.emit("send msg", {
         type: "log",
-        data: `Removed 1 card from hand`,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "log",
-        data: `Added 1 card to top of deck`,
+        data: { text: `Added 1 card to top of deck from hand` },
         room: state.room,
       });
       socket.emit("send msg", {
@@ -1015,23 +1102,22 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      state.gameLog = [
-        ...state.gameLog,
-        `[${date}] (Me): Removed ${card} from hand`,
-      ];
+
       state.deck = [...state.deck, card];
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   `[${date}] (Me): Added ${card} to bot of deck`,
+      // ];
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Added ${card} to bottom of deck`,
+        {
+          text: `[${date}] (Me): Added ${card} to bot of deck from hand`,
+          card,
+        },
       ];
       socket.emit("send msg", {
         type: "log",
-        data: `Removed 1 card from hand`,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "log",
-        data: `Added 1 card to bot of deck`,
+        data: { text: `Added 1 card to bot of deck from hand` },
         room: state.room,
       });
       socket.emit("send msg", {
@@ -1053,23 +1139,21 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      state.gameLog = [
-        ...state.gameLog,
-        `[${date}] (Me): Removed ${card} from cemetery`,
-      ];
       state.deck = [card, ...state.deck];
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   `[${date}] (Me): Added ${card} to top of deck`,
+      // ];
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Added ${card} to top of deck`,
+        {
+          text: `[${date}] (Me): Added ${card} to top of deck from cemetery`,
+          card,
+        },
       ];
       socket.emit("send msg", {
         type: "log",
-        data: `Removed ${card} from cemetery`,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "log",
-        data: `Added ${card} to hand`,
+        data: { text: `Added ${card} to top of deck from cemetery`, card },
         room: state.room,
       });
       socket.emit("send msg", {
@@ -1086,23 +1170,22 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      state.gameLog = [
-        ...state.gameLog,
-        `[${date}] (Me): Removed ${card} from cemetery`,
-      ];
+
       state.deck = [...state.deck, card];
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   `[${date}] (Me): Added ${card} to bot of deck`,
+      // ];
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Added ${card} to top of deck`,
+        {
+          text: `[${date}] (Me): Added ${card} to bot of deck from cemetery`,
+          card,
+        },
       ];
       socket.emit("send msg", {
         type: "log",
-        data: `Removed ${card} from cemetery`,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "log",
-        data: `Added ${card} to hand`,
+        data: { text: `Added ${card} to bot of deck from cemetery`, card },
         room: state.room,
       });
       socket.emit("send msg", {
@@ -1124,23 +1207,21 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      state.gameLog = [
-        ...state.gameLog,
-        `[${date}] (Me): Removed ${card} from field`,
-      ];
       state.deck = [card, ...state.deck];
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   `[${date}] (Me): Added ${card} to top of deck`,
+      // ];
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Added ${card} to top of deck`,
+        {
+          text: `[${date}] (Me): Added ${card} to top of deck from field`,
+          card,
+        },
       ];
       socket.emit("send msg", {
         type: "log",
-        data: `Removed ${card} from field`,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "log",
-        data: `Added ${card} to top of deck`,
+        data: { text: `Added ${card} to top of deck from field`, card },
         room: state.room,
       });
       socket.emit("send msg", {
@@ -1167,23 +1248,21 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      state.gameLog = [
-        ...state.gameLog,
-        `[${date}] (Me): Removed ${card} from field`,
-      ];
       state.deck = [...state.deck, card];
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   `[${date}] (Me): Added ${card} to bot of deck`,
+      // ];
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Added ${card} to bot of deck`,
+        {
+          text: `[${date}] (Me): Added ${card} to bot of deck from field`,
+          card,
+        },
       ];
       socket.emit("send msg", {
         type: "log",
-        data: `Removed ${card} from field`,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "log",
-        data: `Added ${card} to bot of deck`,
+        data: { text: `Added ${card} to bot of deck from field`, card },
         room: state.room,
       });
       socket.emit("send msg", {
@@ -1210,13 +1289,20 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   `[${date}] (Me): Added ${card} to field`,
+      // ];
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Added ${card} to field`,
+        {
+          text: `[${date}] (Me): Added ${card} to field`,
+          card,
+        },
       ];
       socket.emit("send msg", {
         type: "log",
-        data: `Added ${card} to field`,
+        data: { text: `Added ${card} to field`, card },
         room: state.room,
       });
       socket.emit("send msg", {
@@ -1238,13 +1324,20 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   `[${date}] (Me): Removed ${card} from field`,
+      // ];
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Removed ${card} from field`,
+        {
+          text: `[${date}] (Me): Removed ${card} from field`,
+          card,
+        },
       ];
       socket.emit("send msg", {
         type: "log",
-        data: `Removed ${card} from field`,
+        data: { text: `Removed ${card} from field`, card },
         room: state.room,
       });
       socket.emit("send msg", {
@@ -1273,13 +1366,20 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   `[${date}] (Me): Moved ${card} on field`,
+      // ];
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Moved ${card} on field`,
+        {
+          text: `[${date}] (Me): Moved ${card} on field`,
+          card,
+        },
       ];
       socket.emit("send msg", {
         type: "log",
-        data: `Moved ${card} on field`,
+        data: { text: `Moved ${card} on field`, card },
         room: state.room,
       });
       socket.emit("send msg", {
@@ -1325,13 +1425,20 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   `[${date}] (Me): Moved ${evoCard} on field`,
+      // ];
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Moved ${evoCard} on field`,
+        {
+          text: `[${date}] (Me): Moved ${evoCard} on field`,
+          card: evoCard,
+        },
       ];
       socket.emit("send msg", {
         type: "log",
-        data: `Moved ${evoCard} on field`,
+        data: { text: `Moved ${evoCard} on field`, card: evoCard },
         room: state.room,
       });
       socket.emit("send msg", {
@@ -1365,10 +1472,17 @@ export const CardSlice = createSlice({
           hour: "2-digit",
           minute: "2-digit",
         });
-        state.gameLog = [
-          ...state.gameLog,
-          `[${date}] (Me): Removed ${card} from field`,
-        ];
+        // state.gameLog = [
+        //   ...state.gameLog,
+        //   `[${date}] (Me): Removed ${card} from field`,
+        // ];
+        // state.gameLog = [
+        //   ...state.gameLog,
+        //   {
+        //     text: `[${date}] (Me): Removed ${card} from field`,
+        //     card,
+        //   },
+        // ];
         let index;
         for (let i = 0; i < 5; i++) {
           if (state.enemyField[i] === 0) {
@@ -1382,18 +1496,20 @@ export const CardSlice = createSlice({
           ...state.enemyField.slice(index + 1),
         ];
         state.enemyField = newField;
+        // state.gameLog = [
+        //   ...state.gameLog,
+        //   `[${date}] (Me): Transfered ${card} to enemy field`,
+        // ];
         state.gameLog = [
           ...state.gameLog,
-          `[${date}] (Me): Added ${card} to enemy field`,
+          {
+            text: `[${date}] (Me): Transfered ${card} to enemy field`,
+            card,
+          },
         ];
         socket.emit("send msg", {
           type: "log",
-          data: `Removed ${card} from field`,
-          room: state.room,
-        });
-        socket.emit("send msg", {
-          type: "log",
-          data: `Added ${card} to enemy field`,
+          data: { text: `Transfered ${card} to your field`, card },
           room: state.room,
         });
         socket.emit("send msg", {
@@ -1420,28 +1536,27 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      state.gameLog = [
-        ...state.gameLog,
-        `[${date}] (Me): Removed ${card} from deck`,
-      ];
+
       const newField = [
         ...state.field.slice(0, newIndex),
         card,
         ...state.field.slice(newIndex + 1),
       ];
       state.field = newField;
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   `[${date}] (Me): Added ${card} to field`,
+      // ];
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Added ${card} to field`,
+        {
+          text: `[${date}] (Me): Added ${card} to field from deck`,
+          card,
+        },
       ];
       socket.emit("send msg", {
         type: "log",
-        data: `Removed ${card} from deck`,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "log",
-        data: `Added ${card} to field`,
+        data: { text: `Added ${card} to field from deck`, card },
         room: state.room,
       });
       socket.emit("send msg", {
@@ -1464,13 +1579,20 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   `[${date}] (Me): Moved ${card} to top of deck`,
+      // ];
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Moved ${card} to top of deck`,
+        {
+          text: `[${date}] (Me): Moved ${card} to top of deck`,
+          card,
+        },
       ];
       socket.emit("send msg", {
         type: "log",
-        data: `Moved 1 card to top of deck`,
+        data: { text: `Moved 1 card to top of deck` },
         room: state.room,
       });
       socket.emit("send msg", {
@@ -1488,13 +1610,20 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   `[${date}] (Me): Moved ${card} to bot of deck`,
+      // ];
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Moved ${card} to bot of deck`,
+        {
+          text: `[${date}] (Me): Moved ${card} to bot of deck`,
+          card,
+        },
       ];
       socket.emit("send msg", {
         type: "log",
-        data: `Moved 1 card to bot of deck`,
+        data: { text: `Moved 1 card to bot of deck` },
         room: state.room,
       });
       socket.emit("send msg", {
@@ -1511,23 +1640,21 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      state.gameLog = [
-        ...state.gameLog,
-        `[${date}] (Me): Removed ${card} from deck`,
-      ];
       state.cemetery = [card, ...state.cemetery];
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   `[${date}] (Me): Added ${card} to cemetery`,
+      // ];
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Added ${card} to cemetery`,
+        {
+          text: `[${date}] (Me): Added ${card} to cemetery from deck`,
+          card,
+        },
       ];
       socket.emit("send msg", {
         type: "log",
-        data: `Removed ${card} from deck`,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "log",
-        data: `Added ${card} to cemetery`,
+        data: { text: `Added ${card} to cemetery from deck`, card },
         room: state.room,
       });
       socket.emit("send msg", {
@@ -1549,13 +1676,20 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   `[${date}] (Me): Milled ${card} to cemetery`,
+      // ];
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Mill ${card} to cemetery`,
+        {
+          text: `[${date}] (Me): Milled ${card} to cemetery`,
+          card,
+        },
       ];
       socket.emit("send msg", {
         type: "log",
-        data: `Mill ${card} to cemetery`,
+        data: { text: `Milled ${card} to cemetery`, card },
         room: state.room,
       });
       socket.emit("send msg", {
@@ -1577,23 +1711,22 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      state.gameLog = [
-        ...state.gameLog,
-        `[${date}] (Me): Removed ${card} from deck`,
-      ];
       state.banish = [card, ...state.banish];
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   `[${date}] (Me): Added ${card} to banished`,
+      // ];
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Added ${card} to banished`,
+        {
+          text: `[${date}] (Me): Banished ${card} from deck`,
+          card,
+        },
       ];
+
       socket.emit("send msg", {
         type: "log",
-        data: `Removed ${card} from deck`,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "log",
-        data: `Added ${card} to banished`,
+        data: { text: `Banished ${card} from deck`, card },
         room: state.room,
       });
       socket.emit("send msg", {
@@ -1616,23 +1749,22 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      state.gameLog = [
-        ...state.gameLog,
-        `[${date}] (Me): Removed ${card} from deck`,
-      ];
+
       state.hand = [...state.hand, card];
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   `[${date}] (Me): Added ${card} to hand`,
+      // ];
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Added ${card} to hand`,
+        {
+          text: `[${date}] (Me): Added ${card} to hand from deck`,
+          card,
+        },
       ];
       socket.emit("send msg", {
         type: "log",
-        data: `Removed ${card} from deck`,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "log",
-        data: `Added ${card} to hand`,
+        data: { text: `Added ${card} to hand from deck`, card },
         room: state.room,
       });
       socket.emit("send msg", {
@@ -1659,23 +1791,22 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      state.gameLog = [
-        ...state.gameLog,
-        `[${date}] (Me): Removed ${card} from field`,
-      ];
+
       state.hand = [...state.hand, card];
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   `[${date}] (Me): Added ${card} to hand`,
+      // ];
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Added ${card} to hand`,
+        {
+          text: `[${date}] (Me): Added ${card} to hand from field`,
+          card,
+        },
       ];
       socket.emit("send msg", {
         type: "log",
-        data: `Removed ${card} from field`,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "log",
-        data: `Added ${card} to hand`,
+        data: { text: `Added ${card} to hand from field`, card },
         room: state.room,
       });
       socket.emit("send msg", {
@@ -1698,28 +1829,26 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      state.gameLog = [
-        ...state.gameLog,
-        `[${date}] (Me): Removed ${card} from hand`,
-      ];
       const newField = [
         ...state.field.slice(0, newIndex),
         card,
         ...state.field.slice(newIndex + 1),
       ];
       state.field = newField;
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   `[${date}] (Me): Added ${card} to field`,
+      // ];
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Added ${card} to field`,
+        {
+          text: `[${date}] (Me): Added ${card} to field from hand`,
+          card,
+        },
       ];
       socket.emit("send msg", {
         type: "log",
-        data: `Removed ${card} from hand`,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "log",
-        data: `Added ${card} to field`,
+        data: { text: `Added ${card} to field from hand`, card },
         room: state.room,
       });
       socket.emit("send msg", {
@@ -1741,23 +1870,22 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      state.gameLog = [
-        ...state.gameLog,
-        `[${date}] (Me): Removed ${card} from cemetery`,
-      ];
+
       state.hand = [...state.hand, card];
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   `[${date}] (Me): Added ${card} to hand`,
+      // ];
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Added ${card} to hand`,
+        {
+          text: `[${date}] (Me): Added ${card} to hand from cemetery`,
+          card,
+        },
       ];
       socket.emit("send msg", {
         type: "log",
-        data: `Removed ${card} from cemetery`,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "log",
-        data: `Added ${card} to hand`,
+        data: { text: `Added ${card} to hand from cemetery`, card },
         room: state.room,
       });
       socket.emit("send msg", {
@@ -1779,23 +1907,21 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      state.gameLog = [
-        ...state.gameLog,
-        `[${date}] (Me): Removed ${card} from cemetery`,
-      ];
       state.banish = [card, ...state.banish];
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   `[${date}] (Me): Added ${card} to banished`,
+      // ];
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Added ${card} to banished`,
+        {
+          text: `[${date}] (Me): Banished ${card} from cemetery`,
+          card,
+        },
       ];
       socket.emit("send msg", {
         type: "log",
-        data: `Removed ${card} from cemetery`,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "log",
-        data: `Added ${card} to banished`,
+        data: { text: `Banished ${card} from cemetery`, card },
         room: state.room,
       });
       socket.emit("send msg", {
@@ -1817,23 +1943,21 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      state.gameLog = [
-        ...state.gameLog,
-        `[${date}] (Me): Removed ${card} from banish`,
-      ];
       state.hand = [...state.hand, card];
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   `[${date}] (Me): Added ${card} to hand`,
+      // ];
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Added ${card} to hand`,
+        {
+          text: `[${date}] (Me): Added ${card} to hand from banished`,
+          card,
+        },
       ];
       socket.emit("send msg", {
         type: "log",
-        data: `Removed ${card} from banish`,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "log",
-        data: `Added ${card} to hand`,
+        data: { text: `Added ${card} to hand from banished`, card },
         room: state.room,
       });
       socket.emit("send msg", {
@@ -1860,23 +1984,22 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      state.gameLog = [
-        ...state.gameLog,
-        `[${date}] (Me): Removed ${card} from field`,
-      ];
+
       state.cemetery = [card, ...state.cemetery];
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   `[${date}] (Me): Added ${card} to cemetery`,
+      // ];
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Added ${card} to cemetery`,
+        {
+          text: `[${date}] (Me): Added ${card} to cemetery from field`,
+          card,
+        },
       ];
       socket.emit("send msg", {
         type: "log",
-        data: `Removed ${card} from field`,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "log",
-        data: `Added ${card} to cemetery`,
+        data: { text: `Added ${card} to cemetery from field`, card },
         room: state.room,
       });
       socket.emit("send msg", {
@@ -1904,13 +2027,19 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   `[${date}] (Me): Shuffled cards in hand`,
+      // ];
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Shuffled cards in hand`,
+        {
+          text: `[${date}] (Me): Shuffled cards in hand`,
+        },
       ];
       socket.emit("send msg", {
         type: "log",
-        data: `Shuffled cards in hand`,
+        data: { text: `Shuffled cards in hand` },
         room: state.room,
       });
       socket.emit("send msg", {
@@ -1927,25 +2056,27 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   `[${date}] (Me): Removed ${card} (#${cardIndex + 1}) from hand`,
+      // ];
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Removed ${card} (#${cardIndex + 1}) from hand`,
+        {
+          text: `[${date}] (Me): Discarded ${card} (#${
+            cardIndex + 1
+          }) from hand`,
+          card,
+        },
       ];
       state.cemetery = [card, ...state.cemetery];
-      state.gameLog = [
-        ...state.gameLog,
-        `[${date}] (Me): Added ${card} to cemetery`,
-      ];
+
       socket.emit("send msg", {
         type: "log",
-        data: `Removed ${card} (#${cardIndex + 1}) from hand`,
+        data: { text: `Discarded ${card} (#${cardIndex + 1}) from hand`, card },
         room: state.room,
       });
-      socket.emit("send msg", {
-        type: "log",
-        data: `Added ${card} to cemetery`,
-        room: state.room,
-      });
+
       socket.emit("send msg", {
         type: "cemetery",
         data: state.cemetery,
@@ -1966,28 +2097,26 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      state.gameLog = [
-        ...state.gameLog,
-        `[${date}] (Me): Removed ${card} from deck`,
-      ];
       const newField = [
         ...state.field.slice(0, newIndex),
         card,
         ...state.field.slice(newIndex + 1),
       ];
       state.field = newField;
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   `[${date}] (Me): Added ${card} to field`,
+      // ];
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Added ${card} to field`,
+        {
+          text: `[${date}] (Me): Added ${card} to field from deck`,
+          card,
+        },
       ];
       socket.emit("send msg", {
         type: "log",
-        data: `Removed ${card} from deck`,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "log",
-        data: `Added ${card} to field`,
+        data: { text: `Added ${card} to field from deck`, card },
         room: state.room,
       });
       socket.emit("send msg", {
@@ -2005,28 +2134,27 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      state.gameLog = [
-        ...state.gameLog,
-        `[${date}] (Me): Removed ${card} from cemetery`,
-      ];
+
       const newField = [
         ...state.field.slice(0, newIndex),
         card,
         ...state.field.slice(newIndex + 1),
       ];
       state.field = newField;
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   `[${date}] (Me): Added ${card} to field`,
+      // ];
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Added ${card} to field`,
+        {
+          text: `[${date}] (Me): Added ${card} to field from cemetery`,
+          card,
+        },
       ];
       socket.emit("send msg", {
         type: "log",
-        data: `Removed ${card} from cemetery`,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "log",
-        data: `Added ${card} to field`,
+        data: { text: `Added ${card} to field from cemetery`, card },
         room: state.room,
       });
       socket.emit("send msg", {
@@ -2049,28 +2177,27 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      state.gameLog = [
-        ...state.gameLog,
-        `[${date}] (Me): Removed ${card} from banish`,
-      ];
+
       const newField = [
         ...state.field.slice(0, newIndex),
         card,
         ...state.field.slice(newIndex + 1),
       ];
       state.field = newField;
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   `[${date}] (Me): Added ${card} to field`,
+      // ];
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Added ${card} to field`,
+        {
+          text: `[${date}] (Me): Added ${card} to field from banished`,
+          card,
+        },
       ];
       socket.emit("send msg", {
         type: "log",
-        data: `Removed ${card} from banish`,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "log",
-        data: `Added ${card} to field`,
+        data: { text: `Added ${card} to field from banished`, card },
         room: state.room,
       });
       socket.emit("send msg", {
@@ -2097,23 +2224,22 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      state.gameLog = [
-        ...state.gameLog,
-        `[${date}] (Me): Removed ${card} from field`,
-      ];
+
       state.banish = [card, ...state.banish];
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   `[${date}] (Me): Added ${card} to banished`,
+      // ];
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Added ${card} to banished`,
+        {
+          text: `[${date}] (Me): Banished ${card} from field`,
+          card,
+        },
       ];
       socket.emit("send msg", {
         type: "log",
-        data: `Removed ${card} from field`,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "log",
-        data: `Added ${card} to banished`,
+        data: { text: `Banished ${card} from field`, card },
         room: state.room,
       });
       socket.emit("send msg", {
@@ -2136,28 +2262,26 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      state.gameLog = [
-        ...state.gameLog,
-        `[${date}] (Me): Removed ${card} from evolve deck`,
-      ];
       const newField = [
         ...state.evoField.slice(0, newIndex),
         card,
         ...state.evoField.slice(newIndex + 1),
       ];
       state.evoField = newField;
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   `[${date}] (Me): Added ${card} to field`,
+      // ];
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Added ${card} to field`,
+        {
+          text: `[${date}] (Me): Evolved to ${card}`,
+          card,
+        },
       ];
       socket.emit("send msg", {
         type: "log",
-        data: `Removed ${card} from evolve deck`,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "log",
-        data: `Added ${card} to field`,
+        data: { text: `Evolved to ${card}`, card },
         room: state.room,
       });
       socket.emit("send msg", {
@@ -2199,13 +2323,24 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   `[${date}] (Me): Fed ${state.field[newIndex]} 1 Carrot`,
+      // ];
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Fed ${state.field[newIndex]} 1 Carrot`,
+        {
+          text: `[${date}] (Me): Fed ${state.field[newIndex]} 1 Carrot`,
+          // card: card,
+          card: state.field[newIndex],
+        },
       ];
       socket.emit("send msg", {
         type: "log",
-        data: `Fed ${state.field[newIndex]} 1 Carrot`,
+        data: {
+          text: `Fed ${state.field[newIndex]} 1 Carrot`,
+          card: state.field[newIndex],
+        },
         room: state.room,
       });
       socket.emit("send msg", {
@@ -2232,10 +2367,6 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      state.gameLog = [
-        ...state.gameLog,
-        `[${date}] (Me): Removed ${card} from field`,
-      ];
       if (card.slice(0, 6) === "Carrot") {
         const numOfCarrots = Number(card.slice(-1));
         for (let i = 0; i < numOfCarrots; i++)
@@ -2243,18 +2374,20 @@ export const CardSlice = createSlice({
       } else {
         state.evoDeck = [...state.evoDeck, { card: card, status: true }];
       }
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   `[${date}] (Me): Added used ${card} to evolve deck`,
+      // ];
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Added used ${card} to evolve deck`,
+        {
+          text: `[${date}] (Me): Returned ${card} to evolve deck`,
+          card,
+        },
       ];
       socket.emit("send msg", {
         type: "log",
-        data: `Removed ${card} from field`,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "log",
-        data: `Added used ${card} to evolve deck`,
+        data: { text: `Returned ${card} to evolve deck`, card },
         room: state.room,
       });
       socket.emit("send msg", {
@@ -2288,13 +2421,20 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   `[${date}] (Me): Flipped ${card} in evolve deck`,
+      // ];
       state.gameLog = [
         ...state.gameLog,
-        `[${date}] (Me): Flipped ${card} in evolve deck`,
+        {
+          text: `[${date}] (Me): Flipped ${card} in evolve deck`,
+          card,
+        },
       ];
       socket.emit("send msg", {
         type: "log",
-        data: `Flipped ${card} in evolve deck`,
+        data: { text: `Flipped ${card} in evolve deck`, card },
         room: state.room,
       });
       socket.emit("send msg", {
@@ -2363,11 +2503,14 @@ export const CardSlice = createSlice({
         for (let i = 0; i < 5; i++) {
           state.gameLog = [
             ...state.gameLog,
-            `[${date}] (Me): Added ${card} to field`,
+            {
+              text: `[${date}] (Me): Added ${card} to field`,
+              card,
+            },
           ];
           socket.emit("send msg", {
             type: "log",
-            data: `Added ${card} to field`,
+            data: { text: `Added ${card} to field`, card },
             room: state.room,
           });
         }
