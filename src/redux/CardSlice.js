@@ -212,14 +212,14 @@ export const CardSlice = createSlice({
       state.showDice = action.payload;
     },
     setDice: (state, action) => {
-      // const date = new Date().toLocaleTimeString("it-IT", {
-      //   hour: "2-digit",
-      //   minute: "2-digit",
-      // });
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Me): Rolled a dice and got ${action.payload.roll}`,
-      // ];
+      const date = new Date().toLocaleTimeString("it-IT", {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+      state.gameLog = [
+        ...state.gameLog,
+        `[${date}] (Me): Rolled a dice and got ${action.payload.roll}`,
+      ];
       socket.emit("send msg", {
         type: "dice",
         data: action.payload,
@@ -227,12 +227,17 @@ export const CardSlice = createSlice({
       });
     },
     setEnemyDice: (state, action) => {
+      const date = new Date().toLocaleTimeString("it-IT", {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
       state.enemyDice = action.payload;
-      // socket.emit("send msg", {
-      //   type: "log",
-      //   data: `Rolled a dice and got ${action.payload.roll}`,
-      //   room: state.room,
-      // });
+      if (state.enemyDice.show) {
+        state.gameLog = [
+          ...state.gameLog,
+          `[${date}] (Player 2): Rolled a dice and got ${action.payload.roll}`,
+        ];
+      }
     },
     setCardSelectedInHand: (state, action) => {
       state.cardSelectedInHand = action.payload;
