@@ -8,6 +8,7 @@ import {
   drawFourFromDeck,
   shuffleCards,
   addToHandFromDeck,
+  addToHandFromDeckWithoutRevealing,
   addToTopOfDeckFromDeck,
   addToBotOfDeckFromDeck,
   addToCemeteryFromDeck,
@@ -212,6 +213,21 @@ export default function Deck({
       data: name,
       room: reduxRoom,
     });
+  };
+  const handleAddFromDeckToHandWithoutRevealing = () => {
+    handleCardClose();
+    handleModalClose();
+    dispatch(addToHandFromDeckWithoutRevealing({ card: name, index: index }));
+    // socket.emit("send msg", {
+    //   type: "showCard",
+    //   data: true,
+    //   room: reduxRoom,
+    // });
+    // socket.emit("send msg", {
+    //   type: "cardRevealed",
+    //   data: name,
+    //   room: reduxRoom,
+    // });
   };
 
   const handleCardToFieldFromDeck = () => {
@@ -453,6 +469,11 @@ export default function Deck({
           <MenuItem onClick={() => handleToBotOfDeck()}>Bot of Deck</MenuItem>
         )}
         <MenuItem onClick={() => handleToBanish()}>Banish</MenuItem>
+        {!reveal && (
+          <MenuItem onClick={() => handleAddFromDeckToHandWithoutRevealing()}>
+            Hand (No Reveal)
+          </MenuItem>
+        )}
       </Menu>
 
       <Modal

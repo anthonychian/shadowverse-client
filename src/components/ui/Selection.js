@@ -107,7 +107,7 @@ export default function Selection({ setSelectedOption }) {
 
   const [rematchOpenDialog, setRematchOpenDialog] = useState(false);
 
-  const [rematchNotify, setRematchNotify] = useState(false);
+  // const [rematchNotify, setRematchNotify] = useState(false);
 
   const [acceptRematch, setAcceptRematch] = useState(false);
 
@@ -128,7 +128,7 @@ export default function Selection({ setSelectedOption }) {
     if (acceptRematch && reduxEnemyRematchStatus) {
       dispatch(reset());
       setAcceptRematch(false);
-      setRematchNotify(true);
+      // setRematchNotify(true);
     }
   };
 

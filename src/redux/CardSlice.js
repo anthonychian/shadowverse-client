@@ -216,10 +216,7 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Me): Rolled a dice and got ${action.payload.roll}`,
-      // ];
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -239,10 +236,6 @@ export const CardSlice = createSlice({
       });
       state.enemyDice = action.payload;
       if (state.enemyDice.show) {
-        // state.gameLog = [
-        //   ...state.gameLog,
-        //   `[${date}] (Player 2): Rolled a dice and got ${action.payload.roll}`,
-        // ];
         state.gameLog = [
           ...state.gameLog,
           {
@@ -264,10 +257,7 @@ export const CardSlice = createSlice({
           hour: "2-digit",
           minute: "2-digit",
         });
-        // state.gameLog = [
-        //   ...state.gameLog,
-        //   `[${date}] (Me): Selected card #${logIndex} in opponent's hand`,
-        // ];
+
         state.gameLog = [
           ...state.gameLog,
           {
@@ -401,10 +391,7 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Player 2): ${action.payload}`,
-      // ];
+
       if (action.payload.card) {
         state.gameLog = [
           ...state.gameLog,
@@ -453,10 +440,7 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Me): Looked at top ${number} cards of deck`,
-      // ];
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -476,7 +460,6 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      // state.gameLog = [...state.gameLog, `[${date}] (Me): Viewed deck`];
       state.gameLog = [
         ...state.gameLog,
         {
@@ -504,10 +487,7 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Me): Set ${state.field[index]} counter to ${newValue}`,
-      // ];
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -582,10 +562,7 @@ export const CardSlice = createSlice({
           hour: "2-digit",
           minute: "2-digit",
         });
-        // state.gameLog = [
-        //   ...state.gameLog,
-        //   `[${date}] (Me): (Draw) Added ${card} to hand`,
-        // ];
+
         state.gameLog = [
           ...state.gameLog,
           {
@@ -620,10 +597,7 @@ export const CardSlice = createSlice({
             hour: "2-digit",
             minute: "2-digit",
           });
-          // state.gameLog = [
-          //   ...state.gameLog,
-          //   `[${date}] (Me): (Draw) Added ${card} to hand`,
-          // ];
+
           state.gameLog = [
             ...state.gameLog,
             {
@@ -660,10 +634,7 @@ export const CardSlice = createSlice({
               hour: "2-digit",
               minute: "2-digit",
             });
-            // state.gameLog = [
-            //   ...state.gameLog,
-            //   `[${date}] (Me): (Mulligan) Added ${card} to deck`,
-            // ];
+
             state.gameLog = [
               ...state.gameLog,
               {
@@ -999,10 +970,7 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Me): Added ${card} to field`,
-      // ];
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -1031,7 +999,6 @@ export const CardSlice = createSlice({
       state.currentCard = action.payload;
     },
     shuffleDeck: (state) => {
-      // state.deck = state.deck.toSorted(() => Math.random() - 0.5);
       function shuffleDeck(deck) {
         for (let i = deck.length - 1; i > 0; i--) {
           const j = Math.floor(Math.random() * (i + 1));
@@ -1044,7 +1011,6 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      // state.gameLog = [...state.gameLog, `[${date}] (Me): Shuffled deck`];
       state.gameLog = [
         ...state.gameLog,
         {
@@ -1066,10 +1032,7 @@ export const CardSlice = createSlice({
         minute: "2-digit",
       });
       state.deck = [card, ...state.deck];
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Me): Added ${card} to top of deck`,
-      // ];
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -1104,10 +1067,7 @@ export const CardSlice = createSlice({
       });
 
       state.deck = [...state.deck, card];
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Me): Added ${card} to bot of deck`,
-      // ];
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -1140,10 +1100,7 @@ export const CardSlice = createSlice({
         minute: "2-digit",
       });
       state.deck = [card, ...state.deck];
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Me): Added ${card} to top of deck`,
-      // ];
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -1172,10 +1129,7 @@ export const CardSlice = createSlice({
       });
 
       state.deck = [...state.deck, card];
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Me): Added ${card} to bot of deck`,
-      // ];
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -1208,10 +1162,7 @@ export const CardSlice = createSlice({
         minute: "2-digit",
       });
       state.deck = [card, ...state.deck];
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Me): Added ${card} to top of deck`,
-      // ];
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -1249,10 +1200,7 @@ export const CardSlice = createSlice({
         minute: "2-digit",
       });
       state.deck = [...state.deck, card];
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Me): Added ${card} to bot of deck`,
-      // ];
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -1289,10 +1237,7 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Me): Added ${card} to field`,
-      // ];
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -1324,10 +1269,7 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Me): Removed ${card} from field`,
-      // ];
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -1366,10 +1308,7 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Me): Moved ${card} on field`,
-      // ];
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -1425,10 +1364,7 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Me): Moved ${evoCard} on field`,
-      // ];
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -1472,17 +1408,7 @@ export const CardSlice = createSlice({
           hour: "2-digit",
           minute: "2-digit",
         });
-        // state.gameLog = [
-        //   ...state.gameLog,
-        //   `[${date}] (Me): Removed ${card} from field`,
-        // ];
-        // state.gameLog = [
-        //   ...state.gameLog,
-        //   {
-        //     text: `[${date}] (Me): Removed ${card} from field`,
-        //     card,
-        //   },
-        // ];
+
         let index;
         for (let i = 0; i < 5; i++) {
           if (state.enemyField[i] === 0) {
@@ -1496,10 +1422,7 @@ export const CardSlice = createSlice({
           ...state.enemyField.slice(index + 1),
         ];
         state.enemyField = newField;
-        // state.gameLog = [
-        //   ...state.gameLog,
-        //   `[${date}] (Me): Transfered ${card} to enemy field`,
-        // ];
+
         state.gameLog = [
           ...state.gameLog,
           {
@@ -1543,10 +1466,7 @@ export const CardSlice = createSlice({
         ...state.field.slice(newIndex + 1),
       ];
       state.field = newField;
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Me): Added ${card} to field`,
-      // ];
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -1579,10 +1499,7 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Me): Moved ${card} to top of deck`,
-      // ];
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -1610,10 +1527,7 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Me): Moved ${card} to bot of deck`,
-      // ];
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -1641,10 +1555,7 @@ export const CardSlice = createSlice({
         minute: "2-digit",
       });
       state.cemetery = [card, ...state.cemetery];
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Me): Added ${card} to cemetery`,
-      // ];
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -1676,10 +1587,7 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Me): Milled ${card} to cemetery`,
-      // ];
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -1712,10 +1620,7 @@ export const CardSlice = createSlice({
         minute: "2-digit",
       });
       state.banish = [card, ...state.banish];
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Me): Added ${card} to banished`,
-      // ];
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -1751,10 +1656,7 @@ export const CardSlice = createSlice({
       });
 
       state.hand = [...state.hand, card];
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Me): Added ${card} to hand`,
-      // ];
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -1765,6 +1667,41 @@ export const CardSlice = createSlice({
       socket.emit("send msg", {
         type: "log",
         data: { text: `Added ${card} to hand from deck`, card },
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "hand",
+        data: state.hand,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "deckSize",
+        data: state.deck.length,
+        room: state.room,
+      });
+    },
+    addToHandFromDeckWithoutRevealing: (state, action) => {
+      const card = action.payload.card;
+      const cardIndex = action.payload.index;
+      const newDeck = state.deck.filter((_, i) => i !== cardIndex);
+      state.deck = newDeck;
+      const date = new Date().toLocaleTimeString("it-IT", {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+
+      state.hand = [...state.hand, card];
+
+      state.gameLog = [
+        ...state.gameLog,
+        {
+          text: `[${date}] (Me): Added ${card} to hand from deck`,
+          card,
+        },
+      ];
+      socket.emit("send msg", {
+        type: "log",
+        data: { text: `Added 1 card to hand from deck` },
         room: state.room,
       });
       socket.emit("send msg", {
@@ -1793,10 +1730,7 @@ export const CardSlice = createSlice({
       });
 
       state.hand = [...state.hand, card];
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Me): Added ${card} to hand`,
-      // ];
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -1835,10 +1769,7 @@ export const CardSlice = createSlice({
         ...state.field.slice(newIndex + 1),
       ];
       state.field = newField;
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Me): Added ${card} to field`,
-      // ];
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -1872,10 +1803,7 @@ export const CardSlice = createSlice({
       });
 
       state.hand = [...state.hand, card];
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Me): Added ${card} to hand`,
-      // ];
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -1908,10 +1836,7 @@ export const CardSlice = createSlice({
         minute: "2-digit",
       });
       state.banish = [card, ...state.banish];
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Me): Added ${card} to banished`,
-      // ];
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -1944,10 +1869,7 @@ export const CardSlice = createSlice({
         minute: "2-digit",
       });
       state.hand = [...state.hand, card];
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Me): Added ${card} to hand`,
-      // ];
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -1986,10 +1908,7 @@ export const CardSlice = createSlice({
       });
 
       state.cemetery = [card, ...state.cemetery];
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Me): Added ${card} to cemetery`,
-      // ];
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -2014,7 +1933,6 @@ export const CardSlice = createSlice({
       });
     },
     shuffleCards: (state, action) => {
-      // state.hand = state.hand.toSorted(() => Math.random() - 0.5);
       function shuffleDeck(deck) {
         for (let i = deck.length - 1; i > 0; i--) {
           const j = Math.floor(Math.random() * (i + 1));
@@ -2027,10 +1945,7 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Me): Shuffled cards in hand`,
-      // ];
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -2056,10 +1971,7 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Me): Removed ${card} (#${cardIndex + 1}) from hand`,
-      // ];
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -2103,10 +2015,7 @@ export const CardSlice = createSlice({
         ...state.field.slice(newIndex + 1),
       ];
       state.field = newField;
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Me): Added ${card} to field`,
-      // ];
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -2141,10 +2050,7 @@ export const CardSlice = createSlice({
         ...state.field.slice(newIndex + 1),
       ];
       state.field = newField;
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Me): Added ${card} to field`,
-      // ];
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -2184,10 +2090,7 @@ export const CardSlice = createSlice({
         ...state.field.slice(newIndex + 1),
       ];
       state.field = newField;
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Me): Added ${card} to field`,
-      // ];
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -2226,10 +2129,7 @@ export const CardSlice = createSlice({
       });
 
       state.banish = [card, ...state.banish];
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Me): Added ${card} to banished`,
-      // ];
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -2268,10 +2168,7 @@ export const CardSlice = createSlice({
         ...state.evoField.slice(newIndex + 1),
       ];
       state.evoField = newField;
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Me): Added ${card} to field`,
-      // ];
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -2323,10 +2220,7 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Me): Fed ${state.field[newIndex]} 1 Carrot`,
-      // ];
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -2374,10 +2268,7 @@ export const CardSlice = createSlice({
       } else {
         state.evoDeck = [...state.evoDeck, { card: card, status: true }];
       }
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Me): Added used ${card} to evolve deck`,
-      // ];
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -2421,10 +2312,7 @@ export const CardSlice = createSlice({
         hour: "2-digit",
         minute: "2-digit",
       });
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   `[${date}] (Me): Flipped ${card} in evolve deck`,
-      // ];
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -2784,6 +2672,7 @@ export const {
   placeToFieldFromCemetery,
   placeToFieldFromBanish,
   addToHandFromDeck,
+  addToHandFromDeckWithoutRevealing,
   addToHandFromField,
   addToHandFromCemetery,
   addToBanishFromCemetery,
