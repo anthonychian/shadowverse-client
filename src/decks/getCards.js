@@ -3095,6 +3095,8 @@ export const cardImage = (cardName) => {
       return "../textures/BP01-T16EN.png";
     case "Holy Tiger TOKEN":
       return "../textures/BP01-T17EN.png";
+    case "Card":
+      return "../textures/default.png";
     default:
       return "";
   }

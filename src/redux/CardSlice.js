@@ -1701,7 +1701,7 @@ export const CardSlice = createSlice({
       ];
       socket.emit("send msg", {
         type: "log",
-        data: { text: `Added 1 card to hand from deck` },
+        data: { text: `Added 1 card to hand from deck`, card: "Card" },
         room: state.room,
       });
       socket.emit("send msg", {

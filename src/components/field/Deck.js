@@ -218,16 +218,16 @@ export default function Deck({
     handleCardClose();
     handleModalClose();
     dispatch(addToHandFromDeckWithoutRevealing({ card: name, index: index }));
-    // socket.emit("send msg", {
-    //   type: "showCard",
-    //   data: true,
-    //   room: reduxRoom,
-    // });
-    // socket.emit("send msg", {
-    //   type: "cardRevealed",
-    //   data: name,
-    //   room: reduxRoom,
-    // });
+    socket.emit("send msg", {
+      type: "showCard",
+      data: true,
+      room: reduxRoom,
+    });
+    socket.emit("send msg", {
+      type: "cardRevealed",
+      data: "Card",
+      room: reduxRoom,
+    });
   };
 
   const handleCardToFieldFromDeck = () => {
