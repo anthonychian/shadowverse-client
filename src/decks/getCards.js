@@ -1935,7 +1935,7 @@ export const cardImage = (cardName) => {
     case "Fafnir":
       return "../textures/SD04-001EN.png";
     case "Dragon Oracle":
-      return "../textures/SD04-002EN.png";
+      return "../textures/PR-235EN.png";
     case "Dragon Warrior":
       return "../textures/SD04-003EN.png";
     case "Dragonewt Princess":
