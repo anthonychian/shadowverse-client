@@ -308,7 +308,7 @@ export default function Home() {
       >
         <div>
           {/* <img height={250} src={shadowverse} alt={"shadowverse"} /> */}
-          <img style={{ marginTop: "5em" }} height={150} src={ga} alt={"ga"} />
+          <img style={{ marginTop: "5em" }} height={200} src={ga} alt={"ga"} />
         </div>
         <div
           style={{
