@@ -3,22 +3,22 @@ import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import wallpaper from "../../src/assets/wallpapers/3.png";
 
-// import galmieux from "../../src/assets/wallpapers/Galmieux.png";
-// import viridia from "../../src/assets/wallpapers/viridia.png";
-// import piercye from "../../src/assets/wallpapers/piercye.png";
-// import kuon from "../../src/assets/wallpapers/Kuon.png";
-// import korwa from "../../src/assets/wallpapers/Korwa.png";
-// import tsubaki from "../../src/assets/wallpapers/Tsubaki.png";
-// import grimnir from "../../src/assets/wallpapers/Grimnir.png";
+import galmieux from "../../src/assets/wallpapers/Galmieux.png";
+import viridia from "../../src/assets/wallpapers/viridia.png";
+import piercye from "../../src/assets/wallpapers/piercye.png";
+import kuon from "../../src/assets/wallpapers/Kuon.png";
+import korwa from "../../src/assets/wallpapers/Korwa.png";
+import tsubaki from "../../src/assets/wallpapers/Tsubaki.png";
+import grimnir from "../../src/assets/wallpapers/Grimnir.png";
 
 //-----------------delete-------------------------
-import merlin from "../../src/assets/wallpapers/merlin.png";
-import lorraine from "../../src/assets/wallpapers/lorraine.png";
-import kongming from "../../src/assets/wallpapers/kongming.png";
-import diao from "../../src/assets/wallpapers/diao.png";
-import arisanna from "../../src/assets/wallpapers/arisanna.png";
-import nico from "../../src/assets/wallpapers/nico.png";
-import ga from "../../src/assets/wallpapers/ga.png";
+// import merlin from "../../src/assets/wallpapers/merlin.png";
+// import lorraine from "../../src/assets/wallpapers/lorraine.png";
+// import kongming from "../../src/assets/wallpapers/kongming.png";
+// import diao from "../../src/assets/wallpapers/diao.png";
+// import arisanna from "../../src/assets/wallpapers/arisanna.png";
+// import nico from "../../src/assets/wallpapers/nico.png";
+// import ga from "../../src/assets/wallpapers/ga.png";
 //-----------------delete-------------------------
 
 import buttonImage from "../../src/assets/buttons/variant1.png";
@@ -217,36 +217,36 @@ export default function Home() {
     const num = Math.floor(Math.random() * numLeaders + 1);
     setLeaderNum(num);
     switch (num) {
-      case 1:
-        return merlin;
-      case 2:
-        return lorraine;
-      case 3:
-        return kongming;
-      case 4:
-        return diao;
-      case 5:
-        return arisanna;
-      case 6:
-        return nico;
-      default:
-        return merlin;
       // case 1:
-      //   return galmieux;
+      //   return merlin;
       // case 2:
-      //   return kuon;
+      //   return lorraine;
       // case 3:
-      //   return korwa;
+      //   return kongming;
       // case 4:
-      //   return viridia;
+      //   return diao;
       // case 5:
-      //   return tsubaki;
+      //   return arisanna;
       // case 6:
-      //   return grimnir;
-      // case 7:
-      //   return piercye;
+      //   return nico;
       // default:
-      //   return galmieux;
+      //   return merlin;
+      case 1:
+        return galmieux;
+      case 2:
+        return kuon;
+      case 3:
+        return korwa;
+      case 4:
+        return viridia;
+      case 5:
+        return tsubaki;
+      case 6:
+        return grimnir;
+      case 7:
+        return piercye;
+      default:
+        return galmieux;
     }
   };
 
@@ -307,8 +307,8 @@ export default function Home() {
         }}
       >
         <div>
-          {/* <img height={250} src={shadowverse} alt={"shadowverse"} /> */}
-          <img style={{ marginTop: "5em" }} height={150} src={ga} alt={"ga"} />
+          <img height={250} src={shadowverse} alt={"shadowverse"} />
+          {/* <img style={{ marginTop: "5em" }} height={150} src={ga} alt={"ga"} /> */}
         </div>
         <div
           style={{
