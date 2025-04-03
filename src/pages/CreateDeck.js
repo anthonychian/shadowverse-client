@@ -3,7 +3,10 @@ import { useParams } from "react-router-dom";
 import InfiniteScroll from "react-infinite-scroll-component";
 import wallpaper3 from "../../src/assets/wallpapers/3.png";
 import ReplyIcon from "@mui/icons-material/Reply";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import {
+  LazyLoadImage,
+  LazyLoadComponent,
+} from "react-lazy-load-image-component";
 import swap from "../assets/logo/swap_icon.png";
 
 import {
@@ -101,6 +104,12 @@ export default function CreateDeck() {
   const [buttonFilterClass, setButtonFilterClass] = useState("all");
   const [buttonFilterSetEvo, setButtonFilterSetEvo] = useState("all evo");
   const [buttonFilterClassEvo, setButtonFilterClassEvo] = useState("all evo");
+
+  const [imageStyle, setImageStyle] = useState({ opacity: 0 });
+
+  const handleImageLoad = () => {
+    setImageStyle({}); // Reset opacity to make the image visible
+  };
 
   useEffect(() => {
     const filtered = handleSelectButtonFilter();
@@ -1217,7 +1226,6 @@ export default function CreateDeck() {
 
       <InfiniteScroll
         dataLength={allCards.length} //This is important field to render the next data
-        //   next={fetchData}
         style={{
           width: "80vw",
           display: "flex",
@@ -1232,52 +1240,61 @@ export default function CreateDeck() {
         }}
       >
         {mainDeckSelected &&
-          filteredAllCards.map((name, idx) =>
-            name ? (
-              <motion.div
-                key={idx}
-                whileTap={
+          filteredAllCards.map((name, idx) => (
+            <motion.div
+              key={idx}
+              whileTap={
+                deckMap.get(name) === 3 ||
+                (deckMap.get(name) === 1 && name === "Shenlong") ||
+                (deckMap.get(name) === 1 && name === "Curse Crafter")
+                  ? {}
+                  : { opacity: 0.3 }
+              }
+              onTap={() => handleCardSelection(name)}
+              onContextMenu={() => handleModalOpen(name)}
+              whileHover={{
+                translateY: -25,
+                scale: 1.3,
+                cursor: `url(${img}) 55 55, auto`,
+                // boxShadow: 100,
+                boxShadow:
+                  "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 1.0)",
+              }}
+            >
+              <LazyLoadImage
+                width={"224px"}
+                height={"312px"}
+                onLoad={handleImageLoad}
+                placeholder={
+                  <Skeleton
+                    sx={{ bgcolor: "grey", opacity: ".5" }}
+                    animation="wave"
+                    variant="rounded"
+                    width={224}
+                    height={312}
+                  />
+                }
+                src={cardImage(name)}
+                alt={name}
+                style={
                   deckMap.get(name) === 3 ||
                   (deckMap.get(name) === 1 && name === "Shenlong") ||
                   (deckMap.get(name) === 1 && name === "Curse Crafter")
-                    ? {}
-                    : { opacity: 0.3 }
+                    ? { filter: "grayscale(100%)" }
+                    : { imageStyle }
                 }
-                onTap={() => handleCardSelection(name)}
-                onContextMenu={() => handleModalOpen(name)}
-                whileHover={{
-                  translateY: -25,
-                  scale: 1.3,
-                  cursor: `url(${img}) 55 55, auto`,
-                  // boxShadow: 100,
-                  boxShadow:
-                    "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 1.0)",
-                }}
-              >
-                <LazyLoadImage
-                  width={"224px"}
-                  height={"312px"}
-                  src={cardImage(name)}
-                  alt={name}
-                  style={
-                    deckMap.get(name) === 3 ||
-                    (deckMap.get(name) === 1 && name === "Shenlong") ||
-                    (deckMap.get(name) === 1 && name === "Curse Crafter")
-                      ? { filter: "grayscale(100%)" }
-                      : {}
-                  }
-                />
-              </motion.div>
-            ) : (
-              <Skeleton
-                sx={{ bgcolor: "grey.900" }}
-                animation="wave"
-                variant="rounded"
-                width={224}
-                height={312}
               />
-            )
-          )}
+              {/* <LazyLoadComponent>
+                <Skeleton
+                  sx={{ bgcolor: "grey", opacity: ".5" }}
+                  animation="wave"
+                  variant="rounded"
+                  width={224}
+                  height={312}
+                />
+              </LazyLoadComponent> */}
+            </motion.div>
+          ))}
         {evoDeckSelected &&
           filteredAllCardsEvo.map((name, idx) => (
             <motion.div
@@ -1301,13 +1318,23 @@ export default function CreateDeck() {
               <LazyLoadImage
                 width={"224px"}
                 height={"312px"}
+                onLoad={handleImageLoad}
+                placeholder={
+                  <Skeleton
+                    sx={{ bgcolor: "grey", opacity: ".5" }}
+                    animation="wave"
+                    variant="rounded"
+                    width={224}
+                    height={312}
+                  />
+                }
                 src={cardImage(name)}
                 alt={name}
                 style={
                   (evoDeckMap.get(name) === 3 && name !== "Carrot") ||
                   evoDeckMap.get(name) === 10
                     ? { filter: "grayscale(100%)" }
-                    : {}
+                    : { imageStyle }
                 }
               />
             </motion.div>
