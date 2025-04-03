@@ -35,7 +35,7 @@ export const cardImage = (cardName) => {
     case "Nonja, Silent Maid":
       return "../textures/bp09-023.png";
     case "Chromatic Duel":
-      return "../textures/bp09-024.png";
+      return "../textures/PR-233EN.png";
     case "Dario, Demon Count":
       return "../textures/bp09-025.png";
     case "Queen Hemera the White":
