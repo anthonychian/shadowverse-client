@@ -5,31 +5,31 @@ export const allCardsEvo = [
   "Grasshopper Conductor Evolved",
 
   "Celia, Hope's Strategist",
-  "Innocent Princess Prim Evolved",
+  "Prim, Innocent Princess Evolved",
   "Dario, Demon Count Evolved",
   "Axe Princess Evolved",
 
   "Ceridwen, Eternity Hunter Evolved",
+  "Grea, Mysterian Dragoness Evolved",
   "Mysterian Whitewyrm",
   "Bergent, Onion Patchmaster Evolved",
+  "Vayle, Mysterian Summoner Evolved",
   "Witch of Foresight Evolved",
-  "Grea, Mysterian Dragoness Evolved",
-  "Mysterian Summoner Vayle Evolved",
 
   "Jerva of Draconic Mail Evolved",
-  "Virtuous Lindworm",
-  "Dragoncleaver Roy Evolved",
-  "Heroic Dragonslayer Evolved",
   "Romelia, Lightning Striker Evolved",
+  "Virtuous Lindworm",
+  "Roy, Dragoncleaver Evolved",
   "Katakura Kojuro Evolved",
+  "Heroic Dragonslayer Evolved",
 
-  "Kind Queen Vania",
+  "Vania, Kind Queen",
   "Oldblood King Evolved",
   "Big Soul Hunter Evolved",
   "Orator of the Bones Evolved",
 
   "Jeanne, Beacon of Salvation Evolved",
-  "Cerynelan Lighthind",
+  "Ceryneian Lighthind",
   "Jeweled Priestess Evolved",
   "Lycaon Evolved",
 
@@ -298,7 +298,7 @@ export const allCardsEvo = [
   "Jeno, Levin Vanguard Evolved",
   "Avant Blader Evolved",
   "Daria Dimensional Witch Evolved",
-  "Anne, Belle oF Mysteria Evolved",
+  "Anne, Belle of Mysteria Evolved",
   "Remi & Rami, Witchy Duo Evolved",
   "Craig, Wizard of Mysteria Evolved",
   "Imperial Dragoon Evolved",
@@ -376,31 +376,31 @@ export const set9Evo = [
   "Grasshopper Conductor Evolved",
 
   "Celia, Hope's Strategist",
-  "Innocent Princess Prim Evolved",
+  "Prim, Innocent Princess Evolved",
   "Dario, Demon Count Evolved",
   "Axe Princess Evolved",
 
   "Ceridwen, Eternity Hunter Evolved",
+  "Grea, Mysterian Dragoness Evolved",
   "Mysterian Whitewyrm",
   "Bergent, Onion Patchmaster Evolved",
+  "Vayle, Mysterian Summoner Evolved",
   "Witch of Foresight Evolved",
-  "Grea, Mysterian Dragoness Evolved",
-  "Mysterian Summoner Vayle Evolved",
 
   "Jerva of Draconic Mail Evolved",
-  "Virtuous Lindworm",
-  "Dragoncleaver Roy Evolved",
-  "Heroic Dragonslayer Evolved",
   "Romelia, Lightning Striker Evolved",
+  "Virtuous Lindworm",
+  "Roy, Dragoncleaver Evolved",
   "Katakura Kojuro Evolved",
+  "Heroic Dragonslayer Evolved",
 
-  "Kind Queen Vania",
+  "Vania, Kind Queen",
   "Oldblood King Evolved",
   "Big Soul Hunter Evolved",
   "Orator of the Bones Evolved",
 
   "Jeanne, Beacon of Salvation Evolved",
-  "Cerynelan Lighthind",
+  "Ceryneian Lighthind",
   "Jeweled Priestess Evolved",
   "Lycaon Evolved",
 
@@ -686,7 +686,7 @@ export const set2Evo = [
   "Jeno, Levin Vanguard Evolved",
   "Avant Blader Evolved",
   "Daria Dimensional Witch Evolved",
-  "Anne, Belle oF Mysteria Evolved",
+  "Anne, Belle of Mysteria Evolved",
   "Remi & Rami, Witchy Duo Evolved",
   "Craig, Wizard of Mysteria Evolved",
   "Imperial Dragoon Evolved",
@@ -814,7 +814,7 @@ export const forestEvo = [
 
 export const swordEvo = [
   "Celia, Hope's Strategist",
-  "Innocent Princess Prim Evolved",
+  "Prim, Innocent Princess Evolved",
   "Dario, Demon Count Evolved",
   "Axe Princess Evolved",
 
@@ -867,11 +867,11 @@ export const swordEvo = [
 
 export const runeEvo = [
   "Ceridwen, Eternity Hunter Evolved",
+  "Grea, Mysterian Dragoness Evolved",
   "Mysterian Whitewyrm",
   "Bergent, Onion Patchmaster Evolved",
+  "Vayle, Mysterian Summoner Evolved",
   "Witch of Foresight Evolved",
-  "Grea, Mysterian Dragoness Evolved",
-  "Mysterian Summoner Vayle Evolved",
 
   "Sweet-Tooth Medusa Evolved",
   "Unbodied Witch Evolved",
@@ -908,7 +908,7 @@ export const runeEvo = [
   "Witch of Sweets Evolved",
   "Agnes Tachyon Evolved",
   "Daria Dimensional Witch Evolved",
-  "Anne, Belle oF Mysteria Evolved",
+  "Anne, Belle of Mysteria Evolved",
   "Remi & Rami, Witchy Duo Evolved",
   "Craig, Wizard of Mysteria Evolved",
   "Demonflame Mage Evolved",
@@ -922,11 +922,11 @@ export const runeEvo = [
 
 export const dragonEvo = [
   "Jerva of Draconic Mail Evolved",
-  "Virtuous Lindworm",
-  "Dragoncleaver Roy Evolved",
-  "Heroic Dragonslayer Evolved",
   "Romelia, Lightning Striker Evolved",
+  "Virtuous Lindworm",
+  "Roy, Dragoncleaver Evolved",
   "Katakura Kojuro Evolved",
+  "Heroic Dragonslayer Evolved",
 
   "Azi Dahaka Evolved",
   "Annerose Evolved",
@@ -978,7 +978,7 @@ export const dragonEvo = [
 ];
 
 export const abyssEvo = [
-  "Kind Queen Vania",
+  "Vania, Kind Queen",
   "Oldblood King Evolved",
   "Big Soul Hunter Evolved",
   "Orator of the Bones Evolved",
@@ -1031,7 +1031,7 @@ export const abyssEvo = [
 
 export const havenEvo = [
   "Jeanne, Beacon of Salvation Evolved",
-  "Cerynelan Lighthind",
+  "Ceryneian Lighthind",
   "Jeweled Priestess Evolved",
   "Lycaon Evolved",
 

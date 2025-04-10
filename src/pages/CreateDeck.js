@@ -156,10 +156,10 @@ export default function CreateDeck() {
       cardName === "Mysterian Blackwyrm" ||
       cardName === "Virtuous Lindworm" ||
       cardName === "Iniquitous Lindworm" ||
-      cardName === "Kind Queen Vania" ||
-      cardName === "Blood Queen Vania" ||
-      cardName === "Cerynelan Lighthind" ||
-      cardName === "Cerynelan Darkhind"
+      cardName === "Vania, Kind Queen" ||
+      cardName === "Vania, Blood Queen" ||
+      cardName === "Ceryneian Lighthind" ||
+      cardName === "Ceryneian Darkhind"
     );
   };
 
@@ -189,15 +189,15 @@ export default function CreateDeck() {
     } else if (cardName === "Iniquitous Lindworm") {
       setCardName("Virtuous Lindworm");
     }
-    if (cardName === "Kind Queen Vania") {
-      setCardName("Blood Queen Vania");
-    } else if (cardName === "Blood Queen Vania") {
-      setCardName("Kind Queen Vania");
+    if (cardName === "Vania, Kind Queen") {
+      setCardName("Vania, Blood Queen");
+    } else if (cardName === "Vania, Blood Queen") {
+      setCardName("Vania, Kind Queen");
     }
-    if (cardName === "Cerynelan Lighthind") {
-      setCardName("Cerynelan Darkhind");
-    } else if (cardName === "Cerynelan Darkhind") {
-      setCardName("Cerynelan Lighthind");
+    if (cardName === "Ceryneian Lighthind") {
+      setCardName("Ceryneian Darkhind");
+    } else if (cardName === "Ceryneian Darkhind") {
+      setCardName("Ceryneian Lighthind");
     }
   };
 

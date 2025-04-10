@@ -2351,10 +2351,10 @@ export const CardSlice = createSlice({
       else if (card === "Mysterian Blackwyrm") newCard = "Mysterian Whitewyrm";
       else if (card === "Virtuous Lindworm") newCard = "Iniquitous Lindworm";
       else if (card === "Iniquitous Lindworm") newCard = "Virtuous Lindworm";
-      else if (card === "Kind Queen Vania") newCard = "Blood Queen Vania";
-      else if (card === "Blood Queen Vania") newCard = "Kind Queen Vania";
-      else if (card === "Cerynelan Lighthind") newCard = "Cerynelan Darkhind";
-      else if (card === "Cerynelan Darkhind") newCard = "Cerynelan Lighthind";
+      else if (card === "Vania, Kind Queen") newCard = "Vania, Blood Queen";
+      else if (card === "Vania, Blood Queen") newCard = "Vania, Kind Queen";
+      else if (card === "Ceryneian Lighthind") newCard = "Ceryneian Darkhind";
+      else if (card === "Ceryneian Darkhind") newCard = "Ceryneian Lighthind";
 
       state.evoDeck[idx].card = newCard;
     },
