@@ -1,7 +1,7 @@
 export const allTokens = [
-  "Instant Potion TOKEN",
+  "Instant Poison TOKEN",
   "Eternal Potion TOKEN",
-  "Mysterian Missle TOKEN",
+  "Mysterian Missile TOKEN",
   "Aftershock TOKEN",
 
   "Lloyd TOKEN",
