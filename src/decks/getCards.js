@@ -2351,7 +2351,7 @@ export const cardImage = (cardName) => {
     case "Iniquitous Lindworm":
       return "../textures/BP09-069EN_URA.png";
     case "Roy, Dragoncleaver Evolved":
-      return "../textures/BP09-070EN.png";
+      return "../textures/BP09-076EN.png";
     case "Katakura Kojuro Evolved":
       return "../textures/BP09-079EN.png";
     case "Heroic Dragonslayer Evolved":
