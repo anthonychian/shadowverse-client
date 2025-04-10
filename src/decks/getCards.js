@@ -1169,7 +1169,7 @@ export const cardImage = (cardName) => {
 
     case "Cassiopeia":
       return "../textures/BP04-U01EN.png";
-    case "C.C. Woodland Witch":
+    case "C.C., Woodland Witch":
       return "../textures/BP04-002EN.png";
     case "Deepwood Anomaly":
       return "../textures/BP04-003EN.png";

@@ -615,7 +615,7 @@ export const allCards = [
   "Gliesaray",
 
   "Cassiopeia",
-  "C.C. Woodland Witch",
+  "C.C., Woodland Witch",
   "Deepwood Anomaly",
   "King Elephant",
   "Fashionista Nelcha",
@@ -1814,7 +1814,7 @@ export const set5 = [
 
 export const set4 = [
   "Cassiopeia",
-  "C.C. Woodland Witch",
+  "C.C., Woodland Witch",
   "Deepwood Anomaly",
   "King Elephant",
   "Fashionista Nelcha",
@@ -2487,7 +2487,7 @@ export const forest = [
   "Mark of the Six",
 
   "Cassiopeia",
-  "C.C. Woodland Witch",
+  "C.C., Woodland Witch",
   "Deepwood Anomaly",
   "King Elephant",
   "Fashionista Nelcha",
