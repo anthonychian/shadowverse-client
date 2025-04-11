@@ -1931,7 +1931,7 @@ export const cardImage = (cardName) => {
     case "Undying Resentment":
       return "../textures/SD05-015EN.png";
     case "Summon Bloodkin":
-      return "../textures/SD05-016EN.png";
+      return "../textures/PR-211EN.png";
     case "Fafnir":
       return "../textures/SD04-001EN.png";
     case "Dragon Oracle":
