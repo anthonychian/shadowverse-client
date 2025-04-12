@@ -878,26 +878,39 @@ export default function Field({
           <MenuItem onClick={handleDuplicateToken}>Duplicate</MenuItem>
         )}
         {!isToken(name) && (
-          <MenuItem onClick={handleCardToHandFromField}>Hand</MenuItem>
-        )}
-        {!isToken(name) && (
           <MenuItem onClick={handleCardToCemetery}>Cemetery</MenuItem>
         )}
-
         {!reduxCustomValues[index].showAtk && (
           <MenuItem onClick={handleShowAtkDef}>Modify Atk/Def</MenuItem>
         )}
         {reduxCustomValues[index].showAtk && (
           <MenuItem onClick={handleHideAtkDef}>Hide Atk/Def</MenuItem>
         )}
+        {reduxCounterField[index] < 1 && (
+          <MenuItem onClick={handleAddCounter}>Add Counter</MenuItem>
+        )}
+        {!isToken(name) && (
+          <MenuItem onClick={handleCardToHandFromField}>Hand</MenuItem>
+        )}
+        <MenuItem onClick={handleMoveOnField}>Move</MenuItem>
+        {!isToken(name) && (
+          <MenuItem onClick={handleCardToTopDeck}>Top of Deck</MenuItem>
+        )}
+        {!isToken(name) && (
+          <MenuItem onClick={handleCardToBotDeck}>Bot of Deck</MenuItem>
+        )}
+        {!isToken(name) && (
+          <MenuItem onClick={handleCardToBanish}>Banish</MenuItem>
+        )}
+
+        {!isToken(name) && (
+          <MenuItem onClick={handleTransfer}>Transfer</MenuItem>
+        )}
         {!reduxCustomStatus[index] && (
           <MenuItem onClick={handleShowStatus}>Add Status</MenuItem>
         )}
         {reduxCustomStatus[index] && (
           <MenuItem onClick={handleHideStatus}>Hide Status</MenuItem>
-        )}
-        {reduxCounterField[index] < 1 && reduxCustomStatus[index] && (
-          <MenuItem onClick={handleAddCounter}>Add Counter</MenuItem>
         )}
         {reduxAuraField[index] === 0 &&
           reduxBaneField[index] === 0 &&
@@ -925,20 +938,6 @@ export default function Field({
         )}
         {reduxWardField[index] === 1 && reduxCustomStatus[index] && (
           <MenuItem onClick={handleRemoveWard}>Remove Ward</MenuItem>
-        )}
-        <MenuItem onClick={handleMoveOnField}>Move</MenuItem>
-        {!isToken(name) && (
-          <MenuItem onClick={handleCardToTopDeck}>Top of Deck</MenuItem>
-        )}
-        {!isToken(name) && (
-          <MenuItem onClick={handleCardToBotDeck}>Bot of Deck</MenuItem>
-        )}
-        {!isToken(name) && (
-          <MenuItem onClick={handleCardToBanish}>Banish</MenuItem>
-        )}
-
-        {!isToken(name) && (
-          <MenuItem onClick={handleTransfer}>Transfer</MenuItem>
         )}
       </Menu>
       <Menu

@@ -483,22 +483,22 @@ export const CardSlice = createSlice({
         ...state.counterField.slice(index + 1),
       ];
       state.counterField = newCounters;
-      const date = new Date().toLocaleTimeString("it-IT", {
-        hour: "2-digit",
-        minute: "2-digit",
-      });
+      // const date = new Date().toLocaleTimeString("it-IT", {
+      //   hour: "2-digit",
+      //   minute: "2-digit",
+      // });
 
-      state.gameLog = [
-        ...state.gameLog,
-        {
-          text: `[${date}] (Me): Set ${state.field[index]} counter to ${newValue}`,
-        },
-      ];
-      socket.emit("send msg", {
-        type: "log",
-        data: { text: `Set ${state.field[index]} counter to ${newValue}` },
-        room: state.room,
-      });
+      // state.gameLog = [
+      //   ...state.gameLog,
+      //   {
+      //     text: `[${date}] (Me): Set ${state.field[index]} counter to ${newValue}`,
+      //   },
+      // ];
+      // socket.emit("send msg", {
+      //   type: "log",
+      //   data: { text: `Set ${state.field[index]} counter to ${newValue}` },
+      //   room: state.room,
+      // });
       socket.emit("send msg", {
         type: "counter",
         data: state.counterField,
