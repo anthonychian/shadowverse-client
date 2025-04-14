@@ -112,7 +112,7 @@ export const cardImage = (cardName) => {
       return "../textures/BP09-072EN.png";
     case "Force of the Dragonewt":
       return "../textures/BP09-073EN.png";
-    case "Waters of the Orca":
+    case "Waters of the Megalorca":
       return "../textures/BP09-074EN.png";
     case "Roy, Dragoncleaver":
       return "../textures/BP09-075EN.png";
