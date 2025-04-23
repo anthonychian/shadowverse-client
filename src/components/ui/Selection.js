@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 import { motion } from "framer-motion";
 import imageRamina from "../../assets/leaders/Ramina.png";
 import imageJeanne from "../../assets/leaders/Jeanne.png";
@@ -43,6 +44,7 @@ import { cardImage } from "../../decks/getCards";
 
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
+import { socket } from "../../sockets";
 
 import {
   Box,
@@ -69,6 +71,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import SettingsIcon from "@mui/icons-material/Settings";
 import ChatIcon from "@mui/icons-material/Chat";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
+import SensorsIcon from "@mui/icons-material/Sensors";
 import ReplayIcon from "@mui/icons-material/Replay";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -108,6 +111,7 @@ export default function Selection({ setSelectedOption }) {
   const [rematchOpenDialog, setRematchOpenDialog] = useState(false);
 
   // const [rematchNotify, setRematchNotify] = useState(false);
+  const reduxRoom = useSelector((state) => state.card.room);
 
   const [acceptRematch, setAcceptRematch] = useState(false);
 
@@ -134,7 +138,13 @@ export default function Selection({ setSelectedOption }) {
 
   const exitToHome = () => {
     dispatch(exitGame());
+    socket.emit("leave_room", reduxRoom.toString());
     navigate("/");
+  };
+
+  const reconnectToRoom = () => {
+    socket.emit("leave_room", reduxRoom.toString());
+    socket.emit("join_room", reduxRoom.toString());
   };
 
   const handleAcceptRematchUI = () => {
@@ -274,6 +284,19 @@ export default function Selection({ setSelectedOption }) {
                   <ExitToAppIcon sx={{ color: "white" }} />
                 </ListItemIcon>
                 <ListItemText primary={"Exit Game"} />
+              </ListItemButton>
+            </ListItem>
+          </List>
+
+          <Divider />
+
+          <List>
+            <ListItem key={"text"} disablePadding>
+              <ListItemButton onClick={reconnectToRoom}>
+                <ListItemIcon>
+                  <SensorsIcon sx={{ color: "white" }} />
+                </ListItemIcon>
+                <ListItemText primary={"Reconnect"} />
               </ListItemButton>
             </ListItem>
           </List>
