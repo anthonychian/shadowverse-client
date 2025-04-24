@@ -25,6 +25,7 @@ import buttonImage from "../../src/assets/buttons/variant1.png";
 import shadowverse from "../../src/assets/wallpapers/SVElogo.png";
 import cardback from "../assets/cardbacks/default.png";
 import donate from "../assets/buttons/donate_btn.webp";
+import discord from "../assets/buttons/discord.png";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -584,8 +585,8 @@ export default function Home() {
       <div
         style={{
           position: "absolute",
-          bottom: "15%",
-          right: "1%",
+          bottom: "4em",
+          right: "1em",
           height: "10px",
           // width: "40px",
           color: "white",
@@ -600,6 +601,32 @@ export default function Home() {
           rel="noreferrer noopener"
         >
           <img height={"40px"} src={donate} alt={"donate"} />
+        </a>
+      </div>
+      <div
+        style={{
+          position: "absolute",
+          bottom: "4em",
+          right: "12em",
+          height: "10px",
+          // width: "40px",
+          color: "white",
+
+          fontFamily: "Noto Serif JP, serif",
+          borderRadius: "7px",
+        }}
+      >
+        <a
+          href="https://discord.gg/shadowverse-evolve-tcg-community-928746294384677004"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          {/* <img
+            height={"100px"}
+            src="https://styles.redditmedia.com/t5_5mmlkz/styles/image_widget_jq1ka67u1neb1.png"
+            alt={"discord"}
+          /> */}
+          <img height={"40px"} src={discord} alt={"discord"} />
         </a>
       </div>
       <div className="LeaderContainerHome">
