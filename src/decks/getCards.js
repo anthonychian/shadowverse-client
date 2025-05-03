@@ -2852,7 +2852,7 @@ export const cardImage = (cardName) => {
     case "Daria Dimensional Witch Evolved":
       return "../textures/BP02-036EN.png";
     case "Anne, Belle of Mysteria Evolved":
-      return "../textures/BP09-SP01EN.png";
+      return "../textures/BP02-039EN.png";
     case "Remi & Rami, Witchy Duo Evolved":
       return "../textures/BP02-043EN.png";
     case "Craig, Wizard of Mysteria Evolved":
