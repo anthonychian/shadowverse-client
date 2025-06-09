@@ -2248,6 +2248,45 @@ export const CardSlice = createSlice({
         room: state.room,
       });
     },
+    advancedToField: (state, action) => {
+      const card = action.payload.card;
+      const newIndex = action.payload.index;
+      const cardIndex = action.payload.indexInEvolveDeck;
+      state.evoDeck = state.evoDeck.filter((_, i) => i !== cardIndex);
+      const date = new Date().toLocaleTimeString("it-IT", {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+      const newField = [
+        ...state.field.slice(0, newIndex),
+        card,
+        ...state.field.slice(newIndex + 1),
+      ];
+      state.field = newField;
+
+      state.gameLog = [
+        ...state.gameLog,
+        {
+          text: `[${date}] (Me): Added ${card} to field from evolve deck`,
+          card,
+        },
+      ];
+      socket.emit("send msg", {
+        type: "log",
+        data: { text: `Added ${card} to field from evolve deck`, card },
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "field",
+        data: state.field,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "evoDeck",
+        data: state.evoDeck,
+        room: state.room,
+      });
+    },
     backToEvolveDeck: (state, action) => {
       const card = action.payload.card;
       const cardIndex = action.payload.index;
@@ -2257,10 +2296,7 @@ export const CardSlice = createSlice({
         ...state.evoField.slice(cardIndex + 1),
       ];
       state.evoField = newField;
-      const date = new Date().toLocaleTimeString("it-IT", {
-        hour: "2-digit",
-        minute: "2-digit",
-      });
+
       if (card.slice(0, 6) === "Carrot") {
         const numOfCarrots = Number(card.slice(-1));
         for (let i = 0; i < numOfCarrots; i++)
@@ -2269,6 +2305,10 @@ export const CardSlice = createSlice({
         state.evoDeck = [...state.evoDeck, { card: card, status: true }];
       }
 
+      const date = new Date().toLocaleTimeString("it-IT", {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
       state.gameLog = [
         ...state.gameLog,
         {
@@ -2284,6 +2324,46 @@ export const CardSlice = createSlice({
       socket.emit("send msg", {
         type: "evoField",
         data: state.evoField,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "evoDeck",
+        data: state.evoDeck,
+        room: state.room,
+      });
+    },
+    advancedBackToEvolveDeck: (state, action) => {
+      const card = action.payload.card;
+      const cardIndex = action.payload.index;
+      const newField = [
+        ...state.field.slice(0, cardIndex),
+        0,
+        ...state.field.slice(cardIndex + 1),
+      ];
+      state.field = newField;
+
+      state.evoDeck = [...state.evoDeck, { card: card, status: true }];
+
+      const date = new Date().toLocaleTimeString("it-IT", {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+
+      state.gameLog = [
+        ...state.gameLog,
+        {
+          text: `[${date}] (Me): Returned ${card} to evolve deck`,
+          card,
+        },
+      ];
+      socket.emit("send msg", {
+        type: "log",
+        data: { text: `Returned ${card} to evolve deck`, card },
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "field",
+        data: state.field,
         room: state.room,
       });
       socket.emit("send msg", {
@@ -2703,7 +2783,9 @@ export const {
   shuffleDeck,
   evolveCardOnField,
   feedCardOnField,
+  advancedToField,
   backToEvolveDeck,
+  advancedBackToEvolveDeck,
   flipEvoCard,
   switchEvoCard,
   setField,

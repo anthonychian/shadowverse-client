@@ -51,6 +51,7 @@ const style = {
 export default function EvoDeck({
   setHovering,
   setReadyToEvo,
+  setReadyToAdvanced,
   setReadyToFeed,
   setReady,
   ready,
@@ -58,7 +59,8 @@ export default function EvoDeck({
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
   const [showEvo, setShowEvo] = useState(true);
-  const [doubleSided, setDoubleSided] = useState(true);
+  const [doubleSided, setDoubleSided] = useState(false);
+  const [advanced, setAdvanced] = useState(false);
   const [evoStatus, setEvoStatus] = useState(false);
   const [contextMenu, setContextMenu] = React.useState(null);
   const [name, setName] = useState("");
@@ -73,6 +75,10 @@ export default function EvoDeck({
   const handleModalClose = () => {
     setOpen(false);
     dispatch(setViewingEvoDeck(false));
+  };
+
+  const isAdvanced = (cardName) => {
+    return cardName.slice(-7) === "ADVANCE";
   };
 
   const isDoubleEvo = (cardName) => {
@@ -98,6 +104,8 @@ export default function EvoDeck({
     setShowEvo(card.card === "Carrot");
     setDoubleSided(isDoubleEvo(card.card));
     setEvoStatus(card.status);
+    console.log(card.card.slice(-7));
+    setAdvanced(isAdvanced(card.card));
     setName(card.card);
     setIdx(idx);
     console.log(idx);
@@ -117,6 +125,13 @@ export default function EvoDeck({
 
   const handleClose = () => {
     setContextMenu(null);
+  };
+
+  const handleAdvanced = () => {
+    handleModalClose();
+    handleClose();
+    setReady(true);
+    setReadyToAdvanced(true);
   };
 
   const handleEvolve = () => {
@@ -293,8 +308,11 @@ export default function EvoDeck({
         {showEvo && !evoStatus && (
           <MenuItem onClick={handleFeed}>Feed</MenuItem>
         )}
-        {!showEvo && !evoStatus && (
+        {!showEvo && !evoStatus && !advanced && (
           <MenuItem onClick={handleEvolve}>Evolve</MenuItem>
+        )}
+        {advanced && !evoStatus && (
+          <MenuItem onClick={handleAdvanced}>Field</MenuItem>
         )}
         {<MenuItem onClick={handleFlipEvo}>Flip</MenuItem>}
         {doubleSided && !evoStatus && (

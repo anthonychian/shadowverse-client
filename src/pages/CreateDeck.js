@@ -11,6 +11,7 @@ import swap from "../assets/logo/swap_icon.png";
 
 import {
   allCards,
+  set10,
   set9,
   set8,
   setIDOL,
@@ -32,6 +33,7 @@ import {
 } from "../decks/AllCards";
 import {
   allCardsEvo,
+  set10Evo,
   set9Evo,
   set8Evo,
   setIDOLEvo,
@@ -73,6 +75,9 @@ import {
   Skeleton,
   Modal,
   Box,
+  InputLabel,
+  MenuItem,
+  Select,
 } from "@mui/material";
 
 export default function CreateDeck() {
@@ -106,6 +111,17 @@ export default function CreateDeck() {
   const [buttonFilterClassEvo, setButtonFilterClassEvo] = useState("all evo");
 
   const [imageStyle, setImageStyle] = useState({ opacity: 0 });
+
+  // const [cardSet, setCardSet] = useState("all");
+
+  const handleChange = (event) => {
+    setButtonFilterSet(event.target.value);
+    setButtonFilterSetEvo(event.target.value + " evo");
+  };
+  const handleChangeClass = (event) => {
+    setButtonFilterClass(event.target.value);
+    setButtonFilterClassEvo(event.target.value + " evo");
+  };
 
   const handleImageLoad = () => {
     setImageStyle({}); // Reset opacity to make the image visible
@@ -314,6 +330,8 @@ export default function CreateDeck() {
 
   const getCardsFromName = (name) => {
     switch (name) {
+      case "set 10":
+        return set10;
       case "set 9":
         return set9;
       case "set 8":
@@ -336,6 +354,8 @@ export default function CreateDeck() {
         return set2;
       case "set 1":
         return set1;
+      case "set 10 evo":
+        return set10Evo;
       case "set 9 evo":
         return set9Evo;
       case "set 8 evo":
@@ -788,7 +808,34 @@ export default function CreateDeck() {
             columns: "100px",
           }}
         >
-          <Button
+          <Box sx={{ width: 300, backgroundColor: "white" }}>
+            <FormControl fullWidth variant="filled">
+              <InputLabel id="demo-simple-select-label">Card Set</InputLabel>
+              <Select
+                sx={{ backgroundColor: "white" }}
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={buttonFilterSet}
+                label="Card Set"
+                onChange={handleChange}
+              >
+                <MenuItem value={"all"}>All</MenuItem>
+                <MenuItem value={"set 10"}>Gods of the Arcana</MenuItem>
+                <MenuItem value={"set 9"}>Duet of Dawn and Dusk</MenuItem>
+                <MenuItem value={"set 8"}>Alterchaotica</MenuItem>
+                <MenuItem value={"set 7"}>Verdant Steel</MenuItem>
+                <MenuItem value={"idol"}>iM@S CG</MenuItem>
+                <MenuItem value={"set 6"}>Paragons of the Colosseum</MenuItem>
+                <MenuItem value={"set 5"}>Omens Eternal</MenuItem>
+                <MenuItem value={"set 4"}>Cosmic Mythos</MenuItem>
+                <MenuItem value={"set 3"}>Flame of Lævateinn</MenuItem>
+                <MenuItem value={"uma"}>Umamusume</MenuItem>
+                <MenuItem value={"set 2"}>Reign of Bahamut</MenuItem>
+                <MenuItem value={"set 1"}>Advent of Genesis</MenuItem>
+              </Select>
+            </FormControl>
+          </Box>
+          {/* <Button
             onClick={() => {
               setButtonFilterSet("all");
               setButtonFilterSetEvo("all evo");
@@ -807,6 +854,27 @@ export default function CreateDeck() {
             variant="contained"
           >
             All
+          </Button>
+          <Button
+            onClick={() => {
+              setButtonFilterSet("set 10");
+              setButtonFilterSetEvo("set 10 evo");
+            }}
+            style={{
+              fontFamily: "Noto Serif JP,serif",
+              textTransform: "none",
+              fontWeight: "bold",
+              backgroundColor:
+                buttonFilterSet === "set 10" ? "#131219" : "white",
+              border:
+                buttonFilterSet === "set 10"
+                  ? "3px solid gold"
+                  : "3px solid white",
+              color: buttonFilterSet === "set 10" ? "gold" : "#131219",
+            }}
+            variant="contained"
+          >
+            Gods of the Arcana
           </Button>
           <Button
             onClick={() => {
@@ -1036,7 +1104,7 @@ export default function CreateDeck() {
             variant="contained"
           >
             Advent of Genesis
-          </Button>
+          </Button> */}
         </div>
 
         <div
@@ -1053,7 +1121,29 @@ export default function CreateDeck() {
             flexWrap: "wrap",
           }}
         >
-          <Button
+          <Box sx={{ width: 300, backgroundColor: "white" }}>
+            <FormControl fullWidth variant="filled">
+              <InputLabel id="demo-simple-select-label">Class</InputLabel>
+              <Select
+                sx={{ backgroundColor: "white" }}
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                value={buttonFilterClass}
+                label="Class"
+                onChange={handleChangeClass}
+              >
+                <MenuItem value={"all"}>All</MenuItem>
+                <MenuItem value={"forest"}>Forestcraft</MenuItem>
+                <MenuItem value={"sword"}>Swordcraft</MenuItem>
+                <MenuItem value={"rune"}>Runecraft</MenuItem>
+                <MenuItem value={"dragon"}>Dragoncraft</MenuItem>
+                <MenuItem value={"abyss"}>Abysscraft</MenuItem>
+                <MenuItem value={"haven"}>Havencraft</MenuItem>
+                <MenuItem value={"neutral"}>Neutral</MenuItem>
+              </Select>
+            </FormControl>
+          </Box>
+          {/* <Button
             onClick={() => {
               setButtonFilterClass("all");
               setButtonFilterClassEvo("all evo");
@@ -1220,7 +1310,7 @@ export default function CreateDeck() {
             variant="contained"
           >
             Neutral
-          </Button>
+          </Button> */}
         </div>
       </div>
 

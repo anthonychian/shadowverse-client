@@ -15,8 +15,10 @@ import {
   placeToBanishFromField,
   removeTokenOnField,
   evolveCardOnField,
+  advancedToField,
   feedCardOnField,
   backToEvolveDeck,
+  advancedBackToEvolveDeck,
   setEnemyField,
   setEnemyEvoField,
   setEnemyEngaged,
@@ -201,6 +203,7 @@ export default function Field({
   const [readyFromCemetery, setReadyFromCemetery] = useState(false);
   const [readyFromBanish, setReadyFromBanish] = useState(false);
   const [readyToEvo, setReadyToEvo] = useState(false);
+  const [readyToAdvanced, setReadyToAdvanced] = useState(false);
   const [readyToFeed, setReadyToFeed] = useState(false);
   const [tokenReady, setTokenReady] = useState(false);
 
@@ -297,6 +300,9 @@ export default function Field({
   const isToken = (name) => {
     return name.slice(-5) === "TOKEN";
   };
+  const isAdvanced = (name) => {
+    return name.slice(-7) === "ADVANCE";
+  };
 
   const handleClick = (name, indexClicked) => {
     if (reduxField[indexClicked] === 0 && !readyToEvo && !readyToFeed) {
@@ -321,6 +327,16 @@ export default function Field({
         // dispatch(clearValuesAtIndex(index));
         // dispatch(clearEngagedAtIndex(index));
         // dispatch(clearCountersAtIndex(index));
+      }
+      if (readyToAdvanced) {
+        setReadyToAdvanced(false);
+        dispatch(
+          advancedToField({
+            card: name,
+            indexInEvolveDeck: reduxCurrentCardIndex,
+            index: indexClicked,
+          })
+        );
       }
       if (readyToMoveOnField) {
         setReadyToMoveOnField(false);
@@ -490,6 +506,7 @@ export default function Field({
     } else {
       console.log("there is already a card here");
       setReadyToEvo(false);
+      setReadyToAdvanced(false);
       setReadyToFeed(false);
       setReadyFromCemetery(false);
       setReadyFromBanish(false);
@@ -753,6 +770,15 @@ export default function Field({
       })
     );
   };
+  const handleReturnAdvancedToEvolveDeck = () => {
+    handleClose();
+    dispatch(
+      advancedBackToEvolveDeck({
+        card: name,
+        index: index,
+      })
+    );
+  };
 
   const handleSelectEnemyCardInHand = (idx) => {
     if (idx === reduxCardSelectedInHand) dispatch(setCardSelectedInHand(-1));
@@ -871,13 +897,18 @@ export default function Field({
             : undefined
         }
       >
+        {isAdvanced(name) && (
+          <MenuItem onClick={() => handleReturnAdvancedToEvolveDeck()}>
+            Return
+          </MenuItem>
+        )}
         {isToken(name) && (
           <MenuItem onClick={handleRemoveTokenFromField}>Remove</MenuItem>
         )}
         {isToken(name) && (
           <MenuItem onClick={handleDuplicateToken}>Duplicate</MenuItem>
         )}
-        {!isToken(name) && (
+        {!isToken(name) && !isAdvanced(name) && (
           <MenuItem onClick={handleCardToCemetery}>Cemetery</MenuItem>
         )}
         {!reduxCustomValues[index].showAtk && (
@@ -889,21 +920,21 @@ export default function Field({
         {reduxCounterField[index] < 1 && (
           <MenuItem onClick={handleAddCounter}>Add Counter</MenuItem>
         )}
-        {!isToken(name) && (
+        {!isToken(name) && !isAdvanced(name) && (
           <MenuItem onClick={handleCardToHandFromField}>Hand</MenuItem>
         )}
         <MenuItem onClick={handleMoveOnField}>Move</MenuItem>
-        {!isToken(name) && (
+        {!isToken(name) && !isAdvanced(name) && (
           <MenuItem onClick={handleCardToTopDeck}>Top of Deck</MenuItem>
         )}
-        {!isToken(name) && (
+        {!isToken(name) && !isAdvanced(name) && (
           <MenuItem onClick={handleCardToBotDeck}>Bot of Deck</MenuItem>
         )}
-        {!isToken(name) && (
+        {!isToken(name) && !isAdvanced(name) && (
           <MenuItem onClick={handleCardToBanish}>Banish</MenuItem>
         )}
 
-        {!isToken(name) && (
+        {!isToken(name) && !isAdvanced(name) && (
           <MenuItem onClick={handleTransfer}>Transfer</MenuItem>
         )}
         {!reduxCustomStatus[index] && (
@@ -1374,6 +1405,7 @@ export default function Field({
         >
           <EvoDeck
             setReadyToEvo={setReadyToEvo}
+            setReadyToAdvanced={setReadyToAdvanced}
             setReadyToFeed={setReadyToFeed}
             setReady={setReady}
             setHovering={setHovering}

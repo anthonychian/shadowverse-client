@@ -1,4 +1,7 @@
 export const allTokens = [
+  "Terminus Weapon TOKEN",
+  "Devoted Dragon TOKEN",
+
   "Instant Poison TOKEN",
   "Eternal Potion TOKEN",
   "Mysterian Missile TOKEN",
