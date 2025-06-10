@@ -1,6 +1,6 @@
 export const allCards = [
   "XII. Wolfraud, Hanged Man",
-  "Lucille, Kepper of Relics",
+  "Lucille, Keeper of Relics",
   "Chipper Skipper",
   "Windflower Tiger",
   "Treacherous Reversal",
@@ -1288,7 +1288,7 @@ export const allCards = [
 
 export const set10 = [
   "XII. Wolfraud, Hanged Man",
-  "Lucille, Kepper of Relics",
+  "Lucille, Keeper of Relics",
   "Chipper Skipper",
   "Windflower Tiger",
   "Treacherous Reversal",
@@ -2592,7 +2592,7 @@ export const set1 = [
 
 export const forest = [
   "XII. Wolfraud, Hanged Man",
-  "Lucille, Kepper of Relics",
+  "Lucille, Keeper of Relics",
   "Chipper Skipper",
   "Windflower Tiger",
   "Treacherous Reversal",
