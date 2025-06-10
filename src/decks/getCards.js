@@ -4,7 +4,7 @@ export const cardImage = (cardName) => {
       return "../textures/bp10-u01.png";
     case "XII. Wolfraud, Hanged Man Evolved":
       return "../textures/bp10-002.png";
-    case "Lucille, Kepper of Relics":
+    case "Lucille, Keeper of Relics":
       return "../textures/bp10-003.png";
     case "Spinaria & Lucille, Keepers ADVANCE":
       return "../textures/bp10-004.png";
