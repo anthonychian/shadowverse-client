@@ -520,6 +520,16 @@ export default function Field({
 
   const cancelClick = () => {
     setReady(false);
+
+    setReadyToEvo(false);
+    setReadyToAdvanced(false);
+    setReadyToFeed(false);
+    setReadyFromCemetery(false);
+    setReadyFromBanish(false);
+    setReadyToPlaceOnFieldFromHand(false);
+    setReadyToMoveOnField(false);
+    setReadyToMoveEvoOnField(false);
+    setTokenReady(false);
   };
 
   const handleContextMenu = (event, index, name) => {
