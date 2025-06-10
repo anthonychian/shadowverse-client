@@ -22,7 +22,7 @@ export const allCardsEvo = [
   "Lævateinn Dragon, Dual Form Gamma ADVANCE",
   "Slaughering Dragonewt Evolved",
   "Swiftblade Dragonewt Evolved",
-  "Springwell Dragon Keeper",
+  "Springwell Dragon Keeper Evolved",
 
   "VI. Milteo, The Lovers Evolved",
   "Sincere Masquerade Ghost ADVANCE ",
@@ -434,7 +434,7 @@ export const set10Evo = [
   "Lævateinn Dragon, Dual Form Gamma ADVANCE",
   "Slaughering Dragonewt Evolved",
   "Swiftblade Dragonewt Evolved",
-  "Springwell Dragon Keeper",
+  "Springwell Dragon Keeper Evolved",
 
   "VI. Milteo, The Lovers Evolved",
   "Sincere Masquerade Ghost ADVANCE",
@@ -1028,7 +1028,7 @@ export const dragonEvo = [
   "Lævateinn Dragon, Dual Form Gamma ADVANCE",
   "Slaughering Dragonewt Evolved",
   "Swiftblade Dragonewt Evolved",
-  "Springwell Dragon Keeper",
+  "Springwell Dragon Keeper Evolved",
 
   "Jerva of Draconic Mail Evolved",
   "Romelia, Lightning Striker Evolved",
