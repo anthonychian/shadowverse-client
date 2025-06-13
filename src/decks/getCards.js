@@ -2991,7 +2991,7 @@ export const cardImage = (cardName) => {
       return "../textures/BP01-075EN.png";
     case "Dark Dragoon Forte":
       return "../textures/BP01-076EN.png";
-    case "Dark Dragoon Forte Evolved U":
+    case "Dark Dragoon Forte Evolved":
       return "../textures/BP01-U04EN.png";
     case "Aiela, Dragon Knight":
       return "../textures/BP01-P16EN.png";
