@@ -25,7 +25,7 @@ export const allCardsEvo = [
   "Springwell Dragon Keeper Evolved",
 
   "VI. Milteo, The Lovers Evolved",
-  "Sincere Masquerade Ghost ADVANCE ",
+  "Sincere Masquerade Ghost ADVANCE",
   "Deathbringer Evolved",
   "Ghostly Maid Evolved",
   "Moonrise Werewolf Evolved",
