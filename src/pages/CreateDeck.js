@@ -234,10 +234,19 @@ export default function CreateDeck() {
   const handleDeckImport = (event) => {
     setImportTextFieldVal(event.target.value);
     const val = event.target.value.split("\n");
+
+    let arr = [];
+    for (const card of val) {
+      let num = parseInt(card[0]);
+      for (let i = 0; i < num; i++) {
+        arr.push(card.slice(2));
+      }
+    }
+
     if (mainDeckSelected) {
-      handleFillDeckMap(val);
+      handleFillDeckMap(arr);
     } else {
-      handleFillEvoDeckMap(val);
+      handleFillEvoDeckMap(arr);
     }
   };
   const handleClearImport = () => {
@@ -248,26 +257,23 @@ export default function CreateDeck() {
       setEvoDeck([]);
       setEvoDeckMap(new Map());
     }
+    setImportTextFieldVal();
   };
 
   const handleDeckImportFormat = () => {
     let formattedDeck;
 
     if (mainDeckSelected) {
-      formattedDeck = deck.map((x) => x + "\n");
-      const iterator = formattedDeck.values();
       let str = "";
-      for (const value of iterator) {
-        str += value;
-      }
+      deckMap.forEach((value, key) => {
+        str += `${value} ${key}\n`;
+      });
       formattedDeck = str;
     } else {
-      formattedDeck = evoDeck.map((x) => x + "\n");
-      const iterator = formattedDeck.values();
       let str = "";
-      for (const value of iterator) {
-        str += value;
-      }
+      evoDeckMap.forEach((value, key) => {
+        str += `${value} ${key}\n`;
+      });
       formattedDeck = str;
     }
     formattedDeck = formattedDeck.slice(0, -1);
@@ -290,7 +296,6 @@ export default function CreateDeck() {
   const handleSubmit = () => {
     const encodedObject = JSON.stringify(deckEdit);
     const encoded = btoa(encodedObject);
-    // const url = handleDeckImportFormat();
     dispatch(deleteDeck(deckName));
 
     dispatch(
@@ -835,276 +840,6 @@ export default function CreateDeck() {
               </Select>
             </FormControl>
           </Box>
-          {/* <Button
-            onClick={() => {
-              setButtonFilterSet("all");
-              setButtonFilterSetEvo("all evo");
-            }}
-            style={{
-              fontFamily: "Noto Serif JP,serif",
-              textTransform: "none",
-              fontWeight: "bold",
-              backgroundColor: buttonFilterSet === "all" ? "#131219" : "white",
-              border:
-                buttonFilterSet === "all"
-                  ? "3px solid gold"
-                  : "3px solid white",
-              color: buttonFilterSet === "all" ? "gold" : "#131219",
-            }}
-            variant="contained"
-          >
-            All
-          </Button>
-          <Button
-            onClick={() => {
-              setButtonFilterSet("set 10");
-              setButtonFilterSetEvo("set 10 evo");
-            }}
-            style={{
-              fontFamily: "Noto Serif JP,serif",
-              textTransform: "none",
-              fontWeight: "bold",
-              backgroundColor:
-                buttonFilterSet === "set 10" ? "#131219" : "white",
-              border:
-                buttonFilterSet === "set 10"
-                  ? "3px solid gold"
-                  : "3px solid white",
-              color: buttonFilterSet === "set 10" ? "gold" : "#131219",
-            }}
-            variant="contained"
-          >
-            Gods of the Arcana
-          </Button>
-          <Button
-            onClick={() => {
-              setButtonFilterSet("set 9");
-              setButtonFilterSetEvo("set 9 evo");
-            }}
-            style={{
-              fontFamily: "Noto Serif JP,serif",
-              textTransform: "none",
-              fontWeight: "bold",
-              backgroundColor:
-                buttonFilterSet === "set 9" ? "#131219" : "white",
-              border:
-                buttonFilterSet === "set 9"
-                  ? "3px solid gold"
-                  : "3px solid white",
-              color: buttonFilterSet === "set 9" ? "gold" : "#131219",
-            }}
-            variant="contained"
-          >
-            Duet of Dawn and Dusk
-          </Button>
-          <Button
-            onClick={() => {
-              setButtonFilterSet("set 8");
-              setButtonFilterSetEvo("set 8 evo");
-            }}
-            style={{
-              fontFamily: "Noto Serif JP,serif",
-              textTransform: "none",
-              fontWeight: "bold",
-              backgroundColor:
-                buttonFilterSet === "set 8" ? "#131219" : "white",
-              border:
-                buttonFilterSet === "set 8"
-                  ? "3px solid gold"
-                  : "3px solid white",
-              color: buttonFilterSet === "set 8" ? "gold" : "#131219",
-            }}
-            variant="contained"
-          >
-            Alterchaotica
-          </Button>
-          <Button
-            onClick={() => {
-              setButtonFilterSet("set 7");
-              setButtonFilterSetEvo("set 7 evo");
-            }}
-            style={{
-              fontFamily: "Noto Serif JP,serif",
-              textTransform: "none",
-              fontWeight: "bold",
-              backgroundColor:
-                buttonFilterSet === "set 7" ? "#131219" : "white",
-              border:
-                buttonFilterSet === "set 7"
-                  ? "3px solid gold"
-                  : "3px solid white",
-              color: buttonFilterSet === "set 7" ? "gold" : "#131219",
-            }}
-            variant="contained"
-          >
-            Verdant Steel
-          </Button>
-          <Button
-            onClick={() => {
-              setButtonFilterSet("idol");
-              setButtonFilterSetEvo("idol evo");
-            }}
-            style={{
-              fontFamily: "Noto Serif JP,serif",
-              textTransform: "none",
-              fontWeight: "bold",
-              backgroundColor: buttonFilterSet === "idol" ? "#131219" : "white",
-              border:
-                buttonFilterSet === "idol"
-                  ? "3px solid gold"
-                  : "3px solid white",
-              color: buttonFilterSet === "idol" ? "gold" : "#131219",
-            }}
-            variant="contained"
-          >
-            iM@S CG
-          </Button>
-          <Button
-            onClick={() => {
-              setButtonFilterSet("set 6");
-              setButtonFilterSetEvo("set 6 evo");
-            }}
-            style={{
-              fontFamily: "Noto Serif JP,serif",
-              textTransform: "none",
-              fontWeight: "bold",
-              backgroundColor:
-                buttonFilterSet === "set 6" ? "#131219" : "white",
-              border:
-                buttonFilterSet === "set 6"
-                  ? "3px solid gold"
-                  : "3px solid white",
-              color: buttonFilterSet === "set 6" ? "gold" : "#131219",
-            }}
-            variant="contained"
-          >
-            Paragons of the Colosseum
-          </Button>
-          <Button
-            onClick={() => {
-              setButtonFilterSet("set 5");
-              setButtonFilterSetEvo("set 5 evo");
-            }}
-            style={{
-              fontFamily: "Noto Serif JP,serif",
-              textTransform: "none",
-              fontWeight: "bold",
-              backgroundColor:
-                buttonFilterSet === "set 5" ? "#131219" : "white",
-              border:
-                buttonFilterSet === "set 5"
-                  ? "3px solid gold"
-                  : "3px solid white",
-              color: buttonFilterSet === "set 5" ? "gold" : "#131219",
-            }}
-            variant="contained"
-          >
-            Omens Eternal
-          </Button>
-          <Button
-            onClick={() => {
-              setButtonFilterSet("set 4");
-              setButtonFilterSetEvo("set 4 evo");
-            }}
-            style={{
-              fontFamily: "Noto Serif JP,serif",
-              textTransform: "none",
-              fontWeight: "bold",
-              backgroundColor:
-                buttonFilterSet === "set 4" ? "#131219" : "white",
-              border:
-                buttonFilterSet === "set 4"
-                  ? "3px solid gold"
-                  : "3px solid white",
-              color: buttonFilterSet === "set 4" ? "gold" : "#131219",
-            }}
-            variant="contained"
-          >
-            Cosmic Mythos
-          </Button>
-          <Button
-            onClick={() => {
-              setButtonFilterSet("set 3");
-              setButtonFilterSetEvo("set 3 evo");
-            }}
-            style={{
-              fontFamily: "Noto Serif JP,serif",
-              textTransform: "none",
-              fontWeight: "bold",
-              backgroundColor:
-                buttonFilterSet === "set 3" ? "#131219" : "white",
-              border:
-                buttonFilterSet === "set 3"
-                  ? "3px solid gold"
-                  : "3px solid white",
-              color: buttonFilterSet === "set 3" ? "gold" : "#131219",
-            }}
-            variant="contained"
-          >
-            Flame of Lævateinn
-          </Button>
-          <Button
-            onClick={() => {
-              setButtonFilterSet("uma");
-              setButtonFilterSetEvo("uma evo");
-            }}
-            style={{
-              fontFamily: "Noto Serif JP,serif",
-              textTransform: "none",
-              fontWeight: "bold",
-              backgroundColor: buttonFilterSet === "uma" ? "#131219" : "white",
-              border:
-                buttonFilterSet === "uma"
-                  ? "3px solid gold"
-                  : "3px solid white",
-              color: buttonFilterSet === "uma" ? "gold" : "#131219",
-            }}
-            variant="contained"
-          >
-            Umamusume
-          </Button>
-          <Button
-            onClick={() => {
-              setButtonFilterSet("set 2");
-              setButtonFilterSetEvo("set 2 evo");
-            }}
-            style={{
-              fontFamily: "Noto Serif JP,serif",
-              textTransform: "none",
-              fontWeight: "bold",
-              backgroundColor:
-                buttonFilterSet === "set 2" ? "#131219" : "white",
-              border:
-                buttonFilterSet === "set 2"
-                  ? "3px solid gold"
-                  : "3px solid white",
-              color: buttonFilterSet === "set 2" ? "gold" : "#131219",
-            }}
-            variant="contained"
-          >
-            Reign of Bahamut
-          </Button>
-          <Button
-            onClick={() => {
-              setButtonFilterSet("set 1");
-              setButtonFilterSetEvo("set 1 evo");
-            }}
-            style={{
-              fontFamily: "Noto Serif JP,serif",
-              textTransform: "none",
-              fontWeight: "bold",
-              backgroundColor:
-                buttonFilterSet === "set 1" ? "#131219" : "white",
-              border:
-                buttonFilterSet === "set 1"
-                  ? "3px solid gold"
-                  : "3px solid white",
-              color: buttonFilterSet === "set 1" ? "gold" : "#131219",
-            }}
-            variant="contained"
-          >
-            Advent of Genesis
-          </Button> */}
         </div>
 
         <div
@@ -1143,174 +878,6 @@ export default function CreateDeck() {
               </Select>
             </FormControl>
           </Box>
-          {/* <Button
-            onClick={() => {
-              setButtonFilterClass("all");
-              setButtonFilterClassEvo("all evo");
-            }}
-            style={{
-              fontFamily: "Noto Serif JP,serif",
-              textTransform: "none",
-              fontWeight: "bold",
-              backgroundColor:
-                buttonFilterClass === "all" ? "#131219" : "white",
-              border:
-                buttonFilterClass === "all"
-                  ? "3px solid gold"
-                  : "3px solid white",
-              color: buttonFilterClass === "all" ? "gold" : "#131219",
-            }}
-            variant="contained"
-          >
-            All
-          </Button>
-          <Button
-            onClick={() => {
-              setButtonFilterClass("forest");
-              setButtonFilterClassEvo("forest evo");
-            }}
-            style={{
-              fontFamily: "Noto Serif JP,serif",
-              textTransform: "none",
-              fontWeight: "bold",
-              backgroundColor:
-                buttonFilterClass === "forest" ? "#131219" : "white",
-              border:
-                buttonFilterClass === "forest"
-                  ? "3px solid gold"
-                  : "3px solid white",
-              color: buttonFilterClass === "forest" ? "gold" : "#131219",
-            }}
-            variant="contained"
-          >
-            Forestcraft
-          </Button>
-          <Button
-            onClick={() => {
-              setButtonFilterClass("sword");
-              setButtonFilterClassEvo("sword evo");
-            }}
-            style={{
-              fontFamily: "Noto Serif JP,serif",
-              textTransform: "none",
-              fontWeight: "bold",
-              backgroundColor:
-                buttonFilterClass === "sword" ? "#131219" : "white",
-              border:
-                buttonFilterClass === "sword"
-                  ? "3px solid gold"
-                  : "3px solid white",
-              color: buttonFilterClass === "sword" ? "gold" : "#131219",
-            }}
-            variant="contained"
-          >
-            Swordcraft
-          </Button>
-          <Button
-            onClick={() => {
-              setButtonFilterClass("rune");
-              setButtonFilterClassEvo("rune evo");
-            }}
-            style={{
-              fontFamily: "Noto Serif JP,serif",
-              textTransform: "none",
-              fontWeight: "bold",
-              backgroundColor:
-                buttonFilterClass === "rune" ? "#131219" : "white",
-              border:
-                buttonFilterClass === "rune"
-                  ? "3px solid gold"
-                  : "3px solid white",
-              color: buttonFilterClass === "rune" ? "gold" : "#131219",
-            }}
-            variant="contained"
-          >
-            Runecraft
-          </Button>
-          <Button
-            onClick={() => {
-              setButtonFilterClass("dragon");
-              setButtonFilterClassEvo("dragon evo");
-            }}
-            style={{
-              fontFamily: "Noto Serif JP,serif",
-              textTransform: "none",
-              fontWeight: "bold",
-              backgroundColor:
-                buttonFilterClass === "dragon" ? "#131219" : "white",
-              border:
-                buttonFilterClass === "dragon"
-                  ? "3px solid gold"
-                  : "3px solid white",
-              color: buttonFilterClass === "dragon" ? "gold" : "#131219",
-            }}
-            variant="contained"
-          >
-            Dragoncraft
-          </Button>
-          <Button
-            onClick={() => {
-              setButtonFilterClass("abyss");
-              setButtonFilterClassEvo("abyss evo");
-            }}
-            style={{
-              fontFamily: "Noto Serif JP,serif",
-              textTransform: "none",
-              fontWeight: "bold",
-              backgroundColor:
-                buttonFilterClass === "abyss" ? "#131219" : "white",
-              border:
-                buttonFilterClass === "abyss"
-                  ? "3px solid gold"
-                  : "3px solid white",
-              color: buttonFilterClass === "abyss" ? "gold" : "#131219",
-            }}
-            variant="contained"
-          >
-            Abysscraft
-          </Button>
-          <Button
-            onClick={() => {
-              setButtonFilterClass("haven");
-              setButtonFilterClassEvo("haven evo");
-            }}
-            style={{
-              fontFamily: "Noto Serif JP,serif",
-              textTransform: "none",
-              fontWeight: "bold",
-              backgroundColor:
-                buttonFilterClass === "haven" ? "#131219" : "white",
-              border:
-                buttonFilterClass === "haven"
-                  ? "3px solid gold"
-                  : "3px solid white",
-              color: buttonFilterClass === "haven" ? "gold" : "#131219",
-            }}
-            variant="contained"
-          >
-            Havencraft
-          </Button>
-          <Button
-            onClick={() => {
-              setButtonFilterClass("neutral");
-              setButtonFilterClassEvo("neutral evo");
-            }}
-            style={{
-              fontFamily: "Noto Serif JP,serif",
-              textTransform: "none",
-              fontWeight: "bold",
-              backgroundColor:
-                buttonFilterClass === "neutral" ? "#131219" : "white",
-              border:
-                buttonFilterClass === "neutral"
-                  ? "3px solid gold"
-                  : "3px solid white",
-              color: buttonFilterClass === "neutral" ? "gold" : "#131219",
-            }}
-            variant="contained"
-          >
-            Neutral
-          </Button> */}
         </div>
       </div>
 
@@ -1374,15 +941,6 @@ export default function CreateDeck() {
                     : { imageStyle }
                 }
               />
-              {/* <LazyLoadComponent>
-                <Skeleton
-                  sx={{ bgcolor: "grey", opacity: ".5" }}
-                  animation="wave"
-                  variant="rounded"
-                  width={224}
-                  height={312}
-                />
-              </LazyLoadComponent> */}
             </motion.div>
           ))}
         {evoDeckSelected &&
