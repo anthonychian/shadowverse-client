@@ -37,12 +37,23 @@ import {
 import { deleteDeck } from "../redux/DeckSlice";
 import { cardImage } from "../decks/getCards";
 import { socket } from "../sockets";
-import Snackbar from "@mui/material/Snackbar";
-import IconButton from "@mui/material/IconButton";
-import CloseIcon from "@mui/icons-material/Close";
 
-import { Menu, MenuItem, Modal, Box } from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
 import CardMUI from "@mui/material/Card";
+import {
+  Snackbar,
+  IconButton,
+  Menu,
+  MenuItem,
+  Modal,
+  Box,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogContentText,
+  DialogActions,
+} from "@mui/material";
+
 import "../css/Home.css";
 
 export default function Home() {
@@ -57,6 +68,7 @@ export default function Home() {
   const [roomNumber, setRoomNumber] = useState("");
   const [name, setName] = useState("");
   const [open, setOpen] = useState(false);
+  const [openDialogue, setOpenDialogue] = useState(false);
   const [leaderImage, setLeaderImage] = useState(null);
   const [leaderNum, setLeaderNum] = useState(0);
   const [hoverCard, setHoverCard] = useState("");
@@ -100,6 +112,14 @@ export default function Home() {
   };
   const handleModalClose = () => setOpen(false);
 
+  const handleOpenDialogue = () => {
+    setOpenDialogue(true);
+    handleClose();
+  };
+  const handleCloseDialogue = () => {
+    setOpenDialogue(false);
+  };
+
   const handleCreateRoom = () => {
     if (Object.keys(selectedDeck).length !== 0) {
       if (socket.id) {
@@ -122,6 +142,7 @@ export default function Home() {
 
   const handleDeleteDeck = () => {
     handleClose();
+    handleCloseDialogue();
     dispatch(deleteDeck(name));
   };
 
@@ -286,6 +307,26 @@ export default function Home() {
         flexDirection: "row",
       }}
     >
+      <Dialog
+        open={openDialogue}
+        onClose={handleCloseDialogue}
+        PaperProps={{
+          component: "form",
+        }}
+      >
+        <DialogTitle>Delete Deck</DialogTitle>
+        <DialogContent>
+          <DialogContentText>
+            Are you sure you want to delete this deck?
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleCloseDialogue}>No</Button>
+          <Button onClick={handleDeleteDeck} type="submit">
+            Yes
+          </Button>
+        </DialogActions>
+      </Dialog>
       <Snackbar
         open={openSnack}
         autoHideDuration={6000}
@@ -658,7 +699,7 @@ export default function Home() {
         <MenuItem onClick={handleModalOpen}>Preview</MenuItem>
         <MenuItem onClick={handleEditDeck}>Edit</MenuItem>
         {/* <MenuItem onClick={handleShareDeck}>Share</MenuItem> */}
-        <MenuItem onClick={handleDeleteDeck}>Delete</MenuItem>
+        <MenuItem onClick={handleOpenDialogue}>Delete</MenuItem>
       </Menu>
       <Modal
         open={open}
