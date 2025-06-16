@@ -78,7 +78,7 @@ export default function EvoDeck({
   };
 
   const isAdvanced = (cardName) => {
-    return cardName.slice(-7) === "ADVANCE";
+    return cardName.slice(-8) === "ADVANCED";
   };
 
   const isDoubleEvo = (cardName) => {

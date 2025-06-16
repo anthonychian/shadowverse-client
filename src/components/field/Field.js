@@ -301,7 +301,7 @@ export default function Field({
     return name.slice(-5) === "TOKEN";
   };
   const isAdvanced = (name) => {
-    return name.slice(-7) === "ADVANCE";
+    return name.slice(-8) === "ADVANCED";
   };
 
   const handleClick = (name, indexClicked) => {

@@ -1,11 +1,11 @@
 export const allCardsEvo = [
-  "XII. Wolfraud, Hanged Man Evolved",
-  "Spinaria & Lucille, Keepers ADVANCE",
+  "XII. Wolfraud, The Hanged Man Evolved",
+  "Spinaria & Lucille, Keepers ADVANCED",
   "Chipper Skipper Evolved",
   "Salvia Panther Evolved",
   "Reclusive Ponderer Evolved",
 
-  "VII. Oluon, Runaway Chariot ADVANCE",
+  "VII. Oluon, Runaway Chariot ADVANCED",
   "Alyaska, War Hawker Evolved",
   "Prudent General Evolved",
   "Lightning Kicker Evolved",
@@ -14,20 +14,20 @@ export const allCardsEvo = [
   "0. Lhynkal, The Fool Evolved",
   "Imperator of Magic Evolved",
   "Juggling Moggy Evolved",
-  "Potion Wizard Evolved",
+  "Piquant Potioneer Evolved",
 
   "XI. Erntz, Justice Evolved",
-  "Lævateinn Dragon, Dual Form Alpha ADVANCE",
-  "Lævateinn Dragon, Dual Form Beta ADVANCE",
-  "Lævateinn Dragon, Dual Form Gamma ADVANCE",
+  "Lævateinn Dragon, Dual Form Alpha ADVANCED",
+  "Lævateinn Dragon, Dual Form Beta ADVANCED",
+  "Lævateinn Dragon, Dual Form Gamma ADVANCED",
   "Slaughering Dragonewt Evolved",
   "Swiftblade Dragonewt Evolved",
   "Springwell Dragon Keeper Evolved",
 
   "VI. Milteo, The Lovers Evolved",
-  "Sincere Masquerade Ghost ADVANCE",
+  "Sincere Masquerade Ghost ADVANCED",
   "Deathbringer Evolved",
-  "Ghostly Maid Evolved",
+  "Ghost Maid Evolved",
   "Moonrise Werewolf Evolved",
 
   "VIII. Sofina, Strength Evolved",
@@ -35,7 +35,7 @@ export const allCardsEvo = [
   "Topaz Swordian Evolved",
   "Priestess of Foresight Evolved",
 
-  "XXI. Zelgenea, O Great World ADVANCE",
+  "XXI. Zelgenea, O Great World ADVANCED",
   "Starbright Deity Evolved",
   "One-Winged Traitor Evolved",
   "Pureshot Angel Evolved",
@@ -411,13 +411,13 @@ export const allCardsEvo = [
 ];
 
 export const set10Evo = [
-  "XII. Wolfraud, Hanged Man Evolved",
-  "Spinaria & Lucille, Keepers ADVANCE",
+  "XII. Wolfraud, The Hanged Man Evolved",
+  "Spinaria & Lucille, Keepers ADVANCED",
   "Chipper Skipper Evolved",
   "Salvia Panther Evolved",
   "Reclusive Ponderer Evolved",
 
-  "VII. Oluon, Runaway Chariot ADVANCE",
+  "VII. Oluon, Runaway Chariot ADVANCED",
   "Alyaska, War Hawker Evolved",
   "Prudent General Evolved",
   "Lightning Kicker Evolved",
@@ -426,20 +426,20 @@ export const set10Evo = [
   "0. Lhynkal, The Fool Evolved",
   "Imperator of Magic Evolved",
   "Juggling Moggy Evolved",
-  "Potion Wizard Evolved",
+  "Piquant Potioneer Evolved",
 
   "XI. Erntz, Justice Evolved",
-  "Lævateinn Dragon, Dual Form Alpha ADVANCE",
-  "Lævateinn Dragon, Dual Form Beta ADVANCE",
-  "Lævateinn Dragon, Dual Form Gamma ADVANCE",
+  "Lævateinn Dragon, Dual Form Alpha ADVANCED",
+  "Lævateinn Dragon, Dual Form Beta ADVANCED",
+  "Lævateinn Dragon, Dual Form Gamma ADVANCED",
   "Slaughering Dragonewt Evolved",
   "Swiftblade Dragonewt Evolved",
   "Springwell Dragon Keeper Evolved",
 
   "VI. Milteo, The Lovers Evolved",
-  "Sincere Masquerade Ghost ADVANCE",
+  "Sincere Masquerade Ghost ADVANCED",
   "Deathbringer Evolved",
-  "Ghostly Maid Evolved",
+  "Ghost Maid Evolved",
   "Moonrise Werewolf Evolved",
 
   "VIII. Sofina, Strength Evolved",
@@ -447,7 +447,7 @@ export const set10Evo = [
   "Topaz Swordian Evolved",
   "Priestess of Foresight Evolved",
 
-  "XXI. Zelgenea, O Great World ADVANCE",
+  "XXI. Zelgenea, O Great World ADVANCED",
   "Starbright Deity Evolved",
   "One-Winged Traitor Evolved",
   "Pureshot Angel Evolved",
@@ -844,8 +844,8 @@ export const set1Evo = [
 ];
 
 export const forestEvo = [
-  "XII. Wolfraud, Hanged Man Evolved",
-  "Spinaria & Lucille, Keepers ADVANCE",
+  "XII. Wolfraud, The Hanged Man Evolved",
+  "Spinaria & Lucille, Keepers ADVANCED",
   "Chipper Skipper Evolved",
   "Salvia Panther Evolved",
   "Reclusive Ponderer Evolved",
@@ -903,7 +903,7 @@ export const forestEvo = [
 ];
 
 export const swordEvo = [
-  "VII. Oluon, Runaway Chariot ADVANCE",
+  "VII. Oluon, Runaway Chariot ADVANCED",
   "Alyaska, War Hawker Evolved",
   "Prudent General Evolved",
   "Lightning Kicker Evolved",
@@ -965,7 +965,7 @@ export const runeEvo = [
   "0. Lhynkal, The Fool Evolved",
   "Imperator of Magic Evolved",
   "Juggling Moggy Evolved",
-  "Potion Wizard Evolved",
+  "Piquant Potioneer Evolved",
 
   "Ceridwen, Eternity Hunter Evolved",
   "Grea, Mysterian Dragoness Evolved",
@@ -1023,9 +1023,9 @@ export const runeEvo = [
 
 export const dragonEvo = [
   "XI. Erntz, Justice Evolved",
-  "Lævateinn Dragon, Dual Form Alpha ADVANCE",
-  "Lævateinn Dragon, Dual Form Beta ADVANCE",
-  "Lævateinn Dragon, Dual Form Gamma ADVANCE",
+  "Lævateinn Dragon, Dual Form Alpha ADVANCED",
+  "Lævateinn Dragon, Dual Form Beta ADVANCED",
+  "Lævateinn Dragon, Dual Form Gamma ADVANCED",
   "Slaughering Dragonewt Evolved",
   "Swiftblade Dragonewt Evolved",
   "Springwell Dragon Keeper Evolved",
@@ -1088,9 +1088,9 @@ export const dragonEvo = [
 
 export const abyssEvo = [
   "VI. Milteo, The Lovers Evolved",
-  "Sincere Masquerade Ghost ADVANCE",
+  "Sincere Masquerade Ghost ADVANCED",
   "Deathbringer Evolved",
-  "Ghostly Maid Evolved",
+  "Ghost Maid Evolved",
   "Moonrise Werewolf Evolved",
 
   "Vania, Kind Queen",
@@ -1202,7 +1202,7 @@ export const havenEvo = [
 ];
 
 export const neutralEvo = [
-  "XXI. Zelgenea, O Great World ADVANCE",
+  "XXI. Zelgenea, O Great World ADVANCED",
   "Starbright Deity Evolved",
   "One-Winged Traitor Evolved",
   "Pureshot Angel Evolved",
