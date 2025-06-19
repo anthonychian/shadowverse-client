@@ -52,6 +52,7 @@ import {
   DialogContent,
   DialogContentText,
   DialogActions,
+  Chip,
 } from "@mui/material";
 
 import "../css/Home.css";
@@ -644,6 +645,7 @@ export default function Home() {
           <img height={"40px"} src={donate} alt={"donate"} />
         </a>
       </div>
+
       <div
         style={{
           position: "absolute",
@@ -677,6 +679,33 @@ export default function Home() {
           alt={"leader"}
           style={leaderNum === 6 ? { paddingTop: "100px" } : {}}
         />
+      </div>
+      <div
+        style={{
+          position: "absolute",
+          bottom: "3.8em",
+          right: "16em",
+          height: "10px",
+          // width: "40px",
+          color: "white",
+
+          fontFamily: "Noto Serif JP, serif",
+          borderRadius: "7px",
+        }}
+      >
+        <a
+          href="https://dingdongdb.me/builder"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          {/* <img
+            height={"100px"}
+            src="https://styles.redditmedia.com/t5_5mmlkz/styles/image_widget_jq1ka67u1neb1.png"
+            alt={"discord"}
+          /> */}
+          {/* <img height={"40px"} src={discord} alt={"discord"} /> */}
+          <Chip color="primary" label="DingDongDB" clickable />
+        </a>
       </div>
       <Menu
         open={contextMenu !== null}
