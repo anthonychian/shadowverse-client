@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import InfiniteScroll from "react-infinite-scroll-component";
 import wallpaper3 from "../../src/assets/wallpapers/3.png";
 import ReplyIcon from "@mui/icons-material/Reply";
+import CloseIcon from "@mui/icons-material/Close";
 import {
   LazyLoadImage,
   LazyLoadComponent,
@@ -78,6 +79,8 @@ import {
   InputLabel,
   MenuItem,
   Select,
+  Snackbar,
+  IconButton,
 } from "@mui/material";
 
 export default function CreateDeck() {
@@ -109,6 +112,7 @@ export default function CreateDeck() {
   const [buttonFilterClass, setButtonFilterClass] = useState("all");
   const [buttonFilterSetEvo, setButtonFilterSetEvo] = useState("all evo");
   const [buttonFilterClassEvo, setButtonFilterClassEvo] = useState("all evo");
+  const [openSnack, setOpenSnack] = useState(false);
 
   const [imageStyle, setImageStyle] = useState({ opacity: 0 });
 
@@ -231,59 +235,119 @@ export default function CreateDeck() {
   const handleNameChange = (event) => {
     setName(event.target.value);
   };
-  const handleDeckImport = (event) => {
-    setImportTextFieldVal(event.target.value);
-    const val = event.target.value.split("\n");
+  const handleDeckImport = () => {
+    // setImportTextFieldVal(event.target.value);
+    // const val = event.target.value.split("\n");
+    // setImportTextFieldVal(event.target.value);
 
-    let arr = [];
-    for (const card of val) {
-      let num = parseInt(card[0]);
-      for (let i = 0; i < num; i++) {
-        arr.push(card.slice(2));
+    const val = importTextFieldVal.split("\n\n");
+    if (val.length === 2) {
+      const val1 = val[0].split("\n");
+      const val2 = val[1].split("\n");
+      let arr1 = [];
+      for (const card of val1) {
+        let num = parseInt(card[0]);
+        for (let i = 0; i < num; i++) {
+          arr1.push(card.slice(2));
+        }
       }
+      handleFillDeckMap(arr1);
+      let arr2 = [];
+      for (const card of val2) {
+        let num = parseInt(card[0]);
+        for (let i = 0; i < num; i++) {
+          arr2.push(card.slice(2));
+        }
+      }
+      handleFillEvoDeckMap(arr2);
+    } else if (val.length === 1) {
+      const val1 = val[0].split("\n");
+      let arr1 = [];
+      for (const card of val1) {
+        let num = parseInt(card[0]);
+        for (let i = 0; i < num; i++) {
+          arr1.push(card.slice(2));
+        }
+      }
+      handleFillDeckMap(arr1);
     }
 
-    if (mainDeckSelected) {
-      handleFillDeckMap(arr);
-    } else {
-      handleFillEvoDeckMap(arr);
-    }
+    // let arr = [];
+    // for (const card of val) {
+    //   let num = parseInt(card[0]);
+    //   for (let i = 0; i < num; i++) {
+    //     arr.push(card.slice(2));
+    //   }
+    // }
+
+    // if (mainDeckSelected) {
+    //   handleFillDeckMap(arr);
+    // } else {
+    //   handleFillEvoDeckMap(arr);
+    // }
   };
   const handleClearImport = () => {
-    if (mainDeckSelected) {
-      setDeck([]);
-      setDeckMap(new Map());
-    } else {
-      setEvoDeck([]);
-      setEvoDeckMap(new Map());
-    }
+    // if (mainDeckSelected) {
+    //   setDeck([]);
+    //   setDeckMap(new Map());
+    // } else {
+    //   setEvoDeck([]);
+    //   setEvoDeckMap(new Map());
+    // }
+    // setImportTextFieldVal();
+
+    setDeck([]);
+    setDeckMap(new Map());
+    setEvoDeck([]);
+    setEvoDeckMap(new Map());
     setImportTextFieldVal();
   };
 
   const handleDeckImportFormat = () => {
-    let formattedDeck;
+    // let formattedDeck;
 
-    if (mainDeckSelected) {
-      let str = "";
-      deckMap.forEach((value, key) => {
-        str += `${value} ${key}\n`;
-      });
-      formattedDeck = str;
-    } else {
-      let str = "";
-      evoDeckMap.forEach((value, key) => {
-        str += `${value} ${key}\n`;
-      });
-      formattedDeck = str;
-    }
-    formattedDeck = formattedDeck.slice(0, -1);
-    return formattedDeck;
+    // if (mainDeckSelected) {
+    //   let str = "";
+    //   deckMap.forEach((value, key) => {
+    //     str += `${value} ${key}\n`;
+    //   });
+    //   formattedDeck = str;
+    // } else {
+    //   let str = "";
+    //   evoDeckMap.forEach((value, key) => {
+    //     str += `${value} ${key}\n`;
+    //   });
+    //   formattedDeck = str;
+    // }
+    // formattedDeck = formattedDeck.slice(0, -1);
+    // return formattedDeck;
+    let formattedDeck1;
+    let formattedDeck2;
+
+    let str1 = "";
+    deckMap.forEach((value, key) => {
+      str1 += `${value} ${key}\n`;
+    });
+    formattedDeck1 = str1;
+    formattedDeck1 = formattedDeck1.slice(0, -1);
+
+    let str2 = "";
+    evoDeckMap.forEach((value, key) => {
+      str2 += `${value} ${key}\n`;
+    });
+    formattedDeck2 = str2;
+    formattedDeck2 = formattedDeck2.slice(0, -1);
+
+    return formattedDeck1 + "\n\n" + formattedDeck2;
   };
 
   const handleClickOpen = () => {
     setOpen(true);
   };
   const handleClickOpenImport = () => {
+    setOpenImport(true);
+  };
+  const handleClickOpenExport = () => {
     setOpenImport(true);
   };
   const handleClose = () => {
@@ -331,6 +395,10 @@ export default function CreateDeck() {
       );
       setFilteredAllCardsEvo(filteredCards);
     }
+  };
+
+  const handleDecklistInput = (text) => {
+    setImportTextFieldVal(text);
   };
 
   const getCardsFromName = (name) => {
@@ -504,6 +572,33 @@ export default function CreateDeck() {
     setMainDeckSelected(false);
     setEvoDeckSelected(true);
   };
+
+  const handleOpenSnack = () => {
+    let deck = handleDeckImportFormat();
+    setOpenSnack(true);
+    navigator.clipboard.writeText(deck);
+  };
+
+  const handleCloseSnack = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpenSnack(false);
+  };
+
+  const action = (
+    <React.Fragment>
+      <IconButton
+        size="small"
+        aria-label="close"
+        color="inherit"
+        onClick={handleCloseSnack}
+      >
+        <CloseIcon fontSize="small" />
+      </IconButton>
+    </React.Fragment>
+  );
 
   return (
     <div
@@ -1039,7 +1134,7 @@ export default function CreateDeck() {
       >
         <DialogTitle>Import Deck</DialogTitle>
         <DialogContent>
-          {mainDeckSelected ? (
+          {/* {mainDeckSelected ? (
             <DialogContentText>
               Enter the contents for this deck. This will create the main deck
               for you.
@@ -1049,7 +1144,12 @@ export default function CreateDeck() {
               Enter the contents for this deck. This will create the evolve deck
               for you.
             </DialogContentText>
-          )}
+          )} */}
+
+          <DialogContentText>
+            Enter the contents for this deck. This will create the deck for you.
+          </DialogContentText>
+
           <TextField
             autoFocus
             required
@@ -1057,17 +1157,30 @@ export default function CreateDeck() {
             id="name"
             name="deck"
             value={importTextFieldVal}
-            defaultValue={handleDeckImportFormat()}
+            // defaultValue={handleDeckImportFormat()}
             multiline="true"
             fullWidth
             variant="standard"
-            onChange={handleDeckImport}
+            // onChange={handleDeckImport}
+            onChange={(event) => handleDecklistInput(event.target.value)}
           />
         </DialogContent>
         <DialogActions>
+          <Button onClick={handleDeckImport}>Submit</Button>
           <Button onClick={handleClearImport}>Clear</Button>
         </DialogActions>
       </Dialog>
+      <Snackbar
+        open={openSnack}
+        anchorOrigin={{
+          vertical: "bottom",
+          horizontal: "right",
+        }}
+        autoHideDuration={6000}
+        onClose={handleCloseSnack}
+        message="Copied decklist to clipboard"
+        action={action}
+      />
       <Modal
         open={openModal}
         onClose={handleModalClose}
@@ -1157,7 +1270,7 @@ export default function CreateDeck() {
         style={{
           // backgroundColor: "black",
           color: "white",
-          height: "40px",
+          height: "10px",
           minWidth: "150px",
           position: "absolute",
           fontSize: "18px ",
@@ -1166,8 +1279,8 @@ export default function CreateDeck() {
           alignItems: "center",
           justifyContent: "center",
           gap: ".5em",
-          top: 10,
-          right: 10,
+          top: 30,
+          right: 0,
           cursor: "pointer",
         }}
       >
@@ -1188,6 +1301,43 @@ export default function CreateDeck() {
           onClick={handleClickOpenImport}
         >
           Import
+        </Button>
+      </div>
+      <div
+        style={{
+          // backgroundColor: "black",
+          color: "white",
+          height: "10px",
+          minWidth: "150px",
+          position: "absolute",
+          fontSize: "18px ",
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: ".5em",
+          top: 80,
+          right: 0,
+          cursor: "pointer",
+        }}
+      >
+        <Button
+          style={{
+            backgroundColor: "white",
+            // marginTop: "0em",
+            color: "black",
+            textTransform: "none",
+            fontFamily: "Noto Serif JP, serif",
+            fontWeight: "bold",
+
+            // border: "3px solid gold",
+            // backgroundColor: "#131219",
+            // color: "gold",
+          }}
+          variant="contained"
+          onClick={handleOpenSnack}
+        >
+          Export
         </Button>
       </div>
     </div>
