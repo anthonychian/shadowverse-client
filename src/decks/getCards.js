@@ -112,11 +112,11 @@ export const cardImage = (cardName) => {
       return "../textures/BP10-055EN.png";
     case "Aiela, Devoted Knight":
       return "../textures/BP10-056EN.png";
-    case "Lævateinn Dragon, Dual Form Alpha ADVANCED":
+    case "Lævateinn Dragon, Dual Form α ADVANCED":
       return "../textures/BP10-057EN.png";
-    case "Lævateinn Dragon, Dual Form Beta ADVANCED":
+    case "Lævateinn Dragon, Dual Form β ADVANCED":
       return "../textures/BP10-058EN.png";
-    case "Lævateinn Dragon, Dual Form Gamma ADVANCED":
+    case "Lævateinn Dragon, Dual Form γ ADVANCED":
       return "../textures/BP10-059EN.png";
     case "Slaughering Dragonewt":
       return "../textures/BP10-060EN.png";
