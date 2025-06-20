@@ -17,9 +17,9 @@ export const allCardsEvo = [
   "Piquant Potioneer Evolved",
 
   "XI. Erntz, Justice Evolved",
-  "Lævateinn Dragon, Dual Form Alpha ADVANCED",
-  "Lævateinn Dragon, Dual Form Beta ADVANCED",
-  "Lævateinn Dragon, Dual Form Gamma ADVANCED",
+  "Lævateinn Dragon, Dual Form α ADVANCED",
+  "Lævateinn Dragon, Dual Form β ADVANCED",
+  "Lævateinn Dragon, Dual Form γ ADVANCED",
   "Slaughering Dragonewt Evolved",
   "Swiftblade Dragonewt Evolved",
   "Springwell Dragon Keeper Evolved",
@@ -429,9 +429,9 @@ export const set10Evo = [
   "Piquant Potioneer Evolved",
 
   "XI. Erntz, Justice Evolved",
-  "Lævateinn Dragon, Dual Form Alpha ADVANCED",
-  "Lævateinn Dragon, Dual Form Beta ADVANCED",
-  "Lævateinn Dragon, Dual Form Gamma ADVANCED",
+  "Lævateinn Dragon, Dual Form α ADVANCED",
+  "Lævateinn Dragon, Dual Form β ADVANCED",
+  "Lævateinn Dragon, Dual Form γ ADVANCED",
   "Slaughering Dragonewt Evolved",
   "Swiftblade Dragonewt Evolved",
   "Springwell Dragon Keeper Evolved",
@@ -1023,9 +1023,9 @@ export const runeEvo = [
 
 export const dragonEvo = [
   "XI. Erntz, Justice Evolved",
-  "Lævateinn Dragon, Dual Form Alpha ADVANCED",
-  "Lævateinn Dragon, Dual Form Beta ADVANCED",
-  "Lævateinn Dragon, Dual Form Gamma ADVANCED",
+  "Lævateinn Dragon, Dual Form α ADVANCED",
+  "Lævateinn Dragon, Dual Form β ADVANCED",
+  "Lævateinn Dragon, Dual Form γ ADVANCED",
   "Slaughering Dragonewt Evolved",
   "Swiftblade Dragonewt Evolved",
   "Springwell Dragon Keeper Evolved",
