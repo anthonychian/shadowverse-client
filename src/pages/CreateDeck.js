@@ -80,6 +80,7 @@ import {
   MenuItem,
   Select,
   Snackbar,
+  SnackbarContent,
   IconButton,
 } from "@mui/material";
 
@@ -1173,14 +1174,19 @@ export default function CreateDeck() {
       <Snackbar
         open={openSnack}
         anchorOrigin={{
-          vertical: "bottom",
-          horizontal: "right",
+          vertical: "top",
+          horizontal: "center",
         }}
-        autoHideDuration={6000}
+        autoHideDuration={3000}
         onClose={handleCloseSnack}
-        message="Copied decklist to clipboard"
+        // message="Copied decklist to clipboard"
         action={action}
-      />
+      >
+        <SnackbarContent
+          sx={{ backgroundColor: "#1976d2" }}
+          message="Copied decklist to clipboard"
+        />
+      </Snackbar>
       <Modal
         open={openModal}
         onClose={handleModalClose}
