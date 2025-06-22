@@ -142,10 +142,10 @@ export default function Selection({ setSelectedOption }) {
     navigate("/");
   };
 
-  const reconnectToRoom = () => {
-    socket.emit("leave_room", reduxRoom.toString());
-    socket.emit("join_room", reduxRoom.toString());
-  };
+  // const reconnectToRoom = () => {
+  //   socket.emit("leave_room", reduxRoom.toString());
+  //   socket.emit("join_room", reduxRoom.toString());
+  // };
 
   const handleAcceptRematchUI = () => {
     setAcceptRematch(true);
@@ -290,7 +290,7 @@ export default function Selection({ setSelectedOption }) {
 
           <Divider />
 
-          <List>
+          {/* <List>
             <ListItem key={"text"} disablePadding>
               <ListItemButton onClick={reconnectToRoom}>
                 <ListItemIcon>
@@ -299,7 +299,7 @@ export default function Selection({ setSelectedOption }) {
                 <ListItemText primary={"Reconnect"} />
               </ListItemButton>
             </ListItem>
-          </List>
+          </List> */}
         </Box>
       </Drawer>
 
