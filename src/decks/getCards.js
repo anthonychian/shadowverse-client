@@ -3201,9 +3201,9 @@ export const cardImage = (cardName) => {
       return "../textures/PR-018EN.png";
 
     case "Exterminus Weapon TOKEN":
-      return "../textures/bp10-t01.png";
+      return "../textures/BP10-T01EN.png";
     case "Devoted Dragon TOKEN":
-      return "../textures/bp10-t02.png";
+      return "../textures/BP10-T02EN.png";
 
     case "Instant Poison TOKEN":
       return "../textures/BP09-T01EN.png";
