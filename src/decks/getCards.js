@@ -2675,7 +2675,7 @@ export const cardImage = (cardName) => {
     case "Archangel Reina Evolved":
       return "../textures/BP02-108EN.png";
     case "Surefire Bullet":
-      return "../textures/BP02-109EN.png";
+      return "../textures/SS01-U01EN.png";
     case "Unicorn Dancer Unicorn":
       return "../textures/BP02-110EN.png";
     case "Unicorn Dancer Unicorn Evolved":
