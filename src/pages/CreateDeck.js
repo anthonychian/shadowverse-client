@@ -288,20 +288,11 @@ export default function CreateDeck() {
     // }
   };
   const handleClearImport = () => {
-    // if (mainDeckSelected) {
-    //   setDeck([]);
-    //   setDeckMap(new Map());
-    // } else {
-    //   setEvoDeck([]);
-    //   setEvoDeckMap(new Map());
-    // }
-    // setImportTextFieldVal();
-
     setDeck([]);
     setDeckMap(new Map());
     setEvoDeck([]);
     setEvoDeckMap(new Map());
-    setImportTextFieldVal();
+    handleDecklistInput("");
   };
 
   const handleDeckImportFormat = () => {
@@ -338,8 +329,8 @@ export default function CreateDeck() {
     });
     formattedDeck2 = str2;
     formattedDeck2 = formattedDeck2.slice(0, -1);
-
-    return formattedDeck1 + "\n\n" + formattedDeck2;
+    if (evoDeckMap.size > 0) return formattedDeck1 + "\n\n" + formattedDeck2;
+    else return formattedDeck1;
   };
 
   const handleClickOpen = () => {
