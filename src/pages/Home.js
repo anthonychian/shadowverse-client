@@ -11,6 +11,21 @@ import korwa from "../../src/assets/wallpapers/Korwa.png";
 import tsubaki from "../../src/assets/wallpapers/Tsubaki.png";
 import grimnir from "../../src/assets/wallpapers/Grimnir.png";
 
+// import elf_mov from "../../src/assets/leaders/character_elf.mov";
+// import elf_webm from "../../src/assets/leaders/character_elf.webm";
+// import royal_mov from "../../src/assets/leaders/character_royal.mov";
+// import royal_webm from "../../src/assets/leaders/character_royal.webm";
+// import witch_mov from "../../src/assets/leaders/character_witch.mov";
+// import witch_webm from "../../src/assets/leaders/character_witch.webm";
+// import dragon_mov from "../../src/assets/leaders/character_dragon.mov";
+// import dragon_webm from "../../src/assets/leaders/character_dragon.webm";
+// import nightmare_mov from "../../src/assets/leaders/character_nightmare.mov";
+// import nightmare_webm from "../../src/assets/leaders/character_nightmare.webm";
+// import bishop_mov from "../../src/assets/leaders/character_bishop.mov";
+// import bishop_webm from "../../src/assets/leaders/character_bishop.webm";
+// import nemesis_mov from "../../src/assets/leaders/character_nemesis.mov";
+// import nemesis_webm from "../../src/assets/leaders/character_nemesis.webm";
+
 //-----------------delete-------------------------
 // import merlin from "../../src/assets/wallpapers/merlin.png";
 // import lorraine from "../../src/assets/wallpapers/lorraine.png";
@@ -562,6 +577,7 @@ export default function Home() {
                 flexDirection: "column",
                 justifyContent: "center",
                 alignItems: "center",
+                zIndex: 2,
                 height: "90px",
                 width: "80px",
                 "&:hover": { boxShadow: "0 0 40px 17px #48abe0" },
@@ -641,6 +657,7 @@ export default function Home() {
           href="https://ko-fi.com/anthonychian"
           target="_blank"
           rel="noreferrer noopener"
+          style={{ right: 10, position: "absolute", zIndex: 2 }}
         >
           <img height={"40px"} src={donate} alt={"donate"} />
         </a>
@@ -663,16 +680,22 @@ export default function Home() {
           href="https://discord.gg/shadowverse-evolve-tcg-community-928746294384677004"
           target="_blank"
           rel="noreferrer noopener"
+          style={{ position: "absolute", right: 10, zIndex: 2 }}
         >
-          {/* <img
-            height={"100px"}
-            src="https://styles.redditmedia.com/t5_5mmlkz/styles/image_widget_jq1ka67u1neb1.png"
-            alt={"discord"}
-          /> */}
           <img height={"40px"} src={discord} alt={"discord"} />
         </a>
       </div>
       <div className="LeaderContainerHome">
+        {/* <video
+          className="AnimatedLeaderImageHome"
+          loop="true"
+          autoplay="autoplay"
+          muted
+        >
+          <source src={nemesis_mov} type="video/quicktime" />
+          <source src={nemesis_webm} type="video/webm" />
+        </video> */}
+
         <img
           className="LeaderImageHome"
           src={leaderImage}
@@ -697,13 +720,8 @@ export default function Home() {
           href="https://dingdongdb.me/builder"
           target="_blank"
           rel="noreferrer noopener"
+          style={{ position: "absolute", right: 10, zIndex: 2 }}
         >
-          {/* <img
-            height={"100px"}
-            src="https://styles.redditmedia.com/t5_5mmlkz/styles/image_widget_jq1ka67u1neb1.png"
-            alt={"discord"}
-          /> */}
-          {/* <img height={"40px"} src={discord} alt={"discord"} /> */}
           <Chip color="primary" label="DingDongDB" clickable />
         </a>
       </div>
