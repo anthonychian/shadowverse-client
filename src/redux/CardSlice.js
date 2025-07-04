@@ -2248,6 +2248,50 @@ export const CardSlice = createSlice({
         room: state.room,
       });
     },
+    rideCardOnField: (state, action) => {
+      const newIndex = action.payload.index;
+      const cardIndex = action.payload.indexInEvolveDeck;
+
+      state.evoDeck = state.evoDeck.filter((_, i) => i !== cardIndex);
+
+      const newField = [
+        ...state.evoField.slice(0, newIndex),
+        "Drive Point",
+        ...state.evoField.slice(newIndex + 1),
+      ];
+      state.evoField = newField;
+
+      const date = new Date().toLocaleTimeString("it-IT", {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+
+      state.gameLog = [
+        ...state.gameLog,
+        {
+          text: `[${date}] (Me): Ride ${state.field[newIndex]}`,
+          card: state.field[newIndex],
+        },
+      ];
+      socket.emit("send msg", {
+        type: "log",
+        data: {
+          text: `Ride ${state.field[newIndex]}`,
+          card: state.field[newIndex],
+        },
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "evoField",
+        data: state.evoField,
+        room: state.room,
+      });
+      socket.emit("send msg", {
+        type: "evoDeck",
+        data: state.evoDeck,
+        room: state.room,
+      });
+    },
     advancedToField: (state, action) => {
       const card = action.payload.card;
       const newIndex = action.payload.index;
@@ -2783,6 +2827,7 @@ export const {
   shuffleDeck,
   evolveCardOnField,
   feedCardOnField,
+  rideCardOnField,
   advancedToField,
   backToEvolveDeck,
   advancedBackToEvolveDeck,

@@ -12,6 +12,7 @@ import swap from "../assets/logo/swap_icon.png";
 
 import {
   allCards,
+  setVG,
   set10,
   set9,
   set8,
@@ -34,6 +35,7 @@ import {
 } from "../decks/AllCards";
 import {
   allCardsEvo,
+  setVGEvo,
   set10Evo,
   set9Evo,
   set8Evo,
@@ -395,6 +397,8 @@ export default function CreateDeck() {
 
   const getCardsFromName = (name) => {
     switch (name) {
+      case "vg":
+        return setVG;
       case "set 10":
         return set10;
       case "set 9":
@@ -419,6 +423,8 @@ export default function CreateDeck() {
         return set2;
       case "set 1":
         return set1;
+      case "vg evo":
+        return setVGEvo;
       case "set 10 evo":
         return set10Evo;
       case "set 9 evo":
@@ -544,7 +550,11 @@ export default function CreateDeck() {
   const handleEvoCardSelection = (card) => {
     if (evoDeck.length < 10) {
       if (evoDeckMap.has(card)) {
-        if (evoDeckMap.get(card) === 3 && card !== "Carrot") {
+        if (
+          evoDeckMap.get(card) === 3 &&
+          card !== "Carrot" &&
+          card !== "Drive Point"
+        ) {
           return;
         } else {
           evoDeckMap.set(card, evoDeckMap.get(card) + 1);
@@ -912,6 +922,7 @@ export default function CreateDeck() {
                 onChange={handleChange}
               >
                 <MenuItem value={"all"}>All</MenuItem>
+                <MenuItem value={"vg"}>Cardfight!! Vanguard</MenuItem>
                 <MenuItem value={"set 10"}>Gods of the Arcana</MenuItem>
                 <MenuItem value={"set 9"}>Duet of Dawn and Dusk</MenuItem>
                 <MenuItem value={"set 8"}>Alterchaotica</MenuItem>
@@ -1036,7 +1047,9 @@ export default function CreateDeck() {
               key={idx}
               onTap={() => handleEvoCardSelection(name)}
               whileTap={
-                (evoDeckMap.get(name) === 3 && name !== "Carrot") ||
+                (evoDeckMap.get(name) === 3 &&
+                  name !== "Carrot" &&
+                  name !== "Drive Point") ||
                 evoDeckMap.get(name) === 10
                   ? {}
                   : { opacity: 0.3 }
@@ -1066,7 +1079,9 @@ export default function CreateDeck() {
                 src={cardImage(name)}
                 alt={name}
                 style={
-                  (evoDeckMap.get(name) === 3 && name !== "Carrot") ||
+                  (evoDeckMap.get(name) === 3 &&
+                    name !== "Carrot" &&
+                    name !== "Drive Point") ||
                   evoDeckMap.get(name) === 10
                     ? { filter: "grayscale(100%)" }
                     : { imageStyle }

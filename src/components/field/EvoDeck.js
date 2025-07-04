@@ -53,12 +53,15 @@ export default function EvoDeck({
   setReadyToEvo,
   setReadyToAdvanced,
   setReadyToFeed,
+  setReadyToRide,
   setReady,
   ready,
 }) {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
-  const [showEvo, setShowEvo] = useState(true);
+  const [showEvo, setShowEvo] = useState(false);
+  const [showFeed, setShowFeed] = useState(false);
+  const [showRide, setShowRide] = useState(false);
   const [doubleSided, setDoubleSided] = useState(false);
   const [advanced, setAdvanced] = useState(false);
   const [evoStatus, setEvoStatus] = useState(false);
@@ -101,14 +104,16 @@ export default function EvoDeck({
   };
 
   const handleContextMenu = (event, card, idx) => {
-    setShowEvo(card.card === "Carrot");
+    setShowEvo(card.card !== "Carrot" && card.card !== "Drive Point");
+    setShowFeed(card.card === "Carrot");
+    setShowRide(card.card === "Drive Point");
     setDoubleSided(isDoubleEvo(card.card));
     setEvoStatus(card.status);
-    console.log(card.card.slice(-7));
+    // console.log(card.card.slice(-7));
     setAdvanced(isAdvanced(card.card));
     setName(card.card);
     setIdx(idx);
-    console.log(idx);
+    // console.log(idx);
     dispatch(setCurrentEvo(card.card));
     dispatch(setCurrentCardIndex(idx));
     // console.log("set current evo to", card.card);
@@ -146,6 +151,13 @@ export default function EvoDeck({
     handleClose();
     setReady(true);
     setReadyToFeed(true);
+  };
+
+  const handleRide = () => {
+    handleModalClose();
+    handleClose();
+    setReady(true);
+    setReadyToRide(true);
   };
 
   const handleFlipEvo = () => {
@@ -305,10 +317,13 @@ export default function EvoDeck({
           horizontal: "left",
         }}
       >
-        {showEvo && !evoStatus && (
+        {showFeed && !evoStatus && (
           <MenuItem onClick={handleFeed}>Feed</MenuItem>
         )}
-        {!showEvo && !evoStatus && !advanced && (
+        {showRide && !evoStatus && (
+          <MenuItem onClick={handleRide}>Ride</MenuItem>
+        )}
+        {showEvo && !evoStatus && !advanced && (
           <MenuItem onClick={handleEvolve}>Evolve</MenuItem>
         )}
         {advanced && !evoStatus && (

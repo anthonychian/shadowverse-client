@@ -212,7 +212,11 @@ export default function Home() {
   };
   const handleEvoCardSelection = (card) => {
     if (evoDeckMap.has(card)) {
-      if (evoDeckMap.get(card) === 3 && card !== "Carrot") {
+      if (
+        evoDeckMap.get(card) === 3 &&
+        card !== "Carrot" &&
+        card !== "Drive Point"
+      ) {
         return;
       } else {
         evoDeckMap.set(card, evoDeckMap.get(card) + 1);

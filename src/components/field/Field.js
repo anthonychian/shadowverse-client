@@ -17,6 +17,7 @@ import {
   evolveCardOnField,
   advancedToField,
   feedCardOnField,
+  rideCardOnField,
   backToEvolveDeck,
   advancedBackToEvolveDeck,
   setEnemyField,
@@ -205,6 +206,7 @@ export default function Field({
   const [readyToEvo, setReadyToEvo] = useState(false);
   const [readyToAdvanced, setReadyToAdvanced] = useState(false);
   const [readyToFeed, setReadyToFeed] = useState(false);
+  const [readyToRide, setReadyToRide] = useState(false);
   const [tokenReady, setTokenReady] = useState(false);
 
   useEffect(() => {
@@ -466,7 +468,7 @@ export default function Field({
         );
       }
     } else if (
-      (readyToFeed || readyToEvo) &&
+      (readyToFeed || readyToEvo || readyToRide) &&
       reduxField[indexClicked] !== 0 &&
       reduxEvoField[indexClicked] === 0
     ) {
@@ -477,6 +479,16 @@ export default function Field({
             card: name,
             indexInEvolveDeck: reduxCurrentCardIndex,
             index: indexClicked,
+          })
+        );
+      }
+      if (readyToRide) {
+        setReadyToRide(false);
+        dispatch(
+          rideCardOnField({
+            card: name,
+            index: indexClicked,
+            indexInEvolveDeck: reduxCurrentCardIndex,
           })
         );
       }
@@ -501,6 +513,7 @@ export default function Field({
           card: name,
           index: indexClicked,
           carrots: 2,
+          indexInEvolveDeck: reduxCurrentCardIndex,
         })
       );
     } else {
@@ -1417,6 +1430,7 @@ export default function Field({
             setReadyToEvo={setReadyToEvo}
             setReadyToAdvanced={setReadyToAdvanced}
             setReadyToFeed={setReadyToFeed}
+            setReadyToRide={setReadyToRide}
             setReady={setReady}
             setHovering={setHovering}
             ready={ready}
@@ -1507,9 +1521,12 @@ export default function Field({
                   className={
                     reduxField[idx] !== 0 &&
                     reduxEvoField[idx] === 0 &&
-                    (readyToEvo || readyToFeed)
+                    (readyToEvo || readyToFeed || readyToRide)
                       ? "box"
-                      : reduxField[idx] === 0 && !readyToEvo && !readyToFeed
+                      : reduxField[idx] === 0 &&
+                        !readyToEvo &&
+                        !readyToFeed &&
+                        !readyToRide
                       ? "box"
                       : "none"
                   }

@@ -1,4 +1,28 @@
 export const allCardsEvo = [
+  "King of Knights, Alfred",
+  "Blaster Blade Evolved",
+
+  "Dragonic Overlord Evolved",
+  "Embodiment of Victory, Aleph",
+
+  "Blue Storm Supreme Dragon, Glory Maelstrom",
+  "Navalgazer Dragon",
+
+  "Soul Saver Dragon",
+
+  "Nightmare Doll, Alice Evolved",
+  "Barking Manticore",
+
+  "Blazing Flare Dragon",
+
+  "Phantom Blaster Dragon Evolved",
+  "Blaster Dark Evolved",
+
+  "CEO Amaterasu Evolved",
+  "Silent Tom Evolved",
+
+  "Drive Point",
+
   "XII. Wolfraud, The Hanged Man Evolved",
   "Spinaria & Lucille, Keepers ADVANCED",
   "Chipper Skipper Evolved",
@@ -408,6 +432,32 @@ export const allCardsEvo = [
   "Goblin Evolved",
   "Goliath Evolved",
   "Healing Angel Evolved",
+];
+
+export const setVGEvo = [
+  "King of Knights, Alfred",
+  "Blaster Blade Evolved",
+
+  "Dragonic Overlord Evolved",
+  "Embodiment of Victory, Aleph",
+
+  "Blue Storm Supreme Dragon, Glory Maelstrom",
+  "Navalgazer Dragon",
+
+  "Soul Saver Dragon",
+
+  "Nightmare Doll, Alice Evolved",
+  "Barking Manticore",
+
+  "Blazing Flare Dragon",
+
+  "Phantom Blaster Dragon Evolved",
+  "Blaster Dark Evolved",
+
+  "CEO Amaterasu Evolved",
+  "Silent Tom Evolved",
+
+  "Drive Point",
 ];
 
 export const set10Evo = [
@@ -844,6 +894,9 @@ export const set1Evo = [
 ];
 
 export const forestEvo = [
+  "Blue Storm Supreme Dragon, Glory Maelstrom",
+  "Navalgazer Dragon",
+
   "XII. Wolfraud, The Hanged Man Evolved",
   "Spinaria & Lucille, Keepers ADVANCED",
   "Chipper Skipper Evolved",
@@ -903,6 +956,11 @@ export const forestEvo = [
 ];
 
 export const swordEvo = [
+  "King of Knights, Alfred",
+  "Blaster Blade Evolved",
+
+  "Soul Saver Dragon",
+
   "VII. Oluon, Runaway Chariot ADVANCED",
   "Alyaska, War Hawker Evolved",
   "Prudent General Evolved",
@@ -962,6 +1020,9 @@ export const swordEvo = [
 ];
 
 export const runeEvo = [
+  "Nightmare Doll, Alice Evolved",
+  "Barking Manticore",
+
   "0. Lhynkal, The Fool Evolved",
   "Imperator of Magic Evolved",
   "Juggling Moggy Evolved",
@@ -1022,6 +1083,11 @@ export const runeEvo = [
 ];
 
 export const dragonEvo = [
+  "Dragonic Overlord Evolved",
+  "Embodiment of Victory, Aleph",
+
+  "Blazing Flare Dragon",
+
   "XI. Erntz, Justice Evolved",
   "Lævateinn Dragon, Dual Form α ADVANCED",
   "Lævateinn Dragon, Dual Form β ADVANCED",
@@ -1087,6 +1153,9 @@ export const dragonEvo = [
 ];
 
 export const abyssEvo = [
+  "Phantom Blaster Dragon Evolved",
+  "Blaster Dark Evolved",
+
   "VI. Milteo, The Lovers Evolved",
   "Sincere Masquerade Ghost ADVANCED",
   "Deathbringer Evolved",
@@ -1145,6 +1214,9 @@ export const abyssEvo = [
 ];
 
 export const havenEvo = [
+  "CEO Amaterasu Evolved",
+  "Silent Tom Evolved",
+
   "VIII. Sofina, Strength Evolved",
   "Reverend Adjudicator Evolved",
   "Topaz Swordian Evolved",
@@ -1202,6 +1274,8 @@ export const havenEvo = [
 ];
 
 export const neutralEvo = [
+  "Drive Point",
+
   "XXI. Zelgenea, O Great World ADVANCED",
   "Starbright Deity Evolved",
   "One-Winged Traitor Evolved",

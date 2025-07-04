@@ -11,6 +11,7 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import cancel from "../../assets/logo/cancel.png";
 import carrot from "../../assets/logo/carrot.png";
+import drive from "../../assets/logo/drive.png";
 import img from "../../assets/pin_bellringer_angel.png";
 import atkImg from "../../assets/logo/atk.png";
 import defImg from "../../assets/logo/def.png";
@@ -107,7 +108,7 @@ export default function Card({
   const handleHoverStart = () => {
     if (!ready) {
       setHovering(true);
-      if (name.slice(0, 6) === "Carrot") {
+      if (name.slice(0, 6) === "Carrot" || name === "Drive Point") {
         dispatch(setCurrentCard(cardBeneath));
       } else {
         dispatch(setCurrentCard(name));
@@ -215,7 +216,8 @@ export default function Card({
             </div>
           </>
         )}
-        {numOfCarrots > 0 && name !== "Carrot" ? (
+        {(numOfCarrots > 0 && name !== "Carrot") ||
+        (name === "Drive Point" && onField) ? (
           <img
             style={{ opacity: 1 }}
             height={"100%"}
@@ -223,22 +225,9 @@ export default function Card({
             alt={name}
           />
         ) : (
-          <img
-            // style={
-            //   inHand &&
-            //   (reduxEnemyCardSelectedInHand - handLength + 1) * -1 ===
-            //     inHandIndex
-            //     ? {
-            //         filter:
-            //           "sepia() saturate(4) hue-rotate(315deg) brightness(100%) opacity(5)",
-            //       }
-            //     : {}
-            // }
-            height={"100%"}
-            src={cardImage(name)}
-            alt={name}
-          />
+          <img height={"100%"} src={cardImage(name)} alt={name} />
         )}
+
         {showAtk && (
           <>
             <input
@@ -355,6 +344,35 @@ export default function Card({
               }}
             />
             <div style={{ fontSize: 15 }}>x {numOfCarrots} </div>
+          </div>
+        )}
+        {name === "Drive Point" && onField && (
+          <div
+            style={{
+              width: "50px",
+              position: "relative",
+              left: "45%",
+              bottom: "120%",
+              fontFamily: "EB Garamond",
+              color: "white",
+              backgroundColor: "rgba(0, 0, 0, 0.5)",
+              borderRadius: "10px",
+              border: "4px solid #0000",
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <img
+              src={drive}
+              alt={"drive"}
+              style={{
+                height: "20px",
+                width: "20px",
+              }}
+            />
+            <div style={{ fontSize: 15 }}></div>
           </div>
         )}
       </motion.div>
