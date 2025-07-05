@@ -12,6 +12,7 @@ import {
 import CardMUI from "@mui/material/Card";
 import Card from "../hand/Card";
 import { setViewingCemeteryOpponent } from "../../redux/CardSlice";
+import "../../css/Card.css";
 
 const img = require("../../assets/pin_bellringer_angel.png");
 
@@ -66,17 +67,19 @@ export default function EnemyCemetery({ setHovering, ready }) {
       <div
         onClick={handleModalOpen}
         style={{
-          height: "160px",
-          width: "115px",
+          // height: "160px",
+          // width: "115px",
           borderRadius: "10px",
           border: "4px solid #1a20d6c8",
           cursor: `url(${img}) 55 55, auto`,
           position: "relative",
         }}
+        className={"cardStyle"}
       >
         {reduxEnemyCemetery && reduxEnemyCemetery.length > 0 && (
           <img
-            height={"160px"}
+            // height={"160px"}
+            className={"cardStyle"}
             src={cardImage(reduxEnemyCemetery[0])}
             alt={"cardback"}
           />

@@ -33,6 +33,7 @@ import shutenCardBack from "../../assets/cardbacks/shuten.png";
 import tidalgunnerCardBack from "../../assets/cardbacks/tidalgunner.png";
 import viridiaCardBack from "../../assets/cardbacks/viridia.png";
 import wilbertCardBack from "../../assets/cardbacks/wilbert.png";
+import "../../css/Card.css";
 
 const style = {
   position: "relative",
@@ -242,13 +243,14 @@ export default function EvoDeck({
       <div
         onClick={handleModalOpen}
         style={{
-          height: "160px",
-          width: "115px",
+          // height: "160px",
+          // width: "115px",
           //   backgroundColor: "rgba(255, 255, 255, 0.1)",
           cursor: `url(${img}) 55 55, auto`,
         }}
+        className={"cardStyle"}
       >
-        <img height={"160px"} src={cardback} alt={"cardback"} />
+        <img className={"cardStyle"} src={cardback} alt={"cardback"} />
       </div>
 
       <Modal

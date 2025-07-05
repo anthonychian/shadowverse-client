@@ -25,6 +25,7 @@ import {
   setViewingCemetery,
 } from "../../redux/CardSlice";
 // import cardback from "../../assets/cardbacks/default.png";
+import "../../css/Card.css";
 
 const img = require("../../assets/pin_bellringer_angel.png");
 
@@ -152,8 +153,8 @@ export default function Cemetery({
       <div
         onClick={handleModalOpen}
         style={{
-          height: "160px",
-          width: "115px",
+          // height: "160px",
+          // width: "115px",
           // backgroundColor: "#131219",
           borderRadius: "10px",
           // border: "4px solid #0000",
@@ -161,10 +162,11 @@ export default function Cemetery({
           cursor: `url(${img}) 55 55, auto`,
           position: "relative",
         }}
+        className={"cardStyle"}
       >
         {reduxCemetery && reduxCemetery.length > 0 && (
           <img
-            height={"160px"}
+            className={"cardStyle"}
             src={cardImage(reduxCemetery[0])}
             alt={"cardback"}
           />
@@ -175,7 +177,7 @@ export default function Cemetery({
             position: "absolute",
             backgroundColor: "rgba(0, 0, 0, 0.4)",
             top: "70%",
-            right: "30%",
+            right: "27%",
             color: "rgba(255, 255, 255, 1)",
             fontSize: "30px",
             fontFamily: "Noto Serif JP, serif",

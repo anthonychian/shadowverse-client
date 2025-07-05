@@ -1,29 +1,212 @@
-.PlayPointsContainer {
-  color: white;
-  height: 85%;
-  max-height: 820px;
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  justify-content: center;
-  align-items: center;
-  font-family: "Noto Serif JP", serif;
-  -webkit-text-stroke-color: black;
-  /* position: fixed; */
-  /* bottom: 50%; */
+@media screen and (min-width: 1000px) {
+  .PlayPointsContainer {
+    color: white;
+    height: 70%;
+    max-height: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    font-family: "Noto Serif JP", serif;
+    -webkit-text-stroke-color: black;
+    /* position: fixed; */
+    /* bottom: 50%; */
+  }
+  .CircleContainer {
+    /* background-color: #131219; */
+    background-color: rgba(0, 0, 0, 0.6);
+    outline: 7px ridge rgba(0, 0, 0, 0.6);
+    border-radius: 2rem;
+    height: 80%;
+    max-height: 820px;
+    max-width: 100px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .circle {
+    background: radial-gradient(
+      circle at -1% 57.5%,
+      rgb(19, 170, 82) 0%,
+      rgb(0, 102, 43) 90%
+    );
+    /* background-color: green; */
+    outline: 5px ridge rgba(0, 0, 0, 0.9);
+    border-radius: 2rem;
+    display: flex;
+    margin-top: 30%;
+    width: 35px;
+    height: 35px;
+    font-size: 1.5em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .pointsContainer {
+    background-color: rgba(0, 0, 0, 0.8);
+    outline: 7px ridge rgba(0, 0, 0, 0.6);
+    border-radius: 2rem;
+    /* position: fixed; */
+    bottom: 20%;
+    left: 30%;
+    height: 70px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .points {
+    font-size: 25px;
+    height: 80px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    padding: 0 0.2em;
+  }
+  .buttonText {
+    font-size: 12px;
+    font-family: "Noto Serif JP", serif;
+    color: white;
+  }
+  .nextTurnContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    background: radial-gradient(
+      circle at -1% 57.5%,
+      rgb(19, 170, 82) 0%,
+      rgb(0, 102, 43) 90%
+    );
+    /* background-color: green; */
+    outline: 5px ridge rgba(0, 0, 0, 0.9);
+    border-radius: 2rem;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+  .endTurnContainer {
+    user-select: none;
+    background: linear-gradient(to right, rgb(5, 117, 230), rgb(2, 27, 121));
+    /* background-color: blue; */
+    outline: 5px ridge rgba(0, 0, 0, 0.9);
+    border-radius: 2rem;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
 }
 
-/* medium - tablet styles */
-@media screen and (max-width: 1000px) {
+@media screen and (min-width: 2000px) {
+  .PlayPointsContainer {
+    color: white;
+    height: 70%;
+    max-height: 820px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    font-family: "Noto Serif JP", serif;
+    -webkit-text-stroke-color: black;
+    /* position: fixed; */
+    /* bottom: 50%; */
+  }
+  .CircleContainer {
+    /* background-color: #131219; */
+    background-color: rgba(0, 0, 0, 0.6);
+    outline: 7px ridge rgba(0, 0, 0, 0.6);
+    border-radius: 2rem;
+    height: 80%;
+    max-width: 120px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .circle {
+    background: radial-gradient(
+      circle at -1% 57.5%,
+      rgb(19, 170, 82) 0%,
+      rgb(0, 102, 43) 90%
+    );
+    /* background-color: green; */
+    outline: 5px ridge rgba(0, 0, 0, 0.9);
+    border-radius: 2rem;
+    display: flex;
+    margin-top: 30%;
+    width: 45px;
+    height: 45px;
+    font-size: 1.8em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .pointsContainer {
+    background-color: rgba(0, 0, 0, 0.8);
+    outline: 7px ridge rgba(0, 0, 0, 0.6);
+    border-radius: 2rem;
+    /* position: fixed; */
+    bottom: 20%;
+    left: 30%;
+    height: 80px;
+    width: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .points {
+    font-size: 30px;
+    height: 80px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    padding: 0 0.2em;
+  }
+  .buttonText {
+    font-size: 14px;
+    font-family: "Noto Serif JP", serif;
+    color: white;
+  }
+  .nextTurnContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    background: radial-gradient(
+      circle at -1% 57.5%,
+      rgb(19, 170, 82) 0%,
+      rgb(0, 102, 43) 90%
+    );
+    /* background-color: green; */
+    outline: 5px ridge rgba(0, 0, 0, 0.9);
+    border-radius: 2rem;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+  }
+  .endTurnContainer {
+    user-select: none;
+    background: linear-gradient(to right, rgb(5, 117, 230), rgb(2, 27, 121));
+    /* background-color: blue; */
+    outline: 5px ridge rgba(0, 0, 0, 0.9);
+    border-radius: 2rem;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+  }
 }
 
-/* small - mobile styles */
-@media screen and (max-width: 600px) {
-}
-
-/* extra small styles */
-@media screen and (max-width: 400px) {
-}
 .inc {
   /* background-color: red; */
   display: flex;
@@ -43,18 +226,6 @@
   width: 60px;
   bottom: 0;
 }
-.CircleContainer {
-  /* background-color: #131219; */
-  background-color: rgba(0, 0, 0, 0.6);
-  outline: 7px ridge rgba(0, 0, 0, 0.6);
-  border-radius: 2rem;
-  height: 80%;
-  max-width: 120px;
-  width: 70%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .buttonsContainer {
   width: 100%;
   display: flex;
@@ -65,30 +236,6 @@
 }
 
 .IncDecContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.points {
-  font-size: 30px;
-  height: 80px;
-  width: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  user-select: none;
-  padding: 0 0.2em;
-}
-
-.pointsContainer {
-  background-color: rgba(0, 0, 0, 0.8);
-  outline: 7px ridge rgba(0, 0, 0, 0.6);
-  border-radius: 2rem;
-  /* position: fixed; */
-  bottom: 20%;
-  left: 30%;
-  height: "200px";
-  width: "200px";
   display: flex;
   justify-content: center;
   align-items: center;
@@ -118,26 +265,6 @@
   display: flex;
 }
 
-.circle {
-  background: radial-gradient(
-    circle at -1% 57.5%,
-    rgb(19, 170, 82) 0%,
-    rgb(0, 102, 43) 90%
-  );
-  /* background-color: green; */
-  outline: 5px ridge rgba(0, 0, 0, 0.9);
-  border-radius: 2rem;
-  display: flex;
-  margin-top: 30%;
-  width: 45px;
-  height: 45px;
-  font-size: 1.8em;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
 .circleFaded {
   background-color: rgb(0, 255, 0, 0.1);
   outline: 5px ridge rgba(0, 0, 0, 0.9);
@@ -152,34 +279,4 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-}
-.nextTurnContainer {
-  user-select: none;
-  background: radial-gradient(
-    circle at -1% 57.5%,
-    rgb(19, 170, 82) 0%,
-    rgb(0, 102, 43) 90%
-  );
-  /* background-color: green; */
-  outline: 5px ridge rgba(0, 0, 0, 0.9);
-  border-radius: 2rem;
-  width: 45px;
-  height: 45px;
-  cursor: pointer;
-}
-.endTurnContainer {
-  user-select: none;
-  background: linear-gradient(to right, rgb(5, 117, 230), rgb(2, 27, 121));
-  /* background-color: blue; */
-  outline: 5px ridge rgba(0, 0, 0, 0.9);
-  border-radius: 2rem;
-  width: 45px;
-  height: 45px;
-  cursor: pointer;
-}
-.buttonText {
-  font-size: 14px;
-  font-family: "Noto Serif JP", serif;
-  color: white;
-  /* width: 100%; */
 }

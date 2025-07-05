@@ -1158,22 +1158,11 @@ export default function Field({
               // animate={["start"]}
             >
               <img
-                height={"160px"}
+                className={"cardStyle"}
                 src={cardImage(reduxEnemyCard)}
                 alt={reduxEnemyCard}
               />
             </motion.div>
-            {/* <motion.div
-              initial={{ scale: 1.0, rotateY: 180 }}
-              transition={{ duration: 0.8 }}
-              animate={{ scale: 4.5, rotateY: 0 }}
-            >
-              <img
-                height={"160px"}
-                src={cardImage(reduxEnemyCard)}
-                alt={reduxEnemyCard}
-              />
-            </motion.div> */}
           </CardMUI>
         </Box>
       </Modal>
@@ -1205,7 +1194,7 @@ export default function Field({
                 : { cursor: `url(${img}) 55 55, auto` }
             }
             key={idx}
-            height={"160px"}
+            className={"cardStyle"}
             src={cardback}
             alt={"cardback"}
             onClick={() => handleSelectEnemyCardInHand(idx)}
@@ -1243,7 +1232,7 @@ export default function Field({
             //   cursor: `url(${img}) 55 55, auto`,
             // }}
             >
-              <img height={"160px"} src={cardback} alt={"cardback"} />
+              <img className={"cardStyle"} src={cardback} alt={"cardback"} />
             </div>
             {/* {showOpponentDeckSize && ( */}
             <div
@@ -1253,7 +1242,7 @@ export default function Field({
                 backgroundColor: "rgba(0, 0, 0, 0.4)",
                 top: "5%",
                 right: "30%",
-                color: "rgba(255, 255, 255, 1)",
+                color: "rgb(8, 8, 8)",
                 fontSize: "30px",
                 fontFamily: "Noto Serif JP, serif",
               }}
@@ -1316,12 +1305,13 @@ export default function Field({
             <motion.div
               key={`enemy1-${idx}`}
               style={{
-                height: "160px",
-                width: "115px",
+                zIndex: 2,
+                // position: "absolute",
                 // backgroundColor: "#131219",
                 // borderRadius: "10px",
                 // border: "4px solid #555559",
               }}
+              className={"cardStyle"}
               onClick={() => handleSelectEnemyCardOnField(cardPos(idx))}
             >
               {/* {reduxEnemyArrow.show &&
@@ -1482,6 +1472,7 @@ export default function Field({
               bottom: "45%",
               width: "50px",
               pointerEvents: "none",
+              zIndex: 0,
             }}
           >
             Field
@@ -1501,7 +1492,7 @@ export default function Field({
             EX Area
           </span>
           {reduxField.map((card, idx) => (
-            <div key={`card-${idx}`}>
+            <div style={{ zIndex: 2 }} key={`card-${idx}`}>
               {ready && (
                 <motion.div
                   onClick={() => {
@@ -1511,13 +1502,15 @@ export default function Field({
                     cancelClick();
                   }}
                   key={`player1-${idx}`}
-                  style={{
-                    height: "160px",
-                    width: "115px",
-                    // backgroundColor: "rgba(255, 255, 255, 0.1)",
-                    // backgroundColor: "#131219",
-                    // borderRadius: "10px",
-                  }}
+                  style={
+                    {
+                      // height: "160px",
+                      // width: "115px",
+                      // backgroundColor: "rgba(255, 255, 255, 0.1)",
+                      // backgroundColor: "#131219",
+                      // borderRadius: "10px",
+                    }
+                  }
                   className={
                     reduxField[idx] !== 0 &&
                     reduxEvoField[idx] === 0 &&
@@ -1581,10 +1574,13 @@ export default function Field({
                   // onMouseUp={(event) => handleHideArrow(event, idx)}
                   // onMouseMove={(event) => handleMouseMove(event, idx)}
                   key={`player2-${idx}`}
-                  style={{
-                    height: "160px",
-                    width: "115px",
-                  }}
+                  style={
+                    {
+                      // height: "160px",
+                      // width: "115px",
+                    }
+                  }
+                  className={"cardStyle"}
                 >
                   {/* {showArrow[idx] &&
                     (reduxField[idx] !== 0 || reduxEvoField[idx] !== 0) && (
@@ -1679,7 +1675,7 @@ export default function Field({
                 width: "50px",
                 backgroundColor: "rgba(0, 0, 0, 0.4)",
                 top: "65%",
-                right: "30%",
+                right: "27%",
                 color: "rgba(255, 255, 255, 1)",
                 fontSize: "30px",
                 fontFamily: "Noto Serif JP, serif",

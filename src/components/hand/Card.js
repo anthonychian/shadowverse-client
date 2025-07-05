@@ -149,23 +149,19 @@ export default function Card({
     <>
       <motion.div
         onTap={handleTap}
-        style={{
-          height: "160px",
-          position: "relative",
-        }}
         animate={engaged ? { rotate: -90 } : { rotate: 0 }}
         initial={false}
         onHoverStart={() => handleHoverStart()}
         onHoverEnd={() => handleHoverEnd()}
         whileHover={
           !ready && {
-            boxShadow:
-              "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 1.0)",
-            zIndex: 100,
+            // boxShadow:
+            //   "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 1.0)",
             translateY: inHand ? -80 : -25,
             scale: inHand ? 1.5 : 1.3,
             cursor: `url(${img}) 55 55, auto`,
             overlay: "auto",
+            display: "inline-block",
           }
         }
         className={
@@ -183,7 +179,7 @@ export default function Card({
             ? "bane"
             : ward === 1
             ? "ward"
-            : ""
+            : "none"
         }
       >
         {counterVal > 0 && (

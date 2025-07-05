@@ -45,3 +45,25 @@
   outline: none;
   transform: rotateY(180deg);
 }
+/* medium - tablet styles */
+@media screen and (min-width: 500px) {
+  .cardStyle {
+    height: 140px;
+    width: 100px;
+  }
+}
+
+/* medium - tablet styles */
+@media screen and (min-width: 1000px) {
+  .cardStyle {
+    height: 140px;
+    width: 100px;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .cardStyle {
+    height: 160px;
+    width: 115px;
+  }
+}

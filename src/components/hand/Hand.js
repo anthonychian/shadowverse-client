@@ -100,7 +100,8 @@ export default function Hand({
           width: "50vw",
           alignItems: "start",
           justifyContent: "center",
-          overflowX: reduxHand.length > 9 ? "auto" : "visible",
+          // justifyContent: "flex-start",
+          overflowX: reduxHand.length > 9 ? "scroll" : "visible",
           overflowY: reduxHand.length > 9 ? "clip" : "visible",
         }}
       >

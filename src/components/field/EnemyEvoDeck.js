@@ -27,6 +27,8 @@ import tidalgunnerCardBack from "../../assets/cardbacks/tidalgunner.png";
 import viridiaCardBack from "../../assets/cardbacks/viridia.png";
 import wilbertCardBack from "../../assets/cardbacks/wilbert.png";
 
+import "../../css/Card.css";
+
 const img = require("../../assets/pin_bellringer_angel.png");
 
 const style = {
@@ -131,12 +133,13 @@ export default function EnemyEvoDeck({ setHovering, ready }) {
       <div
         onClick={handleModalOpen}
         style={{
-          height: "160px",
-          width: "115px",
+          // height: "160px",
+          // width: "115px",
           cursor: `url(${img}) 55 55, auto`,
         }}
+        className={"cardStyle"}
       >
-        <img height={"160px"} src={cardback} alt={"cardback"} />
+        <img className={"cardStyle"} src={cardback} alt={"cardback"} />
       </div>
 
       <Modal
@@ -176,7 +179,11 @@ export default function EnemyEvoDeck({ setHovering, ready }) {
                 )}
 
                 {!card.status && (
-                  <img height={"160px"} src={cardback} alt={"cardback"} />
+                  <img
+                    className={"cardStyle"}
+                    src={cardback}
+                    alt={"cardback"}
+                  />
                 )}
               </div>
             ))}
