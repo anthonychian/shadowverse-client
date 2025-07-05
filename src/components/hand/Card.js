@@ -161,7 +161,7 @@ export default function Card({
             scale: inHand ? 1.5 : 1.3,
             cursor: `url(${img}) 55 55, auto`,
             overlay: "auto",
-            display: "inline-block",
+            // display: "inline-block",
           }
         }
         className={
