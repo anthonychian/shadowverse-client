@@ -149,6 +149,10 @@ export default function Card({
     <>
       <motion.div
         onTap={handleTap}
+        // style={{
+        //   height: "160px",
+        //   position: "relative",
+        // }}
         animate={engaged ? { rotate: -90 } : { rotate: 0 }}
         initial={false}
         onHoverStart={() => handleHoverStart()}
