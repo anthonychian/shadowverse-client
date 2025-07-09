@@ -1,7 +1,9 @@
 import io from "socket.io-client";
 
 // export const socket = io.connect("http://localhost:5000");
-export const socket = io("https://juvenile-closed-stork.glitch.me", {
+//export const socket = io("https://juvenile-closed-stork.glitch.me", {
+
+export const socket = io("https://shadowverse-server.onrender.com/", {
   transports: ["websocket"],
 });
 

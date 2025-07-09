@@ -102,13 +102,6 @@
   inherits: false;
 }
 
-/* z-index: 2; 
-  position: "relative"; 
-  width: "115px"; 
-  background-color: "#131219";
-  border-radius: "10px";
-  border: 4px solid transparent; */
-
 @media screen and (min-width: 500px) {
   .none {
     position: relative;
