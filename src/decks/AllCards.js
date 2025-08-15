@@ -17,7 +17,7 @@ export const allCards = [
   "Wyvern Guard, Barri",
   "Dragon Knight, Nehalem",
   "Embodiment of Armor, Bahr",
-  "Chain-attack Sutherland",
+  "Chain-Attack Sutherland",
   "Follower, Reas",
   "Lizard Runner, Undeux",
 
@@ -26,7 +26,7 @@ export const allCards = [
   "Storm Rider, Basil",
   "Marine General of the Restless Tides, Algos",
   "Hydro Hurricane Dragon",
-  "Water General of Wave-like Spirals, Benedict",
+  "Water General of Wave-Like Spirals, Benedict",
   "Tear Knight, Valeria",
   "Tear Knight, Lazarus",
   "Tear Knight, Theo",
@@ -141,7 +141,7 @@ export const allCards = [
   "Luck Bird",
   "Godhawk, Ichibyoshi",
 
-  "Intertwining Power",
+  "Powers Converged",
 
   "XII. Wolfraud, The Hanged Man",
   "Lucille, Keeper of Relics",
@@ -1449,7 +1449,7 @@ export const setVG = [
   "Wyvern Guard, Barri",
   "Dragon Knight, Nehalem",
   "Embodiment of Armor, Bahr",
-  "Chain-attack Sutherland",
+  "Chain-Attack Sutherland",
   "Follower, Reas",
   "Lizard Runner, Undeux",
 
@@ -1458,7 +1458,7 @@ export const setVG = [
   "Storm Rider, Basil",
   "Marine General of the Restless Tides, Algos",
   "Hydro Hurricane Dragon",
-  "Water General of Wave-like Spirals, Benedict",
+  "Water General of Wave-Like Spirals, Benedict",
   "Tear Knight, Valeria",
   "Tear Knight, Lazarus",
   "Tear Knight, Theo",
@@ -1573,7 +1573,7 @@ export const setVG = [
   "Luck Bird",
   "Godhawk, Ichibyoshi",
 
-  "Intertwining Power",
+  "Powers Converged",
 ];
 
 export const set10 = [
@@ -2886,7 +2886,7 @@ export const forest = [
   "Storm Rider, Basil",
   "Marine General of the Restless Tides, Algos",
   "Hydro Hurricane Dragon",
-  "Water General of Wave-like Spirals, Benedict",
+  "Water General of Wave-Like Spirals, Benedict",
   "Tear Knight, Valeria",
   "Tear Knight, Lazarus",
   "Tear Knight, Theo",
@@ -3537,7 +3537,7 @@ export const dragon = [
   "Wyvern Guard, Barri",
   "Dragon Knight, Nehalem",
   "Embodiment of Armor, Bahr",
-  "Chain-attack Sutherland",
+  "Chain-Attack Sutherland",
   "Follower, Reas",
   "Lizard Runner, Undeux",
 
@@ -4164,7 +4164,7 @@ export const haven = [
 ];
 
 export const neutral = [
-  "Intertwining Power",
+  "Powers Converged",
 
   "XXI. Zelgenea, The World",
   "Starbright Deity",

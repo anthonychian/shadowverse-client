@@ -1,312 +1,312 @@
 export const cardImage = (cardName) => {
   switch (cardName) {
     case "Alfred Early":
-      return "../textures/csd03a-001.png";
+      return "../textures/CSD03a-001EN.png";
     case "King of Knights, Alfred":
-      return "../textures/csd03a-002.png";
+      return "../textures/CSD03a-002EN.png";
     case "Blaster Blade":
-      return "../textures/csd03a-003.png";
+      return "../textures/CSD03a-003EN.png";
     case "Blaster Blade Evolved":
-      return "../textures/csd03a-004.png";
+      return "../textures/CSD03a-004EN.png";
     case "Wingal":
-      return "../textures/csd03a-005.png";
+      return "../textures/CSD03a-005EN.png";
     case "Knight of Conviction, Bors":
-      return "../textures/csd03a-006.png";
+      return "../textures/CSD03a-006EN.png";
     case "Flash Shield, Iseult":
-      return "../textures/csd03a-007.png";
+      return "../textures/CSD03a-007EN.png";
     case "Knight of Silence, Gallatin":
-      return "../textures/csd03a-008.png";
+      return "../textures/CSD03a-008EN.png";
     case "Little Sage, Marron":
-      return "../textures/csd03a-009.png";
+      return "../textures/CSD03a-009EN.png";
     case "Lake Maiden, Lien":
-      return "../textures/csd03a-010.png";
+      return "../textures/CSD03a-010EN.png";
     case "Knight of Rose, Morgana":
-      return "../textures/csd03a-011.png";
+      return "../textures/CSD03a-011EN.png";
     case "Stardust Trumpeter":
-      return "../textures/csd03a-016.png";
+      return "../textures/CSD03a-016EN.png";
 
     case "Dragonic Overlord":
-      return "../textures/csd03b-001.png";
+      return "../textures/CSD03b-001EN.png";
     case "Dragonic Overlord Evolved":
-      return "../textures/csd03b-002.png";
+      return "../textures/CSD03b-002EN.png";
     case "Dragon Monk, Goku":
-      return "../textures/csd03b-003.png";
+      return "../textures/CSD03b-003EN.png";
     case "Dragon Knight, Aleph":
-      return "../textures/csd03b-004.png";
+      return "../textures/CSD03b-004EN.png";
     case "Embodiment of Victory, Aleph":
-      return "../textures/csd03b-005.png";
+      return "../textures/CSD03b-005EN.png";
     case "Berserk Dragon":
-      return "../textures/csd03b-006.png";
+      return "../textures/CSD03b-006EN.png";
     case "Wyvern Guard, Barri":
-      return "../textures/csd03b-007.png";
+      return "../textures/CSD03b-007EN.png";
     case "Dragon Knight, Nehalem":
-      return "../textures/csd03b-008.png";
+      return "../textures/CSD03b-008EN.png";
     case "Embodiment of Armor, Bahr":
-      return "../textures/csd03b-009.png";
-    case "Chain-attack Sutherland":
-      return "../textures/csd03b-010.png";
+      return "../textures/CSD03b-009EN.png";
+    case "Chain-Attack Sutherland":
+      return "../textures/CSD03b-010EN.png";
     case "Follower, Reas":
-      return "../textures/csd03b-011.png";
+      return "../textures/CSD03b-011EN.png";
     case "Lizard Runner, Undeux":
-      return "../textures/csd03b-016.png";
+      return "../textures/CSD03b-016EN.png";
 
     case "Blue Storm Dragon, Maelstrom":
-      return "../textures/cp03-u01.png";
+      return "../textures/CP03-U01EN.png";
     case "Blue Storm Supreme Dragon, Glory Maelstrom":
-      return "../textures/cp03-002.png";
+      return "../textures/CP03-002EN.png";
     case "Storm Rider, Diamantes":
-      return "../textures/cp03-003.png";
+      return "../textures/CP03-003EN.png";
     case "Storm Rider, Basil":
-      return "../textures/cp03-004.png";
+      return "../textures/CP03-004EN.png";
     case "Marine General of the Restless Tides, Algos":
-      return "../textures/cp03-005.png";
+      return "../textures/CP03-005EN.png";
     case "Navalgazer Dragon":
-      return "../textures/cp03-006.png";
+      return "../textures/CP03-006EN.png";
     case "Hydro Hurricane Dragon":
-      return "../textures/cp03-007.png";
-    case "Water General of Wave-like Spirals, Benedict":
-      return "../textures/cp03-008.png";
+      return "../textures/CP03-007EN.png";
+    case "Water General of Wave-Like Spirals, Benedict":
+      return "../textures/CP03-008EN.png";
     case "Tear Knight, Valeria":
-      return "../textures/cp03-009.png";
+      return "../textures/CP03-009EN.png";
     case "Tear Knight, Lazarus":
-      return "../textures/cp03-010.png";
+      return "../textures/CP03-010EN.png";
     case "Tear Knight, Theo":
-      return "../textures/cp03-011.png";
+      return "../textures/CP03-011EN.png";
     case "Light Signals Penguin Soldier":
-      return "../textures/cp03-012.png";
+      return "../textures/CP03-012EN.png";
     case "Tear Knight, Cyprus":
-      return "../textures/cp03-013.png";
+      return "../textures/CP03-013EN.png";
     case "Emerald Shield, Paschal":
-      return "../textures/cp03-014.png";
+      return "../textures/CP03-014EN.png";
     case "Battleship Intelligence":
-      return "../textures/cp03-015.png";
+      return "../textures/CP03-015EN.png";
     case "Pyroxene Communications Sea Otter Soldier":
-      return "../textures/cp03-016.png";
+      return "../textures/CP03-016EN.png";
     case "Dolphin Soldier of High Speed Raids":
-      return "../textures/cp03-017.png";
+      return "../textures/CP03-017EN.png";
     case "Medical Officer of the Rainbow Elixir":
-      return "../textures/cp03-018.png";
+      return "../textures/CP03-018EN.png";
     case "Coral Assault":
-      return "../textures/cp03-019.png";
+      return "../textures/CP03-019EN.png";
     case "Battle Siren, Cynthia":
-      return "../textures/cp03-020.png";
+      return "../textures/CP03-020EN.png";
     case "Officer Cadet, Erikk":
-      return "../textures/cp03-021.png";
+      return "../textures/CP03-021EN.png";
 
     case "Majesty Lord Blaster":
-      return "../textures/cp03-u02.png";
+      return "../textures/CP03-U02EN.png";
     case "Swordsman of the Explosive Flames, Palamedes":
-      return "../textures/cp03-023.png";
+      return "../textures/CP03-023EN.png";
     case "Star Call Trumpeter":
-      return "../textures/cp03-024.png";
+      return "../textures/CP03-024EN.png";
     case "High Dog Breeder, Akane":
-      return "../textures/cp03-025.png";
+      return "../textures/CP03-025EN.png";
     case "Soul Saver Dragon":
-      return "../textures/cp03-026.png";
+      return "../textures/CP03-026EN.png";
     case "Knight of Loyalty, Bedivere":
-      return "../textures/cp03-027.png";
+      return "../textures/CP03-027EN.png";
     case "Solitary Knight, Gancelot":
-      return "../textures/cp03-028.png";
+      return "../textures/CP03-028EN.png";
     case "Knight of Friendship, Kay":
-      return "../textures/cp03-029.png";
+      return "../textures/CP03-029EN.png";
     case "Barcgal":
-      return "../textures/cp03-030.png";
+      return "../textures/CP03-030EN.png";
     case "Miru Biru":
-      return "../textures/cp03-031.png";
+      return "../textures/CP03-031EN.png";
     case "Young Pegasus Knight":
-      return "../textures/cp03-032.png";
+      return "../textures/CP03-032EN.png";
     case "Toypugal":
-      return "../textures/cp03-033.png";
+      return "../textures/CP03-033EN.png";
     case "Pongal":
-      return "../textures/cp03-034.png";
+      return "../textures/CP03-034EN.png";
     case "Future Knight, Llew":
-      return "../textures/cp03-035.png";
+      return "../textures/CP03-035EN.png";
     case "Margal":
-      return "../textures/cp03-036.png";
+      return "../textures/CP03-036EN.png";
     case "Flogal":
-      return "../textures/cp03-037.png";
+      return "../textures/CP03-037EN.png";
     case "Yggdrasil Maiden, Elaine":
-      return "../textures/cp03-038.png";
+      return "../textures/CP03-038EN.png";
     case "Starlight Unicorn":
-      return "../textures/cp03-039.png";
+      return "../textures/CP03-039EN.png";
     case "Knight of Truth, Gordon":
-      return "../textures/cp03-040.png";
+      return "../textures/CP03-040EN.png";
     case "Wingal Brave":
-      return "../textures/cp03-041.png";
+      return "../textures/CP03-041EN.png";
 
     case "Silver Thorn Dragon Tamer, Luquier":
-      return "../textures/cp03-u03.png";
+      return "../textures/CP03-U03EN.png";
     case "Nightmare Doll, Alice":
-      return "../textures/cp03-043.png";
+      return "../textures/CP03-043EN.png";
     case "Nightmare Doll, Alice Evolved":
-      return "../textures/cp03-044.png";
+      return "../textures/CP03-044EN.png";
     case "Purple Trapezist":
-      return "../textures/cp03-045.png";
+      return "../textures/CP03-045EN.png";
     case "Crimson Beast Tamer":
-      return "../textures/cp03-046.png";
+      return "../textures/CP03-046EN.png";
     case "Barking Manticore":
-      return "../textures/cp03-047.png";
+      return "../textures/CP03-047EN.png";
     case "Mistress Hurricane":
-      return "../textures/cp03-048.png";
+      return "../textures/CP03-048EN.png";
     case "Golden Beast Tamer":
-      return "../textures/cp03-049.png";
+      return "../textures/CP03-049EN.png";
     case "Starlight Melody Tamer, Farah":
-      return "../textures/cp03-050.png";
+      return "../textures/CP03-050EN.png";
     case "Turquoise Beast Tamer":
-      return "../textures/cp03-051.png";
+      return "../textures/CP03-051EN.png";
     case "Dark Metal Bicorn":
-      return "../textures/cp03-052.png";
+      return "../textures/CP03-052EN.png";
     case "Nitro Juggler":
-      return "../textures/cp03-053.png";
+      return "../textures/CP03-053EN.png";
     case "Midnight Bunny":
-      return "../textures/cp03-054.png";
+      return "../textures/CP03-054EN.png";
     case "Hades Hypnotist":
-      return "../textures/cp03-055.png";
+      return "../textures/CP03-055EN.png";
     case "Dynamite Juggler":
-      return "../textures/cp03-056.png";
+      return "../textures/CP03-056EN.png";
     case "Rainbow Magician":
-      return "../textures/cp03-057.png";
+      return "../textures/CP03-057EN.png";
     case "Skyhigh Walker":
-      return "../textures/cp03-058.png";
+      return "../textures/CP03-058EN.png";
     case "Candy Clown":
-      return "../textures/cp03-059.png";
+      return "../textures/CP03-059EN.png";
     case "Jumping Jill":
-      return "../textures/cp03-060.png";
+      return "../textures/CP03-060EN.png";
     case "Skull Juggler":
-      return "../textures/cp03-061.png";
+      return "../textures/CP03-061EN.png";
     case "Girl Who Crossed the Gap":
-      return "../textures/cp03-062.png";
+      return "../textures/CP03-062EN.png";
 
     case "Dragonic Overlord the End":
-      return "../textures/cp03-u04.png";
+      return "../textures/CP03-U04EN.png";
     case "Seal Dragon, Blockade":
-      return "../textures/cp03-064.png";
+      return "../textures/CP03-064EN.png";
     case "Burning Horn Dragon":
-      return "../textures/cp03-065.png";
+      return "../textures/CP03-065EN.png";
     case "Blazing Core Dragon":
-      return "../textures/cp03-066.png";
+      return "../textures/CP03-066EN.png";
     case "Blazing Flare Dragon":
-      return "../textures/cp03-067.png";
+      return "../textures/CP03-067EN.png";
     case "Dragonic Executioner":
-      return "../textures/cp03-068.png";
+      return "../textures/CP03-068EN.png";
     case "Vortex Dragon":
-      return "../textures/cp03-069.png";
+      return "../textures/CP03-069EN.png";
     case "Flame of Promise, Aermo":
-      return "../textures/cp03-070.png";
+      return "../textures/CP03-070EN.png";
     case "Bellicosity Dragon":
-      return "../textures/cp03-071.png";
+      return "../textures/CP03-071EN.png";
     case "Prowling Dragon, Striken":
-      return "../textures/cp03-072.png";
+      return "../textures/CP03-072EN.png";
     case "Dragon Monk, Gojo":
-      return "../textures/cp03-073.png";
+      return "../textures/CP03-073EN.png";
     case "Demonic Dragon Berserker, Yaksha":
-      return "../textures/cp03-074.png";
+      return "../textures/CP03-074EN.png";
     case "Demonic Dragon Mage, Kimnara":
-      return "../textures/cp03-075.png";
+      return "../textures/CP03-075EN.png";
     case "Embodiment of Spear, Tahr":
-      return "../textures/cp03-076.png";
+      return "../textures/CP03-076EN.png";
     case "Gatling Claw Dragon":
-      return "../textures/cp03-077.png";
+      return "../textures/CP03-077EN.png";
     case "Lizard Soldier, Ganlu":
-      return "../textures/cp03-078.png";
+      return "../textures/CP03-078EN.png";
     case "Dragon Monk, Genjo":
-      return "../textures/cp03-079.png";
+      return "../textures/CP03-079EN.png";
     case "Irontail Dragon":
-      return "../textures/cp03-080.png";
+      return "../textures/CP03-080EN.png";
     case "Flame of Hope, Aermo":
-      return "../textures/cp03-081.png";
+      return "../textures/CP03-081EN.png";
     case "Lizard Soldier, Conroe":
-      return "../textures/cp03-082.png";
+      return "../textures/CP03-082EN.png";
 
     case "Phantom Blaster Overlord":
-      return "../textures/cp03-u05.png";
+      return "../textures/CP03-U05EN.png";
     case "Phantom Blaster Dragon":
-      return "../textures/cp03-084.png";
+      return "../textures/CP03-084EN.png";
     case "Phantom Blaster Dragon Evolved":
-      return "../textures/cp03-085.png";
+      return "../textures/CP03-085EN.png";
     case "Blaster Dark":
-      return "../textures/cp03-086.png";
+      return "../textures/CP03-086EN.png";
     case "Blaster Dark Evolved":
-      return "../textures/cp03-087.png";
+      return "../textures/CP03-087EN.png";
     case "Skull Witch, Nemain":
-      return "../textures/cp03-088.png";
+      return "../textures/CP03-088EN.png";
     case "Knight of Nullity, Masquerade":
-      return "../textures/cp03-089.png";
+      return "../textures/CP03-089EN.png";
     case "Darkness Maiden, Macha":
-      return "../textures/cp03-090.png";
+      return "../textures/CP03-090EN.png";
     case "Cursed Lancer":
-      return "../textures/cp03-091.png";
+      return "../textures/CP03-091EN.png";
     case "Knight of Darkness, Rugos":
-      return "../textures/cp03-092.png";
+      return "../textures/CP03-092EN.png";
     case "Black Sage, Charon":
-      return "../textures/cp03-093.png";
+      return "../textures/CP03-093EN.png";
     case "Doranbau":
-      return "../textures/cp03-094.png";
+      return "../textures/CP03-094EN.png";
     case "Blaster Javelin":
-      return "../textures/cp03-095.png";
+      return "../textures/CP03-095EN.png";
     case "Dark Shield, Mac Lir":
-      return "../textures/cp03-096.png";
+      return "../textures/CP03-096EN.png";
     case "Grim Reaper":
-      return "../textures/cp03-097.png";
+      return "../textures/CP03-097EN.png";
     case "Abyss Freezer":
-      return "../textures/cp03-098.png";
+      return "../textures/CP03-098EN.png";
     case "Darkside Trumpeter":
-      return "../textures/cp03-099.png";
+      return "../textures/CP03-099EN.png";
     case "Abyss Healer":
-      return "../textures/cp03-100.png";
+      return "../textures/CP03-100EN.png";
     case "Witch of Nostrum, Arianrhod":
-      return "../textures/cp03-101.png";
+      return "../textures/CP03-101EN.png";
     case "Gururubau":
-      return "../textures/cp03-102.png";
+      return "../textures/CP03-102EN.png";
     case "Fullbau":
-      return "../textures/cp03-103.png";
+      return "../textures/CP03-103EN.png";
 
     case "Goddess of the Full Moon, Tsukuyomi":
-      return "../textures/cp03-u06.png";
+      return "../textures/CP03-U06EN.png";
     case "Goddess of the Half Moon, Tsukuyomi":
-      return "../textures/cp03-105.png";
+      return "../textures/CP03-105EN.png";
     case "CEO Amaterasu":
-      return "../textures/cp03-106.png";
+      return "../textures/CP03-106EN.png";
     case "CEO Amaterasu Evolved":
-      return "../textures/cp03-107.png";
+      return "../textures/CP03-107EN.png";
     case "Silent Tom":
-      return "../textures/cp03-108.png";
+      return "../textures/CP03-108EN.png";
     case "Silent Tom Evolved":
-      return "../textures/cp03-109.png";
+      return "../textures/CP03-109EN.png";
     case "Evil-eye Princess, Euryale":
-      return "../textures/cp03-110.png";
+      return "../textures/CP03-110EN.png";
     case "Maiden of Libra":
-      return "../textures/cp03-111.png";
+      return "../textures/CP03-111EN.png";
     case "Battle Sister, Cocoa":
-      return "../textures/cp03-112.png";
+      return "../textures/CP03-112EN.png";
     case "Oracle Guardian, Wiseman":
-      return "../textures/cp03-113.png";
+      return "../textures/CP03-113EN.png";
     case "White Hare of Inaba":
-      return "../textures/cp03-114.png";
+      return "../textures/CP03-114EN.png";
     case "Goddess of the Crescent Moon, Tsukuyomi":
-      return "../textures/cp03-115.png";
+      return "../textures/CP03-115EN.png";
     case "Dark Cat":
-      return "../textures/cp03-116.png";
+      return "../textures/CP03-116EN.png";
     case "Battle Sister, Chocolat":
-      return "../textures/cp03-117.png";
+      return "../textures/CP03-117EN.png";
     case "Oracle Guardian, Nike":
-      return "../textures/cp03-118.png";
+      return "../textures/CP03-118EN.png";
     case "Dream Eater":
-      return "../textures/cp03-119.png";
+      return "../textures/CP03-119EN.png";
     case "Emergency Alarmer":
-      return "../textures/cp03-120.png";
+      return "../textures/CP03-120EN.png";
     case "Lozenge Magus":
-      return "../textures/cp03-121.png";
+      return "../textures/CP03-121EN.png";
     case "Battle Maiden, Tagitsuhime":
-      return "../textures/cp03-122.png";
+      return "../textures/CP03-122EN.png";
     case "Luck Bird":
-      return "../textures/cp03-123.png";
+      return "../textures/CP03-123EN.png";
     case "Godhawk, Ichibyoshi":
-      return "../textures/cp03-124.png";
-    case "Intertwining Power":
-      return "../textures/cp03-126.png";
+      return "../textures/CP03-124EN.png";
+    case "Powers Converged":
+      return "../textures/CP03-126EN.png";
     case "Drive Point":
-      return "../textures/cp03-127.png";
+      return "../textures/CP03-127EN.png";
 
     case "XII. Wolfraud, The Hanged Man":
       return "../textures/BP10-U01EN.png";
