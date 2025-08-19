@@ -253,17 +253,17 @@ export default function Selection({ setSelectedOption }) {
           </List>
           <Divider />
 
-          <List>
+          {/* <List>
             <ListItem key={"text"} disablePadding>
-              <ListItemButton>
+              <ListItemButton onClick={handleZoomOutClick}>
                 <ListItemIcon>
                   <SettingsIcon sx={{ color: "white" }} />
                 </ListItemIcon>
-                <ListItemText primary={"Settings"} />
+                <ListItemText primary={"Resize"} />
               </ListItemButton>
             </ListItem>
           </List>
-          <Divider />
+          <Divider /> */}
 
           <List>
             <ListItem key={"text"} disablePadding>

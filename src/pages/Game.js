@@ -12,7 +12,7 @@ import { useSelector } from "react-redux";
 import ZoomedCard from "../components/ui/ZoomedCard";
 import initialWallpaper from "../../src/assets/wallpapers/3.png";
 
-export default function Game() {
+export default function Game(callback) {
   const [wallpaper, setWallpaper] = useState(initialWallpaper);
   const [selectedOption, setSelectedOption] = useState("Galmieux");
   const constraintsRef = useRef(null);

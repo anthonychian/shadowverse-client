@@ -252,6 +252,8 @@ export default function Scoreboard({ name }) {
             )}
           </div>
         </div>
+      </div>
+      <div className="turnContainer">
         <div className="nextTurnContainer">
           <div className="buttonText" onClick={() => nextTurn()}>
             Next Turn

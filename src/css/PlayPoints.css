@@ -2,7 +2,7 @@
   .PlayPointsContainer {
     color: white;
     height: 70%;
-    max-height: 700px;
+    min-height: 700px;
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -229,10 +229,18 @@
 .buttonsContainer {
   width: 100%;
   display: flex;
-  justify-content: end;
+  /* justify-content: end; */
+  justify-content: center;
   align-items: center;
   gap: 1em;
-  padding-left: 4em;
+  padding: 1em;
+}
+.turnContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
 }
 
 .IncDecContainer {
