@@ -1,4 +1,39 @@
 export const allCardsEvo = [
+  "Loxis, Homestead Pioneer Evolved",
+  "Terrorformer Evolved",
+  "Varmint Hunter Evolved",
+  "Lookout Elf Evolved",
+
+  "Bunny & Baron, Specter Duo Evolved",
+  "Reinhardt, the Deathless Evolved",
+  "Stalwart Slinger Evolved",
+  "Shinobi Tanuki Evolved",
+
+  "Vincent, the Peacekeeper Evolved",
+  "Magical Gunslinger Evolved",
+  "Artistic Arcanist Evolved",
+  "Crystal Fencer Evolved",
+
+  "Reggie, Peerless Artisan Evolved",
+  "Georgius Evolved",
+  "Azureflame Dragonewt Evolved",
+  "Mermaid Guide Evolved",
+
+  "Iceschillendrig, Gilded Autocrat Evolved",
+  "Hazhan, Demonblade Knight Evolved",
+  "Wretch Evolved",
+  "Redcap Evolved",
+
+  "Anvelt, Judgment's Cannon Evolved",
+  "Vengeful Sniper Evolved",
+  "Set Evolved",
+  "Enchanted Knight Evolved",
+
+  "Sylvia, Grand Arbiter Evolved",
+  "Quixotic Adventurer Evolved",
+  "Wandering Chef Evolved",
+  "Rivaylian Bandit Evolved",
+
   "King of Knights, Alfred",
   "Blaster Blade Evolved",
 
@@ -432,6 +467,43 @@ export const allCardsEvo = [
   "Goblin Evolved",
   "Goliath Evolved",
   "Healing Angel Evolved",
+];
+
+export const set11Evo = [
+  "Loxis, Homestead Pioneer Evolved",
+  "Terrorformer Evolved",
+  "Varmint Hunter Evolved",
+  "Lookout Elf Evolved",
+
+  "Bunny & Baron, Specter Duo Evolved",
+  "Reinhardt, the Deathless Evolved",
+  "Stalwart Slinger Evolved",
+  "Shinobi Tanuki Evolved",
+
+  "Vincent, the Peacekeeper Evolved",
+  "Magical Gunslinger Evolved",
+  "Artistic Arcanist Evolved",
+  "Crystal Fencer Evolved",
+
+  "Reggie, Peerless Artisan Evolved",
+  "Georgius Evolved",
+  "Azureflame Dragonewt Evolved",
+  "Mermaid Guide Evolved",
+
+  "Iceschillendrig, Gilded Autocrat Evolved",
+  "Hazhan, Demonblade Knight Evolved",
+  "Wretch Evolved",
+  "Redcap Evolved",
+
+  "Anvelt, Judgment's Cannon Evolved",
+  "Vengeful Sniper Evolved",
+  "Set Evolved",
+  "Enchanted Knight Evolved",
+
+  "Sylvia, Grand Arbiter Evolved",
+  "Quixotic Adventurer Evolved",
+  "Wandering Chef Evolved",
+  "Rivaylian Bandit Evolved",
 ];
 
 export const setVGEvo = [
@@ -894,6 +966,11 @@ export const set1Evo = [
 ];
 
 export const forestEvo = [
+  "Loxis, Homestead Pioneer Evolved",
+  "Terrorformer Evolved",
+  "Varmint Hunter Evolved",
+  "Lookout Elf Evolved",
+
   "Blue Storm Supreme Dragon, Glory Maelstrom",
   "Navalgazer Dragon",
 
@@ -956,6 +1033,11 @@ export const forestEvo = [
 ];
 
 export const swordEvo = [
+  "Bunny & Baron, Specter Duo Evolved",
+  "Reinhardt, the Deathless Evolved",
+  "Stalwart Slinger Evolved",
+  "Shinobi Tanuki Evolved",
+
   "King of Knights, Alfred",
   "Blaster Blade Evolved",
 
@@ -1020,6 +1102,11 @@ export const swordEvo = [
 ];
 
 export const runeEvo = [
+  "Vincent, the Peacekeeper Evolved",
+  "Magical Gunslinger Evolved",
+  "Artistic Arcanist Evolved",
+  "Crystal Fencer Evolved",
+
   "Nightmare Doll, Alice Evolved",
   "Barking Manticore",
 
@@ -1083,6 +1170,11 @@ export const runeEvo = [
 ];
 
 export const dragonEvo = [
+  "Reggie, Peerless Artisan Evolved",
+  "Georgius Evolved",
+  "Azureflame Dragonewt Evolved",
+  "Mermaid Guide Evolved",
+
   "Dragonic Overlord Evolved",
   "Embodiment of Victory, Aleph",
 
@@ -1153,6 +1245,11 @@ export const dragonEvo = [
 ];
 
 export const abyssEvo = [
+  "Iceschillendrig, Gilded Autocrat Evolved",
+  "Hazhan, Demonblade Knight Evolved",
+  "Wretch Evolved",
+  "Redcap Evolved",
+
   "Phantom Blaster Dragon Evolved",
   "Blaster Dark Evolved",
 
@@ -1214,6 +1311,11 @@ export const abyssEvo = [
 ];
 
 export const havenEvo = [
+  "Anvelt, Judgment's Cannon Evolved",
+  "Vengeful Sniper Evolved",
+  "Set Evolved",
+  "Enchanted Knight Evolved",
+
   "CEO Amaterasu Evolved",
   "Silent Tom Evolved",
 
@@ -1274,6 +1376,11 @@ export const havenEvo = [
 ];
 
 export const neutralEvo = [
+  "Sylvia, Grand Arbiter Evolved",
+  "Quixotic Adventurer Evolved",
+  "Wandering Chef Evolved",
+  "Rivaylian Bandit Evolved",
+
   "Drive Point",
 
   "XXI. Zelgenea, O Great World ADVANCED",

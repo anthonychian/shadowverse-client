@@ -1,4 +1,9 @@
 export const allTokens = [
+  "Val, Trusty Getaway Car TOKEN",
+  "Magitrain TOKEN",
+  "Dutiful Steed TOKEN",
+  "Bullet Bike TOKEN",
+
   "Exterminus Weapon TOKEN",
   "Devoted Dragon TOKEN",
 

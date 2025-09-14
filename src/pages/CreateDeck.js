@@ -13,6 +13,7 @@ import swap from "../assets/logo/swap_icon.png";
 import {
   allCards,
   setVG,
+  set11,
   set10,
   set9,
   set8,
@@ -35,6 +36,7 @@ import {
 } from "../decks/AllCards";
 import {
   allCardsEvo,
+  set11Evo,
   setVGEvo,
   set10Evo,
   set9Evo,
@@ -397,6 +399,8 @@ export default function CreateDeck() {
 
   const getCardsFromName = (name) => {
     switch (name) {
+      case "set 11":
+        return set11;
       case "vg":
         return setVG;
       case "set 10":
@@ -423,6 +427,8 @@ export default function CreateDeck() {
         return set2;
       case "set 1":
         return set1;
+      case "set 11 evo":
+        return set11Evo;
       case "vg evo":
         return setVGEvo;
       case "set 10 evo":
@@ -922,6 +928,7 @@ export default function CreateDeck() {
                 onChange={handleChange}
               >
                 <MenuItem value={"all"}>All</MenuItem>
+                <MenuItem value={"set 11"}>Bullet of Fate</MenuItem>
                 <MenuItem value={"vg"}>Cardfight!! Vanguard</MenuItem>
                 <MenuItem value={"set 10"}>Gods of the Arcana</MenuItem>
                 <MenuItem value={"set 9"}>Duet of Dawn and Dusk</MenuItem>
