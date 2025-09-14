@@ -54,6 +54,7 @@ export const CardSlice = createSlice({
     currentCardIndex: -1,
     currentEvo: "",
     room: "",
+    enemyOnlineStatus: true,
     activeUsers: 0,
     gameLog: [],
     chatLog: [],
@@ -431,8 +432,13 @@ export const CardSlice = createSlice({
         `[${date}] (Player 2): ${action.payload}`,
       ];
     },
+    setEnemyOnlineStatus: (state, action) => {
+      state.enemyOnlineStatus = action.payload;
+      console.log("Enemy online status:", action.payload);
+    },
     setLastChatMessage: (state, action) => {
       state.lastChatMessage = action.payload;
+      console.log("Enemy online status:", action.payload);
     },
     setViewingCardsLog: (state, action) => {
       let number = action.payload.number;
@@ -2580,6 +2586,7 @@ export const CardSlice = createSlice({
     },
     exitGame: (state) => {
       state.room = "";
+      state.enemyOnlineStatus = true;
       state.gameLog = [];
       state.chatLog = [];
       state.lastChatMessage = "";
@@ -2867,6 +2874,7 @@ export const {
   setEnemyHealth,
   setEnemyLog,
   setChat,
+  setEnemyOnlineStatus,
   setLastChatMessage,
   setEnemyChat,
   setViewingCardsLog,

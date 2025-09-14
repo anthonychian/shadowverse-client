@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Badge, Snackbar, SnackbarContent } from "@mui/material/";
+import { Snackbar, SnackbarContent } from "@mui/material/";
 import { motion } from "framer-motion";
 import Dice from "react-dice-roll";
 import { useDispatch, useSelector } from "react-redux";
@@ -20,6 +20,10 @@ import { styled } from "@mui/material/styles";
 import Rating from "@mui/material/Rating";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import FiberManualRecordOutlinedIcon from "@mui/icons-material/FiberManualRecordOutlined";
+import WifiOffIcon from "@mui/icons-material/WifiOff";
+import WifiIcon from "@mui/icons-material/Wifi";
+
+import "../../css/EnemyUI.css";
 
 const StyledRating = styled(Rating)({
   "& .MuiRating-iconFilled": {
@@ -67,6 +71,9 @@ export default function EnemyUI() {
     (state) => state.card.enemyViewingHand
   );
   const reduxEnemyDice = useSelector((state) => state.card.enemyDice);
+  const reduxEnemyOnlineStatus = useSelector(
+    (state) => state.card.enemyOnlineStatus
+  );
 
   useEffect(() => {
     if (reduxEnemyDice.show) {
@@ -312,6 +319,17 @@ export default function EnemyUI() {
         )}
       </div>
       <Leader name={reduxEnemyLeader} active={reduxEnemyLeaderActive} />
+
+      {reduxEnemyOnlineStatus ? (
+        <div className={"onlineStatus"}>
+          <WifiIcon sx={{ height: 40, width: 40 }} />
+        </div>
+      ) : (
+        <div className={"offlineStatus"}>
+          <WifiOffIcon sx={{ height: 40, width: 40 }} />
+        </div>
+      )}
+
       <div style={{ opacity: 0.75 }}>
         <img
           height={70}

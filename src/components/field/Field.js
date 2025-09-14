@@ -72,6 +72,7 @@ import {
   setEnemyDice,
   setEnemyLog,
   setEnemyChat,
+  setEnemyOnlineStatus,
   setLastChatMessage,
   setEnemyLeaderActive,
   setField,
@@ -265,6 +266,14 @@ export default function Field({
         dispatch(setEnemyChat(data.data));
         dispatch(setLastChatMessage(data.data));
       }
+      // else if (data.type === "online") dispatch(setEnemyOnlineStatus(true));
+      // else if (data.type === "offline") dispatch(setEnemyOnlineStatus(false));
+    });
+    socket.on("online", (data) => {
+      dispatch(setEnemyOnlineStatus(true));
+    });
+    socket.on("offline", (data) => {
+      dispatch(setEnemyOnlineStatus(false));
     });
     return () => {
       socket.off("receive msg");

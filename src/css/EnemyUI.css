@@ -1,0 +1,19 @@
+.offlineStatus {
+  color: red;
+  animation: blink 2s ease-in infinite;
+}
+.onlineStatus {
+  color: greenyellow;
+  opacity: 0.6;
+  /* animation: blink 2s ease-in infinite; */
+}
+
+@keyframes blink {
+  from,
+  to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
