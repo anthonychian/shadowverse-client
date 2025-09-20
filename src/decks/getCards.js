@@ -137,9 +137,9 @@ export const cardImage = (cardName) => {
     case "Thunderous Roar":
       return "../textures/BP11-068EN.png";
     case "Iceschillendrig, Gilded Autocrat":
-      return "../textures/BP11-U05EN.png";
+      return "../textures/BP11-069EN.png";
     case "Iceschillendrig, Gilded Autocrat Evolved":
-      return "../textures/BP11-070EN.png";
+      return "../textures/BP11-U05EN.png";
     case "Illganeau, Horror Astray":
       return "../textures/BP11-071EN.png";
     case "Hazhan, Demonblade Knight":
