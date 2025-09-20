@@ -3,6 +3,7 @@ export const allTokens = [
   "Magitrain TOKEN",
   "Dutiful Steed TOKEN",
   "Bullet Bike TOKEN",
+  "Arcane Personnel Carrier TOKEN",
 
   "Exterminus Weapon TOKEN",
   "Devoted Dragon TOKEN",
