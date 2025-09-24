@@ -1007,7 +1007,7 @@ export default function CreateDeck() {
             <motion.div
               key={idx}
               whileTap={
-                deckMap.get(name) === 3 ||
+                (deckMap.get(name) === 3 && name !== "Rapid Fire" && name !== "Onion Patch") ||
                 (deckMap.get(name) === 1 && name === "Shenlong") ||
                 (deckMap.get(name) === 1 && name === "Curse Crafter") ||
                 (deckMap.get(name) === 6 && name === "Rapid Fire")
@@ -1041,7 +1041,7 @@ export default function CreateDeck() {
                 src={cardImage(name)}
                 alt={name}
                 style={
-                  deckMap.get(name) === 3 ||
+                  (deckMap.get(name) === 3 && name !== "Rapid Fire" && name !== "Onion Patch") ||
                   (deckMap.get(name) === 1 && name === "Shenlong") ||
                   (deckMap.get(name) === 1 && name === "Curse Crafter") ||
                   (deckMap.get(name) === 6 && name === "Rapid Fire")
