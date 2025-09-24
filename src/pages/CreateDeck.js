@@ -512,9 +512,10 @@ export default function CreateDeck() {
   const handleCardSelection = (card) => {
     if (deck.length < 50) {
       if (deckMap.has(card)) {
+        if (deckMap.get(card) === 6 && card === "Rapid Fire") return;
         if (deckMap.get(card) === 1 && card === "Shenlong") return;
         if (deckMap.get(card) === 1 && card === "Curse Crafter") return;
-        if (deckMap.get(card) === 3 && card !== "Onion Patch") {
+        if (deckMap.get(card) === 3 && card !== "Onion Patch" && card !== "Rapid Fire") {
           return;
         } else {
           deckMap.set(card, deckMap.get(card) + 1);
@@ -1008,7 +1009,8 @@ export default function CreateDeck() {
               whileTap={
                 deckMap.get(name) === 3 ||
                 (deckMap.get(name) === 1 && name === "Shenlong") ||
-                (deckMap.get(name) === 1 && name === "Curse Crafter")
+                (deckMap.get(name) === 1 && name === "Curse Crafter") ||
+                (deckMap.get(name) === 6 && name === "Rapid Fire")
                   ? {}
                   : { opacity: 0.3 }
               }
@@ -1041,7 +1043,8 @@ export default function CreateDeck() {
                 style={
                   deckMap.get(name) === 3 ||
                   (deckMap.get(name) === 1 && name === "Shenlong") ||
-                  (deckMap.get(name) === 1 && name === "Curse Crafter")
+                  (deckMap.get(name) === 1 && name === "Curse Crafter") ||
+                  (deckMap.get(name) === 6 && name === "Rapid Fire")
                     ? { filter: "grayscale(100%)" }
                     : { imageStyle }
                 }
