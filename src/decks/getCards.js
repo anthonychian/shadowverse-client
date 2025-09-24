@@ -205,9 +205,9 @@ export const cardImage = (cardName) => {
     case "Pure Metamorphosis":
       return "../textures/BP11-102EN.png";
     case "Sylvia, Grand Arbiter":
-      return "../textures/BP11-U07EN.png";
+      return "../textures/BP11-103EN.png";
     case "Sylvia, Grand Arbiter Evolved":
-      return "../textures/BP11-104EN.png";
+      return "../textures/BP11-U07EN.png";
     case "Quixotic Adventurer":
       return "../textures/BP11-105EN.png";
     case "Quixotic Adventurer Evolved":
