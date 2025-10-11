@@ -211,8 +211,8 @@ export default function Field({
   const [readyToRide, setReadyToRide] = useState(false);
   const [tokenReady, setTokenReady] = useState(false);
 
-  useSocketStateSync();
-  useReceiveFullState();
+  // useSocketStateSync();
+  // useReceiveFullState();
 
   useEffect(() => {
     socket.on("connect", () => {
@@ -1266,7 +1266,7 @@ export default function Field({
                 backgroundColor: "rgba(0, 0, 0, 0.4)",
                 top: "5%",
                 right: "30%",
-                color: "rgb(8, 8, 8)",
+                color: "rgba(255, 255, 255, 1)",
                 fontSize: "30px",
                 fontFamily: "Noto Serif JP, serif",
               }}
