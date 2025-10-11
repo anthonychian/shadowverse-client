@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import store from "../../redux/store";
+import { store } from "../../redux/store";
 import { socket } from "../../sockets";
 
 const useSocketStateSync = () => {
