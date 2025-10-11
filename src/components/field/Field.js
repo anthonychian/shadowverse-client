@@ -67,8 +67,6 @@ import {
   setEnemyViewingEvoDeckOpponent,
   setEnemyViewingTopCards,
   setEnemyRematchStatus,
-  // setArrow,
-  // setEnemyArrow,
   setEnemyDice,
   setEnemyLog,
   setEnemyChat,
@@ -99,9 +97,12 @@ import img from "../../assets/pin_bellringer_angel.png";
 import "../../css/AnimatedBorder.css";
 import { useNavigate } from "react-router-dom";
 import { socket } from "../../sockets";
+
+import useSocketStateSync from "../hooks/useSocketStateSync";
+import useReceiveFullState from "../hooks/useReceiveFullState";
+
 import Token from "./Token";
 import Lesson from "./Lesson";
-// import { PerfectArrow } from "./PerfectArrow";
 import ShowDice from "./ShowDice";
 
 import defaultCardBack from "../../assets/cardbacks/default.png";
@@ -209,6 +210,21 @@ export default function Field({
   const [readyToFeed, setReadyToFeed] = useState(false);
   const [readyToRide, setReadyToRide] = useState(false);
   const [tokenReady, setTokenReady] = useState(false);
+
+  useSocketStateSync();
+  useReceiveFullState();
+
+  useEffect(() => {
+    socket.on("connect", () => {
+      console.log("Reconnected with socket id:", socket.id);
+      socket.emit("join_room", reduxRoom); // rejoin room
+      socket.emit("request_state", { room: reduxRoom });
+    });
+
+    return () => {
+      socket.off("connect");
+    };
+  }, [socket]);
 
   useEffect(() => {
     socket.on("receive msg", (data) => {
