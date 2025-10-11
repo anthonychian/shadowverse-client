@@ -34,7 +34,7 @@ import {
   setEnemyViewingTopCards,
   setShowEnemyCard,
   setShowEnemyHand,
-} from "../features/CardSlice";
+} from "../../redux/CardSlice";
 
 const useReceiveFullState = () => {
   const dispatch = useDispatch();
