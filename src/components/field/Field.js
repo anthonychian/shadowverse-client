@@ -266,7 +266,6 @@ export default function Field({
         dispatch(setEnemyViewingCemeteryOpponent(data.data));
       else if (data.type === "viewingEvoDeckOpponent")
         dispatch(setEnemyViewingEvoDeckOpponent(data.data));
-      // else if (data.type === "arrow") dispatch(setEnemyArrow(data.data));
       else if (data.type === "dice") dispatch(setEnemyDice(data.data));
       else if (data.type === "leaderActive")
         dispatch(setEnemyLeaderActive(data.data));
@@ -1339,18 +1338,6 @@ export default function Field({
               className={"cardStyle"}
               onClick={() => handleSelectEnemyCardOnField(cardPos(idx))}
             >
-              {/* {reduxEnemyArrow.show &&
-                reduxEnemyArrow.idx === idx &&
-                (reduxEnemyField[idx] !== 0 ||
-                  reduxEnemyEvoField[idx] !== 0) && (
-                  <PerfectArrow
-                    pos={initialArrowPos}
-                    idx={reduxEnemyArrow.idx}
-                    distance={{ x: reduxEnemyArrow.x, y: reduxEnemyArrow.y }}
-                    onEnemyField={true}
-                  />
-                )} */}
-
               {reduxEnemyField[cardPos(idx)] !== 0 &&
                 reduxEnemyEvoField[cardPos(idx)] === 0 && (
                   <Card
@@ -1595,9 +1582,6 @@ export default function Field({
                     else if (reduxField[idx] !== 0)
                       handleEvoContextMenu(e, idx, reduxEvoField[idx]);
                   }}
-                  // onMouseDown={(event) => handleShowArrow(event, idx)}
-                  // onMouseUp={(event) => handleHideArrow(event, idx)}
-                  // onMouseMove={(event) => handleMouseMove(event, idx)}
                   key={`player2-${idx}`}
                   style={
                     {
@@ -1607,14 +1591,6 @@ export default function Field({
                   }
                   className={"cardStyle"}
                 >
-                  {/* {showArrow[idx] &&
-                    (reduxField[idx] !== 0 || reduxEvoField[idx] !== 0) && (
-                      <PerfectArrow
-                        pos={initialArrowPos}
-                        idx={idx}
-                        distance={distance}
-                      />
-                    )} */}
                   {reduxField[idx] !== 0 && reduxEvoField[idx] === 0 && (
                     <Card
                       showAtk={reduxCustomValues[idx].showAtk}
