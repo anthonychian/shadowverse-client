@@ -9,7 +9,8 @@ import {
   LazyLoadComponent,
 } from "react-lazy-load-image-component";
 import swap from "../assets/logo/swap_icon.png";
-
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import {
   allCards,
   setVG,
@@ -87,6 +88,7 @@ import {
   SnackbarContent,
   IconButton,
 } from "@mui/material";
+import ArrowBackIosNew from "@mui/icons-material/ArrowBackIosNew";
 
 export default function CreateDeck() {
   const location = useLocation();
@@ -515,7 +517,11 @@ export default function CreateDeck() {
         if (deckMap.get(card) === 6 && card === "Rapid Fire") return;
         if (deckMap.get(card) === 1 && card === "Shenlong") return;
         if (deckMap.get(card) === 1 && card === "Curse Crafter") return;
-        if (deckMap.get(card) === 3 && card !== "Onion Patch" && card !== "Rapid Fire") {
+        if (
+          deckMap.get(card) === 3 &&
+          card !== "Onion Patch" &&
+          card !== "Rapid Fire"
+        ) {
           return;
         } else {
           deckMap.set(card, deckMap.get(card) + 1);
@@ -594,6 +600,38 @@ export default function CreateDeck() {
     }
 
     setOpenSnack(false);
+  };
+
+  const handleBackClick = () => {
+    let newCardName;
+    if (mainDeckSelected) {
+      const newCardIndex = filteredAllCards.indexOf(cardName) - 1;
+      if (0 <= newCardIndex && newCardIndex < filteredAllCards.length)
+        newCardName = filteredAllCards[newCardIndex];
+      else newCardName = cardName;
+    } else {
+      const newCardIndex = filteredAllCardsEvo.indexOf(cardName) - 1;
+      if (0 <= newCardIndex && newCardIndex < filteredAllCardsEvo.length)
+        newCardName = filteredAllCardsEvo[newCardIndex];
+      else newCardName = cardName;
+    }
+    setCardName(newCardName);
+  };
+
+  const handleForwardClick = () => {
+    let newCardName;
+    if (mainDeckSelected) {
+      const newCardIndex = filteredAllCards.indexOf(cardName) + 1;
+      if (0 <= newCardIndex && newCardIndex < filteredAllCards.length)
+        newCardName = filteredAllCards[newCardIndex];
+      else newCardName = cardName;
+    } else {
+      const newCardIndex = filteredAllCardsEvo.indexOf(cardName) + 1;
+      if (0 <= newCardIndex && newCardIndex < filteredAllCardsEvo.length)
+        newCardName = filteredAllCardsEvo[newCardIndex];
+      else newCardName = cardName;
+    }
+    setCardName(newCardName);
   };
 
   const action = (
@@ -1007,7 +1045,9 @@ export default function CreateDeck() {
             <motion.div
               key={idx}
               whileTap={
-                (deckMap.get(name) === 3 && name !== "Rapid Fire" && name !== "Onion Patch") ||
+                (deckMap.get(name) === 3 &&
+                  name !== "Rapid Fire" &&
+                  name !== "Onion Patch") ||
                 (deckMap.get(name) === 1 && name === "Shenlong") ||
                 (deckMap.get(name) === 1 && name === "Curse Crafter") ||
                 (deckMap.get(name) === 6 && name === "Rapid Fire")
@@ -1041,7 +1081,9 @@ export default function CreateDeck() {
                 src={cardImage(name)}
                 alt={name}
                 style={
-                  (deckMap.get(name) === 3 && name !== "Rapid Fire" && name !== "Onion Patch") ||
+                  (deckMap.get(name) === 3 &&
+                    name !== "Rapid Fire" &&
+                    name !== "Onion Patch") ||
                   (deckMap.get(name) === 1 && name === "Shenlong") ||
                   (deckMap.get(name) === 1 && name === "Curse Crafter") ||
                   (deckMap.get(name) === 6 && name === "Rapid Fire")
@@ -1208,6 +1250,11 @@ export default function CreateDeck() {
         onClose={handleModalClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
+        sx={{
+          ".MuiBackdrop-root": {
+            backgroundColor: "rgba(0, 0, 0, 0.7)", // Adjust the alpha value (0.7 here)
+          },
+        }}
       >
         <Box
           sx={{
@@ -1237,11 +1284,46 @@ export default function CreateDeck() {
           >
             {/* <img height={"100%"} src={cardImage(cardName)} alt={cardName} /> */}
             <motion.div
-              initial={{ scale: 1.0, rotateY: 180 }}
-              transition={{ duration: 0.8 }}
-              animate={{ scale: 4.5, rotateY: 0 }}
+              initial={{ scale: 5.0 }}
+              // initial={{ scale: 1.0, rotateY: 180 }}
+              // initial={{ scale: 1.0 }}
+              // transition={{ duration: 0.8 }}
+              // animate={{ scale: 4.5, rotateY: 0 }}
             >
+              {/* go here */}
+              <ArrowBackIosNew
+                style={{
+                  position: "absolute",
+                  right: "100%",
+                  bottom: "50%",
+                  cursor: "pointer",
+                }}
+                sx={{
+                  color: "white",
+                  opacity: "40%",
+                  "&:hover": {
+                    opacity: 1,
+                  },
+                }}
+                onClick={handleBackClick}
+              />
               <img height={"160px"} src={cardImage(cardName)} alt={cardName} />
+              <ArrowForwardIosIcon
+                style={{
+                  position: "absolute",
+                  left: "100%",
+                  bottom: "50%",
+                  cursor: "pointer",
+                }}
+                sx={{
+                  color: "white",
+                  opacity: "40%",
+                  "&:hover": {
+                    opacity: 1,
+                  },
+                }}
+                onClick={handleForwardClick}
+              />
               {/* Double Sided Evo */}
               {isDoubleEvo(cardName) && (
                 <div
