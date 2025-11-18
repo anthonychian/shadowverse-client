@@ -1,4 +1,16 @@
 export const allTokens = [
+  "Anne's Summoning TOKEN",
+  "Resentful Blaze TOKEN",
+  "Blood Arts TOKEN",
+  "Darkest Desire TOKEN",
+  "Keenedge Artifact TOKEN",
+
+  "Carbuncle's Sparkle TOKEN",
+  "Twilight Blade TOKEN",
+  "Armored Tentacle TOKEN",
+  "Assault Tentacle TOKEN",
+  "Medusiana TOKEN",
+
   "Val, Trusty Getaway Car TOKEN",
   "Magitrain TOKEN",
   "Dutiful Steed TOKEN",

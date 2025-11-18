@@ -1,5 +1,490 @@
 export const cardImage = (cardName) => {
   switch (cardName) {
+    case "Sekka, Fatebound Fox":
+      return "../textures/BP13-U01EN.png";
+    case "Sekka, Ninefold Blaze ADVANCED":
+      return "../textures/BP13-SP01EN.png";
+    case "Aria, Miasma Fairy":
+      return "../textures/BP13-003EN.png";
+    case "Aria, Miasma Fairy Evolved":
+      return "../textures/BP13-004EN.png";
+    case "Nelcha, Fashion Hazard":
+      return "../textures/BP13-005EN.png";
+    case "Nelcha, Fashion Hazard Evolved":
+      return "../textures/BP13-006EN.png";
+    case "Spinaria, Keeper of the End":
+      return "../textures/BP13-007EN.png";
+    case "Resolve of the Nine-Tailed Fox":
+      return "../textures/BP13-008EN.png";
+    case "Sunbright Elf":
+      return "../textures/BP13-009EN.png";
+    case "Sunbright Elf Evolved":
+      return "../textures/BP13-010EN.png";
+    case "Wildwood Warrior":
+      return "../textures/BP13-011EN.png";
+    case "Tree of Wonders":
+      return "../textures/BP13-012EN.png";
+    case "Fairy Slugger":
+      return "../textures/BP13-013EN.png";
+    case "Fairy Slugger Evolved":
+      return "../textures/BP13-014EN.png";
+    case "Edgy Elf":
+      return "../textures/BP13-015EN.png";
+    case "Gazania Fox":
+      return "../textures/BP13-016EN.png";
+    case "Tower Root Giant":
+      return "../textures/BP13-017EN.png";
+    case "Feybolt Archer":
+      return "../textures/BP13-018EN.png";
+    case "Albert, Thunderous Doom":
+      return "../textures/BP13-019EN.png";
+    case "Albert, Thunderous Doom Evolved":
+      return "../textures/BP13-020EN.png";
+    case "Magna Zero":
+      return "../textures/BP13-U02EN.png";
+    case "Sera, Maiden of the Dawn":
+      return "../textures/BP13-022EN.png";
+    case "Sera, Maiden of the Dawn Evolved":
+      return "../textures/BP13-023EN.png";
+    case "Homebound Infantryman":
+      return "../textures/BP13-024EN.png";
+    case "Levin Justice":
+      return "../textures/BP13-025EN.png";
+    case "Lounes, Levin Apprentice":
+      return "../textures/BP13-026EN.png";
+    case "Lounes, Levin Apprentice Evolved":
+      return "../textures/BP13-027EN.png";
+    case "Jeno, Fanged Tyrant":
+      return "../textures/BP13-028EN.png";
+    case "Cat Admiral":
+      return "../textures/BP13-029EN.png";
+    case "Mina, Levin Vice Leader":
+      return "../textures/BP13-030EN.png";
+    case "Mina, Levin Vice Leader Evolved":
+      return "../textures/BP13-031EN.png";
+    case "Mona, Levin Mage":
+      return "../textures/BP13-032EN.png";
+    case "Mena, Levin Duelist":
+      return "../textures/BP13-033EN.png";
+    case "Icyclone":
+      return "../textures/BP13-034EN.png";
+    case "Meet the Levin Sisters!":
+      return "../textures/BP13-035EN.png";
+    case "Anne, Mysterian Imperatrix":
+      return "../textures/BP13-036EN.png";
+    case "Ghios, Sparkling Prism":
+      return "../textures/BP13-037EN.png";
+    case "Ghios, Sparkling Prism Evolved":
+      return "../textures/BP13-U03EN.png";
+    case "Rending Blast ADVANCED":
+      return "../textures/BP13-039EN.png";
+    case "Mileka, Celestial Seer":
+      return "../textures/BP13-040EN.png";
+    case "Mileka, Celestial Seer Evolved":
+      return "../textures/BP13-041EN.png";
+    case "Grea, Scorching Fury":
+      return "../textures/BP13-042EN.png";
+    case "Whims of Chaos":
+      return "../textures/BP13-043EN.png";
+    case "Grimoire Sorcerer":
+      return "../textures/BP13-044EN.png";
+    case "Grimoire Sorcerer Evolved":
+      return "../textures/BP13-045EN.png";
+    case "Hurricane Golem":
+      return "../textures/BP13-046EN.png";
+    case "Riven Earth":
+      return "../textures/BP13-047EN.png";
+    case "Magical Squirrel":
+      return "../textures/BP13-048EN.png";
+    case "Magical Squirrel Evolved":
+      return "../textures/BP13-049EN.png";
+    case "Art Society Magus":
+      return "../textures/BP13-050EN.png";
+    case "Cat Summoner":
+      return "../textures/BP13-051EN.png";
+    case "Arcane Duplication":
+      return "../textures/BP13-052EN.png";
+    case "Sacrifice":
+      return "../textures/BP13-053EN.png";
+    case "Drache, Fiery Dragonlord":
+      return "../textures/BP13-054EN.png";
+    case "Drache, Fiery Dragonlord Evolved":
+      return "../textures/BP13-U04EN.png";
+    case "Forte, Sovereign Supreme":
+      return "../textures/BP13-056EN.png";
+    case "Godfire Phoenix":
+      return "../textures/BP13-057EN.png";
+    case "Godfire Phoenix Evolved":
+      return "../textures/BP13-058EN.png";
+    case "Roy, Dragonreaver":
+      return "../textures/BP13-059EN.png";
+    case "Howling Conflagration":
+      return "../textures/BP13-060EN.png";
+    case "Flame Pillar Dragonewt":
+      return "../textures/BP13-061EN.png";
+    case "Flame Pillar Dragonewt Evolved":
+      return "../textures/BP13-062EN.png";
+    case "Empyreal Dragon":
+      return "../textures/BP13-063EN.png";
+    case "Scalebound Plight":
+      return "../textures/BP13-064EN.png";
+    case "Margarite Mermaid":
+      return "../textures/BP13-065EN.png";
+    case "Margarite Mermaid Evolved":
+      return "../textures/BP13-066EN.png";
+    case "Earthen Dragonewt":
+      return "../textures/BP13-067EN.png";
+    case "Twinblade Dragonfolk":
+      return "../textures/BP13-068EN.png";
+    case "Coral Shark":
+      return "../textures/BP13-069EN.png";
+    case "Beating of the Dragonwings":
+      return "../textures/BP13-070EN.png";
+    case "Aluzard, Timeworn Vampire":
+      return "../textures/BP13-071EN.png";
+    case "Aluzard, Timeworn Vampire Evolved":
+      return "../textures/BP13-072EN.png";
+    case "Laura, Crimson Strife":
+      return "../textures/BP13-U05EN.png";
+    case "Ceres, Bride of the Night":
+      return "../textures/BP13-074EN.png";
+    case "Ceres, Bride of the Night Evolved":
+      return "../textures/BP13-075EN.png";
+    case "Kagero, Swordbound Soul":
+      return "../textures/BP13-076EN.png";
+    case "Chris, Beyond the Patch":
+      return "../textures/BP13-077EN.png";
+    case "Liberté, Unchained Wolf":
+      return "../textures/BP13-078EN.png";
+    case "Liberté, Unchained Wolf Evolved":
+      return "../textures/BP13-079EN.png";
+    case "Silversteel Blader":
+      return "../textures/BP13-080EN.png";
+    case "Soulstrike":
+      return "../textures/BP13-081EN.png";
+    case "Linkstaff Necromancer":
+      return "../textures/BP13-082EN.png";
+    case "Linkstaff Necromancer Evolved":
+      return "../textures/BP13-083EN.png";
+    case "Noble Phantom":
+      return "../textures/BP13-084EN.png";
+    case "Bandage Connoisseur":
+      return "../textures/BP13-085EN.png";
+    case "Ghastly Banishment":
+      return "../textures/BP13-086EN.png";
+    case "Sanguine Necklace":
+      return "../textures/BP13-087EN.png";
+    case "Jeanne, Despair's Maiden":
+      return "../textures/BP13-088EN.png";
+    case "Jeanne, Despair's Maiden Evolved":
+      return "../textures/BP13-U06EN.png";
+    case "Jatelant, God of Prosperity":
+      return "../textures/BP13-090EN.png";
+    case "Lunerian Paladin":
+      return "../textures/BP13-091EN.png";
+    case "Lunerian Paladin Evolved":
+      return "../textures/BP13-092EN.png";
+    case "Absolute Tolerance":
+      return "../textures/BP13-093EN.png";
+    case "Westmuenster Abbey":
+      return "../textures/BP13-094EN.png";
+    case "Pyne, Twisted Justice":
+      return "../textures/BP13-095EN.png";
+    case "Pyne, Twisted Justice Evolved":
+      return "../textures/BP13-096EN.png";
+    case "Thornclad Arbiter":
+      return "../textures/BP13-097EN.png";
+    case "Gods' Loving Smite":
+      return "../textures/BP13-098EN.png";
+    case "Charitable Al-mi'raj":
+      return "../textures/BP13-099EN.png";
+    case "Charitable Al-mi'raj Evolved":
+      return "../textures/BP13-100EN.png";
+    case "Prismawing Featherfolk":
+      return "../textures/BP13-101EN.png";
+    case "Turquoise Sister":
+      return "../textures/BP13-102EN.png";
+    case "Sacred Groundskeeper":
+      return "../textures/BP13-103EN.png";
+    case "Sealed Tome":
+      return "../textures/BP13-104EN.png";
+    case "Sahaquiel & Israfil":
+      return "../textures/BP13-105EN.png";
+    case "Sahaquiel & Israfil Evolved":
+      return "../textures/BP13-U07EN.png";
+    case "Planetary Fracture":
+      return "../textures/BP13-107EN.png";
+    case "Miriam, Mutinous Being":
+      return "../textures/BP13-108EN.png";
+    case "Miriam, Mutinous Being Evolved":
+      return "../textures/BP13-109EN.png";
+    case "Grimnir, Voidwrought Wind":
+      return "../textures/BP13-110EN.png";
+    case "Frostfire":
+      return "../textures/BP13-111EN.png";
+    case "Managrocer":
+      return "../textures/BP13-112EN.png";
+    case "Managrocer Evolved":
+      return "../textures/BP13-113EN.png";
+    case "Goddess of Rebirth":
+      return "../textures/BP13-114EN.png";
+    case "Dogged Detective":
+      return "../textures/BP13-115EN.png";
+    case "Armored Goblin":
+      return "../textures/BP13-116EN.png";
+    case "Armored Goblin Evolved":
+      return "../textures/BP13-117EN.png";
+    case "Fallen Harpist":
+      return "../textures/BP13-118EN.png";
+    case "Retracing the Past":
+      return "../textures/BP13-119EN.png";
+
+    case "Awakened Gaia":
+      return "../textures/BP12-001EN.png";
+    case "Elf Queen of Abundant Life":
+      return "../textures/BP12-002EN.png";
+    case "Elf Queen of Abundant Life Evolved":
+      return "../textures/BP12-U01EN.png";
+    case "Carbuncle, Immortal Jewel":
+      return "../textures/BP12-004EN.png";
+    case "Carbuncle, Immortal Jewel Evolved":
+      return "../textures/BP12-005EN.png";
+    case "Irene, Harvest Defender":
+      return "../textures/BP12-006EN.png";
+    case "Intertwined Resolve":
+      return "../textures/BP12-007EN.png";
+    case "Forest Defender":
+      return "../textures/BP12-008EN.png";
+    case "Forest Defender Evolved":
+      return "../textures/BP12-009EN.png";
+    case "Windfall Fay":
+      return "../textures/BP12-010EN.png";
+    case "Aria's Whirlwind":
+      return "../textures/BP12-011EN.png";
+    case "Forest Hatcheteer":
+      return "../textures/BP12-012EN.png";
+    case "Forest Hatcheteer Evolved":
+      return "../textures/BP12-013EN.png";
+    case "Springleaf Sprite":
+      return "../textures/BP12-014EN.png";
+    case "Elven Pikeman":
+      return "../textures/BP12-015EN.png";
+    case "Fairy Officer":
+      return "../textures/BP12-016EN.png";
+    case "Fairy Menhir":
+      return "../textures/BP12-017EN.png";
+    case "Patrick, Rhiceros Knight":
+      return "../textures/BP12-018EN.png";
+    case "Patrick, Rhiceros Knight Evolved":
+      return "../textures/BP12-019EN.png";
+    case "Lecia, Sky Saber":
+      return "../textures/BP12-U02EN.png";
+    case "Ironfist Beast Warrior":
+      return "../textures/BP12-021EN.png";
+    case "Ironfist Beast Warrior Evolved":
+      return "../textures/BP12-022EN.png";
+    case "Alwida, Pirate Queen":
+      return "../textures/BP12-023EN.png";
+    case "Stroke of Conviction":
+      return "../textures/BP12-024EN.png";
+    case "Nano, the Dawnblade":
+      return "../textures/BP12-025EN.png";
+    case "Nano, the Dawnblade Evolved":
+      return "../textures/BP12-026EN.png";
+    case "Panther Scout":
+      return "../textures/BP12-027EN.png";
+    case "King's Welcome":
+      return "../textures/BP12-028EN.png";
+    case "Lilje, Butler of the Mists":
+      return "../textures/BP12-029EN.png";
+    case "Lilje, Butler of the Mists Evolved":
+      return "../textures/BP12-030EN.png";
+    case "Sheena, Maid of the Mists":
+      return "../textures/BP12-031EN.png";
+    case "Wolf Fang Swordsman":
+      return "../textures/BP12-032EN.png";
+    case "Splendid Fencer":
+      return "../textures/BP12-033EN.png";
+    case "Ivory Sword Dance":
+      return "../textures/BP12-034EN.png";
+    case "Belphomet, Worldreaver":
+      return "../textures/BP12-035EN.png";
+    case "Belphomet, Worldreaver Evolved":
+      return "../textures/BP12-036EN.png";
+    case "Daria, Infinity Witch":
+      return "../textures/BP12-U03EN.png";
+    case "Regalore, Steel Chimera":
+      return "../textures/BP12-038EN.png";
+    case "Regalore, Steel Chimera Evolved":
+      return "../textures/BP12-039EN.png";
+    case "Melvie, Princess Witch":
+      return "../textures/BP12-040EN.png";
+    case "Sorcery in Solidarity":
+      return "../textures/BP12-041EN.png";
+    case "Chaos Wielder":
+      return "../textures/BP12-042EN.png";
+    case "Chaos Wielder Evolved":
+      return "../textures/BP12-043EN.png";
+    case "Rebel Against Fate":
+      return "../textures/BP12-044EN.png";
+    case "Arcane Item Shop":
+      return "../textures/BP12-045EN.png";
+    case "Gigahand Golem":
+      return "../textures/BP12-046EN.png";
+    case "Gigahand Golem Evolved":
+      return "../textures/BP12-047EN.png";
+    case "Device Diviner":
+      return "../textures/BP12-048EN.png";
+    case "Mechabook Sorcerer":
+      return "../textures/BP12-049EN.png";
+    case "Chain Lightning":
+      return "../textures/BP12-050EN.png";
+    case "Mystic Absorption":
+      return "../textures/BP12-051EN.png";
+    case "Shipsbane Plesiosaurus":
+      return "../textures/BP12-052EN.png";
+    case "Shipsbane Plesiosaurus Evolved":
+      return "../textures/BP12-U04EN.png";
+    case "Jerva, Wyrm Transcendent":
+      return "../textures/BP12-054EN.png";
+    case "Steelcap Pachycephalosaurus":
+      return "../textures/BP12-055EN.png";
+    case "Steelcap Pachycephalosaurus Evolved":
+      return "../textures/BP12-056EN.png";
+    case "Giselle, Mermaid Healer":
+      return "../textures/BP12-057EN.png";
+    case "Cursed Furor":
+      return "../textures/BP12-058EN.png";
+    case "Assault Dragoon":
+      return "../textures/BP12-059EN.png";
+    case "Assault Dragoon Evolved":
+      return "../textures/BP12-060EN.png";
+    case "Petalspine Stegosaurus":
+      return "../textures/BP12-061EN.png";
+    case "Phoenix Howl":
+      return "../textures/BP12-062EN.png";
+    case "Dragoon Medic":
+      return "../textures/BP12-063EN.png";
+    case "Dragoon Medic Evolved":
+      return "../textures/BP12-064EN.png";
+    case "Rockback Ankylosaurus":
+      return "../textures/BP12-065EN.png";
+    case "Ruinous Dragon":
+      return "../textures/BP12-066EN.png";
+    case "Dragon Aficionado":
+      return "../textures/BP12-067EN.png";
+    case "Overwhelming Crush":
+      return "../textures/BP12-068EN.png";
+    case "Neun, Daybreak Vampire":
+      return "../textures/BP12-069EN.png";
+    case "Neun, Daybreak Vampire Evolved":
+      return "../textures/BP12-070EN.png";
+    case "Gremory, Death Teller":
+      return "../textures/BP12-U05EN.png";
+    case "Jackshovel Gravedigger":
+      return "../textures/BP12-072EN.png";
+    case "Jackshovel Gravedigger Evolved":
+      return "../textures/BP12-073EN.png";
+    case "Medusa, Evil-Eyed Serpent":
+      return "../textures/BP12-074EN.png";
+    case "Friends Forever":
+      return "../textures/BP12-075EN.png";
+    case "Liberté, Werewolf Pup":
+      return "../textures/BP12-076EN.png";
+    case "Liberté, Werewolf Pup Evolved":
+      return "../textures/BP12-077EN.png";
+    case "Hellfire Hound":
+      return "../textures/BP12-078EN.png";
+    case "Garnet Waltz":
+      return "../textures/BP12-079EN.png";
+    case "Bloodstained Berserker":
+      return "../textures/BP12-080EN.png";
+    case "Bloodstained Berserker Evolved":
+      return "../textures/BP12-081EN.png";
+    case "Roly-Poly Mk I":
+      return "../textures/BP12-082EN.png";
+    case "Mechasaw Deathbringer":
+      return "../textures/BP12-083EN.png";
+    case "Ghoul":
+      return "../textures/BP12-084EN.png";
+    case "Viper Lash":
+      return "../textures/BP12-085EN.png";
+    case "Rola, Inferno Dragoon":
+      return "../textures/BP12-086EN.png";
+    case "Rola, Inferno Dragoon Evolved":
+      return "../textures/BP12-U06EN.png";
+    case "Charaton, Iceflame Priest":
+      return "../textures/BP12-088EN.png";
+    case "Gullias, Silverbeast Lord":
+      return "../textures/BP12-089EN.png";
+    case "Gullias, Silverbeast Lord Evolved":
+      return "../textures/BP12-090EN.png";
+    case "Robowhip Reverend":
+      return "../textures/BP12-091EN.png";
+    case "Major Prayers":
+      return "../textures/BP12-092EN.png";
+    case "Holylight Convert":
+      return "../textures/BP12-093EN.png";
+    case "Holylight Convert Evolved":
+      return "../textures/BP12-094EN.png";
+    case "Smilecure Priest":
+      return "../textures/BP12-095EN.png";
+    case "Salvation Ex Limonia":
+      return "../textures/BP12-096EN.png";
+    case "Sol Sister":
+      return "../textures/BP12-097EN.png";
+    case "Sol Sister Evolved":
+      return "../textures/BP12-098EN.png";
+    case "Robowing Precant":
+      return "../textures/BP12-099EN.png";
+    case "Fortune Fowl":
+      return "../textures/BP12-100EN.png";
+    case "Pilgrims' Path":
+      return "../textures/BP12-101EN.png";
+    case "Fiery Paean":
+      return "../textures/BP12-102EN.png";
+    case "Natur Al'machinus":
+      return "../textures/BP12-U07EN.png";
+    case "Changewing Cherub":
+      return "../textures/BP12-104EN.png";
+    case "Changewing Cherub Evolved":
+      return "../textures/BP12-105EN.png";
+    case "Seraphic Blade":
+      return "../textures/BP12-106EN.png";
+    case "Travelers' Respite":
+      return "../textures/BP12-107EN.png";
+    case "Romantic Chanteuse":
+      return "../textures/BP12-108EN.png";
+    case "Romantic Chanteuse Evolved":
+      return "../textures/BP12-109EN.png";
+    case "Giving Gourmet":
+      return "../textures/BP12-110EN.png";
+    case "Goblin Warpack":
+      return "../textures/BP12-111EN.png";
+    case "Plucky Treasure Hunter":
+      return "../textures/BP12-112EN.png";
+    case "Plucky Treasure Hunter Evolved":
+      return "../textures/BP12-113EN.png";
+    case "Wayfaring Illustrator":
+      return "../textures/BP12-114EN.png";
+    case "We've Got a Case!":
+      return "../textures/BP12-115EN.png";
+
+    case "Spinaria, Waveing Will":
+      return "../textures/SP01-SP02EN.png";
+    case "Amelia, Sunny Paladin":
+      return "../textures/SP01-SP05EN.png";
+    case "Falise, Innocent Sea Spray":
+      return "../textures/SP01-SP12EN.png";
+    case "Sharon, Seaside Nymph":
+      return "../textures/SP01-SP16EN.png";
+    case "Queen Vampire, Sultry Evening":
+      return "../textures/SP01-SP20EN.png";
+    case "Zoe, Shore's Melody":
+      return "../textures/SP01-SP25EN.png";
+    case "Alice, Golden Afternoon":
+      return "../textures/SP01-SP31EN.png";
+
     case "Loxis, Homestead Pioneer":
       return "../textures/BP11-001EN.png";
     case "Loxis, Homestead Pioneer Evolved":
@@ -3632,7 +4117,7 @@ export const cardImage = (cardName) => {
     case "Moon Al-mi'raj":
       return "../textures/BP01-126EN.png";
     case "Jeanne d'Arc":
-      return "../textures/BP01-127EN.png";
+      return "../textures/BP13-SP02EN.png";
     case "Jeanne d'Arc Evolved":
       return "../textures/BP01-U06EN.png";
     case "Arch Priestess Laelia":
@@ -3739,6 +4224,28 @@ export const cardImage = (cardName) => {
       return "../textures/PR-017EN.png";
     case "Angelic Barrage":
       return "../textures/PR-018EN.png";
+
+    case "Anne's Summoning TOKEN":
+      return "../textures/BP13-T01EN.png";
+    case "Resentful Blaze TOKEN":
+      return "../textures/BP13-T02EN.png";
+    case "Blood Arts TOKEN":
+      return "../textures/BP13-T03EN.png";
+    case "Darkest Desire TOKEN":
+      return "../textures/BP13-T04EN.png";
+    case "Keenedge Artifact TOKEN":
+      return "../textures/BP13-T05EN.png";
+
+    case "Carbuncle's Sparkle TOKEN":
+      return "../textures/BP12-T01EN.png";
+    case "Twilight Blade TOKEN":
+      return "../textures/BP12-T02EN.png";
+    case "Armored Tentacle TOKEN":
+      return "../textures/BP12-T03EN.png";
+    case "Assault Tentacle TOKEN":
+      return "../textures/BP12-T04EN.png";
+    case "Medusiana TOKEN":
+      return "../textures/BP12-T05EN.png";
 
     case "Val, Trusty Getaway Car TOKEN":
       return "../textures/BP11-T01EN.png";

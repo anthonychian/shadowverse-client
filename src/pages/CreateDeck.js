@@ -13,8 +13,11 @@ import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import {
   allCards,
-  setVG,
+  set13,
+  set12,
+  setSEA,
   set11,
+  setVG,
   set10,
   set9,
   set8,
@@ -37,6 +40,8 @@ import {
 } from "../decks/AllCards";
 import {
   allCardsEvo,
+  set13Evo,
+  set12Evo,
   set11Evo,
   setVGEvo,
   set10Evo,
@@ -401,6 +406,12 @@ export default function CreateDeck() {
 
   const getCardsFromName = (name) => {
     switch (name) {
+      case "set 13":
+        return set13;
+      case "set 12":
+        return set12;
+      case "sea":
+        return setSEA;
       case "set 11":
         return set11;
       case "vg":
@@ -429,6 +440,10 @@ export default function CreateDeck() {
         return set2;
       case "set 1":
         return set1;
+      case "set 13 evo":
+        return set13Evo;
+      case "set 12 evo":
+        return set12Evo;
       case "set 11 evo":
         return set11Evo;
       case "vg evo":
@@ -967,6 +982,9 @@ export default function CreateDeck() {
                 onChange={handleChange}
               >
                 <MenuItem value={"all"}>All</MenuItem>
+                <MenuItem value={"set 13"}>Dominion of Darkness</MenuItem>
+                <MenuItem value={"set 12"}>Worldreaver's Descent</MenuItem>
+                <MenuItem value={"sea"}>Seaside Memories</MenuItem>
                 <MenuItem value={"set 11"}>Bullet of Fate</MenuItem>
                 <MenuItem value={"vg"}>Cardfight!! Vanguard</MenuItem>
                 <MenuItem value={"set 10"}>Gods of the Arcana</MenuItem>

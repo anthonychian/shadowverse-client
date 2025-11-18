@@ -1,4 +1,75 @@
 export const allCardsEvo = [
+  "Sekka, Ninefold Blaze ADVANCED",
+  "Aria, Miasma Fairy Evolved",
+  "Nelcha, Fashion Hazard Evolved",
+  "Sunbright Elf Evolved",
+  "Fairy Slugger Evolved",
+
+  "Albert, Thunderous Doom Evolved",
+  "Sera, Maiden of the Dawn Evolved",
+  "Lounes, Levin Apprentice Evolved",
+  "Mina, Levin Vice Leader Evolved",
+
+  "Ghios, Sparkling Prism Evolved",
+  "Rending Blast ADVANCED",
+  "Mileka, Celestial Seer Evolved",
+  "Grimoire Sorcerer Evolved",
+  "Magical Squirrel Evolved",
+
+  "Drache, Fiery Dragonlord Evolved",
+  "Godfire Phoenix Evolved",
+  "Flame Pillar Dragonewt Evolved",
+  "Margarite Mermaid Evolved",
+
+  "Aluzard, Timeworn Vampire Evolved",
+  "Ceres, Bride of the Night Evolved",
+  "Liberté, Unchained Wolf Evolved",
+  "Linkstaff Necromancer Evolved",
+
+  "Jeanne, Despair's Maiden Evolved",
+  "Lunerian Paladin Evolved",
+  "Pyne, Twisted Justice Evolved",
+  "Charitable Al-mi'raj Evolved",
+
+  "Sahaquiel & Israfil Evolved",
+  "Miriam, Mutinous Being Evolved",
+  "Managrocer Evolved",
+  "Armored Goblin Evolved",
+
+  "Elf Queen of Abundant Life Evolved",
+  "Carbuncle, Immortal Jewel Evolved",
+  "Forest Defender Evolved",
+  "Forest Hatcheteer Evolved",
+
+  "Patrick, Rhiceros Knight Evolved",
+  "Ironfist Beast Warrior Evolved",
+  "Nano, the Dawnblade Evolved",
+  "Lilje, Butler of the Mists Evolved",
+
+  "Belphomet, Worldreaver Evolved",
+  "Regalore, Steel Chimera Evolved",
+  "Chaos Wielder Evolved",
+  "Gigahand Golem Evolved",
+
+  "Shipsbane Plesiosaurus Evolved",
+  "Steelcap Pachycephalosaurus Evolved",
+  "Assault Dragoon Evolved",
+  "Dragoon Medic Evolved",
+
+  "Neun, Daybreak Vampire Evolved",
+  "Jackshovel Gravedigger Evolved",
+  "Liberté, Werewolf Pup Evolved",
+  "Bloodstained Berserker Evolved",
+
+  "Rola, Inferno Dragoon Evolved",
+  "Gullias, Silverbeast Lord Evolved",
+  "Holylight Convert Evolved",
+  "Sol Sister Evolved",
+
+  "Changewing Cherub Evolved",
+  "Romantic Chanteuse Evolved",
+  "Plucky Treasure Hunter Evolved",
+
   "Loxis, Homestead Pioneer Evolved",
   "Terrorformer Evolved",
   "Varmint Hunter Evolved",
@@ -467,6 +538,81 @@ export const allCardsEvo = [
   "Goblin Evolved",
   "Goliath Evolved",
   "Healing Angel Evolved",
+];
+
+export const set13Evo = [
+  "Sekka, Ninefold Blaze ADVANCED",
+  "Aria, Miasma Fairy Evolved",
+  "Nelcha, Fashion Hazard Evolved",
+  "Sunbright Elf Evolved",
+  "Fairy Slugger Evolved",
+
+  "Albert, Thunderous Doom Evolved",
+  "Sera, Maiden of the Dawn Evolved",
+  "Lounes, Levin Apprentice Evolved",
+  "Mina, Levin Vice Leader Evolved",
+
+  "Ghios, Sparkling Prism Evolved",
+  "Rending Blast ADVANCED",
+  "Mileka, Celestial Seer Evolved",
+  "Grimoire Sorcerer Evolved",
+  "Magical Squirrel Evolved",
+
+  "Drache, Fiery Dragonlord Evolved",
+  "Godfire Phoenix Evolved",
+  "Flame Pillar Dragonewt Evolved",
+  "Margarite Mermaid Evolved",
+
+  "Aluzard, Timeworn Vampire Evolved",
+  "Ceres, Bride of the Night Evolved",
+  "Liberté, Unchained Wolf Evolved",
+  "Linkstaff Necromancer Evolved",
+
+  "Jeanne, Despair's Maiden Evolved",
+  "Lunerian Paladin Evolved",
+  "Pyne, Twisted Justice Evolved",
+  "Charitable Al-mi'raj Evolved",
+
+  "Sahaquiel & Israfil Evolved",
+  "Miriam, Mutinous Being Evolved",
+  "Managrocer Evolved",
+  "Armored Goblin Evolved",
+];
+
+export const set12Evo = [
+  "Elf Queen of Abundant Life Evolved",
+  "Carbuncle, Immortal Jewel Evolved",
+  "Forest Defender Evolved",
+  "Forest Hatcheteer Evolved",
+
+  "Patrick, Rhiceros Knight Evolved",
+  "Ironfist Beast Warrior Evolved",
+  "Nano, the Dawnblade Evolved",
+  "Lilje, Butler of the Mists Evolved",
+
+  "Belphomet, Worldreaver Evolved",
+  "Regalore, Steel Chimera Evolved",
+  "Chaos Wielder Evolved",
+  "Gigahand Golem Evolved",
+
+  "Shipsbane Plesiosaurus Evolved",
+  "Steelcap Pachycephalosaurus Evolved",
+  "Assault Dragoon Evolved",
+  "Dragoon Medic Evolved",
+
+  "Neun, Daybreak Vampire Evolved",
+  "Jackshovel Gravedigger Evolved",
+  "Liberté, Werewolf Pup Evolved",
+  "Bloodstained Berserker Evolved",
+
+  "Rola, Inferno Dragoon Evolved",
+  "Gullias, Silverbeast Lord Evolved",
+  "Holylight Convert Evolved",
+  "Sol Sister Evolved",
+
+  "Changewing Cherub Evolved",
+  "Romantic Chanteuse Evolved",
+  "Plucky Treasure Hunter Evolved",
 ];
 
 export const set11Evo = [
@@ -966,6 +1112,17 @@ export const set1Evo = [
 ];
 
 export const forestEvo = [
+  "Sekka, Ninefold Blaze ADVANCED",
+  "Aria, Miasma Fairy Evolved",
+  "Nelcha, Fashion Hazard Evolved",
+  "Sunbright Elf Evolved",
+  "Fairy Slugger Evolved",
+
+  "Elf Queen of Abundant Life Evolved",
+  "Carbuncle, Immortal Jewel Evolved",
+  "Forest Defender Evolved",
+  "Forest Hatcheteer Evolved",
+
   "Loxis, Homestead Pioneer Evolved",
   "Terrorformer Evolved",
   "Varmint Hunter Evolved",
@@ -1033,6 +1190,16 @@ export const forestEvo = [
 ];
 
 export const swordEvo = [
+  "Albert, Thunderous Doom Evolved",
+  "Sera, Maiden of the Dawn Evolved",
+  "Lounes, Levin Apprentice Evolved",
+  "Mina, Levin Vice Leader Evolved",
+
+  "Patrick, Rhiceros Knight Evolved",
+  "Ironfist Beast Warrior Evolved",
+  "Nano, the Dawnblade Evolved",
+  "Lilje, Butler of the Mists Evolved",
+
   "Bunny & Baron, Specter Duo Evolved",
   "Reinhardt, the Deathless Evolved",
   "Stalwart Slinger Evolved",
@@ -1102,6 +1269,17 @@ export const swordEvo = [
 ];
 
 export const runeEvo = [
+  "Ghios, Sparkling Prism Evolved",
+  "Rending Blast ADVANCED",
+  "Mileka, Celestial Seer Evolved",
+  "Grimoire Sorcerer Evolved",
+  "Magical Squirrel Evolved",
+
+  "Belphomet, Worldreaver Evolved",
+  "Regalore, Steel Chimera Evolved",
+  "Chaos Wielder Evolved",
+  "Gigahand Golem Evolved",
+
   "Vincent, the Peacekeeper Evolved",
   "Magical Gunslinger Evolved",
   "Artistic Arcanist Evolved",
@@ -1170,6 +1348,16 @@ export const runeEvo = [
 ];
 
 export const dragonEvo = [
+  "Drache, Fiery Dragonlord Evolved",
+  "Godfire Phoenix Evolved",
+  "Flame Pillar Dragonewt Evolved",
+  "Margarite Mermaid Evolved",
+
+  "Shipsbane Plesiosaurus Evolved",
+  "Steelcap Pachycephalosaurus Evolved",
+  "Assault Dragoon Evolved",
+  "Dragoon Medic Evolved",
+
   "Reggie, Peerless Artisan Evolved",
   "Georgius Evolved",
   "Azureflame Dragonewt Evolved",
@@ -1245,6 +1433,16 @@ export const dragonEvo = [
 ];
 
 export const abyssEvo = [
+  "Aluzard, Timeworn Vampire Evolved",
+  "Ceres, Bride of the Night Evolved",
+  "Liberté, Unchained Wolf Evolved",
+  "Linkstaff Necromancer Evolved",
+
+  "Neun, Daybreak Vampire Evolved",
+  "Jackshovel Gravedigger Evolved",
+  "Liberté, Werewolf Pup Evolved",
+  "Bloodstained Berserker Evolved",
+
   "Iceschillendrig, Gilded Autocrat Evolved",
   "Hazhan, Demonblade Knight Evolved",
   "Wretch Evolved",
@@ -1311,6 +1509,16 @@ export const abyssEvo = [
 ];
 
 export const havenEvo = [
+  "Jeanne, Despair's Maiden Evolved",
+  "Lunerian Paladin Evolved",
+  "Pyne, Twisted Justice Evolved",
+  "Charitable Al-mi'raj Evolved",
+
+  "Rola, Inferno Dragoon Evolved",
+  "Gullias, Silverbeast Lord Evolved",
+  "Holylight Convert Evolved",
+  "Sol Sister Evolved",
+
   "Anvelt, Judgment's Cannon Evolved",
   "Vengeful Sniper Evolved",
   "Set Evolved",
@@ -1376,6 +1584,15 @@ export const havenEvo = [
 ];
 
 export const neutralEvo = [
+  "Sahaquiel & Israfil Evolved",
+  "Miriam, Mutinous Being Evolved",
+  "Managrocer Evolved",
+  "Armored Goblin Evolved",
+
+  "Changewing Cherub Evolved",
+  "Romantic Chanteuse Evolved",
+  "Plucky Treasure Hunter Evolved",
+
   "Sylvia, Grand Arbiter Evolved",
   "Quixotic Adventurer Evolved",
   "Wandering Chef Evolved",
