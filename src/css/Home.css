@@ -16,12 +16,12 @@
 
 .cardSizeInPreview {
   aspect-ratio: 110 / 150;
-  max-height: 150px;
+  max-height: 350px;
 }
 @media screen and (max-width: 2000px) {
   .cardSizeInPreview {
     aspect-ratio: 110 / 150;
-    max-height: 120px;
+    max-height: 250px;
   }
 }
 /* medium - tablet styles */

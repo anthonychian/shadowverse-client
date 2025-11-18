@@ -53,6 +53,8 @@ import { deleteDeck } from "../redux/DeckSlice";
 import { cardImage } from "../decks/getCards";
 import { socket } from "../sockets";
 
+import ArrowBackIosNew from "@mui/icons-material/ArrowBackIosNew";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import CloseIcon from "@mui/icons-material/Close";
 import CardMUI from "@mui/material/Card";
 import {
@@ -90,6 +92,7 @@ export default function Home() {
   const [hoverCard, setHoverCard] = useState("");
   const [hover, setHover] = useState(false);
   const [openSnack, setOpenSnack] = useState(false);
+  const [deckIdx, setDeckIdx] = useState(0);
 
   const reduxDecks = useSelector((state) => state.deck.decks);
   const reduxActiveUsers = useSelector((state) => state.card.activeUsers);
@@ -167,6 +170,7 @@ export default function Home() {
   };
   const handleContextMenu = (event, deck, idx) => {
     setName(deck.name);
+    setDeckIdx(idx);
     event.preventDefault();
     setContextMenu(
       contextMenu === null
@@ -303,6 +307,22 @@ export default function Home() {
     }
 
     setOpenSnack(false);
+  };
+
+  const handleBackClick = () => {
+    if (deckIdx - 1 < 0) return;
+    else {
+      handleSelectDeck(reduxDecks[deckIdx - 1], deckIdx - 1);
+      setDeckIdx(deckIdx - 1);
+    }
+  };
+
+  const handleForwardClick = () => {
+    if (deckIdx >= reduxDecks.length - 1) return;
+    else {
+      handleSelectDeck(reduxDecks[deckIdx + 1], deckIdx + 1);
+      setDeckIdx(deckIdx + 1);
+    }
   };
 
   const action = (
@@ -769,10 +789,12 @@ export default function Home() {
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
-            backgroundColor: "transparent",
+            backgroundColor: "rgba(31, 31, 31)",
+
             boxShadow: 24,
-            p: 3,
-            width: "40%",
+            // p: 3,
+            height: "100%",
+            width: "100%",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
@@ -780,25 +802,87 @@ export default function Home() {
             outline: "none",
           }}
         >
+          <CloseIcon
+            sx={{
+              position: "absolute",
+              right: "1%",
+              top: "0%",
+              zIndex: 10,
+              cursor: "pointer",
+              height: "90px",
+              width: "90px",
+              color: "white",
+              opacity: "0%",
+              "&:hover": {
+                opacity: "50%",
+              },
+            }}
+            onClick={handleModalClose}
+            fontSize="small"
+          />
+
+          <ArrowBackIosNew
+            style={{}}
+            sx={{
+              position: "absolute",
+              right: "93%",
+              bottom: "50%",
+              zIndex: 10,
+              cursor: "pointer",
+              height: "170px",
+              width: "170px",
+              color: "white",
+              opacity: "0%",
+              "&:hover": {
+                opacity: "70%",
+              },
+            }}
+            onClick={handleBackClick}
+          />
+          <ArrowForwardIosIcon
+            style={{}}
+            sx={{
+              position: "absolute",
+              right: "1%",
+              bottom: "50%",
+              zIndex: 10,
+              cursor: "pointer",
+              height: "170px",
+              width: "170px",
+              color: "white",
+              opacity: "0%",
+              "&:hover": {
+                opacity: "70%",
+              },
+            }}
+            onClick={handleForwardClick}
+          />
+
           <CardMUI
             sx={{
-              backgroundColor: "rgba(0, 0, 0, 1)",
+              // backgroundColor: "rgba(31, 31, 31)",
+              backgroundColor: "transparent",
               minHeight: "250px",
               padding: "2em",
+
               // height: "400px",
-              maxHeight: "750px",
+              // maxHeight: "750px",
               overflowY: "auto",
-              width: "100%",
+
+              height: "90%",
+              width: "90%",
               display: "flex",
               flexDirection: "row",
               flexWrap: "wrap",
+              // justifyContent: "start",
               alignItems: "center",
+              paddingLeft: "10%",
               gap: "3px",
             }}
             variant="outlined"
           >
             {/* Hover card image */}
-            <div
+            {/* <div
               style={{
                 display: "flex",
                 justifyContent: "center",
@@ -840,14 +924,14 @@ export default function Home() {
                   </div>
                 </div>
               )}
-            </div>
+            </div> */}
             {Array.from(deckMap.entries()).map((entry, idx) => {
               const [key, value] = entry;
               return (
                 <div
                   key={idx}
-                  onMouseEnter={() => handleStartHover(key)}
-                  onMouseLeave={() => handleEndHover()}
+                  // onMouseEnter={() => handleStartHover(key)}
+                  // onMouseLeave={() => handleEndHover()}
                   style={{
                     position: "relative",
                     display: "flex",
@@ -864,9 +948,9 @@ export default function Home() {
                     <img
                       key={idx}
                       className="cardSizeInPreview"
-                      // style={{ aspectRatio: 110 / 150, maxHeight: "120px" }}
+                      // style={{ aspectRatio: 110 / 150, height: "30vh" }}
                       // width={"110px"}
-                      // height={"150px"}
+                      height={"350px"}
                       src={cardImage(key)}
                       alt={key}
                     />
@@ -883,10 +967,10 @@ export default function Home() {
                         position: "absolute",
                         bottom: "0",
                         backgroundColor: "rgba(0, 0, 0, 0.7)",
-                        height: "35px",
-                        width: "35px",
+                        height: "60px",
+                        width: "60px",
                         color: "white",
-                        fontSize: "25px",
+                        fontSize: "40px",
                         fontFamily: "Noto Serif JP, serif",
                         borderRadius: "7px",
                         display: "flex",
@@ -912,8 +996,8 @@ export default function Home() {
               return (
                 <div
                   key={idx * 2}
-                  onMouseEnter={() => handleStartHover(key)}
-                  onMouseLeave={() => handleEndHover()}
+                  // onMouseEnter={() => handleStartHover(key)}
+                  // onMouseLeave={() => handleEndHover()}
                   style={{
                     position: "relative",
                     display: "flex",
