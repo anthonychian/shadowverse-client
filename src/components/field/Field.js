@@ -224,70 +224,92 @@ export default function Field({
 
   useEffect(() => {
     socket.on("receive msg", (data) => {
-      if (data.type === "field") dispatch(setEnemyField(data.data));
-      else if (data.type === "evoField") dispatch(setEnemyEvoField(data.data));
-      else if (data.type === "engaged") dispatch(setEnemyEngaged(data.data));
-      else if (data.type === "cemetery") dispatch(setEnemyCemetery(data.data));
-      else if (data.type === "evoDeck") dispatch(setEnemyEvoDeck(data.data));
-      else if (data.type === "values")
-        dispatch(setEnemyCustomValues(data.data));
-      else if (data.type === "hand") dispatch(setEnemyHand(data.data));
-      else if (data.type === "deckSize") dispatch(setEnemyDeckSize(data.data));
-      else if (data.type === "evoPoints")
-        dispatch(setEnemyEvoPoints(data.data));
-      else if (data.type === "playPoints")
-        dispatch(setEnemyPlayPoints(data.data));
-      else if (data.type === "health") dispatch(setEnemyHealth(data.data));
-      else if (data.type === "leader") dispatch(setEnemyLeader(data.data));
-      else if (data.type === "showHand") dispatch(setShowEnemyHand(data.data));
-      else if (data.type === "showCard") dispatch(setShowEnemyCard(data.data));
-      else if (data.type === "cardRevealed") dispatch(setEnemyCard(data.data));
-      else if (data.type === "transfer") dispatch(setField(data.data));
-      else if (data.type === "counter") dispatch(setEnemyCounter(data.data));
-      else if (data.type === "aura") dispatch(setEnemyAura(data.data));
-      else if (data.type === "bane") dispatch(setEnemyBane(data.data));
-      else if (data.type === "ward") dispatch(setEnemyWard(data.data));
-      else if (data.type === "banish") dispatch(setEnemyBanish(data.data));
-      else if (data.type === "viewingHand")
-        dispatch(setEnemyViewingHand(data.data));
-      else if (data.type === "viewingDeck")
-        dispatch(setEnemyViewingDeck(data.data));
-      else if (data.type === "viewingTopCards")
-        dispatch(setEnemyViewingTopCards(data.data));
-      else if (data.type === "viewingCemetery")
-        dispatch(setEnemyViewingCemetery(data.data));
-      else if (data.type === "viewingEvoDeck")
-        dispatch(setEnemyViewingEvoDeck(data.data));
-      else if (data.type === "viewingCemeteryOpponent")
-        dispatch(setEnemyViewingCemeteryOpponent(data.data));
-      else if (data.type === "viewingEvoDeckOpponent")
-        dispatch(setEnemyViewingEvoDeckOpponent(data.data));
-      else if (data.type === "dice") dispatch(setEnemyDice(data.data));
-      else if (data.type === "leaderActive")
-        dispatch(setEnemyLeaderActive(data.data));
-      else if (data.type === "log") dispatch(setEnemyLog(data.data));
-      else if (data.type === "cardback") dispatch(setEnemyCardBack(data.data));
-      else if (data.type === "rematch")
-        dispatch(setEnemyRematchStatus(data.data));
-      else if (data.type === "cardSelected")
-        dispatch(setEnemyCardSelectedInHand(data.data));
-      else if (data.type === "cardSelectedField")
-        dispatch(setEnemyCardSelectedOnField(data.data));
-      else if (data.type === "chat") {
-        dispatch(setEnemyChat(data.data));
-        dispatch(setLastChatMessage(data.data));
+      // Handle consolidated updates
+      if (data.updates && Array.isArray(data.updates)) {
+        data.updates.forEach((update) => {
+          handleUpdate(update);
+        });
+      } else {
+        // Fallback for single updates (backward compatibility)
+        handleUpdate(data);
       }
     });
-    socket.on("online", (data) => {
-      dispatch(setEnemyOnlineStatus(true));
-    });
-    socket.on("offline", (data) => {
-      dispatch(setEnemyOnlineStatus(false));
-    });
+
+    const handleUpdate = (update) => {
+      if (update.type === "field") dispatch(setEnemyField(update.data));
+      else if (update.type === "evoField")
+        dispatch(setEnemyEvoField(update.data));
+      else if (update.type === "engaged")
+        dispatch(setEnemyEngaged(update.data));
+      else if (update.type === "cemetery")
+        dispatch(setEnemyCemetery(update.data));
+      else if (update.type === "evoDeck")
+        dispatch(setEnemyEvoDeck(update.data));
+      else if (update.type === "values")
+        dispatch(setEnemyCustomValues(update.data));
+      else if (update.type === "hand") dispatch(setEnemyHand(update.data));
+      else if (update.type === "deckSize")
+        dispatch(setEnemyDeckSize(update.data));
+      else if (update.type === "evoPoints")
+        dispatch(setEnemyEvoPoints(update.data));
+      else if (update.type === "playPoints")
+        dispatch(setEnemyPlayPoints(update.data));
+      else if (update.type === "health") dispatch(setEnemyHealth(update.data));
+      else if (update.type === "leader") dispatch(setEnemyLeader(update.data));
+      else if (update.type === "showHand")
+        dispatch(setShowEnemyHand(update.data));
+      else if (update.type === "showCard")
+        dispatch(setShowEnemyCard(update.data));
+      else if (update.type === "cardRevealed")
+        dispatch(setEnemyCard(update.data));
+      else if (update.type === "transfer") dispatch(setField(update.data));
+      else if (update.type === "counter")
+        dispatch(setEnemyCounter(update.data));
+      else if (update.type === "aura") dispatch(setEnemyAura(update.data));
+      else if (update.type === "bane") dispatch(setEnemyBane(update.data));
+      else if (update.type === "ward") dispatch(setEnemyWard(update.data));
+      else if (update.type === "banish") dispatch(setEnemyBanish(update.data));
+      else if (update.type === "viewingHand")
+        dispatch(setEnemyViewingHand(update.data));
+      else if (update.type === "viewingDeck")
+        dispatch(setEnemyViewingDeck(update.data));
+      else if (update.type === "viewingTopCards")
+        dispatch(setEnemyViewingTopCards(update.data));
+      else if (update.type === "viewingCemetery")
+        dispatch(setEnemyViewingCemetery(update.data));
+      else if (update.type === "viewingEvoDeck")
+        dispatch(setEnemyViewingEvoDeck(update.data));
+      else if (update.type === "viewingCemeteryOpponent")
+        dispatch(setEnemyViewingCemeteryOpponent(update.data));
+      else if (update.type === "viewingEvoDeckOpponent")
+        dispatch(setEnemyViewingEvoDeckOpponent(update.data));
+      else if (update.type === "dice") dispatch(setEnemyDice(update.data));
+      else if (update.type === "leaderActive")
+        dispatch(setEnemyLeaderActive(update.data));
+      else if (update.type === "log") dispatch(setEnemyLog(update.data));
+      else if (update.type === "cardback")
+        dispatch(setEnemyCardBack(update.data));
+      else if (update.type === "rematch")
+        dispatch(setEnemyRematchStatus(update.data));
+      else if (update.type === "cardSelected")
+        dispatch(setEnemyCardSelectedInHand(update.data));
+      else if (update.type === "cardSelectedField")
+        dispatch(setEnemyCardSelectedOnField(update.data));
+      else if (update.type === "chat") {
+        dispatch(setEnemyChat(update.data));
+        dispatch(setLastChatMessage(update.data));
+      }
+    };
+
+    socket.on("online", () => dispatch(setEnemyOnlineStatus(true)));
+    socket.on("offline", () => dispatch(setEnemyOnlineStatus(false)));
+
     return () => {
       socket.off("receive msg");
+      socket.off("online");
+      socket.off("offline");
     };
-  }, [socket]);
+  }, [socket, dispatch]);
 
   useEffect(() => {
     if (reduxCurrentRoom.length === 0) {

@@ -479,22 +479,7 @@ export const CardSlice = createSlice({
         ...state.counterField.slice(index + 1),
       ];
       state.counterField = newCounters;
-      // const date = new Date().toLocaleTimeString("it-IT", {
-      //   hour: "2-digit",
-      //   minute: "2-digit",
-      // });
 
-      // state.gameLog = [
-      //   ...state.gameLog,
-      //   {
-      //     text: `[${date}] (Me): Set ${state.field[index]} counter to ${newValue}`,
-      //   },
-      // ];
-      // socket.emit("send msg", {
-      //   type: "log",
-      //   data: { text: `Set ${state.field[index]} counter to ${newValue}` },
-      //   room: state.room,
-      // });
       socket.emit("send msg", {
         type: "counter",
         data: state.counterField,
@@ -566,19 +551,14 @@ export const CardSlice = createSlice({
             card,
           },
         ];
+
         socket.emit("send msg", {
-          type: "log",
-          data: { text: `Draw 1 card` },
-          room: state.room,
-        });
-        socket.emit("send msg", {
-          type: "hand",
-          data: state.hand,
-          room: state.room,
-        });
-        socket.emit("send msg", {
-          type: "deckSize",
-          data: state.deck.length,
+          type: "draw",
+          updates: [
+            { type: "log", data: { text: `Draw 1 card` } },
+            { type: "hand", data: state.hand },
+            { type: "deckSize", data: state.deck.length },
+          ],
           room: state.room,
         });
       }
@@ -602,19 +582,14 @@ export const CardSlice = createSlice({
             },
           ];
         }
+
         socket.emit("send msg", {
-          type: "log",
-          data: { text: `Draw 4 cards` },
-          room: state.room,
-        });
-        socket.emit("send msg", {
-          type: "hand",
-          data: state.hand,
-          room: state.room,
-        });
-        socket.emit("send msg", {
-          type: "deckSize",
-          data: state.deck.length,
+          type: "drawFour",
+          updates: [
+            { type: "log", data: { text: `Draw 4 cards` } },
+            { type: "hand", data: state.hand },
+            { type: "deckSize", data: state.deck.length },
+          ],
           room: state.room,
         });
       }
@@ -640,22 +615,54 @@ export const CardSlice = createSlice({
             ];
           }
         }
+
         socket.emit("send msg", {
-          type: "log",
-          data: { text: `Mulligan 4 cards` },
-          room: state.room,
-        });
-        socket.emit("send msg", {
-          type: "hand",
-          data: state.hand,
-          room: state.room,
-        });
-        socket.emit("send msg", {
-          type: "deckSize",
-          data: state.deck.length,
+          type: "mulligan",
+          updates: [
+            { type: "log", data: { text: `Mulligan 4 cards` } },
+            { type: "hand", data: state.hand },
+            { type: "deckSize", data: state.deck.length },
+          ],
           room: state.room,
         });
       }
+    },
+    clearStatusAtIndex: (state, action) => {
+      let index = action.payload;
+      const newCustomStatus = [
+        ...state.customStatus.slice(0, index),
+        false,
+        ...state.customStatus.slice(index + 1),
+      ];
+      state.customStatus = newCustomStatus;
+      const newAuraField = [
+        ...state.auraField.slice(0, index),
+        0,
+        ...state.auraField.slice(index + 1),
+      ];
+      state.auraField = newAuraField;
+      const newBaneField = [
+        ...state.baneField.slice(0, index),
+        0,
+        ...state.baneField.slice(index + 1),
+      ];
+      state.baneField = newBaneField;
+      const newWardField = [
+        ...state.wardField.slice(0, index),
+        0,
+        ...state.wardField.slice(index + 1),
+      ];
+      state.wardField = newWardField;
+
+      socket.emit("send msg", {
+        type: "clearStatus",
+        updates: [
+          { type: "aura", data: state.auraField },
+          { type: "bane", data: state.baneField },
+          { type: "ward", data: state.wardField },
+        ],
+        room: state.room,
+      });
     },
     setEngaged: (state, action) => {
       let index = action.payload;
@@ -704,48 +711,6 @@ export const CardSlice = createSlice({
         ...state.wardField.slice(index + 1),
       ];
       state.wardField = newWardField;
-    },
-    clearStatusAtIndex: (state, action) => {
-      let index = action.payload;
-      const newCustomStatus = [
-        ...state.customStatus.slice(0, index),
-        false,
-        ...state.customStatus.slice(index + 1),
-      ];
-      state.customStatus = newCustomStatus;
-      const newAuraField = [
-        ...state.auraField.slice(0, index),
-        0,
-        ...state.auraField.slice(index + 1),
-      ];
-      state.auraField = newAuraField;
-      const newBaneField = [
-        ...state.baneField.slice(0, index),
-        0,
-        ...state.baneField.slice(index + 1),
-      ];
-      state.baneField = newBaneField;
-      const newWardField = [
-        ...state.wardField.slice(0, index),
-        0,
-        ...state.wardField.slice(index + 1),
-      ];
-      state.wardField = newWardField;
-      socket.emit("send msg", {
-        type: "aura",
-        data: state.auraField,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "bane",
-        data: state.baneField,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "ward",
-        data: state.wardField,
-        room: state.room,
-      });
     },
     clearEngagedAtIndex: (state, action) => {
       let index = action.payload;
@@ -975,13 +940,11 @@ export const CardSlice = createSlice({
         },
       ];
       socket.emit("send msg", {
-        type: "log",
-        data: { text: `Added ${card} to field`, card },
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "field",
-        data: state.field,
+        type: "duplicateCardOnField",
+        updates: [
+          { type: "log", data: { text: `Added ${card} to field`, card } },
+          { type: "field", data: state.field },
+        ],
         room: state.room,
       });
     },
@@ -1036,20 +999,16 @@ export const CardSlice = createSlice({
           card,
         },
       ];
-
       socket.emit("send msg", {
-        type: "log",
-        data: { text: `Added 1 card to top of deck from hand` },
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "hand",
-        data: state.hand,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "deckSize",
-        data: state.deck.length,
+        type: "placeToTopOfDeckFromHand",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Added 1 card to top of deck from hand` },
+          },
+          { type: "deckSize", data: state.deck.length },
+          { type: "hand", data: state.hand },
+        ],
         room: state.room,
       });
     },
@@ -1071,19 +1030,17 @@ export const CardSlice = createSlice({
           card,
         },
       ];
+
       socket.emit("send msg", {
-        type: "log",
-        data: { text: `Added 1 card to bot of deck from hand` },
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "hand",
-        data: state.hand,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "deckSize",
-        data: state.deck.length,
+        type: "placeToBotOfDeckFromHand",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Added 1 card to bot of deck from hand` },
+          },
+          { type: "deckSize", data: state.deck.length },
+          { type: "hand", data: state.hand },
+        ],
         room: state.room,
       });
     },
@@ -1105,13 +1062,15 @@ export const CardSlice = createSlice({
         },
       ];
       socket.emit("send msg", {
-        type: "log",
-        data: { text: `Added ${card} to top of deck from cemetery`, card },
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "cemetery",
-        data: state.cemetery,
+        type: "placeToTopOfDeckFromCemetery",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Added ${card} to top of deck from cemetery`, card },
+          },
+          { type: "deckSize", data: state.deck.length },
+          { type: "cemetery", data: state.cemetery },
+        ],
         room: state.room,
       });
     },
@@ -1134,13 +1093,14 @@ export const CardSlice = createSlice({
         },
       ];
       socket.emit("send msg", {
-        type: "log",
-        data: { text: `Added ${card} to bot of deck from cemetery`, card },
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "cemetery",
-        data: state.cemetery,
+        type: "placeToBotOfDeckFromCemetery",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Added ${card} to bot of deck from cemetery`, card },
+          },
+          { type: "cemetery", data: state.cemetery },
+        ],
         room: state.room,
       });
     },
@@ -1166,19 +1126,17 @@ export const CardSlice = createSlice({
           card,
         },
       ];
+
       socket.emit("send msg", {
-        type: "log",
-        data: { text: `Added ${card} to top of deck from field`, card },
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "field",
-        data: state.field,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "deckSize",
-        data: state.deck.length,
+        type: "placeToTopOfDeckFromField",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Added ${card} to top of deck from field`, card },
+          },
+          { type: "field", data: state.field },
+          { type: "deckSize", data: state.deck.length },
+        ],
         room: state.room,
       });
     },
@@ -1204,19 +1162,17 @@ export const CardSlice = createSlice({
           card,
         },
       ];
+
       socket.emit("send msg", {
-        type: "log",
-        data: { text: `Added ${card} to bot of deck from field`, card },
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "field",
-        data: state.field,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "deckSize",
-        data: state.deck.length,
+        type: "placeToBotOfDeckFromField",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Added ${card} to bot of deck from field`, card },
+          },
+          { type: "field", data: state.field },
+          { type: "deckSize", data: state.deck.length },
+        ],
         room: state.room,
       });
     },
@@ -1242,13 +1198,14 @@ export const CardSlice = createSlice({
         },
       ];
       socket.emit("send msg", {
-        type: "log",
-        data: { text: `Added ${card} to field`, card },
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "field",
-        data: state.field,
+        type: "placeTokenOnField",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Added ${card} to field`, card },
+          },
+          { type: "field", data: state.field },
+        ],
         room: state.room,
       });
     },
@@ -1274,13 +1231,14 @@ export const CardSlice = createSlice({
         },
       ];
       socket.emit("send msg", {
-        type: "log",
-        data: { text: `Removed ${card} from field`, card },
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "field",
-        data: state.field,
+        type: "removeTokenOnField",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Removed ${card} from field`, card },
+          },
+          { type: "field", data: state.field },
+        ],
         room: state.room,
       });
     },
@@ -1312,14 +1270,13 @@ export const CardSlice = createSlice({
           card,
         },
       ];
+
       socket.emit("send msg", {
-        type: "log",
-        data: { text: `Moved ${card} on field`, card },
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "field",
-        data: state.field,
+        type: "moveCard",
+        updates: [
+          { type: "log", data: { text: `Moved ${card} on field`, card } },
+          { type: "field", data: state.field },
+        ],
         room: state.room,
       });
     },
@@ -1369,18 +1326,15 @@ export const CardSlice = createSlice({
         },
       ];
       socket.emit("send msg", {
-        type: "log",
-        data: { text: `Moved ${evoCard} on field`, card: evoCard },
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "field",
-        data: state.field,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "evoField",
-        data: state.evoField,
+        type: "moveEvoAndBaseOnField",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Moved ${evoCard} on field`, card: evoCard },
+          },
+          { type: "field", data: state.field },
+          { type: "evoField", data: state.evoField },
+        ],
         room: state.room,
       });
     },
@@ -1427,18 +1381,15 @@ export const CardSlice = createSlice({
           },
         ];
         socket.emit("send msg", {
-          type: "log",
-          data: { text: `Transfered ${card} to your field`, card },
-          room: state.room,
-        });
-        socket.emit("send msg", {
-          type: "field",
-          data: state.field,
-          room: state.room,
-        });
-        socket.emit("send msg", {
-          type: "transfer",
-          data: state.enemyField,
+          type: "transferToOpponentField",
+          updates: [
+            {
+              type: "log",
+              data: { text: `Transfered ${card} to your field`, card },
+            },
+            { type: "field", data: state.field },
+            { type: "transfer", data: state.enemyField },
+          ],
           room: state.room,
         });
       } else {
@@ -1470,19 +1421,17 @@ export const CardSlice = createSlice({
           card,
         },
       ];
+
       socket.emit("send msg", {
-        type: "log",
-        data: { text: `Added ${card} to field from deck`, card },
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "field",
-        data: state.field,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "deckSize",
-        data: state.deck.length,
+        type: "addToFieldFromDeck",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Transfered ${card} to your field`, card },
+          },
+          { type: "field", data: state.field },
+          { type: "deckSize", data: state.deck.length },
+        ],
         room: state.room,
       });
     },
@@ -1503,14 +1452,16 @@ export const CardSlice = createSlice({
           card,
         },
       ];
+
       socket.emit("send msg", {
-        type: "log",
-        data: { text: `Moved 1 card to top of deck` },
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "deckSize",
-        data: state.deck.length,
+        type: "addToTopOfDeckFromDeck",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Moved 1 card to top of deck` },
+          },
+          { type: "deckSize", data: state.deck.length },
+        ],
         room: state.room,
       });
     },
@@ -1531,14 +1482,16 @@ export const CardSlice = createSlice({
           card,
         },
       ];
+
       socket.emit("send msg", {
-        type: "log",
-        data: { text: `Moved 1 card to bot of deck` },
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "deckSize",
-        data: state.deck.length,
+        type: "addToBotOfDeckFromDeck",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Moved 1 card to bot of deck` },
+          },
+          { type: "deckSize", data: state.deck.length },
+        ],
         room: state.room,
       });
     },
@@ -1559,19 +1512,17 @@ export const CardSlice = createSlice({
           card,
         },
       ];
+
       socket.emit("send msg", {
-        type: "log",
-        data: { text: `Added ${card} to cemetery from deck`, card },
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "cemetery",
-        data: state.cemetery,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "deckSize",
-        data: state.deck.length,
+        type: "addToCemeteryFromDeck",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Added ${card} to cemetery from deck`, card },
+          },
+          { type: "cemetery", data: state.cemetery },
+          { type: "deckSize", data: state.deck.length },
+        ],
         room: state.room,
       });
     },
@@ -1591,19 +1542,17 @@ export const CardSlice = createSlice({
           card,
         },
       ];
+
       socket.emit("send msg", {
-        type: "log",
-        data: { text: `Milled ${card} to cemetery`, card },
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "cemetery",
-        data: state.cemetery,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "deckSize",
-        data: state.deck.length,
+        type: "addToCemeteryFromTopOfDeck",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Milled ${card} to cemetery`, card },
+          },
+          { type: "cemetery", data: state.cemetery },
+          { type: "deckSize", data: state.deck.length },
+        ],
         room: state.room,
       });
     },
@@ -1626,18 +1575,15 @@ export const CardSlice = createSlice({
       ];
 
       socket.emit("send msg", {
-        type: "log",
-        data: { text: `Banished ${card} from deck`, card },
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "banish",
-        data: state.banish,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "deckSize",
-        data: state.deck.length,
+        type: "addToBanishFromDeck",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Banished ${card} from deck`, card },
+          },
+          { type: "banish", data: state.banish },
+          { type: "deckSize", data: state.deck.length },
+        ],
         room: state.room,
       });
     },
@@ -1660,19 +1606,17 @@ export const CardSlice = createSlice({
           card,
         },
       ];
+
       socket.emit("send msg", {
-        type: "log",
-        data: { text: `Added ${card} to hand from deck`, card },
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "hand",
-        data: state.hand,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "deckSize",
-        data: state.deck.length,
+        type: "addToHandFromDeck",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Added ${card} to hand from deck`, card },
+          },
+          { type: "hand", data: state.hand },
+          { type: "deckSize", data: state.deck.length },
+        ],
         room: state.room,
       });
     },
@@ -1695,19 +1639,17 @@ export const CardSlice = createSlice({
           card,
         },
       ];
+
       socket.emit("send msg", {
-        type: "log",
-        data: { text: `Added 1 card to hand from deck`, card: "Card" },
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "hand",
-        data: state.hand,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "deckSize",
-        data: state.deck.length,
+        type: "addToHandFromDeckWithoutRevealing",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Added 1 card to hand from deck`, card: "Card" },
+          },
+          { type: "hand", data: state.hand },
+          { type: "deckSize", data: state.deck.length },
+        ],
         room: state.room,
       });
     },
@@ -1734,19 +1676,53 @@ export const CardSlice = createSlice({
           card,
         },
       ];
+
       socket.emit("send msg", {
-        type: "log",
-        data: { text: `Added ${card} to hand from field`, card },
+        type: "addToHandFromField",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Added ${card} to hand from field`, card },
+          },
+          { type: "field", data: state.field },
+          { type: "hand", data: state.hand },
+        ],
         room: state.room,
       });
-      socket.emit("send msg", {
-        type: "field",
-        data: state.field,
-        room: state.room,
+    },
+    placeToCemeteryFromHand: (state, action) => {
+      const card = action.payload.name;
+      const cardIndex = action.payload.index;
+      state.hand = state.hand.filter((_, i) => i !== cardIndex);
+      const date = new Date().toLocaleTimeString("it-IT", {
+        hour: "2-digit",
+        minute: "2-digit",
       });
+
+      state.gameLog = [
+        ...state.gameLog,
+        {
+          text: `[${date}] (Me): Discarded ${card} (#${
+            cardIndex + 1
+          }) from hand`,
+          card,
+        },
+      ];
+      state.cemetery = [card, ...state.cemetery];
+
       socket.emit("send msg", {
-        type: "hand",
-        data: state.hand,
+        type: "discardFromHand",
+        updates: [
+          {
+            type: "log",
+            data: {
+              text: `Discarded ${card} (#${cardIndex + 1}) from hand`,
+              card,
+            },
+          },
+          { type: "cemetery", data: state.cemetery },
+          { type: "hand", data: state.hand },
+        ],
         room: state.room,
       });
     },
@@ -1773,19 +1749,17 @@ export const CardSlice = createSlice({
           card,
         },
       ];
+
       socket.emit("send msg", {
-        type: "log",
-        data: { text: `Added ${card} to field from hand`, card },
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "field",
-        data: state.field,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "hand",
-        data: state.hand,
+        type: "placeFromHand",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Added ${card} to field from hand`, card },
+          },
+          { type: "field", data: state.field },
+          { type: "hand", data: state.hand },
+        ],
         room: state.room,
       });
     },
@@ -1807,19 +1781,17 @@ export const CardSlice = createSlice({
           card,
         },
       ];
+
       socket.emit("send msg", {
-        type: "log",
-        data: { text: `Added ${card} to hand from cemetery`, card },
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "cemetery",
-        data: state.cemetery,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "hand",
-        data: state.hand,
+        type: "addToHandFromCemetery",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Added ${card} to hand from cemetery`, card },
+          },
+          { type: "cemetery", data: state.cemetery },
+          { type: "hand", data: state.hand },
+        ],
         room: state.room,
       });
     },
@@ -1840,19 +1812,17 @@ export const CardSlice = createSlice({
           card,
         },
       ];
+
       socket.emit("send msg", {
-        type: "log",
-        data: { text: `Banished ${card} from cemetery`, card },
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "cemetery",
-        data: state.cemetery,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "banish",
-        data: state.banish,
+        type: "addToBanishFromCemetery",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Banished ${card} from cemetery`, card },
+          },
+          { type: "cemetery", data: state.cemetery },
+          { type: "banish", data: state.banish },
+        ],
         room: state.room,
       });
     },
@@ -1873,19 +1843,17 @@ export const CardSlice = createSlice({
           card,
         },
       ];
+
       socket.emit("send msg", {
-        type: "log",
-        data: { text: `Added ${card} to hand from banished`, card },
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "banish",
-        data: state.banish,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "hand",
-        data: state.hand,
+        type: "addToHandFromBanish",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Added ${card} to hand from banished`, card },
+          },
+          { type: "hand", data: state.hand },
+          { type: "banish", data: state.banish },
+        ],
         room: state.room,
       });
     },
@@ -1913,18 +1881,15 @@ export const CardSlice = createSlice({
         },
       ];
       socket.emit("send msg", {
-        type: "log",
-        data: { text: `Added ${card} to cemetery from field`, card },
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "field",
-        data: state.field,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "cemetery",
-        data: state.cemetery,
+        type: "placeToCemeteryFromField",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Added ${card} to cemetery from field`, card },
+          },
+          { type: "field", data: state.field },
+          { type: "cemetery", data: state.cemetery },
+        ],
         room: state.room,
       });
     },
@@ -1949,50 +1914,14 @@ export const CardSlice = createSlice({
         },
       ];
       socket.emit("send msg", {
-        type: "log",
-        data: { text: `Shuffled cards in hand` },
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "hand",
-        data: state.hand,
-        room: state.room,
-      });
-    },
-    placeToCemeteryFromHand: (state, action) => {
-      const card = action.payload.name;
-      const cardIndex = action.payload.index;
-      state.hand = state.hand.filter((_, i) => i !== cardIndex);
-      const date = new Date().toLocaleTimeString("it-IT", {
-        hour: "2-digit",
-        minute: "2-digit",
-      });
-
-      state.gameLog = [
-        ...state.gameLog,
-        {
-          text: `[${date}] (Me): Discarded ${card} (#${
-            cardIndex + 1
-          }) from hand`,
-          card,
-        },
-      ];
-      state.cemetery = [card, ...state.cemetery];
-
-      socket.emit("send msg", {
-        type: "log",
-        data: { text: `Discarded ${card} (#${cardIndex + 1}) from hand`, card },
-        room: state.room,
-      });
-
-      socket.emit("send msg", {
-        type: "cemetery",
-        data: state.cemetery,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "hand",
-        data: state.hand,
+        type: "shuffleCards",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Shuffled cards in hand` },
+          },
+          { type: "hand", data: state.hand },
+        ],
         room: state.room,
       });
     },
@@ -2019,14 +1948,17 @@ export const CardSlice = createSlice({
           card,
         },
       ];
+
       socket.emit("send msg", {
-        type: "log",
-        data: { text: `Added ${card} to field from deck`, card },
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "field",
-        data: state.field,
+        type: "placeToFieldFromDeck",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Shuffled cards in hand` },
+          },
+          { type: "field", data: state.field },
+          { type: "deckSize", data: state.deck.length },
+        ],
         room: state.room,
       });
     },
@@ -2054,19 +1986,17 @@ export const CardSlice = createSlice({
           card,
         },
       ];
+
       socket.emit("send msg", {
-        type: "log",
-        data: { text: `Added ${card} to field from cemetery`, card },
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "field",
-        data: state.field,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "cemetery",
-        data: state.cemetery,
+        type: "placeToFieldFromCemetery",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Added ${card} to field from cemetery`, card },
+          },
+          { type: "field", data: state.field },
+          { type: "cemetery", data: state.cemetery },
+        ],
         room: state.room,
       });
     },
@@ -2094,19 +2024,17 @@ export const CardSlice = createSlice({
           card,
         },
       ];
+
       socket.emit("send msg", {
-        type: "log",
-        data: { text: `Added ${card} to field from banished`, card },
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "field",
-        data: state.field,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "banish",
-        data: state.banish,
+        type: "placeToFieldFromBanish",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Added ${card} to field from banished`, card },
+          },
+          { type: "field", data: state.field },
+          { type: "banish", data: state.banish },
+        ],
         room: state.room,
       });
     },
@@ -2133,19 +2061,17 @@ export const CardSlice = createSlice({
           card,
         },
       ];
+
       socket.emit("send msg", {
-        type: "log",
-        data: { text: `Banished ${card} from field`, card },
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "field",
-        data: state.field,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "banish",
-        data: state.banish,
+        type: "placeToBanishFromField",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Banished ${card} from field`, card },
+          },
+          { type: "field", data: state.field },
+          { type: "banish", data: state.banish },
+        ],
         room: state.room,
       });
     },
@@ -2172,19 +2098,14 @@ export const CardSlice = createSlice({
           card,
         },
       ];
+
       socket.emit("send msg", {
-        type: "log",
-        data: { text: `Evolved to ${card}`, card },
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "evoField",
-        data: state.evoField,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "evoDeck",
-        data: state.evoDeck,
+        type: "evolve",
+        updates: [
+          { type: "log", data: { text: `Evolved to ${card}`, card } },
+          { type: "evoField", data: state.evoField },
+          { type: "evoDeck", data: state.evoDeck },
+        ],
         room: state.room,
       });
     },
@@ -2225,22 +2146,20 @@ export const CardSlice = createSlice({
           card: state.field[newIndex],
         },
       ];
+
       socket.emit("send msg", {
-        type: "log",
-        data: {
-          text: `Fed ${state.field[newIndex]} 1 Carrot`,
-          card: state.field[newIndex],
-        },
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "evoField",
-        data: state.evoField,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "evoDeck",
-        data: state.evoDeck,
+        type: "feedCardOnField",
+        updates: [
+          {
+            type: "log",
+            data: {
+              text: `Fed ${state.field[newIndex]} 1 Carrot`,
+              card: state.field[newIndex],
+            },
+          },
+          { type: "evoField", data: state.evoField },
+          { type: "evoDeck", data: state.evoDeck },
+        ],
         room: state.room,
       });
     },
@@ -2269,22 +2188,20 @@ export const CardSlice = createSlice({
           card: state.field[newIndex],
         },
       ];
+
       socket.emit("send msg", {
-        type: "log",
-        data: {
-          text: `Ride ${state.field[newIndex]}`,
-          card: state.field[newIndex],
-        },
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "evoField",
-        data: state.evoField,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "evoDeck",
-        data: state.evoDeck,
+        type: "rideCardOnField",
+        updates: [
+          {
+            type: "log",
+            data: {
+              text: `Ride ${state.field[newIndex]}`,
+              card: state.field[newIndex],
+            },
+          },
+          { type: "evoField", data: state.evoField },
+          { type: "evoDeck", data: state.evoDeck },
+        ],
         room: state.room,
       });
     },
@@ -2311,19 +2228,17 @@ export const CardSlice = createSlice({
           card,
         },
       ];
+
       socket.emit("send msg", {
-        type: "log",
-        data: { text: `Added ${card} to field from evolve deck`, card },
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "field",
-        data: state.field,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "evoDeck",
-        data: state.evoDeck,
+        type: "advancedToField",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Added ${card} to field from evolve deck`, card },
+          },
+          { type: "field", data: state.field },
+          { type: "evoDeck", data: state.evoDeck },
+        ],
         room: state.room,
       });
     },
@@ -2356,19 +2271,17 @@ export const CardSlice = createSlice({
           card,
         },
       ];
+
       socket.emit("send msg", {
-        type: "log",
-        data: { text: `Returned ${card} to evolve deck`, card },
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "evoField",
-        data: state.evoField,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "evoDeck",
-        data: state.evoDeck,
+        type: "backToEvolveDeck",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Returned ${card} to evolve deck`, card },
+          },
+          { type: "evoField", data: state.evoField },
+          { type: "evoDeck", data: state.evoDeck },
+        ],
         room: state.room,
       });
     },
@@ -2396,19 +2309,17 @@ export const CardSlice = createSlice({
           card,
         },
       ];
+
       socket.emit("send msg", {
-        type: "log",
-        data: { text: `Returned ${card} to evolve deck`, card },
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "field",
-        data: state.field,
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "evoDeck",
-        data: state.evoDeck,
+        type: "advancedBackToEvolveDeck",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Returned ${card} to evolve deck`, card },
+          },
+          { type: "field", data: state.field },
+          { type: "evoDeck", data: state.evoDeck },
+        ],
         room: state.room,
       });
     },
@@ -2440,14 +2351,16 @@ export const CardSlice = createSlice({
           card,
         },
       ];
+
       socket.emit("send msg", {
-        type: "log",
-        data: { text: `Flipped ${card} in evolve deck`, card },
-        room: state.room,
-      });
-      socket.emit("send msg", {
-        type: "evoDeck",
-        data: state.evoDeck,
+        type: "flipEvoCard",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Flipped ${card} in evolve deck`, card },
+          },
+          { type: "evoDeck", data: state.evoDeck },
+        ],
         room: state.room,
       });
     },
@@ -2516,15 +2429,17 @@ export const CardSlice = createSlice({
               card,
             },
           ];
-          socket.emit("send msg", {
-            type: "log",
-            data: { text: `Added ${card} to field`, card },
-            room: state.room,
-          });
         }
+
         socket.emit("send msg", {
-          type: "field",
-          data: state.field,
+          type: "createLessonTokens",
+          updates: [
+            {
+              type: "log",
+              data: { text: `Added 5 ${card} to field`, card },
+            },
+            { type: "field", data: state.field },
+          ],
           room: state.room,
         });
       }
