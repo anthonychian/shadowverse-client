@@ -9,7 +9,7 @@ import {
   LazyLoadComponent,
 } from "react-lazy-load-image-component";
 import swap from "../assets/logo/swap_icon.png";
-import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import ArrowBackIosNew from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import {
   allCards,
@@ -93,7 +93,6 @@ import {
   SnackbarContent,
   IconButton,
 } from "@mui/material";
-import ArrowBackIosNew from "@mui/icons-material/ArrowBackIosNew";
 
 export default function CreateDeck() {
   const location = useLocation();

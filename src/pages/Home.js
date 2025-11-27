@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import wallpaper from "../../src/assets/wallpapers/3.png";
+import html2canvas from "html2canvas";
 
 import galmieux from "../../src/assets/wallpapers/Galmieux.png";
 import viridia from "../../src/assets/wallpapers/viridia.png";
@@ -10,31 +11,6 @@ import kuon from "../../src/assets/wallpapers/Kuon.png";
 import korwa from "../../src/assets/wallpapers/Korwa.png";
 import tsubaki from "../../src/assets/wallpapers/Tsubaki.png";
 import grimnir from "../../src/assets/wallpapers/Grimnir.png";
-
-// import elf_mov from "../../src/assets/leaders/character_elf.mov";
-// import elf_webm from "../../src/assets/leaders/character_elf.webm";
-// import royal_mov from "../../src/assets/leaders/character_royal.mov";
-// import royal_webm from "../../src/assets/leaders/character_royal.webm";
-// import witch_mov from "../../src/assets/leaders/character_witch.mov";
-// import witch_webm from "../../src/assets/leaders/character_witch.webm";
-// import dragon_mov from "../../src/assets/leaders/character_dragon.mov";
-// import dragon_webm from "../../src/assets/leaders/character_dragon.webm";
-// import nightmare_mov from "../../src/assets/leaders/character_nightmare.mov";
-// import nightmare_webm from "../../src/assets/leaders/character_nightmare.webm";
-// import bishop_mov from "../../src/assets/leaders/character_bishop.mov";
-// import bishop_webm from "../../src/assets/leaders/character_bishop.webm";
-// import nemesis_mov from "../../src/assets/leaders/character_nemesis.mov";
-// import nemesis_webm from "../../src/assets/leaders/character_nemesis.webm";
-
-//-----------------delete-------------------------
-// import merlin from "../../src/assets/wallpapers/merlin.png";
-// import lorraine from "../../src/assets/wallpapers/lorraine.png";
-// import kongming from "../../src/assets/wallpapers/kongming.png";
-// import diao from "../../src/assets/wallpapers/diao.png";
-// import arisanna from "../../src/assets/wallpapers/arisanna.png";
-// import nico from "../../src/assets/wallpapers/nico.png";
-// import ga from "../../src/assets/wallpapers/ga.png";
-//-----------------delete-------------------------
 
 import buttonImage from "../../src/assets/buttons/variant1.png";
 import shadowverse from "../../src/assets/wallpapers/SVElogo.png";
@@ -55,6 +31,7 @@ import { socket } from "../sockets";
 
 import ArrowBackIosNew from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import CameraAltIcon from "@mui/icons-material/CameraAlt";
 import CloseIcon from "@mui/icons-material/Close";
 import CardMUI from "@mui/material/Card";
 import {
@@ -268,20 +245,6 @@ export default function Home() {
     const num = Math.floor(Math.random() * numLeaders + 1);
     setLeaderNum(num);
     switch (num) {
-      // case 1:
-      //   return merlin;
-      // case 2:
-      //   return lorraine;
-      // case 3:
-      //   return kongming;
-      // case 4:
-      //   return diao;
-      // case 5:
-      //   return arisanna;
-      // case 6:
-      //   return nico;
-      // default:
-      //   return merlin;
       case 1:
         return galmieux;
       case 2:
@@ -324,6 +287,59 @@ export default function Home() {
       setDeckIdx(deckIdx + 1);
     }
   };
+
+  // const deckToImage = () => {
+  //   var element = document.getElementById("deckPreview");
+  //   html2canvas(element).then(function (canvas) {
+  //     canvas.toBlob(function (blob) {
+  //       window.saveAs(blob, "preview.png");
+  //     });
+  //   });
+  // };
+
+  const deckToImage = () => {
+    const element = document.getElementById("deckPreview");
+
+    if (!element) {
+      console.error("deckPreview element not found");
+      return;
+    }
+
+    html2canvas(element, {
+      allowTaint: true,
+      useCORS: true,
+      backgroundColor: "rgba(31, 31, 31)",
+    })
+      .then((canvas) => {
+        const image = canvas.toDataURL("image/png");
+        const newTab = window.open();
+        newTab.document.body.innerHTML = `<img src="${image}" style="width: 100%; height: 100%;" />`;
+        newTab.document.title = `deck-${Date.now()}.png`;
+      })
+      .catch((err) => console.error(err));
+  };
+
+  // const deckToImageSaved = () => {
+  //   const element = document.getElementById("deckPreview");
+
+  //   if (!element) {
+  //     console.error("deckPreview element not found");
+  //     return;
+  //   }
+
+  //   html2canvas(element, {
+  //     allowTaint: true,
+  //     useCORS: true,
+  //     backgroundColor: "#1f1f1f",
+  //   })
+  //     .then((canvas) => {
+  //       const link = document.createElement("a");
+  //       link.href = canvas.toDataURL("image/png");
+  //       link.download = `deck-${Date.now()}.png`;
+  //       link.click();
+  //     })
+  //     .catch((err) => console.error(err));
+  // };
 
   const action = (
     <React.Fragment>
@@ -778,12 +794,14 @@ export default function Home() {
         <MenuItem onClick={handleOpenDialogue}>Delete</MenuItem>
       </Menu>
       <Modal
+        sx={{ backgroundColor: "rgba(31, 31, 31)" }}
         open={open}
         onClose={handleModalClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
         <Box
+          id="deckPreview"
           sx={{
             position: "relative",
             top: "50%",
@@ -858,10 +876,29 @@ export default function Home() {
             onClick={handleForwardClick}
           />
 
+          <CameraAltIcon
+            style={{}}
+            sx={{
+              position: "absolute",
+              right: "1%",
+              top: "90%",
+              zIndex: 10,
+              cursor: "pointer",
+              height: "90px",
+              width: "90px",
+              color: "white",
+              opacity: "0%",
+              "&:hover": {
+                opacity: "50%",
+              },
+            }}
+            onClick={deckToImage}
+          />
+
           <CardMUI
             sx={{
-              // backgroundColor: "rgba(31, 31, 31)",
-              backgroundColor: "transparent",
+              backgroundColor: "rgba(31, 31, 31)",
+              // backgroundColor: "transparent",
               minHeight: "250px",
               padding: "2em",
 

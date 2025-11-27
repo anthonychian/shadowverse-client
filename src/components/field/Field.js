@@ -98,11 +98,7 @@ import "../../css/AnimatedBorder.css";
 import { useNavigate } from "react-router-dom";
 import { socket } from "../../sockets";
 
-import useSocketStateSync from "../hooks/useSocketStateSync";
-import useReceiveFullState from "../hooks/useReceiveFullState";
-
 import Token from "./Token";
-import Lesson from "./Lesson";
 import ShowDice from "./ShowDice";
 
 import defaultCardBack from "../../assets/cardbacks/default.png";
@@ -281,8 +277,6 @@ export default function Field({
         dispatch(setEnemyChat(data.data));
         dispatch(setLastChatMessage(data.data));
       }
-      // else if (data.type === "online") dispatch(setEnemyOnlineStatus(true));
-      // else if (data.type === "offline") dispatch(setEnemyOnlineStatus(false));
     });
     socket.on("online", (data) => {
       dispatch(setEnemyOnlineStatus(true));
