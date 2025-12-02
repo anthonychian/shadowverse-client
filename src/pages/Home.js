@@ -689,30 +689,7 @@ export default function Home() {
         style={{
           position: "absolute",
           bottom: "4em",
-          right: "1em",
-          height: "10px",
-          // width: "40px",
-          color: "white",
-
-          fontFamily: "Noto Serif JP, serif",
-          borderRadius: "7px",
-        }}
-      >
-        <a
-          href="https://ko-fi.com/anthonychian"
-          target="_blank"
-          rel="noreferrer noopener"
-          style={{ right: 10, position: "absolute", zIndex: 2 }}
-        >
-          <img height={"40px"} src={donate} alt={"donate"} />
-        </a>
-      </div>
-
-      <div
-        style={{
-          position: "absolute",
-          bottom: "4em",
-          right: "12em",
+          right: "2em",
           height: "10px",
           // width: "40px",
           color: "white",
@@ -725,7 +702,7 @@ export default function Home() {
           href="https://discord.gg/shadowverse-evolve-tcg-community-928746294384677004"
           target="_blank"
           rel="noreferrer noopener"
-          style={{ position: "absolute", right: 10, zIndex: 2 }}
+          style={{ position: "absolute", right: 0, zIndex: 2 }}
         >
           <img height={"40px"} src={discord} alt={"discord"} />
         </a>
@@ -752,7 +729,7 @@ export default function Home() {
         style={{
           position: "absolute",
           bottom: "3.8em",
-          right: "16em",
+          right: "6em",
           height: "10px",
           // width: "40px",
           color: "white",
