@@ -1,4 +1,62 @@
 export const allCards = [
+  "Hokko Tarumae",
+  "Sakura Laurel",
+  "Sounds of Earth",
+  "Haru Urara [Sunny Passion ♪]",
+  "Yamanin Zephyr",
+  "Sakura Bakushin O",
+  "Mihono Bourbon",
+  "A MORE MARVELOUS WORLD! ☆",
+
+  "Gentildonna",
+  "Symboli Rudolf [Enchaînement]",
+  "Sirius Symboli [Escorte Étoile]",
+  "Aston Machan",
+  "Symboli Kris S",
+  "Tap Dance City",
+  "Biwa Hayahide",
+  "Teio-Oo-Oo!!!",
+
+  "Cheval Grand",
+  "Tanino Gimlet",
+  "Narita Top Road [Peachy Silhouette]",
+  "Verxina",
+  "Vivlos",
+  "Daitaku Helios",
+  "Sweep Tosho",
+  "Lucky Star in the Sky",
+
+  "Neo Universe",
+  "Mr. C.B.",
+  "Katsuragi Ace",
+  "Super Creek [Piece of Mind]",
+  "Tsurumaru Tsuyoshi",
+  "El Condor Pasa",
+  "Nishino Flower",
+  "Pious Flame, Heavens Scorcher",
+
+  "Hishi Miracle",
+  "Daiichi Ruby",
+  "Duramente",
+  "Matikanetannhauser [Machitan☆Adventure]",
+  "K.S.Miracle",
+  "Air Shakur",
+  "Manhattan Cafe",
+  "TT Ignition!",
+
+  "Satono Crown",
+  "Mejiro Ramonu",
+  "Jungle Pocket",
+  "Wonder Acute",
+  "Mejiro Ardan [Hopeful Petals Dancing in the Night]",
+  "Matikanefukukitaru",
+  "Mejiro Palmer [Moonlit Devil ♪]",
+  "Bring 'Em Home, Please!",
+
+  "Progenitors and Guides",
+  "Balliamo?",
+  "Ryoka Tsurugi",
+
   "Sekka, Fatebound Fox",
   "Aria, Miasma Fairy",
   "Nelcha, Fashion Hazard",
@@ -1716,6 +1774,66 @@ export const allCards = [
   "Healing Angel",
   "Angelic Snipe",
   "Angelic Barrage",
+];
+
+export const setUMA2 = [
+  "Hokko Tarumae",
+  "Sakura Laurel",
+  "Sounds of Earth",
+  "Haru Urara [Sunny Passion ♪]",
+  "Yamanin Zephyr",
+  "Sakura Bakushin O",
+  "Mihono Bourbon",
+  "A MORE MARVELOUS WORLD! ☆",
+
+  "Gentildonna",
+  "Symboli Rudolf [Enchaînement]",
+  "Sirius Symboli [Escorte Étoile]",
+  "Aston Machan",
+  "Symboli Kris S",
+  "Tap Dance City",
+  "Biwa Hayahide",
+  "Teio-Oo-Oo!!!",
+
+  "Cheval Grand",
+  "Tanino Gimlet",
+  "Narita Top Road [Peachy Silhouette]",
+  "Verxina",
+  "Vivlos",
+  "Daitaku Helios",
+  "Sweep Tosho",
+  "Lucky Star in the Sky",
+
+  "Neo Universe",
+  "Mr. C.B.",
+  "Katsuragi Ace",
+  "Super Creek [Piece of Mind]",
+  "Tsurumaru Tsuyoshi",
+  "El Condor Pasa",
+  "Nishino Flower",
+  "Pious Flame, Heavens Scorcher",
+
+  "Hishi Miracle",
+  "Daiichi Ruby",
+  "Duramente",
+  "Matikanetannhauser [Machitan☆Adventure]",
+  "K.S.Miracle",
+  "Air Shakur",
+  "Manhattan Cafe",
+  "TT Ignition!",
+
+  "Satono Crown",
+  "Mejiro Ramonu",
+  "Jungle Pocket",
+  "Wonder Acute",
+  "Mejiro Ardan [Hopeful Petals Dancing in the Night]",
+  "Matikanefukukitaru",
+  "Mejiro Palmer [Moonlit Devil ♪]",
+  "Bring 'Em Home, Please!",
+
+  "Progenitors and Guides",
+  "Balliamo?",
+  "Ryoka Tsurugi",
 ];
 
 export const set13 = [
@@ -3471,6 +3589,15 @@ export const set1 = [
 ];
 
 export const forest = [
+  "Hokko Tarumae",
+  "Sakura Laurel",
+  "Sounds of Earth",
+  "Haru Urara [Sunny Passion ♪]",
+  "Yamanin Zephyr",
+  "Sakura Bakushin O",
+  "Mihono Bourbon",
+  "A MORE MARVELOUS WORLD! ☆",
+
   "Sekka, Fatebound Fox",
   "Aria, Miasma Fairy",
   "Nelcha, Fashion Hazard",
@@ -3721,6 +3848,15 @@ export const forest = [
 ];
 
 export const sword = [
+  "Gentildonna",
+  "Symboli Rudolf [Enchaînement]",
+  "Sirius Symboli [Escorte Étoile]",
+  "Aston Machan",
+  "Symboli Kris S",
+  "Tap Dance City",
+  "Biwa Hayahide",
+  "Teio-Oo-Oo!!!",
+
   "Albert, Thunderous Doom",
   "Magna Zero",
   "Sera, Maiden of the Dawn",
@@ -3989,6 +4125,15 @@ export const sword = [
 ];
 
 export const rune = [
+  "Cheval Grand",
+  "Tanino Gimlet",
+  "Narita Top Road [Peachy Silhouette]",
+  "Verxina",
+  "Vivlos",
+  "Daitaku Helios",
+  "Sweep Tosho",
+  "Lucky Star in the Sky",
+
   "Anne, Mysterian Imperatrix",
   "Ghios, Sparkling Prism",
   "Mileka, Celestial Seer",
@@ -4251,6 +4396,15 @@ export const rune = [
 ];
 
 export const dragon = [
+  "Neo Universe",
+  "Mr. C.B.",
+  "Katsuragi Ace",
+  "Super Creek [Piece of Mind]",
+  "Tsurumaru Tsuyoshi",
+  "El Condor Pasa",
+  "Nishino Flower",
+  "Pious Flame, Heavens Scorcher",
+
   "Drache, Fiery Dragonlord",
   "Forte, Sovereign Supreme",
   "Godfire Phoenix",
@@ -4520,6 +4674,15 @@ export const dragon = [
 ];
 
 export const abyss = [
+  "Hishi Miracle",
+  "Daiichi Ruby",
+  "Duramente",
+  "Matikanetannhauser [Machitan☆Adventure]",
+  "K.S.Miracle",
+  "Air Shakur",
+  "Manhattan Cafe",
+  "TT Ignition!",
+
   "Aluzard, Timeworn Vampire",
   "Laura, Crimson Strife",
   "Ceres, Bride of the Night",
@@ -4768,6 +4931,15 @@ export const abyss = [
 ];
 
 export const haven = [
+  "Satono Crown",
+  "Mejiro Ramonu",
+  "Jungle Pocket",
+  "Wonder Acute",
+  "Mejiro Ardan [Hopeful Petals Dancing in the Night]",
+  "Matikanefukukitaru",
+  "Mejiro Palmer [Moonlit Devil ♪]",
+  "Bring 'Em Home, Please!",
+
   "Jeanne, Despair's Maiden",
   "Jatelant, God of Prosperity",
   "Lunerian Paladin",
@@ -5017,6 +5189,10 @@ export const haven = [
 ];
 
 export const neutral = [
+  "Progenitors and Guides",
+  "Balliamo?",
+  "Ryoka Tsurugi",
+
   "Sahaquiel & Israfil",
   "Planetary Fracture",
   "Miriam, Mutinous Being",

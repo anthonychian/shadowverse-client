@@ -1,4 +1,22 @@
 export const allCardsEvo = [
+  "Hokko Tarumae Evolved",
+
+  "Gentildonna Evolved",
+
+  "Cheval Grand Evolved",
+
+  "Neo Universe Evolved",
+
+  "Hishi Miracle Evolved",
+
+  "Satono Crown Evolved",
+
+  // "A Super Successful Event!",
+  // "Hungry for a Miracle",
+  // "At the End of the Day",
+  // "Forth! Into the Great Age of Agriculture!",
+  // "Workshop! Farmers for a Day!",
+
   "Sekka, Ninefold Blaze ADVANCED",
   "Aria, Miasma Fairy Evolved",
   "Nelcha, Fashion Hazard Evolved",
@@ -538,6 +556,26 @@ export const allCardsEvo = [
   "Goblin Evolved",
   "Goliath Evolved",
   "Healing Angel Evolved",
+];
+
+export const setUMA2Evo = [
+  "Hokko Tarumae Evolved",
+
+  "Gentildonna Evolved",
+
+  "Cheval Grand Evolved",
+
+  "Neo Universe Evolved",
+
+  "Hishi Miracle Evolved",
+
+  "Satono Crown Evolved",
+
+  // "A Super Successful Event!",
+  // "Hungry for a Miracle",
+  // "At the End of the Day",
+  // "Forth! Into the Great Age of Agriculture!",
+  // "Workshop! Farmers for a Day!",
 ];
 
 export const set13Evo = [
@@ -1112,6 +1150,8 @@ export const set1Evo = [
 ];
 
 export const forestEvo = [
+  "Hokko Tarumae Evolved",
+
   "Sekka, Ninefold Blaze ADVANCED",
   "Aria, Miasma Fairy Evolved",
   "Nelcha, Fashion Hazard Evolved",
@@ -1190,6 +1230,8 @@ export const forestEvo = [
 ];
 
 export const swordEvo = [
+  "Gentildonna Evolved",
+
   "Albert, Thunderous Doom Evolved",
   "Sera, Maiden of the Dawn Evolved",
   "Lounes, Levin Apprentice Evolved",
@@ -1269,6 +1311,8 @@ export const swordEvo = [
 ];
 
 export const runeEvo = [
+  "Cheval Grand Evolved",
+
   "Ghios, Sparkling Prism Evolved",
   "Rending Blast ADVANCED",
   "Mileka, Celestial Seer Evolved",
@@ -1348,6 +1392,8 @@ export const runeEvo = [
 ];
 
 export const dragonEvo = [
+  "Neo Universe Evolved",
+
   "Drache, Fiery Dragonlord Evolved",
   "Godfire Phoenix Evolved",
   "Flame Pillar Dragonewt Evolved",
@@ -1433,6 +1479,8 @@ export const dragonEvo = [
 ];
 
 export const abyssEvo = [
+  "Hishi Miracle Evolved",
+
   "Aluzard, Timeworn Vampire Evolved",
   "Ceres, Bride of the Night Evolved",
   "Liberté, Unchained Wolf Evolved",
@@ -1509,6 +1557,8 @@ export const abyssEvo = [
 ];
 
 export const havenEvo = [
+  "Satono Crown Evolved",
+
   "Jeanne, Despair's Maiden Evolved",
   "Lunerian Paladin Evolved",
   "Pyne, Twisted Justice Evolved",
@@ -1584,6 +1634,12 @@ export const havenEvo = [
 ];
 
 export const neutralEvo = [
+  // "A Super Successful Event!",
+  // "Hungry for a Miracle",
+  // "At the End of the Day",
+  // "Forth! Into the Great Age of Agriculture!",
+  // "Workshop! Farmers for a Day!",
+
   "Sahaquiel & Israfil Evolved",
   "Miriam, Mutinous Being Evolved",
   "Managrocer Evolved",

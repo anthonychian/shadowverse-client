@@ -13,6 +13,7 @@ import ArrowBackIosNew from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import {
   allCards,
+  setUMA2,
   set13,
   set12,
   setSEA,
@@ -40,6 +41,7 @@ import {
 } from "../decks/AllCards";
 import {
   allCardsEvo,
+  setUMA2Evo,
   set13Evo,
   set12Evo,
   set11Evo,
@@ -405,6 +407,8 @@ export default function CreateDeck() {
 
   const getCardsFromName = (name) => {
     switch (name) {
+      case "uma2":
+        return setUMA2;
       case "set 13":
         return set13;
       case "set 12":
@@ -439,6 +443,8 @@ export default function CreateDeck() {
         return set2;
       case "set 1":
         return set1;
+      case "uma2 evo":
+        return setUMA2Evo;
       case "set 13 evo":
         return set13Evo;
       case "set 12 evo":

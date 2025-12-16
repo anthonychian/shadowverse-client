@@ -1,5 +1,130 @@
 export const cardImage = (cardName) => {
   switch (cardName) {
+    case "Hokko Tarumae":
+      return "../textures/ECP01-SP01EN.png";
+    case "Hokko Tarumae Evolved":
+      return "../textures/ECP01-SP02EN.png";
+    case "Sakura Laurel":
+      return "../textures/ECP01-SP03EN.png";
+    case "Sounds of Earth":
+      return "../textures/ECP01-SP04EN.png";
+    case "Haru Urara [Sunny Passion ♪]":
+      return "../textures/ECP01-005EN.png";
+    case "Yamanin Zephyr":
+      return "../textures/ECP01-006EN.png";
+    case "Sakura Bakushin O":
+      return "../textures/ECP01-007EN.png";
+    case "Mihono Bourbon":
+      return "../textures/ECP01-008EN.png";
+    case "A MORE MARVELOUS WORLD! ☆":
+      return "../textures/ECP01-009EN.png";
+    case "Gentildonna":
+      return "../textures/ECP01-SP05EN.png";
+    case "Gentildonna Evolved":
+      return "../textures/ECP01-SP06EN.png";
+    case "Symboli Rudolf [Enchaînement]":
+      return "../textures/ECP01-SP07EN.png";
+    case "Sirius Symboli [Escorte Étoile]":
+      return "../textures/ECP01-SP08EN.png";
+    case "Aston Machan":
+      return "../textures/ECP01-014EN.png";
+    case "Symboli Kris S":
+      return "../textures/ECP01-015EN.png";
+    case "Tap Dance City":
+      return "../textures/ECP01-016EN.png";
+    case "Biwa Hayahide":
+      return "../textures/ECP01-017EN.png";
+    case "Teio-Oo-Oo!!!":
+      return "../textures/ECP01-018EN.png";
+    case "Cheval Grand":
+      return "../textures/ECP01-SP09EN.png";
+    case "Cheval Grand Evolved":
+      return "../textures/ECP01-SP10EN.png";
+    case "Tanino Gimlet":
+      return "../textures/ECP01-SP11EN.png";
+    case "Narita Top Road [Peachy Silhouette]":
+      return "../textures/ECP01-SP12EN.png";
+    case "Verxina":
+      return "../textures/ECP01-023EN.png";
+    case "Vivlos":
+      return "../textures/ECP01-024EN.png";
+    case "Daitaku Helios":
+      return "../textures/ECP01-025EN.png";
+    case "Sweep Tosho":
+      return "../textures/ECP01-026EN.png";
+    case "Lucky Star in the Sky":
+      return "../textures/ECP01-027EN.png";
+    case "Neo Universe":
+      return "../textures/ECP01-SP13EN.png";
+    case "Neo Universe Evolved":
+      return "../textures/ECP01-SP14EN.png";
+    case "Mr. C.B.":
+      return "../textures/ECP01-SP15EN.png";
+    case "Katsuragi Ace":
+      return "../textures/ECP01-SP16EN.png";
+    case "Super Creek [Piece of Mind]":
+      return "../textures/ECP01-032EN.png";
+    case "Tsurumaru Tsuyoshi":
+      return "../textures/ECP01-033EN.png";
+    case "El Condor Pasa":
+      return "../textures/ECP01-034EN.png";
+    case "Nishino Flower":
+      return "../textures/ECP01-035EN.png";
+    case "Pious Flame, Heavens Scorcher":
+      return "../textures/ECP01-036EN.png";
+    case "Hishi Miracle":
+      return "../textures/ECP01-SP17EN.png";
+    case "Hishi Miracle Evolved":
+      return "../textures/ECP01-SP18EN.png";
+    case "Daiichi Ruby":
+      return "../textures/ECP01-SP19EN.png";
+    case "Duramente":
+      return "../textures/ECP01-SP20EN.png";
+    case "Matikanetannhauser [Machitan☆Adventure]":
+      return "../textures/ECP01-041EN.png";
+    case "K.S.Miracle":
+      return "../textures/ECP01-042EN.png";
+    case "Air Shakur":
+      return "../textures/ECP01-043EN.png";
+    case "Manhattan Cafe":
+      return "../textures/ECP01-044EN.png";
+    case "TT Ignition!":
+      return "../textures/ECP01-045EN.png";
+    case "Satono Crown":
+      return "../textures/ECP01-SP21EN.png";
+    case "Satono Crown Evolved":
+      return "../textures/ECP01-SP22EN.png";
+    case "Mejiro Ramonu":
+      return "../textures/ECP01-SP23EN.png";
+    case "Jungle Pocket":
+      return "../textures/ECP01-SP24EN.png";
+    case "Wonder Acute":
+      return "../textures/ECP01-050EN.png";
+    case "Mejiro Ardan [Hopeful Petals Dancing in the Night]":
+      return "../textures/ECP01-051EN.png";
+    case "Matikanefukukitaru":
+      return "../textures/ECP01-052EN.png";
+    case "Mejiro Palmer [Moonlit Devil ♪]":
+      return "../textures/ECP01-053EN.png";
+    case "Bring 'Em Home, Please!":
+      return "../textures/ECP01-054EN.png";
+    case "Progenitors and Guides":
+      return "../textures/ECP01-055EN.png";
+    case "Balliamo?":
+      return "../textures/ECP01-056EN.png";
+    case "Ryoka Tsurugi":
+      return "../textures/ECP01-057EN.png";
+    case "A Super Successful Event!":
+      return "../textures/ECP01-058EN.png";
+    case "Hungry for a Miracle":
+      return "../textures/ECP01-059EN.png";
+    case "At the End of the Day":
+      return "../textures/ECP01-060EN.png";
+    case "Forth! Into the Great Age of Agriculture!":
+      return "../textures/ECP01-061EN.png";
+    case "Workshop! Farmers for a Day!":
+      return "../textures/ECP01-062EN.png";
+
     case "Sekka, Fatebound Fox":
       return "../textures/BP13-U01EN.png";
     case "Sekka, Ninefold Blaze ADVANCED":
