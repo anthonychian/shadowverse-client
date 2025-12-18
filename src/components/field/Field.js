@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
+import { unstable_batchedUpdates } from "react-dom";
 import {
   placeToFieldFromHand,
   addToHandFromField,
@@ -220,110 +221,270 @@ export default function Field({
     return () => {
       socket.off("connect");
     };
-  }, [socket]);
+  }, [reduxRoom]);
 
-  useEffect(() => {
-    socket.on("receive msg", (data) => {
-      // Handle consolidated updates
-      if (data.updates && Array.isArray(data.updates)) {
-        data.updates.forEach((update) => {
-          handleUpdate(update);
-        });
-      } else {
-        // Fallback for single updates (backward compatibility)
-        handleUpdate(data);
+  // Message queue to handle out-of-order messages
+  const messageQueueRef = useRef([]);
+  const lastSequenceRef = useRef(-1);
+  const processingRef = useRef(false);
+
+  // Process a single update (batched with others)
+  const handleUpdate = useCallback(
+    (update) => {
+      switch (update.type) {
+        case "field":
+          dispatch(setEnemyField(update.data));
+          break;
+        case "evoField":
+          dispatch(setEnemyEvoField(update.data));
+          break;
+        case "engaged":
+          dispatch(setEnemyEngaged(update.data));
+          break;
+        case "cemetery":
+          dispatch(setEnemyCemetery(update.data));
+          break;
+        case "evoDeck":
+          dispatch(setEnemyEvoDeck(update.data));
+          break;
+        case "values":
+          dispatch(setEnemyCustomValues(update.data));
+          break;
+        case "hand":
+          dispatch(setEnemyHand(update.data));
+          break;
+        case "deckSize":
+          dispatch(setEnemyDeckSize(update.data));
+          break;
+        case "evoPoints":
+          dispatch(setEnemyEvoPoints(update.data));
+          break;
+        case "playPoints":
+          dispatch(setEnemyPlayPoints(update.data));
+          break;
+        case "health":
+          dispatch(setEnemyHealth(update.data));
+          break;
+        case "leader":
+          dispatch(setEnemyLeader(update.data));
+          break;
+        case "showHand":
+          dispatch(setShowEnemyHand(update.data));
+          break;
+        case "showCard":
+          dispatch(setShowEnemyCard(update.data));
+          break;
+        case "cardRevealed":
+          dispatch(setEnemyCard(update.data));
+          break;
+        case "transfer":
+          dispatch(setField(update.data));
+          break;
+        case "counter":
+          dispatch(setEnemyCounter(update.data));
+          break;
+        case "aura":
+          dispatch(setEnemyAura(update.data));
+          break;
+        case "bane":
+          dispatch(setEnemyBane(update.data));
+          break;
+        case "ward":
+          dispatch(setEnemyWard(update.data));
+          break;
+        case "banish":
+          dispatch(setEnemyBanish(update.data));
+          break;
+        case "viewingHand":
+          dispatch(setEnemyViewingHand(update.data));
+          break;
+        case "viewingDeck":
+          dispatch(setEnemyViewingDeck(update.data));
+          break;
+        case "viewingTopCards":
+          dispatch(setEnemyViewingTopCards(update.data));
+          break;
+        case "viewingCemetery":
+          dispatch(setEnemyViewingCemetery(update.data));
+          break;
+        case "viewingEvoDeck":
+          dispatch(setEnemyViewingEvoDeck(update.data));
+          break;
+        case "viewingCemeteryOpponent":
+          dispatch(setEnemyViewingCemeteryOpponent(update.data));
+          break;
+        case "viewingEvoDeckOpponent":
+          dispatch(setEnemyViewingEvoDeckOpponent(update.data));
+          break;
+        case "dice":
+          dispatch(setEnemyDice(update.data));
+          break;
+        case "leaderActive":
+          dispatch(setEnemyLeaderActive(update.data));
+          break;
+        case "log":
+          dispatch(setEnemyLog(update.data));
+          break;
+        case "cardback":
+          dispatch(setEnemyCardBack(update.data));
+          break;
+        case "rematch":
+          dispatch(setEnemyRematchStatus(update.data));
+          break;
+        case "cardSelected":
+          dispatch(setEnemyCardSelectedInHand(update.data));
+          break;
+        case "cardSelectedField":
+          dispatch(setEnemyCardSelectedOnField(update.data));
+          break;
+        case "chat":
+          dispatch(setEnemyChat(update.data));
+          dispatch(setLastChatMessage(update.data));
+          break;
+        case "full_state_sync":
+          // Handle full state synchronization (used on reconnection)
+          // This bypasses the queue and directly updates all state
+          const fullState = update.data;
+          if (fullState) {
+            unstable_batchedUpdates(() => {
+              if (fullState.enemyField !== undefined)
+                dispatch(setEnemyField(fullState.enemyField));
+              if (fullState.enemyEvoField !== undefined)
+                dispatch(setEnemyEvoField(fullState.enemyEvoField));
+              if (fullState.enemyHand !== undefined)
+                dispatch(setEnemyHand(fullState.enemyHand));
+              if (fullState.enemyLeader !== undefined)
+                dispatch(setEnemyLeader(fullState.enemyLeader));
+              if (fullState.enemyHealth !== undefined)
+                dispatch(setEnemyHealth(fullState.enemyHealth));
+              if (fullState.enemyPlayPoints !== undefined)
+                dispatch(setEnemyPlayPoints(fullState.enemyPlayPoints));
+              if (fullState.enemyEvoPoints !== undefined)
+                dispatch(setEnemyEvoPoints(fullState.enemyEvoPoints));
+              if (fullState.enemyDeckSize !== undefined)
+                dispatch(setEnemyDeckSize(fullState.enemyDeckSize));
+              if (fullState.enemyCemetery !== undefined)
+                dispatch(setEnemyCemetery(fullState.enemyCemetery));
+              if (fullState.enemyCardBack !== undefined)
+                dispatch(setEnemyCardBack(fullState.enemyCardBack));
+              if (fullState.enemyCounter !== undefined)
+                dispatch(setEnemyCounter(fullState.enemyCounter));
+              if (fullState.enemyAura !== undefined)
+                dispatch(setEnemyAura(fullState.enemyAura));
+              if (fullState.enemyBane !== undefined)
+                dispatch(setEnemyBane(fullState.enemyBane));
+              if (fullState.enemyWard !== undefined)
+                dispatch(setEnemyWard(fullState.enemyWard));
+              if (fullState.enemyBanish !== undefined)
+                dispatch(setEnemyBanish(fullState.enemyBanish));
+              if (fullState.enemyCustomValues !== undefined)
+                dispatch(setEnemyCustomValues(fullState.enemyCustomValues));
+              if (fullState.enemyDice !== undefined)
+                dispatch(setEnemyDice(fullState.enemyDice));
+              if (fullState.enemyLeaderActive !== undefined)
+                dispatch(setEnemyLeaderActive(fullState.enemyLeaderActive));
+              if (fullState.enemyLog !== undefined)
+                dispatch(setEnemyLog(fullState.enemyLog));
+            });
+            // Reset sequence after full state sync
+            lastSequenceRef.current = -1;
+          }
+          break;
+        default:
+          console.warn("Unknown update type:", update.type);
       }
+    },
+    [dispatch]
+  );
+
+  // Process queued messages in order
+  const processQueue = useCallback(() => {
+    if (processingRef.current) return;
+    processingRef.current = true;
+
+    // Sort queue by sequence number if available, otherwise by timestamp
+    messageQueueRef.current.sort((a, b) => {
+      if (a.sequence !== undefined && b.sequence !== undefined) {
+        return a.sequence - b.sequence;
+      }
+      return a.timestamp - b.timestamp;
     });
 
-    const handleUpdate = (update) => {
-      if (update.type === "field") dispatch(setEnemyField(update.data));
-      else if (update.type === "evoField")
-        dispatch(setEnemyEvoField(update.data));
-      else if (update.type === "engaged")
-        dispatch(setEnemyEngaged(update.data));
-      else if (update.type === "cemetery")
-        dispatch(setEnemyCemetery(update.data));
-      else if (update.type === "evoDeck")
-        dispatch(setEnemyEvoDeck(update.data));
-      else if (update.type === "values")
-        dispatch(setEnemyCustomValues(update.data));
-      else if (update.type === "hand") dispatch(setEnemyHand(update.data));
-      else if (update.type === "deckSize")
-        dispatch(setEnemyDeckSize(update.data));
-      else if (update.type === "evoPoints")
-        dispatch(setEnemyEvoPoints(update.data));
-      else if (update.type === "playPoints")
-        dispatch(setEnemyPlayPoints(update.data));
-      else if (update.type === "health") dispatch(setEnemyHealth(update.data));
-      else if (update.type === "leader") dispatch(setEnemyLeader(update.data));
-      else if (update.type === "showHand")
-        dispatch(setShowEnemyHand(update.data));
-      else if (update.type === "showCard")
-        dispatch(setShowEnemyCard(update.data));
-      else if (update.type === "cardRevealed")
-        dispatch(setEnemyCard(update.data));
-      else if (update.type === "transfer") dispatch(setField(update.data));
-      else if (update.type === "counter")
-        dispatch(setEnemyCounter(update.data));
-      else if (update.type === "aura") dispatch(setEnemyAura(update.data));
-      else if (update.type === "bane") dispatch(setEnemyBane(update.data));
-      else if (update.type === "ward") dispatch(setEnemyWard(update.data));
-      else if (update.type === "banish") dispatch(setEnemyBanish(update.data));
-      else if (update.type === "viewingHand")
-        dispatch(setEnemyViewingHand(update.data));
-      else if (update.type === "viewingDeck")
-        dispatch(setEnemyViewingDeck(update.data));
-      else if (update.type === "viewingTopCards")
-        dispatch(setEnemyViewingTopCards(update.data));
-      else if (update.type === "viewingCemetery")
-        dispatch(setEnemyViewingCemetery(update.data));
-      else if (update.type === "viewingEvoDeck")
-        dispatch(setEnemyViewingEvoDeck(update.data));
-      else if (update.type === "viewingCemeteryOpponent")
-        dispatch(setEnemyViewingCemeteryOpponent(update.data));
-      else if (update.type === "viewingEvoDeckOpponent")
-        dispatch(setEnemyViewingEvoDeckOpponent(update.data));
-      else if (update.type === "dice") dispatch(setEnemyDice(update.data));
-      else if (update.type === "leaderActive")
-        dispatch(setEnemyLeaderActive(update.data));
-      else if (update.type === "log") dispatch(setEnemyLog(update.data));
-      else if (update.type === "cardback")
-        dispatch(setEnemyCardBack(update.data));
-      else if (update.type === "rematch")
-        dispatch(setEnemyRematchStatus(update.data));
-      else if (update.type === "cardSelected")
-        dispatch(setEnemyCardSelectedInHand(update.data));
-      else if (update.type === "cardSelectedField")
-        dispatch(setEnemyCardSelectedOnField(update.data));
-      else if (update.type === "chat") {
-        dispatch(setEnemyChat(update.data));
-        dispatch(setLastChatMessage(update.data));
+    // Process all ready messages
+    while (messageQueueRef.current.length > 0) {
+      const message = messageQueueRef.current[0];
+
+      // If sequence numbers are used, only process if it's the next expected one
+      if (message.sequence !== undefined) {
+        if (message.sequence !== lastSequenceRef.current + 1) {
+          // Wait for the correct sequence
+          break;
+        }
+        lastSequenceRef.current = message.sequence;
       }
+
+      // Remove from queue
+      messageQueueRef.current.shift();
+
+      // Process all updates in this message atomically using batched updates
+      if (message.updates && Array.isArray(message.updates)) {
+        // Batch all dispatches together to prevent intermediate renders
+        unstable_batchedUpdates(() => {
+          message.updates.forEach((update) => {
+            handleUpdate(update);
+          });
+        });
+      } else {
+        // Single update - still batch it
+        unstable_batchedUpdates(() => {
+          handleUpdate(message);
+        });
+      }
+    }
+
+    processingRef.current = false;
+  }, [handleUpdate]);
+
+  useEffect(() => {
+    const handleMessage = (data) => {
+      // Add sequence number and timestamp if not present
+      const message = {
+        ...data,
+        sequence: data.sequence,
+        timestamp: data.timestamp || Date.now(),
+      };
+
+      // Add to queue
+      messageQueueRef.current.push(message);
+
+      // Process queue
+      processQueue();
     };
 
+    socket.on("receive msg", handleMessage);
     socket.on("online", () => dispatch(setEnemyOnlineStatus(true)));
     socket.on("offline", () => dispatch(setEnemyOnlineStatus(false)));
 
     return () => {
-      socket.off("receive msg");
+      socket.off("receive msg", handleMessage);
       socket.off("online");
       socket.off("offline");
     };
-  }, [socket, dispatch]);
+  }, [dispatch, processQueue]);
 
   useEffect(() => {
     if (reduxCurrentRoom.length === 0) {
       navigate("/");
     }
-  }, [reduxCurrentRoom]);
+  }, [reduxCurrentRoom, navigate]);
 
   useEffect(() => {
     dispatch(setCardSelectedInHand(-1));
-  }, [reduxEnemyHand]);
+  }, [reduxEnemyHand, dispatch]);
 
   useEffect(() => {
     dispatch(setCardSelectedOnField(-1));
-  }, [reduxEnemyField]);
+  }, [reduxEnemyField, dispatch]);
 
   const handleModalClose = () => {
     dispatch(setShowEnemyHand(false));

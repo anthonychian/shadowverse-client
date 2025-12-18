@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
+import { unstable_batchedUpdates } from "react-dom";
 import { socket } from "../../sockets";
 
 import {
@@ -40,26 +41,31 @@ const useReceiveFullState = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    socket.on("receive_full_state", (fullState) => {
-      dispatch(setEnemyField(fullState.field));
-      dispatch(setEnemyEvoField(fullState.evoField));
-      dispatch(setEnemyHand(fullState.hand));
-      dispatch(setEnemyLeader(fullState.leader));
-      dispatch(setEnemyLeaderActive(fullState.leaderActive));
-      dispatch(setEnemyHealth(fullState.health));
-      dispatch(setEnemyPlayPoints(fullState.playPoints));
-      dispatch(setEnemyEvoPoints(fullState.evoPoints));
-      dispatch(setEnemyEvoDeck(fullState.evoDeck));
-      dispatch(setEnemyDeckSize(fullState.deck.length));
-      dispatch(setEnemyCemetery(fullState.cemetery));
-      dispatch(setEnemyCardBack(fullState.cardBack));
-      dispatch(setEnemyCard(fullState.currentCard));
-      dispatch(setEnemyBanish(fullState.banish));
-      dispatch(setEnemyAura(fullState.aura));
-      dispatch(setEnemyCounter(fullState.counter));
-      dispatch(setEnemyCustomValues(fullState.customValues));
-      dispatch(setEnemyOnlineStatus(fullState.onlineStatus));
-      dispatch(setEnemyLog(fullState.log));
+    socket.on("receive_full_state", (message) => {
+      // Handle both old format (direct fullState) and new format (wrapped in message)
+      const fullState = message.data || message;
+      
+      // Batch all state updates together to prevent intermediate renders
+      unstable_batchedUpdates(() => {
+        if (fullState.field !== undefined) dispatch(setEnemyField(fullState.field));
+        if (fullState.evoField !== undefined) dispatch(setEnemyEvoField(fullState.evoField));
+        if (fullState.hand !== undefined) dispatch(setEnemyHand(fullState.hand));
+        if (fullState.leader !== undefined) dispatch(setEnemyLeader(fullState.leader));
+        if (fullState.leaderActive !== undefined) dispatch(setEnemyLeaderActive(fullState.leaderActive));
+        if (fullState.health !== undefined) dispatch(setEnemyHealth(fullState.health));
+        if (fullState.playPoints !== undefined) dispatch(setEnemyPlayPoints(fullState.playPoints));
+        if (fullState.evoPoints !== undefined) dispatch(setEnemyEvoPoints(fullState.evoPoints));
+        if (fullState.evoDeck !== undefined) dispatch(setEnemyEvoDeck(fullState.evoDeck));
+        if (fullState.deck !== undefined) dispatch(setEnemyDeckSize(fullState.deck.length));
+        if (fullState.cemetery !== undefined) dispatch(setEnemyCemetery(fullState.cemetery));
+        if (fullState.cardBack !== undefined) dispatch(setEnemyCardBack(fullState.cardBack));
+        if (fullState.currentCard !== undefined) dispatch(setEnemyCard(fullState.currentCard));
+        if (fullState.banish !== undefined) dispatch(setEnemyBanish(fullState.banish));
+        if (fullState.aura !== undefined) dispatch(setEnemyAura(fullState.aura));
+        if (fullState.counter !== undefined) dispatch(setEnemyCounter(fullState.counter));
+        if (fullState.customValues !== undefined) dispatch(setEnemyCustomValues(fullState.customValues));
+        if (fullState.onlineStatus !== undefined) dispatch(setEnemyOnlineStatus(fullState.onlineStatus));
+        if (fullState.log !== undefined) dispatch(setEnemyLog(fullState.log));
       // dispatch(setEnemyViewingCemetery(fullState.viewingCemetery));
       // dispatch(
       //   setEnemyViewingCemeteryOpponent(fullState.viewingCemeteryOpponent)

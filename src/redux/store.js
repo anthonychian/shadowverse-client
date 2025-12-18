@@ -2,7 +2,7 @@ import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { CardSlice } from "./CardSlice";
 import { DeckSlice } from "./DeckSlice";
 
-import AsyncStorage from "@react-native-async-storage/async-storage";
+import storage from "redux-persist/lib/storage";
 
 import {
   persistReducer,
@@ -17,7 +17,7 @@ import {
 
 const persistConfig = {
   key: "root",
-  storage: AsyncStorage,
+  storage: storage,
   blacklist: ["card"],
 };
 const rootReducer = combineReducers({
