@@ -987,6 +987,7 @@ export default function CreateDeck() {
                 onChange={handleChange}
               >
                 <MenuItem value={"all"}>All</MenuItem>
+                <MenuItem value={"uma2"}>Umamusume: Pretty Derby EX</MenuItem>
                 <MenuItem value={"set 13"}>Dominion of Darkness</MenuItem>
                 <MenuItem value={"set 12"}>Worldreaver's Descent</MenuItem>
                 <MenuItem value={"sea"}>Seaside Memories</MenuItem>
@@ -996,12 +997,12 @@ export default function CreateDeck() {
                 <MenuItem value={"set 9"}>Duet of Dawn and Dusk</MenuItem>
                 <MenuItem value={"set 8"}>Alterchaotica</MenuItem>
                 <MenuItem value={"set 7"}>Verdant Steel</MenuItem>
-                <MenuItem value={"idol"}>iM@S CG</MenuItem>
+                <MenuItem value={"idol"}>iDOLM@STER Cinderella Girls</MenuItem>
                 <MenuItem value={"set 6"}>Paragons of the Colosseum</MenuItem>
                 <MenuItem value={"set 5"}>Omens Eternal</MenuItem>
                 <MenuItem value={"set 4"}>Cosmic Mythos</MenuItem>
                 <MenuItem value={"set 3"}>Flame of Lævateinn</MenuItem>
-                <MenuItem value={"uma"}>Umamusume</MenuItem>
+                <MenuItem value={"uma"}>Umamusume: Pretty Derby</MenuItem>
                 <MenuItem value={"set 2"}>Reign of Bahamut</MenuItem>
                 <MenuItem value={"set 1"}>Advent of Genesis</MenuItem>
               </Select>
