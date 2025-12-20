@@ -708,16 +708,6 @@ export default function Home() {
         </a>
       </div>
       <div className="LeaderContainerHome">
-        {/* <video
-          className="AnimatedLeaderImageHome"
-          loop="true"
-          autoplay="autoplay"
-          muted
-        >
-          <source src={nemesis_mov} type="video/quicktime" />
-          <source src={nemesis_webm} type="video/webm" />
-        </video> */}
-
         <img
           className="LeaderImageHome"
           src={leaderImage}
@@ -895,50 +885,6 @@ export default function Home() {
             }}
             variant="outlined"
           >
-            {/* Hover card image */}
-            {/* <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                width: "100vw",
-              }}
-            >
-              {hover && (
-                <div
-                  style={{
-                    width: "100vw",
-
-                    display: "flex",
-                    justifyContent: "center",
-                    position: "absolute",
-                    height: "100vh",
-                  }}
-                >
-                  <div
-                    style={{
-                      width: "100vw",
-                      height: "100%",
-                    }}
-                  >
-                    <div
-                      style={{
-                        width: "410px",
-                        position: "relative",
-                        left: "6%",
-                        top: "46%",
-                      }}
-                    >
-                      <img
-                        className="cardHover"
-                        src={cardImage(hoverCard)}
-                        alt={hoverCard}
-                      />
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div> */}
             {Array.from(deckMap.entries()).map((entry, idx) => {
               const [key, value] = entry;
               return (
@@ -1032,10 +978,10 @@ export default function Home() {
                       position: "absolute",
                       bottom: "0",
                       backgroundColor: "rgba(0, 0, 0, 0.7)",
-                      height: "35px",
-                      width: "35px",
+                      height: "60px",
+                      width: "60px",
                       color: "white",
-                      fontSize: "25px",
+                      fontSize: "40px",
                       fontFamily: "Noto Serif JP, serif",
                       borderRadius: "7px",
                       display: "flex",
