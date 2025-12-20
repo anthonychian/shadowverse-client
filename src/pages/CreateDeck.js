@@ -362,8 +362,6 @@ export default function CreateDeck() {
   };
 
   const handleSubmit = () => {
-    const encodedObject = JSON.stringify(deckEdit);
-    const encoded = btoa(encodedObject);
     dispatch(deleteDeck(deckName));
 
     dispatch(
@@ -371,7 +369,6 @@ export default function CreateDeck() {
         name,
         deck,
         evoDeck,
-        // url,
       })
     );
 
