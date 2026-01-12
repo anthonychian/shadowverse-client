@@ -1,5 +1,497 @@
 export const cardImage = (cardName) => {
   switch (cardName) {
+    case "bp15-001":
+      return "../textures/bp15-001.png";
+    case "bp15-002":
+      return "../textures/bp15-002.png";
+    case "bp15-003 Evolved":
+      return "../textures/bp15-003.png";
+    case "bp15-004":
+      return "../textures/bp15-004.png";
+    case "bp15-005 Evolved":
+      return "../textures/bp15-005.png";
+    case "bp15-006":
+      return "../textures/bp15-006.png";
+    case "bp15-007 Evolved":
+      return "../textures/bp15-007.png";
+    case "bp15-008":
+      return "../textures/bp15-008.png";
+    case "bp15-009":
+      return "../textures/bp15-009.png";
+    case "bp15-010":
+      return "../textures/bp15-010.png";
+    case "bp15-011 Evolved":
+      return "../textures/bp15-011.png";
+    case "bp15-012":
+      return "../textures/bp15-012.png";
+    case "bp15-013":
+      return "../textures/bp15-013.png";
+    case "bp15-014":
+      return "../textures/bp15-014.png";
+    case "bp15-015 Evolved":
+      return "../textures/bp15-015.png";
+    case "bp15-016":
+      return "../textures/bp15-016.png";
+    case "bp15-017":
+      return "../textures/bp15-017.png";
+    case "bp15-018":
+      return "../textures/bp15-018.png";
+    case "bp15-019":
+      return "../textures/bp15-019.png";
+    case "bp15-020":
+      return "../textures/bp15-020.png";
+    case "bp15-021":
+      return "../textures/bp15-021.png";
+    case "bp15-022 Evolved":
+      return "../textures/bp15-022.png";
+    case "bp15-023":
+      return "../textures/bp15-023.png";
+    case "bp15-024":
+      return "../textures/bp15-024.png";
+    case "bp15-025 Evolved":
+      return "../textures/bp15-025.png";
+    case "bp15-026":
+      return "../textures/bp15-026.png";
+    case "bp15-027":
+      return "../textures/bp15-027.png";
+    case "bp15-028":
+      return "../textures/bp15-028.png";
+    case "bp15-029 Evolved":
+      return "../textures/bp15-029.png";
+    case "bp15-030":
+      return "../textures/bp15-030.png";
+    case "bp15-031":
+      return "../textures/bp15-031.png";
+    case "bp15-032":
+      return "../textures/bp15-032.png";
+    case "bp15-033 Evolved":
+      return "../textures/bp15-033.png";
+    case "bp15-034":
+      return "../textures/bp15-034.png";
+    case "bp15-035":
+      return "../textures/bp15-035.png";
+    case "bp15-036":
+      return "../textures/bp15-036.png";
+    case "bp15-037":
+      return "../textures/bp15-037.png";
+    case "bp15-038":
+      return "../textures/bp15-038.png";
+    case "bp15-039":
+      return "../textures/bp15-039.png";
+    case "bp15-040 Evolved":
+      return "../textures/bp15-040.png";
+    case "bp15-041":
+      return "../textures/bp15-041.png";
+    case "bp15-042 ADVANCED":
+      return "../textures/bp15-042.png";
+    case "bp15-043":
+      return "../textures/bp15-043.png";
+    case "bp15-044 Evolved":
+      return "../textures/bp15-044.png";
+    case "bp15-045":
+      return "../textures/bp15-045.png";
+    case "bp15-046":
+      return "../textures/bp15-046.png";
+    case "bp15-047":
+      return "../textures/bp15-047.png";
+    case "bp15-048 Evolved":
+      return "../textures/bp15-048.png";
+    case "bp15-049":
+      return "../textures/bp15-049.png";
+    case "bp15-050":
+      return "../textures/bp15-050.png";
+    case "bp15-051":
+      return "../textures/bp15-051.png";
+    case "bp15-052 Evolved":
+      return "../textures/bp15-052.png";
+    case "bp15-053":
+      return "../textures/bp15-053.png";
+    case "bp15-054":
+      return "../textures/bp15-054.png";
+    case "bp15-055":
+      return "../textures/bp15-055.png";
+    case "bp15-056":
+      return "../textures/bp15-056.png";
+    case "bp15-057":
+      return "../textures/bp15-057.png";
+    case "bp15-058":
+      return "../textures/bp15-058.png";
+    case "bp15-059 Evolved":
+      return "../textures/bp15-059.png";
+    case "bp15-060":
+      return "../textures/bp15-060.png";
+    case "bp15-061 Evolved":
+      return "../textures/bp15-061.png";
+    case "bp15-062":
+      return "../textures/bp15-062.png";
+    case "bp15-063 Evolved":
+      return "../textures/bp15-063.png";
+    case "bp15-064":
+      return "../textures/bp15-064.png";
+    case "bp15-065":
+      return "../textures/bp15-065.png";
+    case "bp15-066":
+      return "../textures/bp15-066.png";
+    case "bp15-067 Evolved":
+      return "../textures/bp15-067.png";
+    case "bp15-068":
+      return "../textures/bp15-068.png";
+    case "bp15-069":
+      return "../textures/bp15-069.png";
+    case "bp15-070":
+      return "../textures/bp15-070.png";
+    case "bp15-071 Evolved":
+      return "../textures/bp15-071.png";
+    case "bp15-072":
+      return "../textures/bp15-072.png";
+    case "bp15-073":
+      return "../textures/bp15-073.png";
+    case "bp15-074":
+      return "../textures/bp15-074.png";
+    case "bp15-075":
+      return "../textures/bp15-075.png";
+    case "bp15-076":
+      return "../textures/bp15-076.png";
+    case "bp15-077 Evolved":
+      return "../textures/bp15-077.png";
+    case "bp15-078":
+      return "../textures/bp15-078.png";
+    case "bp15-079":
+      return "../textures/bp15-079.png";
+    case "bp15-080":
+      return "../textures/bp15-080.png";
+    case "bp15-081 Evolved":
+      return "../textures/bp15-081.png";
+    case "bp15-082":
+      return "../textures/bp15-082.png";
+    case "bp15-083":
+      return "../textures/bp15-083.png";
+    case "bp15-084":
+      return "../textures/bp15-084.png";
+    case "bp15-085 Evolved":
+      return "../textures/bp15-085.png";
+    case "bp15-086":
+      return "../textures/bp15-086.png";
+    case "bp15-087":
+      return "../textures/bp15-087.png";
+    case "bp15-088":
+      return "../textures/bp15-088.png";
+    case "bp15-089 Evolved":
+      return "../textures/bp15-089.png";
+    case "bp15-090":
+      return "../textures/bp15-090.png";
+    case "bp15-091":
+      return "../textures/bp15-091.png";
+    case "bp15-092":
+      return "../textures/bp15-092.png";
+    case "bp15-093":
+      return "../textures/bp15-093.png";
+    case "bp15-094":
+      return "../textures/bp15-094.png";
+    case "bp15-095 Evolved":
+      return "../textures/bp15-095.png";
+    case "bp15-096":
+      return "../textures/bp15-096.png";
+    case "bp15-097":
+      return "../textures/bp15-097.png";
+    case "bp15-098":
+      return "../textures/bp15-098.png";
+    case "bp15-099 Evolved":
+      return "../textures/bp15-099.png";
+    case "bp15-100":
+      return "../textures/bp15-100.png";
+    case "bp15-101":
+      return "../textures/bp15-101.png";
+    case "bp15-102":
+      return "../textures/bp15-102.png";
+    case "bp15-103 Evolved":
+      return "../textures/bp15-103.png";
+    case "bp15-104":
+      return "../textures/bp15-104.png";
+    case "bp15-105":
+      return "../textures/bp15-105.png";
+    case "bp15-106":
+      return "../textures/bp15-106.png";
+    case "bp15-107 Evolved":
+      return "../textures/bp15-107.png";
+    case "bp15-108":
+      return "../textures/bp15-108.png";
+    case "bp15-109":
+      return "../textures/bp15-109.png";
+    case "bp15-110":
+      return "../textures/bp15-110.png";
+    case "bp15-111":
+      return "../textures/bp15-111.png";
+    case "bp15-112":
+      return "../textures/bp15-112.png";
+    case "bp15-113":
+      return "../textures/bp15-113.png";
+    case "bp15-114 Evolved":
+      return "../textures/bp15-114.png";
+    case "bp15-115":
+      return "../textures/bp15-115.png";
+    case "bp15-116 Evolved":
+      return "../textures/bp15-116.png";
+    case "bp15-117":
+      return "../textures/bp15-117.png";
+    case "bp15-118":
+      return "../textures/bp15-118.png";
+    case "bp15-119":
+      return "../textures/bp15-119.png";
+    case "bp15-120 Evolved":
+      return "../textures/bp15-120.png";
+    case "bp15-121":
+      return "../textures/bp15-121.png";
+    case "bp15-122":
+      return "../textures/bp15-122.png";
+    case "bp15-123":
+      return "../textures/bp15-123.png";
+    case "bp15-124 Evolved":
+      return "../textures/bp15-124.png";
+    case "bp15-125":
+      return "../textures/bp15-125.png";
+    case "bp15-126":
+      return "../textures/bp15-126.png";
+
+    case "bp14-001":
+      return "../textures/bp14-001.png";
+    case "bp14-002 Evolved":
+      return "../textures/bp14-002.png";
+    case "bp14-003":
+      return "../textures/bp14-003.png";
+    case "bp14-004":
+      return "../textures/bp14-004.png";
+    case "bp14-005 Evolved":
+      return "../textures/bp14-005.png";
+    case "bp14-006":
+      return "../textures/bp14-006.png";
+    case "bp14-007":
+      return "../textures/bp14-007.png";
+    case "bp14-008":
+      return "../textures/bp14-008.png";
+    case "bp14-009 Evolved":
+      return "../textures/bp14-009.png";
+    case "bp14-010":
+      return "../textures/bp14-010.png";
+    case "bp14-011":
+      return "../textures/bp14-011.png";
+    case "bp14-012":
+      return "../textures/bp14-012.png";
+    case "bp14-013 Evolved":
+      return "../textures/bp14-013.png";
+    case "bp14-014":
+      return "../textures/bp14-014.png";
+    case "bp14-015":
+      return "../textures/bp14-015.png";
+    case "bp14-016":
+      return "../textures/bp14-016.png";
+    case "bp14-017":
+      return "../textures/bp14-017.png";
+    case "bp14-018":
+      return "../textures/bp14-018.png";
+    case "bp14-019 ADVANCED":
+      return "../textures/bp14-019.png";
+    case "bp14-020":
+      return "../textures/bp14-020.png";
+    case "bp14-021 Evolved":
+      return "../textures/bp14-021.png";
+    case "bp14-022":
+      return "../textures/bp14-022.png";
+    case "bp14-023 Evolved":
+      return "../textures/bp14-023.png";
+    case "bp14-024":
+      return "../textures/bp14-024.png";
+    case "bp14-025":
+      return "../textures/bp14-025.png";
+    case "bp14-026":
+      return "../textures/bp14-026.png";
+    case "bp14-027 Evolved":
+      return "../textures/bp14-027.png";
+    case "bp14-028":
+      return "../textures/bp14-028.png";
+    case "bp14-029":
+      return "../textures/bp14-029.png";
+    case "bp14-030":
+      return "../textures/bp14-030.png";
+    case "bp14-031 Evolved":
+      return "../textures/bp14-031.png";
+    case "bp14-032":
+      return "../textures/bp14-032.png";
+    case "bp14-033":
+      return "../textures/bp14-033.png";
+    case "bp14-034":
+      return "../textures/bp14-034.png";
+    case "bp14-035":
+      return "../textures/bp14-035.png";
+    case "bp14-036":
+      return "../textures/bp14-036.png";
+    case "bp14-037":
+      return "../textures/bp14-037.png";
+    case "bp14-038 Evolved":
+      return "../textures/bp14-038.png";
+    case "bp14-039":
+      return "../textures/bp14-039.png";
+    case "bp14-040 Evolved":
+      return "../textures/bp14-040.png";
+    case "bp14-041":
+      return "../textures/bp14-041.png";
+    case "bp14-042":
+      return "../textures/bp14-042.png";
+    case "bp14-043":
+      return "../textures/bp14-043.png";
+    case "bp14-044 Evolved":
+      return "../textures/bp14-044.png";
+    case "bp14-045":
+      return "../textures/bp14-045.png";
+    case "bp14-046":
+      return "../textures/bp14-046.png";
+    case "bp14-047":
+      return "../textures/bp14-047.png";
+    case "bp14-048 Evolved":
+      return "../textures/bp14-048.png";
+    case "bp14-049":
+      return "../textures/bp14-049.png";
+    case "bp14-050":
+      return "../textures/bp14-050.png";
+    case "bp14-051":
+      return "../textures/bp14-051.png";
+    case "bp14-052":
+      return "../textures/bp14-052.png";
+    case "bp14-053":
+      return "../textures/bp14-053.png";
+    case "bp14-054 Evolved":
+      return "../textures/bp14-054.png";
+    case "bp14-055":
+      return "../textures/bp14-055.png";
+    case "bp14-056":
+      return "../textures/bp14-056.png";
+    case "bp14-057 Evolved":
+      return "../textures/bp14-057.png";
+    case "bp14-058":
+      return "../textures/bp14-058.png";
+    case "bp14-059":
+      return "../textures/bp14-059.png";
+    case "bp14-060":
+      return "../textures/bp14-060.png";
+    case "bp14-061 Evolved":
+      return "../textures/bp14-061.png";
+    case "bp14-062":
+      return "../textures/bp14-062.png";
+    case "bp14-063":
+      return "../textures/bp14-063.png";
+    case "bp14-064":
+      return "../textures/bp14-064.png";
+    case "bp14-065 Evolved":
+      return "../textures/bp14-065.png";
+    case "bp14-066":
+      return "../textures/bp14-066.png";
+    case "bp14-067":
+      return "../textures/bp14-067.png";
+    case "bp14-068":
+      return "../textures/bp14-068.png";
+    case "bp14-069":
+      return "../textures/bp14-069.png";
+    case "bp14-070":
+      return "../textures/bp14-070.png";
+    case "bp14-071 ADVANCED":
+      return "../textures/bp14-071.png";
+    case "bp14-072":
+      return "../textures/bp14-072.png";
+    case "bp14-073 Evolved":
+      return "../textures/bp14-073.png";
+    case "bp14-074":
+      return "../textures/bp14-074.png";
+    case "bp14-075 Evolved":
+      return "../textures/bp14-075.png";
+    case "bp14-076":
+      return "../textures/bp14-076.png";
+    case "bp14-077":
+      return "../textures/bp14-077.png";
+    case "bp14-078":
+      return "../textures/bp14-078.png";
+    case "bp14-079 Evolved":
+      return "../textures/bp14-079.png";
+    case "bp14-080":
+      return "../textures/bp14-080.png";
+    case "bp14-081":
+      return "../textures/bp14-081.png";
+    case "bp14-082":
+      return "../textures/bp14-082.png";
+    case "bp14-083 Evolved":
+      return "../textures/bp14-083.png";
+    case "bp14-084":
+      return "../textures/bp14-084.png";
+    case "bp14-085":
+      return "../textures/bp14-085.png";
+    case "bp14-086":
+      return "../textures/bp14-086.png";
+    case "bp14-087":
+      return "../textures/bp14-087.png";
+    case "bp14-088":
+      return "../textures/bp14-088.png";
+    case "bp14-089 Evolved":
+      return "../textures/bp14-089.png";
+    case "bp14-090":
+      return "../textures/bp14-090.png";
+    case "bp14-091":
+      return "../textures/bp14-091.png";
+    case "bp14-092 Evolved":
+      return "../textures/bp14-092.png";
+    case "bp14-093":
+      return "../textures/bp14-093.png";
+    case "bp14-094":
+      return "../textures/bp14-094.png";
+    case "bp14-095":
+      return "../textures/bp14-095.png";
+    case "bp14-096 Evolved":
+      return "../textures/bp14-096.png";
+    case "bp14-097":
+      return "../textures/bp14-097.png";
+    case "bp14-098":
+      return "../textures/bp14-098.png";
+    case "bp14-099":
+      return "../textures/bp14-099.png";
+    case "bp14-100 Evolved":
+      return "../textures/bp14-100.png";
+    case "bp14-101":
+      return "../textures/bp14-101.png";
+    case "bp14-102":
+      return "../textures/bp14-102.png";
+    case "bp14-103":
+      return "../textures/bp14-103.png";
+    case "bp14-104":
+      return "../textures/bp14-104.png";
+    case "bp14-105":
+      return "../textures/bp14-105.png";
+    case "bp14-106 Evolved":
+      return "../textures/bp14-106.png";
+    case "bp14-107":
+      return "../textures/bp14-107.png";
+    case "bp14-108":
+      return "../textures/bp14-108.png";
+    case "bp14-109 Evolved":
+      return "../textures/bp14-109.png";
+    case "bp14-110":
+      return "../textures/bp14-110.png";
+    case "bp14-111":
+      return "../textures/bp14-111.png";
+    case "bp14-112":
+      return "../textures/bp14-112.png";
+    case "bp14-113 Evolved":
+      return "../textures/bp14-113.png";
+    case "bp14-114":
+      return "../textures/bp14-114.png";
+    case "bp14-115":
+      return "../textures/bp14-115.png";
+    case "bp14-116":
+      return "../textures/bp14-116.png";
+    case "bp14-117 Evolved":
+      return "../textures/bp14-117.png";
+    case "bp14-118":
+      return "../textures/bp14-118.png";
+    case "bp14-119":
+      return "../textures/bp14-119.png";
+
     case "Hokko Tarumae":
       return "../textures/ECP01-SP01EN.png";
     case "Hokko Tarumae Evolved":
@@ -4349,6 +4841,50 @@ export const cardImage = (cardName) => {
       return "../textures/PR-017EN.png";
     case "Angelic Barrage":
       return "../textures/PR-018EN.png";
+
+    case "bp15-pr19 TOKEN":
+      return "../textures/bp15-pr19.png";
+    case "bp15-pr20 TOKEN":
+      return "../textures/bp15-pr20.png";
+    case "bp15-t01 TOKEN":
+      return "../textures/bp15-t01.png";
+    case "bp15-t02 TOKEN":
+      return "../textures/bp15-t02.png";
+    case "bp15-t03 TOKEN":
+      return "../textures/bp15-t03.png";
+    case "bp15-pr21 TOKEN":
+      return "../textures/bp15-pr21.png";
+    case "bp15-pr22 TOKEN":
+      return "../textures/bp15-pr22.png";
+    case "bp15-pr23 TOKEN":
+      return "../textures/bp15-pr23.png";
+    case "bp15-pr24 TOKEN":
+      return "../textures/bp15-pr24.png";
+    case "bp15-pr25 TOKEN":
+      return "../textures/bp15-pr25.png";
+    case "bp15-t04 TOKEN":
+      return "../textures/bp15-t04.png";
+    case "bp15-pr26 TOKEN":
+      return "../textures/bp15-pr26.png";
+    case "bp15-pr27 TOKEN":
+      return "../textures/bp15-pr27.png";
+    case "bp15-pr28 TOKEN":
+      return "../textures/bp15-pr28.png";
+
+    case "bp14-t01 TOKEN":
+      return "../textures/bp14-t01.png";
+    case "bp14-t02 TOKEN":
+      return "../textures/bp14-t02.png";
+    case "bp14-t03 TOKEN":
+      return "../textures/bp14-t03.png";
+    case "bp14-t04 TOKEN":
+      return "../textures/bp14-t04.png";
+    case "bp14-t05 TOKEN":
+      return "../textures/bp14-t05.png";
+    case "bp14-t06 TOKEN":
+      return "../textures/bp14-t06.png";
+    case "bp14-t07 TOKEN":
+      return "../textures/bp14-t07.png";
 
     case "Anne's Summoning TOKEN":
       return "../textures/BP13-T01EN.png";

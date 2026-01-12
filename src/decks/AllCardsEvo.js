@@ -1,14 +1,84 @@
 export const allCardsEvo = [
+  "bp15-003 Evolved",
+  "bp15-005 Evolved",
+  "bp15-007 Evolved",
+  "bp15-011 Evolved",
+  "bp15-015 Evolved",
+
+  "bp15-022 Evolved",
+  "bp15-025 Evolved",
+  "bp15-029 Evolved",
+  "bp15-033 Evolved",
+
+  "bp15-040 Evolved",
+  "bp15-042 ADVANCED",
+  "bp15-044 Evolved",
+  "bp15-048 Evolved",
+  "bp15-052 Evolved",
+
+  "bp15-059 Evolved",
+  "bp15-061 Evolved",
+  "bp15-063 Evolved",
+  "bp15-067 Evolved",
+  "bp15-071 Evolved",
+
+  "bp15-077 Evolved",
+  "bp15-081 Evolved",
+  "bp15-085 Evolved",
+  "bp15-089 Evolved",
+
+  "bp15-095 Evolved",
+  "bp15-099 Evolved",
+  "bp15-103 Evolved",
+  "bp15-107 Evolved",
+
+  "bp15-114 Evolved",
+  "bp15-116 Evolved",
+  "bp15-120 Evolved",
+  "bp15-124 Evolved",
+
+  "bp14-002 Evolved",
+  "bp14-005 Evolved",
+  "bp14-009 Evolved",
+  "bp14-013 Evolved",
+
+  "bp14-019 ADVANCED",
+  "bp14-021 Evolved",
+  "bp14-023 Evolved",
+  "bp14-027 Evolved",
+  "bp14-031 Evolved",
+
+  "bp14-038 Evolved",
+  "bp14-040 Evolved",
+  "bp14-044 Evolved",
+  "bp14-048 Evolved",
+
+  "bp14-054 Evolved",
+  "bp14-057 Evolved",
+  "bp14-061 Evolved",
+  "bp14-065 Evolved",
+
+  "bp14-071 ADVANCED",
+  "bp14-073 Evolved",
+  "bp14-075 Evolved",
+  "bp14-079 Evolved",
+  "bp14-083 Evolved",
+
+  "bp14-089 Evolved",
+  "bp14-092 Evolved",
+  "bp14-096 Evolved",
+  "bp14-100 Evolved",
+
+  "bp14-106 Evolved",
+  "bp14-109 Evolved",
+  "bp14-113 Evolved",
+  "bp14-117 Evolved",
+
   "Hokko Tarumae Evolved",
-
   "Gentildonna Evolved",
-
   "Cheval Grand Evolved",
-
   "Neo Universe Evolved",
-
   "Hishi Miracle Evolved",
-
   "Satono Crown Evolved",
 
   // "A Super Successful Event!",
@@ -556,6 +626,85 @@ export const allCardsEvo = [
   "Goblin Evolved",
   "Goliath Evolved",
   "Healing Angel Evolved",
+];
+
+export const set15Evo = [
+  "bp15-003 Evolved",
+  "bp15-005 Evolved",
+  "bp15-007 Evolved",
+  "bp15-011 Evolved",
+  "bp15-015 Evolved",
+
+  "bp15-022 Evolved",
+  "bp15-025 Evolved",
+  "bp15-029 Evolved",
+  "bp15-033 Evolved",
+
+  "bp15-040 Evolved",
+  "bp15-042 ADVANCED",
+  "bp15-044 Evolved",
+  "bp15-048 Evolved",
+  "bp15-052 Evolved",
+
+  "bp15-059 Evolved",
+  "bp15-061 Evolved",
+  "bp15-063 Evolved",
+  "bp15-067 Evolved",
+  "bp15-071 Evolved",
+
+  "bp15-077 Evolved",
+  "bp15-081 Evolved",
+  "bp15-085 Evolved",
+  "bp15-089 Evolved",
+
+  "bp15-095 Evolved",
+  "bp15-099 Evolved",
+  "bp15-103 Evolved",
+  "bp15-107 Evolved",
+
+  "bp15-114 Evolved",
+  "bp15-116 Evolved",
+  "bp15-120 Evolved",
+  "bp15-124 Evolved",
+];
+
+export const set14Evo = [
+  "bp14-002 Evolved",
+  "bp14-005 Evolved",
+  "bp14-009 Evolved",
+  "bp14-013 Evolved",
+
+  "bp14-019 ADVANCED",
+  "bp14-021 Evolved",
+  "bp14-023 Evolved",
+  "bp14-027 Evolved",
+  "bp14-031 Evolved",
+
+  "bp14-038 Evolved",
+  "bp14-040 Evolved",
+  "bp14-044 Evolved",
+  "bp14-048 Evolved",
+
+  "bp14-054 Evolved",
+  "bp14-057 Evolved",
+  "bp14-061 Evolved",
+  "bp14-065 Evolved",
+
+  "bp14-071 ADVANCED",
+  "bp14-073 Evolved",
+  "bp14-075 Evolved",
+  "bp14-079 Evolved",
+  "bp14-083 Evolved",
+
+  "bp14-089 Evolved",
+  "bp14-092 Evolved",
+  "bp14-096 Evolved",
+  "bp14-100 Evolved",
+
+  "bp14-106 Evolved",
+  "bp14-109 Evolved",
+  "bp14-113 Evolved",
+  "bp14-117 Evolved",
 ];
 
 export const setUMA2Evo = [
@@ -1150,6 +1299,17 @@ export const set1Evo = [
 ];
 
 export const forestEvo = [
+  "bp15-003 Evolved",
+  "bp15-005 Evolved",
+  "bp15-007 Evolved",
+  "bp15-011 Evolved",
+  "bp15-015 Evolved",
+
+  "bp14-002 Evolved",
+  "bp14-005 Evolved",
+  "bp14-009 Evolved",
+  "bp14-013 Evolved",
+
   "Hokko Tarumae Evolved",
 
   "Sekka, Ninefold Blaze ADVANCED",
@@ -1230,6 +1390,17 @@ export const forestEvo = [
 ];
 
 export const swordEvo = [
+  "bp15-022 Evolved",
+  "bp15-025 Evolved",
+  "bp15-029 Evolved",
+  "bp15-033 Evolved",
+
+  "bp14-019 ADVANCED",
+  "bp14-021 Evolved",
+  "bp14-023 Evolved",
+  "bp14-027 Evolved",
+  "bp14-031 Evolved",
+
   "Gentildonna Evolved",
 
   "Albert, Thunderous Doom Evolved",
@@ -1311,6 +1482,17 @@ export const swordEvo = [
 ];
 
 export const runeEvo = [
+  "bp15-040 Evolved",
+  "bp15-042 ADVANCED",
+  "bp15-044 Evolved",
+  "bp15-048 Evolved",
+  "bp15-052 Evolved",
+
+  "bp14-038 Evolved",
+  "bp14-040 Evolved",
+  "bp14-044 Evolved",
+  "bp14-048 Evolved",
+
   "Cheval Grand Evolved",
 
   "Ghios, Sparkling Prism Evolved",
@@ -1392,6 +1574,17 @@ export const runeEvo = [
 ];
 
 export const dragonEvo = [
+  "bp15-059 Evolved",
+  "bp15-061 Evolved",
+  "bp15-063 Evolved",
+  "bp15-067 Evolved",
+  "bp15-071 Evolved",
+
+  "bp14-054 Evolved",
+  "bp14-057 Evolved",
+  "bp14-061 Evolved",
+  "bp14-065 Evolved",
+
   "Neo Universe Evolved",
 
   "Drache, Fiery Dragonlord Evolved",
@@ -1479,6 +1672,17 @@ export const dragonEvo = [
 ];
 
 export const abyssEvo = [
+  "bp15-077 Evolved",
+  "bp15-081 Evolved",
+  "bp15-085 Evolved",
+  "bp15-089 Evolved",
+
+  "bp14-071 ADVANCED",
+  "bp14-073 Evolved",
+  "bp14-075 Evolved",
+  "bp14-079 Evolved",
+  "bp14-083 Evolved",
+
   "Hishi Miracle Evolved",
 
   "Aluzard, Timeworn Vampire Evolved",
@@ -1557,6 +1761,16 @@ export const abyssEvo = [
 ];
 
 export const havenEvo = [
+  "bp15-095 Evolved",
+  "bp15-099 Evolved",
+  "bp15-103 Evolved",
+  "bp15-107 Evolved",
+
+  "bp14-089 Evolved",
+  "bp14-092 Evolved",
+  "bp14-096 Evolved",
+  "bp14-100 Evolved",
+
   "Satono Crown Evolved",
 
   "Jeanne, Despair's Maiden Evolved",
@@ -1634,6 +1848,16 @@ export const havenEvo = [
 ];
 
 export const neutralEvo = [
+  "bp15-114 Evolved",
+  "bp15-116 Evolved",
+  "bp15-120 Evolved",
+  "bp15-124 Evolved",
+
+  "bp14-106 Evolved",
+  "bp14-109 Evolved",
+  "bp14-113 Evolved",
+  "bp14-117 Evolved",
+
   // "A Super Successful Event!",
   // "Hungry for a Miracle",
   // "At the End of the Day",
