@@ -88,22 +88,34 @@ export default function EnemyUI() {
 
   const getColorFromLeader = (name) => {
     switch (name) {
+      case "SiLong":
+        return "linear-gradient(to right, rgb(252, 74, 26), rgb(247, 183, 51))";
+      case "Drache":
+        return "linear-gradient(to right, rgb(252, 74, 26), rgb(247, 183, 51))";
       case "Forte":
         return "linear-gradient(to right, rgb(252, 74, 26), rgb(247, 183, 51))";
       case "Galmieux":
         return "linear-gradient(to right, rgb(252, 74, 26), rgb(247, 183, 51))";
       case "Jeanne":
         return "linear-gradient(to top, #c79081 0%, #dfa579 100%)";
-      case "Ramina":
+      case "Rola":
         return "linear-gradient(to top, #c79081 0%, #dfa579 100%)";
       case "CC":
         return "linear-gradient(-60deg, #16a085 0%, #f4d03f 100%)";
       case "Orchis":
         return "linear-gradient(-60deg, #16a085 0%, #f4d03f 100%)";
-      case "Dionne":
+      case "Sekka":
+        return "linear-gradient(-60deg, #16a085 0%, #f4d03f 100%)";
+      case "Hozumi":
+        return "linear-gradient(-60deg, #16a085 0%, #f4d03f 100%)";
+      case "Bunny":
         return "linear-gradient(110.3deg, rgb(238, 179, 123) 8.7%, rgb(216, 103, 77) 47.5%, rgb(114, 43, 54) 89.1%)";
       case "Albert":
         return "linear-gradient(110.3deg, rgb(238, 179, 123) 8.7%, rgb(216, 103, 77) 47.5%, rgb(114, 43, 54) 89.1%)";
+      case "Icy":
+        return "linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(247, 30, 30) 100.3%)";
+      case "Anisage":
+        return "linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(247, 30, 30) 100.3%)";
       case "Vania":
         return "linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(247, 30, 30) 100.3%)";
       case "Mono":
@@ -112,6 +124,8 @@ export default function EnemyUI() {
         return "linear-gradient(181deg, rgb(2, 0, 97) 15%, rgb(97, 149, 219) 158.5%)";
       case "Daria":
         return "linear-gradient(181deg, rgb(2, 0, 97) 15%, rgb(97, 149, 219) 158.5%)";
+      case "Manhatten Cafe":
+        return "linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(247, 30, 30) 100.3%)";
       case "Maruzensky":
         return "linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(247, 30, 30) 100.3%)";
       case "Rin":
@@ -126,30 +140,48 @@ export default function EnemyUI() {
   };
   const getClassFromLeader = (name) => {
     switch (name) {
+      case "SiLong":
+        return dragon;
+      case "Drache":
+        return dragon;
       case "Forte":
         return dragon;
       case "Galmieux":
         return dragon;
       case "Jeanne":
         return haven;
-      case "Ramina":
+      case "Rola":
         return haven;
+      case "Sekka":
+        return forest;
+      case "Hozumi":
+        return forest;
       case "CC":
         return forest;
       case "Orchis":
         return forest;
-      case "Dionne":
+      case "Bunny":
         return sword;
       case "Albert":
         return sword;
+      case "Icy":
+        return abyss;
+      case "Anisage":
+        return abyss;
       case "Vania":
         return abyss;
       case "Mono":
         return abyss;
+      case "Lishenna":
+        return rune;
+      case "Ceridwen":
+        return rune;
       case "Kuon":
         return rune;
       case "Daria":
         return rune;
+      case "Manhatten Cafe":
+        return uma;
       case "Maruzensky":
         return uma;
       case "Rin":
