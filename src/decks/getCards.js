@@ -1,495 +1,495 @@
 export const cardImage = (cardName) => {
   switch (cardName) {
-    case "bp15-001":
+    case "Izudia, Unkilling Annihilation":
       return "../textures/bp15-001.png";
-    case "bp15-002":
+    case "Amataz, Reverse Blader":
       return "../textures/bp15-002.png";
-    case "bp15-003 Evolved":
+    case "Amataz, Reverse Blader Evolved":
       return "../textures/bp15-003.png";
-    case "bp15-004":
+    case "Piercye, Queen of Frost":
       return "../textures/bp15-004.png";
-    case "bp15-005 Evolved":
+    case "Piercye, Queen of Frost Evolved":
       return "../textures/bp15-005.png";
-    case "bp15-006":
+    case "Inauspicious Puppeteer":
       return "../textures/bp15-006.png";
-    case "bp15-007 Evolved":
+    case "Inauspicious Puppeteer Evolved":
       return "../textures/bp15-007.png";
-    case "bp15-008":
+    case "Erosive Annihilation":
       return "../textures/bp15-008.png";
-    case "bp15-009":
+    case "Rejuvenating Resurrection":
       return "../textures/bp15-009.png";
-    case "bp15-010":
+    case "Cryptid Keeper":
       return "../textures/bp15-010.png";
-    case "bp15-011 Evolved":
+    case "Cryptid Keeper Evolved":
       return "../textures/bp15-011.png";
-    case "bp15-012":
+    case "Adherent of Annihilation":
       return "../textures/bp15-012.png";
-    case "bp15-013":
+    case "Fairy Healer":
       return "../textures/bp15-013.png";
-    case "bp15-014":
+    case "Hermit of Unkilling":
       return "../textures/bp15-014.png";
-    case "bp15-015 Evolved":
+    case "Hermit of Unkilling Evolved":
       return "../textures/bp15-015.png";
-    case "bp15-016":
+    case "Horned Beastie":
       return "../textures/bp15-016.png";
-    case "bp15-017":
+    case "Bouquet Fairy":
       return "../textures/bp15-017.png";
-    case "bp15-018":
+    case "Emerald Wildfox":
       return "../textures/bp15-018.png";
-    case "bp15-019":
+    case "Wind Fairy":
       return "../textures/bp15-019.png";
-    case "bp15-020":
+    case "Octrice, Hollow Usurpation":
       return "../textures/bp15-020.png";
-    case "bp15-021":
+    case "Kagemitsu, Lost Samurai":
       return "../textures/bp15-021.png";
-    case "bp15-022 Evolved":
+    case "Kagemitsu, Lost Samurai Evolved":
       return "../textures/bp15-022.png";
-    case "bp15-023":
+    case "Ralmia, Astrowing":
       return "../textures/bp15-023.png";
-    case "bp15-024":
+    case "Arsène Lupin":
       return "../textures/bp15-024.png";
-    case "bp15-025 Evolved":
+    case "Arsène Lupin Evolved":
       return "../textures/bp15-025.png";
-    case "bp15-026":
+    case "Ultimate Hollow":
       return "../textures/bp15-026.png";
-    case "bp15-027":
+    case "Supersonic Breakthrough":
       return "../textures/bp15-027.png";
-    case "bp15-028":
+    case "Adherent of Hollowness":
       return "../textures/bp15-028.png";
-    case "bp15-029 Evolved":
+    case "Adherent of Hollowness Evolved":
       return "../textures/bp15-029.png";
-    case "bp15-030":
+    case "Sword General":
       return "../textures/bp15-030.png";
-    case "bp15-031":
+    case "Serration Wave":
       return "../textures/bp15-031.png";
-    case "bp15-032":
+    case "Penguin Guardian":
       return "../textures/bp15-032.png";
-    case "bp15-033 Evolved":
+    case "Penguin Guardian Evolved":
       return "../textures/bp15-033.png";
-    case "bp15-034":
+    case "Hermit of Usurpation":
       return "../textures/bp15-034.png";
-    case "bp15-035":
+    case "Chivalrous Bandit":
       return "../textures/bp15-035.png";
-    case "bp15-036":
+    case "Flying Messenger Squirrel":
       return "../textures/bp15-036.png";
-    case "bp15-037":
+    case "Brave Buccaneer":
       return "../textures/bp15-037.png";
-    case "bp15-038":
+    case "Raio, Truthful Elimination":
       return "../textures/bp15-038.png";
-    case "bp15-039":
+    case "Lishenna, Melodious Destruction":
       return "../textures/bp15-039.png";
-    case "bp15-040 Evolved":
+    case "Lishenna, Melodious Destruction Evolved":
       return "../textures/bp15-040.png";
-    case "bp15-041":
+    case "Kuon, Wuxing Master":
       return "../textures/bp15-041.png";
-    case "bp15-042 ADVANCED":
+    case "Noble Shikigami ADVANCED":
       return "../textures/bp15-042.png";
-    case "bp15-043":
+    case "Acid Golem":
       return "../textures/bp15-043.png";
-    case "bp15-044 Evolved":
+    case "Acid Golem Evolved":
       return "../textures/bp15-044.png";
-    case "bp15-045":
+    case "Melody's Return":
       return "../textures/bp15-045.png";
-    case "bp15-046":
+    case "Secrets of Onmyodo":
       return "../textures/bp15-046.png";
-    case "bp15-047":
+    case "Adherent of Elimination":
       return "../textures/bp15-047.png";
-    case "bp15-048 Evolved":
+    case "Adherent of Elimination Evolved":
       return "../textures/bp15-048.png";
-    case "bp15-049":
+    case "Adherent of Melody":
       return "../textures/bp15-049.png";
-    case "bp15-050":
+    case "Elimination Unleashed":
       return "../textures/bp15-050.png";
-    case "bp15-051":
+    case "Scroll Wizard":
       return "../textures/bp15-051.png";
-    case "bp15-052 Evolved":
+    case "Scroll Wizard Evolved":
       return "../textures/bp15-052.png";
-    case "bp15-053":
+    case "Hermit of Truth":
       return "../textures/bp15-053.png";
-    case "bp15-054":
+    case "Hermit of Destruction":
       return "../textures/bp15-054.png";
-    case "bp15-055":
+    case "Crystal Witch":
       return "../textures/bp15-055.png";
-    case "bp15-056":
+    case "Twinblade Mage":
       return "../textures/bp15-056.png";
-    case "bp15-057":
+    case "Galmieux, Ardent Disdain":
       return "../textures/bp15-057.png";
-    case "bp15-058":
+    case "Filene, Blizzardous Heart":
       return "../textures/bp15-058.png";
-    case "bp15-059 Evolved":
+    case "Filene, Blizzardous Heart Evolved":
       return "../textures/bp15-059.png";
-    case "bp15-060":
+    case "Celestial Dragoon":
       return "../textures/bp15-060.png";
-    case "bp15-061 Evolved":
+    case "Celestial Dragoon Evolved":
       return "../textures/bp15-061.png";
-    case "bp15-062":
+    case "Mermaid of Punishment":
       return "../textures/bp15-062.png";
-    case "bp15-063 Evolved":
+    case "Mermaid of Punishment Evolved":
       return "../textures/bp15-063.png";
-    case "bp15-064":
+    case "Ardent Torch":
       return "../textures/bp15-064.png";
-    case "bp15-065":
+    case "Whitefrost Blizzard":
       return "../textures/bp15-065.png";
-    case "bp15-066":
+    case "Adherent of Ardor":
       return "../textures/bp15-066.png";
-    case "bp15-067 Evolved":
+    case "Adherent of Ardor Evolved":
       return "../textures/bp15-067.png";
-    case "bp15-068":
+    case "Windswept Dragonewt":
       return "../textures/bp15-068.png";
-    case "bp15-069":
+    case "Tropical Mermaid":
       return "../textures/bp15-069.png";
-    case "bp15-070":
+    case "Tiniest Dragon":
       return "../textures/bp15-070.png";
-    case "bp15-071 Evolved":
+    case "Tiniest Dragon Evolved":
       return "../textures/bp15-071.png";
-    case "bp15-072":
+    case "Hermit of Disdain":
       return "../textures/bp15-072.png";
-    case "bp15-073":
+    case "Beginner Dragoon":
       return "../textures/bp15-073.png";
-    case "bp15-074":
+    case "Orbed Cancer":
       return "../textures/bp15-074.png";
-    case "bp15-075":
+    case "Whimsical Mermaid":
       return "../textures/bp15-075.png";
-    case "bp15-076":
+    case "Valnareik, Lustful Desire":
       return "../textures/bp15-076.png";
-    case "bp15-077 Evolved":
+    case "Valnareik, Lustful Desire Evolved":
       return "../textures/bp15-077.png";
-    case "bp15-078":
+    case "Rulenye, Screaming Silence":
       return "../textures/bp15-078.png";
-    case "bp15-079":
+    case "Ginsetsu, Terror Banquet":
       return "../textures/bp15-079.png";
-    case "bp15-080":
+    case "Yuzuki, Bloodlord":
       return "../textures/bp15-080.png";
-    case "bp15-081 Evolved":
+    case "Yuzuki, Bloodlord Evolved":
       return "../textures/bp15-081.png";
-    case "bp15-082":
+    case "Spiteful Screams":
       return "../textures/bp15-082.png";
-    case "bp15-083":
+    case "A Hellish Banquet":
       return "../textures/bp15-083.png";
-    case "bp15-084":
+    case "Adherent of Desire":
       return "../textures/bp15-084.png";
-    case "bp15-085 Evolved":
+    case "Adherent of Desire Evolved":
       return "../textures/bp15-085.png";
-    case "bp15-086":
+    case "Loathing Desire":
       return "../textures/bp15-086.png";
-    case "bp15-087":
+    case "Crimson Virtue":
       return "../textures/bp15-087.png";
-    case "bp15-088":
+    case "Adherent of Screams":
       return "../textures/bp15-088.png";
-    case "bp15-089 Evolved":
+    case "Adherent of Screams Evolved":
       return "../textures/bp15-089.png";
-    case "bp15-090":
+    case "Hermit of Lust":
       return "../textures/bp15-090.png";
-    case "bp15-091":
+    case "Hermit of Silence":
       return "../textures/bp15-091.png";
-    case "bp15-092":
+    case "Krampus":
       return "../textures/bp15-092.png";
-    case "bp15-093":
+    case "Astral Projection":
       return "../textures/bp15-093.png";
-    case "bp15-094":
+    case "Marwynn, Repose of Despair":
       return "../textures/bp15-094.png";
-    case "bp15-095 Evolved":
+    case "Marwynn, Repose of Despair Evolved":
       return "../textures/bp15-095.png";
-    case "bp15-096":
+    case "Wilbert, Luminous Paladin":
       return "../textures/bp15-096.png";
-    case "bp15-097":
+    case "Sarissa, Luxflash Spear":
       return "../textures/bp15-097.png";
-    case "bp15-098":
+    case "Shiro, Cursed Wings":
       return "../textures/bp15-098.png";
-    case "bp15-099 Evolved":
+    case "Shiro, Cursed Wings Evolved":
       return "../textures/bp15-099.png";
-    case "bp15-100":
+    case "Cyclical Fate":
       return "../textures/bp15-100.png";
-    case "bp15-101":
+    case "Perpetual Despair":
       return "../textures/bp15-101.png";
-    case "bp15-102":
+    case "Adherent of Despair":
       return "../textures/bp15-102.png";
-    case "bp15-103 Evolved":
+    case "Adherent of Despair Evolved":
       return "../textures/bp15-103.png";
-    case "bp15-104":
+    case "Zeno, Paradoxical Shield":
       return "../textures/bp15-104.png";
-    case "bp15-105":
+    case "Crusader's Rallying Cry":
       return "../textures/bp15-105.png";
-    case "bp15-106":
+    case "Temple Healer":
       return "../textures/bp15-106.png";
-    case "bp15-107 Evolved":
+    case "Temple Healer Evolved":
       return "../textures/bp15-107.png";
-    case "bp15-108":
+    case "Hermit of Repose":
       return "../textures/bp15-108.png";
-    case "bp15-109":
+    case "Hardplume Warrior":
       return "../textures/bp15-109.png";
-    case "bp15-110":
+    case "Caladrius":
       return "../textures/bp15-110.png";
-    case "bp15-111":
+    case "Sacred Gavel":
       return "../textures/bp15-111.png";
-    case "bp15-112":
+    case "Mjerrabaine, Great One":
       return "../textures/bp15-112.png";
-    case "bp15-113":
+    case "Gilnelise, Ravenous Craving":
       return "../textures/bp15-113.png";
-    case "bp15-114 Evolved":
+    case "Gilnelise, Ravenous Craving Evolved":
       return "../textures/bp15-114.png";
-    case "bp15-115":
+    case "Arael":
       return "../textures/bp15-115.png";
-    case "bp15-116 Evolved":
+    case "Arael Evolved":
       return "../textures/bp15-116.png";
-    case "bp15-117":
+    case "Thunder God of the Tempest":
       return "../textures/bp15-117.png";
-    case "bp15-118":
+    case "Resolve of the Fallen":
       return "../textures/bp15-118.png";
-    case "bp15-119":
+    case "Mechanical Analyzer":
       return "../textures/bp15-119.png";
-    case "bp15-120 Evolved":
+    case "Mechanical Analyzer Evolved":
       return "../textures/bp15-120.png";
-    case "bp15-121":
+    case "Messenger of the Skies":
       return "../textures/bp15-121.png";
-    case "bp15-122":
+    case "Merciless Voiding":
       return "../textures/bp15-122.png";
-    case "bp15-123":
+    case "Nomadic Conductor":
       return "../textures/bp15-123.png";
-    case "bp15-124 Evolved":
+    case "Nomadic Conductor Evolved":
       return "../textures/bp15-124.png";
-    case "bp15-125":
+    case "Mountain Gigas":
       return "../textures/bp15-125.png";
-    case "bp15-126":
+    case "Fluffy Angel":
       return "../textures/bp15-126.png";
 
-    case "bp14-001":
+    case "Hozumi, Enchanting Hostess":
       return "../textures/bp14-001.png";
-    case "bp14-002 Evolved":
+    case "Hozumi, Enchanting Hostess Evolved":
       return "../textures/bp14-002.png";
-    case "bp14-003":
+    case "Levon, Scentbound Sword":
       return "../textures/bp14-003.png";
-    case "bp14-004":
+    case "Bastion of Seasons":
       return "../textures/bp14-004.png";
-    case "bp14-005 Evolved":
+    case "Bastion of Seasons Evolved":
       return "../textures/bp14-005.png";
-    case "bp14-006":
+    case "Spirit of the Spring":
       return "../textures/bp14-006.png";
-    case "bp14-007":
+    case "Illusions of Comfort":
       return "../textures/bp14-007.png";
-    case "bp14-008":
+    case "Elven Waitress":
       return "../textures/bp14-008.png";
-    case "bp14-009 Evolved":
+    case "Elven Waitress Evolved":
       return "../textures/bp14-009.png";
-    case "bp14-010":
+    case "Tinkering Shopkeeper":
       return "../textures/bp14-010.png";
-    case "bp14-011":
+    case "Craftsman's Pride":
       return "../textures/bp14-011.png";
-    case "bp14-012":
+    case "Karakuri Servant":
       return "../textures/bp14-012.png";
-    case "bp14-013 Evolved":
+    case "Karakuri Servant Evolved":
       return "../textures/bp14-013.png";
-    case "bp14-014":
+    case "Fairylight Guide":
       return "../textures/bp14-014.png";
-    case "bp14-015":
+    case "Woodland Pest Control":
       return "../textures/bp14-015.png";
-    case "bp14-016":
+    case "Windswept Lancer":
       return "../textures/bp14-016.png";
-    case "bp14-017":
+    case "Elven Craftsmanship":
       return "../textures/bp14-017.png";
-    case "bp14-018":
+    case "Taketsumi, Aconite Paladin":
       return "../textures/bp14-018.png";
-    case "bp14-019 ADVANCED":
+    case "Taketsumi, Beginning of Paradise ADVANCED":
       return "../textures/bp14-019.png";
-    case "bp14-020":
+    case "Mars, Belligerent Flame":
       return "../textures/bp14-020.png";
-    case "bp14-021 Evolved":
+    case "Mars, Belligerent Flame Evolved":
       return "../textures/bp14-021.png";
-    case "bp14-022":
+    case "Jiemon, Thief Lord":
       return "../textures/bp14-022.png";
-    case "bp14-023 Evolved":
+    case "Jiemon, Thief Lord Evolved":
       return "../textures/bp14-023.png";
-    case "bp14-024":
+    case "Bumpkin Recruit":
       return "../textures/bp14-024.png";
-    case "bp14-025":
+    case "Hero of the Hunt":
       return "../textures/bp14-025.png";
-    case "bp14-026":
+    case "Masterful Musician":
       return "../textures/bp14-026.png";
-    case "bp14-027 Evolved":
+    case "Masterful Musician Evolved":
       return "../textures/bp14-027.png";
-    case "bp14-028":
+    case "War Hero":
       return "../textures/bp14-028.png";
-    case "bp14-029":
+    case "Noble Shieldmaiden":
       return "../textures/bp14-029.png";
-    case "bp14-030":
+    case "Front Desk Frog":
       return "../textures/bp14-030.png";
-    case "bp14-031 Evolved":
+    case "Front Desk Frog Evolved":
       return "../textures/bp14-031.png";
-    case "bp14-032":
+    case "Violent Soldier":
       return "../textures/bp14-032.png";
-    case "bp14-033":
+    case "Hasty Axeman":
       return "../textures/bp14-033.png";
-    case "bp14-034":
+    case "Night on the Town":
       return "../textures/bp14-034.png";
-    case "bp14-035":
+    case "Haggler's Gambit":
       return "../textures/bp14-035.png";
-    case "bp14-036":
+    case "Yukishima, Master Biographer":
       return "../textures/bp14-036.png";
-    case "bp14-037":
+    case "Riley, Astral Shaman":
       return "../textures/bp14-037.png";
-    case "bp14-038 Evolved":
+    case "Riley, Astral Shaman Evolved":
       return "../textures/bp14-038.png";
-    case "bp14-039":
+    case "Bergent, Layered Sorceress":
       return "../textures/bp14-039.png";
-    case "bp14-040 Evolved":
+    case "Bergent, Layered Sorceress Evolved":
       return "../textures/bp14-040.png";
-    case "bp14-041":
+    case "Arctic Chimera":
       return "../textures/bp14-041.png";
-    case "bp14-042":
+    case "Story of a Lifetime":
       return "../textures/bp14-042.png";
-    case "bp14-043":
+    case "Orchestral Mage":
       return "../textures/bp14-043.png";
-    case "bp14-044 Evolved":
+    case "Orchestral Mage Evolved":
       return "../textures/bp14-044.png";
-    case "bp14-045":
+    case "Tempestuous Alchemist":
       return "../textures/bp14-045.png";
-    case "bp14-046":
+    case "Dream Come True":
       return "../textures/bp14-046.png";
-    case "bp14-047":
+    case "Chakram Wizard":
       return "../textures/bp14-047.png";
-    case "bp14-048 Evolved":
+    case "Chakram Wizard Evolved":
       return "../textures/bp14-048.png";
-    case "bp14-049":
+    case "Owl Receptionist":
       return "../textures/bp14-049.png";
-    case "bp14-050":
+    case "Earthen Fist":
       return "../textures/bp14-050.png";
-    case "bp14-051":
+    case "Magical Reserves":
       return "../textures/bp14-051.png";
-    case "bp14-052":
+    case "Grand Spire":
       return "../textures/bp14-052.png";
-    case "bp14-053":
+    case "Si Long, Draconic God-Queen":
       return "../textures/bp14-053.png";
-    case "bp14-054 Evolved":
+    case "Si Long, Draconic God-Queen Evolved":
       return "../textures/bp14-054.png";
-    case "bp14-055":
+    case "Sacred Springs Dragon":
       return "../textures/bp14-055.png";
-    case "bp14-056":
+    case "Frostbite Dragon":
       return "../textures/bp14-056.png";
-    case "bp14-057 Evolved":
+    case "Frostbite Dragon Evolved":
       return "../textures/bp14-057.png";
-    case "bp14-058":
+    case "Dragonskull Bludgeoner":
       return "../textures/bp14-058.png";
-    case "bp14-059":
+    case "Soothing Dragonspring":
       return "../textures/bp14-059.png";
-    case "bp14-060":
+    case "Dragonfolk Stoker":
       return "../textures/bp14-060.png";
-    case "bp14-061 Evolved":
+    case "Dragonfolk Stoker Evolved":
       return "../textures/bp14-061.png";
-    case "bp14-062":
+    case "Leviathan, the Furious":
       return "../textures/bp14-062.png";
-    case "bp14-063":
+    case "March of the Dragonspring":
       return "../textures/bp14-063.png";
-    case "bp14-064":
+    case "Dragon Breeder":
       return "../textures/bp14-064.png";
-    case "bp14-065 Evolved":
+    case "Dragon Breeder Evolved":
       return "../textures/bp14-065.png";
-    case "bp14-066":
+    case "Dragon-Drawn Carriage":
       return "../textures/bp14-066.png";
-    case "bp14-067":
+    case "Loyal Sea Serpent":
       return "../textures/bp14-067.png";
-    case "bp14-068":
+    case "Mermaid Song":
       return "../textures/bp14-068.png";
-    case "bp14-069":
+    case "Aquatic Authority":
       return "../textures/bp14-069.png";
-    case "bp14-070":
+    case "Itsurugi, Eager Admirer":
       return "../textures/bp14-070.png";
-    case "bp14-071 ADVANCED":
+    case "Itsurugi, End of Paradise ADVANCED":
       return "../textures/bp14-071.png";
-    case "bp14-072":
+    case "Paracelise, Demon of Greed":
       return "../textures/bp14-072.png";
-    case "bp14-073 Evolved":
+    case "Paracelise, Demon of Greed Evolved":
       return "../textures/bp14-073.png";
-    case "bp14-074":
+    case "Anisage, Lost Forsaken":
       return "../textures/bp14-074.png";
-    case "bp14-075 Evolved":
+    case "Anisage, Lost Forsaken Evolved":
       return "../textures/bp14-075.png";
-    case "bp14-076":
+    case "Frigid Necromancer":
       return "../textures/bp14-076.png";
-    case "bp14-077":
+    case "Eternal Contract":
       return "../textures/bp14-077.png";
-    case "bp14-078":
+    case "Briared Vampire":
       return "../textures/bp14-078.png";
-    case "bp14-079 Evolved":
+    case "Briared Vampire Evolved":
       return "../textures/bp14-079.png";
-    case "bp14-080":
+    case "Room Service Demon":
       return "../textures/bp14-080.png";
-    case "bp14-081":
+    case "Undying Resolve":
       return "../textures/bp14-081.png";
-    case "bp14-082":
+    case "Silvernail Blaster":
       return "../textures/bp14-082.png";
-    case "bp14-083 Evolved":
+    case "Silvernail Blaster Evolved":
       return "../textures/bp14-083.png";
-    case "bp14-084":
+    case "Parkour Werewolf":
       return "../textures/bp14-084.png";
-    case "bp14-085":
+    case "Bat Usher":
       return "../textures/bp14-085.png";
-    case "bp14-086":
+    case "Creeping Malice":
       return "../textures/bp14-086.png";
-    case "bp14-087":
+    case "Full Moon Leap":
       return "../textures/bp14-087.png";
-    case "bp14-088":
+    case "All-Feeling Divine":
       return "../textures/bp14-088.png";
-    case "bp14-089 Evolved":
+    case "All-Feeling Divine Evolved":
       return "../textures/bp14-089.png";
-    case "bp14-090":
+    case "Shion, Immortal Aegis":
       return "../textures/bp14-090.png";
-    case "bp14-091":
+    case "Nekhbet":
       return "../textures/bp14-091.png";
-    case "bp14-092 Evolved":
+    case "Nekhbet Evolved":
       return "../textures/bp14-092.png";
-    case "bp14-093":
+    case "Impious Bishop":
       return "../textures/bp14-093.png";
-    case "bp14-094":
+    case "Chamber of Cleansing":
       return "../textures/bp14-094.png";
-    case "bp14-095":
+    case "Winged Gatekeeper":
       return "../textures/bp14-095.png";
-    case "bp14-096 Evolved":
+    case "Winged Gatekeeper Evolved":
       return "../textures/bp14-096.png";
-    case "bp14-097":
+    case "Boomerang Sister":
       return "../textures/bp14-097.png";
-    case "bp14-098":
+    case "Spiritual Blow":
       return "../textures/bp14-098.png";
-    case "bp14-099":
+    case "Twinblade Featherfolk":
       return "../textures/bp14-099.png";
-    case "bp14-100 Evolved":
+    case "Twinblade Featherfolk Evolved":
       return "../textures/bp14-100.png";
-    case "bp14-101":
+    case "Fox of Fortune":
       return "../textures/bp14-101.png";
-    case "bp14-102":
+    case "Pegasus Knight":
       return "../textures/bp14-102.png";
-    case "bp14-103":
+    case "Al-mi'raj Defender":
       return "../textures/bp14-103.png";
-    case "bp14-104":
+    case "White Eagle Baptism":
       return "../textures/bp14-104.png";
-    case "bp14-105":
+    case "Magna Saber":
       return "../textures/bp14-105.png";
-    case "bp14-106 Evolved":
+    case "Magna Saber Evolved":
       return "../textures/bp14-106.png";
-    case "bp14-107":
+    case "Flame and Glass, Duality":
       return "../textures/bp14-107.png";
-    case "bp14-108":
+    case "Glistering Angel":
       return "../textures/bp14-108.png";
-    case "bp14-109 Evolved":
+    case "Glistering Angel Evolved":
       return "../textures/bp14-109.png";
-    case "bp14-110":
+    case "Angel's Blessing":
       return "../textures/bp14-110.png";
-    case "bp14-111":
+    case "Magna Transformation":
       return "../textures/bp14-111.png";
-    case "bp14-112":
+    case "Gunslinger Automaton":
       return "../textures/bp14-112.png";
-    case "bp14-113 Evolved":
+    case "Gunslinger Automaton Evolved":
       return "../textures/bp14-113.png";
-    case "bp14-114":
+    case "Ogre Weaponmaster":
       return "../textures/bp14-114.png";
-    case "bp14-115":
+    case "Stay in Paradise":
       return "../textures/bp14-115.png";
-    case "bp14-116":
+    case "Brave Goblin":
       return "../textures/bp14-116.png";
-    case "bp14-117 Evolved":
+    case "Brave Goblin Evolved":
       return "../textures/bp14-117.png";
-    case "bp14-118":
+    case "Torchbearing Guide":
       return "../textures/bp14-118.png";
-    case "bp14-119":
+    case "Goblin Assault":
       return "../textures/bp14-119.png";
 
     case "Hokko Tarumae":
@@ -4842,48 +4842,48 @@ export const cardImage = (cardName) => {
     case "Angelic Barrage":
       return "../textures/PR-018EN.png";
 
-    case "bp15-pr19 TOKEN":
+    case "Annihilating Onslaught TOKEN":
       return "../textures/bp15-pr19.png";
-    case "bp15-pr20 TOKEN":
+    case "Remnant of Hollowness TOKEN":
       return "../textures/bp15-pr20.png";
-    case "bp15-t01 TOKEN":
+    case "Gilded Blade TOKEN":
       return "../textures/bp15-t01.png";
-    case "bp15-t02 TOKEN":
+    case "Gilded Goblet TOKEN":
       return "../textures/bp15-t02.png";
-    case "bp15-t03 TOKEN":
+    case "Gilded Boots TOKEN":
       return "../textures/bp15-t03.png";
-    case "bp15-pr21 TOKEN":
+    case "Ersatz Elimination TOKEN":
       return "../textures/bp15-pr21.png";
-    case "bp15-pr22 TOKEN":
+    case "Melodious Monody TOKEN":
       return "../textures/bp15-pr22.png";
-    case "bp15-pr23 TOKEN":
+    case "Fangs of Ardent Destruction TOKEN":
       return "../textures/bp15-pr23.png";
-    case "bp15-pr24 TOKEN":
+    case "Wings of Desire TOKEN":
       return "../textures/bp15-pr24.png";
-    case "bp15-pr25 TOKEN":
+    case "Scream Diffusion TOKEN":
       return "../textures/bp15-pr25.png";
-    case "bp15-t04 TOKEN":
+    case "Rulenye, Screaming Echo TOKEN":
       return "../textures/bp15-t04.png";
-    case "bp15-pr26 TOKEN":
+    case "Torrent of Despair TOKEN":
       return "../textures/bp15-pr26.png";
-    case "bp15-pr27 TOKEN":
+    case "Great Testimony TOKEN":
       return "../textures/bp15-pr27.png";
-    case "bp15-pr28 TOKEN":
+    case "Ravenous Sweetness TOKEN":
       return "../textures/bp15-pr28.png";
 
-    case "bp14-t01 TOKEN":
+    case "Sootspawn TOKEN":
       return "../textures/bp14-t01.png";
-    case "bp14-t02 TOKEN":
+    case "Glittering Gold TOKEN":
       return "../textures/bp14-t02.png";
-    case "bp14-t03 TOKEN":
+    case "Flame General's Regalia TOKEN":
       return "../textures/bp14-t03.png";
-    case "bp14-t04 TOKEN":
+    case "Tidal Tyranny TOKEN":
       return "../textures/bp14-t04.png";
-    case "bp14-t05 TOKEN":
+    case "Wolfling's Struggle TOKEN":
       return "../textures/bp14-t05.png";
-    case "bp14-t06 TOKEN":
+    case "Fox of Invitation TOKEN":
       return "../textures/bp14-t06.png";
-    case "bp14-t07 TOKEN":
+    case "Mercurial Might TOKEN":
       return "../textures/bp14-t07.png";
 
     case "Anne's Summoning TOKEN":
