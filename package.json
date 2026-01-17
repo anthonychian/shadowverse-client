@@ -9,6 +9,7 @@
     "@babel/plugin-transform-private-property-in-object": "^7.28.6",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
+    "@mediapipe/tasks-vision": "^0.10.22-rc.20250304",
     "@mui/icons-material": "^5.15.6",
     "@mui/joy": "^5.0.0-beta.6",
     "@mui/material": "^5.15.6",
