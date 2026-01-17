@@ -6,6 +6,7 @@
   },
   "private": true,
   "dependencies": {
+    "@babel/plugin-transform-private-property-in-object": "^7.28.6",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.15.6",
@@ -22,6 +23,7 @@
     "@use-gesture/react": "^10.3.0",
     "ajv": "^8.17.1",
     "caniuse-lite": "^1.0.30001749",
+    "eslint": "^9.39.2",
     "framer-motion": "^10.18.0",
     "html2canvas": "^1.4.1",
     "object-hash": "^3.0.0",
@@ -35,6 +37,7 @@
     "react-lazy-load-image-component": "^1.6.2",
     "react-native-animated-border": "^1.0.2",
     "react-redux": "^9.0.4",
+    "react-refresh": "^0.18.0",
     "react-router-dom": "^6.21.3",
     "react-scripts": "5.0.1",
     "redux-persist": "^6.0.0",
