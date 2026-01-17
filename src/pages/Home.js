@@ -15,7 +15,6 @@ import grimnir from "../../src/assets/wallpapers/Grimnir.png";
 import buttonImage from "../../src/assets/buttons/variant1.png";
 import shadowverse from "../../src/assets/wallpapers/SVElogo.png";
 import cardback from "../assets/cardbacks/default.png";
-import donate from "../assets/buttons/donate_btn.webp";
 import discord from "../assets/buttons/discord.png";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -66,8 +65,6 @@ export default function Home() {
   const [openDialogue, setOpenDialogue] = useState(false);
   const [leaderImage, setLeaderImage] = useState(null);
   const [leaderNum, setLeaderNum] = useState(0);
-  const [hoverCard, setHoverCard] = useState("");
-  const [hover, setHover] = useState(false);
   const [openSnack, setOpenSnack] = useState(false);
   const [deckIdx, setDeckIdx] = useState(0);
 
@@ -93,14 +90,14 @@ export default function Home() {
     setShowSelected(new Array(reduxDecks.length).fill(false));
   }, [reduxDecks]);
 
-  const handleStartHover = (key) => {
-    setHover(true);
-    setHoverCard(key);
-  };
-  const handleEndHover = () => {
-    setHover(false);
-    setHoverCard("");
-  };
+  // const handleStartHover = (key) => {
+  //   setHover(true);
+  //   setHoverCard(key);
+  // };
+  // const handleEndHover = () => {
+  //   setHover(false);
+  //   setHoverCard("");
+  // };
 
   const handleModalOpen = () => {
     handleClose();
@@ -155,7 +152,7 @@ export default function Home() {
             mouseX: event.clientX + 2,
             mouseY: event.clientY - 6,
           }
-        : null
+        : null,
     );
     handleSelectDeck(deck, idx);
   };
@@ -236,8 +233,8 @@ export default function Home() {
       setEvoDeck(
         newDeck.evoDeck.map((card) => {
           return { card: card, status: false };
-        })
-      )
+        }),
+      ),
     );
   };
 
@@ -556,7 +553,7 @@ export default function Home() {
                       <img
                         height={"160px"}
                         src={cardImage(
-                          deck.deck[Math.floor(deck.deck.length / 2)]
+                          deck.deck[Math.floor(deck.deck.length / 2)],
                         )}
                         alt={"cardback"}
                       />

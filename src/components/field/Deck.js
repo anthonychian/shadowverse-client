@@ -127,17 +127,17 @@ export default function Deck({
     setTextInput(text);
   };
 
-  const handleContextMenu = (event) => {
-    event.preventDefault();
-    setContextMenu(
-      contextMenu === null
-        ? {
-            mouseX: event.clientX + 2,
-            mouseY: event.clientY - 6,
-          }
-        : null
-    );
-  };
+  // const handleContextMenu = (event) => {
+  //   event.preventDefault();
+  //   setContextMenu(
+  //     contextMenu === null
+  //       ? {
+  //           mouseX: event.clientX + 2,
+  //           mouseY: event.clientY - 6,
+  //         }
+  //       : null
+  //   );
+  // };
   const handleCardContextMenu = (event, name, index) => {
     setName(name);
     setIndex(index);
@@ -150,7 +150,7 @@ export default function Deck({
             mouseX: event.clientX + 2,
             mouseY: event.clientY - 6,
           }
-        : null
+        : null,
     );
   };
 

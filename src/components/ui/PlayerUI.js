@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
-import { IconButton, Badge } from "@mui/material/";
+import { IconButton } from "@mui/material/";
 import { useDispatch, useSelector } from "react-redux";
 import { setHealth, setEvoPoints, setDice } from "../../redux/CardSlice";
 import Leader from "./Leader";
@@ -41,7 +41,7 @@ export default function PlayerUI({ name }) {
   const reduxCurrentHealth = useSelector((state) => state.card.playerHealth);
   const reduxMaxPlayPoints = useSelector((state) => state.card.playPoints.max);
   const reduxCurrentPlayPoints = useSelector(
-    (state) => state.card.playPoints.available
+    (state) => state.card.playPoints.available,
   );
   const reduxShowDice = useSelector((state) => state.card.showDice);
   const reduxLeaderActive = useSelector((state) => state.card.leaderActive);

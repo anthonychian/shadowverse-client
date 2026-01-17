@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
@@ -15,7 +14,7 @@ export default function Scoreboard({ name }) {
 
   const reduxMaxPlayPoints = useSelector((state) => state.card.playPoints.max);
   const reduxCurrentPlayPoints = useSelector(
-    (state) => state.card.playPoints.available
+    (state) => state.card.playPoints.available,
   );
   const reduxRoom = useSelector((state) => state.card.room);
 
@@ -46,7 +45,7 @@ export default function Scoreboard({ name }) {
         setPlayPoints({
           available: reduxCurrentPlayPoints + 1,
           max: reduxMaxPlayPoints,
-        })
+        }),
       );
     }
   };
@@ -56,13 +55,13 @@ export default function Scoreboard({ name }) {
           setPlayPoints({
             available: reduxCurrentPlayPoints - 1,
             max: reduxMaxPlayPoints,
-          })
+          }),
         )
       : dispatch(
           setPlayPoints({
             available: 0,
             max: reduxMaxPlayPoints,
-          })
+          }),
         );
   };
   const incrementMax = () => {
@@ -71,13 +70,13 @@ export default function Scoreboard({ name }) {
           setPlayPoints({
             available: reduxCurrentPlayPoints,
             max: reduxMaxPlayPoints + 1,
-          })
+          }),
         )
       : dispatch(
           setPlayPoints({
             available: reduxCurrentPlayPoints,
             max: 10,
-          })
+          }),
         );
   };
   const decrementMax = () => {
@@ -86,13 +85,13 @@ export default function Scoreboard({ name }) {
           setPlayPoints({
             available: reduxCurrentPlayPoints,
             max: reduxMaxPlayPoints - 1,
-          })
+          }),
         )
       : dispatch(
           setPlayPoints({
             available: reduxCurrentPlayPoints,
             max: 0,
-          })
+          }),
         );
   };
   const decrementMultiple = (idx) => {
@@ -101,14 +100,14 @@ export default function Scoreboard({ name }) {
         setPlayPoints({
           available: idx - 1,
           max: reduxMaxPlayPoints,
-        })
+        }),
       );
     } else {
       dispatch(
         setPlayPoints({
           available: idx,
           max: reduxMaxPlayPoints,
-        })
+        }),
       );
     }
   };
@@ -117,7 +116,7 @@ export default function Scoreboard({ name }) {
       setPlayPoints({
         available: idx,
         max: reduxMaxPlayPoints,
-      })
+      }),
     );
   };
   const incrementBoth = () => {
@@ -126,13 +125,13 @@ export default function Scoreboard({ name }) {
           setPlayPoints({
             available: reduxMaxPlayPoints + 1,
             max: reduxMaxPlayPoints + 1,
-          })
+          }),
         )
       : dispatch(
           setPlayPoints({
             available: 10,
             max: 10,
-          })
+          }),
         );
   };
 
@@ -161,7 +160,7 @@ export default function Scoreboard({ name }) {
               )
             ) : (
               <div key={`${idx}`}></div>
-            )
+            ),
           )}
         </div>
       </div>

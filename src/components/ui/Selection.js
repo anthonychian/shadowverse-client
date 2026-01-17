@@ -68,10 +68,8 @@ import {
 } from "@mui/material";
 
 import MenuIcon from "@mui/icons-material/Menu";
-import SettingsIcon from "@mui/icons-material/Settings";
 import ChatIcon from "@mui/icons-material/Chat";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
-import SensorsIcon from "@mui/icons-material/Sensors";
 import ReplayIcon from "@mui/icons-material/Replay";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -87,7 +85,7 @@ export default function Selection({ setSelectedOption }) {
   // redux state
   const reduxChatLog = useSelector((state) => state.card.gameLog);
   const reduxEnemyRematchStatus = useSelector(
-    (state) => state.card.enemyRematchStatus
+    (state) => state.card.enemyRematchStatus,
   );
   const img = require("../../assets/pin_bellringer_angel.png");
 
@@ -540,7 +538,7 @@ export default function Selection({ setSelectedOption }) {
                 //     </Typography>
                 //   </div>
                 // </>
-              )
+              ),
             )}
           </DialogContentText>
         </DialogContent>

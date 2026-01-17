@@ -10,7 +10,6 @@ import {
 } from "../../redux/CardSlice";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import { socket } from "../../sockets";
 
 export default function Hand({
   constraintsRef,
@@ -45,7 +44,7 @@ export default function Hand({
             mouseX: event.clientX + 2,
             mouseY: event.clientY - 6,
           }
-        : null
+        : null,
     );
   };
   const handleClose = () => {

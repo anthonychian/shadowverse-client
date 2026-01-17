@@ -4,10 +4,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import wallpaper3 from "../../src/assets/wallpapers/3.png";
 import ReplyIcon from "@mui/icons-material/Reply";
 import CloseIcon from "@mui/icons-material/Close";
-import {
-  LazyLoadImage,
-  LazyLoadComponent,
-} from "react-lazy-load-image-component";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import swap from "../assets/logo/swap_icon.png";
 import ArrowBackIosNew from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
@@ -355,9 +352,9 @@ export default function CreateDeck() {
   const handleClickOpenImport = () => {
     setOpenImport(true);
   };
-  const handleClickOpenExport = () => {
-    setOpenImport(true);
-  };
+  // const handleClickOpenExport = () => {
+  //   setOpenImport(true);
+  // };
   const handleClose = () => {
     setOpen(false);
   };
@@ -373,7 +370,7 @@ export default function CreateDeck() {
         name,
         deck,
         evoDeck,
-      })
+      }),
     );
 
     navigate("/");
@@ -390,13 +387,13 @@ export default function CreateDeck() {
     if (mainDeckSelected) {
       const filtered = handleSelectButtonFilter();
       const filteredCards = filtered.filter((card) =>
-        card.toLowerCase().includes(text.toLowerCase())
+        card.toLowerCase().includes(text.toLowerCase()),
       );
       setFilteredAllCards(filteredCards);
     } else {
       const filteredEvo = handleSelectButtonFilterEvo();
       const filteredCards = filteredEvo.filter((card) =>
-        card.toLowerCase().includes(text.toLowerCase())
+        card.toLowerCase().includes(text.toLowerCase()),
       );
       setFilteredAllCardsEvo(filteredCards);
     }
@@ -527,7 +524,7 @@ export default function CreateDeck() {
     const setCards = getCardsFromName(buttonFilterSet);
     const classCards = getCardsFromName(buttonFilterClass);
     const merged = setCards.filter(
-      (setCard) => classCards.indexOf(setCard) > -1
+      (setCard) => classCards.indexOf(setCard) > -1,
     );
     return merged;
   };
@@ -535,7 +532,7 @@ export default function CreateDeck() {
     const setCards = getCardsFromName(buttonFilterSetEvo);
     const classCards = getCardsFromName(buttonFilterClassEvo);
     const merged = setCards.filter(
-      (setCard) => classCards.indexOf(setCard) > -1
+      (setCard) => classCards.indexOf(setCard) > -1,
     );
     return merged;
   };
