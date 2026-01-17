@@ -20,6 +20,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@use-gesture/react": "^10.3.0",
+    "ajv": "^8.17.1",
     "caniuse-lite": "^1.0.30001749",
     "framer-motion": "^10.18.0",
     "html2canvas": "^1.4.1",
