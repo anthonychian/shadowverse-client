@@ -1,24 +1,33 @@
 import React, { useState, useEffect } from "react";
 
 import { motion } from "framer-motion";
-import imageRamina from "../../assets/leaders/Ramina.png";
-import imageJeanne from "../../assets/leaders/Jeanne.png";
+import imageSiLong from "../../assets/leaders/SiLong.png";
 import imageForte from "../../assets/leaders/Forte.png";
 import imageGalmieux from "../../assets/leaders/Galmieux.png";
+import imageDrache from "../../assets/leaders/Drache.png";
+import imageLishenna from "../../assets/leaders/Lishenna.png";
+import imageCeridwen from "../../assets/leaders/Ceridwen.png";
 import imageKuon from "../../assets/leaders/Kuon.png";
 import imageDaria from "../../assets/leaders/Daria.png";
-import imageDionne from "../../assets/leaders/Dionne.png";
+import imageBunny from "../../assets/leaders/Bunny.png";
 import imageAlbert from "../../assets/leaders/Albert.png";
+import imageSekka from "../../assets/leaders/Sekka.png";
+import imageHozumi from "../../assets/leaders/Hozumi.png";
 import imageOrchis from "../../assets/leaders/Orchis.png";
 import imageCC from "../../assets/leaders/CC.png";
+import imageIcy from "../../assets/leaders/Icy.png";
+import imageAnisage from "../../assets/leaders/Anisage.png";
 import imageMono from "../../assets/leaders/Mono.png";
 import imageVania from "../../assets/leaders/Vania.png";
+import imageRola from "../../assets/leaders/Rola.png";
+import imageJeanne from "../../assets/leaders/Jeanne.png";
+import imageManhattenCafe from "../../assets/leaders/ManhattenCafe.png";
 import imageMaru from "../../assets/leaders/Maru.png";
 import imageRin from "../../assets/leaders/Rin.png";
 import imageUzuki from "../../assets/leaders/Uzuki.png";
 import imageMio from "../../assets/leaders/Mio.png";
-import dragon from "../../assets/logo/dragon.png";
 
+import dragon from "../../assets/logo/dragon.png";
 import defaultCardBack from "../../assets/cardbacks/default.png";
 import aeneaCardBack from "../../assets/cardbacks/aenea.png";
 import dionneCardBack from "../../assets/cardbacks/dionne.png";
@@ -604,6 +613,30 @@ export default function Selection({ setSelectedOption }) {
                 selectLeader(e);
               }}
             >
+              <img width="100px" src={imageSiLong} alt="SiLong" />
+            </IconButton>
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectLeader(e);
+              }}
+            >
+              <img width="100px" src={imageDrache} alt="Drache" />
+            </IconButton>
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectLeader(e);
+              }}
+            >
               <img width="100px" src={imageForte} alt="Forte" />
             </IconButton>
             <IconButton
@@ -628,20 +661,7 @@ export default function Selection({ setSelectedOption }) {
                 selectLeader(e);
               }}
             >
-              <img width="100px" src={imageJeanne} alt="Jeanne" />
-            </IconButton>
-
-            <IconButton
-              sx={{
-                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
-                color: "white",
-                backgroundColor: "rgba(0, 0, 0, 0.6)",
-              }}
-              onClick={(e) => {
-                selectLeader(e);
-              }}
-            >
-              <img width="100px" src={imageRamina} alt="Ramina" />
+              <img width="100px" src={imageBunny} alt="Bunny" />
             </IconButton>
             <IconButton
               sx={{
@@ -665,7 +685,19 @@ export default function Selection({ setSelectedOption }) {
                 selectLeader(e);
               }}
             >
-              <img width="100px" src={imageDionne} alt="Dionne" />
+              <img width="100px" src={imageLishenna} alt="Lishenna" />
+            </IconButton>
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectLeader(e);
+              }}
+            >
+              <img width="100px" src={imageCeridwen} alt="Ceridwen" />
             </IconButton>
             <IconButton
               sx={{
@@ -691,7 +723,30 @@ export default function Selection({ setSelectedOption }) {
             >
               <img width="100px" src={imageKuon} alt="Kuon" />
             </IconButton>
-
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectLeader(e);
+              }}
+            >
+              <img width="100px" src={imageSekka} alt="Sekka" />
+            </IconButton>
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectLeader(e);
+              }}
+            >
+              <img width="100px" src={imageHozumi} alt="Hozumi" />
+            </IconButton>
             <IconButton
               sx={{
                 "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
@@ -726,6 +781,30 @@ export default function Selection({ setSelectedOption }) {
                 selectLeader(e);
               }}
             >
+              <img width="100px" src={imageIcy} alt="Icy" />
+            </IconButton>
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectLeader(e);
+              }}
+            >
+              <img width="100px" src={imageAnisage} alt="Anisage" />
+            </IconButton>
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectLeader(e);
+              }}
+            >
               <img width="100px" src={imageVania} alt="Vania" />
             </IconButton>
             <IconButton
@@ -739,6 +818,46 @@ export default function Selection({ setSelectedOption }) {
               }}
             >
               <img width="100px" src={imageMono} alt="Mono" />
+            </IconButton>
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectLeader(e);
+              }}
+            >
+              <img width="100px" src={imageRola} alt="Rola" />
+            </IconButton>
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectLeader(e);
+              }}
+            >
+              <img width="100px" src={imageJeanne} alt="Jeanne" />
+            </IconButton>
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectLeader(e);
+              }}
+            >
+              <img
+                width="100px"
+                src={imageManhattenCafe}
+                alt="Manhatten Cafe"
+              />
             </IconButton>
             <IconButton
               sx={{
