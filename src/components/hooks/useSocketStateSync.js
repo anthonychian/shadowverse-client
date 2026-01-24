@@ -1,24 +1,3 @@
-import { useEffect } from "react";
-import { store } from "../../redux/store";
-import { socket } from "../../sockets";
-
-const useSocketStateSync = () => {
-  useEffect(() => {
-    socket.on("send_full_state", ({ requesterId }) => {
-      console.log("[useSocketStateSync] received request from", requesterId);
-      const currentState = store.getState().card;
-      console.log("[useSocketStateSync] sending state, keys:", Object.keys(currentState).length);
-
-      socket.emit("send_full_state", {
-        requesterId,
-        fullState: currentState,
-      });
-    });
-
-    return () => {
-      socket.off("send_full_state");
-    };
-  }, []);
-};
-
-export default useSocketStateSync;
+version https://git-lfs.github.com/spec/v1
+oid sha256:9188fbcff911cb0995130b264a2196031d9a9b6221e17e2f84922fefa8a419cb
+size 681

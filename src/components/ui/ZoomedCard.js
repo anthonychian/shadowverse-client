@@ -1,21 +1,3 @@
-import React from "react";
-import { cardImage } from "../../decks/getCards";
-
-export default function ZoomedCard({ hovering, name }) {
-  return (
-    <>
-      {hovering && (
-        <div
-          style={{
-            position: "absolute",
-            top: "10%",
-            height: "60%",
-            zIndex: 100,
-          }}
-        >
-          <img height={"100%"} src={cardImage(name)} alt={name} />
-        </div>
-      )}
-    </>
-  );
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c9a7903c749ab016520f4b7d6531f6ff110cd0ad4ca6135f83d3af8171e7e312
+size 445

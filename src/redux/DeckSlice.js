@@ -1,19 +1,3 @@
-import { createSlice } from "@reduxjs/toolkit";
-
-export const DeckSlice = createSlice({
-  name: "deck",
-  initialState: {
-    decks: [],
-  },
-  reducers: {
-    createDeck: (state, action) => {
-      state.decks = [...state.decks, action.payload];
-    },
-    deleteDeck: (state, action) => {
-      const name = action.payload;
-      state.decks = state.decks.filter((x) => x.name !== name);
-    },
-  },
-});
-
-export const { createDeck, deleteDeck } = DeckSlice.actions;
+version https://git-lfs.github.com/spec/v1
+oid sha256:0de80dc3f25f18870689f082a60099f7e09e92d0fc0f7ef811a76e28419b1cbb
+size 468

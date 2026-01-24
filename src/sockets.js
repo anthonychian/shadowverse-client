@@ -1,24 +1,3 @@
-import io from "socket.io-client";
-
-// export const socket = io.connect("http://localhost:5000");
-//export const socket = io("https://juvenile-closed-stork.glitch.me", {
-
-export const socket = io("https://shadowverse-server.onrender.com/", {
-  transports: ["websocket"],
-});
-
-if (!sessionStorage.getItem("playerId")) {
-  sessionStorage.setItem("playerId", crypto.randomUUID());
-}
-export const playerId = sessionStorage.getItem("playerId");
-
-socket.on("connect_error", (err) => {
-  // the reason of the error, for example "xhr poll error"
-  console.log(err.message);
-
-  // some additional description, for example the status code of the initial HTTP response
-  console.log(err.description);
-
-  // some additional context, for example the XMLHttpRequest object
-  console.log(err.context);
-});
+version https://git-lfs.github.com/spec/v1
+oid sha256:59c2c14911badfbc858bc1d8f450f5f4389ce3543cb024d91a100f44b540a029
+size 1492

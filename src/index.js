@@ -1,20 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App";
-import { Loader } from "@react-three/drei";
-import "./index.css";
-import { Provider } from "react-redux";
-import { persistor, store } from "../src/redux/store";
-import { PersistGate } from "redux-persist/integration/react";
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <>
-    <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        <App />
-      </PersistGate>
-    </Provider>
-    <Loader />
-  </>
-);
+version https://git-lfs.github.com/spec/v1
+oid sha256:de3d454d2e07e2f5863a30617666cecb2190e95f05c2b1f9ae94185db80ae8c6
+size 566
