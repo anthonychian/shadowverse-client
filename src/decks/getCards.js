@@ -127,7 +127,7 @@ export const cardImage = (cardName) => {
     case "Mermaid of Punishment Evolved":
       return "../textures/BP15-063EN.png";
     case "Ardent Torch":
-      return "../textures/BP15-064EN.png";
+      return "../textures/PR-387EN.png";
     case "Whitefrost Blizzard":
       return "../textures/BP15-065EN.png";
     case "Adherent of Ardor":
@@ -223,9 +223,9 @@ export const cardImage = (cardName) => {
     case "Sacred Gavel":
       return "../textures/BP15-111EN.png";
     case "Mjerrabaine, Great One":
-      return "../textures/BP15-112EN.png";
+      return "../textures/BP15-SP01EN.png";
     case "Gilnelise, Ravenous Craving":
-      return "../textures/BP15-113EN.png";
+      return "../textures/BP15-SP02EN.png";
     case "Gilnelise, Ravenous Craving Evolved":
       return "../textures/BP15-U07EN.png";
     case "Arael":
@@ -3283,7 +3283,7 @@ export const cardImage = (cardName) => {
       return "../textures/BP05-051EN.png";
 
     case "Galmieux, Omen of Disdain":
-      return "../textures/BP05-052EN.png";
+      return "../textures/SP01-U16EN.png";
     case "Galmieux, Omen of Disdain Evolved":
       return "../textures/BP05-U04EN.png";
     case "Electromagical Rhino":
