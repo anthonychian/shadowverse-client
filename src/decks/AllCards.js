@@ -5489,6 +5489,7 @@ export const haven = [
   "Hermit of Repose",
   "Hardplume Warrior",
   "Caladrius",
+  "Sacred Gavel",
 
   "All-Feeling Divine",
   "Shion, Immortal Aegis",
@@ -5762,7 +5763,6 @@ export const haven = [
 ];
 
 export const neutral = [
-  "Sacred Gavel",
   "Mjerrabaine, Great One",
   "Gilnelise, Ravenous Craving",
   "Arael",
