@@ -8,13 +8,11 @@ import {
   setEnemyBanish,
   setEnemyCard,
   setEnemyCardBack,
-  setEnemyCardSelectedInHand,
-  setEnemyCardSelectedOnField,
   setEnemyCemetery,
   setEnemyCounter,
   setEnemyCustomValues,
   setEnemyDeckSize,
-  setEnemyDice,
+  setEnemyEngaged,
   setEnemyEvoDeck,
   setEnemyEvoField,
   setEnemyEvoPoints,
@@ -23,68 +21,76 @@ import {
   setEnemyHealth,
   setEnemyLeader,
   setEnemyLeaderActive,
-  setEnemyLog,
-  setEnemyOnlineStatus,
   setEnemyPlayPoints,
-  setEnemyViewingCemetery,
-  setEnemyViewingCemeteryOpponent,
-  setEnemyViewingDeck,
-  setEnemyViewingEvoDeck,
-  setEnemyViewingEvoDeckOpponent,
-  setEnemyViewingHand,
-  setEnemyViewingTopCards,
-  setShowEnemyCard,
-  setShowEnemyHand,
+  restoreOwnState,
 } from "../../redux/CardSlice";
+
+const applyEnemyState = (dispatch, s) => {
+  if (s.field !== undefined) dispatch(setEnemyField(s.field));
+  if (s.evoField !== undefined) dispatch(setEnemyEvoField(s.evoField));
+  if (s.hand !== undefined) dispatch(setEnemyHand(s.hand));
+  if (s.leader !== undefined) dispatch(setEnemyLeader(s.leader));
+  if (s.leaderActive !== undefined) dispatch(setEnemyLeaderActive(s.leaderActive));
+  if (s.playerHealth !== undefined) dispatch(setEnemyHealth(s.playerHealth));
+  if (s.playPoints !== undefined) dispatch(setEnemyPlayPoints(s.playPoints));
+  if (s.evoPoints !== undefined) dispatch(setEnemyEvoPoints(s.evoPoints));
+  if (s.evoDeck !== undefined) dispatch(setEnemyEvoDeck(s.evoDeck));
+  if (s.deck !== undefined) dispatch(setEnemyDeckSize(s.deck.length));
+  if (s.cemetery !== undefined) dispatch(setEnemyCemetery(s.cemetery));
+  if (s.cardback !== undefined) dispatch(setEnemyCardBack(s.cardback));
+  if (s.currentCard !== undefined) dispatch(setEnemyCard(s.currentCard));
+  if (s.banish !== undefined) dispatch(setEnemyBanish(s.banish));
+  if (s.auraField !== undefined) dispatch(setEnemyAura(s.auraField));
+  if (s.counterField !== undefined) dispatch(setEnemyCounter(s.counterField));
+  if (s.customValues !== undefined) dispatch(setEnemyCustomValues(s.customValues));
+  if (s.engagedField !== undefined) dispatch(setEnemyEngaged(s.engagedField));
+};
 
 const useReceiveFullState = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    socket.on("receive_full_state", (message) => {
-      // Handle both old format (direct fullState) and new format (wrapped in message)
-      const fullState = message.data || message;
-      
-      // Batch all state updates together to prevent intermediate renders
+    // Primary path: server has stored state for both players
+    socket.on("receive_stored_state", ({ ownState, enemyState }) => {
+      console.log("[receive_stored_state] own:", !!ownState, "enemy:", !!enemyState);
       unstable_batchedUpdates(() => {
-        if (fullState.field !== undefined) dispatch(setEnemyField(fullState.field));
-        if (fullState.evoField !== undefined) dispatch(setEnemyEvoField(fullState.evoField));
-        if (fullState.hand !== undefined) dispatch(setEnemyHand(fullState.hand));
-        if (fullState.leader !== undefined) dispatch(setEnemyLeader(fullState.leader));
-        if (fullState.leaderActive !== undefined) dispatch(setEnemyLeaderActive(fullState.leaderActive));
-        if (fullState.health !== undefined) dispatch(setEnemyHealth(fullState.health));
-        if (fullState.playPoints !== undefined) dispatch(setEnemyPlayPoints(fullState.playPoints));
-        if (fullState.evoPoints !== undefined) dispatch(setEnemyEvoPoints(fullState.evoPoints));
-        if (fullState.evoDeck !== undefined) dispatch(setEnemyEvoDeck(fullState.evoDeck));
-        if (fullState.deck !== undefined) dispatch(setEnemyDeckSize(fullState.deck.length));
-        if (fullState.cemetery !== undefined) dispatch(setEnemyCemetery(fullState.cemetery));
-        if (fullState.cardBack !== undefined) dispatch(setEnemyCardBack(fullState.cardBack));
-        if (fullState.currentCard !== undefined) dispatch(setEnemyCard(fullState.currentCard));
-        if (fullState.banish !== undefined) dispatch(setEnemyBanish(fullState.banish));
-        if (fullState.aura !== undefined) dispatch(setEnemyAura(fullState.aura));
-        if (fullState.counter !== undefined) dispatch(setEnemyCounter(fullState.counter));
-        if (fullState.customValues !== undefined) dispatch(setEnemyCustomValues(fullState.customValues));
-        if (fullState.onlineStatus !== undefined) dispatch(setEnemyOnlineStatus(fullState.onlineStatus));
-        if (fullState.log !== undefined) dispatch(setEnemyLog(fullState.log));
-      // dispatch(setEnemyViewingCemetery(fullState.viewingCemetery));
-      // dispatch(
-      //   setEnemyViewingCemeteryOpponent(fullState.viewingCemeteryOpponent)
-      // );
-      // dispatch(setEnemyViewingDeck(fullState.viewingDeck));
-      // dispatch(setEnemyViewingEvoDeck(fullState.viewingEvoDeck));
-      // dispatch(
-      //   setEnemyViewingEvoDeckOpponent(fullState.viewingEvoDeckOpponent)
-      // );
-      // dispatch(setShowEnemyHand(fullState.showEnemyHand));
-      // dispatch(setShowEnemyCard(fullState.showEnemyCard));
+        if (ownState) dispatch(restoreOwnState(ownState));
+        if (enemyState) applyEnemyState(dispatch, enemyState);
+      });
+    });
 
-      // dispatch(setEnemyViewingHand(fullState.viewingHand));
-      // dispatch(setEnemyViewingTopCards(fullState.viewingTopCards));
-      // dispatch(setEnemyCardSelectedInHand(fullState.cardSelectedInHand));
-      // dispatch(setEnemyCardSelectedOnField(fullState.cardSelectedOnField));
+    // Fallback: peer-based sync (opponent sends their state directly)
+    socket.on("receive_full_state", (message) => {
+      console.log("[receive_full_state] peer state received");
+      const fullState = message.data || message;
+      unstable_batchedUpdates(() => {
+        applyEnemyState(dispatch, fullState);
+        // Recover own state from opponent's enemy* fields
+        dispatch(restoreOwnState({
+          field: fullState.enemyField,
+          evoField: fullState.enemyEvoField,
+          hand: fullState.enemyHand,
+          playerHealth: fullState.enemyHealth,
+          playPoints: fullState.enemyPlayPoints,
+          evoPoints: fullState.enemyEvoPoints,
+          leader: fullState.enemyLeader,
+          leaderActive: fullState.enemyLeaderActive,
+          cardback: fullState.enemyCardback,
+          cemetery: fullState.enemyCemetery,
+          banish: fullState.enemyBanish,
+          evoDeck: fullState.enemyEvoDeck,
+          engagedField: fullState.enemyEngagedField,
+          counterField: fullState.enemyCounterField,
+          auraField: fullState.enemyAuraField,
+          baneField: fullState.enemyBaneField,
+          wardField: fullState.enemyWardField,
+          customValues: fullState.enemyCustomValues,
+        }));
+      });
     });
 
     return () => {
+      socket.off("receive_stored_state");
       socket.off("receive_full_state");
     };
   }, [dispatch]);

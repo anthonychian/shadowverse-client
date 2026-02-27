@@ -97,7 +97,10 @@ import EnemyEvoDeck from "./EnemyEvoDeck";
 import img from "../../assets/pin_bellringer_angel.png";
 import "../../css/AnimatedBorder.css";
 import { useNavigate } from "react-router-dom";
-import { socket } from "../../sockets";
+import { socket, playerId } from "../../sockets";
+import useSocketStateSync from "../hooks/useSocketStateSync";
+import useReceiveFullState from "../hooks/useReceiveFullState";
+import useStoreState from "../hooks/useStoreState";
 
 import Token from "./Token";
 import ShowDice from "./ShowDice";
@@ -150,19 +153,19 @@ export default function Field({
   const reduxField = useSelector((state) => state.card.field);
   const reduxCurrentCard = useSelector((state) => state.card.currentCard);
   const reduxCurrentCardIndex = useSelector(
-    (state) => state.card.currentCardIndex
+    (state) => state.card.currentCardIndex,
   );
   const reduxEvoField = useSelector((state) => state.card.evoField);
   const reduxEngaged = useSelector((state) => state.card.engagedField);
   const reduxCustomStatus = useSelector((state) => state.card.customStatus);
   const reduxCustomValues = useSelector((state) => state.card.customValues);
   const reduxEnemyCustomValues = useSelector(
-    (state) => state.card.enemyCustomValues
+    (state) => state.card.enemyCustomValues,
   );
   const reduxEnemyField = useSelector((state) => state.card.enemyField);
   const reduxEnemyEvoField = useSelector((state) => state.card.enemyEvoField);
   const reduxEnemyEngaged = useSelector(
-    (state) => state.card.enemyEngagedField
+    (state) => state.card.enemyEngagedField,
   );
   const reduxCurrentDeck = useSelector((state) => state.card.deck);
   const reduxCurrentRoom = useSelector((state) => state.card.room);
@@ -173,7 +176,7 @@ export default function Field({
   const reduxEnemyCard = useSelector((state) => state.card.enemyCard);
   const reduxCounterField = useSelector((state) => state.card.counterField);
   const reduxEnemyCounterField = useSelector(
-    (state) => state.card.enemyCounterField
+    (state) => state.card.enemyCounterField,
   );
   const reduxAuraField = useSelector((state) => state.card.auraField);
   const reduxEnemyAuraField = useSelector((state) => state.card.enemyAuraField);
@@ -183,10 +186,10 @@ export default function Field({
   const reduxEnemyWardField = useSelector((state) => state.card.enemyWardField);
   const reduxEnemyCardBack = useSelector((state) => state.card.enemyCardback);
   const reduxCardSelectedInHand = useSelector(
-    (state) => state.card.cardSelectedInHand
+    (state) => state.card.cardSelectedInHand,
   );
   const reduxCardSelectedOnField = useSelector(
-    (state) => state.card.cardSelectedOnField
+    (state) => state.card.cardSelectedOnField,
   );
 
   // useState
@@ -208,18 +211,26 @@ export default function Field({
   const [readyToRide, setReadyToRide] = useState(false);
   const [tokenReady, setTokenReady] = useState(false);
 
-  // useSocketStateSync();
-  // useReceiveFullState();
+  useSocketStateSync();
+  useReceiveFullState();
+  useStoreState();
 
   useEffect(() => {
-    socket.on("connect", () => {
+    const handleReconnect = () => {
+      if (!reduxRoom) return;
       console.log("Reconnected with socket id:", socket.id);
-      socket.emit("join_room", reduxRoom); // rejoin room
-      socket.emit("request_state", { room: reduxRoom });
-    });
+      socket.emit("rejoin_room", reduxRoom);
+      socket.emit("request_stored_state", { room: reduxRoom, playerId });
+    };
+
+    if (socket.connected) {
+      handleReconnect();
+    }
+
+    socket.on("connect", handleReconnect);
 
     return () => {
-      socket.off("connect");
+      socket.off("connect", handleReconnect);
     };
   }, [reduxRoom]);
 
@@ -394,7 +405,7 @@ export default function Field({
           console.warn("Unknown update type:", update.type);
       }
     },
-    [dispatch]
+    [dispatch],
   );
 
   // Process queued messages in order
@@ -516,7 +527,7 @@ export default function Field({
             card: reduxCurrentCard,
             indexInHand: reduxCurrentCardIndex,
             index: indexClicked,
-          })
+          }),
         );
       }
       if (tokenReady) {
@@ -525,7 +536,7 @@ export default function Field({
           placeTokenOnField({
             card: name,
             index: indexClicked,
-          })
+          }),
         );
         // dispatch(clearValuesAtIndex(index));
         // dispatch(clearEngagedAtIndex(index));
@@ -538,7 +549,7 @@ export default function Field({
             card: name,
             indexInEvolveDeck: reduxCurrentCardIndex,
             index: indexClicked,
-          })
+          }),
         );
       }
       if (readyToMoveOnField) {
@@ -548,31 +559,31 @@ export default function Field({
             card: name,
             prevIndex: index,
             index: indexClicked,
-          })
+          }),
         );
         dispatch(
           moveValuesAtIndex({
             prevIndex: index,
             index: indexClicked,
-          })
+          }),
         );
         dispatch(
           moveCountersAtIndex({
             prevIndex: index,
             index: indexClicked,
-          })
+          }),
         );
         dispatch(
           moveEngagedAtIndex({
             prevIndex: index,
             index: indexClicked,
-          })
+          }),
         );
         dispatch(
           moveStatusAtIndex({
             prevIndex: index,
             index: indexClicked,
-          })
+          }),
         );
         dispatch(clearValuesAtIndex(index));
         dispatch(clearEngagedAtIndex(index));
@@ -587,31 +598,31 @@ export default function Field({
             evoCard: name,
             prevIndex: index,
             index: indexClicked,
-          })
+          }),
         );
         dispatch(
           moveValuesAtIndex({
             prevIndex: index,
             index: indexClicked,
-          })
+          }),
         );
         dispatch(
           moveCountersAtIndex({
             prevIndex: index,
             index: indexClicked,
-          })
+          }),
         );
         dispatch(
           moveEngagedAtIndex({
             prevIndex: index,
             index: indexClicked,
-          })
+          }),
         );
         dispatch(
           moveStatusAtIndex({
             prevIndex: index,
             index: indexClicked,
-          })
+          }),
         );
         dispatch(clearValuesAtIndex(index));
         dispatch(clearEngagedAtIndex(index));
@@ -624,13 +635,13 @@ export default function Field({
           duplicateCardOnField({
             card: name,
             index: indexClicked,
-          })
+          }),
         );
         dispatch(
           moveValuesAtIndex({
             prevIndex: index,
             index: indexClicked,
-          })
+          }),
         );
         // dispatch(clearValuesAtIndex(indexClicked));
         dispatch(clearEngagedAtIndex(indexClicked));
@@ -645,7 +656,7 @@ export default function Field({
             card: name,
             index: indexClicked,
             deckIndex: deckIndex,
-          })
+          }),
         );
       }
       if (readyFromCemetery) {
@@ -655,7 +666,7 @@ export default function Field({
             card: name,
             indexInHand: reduxCurrentCardIndex,
             index: indexClicked,
-          })
+          }),
         );
       }
       if (readyFromBanish) {
@@ -665,7 +676,7 @@ export default function Field({
             card: name,
             indexInHand: reduxCurrentCardIndex,
             index: indexClicked,
-          })
+          }),
         );
       }
     } else if (
@@ -680,7 +691,7 @@ export default function Field({
             card: name,
             indexInEvolveDeck: reduxCurrentCardIndex,
             index: indexClicked,
-          })
+          }),
         );
       }
       if (readyToRide) {
@@ -690,7 +701,7 @@ export default function Field({
             card: name,
             index: indexClicked,
             indexInEvolveDeck: reduxCurrentCardIndex,
-          })
+          }),
         );
       }
       if (readyToFeed) {
@@ -701,7 +712,7 @@ export default function Field({
             index: indexClicked,
             carrots: 1,
             indexInEvolveDeck: reduxCurrentCardIndex,
-          })
+          }),
         );
       }
     } else if (
@@ -715,7 +726,7 @@ export default function Field({
           index: indexClicked,
           carrots: 2,
           indexInEvolveDeck: reduxCurrentCardIndex,
-        })
+        }),
       );
     } else {
       console.log("there is already a card here");
@@ -756,7 +767,7 @@ export default function Field({
             mouseX: event.clientX + 2,
             mouseY: event.clientY - 6,
           }
-        : null
+        : null,
     );
   };
   const handleEvoContextMenu = (event, index, name) => {
@@ -769,7 +780,7 @@ export default function Field({
             mouseX: event.clientX + 2,
             mouseY: event.clientY - 6,
           }
-        : null
+        : null,
     );
   };
   const handleClose = () => {
@@ -784,7 +795,7 @@ export default function Field({
       addToHandFromField({
         card: name,
         index: index,
-      })
+      }),
     );
     dispatch(clearValuesAtIndex(index));
     dispatch(clearEngagedAtIndex(index));
@@ -797,7 +808,7 @@ export default function Field({
       placeToTopOfDeckFromField({
         card: name,
         index: index,
-      })
+      }),
     );
     dispatch(clearValuesAtIndex(index));
     dispatch(clearEngagedAtIndex(index));
@@ -810,7 +821,7 @@ export default function Field({
       placeToBotOfDeckFromField({
         card: name,
         index: index,
-      })
+      }),
     );
     dispatch(clearValuesAtIndex(index));
     dispatch(clearEngagedAtIndex(index));
@@ -823,7 +834,7 @@ export default function Field({
       removeTokenOnField({
         card: name,
         index: index,
-      })
+      }),
     );
     dispatch(clearValuesAtIndex(index));
     dispatch(clearEngagedAtIndex(index));
@@ -842,7 +853,7 @@ export default function Field({
       placeToCemeteryFromField({
         card: name,
         index: index,
-      })
+      }),
     );
     dispatch(clearValuesAtIndex(index));
     dispatch(clearEngagedAtIndex(index));
@@ -855,7 +866,7 @@ export default function Field({
       placeToBanishFromField({
         card: name,
         index: index,
-      })
+      }),
     );
     dispatch(clearValuesAtIndex(index));
     dispatch(clearEngagedAtIndex(index));
@@ -896,7 +907,7 @@ export default function Field({
       modifyCounter({
         value: 1,
         index: index,
-      })
+      }),
     );
   };
 
@@ -907,7 +918,7 @@ export default function Field({
       addAura({
         value: 1,
         index: index,
-      })
+      }),
     );
   };
   const handleRemoveAura = () => {
@@ -917,7 +928,7 @@ export default function Field({
       addAura({
         value: 0,
         index: index,
-      })
+      }),
     );
     dispatch(hideStatus(index));
   };
@@ -928,7 +939,7 @@ export default function Field({
       addBane({
         value: 1,
         index: index,
-      })
+      }),
     );
   };
   const handleRemoveBane = () => {
@@ -938,7 +949,7 @@ export default function Field({
       addBane({
         value: 0,
         index: index,
-      })
+      }),
     );
     dispatch(hideStatus(index));
   };
@@ -949,7 +960,7 @@ export default function Field({
       addWard({
         value: 1,
         index: index,
-      })
+      }),
     );
   };
   const handleRemoveWard = () => {
@@ -959,7 +970,7 @@ export default function Field({
       addWard({
         value: 0,
         index: index,
-      })
+      }),
     );
     dispatch(hideStatus(index));
   };
@@ -981,7 +992,7 @@ export default function Field({
       transferToOpponentField({
         card: name,
         prevIndex: index,
-      })
+      }),
     );
   };
 
@@ -991,7 +1002,7 @@ export default function Field({
       backToEvolveDeck({
         card: name,
         index: index,
-      })
+      }),
     );
   };
   const handleReturnAdvancedToEvolveDeck = () => {
@@ -1000,7 +1011,7 @@ export default function Field({
       advancedBackToEvolveDeck({
         card: name,
         index: index,
-      })
+      }),
     );
   };
 
@@ -1706,11 +1717,11 @@ export default function Field({
                     (readyToEvo || readyToFeed || readyToRide)
                       ? "box"
                       : reduxField[idx] === 0 &&
-                        !readyToEvo &&
-                        !readyToFeed &&
-                        !readyToRide
-                      ? "box"
-                      : "none"
+                          !readyToEvo &&
+                          !readyToFeed &&
+                          !readyToRide
+                        ? "box"
+                        : "none"
                   }
                 >
                   {reduxField[idx] !== 0 && reduxEvoField[idx] === 0 && (

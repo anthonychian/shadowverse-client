@@ -7,6 +7,11 @@ export const socket = io("https://shadowverse-server.onrender.com/", {
   transports: ["websocket"],
 });
 
+if (!sessionStorage.getItem("playerId")) {
+  sessionStorage.setItem("playerId", crypto.randomUUID());
+}
+export const playerId = sessionStorage.getItem("playerId");
+
 socket.on("connect_error", (err) => {
   // the reason of the error, for example "xhr poll error"
   console.log(err.message);

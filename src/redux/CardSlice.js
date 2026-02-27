@@ -2444,6 +2444,33 @@ export const CardSlice = createSlice({
         });
       }
     },
+    restoreOwnState: (state, action) => {
+      const s = action.payload;
+      if (s.field !== undefined) state.field = s.field;
+      if (s.evoField !== undefined) state.evoField = s.evoField;
+      if (s.hand !== undefined) state.hand = s.hand;
+      if (s.playerHealth !== undefined) state.playerHealth = s.playerHealth;
+      if (s.playPoints !== undefined) state.playPoints = s.playPoints;
+      if (s.evoPoints !== undefined) state.evoPoints = s.evoPoints;
+      if (s.leader !== undefined) state.leader = s.leader;
+      if (s.leaderActive !== undefined) state.leaderActive = s.leaderActive;
+      if (s.cardback !== undefined) state.cardback = s.cardback;
+      if (s.cemetery !== undefined) state.cemetery = s.cemetery;
+      if (s.banish !== undefined) state.banish = s.banish;
+      if (s.evoDeck !== undefined) state.evoDeck = s.evoDeck;
+      if (s.deck !== undefined) state.deck = s.deck;
+      if (s.engagedField !== undefined) state.engagedField = s.engagedField;
+      if (s.counterField !== undefined) state.counterField = s.counterField;
+      if (s.auraField !== undefined) state.auraField = s.auraField;
+      if (s.baneField !== undefined) state.baneField = s.baneField;
+      if (s.wardField !== undefined) state.wardField = s.wardField;
+      if (s.customValues !== undefined) state.customValues = s.customValues;
+      if (s.customStatus !== undefined) state.customStatus = s.customStatus;
+      state.cardSelectedInHand = -1;
+      state.enemyCardSelectedInHand = -1;
+      state.cardSelectedOnField = -1;
+      state.enemyCardSelectedOnField = -1;
+    },
     setField: (state, action) => {
       state.field = action.payload;
     },
@@ -2765,6 +2792,7 @@ export const {
   duplicateCardOnField,
   createLessonTokens,
   shuffleCards,
+  restoreOwnState,
   reset,
   exitGame,
   setRematchStatus,

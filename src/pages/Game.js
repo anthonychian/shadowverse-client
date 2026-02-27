@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "../css/Game.css";
 import Selection from "../components/ui/Selection";
 import PlayerUI from "../components/ui/PlayerUI";
@@ -15,6 +15,11 @@ import initialWallpaper from "../../src/assets/wallpapers/3.png";
 export default function Game(callback) {
   const [wallpaper, setWallpaper] = useState(initialWallpaper);
   const [selectedOption, setSelectedOption] = useState("Galmieux");
+  const reduxLeader = useSelector((state) => state.card.leader);
+
+  useEffect(() => {
+    if (reduxLeader) setSelectedOption(reduxLeader);
+  }, [reduxLeader]);
   const constraintsRef = useRef(null);
   const [ready, setReady] = useState(false);
   // const [dragging, setDragging] = useState(false);
