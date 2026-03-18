@@ -10,6 +10,7 @@ import ArrowBackIosNew from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import {
   allCards,
+  set16,
   set15,
   set14,
   setUMA2,
@@ -40,6 +41,7 @@ import {
 } from "../decks/AllCards";
 import {
   allCardsEvo,
+  set16Evo,
   set15Evo,
   set14Evo,
   setUMA2Evo,
@@ -405,6 +407,8 @@ export default function CreateDeck() {
 
   const getCardsFromName = (name) => {
     switch (name) {
+      case "set 16":
+        return set16;
       case "set 15":
         return set15;
       case "set 14":
@@ -445,6 +449,8 @@ export default function CreateDeck() {
         return set2;
       case "set 1":
         return set1;
+      case "set 16 evo":
+        return set16Evo;
       case "set 15 evo":
         return set15Evo;
       case "set 14 evo":
@@ -993,6 +999,7 @@ export default function CreateDeck() {
                 onChange={handleChange}
               >
                 <MenuItem value={"all"}>All</MenuItem>
+                <MenuItem value={"set 16"}>New World Genesis</MenuItem>
                 <MenuItem value={"set 15"}>Trial of the Omens</MenuItem>
                 <MenuItem value={"set 14"}>Banquet of Dreams</MenuItem>
                 <MenuItem value={"uma2"}>Umamusume: Pretty Derby EX</MenuItem>

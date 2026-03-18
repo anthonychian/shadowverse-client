@@ -1,4 +1,14 @@
 export const allTokens = [
+  "Guardian Golem TOKEN",
+  "Looking Smart! TOKEN",
+  "Fire Drake Whelp TOKEN",
+  "Mimi, Right Paw Hellhound TOKEN",
+  "Coco, Left Paw Hellhound TOKEN",
+  "Silent Rider TOKEN",
+  "Servant of Cocytus TOKEN",
+  "Demon of Purgatory TOKEN",
+  "Astaroth's Reckoning TOKEN",
+
   "Annihilating Onslaught TOKEN",
   "Remnant of Hollowness TOKEN",
   "Gilded Blade TOKEN",

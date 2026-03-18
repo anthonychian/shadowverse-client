@@ -1,5 +1,252 @@
 export const cardImage = (cardName) => {
   switch (cardName) {
+    case "Aria, Lady of the Woods":
+      return "../textures/BP16-001EN.png";
+    case "Aria, Lady of the Woods Evolved":
+      return "../textures/BP16-002EN.png";
+    case "Orchis, Newfound Heart":
+      return "../textures/BP16-U01EN.png";
+    case "Nazuri, Bestial Innkeeper":
+      return "../textures/BP16-004EN.png";
+    case "Glade, Fragrantwood Ward":
+      return "../textures/BP16-005EN.png";
+    case "Glade, Fragrantwood Ward Evolved":
+      return "../textures/BP16-006EN.png";
+    case "Lily, Crystalian Innocence":
+      return "../textures/BP16-007EN.png";
+    case "Liam, Crazed Creator":
+      return "../textures/BP16-008EN.png";
+    case "Aerin, Crystalian Frostward":
+      return "../textures/BP16-009EN.png";
+    case "Aerin, Crystalian Frostward Evolved":
+      return "../textures/BP16-010EN.png";
+    case "Bayle, Luxglaive Warrior":
+      return "../textures/BP16-011EN.png";
+    case "Godwood Staff":
+      return "../textures/BP16-012EN.png";
+    case "Fairy Tamer":
+      return "../textures/BP16-013EN.png";
+    case "Fairy Tamer Evolved":
+      return "../textures/BP16-014EN.png";
+    case "Good Fairy of the Pond":
+      return "../textures/BP16-015EN.png";
+    case "Fay Twinkletoes":
+      return "../textures/BP16-016EN.png";
+    case "Baby Carbuncle":
+      return "../textures/BP16-017EN.png";
+    case "Fragrantwood Whispers":
+      return "../textures/BP16-018EN.png";
+    case "Amelia, Silver Captain":
+      return "../textures/BP16-019EN.png";
+    case "Amelia, Silver Captain Evolved":
+      return "../textures/BP16-020EN.png";
+    case "Albert, Levin Stormsaber":
+      return "../textures/BP16-U02EN.png";
+    case "Ginne, Bewitching Courtesan":
+      return "../textures/BP16-022EN.png";
+    case "Zirconia, Ironcrown Ward":
+      return "../textures/BP16-023EN.png";
+    case "Zirconia, Ironcrown Ward Evolved":
+      return "../textures/BP16-024EN.png";
+    case "Amalia, Luxsteel Paladin":
+      return "../textures/BP16-025EN.png";
+    case "Ravening Tentacles":
+      return "../textures/BP16-026EN.png";
+    case "Luminous Commander":
+      return "../textures/BP16-027EN.png";
+    case "Luminous Commander Evolved":
+      return "../textures/BP16-028EN.png";
+    case "Luminous Magus":
+      return "../textures/BP16-029EN.png";
+    case "Rusty, Luxcard Trickster":
+      return "../textures/BP16-030EN.png";
+    case "Jeno, Levin Axeraider":
+      return "../textures/BP16-031EN.png";
+    case "Flashstep Quickblader":
+      return "../textures/BP16-032EN.png";
+    case "Flashstep Quickblader Evolved":
+      return "../textures/BP16-033EN.png";
+    case "Luminous Lancetrooper":
+      return "../textures/BP16-034EN.png";
+    case "Lyrala, Luminous Potionwright":
+      return "../textures/BP16-035EN.png";
+    case "Ignominious Samurai":
+      return "../textures/BP16-036EN.png";
+    case "Ironcrown Majesty":
+      return "../textures/BP16-037EN.png";
+    case "Anne & Grea, Mysterian Duo":
+      return "../textures/BP16-U03EN.png";
+    case "Lilanthim, Anathema of Edacity":
+      return "../textures/BP16-039EN.png";
+    case "Lilanthim, Anathema of Edacity Evolved":
+      return "../textures/BP16-040EN.png";
+    case "Zizdvend, Fate's Arbiter":
+      return "../textures/BP16-041EN.png";
+    case "Zizdvend, Fate's Arbiter Evolved":
+      return "../textures/BP16-042EN.png";
+    case "Edelweiss, Sagelight Ward":
+      return "../textures/BP16-043EN.png";
+    case "Edelweiss, Sagelight Ward Evolved":
+      return "../textures/BP16-044EN.png";
+    case "Juno, Visionary Alchemist":
+      return "../textures/BP16-045EN.png";
+    case "Homework Time!":
+      return "../textures/BP16-046EN.png";
+    case "Penelope, Potions Prodigy":
+      return "../textures/BP16-047EN.png";
+    case "Penelope, Potions Prodigy Evolved":
+      return "../textures/BP16-048EN.png";
+    case "Ms. Miranda, Adored Academic":
+      return "../textures/BP16-049EN.png";
+    case "Snowman Army":
+      return "../textures/BP16-050EN.png";
+    case "Starry-Eyed Penguin Wizard":
+      return "../textures/BP16-051EN.png";
+    case "Starry-Eyed Penguin Wizard Evolved":
+      return "../textures/BP16-052EN.png";
+    case "Emmylou, Witch of Wonder":
+      return "../textures/BP16-053EN.png";
+    case "William, Mysterian Student":
+      return "../textures/BP16-054EN.png";
+    case "Sagelight Teachings":
+      return "../textures/BP16-055EN.png";
+    case "Truth Summons":
+      return "../textures/BP16-056EN.png";
+    case "Forte, Blackwing Dragoon":
+      return "../textures/BP16-U04EN.png";
+    case "Burnite, Anathema of Flame":
+      return "../textures/BP16-058EN.png";
+    case "Burnite, Anathema of Flame Evolved":
+      return "../textures/BP16-059EN.png";
+    case "Nirle, Draconic Prodigy":
+      return "../textures/BP16-060EN.png";
+    case "Nirle, Draconic Prodigy Evolved":
+      return "../textures/BP16-061EN.png";
+    case "Liu Feng, Goldennote Ward":
+      return "../textures/BP16-062EN.png";
+    case "Liu Feng, Goldennote Ward Evolved":
+      return "../textures/BP16-063EN.png";
+    case "Genesis Dragon Reborn":
+      return "../textures/BP16-064EN.png";
+    case "Fan of Otohime":
+      return "../textures/BP16-065EN.png";
+    case "Eyfa, Windrider":
+      return "../textures/BP16-066EN.png";
+    case "Eyfa, Windrider Evolved":
+      return "../textures/BP16-067EN.png";
+    case "Marion, Ravishing Dragonewt":
+      return "../textures/BP16-068EN.png";
+    case "Kit, Luxfang Champion":
+      return "../textures/BP16-069EN.png";
+    case "Zahar, Stormwave Dragoon":
+      return "../textures/BP16-070EN.png";
+    case "Little Dragon Nanny":
+      return "../textures/BP16-071EN.png";
+    case "Little Dragon Nanny Evolved":
+      return "../textures/BP16-072EN.png";
+    case "Zell, Windreader":
+      return "../textures/BP16-073EN.png";
+    case "Silvercloud Dragonrider":
+      return "../textures/BP16-074EN.png";
+    case "Swordsnout Trencher":
+      return "../textures/BP16-075EN.png";
+    case "Goldennote Melody":
+      return "../textures/BP16-076EN.png";
+    case "Cerberus, Hellfire Unleashed":
+      return "../textures/BP16-U05EN.png";
+    case "Aragavy, Eternal Hunter":
+      return "../textures/BP16-078EN.png";
+    case "Aragavy, Eternal Hunter Evolved":
+      return "../textures/BP16-079EN.png";
+    case "Gold Rush Ghost":
+      return "../textures/BP16-080EN.png";
+    case "Mukan, Shadowcrypt Ward":
+      return "../textures/BP16-081EN.png";
+    case "Mukan, Shadowcrypt Ward Evolved":
+      return "../textures/BP16-082EN.png";
+    case "Balto, Dusk Bounty Hunter":
+      return "../textures/BP16-083EN.png";
+    case "Ceres, Blue Rose Maiden":
+      return "../textures/BP16-084EN.png";
+    case "Orthrus, Hellhound Blader":
+      return "../textures/BP16-085EN.png";
+    case "Orthrus, Hellhound Blader Evolved":
+      return "../textures/BP16-086EN.png";
+    case "Yuna, Occult Hunter":
+      return "../textures/BP16-087EN.png";
+    case "Soul Predation":
+      return "../textures/BP16-088EN.png";
+    case "Vlad, Impaler":
+      return "../textures/BP16-089EN.png";
+    case "Vlad, Impaler Evolved":
+      return "../textures/BP16-090EN.png";
+    case "Aryll, Moonstruck Vampire":
+      return "../textures/BP16-091EN.png";
+    case "Mino, Shrewd Reaper":
+      return "../textures/BP16-092EN.png";
+    case "Beryl, Nightmare Incarnate":
+      return "../textures/BP16-093EN.png";
+    case "Shadowcrypt Memorial":
+      return "../textures/BP16-094EN.png";
+    case "Lapis, Shining Seraph":
+      return "../textures/BP16-U06EN.png";
+    case "Rodeo, Anathema of Judgment":
+      return "../textures/BP16-096EN.png";
+    case "Rodeo, Anathema of Judgment Evolved":
+      return "../textures/BP16-097EN.png";
+    case "Rana, Dual Cannon Abbess":
+      return "../textures/BP16-098EN.png";
+    case "Ronavero, Darkhaven Ward":
+      return "../textures/BP16-099EN.png";
+    case "Ronavero, Darkhaven Ward Evolved":
+      return "../textures/BP16-100EN.png";
+    case "Salefa, Guardian of Water":
+      return "../textures/BP16-101EN.png";
+    case "Pact of the Beast Princess":
+      return "../textures/BP16-102EN.png";
+    case "Angelic Prism Priestess":
+      return "../textures/BP16-103EN.png";
+    case "Angelic Prism Priestess Evolved":
+      return "../textures/BP16-104EN.png";
+    case "Reno, Luxwing Featherfolk":
+      return "../textures/BP16-105EN.png";
+    case "Serene Sanctuary":
+      return "../textures/BP16-106EN.png";
+    case "Ironfist Priest":
+      return "../textures/BP16-107EN.png";
+    case "Ironfist Priest Evolved":
+      return "../textures/BP16-108EN.png";
+    case "Maeve, Guardian of Earth":
+      return "../textures/BP16-109EN.png";
+    case "Holy Shieldmaiden":
+      return "../textures/BP16-110EN.png";
+    case "Mainyu, Darkdweller":
+      return "../textures/BP16-111EN.png";
+    case "Darkhaven Grace":
+      return "../textures/BP16-112EN.png";
+    case "Olivia, Heroic Dark Angel":
+      return "../textures/BP16-U07EN.png";
+    case "Olivia, Heroic Dark Angel Evolved":
+      return "../textures/BP16-SP01EN.png";
+    case "Ruler of Cocytus":
+      return "../textures/BP16-115EN.png";
+    case "Phildau, Lionheart Ward":
+      return "../textures/BP16-116EN.png";
+    case "Phildau, Lionheart Ward Evolved":
+      return "../textures/BP16-117EN.png";
+    case "Alouette, Doomwright Ward":
+      return "../textures/BP16-118EN.png";
+    case "Leah, Bellringer Angel":
+      return "../textures/BP16-119EN.png";
+    case "Apollo, Heaven's Envoy":
+      return "../textures/BP16-120EN.png";
+    case "Apollo, Heaven's Envoy Evolved":
+      return "../textures/BP16-121EN.png";
+    case "Divine Thunder":
+      return "../textures/BP16-122EN.png";
+    case "Doomwright Resurgence":
+      return "../textures/BP16-123EN.png";
+
     case "Izudia, Unkilling Annihilation":
       return "../textures/BP15-U01EN.png";
     case "Amataz, Reverse Blader":
@@ -4841,6 +5088,25 @@ export const cardImage = (cardName) => {
       return "../textures/PR-017EN.png";
     case "Angelic Barrage":
       return "../textures/PR-018EN.png";
+
+    case "Guardian Golem TOKEN":
+      return "../textures/BP16-T01EN.png";
+    case "Looking Smart! TOKEN":
+      return "../textures/BP16-T02EN.png";
+    case "Fire Drake Whelp TOKEN":
+      return "../textures/BP16-T03EN.png";
+    case "Mimi, Right Paw Hellhound TOKEN":
+      return "../textures/BP16-T04EN.png";
+    case "Coco, Left Paw Hellhound TOKEN":
+      return "../textures/BP16-T05EN.png";
+    case "Silent Rider TOKEN":
+      return "../textures/BP16-T06EN.png";
+    case "Servant of Cocytus TOKEN":
+      return "../textures/BP16-T07EN.png";
+    case "Demon of Purgatory TOKEN":
+      return "../textures/BP16-T08EN.png";
+    case "Astaroth's Reckoning TOKEN":
+      return "../textures/BP16-T09EN.png";
 
     case "Annihilating Onslaught TOKEN":
       return "../textures/BP15-PR09EN.png";

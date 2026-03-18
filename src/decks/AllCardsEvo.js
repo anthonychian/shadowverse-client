@@ -1,4 +1,40 @@
 export const allCardsEvo = [
+  "Aria, Lady of the Woods Evolved",
+  "Glade, Fragrantwood Ward Evolved",
+  "Aerin, Crystalian Frostward Evolved",
+  "Fairy Tamer Evolved",
+
+  "Amelia, Silver Captain Evolved",
+  "Zirconia, Ironcrown Ward Evolved",
+  "Luminous Commander Evolved",
+  "Flashstep Quickblader Evolved",
+
+  "Lilanthim, Anathema of Edacity Evolved",
+  "Zizdvend, Fate's Arbiter Evolved",
+  "Edelweiss, Sagelight Ward Evolved",
+  "Penelope, Potions Prodigy Evolved",
+  "Starry-Eyed Penguin Wizard Evolved",
+
+  "Burnite, Anathema of Flame Evolved",
+  "Nirle, Draconic Prodigy Evolved",
+  "Liu Feng, Goldennote Ward Evolved",
+  "Eyfa, Windrider Evolved",
+  "Little Dragon Nanny Evolved",
+
+  "Aragavy, Eternal Hunter Evolved",
+  "Mukan, Shadowcrypt Ward Evolved",
+  "Orthrus, Hellhound Blader Evolved",
+  "Vlad, Impaler Evolved",
+
+  "Rodeo, Anathema of Judgment Evolved",
+  "Ronavero, Darkhaven Ward Evolved",
+  "Angelic Prism Priestess Evolved",
+  "Ironfist Priest Evolved",
+
+  "Olivia, Heroic Dark Angel Evolved",
+  "Phildau, Lionheart Ward Evolved",
+  "Apollo, Heaven's Envoy Evolved",
+
   "Amataz, Reverse Blader Evolved",
   "Piercye, Queen of Frost Evolved",
   "Inauspicious Puppeteer Evolved",
@@ -620,6 +656,44 @@ export const allCardsEvo = [
   "Goblin Evolved",
   "Goliath Evolved",
   "Healing Angel Evolved",
+];
+
+export const set16Evo = [
+  "Aria, Lady of the Woods Evolved",
+  "Glade, Fragrantwood Ward Evolved",
+  "Aerin, Crystalian Frostward Evolved",
+  "Fairy Tamer Evolved",
+
+  "Amelia, Silver Captain Evolved",
+  "Zirconia, Ironcrown Ward Evolved",
+  "Luminous Commander Evolved",
+  "Flashstep Quickblader Evolved",
+
+  "Lilanthim, Anathema of Edacity Evolved",
+  "Zizdvend, Fate's Arbiter Evolved",
+  "Edelweiss, Sagelight Ward Evolved",
+  "Penelope, Potions Prodigy Evolved",
+  "Starry-Eyed Penguin Wizard Evolved",
+
+  "Burnite, Anathema of Flame Evolved",
+  "Nirle, Draconic Prodigy Evolved",
+  "Liu Feng, Goldennote Ward Evolved",
+  "Eyfa, Windrider Evolved",
+  "Little Dragon Nanny Evolved",
+
+  "Aragavy, Eternal Hunter Evolved",
+  "Mukan, Shadowcrypt Ward Evolved",
+  "Orthrus, Hellhound Blader Evolved",
+  "Vlad, Impaler Evolved",
+
+  "Rodeo, Anathema of Judgment Evolved",
+  "Ronavero, Darkhaven Ward Evolved",
+  "Angelic Prism Priestess Evolved",
+  "Ironfist Priest Evolved",
+
+  "Olivia, Heroic Dark Angel Evolved",
+  "Phildau, Lionheart Ward Evolved",
+  "Apollo, Heaven's Envoy Evolved",
 ];
 
 export const set15Evo = [
@@ -1287,6 +1361,11 @@ export const set1Evo = [
 ];
 
 export const forestEvo = [
+  "Aria, Lady of the Woods Evolved",
+  "Glade, Fragrantwood Ward Evolved",
+  "Aerin, Crystalian Frostward Evolved",
+  "Fairy Tamer Evolved",
+
   "Amataz, Reverse Blader Evolved",
   "Piercye, Queen of Frost Evolved",
   "Inauspicious Puppeteer Evolved",
@@ -1378,6 +1457,11 @@ export const forestEvo = [
 ];
 
 export const swordEvo = [
+  "Amelia, Silver Captain Evolved",
+  "Zirconia, Ironcrown Ward Evolved",
+  "Luminous Commander Evolved",
+  "Flashstep Quickblader Evolved",
+
   "Kagemitsu, Lost Samurai Evolved",
   "Arsène Lupin Evolved",
   "Adherent of Hollowness Evolved",
@@ -1470,6 +1554,12 @@ export const swordEvo = [
 ];
 
 export const runeEvo = [
+  "Lilanthim, Anathema of Edacity Evolved",
+  "Zizdvend, Fate's Arbiter Evolved",
+  "Edelweiss, Sagelight Ward Evolved",
+  "Penelope, Potions Prodigy Evolved",
+  "Starry-Eyed Penguin Wizard Evolved",
+
   "Lishenna, Melodious Destruction Evolved",
   "Noble Shikigami ADVANCED",
   "Acid Golem Evolved",
@@ -1562,6 +1652,12 @@ export const runeEvo = [
 ];
 
 export const dragonEvo = [
+  "Burnite, Anathema of Flame Evolved",
+  "Nirle, Draconic Prodigy Evolved",
+  "Liu Feng, Goldennote Ward Evolved",
+  "Eyfa, Windrider Evolved",
+  "Little Dragon Nanny Evolved",
+
   "Filene, Blizzardous Heart Evolved",
   "Celestial Dragoon Evolved",
   "Mermaid of Punishment Evolved",
@@ -1660,6 +1756,11 @@ export const dragonEvo = [
 ];
 
 export const abyssEvo = [
+  "Aragavy, Eternal Hunter Evolved",
+  "Mukan, Shadowcrypt Ward Evolved",
+  "Orthrus, Hellhound Blader Evolved",
+  "Vlad, Impaler Evolved",
+
   "Valnareik, Lustful Desire Evolved",
   "Yuzuki, Bloodlord Evolved",
   "Adherent of Desire Evolved",
@@ -1749,6 +1850,11 @@ export const abyssEvo = [
 ];
 
 export const havenEvo = [
+  "Rodeo, Anathema of Judgment Evolved",
+  "Ronavero, Darkhaven Ward Evolved",
+  "Angelic Prism Priestess Evolved",
+  "Ironfist Priest Evolved",
+
   "Marwynn, Repose of Despair Evolved",
   "Shiro, Cursed Wings Evolved",
   "Adherent of Despair Evolved",
@@ -1836,6 +1942,10 @@ export const havenEvo = [
 ];
 
 export const neutralEvo = [
+  "Olivia, Heroic Dark Angel Evolved",
+  "Phildau, Lionheart Ward Evolved",
+  "Apollo, Heaven's Envoy Evolved",
+
   "Gilnelise, Ravenous Craving Evolved",
   "Arael Evolved",
   "Mechanical Analyzer Evolved",
