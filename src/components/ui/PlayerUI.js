@@ -400,12 +400,12 @@ export default function PlayerUI({ name }) {
             onClick={() => handleSuperEvo()}
           >
             {superEvo && (
-              <div className="sep_on">
+              <div>
                 <img height={50} width={100} src={sepOn} alt={"sep"} />
               </div>
             )}
             {!superEvo && (
-              <div className="sep_off">
+              <div>
                 <img height={50} width={100} src={sepOff} alt={"sep"} />
               </div>
             )}

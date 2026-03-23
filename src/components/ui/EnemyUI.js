@@ -472,7 +472,7 @@ export default function EnemyUI() {
           }}
         >
           {reduxEnemySuperEvo && (
-            <div className="sep">
+            <div>
               <img height={50} width={100} src={sepOn} alt="sep" />
             </div>
           )}

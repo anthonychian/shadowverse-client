@@ -64,16 +64,6 @@
   border: 4px solid #0000;
   animation: 2.5s ward linear infinite;
 }
-.sep {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: -0.2em;
-  margin-right: -0.2em;
-  /* border-radius: 10px; */
-  /* border: 4px solid #0000; */
-  animation: 2.5s sep linear infinite;
-}
 
 .sep_on {
   border: none;
