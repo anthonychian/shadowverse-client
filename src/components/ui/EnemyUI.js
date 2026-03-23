@@ -22,7 +22,8 @@ import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import FiberManualRecordOutlinedIcon from "@mui/icons-material/FiberManualRecordOutlined";
 import WifiOffIcon from "@mui/icons-material/WifiOff";
 import WifiIcon from "@mui/icons-material/Wifi";
-
+import sepOn from "../../assets/logo/sep_on.png";
+import sepOff from "../../assets/logo/sep_off.png";
 import "../../css/EnemyUI.css";
 
 const StyledRating = styled(Rating)({
@@ -38,41 +39,44 @@ const StyledRating = styled(Rating)({
 export default function EnemyUI() {
   const dispatch = useDispatch();
   const reduxCurrentEnemyPlayPoints = useSelector(
-    (state) => state.card.enemyPlayPoints.available
+    (state) => state.card.enemyPlayPoints.available,
   );
   const reduxMaxEnemyPlayPoints = useSelector(
-    (state) => state.card.enemyPlayPoints.max
+    (state) => state.card.enemyPlayPoints.max,
+  );
+  const reduxEnemySuperEvo = useSelector(
+    (state) => state.card.enemySuperEvoActive,
   );
   const reduxEnemyHealth = useSelector((state) => state.card.enemyHealth);
   const reduxEnemyLeader = useSelector((state) => state.card.enemyLeader);
   const reduxEnemyEvoPoints = useSelector((state) => state.card.enemyEvoPoints);
   const reduxEnemyLeaderActive = useSelector(
-    (state) => state.card.enemyLeaderActive
+    (state) => state.card.enemyLeaderActive,
   );
   const reduxEnemyViewingDeck = useSelector(
-    (state) => state.card.enemyViewingDeck
+    (state) => state.card.enemyViewingDeck,
   );
   const reduxEnemyViewingCemetery = useSelector(
-    (state) => state.card.enemyViewingCemetery
+    (state) => state.card.enemyViewingCemetery,
   );
   const reduxEnemyViewingEvoDeck = useSelector(
-    (state) => state.card.enemyViewingEvoDeck
+    (state) => state.card.enemyViewingEvoDeck,
   );
   const reduxEnemyViewingCemeteryOpponent = useSelector(
-    (state) => state.card.enemyViewingCemeteryOpponent
+    (state) => state.card.enemyViewingCemeteryOpponent,
   );
   const reduxEnemyViewingEvoDeckOpponent = useSelector(
-    (state) => state.card.enemyViewingEvoDeckOpponent
+    (state) => state.card.enemyViewingEvoDeckOpponent,
   );
   const reduxEnemyViewingTopCards = useSelector(
-    (state) => state.card.enemyViewingTopCards
+    (state) => state.card.enemyViewingTopCards,
   );
   const reduxEnemyViewingHand = useSelector(
-    (state) => state.card.enemyViewingHand
+    (state) => state.card.enemyViewingHand,
   );
   const reduxEnemyDice = useSelector((state) => state.card.enemyDice);
   const reduxEnemyOnlineStatus = useSelector(
-    (state) => state.card.enemyOnlineStatus
+    (state) => state.card.enemyOnlineStatus,
   );
 
   useEffect(() => {
@@ -198,7 +202,7 @@ export default function EnemyUI() {
   return (
     <div
       style={{
-        paddingTop: "1em",
+        paddingTop: "3em",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -459,6 +463,24 @@ export default function EnemyUI() {
             icon={<FiberManualRecordIcon fontSize="inherit" />}
             emptyIcon={<FiberManualRecordOutlinedIcon fontSize="inherit" />}
           />
+        </div>
+        <div
+          style={{
+            height: "50px",
+            width: "100px",
+            zIndex: 1,
+          }}
+        >
+          {reduxEnemySuperEvo && (
+            <div className="sep">
+              <img height={50} width={100} src={sepOn} alt="sep" />
+            </div>
+          )}
+          {!reduxEnemySuperEvo && (
+            <div>
+              <img height={50} width={100} src={sepOff} alt="sep" />
+            </div>
+          )}
         </div>
       </div>
     </div>

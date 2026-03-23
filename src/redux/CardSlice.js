@@ -19,6 +19,8 @@ export const CardSlice = createSlice({
     enemyArrow: { idx: -1, show: false },
     leaderActive: false,
     enemyLeaderActive: false,
+    superEvoActive: false,
+    enemySuperEvoActive: false,
     enemyViewingHand: false,
     enemyViewingDeck: false,
     enemyViewingTopCards: false,
@@ -2454,6 +2456,8 @@ export const CardSlice = createSlice({
       if (s.evoPoints !== undefined) state.evoPoints = s.evoPoints;
       if (s.leader !== undefined) state.leader = s.leader;
       if (s.leaderActive !== undefined) state.leaderActive = s.leaderActive;
+      if (s.superEvoActive !== undefined)
+        state.superEvoActive = s.superEvoActive;
       if (s.cardback !== undefined) state.cardback = s.cardback;
       if (s.cemetery !== undefined) state.cemetery = s.cemetery;
       if (s.banish !== undefined) state.banish = s.banish;
@@ -2516,6 +2520,12 @@ export const CardSlice = createSlice({
     setLeaderActive: (state, action) => {
       state.leaderActive = action.payload;
     },
+    setEnemySuperEvoActive: (state, action) => {
+      state.enemySuperEvoActive = action.payload;
+    },
+    setSuperEvoActive: (state, action) => {
+      state.superEvoActive = action.payload;
+    },
     exitGame: (state) => {
       state.room = "";
       state.enemyOnlineStatus = true;
@@ -2539,6 +2549,8 @@ export const CardSlice = createSlice({
       state.enemyLeader = "";
       state.leaderActive = false;
       state.enemyLeaderActive = false;
+      state.superEvoActive = false;
+      state.enemySuperEvoActive = false;
       state.cardback = "";
       state.enemyCardback = "";
       state.leader = "";
@@ -2642,6 +2654,8 @@ export const CardSlice = createSlice({
       state.enemyDeckSize = 0;
       state.leaderActive = false;
       state.enemyLeaderActive = false;
+      state.superEvoActive = false;
+      state.enemySuperEvoActive = false;
       state.evoPoints = 0;
       state.enemyEvoPoints = 0;
       state.playPoints = { available: 0, max: 0 };
@@ -2795,6 +2809,8 @@ export const {
   restoreOwnState,
   reset,
   exitGame,
+  setSuperEvoActive,
+  setEnemySuperEvoActive,
   setRematchStatus,
   setEnemyRematchStatus,
   setCurrentCard,

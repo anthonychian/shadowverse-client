@@ -21,6 +21,7 @@ import {
   setEnemyHealth,
   setEnemyLeader,
   setEnemyLeaderActive,
+  setEnemySuperEvoActive,
   setEnemyPlayPoints,
   restoreOwnState,
 } from "../../redux/CardSlice";
@@ -30,7 +31,10 @@ const applyEnemyState = (dispatch, s) => {
   if (s.evoField !== undefined) dispatch(setEnemyEvoField(s.evoField));
   if (s.hand !== undefined) dispatch(setEnemyHand(s.hand));
   if (s.leader !== undefined) dispatch(setEnemyLeader(s.leader));
-  if (s.leaderActive !== undefined) dispatch(setEnemyLeaderActive(s.leaderActive));
+  if (s.leaderActive !== undefined)
+    dispatch(setEnemyLeaderActive(s.leaderActive));
+  if (s.superEvoActive !== undefined)
+    dispatch(setEnemySuperEvoActive(s.superEvoActive));
   if (s.playerHealth !== undefined) dispatch(setEnemyHealth(s.playerHealth));
   if (s.playPoints !== undefined) dispatch(setEnemyPlayPoints(s.playPoints));
   if (s.evoPoints !== undefined) dispatch(setEnemyEvoPoints(s.evoPoints));
@@ -42,7 +46,8 @@ const applyEnemyState = (dispatch, s) => {
   if (s.banish !== undefined) dispatch(setEnemyBanish(s.banish));
   if (s.auraField !== undefined) dispatch(setEnemyAura(s.auraField));
   if (s.counterField !== undefined) dispatch(setEnemyCounter(s.counterField));
-  if (s.customValues !== undefined) dispatch(setEnemyCustomValues(s.customValues));
+  if (s.customValues !== undefined)
+    dispatch(setEnemyCustomValues(s.customValues));
   if (s.engagedField !== undefined) dispatch(setEnemyEngaged(s.engagedField));
 };
 
@@ -52,7 +57,12 @@ const useReceiveFullState = () => {
   useEffect(() => {
     // Primary path: server has stored state for both players
     socket.on("receive_stored_state", ({ ownState, enemyState }) => {
-      console.log("[receive_stored_state] own:", !!ownState, "enemy:", !!enemyState);
+      console.log(
+        "[receive_stored_state] own:",
+        !!ownState,
+        "enemy:",
+        !!enemyState,
+      );
       unstable_batchedUpdates(() => {
         if (ownState) dispatch(restoreOwnState(ownState));
         if (enemyState) applyEnemyState(dispatch, enemyState);
@@ -66,26 +76,29 @@ const useReceiveFullState = () => {
       unstable_batchedUpdates(() => {
         applyEnemyState(dispatch, fullState);
         // Recover own state from opponent's enemy* fields
-        dispatch(restoreOwnState({
-          field: fullState.enemyField,
-          evoField: fullState.enemyEvoField,
-          hand: fullState.enemyHand,
-          playerHealth: fullState.enemyHealth,
-          playPoints: fullState.enemyPlayPoints,
-          evoPoints: fullState.enemyEvoPoints,
-          leader: fullState.enemyLeader,
-          leaderActive: fullState.enemyLeaderActive,
-          cardback: fullState.enemyCardback,
-          cemetery: fullState.enemyCemetery,
-          banish: fullState.enemyBanish,
-          evoDeck: fullState.enemyEvoDeck,
-          engagedField: fullState.enemyEngagedField,
-          counterField: fullState.enemyCounterField,
-          auraField: fullState.enemyAuraField,
-          baneField: fullState.enemyBaneField,
-          wardField: fullState.enemyWardField,
-          customValues: fullState.enemyCustomValues,
-        }));
+        dispatch(
+          restoreOwnState({
+            field: fullState.enemyField,
+            evoField: fullState.enemyEvoField,
+            hand: fullState.enemyHand,
+            playerHealth: fullState.enemyHealth,
+            playPoints: fullState.enemyPlayPoints,
+            evoPoints: fullState.enemyEvoPoints,
+            leader: fullState.enemyLeader,
+            leaderActive: fullState.enemyLeaderActive,
+            superEvoActive: fullState.enemySuperEvoActive,
+            cardback: fullState.enemyCardback,
+            cemetery: fullState.enemyCemetery,
+            banish: fullState.enemyBanish,
+            evoDeck: fullState.enemyEvoDeck,
+            engagedField: fullState.enemyEngagedField,
+            counterField: fullState.enemyCounterField,
+            auraField: fullState.enemyAuraField,
+            baneField: fullState.enemyBaneField,
+            wardField: fullState.enemyWardField,
+            customValues: fullState.enemyCustomValues,
+          }),
+        );
       });
     });
 

@@ -3,7 +3,13 @@ import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import { IconButton } from "@mui/material/";
 import { useDispatch, useSelector } from "react-redux";
-import { setHealth, setEvoPoints, setDice } from "../../redux/CardSlice";
+import {
+  setHealth,
+  setEvoPoints,
+  setSuperEvoActive,
+  setDice,
+} from "../../redux/CardSlice";
+import { socket } from "../../sockets";
 import Leader from "./Leader";
 import sword from "../../assets/logo/sword.png";
 import forest from "../../assets/logo/forest.png";
@@ -22,6 +28,8 @@ import { styled } from "@mui/material/styles";
 import Rating from "@mui/material/Rating";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import FiberManualRecordOutlinedIcon from "@mui/icons-material/FiberManualRecordOutlined";
+import sepOn from "../../assets/logo/sep_on.png";
+import sepOff from "../../assets/logo/sep_off.png";
 
 const StyledRating = styled(Rating)({
   "& .MuiRating-iconFilled": {
@@ -36,7 +44,11 @@ const StyledRating = styled(Rating)({
 export default function PlayerUI({ name }) {
   const dispatch = useDispatch();
   const [ep, setEP] = useState(0);
+  const [superEvo, setSEP] = useState(false);
   const [playerHealth, setPlayerHealth] = useState(20);
+  const reduxCurrentSuperEvo = useSelector(
+    (state) => state.card.superEvoActive,
+  );
   const reduxCurrentEP = useSelector((state) => state.card.evoPoints);
   const reduxCurrentHealth = useSelector((state) => state.card.playerHealth);
   const reduxMaxPlayPoints = useSelector((state) => state.card.playPoints.max);
@@ -45,6 +57,7 @@ export default function PlayerUI({ name }) {
   );
   const reduxShowDice = useSelector((state) => state.card.showDice);
   const reduxLeaderActive = useSelector((state) => state.card.leaderActive);
+  const reduxRoom = useSelector((state) => state.card.room);
 
   useEffect(() => {
     dispatch(setHealth(playerHealth));
@@ -70,6 +83,16 @@ export default function PlayerUI({ name }) {
     setEP(newValue);
     dispatch(setEvoPoints(newValue));
     console.log(newValue);
+  };
+
+  const handleSuperEvo = () => {
+    setSEP(!superEvo);
+    dispatch(setSuperEvoActive(!superEvo));
+    socket.emit("send msg", {
+      type: "superEvoActive",
+      data: !superEvo,
+      room: reduxRoom,
+    });
   };
 
   const handleDiceRoll = (value) => {
@@ -366,6 +389,26 @@ export default function PlayerUI({ name }) {
               icon={<FiberManualRecordIcon fontSize="inherit" />}
               emptyIcon={<FiberManualRecordOutlinedIcon fontSize="inherit" />}
             />
+          </div>
+          <div
+            style={{
+              cursor: "pointer",
+              height: "50px",
+              width: "100px",
+              zIndex: 1,
+            }}
+            onClick={() => handleSuperEvo()}
+          >
+            {superEvo && (
+              <div className="sep_on">
+                <img height={50} width={100} src={sepOn} alt={"sep"} />
+              </div>
+            )}
+            {!superEvo && (
+              <div className="sep_off">
+                <img height={50} width={100} src={sepOff} alt={"sep"} />
+              </div>
+            )}
           </div>
         </div>
       </div>

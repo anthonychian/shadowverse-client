@@ -74,6 +74,7 @@ import {
   setEnemyOnlineStatus,
   setLastChatMessage,
   setEnemyLeaderActive,
+  setEnemySuperEvoActive,
   setField,
   setEnemyCardBack,
   setCardSelectedInHand,
@@ -333,6 +334,9 @@ export default function Field({
         case "leaderActive":
           dispatch(setEnemyLeaderActive(update.data));
           break;
+        case "superEvoActive":
+          dispatch(setEnemySuperEvoActive(update.data));
+          break;
         case "log":
           dispatch(setEnemyLog(update.data));
           break;
@@ -394,6 +398,8 @@ export default function Field({
                 dispatch(setEnemyDice(fullState.enemyDice));
               if (fullState.enemyLeaderActive !== undefined)
                 dispatch(setEnemyLeaderActive(fullState.enemyLeaderActive));
+              if (fullState.enemySuperEvoActive !== undefined)
+                dispatch(setEnemySuperEvoActive(fullState.enemySuperEvoActive));
               if (fullState.enemyLog !== undefined)
                 dispatch(setEnemyLog(fullState.enemyLog));
             });
