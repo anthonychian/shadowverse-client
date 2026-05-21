@@ -5445,10 +5445,6 @@ export const cardImage = (cardName) => {
       return "../textures/BP12-T01EN.png";
     case "Twilight Blade TOKEN":
       return "../textures/BP12-T02EN.png";
-    case "Armored Tentacle TOKEN":
-      return "../textures/BP12-T03EN.png";
-    case "Assault Tentacle TOKEN":
-      return "../textures/BP12-T04EN.png";
     case "Medusiana TOKEN":
       return "../textures/BP12-T05EN.png";
 
@@ -5484,13 +5480,6 @@ export const cardImage = (cardName) => {
     case "Otohime's Vanguard TOKEN":
       return "../textures/BP08-T03EN.png";
 
-    case "Assembly Droid TOKEN":
-      return "../textures/BP07-T01EN.png";
-    case "Repair Mode TOKEN":
-      return "../textures/BP07-T02EN.png";
-    case "Naterran Great Tree TOKEN":
-      return "../textures/BP07-T03EN.png";
-
     case "Enchanted Slippers TOKEN":
       return "../textures/PR-153EN.png";
     case "Enchanted Dress TOKEN":
@@ -5513,8 +5502,6 @@ export const cardImage = (cardName) => {
       return "../textures/BP05-T02EN.png";
     case "Puppet TOKEN":
       return "../textures/BP05-T03EN.png";
-    case "Ancient Artifact TOKEN":
-      return "../textures/BP05-T04EN.png";
     case "Mystic Artifact TOKEN":
       return "../textures/BP05-T05EN.png";
     case "Serpent TOKEN":
@@ -5525,8 +5512,6 @@ export const cardImage = (cardName) => {
       return "../textures/BP03-T01EN.png";
     case "Crystalia Eve TOKEN":
       return "../textures/BP02-T01EN.png";
-    case "Shield Guardian TOKEN":
-      return "../textures/BP02-T02EN.png";
     case "Leonidas's Resolve TOKEN":
       return "../textures/BP02-T03EN.png";
     case "Magical Pawn TOKEN":
@@ -5547,12 +5532,8 @@ export const cardImage = (cardName) => {
       return "../textures/BP01-T03EN.png";
     case "Otohime's Bodyguard TOKEN":
       return "../textures/BP01-T04EN.png";
-    case "Knight TOKEN":
-      return "../textures/BP01-T05EN.png";
     case "Viking TOKEN":
       return "../textures/BP01-T06EN.png";
-    case "Steelclad Knight TOKEN":
-      return "../textures/BP01-T07EN.png";
     case "Strikeform Golem TOKEN":
       return "../textures/BP01-T08EN.png";
     case "Guardform Golem TOKEN":
