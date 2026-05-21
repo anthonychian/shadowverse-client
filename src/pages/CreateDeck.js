@@ -10,6 +10,7 @@ import ArrowBackIosNew from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import {
   allCards,
+  set17,
   set16,
   set15,
   set14,
@@ -41,6 +42,7 @@ import {
 } from "../decks/AllCards";
 import {
   allCardsEvo,
+  set17Evo,
   set16Evo,
   set15Evo,
   set14Evo,
@@ -407,6 +409,8 @@ export default function CreateDeck() {
 
   const getCardsFromName = (name) => {
     switch (name) {
+      case "set 17":
+        return set17;
       case "set 16":
         return set16;
       case "set 15":
@@ -449,6 +453,8 @@ export default function CreateDeck() {
         return set2;
       case "set 1":
         return set1;
+      case "set 17 evo":
+        return set17Evo;
       case "set 16 evo":
         return set16Evo;
       case "set 15 evo":
@@ -999,6 +1005,7 @@ export default function CreateDeck() {
                 onChange={handleChange}
               >
                 <MenuItem value={"all"}>All</MenuItem>
+                <MenuItem value={"set 17"}>Convergent Destinies</MenuItem>
                 <MenuItem value={"set 16"}>New World Genesis</MenuItem>
                 <MenuItem value={"set 15"}>Trial of the Omens</MenuItem>
                 <MenuItem value={"set 14"}>Banquet of Dreams</MenuItem>

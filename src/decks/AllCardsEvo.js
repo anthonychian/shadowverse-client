@@ -1,4 +1,31 @@
 export const allCardsEvo = [
+  "Ladica, Verdant Claw Evolved",
+  "Lococo, Little Puppeteer Evolved",
+  "Beastfolk Harvester Evolved",
+  "Blossom Treant Evolved",
+  "Mistolina & Bayleon Evolved",
+  "Frenzied Corpsmaster Evolved",
+  "Valhorean Dealer Evolved",
+  "Fox Lancer Evolved",
+  "Isabelle, Intrepid Mage Evolved",
+  "Tetra, Serene Sapphire Evolved",
+  "Marie, Flowery Magician Evolved",
+  "Awakened Robot Evolved",
+  "Disrestan, Ocean Harbinger Evolved",
+  "Djeana, the Stouthearted Evolved",
+  "Forestclaw Sentinel Evolved",
+  "Shark Warrior Evolved",
+  "Urias, Final Vampire Evolved",
+  "Aenea, Creative Amethyst Evolved",
+  "Amy, Psychopomp Guide Evolved",
+  "Rouge Vampire Evolved",
+  "Yuwan, Dimensional Avenger Evolved",
+  "Marlone, Peace Advocate Evolved",
+  "Aerial Craft Evolved",
+  "Steelwing Evolved",
+  "Maisha, Purgation's Vessel Evolved",
+  "Hoverboard Mercenary Evolved",
+
   "Aria, Lady of the Woods Evolved",
   "Glade, Fragrantwood Ward Evolved",
   "Aerin, Crystalian Frostward Evolved",
@@ -656,6 +683,43 @@ export const allCardsEvo = [
   "Goblin Evolved",
   "Goliath Evolved",
   "Healing Angel Evolved",
+];
+
+
+export const set17Evo = [
+
+  "Ladica, Verdant Claw Evolved",
+  "Lococo, Little Puppeteer Evolved",
+  "Beastfolk Harvester Evolved",
+  "Blossom Treant Evolved",
+
+  "Mistolina & Bayleon Evolved",
+  "Frenzied Corpsmaster Evolved",
+  "Valhorean Dealer Evolved",
+  "Fox Lancer Evolved",
+
+  "Isabelle, Intrepid Mage Evolved",
+  "Tetra, Serene Sapphire Evolved",
+  "Marie, Flowery Magician Evolved",
+  "Awakened Robot Evolved",
+
+  "Disrestan, Ocean Harbinger Evolved",
+  "Djeana, the Stouthearted Evolved",
+  "Forestclaw Sentinel Evolved",
+  "Shark Warrior Evolved",
+
+  "Urias, Final Vampire Evolved",
+  "Aenea, Creative Amethyst Evolved",
+  "Amy, Psychopomp Guide Evolved",
+  "Rouge Vampire Evolved",
+
+  "Yuwan, Dimensional Avenger Evolved",
+  "Marlone, Peace Advocate Evolved",
+  "Aerial Craft Evolved",
+  "Steelwing Evolved",
+
+  "Maisha, Purgation's Vessel Evolved",
+  "Hoverboard Mercenary Evolved",
 ];
 
 export const set16Evo = [
@@ -1361,6 +1425,11 @@ export const set1Evo = [
 ];
 
 export const forestEvo = [
+  "Ladica, Verdant Claw Evolved",
+  "Lococo, Little Puppeteer Evolved",
+  "Beastfolk Harvester Evolved",
+  "Blossom Treant Evolved",
+
   "Aria, Lady of the Woods Evolved",
   "Glade, Fragrantwood Ward Evolved",
   "Aerin, Crystalian Frostward Evolved",
@@ -1457,6 +1526,11 @@ export const forestEvo = [
 ];
 
 export const swordEvo = [
+  "Mistolina & Bayleon Evolved",
+  "Frenzied Corpsmaster Evolved",
+  "Valhorean Dealer Evolved",
+  "Fox Lancer Evolved",
+
   "Amelia, Silver Captain Evolved",
   "Zirconia, Ironcrown Ward Evolved",
   "Luminous Commander Evolved",
@@ -1554,6 +1628,11 @@ export const swordEvo = [
 ];
 
 export const runeEvo = [
+  "Isabelle, Intrepid Mage Evolved",
+  "Tetra, Serene Sapphire Evolved",
+  "Marie, Flowery Magician Evolved",
+  "Awakened Robot Evolved",
+
   "Lilanthim, Anathema of Edacity Evolved",
   "Zizdvend, Fate's Arbiter Evolved",
   "Edelweiss, Sagelight Ward Evolved",
@@ -1652,6 +1731,11 @@ export const runeEvo = [
 ];
 
 export const dragonEvo = [
+  "Disrestan, Ocean Harbinger Evolved",
+  "Djeana, the Stouthearted Evolved",
+  "Forestclaw Sentinel Evolved",
+  "Shark Warrior Evolved",
+
   "Burnite, Anathema of Flame Evolved",
   "Nirle, Draconic Prodigy Evolved",
   "Liu Feng, Goldennote Ward Evolved",
@@ -1756,6 +1840,11 @@ export const dragonEvo = [
 ];
 
 export const abyssEvo = [
+  "Urias, Final Vampire Evolved",
+  "Aenea, Creative Amethyst Evolved",
+  "Amy, Psychopomp Guide Evolved",
+  "Rouge Vampire Evolved",
+
   "Aragavy, Eternal Hunter Evolved",
   "Mukan, Shadowcrypt Ward Evolved",
   "Orthrus, Hellhound Blader Evolved",
@@ -1850,6 +1939,11 @@ export const abyssEvo = [
 ];
 
 export const havenEvo = [
+  "Yuwan, Dimensional Avenger Evolved",
+  "Marlone, Peace Advocate Evolved",
+  "Aerial Craft Evolved",
+  "Steelwing Evolved",
+
   "Rodeo, Anathema of Judgment Evolved",
   "Ronavero, Darkhaven Ward Evolved",
   "Angelic Prism Priestess Evolved",
@@ -1942,6 +2036,9 @@ export const havenEvo = [
 ];
 
 export const neutralEvo = [
+  "Maisha, Purgation's Vessel Evolved",
+  "Hoverboard Mercenary Evolved",
+
   "Olivia, Heroic Dark Angel Evolved",
   "Phildau, Lionheart Ward Evolved",
   "Apollo, Heaven's Envoy Evolved",

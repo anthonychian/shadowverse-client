@@ -1,4 +1,15 @@
 export const allTokens = [
+  "Lococo's Teddy Bear TOKEN",
+  "Gale Arrow TOKEN",
+  "Storm Arrow TOKEN",
+  "Quadra Magic TOKEN",
+  "Elements of Creation TOKEN",
+  "Curse of the Black Dragon TOKEN",
+  "A Horrible Night TOKEN",
+  "Luna's Doll TOKEN",
+  "Eschamali Adviser TOKEN",
+  "Eschamali Constable TOKEN",
+
   "Guardian Golem TOKEN",
   "Looking Smart! TOKEN",
   "Fire Drake Whelp TOKEN",
