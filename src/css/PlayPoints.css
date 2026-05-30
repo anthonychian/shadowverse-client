@@ -1,290 +1,248 @@
-@media screen and (min-width: 1000px) {
-  .PlayPointsContainer {
-    color: white;
-    height: 70%;
-    min-height: 700px;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    justify-content: center;
-    align-items: center;
-    font-family: "Noto Serif JP", serif;
-    -webkit-text-stroke-color: black;
-    /* position: fixed; */
-    /* bottom: 50%; */
-  }
-  .CircleContainer {
-    /* background-color: #131219; */
-    background-color: rgba(0, 0, 0, 0.6);
-    outline: 7px ridge rgba(0, 0, 0, 0.6);
-    border-radius: 2rem;
-    height: 80%;
-    max-height: 820px;
-    max-width: 100px;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .circle {
-    background: radial-gradient(
-      circle at -1% 57.5%,
-      rgb(19, 170, 82) 0%,
-      rgb(0, 102, 43) 90%
-    );
-    /* background-color: green; */
-    outline: 5px ridge rgba(0, 0, 0, 0.9);
-    border-radius: 2rem;
-    display: flex;
-    margin-top: 30%;
-    width: 35px;
-    height: 35px;
-    font-size: 1.5em;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-  }
-  .pointsContainer {
-    background-color: rgba(0, 0, 0, 0.8);
-    outline: 7px ridge rgba(0, 0, 0, 0.6);
-    border-radius: 2rem;
-    /* position: fixed; */
-    bottom: 20%;
-    left: 30%;
-    height: 70px;
-    width: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .points {
-    font-size: 25px;
-    height: 80px;
-    width: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    user-select: none;
-    padding: 0 0.2em;
-  }
-  .buttonText {
-    font-size: 12px;
-    font-family: "Noto Serif JP", serif;
-    color: white;
-  }
-  .nextTurnContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    user-select: none;
-    background: radial-gradient(
-      circle at -1% 57.5%,
-      rgb(19, 170, 82) 0%,
-      rgb(0, 102, 43) 90%
-    );
-    /* background-color: green; */
-    outline: 5px ridge rgba(0, 0, 0, 0.9);
-    border-radius: 2rem;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-  }
-  .endTurnContainer {
-    user-select: none;
-    background: linear-gradient(to right, rgb(5, 117, 230), rgb(2, 27, 121));
-    /* background-color: blue; */
-    outline: 5px ridge rgba(0, 0, 0, 0.9);
-    border-radius: 2rem;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-  }
-}
+/* ============================================================
+   Play Points tracker — Shadowverse-style PP crystal orbs.
+   Layout/structure unchanged (every class the component uses is
+   preserved); this is a visual refresh: glossy gem orbs with a
+   glow + highlight, a polished frame and points pill, and proper
+   labeled Next/End turn buttons.
+   ============================================================ */
 
-@media screen and (min-width: 2000px) {
-  .PlayPointsContainer {
-    color: white;
-    height: 70%;
-    /* max-height: 820px; */
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    justify-content: center;
-    align-items: center;
-    font-family: "Noto Serif JP", serif;
-    -webkit-text-stroke-color: black;
-    /* position: fixed; */
-    /* bottom: 50%; */
-  }
-  .CircleContainer {
-    /* background-color: #131219; */
-    background-color: rgba(0, 0, 0, 0.6);
-    outline: 7px ridge rgba(0, 0, 0, 0.6);
-    border-radius: 2rem;
-    height: 80%;
-    max-width: 120px;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .circle {
-    background: radial-gradient(
-      circle at -1% 57.5%,
-      rgb(19, 170, 82) 0%,
-      rgb(0, 102, 43) 90%
-    );
-    /* background-color: green; */
-    outline: 5px ridge rgba(0, 0, 0, 0.9);
-    border-radius: 2rem;
-    display: flex;
-    margin-top: 30%;
-    width: 45px;
-    height: 45px;
-    font-size: 1.8em;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-  }
-  .pointsContainer {
-    background-color: rgba(0, 0, 0, 0.8);
-    outline: 7px ridge rgba(0, 0, 0, 0.6);
-    border-radius: 2rem;
-    /* position: fixed; */
-    bottom: 20%;
-    left: 30%;
-    height: 80px;
-    width: 170px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .points {
-    font-size: 30px;
-    height: 80px;
-    width: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    user-select: none;
-    padding: 0 0.2em;
-  }
-  .buttonText {
-    font-size: 14px;
-    font-family: "Noto Serif JP", serif;
-    color: white;
-  }
-  .nextTurnContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    user-select: none;
-    background: radial-gradient(
-      circle at -1% 57.5%,
-      rgb(19, 170, 82) 0%,
-      rgb(0, 102, 43) 90%
-    );
-    /* background-color: green; */
-    outline: 5px ridge rgba(0, 0, 0, 0.9);
-    border-radius: 2rem;
-    width: 45px;
-    height: 45px;
-    cursor: pointer;
-  }
-  .endTurnContainer {
-    user-select: none;
-    background: linear-gradient(to right, rgb(5, 117, 230), rgb(2, 27, 121));
-    /* background-color: blue; */
-    outline: 5px ridge rgba(0, 0, 0, 0.9);
-    border-radius: 2rem;
-    width: 45px;
-    height: 45px;
-    cursor: pointer;
-  }
-}
+/* ---------- shared look (size-independent) ---------- */
 
-.inc {
-  /* background-color: red; */
+.PlayPointsContainer {
+  color: white;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  /* position: absolute; */
-  width: 60px;
-  top: 0;
-}
-
-.dec {
-  /* background-color: red; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* position: absolute; */
-  width: 60px;
-  bottom: 0;
-}
-.buttonsContainer {
-  width: 100%;
-  display: flex;
-  /* justify-content: end; */
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
   gap: 1em;
-  padding: 1em;
+  justify-content: center;
+  align-items: center;
+  font-family: "Noto Serif JP", serif;
+  -webkit-text-stroke-color: black;
 }
+
+.CircleContainer {
+  background: linear-gradient(
+    180deg,
+    rgba(10, 24, 17, 0.82) 0%,
+    rgba(3, 9, 7, 0.9) 100%
+  );
+  border: 2px solid rgba(120, 210, 160, 0.28);
+  box-shadow:
+    inset 0 0 22px rgba(0, 0, 0, 0.75),
+    0 6px 16px rgba(0, 0, 0, 0.55);
+  border-radius: 2rem;
+  box-sizing: border-box;
+  padding: 1.2em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circles {
+  height: 100%;
+  user-select: none;
+  flex-direction: column-reverse;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.55em;
+}
+
+/* Filled (available) PP orb — bright glossy green crystal. */
+.circle {
+  background: radial-gradient(
+    circle at 32% 26%,
+    #7bf0a6 0%,
+    #25c06a 40%,
+    #0c8a42 74%,
+    #064f27 100%
+  );
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow:
+    inset 0 2px 4px rgba(255, 255, 255, 0.6),
+    inset 0 -4px 6px rgba(0, 0, 0, 0.45);
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.85);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.12s ease;
+}
+.circle:hover {
+  transform: scale(1.08);
+}
+
+/* Empty (spent / unavailable) PP orb — dark, dim, faint green rim. */
+.circleFaded {
+  background: radial-gradient(
+    circle at 32% 26%,
+    rgba(90, 130, 105, 0.3) 0%,
+    rgba(18, 34, 26, 0.55) 80%
+  );
+  border: 2px solid rgba(120, 200, 150, 0.18);
+  box-shadow:
+    inset 0 2px 4px rgba(255, 255, 255, 0.08),
+    inset 0 -3px 5px rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.35);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.circleFaded:hover {
+  background: radial-gradient(
+    circle at 32% 26%,
+    rgba(110, 160, 130, 0.4) 0%,
+    rgba(24, 46, 34, 0.6) 80%
+  );
+}
+
+/* Locked socket — a PP slot not yet unlocked (index beyond current max).
+   Always rendered (rather than an empty gap) so the column stays full and
+   centered, and never looks empty at the start of the game. */
+.circleSocket {
+  background: radial-gradient(
+    circle at 32% 26%,
+    rgba(60, 80, 70, 0.22) 0%,
+    rgba(8, 16, 12, 0.5) 80%
+  );
+  border: 2px solid rgba(120, 200, 150, 0.1);
+  box-shadow: inset 0 -3px 5px rgba(0, 0, 0, 0.5);
+  color: rgba(255, 255, 255, 0.18);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Current / max points pill. */
+.pointsContainer {
+  background: linear-gradient(
+    180deg,
+    rgba(16, 32, 24, 0.95) 0%,
+    rgba(4, 11, 8, 0.95) 100%
+  );
+  border: 2px solid rgba(120, 210, 160, 0.32);
+  box-shadow:
+    inset 0 1px 2px rgba(255, 255, 255, 0.18),
+    0 4px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.points {
+  color: #eafff3;
+  text-shadow: 0 1px 2px #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  padding: 0 0.2em;
+}
+
+/* Turn buttons — labeled glossy pills (green = next, blue = end). */
 .turnContainer {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 3em;
+  gap: 1.5em;
+}
+.nextTurnContainer,
+.endTurnContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 1.4rem;
+  padding: 0.55em 1em;
+  cursor: pointer;
+  transition:
+    transform 0.12s ease,
+    filter 0.12s ease;
+}
+.nextTurnContainer {
+  background: linear-gradient(180deg, #34d979 0%, #0c8a42 100%);
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.5);
+}
+.endTurnContainer {
+  background: linear-gradient(180deg, rgb(46, 132, 240) 0%, rgb(2, 27, 121) 100%);
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.5);
+}
+.nextTurnContainer:hover,
+.endTurnContainer:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.12);
+}
+.buttonText {
+  font-family: "Noto Serif JP", serif;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+  white-space: nowrap;
 }
 
+/* increment / decrement controls. */
+.inc,
+.dec {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+}
+.buttonsContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+}
 .IncDecContainer {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.upArrow {
-  background-color: rgba(0, 0, 0, 0.8);
-  outline: 7px ridge rgba(0, 0, 0, 0.6);
-  height: "200px";
-  width: "200px";
-}
+/* ---------- fixed design sizes ----------
+   One size at every resolution; the side-panel scale transform handles all
+   responsiveness. (Previously these were viewport-width breakpoints, which
+   dropped out below 1000px and made the orbs collapse at small sizes.) */
 
-.downArrow {
-  background-color: rgba(0, 0, 0, 0.8);
-  outline: 7px ridge rgba(0, 0, 0, 0.6);
-  height: "200px";
-  width: "200px";
+.PlayPointsContainer {
+  height: 70%;
+  min-height: 700px;
 }
-
-.circles {
-  height: 100%;
-  position: relative;
-  /* top: 5%; */
-  user-select: none;
-  bottom: 7%;
-  flex-direction: column-reverse;
-  display: flex;
+.CircleContainer {
+  height: 80%;
+  max-height: 820px;
+  max-width: 100px;
+  width: 50%;
 }
-
-.circleFaded {
-  background-color: rgb(0, 255, 0, 0.1);
-  outline: 5px ridge rgba(0, 0, 0, 0.9);
-  border-radius: 2rem;
-  display: flex;
-  margin-top: 30%;
-  width: 45px;
-  height: 45px;
-  font-size: 1.8em;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
+.circle,
+.circleFaded,
+.circleSocket {
+  width: 38px;
+  height: 38px;
+  font-size: 1.4em;
+}
+.pointsContainer {
+  height: 70px;
+  width: 150px;
+}
+.points {
+  font-size: 26px;
+  height: 80px;
+  width: 70px;
+}
+.buttonText {
+  font-size: 13px;
 }

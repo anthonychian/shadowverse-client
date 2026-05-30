@@ -5,6 +5,10 @@
   z-index: 0;
   border-radius: "10px";
   border: 4px solid transparent;
+  /* Keep the 4px border inside the 115x161 footprint so toggling placement mode
+     (cardStyle cell -> .box cell) doesn't resize the cell, reflow the grid, or
+     change the board's measured height (which would rescale the whole board). */
+  box-sizing: border-box;
 }
 .box:hover {
   display: flex;
@@ -128,116 +132,17 @@
   inherits: false;
 }
 
-@media screen and (min-width: 500px) {
-  .none {
-    position: relative;
-    height: 140px;
-    width: 100px;
-  }
-  .box {
-    position: relative;
-    height: 140px;
-    width: 100px;
-  }
-  .box:hover {
-    position: relative;
-    height: 140px;
-    width: 100px;
-  }
-  .box2 {
-    position: relative;
-    height: 140px;
-    width: 100px;
-  }
-  .aura {
-    position: relative;
-    height: 140px;
-    width: 100px;
-  }
-  .bane {
-    position: relative;
-    height: 140px;
-    width: 100px;
-  }
-  .ward {
-    position: relative;
-    height: 140px;
-    width: 100px;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .none {
-    position: relative;
-    height: 140px;
-    width: 100px;
-  }
-  .box {
-    position: relative;
-    height: 140px;
-    width: 100px;
-  }
-  .box:hover {
-    position: relative;
-    height: 140px;
-    width: 100px;
-  }
-  .box2 {
-    position: relative;
-    height: 140px;
-    width: 100px;
-  }
-  .aura {
-    position: relative;
-    height: 140px;
-    width: 100px;
-  }
-  .bane {
-    position: relative;
-    height: 140px;
-    width: 100px;
-  }
-  .ward {
-    position: relative;
-    height: 140px;
-    width: 100px;
-  }
-}
-
-@media screen and (min-width: 2000px) {
-  .none {
-    position: relative;
-    height: 160px;
-    width: 115px;
-  }
-  .box {
-    position: relative;
-    height: 160px;
-    width: 115px;
-  }
-  .box:hover {
-    position: relative;
-    height: 160px;
-    width: 115px;
-  }
-  .box2 {
-    position: relative;
-    height: 160px;
-    width: 115px;
-  }
-  .aura {
-    position: relative;
-    height: 160px;
-    width: 115px;
-  }
-  .bane {
-    position: relative;
-    height: 160px;
-    width: 115px;
-  }
-  .ward {
-    position: relative;
-    height: 160px;
-    width: 115px;
-  }
+/* Single fixed card-frame size at every resolution (see Card.css note). The
+   board / hand scale transforms handle all responsive sizing, so these must
+   not vary with viewport width. */
+.none,
+.box,
+.box:hover,
+.box2,
+.aura,
+.bane,
+.ward {
+  position: relative;
+  height: 161px;
+  width: 115px;
 }

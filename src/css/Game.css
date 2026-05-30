@@ -18,10 +18,16 @@
   /* background-color: green; */
   /* width: 1000px; */
   /* width: 50vw; */
-  min-width: 1000px;
+  /* min-width removed: the board now scales to fit, so the column is free to
+     shrink on laptops/iPad instead of forcing horizontal overflow. */
+  min-width: 0;
   max-width: 1100px;
   flex-direction: column;
   align-items: center;
+  /* The board lives in a flex:1 area that fills the space above the hand and
+     centers the board within it, so the board is vertically centered while the
+     player's hand stays pinned to the bottom. */
+  justify-content: flex-start;
   /* overflow: hidden; */
 }
 .rightSideCanvas {
@@ -33,9 +39,14 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  gap: 30vh;
+  /* small min-gap only; space-between handles the spread. A large gap here
+     overflowed the column on shorter screens and pushed the chat button
+     (the last item) off the bottom of the viewport. */
+  gap: 1em;
   align-items: end;
   justify-content: space-between;
+  box-sizing: border-box;
+  padding: 1em 0;
 }
 
 .leftSideCanvas {
@@ -48,22 +59,4 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-/* medium - tablet styles */
-@media screen and (max-width: 1000px) {
-  .centerCanvas {
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    max-width: 880px;
-    flex-direction: column;
-    align-items: center;
-  }
-  .rightSideCanvas {
-    display: none;
-  }
-  .leftSideCanvas {
-    display: none;
-  }
 }

@@ -36,24 +36,6 @@
   justify-content: center;
 }
 
-/* medium - tablet styles */
-@media screen and (max-width: 1000px) {
-  .centerCanvas {
-    display: flex;
-    height: 100vh;
-    width: 100vw;
-    max-width: 880px;
-    flex-direction: column;
-    align-items: center;
-  }
-  .rightSideCanvas {
-    display: none;
-  }
-  .leftSideCanvas {
-    display: none;
-  }
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;

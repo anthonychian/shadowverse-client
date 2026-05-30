@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Draggable from "react-draggable";
 import ChatIcon from "@mui/icons-material/Chat";
 import { Snackbar, IconButton, SnackbarContent } from "@mui/material";
@@ -16,19 +16,24 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { setChat } from "../../redux/CardSlice";
 
-function PaperComponent(props) {
-  return (
-    <Draggable
-      handle="#draggable-dialog-title"
-      cancel={'[class*="MuiDialogContent-root"]'}
-    >
-      <Paper {...props} />
-    </Draggable>
-  );
-}
-
-export default function ChatUI() {
+export default function ChatUI({ scale = 1 }) {
   const dispatch = useDispatch();
+
+  // The dialog is portaled, so the parent's scale transform doesn't reach it.
+  // Scale it here via `zoom` (kept off `transform`, which react-draggable owns)
+  // and tell Draggable about the scale so dragging stays 1:1 with the cursor.
+  const PaperComponent = useCallback(
+    (props) => (
+      <Draggable
+        handle="#draggable-dialog-title"
+        cancel={'[class*="MuiDialogContent-root"]'}
+        scale={scale}
+      >
+        <Paper {...props} />
+      </Draggable>
+    ),
+    [scale],
+  );
 
   const [open, setOpen] = useState(false);
   const [openSnack, setOpenSnack] = useState(false);
@@ -103,7 +108,7 @@ export default function ChatUI() {
         <ChatIcon sx={{ color: "white" }} />
       </Button>
       <Dialog
-        PaperProps={{ style: { pointerEvents: "auto" } }}
+        PaperProps={{ style: { pointerEvents: "auto", zoom: scale } }}
         disableEnforceFocus
         style={{
           pointerEvents: "none",

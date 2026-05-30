@@ -45,25 +45,11 @@
   outline: none;
   transform: rotateY(180deg);
 }
-/* medium - tablet styles */
-@media screen and (min-width: 500px) {
-  .cardStyle {
-    height: 140px;
-    width: 100px;
-  }
-}
-
-/* medium - tablet styles */
-@media screen and (min-width: 1000px) {
-  .cardStyle {
-    height: 140px;
-    width: 100px;
-  }
-}
-
-@media screen and (min-width: 2000px) {
-  .cardStyle {
-    height: 160px;
-    width: 115px;
-  }
+/* Single fixed card size at every resolution. All responsive scaling is done
+   by the board / side-panel / hand scale transforms, so card dimensions must
+   not change with viewport width — otherwise cards mismatch the scaled board
+   at certain resolutions (and fell back to full natural size below 500px). */
+.cardStyle {
+  height: 161px;
+  width: 115px;
 }

@@ -159,7 +159,9 @@ export default function Scoreboard({ name }) {
                 </div>
               )
             ) : (
-              <div key={`${idx}`}></div>
+              <div key={`socket-${idx}`} className="circleSocket">
+                {idx + 1}
+              </div>
             ),
           )}
         </div>

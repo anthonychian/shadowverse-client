@@ -1,12 +1,14 @@
-/* default styles */
+/* default styles — one fixed size at every resolution; the side-panel scale
+   transform handles responsiveness (previously this jumped 350→300→350px
+   across width breakpoints). */
 .LeaderImageActive {
-  min-width: 350px;
+  min-width: 300px;
   width: 50%;
   position: absolute;
   z-index: 1;
 }
 .LeaderImageInactive {
-  min-width: 350px;
+  min-width: 300px;
   margin-top: 5vh;
   width: 50%;
   position: absolute;
@@ -17,40 +19,6 @@
   bottom: 30%;
   right: 20%;
   position: relative;
-}
-
-@media screen and (min-width: 1000px) {
-  .LeaderImageActive {
-    min-width: 300px;
-    width: 50%;
-    position: absolute;
-    z-index: 1;
-  }
-  .LeaderImageInactive {
-    min-width: 300px;
-    margin-top: 5vh;
-    width: 50%;
-    position: absolute;
-    z-index: 1;
-    filter: brightness(30%);
-  }
-}
-
-@media screen and (min-width: 2000px) {
-  .LeaderImageActive {
-    min-width: 350px;
-    width: 50%;
-    position: absolute;
-    z-index: 1;
-  }
-  .LeaderImageInactive {
-    min-width: 350px;
-    margin-top: 5vh;
-    width: 50%;
-    position: absolute;
-    z-index: 1;
-    filter: brightness(30%);
-  }
 }
 
 @media (prefers-reduced-motion: no-preference) {

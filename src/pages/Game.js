@@ -28,6 +28,20 @@ export default function Game(callback) {
     useState(false);
   const reduxCurrentCard = useSelector((state) => state.card.currentCard);
 
+  // The board reports the scale it computed; the side panels (HP, leader, play
+  // points, chat) shrink by the same factor so everything matches. Capped at 1
+  // so they only ever scale down, never grow past their designed size.
+  const [boardScale, setBoardScale] = useState(1);
+  const sideScale = Math.min(boardScale, 1);
+  const leftScaleStyle = {
+    transform: `scale(${sideScale})`,
+    transformOrigin: "center left",
+  };
+  const rightScaleStyle = {
+    transform: `scale(${sideScale})`,
+    transformOrigin: "center right",
+  };
+
   return (
     <div
       onContextMenu={(e) => e.nativeEvent.preventDefault()}
@@ -46,8 +60,17 @@ export default function Game(callback) {
       />
       {/* Left side  */}
       <div className={"leftSideCanvas"}>
-        <ZoomedCard name={reduxCurrentCard} hovering={hovering} />
-        <PlayPoints name={selectedOption} />
+        {/* ZoomedCard is position:absolute against the viewport, so it must NOT
+            be wrapped in a transform (that would reparent its containing block
+            and collapse it). It scales itself via the scale prop instead. */}
+        <ZoomedCard
+          name={reduxCurrentCard}
+          hovering={hovering}
+          scale={sideScale}
+        />
+        <div style={leftScaleStyle}>
+          <PlayPoints name={selectedOption} />
+        </div>
       </div>
 
       {/* Center Field */}
@@ -61,30 +84,63 @@ export default function Game(callback) {
         }}
         ref={constraintsRef}
       >
-        <Field
-          // dragging={dragging}
-          ready={ready}
-          setReady={setReady}
-          setHovering={setHovering}
-          readyToPlaceOnFieldFromHand={readyToPlaceOnFieldFromHand}
-          setReadyToPlaceOnFieldFromHand={setReadyToPlaceOnFieldFromHand}
-        />
-        <Hand
-          // setDragging={setDragging}
-          setHovering={setHovering}
-          constraintsRef={constraintsRef}
-          ready={ready}
-          setReady={setReady}
-          setReadyToPlaceOnFieldFromHand={setReadyToPlaceOnFieldFromHand}
-        />
+        {/* Board area: fills the height above the hand and centers the board
+            vertically, so on tall screens it sits in the middle instead of
+            stuck at the top. The hand below stays pinned to the bottom. */}
+        <div
+          style={{
+            flex: 1,
+            minHeight: 0,
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <Field
+            // dragging={dragging}
+            ready={ready}
+            setReady={setReady}
+            setHovering={setHovering}
+            readyToPlaceOnFieldFromHand={readyToPlaceOnFieldFromHand}
+            setReadyToPlaceOnFieldFromHand={setReadyToPlaceOnFieldFromHand}
+            onScaleChange={setBoardScale}
+          />
+        </div>
+        {/* Scale the hand by the same factor as the board so the player's
+            cards always match the on-field cards at every resolution. Anchor
+            the scale to the bottom so the hand stays locked to the bottom edge
+            instead of floating up by the scaled-away height. */}
+        <div
+          style={{
+            transform: `scale(${boardScale})`,
+            transformOrigin: "bottom center",
+          }}
+        >
+          <Hand
+            // setDragging={setDragging}
+            setHovering={setHovering}
+            constraintsRef={constraintsRef}
+            ready={ready}
+            setReady={setReady}
+            setReadyToPlaceOnFieldFromHand={setReadyToPlaceOnFieldFromHand}
+          />
+        </div>
       </motion.div>
 
       {/* Right side */}
       <div className={"rightSideCanvas"}>
-        <EnemyUI />
+        <div style={rightScaleStyle}>
+          <EnemyUI />
+        </div>
 
-        <PlayerUI name={selectedOption} />
-        <ChatUI />
+        <div style={rightScaleStyle}>
+          <PlayerUI name={selectedOption} />
+        </div>
+        <div style={rightScaleStyle}>
+          <ChatUI scale={sideScale} />
+        </div>
       </div>
     </div>
   );

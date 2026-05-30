@@ -141,12 +141,20 @@ const style = {
   width: "55%",
 };
 
+// Responsive board-scaling constants (see the scaling effect in Field).
+const BASE_WIDTH = 1100; // design width of the board in px (kept compact so cards render large; field still wide enough for engaged-card spacing)
+const TOP_RESERVE = 200; // vertical space kept above the field for the opponent's hand
+const BOTTOM_RESERVE = 210; // vertical space kept below the field for the player's hand
+const MIN_SCALE = 0.4;
+const MAX_SCALE = 1.3;
+
 export default function Field({
   ready,
   setReady,
   setHovering,
   readyToPlaceOnFieldFromHand,
   setReadyToPlaceOnFieldFromHand,
+  onScaleChange,
 }) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -213,6 +221,46 @@ export default function Field({
   const [readyToFeed, setReadyToFeed] = useState(false);
   const [readyToRide, setReadyToRide] = useState(false);
   const [tokenReady, setTokenReady] = useState(false);
+
+  // --- Responsive board scaling -------------------------------------------
+  // The board is authored at a fixed "design size" (BASE_WIDTH x its natural
+  // height) with many pixel-tuned overlays (atk/def, counters, deck counts).
+  // Instead of re-tuning every nested value per breakpoint, we scale the whole
+  // board uniformly to fit the available width and the viewport height. Because
+  // every card and overlay scales together, alignment is preserved exactly at
+  // any laptop / monitor / iPad resolution.
+  const boardWrapperRef = useRef(null);
+  const boardRef = useRef(null);
+  const [boardScale, setBoardScale] = useState(1);
+
+  useEffect(() => {
+    const wrapper = boardWrapperRef.current;
+    const board = boardRef.current;
+    if (!wrapper || !board) return;
+
+    const update = () => {
+      const availWidth = wrapper.clientWidth;
+      const availHeight = window.innerHeight - TOP_RESERVE - BOTTOM_RESERVE;
+      const naturalHeight = board.offsetHeight; // field rows, unaffected by the transform
+      if (!availWidth || !naturalHeight) return;
+      const fit = Math.min(availWidth / BASE_WIDTH, availHeight / naturalHeight);
+      const scale = Math.max(MIN_SCALE, Math.min(fit, MAX_SCALE));
+      setBoardScale(scale);
+      // Report the scale up so sibling UI (HP, leader, play points, chat) can
+      // shrink by the same factor and stay visually consistent with the board.
+      if (onScaleChange) onScaleChange(scale);
+    };
+
+    update();
+    const ro = new ResizeObserver(update);
+    ro.observe(wrapper);
+    ro.observe(board);
+    window.addEventListener("resize", update);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", update);
+    };
+  }, [onScaleChange]);
 
   useSocketStateSync();
   useReceiveFullState();
@@ -1424,40 +1472,82 @@ export default function Field({
         </Box>
       </Modal>
 
-      {/* Enemy */}
+      {/* Three-zone layout that fills the available height: the opponent's
+          hand is pinned to the top edge, the field is centered in the space
+          between the two hands, and the player's hand is pinned to the bottom
+          (rendered in Game.js). Both zones scale by the same boardScale so the
+          cards and their pixel-tuned overlays stay aligned at any resolution. */}
       <div
         style={{
-          // backgroundColor: "yellow",
-          display: "flex",
-          flexDirection: "row",
+          flex: 1,
+          minHeight: 0,
           width: "100%",
-          minHeight: "130px",
-          justifyContent: "center",
+          display: "flex",
+          flexDirection: "column",
           alignItems: "center",
-          paddingBottom: "2em",
-          // marginTop: "-2em",
-          // zIndex: 100,
         }}
       >
-        {reduxEnemyHand.map((_, idx) => (
-          <img
-            style={
-              reduxCardSelectedInHand === idx
-                ? {
-                    filter:
-                      "sepia() saturate(4) hue-rotate(315deg) brightness(100%) opacity(5)",
-                    cursor: `url(${img}) 55 55, auto`,
-                  }
-                : { cursor: `url(${img}) 55 55, auto` }
-            }
-            key={idx}
-            className={"cardStyle"}
-            src={cardback}
-            alt={"cardback"}
-            onClick={() => handleSelectEnemyCardInHand(idx)}
-          />
-        ))}
-      </div>
+        {/* Opponent hand — pinned to the top */}
+        <div
+          style={{
+            flexShrink: 0,
+            transform: `scale(${boardScale})`,
+            transformOrigin: "top center",
+          }}
+        >
+          <div
+            style={{
+              width: `${BASE_WIDTH}px`,
+              display: "flex",
+              flexDirection: "row",
+              minHeight: "130px",
+              justifyContent: "center",
+              alignItems: "center",
+              paddingBottom: "2em",
+            }}
+          >
+            {reduxEnemyHand.map((_, idx) => (
+              <img
+                style={
+                  reduxCardSelectedInHand === idx
+                    ? {
+                        filter:
+                          "sepia() saturate(4) hue-rotate(315deg) brightness(100%) opacity(5)",
+                        cursor: `url(${img}) 55 55, auto`,
+                      }
+                    : { cursor: `url(${img}) 55 55, auto` }
+                }
+                key={idx}
+                className={"cardStyle"}
+                src={cardback}
+                alt={"cardback"}
+                onClick={() => handleSelectEnemyCardInHand(idx)}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Field — centered between the two hands */}
+        <div
+          ref={boardWrapperRef}
+          style={{
+            flex: 1,
+            minHeight: 0,
+            width: "100%",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <div
+            ref={boardRef}
+            style={{
+              width: `${BASE_WIDTH}px`,
+              flexShrink: 0,
+              transform: `scale(${boardScale})`,
+              transformOrigin: "center",
+            }}
+          >
 
       <div
         style={{
@@ -1474,7 +1564,8 @@ export default function Field({
           style={{
             height: "35vh",
             minHeight: "330px",
-            width: "175px",
+            width: "140px",
+            flexShrink: 0,
             display: "flex",
             flexDirection: "column",
             // backgroundColor: "rgba(0, 0, 0, 0.60)",
@@ -1517,14 +1608,15 @@ export default function Field({
           style={{
             height: "35vh",
             minHeight: "330px",
-            minWidth: "600px",
-            width: "100%",
+            flex: 1,
+            minWidth: 0,
             // backgroundColor: "black",
             // backgroundColor: "#131219",
             // backgroundColor: "rgba(0, 0, 0, 0.60)",
             // background: "linear-gradient(to bottom, #09203f 0%, #537895 100%)",
             display: "grid",
             gridTemplateColumns: "repeat(5, 1fr)",
+            columnGap: "60px",
             alignItems: "center",
             justifyItems: "center",
             // zIndex: 0,
@@ -1621,7 +1713,8 @@ export default function Field({
           style={{
             height: "35vh",
             minHeight: "330px",
-            width: "175px",
+            width: "140px",
+            flexShrink: 0,
             display: "flex",
             flexDirection: "column",
             // backgroundColor: "black",
@@ -1654,7 +1747,8 @@ export default function Field({
           style={{
             height: "35vh",
             minHeight: "330px",
-            width: "175px",
+            width: "140px",
+            flexShrink: 0,
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
@@ -1693,8 +1787,8 @@ export default function Field({
           style={{
             height: "35vh",
             minHeight: "330px",
-            minWidth: "600px",
-            width: "100%",
+            flex: 1,
+            minWidth: 0,
             // backgroundColor: "black",
             // backgroundColor: "#131219",
             // backgroundColor: "rgba(0, 0, 0, 0.60)",
@@ -1702,6 +1796,7 @@ export default function Field({
             // background: "linear-gradient(to top, #09203f 0%, #537895 100%)",
             display: "grid",
             gridTemplateColumns: "repeat(5, 1fr)",
+            columnGap: "60px",
             alignItems: "center",
             justifyItems: "center",
             // zIndex: 0,
@@ -1874,7 +1969,8 @@ export default function Field({
           style={{
             height: "35vh",
             minHeight: "330px",
-            width: "175px",
+            width: "140px",
+            flexShrink: 0,
             display: "flex",
             flexDirection: "column",
             // backgroundColor: "black",
@@ -1920,6 +2016,9 @@ export default function Field({
             {/* )} */}
           </div>
         </div>
+      </div>
+        </div>
+      </div>
       </div>
     </>
   );
