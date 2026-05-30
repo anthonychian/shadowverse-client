@@ -103,12 +103,14 @@ function updateAllCards() {
   const isPresent = (name) => content.includes(`"${name}"`);
   const newBase = baseCards.filter((c) => !isPresent(c.name));
 
-  // 1. Add new base card names to the allCards array (before the closing ];)
+  // 1. Add new base card names at the TOP of the allCards array, so the newest
+  //    set shows first in the deck-builder "All" view (which lists newest-first).
   if (newBase.length > 0) {
-    const newCardEntries = newBase.map((c) => `  "${c.name}",`).join("\n");
+    const EOL = content.includes("\r\n") ? "\r\n" : "\n";
+    const newCardEntries = newBase.map((c) => `  "${c.name}",`).join(EOL);
     content = content.replace(
-      /^(export const allCards = \[[\s\S]*?)(^\];)/m,
-      `$1\n${newCardEntries}\n$2`
+      /(export const allCards = \[\r?\n)/,
+      `$1${newCardEntries}${EOL}`
     );
   }
 
@@ -188,12 +190,13 @@ function updateAllCardsEvo() {
   const isPresent = (name) => content.includes(`"${name}"`);
   const newEvo = evoCards.filter((c) => !isPresent(c.name));
 
-  // Add new evolved names to allCardsEvo array
+  // Add new evolved names at the TOP of the allCardsEvo array (newest-first).
   if (newEvo.length > 0) {
-    const newEntries = newEvo.map((c) => `  "${c.name}",`).join("\n");
+    const EOL = content.includes("\r\n") ? "\r\n" : "\n";
+    const newEntries = newEvo.map((c) => `  "${c.name}",`).join(EOL);
     content = content.replace(
-      /^(export const allCardsEvo = \[[\s\S]*?)(^\];)/m,
-      `$1\n${newEntries}\n$2`
+      /(export const allCardsEvo = \[\r?\n)/,
+      `$1${newEntries}${EOL}`
     );
   }
 
