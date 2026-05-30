@@ -10,6 +10,7 @@ import ArrowBackIosNew from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import {
   allCards,
+  set17,
   set16,
   set15,
   set14,
@@ -23,6 +24,7 @@ import {
   set9,
   set8,
   setIDOL,
+  setIDOL2,
   set7,
   set6,
   set5,
@@ -41,6 +43,7 @@ import {
 } from "../decks/AllCards";
 import {
   allCardsEvo,
+  set17Evo,
   set16Evo,
   set15Evo,
   set14Evo,
@@ -53,6 +56,7 @@ import {
   set9Evo,
   set8Evo,
   setIDOLEvo,
+  setIDOL2Evo,
   set7Evo,
   set6Evo,
   set5Evo,
@@ -407,6 +411,8 @@ export default function CreateDeck() {
 
   const getCardsFromName = (name) => {
     switch (name) {
+      case "set 17":
+        return set17;
       case "set 16":
         return set16;
       case "set 15":
@@ -435,6 +441,8 @@ export default function CreateDeck() {
         return set7;
       case "idol":
         return setIDOL;
+      case "idol2":
+        return setIDOL2;
       case "set 6":
         return set6;
       case "set 5":
@@ -449,6 +457,8 @@ export default function CreateDeck() {
         return set2;
       case "set 1":
         return set1;
+      case "set 17 evo":
+        return set17Evo;
       case "set 16 evo":
         return set16Evo;
       case "set 15 evo":
@@ -475,6 +485,8 @@ export default function CreateDeck() {
         return set7Evo;
       case "idol evo":
         return setIDOLEvo;
+      case "idol2 evo":
+        return setIDOL2Evo;
       case "set 6 evo":
         return set6Evo;
       case "set 5 evo":
@@ -999,6 +1011,7 @@ export default function CreateDeck() {
                 onChange={handleChange}
               >
                 <MenuItem value={"all"}>All</MenuItem>
+                <MenuItem value={"set 17"}>Convergent Destinies</MenuItem>
                 <MenuItem value={"set 16"}>New World Genesis</MenuItem>
                 <MenuItem value={"set 15"}>Trial of the Omens</MenuItem>
                 <MenuItem value={"set 14"}>Banquet of Dreams</MenuItem>
@@ -1013,6 +1026,7 @@ export default function CreateDeck() {
                 <MenuItem value={"set 8"}>Alterchaotica</MenuItem>
                 <MenuItem value={"set 7"}>Verdant Steel</MenuItem>
                 <MenuItem value={"idol"}>iDOLM@STER Cinderella Girls</MenuItem>
+                <MenuItem value={"idol2"}>iDOLM@STER Cinderella Girls EX</MenuItem>
                 <MenuItem value={"set 6"}>Paragons of the Colosseum</MenuItem>
                 <MenuItem value={"set 5"}>Omens Eternal</MenuItem>
                 <MenuItem value={"set 4"}>Cosmic Mythos</MenuItem>

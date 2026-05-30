@@ -656,6 +656,52 @@ export const allCardsEvo = [
   "Goblin Evolved",
   "Goliath Evolved",
   "Healing Angel Evolved",
+
+  "Ladica, Verdant Claw Evolved",
+  "Lococo, Little Puppeteer Evolved",
+  "Beastfolk Harvester Evolved",
+  "Blossom Treant Evolved",
+  "Mistolina & Bayleon Evolved",
+  "Frenzied Corpsmaster Evolved",
+  "Valhorean Dealer Evolved",
+  "Fox Lancer Evolved",
+  "Isabelle, Intrepid Mage Evolved",
+  "Tetra, Serene Sapphire Evolved",
+  "Marie, Flowery Magician Evolved",
+  "Awakened Robot Evolved",
+  "Disrestan, Ocean Harbinger Evolved",
+  "Djeana, the Stouthearted Evolved",
+  "Forestclaw Sentinel Evolved",
+  "Shark Warrior Evolved",
+  "Urias, Final Vampire Evolved",
+  "Aenea, Creative Amethyst Evolved",
+  "Amy, Psychopomp Guide Evolved",
+  "Rouge Vampire Evolved",
+  "Yuwan, Dimensional Avenger Evolved",
+  "Marlone, Peace Advocate Evolved",
+  "Aerial Craft Evolved",
+  "Steelwing Evolved",
+  "Maisha, Purgation's Vessel Evolved",
+  "Hoverboard Mercenary Evolved",
+
+  "Anastasia [Seize the Light] Evolved",
+  "Riina Tada [Wannabe Legend] Evolved",
+  "Hinako Kita [True Dream] Evolved",
+  "Mio Honda [Cinderella Girl] Evolved",
+  "Airi Totoki [Cinderella Girl] Evolved",
+  "Mayu Sakuma [Love-Laden Gift] Evolved",
+  "Chieri Ogata [Happiness Tune] Evolved",
+  "Sae Kobayakawa [Dancing Flowers] Evolved",
+  "Hiromi Seki [Twinkle in My Eye] Evolved",
+  "Fumika Sagisawa [Cinderella Girl] Evolved",
+  "Yui Ohtsuki [Lollipop Darling] Evolved",
+  "Hotaru Shiragiku [Unbreakable] Evolved",
+  "Nono Morikubo [individuals] Evolved",
+  "Chitose Kurosaki [Memento Mori] Evolved",
+  "Natsuki Kimura [Scarlet Love Song] Evolved",
+  "Nana Abe [Cinderella Girl] Evolved",
+  "Kako Takafuji [Lady Luck] Evolved",
+  "Kotoka Saionji [Pure Euphoria] Evolved",
 ];
 
 export const set16Evo = [
@@ -1454,6 +1500,15 @@ export const forestEvo = [
   "Rhinoceroach Evolved",
   "Elven Princess Mage Evolved",
   "Archer Evolved",
+
+  "Ladica, Verdant Claw Evolved",
+  "Lococo, Little Puppeteer Evolved",
+  "Beastfolk Harvester Evolved",
+  "Blossom Treant Evolved",
+
+  "Anastasia [Seize the Light] Evolved",
+  "Riina Tada [Wannabe Legend] Evolved",
+  "Hinako Kita [True Dream] Evolved",
 ];
 
 export const swordEvo = [
@@ -1551,6 +1606,16 @@ export const swordEvo = [
   "Shadowed Assassin Evolved",
   "Maid Leader Evolved",
   "Fervid Soldier Evolved",
+
+  "Mistolina & Bayleon Evolved",
+  "Frenzied Corpsmaster Evolved",
+  "Valhorean Dealer Evolved",
+  "Fox Lancer Evolved",
+
+  "Mio Honda [Cinderella Girl] Evolved",
+  "Airi Totoki [Cinderella Girl] Evolved",
+  "Mayu Sakuma [Love-Laden Gift] Evolved",
+  "Chieri Ogata [Happiness Tune] Evolved",
 ];
 
 export const runeEvo = [
@@ -1649,6 +1714,14 @@ export const runeEvo = [
   "Ancient Alchemist Evolved",
   "Spectral Wizard Evolved",
   "Crafty Warlock Evolved",
+
+  "Isabelle, Intrepid Mage Evolved",
+  "Tetra, Serene Sapphire Evolved",
+  "Marie, Flowery Magician Evolved",
+  "Awakened Robot Evolved",
+
+  "Sae Kobayakawa [Dancing Flowers] Evolved",
+  "Hiromi Seki [Twinkle in My Eye] Evolved",
 ];
 
 export const dragonEvo = [
@@ -1753,6 +1826,15 @@ export const dragonEvo = [
   "Shapeshifting Mage Evolved",
   "Shenlong Evolved",
   "Ivory Dragon Evolved",
+
+  "Disrestan, Ocean Harbinger Evolved",
+  "Djeana, the Stouthearted Evolved",
+  "Forestclaw Sentinel Evolved",
+  "Shark Warrior Evolved",
+
+  "Fumika Sagisawa [Cinderella Girl] Evolved",
+  "Yui Ohtsuki [Lollipop Darling] Evolved",
+  "Hotaru Shiragiku [Unbreakable] Evolved",
 ];
 
 export const abyssEvo = [
@@ -1847,6 +1929,15 @@ export const abyssEvo = [
   "Righteous Devil Evolved",
   "Crazed Executioner Evolved",
   "Wardrobe Raider Evolved",
+
+  "Urias, Final Vampire Evolved",
+  "Aenea, Creative Amethyst Evolved",
+  "Amy, Psychopomp Guide Evolved",
+  "Rouge Vampire Evolved",
+
+  "Nono Morikubo [individuals] Evolved",
+  "Chitose Kurosaki [Memento Mori] Evolved",
+  "Natsuki Kimura [Scarlet Love Song] Evolved",
 ];
 
 export const havenEvo = [
@@ -1939,6 +2030,15 @@ export const havenEvo = [
   "Arch Priestess Laelia Evolved",
   "Prism Priestess Evolved",
   "Mainyu Evolved",
+
+  "Yuwan, Dimensional Avenger Evolved",
+  "Marlone, Peace Advocate Evolved",
+  "Aerial Craft Evolved",
+  "Steelwing Evolved",
+
+  "Nana Abe [Cinderella Girl] Evolved",
+  "Kako Takafuji [Lady Luck] Evolved",
+  "Kotoka Saionji [Pure Euphoria] Evolved",
 ];
 
 export const neutralEvo = [
@@ -2026,4 +2126,57 @@ export const neutralEvo = [
   "Goblin Evolved",
   "Goliath Evolved",
   "Healing Angel Evolved",
+
+  "Maisha, Purgation's Vessel Evolved",
+  "Hoverboard Mercenary Evolved",
+];
+
+export const set17Evo = [
+  "Ladica, Verdant Claw Evolved",
+  "Lococo, Little Puppeteer Evolved",
+  "Beastfolk Harvester Evolved",
+  "Blossom Treant Evolved",
+  "Mistolina & Bayleon Evolved",
+  "Frenzied Corpsmaster Evolved",
+  "Valhorean Dealer Evolved",
+  "Fox Lancer Evolved",
+  "Isabelle, Intrepid Mage Evolved",
+  "Tetra, Serene Sapphire Evolved",
+  "Marie, Flowery Magician Evolved",
+  "Awakened Robot Evolved",
+  "Disrestan, Ocean Harbinger Evolved",
+  "Djeana, the Stouthearted Evolved",
+  "Forestclaw Sentinel Evolved",
+  "Shark Warrior Evolved",
+  "Urias, Final Vampire Evolved",
+  "Aenea, Creative Amethyst Evolved",
+  "Amy, Psychopomp Guide Evolved",
+  "Rouge Vampire Evolved",
+  "Yuwan, Dimensional Avenger Evolved",
+  "Marlone, Peace Advocate Evolved",
+  "Aerial Craft Evolved",
+  "Steelwing Evolved",
+  "Maisha, Purgation's Vessel Evolved",
+  "Hoverboard Mercenary Evolved",
+];
+
+export const setIDOL2Evo = [
+  "Anastasia [Seize the Light] Evolved",
+  "Riina Tada [Wannabe Legend] Evolved",
+  "Hinako Kita [True Dream] Evolved",
+  "Mio Honda [Cinderella Girl] Evolved",
+  "Airi Totoki [Cinderella Girl] Evolved",
+  "Mayu Sakuma [Love-Laden Gift] Evolved",
+  "Chieri Ogata [Happiness Tune] Evolved",
+  "Sae Kobayakawa [Dancing Flowers] Evolved",
+  "Hiromi Seki [Twinkle in My Eye] Evolved",
+  "Fumika Sagisawa [Cinderella Girl] Evolved",
+  "Yui Ohtsuki [Lollipop Darling] Evolved",
+  "Hotaru Shiragiku [Unbreakable] Evolved",
+  "Nono Morikubo [individuals] Evolved",
+  "Chitose Kurosaki [Memento Mori] Evolved",
+  "Natsuki Kimura [Scarlet Love Song] Evolved",
+  "Nana Abe [Cinderella Girl] Evolved",
+  "Kako Takafuji [Lady Luck] Evolved",
+  "Kotoka Saionji [Pure Euphoria] Evolved",
 ];

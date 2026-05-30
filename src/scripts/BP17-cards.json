@@ -1,0 +1,968 @@
+[
+  {
+    "cardNo": "BP17-001EN",
+    "name": "Arisa, Evergreen Arrow",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-001EN.png"
+  },
+  {
+    "cardNo": "BP17-002EN",
+    "name": "Ladica, Verdant Claw",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-002EN.png"
+  },
+  {
+    "cardNo": "BP17-003EN",
+    "name": "Ladica, Verdant Claw Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-003EN.png"
+  },
+  {
+    "cardNo": "BP17-004EN",
+    "name": "Setus, Sunlit Hero",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-004EN.png"
+  },
+  {
+    "cardNo": "BP17-005EN",
+    "name": "Lococo, Little Puppeteer",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-005EN.png"
+  },
+  {
+    "cardNo": "BP17-006EN",
+    "name": "Lococo, Little Puppeteer Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-006EN.png"
+  },
+  {
+    "cardNo": "BP17-007EN",
+    "name": "Friendly Embrace",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-007EN.png"
+  },
+  {
+    "cardNo": "BP17-008EN",
+    "name": "Forest Guardian's Bow",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-008EN.png"
+  },
+  {
+    "cardNo": "BP17-009EN",
+    "name": "Beastfolk Harvester",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-009EN.png"
+  },
+  {
+    "cardNo": "BP17-010EN",
+    "name": "Beastfolk Harvester Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-010EN.png"
+  },
+  {
+    "cardNo": "BP17-011EN",
+    "name": "Heroic Resolve",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-011EN.png"
+  },
+  {
+    "cardNo": "BP17-012EN",
+    "name": "Inverted Manipulation",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-012EN.png"
+  },
+  {
+    "cardNo": "BP17-013EN",
+    "name": "Blossom Treant",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-013EN.png"
+  },
+  {
+    "cardNo": "BP17-014EN",
+    "name": "Blossom Treant Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-014EN.png"
+  },
+  {
+    "cardNo": "BP17-015EN",
+    "name": "Sköll Lookout",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-015EN.png"
+  },
+  {
+    "cardNo": "BP17-016EN",
+    "name": "Elf Sorcerer",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-016EN.png"
+  },
+  {
+    "cardNo": "BP17-017EN",
+    "name": "Threadsnipper Puppet",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-017EN.png"
+  },
+  {
+    "cardNo": "BP17-018EN",
+    "name": "Heroic Fairy Champion",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-018EN.png"
+  },
+  {
+    "cardNo": "BP17-019EN",
+    "name": "Erika, Loyal Swordsavant",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-019EN.png"
+  },
+  {
+    "cardNo": "BP17-020EN",
+    "name": "Mistolina & Bayleon",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-020EN.png"
+  },
+  {
+    "cardNo": "BP17-021EN",
+    "name": "Mistolina & Bayleon Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-021EN.png"
+  },
+  {
+    "cardNo": "BP17-022EN",
+    "name": "Leod, Moonlit Executioner",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-022EN.png"
+  },
+  {
+    "cardNo": "BP17-023EN",
+    "name": "Frenzied Corpsmaster",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-023EN.png"
+  },
+  {
+    "cardNo": "BP17-024EN",
+    "name": "Frenzied Corpsmaster Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-024EN.png"
+  },
+  {
+    "cardNo": "BP17-025EN",
+    "name": "Sunny Day Encounter",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-025EN.png"
+  },
+  {
+    "cardNo": "BP17-026EN",
+    "name": "Killer Instincts",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-026EN.png"
+  },
+  {
+    "cardNo": "BP17-027EN",
+    "name": "Valhorean Dealer",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-027EN.png"
+  },
+  {
+    "cardNo": "BP17-028EN",
+    "name": "Valhorean Dealer Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-028EN.png"
+  },
+  {
+    "cardNo": "BP17-029EN",
+    "name": "Bladerights Lieutenant",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-029EN.png"
+  },
+  {
+    "cardNo": "BP17-030EN",
+    "name": "Shadowed Memories",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-030EN.png"
+  },
+  {
+    "cardNo": "BP17-031EN",
+    "name": "Fox Lancer",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-031EN.png"
+  },
+  {
+    "cardNo": "BP17-032EN",
+    "name": "Fox Lancer Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-032EN.png"
+  },
+  {
+    "cardNo": "BP17-033EN",
+    "name": "Stone Merchant",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-033EN.png"
+  },
+  {
+    "cardNo": "BP17-034EN",
+    "name": "Victorious Grappler",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-034EN.png"
+  },
+  {
+    "cardNo": "BP17-035EN",
+    "name": "Countersolari Survivor",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-035EN.png"
+  },
+  {
+    "cardNo": "BP17-036EN",
+    "name": "Brothers United",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-036EN.png"
+  },
+  {
+    "cardNo": "BP17-037EN",
+    "name": "Isabelle, Intrepid Mage",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-037EN.png"
+  },
+  {
+    "cardNo": "BP17-038EN",
+    "name": "Isabelle, Intrepid Mage Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-038EN.png"
+  },
+  {
+    "cardNo": "BP17-039EN",
+    "name": "Eleanor, Glorious Flower",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-039EN.png"
+  },
+  {
+    "cardNo": "BP17-040EN",
+    "name": "Belphomet, Ultimate Creator",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-040EN.png"
+  },
+  {
+    "cardNo": "BP17-041EN",
+    "name": "Tetra, Serene Sapphire",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-041EN.png"
+  },
+  {
+    "cardNo": "BP17-042EN",
+    "name": "Tetra, Serene Sapphire Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-042EN.png"
+  },
+  {
+    "cardNo": "BP17-043EN",
+    "name": "Mega Enforcer",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-043EN.png"
+  },
+  {
+    "cardNo": "BP17-044EN",
+    "name": "Nefarious Invasion",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-044EN.png"
+  },
+  {
+    "cardNo": "BP17-045EN",
+    "name": "Marie, Flowery Magician",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-045EN.png"
+  },
+  {
+    "cardNo": "BP17-046EN",
+    "name": "Marie, Flowery Magician Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-046EN.png"
+  },
+  {
+    "cardNo": "BP17-047EN",
+    "name": "Enforcer",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-047EN.png"
+  },
+  {
+    "cardNo": "BP17-048EN",
+    "name": "Fruits of Wisdom",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-048EN.png"
+  },
+  {
+    "cardNo": "BP17-049EN",
+    "name": "Awakened Robot",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-049EN.png"
+  },
+  {
+    "cardNo": "BP17-050EN",
+    "name": "Awakened Robot Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-050EN.png"
+  },
+  {
+    "cardNo": "BP17-051EN",
+    "name": "Covenant Mage",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-051EN.png"
+  },
+  {
+    "cardNo": "BP17-052EN",
+    "name": "Jetbroom Witch",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-052EN.png"
+  },
+  {
+    "cardNo": "BP17-053EN",
+    "name": "Panacea Alchemist",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-053EN.png"
+  },
+  {
+    "cardNo": "BP17-054EN",
+    "name": "Mysterian Wisdom",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-054EN.png"
+  },
+  {
+    "cardNo": "BP17-055EN",
+    "name": "Rowen, Dragon Lance",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-055EN.png"
+  },
+  {
+    "cardNo": "BP17-056EN",
+    "name": "Valdain, Forest Shadow",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-056EN.png"
+  },
+  {
+    "cardNo": "BP17-057EN",
+    "name": "Disrestan, Ocean Harbinger",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-057EN.png"
+  },
+  {
+    "cardNo": "BP17-058EN",
+    "name": "Disrestan, Ocean Harbinger Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-058EN.png"
+  },
+  {
+    "cardNo": "BP17-059EN",
+    "name": "Djeana, the Stouthearted",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-059EN.png"
+  },
+  {
+    "cardNo": "BP17-060EN",
+    "name": "Djeana, the Stouthearted Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-060EN.png"
+  },
+  {
+    "cardNo": "BP17-061EN",
+    "name": "Verdant Rebirth",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-061EN.png"
+  },
+  {
+    "cardNo": "BP17-062EN",
+    "name": "Dragonslayer Spear",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-062EN.png"
+  },
+  {
+    "cardNo": "BP17-063EN",
+    "name": "Forestclaw Sentinel",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-063EN.png"
+  },
+  {
+    "cardNo": "BP17-064EN",
+    "name": "Forestclaw Sentinel Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-064EN.png"
+  },
+  {
+    "cardNo": "BP17-065EN",
+    "name": "Rock Whale",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-065EN.png"
+  },
+  {
+    "cardNo": "BP17-066EN",
+    "name": "Newfound Allies",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-066EN.png"
+  },
+  {
+    "cardNo": "BP17-067EN",
+    "name": "Shark Warrior",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-067EN.png"
+  },
+  {
+    "cardNo": "BP17-068EN",
+    "name": "Shark Warrior Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-068EN.png"
+  },
+  {
+    "cardNo": "BP17-069EN",
+    "name": "Poisonous Dilophosaurus",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-069EN.png"
+  },
+  {
+    "cardNo": "BP17-070EN",
+    "name": "Mánagarmr Scout",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-070EN.png"
+  },
+  {
+    "cardNo": "BP17-071EN",
+    "name": "Mermaid Archer",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-071EN.png"
+  },
+  {
+    "cardNo": "BP17-072EN",
+    "name": "Touching Thoughts",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-072EN.png"
+  },
+  {
+    "cardNo": "BP17-073EN",
+    "name": "Luna, Soul Keeper",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-073EN.png"
+  },
+  {
+    "cardNo": "BP17-074EN",
+    "name": "Urias, Final Vampire",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-074EN.png"
+  },
+  {
+    "cardNo": "BP17-075EN",
+    "name": "Urias, Final Vampire Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-075EN.png"
+  },
+  {
+    "cardNo": "BP17-076EN",
+    "name": "Mono, Immortal Garnet",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-076EN.png"
+  },
+  {
+    "cardNo": "BP17-077EN",
+    "name": "Aenea, Creative Amethyst",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-077EN.png"
+  },
+  {
+    "cardNo": "BP17-078EN",
+    "name": "Aenea, Creative Amethyst Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-078EN.png"
+  },
+  {
+    "cardNo": "BP17-079EN",
+    "name": "Nicola, Enduring Steward",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-079EN.png"
+  },
+  {
+    "cardNo": "BP17-080EN",
+    "name": "Steeled Hopes",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-080EN.png"
+  },
+  {
+    "cardNo": "BP17-081EN",
+    "name": "Amy, Psychopomp Guide",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-081EN.png"
+  },
+  {
+    "cardNo": "BP17-082EN",
+    "name": "Amy, Psychopomp Guide Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-082EN.png"
+  },
+  {
+    "cardNo": "BP17-083EN",
+    "name": "Roly-Poly Mk II",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-083EN.png"
+  },
+  {
+    "cardNo": "BP17-084EN",
+    "name": "Allure of Shadows",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-084EN.png"
+  },
+  {
+    "cardNo": "BP17-085EN",
+    "name": "Rouge Vampire",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-085EN.png"
+  },
+  {
+    "cardNo": "BP17-086EN",
+    "name": "Rouge Vampire Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-086EN.png"
+  },
+  {
+    "cardNo": "BP17-087EN",
+    "name": "Vampiric Bloodbinder",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-087EN.png"
+  },
+  {
+    "cardNo": "BP17-088EN",
+    "name": "Trampling Terror",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-088EN.png"
+  },
+  {
+    "cardNo": "BP17-089EN",
+    "name": "Soul Commander",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-089EN.png"
+  },
+  {
+    "cardNo": "BP17-090EN",
+    "name": "Midnight Gossip",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-090EN.png"
+  },
+  {
+    "cardNo": "BP17-091EN",
+    "name": "Eris, Atoned Priestess",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-091EN.png"
+  },
+  {
+    "cardNo": "BP17-092EN",
+    "name": "Relic Goddess",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-092EN.png"
+  },
+  {
+    "cardNo": "BP17-093EN",
+    "name": "Yuwan, Dimensional Avenger",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-093EN.png"
+  },
+  {
+    "cardNo": "BP17-094EN",
+    "name": "Yuwan, Dimensional Avenger Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-094EN.png"
+  },
+  {
+    "cardNo": "BP17-095EN",
+    "name": "Meowskers, Fluffy Consul",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-095EN.png"
+  },
+  {
+    "cardNo": "BP17-096EN",
+    "name": "Marlone, Peace Advocate",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-096EN.png"
+  },
+  {
+    "cardNo": "BP17-097EN",
+    "name": "Marlone, Peace Advocate Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-097EN.png"
+  },
+  {
+    "cardNo": "BP17-098EN",
+    "name": "Vice, Death Grip",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-098EN.png"
+  },
+  {
+    "cardNo": "BP17-099EN",
+    "name": "Automachina Maiden",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-099EN.png"
+  },
+  {
+    "cardNo": "BP17-100EN",
+    "name": "Aerial Craft",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-100EN.png"
+  },
+  {
+    "cardNo": "BP17-101EN",
+    "name": "Aerial Craft Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-101EN.png"
+  },
+  {
+    "cardNo": "BP17-102EN",
+    "name": "Balance and Obliteration",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-102EN.png"
+  },
+  {
+    "cardNo": "BP17-103EN",
+    "name": "Unlikely Fellowship",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-103EN.png"
+  },
+  {
+    "cardNo": "BP17-104EN",
+    "name": "Steelwing",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-104EN.png"
+  },
+  {
+    "cardNo": "BP17-105EN",
+    "name": "Steelwing Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-105EN.png"
+  },
+  {
+    "cardNo": "BP17-106EN",
+    "name": "Technomancer",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-106EN.png"
+  },
+  {
+    "cardNo": "BP17-107EN",
+    "name": "Android Artisan",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-107EN.png"
+  },
+  {
+    "cardNo": "BP17-108EN",
+    "name": "Mark Unleashed",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-108EN.png"
+  },
+  {
+    "cardNo": "BP17-109EN",
+    "name": "Unicorn Altar",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-109EN.png"
+  },
+  {
+    "cardNo": "BP17-110EN",
+    "name": "Maisha, Purgation's Vessel",
+    "type": "base",
+    "class": "neutral",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-110EN.png"
+  },
+  {
+    "cardNo": "BP17-111EN",
+    "name": "Maisha, Purgation's Vessel Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-111EN.png"
+  },
+  {
+    "cardNo": "BP17-112EN",
+    "name": "Great Mother's Embrace",
+    "type": "base",
+    "class": "neutral",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-112EN.png"
+  },
+  {
+    "cardNo": "BP17-113EN",
+    "name": "Hoverboard Mercenary",
+    "type": "base",
+    "class": "neutral",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-113EN.png"
+  },
+  {
+    "cardNo": "BP17-114EN",
+    "name": "Hoverboard Mercenary Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-114EN.png"
+  },
+  {
+    "cardNo": "BP17-115EN",
+    "name": "Cosmic Angel",
+    "type": "base",
+    "class": "neutral",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-115EN.png"
+  },
+  {
+    "cardNo": "BP17-116EN",
+    "name": "Guild Assembly",
+    "type": "base",
+    "class": "neutral",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-116EN.png"
+  },
+  {
+    "cardNo": "BP17-117EN",
+    "name": "Naterra's Future",
+    "type": "base",
+    "class": "neutral",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-117EN.png"
+  },
+  {
+    "cardNo": "BP17-118EN",
+    "name": "Unnamed Determination",
+    "type": "base",
+    "class": "neutral",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-118EN.png"
+  },
+  {
+    "cardNo": "BP17-119EN",
+    "name": "Aiolon's Remains",
+    "type": "base",
+    "class": "neutral",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-119EN.png"
+  },
+  {
+    "cardNo": "BP17-T01EN",
+    "name": "Lococo's Teddy Bear TOKEN",
+    "type": "token",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T01EN.png"
+  },
+  {
+    "cardNo": "BP17-T02EN",
+    "name": "Gale Arrow TOKEN",
+    "type": "token",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T02EN.png"
+  },
+  {
+    "cardNo": "BP17-T03EN",
+    "name": "Storm Arrow TOKEN",
+    "type": "token",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T03EN.png"
+  },
+  {
+    "cardNo": "BP17-T04EN",
+    "name": "Quadra Magic TOKEN",
+    "type": "token",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T04EN.png"
+  },
+  {
+    "cardNo": "BP17-T05EN",
+    "name": "Elements of Creation TOKEN",
+    "type": "token",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T05EN.png"
+  },
+  {
+    "cardNo": "BP17-T06EN",
+    "name": "Curse of the Black Dragon TOKEN",
+    "type": "token",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T06EN.png"
+  },
+  {
+    "cardNo": "BP17-T07EN",
+    "name": "A Horrible Night TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T07EN.png"
+  },
+  {
+    "cardNo": "BP17-T08EN",
+    "name": "Luna's Doll TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T08EN.png"
+  },
+  {
+    "cardNo": "BP17-T09EN",
+    "name": "Eschamali Adviser TOKEN",
+    "type": "token",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T09EN.png"
+  },
+  {
+    "cardNo": "BP17-T10EN",
+    "name": "Eschamali Constable TOKEN",
+    "type": "token",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T10EN.png"
+  },
+  {
+    "cardNo": "BP17-T11EN",
+    "name": "Knight TOKEN",
+    "type": "token",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T11EN.png"
+  },
+  {
+    "cardNo": "BP17-T12EN",
+    "name": "Steelclad Knight TOKEN",
+    "type": "token",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T12EN.png"
+  },
+  {
+    "cardNo": "BP17-T13EN",
+    "name": "Shield Guardian TOKEN",
+    "type": "token",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T13EN.png"
+  },
+  {
+    "cardNo": "BP17-T14EN",
+    "name": "Armored Tentacle TOKEN",
+    "type": "token",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T14EN.png"
+  },
+  {
+    "cardNo": "BP17-T15EN",
+    "name": "Assault Tentacle TOKEN",
+    "type": "token",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T15EN.png"
+  },
+  {
+    "cardNo": "BP17-T16EN",
+    "name": "Ancient Artifact TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T16EN.png"
+  },
+  {
+    "cardNo": "BP17-T17EN",
+    "name": "Assembly Droid TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T17EN.png"
+  },
+  {
+    "cardNo": "BP17-T18EN",
+    "name": "Repair Mode TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T18EN.png"
+  },
+  {
+    "cardNo": "BP17-T19EN",
+    "name": "Naterran Great Tree TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T19EN.png"
+  }
+]

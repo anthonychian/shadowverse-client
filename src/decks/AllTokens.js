@@ -105,4 +105,15 @@ export const allTokens = [
   "Forest Bat TOKEN",
   "Holy Falcon TOKEN",
   "Holy Tiger TOKEN",
+
+  "Lococo's Teddy Bear TOKEN",
+  "Gale Arrow TOKEN",
+  "Storm Arrow TOKEN",
+  "Quadra Magic TOKEN",
+  "Elements of Creation TOKEN",
+  "Curse of the Black Dragon TOKEN",
+  "A Horrible Night TOKEN",
+  "Luna's Doll TOKEN",
+  "Eschamali Adviser TOKEN",
+  "Eschamali Constable TOKEN",
 ];

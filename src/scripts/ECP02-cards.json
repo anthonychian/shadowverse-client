@@ -1,0 +1,590 @@
+[
+  {
+    "cardNo": "ECP02-001EN",
+    "name": "Anastasia [Seize the Light]",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-001EN.png"
+  },
+  {
+    "cardNo": "ECP02-002EN",
+    "name": "Anastasia [Seize the Light] Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-002EN.png"
+  },
+  {
+    "cardNo": "ECP02-003EN",
+    "name": "Hajime Fujiwara [Pink Blossom Dream]",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-003EN.png"
+  },
+  {
+    "cardNo": "ECP02-004EN",
+    "name": "Minami Nitta [Water's Edge Bride]",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-004EN.png"
+  },
+  {
+    "cardNo": "ECP02-005EN",
+    "name": "Yuki Himekawa [Full Swing☆Cheer]",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-005EN.png"
+  },
+  {
+    "cardNo": "ECP02-006EN",
+    "name": "Riina Tada [Wannabe Legend]",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-006EN.png"
+  },
+  {
+    "cardNo": "ECP02-007EN",
+    "name": "Riina Tada [Wannabe Legend] Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-007EN.png"
+  },
+  {
+    "cardNo": "ECP02-008EN",
+    "name": "Hinako Kita [True Dream]",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-008EN.png"
+  },
+  {
+    "cardNo": "ECP02-009EN",
+    "name": "Hinako Kita [True Dream] Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-009EN.png"
+  },
+  {
+    "cardNo": "ECP02-010EN",
+    "name": "Miku Maekawa [Meownderful World]",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-010EN.png"
+  },
+  {
+    "cardNo": "ECP02-011EN",
+    "name": "Blossoms' Advance",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-011EN.png"
+  },
+  {
+    "cardNo": "ECP02-012EN",
+    "name": "Rin Shibuya [Cinderella Girl]",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-012EN.png"
+  },
+  {
+    "cardNo": "ECP02-013EN",
+    "name": "Mio Honda [Cinderella Girl]",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-013EN.png"
+  },
+  {
+    "cardNo": "ECP02-014EN",
+    "name": "Mio Honda [Cinderella Girl] Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-014EN.png"
+  },
+  {
+    "cardNo": "ECP02-015EN",
+    "name": "Uzuki Shimamura [Cinderella Girl]",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-015EN.png"
+  },
+  {
+    "cardNo": "ECP02-016EN",
+    "name": "Karen Hojo [Cinderella Girl]",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-016EN.png"
+  },
+  {
+    "cardNo": "ECP02-017EN",
+    "name": "Airi Totoki [Cinderella Girl]",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-017EN.png"
+  },
+  {
+    "cardNo": "ECP02-018EN",
+    "name": "Airi Totoki [Cinderella Girl] Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-018EN.png"
+  },
+  {
+    "cardNo": "ECP02-019EN",
+    "name": "Mayu Sakuma [Love-Laden Gift]",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-019EN.png"
+  },
+  {
+    "cardNo": "ECP02-020EN",
+    "name": "Mayu Sakuma [Love-Laden Gift] Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-020EN.png"
+  },
+  {
+    "cardNo": "ECP02-021EN",
+    "name": "Chieri Ogata [Happiness Tune]",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-021EN.png"
+  },
+  {
+    "cardNo": "ECP02-022EN",
+    "name": "Chieri Ogata [Happiness Tune] Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-022EN.png"
+  },
+  {
+    "cardNo": "ECP02-023EN",
+    "name": "Nagi Hisakawa [Everyday Fairy Tale]",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-023EN.png"
+  },
+  {
+    "cardNo": "ECP02-024EN",
+    "name": "Miho Kohinata [Youthful Romance]",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-024EN.png"
+  },
+  {
+    "cardNo": "ECP02-025EN",
+    "name": "Dancing in the Rain",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-025EN.png"
+  },
+  {
+    "cardNo": "ECP02-026EN",
+    "name": "Syuko Shiomi [Cinderella Girl]",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-026EN.png"
+  },
+  {
+    "cardNo": "ECP02-027EN",
+    "name": "Mika Jougasaki [My★Style]",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-027EN.png"
+  },
+  {
+    "cardNo": "ECP02-028EN",
+    "name": "Yuuki Otokura [Together with Me]",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-028EN.png"
+  },
+  {
+    "cardNo": "ECP02-029EN",
+    "name": "Glitz & Glam☆Parade",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-029EN.png"
+  },
+  {
+    "cardNo": "ECP02-030EN",
+    "name": "Sae Kobayakawa [Dancing Flowers]",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-030EN.png"
+  },
+  {
+    "cardNo": "ECP02-031EN",
+    "name": "Sae Kobayakawa [Dancing Flowers] Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-031EN.png"
+  },
+  {
+    "cardNo": "ECP02-032EN",
+    "name": "Hiromi Seki [Twinkle in My Eye]",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-032EN.png"
+  },
+  {
+    "cardNo": "ECP02-033EN",
+    "name": "Hiromi Seki [Twinkle in My Eye] Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-033EN.png"
+  },
+  {
+    "cardNo": "ECP02-034EN",
+    "name": "Shiki Ichinose [Mystic Elixir]",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-034EN.png"
+  },
+  {
+    "cardNo": "ECP02-035EN",
+    "name": "Kanade Hayami [Faraway Reflection]",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-035EN.png"
+  },
+  {
+    "cardNo": "ECP02-036EN",
+    "name": "Tomoe Murakami [Crimson Fighter]",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-036EN.png"
+  },
+  {
+    "cardNo": "ECP02-037EN",
+    "name": "Fumika Sagisawa [Cinderella Girl]",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-037EN.png"
+  },
+  {
+    "cardNo": "ECP02-038EN",
+    "name": "Fumika Sagisawa [Cinderella Girl] Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-038EN.png"
+  },
+  {
+    "cardNo": "ECP02-039EN",
+    "name": "Akira Sunazuka [Online Life]",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-039EN.png"
+  },
+  {
+    "cardNo": "ECP02-040EN",
+    "name": "Akari Tsujino [Twice as Lovely]",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-040EN.png"
+  },
+  {
+    "cardNo": "ECP02-041EN",
+    "name": "Riamu Yumemi [Party Night]",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-041EN.png"
+  },
+  {
+    "cardNo": "ECP02-042EN",
+    "name": "Yui Ohtsuki [Lollipop Darling]",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-042EN.png"
+  },
+  {
+    "cardNo": "ECP02-043EN",
+    "name": "Yui Ohtsuki [Lollipop Darling] Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-043EN.png"
+  },
+  {
+    "cardNo": "ECP02-044EN",
+    "name": "Hotaru Shiragiku [Unbreakable]",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-044EN.png"
+  },
+  {
+    "cardNo": "ECP02-045EN",
+    "name": "Hotaru Shiragiku [Unbreakable] Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-045EN.png"
+  },
+  {
+    "cardNo": "ECP02-046EN",
+    "name": "Star of the Show",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-046EN.png"
+  },
+  {
+    "cardNo": "ECP02-047EN",
+    "name": "Ranko Kanzaki [Cinderella Girl]",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-047EN.png"
+  },
+  {
+    "cardNo": "ECP02-048EN",
+    "name": "Syoko Hoshi [individuals]",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-048EN.png"
+  },
+  {
+    "cardNo": "ECP02-049EN",
+    "name": "Mirei Hayasaka [individuals]",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-049EN.png"
+  },
+  {
+    "cardNo": "ECP02-050EN",
+    "name": "Nono Morikubo [individuals]",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-050EN.png"
+  },
+  {
+    "cardNo": "ECP02-051EN",
+    "name": "Nono Morikubo [individuals] Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-051EN.png"
+  },
+  {
+    "cardNo": "ECP02-052EN",
+    "name": "Asuka Ninomiya [Sweet & Charming]",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-052EN.png"
+  },
+  {
+    "cardNo": "ECP02-053EN",
+    "name": "Chitose Kurosaki [Memento Mori]",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-053EN.png"
+  },
+  {
+    "cardNo": "ECP02-054EN",
+    "name": "Chitose Kurosaki [Memento Mori] Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-054EN.png"
+  },
+  {
+    "cardNo": "ECP02-055EN",
+    "name": "Natsuki Kimura [Scarlet Love Song]",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-055EN.png"
+  },
+  {
+    "cardNo": "ECP02-056EN",
+    "name": "Natsuki Kimura [Scarlet Love Song] Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-056EN.png"
+  },
+  {
+    "cardNo": "ECP02-057EN",
+    "name": "Takumi Mukai [No One Can Stop Me]",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-057EN.png"
+  },
+  {
+    "cardNo": "ECP02-058EN",
+    "name": "Koume Shirasaka [Haunted Gown]",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-058EN.png"
+  },
+  {
+    "cardNo": "ECP02-059EN",
+    "name": "Self-Proclaimed Fan Favorite",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-059EN.png"
+  },
+  {
+    "cardNo": "ECP02-060EN",
+    "name": "Nana Abe [Cinderella Girl]",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-060EN.png"
+  },
+  {
+    "cardNo": "ECP02-061EN",
+    "name": "Nana Abe [Cinderella Girl] Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-061EN.png"
+  },
+  {
+    "cardNo": "ECP02-062EN",
+    "name": "Kaede Takagaki [Cinderella Girl]",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-062EN.png"
+  },
+  {
+    "cardNo": "ECP02-063EN",
+    "name": "Eve Santaclaus [Cinderella Girl]",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-063EN.png"
+  },
+  {
+    "cardNo": "ECP02-064EN",
+    "name": "Miyu Mifune [Rouge Couture]",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-064EN.png"
+  },
+  {
+    "cardNo": "ECP02-065EN",
+    "name": "Kako Takafuji [Lady Luck]",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-065EN.png"
+  },
+  {
+    "cardNo": "ECP02-066EN",
+    "name": "Kako Takafuji [Lady Luck] Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-066EN.png"
+  },
+  {
+    "cardNo": "ECP02-067EN",
+    "name": "Kotoka Saionji [Pure Euphoria]",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-067EN.png"
+  },
+  {
+    "cardNo": "ECP02-068EN",
+    "name": "Kotoka Saionji [Pure Euphoria] Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-068EN.png"
+  },
+  {
+    "cardNo": "ECP02-069EN",
+    "name": "Haru Yuuki [Secret Blue Rose]",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-069EN.png"
+  },
+  {
+    "cardNo": "ECP02-070EN",
+    "name": "Natalia [One Thousand and One Nights]",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-070EN.png"
+  },
+  {
+    "cardNo": "ECP02-071EN",
+    "name": "A Sweet Romantic Summer",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-071EN.png"
+  },
+  {
+    "cardNo": "ECP02-072EN",
+    "name": "Curtain Call of Smiles",
+    "type": "base",
+    "class": "neutral",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-072EN.png"
+  },
+  {
+    "cardNo": "ECP02-SP01EN",
+    "name": "Minami Nitta [Goddess by the Sunlit Sea]",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-SP01EN.png"
+  },
+  {
+    "cardNo": "ECP02-SP02EN",
+    "name": "Yuki Himekawa [Challengers' Cheer]",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-SP02EN.png"
+  },
+  {
+    "cardNo": "ECP02-SP03aEN",
+    "name": "Rin & Mio",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-SP03aEN.png"
+  },
+  {
+    "cardNo": "ECP02-SP04EN",
+    "name": "Uzuki Shimamura [Magical New Me]",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-SP04EN.png"
+  },
+  {
+    "cardNo": "ECP02-SP05aEN",
+    "name": "Mika & Rika",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-SP05aEN.png"
+  },
+  {
+    "cardNo": "ECP02-SP06EN",
+    "name": "Yuuki Otokura [Ripples of My Heart]",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-SP06EN.png"
+  },
+  {
+    "cardNo": "ECP02-SP07aEN",
+    "name": "Akari & Akira",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-SP07aEN.png"
+  },
+  {
+    "cardNo": "ECP02-SP08EN",
+    "name": "Riamu Yumemi [Shout It to the World]",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-SP08EN.png"
+  },
+  {
+    "cardNo": "ECP02-SP09EN",
+    "name": "Ranko Kanzaki [Princess in White]",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-SP09EN.png"
+  },
+  {
+    "cardNo": "ECP02-SP10EN",
+    "name": "Asuka Ninomiya [Gentle Evening]",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-SP10EN.png"
+  },
+  {
+    "cardNo": "ECP02-SP11EN",
+    "name": "Eve Santaclaus [Holy Night Miracle]",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-SP11EN.png"
+  },
+  {
+    "cardNo": "ECP02-SP12EN",
+    "name": "Miyu Mifune [Parfum Géranium]",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-SP12EN.png"
+  }
+]
