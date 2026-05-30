@@ -81,6 +81,8 @@ import {
   setEnemyCardSelectedInHand,
   setCardSelectedOnField,
   setEnemyCardSelectedOnField,
+  setRoom,
+  setSelfOnlineStatus,
 } from "../../redux/CardSlice";
 import { cardImage } from "../../decks/getCards";
 import { motion } from "framer-motion";
@@ -98,7 +100,7 @@ import EnemyEvoDeck from "./EnemyEvoDeck";
 import img from "../../assets/pin_bellringer_angel.png";
 import "../../css/AnimatedBorder.css";
 import { useNavigate } from "react-router-dom";
-import { socket, playerId } from "../../sockets";
+import { socket, playerId, getSavedRoom } from "../../sockets";
 import useSocketStateSync from "../hooks/useSocketStateSync";
 import useReceiveFullState from "../hooks/useReceiveFullState";
 import useStoreState from "../hooks/useStoreState";
@@ -235,10 +237,19 @@ export default function Field({
     };
   }, [reduxRoom]);
 
-  // Message queue to handle out-of-order messages
-  const messageQueueRef = useRef([]);
-  const lastSequenceRef = useRef(-1);
-  const processingRef = useRef(false);
+  // Per-sender sequence tracking for gap detection: { [senderId]: lastSeq }
+  const lastSeqBySenderRef = useRef({});
+  // Throttle full-state resync requests so a burst of gaps can't storm.
+  const lastResyncRef = useRef(0);
+
+  const requestResync = useCallback(() => {
+    if (!reduxRoom) return;
+    const now = Date.now();
+    if (now - lastResyncRef.current < 1500) return;
+    lastResyncRef.current = now;
+    console.log("[resync] requesting full state from opponent");
+    socket.emit("request_state", { room: reduxRoom });
+  }, [reduxRoom]);
 
   // Process a single update (batched with others)
   const handleUpdate = useCallback(
@@ -403,8 +414,6 @@ export default function Field({
               if (fullState.enemyLog !== undefined)
                 dispatch(setEnemyLog(fullState.enemyLog));
             });
-            // Reset sequence after full state sync
-            lastSequenceRef.current = -1;
           }
           break;
         default:
@@ -414,68 +423,75 @@ export default function Field({
     [dispatch],
   );
 
-  // Process queued messages in order
-  const processQueue = useCallback(() => {
-    if (processingRef.current) return;
-    processingRef.current = true;
-
-    // Sort queue by sequence number if available, otherwise by timestamp
-    messageQueueRef.current.sort((a, b) => {
-      if (a.sequence !== undefined && b.sequence !== undefined) {
-        return a.sequence - b.sequence;
-      }
-      return a.timestamp - b.timestamp;
-    });
-
-    // Process all ready messages
-    while (messageQueueRef.current.length > 0) {
-      const message = messageQueueRef.current[0];
-
-      // If sequence numbers are used, only process if it's the next expected one
-      if (message.sequence !== undefined) {
-        if (message.sequence !== lastSequenceRef.current + 1) {
-          // Wait for the correct sequence
-          break;
-        }
-        lastSequenceRef.current = message.sequence;
-      }
-
-      // Remove from queue
-      messageQueueRef.current.shift();
-
-      // Process all updates in this message atomically using batched updates
+  // Apply a single message (which may carry one update or a batch of updates).
+  // Every update carries the full new value of a field (last-write-wins), so
+  // applying the newest message is always safe — the only risk is a *missing*
+  // field update, which gap detection in handleMessage repairs via resync.
+  const applyMessage = useCallback(
+    (message) => {
       if (message.updates && Array.isArray(message.updates)) {
-        // Batch all dispatches together to prevent intermediate renders
         unstable_batchedUpdates(() => {
-          message.updates.forEach((update) => {
-            handleUpdate(update);
-          });
+          message.updates.forEach((update) => handleUpdate(update));
         });
       } else {
-        // Single update - still batch it
-        unstable_batchedUpdates(() => {
-          handleUpdate(message);
-        });
+        unstable_batchedUpdates(() => handleUpdate(message));
       }
-    }
-
-    processingRef.current = false;
-  }, [handleUpdate]);
+    },
+    [handleUpdate],
+  );
 
   useEffect(() => {
     const handleMessage = (data) => {
-      // Add sequence number and timestamp if not present
-      const message = {
-        ...data,
-        sequence: data.sequence,
-        timestamp: data.timestamp || Date.now(),
-      };
+      const sender = data._from;
+      const seq = data._seq;
 
-      // Add to queue
-      messageQueueRef.current.push(message);
+      // Legacy / untagged message (no sequence info) — just apply it.
+      if (sender === undefined || seq === undefined) {
+        applyMessage(data);
+        return;
+      }
 
-      // Process queue
-      processQueue();
+      const seen = lastSeqBySenderRef.current;
+      const last = seen[sender];
+
+      if (last === undefined) {
+        // First message from this opponent this session. If it doesn't start
+        // at 1, or another opponent id was already tracked (opponent
+        // reconnected with a new socket id), we may have missed earlier
+        // updates — pull a full state to be safe.
+        const sawOtherSender = Object.keys(seen).length > 0;
+        seen[sender] = seq;
+        applyMessage(data);
+        if (seq > 1 || sawOtherSender) requestResync();
+        return;
+      }
+
+      if (seq === last) {
+        // Exact duplicate (e.g. a replayed packet) — ignore.
+        return;
+      }
+
+      if (seq < last) {
+        // Sequence went backwards => the server/socket counter reset
+        // (server restart or socket reuse). Re-baseline and resync.
+        seen[sender] = seq;
+        applyMessage(data);
+        requestResync();
+        return;
+      }
+
+      if (seq > last + 1) {
+        // Gap: one or more updates were lost. Apply the newest value, then
+        // resync to repair any field whose only update fell in the gap.
+        seen[sender] = seq;
+        applyMessage(data);
+        requestResync();
+        return;
+      }
+
+      // In order (seq === last + 1).
+      seen[sender] = seq;
+      applyMessage(data);
     };
 
     socket.on("receive msg", handleMessage);
@@ -487,13 +503,36 @@ export default function Field({
       socket.off("online");
       socket.off("offline");
     };
-  }, [dispatch, processQueue]);
+  }, [dispatch, applyMessage, requestResync]);
 
   useEffect(() => {
     if (reduxCurrentRoom.length === 0) {
-      navigate("/");
+      // The `card` slice isn't persisted, so a hard reload lands here with an
+      // empty room. If we remembered a room (i.e. the player didn't explicitly
+      // leave), restore it and let the reconnect effect rejoin + pull state,
+      // instead of bouncing back to the home screen.
+      const saved = getSavedRoom();
+      if (saved) {
+        dispatch(setRoom(saved));
+      } else {
+        navigate("/");
+      }
     }
-  }, [reduxCurrentRoom, navigate]);
+  }, [reduxCurrentRoom, navigate, dispatch]);
+
+  // Track this client's own connection so the UI can show a disconnected
+  // indicator (the WifiOff icon) while we're offline / reconnecting.
+  useEffect(() => {
+    const onConnect = () => dispatch(setSelfOnlineStatus(true));
+    const onDisconnect = () => dispatch(setSelfOnlineStatus(false));
+    dispatch(setSelfOnlineStatus(socket.connected));
+    socket.on("connect", onConnect);
+    socket.on("disconnect", onDisconnect);
+    return () => {
+      socket.off("connect", onConnect);
+      socket.off("disconnect", onDisconnect);
+    };
+  }, [dispatch]);
 
   useEffect(() => {
     dispatch(setCardSelectedInHand(-1));

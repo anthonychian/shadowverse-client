@@ -69,36 +69,19 @@ const useReceiveFullState = () => {
       });
     });
 
-    // Fallback: peer-based sync (opponent sends their state directly)
+    // Peer-based sync: the opponent sends their full live state. We use it ONLY
+    // to refresh our view of the enemy (gap repair / reconnect reconciliation).
+    //
+    // We deliberately do NOT reconstruct our OWN board from the opponent's
+    // `enemy*` mirror here: that mirror is the laggy copy and using it would
+    // overwrite our authoritative local state, causing the very desyncs we are
+    // trying to fix. Own-state recovery after a reload/reconnect is handled
+    // authoritatively by the server snapshot via `receive_stored_state`.
     socket.on("receive_full_state", (message) => {
       console.log("[receive_full_state] peer state received");
       const fullState = message.data || message;
       unstable_batchedUpdates(() => {
         applyEnemyState(dispatch, fullState);
-        // Recover own state from opponent's enemy* fields
-        dispatch(
-          restoreOwnState({
-            field: fullState.enemyField,
-            evoField: fullState.enemyEvoField,
-            hand: fullState.enemyHand,
-            playerHealth: fullState.enemyHealth,
-            playPoints: fullState.enemyPlayPoints,
-            evoPoints: fullState.enemyEvoPoints,
-            leader: fullState.enemyLeader,
-            leaderActive: fullState.enemyLeaderActive,
-            superEvoActive: fullState.enemySuperEvoActive,
-            cardback: fullState.enemyCardback,
-            cemetery: fullState.enemyCemetery,
-            banish: fullState.enemyBanish,
-            evoDeck: fullState.enemyEvoDeck,
-            engagedField: fullState.enemyEngagedField,
-            counterField: fullState.enemyCounterField,
-            auraField: fullState.enemyAuraField,
-            baneField: fullState.enemyBaneField,
-            wardField: fullState.enemyWardField,
-            customValues: fullState.enemyCustomValues,
-          }),
-        );
       });
     });
 

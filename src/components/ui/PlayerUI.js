@@ -26,6 +26,9 @@ import { motion } from "framer-motion";
 
 import { styled } from "@mui/material/styles";
 import Rating from "@mui/material/Rating";
+import WifiOffIcon from "@mui/icons-material/WifiOff";
+import WifiIcon from "@mui/icons-material/Wifi";
+import "../../css/EnemyUI.css";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import FiberManualRecordOutlinedIcon from "@mui/icons-material/FiberManualRecordOutlined";
 import sepOn from "../../assets/logo/sep_on.png";
@@ -58,6 +61,9 @@ export default function PlayerUI({ name }) {
   const reduxShowDice = useSelector((state) => state.card.showDice);
   const reduxLeaderActive = useSelector((state) => state.card.leaderActive);
   const reduxRoom = useSelector((state) => state.card.room);
+  const reduxSelfOnlineStatus = useSelector(
+    (state) => state.card.selfOnlineStatus,
+  );
 
   useEffect(() => {
     dispatch(setHealth(playerHealth));
@@ -240,6 +246,17 @@ export default function PlayerUI({ name }) {
         )}
       </div>
       <Leader name={name} active={reduxLeaderActive} />
+
+      {reduxSelfOnlineStatus ? (
+        <div className={"onlineStatus"} title={"Connected"}>
+          <WifiIcon sx={{ height: 40, width: 40 }} />
+        </div>
+      ) : (
+        <div className={"offlineStatus"} title={"Disconnected — reconnecting…"}>
+          <WifiOffIcon sx={{ height: 40, width: 40 }} />
+        </div>
+      )}
+
       <div style={{ opacity: 0.75 }}>
         <img height={70} width={70} src={getClassFromLeader(name)} alt={name} />
       </div>
