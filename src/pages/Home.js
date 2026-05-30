@@ -26,7 +26,7 @@ import {
 } from "../redux/CardSlice";
 import { deleteDeck } from "../redux/DeckSlice";
 import { cardImage } from "../decks/getCards";
-import { socket } from "../sockets";
+import { socket, saveRoom } from "../sockets";
 
 import ArrowBackIosNew from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
@@ -119,6 +119,7 @@ export default function Home() {
         const roomNumber = parseInt(Math.random() * 10000000);
         setRoomNumber(roomNumber.toString());
         dispatch(setRoom(roomNumber.toString()));
+        saveRoom(roomNumber.toString());
         socket.emit("create_room", roomNumber.toString());
       }
     }
@@ -128,6 +129,7 @@ export default function Home() {
       if (roomNumber !== "") {
         setRoomNumber(roomNumber.toString());
         dispatch(setRoom(roomNumber.toString()));
+        saveRoom(roomNumber.toString());
         socket.emit("join_room", roomNumber.toString());
       }
     }
