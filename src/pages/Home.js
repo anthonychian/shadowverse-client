@@ -72,6 +72,36 @@ export default function Home() {
   const reduxActiveUsers = useSelector((state) => state.card.activeUsers);
   const numLeaders = 7;
 
+  // Announcements board — add new entries to the top of this list.
+  // Each entry: { date, title, body }
+  const announcements = [
+    {
+      date: "2026-05-30",
+      title: "Card list updated to BP17",
+      body: "The deck builder now includes all cards up to and including BP17.",
+    },
+    {
+      date: "2026-05-30",
+      title: "Announcements board added",
+      body: "This board will show the latest set updates, new features, and other news.",
+    },
+    {
+      date: "2026-05-30",
+      title: "Responsive board scaling",
+      body: "The game board and UI now scale smoothly across different screen resolutions.",
+    },
+    {
+      date: "2026-05-30",
+      title: "Reconnect to active games",
+      body: "Reloading the page now reconnects you to your active game instead of dropping you out.",
+    },
+    {
+      date: "2026-05-30",
+      title: "Faster deck builder",
+      body: "The deck builder card list now loads faster and scrolls more smoothly.",
+    },
+  ];
+
   useEffect(() => {
     socket.on("start_game", () => {
       handleNavigateToGame();
@@ -664,26 +694,114 @@ export default function Home() {
           Joining Room: 1/2 players...
         </div>
       )}
-      {reduxActiveUsers !== 0 && (
+      <div
+        style={{
+          position: "absolute",
+          top: "5%",
+          right: "0",
+          width: "320px",
+          maxHeight: "85%",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "flex-end",
+          gap: "1em",
+          zIndex: 2,
+        }}
+      >
+        {reduxActiveUsers !== 0 && (
+          <div
+            style={{
+              alignSelf: "flex-start",
+              fontSize: 30,
+              fontFamily: "Share Tech Mono, monospace",
+              color: " #daf6ff",
+              textShadow:
+                "0 0 20px rgba(10, 175, 230, 1),  0 0 20px rgba(10, 175, 230, 0)",
+              background:
+                "radial-gradient(ellipse at center,  #0a2e38  0%, #000000 70%)",
+            }}
+          >
+            {reduxActiveUsers} users online
+          </div>
+        )}
         <div
           style={{
-            position: "absolute",
-            top: "5%",
-            right: "4%",
-            // color: "white",
-            fontSize: 30,
-            // fontFamily: "Noto Serif JP, serif",
-            fontFamily: "Share Tech Mono, monospace",
-            color: " #daf6ff",
-            textShadow:
-              "0 0 20px rgba(10, 175, 230, 1),  0 0 20px rgba(10, 175, 230, 0)",
-            background:
-              "radial-gradient(ellipse at center,  #0a2e38  0%, #000000 70%)",
+            width: "100%",
+            maxHeight: "60vh",
+            display: "flex",
+            flexDirection: "column",
+            backgroundColor: "rgba(10, 14, 20, 0.75)",
+            border: "1px solid rgba(72, 171, 224, 0.5)",
+            borderRight: "none",
+            borderRadius: "10px 0 0 10px",
+            boxShadow: "0 0 20px rgba(10, 175, 230, 0.25)",
+            overflow: "hidden",
           }}
         >
-          {reduxActiveUsers} users online
+        <div
+          style={{
+            overflowY: "auto",
+            padding: "0.5em 1em 1em",
+            maxHeight: "270px",
+          }}
+        >
+          {announcements.map((item, idx) => (
+            <div
+              key={idx}
+              style={{
+                paddingTop: "0.75em",
+                paddingBottom: "0.75em",
+                borderBottom:
+                  idx < announcements.length - 1
+                    ? "1px solid rgba(255, 255, 255, 0.1)"
+                    : "none",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "baseline",
+                  gap: "0.5em",
+                }}
+              >
+                <span
+                  style={{
+                    color: "#ffffff",
+                    fontSize: "15px",
+                    fontFamily: "Noto Serif JP, serif",
+                    fontWeight: "bold",
+                  }}
+                >
+                  {item.title}
+                </span>
+                <span
+                  style={{
+                    color: "#7da7bd",
+                    fontSize: "12px",
+                    fontFamily: "Share Tech Mono, monospace",
+                    whiteSpace: "nowrap",
+                  }}
+                >
+                  {item.date}
+                </span>
+              </div>
+              <div
+                style={{
+                  color: "#c9d6dd",
+                  fontSize: "13px",
+                  fontFamily: "Noto Serif JP, serif",
+                  marginTop: "0.25em",
+                  lineHeight: "1.35",
+                }}
+              >
+                {item.body}
+              </div>
+            </div>
+          ))}
         </div>
-      )}
+        </div>
+      </div>
       <div
         style={{
           position: "absolute",
