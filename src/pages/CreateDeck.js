@@ -5,6 +5,7 @@ import wallpaper3 from "../../src/assets/wallpapers/3.png";
 import ReplyIcon from "@mui/icons-material/Reply";
 import CloseIcon from "@mui/icons-material/Close";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/opacity.css";
 import swap from "../assets/logo/swap_icon.png";
 import ArrowBackIosNew from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
@@ -134,7 +135,10 @@ export default function CreateDeck() {
   const [buttonFilterClassEvo, setButtonFilterClassEvo] = useState("all evo");
   const [openSnack, setOpenSnack] = useState(false);
 
-  const [imageStyle, setImageStyle] = useState({ opacity: 0 });
+  // How many cards are currently rendered. Grows as the user scrolls so we
+  // never mount thousands of card tiles (and their hover/motion handlers) at once.
+  const CARD_PAGE_SIZE = 60;
+  const [visibleCount, setVisibleCount] = useState(CARD_PAGE_SIZE);
 
   // const [cardSet, setCardSet] = useState("all");
 
@@ -147,9 +151,11 @@ export default function CreateDeck() {
     setButtonFilterClassEvo(event.target.value + " evo");
   };
 
-  const handleImageLoad = () => {
-    setImageStyle({}); // Reset opacity to make the image visible
-  };
+  // Reset the visible window to the top whenever the displayed list changes
+  // (set/class filter, search, or switching between the main and evo decks).
+  useEffect(() => {
+    setVisibleCount(CARD_PAGE_SIZE);
+  }, [filteredAllCards, filteredAllCardsEvo, mainDeckSelected, evoDeckSelected]);
 
   useEffect(() => {
     const filtered = handleSelectButtonFilter();
@@ -693,6 +699,7 @@ export default function CreateDeck() {
 
   return (
     <div
+      id="createDeckScroll"
       onContextMenu={(e) => e.preventDefault()}
       style={{
         height: "100vh",
@@ -1079,7 +1086,16 @@ export default function CreateDeck() {
       </div>
 
       <InfiniteScroll
-        dataLength={allCards.length} //This is important field to render the next data
+        dataLength={visibleCount} // number of items currently rendered
+        next={() => setVisibleCount((c) => c + CARD_PAGE_SIZE)}
+        hasMore={
+          (mainDeckSelected
+            ? filteredAllCards.length
+            : filteredAllCardsEvo.length) > visibleCount
+        }
+        loader={<div style={{ width: "100%", height: "40px" }} />}
+        scrollThreshold={0.85}
+        scrollableTarget="createDeckScroll"
         style={{
           width: "80vw",
           display: "flex",
@@ -1094,7 +1110,7 @@ export default function CreateDeck() {
         }}
       >
         {mainDeckSelected &&
-          filteredAllCards.map((name, idx) => (
+          filteredAllCards.slice(0, visibleCount).map((name, idx) => (
             <motion.div
               key={idx}
               whileTap={
@@ -1121,7 +1137,7 @@ export default function CreateDeck() {
               <LazyLoadImage
                 width={"224px"}
                 height={"312px"}
-                onLoad={handleImageLoad}
+                effect="opacity"
                 placeholder={
                   <Skeleton
                     sx={{ bgcolor: "grey", opacity: ".5" }}
@@ -1141,13 +1157,13 @@ export default function CreateDeck() {
                   (deckMap.get(name) === 1 && name === "Curse Crafter") ||
                   (deckMap.get(name) === 6 && name === "Rapid Fire")
                     ? { filter: "grayscale(100%)" }
-                    : { imageStyle }
+                    : undefined
                 }
               />
             </motion.div>
           ))}
         {evoDeckSelected &&
-          filteredAllCardsEvo.map((name, idx) => (
+          filteredAllCardsEvo.slice(0, visibleCount).map((name, idx) => (
             <motion.div
               key={idx}
               onTap={() => handleEvoCardSelection(name)}
@@ -1171,7 +1187,7 @@ export default function CreateDeck() {
               <LazyLoadImage
                 width={"224px"}
                 height={"312px"}
-                onLoad={handleImageLoad}
+                effect="opacity"
                 placeholder={
                   <Skeleton
                     sx={{ bgcolor: "grey", opacity: ".5" }}
@@ -1189,7 +1205,7 @@ export default function CreateDeck() {
                     name !== "Drive Point") ||
                   evoDeckMap.get(name) === 10
                     ? { filter: "grayscale(100%)" }
-                    : { imageStyle }
+                    : undefined
                 }
               />
             </motion.div>
