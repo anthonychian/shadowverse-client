@@ -3,9 +3,29 @@ import io from "socket.io-client";
 // export const socket = io.connect("http://localhost:5000");
 //export const socket = io("https://juvenile-closed-stork.glitch.me", {
 
-export const socket = io("https://shadowverse-server.onrender.com/", {
+// Use a local server when developing on localhost, otherwise the deployed one.
+// This lets two browsers play against `node index.js` on :5000 for testing,
+// without touching the production target.
+const SERVER_URL =
+  typeof window !== "undefined" &&
+  (window.location.hostname === "localhost" ||
+    window.location.hostname === "127.0.0.1")
+    ? "http://localhost:5000"
+    : "https://shadowverse-server.onrender.com/";
+
+export const socket = io(SERVER_URL, {
   transports: ["websocket"],
 });
+
+// Dev/test affordance (localhost only): expose the socket so e2e tests can wait
+// for the connection and read its id. No-op when served from any other host.
+if (
+  typeof window !== "undefined" &&
+  (window.location.hostname === "localhost" ||
+    window.location.hostname === "127.0.0.1")
+) {
+  window.__SOCKET__ = socket;
+}
 
 // Player identity MUST live in sessionStorage, NOT localStorage. The server
 // keys each player's stored board by this id, so it has to be unique per
