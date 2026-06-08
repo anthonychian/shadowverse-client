@@ -51,6 +51,45 @@ export const saveRoom = (room) => {
 export const getSavedRoom = () => sessionStorage.getItem(ROOM_KEY);
 export const clearSavedRoom = () => sessionStorage.removeItem(ROOM_KEY);
 
+// Durably persist the player's OWN game state per-tab, keyed by room. The
+// server's stored snapshot lives only in memory (wiped on a server restart —
+// Render free-tier spins down), and the in-memory Redux board is lost on a page
+// reload. Saving here means a reload restores the player's board instantly from
+// their own tab, independent of whether the server still has a copy. Written on
+// every debounced flush and synchronously on beforeunload, so even the last
+// action before a reload is kept. Enemy state is NOT restored from this (only
+// own fields, via restoreOwnState) — the opponent's board is re-pulled live.
+const STATE_KEY_PREFIX = "sve_state_";
+export const saveState = (room, card) => {
+  if (!room || !card) return;
+  try {
+    sessionStorage.setItem(STATE_KEY_PREFIX + room, JSON.stringify(card));
+  } catch (e) {
+    // Storage full/unavailable — non-fatal; the server snapshot remains a fallback.
+  }
+};
+export const getSavedState = (room) => {
+  if (!room) return null;
+  const raw = sessionStorage.getItem(STATE_KEY_PREFIX + room);
+  if (!raw) return null;
+  try {
+    return JSON.parse(raw);
+  } catch (e) {
+    return null;
+  }
+};
+export const clearSavedState = (room) => {
+  if (room) {
+    sessionStorage.removeItem(STATE_KEY_PREFIX + room);
+    return;
+  }
+  // No room given (explicit exit): clear every saved game state.
+  for (let i = sessionStorage.length - 1; i >= 0; i--) {
+    const key = sessionStorage.key(i);
+    if (key && key.startsWith(STATE_KEY_PREFIX)) sessionStorage.removeItem(key);
+  }
+};
+
 socket.on("connect_error", (err) => {
   // the reason of the error, for example "xhr poll error"
   console.log(err.message);

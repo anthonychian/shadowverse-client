@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import { IconButton } from "@mui/material/";
@@ -49,6 +49,10 @@ export default function PlayerUI({ name }) {
   const [ep, setEP] = useState(0);
   const [superEvo, setSEP] = useState(false);
   const [playerHealth, setPlayerHealth] = useState(20);
+  // Guard so we don't push the local default (20) into shared state on mount —
+  // that would clobber a health value just restored from a saved/recovered game
+  // (reload or reconnect). Only health the user changes after mount propagates.
+  const healthDidMount = useRef(false);
   const reduxCurrentSuperEvo = useSelector(
     (state) => state.card.superEvoActive,
   );
@@ -66,6 +70,10 @@ export default function PlayerUI({ name }) {
   );
 
   useEffect(() => {
+    if (!healthDidMount.current) {
+      healthDidMount.current = true;
+      return;
+    }
     dispatch(setHealth(playerHealth));
   }, [playerHealth]);
 

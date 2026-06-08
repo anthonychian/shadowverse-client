@@ -53,7 +53,7 @@ import { cardImage } from "../../decks/getCards";
 
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
-import { socket, clearSavedRoom } from "../../sockets";
+import { socket, clearSavedRoom, clearSavedState } from "../../sockets";
 
 import {
   Box,
@@ -146,6 +146,7 @@ export default function Selection({ setSelectedOption }) {
   const exitToHome = () => {
     dispatch(exitGame());
     clearSavedRoom();
+    clearSavedState(reduxRoom.toString());
     socket.emit("leave_room", reduxRoom.toString());
     navigate("/");
   };

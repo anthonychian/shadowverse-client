@@ -83,6 +83,7 @@ import {
   setEnemyCardSelectedOnField,
   setRoom,
   setSelfOnlineStatus,
+  restoreOwnState,
 } from "../../redux/CardSlice";
 import { cardImage } from "../../decks/getCards";
 import { motion } from "framer-motion";
@@ -100,10 +101,11 @@ import EnemyEvoDeck from "./EnemyEvoDeck";
 import img from "../../assets/pin_bellringer_angel.png";
 import "../../css/AnimatedBorder.css";
 import { useNavigate } from "react-router-dom";
-import { socket, playerId, getSavedRoom } from "../../sockets";
+import { socket, playerId, getSavedRoom, getSavedState } from "../../sockets";
 import useSocketStateSync from "../hooks/useSocketStateSync";
 import useReceiveFullState from "../hooks/useReceiveFullState";
 import useStoreState from "../hooks/useStoreState";
+import useHeartbeat from "../hooks/useHeartbeat";
 
 import Token from "./Token";
 import ShowDice from "./ShowDice";
@@ -265,6 +267,7 @@ export default function Field({
   useSocketStateSync();
   useReceiveFullState();
   useStoreState();
+  useHeartbeat();
 
   useEffect(() => {
     const handleReconnect = () => {
@@ -464,6 +467,11 @@ export default function Field({
             });
           }
           break;
+        case "heartbeat":
+          // Liveness ping (see useHeartbeat). Carries no state — its only job is
+          // to advance the sender's sequence number so the gap detector in
+          // handleMessage can spot a lost prior message. Nothing to apply here.
+          break;
         default:
           console.warn("Unknown update type:", update.type);
       }
@@ -562,6 +570,12 @@ export default function Field({
       const saved = getSavedRoom();
       if (saved) {
         dispatch(setRoom(saved));
+        // Restore the player's OWN board immediately from this tab's saved
+        // snapshot, before any server round-trip. This is what makes the board
+        // survive a reload even if the server restarted and lost its copy. The
+        // reconnect effect still rejoins + pulls the opponent's live state.
+        const savedState = getSavedState(saved);
+        if (savedState) dispatch(restoreOwnState(savedState));
       } else {
         navigate("/");
       }
