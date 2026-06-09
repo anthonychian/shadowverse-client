@@ -1,0 +1,2396 @@
+[
+  {
+    "cardNo": "CP03-002EN",
+    "name": "Blue Storm Supreme Dragon, Glory Maelstrom Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Vanguard / Aqua Force",
+      "rarity": "Legendary",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Storm. Twin Drive. Whenever this follower deals damage to an enemy leader, select an enemy follower on the field. Destroy it and draw 2 cards."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-003EN",
+    "name": "Storm Rider, Diamantes",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Aqua Force",
+      "rarity": "Legendary",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "2",
+      "effect": "Rush. [fanfare] Select an enemy follower on the field and engage it. [lastwords] If it's your turn, look at the top 5 cards of your deck. You may summon up to two 1-cost Aqua Force followers from among them. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-004EN",
+    "name": "Storm Rider, Basil",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Aqua Force",
+      "rarity": "Legendary",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Storm. [fanfare] Return a 1-cost Aqua Force follower on your field to its owner's hand: You may summon an Aqua Force follower that costs 3 or less from your hand."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-005EN",
+    "name": "Marine General of the Restless Tides, Algos",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Aqua Force",
+      "rarity": "Gold",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower into a Navalgazer Dragon. Whenever an Aqua Force follower on your field attacks, if it's the 3rd time an Aqua Force follower on your field has attacked this turn, give your leader [defense]+2 and draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-006EN",
+    "name": "Navalgazer Dragon Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Vanguard / Aqua Force",
+      "rarity": "Gold",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "4",
+      "effect": "Twin Drive. On Evolve - You may summon a 1-cost Aqua Force follower from your hand. Whenever an Aqua Force follower on your field attacks, if it's the 3rd time an Aqua Force follower on your field has attacked this turn, give your leader [defense]+2 and draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-007EN",
+    "name": "Hydro Hurricane Dragon",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Aqua Force",
+      "rarity": "Gold",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "8",
+      "attack": "5",
+      "defense": "5",
+      "effect": "This card costs 6 less to play if Aqua Force followers on your field have attacked at least 3 times this turn. ---------- Twin Drive. [fanfare] Select up to 2 enemy followers on the field. Destroy them and, for every follower destroyed this way, deal 1 damage to each enemy leader."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-008EN",
+    "name": "Water General of Wave-Like Spirals, Benedict",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Aqua Force",
+      "rarity": "Gold",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[ride] [cost01]: Give this follower Drive. On Drive - Give this follower [attack]+1/[defense]+1. Search your deck for up to two 1-cost Aqua Force followers with different names, reveal them, add them to your hand, then shuffle."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-009EN",
+    "name": "Tear Knight, Valeria",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Aqua Force",
+      "rarity": "Gold",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[ride] [cost01]: Give this follower Drive. On Drive - Give this follower [attack]+1/[defense]+1, Storm, and \"Strike - Select an enemy follower on the field and, if it's the 3rd time an Aqua Force follower on your field has attacked this turn, deal 2 damage to the selected follower.\""
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-010EN",
+    "name": "Tear Knight, Lazarus",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Aqua Force",
+      "rarity": "Silver",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "This follower doesn't take damage from enemy abilities."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-011EN",
+    "name": "Tear Knight, Theo",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Aqua Force",
+      "rarity": "Silver",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "1",
+      "effect": "[fanfare] If there's another Aqua Force follower on your field, give this follower Rush and Assail."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-012EN",
+    "name": "Light Signals Penguin Soldier",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Aqua Force",
+      "rarity": "Silver",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[ride] [cost01]: Give this follower Drive. On Drive - Give this follower [attack]+1/[defense]+1. Look at the top card of your deck. You may reveal it and add it to your hand. If you revealed a 1-cost Aqua Force follower, give your leader [defense]+2."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-013EN",
+    "name": "Tear Knight, Cyprus",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Aqua Force",
+      "rarity": "Silver",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "1",
+      "attack": "0",
+      "defense": "1",
+      "effect": "Storm. [lastwords] Search your deck for a Tear Knight, Cyprus, reveal it, add it to your hand, then shuffle."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-014EN",
+    "name": "Emerald Shield, Paschal",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Vanguard / Aqua Force",
+      "rarity": "Silver",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Choose one. (1) Select an enemy follower on the field and deal it 2 damage. (2) Discard an Aqua Force card: Select an enemy follower on the field. Deal it 3 damage and look at the top card of your deck. If it's a 1-cost Aqua Force follower, you may reveal it and add it to your hand."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-015EN",
+    "name": "Battleship Intelligence",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Aqua Force",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Storm. ---------- (If this card is revealed by a drive check, give a follower on your field [attack]+2.)"
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-016EN",
+    "name": "Pyroxene Communications Sea Otter Soldier",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Aqua Force",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "3",
+      "effect": "[fanfare] Draw a card. ---------- (If this card is revealed by a drive check, draw a card.)"
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-017EN",
+    "name": "Dolphin Soldier of High Speed Raids",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Aqua Force",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Rush. [fanfare] Select up to 1 enemy follower on the field and engage or refresh it. ---------- (If this card is revealed by a drive check, refresh a follower on your field. For the rest of this turn, it can't attack enemy leaders.)"
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-018EN",
+    "name": "Medical Officer of the Rainbow Elixir",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Aqua Force",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Ward. At the start of your end phase, if Aqua Force followers on your field have attacked at least 3 times this turn, give your leader [defense]+2. ---------- (If this card is revealed by a drive check, give your leader [defense]+3.)"
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-019EN",
+    "name": "Coral Assault",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Aqua Force",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[ride] [cost01]: Give this follower Drive. On Drive - Select up to 1 enemy follower on the field. Deal it 2 damage and give this follower [attack]+1/[defense]+1. Whenever an Aqua Force follower on your field attacks, select an enemy follower on the field and, if it's the 3rd time an Aqua Force follower on your field has attacked this turn, deal 2 damage to the selected follower."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-020EN",
+    "name": "Battle Siren, Cynthia",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Vanguard / Aqua Force",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a 1-cost Aqua Force follower in your cemetery and summon it."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-021EN",
+    "name": "Officer Cadet, Erikk",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Amulet",
+      "trait": "Vanguard / Aqua Force",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Starting Amulet. (All cards with Starting Amulet in your deck must share the same name.) [act] [engage], bury this card: Select a 1-cost Aqua Force follower on your field and give it Storm."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-023EN",
+    "name": "Swordsman of the Explosive Flames, Palamedes",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Royal Paladin",
+      "rarity": "Legendary",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "4",
+      "attack": "5",
+      "defense": "3",
+      "effect": "While there are at least 15 Royal Paladin cards in your cemetery, this follower has Storm and \"Strike - Give this follower [attack]+1/[defense]+1.\" [fanfare] Select an enemy follower on the field and deal it 5 damage."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-024EN",
+    "name": "Star Call Trumpeter",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Royal Paladin",
+      "rarity": "Legendary",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[ride] [cost01]: Give this follower Drive. On Drive - Select up to 1 enemy follower on the field. Deal it 4 damage and give this follower [attack]+1/[defense]+1. [fanfare] Search your deck for up to 2 cards with \"Blaster\" in their names, reveal them, add one to your hand, bury the other, then shuffle."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-025EN",
+    "name": "High Dog Breeder, Akane",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Royal Paladin",
+      "rarity": "Gold",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "5",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost02]: Evolve this follower into a Soul Saver Dragon. [fanfare] Look at the top 5 cards of your deck. From among them, you may summon up to 2 Royal Paladin followers that cost 2 or less and give them Rush. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-026EN",
+    "name": "Soul Saver Dragon Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Vanguard / Royal Paladin",
+      "rarity": "Gold",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Twin Drive. On Evolve - Select up to 2 other Royal Paladin followers on your field and give them [attack]+2/[defense]+2."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-027EN",
+    "name": "Knight of Loyalty, Bedivere",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Royal Paladin",
+      "rarity": "Gold",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "Ward. [fanfare] If there's a follower with \"Blaster\" in its name on your field, give this follower [attack]+1 and Storm."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-028EN",
+    "name": "Solitary Knight, Gancelot",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Royal Paladin",
+      "rarity": "Gold",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Rush. Assail. Twin Drive. [fanfare] If there's a Blaster Blade in your cemetery, draw 2 cards, then discard a card. For the rest of this turn, this follower doesn't take damage."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-029EN",
+    "name": "Knight of Friendship, Kay",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Royal Paladin",
+      "rarity": "Gold",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "3",
+      "attack": "4",
+      "defense": "3",
+      "effect": "When playing this card, turn a faceup evolved follower with \"Blaster\" in its name in your evolve deck facedown: This card costs 3 less to play. ---------- Rush."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-030EN",
+    "name": "Barcgal",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Royal Paladin",
+      "rarity": "Silver",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "1",
+      "attack": "0",
+      "defense": "1",
+      "effect": "When this card is discarded by the ability of a Royal Paladin card you control, you may put this card into your EX area. ---------- Ward. [lastwords] Draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-031EN",
+    "name": "Miru Biru",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Royal Paladin",
+      "rarity": "Silver",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[fanfare] Reveal a Royal Paladin card from your hand: Draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-032EN",
+    "name": "Young Pegasus Knight",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Royal Paladin",
+      "rarity": "Silver",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Look at the top 3 cards of your deck. You may summon a Royal Paladin follower that costs 2 or less from among them. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-033EN",
+    "name": "Toypugal",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Royal Paladin",
+      "rarity": "Silver",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[fanfare] Select a Vanguard follower that costs 4 or more on your field and give it [attack]+2/[defense]+2, Rush, and Assail."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-034EN",
+    "name": "Pongal",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Royal Paladin",
+      "rarity": "Silver",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[ride] [cost01]: Give this follower Drive. On Drive - Give this follower [attack]+1/[defense]+1. Look at the top card of your deck. You may reveal it and add it to your hand. If you revealed a Royal Paladin card, deal 1 damage to each enemy leader."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-035EN",
+    "name": "Future Knight, Llew",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Royal Paladin",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Discard a Vanguard card: Search your deck for a Blaster Blade, reveal it, add it to your hand, then shuffle. ---------- (If this card is revealed by a drive check, give a follower on your field [attack]+2.)"
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-036EN",
+    "name": "Margal",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Royal Paladin",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Discard a Royal Paladin card: Draw a card. ---------- (If this card is revealed by a drive check, draw a card.)"
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-037EN",
+    "name": "Flogal",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Royal Paladin",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "At the start of your end phase, refresh this card. ---------- (If this card is revealed by a drive check, refresh a follower on your field. For the rest of this turn, it can't attack enemy leaders.)"
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-038EN",
+    "name": "Yggdrasil Maiden, Elaine",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Royal Paladin",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Ward. [fanfare] Give your leader [defense]+2. ---------- (If this card is revealed by a drive check, give your leader [defense]+3.)"
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-039EN",
+    "name": "Starlight Unicorn",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Royal Paladin",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Whenever a follower on your field performs a drive check, give it [attack]+1."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-040EN",
+    "name": "Knight of Truth, Gordon",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Vanguard / Royal Paladin",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Choose one. (1) Select an enemy follower on the field and deal it 3 damage. (2) The next time your leader would take damage this turn, it takes that much minus 5 instead."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-041EN",
+    "name": "Wingal Brave",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Amulet",
+      "trait": "Vanguard / Royal Paladin",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Starting Amulet. (All cards with Starting Amulet in your deck must share the same name.) [act] [engage], bury this card: Draw a card. Discard a card. Activate only if there's a Royal Paladin follower on your field."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-043EN",
+    "name": "Nightmare Doll, Alice",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Pale Moon",
+      "rarity": "Legendary",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. Twin Drive. [fanfare] Banish the top card of your deck. If there are at least 5 cards in your banished zone, draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-044EN",
+    "name": "Nightmare Doll, Alice Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Vanguard / Pale Moon",
+      "rarity": "Legendary",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Twin Drive. On Evolve - Choose one. (1) Select a Pale Moon follower that costs 2 or less in your banished zone and summon it. (2) [cost04]: Select a Pale Moon follower in your banished zone and summon it."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-045EN",
+    "name": "Purple Trapezist",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Pale Moon",
+      "rarity": "Legendary",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Choose one. (1) Draw a card. Banish a card from your hand. (2) Select a Pale Moon follower on your field and, if there are at least 5 cards in your banished zone, give it Storm."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-046EN",
+    "name": "Crimson Beast Tamer",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Pale Moon",
+      "rarity": "Gold",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower into a Barking Manticore. Ward. [fanfare] Banish a Pale Moon card from your hand: Draw 2 cards."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-047EN",
+    "name": "Barking Manticore Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Vanguard / Pale Moon",
+      "rarity": "Gold",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Ward. Twin Drive. On Evolve - Select an enemy follower on the field and deal it 4 damage."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-048EN",
+    "name": "Mistress Hurricane",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Pale Moon",
+      "rarity": "Gold",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[fanfare] If there are at least 5 cards in your banished zone, give this follower Storm. [act] [engage], banish this card: Select an enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-049EN",
+    "name": "Golden Beast Tamer",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Pale Moon",
+      "rarity": "Gold",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Select a Pale Moon follower that costs 2 or less in your banished zone and summon it. [act] [engage]: Select an enemy follower on the field and deal it damage equal to the number of Pale Moon followers on your field."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-050EN",
+    "name": "Starlight Melody Tamer, Farah",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Pale Moon",
+      "rarity": "Gold",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[ride] [cost01]: Give this follower Drive. On Drive - Select up to 1 enemy follower on the field. Give this follower [attack]+1/[defense]+1 and, if there are at least 5 cards in your banished zone, destroy the selected follower and give your leader [defense]+2."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-051EN",
+    "name": "Turquoise Beast Tamer",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Pale Moon",
+      "rarity": "Silver",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[ride] [cost01]: Give this follower Drive. On Drive - Select up to 1 enemy follower on the field. Deal it 2 damage, give this follower [attack]+1/[defense]+1, and banish the top card of your deck."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-052EN",
+    "name": "Dark Metal Bicorn",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Pale Moon",
+      "rarity": "Silver",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[act] [engage]: Draw a card. Banish a card from your hand."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-053EN",
+    "name": "Nitro Juggler",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Pale Moon",
+      "rarity": "Silver",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "3",
+      "attack": "4",
+      "defense": "4",
+      "effect": "While there are at least 5 cards in your banished zone, this follower has Bane and Ward. [fanfare] Look at the top 5 cards of your deck. You may banish up to 2 of them. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-054EN",
+    "name": "Midnight Bunny",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Pale Moon",
+      "rarity": "Silver",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[ride] [cost01]: Give this follower Drive. On Drive - Give this follower [attack]+1/[defense]+1. Look at the top 2 cards of your deck. Add one of them to your hand and banish the other."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-055EN",
+    "name": "Hades Hypnotist",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Vanguard / Pale Moon",
+      "rarity": "Silver",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Choose one. (1) Select an enemy follower on the field and deal it 2 damage. (2) Discard a Pale Moon card: Select an enemy follower on the field. Deal it 3 damage and banish the top 3 cards of your deck."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-056EN",
+    "name": "Dynamite Juggler",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Pale Moon",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Banish the top card of your deck. If there are at least 5 cards in your banished zone, deal 2 damage to each enemy leader. ---------- (If this card is revealed by a drive check, give a follower on your field [attack]+2.)"
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-057EN",
+    "name": "Rainbow Magician",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Pale Moon",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[fanfare] Select a Pale Moon card in your banished zone. Add it to your hand, then banish a card from your hand. ---------- (If this card is revealed by a drive check, draw a card.)"
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-058EN",
+    "name": "Skyhigh Walker",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Pale Moon",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[act] Banish this card: Select another Pale Moon follower on your field and refresh it. For the rest of this turn, it can't attack enemy leaders. ---------- (If this card is revealed by a drive check, refresh a follower on your field. For the rest of this turn, it can't attack enemy leaders.)"
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-059EN",
+    "name": "Candy Clown",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Pale Moon",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "3",
+      "effect": "Ward. [fanfare] Give your leader [defense]+2. Banish the top card of your deck. ---------- (If this card is revealed by a drive check, give your leader [defense]+3.)"
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-060EN",
+    "name": "Jumping Jill",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Pale Moon",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[ride] [cost03]: Give this follower Drive. On Drive - Select up to 1 Pale Moon card in your banished zone. Add it to your hand and give this follower [attack]+1/[defense]+1. [fanfare] Banish the top 2 cards of your deck."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-061EN",
+    "name": "Skull Juggler",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Vanguard / Pale Moon",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select 2 Pale Moon cards in your cemetery. Banish them and draw a card. (Play only if you can select 2.)"
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-062EN",
+    "name": "Girl Who Crossed the Gap",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet",
+      "trait": "Vanguard / Pale Moon",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Starting Amulet. (All cards with Starting Amulet in your deck must share the same name.) [act] [engage], bury this card: Draw a card. Banish a card from your hand. Activate only if there's a Pale Moon follower on your field."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-064EN",
+    "name": "Seal Dragon, Blockade",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Kagero",
+      "rarity": "Legendary",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "During your turn, whenever an opponent plays a spell, deal 2 damage to their leader. Once on each of your turns, when a Kagero card you control deals ability damage to an enemy follower on the field, draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-065EN",
+    "name": "Burning Horn Dragon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Kagero",
+      "rarity": "Legendary",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "Rush. [fanfare] If there's a follower with \"Overlord\" in its name on your field, give this follower [attack]+2/[defense]+2. Whenever a follower on your field performs a drive check, select an enemy leader or enemy follower on the field and deal it 1 damage."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-066EN",
+    "name": "Blazing Core Dragon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Kagero",
+      "rarity": "Gold",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost03]: Evolve this follower into a Blazing Flare Dragon. [evolve] [cost01], banish an Iron Tail Dragon and Gattling Claw Dragon from your cemetery: Evolve this follower into a Blazing Flare Dragon."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-067EN",
+    "name": "Blazing Flare Dragon Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Vanguard / Kagero",
+      "rarity": "Gold",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "Twin Drive. On Evolve - Select an enemy follower on the field. Deal 5 damage to it and 3 damage to its leader."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-068EN",
+    "name": "Dragonic Executioner",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Kagero",
+      "rarity": "Gold",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "4",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Rush. [fanfare] Discard a Kagero card: Draw 2 cards."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-069EN",
+    "name": "Vortex Dragon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Kagero",
+      "rarity": "Gold",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "5",
+      "attack": "6",
+      "defense": "6",
+      "effect": "[fanfare] Banish 3 Kagero cards from your cemetery: Select up to 2 enemy followers on the field and destroy them."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-070EN",
+    "name": "Flame of Promise, Aermo",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Kagero",
+      "rarity": "Gold",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Reveal a follower with \"Overlord\" in its name from your hand: Draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-071EN",
+    "name": "Bellicosity Dragon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Kagero",
+      "rarity": "Silver",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[ride] [cost01]: Give this follower Drive. On Drive - Select up to 2 enemy followers on the field. Deal 4 damage divided between them and give this follower [attack]+1/[defense]+1. [fanfare] Give your leader [defense]+2. Draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-072EN",
+    "name": "Prowling Dragon, Striken",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Kagero",
+      "rarity": "Silver",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "5",
+      "defense": "5",
+      "effect": "This follower can't attack enemies. Whenever you drive check a Trigger, this card loses all abilities for the rest of the turn."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-073EN",
+    "name": "Dragon Monk, Gojo",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Kagero",
+      "rarity": "Silver",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[ride] [cost01]: Give this follower Drive. On Drive - Give this follower [attack]+1/[defense]+1. Look at the top 2 cards of your deck. You may reveal a Kagero follower from among them and add it to your hand. Put the rest on the bottom of your deck in any order. If Overflow is active for you, you may reveal and add up to 2 instead."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-074EN",
+    "name": "Demonic Dragon Berserker, Yaksha",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Kagero",
+      "rarity": "Silver",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Choose one. (1) Select an enemy amulet on the field and destroy it. (2) Deal 2 damage to each enemy leader."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-075EN",
+    "name": "Demonic Dragon Mage, Kimnara",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Vanguard / Kagero",
+      "rarity": "Silver",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field and deal it 6 damage."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-076EN",
+    "name": "Embodiment of Spear, Tahr",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Kagero",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "1",
+      "effect": "Rush. Assail. [fanfare] If Overflow is active for you, deal 2 damage to each enemy leader. (Overflow is active if you have at least 7 max play points.) ---------- (If this card is revealed by a drive check, give a follower on your field [attack]+2.)"
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-077EN",
+    "name": "Gattling Claw Dragon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Kagero",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[act] [engage]: Draw a card. Activate only if an enemy follower was put from the field into the cemetery this turn. ---------- (If this card is revealed by a drive check, draw a card.)"
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-078EN",
+    "name": "Lizard Soldier, Ganlu",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Kagero",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[act] [engage]: Select an enemy follower on the field and deal it 1 damage. Activate only if there's another Kagero follower on your field. [act] [cost02]: Refresh this card. For the rest of this turn, this follower can't attack enemies. ---------- (If this card is revealed by a drive check, refresh a follower on your field. For the rest of this turn, it can't attack enemy leaders.)"
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-079EN",
+    "name": "Dragon Monk, Genjo",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Kagero",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Ward. [fanfare] Give your leader [defense]+1. If Overflow is active for you, give [defense]+2 instead. (Overflow is active if you have at least 7 max play points.) ---------- (If this card is revealed by a drive check, give your leader [defense]+3.)"
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-080EN",
+    "name": "Iron Tail Dragon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Kagero",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[act] [engage]: Give this follower [attack]+1."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-081EN",
+    "name": "Flame of Hope, Aermo",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Kagero",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Select an enemy follower on the field and, if Overflow is active for you, deal it 2 damage. (Overflow is active if you have at least 7 max play points.) Once on each of your turns, when an enemy follower is put from the field into the cemetery, draw a card, then discard a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-082EN",
+    "name": "Lizard Soldier, Conroe",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Amulet",
+      "trait": "Vanguard / Kagero",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Starting Amulet. (All cards with Starting Amulet in your deck must share the same name.) [act] [engage], bury this card: Select an enemy follower on the field and deal it 1 damage. Activate only if there's a Kagero follower on your field."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-084EN",
+    "name": "Phantom Blaster Dragon",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Shadow Paladin",
+      "rarity": "Legendary",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "3",
+      "attack": "4",
+      "defense": "3",
+      "effect": "As an additional cost to play this card, bury a Shadow Paladin follower. ---------- [evolve] [cost01]: Evolve this follower. Storm. Twin Drive. [fanfare] If you buried a Blaster Dark as the additional cost to play this card, evolve this follower."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-085EN",
+    "name": "Phantom Blaster Dragon Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Vanguard / Shadow Paladin",
+      "rarity": "Legendary",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "4",
+      "effect": "Storm. Twin Drive. On Evolve - Select an enemy follower on the field and, if there are at least 10 Shadow Paladin cards in your cemetery, destroy it."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-086EN",
+    "name": "Blaster Dark",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Shadow Paladin",
+      "rarity": "Legendary",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. Single Drive. [fanfare] Bury the top 2 cards of your deck."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-087EN",
+    "name": "Blaster Dark Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Vanguard / Shadow Paladin",
+      "rarity": "Legendary",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Single Drive. On Evolve - Select an enemy follower on the field. Deal it 3 damage, then deal it 1 more damage for every 5 Shadow Paladin cards in your cemetery."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-088EN",
+    "name": "Skull Witch, Nemain",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Shadow Paladin",
+      "rarity": "Gold",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[ride] [cost01]: Give this follower Drive. On Drive - Give this follower [attack]+1/[defense]+1. Look at the top 3 cards of your deck. You may reveal a Shadow Paladin card from among them and add it to your hand. Bury the rest. [fanfare] Select an enemy follower on the field and deal it 4 damage."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-089EN",
+    "name": "Knight of Nullity, Masquerade",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Shadow Paladin",
+      "rarity": "Gold",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "While there are at least 10 Shadow Paladin cards in your cemetery, this follower has Rush and Bane. [fanfare] Bury the top card of your deck. Strike - If there's a follower with \"Blaster\" in its name in your cemetery, deal 2 damage to each enemy leader."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-090EN",
+    "name": "Darkness Maiden, Macha",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Shadow Paladin",
+      "rarity": "Gold",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[ride] [cost01]: Give this follower Drive. On Drive - Give this follower [attack]+1/[defense]+1. Search your deck for a Shadow Paladin follower that costs 2 or less, summon it, then shuffle."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-091EN",
+    "name": "Cursed Lancer",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Shadow Paladin",
+      "rarity": "Gold",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Give your leader [defense]+3. Bury the top 2 cards of your deck. At the start of your end phase, select an enemy follower on the field and, if there are at least 10 Shadow Paladin cards in your cemetery, destroy it."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-092EN",
+    "name": "Knight of Darkness, Rugos",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Shadow Paladin",
+      "rarity": "Silver",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[ride] [cost01]: Give this follower Drive. On Drive - Select up to 1 enemy follower on the field. Deal it 2 damage, give this follower [attack]+1/[defense]+1, and bury the top card of your deck."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-093EN",
+    "name": "Black Sage, Charon",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Shadow Paladin",
+      "rarity": "Silver",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Bury the top card of your deck."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-094EN",
+    "name": "Doranbau",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Shadow Paladin",
+      "rarity": "Silver",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "While there are at least 10 Shadow Paladin cards in your cemetery, this follower has Bane. Whenever a follower on your field performs a drive check, bury the top card of your deck."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-095EN",
+    "name": "Blaster Javelin",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Shadow Paladin",
+      "rarity": "Silver",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "Rush. [fanfare] Discard a Vanguard card: Search your deck for a Phantom Blaster Dragon or Blaster Dark, reveal it, add it to your hand, then shuffle."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-096EN",
+    "name": "Dark Shield, Mac Lir",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Vanguard / Shadow Paladin",
+      "rarity": "Silver",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Choose one. (1) Select an enemy follower on the field and deal it 2 damage. (2) Discard a Shadow Paladin card: Select an enemy follower on the field. Deal it 3 damage and bury the top card of your deck."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-097EN",
+    "name": "Grim Reaper",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Shadow Paladin",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "While there are at least 10 Shadow Paladin cards in your cemetery, this follower has Storm. ---------- (If this card is revealed by a drive check, give a follower on your field [attack]+2.)"
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-098EN",
+    "name": "Abyss Freezer",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Shadow Paladin",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[fanfare] Discard a Shadow Paladin card: Select a Shadow Paladin follower in your cemetery and add it to your hand. ---------- (If this card is revealed by a drive check, draw a card.)"
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-099EN",
+    "name": "Darkside Trumpeter",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Shadow Paladin",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "At the start of your end phase, select a Shadow Paladin follower on your field and, if there are at least 10 Shadow Paladin cards in your cemetery, refresh it. ---------- (If this card is revealed by a drive check, refresh a follower on your field. For the rest of this turn, it can't attack enemy leaders.)"
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-100EN",
+    "name": "Abyss Healer",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Shadow Paladin",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Ward. [fanfare] If there are at least 10 Shadow Paladin cards in your cemetery, give your leader [defense]+3. ---------- (If this card is revealed by a drive check, give your leader [defense]+3.)"
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-101EN",
+    "name": "Witch of Nostrum, Arianrhod",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Shadow Paladin",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[ride] [cost01]: Give this follower Drive. On Drive - Give this follower [attack]+1/[defense]+1. You may discard a Shadow Paladin card. If you do, draw 2 cards."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-102EN",
+    "name": "Gururubau",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Vanguard / Shadow Paladin",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field and up to 1 Shadow Paladin follower in your cemetery. Destroy the first follower and add the second to your hand."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-103EN",
+    "name": "Fullbau",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Amulet",
+      "trait": "Vanguard / Shadow Paladin",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Starting Amulet. (All cards with Starting Amulet in your deck must share the same name.) [act] [engage], bury this card: Bury the top 2 cards of your deck. Activate only if there's a Shadow Paladin follower on your field."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-105EN",
+    "name": "Goddess of the Half Moon, Tsukuyomi",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Oracle Think Tank",
+      "rarity": "Legendary",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Look at the top 3 cards of your deck. Put any number of them on the top of your deck in any order. Put the rest on the bottom in any order. [act] [cost01], [engage]: Select an enemy follower on the field. Reveal the top card of your deck and deal damage equal to its cost to the selected follower. If you revealed a Goddess of the Full Moon, Tsukuyomi, add it to your hand."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-106EN",
+    "name": "CEO Amaterasu",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Oracle Think Tank",
+      "rarity": "Legendary",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost02]: Evolve this follower. Assail. Twin Drive. [fanfare] Look at the top 2 cards of your deck. Put any number of them on the top of your deck in any order. Put the rest on the bottom in any order."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-107EN",
+    "name": "CEO Amaterasu Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Vanguard / Oracle Think Tank",
+      "rarity": "Legendary",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "Assail. Twin Drive. Whenever you drive check a Trigger, choose one. (1) Select an enemy follower on the field and banish it. (2) Draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-108EN",
+    "name": "Silent Tom",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Oracle Think Tank",
+      "rarity": "Gold",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. Single Drive. [fanfare] Select up to 1 card in your cemetery and put it into your deck 3rd from the top."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-109EN",
+    "name": "Silent Tom Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Vanguard / Oracle Think Tank",
+      "rarity": "Gold",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Single Drive. On Evolve - Discard an Oracle Think Tank card: Select an enemy follower with 5 defense or less on the field and banish it."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-110EN",
+    "name": "Evil-Eye Princess, Euryale",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Oracle Think Tank",
+      "rarity": "Gold",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Rush. Twin Drive. Once on each of your turns, when you drive check a Trigger, draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-111EN",
+    "name": "Maiden of Libra",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Oracle Think Tank",
+      "rarity": "Gold",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Ward. [fanfare] Look at the top 5 cards of your deck. Put any number of them on the top of your deck in any order. Put the rest on the bottom in any order. [act] [engage]: Draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-112EN",
+    "name": "Battle Sister, Cocoa",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Oracle Think Tank",
+      "rarity": "Gold",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[ride] [cost01]: Give this follower Drive. On Drive - Give this follower [attack]+1/[defense]+1. Look at the top 5 cards of your deck. Put any number of them on the top of your deck in any order. Put the rest on the bottom in any order. Whenever you drive check a Trigger, select an enemy follower on the field. Deal it 4 damage and give your leader [defense]+2."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-113EN",
+    "name": "Oracle Guardian, Wiseman",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Oracle Think Tank",
+      "rarity": "Silver",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Select up to 1 card in your cemetery and put it into your deck 3rd from the top. Once on each of your turns, when you drive check a Trigger, deal 2 damage to each enemy leader and give your leader [defense]+2."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-114EN",
+    "name": "White Hare of Inaba",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Oracle Think Tank",
+      "rarity": "Silver",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[ride] [cost01]: Give this follower Drive. On Drive - Give this follower [attack]+1/[defense]+1. Give your leader [defense]+1. [fanfare] Select up to 1 card in your cemetery and put it into your deck 3rd from the top."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-115EN",
+    "name": "Goddess of the Crescent Moon, Tsukuyomi",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Oracle Think Tank",
+      "rarity": "Silver",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "1",
+      "effect": "[fanfare] Look at the top 3 cards of your deck. Put any number of them on the top of your deck in any order. Put the rest on the bottom in any order. [act] [engage]: Reveal the top card of your deck. If you revealed a Goddess of the Half Moon, Tsukuyomi, add it to your hand."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-116EN",
+    "name": "Dark Cat",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Oracle Think Tank",
+      "rarity": "Silver",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[ride] [cost01]: Give this follower Drive. On Drive - Give this follower [attack]+1/[defense]+1. Look at the top 3 cards of your deck. You may reveal an Oracle Think Tank follower from among them and add it to your hand. Put any number of them on the top of your deck in any order. Put the rest on the bottom in any order."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-117EN",
+    "name": "Battle Sister, Chocolat",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Vanguard / Oracle Think Tank",
+      "rarity": "Silver",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Choose one. (1) Select an enemy follower on the field and deal it 2 damage. (2) Discard an Oracle Think Tank card: Select an enemy follower on the field. Deal it 3 damage and look at the top 2 cards of your deck. Put any number of them on the top of your deck in any order. Put the rest on the bottom in any order."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-118EN",
+    "name": "Oracle Guardian, Nike",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Oracle Think Tank",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Rush. Assail. Whenever you drive check a Trigger, give this follower Storm. ---------- (If this card is revealed by a drive check, give a follower on your field [attack]+2.)"
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-119EN",
+    "name": "Dream Eater",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Oracle Think Tank",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Draw a card. Put a card from your hand into your deck 3rd from the top. ---------- (If this card is revealed by a drive check, draw a card.)"
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-120EN",
+    "name": "Emergency Alarmer",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Oracle Think Tank",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "1",
+      "effect": "[fanfare] Select a Vanguard follower on your field and refresh it. For the rest of this turn, it can't attack enemy leaders. ---------- (If this card is revealed by a drive check, refresh a follower on your field. For the rest of this turn, it can't attack enemy leaders.)"
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-121EN",
+    "name": "Lozenge Magus",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Oracle Think Tank",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Ward. [fanfare] Look at the top 2 cards of your deck. Put any number of them on the top of your deck in any order. Put the rest on the bottom in any order. Whenever you drive check a Trigger, give your leader [defense]+1. ---------- (If this card is revealed by a drive check, give your leader [defense]+3.)"
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-122EN",
+    "name": "Battle Maiden, Tagitsuhime",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Oracle Think Tank",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[ride] [cost01]: Give this follower Drive. On Drive - Select up to 1 enemy follower on the field. Deal it 2 damage and give this follower [attack]+1/[defense]+1. [fanfare] Look at the top 2 cards of your deck. Put any number of them on the top of your deck in any order. Put the rest on the bottom in any order."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-123EN",
+    "name": "Luck Bird",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Vanguard / Oracle Think Tank",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose one. (1) Look at the top 3 cards of your deck. Put any number of them on the top of your deck in any order. Put the rest on the bottom in any order. (2) Select 5 followers with Triggers in your cemetery. Return them to your deck, shuffle, draw a card, and recover 1 play point."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-124EN",
+    "name": "Godhawk, Ichibyoshi",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Vanguard / Oracle Think Tank",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Starting Amulet. (All cards with Starting Amulet in your deck must share the same name.) [act] [engage], bury this card: Look at the top 3 cards of your deck. Put any number of them on the top of your deck in any order. Put the rest on the bottom in any order. Activate only if there's an Oracle Think Tank follower on your field."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-126EN",
+    "name": "Powers Converged",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Vanguard",
+      "rarity": "Legendary",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose one. If there are at least 3 faceup cards named Drive Point in your evolve deck, choose up to 3 instead. (1) Select an enemy follower on the field and deal it 4 damage. (2) Select a follower in your cemetery and add it to your hand. (3) Give your leader [defense]+4."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-127EN",
+    "name": "Drive Point",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": "You can put up to 10 of this card into your evolve deck. ---------- (Followers with Drive have Rush and Single Drive.)"
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-U01EN",
+    "name": "Blue Storm Dragon, Maelstrom",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Aqua Force",
+      "rarity": "Ultimate",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost04]: Evolve this follower into a Blue Storm Supreme Dragon, Glory Maelstrom. Storm. Twin Drive. Strike - If it's the 4th time an Aqua Force follower on your field has attacked this turn, evolve this follower into a Blue Storm Supreme Dragon, Glory Maelstrom."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-U02EN",
+    "name": "Majesty Lord Blaster",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Royal Paladin",
+      "rarity": "Ultimate",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "6",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Storm. Twin Drive. [fanfare] Select up to 1 enemy follower on the field for every pair of Blaster Blade and Blaster Dark in your cemetery and destroy the selected followers. Strike - If there's a Blaster Blade and Blaster Dark in your cemetery, give this follower [attack]+2/[defense]+2."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-U03EN",
+    "name": "Silver Thorn Dragon Tamer, Luquier",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Pale Moon",
+      "rarity": "Ultimate",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "7",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Rush. Twin Drive. [fanfare] Select up to 1 Pale Moon follower that costs 4 or less, up to 1 that costs 3 or less, and up to 1 that costs 2 or less in your banished zone and summon them."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-U04EN",
+    "name": "Dragonic Overlord the End",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Kagero",
+      "rarity": "Ultimate",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "7",
+      "attack": "6",
+      "defense": "6",
+      "effect": "Storm. Ward. Twin Drive. [fanfare] If there's a Dragonic Overlord in your cemetery, recover 1 play point. Strike - [cost03], discard a Dragonic Overlord the End: Refresh this follower. [act] Banish 5 Kagero cards from your cemetery: Destroy each other follower on the field."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-U05EN",
+    "name": "Phantom Blaster Overlord",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Shadow Paladin",
+      "rarity": "Ultimate",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "9",
+      "attack": "6",
+      "defense": "6",
+      "effect": "If there are at least 15 Shadow Paladin cards in your cemetery, you may bury a Phantom Blaster Dragon to play this card instead of paying its cost. ---------- Ward. Twin Drive. [fanfare] Select an enemy follower on the field. Destroy it and draw 3 cards. [act] [cost01], discard a Phantom Blaster Overlord: Give this follower [attack]+6/[defense]+6."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CP03-U06EN",
+    "name": "Goddess of the Full Moon, Tsukuyomi",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Oracle Think Tank",
+      "rarity": "Ultimate",
+      "cardSet": "Crossover Set \"Cardfight!! Vanguard\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Ward. Twin Drive. While there's a Goddess of the Half Moon, Tsukuyomi and Goddess of the Crescent Moon, Tsukuyomi in your cemetery, this follower has Storm. [fanfare] You may summon an Oracle Think Tank follower that costs 4 or less from your hand."
+    },
+    "imgSrc": ""
+  }
+]

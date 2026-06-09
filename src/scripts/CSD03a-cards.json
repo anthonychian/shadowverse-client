@@ -1,0 +1,230 @@
+[
+  {
+    "cardNo": "CSD03a-001EN",
+    "name": "Alfred Early",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Royal Paladin",
+      "rarity": "Legendary",
+      "cardSet": "Crossover Starter Deck \"Sanctuary Knight Brigade\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost02]: Evolve this follower into a King of Knights, Alfred. Storm. Twin Drive. (Followers with Storm can attack enemy followers and leaders on the turn they're put onto your field.)"
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD03a-002EN",
+    "name": "King of Knights, Alfred Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Vanguard / Royal Paladin",
+      "rarity": "Legendary",
+      "cardSet": "Crossover Starter Deck \"Sanctuary Knight Brigade\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Storm. Twin Drive. (Whenever a follower with Twin Drive attacks, it performs 2 drive checks.) On Evolve - Search your deck for a Royal Paladin follower that costs 3 or less, summon it, then shuffle. If there are at least 15 Royal Paladin cards in your cemetery, give it and this follower [attack]+1/[defense]+1."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD03a-003EN",
+    "name": "Blaster Blade",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Royal Paladin",
+      "rarity": "Legendary",
+      "cardSet": "Crossover Starter Deck \"Sanctuary Knight Brigade\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. Single Drive. (Whenever a follower with Single Drive attacks, it performs a drive check.) [fanfare] If this card was put onto the field by an ability, evolve it."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD03a-004EN",
+    "name": "Blaster Blade Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Vanguard / Royal Paladin",
+      "rarity": "Legendary",
+      "cardSet": "Crossover Starter Deck \"Sanctuary Knight Brigade\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Single Drive. On Evolve - Select an enemy follower on the field and deal it damage equal to 2 times the number of Royal Paladin followers on your field."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD03a-005EN",
+    "name": "Wingal",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Royal Paladin",
+      "rarity": "Gold",
+      "cardSet": "Crossover Starter Deck \"Sanctuary Knight Brigade\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[act] [cost03], [engage]: Select a Blaster Blade in your cemetery and summon it."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD03a-006EN",
+    "name": "Knight of Conviction, Bors",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Royal Paladin",
+      "rarity": "Gold",
+      "cardSet": "Crossover Starter Deck \"Sanctuary Knight Brigade\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[ride] [cost01]: Give this follower Drive. Assail. (Followers with Assail can attack reserved followers.) On Drive - Give this follower [attack]+2/[defense]+2."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD03a-007EN",
+    "name": "Flash Shield, Iseult",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Vanguard / Royal Paladin",
+      "rarity": "Gold",
+      "cardSet": "Crossover Starter Deck \"Sanctuary Knight Brigade\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Choose one. (1) Select an enemy follower on the field and deal it 2 damage. (2) Discard a Royal Paladin card: Select an enemy follower on the field. Deal it 3 damage and give your leader [defense]+2."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD03a-008EN",
+    "name": "Knight of Silence, Gallatin",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Royal Paladin",
+      "rarity": "Silver",
+      "cardSet": "Crossover Starter Deck \"Sanctuary Knight Brigade\"",
+      "cost": "5",
+      "attack": "5",
+      "defense": "4",
+      "effect": "[ride] [cost01]: Give this follower Drive. On Drive - Give this follower [attack]+1/[defense]+1. Deal 3 damage to each enemy leader. [fanfare] Select an enemy follower on the field and deal it 5 damage."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD03a-009EN",
+    "name": "Little Sage, Marron",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Royal Paladin",
+      "rarity": "Silver",
+      "cardSet": "Crossover Starter Deck \"Sanctuary Knight Brigade\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "Ward. [fanfare] Look at the top 5 cards of your deck. You may reveal a Royal Paladin card from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD03a-010EN",
+    "name": "Lake Maiden, Lien",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Royal Paladin",
+      "rarity": "Silver",
+      "cardSet": "Crossover Starter Deck \"Sanctuary Knight Brigade\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Ward. (While you have engaged followers with Ward, opponents can't attack your other followers or leader. You may engage this follower when it's put onto your field or during your end phase.) [fanfare] Discard a Royal Paladin card: Select a Royal Paladin follower in your cemetery and add it to your hand."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD03a-011EN",
+    "name": "Knight of Rose, Morgana",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Royal Paladin",
+      "rarity": "Silver",
+      "cardSet": "Crossover Starter Deck \"Sanctuary Knight Brigade\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[ride] [cost01]: Give this follower Drive. On Drive - Select up to 1 enemy follower on the field. Deal it 2 damage and give this follower [attack]+1/[defense]+1. Strike - Discard a Royal Paladin card: Give this follower [attack]+1/[defense]+1."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD03a-016EN",
+    "name": "Stardust Trumpeter",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Amulet",
+      "trait": "Vanguard / Royal Paladin",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Starter Deck \"Sanctuary Knight Brigade\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Starting Amulet. [act] [engage], bury this card: Select a Vanguard follower on your field and give it [attack]+1/[defense]+1. ---------- (At the start of the game, if your deck is based on the Cardfight!! Vanguard universe, put a card with Starting Amulet from your deck onto your field.)"
+    },
+    "imgSrc": ""
+  }
+]

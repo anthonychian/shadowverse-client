@@ -1,0 +1,2491 @@
+[
+  {
+    "cardNo": "BP08-001EN",
+    "name": "Forest Oracle Pascale",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Fae-Touched / Dancer",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "7",
+      "attack": "4",
+      "defense": "7",
+      "effect": "Ward. [fanfare] Select an enemy follower on the field and put it on top of its owner's deck. At the start of your end phase, give each other follower on your field [attack]+2/[defense]+2 and your leader [defense]+4."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-001EN.png"
+  },
+  {
+    "cardNo": "BP08-002EN",
+    "name": "Orchis, Puppet Girl",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Puppetry",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower into an Orchis, Resolute Puppet. [evolve] [cost04]: Evolve this follower into an Orchis, Vengeful Puppet. Activate only if there are at least 3 Puppetry cards in your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-002EN.png"
+  },
+  {
+    "cardNo": "BP08-003EN",
+    "name": "Orchis, Resolute Puppet Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Puppetry / Lightborne",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Summon 2 Puppet tokens. Once on each of your turns, when a Puppet you control leaves the field, put a Lloyd token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-003EN.png"
+  },
+  {
+    "cardNo": "BP08-004EN",
+    "name": "Zwei, Murderous Puppet",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Puppetry / Cutthroat",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost02]: Evolve this follower. [fanfare] Select a Puppet in your EX area and transform it into a Victoria token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-004EN.png"
+  },
+  {
+    "cardNo": "BP08-005EN",
+    "name": "Zwei, Murderous Puppet Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Puppetry / Cutthroat",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Select a Victoria on your field. It doesn't take damage this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-005EN.png"
+  },
+  {
+    "cardNo": "BP08-006EN",
+    "name": "Lycoris, Poisoner Princess",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Verdant / Princess",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "3",
+      "attack": "1",
+      "defense": "3",
+      "effect": "Bane. During your turn, whenever an enemy follower is put from the field into the cemetery, deal 1 damage to its leader. [act] [engage]: Select another follower on your field and give it Bane."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-006EN.png"
+  },
+  {
+    "cardNo": "BP08-007EN",
+    "name": "Lina & Lena, Twin Souls",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Hunter / Beast",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Storm. Strike - If there are at least 3 followers on your field, give this follower [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-007EN.png"
+  },
+  {
+    "cardNo": "BP08-008EN",
+    "name": "Michelle, the Mind Reader",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Fae-Touched",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost02]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-008EN.png"
+  },
+  {
+    "cardNo": "BP08-009EN",
+    "name": "Michelle, the Mind Reader Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Fae-Touched",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - Search your deck for a [forestcraft] follower that costs 5 or more, reveal it, add it to your hand, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-009EN.png"
+  },
+  {
+    "cardNo": "BP08-010EN",
+    "name": "Liam, Master of Puppets",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Puppetry / Cutthroat",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Put 2 Puppet tokens into your EX area. [act] [engage]: Look at the top 3 cards of your deck. You may reveal a Puppetry card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. Activate only if there are at least 3 Puppetry cards in your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-010EN.png"
+  },
+  {
+    "cardNo": "BP08-011EN",
+    "name": "Heartless Battle",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Puppetry / Cutthroat",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select 2 cards named Puppet in your EX area. Transform one into a Lloyd token and the other into a Victoria token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-011EN.png"
+  },
+  {
+    "cardNo": "BP08-012EN",
+    "name": "Junk",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Puppetry",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[fanfare] Put 2 Puppet tokens into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-012EN.png"
+  },
+  {
+    "cardNo": "BP08-013EN",
+    "name": "Insane Dark Elf",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf / Cutthroat",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. Strike - Put a Fairy Wisp token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-013EN.png"
+  },
+  {
+    "cardNo": "BP08-014EN",
+    "name": "Insane Dark Elf Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Elf / Cutthroat",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Strike - Put a Fairy Wisp token into your EX area. During your turn, whenever this follower deals combat damage, refresh it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-014EN.png"
+  },
+  {
+    "cardNo": "BP08-015EN",
+    "name": "Zealot of Unkilling",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Omen / Hunter / Cutthroat",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] If there are at least 3 Hunter cards in your cemetery, select an enemy follower on the field and give it [attack]-4."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-015EN.png"
+  },
+  {
+    "cardNo": "BP08-016EN",
+    "name": "Knower of History",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Supreme",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Summon an Ancient Artifact token. Whenever a token follower is put onto your field, select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-016EN.png"
+  },
+  {
+    "cardNo": "BP08-017EN",
+    "name": "Ward of Unkilling",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Amulet",
+      "trait": "Omen / Hunter",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Select an enemy follower on the field and give it [attack]-2. [act] [cost01], [engage], bury this card: Select a Hunter follower that costs 2 or less in your cemetery and summon it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-017EN.png"
+  },
+  {
+    "cardNo": "BP08-018EN",
+    "name": "Aether of the Warrior Wing",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Lightborne",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Search your deck for a Commander or Officer card, reveal it, add it to your hand, then shuffle your deck. At the start of your end phase, if there are at least 7 [swordcraft] followers in your cemetery, give each follower on your field [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-018EN.png"
+  },
+  {
+    "cardNo": "BP08-019EN",
+    "name": "Dionne, Dancing Blade",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Dancer",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost06]: Evolve this follower. Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-019EN.png"
+  },
+  {
+    "cardNo": "BP08-020EN",
+    "name": "Dionne, Dancing Blade Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Officer / Dancer",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Storm. Strike - Refresh this follower. Perform only twice per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-020EN.png"
+  },
+  {
+    "cardNo": "BP08-021EN",
+    "name": "Roland the Incorruptible",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. Ward. [fanfare] Choose one of the following. (1) Search your deck for a Durandal the Incorruptible, reveal it, add it to your hand, then shuffle your deck. (2) You may summon a Durandal the Incorruptible from your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-021EN.png"
+  },
+  {
+    "cardNo": "BP08-022EN",
+    "name": "Roland the Incorruptible Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Commander",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "5",
+      "effect": "Ward. On Evolve - Refresh each amulet on your field. At the start of your end phase, give your leader [defense]+3 and, if there's a Durandal the Incorruptible on your field, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-022EN.png"
+  },
+  {
+    "cardNo": "BP08-023EN",
+    "name": "Swordflash Panther",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Beast",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "3",
+      "effect": "Rush. [fanfare] Select a [swordcraft] follower that costs 2 or less in your cemetery. Summon it and give it [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-023EN.png"
+  },
+  {
+    "cardNo": "BP08-024EN",
+    "name": "Durandal the Incorruptible",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Amulet",
+      "trait": "Commander",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] [engage]: Choose one of the following. (1) Select a follower on your field and give it [attack]+1. (2) Select a follower on your field and give it [defense]+1. (3) Select a follower on your field. For the rest of this turn and during each opponent's next turn, it has \"If this follower would take more than 3 damage, it takes 3 instead.\""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-024EN.png"
+  },
+  {
+    "cardNo": "BP08-025EN",
+    "name": "Azord, Duke of the Mists",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Noble",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[evolve] [cost03]: Evolve this follower. Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-025EN.png"
+  },
+  {
+    "cardNo": "BP08-026EN",
+    "name": "Azord, Duke of the Mists Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Commander / Noble",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "5",
+      "effect": "Ward. On Evolve - Select up to 2 [swordcraft] followers that cost 2 or less in your cemetery and summon them."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-026EN.png"
+  },
+  {
+    "cardNo": "BP08-027EN",
+    "name": "Madlance Centaur",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Beast",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "7",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Rush. Strike - Select an enemy follower on the field and deal it 4 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-027EN.png"
+  },
+  {
+    "cardNo": "BP08-028EN",
+    "name": "Dance of Usurpation",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Omen / Thief",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select any number of enemy followers on the field and deal 4 damage divided between them. If there are at least 10 cards in opponents' cemeteries, deal 8 damage divided between them instead. If there are at least 20, deal 8 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-028EN.png"
+  },
+  {
+    "cardNo": "BP08-029EN",
+    "name": "Phantom Assassin",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Assassin",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] If there are at least 2 Assassin followers in your cemetery, give this follower [attack]+1/[defense]+1 and Bane."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-029EN.png"
+  },
+  {
+    "cardNo": "BP08-030EN",
+    "name": "Zealot of Usurpation",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Omen / Thief / Cutthroat",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "Rush. [fanfare] Each opponent buries the top card of their deck. Then, if there are at least 10 cards in opponents' cemeteries, put the top card of your deck into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-030EN.png"
+  },
+  {
+    "cardNo": "BP08-031EN",
+    "name": "Wardog",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[fanfare] If there's a Commander card on your field, deal 2 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-031EN.png"
+  },
+  {
+    "cardNo": "BP08-032EN",
+    "name": "Mana Pistol Merc",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Mercenary / Supreme",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "5",
+      "attack": "5",
+      "defense": "4",
+      "effect": "[evolve] [cost02]: Evolve this follower. [evolve] [cost00]: Evolve this follower. Activate only if there's a Commander card on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-032EN.png"
+  },
+  {
+    "cardNo": "BP08-033EN",
+    "name": "Mana Pistol Merc Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mercenary / Supreme",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "-",
+      "attack": "6",
+      "defense": "5",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 6 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-033EN.png"
+  },
+  {
+    "cardNo": "BP08-034EN",
+    "name": "Godsent Stride",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a follower on your field. Give it [attack]+3/[defense]+2 and Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-034EN.png"
+  },
+  {
+    "cardNo": "BP08-035EN",
+    "name": "Sweet-Tooth Medusa",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Gorgon",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[evolve] [cost02]: Evolve this follower. [fanfare] Search your deck for a card that costs 2 or less, reveal it, add it to your hand, then shuffle your deck. During your turn, whenever an enemy follower is put from the field into the cemetery, summon a Serpent token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-035EN.png"
+  },
+  {
+    "cardNo": "BP08-036EN",
+    "name": "Sweet-Tooth Medusa Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Gorgon",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "5",
+      "effect": "On Evolve - Select up to 2 enemy followers on the field and deal 5 damage divided between them. During your turn, whenever an enemy follower is put from the field into the cemetery, summon a Serpent token. [q][act] Bury 2 cards named Serpent: The next card you play this turn costs 2 less."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-036EN.png"
+  },
+  {
+    "cardNo": "BP08-037EN",
+    "name": "Prophetess of Creation",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "10",
+      "attack": "10",
+      "defense": "10",
+      "effect": "When playing this card, banish 10 cards with different base costs ranging from 1 to 10 from your cemetery: This card costs 10 less to play. ---------- Ward. Aura. This card can't be destroyed by abilities. (It can still be destroyed by ability damage.) [act] Discard this card: Draw a card. Discard a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-037EN.png"
+  },
+  {
+    "cardNo": "BP08-038EN",
+    "name": "Unbodied Witch",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Arcanaform / Forbidden",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "8",
+      "attack": "7",
+      "defense": "7",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Draw X cards. X equals the number of cards in your deck minus 5."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-038EN.png"
+  },
+  {
+    "cardNo": "BP08-039EN",
+    "name": "Unbodied Witch Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arcanaform / Forbidden",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "-",
+      "attack": "7",
+      "defense": "7",
+      "effect": "On Evolve - Put each other card on the field into its owner's cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-039EN.png"
+  },
+  {
+    "cardNo": "BP08-040EN",
+    "name": "Lovely-Heart Monika",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Arcanaform",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Choose one of the following. (1) Search your deck for a Morra, Monika's Familiar, summon it, then shuffle your deck. (2) You may summon a Morra, Monika's Familiar from your hand. [act] [engage] this card and a Morra, Monika's Familiar on your field: Select an enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-040EN.png"
+  },
+  {
+    "cardNo": "BP08-041EN",
+    "name": "Edict of Truth",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Omen / Mage",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "When a Raio, Omen of Truth is put onto your field, banish this card from your cemetery: Gain 1 Evolution Point. ---------- Look at the top 5 cards of your deck. You may put up to 2 cards that cost 3 or less from among them into your EX area. They cost 3 less to play this turn. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-041EN.png"
+  },
+  {
+    "cardNo": "BP08-042EN",
+    "name": "Elusa, Magic Wunderkind",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost02]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-042EN.png"
+  },
+  {
+    "cardNo": "BP08-043EN",
+    "name": "Elusa, Magic Wunderkind Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Academic",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - Search your deck for an Arcanaform follower, reveal it, add it to your hand, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-043EN.png"
+  },
+  {
+    "cardNo": "BP08-044EN",
+    "name": "Morra, Monika's Familiar",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Arcanaform",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[fanfare] Draw a card. Discard a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-044EN.png"
+  },
+  {
+    "cardNo": "BP08-045EN",
+    "name": "Veridic Discovery",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Alchemist",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Draw 2 cards. Discard a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-045EN.png"
+  },
+  {
+    "cardNo": "BP08-046EN",
+    "name": "Moonshade Mage",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Arcanaform",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "8",
+      "attack": "6",
+      "defense": "6",
+      "effect": "Ward. [fanfare] Draw 3 cards. Discard 2 cards. [act] [engage], discard a card: Select an enemy follower on the field and deal it 6 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-046EN.png"
+  },
+  {
+    "cardNo": "BP08-047EN",
+    "name": "Zealot of Truth",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Omen / Mage / Cutthroat",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "4",
+      "effect": "Storm. [fanfare] If there are at least 5 Mage cards in your cemetery, give this follower [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-047EN.png"
+  },
+  {
+    "cardNo": "BP08-048EN",
+    "name": "Rabbit Mage",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Summon a Magic Sediment token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-048EN.png"
+  },
+  {
+    "cardNo": "BP08-049EN",
+    "name": "Rabbit Mage Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "2",
+      "effect": "On Evolve - Look at the top 4 cards of your deck. You may reveal a card with Earth Rite from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-049EN.png"
+  },
+  {
+    "cardNo": "BP08-050EN",
+    "name": "Zealot of Destruction",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Omen / Idolatry / Cutthroat",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[fanfare] If there are at least 3 Idolatry cards on your field, select an enemy follower on the field. Destroy it, deal 2 damage to its leader, and give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-050EN.png"
+  },
+  {
+    "cardNo": "BP08-051EN",
+    "name": "Joy of Destruction",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Omen / Idolatry",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "0",
+      "attack": "-",
+      "defense": "-",
+      "effect": "If there's an Idolatry card on your field, recover 1 play point. If there's a Lishenna, Omen of Destruction on your field, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-051EN.png"
+  },
+  {
+    "cardNo": "BP08-052EN",
+    "name": "Dragon Empress Otohime",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt / Marine",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "4",
+      "attack": "2",
+      "defense": "4",
+      "effect": "[fanfare] Summon an Otohime's Vanguard token. If Overflow is active for you, summon 3 instead. During your turn, whenever another [dragoncraft] follower is put from your field into the cemetery, select an enemy leader or enemy follower on the field and deal it 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-052EN.png"
+  },
+  {
+    "cardNo": "BP08-053EN",
+    "name": "Azi Dahaka",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "6",
+      "effect": "[evolve] [cost02]: Evolve this follower. [fanfare] Turn 3 facedown evolved followers in your evolve deck faceup: Select an enemy follower on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-053EN.png"
+  },
+  {
+    "cardNo": "BP08-054EN",
+    "name": "Azi Dahaka Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wyrmkin",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "-",
+      "attack": "7",
+      "defense": "8",
+      "effect": "Storm. Strike - If there are at least 5 faceup evolved followers in your evolve deck, give your leader [defense]+3. If there are at least 8, deal 3 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-054EN.png"
+  },
+  {
+    "cardNo": "BP08-055EN",
+    "name": "Annerose",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt / Princess",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] If Overflow is active for you, look at the top 3 cards of your deck. You may reveal a Dragonewt card from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-055EN.png"
+  },
+  {
+    "cardNo": "BP08-056EN",
+    "name": "Annerose Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonewt / Princess",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-056EN.png"
+  },
+  {
+    "cardNo": "BP08-057EN",
+    "name": "Ouroboros",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "7",
+      "attack": "8",
+      "defense": "4",
+      "effect": "[fanfare] Select an enemy follower on the field. Deal it 5 damage and give your leader [defense]+5. [lastwords] Discard 2 cards: Put this card into its owner's EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-057EN.png"
+  },
+  {
+    "cardNo": "BP08-058EN",
+    "name": "Powerforge",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Wyrmkin / Cutthroat",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field and a follower on your field or in your EX area. Deal the first follower damage equal to the second's attack."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-058EN.png"
+  },
+  {
+    "cardNo": "BP08-059EN",
+    "name": "Elios, Loyal Dragoon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "4",
+      "effect": "[evolve] [cost03]: Evolve this follower. Ward. Whenever this follower takes damage, give it and your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-059EN.png"
+  },
+  {
+    "cardNo": "BP08-060EN",
+    "name": "Elios, Loyal Dragoon Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonheart",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "6",
+      "effect": "Storm. Ward. Whenever this follower takes damage, give it and your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-060EN.png"
+  },
+  {
+    "cardNo": "BP08-061EN",
+    "name": "Dragonsoul Princess",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt / Princess",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Look at the top 5 cards of your deck. You may put a Wyrmkin follower from among them into your EX area. If Overflow is active for you, it costs 3 less to play this turn. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-061EN.png"
+  },
+  {
+    "cardNo": "BP08-062EN",
+    "name": "Vile Violet Dragon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] If Overflow is active for you, give this follower [attack]+1/[defense]+1 and Rush. Once on each of your turns, when this follower takes damage, draw 2 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-062EN.png"
+  },
+  {
+    "cardNo": "BP08-063EN",
+    "name": "Zealot of Disdain",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Omen / Wyrmkin / Cutthroat",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Deal 1 damage to each follower on the field. During your turn, whenever this follower takes ability damage, deal 1 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-063EN.png"
+  },
+  {
+    "cardNo": "BP08-064EN",
+    "name": "Righteous Dragoon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[fanfare] If Overflow is active for you, choose one of the following. (1) Select an enemy follower on the field and deal it 4 damage. (2) Deal 2 damage to each enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-064EN.png"
+  },
+  {
+    "cardNo": "BP08-065EN",
+    "name": "Geovore",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "6",
+      "attack": "4",
+      "defense": "6",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Bury the top 2 cards of your deck. If there's a non-[dragoncraft] card in your cemetery, give your leader [defense]+2 and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-065EN.png"
+  },
+  {
+    "cardNo": "BP08-066EN",
+    "name": "Geovore Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "7",
+      "effect": "Strike - Banish 5 cards from your cemetery: Give this follower [attack]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-066EN.png"
+  },
+  {
+    "cardNo": "BP08-067EN",
+    "name": "Draco Marionette",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin / Puppetry",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "3",
+      "attack": "7",
+      "defense": "7",
+      "effect": "Rush. At the start of your end phase, destroy this card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-067EN.png"
+  },
+  {
+    "cardNo": "BP08-068EN",
+    "name": "Sneer of Disdain",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Omen / Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "When a Galmieux, Omen of Disdain is put onto your field, banish this card from your cemetery: Select a follower on your field and deal it 1 damage. ---------- Select a follower on the field and deal it 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-068EN.png"
+  },
+  {
+    "cardNo": "BP08-069EN",
+    "name": "Crimson Rose Queen",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "6",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost02]: Evolve this follower. [fanfare] Put a Thorn Burst token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-069EN.png"
+  },
+  {
+    "cardNo": "BP08-070EN",
+    "name": "Crimson Rose Queen Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Demon",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "On Evolve - Reveal your hand. Recover play points equal to the number of 2-cost cards revealed this way. Whenever you play a card that originally costs 2, choose one of the following. (1) Deal 2 damage to each enemy follower on the field. Give your leader [defense]+2. (2) Deal 2 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-070EN.png"
+  },
+  {
+    "cardNo": "BP08-071EN",
+    "name": "Nephthys",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed / Necromancer",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "7",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Look at the top 7 cards of your deck. You may summon up to 4 [abysscraft] followers with different names that cost 6 or less from among them. Put the rest on the bottom of your deck in any order. Destroy each follower summoned this way."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-071EN.png"
+  },
+  {
+    "cardNo": "BP08-072EN",
+    "name": "Tartarus, the Tormentor",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "10",
+      "attack": "7",
+      "defense": "7",
+      "effect": "This card costs 5 less to play if there are at least 15 Departed cards in your cemetery. ---------- [evolve] [cost01]: Evolve this follower. [act] [cost01], put this card from your hand into your EX area: Look at the top 2 cards of your deck. You may reveal a Departed card from among them and add it to your hand. Bury the rest."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-072EN.png"
+  },
+  {
+    "cardNo": "BP08-073EN",
+    "name": "Tartarus, the Tormentor Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Demon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "-",
+      "attack": "8",
+      "defense": "8",
+      "effect": "On Evolve - Select a Departed follower in your cemetery and summon it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-073EN.png"
+  },
+  {
+    "cardNo": "BP08-074EN",
+    "name": "Vuella, One-Winged Demon",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[act] [cost01]: Reveal the top card of your deck. If it's a 2-cost card, put it into your EX area. It costs 2 less to play this turn. Activate only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-074EN.png"
+  },
+  {
+    "cardNo": "BP08-075EN",
+    "name": "Sonata of Silence",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Omen / Necromancer",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a Rulenye, Omen of Silence in your cemetery. Summon it. Necrocharge (10) - Each opponent discards a random card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-075EN.png"
+  },
+  {
+    "cardNo": "BP08-076EN",
+    "name": "Chris Pumpkinhead",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. At the start of your end phase, Necrocharge (10) - Select a follower on your field. Give it [attack]+1/[defense]+1 and Ward and engage it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-076EN.png"
+  },
+  {
+    "cardNo": "BP08-077EN",
+    "name": "Chris Pumpkinhead Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Departed",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Bury the top 2 cards of your deck. At the start of your end phase, Necrocharge (10) - Select a follower on your field. Give it [attack]+1/[defense]+1 and Ward and engage it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-077EN.png"
+  },
+  {
+    "cardNo": "BP08-078EN",
+    "name": "Salome",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Necromancer / Princess",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "3",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[fanfare][lastwords] Select an enemy follower on the field. Deal it 2 damage and give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-078EN.png"
+  },
+  {
+    "cardNo": "BP08-079EN",
+    "name": "Kiss of Lust",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Omen / Demon",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Give your leader [defense]+2. Draw a card. If Sanguine is active for you, draw 2 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-079EN.png"
+  },
+  {
+    "cardNo": "BP08-080EN",
+    "name": "Arion",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "6",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Rush. [lastwords] Select an [abysscraft] follower that costs 5 or less in your cemetery and summon it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-080EN.png"
+  },
+  {
+    "cardNo": "BP08-081EN",
+    "name": "Marian the Mummy",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Bury the top 2 cards of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-081EN.png"
+  },
+  {
+    "cardNo": "BP08-082EN",
+    "name": "Marian the Mummy Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Departed",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Ward. Necrocharge (7) - This follower has Assail. NC (15) - This follower has Storm and Bane."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-082EN.png"
+  },
+  {
+    "cardNo": "BP08-083EN",
+    "name": "Zealot of Silence",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Omen / Necromancer / Cutthroat",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "1",
+      "effect": "Rush. During your turn, when an opponent discards a card, [cost01]: Summon this follower from your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-083EN.png"
+  },
+  {
+    "cardNo": "BP08-084EN",
+    "name": "Zealot of Lust",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Omen / Demon / Cutthroat",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[act] Give your leader [defense]-1: Select an enemy follower on the field and deal it 1 damage. Activate only twice per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-084EN.png"
+  },
+  {
+    "cardNo": "BP08-085EN",
+    "name": "Manifest Malice",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Necromancer",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field. Deal it 3 damage. You may banish 4 cards from your cemetery. If you do, return this card to its owner's hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-085EN.png"
+  },
+  {
+    "cardNo": "BP08-086EN",
+    "name": "Holylord Eachtar",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Luminary / Lightborne",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "7",
+      "attack": "5",
+      "defense": "6",
+      "effect": "Ward. [fanfare] Select up to 2 [havencraft] followers that cost 2 or less in your cemetery and summon them. While this card is on your field, each [havencraft] follower on your field has Rush. [act] Banish 3 [havencraft] followers from your cemetery: Give each other follower on your field [attack]+1/[defense]+1. Activate only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-086EN.png"
+  },
+  {
+    "cardNo": "BP08-087EN",
+    "name": "Godsworn Alexiel",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Lightborne",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "7",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. Ward. [fanfare] Give your leader [defense] equal to 2 times the number of amulets on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-087EN.png"
+  },
+  {
+    "cardNo": "BP08-088EN",
+    "name": "Godsworn Alexiel Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith / Lightborne",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Ward. On Evolve - Select an enemy follower on the field. Deal it and its leader damage equal to 2 times the number of amulets on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-088EN.png"
+  },
+  {
+    "cardNo": "BP08-089EN",
+    "name": "Eidolon of Madness",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Zealot / Eidolon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "2",
+      "attack": "0",
+      "defense": "3",
+      "effect": "[evolve] [cost02]: Evolve this follower. [fanfare] If there are at least 3 amulets on your field, this card's [evolve] costs 0 this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-089EN.png"
+  },
+  {
+    "cardNo": "BP08-090EN",
+    "name": "Eidolon of Madness Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet / Evolved",
+      "trait": "Zealot / Eidolon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": "On Evolve - Select an enemy follower on the field and banish it. [lastwords] Deal 3 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-090EN.png"
+  },
+  {
+    "cardNo": "BP08-091EN",
+    "name": "Sekhmet",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Beast",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[act] [engage], bury an amulet: Select an enemy follower on the field. Deal 4 damage to it and 1 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-091EN.png"
+  },
+  {
+    "cardNo": "BP08-092EN",
+    "name": "Vengeful Radiance",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Zealot / Cutthroat",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] This card can't be played during your turn. ---------- Select up to 2 enemy followers on the field and deal 4 damage divided between them."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-092EN.png"
+  },
+  {
+    "cardNo": "BP08-093EN",
+    "name": "Colette, Holy Gunner",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "1",
+      "effect": "[evolve] [cost02]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-093EN.png"
+  },
+  {
+    "cardNo": "BP08-094EN",
+    "name": "Colette, Holy Gunner Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "2",
+      "effect": "On Evolve - Each opponent buries a follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-094EN.png"
+  },
+  {
+    "cardNo": "BP08-095EN",
+    "name": "Battlefield Inquisitor",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Zealot / Cutthroat",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "8",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Select up to 2 enemy cards on the field. Destroy them and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-095EN.png"
+  },
+  {
+    "cardNo": "BP08-096EN",
+    "name": "Manifestation of Repose",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Omen / Zealot",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "This card costs 2 less to play if there's a Marwynn, Omen of Repose on your field. ---------- Select a follower on your field. Give it [defense]+2 and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-096EN.png"
+  },
+  {
+    "cardNo": "BP08-097EN",
+    "name": "Malevolent Al-mi'raj",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Zealot / Beast / Cutthroat",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Ward. [fanfare] Bury the top card of your deck. If you buried a follower with Ward, give this follower Bane."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-097EN.png"
+  },
+  {
+    "cardNo": "BP08-098EN",
+    "name": "Zealot of Repose",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Omen / Zealot / Cutthroat",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "4",
+      "attack": "0",
+      "defense": "4",
+      "effect": "At the start of each opponent's main phase, select an enemy follower with 4 defense or less on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-098EN.png"
+  },
+  {
+    "cardNo": "BP08-099EN",
+    "name": "Temple Windbear",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[evolve] [cost02]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-099EN.png"
+  },
+  {
+    "cardNo": "BP08-100EN",
+    "name": "Temple Windbear Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "3",
+      "effect": "On Evolve - Summon a Holy Tiger token. If there are at least 2 amulets on your field, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-100EN.png"
+  },
+  {
+    "cardNo": "BP08-101EN",
+    "name": "Angel of the Iron Steed",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Supreme",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "4",
+      "effect": "Ward. [fanfare] Summon a Mystic Artifact token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-101EN.png"
+  },
+  {
+    "cardNo": "BP08-102EN",
+    "name": "Forgotten Sanctuary",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith / Eidolon",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Summon a Holy Tiger token. [lastwords] Give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-102EN.png"
+  },
+  {
+    "cardNo": "BP08-103EN",
+    "name": "Alterplane Arbiter",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Deity",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[evolve] [cost02]: Evolve this follower. [fanfare] Declare any number. Bury the top 5 cards of your deck. Deal X damage to each enemy follower on the field. X equals the number of cards buried this way that cost the declared number."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-103EN.png"
+  },
+  {
+    "cardNo": "BP08-104EN",
+    "name": "Alterplane Arbiter Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Deity",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "On Evolve - Select 3 cards with different names in your cemetery. If they each cost the same number of play points, add them to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-104EN.png"
+  },
+  {
+    "cardNo": "BP08-105EN",
+    "name": "Sylvia, the Condemner",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Supreme",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "7",
+      "attack": "6",
+      "defense": "6",
+      "effect": "[fanfare] Select an enemy follower on the field. Destroy it and deal 5 damage to its leader. [act] [cost02], discard this card: Select an enemy follower that costs 5 or more on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-105EN.png"
+  },
+  {
+    "cardNo": "BP08-106EN",
+    "name": "Sahaquiel",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Angel / Deity",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "6",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost02]: Evolve this follower. [fanfare] You may summon a [neutral] follower from your hand and give it \"At the start of your end phase, return this card to its owner's hand.\""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-106EN.png"
+  },
+  {
+    "cardNo": "BP08-107EN",
+    "name": "Sahaquiel Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Angel / Deity",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "On Evolve - Give each follower on your field Rush and Assail."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-107EN.png"
+  },
+  {
+    "cardNo": "BP08-108EN",
+    "name": "Tart Man",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Lightborne",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Search your deck for any card, add it to your hand, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-108EN.png"
+  },
+  {
+    "cardNo": "BP08-109EN",
+    "name": "Slash of the One",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Omen",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy card that costs 4 or less on the field and destroy it. If there are 2 cards or less in your hand, deal 2 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-109EN.png"
+  },
+  {
+    "cardNo": "BP08-110EN",
+    "name": "Reina, Evolution's Herald",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Lightborne",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost02]: Evolve this follower. [fanfare] Select an enemy follower on the field and deal it damage equal to the number of faceup evolved followers in your evolve deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-110EN.png"
+  },
+  {
+    "cardNo": "BP08-111EN",
+    "name": "Reina, Evolution's Herald Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Lightborne",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "On Evolve - Select a faceup evolved follower in your evolve deck. Turn it facedown, then search your deck for a follower, reveal it, add it to your hand, and shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-111EN.png"
+  },
+  {
+    "cardNo": "BP08-112EN",
+    "name": "Ephemera, Sword Angel",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Angel",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "1",
+      "effect": "Rush. [fanfare] If there are at least 3 cards on an opponent's field, give this follower [attack]+1 and Assail."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-112EN.png"
+  },
+  {
+    "cardNo": "BP08-113EN",
+    "name": "Treasure Map",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Mercenary",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Look at the top 7 cards of your deck. From among them, you may reveal up to 1 follower and up to 1 amulet and add them to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-113EN.png"
+  },
+  {
+    "cardNo": "BP08-114EN",
+    "name": "Steelclad Minotaur",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Mercenary / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "6",
+      "attack": "7",
+      "defense": "6",
+      "effect": "Rush. Ward. If this follower would take combat damage, it takes that much minus 2 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-114EN.png"
+  },
+  {
+    "cardNo": "BP08-115EN",
+    "name": "High Enchantress",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Mercenary",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Each player puts the top card of their deck into their EX area. Do this 2 times."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-115EN.png"
+  },
+  {
+    "cardNo": "BP08-116EN",
+    "name": "High Enchantress Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Mercenary",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "4",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it damage equal to the number of cards in your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-116EN.png"
+  },
+  {
+    "cardNo": "BP08-117EN",
+    "name": "Happy Pig",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare][lastwords] Give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-117EN.png"
+  },
+  {
+    "cardNo": "BP08-SP01EN",
+    "name": "Mysteria, Magic Founder",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic",
+      "rarity": "Special",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Reveal an Academic follower from your hand: Select an enemy follower on the field and deal it 2 damage. While this card is on your field, any Academic follower you play costs 1 less."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-SP01EN.png"
+  },
+  {
+    "cardNo": "BP08-SP02EN",
+    "name": "Mysteria, Magic Founder Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Academic",
+      "rarity": "Special",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "5",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 3 damage. While this card is on your field, any Academic follower you play costs 1 less."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-SP02EN.png"
+  },
+  {
+    "cardNo": "BP08-T01EN",
+    "name": "Lloyd TOKEN",
+    "type": "token",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Token",
+      "trait": "Puppetry",
+      "rarity": "-",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "0",
+      "attack": "2",
+      "defense": "4",
+      "effect": "Ward. [fanfare] Give your leader [defense]+2. While this card is on the field, its name is also Puppet."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-T01EN.png"
+  },
+  {
+    "cardNo": "BP08-T02EN",
+    "name": "Victoria TOKEN",
+    "type": "token",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Token",
+      "trait": "Puppetry / Cutthroat",
+      "rarity": "-",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "0",
+      "attack": "4",
+      "defense": "1",
+      "effect": "Rush. Assail. [fanfare] Draw a card. While this card is on the field, its name is also Puppet."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-T02EN.png"
+  },
+  {
+    "cardNo": "BP08-T03EN",
+    "name": "Otohime's Vanguard TOKEN",
+    "type": "token",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Token",
+      "trait": "Marine",
+      "rarity": "-",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "1",
+      "effect": "Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-T03EN.png"
+  },
+  {
+    "cardNo": "BP08-T04EN",
+    "name": "Thorn Burst TOKEN",
+    "type": "token",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell / Token",
+      "trait": "Verdant",
+      "rarity": "-",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy leader or enemy follower on the field. Deal it 3 damage and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-T04EN.png"
+  },
+  {
+    "cardNo": "BP08-T05EN",
+    "name": "Fairy Wisp TOKEN",
+    "type": "token",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Token",
+      "trait": "Pixie",
+      "rarity": "-",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "0",
+      "attack": "1",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-T05EN.png"
+  },
+  {
+    "cardNo": "BP08-T06EN",
+    "name": "Magic Sediment TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet / Token",
+      "trait": "Earth Sigil",
+      "rarity": "-",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Stack."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-T06EN.png"
+  },
+  {
+    "cardNo": "BP08-T07EN",
+    "name": "Serpent TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Token",
+      "trait": "Demon",
+      "rarity": "-",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "1",
+      "attack": "0",
+      "defense": "1",
+      "effect": "Bane."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-T07EN.png"
+  },
+  {
+    "cardNo": "BP08-T08EN",
+    "name": "Holy Tiger TOKEN",
+    "type": "token",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Token",
+      "trait": "Beast",
+      "rarity": "-",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-T08EN.png"
+  },
+  {
+    "cardNo": "BP08-T09EN",
+    "name": "Puppet TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Token",
+      "trait": "Puppetry",
+      "rarity": "-",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-T09EN.png"
+  },
+  {
+    "cardNo": "BP08-T10EN",
+    "name": "Ancient Artifact TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Token",
+      "trait": "Supreme",
+      "rarity": "-",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "1",
+      "attack": "3",
+      "defense": "1",
+      "effect": "Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-T10EN.png"
+  },
+  {
+    "cardNo": "BP08-T11EN",
+    "name": "Mystic Artifact TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Token",
+      "trait": "Supreme",
+      "rarity": "-",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Ward. [fanfare] Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-T11EN.png"
+  },
+  {
+    "cardNo": "BP08-U07EN",
+    "name": "Ms. Tart Man",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Lightborne",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #8 \"Alterchaotica\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Search your deck for any card, add it to your hand, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP08/BP08-U07EN.png"
+  }
+]

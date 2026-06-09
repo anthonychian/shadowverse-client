@@ -1,0 +1,211 @@
+[
+  {
+    "cardNo": "CSD02b-001EN",
+    "name": "Rin Shibuya [Triad Primus]",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Legendary",
+      "cardSet": "Crossover Starter Deck “Cool”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Storm. [fanfare] If there are at least 3 Cool followers on your field, select another follower with 3 attack or less on your field and give it Storm. [act] [cost01], Lesson (1): Give this follower [attack]+1. Activate only once per turn."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD02b-002EN",
+    "name": "Nao Kamiya [Over the Rainbow]",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Legendary",
+      "cardSet": "Crossover Starter Deck “Cool”",
+      "cost": "5",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Look at the top 5 cards of your deck. From among them, you may summon up to 2 Cool followers that cost a total of 4 or less. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD02b-003EN",
+    "name": "Karen Hojo [Song for Life]",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Legendary",
+      "cardSet": "Crossover Starter Deck “Cool”",
+      "cost": "1",
+      "attack": "3",
+      "defense": "2",
+      "effect": "At the start of your end phase, if there are no other Cool followers on your field, deal 1 damage to this follower. [act] [cost03], Lesson (1): Give each follower on your field [attack]+1."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD02b-004EN",
+    "name": "Yasuha Okazaki",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Gold",
+      "cardSet": "Crossover Starter Deck “Cool”",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Search your deck for a Cool follower that costs 2 or less, summon it, then shuffle your deck."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD02b-005EN",
+    "name": "Yukimi Sajo",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Silver",
+      "cardSet": "Crossover Starter Deck “Cool”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] [cost02], Lesson (1): Give this follower [attack]+1/[defense]+1. (To perform Lesson (1), banish a Magical Item token from your EX area.)"
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD02b-006EN",
+    "name": "Yukimi Sajo Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Silver",
+      "cardSet": "Crossover Starter Deck “Cool”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select another Cool follower on your field. Give it [attack]+1, Rush, and Assail. (Followers with Assail can attack reserved followers.)"
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD02b-007EN",
+    "name": "Kako Takafuji",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Silver",
+      "cardSet": "Crossover Starter Deck “Cool”",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost02]: Evolve this follower."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD02b-008EN",
+    "name": "Kako Takafuji Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Silver",
+      "cardSet": "Crossover Starter Deck “Cool”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - [cost03]: Select an enemy leader and deal it 3 damage."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD02b-009EN",
+    "name": "Chizuru Matsuo",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Starter Deck “Cool”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Select another Cool follower on your field and give it [attack]+1. [lastwords] Select a Cool follower on your field and give it [attack]+1."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD02b-010EN",
+    "name": "Seira Mizuki",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Starter Deck “Cool”",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost02]: Evolve this follower. Storm. (Followers with Storm can attack enemy followers and leaders on the turn they're put onto your field.)"
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD02b-011EN",
+    "name": "Seira Mizuki Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Starter Deck “Cool”",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Storm. On Evolve - Select an enemy follower on the field and deal it 5 damage."
+    },
+    "imgSrc": ""
+  }
+]

@@ -1,0 +1,211 @@
+[
+  {
+    "cardNo": "CSD02a-001EN",
+    "name": "Uzuki Shimamura [P.C.S.]",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cute",
+      "rarity": "Legendary",
+      "cardSet": "Crossover Starter Deck “Cute”",
+      "cost": "7",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Select up to 1 Cute follower that costs 4 or less and up to 1 Cute follower that costs 2 or less in your cemetery. Summon them and give them [attack]+1/[defense]+1. [act] Lesson (1): Give your leader [defense]+3. Activate only once per turn."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD02a-002EN",
+    "name": "Kyoko Igarashi [P.C.S.]",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cute",
+      "rarity": "Legendary",
+      "cardSet": "Crossover Starter Deck “Cute”",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Ward. [fanfare] Select an enemy follower on the field and give it [attack]-1/[defense]-1 for every Cute follower on your field. [act] Lesson (1): Select an enemy follower on the field and give it [attack]-1/[defense]-1. Activate only once per turn."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD02a-003EN",
+    "name": "Miho Kohinata [P.C.S.]",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cute",
+      "rarity": "Legendary",
+      "cardSet": "Crossover Starter Deck “Cute”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Look at the top card of your deck. If it's a Cute card, you may reveal it and add it to your hand. While there are at least 3 Cute followers on your field, this follower has Rush."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD02a-004EN",
+    "name": "Chika Yokoyama",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cute",
+      "rarity": "Gold",
+      "cardSet": "Crossover Starter Deck “Cute”",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] If there are at least 5 Cute cards in your cemetery, give this follower [attack]+1/[defense]+2 and Ward."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD02a-005EN",
+    "name": "Momoka Sakurai",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cute",
+      "rarity": "Silver",
+      "cardSet": "Crossover Starter Deck “Cute”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] [cost02], Lesson (1): Give this follower [attack]+1/[defense]+1. (To perform Lesson (1), banish a Magical Item token from your EX area.)"
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD02a-006EN",
+    "name": "Momoka Sakurai Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "iM@S CG / Cute",
+      "rarity": "Silver",
+      "cardSet": "Crossover Starter Deck “Cute”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Look at the top 3 cards of your deck. You may reveal a Cute card from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD02a-007EN",
+    "name": "Akiha Ikebukuro",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cute",
+      "rarity": "Silver",
+      "cardSet": "Crossover Starter Deck “Cute”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Select another Cute follower on your field and give it [defense]+1."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD02a-008EN",
+    "name": "Akiha Ikebukuro Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "iM@S CG / Cute",
+      "rarity": "Silver",
+      "cardSet": "Crossover Starter Deck “Cute”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Discard a Cute card: Select an enemy follower on the field. Deal it 3 damage and draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD02a-009EN",
+    "name": "Nene Kurihara",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cute",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Starter Deck “Cute”",
+      "cost": "5",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. Ward. [fanfare] Select an enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD02a-010EN",
+    "name": "Nene Kurihara Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "iM@S CG / Cute",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Starter Deck “Cute”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "5",
+      "effect": "Ward. On Evolve - [cost03]: Select a Cute follower in your cemetery and summon it."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD02a-011EN",
+    "name": "Karin Domyoji",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cute",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Starter Deck “Cute”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Ward. (While you have engaged followers with Ward, opponents can't attack your other followers or leader. You may engage this follower when it's put onto your field or during your end phase.) [fanfare] Discard a Cute card: Give this follower [defense]+2. Draw a card."
+    },
+    "imgSrc": ""
+  }
+]

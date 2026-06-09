@@ -1,0 +1,2434 @@
+[
+  {
+    "cardNo": "BP11-001EN",
+    "name": "Loxis, Homestead Pioneer",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Elf / Hunter",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. 3 times on each of your turns, when you play an amulet, recover 1 play point. [act] [engage] 3 amulets on your field: Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-001EN.png"
+  },
+  {
+    "cardNo": "BP11-002EN",
+    "name": "Loxis, Homestead Pioneer Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wasteland / Elf / Hunter",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Once on each of your turns, when a Mount card you control leaves the field, put a Dutiful Steed, Bullet Bike, and Arcane Personnel Carrier token into your EX area and give your leader [defense]+2. [act] Banish 3 amulets from your field: Choose one. (1) Select an enemy follower on the field and destroy it. (2) Select another follower on your field and give it [attack]+3/[defense]+3."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-002EN.png"
+  },
+  {
+    "cardNo": "BP11-003EN",
+    "name": "Shamu & Shama, Posh Felines",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Hunter / Beast",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Storm. [fanfare] Select an enemy follower on the field. Combo (5) - Deal it 3 damage. Strike, Combo (3) - Give this follower [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-003EN.png"
+  },
+  {
+    "cardNo": "BP11-004EN",
+    "name": "Terrorformer",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Fae-Touched",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "6",
+      "attack": "0",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. [act] [cost02], put this card from your hand into your EX area: Put the top card of your deck into your EX area. [act] Banish 2 other cards from your EX area: Give this follower in your EX area [attack]+2. Draw a card. Activate only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-004EN.png"
+  },
+  {
+    "cardNo": "BP11-005EN",
+    "name": "Terrorformer Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Fae-Touched",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "-",
+      "attack": "0",
+      "defense": "6",
+      "effect": "Storm. On Evolve - Select an enemy follower on the field and deal it damage equal to this follower's attack."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-005EN.png"
+  },
+  {
+    "cardNo": "BP11-006EN",
+    "name": "Giant Pastures",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Verdant",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "6",
+      "effect": "[fanfare] Put a Bullet Bike and Arcane Personnel Carrier token into your EX area. Deal each enemy leader and enemy follower on the field damage equal to the number of Mount cards in your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-006EN.png"
+  },
+  {
+    "cardNo": "BP11-007EN",
+    "name": "Fairy Flowering",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Pixie",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "As an additional cost to play this card, bury 4 Pixie tokens. ---------- Search your deck for an Aria, Fairy Princess, summon it, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-007EN.png"
+  },
+  {
+    "cardNo": "BP11-008EN",
+    "name": "Varmint Hunter",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Hunter",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. During your turn, whenever a Mount card is put into your EX area, select an enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-008EN.png"
+  },
+  {
+    "cardNo": "BP11-009EN",
+    "name": "Varmint Hunter Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wasteland / Hunter",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Put a Dutiful Steed token into your EX area. During your turn, whenever a Mount card is put into your EX area, select an enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-009EN.png"
+  },
+  {
+    "cardNo": "BP11-010EN",
+    "name": "Stringmaster",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Puppetry",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Once on each of your turns, when a Puppet is put onto your field, put 2 Puppet tokens into your EX area. [act] [cost04]: Give this follower [attack]+2/[defense]+2. Summon a Puppet token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-010EN.png"
+  },
+  {
+    "cardNo": "BP11-011EN",
+    "name": "Corrosive Thorns",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Verdant",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select any number of Pixie tokens on your field. For the rest of this turn, they have \"[act] [engage]: Select an enemy follower on the field. Deal 3 damage to it and 1 damage to its leader.\""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-011EN.png"
+  },
+  {
+    "cardNo": "BP11-012EN",
+    "name": "Lookout Elf",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Look at the top card of your deck. You may put it on the bottom of your deck. Put 2 Fairy tokens into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-012EN.png"
+  },
+  {
+    "cardNo": "BP11-013EN",
+    "name": "Lookout Elf Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Elf",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Summon 2 Fairy tokens."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-013EN.png"
+  },
+  {
+    "cardNo": "BP11-014EN",
+    "name": "Cactus Cowboy",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Verdant",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[fanfare] Put a Dutiful Steed token into your EX area. [lastwords] Select an enemy follower on the field and, if there are at least 3 Mount cards on your field and/or in your EX area, deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-014EN.png"
+  },
+  {
+    "cardNo": "BP11-015EN",
+    "name": "Nature's Warden",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Hunter / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "5",
+      "effect": "Ward. [fanfare] Search your deck for a follower with Ward, reveal it, add it to your hand, then shuffle. [fanfare] [cost05]: You may summon a follower with Ward from your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-015EN.png"
+  },
+  {
+    "cardNo": "BP11-016EN",
+    "name": "Hornet Strike",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Insect",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field and deal it 3 damage. Combo (3) - Deal 5 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-016EN.png"
+  },
+  {
+    "cardNo": "BP11-017EN",
+    "name": "Scavenge",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Puppetry",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a Puppetry card in your cemetery. Add it to your hand and put a Puppet token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-017EN.png"
+  },
+  {
+    "cardNo": "BP11-018EN",
+    "name": "Nahtnaught, Cursed Queen",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Commander",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "5",
+      "effect": "[fanfare] Search your deck for a 1-cost [swordcraft] card, put it into your EX area, then shuffle. [act] [cost00]: Select an enemy follower on the field and engage it. It becomes Boxed until the end of its controller's next turn. Activate only once per turn. (Boxed followers lose all abilities and don't refresh during the start phase.)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-018EN.png"
+  },
+  {
+    "cardNo": "BP11-019EN",
+    "name": "Bunny & Baron, Specter Duo",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Thief",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-019EN.png"
+  },
+  {
+    "cardNo": "BP11-020EN",
+    "name": "Bunny & Baron, Specter Duo Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wasteland / Thief",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Choose one. (1) Summon a Val, Trusty Getaway Car token. (2) Search your deck for a Desperados' Shot, reveal it, add it to your hand, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-020EN.png"
+  },
+  {
+    "cardNo": "BP11-021EN",
+    "name": "Reinhardt, the Deathless",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[evolve] [cost02]: Evolve this follower. [fanfare] If there are at least 3 faceup evolved followers in your evolve deck, evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-021EN.png"
+  },
+  {
+    "cardNo": "BP11-022EN",
+    "name": "Reinhardt, the Deathless Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Commander",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "5",
+      "effect": "Assail. At the start of your end phase, give this follower and your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-022EN.png"
+  },
+  {
+    "cardNo": "BP11-023EN",
+    "name": "Radical Gunslinger",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Officer",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "1",
+      "attack": "0",
+      "defense": "1",
+      "effect": "[fanfare] Summon a Dutiful Steed token. [act] [engage] this card and 2 Mount cards on your field: Select an enemy leader or enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-023EN.png"
+  },
+  {
+    "cardNo": "BP11-024EN",
+    "name": "Tyrant's Order",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Wasteland / Commander",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select up to 1 Boxed enemy follower on the field. Destroy it, search your deck for a Wasteland follower, reveal it, add it to your hand, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-024EN.png"
+  },
+  {
+    "cardNo": "BP11-025EN",
+    "name": "Stalwart Slinger",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "6",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Select an enemy card on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-025EN.png"
+  },
+  {
+    "cardNo": "BP11-026EN",
+    "name": "Stalwart Slinger Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Officer",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Assail. On Evolve - Deal 3 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-026EN.png"
+  },
+  {
+    "cardNo": "BP11-027EN",
+    "name": "Outlaw Gunner",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Officer / Thief",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Summon a Bullet Bike token. [lastwords] Deal 2 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-027EN.png"
+  },
+  {
+    "cardNo": "BP11-028EN",
+    "name": "Desperados' Shot",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Wasteland / Thief",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field and deal it 4 damage. If there's a Bunny & Baron, Specter Duo and Val, Trusty Getaway Car on your field, deal 6 damage instead and deal 2 damage to the selected follower's leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-028EN.png"
+  },
+  {
+    "cardNo": "BP11-029EN",
+    "name": "Shinobi Tanuki",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Ninja / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-029EN.png"
+  },
+  {
+    "cardNo": "BP11-030EN",
+    "name": "Shinobi Tanuki Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Officer / Ninja / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Intimidate."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-030EN.png"
+  },
+  {
+    "cardNo": "BP11-031EN",
+    "name": "Naht's Henchman",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Officer",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "This card costs 1 less to play from the EX area if there's a Nahtnaught, Cursed Queen on your field. ---------- [fanfare] If there's a Nahtnaught, Cursed Queen on your field, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-031EN.png"
+  },
+  {
+    "cardNo": "BP11-032EN",
+    "name": "Frontline Instructor",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] [costX]: Summon X Steelclad Knight tokens. X equals a number of your choice. [act] [engage]: For the rest of this turn, each [swordcraft] follower currently on your field has Rush and Assail."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-032EN.png"
+  },
+  {
+    "cardNo": "BP11-033EN",
+    "name": "Bandit Raid",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Thief",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Look at the top 4 cards of your deck. You may summon a follower that costs 3 or less from among them. Put the rest on the bottom of your deck in any order. If you summoned a Thief follower, give it [attack]+1/[defense]+1 and Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-033EN.png"
+  },
+  {
+    "cardNo": "BP11-034EN",
+    "name": "Dramatic Retreat",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "0",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] This card can't be played during your turn. ---------- Select a follower on your field and put it into its owner's EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-034EN.png"
+  },
+  {
+    "cardNo": "BP11-035EN",
+    "name": "Vincent, the Peacekeeper",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Mage",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. Activate only if this follower has gained attack or defense this turn. [fanfare] Search your deck for a Wasteland card, bury it, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-035EN.png"
+  },
+  {
+    "cardNo": "BP11-036EN",
+    "name": "Vincent, the Peacekeeper Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wasteland / Mage",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "On Evolve - If there are at least 3 cards with different base costs in your cemetery, give your leader [defense]+3. If there are at least 6, draw a card. If there are at least 9, deal 9 damage to each enemy follower on the field. If there are at least 12, deal 12 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-036EN.png"
+  },
+  {
+    "cardNo": "BP11-037EN",
+    "name": "Maiser, Neighborhood Hero",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Mage",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[fanfare] Summon a Dutiful Steed token. Search your deck for a Rapid Fire, put it into your EX area, then shuffle. Spellchain (5) - It costs 1 less to play this turn. Once on each of your turns, when you play a spell that originally costs 1 or less, draw a card, then discard a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-037EN.png"
+  },
+  {
+    "cardNo": "BP11-038EN",
+    "name": "Magical Gunslinger",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Mage",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Summon a Bullet Bike token. During your turn, whenever a Mount card is put onto your field, select an enemy follower on the field. Deal it 2 damage, draw a card, then discard a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-038EN.png"
+  },
+  {
+    "cardNo": "BP11-039EN",
+    "name": "Magical Gunslinger Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wasteland / Mage",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - If there are at least 6 cards with different base costs in your cemetery, summon an Arcane Personnel Carrier token. During your turn, whenever a Mount card is put onto your field, select an enemy follower on the field. Deal it 2 damage, draw a card, then discard a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-039EN.png"
+  },
+  {
+    "cardNo": "BP11-040EN",
+    "name": "Transcendent Simulacrum",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Forbidden",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Select a Golem follower in your cemetery and add it to your hand. [act] [engage]: Select a Golem follower on your field and give it [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-040EN.png"
+  },
+  {
+    "cardNo": "BP11-041EN",
+    "name": "Words of Judgment",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Wasteland / Mage",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "0",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field. It loses all abilities for the rest of this turn and, if there are at least 6 cards with different base costs in your cemetery, you give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-041EN.png"
+  },
+  {
+    "cardNo": "BP11-042EN",
+    "name": "Artistic Arcanist",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "3",
+      "attack": "1",
+      "defense": "4",
+      "effect": "[evolve] [cost02]: Evolve this follower. Rush. Bane. Drain. [act] Earth Rite: Select another follower on your field and give it Rush, Bane, or Drain."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-042EN.png"
+  },
+  {
+    "cardNo": "BP11-043EN",
+    "name": "Artistic Arcanist Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "6",
+      "effect": "Bane. Drain. On Evolve - Select an enemy follower on the field and put it into its owner's EX area. [act] Earth Rite: Select another follower on your field and give it Rush, Bane, or Drain."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-043EN.png"
+  },
+  {
+    "cardNo": "BP11-044EN",
+    "name": "Golem Marshal",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Golem / Arcanaform",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "9",
+      "attack": "5",
+      "defense": "7",
+      "effect": "When this card is discarded, put an Arcane Personnel Carrier token into your EX area. ---------- [fanfare] Select a Wasteland follower that costs 6 or less in your cemetery. Summon it, then summon an Arcane Personnel Carrier token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-044EN.png"
+  },
+  {
+    "cardNo": "BP11-045EN",
+    "name": "Rapid Fire",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Wasteland / Mage",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field and deal it 2 damage. If there are at least 3 cards named Rapid Fire in your cemetery, deal 3 damage instead. If there are at least 5, deal 4 damage to its leader. ---------- You can put up to 6 of this card into your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-045EN.png"
+  },
+  {
+    "cardNo": "BP11-046EN",
+    "name": "Crystal Fencer",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Draw a card. Discard a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-046EN.png"
+  },
+  {
+    "cardNo": "BP11-047EN",
+    "name": "Crystal Fencer Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - You may put a [runecraft] spell from your hand into your EX area. It costs 3 less to play this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-047EN.png"
+  },
+  {
+    "cardNo": "BP11-048EN",
+    "name": "Rivaylian Deputy",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Mage",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[fanfare] Summon a Dutiful Steed token. Once on each of your turns, when a Mount card is put onto your field, draw a card, then discard a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-048EN.png"
+  },
+  {
+    "cardNo": "BP11-049EN",
+    "name": "Mirror Witch",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Storm. During each opponent's turn, whenever this follower takes damage, deal 2 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-049EN.png"
+  },
+  {
+    "cardNo": "BP11-050EN",
+    "name": "Terra Nova",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Alchemist",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Summon a Magic Sediment token. Add 2 to a Stack on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-050EN.png"
+  },
+  {
+    "cardNo": "BP11-051EN",
+    "name": "Scorching Blast",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field and deal it 5 damage. If there are at least 2 Mage followers on your field, deal 2 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-051EN.png"
+  },
+  {
+    "cardNo": "BP11-052EN",
+    "name": "Reggie, Peerless Artisan",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Wyrmkin",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. While Overflow is active for you, this follower has Storm. [fanfare] Select a Wasteland follower that costs 2 or less in your cemetery and summon it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-052EN.png"
+  },
+  {
+    "cardNo": "BP11-053EN",
+    "name": "Reggie, Peerless Artisan Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wasteland / Wyrmkin",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "While Overflow is active for you, this follower has Storm. On Evolve - Give each other Wasteland follower on your field [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-053EN.png"
+  },
+  {
+    "cardNo": "BP11-054EN",
+    "name": "Resplendent Phoenix",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Phoenix",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Ward. [fanfare] [cost02]: If Overflow is active for you, shuffle your deck, then put the top card into your EX area. It costs 0 to play this turn. [lastwords] Give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-054EN.png"
+  },
+  {
+    "cardNo": "BP11-055EN",
+    "name": "Georgius",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin / Cutthroat / Draconic Duelist",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost02]: Evolve this follower. [fanfare] Select an enemy follower on the field and, if Overflow is active for you, deal 2 damage to it and its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-055EN.png"
+  },
+  {
+    "cardNo": "BP11-056EN",
+    "name": "Georgius Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wyrmkin / Cutthroat / Draconic Duelist",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "On Evolve - Destroy each enemy follower with 3 defense or less on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-056EN.png"
+  },
+  {
+    "cardNo": "BP11-057EN",
+    "name": "Balefire Wrenchsmith",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Wyrmkin",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "1",
+      "effect": "[fanfare] Summon a Dutiful Steed token. During your turn, whenever another Wasteland card is put onto your field, select an enemy follower on the field and deal it 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-057EN.png"
+  },
+  {
+    "cardNo": "BP11-058EN",
+    "name": "Dragon-Devouring Dread",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin / Cutthroat",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "9",
+      "attack": "8",
+      "defense": "8",
+      "effect": "[fanfare] For each [dragoncraft] card that costs 7 or more in your cemetery, select up to 1 enemy follower on the field and banish it. [act] [cost03], discard this card and a [dragoncraft] card that costs 7 or more: Increase your max play points by 1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-058EN.png"
+  },
+  {
+    "cardNo": "BP11-059EN",
+    "name": "Azureflame Dragonewt",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "7",
+      "attack": "6",
+      "defense": "6",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Select an enemy follower on the field and deal it 6 damage. [act] [cost01], discard this card and a [dragoncraft] card that costs 7 or more: Select an enemy follower on the field and deal it 4 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-059EN.png"
+  },
+  {
+    "cardNo": "BP11-060EN",
+    "name": "Azureflame Dragonewt Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonewt",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "-",
+      "attack": "7",
+      "defense": "7",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 6 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-060EN.png"
+  },
+  {
+    "cardNo": "BP11-061EN",
+    "name": "Dragonfolk Artificer",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Dragonewt",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Look at the top 3 cards of your deck. You may reveal a Wasteland card from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-061EN.png"
+  },
+  {
+    "cardNo": "BP11-062EN",
+    "name": "Draconic Call",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Wyrmkin",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Look at the top 5 cards of your deck. From among them, you may reveal up to 2 [dragoncraft] cards that cost 7 or more and add them to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-062EN.png"
+  },
+  {
+    "cardNo": "BP11-063EN",
+    "name": "Mermaid Guide",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Marine",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. While there are at least 5 Marine cards in your cemetery, this follower has Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-063EN.png"
+  },
+  {
+    "cardNo": "BP11-064EN",
+    "name": "Mermaid Guide Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Marine",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "While there are at least 5 Marine cards in your cemetery, this follower has Storm. On Evolve - Discard a Marine card: Draw 2 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-064EN.png"
+  },
+  {
+    "cardNo": "BP11-065EN",
+    "name": "Wyrmfire Engineer",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[lastwords] Summon a Bullet Bike token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-065EN.png"
+  },
+  {
+    "cardNo": "BP11-066EN",
+    "name": "Pumpkin Dragon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "8",
+      "attack": "6",
+      "defense": "6",
+      "effect": "Ward. [fanfare] Give your leader [defense]+5. Draw 2 cards. [act] [cost02], discard this card and a [dragoncraft] card that costs 7 or more: Give your leader [defense]+5."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-066EN.png"
+  },
+  {
+    "cardNo": "BP11-067EN",
+    "name": "Wavecrest Angler",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Marine",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Look at the top 3 cards of your deck. You may put a Marine card from among them into your EX area. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-067EN.png"
+  },
+  {
+    "cardNo": "BP11-068EN",
+    "name": "Thunderous Roar",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] As an additional cost to play this card, you may discard a [dragoncraft] card that costs 7 or more. ---------- Select an enemy follower on the field and deal it 3 damage. If you paid this card's additional cost, deal 4 damage instead and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-068EN.png"
+  },
+  {
+    "cardNo": "BP11-069EN",
+    "name": "Iceschillendrig, Gilded Autocrat",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Departed / Demon",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] If there's no Magitrain on your field, summon one. Whenever this card becomes engaged, each opponent discards a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-069EN.png"
+  },
+  {
+    "cardNo": "BP11-070EN",
+    "name": "Iceschillendrig, Gilded Autocrat Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wasteland / Departed / Demon",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "On Evolve - Discard a card: Select 2 followers in your cemetery and add them to your hand. Whenever this card becomes engaged, each opponent discards a card. During your turn, whenever a player discards a card, select an enemy follower on the field and engage it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-070EN.png"
+  },
+  {
+    "cardNo": "BP11-071EN",
+    "name": "Illganeau, Horror Astray",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Departed / Demon",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[fanfare] Select a Wasteland follower that costs 3 or less in your cemetery. Necrocharge (10) - You may summon it. If you do, banish this card. [lastwords] Put this card into its owner's EX area. Bury the top card of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-071EN.png"
+  },
+  {
+    "cardNo": "BP11-072EN",
+    "name": "Hazhan, Demonblade Knight",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "3",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[evolve] [cost03]: Evolve this follower. [evolve] [cost01]: Evolve this follower. Activate only if Sanguine is active for you. Assail. Bane. Drain."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-072EN.png"
+  },
+  {
+    "cardNo": "BP11-073EN",
+    "name": "Hazhan, Demonblade Knight Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Demon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "-",
+      "attack": "1",
+      "defense": "6",
+      "effect": "Assail. Bane. Drain. Strike - Deal 2 damage to each enemy leader. Refresh this follower. Perform only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-073EN.png"
+  },
+  {
+    "cardNo": "BP11-074EN",
+    "name": "Greatpick Corpse",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Departed",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Bury another card: Select an enemy follower on the field and deal it 4 damage. Once per turn, when a 1-cost token card you control leaves the field, summon a token of the same name."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-074EN.png"
+  },
+  {
+    "cardNo": "BP11-075EN",
+    "name": "Dead to Rights",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Wasteland / Departed / Demon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] Banish this card and an Iceschillendrig, Gilded Autocrat from your cemetery: Select an enemy follower on the field and engage it. ---------- [quick] Select an enemy follower on the field and give it [attack]-2/[defense]-2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-075EN.png"
+  },
+  {
+    "cardNo": "BP11-076EN",
+    "name": "Wretch",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Departed / Demon",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. Activate only if this follower was put onto the field from the cemetery. Rush. [lastwords] Summon a Bullet Bike token. Bury the top 2 cards of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-076EN.png"
+  },
+  {
+    "cardNo": "BP11-077EN",
+    "name": "Wretch Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wasteland / Departed / Demon",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "3",
+      "effect": "Storm. On Evolve - Select an enemy follower on the field and deal it 5 damage. [lastwords] Summon a Bullet Bike token. Bury the top 2 cards of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-077EN.png"
+  },
+  {
+    "cardNo": "BP11-078EN",
+    "name": "Gold Mine Necromancer",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Necromancer",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "5",
+      "effect": "[fanfare] Select an enemy follower on the field and a Wasteland follower that costs 3 or less in your cemetery. Necrocharge (10) - Deal 4 damage to the first follower and summon the second."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-078EN.png"
+  },
+  {
+    "cardNo": "BP11-079EN",
+    "name": "Wretched Tryst",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Wasteland / Departed / Demon",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select 2 Wasteland followers that cost 3 or less in your cemetery. Necrocharge (10) - Summon them."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-079EN.png"
+  },
+  {
+    "cardNo": "BP11-080EN",
+    "name": "Redcap",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "4",
+      "attack": "5",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] If there's an amulet on your field, give this follower Rush and Assail."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-080EN.png"
+  },
+  {
+    "cardNo": "BP11-081EN",
+    "name": "Redcap Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Demon",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "-",
+      "attack": "6",
+      "defense": "5",
+      "effect": "Follower Strike - For the rest of this turn, this follower doesn't take damage. At the start of your end phase, refresh this card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-081EN.png"
+  },
+  {
+    "cardNo": "BP11-082EN",
+    "name": "Skeleton Dreamer",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Departed",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Whenever this follower gains attack or defense, give it Storm. [lastwords] Summon a Bullet Bike token. Bury the top card of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-082EN.png"
+  },
+  {
+    "cardNo": "BP11-083EN",
+    "name": "Fulminating Berserker",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "7",
+      "attack": "6",
+      "defense": "6",
+      "effect": "Rush. Strike - Select an enemy follower on the field and deal it 5 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-083EN.png"
+  },
+  {
+    "cardNo": "BP11-084EN",
+    "name": "Grudge Teller",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Necromancer",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[fanfare] Deal 1 damage to each enemy leader. If Sanguine is active for you, deal 3 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-084EN.png"
+  },
+  {
+    "cardNo": "BP11-085EN",
+    "name": "Spiderweb Array",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Demon",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field. Engage it and draw a card. It doesn't refresh during its controller's next start phase."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-085EN.png"
+  },
+  {
+    "cardNo": "BP11-086EN",
+    "name": "Selena, Sugarkiss Assassin",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Faith / Zealot",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "4",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Storm. [fanfare] Look at the top 4 cards of your deck. From among them, you may put up to 1 Wasteland card and up to 1 follower that costs 2 or less into your EX area. Put the rest on the bottom of your deck in any order. Strike - Recover 2 play points."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-086EN.png"
+  },
+  {
+    "cardNo": "BP11-087EN",
+    "name": "Anvelt, Judgment's Cannon",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Faith",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "6",
+      "attack": "4",
+      "defense": "5",
+      "effect": "[evolve] [cost01]: Evolve this follower. Ward. [fanfare] Select up to 2 enemy followers on the field and deal them 3 damage. If there's a Wasteland card in your EX area, deal 2 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-087EN.png"
+  },
+  {
+    "cardNo": "BP11-088EN",
+    "name": "Anvelt, Judgment's Cannon Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wasteland / Faith",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "6",
+      "effect": "Ward. On Evolve - Select up to 2 enemy followers on the field and deal them 3 damage. If there's a Wasteland card in your EX area, deal 2 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-088EN.png"
+  },
+  {
+    "cardNo": "BP11-089EN",
+    "name": "Vengeful Sniper",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Faith",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. Ward. [fanfare] If there are at least 2 amulets on your field and/or in your EX area, deal 2 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-089EN.png"
+  },
+  {
+    "cardNo": "BP11-090EN",
+    "name": "Vengeful Sniper Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wasteland / Faith",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Ward. On Evolve - Select an enemy follower with 3 defense or less on the field and banish it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-090EN.png"
+  },
+  {
+    "cardNo": "BP11-091EN",
+    "name": "Paladin of Clemency",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Give your leader [defense]+1. Draw a card. Discard a card. [act] [cost02]: Select an enemy follower on the field. Deal it 2 damage and give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-091EN.png"
+  },
+  {
+    "cardNo": "BP11-092EN",
+    "name": "Holy Sanctuary",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith / Eidolon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "This card doesn't refresh during your start phase. Whenever your leader gains defense, refresh this card. [act] [engage]: Choose one that you haven't chosen this turn. (1) Select an enemy follower on the field and deal it 3 damage. (2) Select a follower on your field and give it [attack]+1/[defense]+1. (3) Summon a Holy Tiger token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-092EN.png"
+  },
+  {
+    "cardNo": "BP11-093EN",
+    "name": "Set",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Beast",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "6",
+      "attack": "2",
+      "defense": "6",
+      "effect": "[evolve] [cost01]: Evolve this follower. Ward. Bane. Aura. [act] [cost01], discard this card: Give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-093EN.png"
+  },
+  {
+    "cardNo": "BP11-094EN",
+    "name": "Set Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith / Beast",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "7",
+      "effect": "Ward. Bane. Aura. On Evolve - Give your leader [defense]+4."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-094EN.png"
+  },
+  {
+    "cardNo": "BP11-095EN",
+    "name": "Shady Priest",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Faith",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "1",
+      "effect": "[fanfare] Put a Dutiful Steed token into your EX area. Whenever a Mount card you control leaves the field, [cost03]: Select an enemy follower on the field and banish it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-095EN.png"
+  },
+  {
+    "cardNo": "BP11-096EN",
+    "name": "Haven Fire",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Wasteland / Faith / Zealot",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "This card costs 1 less to play if there's a Selena, Sugarkiss Assassin on your field. ---------- Select an enemy follower on the field and deal it 4 damage. If there's a Wasteland card in your EX area, deal 1 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-096EN.png"
+  },
+  {
+    "cardNo": "BP11-097EN",
+    "name": "Enchanted Knight",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this follower. Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-097EN.png"
+  },
+  {
+    "cardNo": "BP11-098EN",
+    "name": "Enchanted Knight Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Ward. On Evolve - If there are at least 4 followers with Ward on your field, draw 2 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-098EN.png"
+  },
+  {
+    "cardNo": "BP11-099EN",
+    "name": "Revolver Eagle",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Faith / Avian",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "1",
+      "effect": "Storm. [fanfare] Put a Bullet Bike token into your EX area. [act] [cost06]: Give this follower [attack]+4/[defense]+4."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-099EN.png"
+  },
+  {
+    "cardNo": "BP11-100EN",
+    "name": "Sacred Stone Apostle",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[fanfare] If there's an amulet on your field, give this follower [attack]+1/[defense]+1. Strike - Draw a card. Discard a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-100EN.png"
+  },
+  {
+    "cardNo": "BP11-101EN",
+    "name": "Benevolent Blight",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Faith",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Deal 2 damage to each enemy follower on the field. Give your leader [defense]+2. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-101EN.png"
+  },
+  {
+    "cardNo": "BP11-102EN",
+    "name": "Pure Metamorphosis",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Faith",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a card on your field. Destroy it and summon a Holy Falcon token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-102EN.png"
+  },
+  {
+    "cardNo": "BP11-103EN",
+    "name": "Sylvia, Grand Arbiter",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Supreme",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-103EN.png"
+  },
+  {
+    "cardNo": "BP11-104EN",
+    "name": "Sylvia, Grand Arbiter Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Supreme",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field and, if there are at least 5 faceup evolved followers in your evolve deck, deal it 5 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-104EN.png"
+  },
+  {
+    "cardNo": "BP11-105EN",
+    "name": "Quixotic Adventurer",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Wasteland / Mercenary",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "1",
+      "effect": "[evolve] [cost04]: Evolve this follower. [fanfare] Put a Dutiful Steed token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-105EN.png"
+  },
+  {
+    "cardNo": "BP11-106EN",
+    "name": "Quixotic Adventurer Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Wasteland / Mercenary",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "4",
+      "effect": "[lastwords] You may put a Dutiful Steed, Bullet Bike, and Arcane Personnel Carrier token onto your field or into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-106EN.png"
+  },
+  {
+    "cardNo": "BP11-107EN",
+    "name": "Goblin Queen",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Goblinoid",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Look at the top 5 cards of your deck. You may reveal a Goblinoid card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. [act] [engage], banish 3 Goblinoid cards from your cemetery: Select an enemy follower on the field. Destroy it and deal 3 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-107EN.png"
+  },
+  {
+    "cardNo": "BP11-108EN",
+    "name": "Embodiment of Cocytus",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Archfiend",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose one. (1) Search your deck for an Archfiend card, reveal it, add it to your hand, then shuffle. (2) Select an enemy follower on the field. Destroy it and deal 3 damage to your leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-108EN.png"
+  },
+  {
+    "cardNo": "BP11-109EN",
+    "name": "Wandering Chef",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Wasteland / Chef",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] If there's a Mount card on your field or in your EX area, give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-109EN.png"
+  },
+  {
+    "cardNo": "BP11-110EN",
+    "name": "Wandering Chef Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Wasteland / Chef",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Look at the top 4 cards of your deck. You may reveal a Wasteland card from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-110EN.png"
+  },
+  {
+    "cardNo": "BP11-111EN",
+    "name": "Supercharged Guitarist",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Musical",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Assail. [fanfare] Draw a card. Strike - Recover 3 play points."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-111EN.png"
+  },
+  {
+    "cardNo": "BP11-112EN",
+    "name": "Titanic Showdown",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Amulet",
+      "trait": "Gigant",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "7",
+      "attack": "-",
+      "defense": "-",
+      "effect": "This card is put onto the field engaged. [fanfare] Look at the top 5 cards of your deck. From among them, you may reveal up to 5 followers that cost 7 or more and add them to your hand. Put the rest on the bottom of your deck in any order. [act] [engage], bury this card: Reveal 2 random cards from your hand. Summon each follower from among them."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-112EN.png"
+  },
+  {
+    "cardNo": "BP11-113EN",
+    "name": "Rivaylian Bandit",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Wasteland / Mercenary",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this follower. Whenever this follower gains attack or defense, give it Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-113EN.png"
+  },
+  {
+    "cardNo": "BP11-114EN",
+    "name": "Rivaylian Bandit Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Wasteland / Mercenary",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - Select an enemy follower on the field and, if there are at least 2 Mount cards on your field and/or in your EX area, deal it 2 damage. Whenever this follower gains attack or defense, give it Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-114EN.png"
+  },
+  {
+    "cardNo": "BP11-115EN",
+    "name": "Vagabond Lizard",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Wasteland / Mercenary",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] You may put a Bullet Bike token onto your field or into your EX area. [lastwords] Put a Dutiful Steed token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-115EN.png"
+  },
+  {
+    "cardNo": "BP11-116EN",
+    "name": "Spice Shower",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Chef",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Deal 1 damage to each enemy leader. Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-116EN.png"
+  },
+  {
+    "cardNo": "BP11-SP02EN",
+    "name": "Dark Dragoon Forte",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Special",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "4",
+      "attack": "5",
+      "defense": "1",
+      "effect": "[evolve] [cost02]: Evolve this follower. Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-SP02EN.png"
+  },
+  {
+    "cardNo": "BP11-T01EN",
+    "name": "Val, Trusty Getaway Car TOKEN",
+    "type": "token",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Amulet / Token",
+      "trait": "Wasteland / Mount",
+      "rarity": "-",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[act] [engage] a Bunny & Baron, Specter Duo on your field: Maneuver this card. (For the rest of this turn, it becomes a follower with [attack]3/[defense]3.) [act] [cost01], [engage] 2 followers on your field: Maneuver this card. Storm. Strike - If there's another Wasteland follower on your field, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-T01EN.png"
+  },
+  {
+    "cardNo": "BP11-T02EN",
+    "name": "Magitrain TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Amulet / Token",
+      "trait": "Wasteland / Mount",
+      "rarity": "-",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "5",
+      "effect": "[act] [cost01], [engage] any number of followers that cost a total of 5 or more on your field: Maneuver this card. (For the rest of this turn, it becomes a follower with [attack]4/[defense]5.) Rush. Strike - Select an engaged enemy follower on the field. Destroy it and give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-T02EN.png"
+  },
+  {
+    "cardNo": "BP11-T03EN",
+    "name": "Dutiful Steed TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Amulet / Token",
+      "trait": "Wasteland / Mount / Beast",
+      "rarity": "-",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] Bury this card: Select a follower on your field and, if it's a Wasteland follower, give it [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-T03EN.png"
+  },
+  {
+    "cardNo": "BP11-T04EN",
+    "name": "Bullet Bike TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Amulet / Token",
+      "trait": "Wasteland / Mount",
+      "rarity": "-",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] Bury this card: Select a follower on your field. Give it Rush and, if it's a Wasteland follower, [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-T04EN.png"
+  },
+  {
+    "cardNo": "BP11-T05EN",
+    "name": "Arcane Personnel Carrier TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Amulet / Token",
+      "trait": "Wasteland / Mount",
+      "rarity": "-",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] Bury this card: Select a follower on your field. Give it Ward and, if it's a Wasteland follower, [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-T05EN.png"
+  },
+  {
+    "cardNo": "BP11-T06EN",
+    "name": "Fairy TOKEN",
+    "type": "token",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Token",
+      "trait": "Pixie",
+      "rarity": "-",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-T06EN.png"
+  },
+  {
+    "cardNo": "BP11-T07EN",
+    "name": "Steelclad Knight TOKEN",
+    "type": "token",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Token",
+      "trait": "Officer",
+      "rarity": "-",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-T07EN.png"
+  },
+  {
+    "cardNo": "BP11-T08EN",
+    "name": "Magic Sediment TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet / Token",
+      "trait": "Earth Sigil",
+      "rarity": "-",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Stack."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-T08EN.png"
+  },
+  {
+    "cardNo": "BP11-T09EN",
+    "name": "Holy Falcon TOKEN",
+    "type": "token",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Token",
+      "trait": "Avian",
+      "rarity": "-",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-T09EN.png"
+  },
+  {
+    "cardNo": "BP11-T10EN",
+    "name": "Holy Tiger TOKEN",
+    "type": "token",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Token",
+      "trait": "Beast",
+      "rarity": "-",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-T10EN.png"
+  },
+  {
+    "cardNo": "BP11-T11EN",
+    "name": "Puppet TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Token",
+      "trait": "Puppetry",
+      "rarity": "-",
+      "cardSet": "Booster Set \"Bullet of Fate\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-T11EN.png"
+  }
+]

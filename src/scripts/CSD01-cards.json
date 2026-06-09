@@ -1,0 +1,59 @@
+[
+  {
+    "cardNo": "CSD01-007EN",
+    "name": "Tazuna Hayakawa [Tracen Reception]",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Tracen Academy",
+      "rarity": "Legendary",
+      "cardSet": "Crossover Starter Deck “Ready, Set, Umamusume!”",
+      "cost": "6",
+      "attack": "3",
+      "defense": "5",
+      "effect": "Ward. (This follower can be engaged when it's put onto your field or during your end phase. When followers with Ward are engaged, your opponent can only attack them.) [fanfare] Select an Umamusume follower or Umamusume amulet that costs 4 play points or less in your cemetery and put it onto your field."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD01-030EN",
+    "name": "Riko Kashimoto",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Tracen Academy",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Starter Deck “Ready, Set, Umamusume!”",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[act][engage]: Select an Umamusume follower on your field and give it [attack]+1. If it's a racing follower, give it [attack]+2 instead."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD01-031EN",
+    "name": "Aoi Kiryuin",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Tracen Academy",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Starter Deck “Ready, Set, Umamusume!”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[act][engage]: Select an Umamusume follower on your field and give it [defense]+1. If it's a racing follower, give it [defense]+2 instead."
+    },
+    "imgSrc": ""
+  }
+]

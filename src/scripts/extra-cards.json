@@ -1,0 +1,40 @@
+[
+  {
+    "cardNo": "PR-235EN",
+    "name": "Dragon Oracle",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Wyrmkin",
+      "rarity": "Promo",
+      "cardSet": "Promo Cards",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose one of the following. (1) Increase your max play points by 1. (2) Draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "PR-387EN",
+    "name": "Ardent Torch",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Omen / Wyrmkin",
+      "rarity": "Promo",
+      "cardSet": "Promo Cards",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a follower on your field. Deal 1 damage to it and each enemy leader, and draw a card."
+    },
+    "imgSrc": ""
+  }
+]

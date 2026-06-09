@@ -5561,10 +5561,6 @@ export const cardImage = (cardName) => {
       return "../textures/ECP02-002EN.png";
     case "Hajime Fujiwara [Pink Blossom Dream]":
       return "../textures/ECP02-003EN.png";
-    case "Minami Nitta [Water's Edge Bride]":
-      return "../textures/ECP02-004EN.png";
-    case "Yuki Himekawa [Full Swing☆Cheer]":
-      return "../textures/ECP02-005EN.png";
     case "Riina Tada [Wannabe Legend]":
       return "../textures/ECP02-006EN.png";
     case "Riina Tada [Wannabe Legend] Evolved":
@@ -5577,14 +5573,10 @@ export const cardImage = (cardName) => {
       return "../textures/ECP02-010EN.png";
     case "Blossoms' Advance":
       return "../textures/ECP02-011EN.png";
-    case "Rin Shibuya [Cinderella Girl]":
-      return "../textures/ECP02-012EN.png";
     case "Mio Honda [Cinderella Girl]":
       return "../textures/ECP02-013EN.png";
     case "Mio Honda [Cinderella Girl] Evolved":
       return "../textures/ECP02-014EN.png";
-    case "Uzuki Shimamura [Cinderella Girl]":
-      return "../textures/ECP02-015EN.png";
     case "Karen Hojo [Cinderella Girl]":
       return "../textures/ECP02-016EN.png";
     case "Airi Totoki [Cinderella Girl]":
@@ -5607,10 +5599,6 @@ export const cardImage = (cardName) => {
       return "../textures/ECP02-025EN.png";
     case "Syuko Shiomi [Cinderella Girl]":
       return "../textures/ECP02-026EN.png";
-    case "Mika Jougasaki [My★Style]":
-      return "../textures/ECP02-027EN.png";
-    case "Yuuki Otokura [Together with Me]":
-      return "../textures/ECP02-028EN.png";
     case "Glitz & Glam☆Parade":
       return "../textures/ECP02-029EN.png";
     case "Sae Kobayakawa [Dancing Flowers]":
@@ -5633,10 +5621,6 @@ export const cardImage = (cardName) => {
       return "../textures/ECP02-038EN.png";
     case "Akira Sunazuka [Online Life]":
       return "../textures/ECP02-039EN.png";
-    case "Akari Tsujino [Twice as Lovely]":
-      return "../textures/ECP02-040EN.png";
-    case "Riamu Yumemi [Party Night]":
-      return "../textures/ECP02-041EN.png";
     case "Yui Ohtsuki [Lollipop Darling]":
       return "../textures/ECP02-042EN.png";
     case "Yui Ohtsuki [Lollipop Darling] Evolved":
@@ -5647,8 +5631,6 @@ export const cardImage = (cardName) => {
       return "../textures/ECP02-045EN.png";
     case "Star of the Show":
       return "../textures/ECP02-046EN.png";
-    case "Ranko Kanzaki [Cinderella Girl]":
-      return "../textures/ECP02-047EN.png";
     case "Syoko Hoshi [individuals]":
       return "../textures/ECP02-048EN.png";
     case "Mirei Hayasaka [individuals]":
@@ -5657,8 +5639,6 @@ export const cardImage = (cardName) => {
       return "../textures/ECP02-050EN.png";
     case "Nono Morikubo [individuals] Evolved":
       return "../textures/ECP02-051EN.png";
-    case "Asuka Ninomiya [Sweet & Charming]":
-      return "../textures/ECP02-052EN.png";
     case "Chitose Kurosaki [Memento Mori]":
       return "../textures/ECP02-053EN.png";
     case "Chitose Kurosaki [Memento Mori] Evolved":
@@ -5679,10 +5659,6 @@ export const cardImage = (cardName) => {
       return "../textures/ECP02-061EN.png";
     case "Kaede Takagaki [Cinderella Girl]":
       return "../textures/ECP02-062EN.png";
-    case "Eve Santaclaus [Cinderella Girl]":
-      return "../textures/ECP02-063EN.png";
-    case "Miyu Mifune [Rouge Couture]":
-      return "../textures/ECP02-064EN.png";
     case "Kako Takafuji [Lady Luck]":
       return "../textures/ECP02-065EN.png";
     case "Kako Takafuji [Lady Luck] Evolved":
@@ -5700,29 +5676,29 @@ export const cardImage = (cardName) => {
     case "Curtain Call of Smiles":
       return "../textures/ECP02-072EN.png";
     case "Minami Nitta [Goddess by the Sunlit Sea]":
-      return "../textures/ECP02-SP01EN.png";
+      return "../textures/ECP02-U01EN.png";
     case "Yuki Himekawa [Challengers' Cheer]":
-      return "../textures/ECP02-SP02EN.png";
+      return "../textures/ECP02-U02EN.png";
     case "Rin & Mio":
-      return "../textures/ECP02-SP03aEN.png";
+      return "../textures/ECP02-U03aEN.png";
     case "Uzuki Shimamura [Magical New Me]":
-      return "../textures/ECP02-SP04EN.png";
+      return "../textures/ECP02-U04EN.png";
     case "Mika & Rika":
-      return "../textures/ECP02-SP05aEN.png";
+      return "../textures/ECP02-U05aEN.png";
     case "Yuuki Otokura [Ripples of My Heart]":
-      return "../textures/ECP02-SP06EN.png";
+      return "../textures/ECP02-U06EN.png";
     case "Akari & Akira":
-      return "../textures/ECP02-SP07aEN.png";
+      return "../textures/ECP02-U07aEN.png";
     case "Riamu Yumemi [Shout It to the World]":
-      return "../textures/ECP02-SP08EN.png";
+      return "../textures/ECP02-U08EN.png";
     case "Ranko Kanzaki [Princess in White]":
-      return "../textures/ECP02-SP09EN.png";
+      return "../textures/ECP02-U09EN.png";
     case "Asuka Ninomiya [Gentle Evening]":
-      return "../textures/ECP02-SP10EN.png";
+      return "../textures/ECP02-U10EN.png";
     case "Eve Santaclaus [Holy Night Miracle]":
-      return "../textures/ECP02-SP11EN.png";
+      return "../textures/ECP02-U11EN.png";
     case "Miyu Mifune [Parfum Géranium]":
-      return "../textures/ECP02-SP12EN.png";
+      return "../textures/ECP02-U12EN.png";
 
 
     default:
