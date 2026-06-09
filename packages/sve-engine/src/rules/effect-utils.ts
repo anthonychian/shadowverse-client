@@ -44,9 +44,23 @@ export function canAdvanceActivate(state: GameState, player: PlayerId, effect: E
   return false;
 }
 
+export function shouldDeferTriggers(state: GameState): boolean {
+  return (state.resolutionContext?.resumeAfterChoice?.length ?? 0) > 0;
+}
+
+export function finishDeferredTriggers(state: GameState): GameState {
+  if (!state.resolutionContext?.deferTriggers) return state;
+  if (state.pendingChoices) return state;
+  if ((state.resolutionContext.resumeAfterChoice?.length ?? 0) > 0) return state;
+  const next = structuredClone(state);
+  next.resolutionContext = { ...next.resolutionContext!, deferTriggers: false };
+  return next;
+}
+
 export function shouldClearResolutionContext(state: GameState): boolean {
   if (state.pendingChoices) return false;
   if ((state.resolutionContext?.resumeAfterChoice?.length ?? 0) > 0) return false;
+  if (state.resolutionContext?.deferTriggers) return false;
   return true;
 }
 
@@ -60,6 +74,7 @@ export function contextForTriggerResolution(
     sourceInstanceId,
     effectStack: [effect],
     resumeAfterChoice: prev?.resumeAfterChoice,
+    deferTriggers: prev?.deferTriggers,
   };
 }
 

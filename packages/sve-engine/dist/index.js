@@ -14,7 +14,7 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getEvolveCost = exports.getEffectiveStats = exports.hasKeyword = exports.getLegalAttackTargets = exports.findInstance = exports.tryAction = exports.createPlayerView = exports.resolveSpell = exports.resolveEffect = exports.runConfirmationTiming = exports.advanceCombatIfNeeded = exports.applyAction = exports.beginStartPhase = exports.applyMulligan = exports.loadDecks = exports.resetIdCounter = exports.createCardInstance = exports.createInitialGameState = exports.MVP_CARD_DEFS = exports.getCardByName = exports.registerCard = exports.getAllCardDefs = exports.getCardDef = void 0;
+exports.resolveCardDefCost = exports.getEvolveCost = exports.getEffectivePlayCost = exports.getEffectiveStats = exports.hasKeyword = exports.getLegalAttackTargets = exports.findInstance = exports.tryAction = exports.createPlayerView = exports.resolveSpell = exports.resolveEffect = exports.runConfirmationTiming = exports.advanceCombatIfNeeded = exports.applyAction = exports.beginStartPhase = exports.applyMulligan = exports.loadDecks = exports.resetIdCounter = exports.createCardInstance = exports.createInitialGameState = exports.MVP_CARD_DEFS = exports.getCardByName = exports.registerCard = exports.getAllCardDefs = exports.getCardDef = void 0;
 __exportStar(require("./types"), exports);
 var registry_1 = require("./cards/registry");
 Object.defineProperty(exports, "getCardDef", { enumerable: true, get: function () { return registry_1.getCardDef; } });
@@ -47,4 +47,6 @@ Object.defineProperty(exports, "findInstance", { enumerable: true, get: function
 Object.defineProperty(exports, "getLegalAttackTargets", { enumerable: true, get: function () { return queries_1.getLegalAttackTargets; } });
 Object.defineProperty(exports, "hasKeyword", { enumerable: true, get: function () { return queries_1.hasKeyword; } });
 Object.defineProperty(exports, "getEffectiveStats", { enumerable: true, get: function () { return queries_1.getEffectiveStats; } });
+Object.defineProperty(exports, "getEffectivePlayCost", { enumerable: true, get: function () { return queries_1.getEffectivePlayCost; } });
 Object.defineProperty(exports, "getEvolveCost", { enumerable: true, get: function () { return queries_1.getEvolveCost; } });
+Object.defineProperty(exports, "resolveCardDefCost", { enumerable: true, get: function () { return queries_1.resolveCardDefCost; } });

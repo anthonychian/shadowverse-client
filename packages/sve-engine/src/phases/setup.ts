@@ -4,9 +4,9 @@ import { drawCard, shuffleDeck } from "../state/zones";
 import { CardInstance, GameState, PlayerId } from "../types";
 
 function clearTurnScopedCardState(card: CardInstance): void {
-  card.playCostReduction = 0;
   card.abilitiesActivatedThisTurn = [];
   card.modifiers = card.modifiers.filter((m) => !m.untilEndOfTurn);
+  card.playCostReduction = 0;
 }
 
 function refreshFieldCard(card: CardInstance, state: GameState): void {

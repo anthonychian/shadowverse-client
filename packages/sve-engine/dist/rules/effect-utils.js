@@ -3,6 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.effectContainsOp = effectContainsOp;
 exports.isAdvanceAbility = isAdvanceAbility;
 exports.canAdvanceActivate = canAdvanceActivate;
+exports.shouldDeferTriggers = shouldDeferTriggers;
+exports.finishDeferredTriggers = finishDeferredTriggers;
 exports.shouldClearResolutionContext = shouldClearResolutionContext;
 exports.contextForTriggerResolution = contextForTriggerResolution;
 exports.getChoiceContext = getChoiceContext;
@@ -40,10 +42,26 @@ function canAdvanceActivate(state, player, effect) {
         return true;
     return false;
 }
+function shouldDeferTriggers(state) {
+    return (state.resolutionContext?.resumeAfterChoice?.length ?? 0) > 0;
+}
+function finishDeferredTriggers(state) {
+    if (!state.resolutionContext?.deferTriggers)
+        return state;
+    if (state.pendingChoices)
+        return state;
+    if ((state.resolutionContext.resumeAfterChoice?.length ?? 0) > 0)
+        return state;
+    const next = structuredClone(state);
+    next.resolutionContext = { ...next.resolutionContext, deferTriggers: false };
+    return next;
+}
 function shouldClearResolutionContext(state) {
     if (state.pendingChoices)
         return false;
     if ((state.resolutionContext?.resumeAfterChoice?.length ?? 0) > 0)
+        return false;
+    if (state.resolutionContext?.deferTriggers)
         return false;
     return true;
 }
@@ -53,6 +71,7 @@ function contextForTriggerResolution(state, sourceInstanceId, effect) {
         sourceInstanceId,
         effectStack: [effect],
         resumeAfterChoice: prev?.resumeAfterChoice,
+        deferTriggers: prev?.deferTriggers,
     };
 }
 function getChoiceContext(state) {

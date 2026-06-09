@@ -4,7 +4,11 @@ import { onCardEntersExArea, onFollowerEntersField, queueLastWords } from "../ru
 
 import { runConfirmationTiming } from "../rules/confirmation";
 import { describeEffect } from "../rules/trigger-labels";
-import { contextForTriggerResolution, withChoiceContext } from "../rules/effect-utils";
+import {
+  contextForTriggerResolution,
+  finishDeferredTriggers,
+  withChoiceContext,
+} from "../rules/effect-utils";
 
 import { cardMatchesFilter, evalCondition } from "../state/conditions";
 
@@ -42,6 +46,7 @@ export function appendResumeEffects(state: GameState, effects: Effect[]): GameSt
     effectStack: next.resolutionContext?.effectStack ?? [],
     resumeAfterChoice: [...existing, ...effects],
     forcedTargetId: next.resolutionContext?.forcedTargetId,
+    deferTriggers: true,
   };
   return next;
 }
@@ -513,7 +518,15 @@ export function resolveEffect(
 
   let next = structuredClone(state);
 
-
+  if (options?.deferConfirmation) {
+    next.resolutionContext = {
+      sourceInstanceId: next.resolutionContext?.sourceInstanceId,
+      effectStack: next.resolutionContext?.effectStack ?? [],
+      resumeAfterChoice: next.resolutionContext?.resumeAfterChoice,
+      forcedTargetId: next.resolutionContext?.forcedTargetId,
+      deferTriggers: true,
+    };
+  }
 
   switch (effect.op) {
 
@@ -550,9 +563,7 @@ export function resolveEffect(
 
 
     case "dealDamage": {
-
       const forced = next.resolutionContext?.forcedTargetId;
-
       const candidates = getTargetCandidates(next, player, effect.targets);
 
       if (candidates.length === 0) break;
@@ -791,23 +802,22 @@ export function resolveEffect(
       break;
     }
 
-    case "sequence":
-
+    case "sequence": {
+      next.resolutionContext = {
+        sourceInstanceId: next.resolutionContext?.sourceInstanceId,
+        effectStack: next.resolutionContext?.effectStack ?? [],
+        resumeAfterChoice: next.resolutionContext?.resumeAfterChoice,
+        forcedTargetId: next.resolutionContext?.forcedTargetId,
+        deferTriggers: true,
+      };
       for (let i = 0; i < effect.steps.length; i++) {
-
         next = resolveEffect(next, effect.steps[i], player, { deferConfirmation: true });
-
-        next = runConfirmationTiming(next);
-
-        if (next.pendingChoices || next.pendingTriggers.length > 0) {
-
+        if (next.pendingChoices) {
           return appendResumeEffects(next, effect.steps.slice(i + 1));
-
         }
-
       }
-
       break;
+    }
 
 
 
@@ -1163,7 +1173,7 @@ export function resolveEffect(
 
       const found = findInstance(next, targetId);
 
-      if (found) found.card.playCostReduction += effect.amount;
+      if (found) found.card.persistentPlayCostReduction += effect.amount;
 
       break;
 
@@ -1572,6 +1582,7 @@ export function resolveEffect(
     return next;
   }
 
+  next = finishDeferredTriggers(next);
   return runConfirmationTiming(next);
 
 }

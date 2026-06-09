@@ -12,5 +12,7 @@ export {
   getLegalAttackTargets,
   hasKeyword,
   getEffectiveStats,
+  getEffectivePlayCost,
   getEvolveCost,
+  resolveCardDefCost,
 } from "./state/queries";

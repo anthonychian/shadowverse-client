@@ -50,6 +50,8 @@ export const CardSlice = createSlice({
     enemyEvoField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     counterField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     enemyCounterField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    exPlayCostField: [null, null, null, null, null, null, null, null, null, null],
+    enemyExPlayCostField: [null, null, null, null, null, null, null, null, null, null],
     auraField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     enemyAuraField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     baneField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -2469,6 +2471,10 @@ export const CardSlice = createSlice({
       if (s.wardField !== undefined) state.wardField = s.wardField;
       if (s.baneField !== undefined) state.baneField = s.baneField;
       if (s.auraField !== undefined) state.auraField = s.auraField;
+      if (s.exPlayCostField !== undefined) state.exPlayCostField = s.exPlayCostField;
+      if (s.enemyExPlayCostField !== undefined) {
+        state.enemyExPlayCostField = s.enemyExPlayCostField;
+      }
       if (s.cemetery !== undefined) state.cemetery = s.cemetery;
       if (s.cemeteryInstanceIds !== undefined) state.cemeteryInstanceIds = s.cemeteryInstanceIds;
       if (s.deck !== undefined) state.deck = s.deck;

@@ -218,8 +218,10 @@ export interface CardInstance {
   enteredFromHand?: boolean;
   /** Follower is boxed until this turn number (exclusive end at start phase). */
   boxedUntilTurn?: number;
-  /** PP reduction when playing this card from hand or EX (cleared end of turn). */
+  /** PP reduction for the rest of this turn (tutor/search EX discounts; cleared end of turn). */
   playCostReduction: number;
+  /** Permanent PP reduction on this instance (e.g. Nicola last words). */
+  persistentPlayCostReduction: number;
   /** Keys `${timing}:${index}` for once-per-turn abilities used this turn. */
   abilitiesActivatedThisTurn: string[];
   /** Extra last-words effects granted while on field. */
@@ -399,6 +401,8 @@ export interface ResolutionContext {
   effectStack: Effect[];
   forcedTargetId?: string;
   resumeAfterChoice?: Effect[];
+  /** While true, queued fanfare/LW/etc. wait until the current effect sequence finishes. */
+  deferTriggers?: boolean;
 }
 
 export interface GameState {
@@ -453,4 +457,8 @@ export interface PlayerView {
   opponentDeckCount: number;
   opponentEvoDeckCount: number;
   legalActions: string[];
+  /** Effective play cost from EX area, keyed by instance id (self). */
+  exPlayCosts: Record<string, number>;
+  /** Effective play cost from EX area, keyed by instance id (opponent). */
+  opponentExPlayCosts: Record<string, number>;
 }

@@ -28,6 +28,7 @@ export function engineViewToRedux(view, playerSlot) {
   const wardField = Array(10).fill(0);
   const baneField = Array(10).fill(0);
   const auraField = Array(10).fill(0);
+  const exPlayCostField = Array(10).fill(null);
 
   const cardName = (instance) => {
     if (instance.cardNo === "HIDDEN") return "Hidden Card";
@@ -83,12 +84,18 @@ export function engineViewToRedux(view, playerSlot) {
     field[idx] = cardName(inst);
     fieldInstanceIds[idx] = inst.instanceId;
     applyStats(inst, idx);
+    const printed = getCardStatsClient(inst.cardNo).cost ?? 0;
+    const effective = view.exPlayCosts?.[inst.instanceId];
+    if (effective != null && effective < printed) {
+      exPlayCostField[idx] = effective;
+    }
   });
 
   const enemyField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
   const enemyFieldInstanceIds = Array(10).fill(null);
   const enemyEvoField = Array(10).fill(0);
   const enemyEngaged = Array(10).fill(false);
+  const enemyExPlayCostField = Array(10).fill(null);
   const enemyCustom = Array(10)
     .fill(null)
     .map(() => ({ showAtk: true, atk: 0, showDef: true, def: 0 }));
@@ -126,6 +133,11 @@ export function engineViewToRedux(view, playerSlot) {
       defVal += m.def ?? 0;
     }
     enemyCustom[idx] = { showAtk: true, atk, showDef: true, def: defVal };
+    const printed = getCardStatsClient(inst.cardNo).cost ?? 0;
+    const effective = view.opponentExPlayCosts?.[inst.instanceId];
+    if (effective != null && effective < printed) {
+      enemyExPlayCostField[idx] = effective;
+    }
   });
 
   return {
@@ -141,10 +153,12 @@ export function engineViewToRedux(view, playerSlot) {
     wardField,
     baneField,
     auraField,
+    exPlayCostField,
     enemyField,
     enemyFieldInstanceIds,
     enemyEvoField,
     enemyEngagedField: enemyEngaged,
+    enemyExPlayCostField,
     enemyCustomValues: enemyCustom,
     cemetery: ps.zones.cemetery.map((c) => cardName(c)),
     cemeteryInstanceIds: ps.zones.cemetery.map((c) => c.instanceId),

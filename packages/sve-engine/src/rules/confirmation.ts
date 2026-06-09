@@ -3,7 +3,11 @@ import { destinationForDestroyedCard } from "../cards/tokens";
 import { resetCardInstanceState } from "../state/card-reset";
 import { resolveEffect } from "../effects/resolver";
 import { isBoxed } from "../state/passives";
-import { contextForTriggerResolution, shouldClearResolutionContext } from "./effect-utils";
+import {
+  contextForTriggerResolution,
+  shouldClearResolutionContext,
+  shouldDeferTriggers,
+} from "./effect-utils";
 import { onCardEntersExAreaTriggers, queueFanfare, queueLastWords } from "./trigger-queue";
 import { findInstance, getPlayer, getEffectiveStats, hasKeyword, resolveCardNo } from "../state/queries";
 import { destroyFollower, drawCard, removeFromField } from "../state/zones";
@@ -168,6 +172,8 @@ export function runConfirmationTiming(state: GameState): GameState {
     next = enforceFieldLimits(next);
     next = checkLosses(next);
     if (next.phase === "gameOver") return next;
+
+    if (shouldDeferTriggers(next)) return next;
 
     const activeTriggers = next.pendingTriggers.filter((t) => t.controller === next.activePlayer);
     const inactiveTriggers = next.pendingTriggers.filter((t) => t.controller !== next.activePlayer);

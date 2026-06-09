@@ -78,6 +78,7 @@ function preserveResumeContext(next, sourceId, stack, tail) {
         sourceInstanceId: sourceId,
         effectStack: stack,
         resumeAfterChoice: appended.length > 0 ? appended : tail,
+        deferTriggers: true,
     };
     return next;
 }
@@ -87,7 +88,8 @@ function continueAfterChoice(state, player) {
     let next = state;
     const sourceId = next.resolutionContext?.sourceInstanceId;
     const stack = next.resolutionContext?.effectStack ?? [];
-    if (next.pendingTriggers.length > 0) {
+    const hasResume = (next.resolutionContext?.resumeAfterChoice?.length ?? 0) > 0;
+    if (!hasResume && !(0, effect_utils_1.shouldDeferTriggers)(next) && next.pendingTriggers.length > 0) {
         next = (0, confirmation_1.runConfirmationTiming)(next);
         if (next.pendingChoices || next.pendingTriggers.length > 0)
             return next;
@@ -98,15 +100,18 @@ function continueAfterChoice(state, player) {
             sourceInstanceId: sourceId,
             effectStack: stack,
             resumeAfterChoice: tail,
+            deferTriggers: true,
         };
         next = (0, resolver_1.resolveEffect)(next, head, player, { deferConfirmation: true });
-        next = (0, confirmation_1.runConfirmationTiming)(next);
-        if (next.pendingChoices || next.pendingTriggers.length > 0) {
+        if (next.pendingChoices) {
             return preserveResumeContext(next, sourceId, stack, tail);
         }
     }
-    if (!next.pendingChoices) {
-        next.resolutionContext = null;
+    if (!next.pendingChoices && !(next.resolutionContext?.resumeAfterChoice?.length ?? 0)) {
+        next = (0, effect_utils_1.finishDeferredTriggers)(next);
+        if ((0, effect_utils_1.shouldClearResolutionContext)(next)) {
+            next.resolutionContext = null;
+        }
     }
     return next;
 }
@@ -135,12 +140,51 @@ function maybeContinueEndPhase(state) {
         return state;
     return continueEndPhaseFlow(state);
 }
+function isCombatAttackerOnField(state) {
+    if (!state.combat)
+        return false;
+    const found = (0, queries_1.findInstance)(state, state.combat.attackerId);
+    return Boolean(found && found.zone === "field");
+}
+function abortCombatIfAttackerGone(state) {
+    if (!state.combat || isCombatAttackerOnField(state))
+        return state;
+    const next = structuredClone(state);
+    next.combat = null;
+    next.phase = "main";
+    next.quickWindow = null;
+    next.quickWindowPlayer = null;
+    return next;
+}
+function continuePausedCombat(state) {
+    if (!state.combat || state.pendingChoices)
+        return state;
+    let next = abortCombatIfAttackerGone(state);
+    if (!next.combat)
+        return next;
+    const combat = next.combat;
+    if (combat.strikeAbilityIndex != null) {
+        next = structuredClone(next);
+        next.phase = "combat";
+        next.combat = { ...combat, strikeAbilityIndex: combat.strikeAbilityIndex + 1 };
+        return resolveCombat(next);
+    }
+    if (combat.phase === "declared") {
+        next = structuredClone(next);
+        next.phase = "combat";
+        return resolveCombat(next);
+    }
+    return next;
+}
 function finishChoiceResolution(state, player) {
     let next = state;
     if (!next.pendingChoices) {
         next = continueAfterChoice(next, player);
     }
     next = (0, confirmation_1.runConfirmationTiming)(next);
+    if (!next.pendingChoices) {
+        next = continuePausedCombat(next);
+    }
     if (next.phase === "end") {
         next = continueEndPhaseFlow(next);
     }
@@ -203,8 +247,6 @@ function handleChoiceResponse(state, player, payload) {
     }
     if (choice.type === "selectTarget") {
         const targetId = String(payload.targetId);
-        const combatPaused = next.combat != null;
-        const strikeIndex = next.combat?.strikeAbilityIndex;
         const resume = next.resolutionContext?.resumeAfterChoice;
         const sourceId = next.resolutionContext?.sourceInstanceId ?? next.combat?.attackerId;
         next.resolutionContext = {
@@ -214,13 +256,7 @@ function handleChoiceResponse(state, player, payload) {
             resumeAfterChoice: resume,
         };
         next = (0, resolver_1.resolveEffect)(next, choice.effect, player);
-        next = finishChoiceResolution(next, player);
-        if (combatPaused && next.combat && strikeIndex != null && !next.pendingChoices) {
-            next.phase = "combat";
-            next.combat = { ...next.combat, strikeAbilityIndex: strikeIndex + 1 };
-            next = resolveCombat(next);
-        }
-        return ok(next);
+        return ok(finishChoiceResolution(next, player));
     }
     if (choice.type === "selectZoneCards") {
         const ids = payload.instanceIds || [];
@@ -419,6 +455,7 @@ function handleChoiceResponse(state, player, payload) {
             sourceInstanceId: next.resolutionContext?.sourceInstanceId,
             effectStack: [],
             resumeAfterChoice: effects,
+            deferTriggers: true,
         };
         return ok(finishChoiceResolution(next, player));
     }
@@ -440,6 +477,15 @@ function putHandCardOnDeck(state, player, instanceId, position) {
 function beginEndPhaseDiscard(state) {
     return finishEndPhase(structuredClone(state));
 }
+function clearTurnPlayCostReduction(player) {
+    for (const zone of Object.values(player.zones)) {
+        if (!Array.isArray(zone))
+            continue;
+        for (const card of zone) {
+            card.playCostReduction = 0;
+        }
+    }
+}
 function endTurn(state) {
     let next = structuredClone(state);
     const player = next.activePlayer;
@@ -448,11 +494,11 @@ function endTurn(state) {
         for (const cards of [p.zones.field, p.zones.hand, p.zones.exArea, p.zones.cemetery]) {
             for (const card of cards) {
                 card.modifiers = card.modifiers.filter((m) => !m.untilEndOfTurn);
-                card.playCostReduction = 0;
                 card.abilitiesActivatedThisTurn = [];
             }
         }
     }
+    clearTurnPlayCostReduction(next.players[player]);
     next.activePlayer = (0, queries_1.opponentOf)(player);
     next.turnNumber += 1;
     next.phase = "start";
@@ -568,10 +614,13 @@ function attack(state, player, attackerId, targetId) {
 function resolveCombatDamage(state) {
     if (!state.combat)
         return state;
-    let next = structuredClone(state);
+    let next = abortCombatIfAttackerGone(state);
+    if (!next.combat)
+        return next;
+    next = structuredClone(next);
     const combat = next.combat;
     const attackerFound = (0, queries_1.findInstance)(next, combat.attackerId);
-    if (!attackerFound) {
+    if (!attackerFound || attackerFound.zone !== "field") {
         next.combat = null;
         next.phase = "main";
         next.quickWindow = null;
@@ -616,7 +665,10 @@ function resolveCombatDamage(state) {
 function resolveCombat(state) {
     if (!state.combat)
         return state;
-    let next = structuredClone(state);
+    let next = abortCombatIfAttackerGone(state);
+    if (!next.combat)
+        return next;
+    next = structuredClone(next);
     const combat = next.combat;
     if (combat.phase === "quickWindow") {
         return next;
@@ -625,7 +677,7 @@ function resolveCombat(state) {
         return resolveCombatDamage(next);
     }
     const attackerFound = (0, queries_1.findInstance)(next, combat.attackerId);
-    if (!attackerFound) {
+    if (!attackerFound || attackerFound.zone !== "field") {
         next.combat = null;
         next.phase = "main";
         next.quickWindow = null;
@@ -637,7 +689,9 @@ function resolveCombat(state) {
     const strikeStart = combat.strikeAbilityIndex ?? 0;
     for (let i = strikeStart; i < strikeAbilities.length; i++) {
         next.resolutionContext = { sourceInstanceId: combat.attackerId, effectStack: [strikeAbilities[i].effect] };
-        next = (0, resolver_1.resolveEffect)(next, strikeAbilities[i].effect, attackerFound.player);
+        next = (0, resolver_1.resolveEffect)(next, strikeAbilities[i].effect, attackerFound.player, {
+            deferConfirmation: true,
+        });
         next = (0, confirmation_1.runConfirmationTiming)(next);
         if (next.pendingChoices ||
             next.pendingTriggers.length > 0 ||
@@ -649,16 +703,26 @@ function resolveCombat(state) {
             return next;
         }
         next.resolutionContext = null;
+        next = abortCombatIfAttackerGone(next);
+        if (!next.combat)
+            return next;
     }
-    const attackerAfterStrike = (0, queries_1.findInstance)(next, combat.attackerId);
-    if (!attackerAfterStrike) {
+    if (!isCombatAttackerOnField(next)) {
         next.combat = null;
         next.phase = "main";
         next.quickWindow = null;
         next.quickWindowPlayer = null;
         return next;
     }
-    const defender = (0, queries_1.opponentOf)(attackerFound.player);
+    const attackerAfterStrike = (0, queries_1.findInstance)(next, combat.attackerId);
+    if (!attackerAfterStrike || attackerAfterStrike.zone !== "field") {
+        next.combat = null;
+        next.phase = "main";
+        next.quickWindow = null;
+        next.quickWindowPlayer = null;
+        return next;
+    }
+    const defender = (0, queries_1.opponentOf)(attackerAfterStrike.player);
     if (hasPlayableQuickCards(next, defender)) {
         next.combat = { ...combat, phase: "quickWindow", strikeAbilityIndex: undefined };
         next.quickWindow = "afterAttack";
@@ -805,12 +869,12 @@ function resolveActivate(state, player, sourceInstanceId, zone, useEvoPoint) {
     if (!found || found.zone !== zone || found.player !== player) {
         return fail(state, "Invalid card");
     }
-    if (zone === "field" && found.card.engaged) {
-        return fail(state, "Follower is engaged and cannot activate");
-    }
     const activated = (0, queries_1.getActivatedAbilities)(state, found.card, player, zone);
     if (activated.length === 0)
         return fail(state, "No activated ability");
+    if (zone === "field" && found.card.engaged && activated[0].ability.cost?.engage) {
+        return fail(state, "Follower is engaged and cannot pay engage cost");
+    }
     let next = structuredClone(state);
     const p = next.players[player];
     const { ability, key } = activated[0];

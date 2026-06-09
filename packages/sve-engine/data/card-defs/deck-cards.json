@@ -1915,6 +1915,13 @@
     "keywords": [],
     "abilities": [
       {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": []
+        }
+      },
+      {
         "timing": "activated",
         "activateFrom": "exArea",
         "cost": {

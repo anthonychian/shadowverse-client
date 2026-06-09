@@ -72,19 +72,17 @@ export function createPlayerView(state: GameState, self: PlayerId): PlayerView {
         }
       }
 
-      if (!card.engaged) {
-        const activated = getActivatedAbilities(state, card, self, "field");
-        if (activated.length > 0) {
-          const def = getCardDef(resolveCardNo(state, card));
-          const { ability } = activated[0];
-          const cost = ability.cost?.pp ?? 0;
-          const advance = isAdvanceAbility(def, ability);
-          const ppPay = computeEvolvePayment(cost, pp, p.evoPoints, false);
-          const epPay = computeEvolvePayment(cost, pp, p.evoPoints, true);
-          if (ppPay.ok) legalActions.push(`ACTIVATE:${card.instanceId}`);
-          if (advance && epPay.ok && epPay.epCost > 0) {
-            legalActions.push(`ACTIVATE_EP:${card.instanceId}`);
-          }
+      const activated = getActivatedAbilities(state, card, self, "field");
+      if (activated.length > 0) {
+        const def = getCardDef(resolveCardNo(state, card));
+        const { ability } = activated[0];
+        const cost = ability.cost?.pp ?? 0;
+        const advance = isAdvanceAbility(def, ability);
+        const ppPay = computeEvolvePayment(cost, pp, p.evoPoints, false);
+        const epPay = computeEvolvePayment(cost, pp, p.evoPoints, true);
+        if (ppPay.ok) legalActions.push(`ACTIVATE:${card.instanceId}`);
+        if (advance && epPay.ok && epPay.epCost > 0) {
+          legalActions.push(`ACTIVATE_EP:${card.instanceId}`);
         }
       }
 
@@ -142,6 +140,27 @@ export function createPlayerView(state: GameState, self: PlayerId): PlayerView {
     legalActions.push("CHOICE_REQUIRED");
   }
 
+  const exPlayCosts: Record<string, number> = {};
+  for (const card of state.players[self].zones.exArea) {
+    exPlayCosts[card.instanceId] = getEffectivePlayCost(
+      card,
+      card.cardNo,
+      state,
+      self,
+      "exArea",
+    );
+  }
+  const opponentExPlayCosts: Record<string, number> = {};
+  for (const card of state.players[opponent].zones.exArea) {
+    opponentExPlayCosts[card.instanceId] = getEffectivePlayCost(
+      card,
+      card.cardNo,
+      state,
+      opponent,
+      "exArea",
+    );
+  }
+
   return {
     self,
     state: view,
@@ -149,6 +168,8 @@ export function createPlayerView(state: GameState, self: PlayerId): PlayerView {
     opponentDeckCount: state.players[opponent].zones.deck.length,
     opponentEvoDeckCount: state.players[opponent].zones.evolveDeck.length,
     legalActions,
+    exPlayCosts,
+    opponentExPlayCosts,
   };
 }
 

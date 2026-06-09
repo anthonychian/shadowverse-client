@@ -109,6 +109,92 @@ function passQuick(state, player) {
         (0, vitest_1.expect)(evolved.ok).toBe(true);
         (0, vitest_1.expect)(evolved.state.pendingChoices?.type).toBe("chooseMultiple");
     });
+    (0, vitest_1.it)("allows evolve while engaged", () => {
+        let state = (0, factory_1.createInitialGameState)(0);
+        state.phase = "main";
+        state.activePlayer = 0;
+        state.turnNumber = 2;
+        state.pendingChoices = null;
+        state.players[0].pp = 5;
+        state.players[0].evoPoints = 2;
+        const base = (0, factory_1.createCardInstance)("MVP-013", 0);
+        base.onFieldSinceTurnStart = true;
+        base.engaged = true;
+        state.players[0].zones.field.push(base);
+        state.players[0].zones.evolveDeck.push((0, factory_1.createCardInstance)("MVP-014", 0));
+        const view = (0, filterView_1.createPlayerView)(state, 0);
+        (0, vitest_1.expect)(view.legalActions.includes(`EVOLVE:${base.instanceId}`)).toBe(true);
+        const evolved = (0, applyAction_1.applyAction)(state, 0, {
+            type: "EVOLVE",
+            fieldInstanceId: base.instanceId,
+            useEvoPoint: false,
+        });
+        (0, vitest_1.expect)(evolved.ok).toBe(true);
+        (0, vitest_1.expect)(evolved.state.players[0].zones.field[0].engaged).toBe(true);
+    });
+    (0, vitest_1.it)("allows non-engage activate while engaged", () => {
+        let state = (0, factory_1.createInitialGameState)(0);
+        state.phase = "main";
+        state.activePlayer = 0;
+        state.pendingChoices = null;
+        const jiemon = (0, factory_1.createCardInstance)("BP11-018EN", 0);
+        jiemon.onFieldSinceTurnStart = true;
+        jiemon.engaged = true;
+        state.players[0].zones.field.push(jiemon);
+        const enemy = (0, factory_1.createCardInstance)("MVP-012", 1);
+        enemy.onFieldSinceTurnStart = true;
+        enemy.engaged = true;
+        state.players[1].zones.field.push(enemy);
+        const view = (0, filterView_1.createPlayerView)(state, 0);
+        (0, vitest_1.expect)(view.legalActions.includes(`ACTIVATE:${jiemon.instanceId}`)).toBe(true);
+        const activated = (0, applyAction_1.applyAction)(state, 0, {
+            type: "ACTIVATE",
+            fieldInstanceId: jiemon.instanceId,
+        });
+        (0, vitest_1.expect)(activated.ok).toBe(true);
+        (0, vitest_1.expect)(activated.state.pendingChoices?.type).toBe("selectTarget");
+        (0, vitest_1.expect)(activated.state.players[0].zones.field[0].engaged).toBe(true);
+    });
+    (0, vitest_1.it)("blocks engage-cost activate while already engaged", () => {
+        let state = (0, factory_1.createInitialGameState)(0);
+        state.phase = "main";
+        state.activePlayer = 0;
+        state.pendingChoices = null;
+        const soot = (0, factory_1.createCardInstance)("BP14-019EN", 0);
+        soot.onFieldSinceTurnStart = true;
+        soot.engaged = true;
+        state.players[0].zones.field.push(soot);
+        const enemy = (0, factory_1.createCardInstance)("MVP-012", 1);
+        enemy.onFieldSinceTurnStart = true;
+        enemy.engaged = true;
+        state.players[1].zones.field.push(enemy);
+        const view = (0, filterView_1.createPlayerView)(state, 0);
+        (0, vitest_1.expect)(view.legalActions.includes(`ACTIVATE:${soot.instanceId}`)).toBe(false);
+        const activated = (0, applyAction_1.applyAction)(state, 0, {
+            type: "ACTIVATE",
+            fieldInstanceId: soot.instanceId,
+        });
+        (0, vitest_1.expect)(activated.ok).toBe(false);
+    });
+    (0, vitest_1.it)("plays glittering gold from ex area for 0 pp as a no-op spell", () => {
+        let state = (0, factory_1.createInitialGameState)(0);
+        state.phase = "main";
+        state.activePlayer = 0;
+        state.pendingChoices = null;
+        state.players[0].pp = 0;
+        const gold = (0, factory_1.createCardInstance)("BP14-T02EN", 0);
+        state.players[0].zones.exArea.push(gold);
+        const view = (0, filterView_1.createPlayerView)(state, 0);
+        (0, vitest_1.expect)(view.legalActions.includes(`PLAY:${gold.instanceId}`)).toBe(true);
+        const played = (0, applyAction_1.applyAction)(state, 0, {
+            type: "PLAY_CARD",
+            handInstanceId: gold.instanceId,
+        });
+        (0, vitest_1.expect)(played.ok).toBe(true);
+        (0, vitest_1.expect)(played.state.players[0].zones.exArea.length).toBe(0);
+        (0, vitest_1.expect)(played.state.players[0].zones.banish.some((c) => c.instanceId === gold.instanceId)).toBe(true);
+        (0, vitest_1.expect)(played.state.players[0].pp).toBe(0);
+    });
     (0, vitest_1.it)("only offers pass quick window when quick cards are playable", () => {
         let state = (0, factory_1.createInitialGameState)(0);
         state.phase = "main";

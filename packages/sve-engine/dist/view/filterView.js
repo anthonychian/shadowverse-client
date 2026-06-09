@@ -58,20 +58,18 @@ function createPlayerView(state, self) {
                     }
                 }
             }
-            if (!card.engaged) {
-                const activated = (0, queries_1.getActivatedAbilities)(state, card, self, "field");
-                if (activated.length > 0) {
-                    const def = (0, registry_1.getCardDef)((0, queries_1.resolveCardNo)(state, card));
-                    const { ability } = activated[0];
-                    const cost = ability.cost?.pp ?? 0;
-                    const advance = (0, effect_utils_1.isAdvanceAbility)(def, ability);
-                    const ppPay = (0, queries_1.computeEvolvePayment)(cost, pp, p.evoPoints, false);
-                    const epPay = (0, queries_1.computeEvolvePayment)(cost, pp, p.evoPoints, true);
-                    if (ppPay.ok)
-                        legalActions.push(`ACTIVATE:${card.instanceId}`);
-                    if (advance && epPay.ok && epPay.epCost > 0) {
-                        legalActions.push(`ACTIVATE_EP:${card.instanceId}`);
-                    }
+            const activated = (0, queries_1.getActivatedAbilities)(state, card, self, "field");
+            if (activated.length > 0) {
+                const def = (0, registry_1.getCardDef)((0, queries_1.resolveCardNo)(state, card));
+                const { ability } = activated[0];
+                const cost = ability.cost?.pp ?? 0;
+                const advance = (0, effect_utils_1.isAdvanceAbility)(def, ability);
+                const ppPay = (0, queries_1.computeEvolvePayment)(cost, pp, p.evoPoints, false);
+                const epPay = (0, queries_1.computeEvolvePayment)(cost, pp, p.evoPoints, true);
+                if (ppPay.ok)
+                    legalActions.push(`ACTIVATE:${card.instanceId}`);
+                if (advance && epPay.ok && epPay.epCost > 0) {
+                    legalActions.push(`ACTIVATE_EP:${card.instanceId}`);
                 }
             }
             // Evolve is allowed even while engaged (e.g. after activating).
@@ -128,6 +126,14 @@ function createPlayerView(state, self) {
     if (state.pendingChoices?.player === self) {
         legalActions.push("CHOICE_REQUIRED");
     }
+    const exPlayCosts = {};
+    for (const card of state.players[self].zones.exArea) {
+        exPlayCosts[card.instanceId] = (0, queries_1.getEffectivePlayCost)(card, card.cardNo, state, self, "exArea");
+    }
+    const opponentExPlayCosts = {};
+    for (const card of state.players[opponent].zones.exArea) {
+        opponentExPlayCosts[card.instanceId] = (0, queries_1.getEffectivePlayCost)(card, card.cardNo, state, opponent, "exArea");
+    }
     return {
         self,
         state: view,
@@ -135,6 +141,8 @@ function createPlayerView(state, self) {
         opponentDeckCount: state.players[opponent].zones.deck.length,
         opponentEvoDeckCount: state.players[opponent].zones.evolveDeck.length,
         legalActions,
+        exPlayCosts,
+        opponentExPlayCosts,
     };
 }
 function tryAction(state, player, action) {

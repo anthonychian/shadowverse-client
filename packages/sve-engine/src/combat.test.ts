@@ -123,6 +123,54 @@ describe("combat", () => {
     expect(result.ok).toBe(true);
   });
 
+  it("cancels combat when strike last words kill the attacker before combat damage", () => {
+    let state = createInitialGameState(0);
+    state.phase = "main";
+    state.activePlayer = 0;
+    state.pendingChoices = null;
+    state.turnNumber = 2;
+
+    const mono = createCardInstance("BP17-SL20EN", 0);
+    mono.onFieldSinceTurnStart = true;
+    state.players[0].zones.field.push(mono);
+    state.players[0].zones.field.push(createCardInstance("BP17-083EN", 0));
+    state.players[0].zones.field.push(createCardInstance("BP17-083EN", 0));
+
+    const soot = createCardInstance("BP14-T01EN", 1);
+    soot.onFieldSinceTurnStart = true;
+    soot.engaged = true;
+    const other = createCardInstance("MVP-012", 1);
+    other.onFieldSinceTurnStart = true;
+    other.engaged = true;
+    state.players[1].zones.field.push(soot, other);
+    const otherDefBefore = getEffectiveStats(other, state).def;
+
+    let current = applyAction(state, 0, {
+      type: "ATTACK",
+      attackerId: mono.instanceId,
+      targetId: soot.instanceId,
+    }).state;
+    expect(current.pendingChoices?.type).toBe("selectTarget");
+
+    current = applyAction(current, 0, {
+      type: "CHOICE_RESPONSE",
+      payload: { targetId: soot.instanceId },
+    }).state;
+    expect(current.pendingChoices?.type).toBe("selectTarget");
+
+    current = applyAction(current, 1, {
+      type: "CHOICE_RESPONSE",
+      payload: { targetId: mono.instanceId },
+    }).state;
+
+    expect(current.combat).toBeNull();
+    expect(current.quickWindow).toBeNull();
+    expect(current.players[0].zones.field.some((c) => c.instanceId === mono.instanceId)).toBe(false);
+    const otherAfter = current.players[1].zones.field.find((c) => c.instanceId === other.instanceId);
+    expect(otherAfter).toBeTruthy();
+    expect(getEffectiveStats(otherAfter!, current).def).toBe(otherDefBefore);
+  });
+
   it("strike resolves before combat damage (Disciple of Usurpation)", () => {
     resetIdCounter();
     let state = createInitialGameState(0);

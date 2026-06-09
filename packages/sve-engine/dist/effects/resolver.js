@@ -27,6 +27,7 @@ function appendResumeEffects(state, effects) {
         effectStack: next.resolutionContext?.effectStack ?? [],
         resumeAfterChoice: [...existing, ...effects],
         forcedTargetId: next.resolutionContext?.forcedTargetId,
+        deferTriggers: true,
     };
     return next;
 }
@@ -266,6 +267,15 @@ function canSatisfyOptionalCost(state, player, effect) {
 }
 function resolveEffect(state, effect, player, options) {
     let next = structuredClone(state);
+    if (options?.deferConfirmation) {
+        next.resolutionContext = {
+            sourceInstanceId: next.resolutionContext?.sourceInstanceId,
+            effectStack: next.resolutionContext?.effectStack ?? [],
+            resumeAfterChoice: next.resolutionContext?.resumeAfterChoice,
+            forcedTargetId: next.resolutionContext?.forcedTargetId,
+            deferTriggers: true,
+        };
+    }
     switch (effect.op) {
         case "draw":
             for (let i = 0; i < effect.count; i++) {
@@ -426,15 +436,22 @@ function resolveEffect(state, effect, player, options) {
             }
             break;
         }
-        case "sequence":
+        case "sequence": {
+            next.resolutionContext = {
+                sourceInstanceId: next.resolutionContext?.sourceInstanceId,
+                effectStack: next.resolutionContext?.effectStack ?? [],
+                resumeAfterChoice: next.resolutionContext?.resumeAfterChoice,
+                forcedTargetId: next.resolutionContext?.forcedTargetId,
+                deferTriggers: true,
+            };
             for (let i = 0; i < effect.steps.length; i++) {
                 next = resolveEffect(next, effect.steps[i], player, { deferConfirmation: true });
-                next = (0, confirmation_2.runConfirmationTiming)(next);
-                if (next.pendingChoices || next.pendingTriggers.length > 0) {
+                if (next.pendingChoices) {
                     return appendResumeEffects(next, effect.steps.slice(i + 1));
                 }
             }
             break;
+        }
         case "choose":
             if (!next.pendingChoices) {
                 const affordableOptions = effect.options
@@ -632,7 +649,7 @@ function resolveEffect(state, effect, player, options) {
             const targetId = candidates[0];
             const found = (0, queries_1.findInstance)(next, targetId);
             if (found)
-                found.card.playCostReduction += effect.amount;
+                found.card.persistentPlayCostReduction += effect.amount;
             break;
         }
         case "banishFromCemetery": {
@@ -857,6 +874,7 @@ function resolveEffect(state, effect, player, options) {
     if (options?.deferConfirmation) {
         return next;
     }
+    next = (0, effect_utils_1.finishDeferredTriggers)(next);
     return (0, confirmation_2.runConfirmationTiming)(next);
 }
 function canEffectResolve(state, player, effect) {

@@ -7,9 +7,9 @@ const factory_1 = require("../state/factory");
 const passives_1 = require("../state/passives");
 const zones_1 = require("../state/zones");
 function clearTurnScopedCardState(card) {
-    card.playCostReduction = 0;
     card.abilitiesActivatedThisTurn = [];
     card.modifiers = card.modifiers.filter((m) => !m.untilEndOfTurn);
+    card.playCostReduction = 0;
 }
 function refreshFieldCard(card, state) {
     card.evolvedThisTurn = false;

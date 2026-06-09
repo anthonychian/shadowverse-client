@@ -116,6 +116,47 @@ function boardWith(attacker, defender, active = 0) {
         });
         (0, vitest_1.expect)(result.ok).toBe(true);
     });
+    (0, vitest_1.it)("cancels combat when strike last words kill the attacker before combat damage", () => {
+        let state = (0, factory_1.createInitialGameState)(0);
+        state.phase = "main";
+        state.activePlayer = 0;
+        state.pendingChoices = null;
+        state.turnNumber = 2;
+        const mono = (0, factory_1.createCardInstance)("BP17-SL20EN", 0);
+        mono.onFieldSinceTurnStart = true;
+        state.players[0].zones.field.push(mono);
+        state.players[0].zones.field.push((0, factory_1.createCardInstance)("BP17-083EN", 0));
+        state.players[0].zones.field.push((0, factory_1.createCardInstance)("BP17-083EN", 0));
+        const soot = (0, factory_1.createCardInstance)("BP14-T01EN", 1);
+        soot.onFieldSinceTurnStart = true;
+        soot.engaged = true;
+        const other = (0, factory_1.createCardInstance)("MVP-012", 1);
+        other.onFieldSinceTurnStart = true;
+        other.engaged = true;
+        state.players[1].zones.field.push(soot, other);
+        const otherDefBefore = (0, queries_1.getEffectiveStats)(other, state).def;
+        let current = (0, applyAction_1.applyAction)(state, 0, {
+            type: "ATTACK",
+            attackerId: mono.instanceId,
+            targetId: soot.instanceId,
+        }).state;
+        (0, vitest_1.expect)(current.pendingChoices?.type).toBe("selectTarget");
+        current = (0, applyAction_1.applyAction)(current, 0, {
+            type: "CHOICE_RESPONSE",
+            payload: { targetId: soot.instanceId },
+        }).state;
+        (0, vitest_1.expect)(current.pendingChoices?.type).toBe("selectTarget");
+        current = (0, applyAction_1.applyAction)(current, 1, {
+            type: "CHOICE_RESPONSE",
+            payload: { targetId: mono.instanceId },
+        }).state;
+        (0, vitest_1.expect)(current.combat).toBeNull();
+        (0, vitest_1.expect)(current.quickWindow).toBeNull();
+        (0, vitest_1.expect)(current.players[0].zones.field.some((c) => c.instanceId === mono.instanceId)).toBe(false);
+        const otherAfter = current.players[1].zones.field.find((c) => c.instanceId === other.instanceId);
+        (0, vitest_1.expect)(otherAfter).toBeTruthy();
+        (0, vitest_1.expect)((0, queries_1.getEffectiveStats)(otherAfter, current).def).toBe(otherDefBefore);
+    });
     (0, vitest_1.it)("strike resolves before combat damage (Disciple of Usurpation)", () => {
         (0, factory_1.resetIdCounter)();
         let state = (0, factory_1.createInitialGameState)(0);

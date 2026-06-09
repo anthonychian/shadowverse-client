@@ -6,6 +6,9 @@ const filterView_1 = require("./view/filterView");
 const confirmation_1 = require("./rules/confirmation");
 const resolver_1 = require("./effects/resolver");
 const factory_1 = require("./state/factory");
+const trigger_queue_1 = require("./rules/trigger-queue");
+const setup_1 = require("./phases/setup");
+const registry_1 = require("./cards/registry");
 const queries_1 = require("./state/queries");
 function resolveAllChoices(state, player) {
     let current = state;
@@ -161,6 +164,49 @@ function resolveAllChoices(state, player) {
         state = (0, confirmation_1.runConfirmationTiming)(state);
         (0, vitest_1.expect)(state.pendingTriggers.filter((t) => t.timing === "lastWords")).toHaveLength(2);
     });
+    (0, vitest_1.it)("nicola enduring steward last words discounts ex area play cost", () => {
+        let state = (0, factory_1.createInitialGameState)(0);
+        state.phase = "main";
+        state.activePlayer = 0;
+        state.pendingChoices = null;
+        state.players[0].pp = 5;
+        state.players[0].maxPp = 5;
+        const nicola = (0, factory_1.createCardInstance)("BP17-079EN", 0);
+        const m1 = (0, factory_1.createCardInstance)("BP12-T10EN", 0);
+        const m2 = (0, factory_1.createCardInstance)("BP17-T17EN", 0);
+        state.players[0].zones.hand.push(m1, m2);
+        state.players[0].zones.cemetery.push(nicola);
+        (0, trigger_queue_1.queueLastWords)(state, nicola.instanceId, 0);
+        state = (0, confirmation_1.runConfirmationTiming)(state);
+        (0, vitest_1.expect)(state.pendingChoices?.type).toBe("choose");
+        const pay = (0, applyAction_1.applyAction)(state, 0, {
+            type: "CHOICE_RESPONSE",
+            payload: { optionIndex: 0 },
+        });
+        (0, vitest_1.expect)(pay.ok).toBe(true);
+        (0, vitest_1.expect)(pay.state.pendingChoices?.type).toBe("selectZoneCards");
+        const paid = (0, applyAction_1.applyAction)(pay.state, 0, {
+            type: "CHOICE_RESPONSE",
+            payload: { instanceIds: [m1.instanceId, m2.instanceId] },
+        });
+        (0, vitest_1.expect)(paid.ok).toBe(true);
+        state = paid.state;
+        const inEx = state.players[0].zones.exArea.find((c) => c.instanceId === nicola.instanceId);
+        (0, vitest_1.expect)(inEx).toBeTruthy();
+        (0, vitest_1.expect)(inEx?.persistentPlayCostReduction).toBe(1);
+        (0, vitest_1.expect)(inEx?.playCostReduction).toBe(0);
+        (0, vitest_1.expect)((0, queries_1.getEffectivePlayCost)(inEx, "BP17-079EN", state, 0, "exArea")).toBe(1);
+        const nextTurn = (0, setup_1.beginStartPhase)(structuredClone(state));
+        (0, vitest_1.expect)(nextTurn.players[0].zones.exArea[0]?.persistentPlayCostReduction).toBe(1);
+        (0, vitest_1.expect)(nextTurn.players[0].zones.exArea[0]?.playCostReduction).toBe(0);
+        (0, vitest_1.expect)((0, queries_1.getEffectivePlayCost)(inEx, "BP17-079EN", nextTurn, 0, "exArea")).toBe(1);
+        const played = (0, applyAction_1.applyAction)(state, 0, {
+            type: "PLAY_CARD",
+            handInstanceId: nicola.instanceId,
+        });
+        (0, vitest_1.expect)(played.ok).toBe(true);
+        (0, vitest_1.expect)(played.state.players[0].pp).toBe(4);
+    });
     (0, vitest_1.it)("taketsumi advance requires festive or swordcraft cards in cemetery", () => {
         let state = (0, factory_1.createInitialGameState)(0);
         state.phase = "main";
@@ -210,6 +256,11 @@ function resolveAllChoices(state, player) {
         (0, vitest_1.expect)(resolved.players[0].zones.exArea.some((c) => c.cardNo === "BP12-T10EN")).toBe(true);
         const tutored = resolved.players[0].zones.exArea.find((c) => c.cardNo === "BP12-T10EN");
         (0, vitest_1.expect)(tutored?.playCostReduction).toBe(3);
+        (0, vitest_1.expect)(tutored?.persistentPlayCostReduction).toBe(0);
+        const afterEndTurn = (0, applyAction_1.applyAction)(resolved, 0, { type: "END_MAIN" }).state;
+        const tutoredNextTurn = afterEndTurn.players[0].zones.exArea.find((c) => c.cardNo === "BP12-T10EN");
+        (0, vitest_1.expect)(tutoredNextTurn?.playCostReduction).toBe(0);
+        (0, vitest_1.expect)((0, queries_1.getEffectivePlayCost)(tutoredNextTurn, "BP12-T10EN", afterEndTurn, 0, "exArea")).toBe((0, registry_1.getCardDef)("BP12-T10EN")?.cost ?? 0);
     });
     (0, vitest_1.it)("front desk frog auto-evolve links stats and triggers on evolve", () => {
         let state = (0, factory_1.createInitialGameState)(0);
@@ -234,6 +285,38 @@ function resolveAllChoices(state, player) {
         (0, vitest_1.expect)((0, queries_1.getEffectiveStats)(fieldFrog, played.state).atk).toBe(3);
         const resolved = resolveAllChoices(played.state, 0);
         (0, vitest_1.expect)(resolved.players[1].zones.field.length).toBe(0);
+    });
+    (0, vitest_1.it)("steeled hopes defers fanfare until all three deck summons finish", () => {
+        let state = (0, factory_1.createInitialGameState)(0);
+        state.phase = "main";
+        state.activePlayer = 0;
+        state.pendingChoices = null;
+        state.players[0].pp = 7;
+        const aenea = (0, factory_1.createCardInstance)("PR-173EN", 0);
+        const machina2 = (0, factory_1.createCardInstance)("BP12-T10EN", 0);
+        const machina3 = (0, factory_1.createCardInstance)("BP17-T17EN", 0);
+        state.players[0].zones.deck.push(aenea, machina2, machina3);
+        const spell = (0, factory_1.createCardInstance)("BP17-080EN", 0);
+        state.players[0].zones.hand.push(spell);
+        let current = (0, applyAction_1.applyAction)(state, 0, { type: "PLAY_CARD", handInstanceId: spell.instanceId });
+        (0, vitest_1.expect)(current.ok).toBe(true);
+        current = (0, applyAction_1.applyAction)(current.state, 0, {
+            type: "CHOICE_RESPONSE",
+            payload: { optionIndex: 1 },
+        });
+        (0, vitest_1.expect)(current.ok).toBe(true);
+        (0, vitest_1.expect)(current.state.pendingChoices?.type).toBe("selectZoneCard");
+        const firstPick = (0, applyAction_1.applyAction)(current.state, 0, {
+            type: "CHOICE_RESPONSE",
+            payload: { instanceId: aenea.instanceId },
+        });
+        (0, vitest_1.expect)(firstPick.ok).toBe(true);
+        (0, vitest_1.expect)(firstPick.state.players[0].zones.field.length).toBe(1);
+        (0, vitest_1.expect)(firstPick.state.pendingTriggers.some((t) => t.timing === "fanfare")).toBe(true);
+        (0, vitest_1.expect)(firstPick.state.pendingChoices?.type).toBe("selectZoneCard");
+        const finished = resolveAllChoices(firstPick.state, 0);
+        (0, vitest_1.expect)(finished.players[0].zones.field.length).toBe(3);
+        (0, vitest_1.expect)(finished.pendingTriggers.some((t) => t.timing === "fanfare")).toBe(false);
     });
     (0, vitest_1.it)("steeled hopes option 2 requires 6 additional PP and summons three followers", () => {
         let state = (0, factory_1.createInitialGameState)(0);

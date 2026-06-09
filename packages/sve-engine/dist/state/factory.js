@@ -29,6 +29,7 @@ function createCardInstance(cardNo, owner, controller) {
         foughtWithBane: false,
         grantedKeywords: [],
         playCostReduction: 0,
+        persistentPlayCostReduction: 0,
         abilitiesActivatedThisTurn: [],
         grantedLastWords: [],
     };

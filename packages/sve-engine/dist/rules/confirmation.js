@@ -154,6 +154,8 @@ function runConfirmationTiming(state) {
         next = checkLosses(next);
         if (next.phase === "gameOver")
             return next;
+        if ((0, effect_utils_1.shouldDeferTriggers)(next))
+            return next;
         const activeTriggers = next.pendingTriggers.filter((t) => t.controller === next.activePlayer);
         const inactiveTriggers = next.pendingTriggers.filter((t) => t.controller !== next.activePlayer);
         if (activeTriggers.length > 1 && !next.pendingChoices) {

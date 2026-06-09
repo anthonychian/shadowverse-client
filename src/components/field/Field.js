@@ -191,6 +191,10 @@ export default function Field({
   const reduxShowEnemyCard = useSelector((state) => state.card.showEnemyCard);
   const reduxEnemyCard = useSelector((state) => state.card.enemyCard);
   const reduxCounterField = useSelector((state) => state.card.counterField);
+  const reduxExPlayCostField = useSelector((state) => state.card.exPlayCostField);
+  const reduxEnemyExPlayCostField = useSelector(
+    (state) => state.card.enemyExPlayCostField,
+  );
   const reduxEnemyCounterField = useSelector(
     (state) => state.card.enemyCounterField,
   );
@@ -1866,15 +1870,11 @@ export default function Field({
           {reduxField.map((x, idx) => (
             <motion.div
               key={`enemy1-${idx}`}
+              className={"cardStyle"}
               style={{
                 zIndex: 2,
-                // position: "absolute",
-                // backgroundColor: "#131219",
-                // borderRadius: "10px",
-                // border: "4px solid #555559",
+                ...fieldCombatStyle(cardPos(idx), true),
               }}
-              className={"cardStyle"}
-              style={fieldCombatStyle(cardPos(idx), true)}
               onClick={() => {
                 const enemyIdx = cardPos(idx);
                 if (automated && selectedAttackerId) {
@@ -1893,6 +1893,7 @@ export default function Field({
                     showDef={reduxEnemyCustomValues[cardPos(idx)].showDef}
                     engaged={reduxEnemyEngaged[cardPos(idx)]}
                     counterVal={reduxEnemyCounterField[cardPos(idx)]}
+                    discountedPlayCost={reduxEnemyExPlayCostField[cardPos(idx)]}
                     aura={reduxEnemyAuraField[cardPos(idx)]}
                     bane={reduxEnemyBaneField[cardPos(idx)]}
                     ward={reduxEnemyWardField[cardPos(idx)]}
@@ -2093,6 +2094,7 @@ export default function Field({
                       defVal={reduxCustomValues[idx].def}
                       engaged={reduxEngaged[idx]}
                       counterVal={reduxCounterField[idx]}
+                      discountedPlayCost={reduxExPlayCostField[idx]}
                       aura={reduxAuraField[idx]}
                       bane={reduxBaneField[idx]}
                       ward={reduxWardField[idx]}
@@ -2150,6 +2152,7 @@ export default function Field({
                       defVal={reduxCustomValues[idx].def}
                       engaged={reduxEngaged[idx]}
                       counterVal={reduxCounterField[idx]}
+                      discountedPlayCost={reduxExPlayCostField[idx]}
                       aura={reduxAuraField[idx]}
                       bane={reduxBaneField[idx]}
                       ward={reduxWardField[idx]}
@@ -2169,6 +2172,7 @@ export default function Field({
                       defVal={reduxCustomValues[idx].def}
                       engaged={reduxEngaged[idx]}
                       counterVal={reduxCounterField[idx]}
+                      discountedPlayCost={reduxExPlayCostField[idx]}
                       aura={reduxAuraField[idx]}
                       bane={reduxBaneField[idx]}
                       ward={reduxWardField[idx]}

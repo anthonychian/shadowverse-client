@@ -143,7 +143,9 @@ export function getEffectivePlayCost(
       base = Math.max(0, base - getExAreaPlayCostReduction(state, player, cardNo));
     }
   }
-  return Math.max(0, base - (card.playCostReduction ?? 0));
+  const instanceReduction =
+    (card.playCostReduction ?? 0) + (card.persistentPlayCostReduction ?? 0);
+  return Math.max(0, base - instanceReduction);
 }
 
 export function getEffectiveStats(card: CardInstance, state?: GameState) {
@@ -264,6 +266,7 @@ export function getActivatedAbilities(
       ).length;
       if (have < need) continue;
     }
+    if (zone === "field" && a.cost?.engage && card.engaged) continue;
     results.push({ ability: a, key });
   }
   return results;

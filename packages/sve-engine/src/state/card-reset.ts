@@ -6,6 +6,7 @@ export function resetCardInstanceState(card: CardInstance): void {
   card.grantedKeywords = [];
   card.grantedLastWords = [];
   card.playCostReduction = 0;
+  card.persistentPlayCostReduction = 0;
   card.abilitiesActivatedThisTurn = [];
   card.engaged = false;
   card.linkedEvoInstanceId = undefined;

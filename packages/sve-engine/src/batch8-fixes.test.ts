@@ -4,7 +4,10 @@ import { createPlayerView } from "./view/filterView";
 import { runConfirmationTiming } from "./rules/confirmation";
 import { resolveEffect } from "./effects/resolver";
 import { createCardInstance, createInitialGameState, resetIdCounter } from "./state/factory";
-import { getActivatedAbilities, getEffectiveStats } from "./state/queries";
+import { queueLastWords } from "./rules/trigger-queue";
+import { beginStartPhase } from "./phases/setup";
+import { getCardDef } from "./cards/registry";
+import { getActivatedAbilities, getEffectivePlayCost, getEffectiveStats } from "./state/queries";
 
 function resolveAllChoices(state: ReturnType<typeof applyAction>["state"], player: 0 | 1) {
   let current = state;
@@ -182,6 +185,57 @@ describe("batch 8 regression fixes", () => {
     expect(state.pendingTriggers.filter((t) => t.timing === "lastWords")).toHaveLength(2);
   });
 
+  it("nicola enduring steward last words discounts ex area play cost", () => {
+    let state = createInitialGameState(0);
+    state.phase = "main";
+    state.activePlayer = 0;
+    state.pendingChoices = null;
+    state.players[0].pp = 5;
+    state.players[0].maxPp = 5;
+
+    const nicola = createCardInstance("BP17-079EN", 0);
+    const m1 = createCardInstance("BP12-T10EN", 0);
+    const m2 = createCardInstance("BP17-T17EN", 0);
+    state.players[0].zones.hand.push(m1, m2);
+    state.players[0].zones.cemetery.push(nicola);
+
+    queueLastWords(state, nicola.instanceId, 0);
+    state = runConfirmationTiming(state);
+    expect(state.pendingChoices?.type).toBe("choose");
+
+    const pay = applyAction(state, 0, {
+      type: "CHOICE_RESPONSE",
+      payload: { optionIndex: 0 },
+    });
+    expect(pay.ok).toBe(true);
+    expect(pay.state.pendingChoices?.type).toBe("selectZoneCards");
+
+    const paid = applyAction(pay.state, 0, {
+      type: "CHOICE_RESPONSE",
+      payload: { instanceIds: [m1.instanceId, m2.instanceId] },
+    });
+    expect(paid.ok).toBe(true);
+    state = paid.state;
+
+    const inEx = state.players[0].zones.exArea.find((c) => c.instanceId === nicola.instanceId);
+    expect(inEx).toBeTruthy();
+    expect(inEx?.persistentPlayCostReduction).toBe(1);
+    expect(inEx?.playCostReduction).toBe(0);
+    expect(getEffectivePlayCost(inEx!, "BP17-079EN", state, 0, "exArea")).toBe(1);
+
+    const nextTurn = beginStartPhase(structuredClone(state));
+    expect(nextTurn.players[0].zones.exArea[0]?.persistentPlayCostReduction).toBe(1);
+    expect(nextTurn.players[0].zones.exArea[0]?.playCostReduction).toBe(0);
+    expect(getEffectivePlayCost(inEx!, "BP17-079EN", nextTurn, 0, "exArea")).toBe(1);
+
+    const played = applyAction(state, 0, {
+      type: "PLAY_CARD",
+      handInstanceId: nicola.instanceId,
+    });
+    expect(played.ok).toBe(true);
+    expect(played.state.players[0].pp).toBe(4);
+  });
+
   it("taketsumi advance requires festive or swordcraft cards in cemetery", () => {
     let state = createInitialGameState(0);
     state.phase = "main";
@@ -240,6 +294,16 @@ describe("batch 8 regression fixes", () => {
     expect(resolved.players[0].zones.exArea.some((c) => c.cardNo === "BP12-T10EN")).toBe(true);
     const tutored = resolved.players[0].zones.exArea.find((c) => c.cardNo === "BP12-T10EN");
     expect(tutored?.playCostReduction).toBe(3);
+    expect(tutored?.persistentPlayCostReduction).toBe(0);
+
+    const afterEndTurn = applyAction(resolved, 0, { type: "END_MAIN" }).state;
+    const tutoredNextTurn = afterEndTurn.players[0].zones.exArea.find(
+      (c) => c.cardNo === "BP12-T10EN",
+    );
+    expect(tutoredNextTurn?.playCostReduction).toBe(0);
+    expect(getEffectivePlayCost(tutoredNextTurn!, "BP12-T10EN", afterEndTurn, 0, "exArea")).toBe(
+      getCardDef("BP12-T10EN")?.cost ?? 0,
+    );
   });
 
   it("front desk frog auto-evolve links stats and triggers on evolve", () => {
@@ -269,6 +333,44 @@ describe("batch 8 regression fixes", () => {
 
     const resolved = resolveAllChoices(played.state, 0);
     expect(resolved.players[1].zones.field.length).toBe(0);
+  });
+
+  it("steeled hopes defers fanfare until all three deck summons finish", () => {
+    let state = createInitialGameState(0);
+    state.phase = "main";
+    state.activePlayer = 0;
+    state.pendingChoices = null;
+    state.players[0].pp = 7;
+
+    const aenea = createCardInstance("PR-173EN", 0);
+    const machina2 = createCardInstance("BP12-T10EN", 0);
+    const machina3 = createCardInstance("BP17-T17EN", 0);
+    state.players[0].zones.deck.push(aenea, machina2, machina3);
+
+    const spell = createCardInstance("BP17-080EN", 0);
+    state.players[0].zones.hand.push(spell);
+
+    let current = applyAction(state, 0, { type: "PLAY_CARD", handInstanceId: spell.instanceId });
+    expect(current.ok).toBe(true);
+    current = applyAction(current.state, 0, {
+      type: "CHOICE_RESPONSE",
+      payload: { optionIndex: 1 },
+    });
+    expect(current.ok).toBe(true);
+    expect(current.state.pendingChoices?.type).toBe("selectZoneCard");
+
+    const firstPick = applyAction(current.state, 0, {
+      type: "CHOICE_RESPONSE",
+      payload: { instanceId: aenea.instanceId },
+    });
+    expect(firstPick.ok).toBe(true);
+    expect(firstPick.state.players[0].zones.field.length).toBe(1);
+    expect(firstPick.state.pendingTriggers.some((t) => t.timing === "fanfare")).toBe(true);
+    expect(firstPick.state.pendingChoices?.type).toBe("selectZoneCard");
+
+    const finished = resolveAllChoices(firstPick.state, 0);
+    expect(finished.players[0].zones.field.length).toBe(3);
+    expect(finished.pendingTriggers.some((t) => t.timing === "fanfare")).toBe(false);
   });
 
   it("steeled hopes option 2 requires 6 additional PP and summons three followers", () => {

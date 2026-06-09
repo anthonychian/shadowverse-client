@@ -125,6 +125,112 @@ describe("batch 9 regression fixes", () => {
     expect(evolved.state.pendingChoices?.type).toBe("chooseMultiple");
   });
 
+  it("allows evolve while engaged", () => {
+    let state = createInitialGameState(0);
+    state.phase = "main";
+    state.activePlayer = 0;
+    state.turnNumber = 2;
+    state.pendingChoices = null;
+    state.players[0].pp = 5;
+    state.players[0].evoPoints = 2;
+
+    const base = createCardInstance("MVP-013", 0);
+    base.onFieldSinceTurnStart = true;
+    base.engaged = true;
+    state.players[0].zones.field.push(base);
+    state.players[0].zones.evolveDeck.push(createCardInstance("MVP-014", 0));
+
+    const view = createPlayerView(state, 0);
+    expect(view.legalActions.includes(`EVOLVE:${base.instanceId}`)).toBe(true);
+
+    const evolved = applyAction(state, 0, {
+      type: "EVOLVE",
+      fieldInstanceId: base.instanceId,
+      useEvoPoint: false,
+    });
+    expect(evolved.ok).toBe(true);
+    expect(evolved.state.players[0].zones.field[0].engaged).toBe(true);
+  });
+
+  it("allows non-engage activate while engaged", () => {
+    let state = createInitialGameState(0);
+    state.phase = "main";
+    state.activePlayer = 0;
+    state.pendingChoices = null;
+
+    const jiemon = createCardInstance("BP11-018EN", 0);
+    jiemon.onFieldSinceTurnStart = true;
+    jiemon.engaged = true;
+    state.players[0].zones.field.push(jiemon);
+
+    const enemy = createCardInstance("MVP-012", 1);
+    enemy.onFieldSinceTurnStart = true;
+    enemy.engaged = true;
+    state.players[1].zones.field.push(enemy);
+
+    const view = createPlayerView(state, 0);
+    expect(view.legalActions.includes(`ACTIVATE:${jiemon.instanceId}`)).toBe(true);
+
+    const activated = applyAction(state, 0, {
+      type: "ACTIVATE",
+      fieldInstanceId: jiemon.instanceId,
+    });
+    expect(activated.ok).toBe(true);
+    expect(activated.state.pendingChoices?.type).toBe("selectTarget");
+    expect(activated.state.players[0].zones.field[0].engaged).toBe(true);
+  });
+
+  it("blocks engage-cost activate while already engaged", () => {
+    let state = createInitialGameState(0);
+    state.phase = "main";
+    state.activePlayer = 0;
+    state.pendingChoices = null;
+
+    const soot = createCardInstance("BP14-019EN", 0);
+    soot.onFieldSinceTurnStart = true;
+    soot.engaged = true;
+    state.players[0].zones.field.push(soot);
+
+    const enemy = createCardInstance("MVP-012", 1);
+    enemy.onFieldSinceTurnStart = true;
+    enemy.engaged = true;
+    state.players[1].zones.field.push(enemy);
+
+    const view = createPlayerView(state, 0);
+    expect(view.legalActions.includes(`ACTIVATE:${soot.instanceId}`)).toBe(false);
+
+    const activated = applyAction(state, 0, {
+      type: "ACTIVATE",
+      fieldInstanceId: soot.instanceId,
+    });
+    expect(activated.ok).toBe(false);
+  });
+
+  it("plays glittering gold from ex area for 0 pp as a no-op spell", () => {
+    let state = createInitialGameState(0);
+    state.phase = "main";
+    state.activePlayer = 0;
+    state.pendingChoices = null;
+    state.players[0].pp = 0;
+
+    const gold = createCardInstance("BP14-T02EN", 0);
+    state.players[0].zones.exArea.push(gold);
+
+    const view = createPlayerView(state, 0);
+    expect(view.legalActions.includes(`PLAY:${gold.instanceId}`)).toBe(true);
+
+    const played = applyAction(state, 0, {
+      type: "PLAY_CARD",
+      handInstanceId: gold.instanceId,
+    });
+    expect(played.ok).toBe(true);
+    expect(played.state.players[0].zones.exArea.length).toBe(0);
+    expect(played.state.players[0].zones.banish.some((c) => c.instanceId === gold.instanceId)).toBe(
+      true,
+    );
+    expect(played.state.players[0].pp).toBe(0);
+  });
+
   it("only offers pass quick window when quick cards are playable", () => {
     let state = createInitialGameState(0);
     state.phase = "main";
