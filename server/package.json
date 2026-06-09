@@ -1,0 +1,16 @@
+{
+  "name": "shadowverse-server",
+  "version": "0.2.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "socket.io": "^4.8.1",
+    "sve-engine": "file:../packages/sve-engine"
+  }
+}

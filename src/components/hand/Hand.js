@@ -10,6 +10,7 @@ import {
 } from "../../redux/CardSlice";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import { useEngineSync } from "../hooks/useEngineSync";
 
 export default function Hand({
   constraintsRef,
@@ -19,8 +20,15 @@ export default function Hand({
   setHovering,
 }) {
   const reduxHand = useSelector((state) => state.card.hand);
+  const handInstanceIds = useSelector((state) => state.card.handInstanceIds);
+  const leaderActive = useSelector((state) => state.card.leaderActive);
+  const gameMode = useSelector((state) => state.gameState.gameMode);
+  const legalActions = useSelector((state) => state.gameState.legalActions);
+  const pendingChoices = useSelector((state) => state.gameState.pendingChoices);
+  const automated = gameMode === "automated";
   const [items, setItems] = useState(reduxHand);
   const dispatch = useDispatch();
+  const { sendAction } = useEngineSync();
 
   useEffect(() => {
     setItems(arrToObjArr(reduxHand));
@@ -71,6 +79,26 @@ export default function Hand({
     dispatch(placeToBotOfDeckFromHand({ name: name, index: cardIndex }));
   };
 
+  const getPlayMode = (index) => {
+    if (!automated || pendingChoices) return null;
+    const instanceId = handInstanceIds[index];
+    if (!instanceId) return null;
+    if (legalActions.includes(`QUICK_PLAY:${instanceId}`)) return "quick";
+    if (leaderActive && legalActions.includes(`PLAY:${instanceId}`)) return "play";
+    return null;
+  };
+
+  const handleAutomatedPlay = (index) => {
+    const instanceId = handInstanceIds[index];
+    const mode = getPlayMode(index);
+    if (!instanceId || !mode) return;
+    if (mode === "quick") {
+      sendAction({ type: "QUICK_PLAY", handInstanceId: instanceId });
+    } else {
+      sendAction({ type: "PLAY_CARD", handInstanceId: instanceId });
+    }
+  };
+
   return (
     <>
       <Menu
@@ -105,10 +133,19 @@ export default function Hand({
         {items.map((card, index) => (
           <div
             onContextMenu={(e) => {
-              if (!ready) handleContextMenu(e, card.name, index);
+              if (!ready && !automated) handleContextMenu(e, card.name, index);
+            }}
+            onClick={() => {
+              if (getPlayMode(index)) handleAutomatedPlay(index);
             }}
             key={card.idx}
             value={card}
+            style={{
+              cursor: getPlayMode(index) ? "pointer" : undefined,
+              outline: getPlayMode(index) ? "3px solid #4caf50" : undefined,
+              borderRadius: getPlayMode(index) ? "8px" : undefined,
+            }}
+            title={getPlayMode(index) ? "Click to play" : undefined}
           >
             <Card
               name={card.name}

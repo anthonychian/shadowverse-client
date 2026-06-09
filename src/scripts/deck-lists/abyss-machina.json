@@ -1,0 +1,32 @@
+{
+  "name": "abyss machina",
+  "leader": null,
+  "mainDeck": {
+    "PR-173EN": { "name": "Aenea, Amethyst Rebel", "count": 3 },
+    "PR-358EN": { "name": "Mechagun Wielder", "count": 3 },
+    "BP07-075EN": { "name": "Alpha Drive", "count": 3 },
+    "BP07-P22EN": { "name": "Nicola, Forbidden Strength", "count": 3 },
+    "BP11-075EN": { "name": "Dead to Rights", "count": 1 },
+    "BP12-075EN": { "name": "Friends Forever", "count": 2 },
+    "BP12-082EN": { "name": "Roly-Poly Mk I", "count": 3 },
+    "BP17-077EN": { "name": "Aenea, Creative Amethyst", "count": 3 },
+    "BP17-079EN": { "name": "Nicola, Enduring Steward", "count": 1 },
+    "BP17-080EN": { "name": "Steeled Hopes", "count": 3 },
+    "BP17-083EN": { "name": "Roly-Poly Mk II", "count": 3 },
+    "BP17-113EN": { "name": "Hoverboard Mercenary", "count": 2 },
+    "BP07-SL13EN": { "name": "Mono, Garnet Rebel", "count": 3 },
+    "BP12-SL22EN": { "name": "Garnet Waltz", "count": 3 },
+    "BP17-SL20EN": { "name": "Mono, Immortal Garnet", "count": 3 },
+    "SDD05-012EN": { "name": "Dead to Rights", "count": 1 }
+  },
+  "evoDeck": {
+    "BP07-077EN": { "name": "Nicola, Forbidden Strength (Evolved)", "count": 2 },
+    "BP07-U05EN": { "name": "Mono, Garnet Rebel (Evolved)", "count": 3 },
+    "BP17-078EN": { "name": "Aenea, Creative Amethyst (Evolved)", "count": 3 },
+    "BP17-114EN": { "name": "Hoverboard Mercenary (Evolved)", "count": 2 }
+  },
+  "format": "unlimited",
+  "class_universe": null,
+  "exportedAt": "2026-06-08T21:43:36.875Z",
+  "exportFormat": "DingDongDB JSON v1"
+}

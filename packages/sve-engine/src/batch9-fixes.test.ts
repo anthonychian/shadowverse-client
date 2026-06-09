@@ -1,0 +1,144 @@
+import { describe, expect, it, beforeEach } from "vitest";
+import { applyAction } from "./actions/applyAction";
+import { createPlayerView } from "./view/filterView";
+import { createCardInstance, createInitialGameState, resetIdCounter } from "./state/factory";
+import { getEffectiveStats, hasKeyword } from "./state/queries";
+
+function passQuick(state: ReturnType<typeof applyAction>["state"], player: 0 | 1) {
+  return applyAction(state, player, { type: "PASS_QUICK_WINDOW" }).state;
+}
+
+describe("batch 9 regression fixes", () => {
+  beforeEach(() => resetIdCounter());
+
+  it("bane destroys the defender even when the bane attacker dies to combat damage", () => {
+    let state = createInitialGameState(0);
+    state.phase = "main";
+    state.activePlayer = 0;
+    state.pendingChoices = null;
+
+    const baneOneOne = createCardInstance("BP17-079EN", 0);
+    baneOneOne.modifiers.push({ atk: 0, def: 0, sourceId: "test" });
+    const ally = createCardInstance("BP12-T10EN", 0);
+    state.players[0].zones.field.push(ally, baneOneOne);
+    baneOneOne.onFieldSinceTurnStart = true;
+
+    const enemy = createCardInstance("MVP-012", 1);
+    enemy.onFieldSinceTurnStart = true;
+    enemy.engaged = true;
+    state.players[1].zones.field.push(enemy);
+
+    expect(hasKeyword(baneOneOne, "bane", state, 0)).toBe(true);
+
+    const attack = applyAction(state, 0, {
+      type: "ATTACK",
+      attackerId: baneOneOne.instanceId,
+      targetId: enemy.instanceId,
+    });
+    expect(attack.ok).toBe(true);
+    const after =
+      attack.state.quickWindow === "afterAttack" ? passQuick(attack.state, 1) : attack.state;
+    expect(after.players[1].zones.field.length).toBe(0);
+  });
+
+  it("skips after-attack quick window when opponent has no playable quick cards", () => {
+    let state = createInitialGameState(0);
+    state.phase = "main";
+    state.activePlayer = 0;
+    state.pendingChoices = null;
+
+    const atk = createCardInstance("MVP-013", 0);
+    atk.onFieldSinceTurnStart = true;
+    const def = createCardInstance("MVP-012", 1);
+    def.onFieldSinceTurnStart = true;
+    def.engaged = true;
+    state.players[0].zones.field.push(atk);
+    state.players[1].zones.field.push(def);
+
+    const attack = applyAction(state, 0, {
+      type: "ATTACK",
+      attackerId: atk.instanceId,
+      targetId: def.instanceId,
+    });
+    expect(attack.ok).toBe(true);
+    expect(attack.state.quickWindow).toBeNull();
+    expect(attack.state.combat).toBeNull();
+  });
+
+  it("start of end abilities resolve before the opponent end-phase quick window", () => {
+    let state = createInitialGameState(0);
+    state.phase = "main";
+    state.activePlayer = 0;
+    state.pendingChoices = null;
+
+    const leod = createCardInstance("SDD02-006EN", 0);
+    leod.onFieldSinceTurnStart = true;
+    const enemy = createCardInstance("MVP-012", 1);
+    enemy.onFieldSinceTurnStart = true;
+    state.players[0].zones.field.push(leod);
+    state.players[1].zones.field.push(enemy);
+    state.players[1].zones.hand.push(createCardInstance("BP17-T18EN", 1));
+    state.players[1].pp = 1;
+    state.players[1].maxPp = 1;
+
+    const enemyDefBefore = getEffectiveStats(enemy, state).def;
+    let ended = applyAction(state, 0, { type: "END_MAIN" });
+    expect(ended.ok).toBe(true);
+    if (ended.state.pendingChoices?.type === "selectTarget") {
+      ended = applyAction(ended.state, 0, {
+        type: "CHOICE_RESPONSE",
+        payload: { targetId: enemy.instanceId },
+      });
+      expect(ended.ok).toBe(true);
+    }
+    expect(ended.state.quickWindow).toBe("endPhase");
+    const damaged = ended.state.players[1].zones.field[0];
+    expect(getEffectiveStats(damaged, ended.state).def).toBeLessThan(enemyDefBefore);
+  });
+
+  it("super evolve prompts effect order when both on evolve and on super evolve exist", () => {
+    let state = createInitialGameState(0);
+    state.phase = "main";
+    state.activePlayer = 0;
+    state.pendingChoices = null;
+    state.turnNumber = 8;
+    state.players[0].turnsPassed = 7;
+    state.players[0].pp = 5;
+    state.players[0].superEvoPoints = 1;
+    state.players[0].zones.deck.push(createCardInstance("BP17-083EN", 0));
+    state.players[0].zones.cemetery.push(createCardInstance("BP12-T10EN", 0));
+
+    const base = createCardInstance("BP17-077EN", 0);
+    base.onFieldSinceTurnStart = true;
+    const evo = createCardInstance("BP17-078EN", 0);
+    state.players[0].zones.field.push(base);
+    state.players[0].zones.evolveDeck.push(evo);
+
+    const evolved = applyAction(state, 0, {
+      type: "EVOLVE",
+      fieldInstanceId: base.instanceId,
+      evolveDeckInstanceId: evo.instanceId,
+      useSuperEvo: true,
+      useEvoPoint: false,
+    });
+    expect(evolved.ok).toBe(true);
+    expect(evolved.state.pendingChoices?.type).toBe("chooseMultiple");
+  });
+
+  it("only offers pass quick window when quick cards are playable", () => {
+    let state = createInitialGameState(0);
+    state.phase = "main";
+    state.activePlayer = 0;
+    state.quickWindow = "endPhase";
+    state.quickWindowPlayer = 1;
+    state.pendingChoices = null;
+
+    const view = createPlayerView(state, 1);
+    expect(view.legalActions.includes("PASS_QUICK_WINDOW")).toBe(false);
+
+    state.players[1].zones.hand.push(createCardInstance("BP17-T18EN", 1));
+    state.players[1].pp = 1;
+    const viewWithQuick = createPlayerView(state, 1);
+    expect(viewWithQuick.legalActions.includes("PASS_QUICK_WINDOW")).toBe(true);
+  });
+});

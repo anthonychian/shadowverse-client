@@ -80,6 +80,9 @@ import MenuIcon from "@mui/icons-material/Menu";
 import ChatIcon from "@mui/icons-material/Chat";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import ReplayIcon from "@mui/icons-material/Replay";
+import FlagIcon from "@mui/icons-material/Flag";
+import { Stack } from "@mui/material";
+import { useEngineSync } from "../hooks/useEngineSync";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import {
@@ -119,6 +122,10 @@ export default function Selection({ setSelectedOption }) {
 
   // const [rematchNotify, setRematchNotify] = useState(false);
   const reduxRoom = useSelector((state) => state.card.room);
+  const gameMode = useSelector((state) => state.gameState.gameMode);
+  const legalActions = useSelector((state) => state.gameState.legalActions) ?? [];
+  const leaderActive = useSelector((state) => state.card.leaderActive);
+  const { sendAction } = useEngineSync();
 
   const [acceptRematch, setAcceptRematch] = useState(false);
 
@@ -285,6 +292,27 @@ export default function Selection({ setSelectedOption }) {
             </ListItem>
           </List>
           <Divider />
+
+          {gameMode === "automated" && (
+            <>
+              <List>
+                <ListItem key={"concede"} disablePadding>
+                  <ListItemButton
+                    onClick={() => {
+                      sendAction({ type: "CONCEDE" });
+                      handleDrawerClose();
+                    }}
+                  >
+                    <ListItemIcon>
+                      <FlagIcon sx={{ color: "white" }} />
+                    </ListItemIcon>
+                    <ListItemText primary={"Concede"} />
+                  </ListItemButton>
+                </ListItem>
+              </List>
+              <Divider />
+            </>
+          )}
 
           <List>
             <ListItem key={"text"} disablePadding>
@@ -558,25 +586,43 @@ export default function Selection({ setSelectedOption }) {
         </DialogActions>
       </Dialog>
 
-      <IconButton
-        onClick={handleDrawerOpen}
+      <Stack
+        direction="row"
+        spacing={1}
+        alignItems="center"
         sx={{
-          color: "white",
           position: "fixed",
           left: "1%",
           top: "1%",
-          zIndex: "10",
-          backgroundColor: "rgba(0, 0, 0, 1)",
+          zIndex: 1000,
         }}
       >
-        <MenuIcon
+        <IconButton
+          onClick={handleDrawerOpen}
           sx={{
             color: "white",
-            width: "50px",
-            height: "50px",
+            backgroundColor: "rgba(0, 0, 0, 1)",
           }}
-        />
-      </IconButton>
+        >
+          <MenuIcon
+            sx={{
+              color: "white",
+              width: "50px",
+              height: "50px",
+            }}
+          />
+        </IconButton>
+        {gameMode === "automated" && leaderActive && legalActions.includes("END_MAIN") && (
+          <Button
+            variant="contained"
+            size="large"
+            onClick={() => sendAction({ type: "END_MAIN" })}
+            sx={{ fontSize: "1.05rem", px: 3, py: 1.25, fontWeight: 600 }}
+          >
+            End Turn
+          </Button>
+        )}
+      </Stack>
       <Modal
         open={open}
         onClose={handleModalClose}

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useEngineSync } from "../hooks/useEngineSync";
 import { cardImage } from "../../decks/getCards";
 import { socket } from "../../sockets";
 import {
@@ -45,8 +46,15 @@ export default function Cemetery({
   const [cardIndex, setCardIndex] = useState(-1);
 
   const reduxCemetery = useSelector((state) => state.card.cemetery);
+  const cemeteryInstanceIds = useSelector((state) => state.card.cemeteryInstanceIds);
   const reduxBanish = useSelector((state) => state.card.banish);
   const reduxRoom = useSelector((state) => state.card.room);
+  const gameMode = useSelector((state) => state.gameState.gameMode);
+  const legalActions = useSelector((state) => state.gameState.legalActions);
+  const leaderActive = useSelector((state) => state.card.leaderActive);
+  const pendingChoices = useSelector((state) => state.gameState.pendingChoices);
+  const automated = gameMode === "automated";
+  const { sendAction } = useEngineSync();
 
   const handleModalOpen = () => {
     if ((reduxCemetery.length > 0 || reduxBanish.length > 0) && !ready) {
@@ -99,6 +107,23 @@ export default function Cemetery({
     handleClose();
     dispatch(addToBanishFromCemetery({ name: name, index: cardIndex }));
   };
+
+  const handleAutomatedActivateFromCemetery = () => {
+    if (!automated || cardIndex < 0) return;
+    const instanceId = cemeteryInstanceIds[cardIndex];
+    if (!instanceId || !legalActions.includes(`ACTIVATE_CEMETERY:${instanceId}`)) return;
+    sendAction({ type: "ACTIVATE_CEMETERY", cemeteryInstanceId: instanceId });
+    handleClose();
+    handleModalClose();
+  };
+
+  const canActivateFromCemetery =
+    automated &&
+    leaderActive &&
+    !pendingChoices &&
+    cardIndex >= 0 &&
+    cemeteryInstanceIds[cardIndex] &&
+    legalActions.includes(`ACTIVATE_CEMETERY:${cemeteryInstanceIds[cardIndex]}`);
 
   const handleCardToHandFromCemetery = () => {
     handleModalClose();
@@ -311,6 +336,9 @@ export default function Cemetery({
             horizontal: "left",
           }}
         >
+          {cemeterySelected && canActivateFromCemetery && (
+            <MenuItem onClick={handleAutomatedActivateFromCemetery}>Activate</MenuItem>
+          )}
           {cemeterySelected && (
             <MenuItem onClick={handleCardToHandFromCemetery}>Hand</MenuItem>
           )}

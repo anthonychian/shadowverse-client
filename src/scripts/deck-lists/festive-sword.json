@@ -1,0 +1,31 @@
+{
+  "name": "festive sword",
+  "leader": null,
+  "mainDeck": {
+    "BP05-025EN": { "name": "Disciple of Usurpation", "count": 3 },
+    "BP11-018EN": { "name": "Nahtnaught, Cursed Queen", "count": 2 },
+    "BP11-P07EN": { "name": "Naht's Henchman", "count": 2 },
+    "BP14-018EN": { "name": "Taketsumi, Aconite Paladin", "count": 3 },
+    "BP14-022EN": { "name": "Jiemon, Thief Lord", "count": 3 },
+    "BP14-025EN": { "name": "Hero of the Hunt", "count": 3 },
+    "BP14-026EN": { "name": "Masterful Musician", "count": 3 },
+    "BP14-030EN": { "name": "Front Desk Frog", "count": 3 },
+    "BP14-034EN": { "name": "Night on the Town", "count": 3 },
+    "BP14-035EN": { "name": "Haggler's Gambit", "count": 3 },
+    "BP14-115EN": { "name": "Stay in Paradise", "count": 3 },
+    "BP14-118EN": { "name": "Torchbearing Guide", "count": 3 },
+    "BP16-022EN": { "name": "Ginne, Bewitching Courtesan", "count": 3 },
+    "SDD02-006EN": { "name": "Leod, the Crescent Blade", "count": 3 }
+  },
+  "evoDeck": {
+    "BP14-019EN": { "name": "Taketsumi, Creator of Paradise", "count": 2 },
+    "BP14-023EN": { "name": "Jiemon, Thief Lord (Evolved)", "count": 2 },
+    "BP14-027EN": { "name": "Masterful Musician (Evolved)", "count": 2 },
+    "BP14-031EN": { "name": "Front Desk Frog (Evolved)", "count": 3 },
+    "SDD02-007EN": { "name": "Leod, the Crescent Blade (Evolved)", "count": 1 }
+  },
+  "format": "unlimited",
+  "class_universe": null,
+  "exportedAt": "2026-06-08T21:41:50.179Z",
+  "exportFormat": "DingDongDB JSON v1"
+}

@@ -1,0 +1,8 @@
+[
+  {"cardNo":"MVP-001","name":"Strike Fairy","cost":1,"attack":1,"defense":1,"keywords":["storm"]},
+  {"cardNo":"MVP-002","name":"Guardian Knight","cost":2,"attack":1,"defense":3,"keywords":["ward"]},
+  {"cardNo":"MVP-006","name":"Fanfare Scholar","cost":2,"attack":1,"defense":2,"keywords":["fanfare"]},
+  {"cardNo":"MVP-012","name":"Vanilla Soldier","cost":2,"attack":2,"defense":2,"keywords":[]},
+  {"cardNo":"MVP-013","name":"Eager Recruit","cost":1,"attack":1,"defense":1,"evolvesTo":"MVP-014"},
+  {"cardNo":"MVP-014","name":"Eager Recruit Evolved","cost":1,"attack":3,"defense":3,"keywords":["storm"]}
+]

@@ -26,7 +26,11 @@ import {
 } from "../redux/CardSlice";
 import { deleteDeck } from "../redux/DeckSlice";
 import { cardImage } from "../decks/getCards";
-import { socket, saveRoom } from "../sockets";
+import { socket, saveRoom, playerId } from "../sockets";
+import { setGameMode, setPlayerSlot, resetEngine } from "../redux/GameStateSlice";
+import { deckToEnginePayload, defaultMvpDeck } from "../engine/adapter";
+import { applyEnginePayload } from "../engine/sync";
+import { store } from "../redux/store";
 
 import ArrowBackIosNew from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
@@ -67,6 +71,7 @@ export default function Home() {
   const [leaderNum, setLeaderNum] = useState(0);
   const [openSnack, setOpenSnack] = useState(false);
   const [deckIdx, setDeckIdx] = useState(0);
+  const [rulesEnforced, setRulesEnforced] = useState(false);
 
   const reduxDecks = useSelector((state) => state.deck.decks);
   const reduxActiveUsers = useSelector((state) => state.card.activeUsers);
@@ -103,14 +108,41 @@ export default function Home() {
   ];
 
   useEffect(() => {
-    socket.on("start_game", () => {
-      handleNavigateToGame();
-    });
+    const savedMode = sessionStorage.getItem("sve_game_mode");
+    if (savedMode === "automated" || savedMode === "manual") {
+      dispatch(setGameMode(savedMode));
+      if (savedMode === "automated") setRulesEnforced(true);
+    }
 
+    const onStartGame = () => handleNavigateToGame();
+
+    const onEngineState = (views) => {
+      const slot = store.getState().gameState.playerSlot;
+      applyEnginePayload(dispatch, views, slot);
+      handleNavigateToGame();
+    };
+
+    const onJoined = ({ slot, automated }) => {
+      if (automated) {
+        dispatch(setPlayerSlot(slot));
+        dispatch(setGameMode("automated"));
+        socket.emit("request_engine_state");
+      }
+    };
+
+    socket.on("start_game", onStartGame);
+    socket.on("engine_state", onEngineState);
+    socket.on("joined", onJoined);
     socket.on("active_users", (data) => {
       dispatch(setActiveUsers(data));
     });
-  }, [socket]);
+
+    return () => {
+      socket.off("start_game", onStartGame);
+      socket.off("engine_state", onEngineState);
+      socket.off("joined", onJoined);
+    };
+  }, [dispatch, socket]);
 
   useEffect(() => {
     setLeaderImage(randomLeader());
@@ -143,14 +175,36 @@ export default function Home() {
     setOpenDialogue(false);
   };
 
+  const buildEngineDeck = () => {
+    if (!selectedDeck.deck?.length) return defaultMvpDeck();
+    return deckToEnginePayload(selectedDeck.deck, selectedDeck.evoDeck || []);
+  };
+
+  const joinRoomWithMode = (room) => {
+    dispatch(setRoom(room));
+    saveRoom(room);
+    if (rulesEnforced) {
+      dispatch(resetEngine());
+      dispatch(setGameMode("automated"));
+      socket.emit("join_room", {
+        room,
+        playerId,
+        automated: true,
+        deck: buildEngineDeck(),
+      });
+    } else {
+      dispatch(setGameMode("manual"));
+      socket.emit("join_room", room);
+      socket.emit("create_room", room);
+    }
+  };
+
   const handleCreateRoom = () => {
     if (Object.keys(selectedDeck).length !== 0) {
       if (socket.id) {
         const roomNumber = parseInt(Math.random() * 10000000);
         setRoomNumber(roomNumber.toString());
-        dispatch(setRoom(roomNumber.toString()));
-        saveRoom(roomNumber.toString());
-        socket.emit("create_room", roomNumber.toString());
+        joinRoomWithMode(roomNumber.toString());
       }
     }
   };
@@ -158,9 +212,7 @@ export default function Home() {
     if (Object.keys(selectedDeck).length !== 0) {
       if (roomNumber !== "") {
         setRoomNumber(roomNumber.toString());
-        dispatch(setRoom(roomNumber.toString()));
-        saveRoom(roomNumber.toString());
-        socket.emit("join_room", roomNumber.toString());
+        joinRoomWithMode(roomNumber.toString());
       }
     }
   };
@@ -478,6 +530,17 @@ export default function Home() {
                 PLAY
               </div>
             </Button>
+            <Chip
+              label={rulesEnforced ? "Rules Enforced" : "Manual Mode"}
+              color={rulesEnforced ? "success" : "default"}
+              title={
+                rulesEnforced
+                  ? "Requires npm run server in a separate terminal (localhost:5000)"
+                  : "Free-form manual play (no rules engine)"
+              }
+              onClick={() => setRulesEnforced((v) => !v)}
+              sx={{ alignSelf: "center", cursor: "pointer" }}
+            />
             <Button
               onClick={handleJoinRoom}
               sx={{

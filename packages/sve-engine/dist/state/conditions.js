@@ -1,0 +1,79 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.cardMatchesFilter = cardMatchesFilter;
+exports.evalCondition = evalCondition;
+const registry_1 = require("../cards/registry");
+const reprints_1 = require("../cards/reprints");
+const passives_1 = require("./passives");
+const queries_1 = require("./queries");
+function cardMatchesFilter(cardNo, filter) {
+    const def = (0, registry_1.getCardDef)(cardNo);
+    if (!def)
+        return false;
+    if (filter.cardNo && cardNo !== filter.cardNo)
+        return false;
+    if (filter.trait && !def.traits?.includes(filter.trait))
+        return false;
+    if (filter.cardClass && def.class !== filter.cardClass)
+        return false;
+    const cost = (0, queries_1.resolveCardDefCost)(cardNo);
+    if (filter.maxCost != null && cost > filter.maxCost)
+        return false;
+    if (filter.minCost != null && cost < filter.minCost)
+        return false;
+    if (filter.cardType && def.cardType !== filter.cardType)
+        return false;
+    return true;
+}
+function countTraitInZone(state, player, zone, trait) {
+    return (0, queries_1.getPlayer)(state, player).zones[zone].filter((c) => (0, registry_1.getCardDef)((0, queries_1.resolveCardNo)(state, c))?.traits?.includes(trait)).length;
+}
+function evalCondition(state, player, condition) {
+    switch (condition.type) {
+        case "always":
+            return true;
+        case "overflow":
+            return (0, queries_1.isOverflowActive)(state, player);
+        case "combo":
+            return (0, queries_1.getPlayer)(state, player).flags.cardsPlayedThisTurn >= condition.count;
+        case "namedFollowerOnField":
+            return (0, queries_1.getPlayer)(state, player).zones.field.some((c) => c.cardNo === condition.cardNo);
+        case "namedFollowerOnFieldByName":
+            return (0, passives_1.hasNamedFollowerOnFieldByIdentity)(state, player, condition.identityName);
+        case "notEnteredFromHand": {
+            const sourceId = state.resolutionContext?.sourceInstanceId;
+            if (!sourceId)
+                return false;
+            const found = (0, queries_1.findInstance)(state, sourceId);
+            return found?.card.enteredFromHand === false;
+        }
+        case "opponentCemeteryMin": {
+            const opp = (0, queries_1.opponentOf)(player);
+            return (0, queries_1.getPlayer)(state, opp).zones.cemetery.length >= condition.count;
+        }
+        case "exAreaTraitMin":
+            return countTraitInZone(state, player, "exArea", condition.trait) >= condition.count;
+        case "exAreaNamedMin": {
+            const target = (0, reprints_1.normalizeIdentityName)(condition.identityName);
+            const count = (0, queries_1.getPlayer)(state, player).zones.exArea.filter((c) => {
+                const def = (0, registry_1.getCardDef)((0, queries_1.resolveCardNo)(state, c));
+                return def && (0, reprints_1.normalizeIdentityName)(def.name) === target;
+            }).length;
+            return count >= condition.count;
+        }
+        case "ownCemeteryTraitMin":
+            return countTraitInZone(state, player, "cemetery", condition.trait) >= condition.count;
+        case "ownDeckTraitMin":
+            return countTraitInZone(state, player, "deck", condition.trait) >= condition.count;
+        case "fieldTraitMin":
+            return countTraitInZone(state, player, "field", condition.trait) >= condition.count;
+        case "handTraitMin":
+            return countTraitInZone(state, player, "hand", condition.trait) >= condition.count;
+        case "ownCemeteryClassMin":
+            return (0, queries_1.getPlayer)(state, player).zones.cemetery.filter((c) => (0, registry_1.getCardDef)(c.cardNo)?.class === condition.cardClass).length >= condition.count;
+        case "ownDeckClassMin":
+            return (0, queries_1.getPlayer)(state, player).zones.deck.filter((c) => (0, registry_1.getCardDef)(c.cardNo)?.class === condition.cardClass).length >= condition.count;
+        default:
+            return false;
+    }
+}

@@ -10,9 +10,13 @@ import Field from "../components/field/Field";
 import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
 import ZoomedCard from "../components/ui/ZoomedCard";
+import ChoiceModal from "../components/automated/ChoiceModal";
+import AutomatedControls from "../components/automated/AutomatedControls";
+import { useEngineSync } from "../components/hooks/useEngineSync";
 import initialWallpaper from "../../src/assets/wallpapers/3.png";
 
 export default function Game(callback) {
+  useEngineSync();
   const [wallpaper, setWallpaper] = useState(initialWallpaper);
   const [selectedOption, setSelectedOption] = useState("Galmieux");
   const reduxLeader = useSelector((state) => state.card.leader);
@@ -130,6 +134,9 @@ export default function Game(callback) {
       </motion.div>
 
       {/* Right side */}
+      <ChoiceModal />
+      <AutomatedControls />
+
       <div className={"rightSideCanvas"}>
         <div style={rightScaleStyle}>
           <EnemyUI />

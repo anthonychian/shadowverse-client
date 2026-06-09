@@ -11,6 +11,8 @@ import { setPlayPoints } from "../../redux/CardSlice";
 
 export default function Scoreboard({ name }) {
   const dispatch = useDispatch();
+  const gameMode = useSelector((state) => state.gameState.gameMode);
+  const automated = gameMode === "automated";
 
   const reduxMaxPlayPoints = useSelector((state) => state.card.playPoints.max);
   const reduxCurrentPlayPoints = useSelector(
@@ -166,7 +168,7 @@ export default function Scoreboard({ name }) {
           )}
         </div>
       </div>
-      <div className="IncDecContainer">
+      {!automated && <div className="IncDecContainer">
         <div className="inc">
           {reduxMaxPlayPoints < 10 ? (
             <IconButton
@@ -207,9 +209,9 @@ export default function Scoreboard({ name }) {
             </IconButton>
           )}
         </div>
-      </div>
+      </div>}
       {/* </div> */}
-      <div className="buttonsContainer">
+      {!automated && <div className="buttonsContainer">
         <div className="pointsContainer">
           <div className="upArrowContainer">
             {reduxCurrentPlayPoints < 10 && reduxMaxPlayPoints > 0 ? (
@@ -253,8 +255,8 @@ export default function Scoreboard({ name }) {
             )}
           </div>
         </div>
-      </div>
-      <div className="turnContainer">
+      </div>}
+      {!automated && <div className="turnContainer">
         <div className="nextTurnContainer">
           <div className="buttonText" onClick={() => nextTurn()}>
             Next Turn
@@ -265,7 +267,14 @@ export default function Scoreboard({ name }) {
             End Turn
           </div>
         </div>
-      </div>
+      </div>}
+      {automated && (
+        <div className="turnContainer">
+          <div className="points" style={{ color: "white", marginTop: 8 }}>
+            PP automated
+          </div>
+        </div>
+      )}
     </div>
   );
 }

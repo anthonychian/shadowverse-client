@@ -11,6 +11,10 @@ export const CardSlice = createSlice({
     cardback: "",
     enemyCardback: "",
     hand: [],
+    handInstanceIds: [],
+    cemeteryInstanceIds: [],
+    fieldInstanceIds: Array(10).fill(null),
+    enemyFieldInstanceIds: Array(10).fill(null),
     enemyHand: [],
     showDice: false,
     showEnemyHand: false,
@@ -2450,6 +2454,40 @@ export const CardSlice = createSlice({
         });
       }
     },
+    syncFromEngine: (state, action) => {
+      const s = action.payload;
+      if (s.hand !== undefined) state.hand = s.hand;
+      if (s.handInstanceIds !== undefined) state.handInstanceIds = s.handInstanceIds;
+      if (s.fieldInstanceIds !== undefined) state.fieldInstanceIds = s.fieldInstanceIds;
+      if (s.enemyFieldInstanceIds !== undefined) {
+        state.enemyFieldInstanceIds = s.enemyFieldInstanceIds;
+      }
+      if (s.field !== undefined) state.field = s.field;
+      if (s.evoField !== undefined) state.evoField = s.evoField;
+      if (s.engagedField !== undefined) state.engagedField = s.engagedField;
+      if (s.customValues !== undefined) state.customValues = s.customValues;
+      if (s.wardField !== undefined) state.wardField = s.wardField;
+      if (s.baneField !== undefined) state.baneField = s.baneField;
+      if (s.auraField !== undefined) state.auraField = s.auraField;
+      if (s.cemetery !== undefined) state.cemetery = s.cemetery;
+      if (s.cemeteryInstanceIds !== undefined) state.cemeteryInstanceIds = s.cemeteryInstanceIds;
+      if (s.deck !== undefined) state.deck = s.deck;
+      if (s.playPoints !== undefined) state.playPoints = s.playPoints;
+      if (s.evoPoints !== undefined) state.evoPoints = s.evoPoints;
+      if (s.playerHealth !== undefined) state.playerHealth = s.playerHealth;
+      if (s.leaderActive !== undefined) state.leaderActive = s.leaderActive;
+      if (s.superEvoActive !== undefined) state.superEvoActive = s.superEvoActive;
+      if (s.enemyHand !== undefined) state.enemyHand = s.enemyHand;
+      if (s.enemyField !== undefined) state.enemyField = s.enemyField;
+      if (s.enemyEvoField !== undefined) state.enemyEvoField = s.enemyEvoField;
+      if (s.enemyEngagedField !== undefined) state.enemyEngagedField = s.enemyEngagedField;
+      if (s.enemyCustomValues !== undefined) state.enemyCustomValues = s.enemyCustomValues;
+      if (s.enemyCemetery !== undefined) state.enemyCemetery = s.enemyCemetery;
+      if (s.enemyPlayPoints !== undefined) state.enemyPlayPoints = s.enemyPlayPoints;
+      if (s.enemyEvoPoints !== undefined) state.enemyEvoPoints = s.enemyEvoPoints;
+      if (s.enemyHealth !== undefined) state.enemyHealth = s.enemyHealth;
+      if (s.enemyLeaderActive !== undefined) state.enemyLeaderActive = s.enemyLeaderActive;
+    },
     restoreOwnState: (state, action) => {
       const s = action.payload;
       if (s.field !== undefined) state.field = s.field;
@@ -2811,6 +2849,7 @@ export const {
   createLessonTokens,
   shuffleCards,
   restoreOwnState,
+  syncFromEngine,
   reset,
   exitGame,
   setSuperEvoActive,

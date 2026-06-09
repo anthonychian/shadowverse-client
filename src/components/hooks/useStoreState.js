@@ -10,8 +10,8 @@ const useStoreState = () => {
   const flushState = useCallback(() => {
     if (timerRef.current) clearTimeout(timerRef.current);
     timerRef.current = null;
-    const { card } = store.getState();
-    if (!card.room) return;
+    const { card, gameState } = store.getState();
+    if (!card.room || gameState.gameMode === "automated") return;
     // Durable per-tab save (survives reload + server restart) ...
     saveState(card.room, card);
     // ... and the server-side snapshot (lets the opponent / a fresh device pull it).

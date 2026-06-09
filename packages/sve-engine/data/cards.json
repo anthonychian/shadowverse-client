@@ -1,0 +1,2601 @@
+{
+  "BP17-001EN": {
+    "cardNo": "BP17-001EN",
+    "name": "Arisa, Evergreen Arrow",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-001EN.png"
+  },
+  "BP17-002EN": {
+    "cardNo": "BP17-002EN",
+    "name": "Ladica, Verdant Claw",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-002EN.png"
+  },
+  "BP17-003EN": {
+    "cardNo": "BP17-003EN",
+    "name": "Ladica, Verdant Claw Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-003EN.png"
+  },
+  "BP17-004EN": {
+    "cardNo": "BP17-004EN",
+    "name": "Setus, Sunlit Hero",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-004EN.png"
+  },
+  "BP17-005EN": {
+    "cardNo": "BP17-005EN",
+    "name": "Lococo, Little Puppeteer",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-005EN.png"
+  },
+  "BP17-006EN": {
+    "cardNo": "BP17-006EN",
+    "name": "Lococo, Little Puppeteer Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-006EN.png"
+  },
+  "BP17-007EN": {
+    "cardNo": "BP17-007EN",
+    "name": "Friendly Embrace",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-007EN.png"
+  },
+  "BP17-008EN": {
+    "cardNo": "BP17-008EN",
+    "name": "Forest Guardian's Bow",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-008EN.png"
+  },
+  "BP17-009EN": {
+    "cardNo": "BP17-009EN",
+    "name": "Beastfolk Harvester",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-009EN.png"
+  },
+  "BP17-010EN": {
+    "cardNo": "BP17-010EN",
+    "name": "Beastfolk Harvester Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-010EN.png"
+  },
+  "BP17-011EN": {
+    "cardNo": "BP17-011EN",
+    "name": "Heroic Resolve",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-011EN.png"
+  },
+  "BP17-012EN": {
+    "cardNo": "BP17-012EN",
+    "name": "Inverted Manipulation",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-012EN.png"
+  },
+  "BP17-013EN": {
+    "cardNo": "BP17-013EN",
+    "name": "Blossom Treant",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-013EN.png"
+  },
+  "BP17-014EN": {
+    "cardNo": "BP17-014EN",
+    "name": "Blossom Treant Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-014EN.png"
+  },
+  "BP17-015EN": {
+    "cardNo": "BP17-015EN",
+    "name": "Sköll Lookout",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-015EN.png"
+  },
+  "BP17-016EN": {
+    "cardNo": "BP17-016EN",
+    "name": "Elf Sorcerer",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-016EN.png"
+  },
+  "BP17-017EN": {
+    "cardNo": "BP17-017EN",
+    "name": "Threadsnipper Puppet",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-017EN.png"
+  },
+  "BP17-018EN": {
+    "cardNo": "BP17-018EN",
+    "name": "Heroic Fairy Champion",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-018EN.png"
+  },
+  "BP17-019EN": {
+    "cardNo": "BP17-019EN",
+    "name": "Erika, Loyal Swordsavant",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-019EN.png"
+  },
+  "BP17-020EN": {
+    "cardNo": "BP17-020EN",
+    "name": "Mistolina & Bayleon",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-020EN.png"
+  },
+  "BP17-021EN": {
+    "cardNo": "BP17-021EN",
+    "name": "Mistolina & Bayleon Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-021EN.png"
+  },
+  "BP17-022EN": {
+    "cardNo": "BP17-022EN",
+    "name": "Leod, Moonlit Executioner",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-022EN.png"
+  },
+  "BP17-023EN": {
+    "cardNo": "BP17-023EN",
+    "name": "Frenzied Corpsmaster",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-023EN.png"
+  },
+  "BP17-024EN": {
+    "cardNo": "BP17-024EN",
+    "name": "Frenzied Corpsmaster Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-024EN.png"
+  },
+  "BP17-025EN": {
+    "cardNo": "BP17-025EN",
+    "name": "Sunny Day Encounter",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-025EN.png"
+  },
+  "BP17-026EN": {
+    "cardNo": "BP17-026EN",
+    "name": "Killer Instincts",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-026EN.png"
+  },
+  "BP17-027EN": {
+    "cardNo": "BP17-027EN",
+    "name": "Valhorean Dealer",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-027EN.png"
+  },
+  "BP17-028EN": {
+    "cardNo": "BP17-028EN",
+    "name": "Valhorean Dealer Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-028EN.png"
+  },
+  "BP17-029EN": {
+    "cardNo": "BP17-029EN",
+    "name": "Bladerights Lieutenant",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-029EN.png"
+  },
+  "BP17-030EN": {
+    "cardNo": "BP17-030EN",
+    "name": "Shadowed Memories",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-030EN.png"
+  },
+  "BP17-031EN": {
+    "cardNo": "BP17-031EN",
+    "name": "Fox Lancer",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-031EN.png"
+  },
+  "BP17-032EN": {
+    "cardNo": "BP17-032EN",
+    "name": "Fox Lancer Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-032EN.png"
+  },
+  "BP17-033EN": {
+    "cardNo": "BP17-033EN",
+    "name": "Stone Merchant",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-033EN.png"
+  },
+  "BP17-034EN": {
+    "cardNo": "BP17-034EN",
+    "name": "Victorious Grappler",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-034EN.png"
+  },
+  "BP17-035EN": {
+    "cardNo": "BP17-035EN",
+    "name": "Countersolari Survivor",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-035EN.png"
+  },
+  "BP17-036EN": {
+    "cardNo": "BP17-036EN",
+    "name": "Brothers United",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-036EN.png"
+  },
+  "BP17-037EN": {
+    "cardNo": "BP17-037EN",
+    "name": "Isabelle, Intrepid Mage",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-037EN.png"
+  },
+  "BP17-038EN": {
+    "cardNo": "BP17-038EN",
+    "name": "Isabelle, Intrepid Mage Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-038EN.png"
+  },
+  "BP17-039EN": {
+    "cardNo": "BP17-039EN",
+    "name": "Eleanor, Glorious Flower",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-039EN.png"
+  },
+  "BP17-040EN": {
+    "cardNo": "BP17-040EN",
+    "name": "Belphomet, Ultimate Creator",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-040EN.png"
+  },
+  "BP17-041EN": {
+    "cardNo": "BP17-041EN",
+    "name": "Tetra, Serene Sapphire",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-041EN.png"
+  },
+  "BP17-042EN": {
+    "cardNo": "BP17-042EN",
+    "name": "Tetra, Serene Sapphire Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-042EN.png"
+  },
+  "BP17-043EN": {
+    "cardNo": "BP17-043EN",
+    "name": "Mega Enforcer",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-043EN.png"
+  },
+  "BP17-044EN": {
+    "cardNo": "BP17-044EN",
+    "name": "Nefarious Invasion",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-044EN.png"
+  },
+  "BP17-045EN": {
+    "cardNo": "BP17-045EN",
+    "name": "Marie, Flowery Magician",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-045EN.png"
+  },
+  "BP17-046EN": {
+    "cardNo": "BP17-046EN",
+    "name": "Marie, Flowery Magician Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-046EN.png"
+  },
+  "BP17-047EN": {
+    "cardNo": "BP17-047EN",
+    "name": "Enforcer",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-047EN.png"
+  },
+  "BP17-048EN": {
+    "cardNo": "BP17-048EN",
+    "name": "Fruits of Wisdom",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-048EN.png"
+  },
+  "BP17-049EN": {
+    "cardNo": "BP17-049EN",
+    "name": "Awakened Robot",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-049EN.png"
+  },
+  "BP17-050EN": {
+    "cardNo": "BP17-050EN",
+    "name": "Awakened Robot Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-050EN.png"
+  },
+  "BP17-051EN": {
+    "cardNo": "BP17-051EN",
+    "name": "Covenant Mage",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-051EN.png"
+  },
+  "BP17-052EN": {
+    "cardNo": "BP17-052EN",
+    "name": "Jetbroom Witch",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-052EN.png"
+  },
+  "BP17-053EN": {
+    "cardNo": "BP17-053EN",
+    "name": "Panacea Alchemist",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-053EN.png"
+  },
+  "BP17-054EN": {
+    "cardNo": "BP17-054EN",
+    "name": "Mysterian Wisdom",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-054EN.png"
+  },
+  "BP17-055EN": {
+    "cardNo": "BP17-055EN",
+    "name": "Rowen, Dragon Lance",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-055EN.png"
+  },
+  "BP17-056EN": {
+    "cardNo": "BP17-056EN",
+    "name": "Valdain, Forest Shadow",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-056EN.png"
+  },
+  "BP17-057EN": {
+    "cardNo": "BP17-057EN",
+    "name": "Disrestan, Ocean Harbinger",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-057EN.png"
+  },
+  "BP17-058EN": {
+    "cardNo": "BP17-058EN",
+    "name": "Disrestan, Ocean Harbinger Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-058EN.png"
+  },
+  "BP17-059EN": {
+    "cardNo": "BP17-059EN",
+    "name": "Djeana, the Stouthearted",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-059EN.png"
+  },
+  "BP17-060EN": {
+    "cardNo": "BP17-060EN",
+    "name": "Djeana, the Stouthearted Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-060EN.png"
+  },
+  "BP17-061EN": {
+    "cardNo": "BP17-061EN",
+    "name": "Verdant Rebirth",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-061EN.png"
+  },
+  "BP17-062EN": {
+    "cardNo": "BP17-062EN",
+    "name": "Dragonslayer Spear",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-062EN.png"
+  },
+  "BP17-063EN": {
+    "cardNo": "BP17-063EN",
+    "name": "Forestclaw Sentinel",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-063EN.png"
+  },
+  "BP17-064EN": {
+    "cardNo": "BP17-064EN",
+    "name": "Forestclaw Sentinel Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-064EN.png"
+  },
+  "BP17-065EN": {
+    "cardNo": "BP17-065EN",
+    "name": "Rock Whale",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-065EN.png"
+  },
+  "BP17-066EN": {
+    "cardNo": "BP17-066EN",
+    "name": "Newfound Allies",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-066EN.png"
+  },
+  "BP17-067EN": {
+    "cardNo": "BP17-067EN",
+    "name": "Shark Warrior",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-067EN.png"
+  },
+  "BP17-068EN": {
+    "cardNo": "BP17-068EN",
+    "name": "Shark Warrior Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-068EN.png"
+  },
+  "BP17-069EN": {
+    "cardNo": "BP17-069EN",
+    "name": "Poisonous Dilophosaurus",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-069EN.png"
+  },
+  "BP17-070EN": {
+    "cardNo": "BP17-070EN",
+    "name": "Mánagarmr Scout",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-070EN.png"
+  },
+  "BP17-071EN": {
+    "cardNo": "BP17-071EN",
+    "name": "Mermaid Archer",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-071EN.png"
+  },
+  "BP17-072EN": {
+    "cardNo": "BP17-072EN",
+    "name": "Touching Thoughts",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-072EN.png"
+  },
+  "BP17-073EN": {
+    "cardNo": "BP17-073EN",
+    "name": "Luna, Soul Keeper",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-073EN.png"
+  },
+  "BP17-074EN": {
+    "cardNo": "BP17-074EN",
+    "name": "Urias, Final Vampire",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-074EN.png"
+  },
+  "BP17-075EN": {
+    "cardNo": "BP17-075EN",
+    "name": "Urias, Final Vampire Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-075EN.png"
+  },
+  "BP17-076EN": {
+    "cardNo": "BP17-076EN",
+    "name": "Mono, Immortal Garnet",
+    "type": "base",
+    "cardType": "follower",
+    "class": "abyss",
+    "traits": [
+      "Machina",
+      "Demon"
+    ],
+    "cost": 3,
+    "attack": 2,
+    "defense": 2,
+    "cardText": "[fanfare]  Summon an Assembly Droid token.\nStrike - Select an enemy follower on the field and deal it damage equal to the number of other Machina followers on your field.\n[act]  [cost00] : Give this [attack] +1/[defense] +1 and Storm. Activate only if there are 5 Machina followers on your field, and only once per turn.",
+    "keywords": [
+      "fanfare"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP17-T17EN",
+      "BP17-SL20EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-076EN.png",
+    "reprintOf": "BP17-SL20EN"
+  },
+  "BP17-077EN": {
+    "cardNo": "BP17-077EN",
+    "name": "Aenea, Creative Amethyst",
+    "type": "base",
+    "cardType": "follower",
+    "class": "abyss",
+    "traits": [
+      "Machina",
+      "Demon"
+    ],
+    "cost": 2,
+    "attack": 1,
+    "defense": 1,
+    "cardText": "[evolve]  [cost01] : Evolve this.",
+    "keywords": [
+      "evolve"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP17-078EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-077EN.png",
+    "evolvesTo": "BP17-078EN"
+  },
+  "BP17-078EN": {
+    "cardNo": "BP17-078EN",
+    "name": "Aenea, Creative Amethyst Evolved",
+    "type": "evolved",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "class": "abyss",
+    "traits": [
+      "Machina",
+      "Demon"
+    ],
+    "cost": null,
+    "attack": 2,
+    "defense": 2,
+    "cardText": "On Evolve - Search your deck for a Roly-Poly Mk II, summon it, then shuffle.\nOn Super-Evolve - Select a Machina card in your cemetery and put it into your EX area. It costs 3 less to play this turn.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP17-077EN",
+      "BP17-083EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-078EN.png",
+    "evolvesFrom": "BP17-077EN"
+  },
+  "BP17-079EN": {
+    "cardNo": "BP17-079EN",
+    "name": "Nicola, Enduring Steward",
+    "type": "base",
+    "cardType": "follower",
+    "class": "abyss",
+    "traits": [
+      "Machina",
+      "Departed"
+    ],
+    "cost": 2,
+    "attack": 1,
+    "defense": 2,
+    "cardText": "While there's another Machina follower on your field, this has Rush and Bane.\n[fanfare]  If this wasn't put onto the field from hand, give it Assail.\n[lastwords]  Discard 2 Machina cards: Put this into its owner's EX area and give it \"This costs 1 less to play.\"",
+    "keywords": [
+      "fanfare"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-079EN.png"
+  },
+  "BP17-080EN": {
+    "cardNo": "BP17-080EN",
+    "name": "Steeled Hopes",
+    "type": "base",
+    "cardType": "spell",
+    "class": "abyss",
+    "traits": [
+      "Machina",
+      "Demon"
+    ],
+    "cost": 1,
+    "attack": null,
+    "defense": null,
+    "cardText": "Choose 1. (1) Search your deck for a Machina follower, reveal it, add it to your hand, then shuffle. (2) [cost06] : Search your deck for a Machina follower that costs 4 or less, a Machina follower that costs 3 or less, and a Machina follower that costs 2 or less, summon them, then shuffle.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-080EN.png"
+  },
+  "BP17-081EN": {
+    "cardNo": "BP17-081EN",
+    "name": "Amy, Psychopomp Guide",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-081EN.png"
+  },
+  "BP17-082EN": {
+    "cardNo": "BP17-082EN",
+    "name": "Amy, Psychopomp Guide Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-082EN.png"
+  },
+  "BP17-083EN": {
+    "cardNo": "BP17-083EN",
+    "name": "Roly-Poly Mk II",
+    "type": "base",
+    "cardType": "follower",
+    "class": "abyss",
+    "traits": [
+      "Machina",
+      "Demon"
+    ],
+    "cost": 2,
+    "attack": 1,
+    "defense": 3,
+    "cardText": "Ward.\n[fanfare]  Look at the top 2 cards of your deck. You may reveal a Machina card from among them and add it to your hand. Bury the rest.",
+    "keywords": [
+      "fanfare"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-083EN.png"
+  },
+  "BP17-084EN": {
+    "cardNo": "BP17-084EN",
+    "name": "Allure of Shadows",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-084EN.png"
+  },
+  "BP17-085EN": {
+    "cardNo": "BP17-085EN",
+    "name": "Rouge Vampire",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-085EN.png"
+  },
+  "BP17-086EN": {
+    "cardNo": "BP17-086EN",
+    "name": "Rouge Vampire Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-086EN.png"
+  },
+  "BP17-087EN": {
+    "cardNo": "BP17-087EN",
+    "name": "Vampiric Bloodbinder",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-087EN.png"
+  },
+  "BP17-088EN": {
+    "cardNo": "BP17-088EN",
+    "name": "Trampling Terror",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-088EN.png"
+  },
+  "BP17-089EN": {
+    "cardNo": "BP17-089EN",
+    "name": "Soul Commander",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-089EN.png"
+  },
+  "BP17-090EN": {
+    "cardNo": "BP17-090EN",
+    "name": "Midnight Gossip",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-090EN.png"
+  },
+  "BP17-091EN": {
+    "cardNo": "BP17-091EN",
+    "name": "Eris, Atoned Priestess",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-091EN.png"
+  },
+  "BP17-092EN": {
+    "cardNo": "BP17-092EN",
+    "name": "Relic Goddess",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-092EN.png"
+  },
+  "BP17-093EN": {
+    "cardNo": "BP17-093EN",
+    "name": "Yuwan, Dimensional Avenger",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-093EN.png"
+  },
+  "BP17-094EN": {
+    "cardNo": "BP17-094EN",
+    "name": "Yuwan, Dimensional Avenger Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-094EN.png"
+  },
+  "BP17-095EN": {
+    "cardNo": "BP17-095EN",
+    "name": "Meowskers, Fluffy Consul",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-095EN.png"
+  },
+  "BP17-096EN": {
+    "cardNo": "BP17-096EN",
+    "name": "Marlone, Peace Advocate",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-096EN.png"
+  },
+  "BP17-097EN": {
+    "cardNo": "BP17-097EN",
+    "name": "Marlone, Peace Advocate Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-097EN.png"
+  },
+  "BP17-098EN": {
+    "cardNo": "BP17-098EN",
+    "name": "Vice, Death Grip",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-098EN.png"
+  },
+  "BP17-099EN": {
+    "cardNo": "BP17-099EN",
+    "name": "Automachina Maiden",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-099EN.png"
+  },
+  "BP17-100EN": {
+    "cardNo": "BP17-100EN",
+    "name": "Aerial Craft",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-100EN.png"
+  },
+  "BP17-101EN": {
+    "cardNo": "BP17-101EN",
+    "name": "Aerial Craft Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-101EN.png"
+  },
+  "BP17-102EN": {
+    "cardNo": "BP17-102EN",
+    "name": "Balance and Obliteration",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-102EN.png"
+  },
+  "BP17-103EN": {
+    "cardNo": "BP17-103EN",
+    "name": "Unlikely Fellowship",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-103EN.png"
+  },
+  "BP17-104EN": {
+    "cardNo": "BP17-104EN",
+    "name": "Steelwing",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-104EN.png"
+  },
+  "BP17-105EN": {
+    "cardNo": "BP17-105EN",
+    "name": "Steelwing Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-105EN.png"
+  },
+  "BP17-106EN": {
+    "cardNo": "BP17-106EN",
+    "name": "Technomancer",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-106EN.png"
+  },
+  "BP17-107EN": {
+    "cardNo": "BP17-107EN",
+    "name": "Android Artisan",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-107EN.png"
+  },
+  "BP17-108EN": {
+    "cardNo": "BP17-108EN",
+    "name": "Mark Unleashed",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-108EN.png"
+  },
+  "BP17-109EN": {
+    "cardNo": "BP17-109EN",
+    "name": "Unicorn Altar",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-109EN.png"
+  },
+  "BP17-110EN": {
+    "cardNo": "BP17-110EN",
+    "name": "Maisha, Purgation's Vessel",
+    "type": "base",
+    "class": "neutral",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-110EN.png"
+  },
+  "BP17-111EN": {
+    "cardNo": "BP17-111EN",
+    "name": "Maisha, Purgation's Vessel Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-111EN.png"
+  },
+  "BP17-112EN": {
+    "cardNo": "BP17-112EN",
+    "name": "Great Mother's Embrace",
+    "type": "base",
+    "class": "neutral",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-112EN.png"
+  },
+  "BP17-113EN": {
+    "cardNo": "BP17-113EN",
+    "name": "Hoverboard Mercenary",
+    "type": "base",
+    "cardType": "follower",
+    "class": "neutral",
+    "traits": [
+      "Machina",
+      "Mercenary"
+    ],
+    "cost": 2,
+    "attack": 1,
+    "defense": 1,
+    "cardText": "[evolve]  [cost01] : Evolve this.\n[fanfare]  Summon an Assembly Droid token. Put a Repair Mode token into your EX area.",
+    "keywords": [
+      "fanfare",
+      "evolve"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP17-114EN",
+      "BP17-T17EN",
+      "BP17-T18EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-113EN.png",
+    "evolvesTo": "BP17-114EN"
+  },
+  "BP17-114EN": {
+    "cardNo": "BP17-114EN",
+    "name": "Hoverboard Mercenary Evolved",
+    "type": "evolved",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "class": "neutral",
+    "traits": [
+      "Machina",
+      "Mercenary"
+    ],
+    "cost": null,
+    "attack": 2,
+    "defense": 2,
+    "cardText": "On Evolve - Summon an Assembly Droid token. Put a Repair Mode token into your EX area.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP17-113EN",
+      "BP17-T17EN",
+      "BP17-T18EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-114EN.png",
+    "evolvesFrom": "BP17-113EN"
+  },
+  "BP17-115EN": {
+    "cardNo": "BP17-115EN",
+    "name": "Cosmic Angel",
+    "type": "base",
+    "class": "neutral",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-115EN.png"
+  },
+  "BP17-116EN": {
+    "cardNo": "BP17-116EN",
+    "name": "Guild Assembly",
+    "type": "base",
+    "class": "neutral",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-116EN.png"
+  },
+  "BP17-117EN": {
+    "cardNo": "BP17-117EN",
+    "name": "Naterra's Future",
+    "type": "base",
+    "class": "neutral",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-117EN.png"
+  },
+  "BP17-118EN": {
+    "cardNo": "BP17-118EN",
+    "name": "Unnamed Determination",
+    "type": "base",
+    "class": "neutral",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-118EN.png"
+  },
+  "BP17-119EN": {
+    "cardNo": "BP17-119EN",
+    "name": "Aiolon's Remains",
+    "type": "base",
+    "class": "neutral",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-119EN.png"
+  },
+  "BP17-T01EN": {
+    "cardNo": "BP17-T01EN",
+    "name": "Lococo's Teddy Bear TOKEN",
+    "type": "token",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T01EN.png"
+  },
+  "BP17-T02EN": {
+    "cardNo": "BP17-T02EN",
+    "name": "Gale Arrow TOKEN",
+    "type": "token",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T02EN.png"
+  },
+  "BP17-T03EN": {
+    "cardNo": "BP17-T03EN",
+    "name": "Storm Arrow TOKEN",
+    "type": "token",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T03EN.png"
+  },
+  "BP17-T04EN": {
+    "cardNo": "BP17-T04EN",
+    "name": "Quadra Magic TOKEN",
+    "type": "token",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T04EN.png"
+  },
+  "BP17-T05EN": {
+    "cardNo": "BP17-T05EN",
+    "name": "Elements of Creation TOKEN",
+    "type": "token",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T05EN.png"
+  },
+  "BP17-T06EN": {
+    "cardNo": "BP17-T06EN",
+    "name": "Curse of the Black Dragon TOKEN",
+    "type": "token",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T06EN.png"
+  },
+  "BP17-T07EN": {
+    "cardNo": "BP17-T07EN",
+    "name": "A Horrible Night TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T07EN.png"
+  },
+  "BP17-T08EN": {
+    "cardNo": "BP17-T08EN",
+    "name": "Luna's Doll TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T08EN.png"
+  },
+  "BP17-T09EN": {
+    "cardNo": "BP17-T09EN",
+    "name": "Eschamali Adviser TOKEN",
+    "type": "token",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T09EN.png"
+  },
+  "BP17-T10EN": {
+    "cardNo": "BP17-T10EN",
+    "name": "Eschamali Constable TOKEN",
+    "type": "token",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T10EN.png"
+  },
+  "BP17-T11EN": {
+    "cardNo": "BP17-T11EN",
+    "name": "Knight TOKEN",
+    "type": "token",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T11EN.png"
+  },
+  "BP17-T12EN": {
+    "cardNo": "BP17-T12EN",
+    "name": "Steelclad Knight TOKEN",
+    "type": "token",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T12EN.png"
+  },
+  "BP17-T13EN": {
+    "cardNo": "BP17-T13EN",
+    "name": "Shield Guardian TOKEN",
+    "type": "token",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T13EN.png"
+  },
+  "BP17-T14EN": {
+    "cardNo": "BP17-T14EN",
+    "name": "Armored Tentacle TOKEN",
+    "type": "token",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T14EN.png"
+  },
+  "BP17-T15EN": {
+    "cardNo": "BP17-T15EN",
+    "name": "Assault Tentacle TOKEN",
+    "type": "token",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T15EN.png"
+  },
+  "BP17-T16EN": {
+    "cardNo": "BP17-T16EN",
+    "name": "Ancient Artifact TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T16EN.png"
+  },
+  "BP17-T17EN": {
+    "cardNo": "BP17-T17EN",
+    "name": "Assembly Droid TOKEN",
+    "type": "token",
+    "cardType": "follower",
+    "specialType": "token",
+    "class": "neutral",
+    "traits": [
+      "Machina"
+    ],
+    "cost": 1,
+    "attack": 1,
+    "defense": 1,
+    "cardText": "[act]  [engage] , bury 3 Machina followers: Select an enemy follower on the field and deal it 5 damage.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T17EN.png",
+    "reprintOf": "BP12-T10EN"
+  },
+  "BP17-T18EN": {
+    "cardNo": "BP17-T18EN",
+    "name": "Repair Mode TOKEN",
+    "type": "token",
+    "cardType": "spell",
+    "specialType": "token",
+    "class": "neutral",
+    "traits": [
+      "Machina"
+    ],
+    "cost": 1,
+    "attack": null,
+    "defense": null,
+    "cardText": "[quick]\nGive your leader [defense] +1.",
+    "keywords": [
+      "quick"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T18EN.png"
+  },
+  "BP17-T19EN": {
+    "cardNo": "BP17-T19EN",
+    "name": "Naterran Great Tree TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T19EN.png"
+  },
+  "BP17-SL20EN": {
+    "cardNo": "BP17-SL20EN",
+    "name": "Mono, Immortal Garnet",
+    "type": "base",
+    "cardType": "follower",
+    "class": "abyss",
+    "traits": [
+      "Machina",
+      "Demon"
+    ],
+    "cost": 3,
+    "attack": 2,
+    "defense": 2,
+    "cardText": "[fanfare]  Summon an Assembly Droid token.\nStrike - Select an enemy follower on the field and deal it damage equal to the number of other Machina followers on your field.\n[act]  [cost00] : Give this [attack] +1/[defense] +1 and Storm. Activate only if there are 5 Machina followers on your field, and only once per turn.",
+    "keywords": [
+      "fanfare"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP17-T17EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-SL20EN.png",
+    "reprintOf": "BP17-076EN"
+  },
+  "ECP02-001EN": {
+    "cardNo": "ECP02-001EN",
+    "name": "Anastasia [Seize the Light]",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-001EN.png"
+  },
+  "ECP02-002EN": {
+    "cardNo": "ECP02-002EN",
+    "name": "Anastasia [Seize the Light] Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-002EN.png"
+  },
+  "ECP02-003EN": {
+    "cardNo": "ECP02-003EN",
+    "name": "Hajime Fujiwara [Pink Blossom Dream]",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-003EN.png"
+  },
+  "ECP02-004EN": {
+    "cardNo": "ECP02-004EN",
+    "name": "Minami Nitta [Water's Edge Bride]",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-004EN.png"
+  },
+  "ECP02-005EN": {
+    "cardNo": "ECP02-005EN",
+    "name": "Yuki Himekawa [Full Swing☆Cheer]",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-005EN.png"
+  },
+  "ECP02-006EN": {
+    "cardNo": "ECP02-006EN",
+    "name": "Riina Tada [Wannabe Legend]",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-006EN.png"
+  },
+  "ECP02-007EN": {
+    "cardNo": "ECP02-007EN",
+    "name": "Riina Tada [Wannabe Legend] Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-007EN.png"
+  },
+  "ECP02-008EN": {
+    "cardNo": "ECP02-008EN",
+    "name": "Hinako Kita [True Dream]",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-008EN.png"
+  },
+  "ECP02-009EN": {
+    "cardNo": "ECP02-009EN",
+    "name": "Hinako Kita [True Dream] Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-009EN.png"
+  },
+  "ECP02-010EN": {
+    "cardNo": "ECP02-010EN",
+    "name": "Miku Maekawa [Meownderful World]",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-010EN.png"
+  },
+  "ECP02-011EN": {
+    "cardNo": "ECP02-011EN",
+    "name": "Blossoms' Advance",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-011EN.png"
+  },
+  "ECP02-012EN": {
+    "cardNo": "ECP02-012EN",
+    "name": "Rin Shibuya [Cinderella Girl]",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-012EN.png"
+  },
+  "ECP02-013EN": {
+    "cardNo": "ECP02-013EN",
+    "name": "Mio Honda [Cinderella Girl]",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-013EN.png"
+  },
+  "ECP02-014EN": {
+    "cardNo": "ECP02-014EN",
+    "name": "Mio Honda [Cinderella Girl] Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-014EN.png"
+  },
+  "ECP02-015EN": {
+    "cardNo": "ECP02-015EN",
+    "name": "Uzuki Shimamura [Cinderella Girl]",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-015EN.png"
+  },
+  "ECP02-016EN": {
+    "cardNo": "ECP02-016EN",
+    "name": "Karen Hojo [Cinderella Girl]",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-016EN.png"
+  },
+  "ECP02-017EN": {
+    "cardNo": "ECP02-017EN",
+    "name": "Airi Totoki [Cinderella Girl]",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-017EN.png"
+  },
+  "ECP02-018EN": {
+    "cardNo": "ECP02-018EN",
+    "name": "Airi Totoki [Cinderella Girl] Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-018EN.png"
+  },
+  "ECP02-019EN": {
+    "cardNo": "ECP02-019EN",
+    "name": "Mayu Sakuma [Love-Laden Gift]",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-019EN.png"
+  },
+  "ECP02-020EN": {
+    "cardNo": "ECP02-020EN",
+    "name": "Mayu Sakuma [Love-Laden Gift] Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-020EN.png"
+  },
+  "ECP02-021EN": {
+    "cardNo": "ECP02-021EN",
+    "name": "Chieri Ogata [Happiness Tune]",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-021EN.png"
+  },
+  "ECP02-022EN": {
+    "cardNo": "ECP02-022EN",
+    "name": "Chieri Ogata [Happiness Tune] Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-022EN.png"
+  },
+  "ECP02-023EN": {
+    "cardNo": "ECP02-023EN",
+    "name": "Nagi Hisakawa [Everyday Fairy Tale]",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-023EN.png"
+  },
+  "ECP02-024EN": {
+    "cardNo": "ECP02-024EN",
+    "name": "Miho Kohinata [Youthful Romance]",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-024EN.png"
+  },
+  "ECP02-025EN": {
+    "cardNo": "ECP02-025EN",
+    "name": "Dancing in the Rain",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-025EN.png"
+  },
+  "ECP02-026EN": {
+    "cardNo": "ECP02-026EN",
+    "name": "Syuko Shiomi [Cinderella Girl]",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-026EN.png"
+  },
+  "ECP02-027EN": {
+    "cardNo": "ECP02-027EN",
+    "name": "Mika Jougasaki [My★Style]",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-027EN.png"
+  },
+  "ECP02-028EN": {
+    "cardNo": "ECP02-028EN",
+    "name": "Yuuki Otokura [Together with Me]",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-028EN.png"
+  },
+  "ECP02-029EN": {
+    "cardNo": "ECP02-029EN",
+    "name": "Glitz & Glam☆Parade",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-029EN.png"
+  },
+  "ECP02-030EN": {
+    "cardNo": "ECP02-030EN",
+    "name": "Sae Kobayakawa [Dancing Flowers]",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-030EN.png"
+  },
+  "ECP02-031EN": {
+    "cardNo": "ECP02-031EN",
+    "name": "Sae Kobayakawa [Dancing Flowers] Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-031EN.png"
+  },
+  "ECP02-032EN": {
+    "cardNo": "ECP02-032EN",
+    "name": "Hiromi Seki [Twinkle in My Eye]",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-032EN.png"
+  },
+  "ECP02-033EN": {
+    "cardNo": "ECP02-033EN",
+    "name": "Hiromi Seki [Twinkle in My Eye] Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-033EN.png"
+  },
+  "ECP02-034EN": {
+    "cardNo": "ECP02-034EN",
+    "name": "Shiki Ichinose [Mystic Elixir]",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-034EN.png"
+  },
+  "ECP02-035EN": {
+    "cardNo": "ECP02-035EN",
+    "name": "Kanade Hayami [Faraway Reflection]",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-035EN.png"
+  },
+  "ECP02-036EN": {
+    "cardNo": "ECP02-036EN",
+    "name": "Tomoe Murakami [Crimson Fighter]",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-036EN.png"
+  },
+  "ECP02-037EN": {
+    "cardNo": "ECP02-037EN",
+    "name": "Fumika Sagisawa [Cinderella Girl]",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-037EN.png"
+  },
+  "ECP02-038EN": {
+    "cardNo": "ECP02-038EN",
+    "name": "Fumika Sagisawa [Cinderella Girl] Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-038EN.png"
+  },
+  "ECP02-039EN": {
+    "cardNo": "ECP02-039EN",
+    "name": "Akira Sunazuka [Online Life]",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-039EN.png"
+  },
+  "ECP02-040EN": {
+    "cardNo": "ECP02-040EN",
+    "name": "Akari Tsujino [Twice as Lovely]",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-040EN.png"
+  },
+  "ECP02-041EN": {
+    "cardNo": "ECP02-041EN",
+    "name": "Riamu Yumemi [Party Night]",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-041EN.png"
+  },
+  "ECP02-042EN": {
+    "cardNo": "ECP02-042EN",
+    "name": "Yui Ohtsuki [Lollipop Darling]",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-042EN.png"
+  },
+  "ECP02-043EN": {
+    "cardNo": "ECP02-043EN",
+    "name": "Yui Ohtsuki [Lollipop Darling] Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-043EN.png"
+  },
+  "ECP02-044EN": {
+    "cardNo": "ECP02-044EN",
+    "name": "Hotaru Shiragiku [Unbreakable]",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-044EN.png"
+  },
+  "ECP02-045EN": {
+    "cardNo": "ECP02-045EN",
+    "name": "Hotaru Shiragiku [Unbreakable] Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-045EN.png"
+  },
+  "ECP02-046EN": {
+    "cardNo": "ECP02-046EN",
+    "name": "Star of the Show",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-046EN.png"
+  },
+  "ECP02-047EN": {
+    "cardNo": "ECP02-047EN",
+    "name": "Ranko Kanzaki [Cinderella Girl]",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-047EN.png"
+  },
+  "ECP02-048EN": {
+    "cardNo": "ECP02-048EN",
+    "name": "Syoko Hoshi [individuals]",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-048EN.png"
+  },
+  "ECP02-049EN": {
+    "cardNo": "ECP02-049EN",
+    "name": "Mirei Hayasaka [individuals]",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-049EN.png"
+  },
+  "ECP02-050EN": {
+    "cardNo": "ECP02-050EN",
+    "name": "Nono Morikubo [individuals]",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-050EN.png"
+  },
+  "ECP02-051EN": {
+    "cardNo": "ECP02-051EN",
+    "name": "Nono Morikubo [individuals] Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-051EN.png"
+  },
+  "ECP02-052EN": {
+    "cardNo": "ECP02-052EN",
+    "name": "Asuka Ninomiya [Sweet & Charming]",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-052EN.png"
+  },
+  "ECP02-053EN": {
+    "cardNo": "ECP02-053EN",
+    "name": "Chitose Kurosaki [Memento Mori]",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-053EN.png"
+  },
+  "ECP02-054EN": {
+    "cardNo": "ECP02-054EN",
+    "name": "Chitose Kurosaki [Memento Mori] Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-054EN.png"
+  },
+  "ECP02-055EN": {
+    "cardNo": "ECP02-055EN",
+    "name": "Natsuki Kimura [Scarlet Love Song]",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-055EN.png"
+  },
+  "ECP02-056EN": {
+    "cardNo": "ECP02-056EN",
+    "name": "Natsuki Kimura [Scarlet Love Song] Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-056EN.png"
+  },
+  "ECP02-057EN": {
+    "cardNo": "ECP02-057EN",
+    "name": "Takumi Mukai [No One Can Stop Me]",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-057EN.png"
+  },
+  "ECP02-058EN": {
+    "cardNo": "ECP02-058EN",
+    "name": "Koume Shirasaka [Haunted Gown]",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-058EN.png"
+  },
+  "ECP02-059EN": {
+    "cardNo": "ECP02-059EN",
+    "name": "Self-Proclaimed Fan Favorite",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-059EN.png"
+  },
+  "ECP02-060EN": {
+    "cardNo": "ECP02-060EN",
+    "name": "Nana Abe [Cinderella Girl]",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-060EN.png"
+  },
+  "ECP02-061EN": {
+    "cardNo": "ECP02-061EN",
+    "name": "Nana Abe [Cinderella Girl] Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-061EN.png"
+  },
+  "ECP02-062EN": {
+    "cardNo": "ECP02-062EN",
+    "name": "Kaede Takagaki [Cinderella Girl]",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-062EN.png"
+  },
+  "ECP02-063EN": {
+    "cardNo": "ECP02-063EN",
+    "name": "Eve Santaclaus [Cinderella Girl]",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-063EN.png"
+  },
+  "ECP02-064EN": {
+    "cardNo": "ECP02-064EN",
+    "name": "Miyu Mifune [Rouge Couture]",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-064EN.png"
+  },
+  "ECP02-065EN": {
+    "cardNo": "ECP02-065EN",
+    "name": "Kako Takafuji [Lady Luck]",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-065EN.png"
+  },
+  "ECP02-066EN": {
+    "cardNo": "ECP02-066EN",
+    "name": "Kako Takafuji [Lady Luck] Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-066EN.png"
+  },
+  "ECP02-067EN": {
+    "cardNo": "ECP02-067EN",
+    "name": "Kotoka Saionji [Pure Euphoria]",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-067EN.png"
+  },
+  "ECP02-068EN": {
+    "cardNo": "ECP02-068EN",
+    "name": "Kotoka Saionji [Pure Euphoria] Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-068EN.png"
+  },
+  "ECP02-069EN": {
+    "cardNo": "ECP02-069EN",
+    "name": "Haru Yuuki [Secret Blue Rose]",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-069EN.png"
+  },
+  "ECP02-070EN": {
+    "cardNo": "ECP02-070EN",
+    "name": "Natalia [One Thousand and One Nights]",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-070EN.png"
+  },
+  "ECP02-071EN": {
+    "cardNo": "ECP02-071EN",
+    "name": "A Sweet Romantic Summer",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-071EN.png"
+  },
+  "ECP02-072EN": {
+    "cardNo": "ECP02-072EN",
+    "name": "Curtain Call of Smiles",
+    "type": "base",
+    "class": "neutral",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-072EN.png"
+  },
+  "ECP02-SP01EN": {
+    "cardNo": "ECP02-SP01EN",
+    "name": "Minami Nitta [Goddess by the Sunlit Sea]",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-SP01EN.png"
+  },
+  "ECP02-SP02EN": {
+    "cardNo": "ECP02-SP02EN",
+    "name": "Yuki Himekawa [Challengers' Cheer]",
+    "type": "base",
+    "class": "forest",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-SP02EN.png"
+  },
+  "ECP02-SP03aEN": {
+    "cardNo": "ECP02-SP03aEN",
+    "name": "Rin & Mio",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-SP03aEN.png"
+  },
+  "ECP02-SP04EN": {
+    "cardNo": "ECP02-SP04EN",
+    "name": "Uzuki Shimamura [Magical New Me]",
+    "type": "base",
+    "class": "sword",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-SP04EN.png"
+  },
+  "ECP02-SP05aEN": {
+    "cardNo": "ECP02-SP05aEN",
+    "name": "Mika & Rika",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-SP05aEN.png"
+  },
+  "ECP02-SP06EN": {
+    "cardNo": "ECP02-SP06EN",
+    "name": "Yuuki Otokura [Ripples of My Heart]",
+    "type": "base",
+    "class": "rune",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-SP06EN.png"
+  },
+  "ECP02-SP07aEN": {
+    "cardNo": "ECP02-SP07aEN",
+    "name": "Akari & Akira",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-SP07aEN.png"
+  },
+  "ECP02-SP08EN": {
+    "cardNo": "ECP02-SP08EN",
+    "name": "Riamu Yumemi [Shout It to the World]",
+    "type": "base",
+    "class": "dragon",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-SP08EN.png"
+  },
+  "ECP02-SP09EN": {
+    "cardNo": "ECP02-SP09EN",
+    "name": "Ranko Kanzaki [Princess in White]",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-SP09EN.png"
+  },
+  "ECP02-SP10EN": {
+    "cardNo": "ECP02-SP10EN",
+    "name": "Asuka Ninomiya [Gentle Evening]",
+    "type": "base",
+    "class": "abyss",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-SP10EN.png"
+  },
+  "ECP02-SP11EN": {
+    "cardNo": "ECP02-SP11EN",
+    "name": "Eve Santaclaus [Holy Night Miracle]",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-SP11EN.png"
+  },
+  "ECP02-SP12EN": {
+    "cardNo": "ECP02-SP12EN",
+    "name": "Miyu Mifune [Parfum Géranium]",
+    "type": "base",
+    "class": "haven",
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-SP12EN.png"
+  },
+  "BP05-025EN": {
+    "cardNo": "BP05-025EN",
+    "name": "Disciple of Usurpation",
+    "type": "base",
+    "cardType": "follower",
+    "class": "sword",
+    "traits": [
+      "Omen",
+      "Thief"
+    ],
+    "cost": 3,
+    "attack": 3,
+    "defense": 2,
+    "cardText": "Storm.\nStrike: Each opponent puts the top card of their deck into their cemetery. Then, if there are at least 10 cards in opponents' cemeteries, give this follower [attack] +2.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-025EN.png"
+  },
+  "BP11-018EN": {
+    "cardNo": "BP11-018EN",
+    "name": "Nahtnaught, Cursed Queen",
+    "type": "base",
+    "cardType": "follower",
+    "class": "sword",
+    "traits": [
+      "Wasteland",
+      "Commander"
+    ],
+    "cost": 4,
+    "attack": 3,
+    "defense": 5,
+    "cardText": "[fanfare]  Search your deck for a 1-cost [swordcraft]  card, put it into your EX area, then shuffle.\n[act]  [cost00] : Select an enemy follower on the field and engage it. It becomes Boxed until the end of its controller's next turn. Activate only once per turn. (Boxed followers lose all abilities and don't refresh during the start phase.)",
+    "keywords": [
+      "fanfare"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-018EN.png"
+  },
+  "BP11-P07EN": {
+    "cardNo": "BP11-P07EN",
+    "name": "Naht's Henchman",
+    "type": "base",
+    "cardType": "follower",
+    "class": "sword",
+    "traits": [
+      "Wasteland",
+      "Officer"
+    ],
+    "cost": 1,
+    "attack": 2,
+    "defense": 2,
+    "cardText": "This card costs 1 less to play from the EX area if there's a Nahtnaught, Cursed Queen on your field.\n----------\n[fanfare]  If there's a Nahtnaught, Cursed Queen on your field, draw a card.",
+    "keywords": [
+      "fanfare"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP11-SL04EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-P07EN.png"
+  },
+  "BP11-075EN": {
+    "cardNo": "BP11-075EN",
+    "name": "Dead to Rights",
+    "type": "base",
+    "cardType": "spell",
+    "class": "abyss",
+    "traits": [
+      "Wasteland",
+      "Departed",
+      "Demon"
+    ],
+    "cost": 1,
+    "attack": null,
+    "defense": null,
+    "cardText": "[act]  Banish this card and an Iceschillendrig, Gilded Autocrat from your cemetery: Select an enemy follower on the field and engage it.\n----------\n[quick]\nSelect an enemy follower on the field and give it [attack] -2/[defense] -2.",
+    "keywords": [
+      "quick"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP11-069EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-075EN.png"
+  },
+  "BP14-018EN": {
+    "cardNo": "BP14-018EN",
+    "name": "Taketsumi, Aconite Paladin",
+    "type": "base",
+    "cardType": "follower",
+    "class": "sword",
+    "traits": [
+      "Festive",
+      "Commander"
+    ],
+    "cost": 2,
+    "attack": 2,
+    "defense": 3,
+    "cardText": "[adv]  [cost04] , banish this: You may summon a Taketsumi, Creator of Paradise from your evolve deck. Activate only if there are at least 5 Festive cards or at least 10 [swordcraft]  cards in your cemetery.\n[fanfare]  Draw a card. Discard a card. Put a Glittering Gold token into your EX area.",
+    "keywords": [
+      "fanfare"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP14-019EN",
+      "BP14-T02EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP14/BP14-018EN.png"
+  },
+  "BP14-022EN": {
+    "cardNo": "BP14-022EN",
+    "name": "Jiemon, Thief Lord",
+    "type": "base",
+    "cardType": "follower",
+    "class": "sword",
+    "traits": [
+      "Festive",
+      "Commander",
+      "Thief"
+    ],
+    "cost": 4,
+    "attack": 3,
+    "defense": 4,
+    "cardText": "[evolve]  [cost01] : Evolve this.\nEach other Festive follower on your field has Storm.\n[fanfare]  Put a Glittering Gold token into your EX area.",
+    "keywords": [
+      "fanfare",
+      "evolve"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP14-023EN",
+      "BP14-T02EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP14/BP14-022EN.png",
+    "evolvesTo": "BP14-023EN"
+  },
+  "BP14-025EN": {
+    "cardNo": "BP14-025EN",
+    "name": "Hero of the Hunt",
+    "type": "base",
+    "cardType": "spell",
+    "class": "sword",
+    "traits": [
+      "Festive",
+      "Commander"
+    ],
+    "cost": 3,
+    "attack": null,
+    "defense": null,
+    "cardText": "Select an enemy follower on the field. Deal it 5 damage, put a Glittering Gold token into your EX area, and, if there are at least 5 Festive cards or at least 10 [swordcraft]  cards in your cemetery, search your deck for a Taketsumi, Aconite Paladin, summon it, then shuffle.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP14-018EN",
+      "BP14-T02EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP14/BP14-025EN.png"
+  },
+  "BP14-026EN": {
+    "cardNo": "BP14-026EN",
+    "name": "Masterful Musician",
+    "type": "base",
+    "cardType": "follower",
+    "class": "sword",
+    "traits": [
+      "Festive",
+      "Thief"
+    ],
+    "cost": 3,
+    "attack": 3,
+    "defense": 3,
+    "cardText": "[evolve]  [cost01] : Evolve this.\n[fanfare]  Put a Glittering Gold token into your EX area. If there's a Jiemon, Thief Lord on your field, give your leader [defense] +3.",
+    "keywords": [
+      "fanfare",
+      "evolve"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP14-022EN",
+      "BP14-023EN",
+      "BP14-027EN",
+      "BP14-T02EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP14/BP14-026EN.png",
+    "evolvesTo": "BP14-027EN"
+  },
+  "BP14-030EN": {
+    "cardNo": "BP14-030EN",
+    "name": "Front Desk Frog",
+    "type": "base",
+    "cardType": "follower",
+    "class": "sword",
+    "traits": [
+      "Festive",
+      "Thief",
+      "Beast"
+    ],
+    "cost": 2,
+    "attack": 2,
+    "defense": 2,
+    "cardText": "[evolve]  [cost01] : Evolve this.\n[fanfare]  Put a Glittering Gold token into your EX area. If there's a Jiemon, Thief Lord on your field, evolve this.",
+    "keywords": [
+      "fanfare",
+      "evolve"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP14-022EN",
+      "BP14-023EN",
+      "BP14-031EN",
+      "BP14-T02EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP14/BP14-030EN.png",
+    "evolvesTo": "BP14-031EN"
+  },
+  "BP14-034EN": {
+    "cardNo": "BP14-034EN",
+    "name": "Night on the Town",
+    "type": "base",
+    "cardType": "spell",
+    "class": "sword",
+    "traits": [
+      "Festive",
+      "Commander",
+      "Thief"
+    ],
+    "cost": 1,
+    "attack": null,
+    "defense": null,
+    "cardText": "Choose 1. (1) Select an enemy follower on the field. Deal it 2 damage and put a Glittering Gold token into your EX area. (2) Select an enemy follower on the field and, if there are at least 3 Festive cards in your EX area, deal it 4 damage.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP14-T02EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP14/BP14-034EN.png"
+  },
+  "BP14-035EN": {
+    "cardNo": "BP14-035EN",
+    "name": "Haggler's Gambit",
+    "type": "base",
+    "cardType": "spell",
+    "class": "sword",
+    "traits": [
+      "Merchant"
+    ],
+    "cost": 1,
+    "attack": null,
+    "defense": null,
+    "cardText": "This costs 1 less to play if there are at least 3 cards in your EX area named Glittering Gold.\n----------\nDraw a card. Put a Glittering Gold token into your EX area.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP14-T02EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP14/BP14-035EN.png"
+  },
+  "BP14-115EN": {
+    "cardNo": "BP14-115EN",
+    "name": "Stay in Paradise",
+    "type": "base",
+    "cardType": "spell",
+    "class": "neutral",
+    "traits": [
+      "Festive"
+    ],
+    "cost": 1,
+    "attack": null,
+    "defense": null,
+    "cardText": "Look at the top 4 cards of your deck. You may put a Festive card from among them into your EX area. Put the rest on the bottom of your deck in any order.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP14/BP14-115EN.png"
+  },
+  "BP14-118EN": {
+    "cardNo": "BP14-118EN",
+    "name": "Torchbearing Guide",
+    "type": "base",
+    "cardType": "follower",
+    "class": "neutral",
+    "traits": [
+      "Festive",
+      "Mercenary"
+    ],
+    "cost": 2,
+    "attack": 2,
+    "defense": 3,
+    "cardText": "[fanfare]  Put a Festive card from your hand into your EX area: Draw a card. If there are at least 3 Festive cards in your EX area, give this [attack] +1/[defense] +1.",
+    "keywords": [
+      "fanfare"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP14/BP14-118EN.png"
+  },
+  "BP14-019EN": {
+    "cardNo": "BP14-019EN",
+    "name": "Taketsumi, Creator of Paradise",
+    "type": "base",
+    "cardType": "follower",
+    "specialType": "advanced",
+    "class": "sword",
+    "traits": [
+      "Festive",
+      "Commander"
+    ],
+    "cost": 4,
+    "attack": 5,
+    "defense": 6,
+    "cardText": "[fanfare]  Summon 2 Sootspawn tokens.\n[act]  [engage] : Select an enemy follower on the field. Deal 5 damage to it and 3 damage to its leader.",
+    "keywords": [
+      "fanfare"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP14-018EN",
+      "BP14-T01EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP14/BP14-019EN.png"
+  },
+  "BP14-023EN": {
+    "cardNo": "BP14-023EN",
+    "name": "Jiemon, Thief Lord Evolved",
+    "type": "evolved",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "class": "sword",
+    "traits": [
+      "Festive",
+      "Commander",
+      "Thief"
+    ],
+    "cost": null,
+    "attack": 4,
+    "defense": 5,
+    "cardText": "Each other Festive follower on your field has Storm.\nOn Evolve - Banish 2 cards named Glittering Gold from your EX area: Look at the top 5 cards of your deck. You may put a Festive card that costs 3 or less from among them into your EX area. It costs 3 less to play this turn. Put the rest on the bottom of your deck in any order.\n[act]  [cost01] : Play this follower's On Evolve ability.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP14-022EN",
+      "BP14-T02EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP14/BP14-023EN.png",
+    "evolvesFrom": "BP14-022EN"
+  },
+  "BP14-027EN": {
+    "cardNo": "BP14-027EN",
+    "name": "Masterful Musician Evolved",
+    "type": "evolved",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "class": "sword",
+    "traits": [
+      "Festive",
+      "Thief"
+    ],
+    "cost": null,
+    "attack": 4,
+    "defense": 4,
+    "cardText": "Whenever a Glittering Gold token is put into your EX area, select an enemy follower on the field. Deal 3 damage to it and 1 damage to its leader.\nOn Evolve - Put a Glittering Gold token into your EX area.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP14-026EN",
+      "BP14-T02EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP14/BP14-027EN.png",
+    "evolvesFrom": "BP14-026EN"
+  },
+  "BP14-031EN": {
+    "cardNo": "BP14-031EN",
+    "name": "Front Desk Frog Evolved",
+    "type": "evolved",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "class": "sword",
+    "traits": [
+      "Festive",
+      "Thief",
+      "Beast"
+    ],
+    "cost": null,
+    "attack": 3,
+    "defense": 3,
+    "cardText": "On Evolve - Select an enemy follower on the field. Deal it 2 damage and, if there are at least 3 Festive cards in your EX area, draw a card.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP14-030EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP14/BP14-031EN.png",
+    "evolvesFrom": "BP14-030EN"
+  },
+  "BP14-T01EN": {
+    "cardNo": "BP14-T01EN",
+    "name": "Sootspawn TOKEN",
+    "type": "token",
+    "cardType": "follower",
+    "specialType": "token",
+    "class": "sword",
+    "traits": [
+      "Festive"
+    ],
+    "cost": 2,
+    "attack": 2,
+    "defense": 2,
+    "cardText": "Ward.\n[lastwords]  Select an enemy follower on the field and deal it 2 damage.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP14/BP14-T01EN.png"
+  },
+  "BP14-T02EN": {
+    "cardNo": "BP14-T02EN",
+    "name": "Glittering Gold TOKEN",
+    "type": "token",
+    "cardType": "spell",
+    "specialType": "token",
+    "class": "sword",
+    "traits": [
+      "Festive",
+      "Thief",
+      "Loot"
+    ],
+    "cost": 0,
+    "attack": null,
+    "defense": null,
+    "cardText": "[act]  [cost01] , banish this and 2 other cards named Glittering Gold from your EX area: Give your leader [defense] +1. Draw a card.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP14/BP14-T02EN.png"
+  },
+  "BP16-022EN": {
+    "cardNo": "BP16-022EN",
+    "name": "Ginne, Bewitching Courtesan",
+    "type": "base",
+    "cardType": "follower",
+    "class": "sword",
+    "traits": [
+      "Festive"
+    ],
+    "cost": 2,
+    "attack": 3,
+    "defense": 2,
+    "cardText": "[fanfare]  Choose up to 2. If there's a Jiemon, Thief Lord on your field, choose up to 3 instead. (1) Select an enemy follower on the field and engage it. It doesn't refresh during its controller's next start phase. (2) Draw a card. Put a card from your hand on the top or bottom of your deck. (3) Put 2 Glittering Gold tokens into your EX area.",
+    "keywords": [
+      "fanfare"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP14-022EN",
+      "BP14-023EN",
+      "BP16-T15EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-022EN.png"
+  },
+  "SDD02-006EN": {
+    "cardNo": "SDD02-006EN",
+    "name": "Leod, the Crescent Blade",
+    "type": "base",
+    "cardType": "follower",
+    "class": "sword",
+    "traits": [
+      "Assassin"
+    ],
+    "cost": 2,
+    "attack": 1,
+    "defense": 3,
+    "cardText": "[evolve]  [cost02] : Evolve this.\nWhile this is reserved on your field, it has Intimidate and Aura. (Followers with Intimidate can't be attacked.)\nAt the start of your end phase, select an enemy follower on the field and deal it 1 damage.",
+    "keywords": [
+      "evolve"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "SDD02-007EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD02/SDD02-006EN.png",
+    "evolvesTo": "SDD02-007EN"
+  },
+  "SDD02-007EN": {
+    "cardNo": "SDD02-007EN",
+    "name": "Leod, the Crescent Blade Evolved",
+    "type": "evolved",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "class": "sword",
+    "traits": [
+      "Assassin"
+    ],
+    "cost": null,
+    "attack": 2,
+    "defense": 4,
+    "cardText": "While this is reserved on your field, it has Intimidate and Aura. (Cards with Aura can't be selected for enemy spells or abilities.)\nOn Evolve - Select an enemy leader or enemy follower on the field and deal it 2 damage.\nAt the start of your end phase, select an enemy follower on the field and deal it 1 damage.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "SDD02-006EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD02/SDD02-007EN.png",
+    "evolvesFrom": "SDD02-006EN"
+  },
+  "PR-173EN": {
+    "cardNo": "PR-173EN",
+    "name": "Aenea, Amethyst Rebel",
+    "type": "base",
+    "cardType": "follower",
+    "class": "abyss",
+    "traits": [
+      "Machina",
+      "Demon"
+    ],
+    "cost": 4,
+    "attack": 2,
+    "defense": 2,
+    "cardText": "[fanfare]  Search your deck for a Machina follower that costs 3 or less, summon it, then shuffle your deck.\n[lastwords]  Give your leader [defense] +2.",
+    "keywords": [
+      "fanfare"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/PR/PR-173EN.png"
+  },
+  "PR-358EN": {
+    "cardNo": "PR-358EN",
+    "name": "Mechagun Wielder",
+    "type": "base",
+    "cardType": "follower",
+    "class": "neutral",
+    "traits": [
+      "Machina",
+      "Mercenary"
+    ],
+    "cost": 1,
+    "attack": 1,
+    "defense": 2,
+    "cardText": "[fanfare]  Put an Assembly Droid or Repair Mode token into your EX area.\n[lastwords]  Discard a Machina card: Draw a card.",
+    "keywords": [
+      "fanfare"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "PR-170EN",
+      "PR-171EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/PR/PR-358EN.png"
+  },
+  "PR-170EN": {
+    "cardNo": "PR-170EN",
+    "name": "Assembly Droid TOKEN",
+    "type": "token",
+    "cardType": "follower",
+    "specialType": "token",
+    "class": "neutral",
+    "traits": [
+      "Machina"
+    ],
+    "cost": 1,
+    "attack": 1,
+    "defense": 1,
+    "cardText": "[act]  [engage] , bury 3 Machina followers: Select an enemy follower on the field and deal it 5 damage.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/PR/PR-170EN.png"
+  },
+  "PR-171EN": {
+    "cardNo": "PR-171EN",
+    "name": "Repair Mode TOKEN",
+    "type": "token",
+    "cardType": "spell",
+    "specialType": "token",
+    "class": "neutral",
+    "traits": [
+      "Machina"
+    ],
+    "cost": 1,
+    "attack": null,
+    "defense": null,
+    "cardText": "[quick]\nGive your leader [defense] +1.",
+    "keywords": [
+      "quick"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/PR/PR-171EN.png"
+  },
+  "BP07-075EN": {
+    "cardNo": "BP07-075EN",
+    "name": "Alpha Drive",
+    "type": "base",
+    "cardType": "spell",
+    "class": "abyss",
+    "traits": [
+      "Machina",
+      "Demon"
+    ],
+    "cost": 1,
+    "attack": null,
+    "defense": null,
+    "cardText": "Choose one of the following. (1) Select a Machina follower in your cemetery and add it to your hand. (2) Select a Mono, Garnet Rebel in your cemetery and summon it.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP07-069EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-075EN.png"
+  },
+  "BP07-P22EN": {
+    "cardNo": "BP07-P22EN",
+    "name": "Nicola, Forbidden Strength",
+    "type": "base",
+    "cardType": "follower",
+    "class": "abyss",
+    "traits": [
+      "Machina",
+      "Departed"
+    ],
+    "cost": 3,
+    "attack": 3,
+    "defense": 3,
+    "cardText": "[evolve]  [cost01] : Evolve this follower.\n[fanfare]  Bury the top 2 cards of your deck.",
+    "keywords": [
+      "fanfare",
+      "evolve"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP07-P23EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-P22EN.png",
+    "evolvesTo": "BP07-077EN"
+  },
+  "BP07-SL13EN": {
+    "cardNo": "BP07-SL13EN",
+    "name": "Mono, Garnet Rebel",
+    "type": "base",
+    "cardType": "follower",
+    "class": "abyss",
+    "traits": [
+      "Machina",
+      "Demon"
+    ],
+    "cost": 2,
+    "attack": 3,
+    "defense": 2,
+    "cardText": "[evolve]  [cost01] : Evolve this follower. Activate only if there are 5 Machina followers on your field.\n[act]  Banish 2 Machina cards from your cemetery: Summon an Assembly Droid token. Activate only once per turn.",
+    "keywords": [
+      "evolve"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP07-SL14EN",
+      "BP07-T01EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-SL13EN.png",
+    "evolvesTo": "BP07-U05EN"
+  },
+  "BP07-077EN": {
+    "cardNo": "BP07-077EN",
+    "name": "Nicola, Forbidden Strength Evolved",
+    "type": "evolved",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "class": "abyss",
+    "traits": [
+      "Machina",
+      "Departed"
+    ],
+    "cost": null,
+    "attack": 4,
+    "defense": 4,
+    "cardText": "On Evolve - Select a Machina card that costs 2 or less in your cemetery and put it into your EX area. It costs 2 less to play this turn.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP07-076EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-077EN.png",
+    "evolvesFrom": "BP07-P22EN"
+  },
+  "BP07-U05EN": {
+    "cardNo": "BP07-U05EN",
+    "name": "Mono, Garnet Rebel Evolved",
+    "type": "evolved",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "class": "abyss",
+    "traits": [
+      "Machina",
+      "Demon"
+    ],
+    "cost": null,
+    "attack": 5,
+    "defense": 4,
+    "cardText": "Storm.\n[act]  [cost02] , banish an Alpha Drive from your cemetery: Give each Machina follower on your field [attack] +2/[defense] +2 and Rush. Activate only once per turn.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP07-069EN",
+      "BP07-075EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-U05EN.png",
+    "evolvesFrom": "BP07-SL13EN"
+  },
+  "BP12-075EN": {
+    "cardNo": "BP12-075EN",
+    "name": "Friends Forever",
+    "type": "base",
+    "cardType": "spell",
+    "class": "abyss",
+    "traits": [
+      "Machina",
+      "Necromancer",
+      "Demon"
+    ],
+    "cost": 5,
+    "attack": null,
+    "defense": null,
+    "cardText": "Select up to 2 Machina followers that cost a total of 5 or less in your cemetery and summon them.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP12/BP12-075EN.png"
+  },
+  "BP12-082EN": {
+    "cardNo": "BP12-082EN",
+    "name": "Roly-Poly Mk I",
+    "type": "base",
+    "cardType": "follower",
+    "class": "abyss",
+    "traits": [
+      "Machina",
+      "Demon"
+    ],
+    "cost": 1,
+    "attack": 1,
+    "defense": 3,
+    "cardText": "Ward.\nWhile there's an Aenea, Amethyst Rebel on your field, if this follower would take more than 1 damage, it takes 1 instead.\n[act]  [cost01] : Summon this card from your cemetery. Give it [attack] +1 and \"[lastwords]  Banish this card.\" Activate only if there's an Aenea, Amethyst Rebel on your field.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP07-072EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP12/BP12-082EN.png"
+  },
+  "BP12-SL22EN": {
+    "cardNo": "BP12-SL22EN",
+    "name": "Garnet Waltz",
+    "type": "base",
+    "cardType": "spell",
+    "class": "abyss",
+    "traits": [
+      "Machina",
+      "Demon",
+      "Vampire"
+    ],
+    "cost": 1,
+    "attack": null,
+    "defense": null,
+    "cardText": "Choose one. (1) Deal 2 damage to each enemy leader and 1 damage to your own. (2) Summon an Assembly Droid token. Put an Assembly Droid token into your EX area. If there's a Mono, Garnet Rebel on your field, summon the second token instead.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP07-SL13EN",
+      "BP07-SL14EN",
+      "BP12-T10EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP12/BP12-SL22EN.png"
+  },
+  "BP12-T10EN": {
+    "cardNo": "BP12-T10EN",
+    "name": "Assembly Droid TOKEN",
+    "type": "token",
+    "cardType": "follower",
+    "specialType": "token",
+    "class": "neutral",
+    "traits": [
+      "Machina"
+    ],
+    "cost": 1,
+    "attack": 1,
+    "defense": 1,
+    "cardText": "[act]  [engage] , bury 3 Machina followers: Select an enemy follower on the field and deal it 5 damage.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP12/BP12-T10EN.png"
+  },
+  "SDD05-012EN": {
+    "cardNo": "SDD05-012EN",
+    "name": "Dead to Rights",
+    "type": "base",
+    "cardType": "spell",
+    "class": "abyss",
+    "traits": [
+      "Wasteland",
+      "Departed",
+      "Demon"
+    ],
+    "cost": 1,
+    "attack": null,
+    "defense": null,
+    "cardText": "[act]  Banish this and an Iceschillendrig, Gilded Autocrat from your cemetery: Select an enemy follower on the field and engage it.\n----------\n[quick]\nSelect an enemy follower on the field and give it [attack] -2/[defense] -2.",
+    "keywords": [
+      "quick"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "SDD05-003EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD05/SDD05-012EN.png",
+    "reprintOf": "BP11-075EN"
+  }
+}

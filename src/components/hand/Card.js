@@ -58,6 +58,7 @@ export default function Card({
   const reduxEnemyCardSelectedOnField = useSelector(
     (state) => state.card.enemyCardSelectedOnField
   );
+  const gameMode = useSelector((state) => state.gameState.gameMode);
 
   useEffect(() => {
     setAtk(Number(atkVal));
@@ -69,6 +70,7 @@ export default function Card({
   }, [counterVal]);
 
   const handleTap = () => {
+    if (gameMode === "automated") return;
     if (onField && !opponentField && !ready && !hoverInput) {
       dispatch(setEngaged(idx));
     }

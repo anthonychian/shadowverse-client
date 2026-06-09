@@ -46,6 +46,12 @@ const detailUrl = (cardNo) => `${BASE_URL}/cards/?cardno=${cardNo}&view=text`;
 const TEXTURES_DIR = path.join(__dirname, "..", "..", "public", "textures");
 const OUTPUT_JSON = path.join(__dirname, `${EXPANSION}-cards.json`);
 
+const {
+  applyReprintInheritance,
+  isCanonicalSlot,
+  cardIdentityKey,
+} = require("./scrape-utils");
+
 const UA =
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36";
 
@@ -135,12 +141,121 @@ async function scrapeList() {
   return found;
 }
 
+const KEYWORD_ICON_MAP = {
+  icon_fanfare: "fanfare",
+  icon_lastwords: "lastWords",
+  icon_evolve: "evolve",
+  icon_quick: "quick",
+  icon_ward: "ward",
+  icon_storm: "storm",
+  icon_rush: "rush",
+  icon_assail: "assail",
+  icon_intimidate: "intimidate",
+  icon_drain: "drain",
+  icon_bane: "bane",
+  icon_aura: "aura",
+  icon_on_evolve: "onEvolve",
+  icon_on_super_evolve: "onSuperEvolve",
+  icon_strike: "strike",
+  icon_advanced: "advanced",
+  icon_stack: "stack",
+  icon_serve: "serve",
+};
+
+function parseDlField(html, label) {
+  const re = new RegExp(`<dt>${label}<\\/dt><dd>([\\s\\S]*?)<\\/dd>`, "i");
+  const m = html.match(re);
+  if (!m) return "";
+  return decodeEntities(m[1].replace(/<br\s*\/?>/gi, " ").replace(/<[^>]+>/g, "").trim());
+}
+
+function parseStats(html) {
+  const cost = parseInt(
+    (html.match(/status-Item-Cost[\s\S]*?heading-Cost[^<]*<\/span>(\d+)/) || [])[1],
+    10,
+  );
+  const attack = parseInt(
+    (html.match(/status-Item-Power[\s\S]*?heading-Power[^<]*<\/span>(\d+)/) || [])[1],
+    10,
+  );
+  const defense = parseInt(
+    (html.match(/status-Item-Hp[\s\S]*?heading-Hp[^<]*<\/span>(\d+)/) || [])[1],
+    10,
+  );
+  return {
+    cost: Number.isFinite(cost) ? cost : null,
+    attack: Number.isFinite(attack) ? attack : null,
+    defense: Number.isFinite(defense) ? defense : null,
+  };
+}
+
+function parseCardText(html) {
+  const detailMatch = html.match(/<div class="detail">([\s\S]*?)<\/div>/i);
+  if (!detailMatch) return { text: "", keywords: [] };
+  const block = detailMatch[1];
+  const keywords = [];
+  for (const [icon, keyword] of Object.entries(KEYWORD_ICON_MAP)) {
+    if (block.includes(icon)) keywords.push(keyword);
+  }
+  const text = decodeEntities(
+    block
+      .replace(/<br\s*\/?>/gi, "\n")
+      .replace(/<img[^>]*alt="\[([^\]]+)\]"[^>]*>/gi, "[$1] ")
+      .replace(/<img[^>]*>/gi, "")
+      .replace(/<[^>]+>/g, "")
+      .replace(/\s+\n/g, "\n")
+      .replace(/\n{3,}/g, "\n\n")
+      .trim(),
+  );
+  return { text, keywords: [...new Set(keywords)] };
+}
+
+function parseRelatedCards(html) {
+  const relationBlock = html.match(/<div class="cardlist-Detail_Relation">([\s\S]*?)<\/div>\s*<div class="cardlist-Under">/i);
+  if (!relationBlock) return [];
+  const links = relationBlock[1].match(/cardno=([A-Z0-9-]+)/gi) || [];
+  return [...new Set(links.map((l) => l.replace(/^cardno=/i, "")))];
+}
+
+function normalizeCardType(raw) {
+  const ct = (raw || "").toLowerCase();
+  if (ct.includes("leader")) return "leader";
+  if (ct.includes("spell")) return "spell";
+  if (ct.includes("amulet")) return "amulet";
+  if (ct.includes("follower")) return "follower";
+  return "follower";
+}
+
 async function fetchDetail(cardNo) {
   const html = await getHtml(detailUrl(cardNo));
   const name = decodeEntities((html.match(/<h1 class="ttl[^"]*">([^<]+)</) || [])[1]);
   const cls = decodeEntities((html.match(/<dt>Class<\/dt><dd>([^<]+)</) || [])[1]);
-  const cardType = decodeEntities((html.match(/<dt>Card Type<\/dt><dd>([^<]+)</) || [])[1]);
-  return { name, cls, cardType };
+  const cardTypeRaw = decodeEntities((html.match(/<dt>Card Type<\/dt><dd>([^<]+)</) || [])[1]);
+  const traitRaw = parseDlField(html, "Trait");
+  const rarity = parseDlField(html, "Rarity");
+  const format = parseDlField(html, "Format");
+  const stats = parseStats(html);
+  const { text, keywords } = parseCardText(html);
+  const relatedCardNos = parseRelatedCards(html);
+  const traits = traitRaw
+    ? traitRaw
+        .split("/")
+        .map((t) => t.trim())
+        .filter(Boolean)
+    : [];
+  return {
+    name,
+    cls,
+    cardType: cardTypeRaw,
+    cardTypeNormalized: normalizeCardType(cardTypeRaw),
+    traits,
+    rarity,
+    format,
+    ...stats,
+    cardText: text,
+    keywords,
+    relatedCardNos,
+  };
 }
 
 async function scrapeCards() {
@@ -178,46 +293,85 @@ async function scrapeCards() {
 
     const type = isToken ? "token" : isEvolved ? "evolved" : "base";
     const cls = CLASS_MAP[(detail.cls || "").toLowerCase()] || "";
+    const specialType = isToken ? "token" : isEvolved ? "evolved" : ct.includes("advanced") ? "advanced" : undefined;
 
     detailed.push({
       cardNo: c.cardNo,
       name,
       type,
+      cardType: detail.cardTypeNormalized,
+      specialType,
       class: cls,
+      traits: detail.traits || [],
+      cost: detail.cost,
+      attack: detail.attack,
+      defense: detail.defense,
+      cardText: detail.cardText || "",
+      keywords: detail.keywords || [],
+      rarity: detail.rarity || "",
+      format: detail.format || "",
+      relatedCardNos: detail.relatedCardNos || [],
       imgSrc: c.imgSrc,
     });
     process.stdout.write(`  [${i + 1}/${listCards.length}] ${c.cardNo}\r`);
   }
   process.stdout.write("\n");
 
-  // Canonical card slots are the plain-numbered cards (001-) and tokens (T##).
-  // P## (parallel foil), SL## (super legendary), SP## (special) and U## (ultimate)
-  // are alternate-art reprints of those, so we keep a canonical card over an alt
-  // whenever they share a name. Always process canonical slots first so the
-  // canonical card number / image wins the dedup.
-  const isCanonical = (no) =>
-    new RegExp(`^${EXPANSION}-(\\d+|T\\d+)EN$`).test(no);
+  // Promo / alt-art printings (P, SL, U, SP, PR, SDD, …) inherit gameplay data from the
+  // richest printing with the same identity name so every card number works in the engine.
+  const allCards = applyReprintInheritance(detailed, EXPANSION);
+  const inheritedCount = allCards.filter((c) => c.reprintOf).length;
+
+  // Deck name lists use one entry per identity; prefer plain numbered slots.
   const ordered = [
-    ...detailed.filter((c) => isCanonical(c.cardNo)),
-    ...detailed.filter((c) => !isCanonical(c.cardNo)),
+    ...allCards.filter((c) => isCanonicalSlot(c.cardNo, EXPANSION)),
+    ...allCards.filter((c) => !isCanonicalSlot(c.cardNo, EXPANSION)),
   ];
 
-  const byName = new Map();
+  const byIdentity = new Map();
   const skipped = [];
   const deduped = [];
   for (const c of ordered) {
-    if (byName.has(c.name)) {
-      // A later (alt-art) card with a name we already have - drop it.
-      skipped.push(`${c.cardNo} (alt of ${byName.get(c.name)}: "${c.name}")`);
+    const identity = cardIdentityKey(c);
+    if (byIdentity.has(identity)) {
+      skipped.push(`${c.cardNo} (alt of ${byIdentity.get(identity)}: "${c.name}")`);
       continue;
     }
-    byName.set(c.name, c.cardNo);
+    byIdentity.set(identity, c.cardNo);
     deduped.push(c);
   }
 
   deduped.sort((a, b) => a.cardNo.localeCompare(b.cardNo, undefined, { numeric: true }));
 
+  // Link base cards to their evolved forms via related-card section.
+  const byCardNo = new Map(deduped.map((c) => [c.cardNo, c]));
+  for (const card of deduped) {
+    if (card.type === "base" && card.relatedCardNos?.length) {
+      const evo = card.relatedCardNos
+        .map((no) => byCardNo.get(no))
+        .find((c) => c && c.type === "evolved");
+      if (evo) {
+        card.evolvesTo = evo.cardNo;
+        evo.evolvesFrom = card.cardNo;
+      }
+    }
+  }
+
   fs.writeFileSync(OUTPUT_JSON, JSON.stringify(deduped, null, 2));
+
+  const CARDS_DB = path.join(__dirname, "..", "..", "packages", "sve-engine", "data", "cards.json");
+  const cardsDbDir = path.dirname(CARDS_DB);
+  if (!fs.existsSync(cardsDbDir)) fs.mkdirSync(cardsDbDir, { recursive: true });
+
+  let merged = {};
+  if (fs.existsSync(CARDS_DB)) {
+    merged = JSON.parse(fs.readFileSync(CARDS_DB, "utf8"));
+  }
+  for (const card of allCards) {
+    merged[card.cardNo] = card;
+  }
+  fs.writeFileSync(CARDS_DB, JSON.stringify(merged, null, 2));
+  console.log(`Merged into canonical DB: ${CARDS_DB} (${Object.keys(merged).length} cards)`);
 
   const byClass = {};
   for (const c of deduped) byClass[c.class || "(none)"] = (byClass[c.class || "(none)"] || 0) + 1;
@@ -228,8 +382,11 @@ async function scrapeCards() {
   console.log(`  Token cards:   ${deduped.filter((c) => c.type === "token").length}`);
   console.log(`  Total kept:    ${deduped.length}`);
   console.log(`  Class breakdown:`, byClass);
+  if (inheritedCount) {
+    console.log(`  Inherited gameplay data for ${inheritedCount} promo/alt-art printings.`);
+  }
   if (skipped.length) {
-    console.log(`  Skipped ${skipped.length} alt-art reprints (kept canonical card for each name).`);
+    console.log(`  Skipped ${skipped.length} duplicate names in deck export (all kept in cards.json).`);
   }
 
   if (JSON_ONLY || SKIP_IMAGES) {
