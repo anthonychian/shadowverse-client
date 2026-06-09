@@ -56,8 +56,7 @@ export default function CardInspector({
   if (!name) {
     return (
       <div style={emptyStyle}>
-        <div style={{ fontSize: 60, opacity: 0.25 }}>🔍</div>
-        <div style={{ color: COLORS.textDim, fontFamily: FONT, marginTop: 12, textAlign: "center" }}>
+        <div style={{ color: COLORS.textDim, fontFamily: FONT, textAlign: "center" }}>
           Select a card to inspect it here.
         </div>
       </div>

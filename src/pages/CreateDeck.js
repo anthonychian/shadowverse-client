@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import ReplyIcon from "@mui/icons-material/Reply";
 import CloseIcon from "@mui/icons-material/Close";
@@ -21,7 +21,7 @@ import {
   Button, TextField, Dialog, DialogActions, DialogContent, DialogContentText,
   DialogTitle, Snackbar, SnackbarContent, IconButton,
 } from "@mui/material";
-import { matchesFilters, hasActiveFilters } from "../decks/cardDetails";
+import { matchesFilters, hasActiveFilters, getCost } from "../decks/cardDetails";
 import FilterBar from "../components/deckbuilder/FilterBar";
 import CardGrid from "../components/deckbuilder/CardGrid";
 import CardInspector from "../components/deckbuilder/CardInspector";
@@ -233,6 +233,29 @@ export default function CreateDeck() {
   }, [mainSelected, buttonFilterSet, buttonFilterClass, search, types, traits, rarities, costs, attacks, defenses]);
 
   useEffect(() => setVisibleCount(CARD_PAGE_SIZE), [displayed]);
+
+  // Show a card preview as soon as the page loads: the first card of an existing
+  // deck if one is being loaded, otherwise the first card in the pool. Runs once.
+  const initedRef = useRef(false);
+  const willLoadDeck =
+    (deckEdit.length > 0 &&
+      ((deckEdit[0].deck && deckEdit[0].deck.length) ||
+        (deckEdit[0].evoDeck && deckEdit[0].evoDeck.length))) ||
+    !!id;
+  useEffect(() => {
+    if (initedRef.current) return;
+    if (cardName) { initedRef.current = true; return; }
+    const byCost = (arr) =>
+      [...arr].sort((a, b) => {
+        const ca = getCost(a), cb = getCost(b);
+        const va = ca == null ? 99 : ca, vb = cb == null ? 99 : cb;
+        return va !== vb ? va - vb : a.localeCompare(b);
+      });
+    if (deck.length > 0) { initedRef.current = true; setCardName(byCost([...deckMap.keys()])[0]); }
+    else if (evoDeck.length > 0) { initedRef.current = true; setCardName(byCost([...evoDeckMap.keys()])[0]); }
+    else if (!willLoadDeck && displayed.length > 0) { initedRef.current = true; setCardName(displayed[0]); }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [deck, evoDeck, displayed, cardName, willLoadDeck]);
 
   // ---------- inspector ----------
   const inspectedIsEvo = cardName ? isEvoCard(cardName) : false;
