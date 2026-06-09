@@ -5,6 +5,7 @@ import RemoveIcon from "@mui/icons-material/Remove";
 import { cardImage } from "../../decks/getCards";
 import { getCost } from "../../decks/cardDetails";
 import { COLORS, FONT, CLASS_ORDER, CLASS_LABELS, CLASS_COLORS } from "./theme";
+import { classIcon } from "./icons";
 
 const sortedEntries = (map) =>
   [...map.entries()].sort((a, b) => {
@@ -116,13 +117,22 @@ export default function DeckPanel({
         <Select label="Deck Class" value={deckClass} onChange={(e) => onDeckClass(e.target.value)}
           renderValue={(v) => (
             <span style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
-              <span style={{ width: 10, height: 10, borderRadius: "50%", background: CLASS_COLORS[v] || "#888" }} />
+              {classIcon(v) ? (
+                <img src={classIcon(v)} alt="" style={{ height: 18 }} />
+              ) : (
+                <span style={{ width: 10, height: 10, borderRadius: "50%", background: CLASS_COLORS[v] || "#888" }} />
+              )}
               {CLASS_LABELS[v] || "Choose a class"}
             </span>
           )}
         >
           {CLASS_ORDER.map((c) => (
-            <MenuItem key={c} value={c}>{CLASS_LABELS[c]}</MenuItem>
+            <MenuItem key={c} value={c}>
+              <span style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
+                {classIcon(c) && <img src={classIcon(c)} alt="" style={{ height: 18 }} />}
+                {CLASS_LABELS[c]}
+              </span>
+            </MenuItem>
           ))}
         </Select>
       </FormControl>
