@@ -39,6 +39,10 @@ function describeAbility(sourceCardNo, ability) {
                     ? "On Evolve"
                     : ability.timing === "startOfEnd"
                         ? "End of turn"
-                        : ability.timing;
+                        : ability.timing === "onCardPlayed"
+                            ? "When you play a card"
+                            : ability.timing === "onAllyFollowerEnter"
+                                ? "When an ally enters the field"
+                                : ability.timing;
     return `${name} — ${timingLabel}: ${describeEffect(ability.effect)}`;
 }

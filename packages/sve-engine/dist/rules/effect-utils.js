@@ -72,6 +72,8 @@ function contextForTriggerResolution(state, sourceInstanceId, effect) {
         effectStack: [effect],
         resumeAfterChoice: prev?.resumeAfterChoice,
         deferTriggers: prev?.deferTriggers,
+        buriedCosts: prev?.buriedCosts,
+        lastDiscardedCardNo: prev?.lastDiscardedCardNo,
     };
 }
 function getChoiceContext(state) {

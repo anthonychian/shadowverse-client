@@ -3,13 +3,18 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.loadDecks = loadDecks;
 exports.applyMulligan = applyMulligan;
 exports.beginStartPhase = beginStartPhase;
+const detectIdentity_1 = require("../deck/detectIdentity");
 const factory_1 = require("../state/factory");
 const passives_1 = require("../state/passives");
 const zones_1 = require("../state/zones");
 function clearTurnScopedCardState(card) {
     card.abilitiesActivatedThisTurn = [];
+    card.counters = {};
     card.modifiers = card.modifiers.filter((m) => !m.untilEndOfTurn);
     card.playCostReduction = 0;
+    if (card.grantedOnCardPlayed?.length) {
+        card.grantedOnCardPlayed = card.grantedOnCardPlayed.filter((g) => !g.untilEndOfTurn);
+    }
 }
 function refreshFieldCard(card, state) {
     card.evolvedThisTurn = false;
@@ -32,6 +37,12 @@ function loadDecks(state, decks) {
         next.players[pid].zones.deck = input.mainDeck.map((cardNo) => (0, factory_1.createCardInstance)(cardNo, pid));
         next.players[pid].zones.evolveDeck = input.evolveDeck.map((cardNo) => (0, factory_1.createCardInstance)(cardNo, pid));
         next = (0, zones_1.shuffleDeck)(next, pid);
+        if (input.universe === "idolmaster") {
+            const p = next.players[pid];
+            for (let i = 0; i < 5 && p.zones.exArea.length < p.exLimit; i++) {
+                p.zones.exArea.push((0, factory_1.createCardInstance)(detectIdentity_1.COOL_EARRINGS_CARD_NO, pid, pid));
+            }
+        }
         for (let i = 0; i < 4; i++) {
             next = (0, zones_1.drawCard)(next, pid);
         }

@@ -24,7 +24,7 @@ export interface CardDefinition {
     evolveCost?: number;
     abilities?: AbilityDefinition[];
 }
-export type TriggerTiming = "fanfare" | "lastWords" | "onEvolve" | "onSuperEvolve" | "strike" | "startOfMain" | "startOfEnd" | "passive" | "aura" | "onExAreaEntry" | "evolve";
+export type TriggerTiming = "fanfare" | "lastWords" | "onEvolve" | "onSuperEvolve" | "onCardPlayed" | "strike" | "startOfMain" | "startOfEnd" | "passive" | "aura" | "onExAreaEntry" | "onAllyFollowerEnter" | "evolve";
 export interface AbilityDefinition {
     timing: TriggerTiming | "activated" | "spell";
     cost?: {
@@ -39,11 +39,21 @@ export interface AbilityDefinition {
     quick?: boolean;
     condition?: Condition;
     filter?: DeckFilter;
-    activateFrom?: "field" | "cemetery" | "exArea";
+    activateFrom?: "field" | "cemetery" | "exArea" | "hand";
     /** Human-readable label for trigger ordering UI. */
     label?: string;
     oncePerTurn?: boolean;
+    /** Max times this trigger can fire per turn (e.g. Tetra Rebel Evo). */
+    maxPerTurn?: number;
     effect: Effect;
+}
+export interface GrantedOnCardPlayed {
+    filter?: DeckFilter;
+    effect: Effect;
+    untilEndOfTurn?: boolean;
+    oncePerTurn?: boolean;
+    maxPerTurn?: number;
+    label?: string;
 }
 export type TargetSelector = {
     type: "self";
@@ -68,6 +78,10 @@ export type DeckFilter = {
     maxCost?: number;
     minCost?: number;
     cardType?: CardType;
+    /** Match cards whose normalized name contains this substring (case-insensitive). */
+    identityNameContains?: string;
+    /** Exclude cards whose normalized identity name equals this value. */
+    excludeIdentityName?: string;
 };
 export type Condition = {
     type: "always";
@@ -119,9 +133,36 @@ export type Condition = {
     type: "exAreaNamedMin";
     identityName: string;
     count: number;
+} | {
+    type: "fieldFollowerMinCost";
+    trait: string;
+    minCost: number;
+    count: number;
+} | {
+    type: "buriedExactCost";
+    cost: number;
+} | {
+    type: "buriedAtLeastCost";
+    cost: number;
+} | {
+    type: "discardedCardType";
+    cardType: CardType;
+} | {
+    type: "handMin";
+    count: number;
+} | {
+    type: "ownCemeteryMin";
+    count: number;
+} | {
+    type: "fieldTraitMax";
+    trait: string;
+    count: number;
 };
 export type DamageAmount = number | {
     op: "otherFieldTraitCount";
+    trait: string;
+} | {
+    op: "fieldTraitCount";
     trait: string;
 };
 export type Effect = {
@@ -142,6 +183,7 @@ export type Effect = {
     atk?: number;
     def?: number;
     keyword?: Keyword;
+    excludeSelf?: boolean;
 } | {
     op: "grantKeyword";
     keyword: Keyword;
@@ -157,6 +199,18 @@ export type Effect = {
 } | {
     op: "recoverPp";
     amount: number;
+} | {
+    op: "spendPp";
+    amount: number;
+} | {
+    op: "rollDie";
+    sides: number;
+    outcomes: {
+        on: number[];
+        effect: Effect;
+    }[];
+} | {
+    op: "buryOpponentMaxAttackFollower";
 } | {
     op: "healLeader";
     amount: number;
@@ -203,11 +257,15 @@ export type Effect = {
     op: "tutorFromDeck";
     filter: DeckFilter;
     to: "hand" | "exArea" | "field";
+    playCostReduction?: number;
+    /** Reveal to opponent before adding to hand (default true for deck → hand). */
+    reveal?: boolean;
 } | {
     op: "tutorFromCemetery";
     filter: DeckFilter;
     to: "hand" | "field" | "exArea";
     playCostReduction?: number;
+    reveal?: boolean;
 } | {
     op: "autoEvolveIf";
     condition: Condition;
@@ -247,6 +305,8 @@ export type Effect = {
     playCostReduction?: number;
     /** Where unchosen cards from the search go (default cemetery). */
     remainderTo?: "cemetery" | "deckBottom";
+    /** Reveal to opponent before adding to hand (default true for deck → hand). */
+    reveal?: boolean;
 } | {
     op: "passiveKeywords";
     keywords: Keyword[];
@@ -288,6 +348,7 @@ export type Effect = {
     filter: DeckFilter;
     to: "exArea" | "hand";
     optional?: boolean;
+    playCostReduction?: number;
 } | {
     op: "triggerAbilities";
     timing: TriggerTiming;
@@ -295,6 +356,29 @@ export type Effect = {
     op: "discardFromHand";
     filter: DeckFilter;
     count: number;
+} | {
+    op: "searchDeckSummonMultiple";
+    filter: DeckFilter;
+    lookAt: number;
+    maxTotalCost: number;
+    remainderTo?: "cemetery" | "deckBottom";
+} | {
+    op: "buryFieldFollowers";
+    filter: DeckFilter;
+    minCost?: number;
+    excludeSelf?: boolean;
+} | {
+    op: "dealDamageAllEnemies";
+    amount: number;
+    followersOnly?: boolean;
+} | {
+    op: "grantOnCardPlayed";
+    filter?: DeckFilter;
+    effect: Effect;
+    untilEndOfTurn?: boolean;
+    oncePerTurn?: boolean;
+    maxPerTurn?: number;
+    label?: string;
 };
 export interface Modifier {
     atk?: number;
@@ -331,6 +415,8 @@ export interface CardInstance {
     abilitiesActivatedThisTurn: string[];
     /** Extra last-words effects granted while on field. */
     grantedLastWords?: Effect[];
+    /** Granted "when you play a card" triggers (e.g. Tetra Serene super-evolve). */
+    grantedOnCardPlayed?: GrantedOnCardPlayed[];
 }
 export interface EvolveLink {
     fieldInstanceId: string;
@@ -380,6 +466,10 @@ export interface PendingTrigger {
     ability: AbilityDefinition;
     timing: TriggerTiming;
     label: string;
+    /** Key for once-per-turn / max-per-turn tracking on the source card. */
+    abilityKey?: string;
+    /** For onAllyFollowerEnter: the follower that just entered the field. */
+    forcedTargetId?: string;
 }
 export interface ChoiceSourceContext {
     sourceCardNo?: string;
@@ -417,6 +507,7 @@ export type ChoicePrompt = ChoiceSourceContext & ({
     }[];
     optional?: boolean;
     playCostReduction?: number;
+    reveal?: boolean;
 } | {
     type: "choose";
     player: PlayerId;
@@ -471,6 +562,7 @@ export type ChoicePrompt = ChoiceSourceContext & ({
     }[];
     playCostReduction?: number;
     remainderTo?: "cemetery" | "deckBottom";
+    reveal?: boolean;
 } | {
     type: "selectZoneCards";
     player: PlayerId;
@@ -484,7 +576,7 @@ export type ChoicePrompt = ChoiceSourceContext & ({
     }[];
     resumeActivate?: {
         sourceInstanceId: string;
-        zone: "field" | "cemetery" | "exArea";
+        zone: "field" | "cemetery" | "exArea" | "hand";
         abilityKey: string;
     };
 } | {
@@ -510,6 +602,20 @@ export type ChoicePrompt = ChoiceSourceContext & ({
         cardNo: string;
         cost: number;
     }[];
+} | {
+    type: "selectDeckSummon";
+    player: PlayerId;
+    maxTotalCost: number;
+    filter: DeckFilter;
+    topInstanceIds: string[];
+    remainderTo: "cemetery" | "deckBottom";
+    options: {
+        instanceId: string;
+        label: string;
+        cardNo: string;
+        cost: number;
+        eligible: boolean;
+    }[];
 });
 export interface CombatState {
     attackerId: string;
@@ -531,6 +637,15 @@ export interface ResolutionContext {
     resumeAfterChoice?: Effect[];
     /** While true, queued fanfare/LW/etc. wait until the current effect sequence finishes. */
     deferTriggers?: boolean;
+    /** Costs of followers buried by the current buryFieldFollowers effect. */
+    buriedCosts?: number[];
+    /** Card no. of the most recently discarded card this effect sequence. */
+    lastDiscardedCardNo?: string;
+}
+export interface RevealedCardInfo {
+    owner: PlayerId;
+    instanceId: string;
+    cardNo: string;
 }
 export interface GameState {
     players: [PlayerState, PlayerState];
@@ -547,6 +662,8 @@ export interface GameState {
     quickWindowPlayer?: PlayerId | null;
     eventLog: GameEvent[];
     resolutionContext: ResolutionContext | null;
+    /** Cards revealed to both players during the current effect resolution. */
+    revealedCards?: RevealedCardInfo[];
     /** End phase: opponent quick window was offered or skipped after start-of-end. */
     endPhaseQuickResolved?: boolean;
 }
@@ -578,6 +695,10 @@ export type GameAction = {
     type: "ACTIVATE_EXAREA";
     exAreaInstanceId: string;
 } | {
+    type: "ACTIVATE_HAND";
+    handInstanceId: string;
+    useEvoPoint?: boolean;
+} | {
     type: "END_MAIN";
 } | {
     type: "QUICK_PLAY";
@@ -596,6 +717,7 @@ export interface ActionResult {
     state: GameState;
     error?: string;
 }
+export type UniverseId = "umamusume" | "idolmaster" | "vanguard";
 export interface PlayerView {
     self: PlayerId;
     state: GameState;
@@ -607,4 +729,8 @@ export interface PlayerView {
     exPlayCosts: Record<string, number>;
     /** Effective play cost from EX area, keyed by instance id (opponent). */
     opponentExPlayCosts: Record<string, number>;
+    /** Auto-detected leader portrait for this player. */
+    selfLeader?: string;
+    /** Auto-detected leader portrait for the opponent. */
+    opponentLeader?: string;
 }

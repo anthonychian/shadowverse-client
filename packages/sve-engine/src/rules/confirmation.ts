@@ -8,7 +8,13 @@ import {
   shouldClearResolutionContext,
   shouldDeferTriggers,
 } from "./effect-utils";
-import { onCardEntersExAreaTriggers, queueFanfare, queueLastWords } from "./trigger-queue";
+import {
+  onCardEntersExAreaTriggers,
+  queueAllyFollowerEnterTriggers,
+  queueCemeteryOnAllyFollowerEnter,
+  queueFanfare,
+  queueLastWords,
+} from "./trigger-queue";
 import { findInstance, getPlayer, getEffectiveStats, hasKeyword, resolveCardNo } from "../state/queries";
 import { destroyFollower, drawCard, removeFromField } from "../state/zones";
 import { GameState, PendingTrigger, PlayerId } from "../types";
@@ -130,6 +136,8 @@ export function onFollowerEntersField(
   found.card.enteredFieldTurn = state.turnNumber;
   found.card.onFieldSinceTurnStart = false;
   queueFanfare(state, instanceId, player);
+  queueAllyFollowerEnterTriggers(state, instanceId, player);
+  queueCemeteryOnAllyFollowerEnter(state, instanceId, player);
 }
 
 export function onCardEntersExArea(
@@ -140,15 +148,28 @@ export function onCardEntersExArea(
   onCardEntersExAreaTriggers(state, instanceId, player);
 }
 
+function markOnCardPlayedTriggerUsed(state: GameState, trigger: PendingTrigger): void {
+  if (trigger.timing !== "onCardPlayed" || !trigger.abilityKey) return;
+  const found = findInstance(state, trigger.sourceInstanceId);
+  if (!found) return;
+  const { ability, abilityKey } = trigger;
+  if (ability.oncePerTurn && !found.card.abilitiesActivatedThisTurn.includes(abilityKey)) {
+    found.card.abilitiesActivatedThisTurn.push(abilityKey);
+  }
+  if (ability.maxPerTurn != null) {
+    found.card.counters[abilityKey] = (found.card.counters[abilityKey] ?? 0) + 1;
+  }
+}
+
 function resolveOneTrigger(state: GameState, trigger: PendingTrigger): GameState {
   let next = structuredClone(state);
   next.pendingTriggers = next.pendingTriggers.filter((t) => t.id !== trigger.id);
-  next.resolutionContext = contextForTriggerResolution(
-    next,
-    trigger.sourceInstanceId,
-    trigger.ability.effect,
-  );
+  next.resolutionContext = {
+    ...contextForTriggerResolution(next, trigger.sourceInstanceId, trigger.ability.effect),
+    forcedTargetId: trigger.forcedTargetId,
+  };
   next = resolveEffect(next, trigger.ability.effect, trigger.controller);
+  markOnCardPlayedTriggerUsed(next, trigger);
   if (shouldClearResolutionContext(next)) {
     next.resolutionContext = null;
   }

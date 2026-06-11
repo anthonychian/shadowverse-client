@@ -21,6 +21,14 @@ export function cardMatchesFilter(cardNo: string, filter: DeckFilter): boolean {
   if (filter.maxCost != null && cost > filter.maxCost) return false;
   if (filter.minCost != null && cost < filter.minCost) return false;
   if (filter.cardType && def.cardType !== filter.cardType) return false;
+  if (filter.identityNameContains) {
+    const needle = filter.identityNameContains.toLowerCase();
+    if (!normalizeIdentityName(def.name).toLowerCase().includes(needle)) return false;
+  }
+  if (filter.excludeIdentityName) {
+    const excluded = normalizeIdentityName(filter.excludeIdentityName);
+    if (normalizeIdentityName(def.name) === excluded) return false;
+  }
   return true;
 }
 
@@ -83,6 +91,30 @@ export function evalCondition(state: GameState, player: PlayerId, condition: Con
       return getPlayer(state, player).zones.deck.filter(
         (c) => getCardDef(c.cardNo)?.class === condition.cardClass,
       ).length >= condition.count;
+    case "fieldFollowerMinCost": {
+      let matches = 0;
+      for (const card of getPlayer(state, player).zones.field) {
+        const def = getCardDef(resolveCardNo(state, card));
+        if (!def?.traits?.includes(condition.trait)) continue;
+        if (resolveCardDefCost(card.cardNo) >= condition.minCost) matches += 1;
+      }
+      return matches >= condition.count;
+    }
+    case "buriedExactCost":
+      return (state.resolutionContext?.buriedCosts ?? []).some((c) => c === condition.cost);
+    case "buriedAtLeastCost":
+      return (state.resolutionContext?.buriedCosts ?? []).some((c) => c >= condition.cost);
+    case "discardedCardType": {
+      const cardNo = state.resolutionContext?.lastDiscardedCardNo;
+      if (!cardNo) return false;
+      return getCardDef(cardNo)?.cardType === condition.cardType;
+    }
+    case "handMin":
+      return getPlayer(state, player).zones.hand.length >= condition.count;
+    case "ownCemeteryMin":
+      return getPlayer(state, player).zones.cemetery.length >= condition.count;
+    case "fieldTraitMax":
+      return countTraitInZone(state, player, "field", condition.trait) <= condition.count;
     default:
       return false;
   }

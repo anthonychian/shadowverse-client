@@ -12,14 +12,15 @@ import { useSelector } from "react-redux";
 import ZoomedCard from "../components/ui/ZoomedCard";
 import ChoiceModal from "../components/automated/ChoiceModal";
 import AutomatedControls from "../components/automated/AutomatedControls";
+import UiChromeRestore from "../components/ui/UiChromeRestore";
 import { useEngineSync } from "../components/hooks/useEngineSync";
 import initialWallpaper from "../../src/assets/wallpapers/3.png";
 
 export default function Game(callback) {
   useEngineSync();
   const [wallpaper, setWallpaper] = useState(initialWallpaper);
-  const [selectedOption, setSelectedOption] = useState("Galmieux");
   const reduxLeader = useSelector((state) => state.card.leader);
+  const [selectedOption, setSelectedOption] = useState(reduxLeader || "Galmieux");
 
   useEffect(() => {
     if (reduxLeader) setSelectedOption(reduxLeader);
@@ -31,6 +32,7 @@ export default function Game(callback) {
   const [readyToPlaceOnFieldFromHand, setReadyToPlaceOnFieldFromHand] =
     useState(false);
   const reduxCurrentCard = useSelector((state) => state.card.currentCard);
+  const uiChromeHidden = useSelector((state) => state.gameState.uiChromeHidden);
 
   // The board reports the scale it computed; the side panels (HP, leader, play
   // points, chat) shrink by the same factor so everything matches. Capped at 1
@@ -58,24 +60,29 @@ export default function Game(callback) {
         backgroundSize: "cover",
       }}
     >
-      <Selection
-        setSelectedOption={setSelectedOption}
-        // setWallpaper={setWallpaper}
+      <UiChromeRestore />
+      {/* ZoomedCard is position:absolute against the viewport, so it must NOT
+          be wrapped in a transform (that would reparent its containing block
+          and collapse it). It scales itself via the scale prop instead. */}
+      <ZoomedCard
+        name={reduxCurrentCard}
+        hovering={hovering}
+        scale={sideScale}
       />
-      {/* Left side  */}
-      <div className={"leftSideCanvas"}>
-        {/* ZoomedCard is position:absolute against the viewport, so it must NOT
-            be wrapped in a transform (that would reparent its containing block
-            and collapse it). It scales itself via the scale prop instead. */}
-        <ZoomedCard
-          name={reduxCurrentCard}
-          hovering={hovering}
-          scale={sideScale}
+      {!uiChromeHidden && (
+        <Selection
+          setSelectedOption={setSelectedOption}
+          // setWallpaper={setWallpaper}
         />
+      )}
+      {/* Left side  */}
+      {!uiChromeHidden && (
+      <div className={"leftSideCanvas"}>
         <div style={leftScaleStyle}>
           <PlayPoints name={selectedOption} />
         </div>
       </div>
+      )}
 
       {/* Center Field */}
       <motion.div
@@ -134,9 +141,10 @@ export default function Game(callback) {
       </motion.div>
 
       {/* Right side */}
-      <ChoiceModal />
-      <AutomatedControls />
+      {!uiChromeHidden && <ChoiceModal setHovering={setHovering} />}
+      {!uiChromeHidden && <AutomatedControls />}
 
+      {!uiChromeHidden && (
       <div className={"rightSideCanvas"}>
         <div style={rightScaleStyle}>
           <EnemyUI />
@@ -149,6 +157,7 @@ export default function Game(callback) {
           <ChatUI scale={sideScale} />
         </div>
       </div>
+      )}
     </div>
   );
 }

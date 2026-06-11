@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import {
 
@@ -20,17 +20,27 @@ import {
 
 } from "@mui/material";
 
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { setCurrentCard } from "../../redux/CardSlice";
 
 import { useEngineSync } from "../hooks/useEngineSync";
 
 import { cardImage } from "../../decks/getCards";
 
 import { getNameByCardNoClient } from "../../engine/cardLookup";
+import HideUiButton from "../ui/HideUiButton";
 
 
 
-function CardChoiceButton({ cardNo, label, onClick, selected, disabled = false }) {
+function CardChoiceButton({
+  cardNo,
+  label,
+  onClick,
+  selected,
+  disabled = false,
+  onPreviewStart,
+  onPreviewEnd,
+}) {
 
   const name = cardNo ? getNameByCardNoClient(cardNo) || label : label;
 
@@ -43,6 +53,10 @@ function CardChoiceButton({ cardNo, label, onClick, selected, disabled = false }
       onClick={onClick}
 
       disabled={disabled}
+
+      onMouseEnter={() => onPreviewStart?.(name)}
+
+      onMouseLeave={() => onPreviewEnd?.(name)}
 
       sx={{
 
@@ -96,8 +110,9 @@ function CardChoiceButton({ cardNo, label, onClick, selected, disabled = false }
 
 
 
-export default function ChoiceModal() {
+export default function ChoiceModal({ setHovering }) {
 
+  const dispatch = useDispatch();
   const pending = useSelector((s) => s.gameState.pendingChoices);
 
   const gameMode = useSelector((s) => s.gameState.gameMode);
@@ -111,16 +126,75 @@ export default function ChoiceModal() {
   const { sendAction } = useEngineSync();
 
   const [selectedDiscardIds, setSelectedDiscardIds] = useState([]);
+  const choicePreviewRef = useRef({ hover: null, pinned: null });
 
+  const syncChoicePreview = () => {
+    const name = choicePreviewRef.current.hover ?? choicePreviewRef.current.pinned;
+    if (name) {
+      dispatch(setCurrentCard(name));
+      setHovering?.(true);
+    } else {
+      setHovering?.(false);
+    }
+  };
 
+  const handleChoicePreviewStart = (name) => {
+    choicePreviewRef.current.hover = name;
+    syncChoicePreview();
+  };
+
+  const handleChoicePreviewEnd = (name) => {
+    if (choicePreviewRef.current.hover === name) choicePreviewRef.current.hover = null;
+    syncChoicePreview();
+  };
+
+  const choicePreviewProps = {
+    onPreviewStart: handleChoicePreviewStart,
+    onPreviewEnd: handleChoicePreviewEnd,
+  };
 
   useEffect(() => {
 
     setSelectedDiscardIds([]);
+    choicePreviewRef.current = { hover: null, pinned: null };
+    setHovering?.(false);
 
-  }, [pending?.type, pending?.count, pending?.player, pending?.action]);
+  }, [pending?.type, pending?.count, pending?.player, pending?.action, setHovering]);
 
-
+  useEffect(() => {
+    if (!pending || !selectedDiscardIds.length) {
+      choicePreviewRef.current.pinned = null;
+      syncChoicePreview();
+      return;
+    }
+    const lastId = selectedDiscardIds[selectedDiscardIds.length - 1];
+    const nameFromCardNo = (cardNo, label) =>
+      cardNo ? getNameByCardNoClient(cardNo) || label : label;
+    let pinnedName = null;
+    if (pending.type === "discard") {
+      const candidates = pending.candidates?.length
+        ? pending.candidates
+        : hand.map((cardName, i) => ({
+            instanceId: handInstanceIds[i],
+            label: cardName,
+            cardNo: null,
+          }));
+      const c = candidates.find((x) => x.instanceId === lastId);
+      if (c) pinnedName = nameFromCardNo(c.cardNo, c.label);
+    } else if (
+      pending.type === "selectDeckSummon" ||
+      pending.type === "selectCemeterySummon" ||
+      pending.type === "wardEngage"
+    ) {
+      const o = pending.options?.find((x) => x.instanceId === lastId);
+      if (o) pinnedName = nameFromCardNo(o.cardNo, o.label);
+    } else if (pending.type === "chooseMultiple") {
+      const o = pending.options?.find((x) => String(x.index) === lastId);
+      if (o) pinnedName = nameFromCardNo(o.cardNo, o.label);
+    }
+    choicePreviewRef.current.pinned = pinnedName;
+    syncChoicePreview();
+  }, [selectedDiscardIds, pending, hand, handInstanceIds, dispatch, setHovering]);
 
   if (gameMode !== "automated" || !pending) return null;
 
@@ -206,6 +280,17 @@ export default function ChoiceModal() {
 
       }
 
+      if (pending.type === "selectDeckSummon") {
+        const option = pending.options.find((o) => o.instanceId === instanceId);
+        if (!option?.eligible) return prev;
+        const currentCost = prev.reduce((sum, id) => {
+          const o = pending.options.find((x) => x.instanceId === id);
+          return sum + (o?.cost ?? 0);
+        }, 0);
+        if (currentCost + option.cost > pending.maxTotalCost) return prev;
+        return [...prev, instanceId];
+      }
+
       if (prev.length >= pending.count) return prev;
 
       return [...prev, instanceId];
@@ -213,6 +298,14 @@ export default function ChoiceModal() {
     });
 
   };
+
+  const selectedDeckSummonCost =
+    pending?.type === "selectDeckSummon"
+      ? selectedDiscardIds.reduce((sum, id) => {
+          const o = pending.options.find((x) => x.instanceId === id);
+          return sum + (o?.cost ?? 0);
+        }, 0)
+      : 0;
 
 
 
@@ -228,13 +321,21 @@ export default function ChoiceModal() {
 
   };
 
-
-
   return (
 
     <Dialog open maxWidth="md" fullWidth>
 
-      <DialogTitle>Game Choice Required</DialogTitle>
+      <DialogTitle
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          pr: 1,
+        }}
+      >
+        Game Choice Required
+        <HideUiButton sx={{ backgroundColor: "transparent", color: "inherit" }} />
+      </DialogTitle>
 
       <DialogContent sx={{ maxHeight: "70vh", overflowY: "auto" }}>
 
@@ -359,7 +460,7 @@ export default function ChoiceModal() {
 
               {discardCandidates.map((c) => (
 
-                <CardChoiceButton
+                <CardChoiceButton {...choicePreviewProps}
 
                   key={c.instanceId}
 
@@ -433,6 +534,18 @@ export default function ChoiceModal() {
 
         )}
 
+        {pending.type === "selectDeckSummon" && (
+
+          <Typography sx={{ mb: 1 }}>
+
+            Select Machina followers to summon (total cost {selectedDeckSummonCost}/
+
+            {pending.maxTotalCost} or less). Unselected cards go to the bottom of your deck.
+
+          </Typography>
+
+        )}
+
 
 
         {pending.type === "selectTarget" && (
@@ -441,7 +554,7 @@ export default function ChoiceModal() {
 
             {targetCandidates.map((c) => (
 
-              <CardChoiceButton
+              <CardChoiceButton {...choicePreviewProps}
 
                 key={c.instanceId}
 
@@ -471,7 +584,7 @@ export default function ChoiceModal() {
 
             {zoneOptions.map((o) => (
 
-              <CardChoiceButton
+              <CardChoiceButton {...choicePreviewProps}
 
                 key={o.instanceId}
 
@@ -515,7 +628,7 @@ export default function ChoiceModal() {
 
                     .map((o) => (
 
-                      <CardChoiceButton
+                      <CardChoiceButton {...choicePreviewProps}
 
                         key={o.instanceId}
 
@@ -557,7 +670,7 @@ export default function ChoiceModal() {
 
                     .map((o) => (
 
-                      <CardChoiceButton
+                      <CardChoiceButton {...choicePreviewProps}
 
                         key={o.instanceId}
 
@@ -589,7 +702,7 @@ export default function ChoiceModal() {
 
             {pending.options.map((c) => (
 
-              <CardChoiceButton
+              <CardChoiceButton {...choicePreviewProps}
 
                 key={c.instanceId}
 
@@ -615,7 +728,7 @@ export default function ChoiceModal() {
 
             {pending.options.map((o) => (
 
-              <CardChoiceButton
+              <CardChoiceButton {...choicePreviewProps}
 
                 key={o.instanceId}
 
@@ -637,11 +750,15 @@ export default function ChoiceModal() {
 
         )}
 
-        {(pending.type === "selectCemeterySummon" || pending.type === "chooseMultiple") && (
+        {(pending.type === "selectCemeterySummon" ||
+          pending.type === "chooseMultiple" ||
+          pending.type === "selectDeckSummon") && (
 
           <Stack direction="row" spacing={1} sx={{ flexWrap: "wrap", justifyContent: "center", mt: 1 }}>
 
-            {pending.options.map((o) => {
+            {pending.options
+              .filter((o) => pending.type !== "selectDeckSummon" || o.eligible !== false)
+              .map((o) => {
 
               const key = pending.type === "chooseMultiple" ? o.index : o.instanceId;
 
@@ -653,9 +770,14 @@ export default function ChoiceModal() {
 
                   : selectedDiscardIds.includes(o.instanceId);
 
+              const deckSummonDisabled =
+                pending.type === "selectDeckSummon" &&
+                !selected &&
+                selectedDeckSummonCost + (o.cost ?? 0) > pending.maxTotalCost;
+
               return (
 
-                <CardChoiceButton
+                <CardChoiceButton {...choicePreviewProps}
 
                   key={key}
 
@@ -670,6 +792,8 @@ export default function ChoiceModal() {
                   }
 
                   selected={selected}
+
+                  disabled={deckSummonDisabled}
 
                   onClick={() => {
 
@@ -705,6 +829,47 @@ export default function ChoiceModal() {
 
         )}
 
+        {pending.type === "selectDeckSummon" &&
+          pending.options.some((o) => o.eligible === false) && (
+
+          <>
+
+            <Typography variant="subtitle2" sx={{ mt: 2, mb: 0.5, color: "text.secondary" }}>
+
+              Other cards (cannot summon)
+
+            </Typography>
+
+            <Stack direction="row" spacing={1} sx={{ flexWrap: "wrap", justifyContent: "center" }}>
+
+              {pending.options
+
+                .filter((o) => o.eligible === false)
+
+                .map((o) => (
+
+                  <CardChoiceButton {...choicePreviewProps}
+
+                    key={o.instanceId}
+
+                    cardNo={o.cardNo}
+
+                    label={`${o.label} (${o.cost} PP)`}
+
+                    disabled
+
+                    onClick={() => {}}
+
+                  />
+
+                ))}
+
+            </Stack>
+
+          </>
+
+        )}
+
 
 
         {pending.type === "wardEngage" && (
@@ -713,7 +878,7 @@ export default function ChoiceModal() {
 
             {pending.candidates.map((c) => (
 
-              <CardChoiceButton
+              <CardChoiceButton {...choicePreviewProps}
 
                 key={c.instanceId}
 
@@ -972,6 +1137,46 @@ export default function ChoiceModal() {
             >
 
               Skip
+
+            </Button>
+
+          </>
+
+        )}
+
+        {pending.type === "selectDeckSummon" && (
+
+          <>
+
+            <Button
+
+              variant="contained"
+
+              onClick={() =>
+
+                sendAction({
+
+                  type: "CHOICE_RESPONSE",
+
+                  payload: { instanceIds: selectedDiscardIds },
+
+                })
+
+              }
+
+            >
+
+              Summon selected
+
+            </Button>
+
+            <Button
+
+              onClick={() => sendAction({ type: "CHOICE_RESPONSE", payload: { instanceIds: [] } })}
+
+            >
+
+              Summon none
 
             </Button>
 

@@ -838,7 +838,8 @@
               "lookAt": 5,
               "to": "exArea",
               "optional": true,
-              "playCostReduction": 3
+              "playCostReduction": 3,
+              "remainderTo": "deckBottom"
             }
           ]
         }
@@ -1122,7 +1123,8 @@
                   "trait": "Machina",
                   "cardType": "follower"
                 },
-                "to": "hand"
+                "to": "hand",
+                "reveal": false
               }
             },
             {
@@ -1397,7 +1399,8 @@
                   "trait": "Machina",
                   "cardType": "follower"
                 },
-                "to": "hand"
+                "to": "hand",
+                "reveal": true
               }
             },
             {
@@ -1465,7 +1468,8 @@
           },
           "lookAt": 2,
           "to": "hand",
-          "optional": true
+          "optional": true,
+          "reveal": true
         }
       }
     ]
@@ -2063,6 +2067,2423 @@
         "effect": {
           "op": "healLeader",
           "amount": 1
+        }
+      }
+    ]
+  },
+  "BP07-047EN": {
+    "printingType": "base",
+    "cost": 1,
+    "attack": 2,
+    "defense": 1,
+    "keywords": [
+      "fanfare"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "Machina",
+      "Golem"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "choose",
+          "min": 1,
+          "max": 1,
+          "options": [
+            {
+              "label": "Assembly Droid token",
+              "effect": {
+                "op": "summon",
+                "tokenCardNo": "BP17-T17EN",
+                "count": 1,
+                "zone": "exArea"
+              }
+            },
+            {
+              "label": "If 3+ Machina in EX: +1/+1 and Rush",
+              "effect": {
+                "op": "if",
+                "condition": {
+                  "type": "exAreaTraitMin",
+                  "trait": "Machina",
+                  "count": 3
+                },
+                "then": {
+                  "op": "sequence",
+                  "steps": [
+                    {
+                      "op": "buff",
+                      "atk": 1,
+                      "def": 1,
+                      "targets": {
+                        "type": "self"
+                      }
+                    },
+                    {
+                      "op": "grantKeyword",
+                      "keyword": "rush",
+                      "targets": {
+                        "type": "self"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP07-103EN": {
+    "printingType": "base",
+    "cost": 6,
+    "attack": 6,
+    "defense": 6,
+    "keywords": [
+      "fanfare"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "Machina",
+      "Deity"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "optionalCost",
+          "label": "Banish 3 Machina cards from your cemetery",
+          "cost": {
+            "op": "banishFromCemetery",
+            "filter": {
+              "trait": "Machina"
+            },
+            "count": 3
+          },
+          "then": {
+            "op": "chooseMultiple",
+            "min": 0,
+            "max": 2,
+            "options": [
+              {
+                "label": "Destroy enemy follower",
+                "effect": {
+                  "op": "destroy",
+                  "targets": {
+                    "type": "enemyFollower",
+                    "count": 1
+                  }
+                }
+              },
+              {
+                "label": "Deal 3 to enemy leader",
+                "effect": {
+                  "op": "dealDamage",
+                  "amount": 3,
+                  "targets": {
+                    "type": "enemyLeader"
+                  }
+                }
+              },
+              {
+                "label": "Search Machina (not Technolord)",
+                "effect": {
+                  "op": "tutorFromDeck",
+                  "filter": {
+                    "trait": "Machina",
+                    "excludeIdentityName": "Technolord"
+                  },
+                  "to": "hand",
+                  "reveal": true
+                }
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "BP12-048EN": {
+    "printingType": "base",
+    "cost": 2,
+    "attack": 2,
+    "defense": 3,
+    "keywords": [
+      "fanfare"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "Machina",
+      "Golem"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "choose",
+          "min": 1,
+          "max": 1,
+          "options": [
+            {
+              "label": "Assembly Droid token",
+              "effect": {
+                "op": "summon",
+                "tokenCardNo": "BP17-T17EN",
+                "count": 1,
+                "zone": "exArea"
+              }
+            },
+            {
+              "label": "Repair Mode token",
+              "effect": {
+                "op": "summon",
+                "tokenCardNo": "BP17-T18EN",
+                "count": 1,
+                "zone": "exArea"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "timing": "onCardPlayed",
+        "filter": {
+          "trait": "Machina"
+        },
+        "oncePerTurn": true,
+        "effect": {
+          "op": "healLeader",
+          "amount": 1
+        }
+      }
+    ]
+  },
+  "BP12-049EN": {
+    "printingType": "base",
+    "cost": 2,
+    "attack": 2,
+    "defense": 3,
+    "keywords": [
+      "fanfare"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "Machina",
+      "Golem"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "optionalCost",
+              "label": "Discard a Machina card to draw a card",
+              "cost": {
+                "op": "discardFromHand",
+                "filter": {
+                  "trait": "Machina"
+                },
+                "count": 1
+              },
+              "then": {
+                "op": "draw",
+                "count": 1
+              }
+            },
+            {
+              "op": "summon",
+              "tokenCardNo": "BP17-T17EN",
+              "count": 1,
+              "zone": "exArea"
+            },
+            {
+              "op": "summon",
+              "tokenCardNo": "BP17-T18EN",
+              "count": 1,
+              "zone": "exArea"
+            },
+            {
+              "op": "if",
+              "condition": {
+                "type": "exAreaTraitMin",
+                "trait": "Machina",
+                "count": 5
+              },
+              "then": {
+                "op": "recoverPp",
+                "amount": 1
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP17-049EN": {
+    "printingType": "base",
+    "cost": 2,
+    "attack": 2,
+    "defense": 2,
+    "evolvesTo": "BP17-050EN",
+    "evolveCost": 1,
+    "keywords": [
+      "evolve"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "Machina",
+      "Natura",
+      "Golem"
+    ],
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP17-T18EN",
+          "count": 1,
+          "zone": "exArea"
+        }
+      }
+    ]
+  },
+  "BP17-050EN": {
+    "printingType": "evolved",
+    "attack": 3,
+    "defense": 3,
+    "evolvesFrom": "BP17-049EN",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "traits": [
+      "Machina",
+      "Natura",
+      "Golem"
+    ],
+    "keywords": [],
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP17-T18EN",
+          "count": 1,
+          "zone": "exArea"
+        }
+      }
+    ]
+  },
+  "BP17-033EN": {
+    "printingType": "base",
+    "cost": 2,
+    "attack": 2,
+    "defense": 2,
+    "cardType": "follower",
+    "traits": [
+      "Merchant"
+    ],
+    "keywords": [
+      "fanfare"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "optionalCost",
+          "label": "Discard a Swordcraft card",
+          "cost": {
+            "op": "discardFromHand",
+            "filter": {
+              "cardClass": "sword"
+            },
+            "count": 1
+          },
+          "then": {
+            "op": "if",
+            "condition": {
+              "type": "discardedCardType",
+              "cardType": "spell"
+            },
+            "then": {
+              "op": "draw",
+              "count": 2
+            },
+            "else": {
+              "op": "draw",
+              "count": 1
+            }
+          }
+        }
+      }
+    ]
+  },
+  "BP17-041EN": {
+    "printingType": "base",
+    "cost": 2,
+    "attack": 2,
+    "defense": 2,
+    "evolvesTo": "BP17-042EN",
+    "evolveCost": 1,
+    "keywords": [
+      "fanfare",
+      "evolve"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "Machina",
+      "Golem"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP17-T18EN",
+          "count": 1,
+          "zone": "exArea"
+        }
+      }
+    ]
+  },
+  "BP17-042EN": {
+    "printingType": "evolved",
+    "attack": 3,
+    "defense": 3,
+    "evolvesFrom": "BP17-041EN",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "traits": [
+      "Machina",
+      "Golem"
+    ],
+    "keywords": [],
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "searchDeckChoose",
+              "filter": {
+                "trait": "Machina"
+              },
+              "lookAt": 4,
+              "to": "hand",
+              "optional": true,
+              "remainderTo": "deckBottom",
+              "reveal": true
+            },
+            {
+              "op": "searchDeckChoose",
+              "filter": {
+                "cardNo": "BP07-041EN"
+              },
+              "lookAt": 4,
+              "to": "hand",
+              "reveal": true,
+              "optional": true,
+              "remainderTo": "deckBottom"
+            }
+          ]
+        }
+      },
+      {
+        "timing": "onSuperEvolve",
+        "effect": {
+          "op": "grantOnCardPlayed",
+          "filter": {
+            "trait": "Machina"
+          },
+          "untilEndOfTurn": true,
+          "label": "When you play a Machina card, deal 1 damage to each enemy leader and follower",
+          "effect": {
+            "op": "dealDamageAllEnemies",
+            "amount": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP07-035EN": {
+    "printingType": "base",
+    "cost": 3,
+    "attack": 3,
+    "defense": 3,
+    "evolvesTo": "BP07-036EN",
+    "evolveCost": 1,
+    "keywords": [
+      "fanfare",
+      "evolve"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "Machina",
+      "Golem"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP17-T18EN",
+          "count": 1,
+          "zone": "exArea"
+        }
+      }
+    ]
+  },
+  "BP07-036EN": {
+    "printingType": "evolved",
+    "attack": 4,
+    "defense": 4,
+    "evolvesFrom": "BP07-035EN",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "traits": [
+      "Machina",
+      "Golem"
+    ],
+    "keywords": [],
+    "abilities": [
+      {
+        "timing": "passive",
+        "filter": {
+          "trait": "Machina"
+        },
+        "effect": {
+          "op": "exAreaPlayCostReduction",
+          "amount": 1
+        }
+      },
+      {
+        "timing": "onCardPlayed",
+        "filter": {
+          "trait": "Machina"
+        },
+        "maxPerTurn": 4,
+        "effect": {
+          "op": "dealDamage",
+          "amount": 1,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP07-037EN": {
+    "printingType": "base",
+    "cost": 7,
+    "attack": 5,
+    "defense": 5,
+    "keywords": [
+      "fanfare",
+      "rush"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "Machina",
+      "Supreme"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "searchDeckSummonMultiple",
+          "filter": {
+            "trait": "Machina",
+            "cardType": "follower",
+            "maxCost": 6
+          },
+          "lookAt": 5,
+          "maxTotalCost": 6,
+          "remainderTo": "deckBottom"
+        }
+      },
+      {
+        "timing": "startOfEnd",
+        "effect": {
+          "op": "buffFieldTrait",
+          "trait": "Machina",
+          "atk": 1,
+          "def": 1,
+          "excludeSelf": true
+        }
+      }
+    ]
+  },
+  "BP12-035EN": {
+    "printingType": "base",
+    "cost": 6,
+    "attack": 5,
+    "defense": 5,
+    "evolvesTo": "BP12-036EN",
+    "evolveCost": 1,
+    "keywords": [
+      "fanfare",
+      "evolve"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "Machina",
+      "Supreme"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP12-T03EN",
+          "count": 1,
+          "zone": "field"
+        }
+      },
+      {
+        "timing": "activated",
+        "activateFrom": "hand",
+        "cost": {
+          "pp": 3,
+          "banishFromExArea": {
+            "trait": "Machina"
+          },
+          "banishCount": 2
+        },
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "moveSourceToExArea"
+            },
+            {
+              "op": "choose",
+              "min": 1,
+              "max": 1,
+              "options": [
+                {
+                  "label": "Armored Tentacle",
+                  "effect": {
+                    "op": "summon",
+                    "tokenCardNo": "BP12-T03EN",
+                    "count": 1,
+                    "zone": "field"
+                  }
+                },
+                {
+                  "label": "Assault Tentacle",
+                  "effect": {
+                    "op": "summon",
+                    "tokenCardNo": "BP12-T04EN",
+                    "count": 1,
+                    "zone": "field"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP12-036EN": {
+    "printingType": "evolved",
+    "attack": 6,
+    "defense": 6,
+    "evolvesFrom": "BP12-035EN",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "traits": [
+      "Machina",
+      "Supreme"
+    ],
+    "keywords": [],
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "optionalCost",
+          "label": "Discard a Machina card",
+          "cost": {
+            "op": "discardFromHand",
+            "filter": {
+              "trait": "Machina"
+            },
+            "count": 1
+          },
+          "then": {
+            "op": "summon",
+            "tokenCardNo": "BP12-T04EN",
+            "count": 1,
+            "zone": "field"
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "oncePerTurn": true,
+        "cost": {
+          "pp": 2,
+          "banishFromExArea": {
+            "trait": "Machina"
+          },
+          "banishCount": 1
+        },
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP12-T04EN",
+          "count": 1,
+          "zone": "field"
+        }
+      }
+    ]
+  },
+  "BP17-040EN": {
+    "printingType": "base",
+    "cost": 5,
+    "attack": 5,
+    "defense": 5,
+    "keywords": [
+      "fanfare"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "Machina",
+      "Supreme"
+    ],
+    "abilities": [
+      {
+        "timing": "passive",
+        "condition": {
+          "type": "fieldFollowerMinCost",
+          "trait": "Machina",
+          "minCost": 6,
+          "count": 1
+        },
+        "effect": {
+          "op": "playCostReduction",
+          "amount": 5
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "buryFieldFollowers",
+              "filter": {
+                "trait": "Machina",
+                "cardType": "follower"
+              },
+              "minCost": 6
+            },
+            {
+              "op": "if",
+              "condition": {
+                "type": "buriedExactCost",
+                "cost": 6
+              },
+              "then": {
+                "op": "summon",
+                "tokenCardNo": "BP12-T04EN",
+                "count": 1,
+                "zone": "field"
+              }
+            },
+            {
+              "op": "if",
+              "condition": {
+                "type": "buriedAtLeastCost",
+                "cost": 7
+              },
+              "then": {
+                "op": "sequence",
+                "steps": [
+                  {
+                    "op": "dealDamageAllEnemies",
+                    "amount": 4,
+                    "followersOnly": true
+                  },
+                  {
+                    "op": "buffFieldTrait",
+                    "trait": "Machina",
+                    "atk": 2,
+                    "def": 2,
+                    "excludeSelf": true
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP17-048EN": {
+    "printingType": "base",
+    "cost": 1,
+    "cardType": "spell",
+    "traits": [
+      "Machina",
+      "Natura",
+      "Golem"
+    ],
+    "keywords": [],
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "searchDeckChoose",
+              "filter": {
+                "trait": "Machina"
+              },
+              "lookAt": 1,
+              "to": "exArea",
+              "optional": true
+            },
+            {
+              "op": "summon",
+              "tokenCardNo": "BP17-T17EN",
+              "count": 1,
+              "zone": "exArea"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP07-041EN": {
+    "printingType": "base",
+    "cost": 1,
+    "keywords": [
+      "quick"
+    ],
+    "cardType": "spell",
+    "traits": [
+      "Machina",
+      "Golem"
+    ],
+    "abilities": [
+      {
+        "timing": "spell",
+        "quick": true,
+        "effect": {
+          "op": "dealDamage",
+          "amount": 2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "onAllyFollowerEnter",
+        "activateFrom": "cemetery",
+        "label": "Delta Cannon — Pay 1 PP: put into EX area",
+        "filter": {
+          "identityNameContains": "Tetra, Sapphire Rebel",
+          "cardType": "follower"
+        },
+        "effect": {
+          "op": "optionalCost",
+          "label": "Pay 1 PP: put this into EX area",
+          "cost": {
+            "op": "spendPp",
+            "amount": 1
+          },
+          "then": {
+            "op": "moveSourceToExArea"
+          }
+        }
+      }
+    ]
+  },
+  "BP17-044EN": {
+    "printingType": "base",
+    "cost": 3,
+    "cardType": "spell",
+    "traits": [
+      "Machina",
+      "Supreme"
+    ],
+    "keywords": [],
+    "abilities": [
+      {
+        "timing": "spell",
+        "condition": {
+          "type": "exAreaTraitMin",
+          "trait": "Machina",
+          "count": 3
+        },
+        "effect": {
+          "op": "choose",
+          "min": 1,
+          "max": 1,
+          "options": [
+            {
+              "label": "Summon Armored Tentacle",
+              "effect": {
+                "op": "sequence",
+                "steps": [
+                  {
+                    "op": "tutorFromDeck",
+                    "filter": {
+                      "identityNameContains": "Belphomet",
+                      "cardType": "follower"
+                    },
+                    "to": "hand",
+                    "reveal": true
+                  },
+                  {
+                    "op": "summon",
+                    "tokenCardNo": "BP12-T03EN",
+                    "count": 1,
+                    "zone": "field"
+                  }
+                ]
+              }
+            },
+            {
+              "label": "Play for 2 more PP (also Assault Tentacle)",
+              "additionalPpCost": 2,
+              "effect": {
+                "op": "sequence",
+                "steps": [
+                  {
+                    "op": "tutorFromDeck",
+                    "filter": {
+                      "identityNameContains": "Belphomet",
+                      "cardType": "follower"
+                    },
+                    "to": "hand",
+                    "reveal": true
+                  },
+                  {
+                    "op": "summon",
+                    "tokenCardNo": "BP12-T03EN",
+                    "count": 1,
+                    "zone": "field"
+                  },
+                  {
+                    "op": "summon",
+                    "tokenCardNo": "BP12-T04EN",
+                    "count": 1,
+                    "zone": "field"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP12-041EN": {
+    "printingType": "base",
+    "cost": 3,
+    "cardType": "spell",
+    "traits": [
+      "Machina",
+      "Golem"
+    ],
+    "keywords": [],
+    "abilities": [
+      {
+        "timing": "spell",
+        "condition": {
+          "type": "ownCemeteryTraitMin",
+          "trait": "Machina",
+          "count": 5
+        },
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "tutorFromDeck",
+              "filter": {
+                "trait": "Machina",
+                "cardType": "follower",
+                "maxCost": 3
+              },
+              "to": "field"
+            },
+            {
+              "op": "tutorFromDeck",
+              "filter": {
+                "cardClass": "rune",
+                "cardType": "spell",
+                "maxCost": 1
+              },
+              "to": "exArea"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP17-119EN": {
+    "printingType": "base",
+    "cost": 2,
+    "cardType": "amulet",
+    "traits": [
+      "Machina"
+    ],
+    "keywords": [
+      "fanfare"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "optionalCost",
+          "label": "Discard a Machina card",
+          "cost": {
+            "op": "discardFromHand",
+            "filter": {
+              "trait": "Machina"
+            },
+            "count": 1
+          },
+          "then": {
+            "op": "sequence",
+            "steps": [
+              {
+                "op": "draw",
+                "count": 2
+              },
+              {
+                "op": "if",
+                "condition": {
+                  "type": "exAreaTraitMin",
+                  "trait": "Machina",
+                  "count": 3
+                },
+                "then": {
+                  "op": "recoverPp",
+                  "amount": 1
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "cost": {
+          "pp": 0,
+          "engage": true
+        },
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "banishSelf"
+            },
+            {
+              "op": "choose",
+              "min": 1,
+              "max": 1,
+              "options": [
+                {
+                  "label": "Give Machina follower +0/+1",
+                  "effect": {
+                    "op": "buff",
+                    "atk": 0,
+                    "def": 1,
+                    "targets": {
+                      "type": "selfFollower",
+                      "count": 1
+                    }
+                  }
+                },
+                {
+                  "label": "Give your leader +0/+1",
+                  "effect": {
+                    "op": "healLeader",
+                    "amount": 1
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP12-T03EN": {
+    "printingType": "token",
+    "cost": 3,
+    "attack": 2,
+    "defense": 4,
+    "cardType": "follower",
+    "specialType": "token",
+    "traits": [
+      "Machina"
+    ],
+    "keywords": [
+      "ward"
+    ],
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "healLeader",
+          "amount": 4
+        }
+      }
+    ]
+  },
+  "CP02-T04EN": {
+    "printingType": "token",
+    "cost": 4,
+    "cardType": "spell",
+    "specialType": "token",
+    "traits": [
+      "iM@S CG",
+      "Magical Item",
+      "Cool"
+    ],
+    "keywords": [],
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "healLeader",
+              "amount": 1
+            },
+            {
+              "op": "draw",
+              "count": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP12-T04EN": {
+    "printingType": "token",
+    "cost": 3,
+    "attack": 4,
+    "defense": 2,
+    "cardType": "follower",
+    "specialType": "token",
+    "traits": [
+      "Machina"
+    ],
+    "keywords": [
+      "storm"
+    ],
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 4,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "ECP02-001EN": {
+    "printingType": "base",
+    "cost": 2,
+    "attack": 1,
+    "defense": 1,
+    "evolvesTo": "ECP02-002EN",
+    "evolveCost": 1,
+    "keywords": [
+      "fanfare",
+      "evolve"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "optionalCost",
+          "label": "[cost01], Lesson (1)",
+          "cost": {
+            "op": "sequence",
+            "steps": [
+              {
+                "op": "spendPp",
+                "amount": 1
+              },
+              {
+                "op": "banishFromExArea",
+                "filter": {
+                  "trait": "Magical Item"
+                },
+                "count": 1
+              }
+            ]
+          },
+          "then": {
+            "op": "selectFromHand",
+            "filter": {
+              "trait": "iM@S CG",
+              "cardType": "follower",
+              "maxCost": 2
+            },
+            "to": "exArea",
+            "optional": true,
+            "playCostReduction": 2
+          }
+        }
+      }
+    ]
+  },
+  "ECP02-002EN": {
+    "printingType": "evolved",
+    "attack": 2,
+    "defense": 2,
+    "evolvesFrom": "ECP02-001EN",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "keywords": [],
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "optionalCost",
+              "label": "Give +1/+1 to an iM@S CG follower",
+              "cost": {
+                "op": "noop"
+              },
+              "then": {
+                "op": "buff",
+                "atk": 1,
+                "def": 1,
+                "targets": {
+                  "type": "selfFollower",
+                  "count": 1
+                }
+              }
+            },
+            {
+              "op": "optionalCost",
+              "label": "Give +1/+1 to another iM@S CG follower",
+              "cost": {
+                "op": "noop"
+              },
+              "then": {
+                "op": "buff",
+                "atk": 1,
+                "def": 1,
+                "targets": {
+                  "type": "selfFollower",
+                  "count": 1
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "timing": "onSuperEvolve",
+        "effect": {
+          "op": "buffFieldTrait",
+          "trait": "iM@S CG",
+          "atk": 1,
+          "def": 1,
+          "excludeSelf": true
+        }
+      }
+    ]
+  },
+  "ECP02-003EN": {
+    "printingType": "base",
+    "cost": 2,
+    "attack": 2,
+    "defense": 2,
+    "keywords": [
+      "fanfare"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {
+            "trait": "Cool"
+          },
+          "lookAt": 1,
+          "to": "hand",
+          "optional": true,
+          "reveal": true
+        }
+      },
+      {
+        "timing": "activated",
+        "oncePerTurn": true,
+        "cost": {
+          "pp": 0
+        },
+        "condition": {
+          "type": "fieldTraitMin",
+          "trait": "Cool",
+          "count": 3
+        },
+        "effect": {
+          "op": "dealDamage",
+          "amount": 1,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "ECP02-012EN": {
+    "printingType": "base",
+    "cost": 2,
+    "attack": 2,
+    "defense": 1,
+    "keywords": [
+      "storm",
+      "fanfare"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "optionalCost",
+          "label": "Lesson (2)",
+          "cost": {
+            "op": "banishFromExArea",
+            "filter": {
+              "trait": "Magical Item"
+            },
+            "count": 2
+          },
+          "then": {
+            "op": "dealDamage",
+            "amount": {
+              "op": "fieldTraitCount",
+              "trait": "Cool"
+            },
+            "targets": {
+              "type": "enemyFollower",
+              "count": 1
+            }
+          }
+        }
+      }
+    ]
+  },
+  "ECP02-016EN": {
+    "printingType": "base",
+    "cost": 1,
+    "attack": 1,
+    "defense": 1,
+    "keywords": [
+      "fanfare"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {
+            "trait": "Cool"
+          },
+          "lookAt": 1,
+          "to": "hand",
+          "optional": true,
+          "reveal": true
+        }
+      },
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "CP02-T04EN",
+          "count": 1,
+          "zone": "exArea"
+        }
+      }
+    ]
+  },
+  "ECP02-026EN": {
+    "printingType": "base",
+    "cost": 1,
+    "attack": 2,
+    "defense": 2,
+    "keywords": [
+      "fanfare"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "optionalCost",
+          "label": "Discard an iM@S CG card",
+          "cost": {
+            "op": "discardFromHand",
+            "filter": {
+              "trait": "iM@S CG"
+            },
+            "count": 1
+          },
+          "then": {
+            "op": "draw",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "cost": {
+          "pp": 2,
+          "engage": true
+        },
+        "condition": {
+          "type": "ownCemeteryTraitMin",
+          "trait": "iM@S CG",
+          "count": 10
+        },
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "buryFieldFollowers",
+              "filter": {
+                "cardNo": "ECP02-026EN"
+              }
+            },
+            {
+              "op": "tutorFromDeck",
+              "filter": {
+                "identityNameContains": "Syuko Shiomi",
+                "cardType": "follower"
+              },
+              "to": "field"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "ECP02-037EN": {
+    "printingType": "base",
+    "cost": 2,
+    "attack": 2,
+    "defense": 2,
+    "evolvesTo": "ECP02-038EN",
+    "evolveCost": 1,
+    "keywords": [
+      "fanfare",
+      "evolve"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "fieldTraitMin",
+            "trait": "Cool",
+            "count": 3
+          },
+          "then": {
+            "op": "dealDamageAllEnemies",
+            "amount": 1,
+            "followersOnly": false
+          }
+        }
+      }
+    ]
+  },
+  "ECP02-038EN": {
+    "printingType": "evolved",
+    "attack": 3,
+    "defense": 3,
+    "evolvesFrom": "ECP02-037EN",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "keywords": [],
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "choose",
+          "min": 1,
+          "max": 1,
+          "options": [
+            {
+              "label": "Deal 2 damage to an enemy follower",
+              "effect": {
+                "op": "dealDamage",
+                "amount": 2,
+                "targets": {
+                  "type": "enemyFollower",
+                  "count": 1
+                }
+              }
+            },
+            {
+              "label": "[cost04], bury this: Search for Fumika Sagisawa",
+              "additionalPpCost": 4,
+              "effect": {
+                "op": "sequence",
+                "steps": [
+                  {
+                    "op": "buryFieldFollowers",
+                    "filter": {
+                      "cardNo": "ECP02-038EN"
+                    }
+                  },
+                  {
+                    "op": "tutorFromDeck",
+                    "filter": {
+                      "identityNameContains": "Fumika Sagisawa",
+                      "cardType": "follower"
+                    },
+                    "to": "field"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "ECP02-047EN": {
+    "printingType": "base",
+    "cost": 5,
+    "attack": 5,
+    "defense": 5,
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "destroy",
+              "targets": {
+                "type": "enemyFollower",
+                "count": 1
+              }
+            },
+            {
+              "op": "if",
+              "condition": {
+                "type": "ownCemeteryMin",
+                "count": 5
+              },
+              "then": {
+                "op": "healLeader",
+                "amount": 3
+              }
+            },
+            {
+              "op": "if",
+              "condition": {
+                "type": "ownCemeteryMin",
+                "count": 10
+              },
+              "then": {
+                "op": "dealDamageAllEnemies",
+                "amount": 3,
+                "followersOnly": false
+              }
+            }
+          ]
+        }
+      },
+      {
+        "timing": "activated",
+        "oncePerTurn": true,
+        "cost": {
+          "pp": 0
+        },
+        "effect": {
+          "op": "optionalCost",
+          "label": "Lesson (1)",
+          "cost": {
+            "op": "banishFromExArea",
+            "filter": {
+              "trait": "Magical Item"
+            },
+            "count": 1
+          },
+          "then": {
+            "op": "draw",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "ECP02-050EN": {
+    "printingType": "base",
+    "cost": 2,
+    "attack": 1,
+    "defense": 1,
+    "evolvesTo": "ECP02-051EN",
+    "evolveCost": 1,
+    "keywords": [
+      "evolve"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "abilities": [
+      {
+        "timing": "onAllyFollowerEnter",
+        "filter": {
+          "identityNameContains": "Mirei Hayasaka",
+          "cardType": "follower"
+        },
+        "effect": {
+          "op": "buff",
+          "atk": 1,
+          "def": 1,
+          "targets": {
+            "type": "selfFollower",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "onAllyFollowerEnter",
+        "filter": {
+          "identityNameContains": "Syoko Hoshi",
+          "cardType": "follower"
+        },
+        "effect": {
+          "op": "buff",
+          "atk": 1,
+          "def": 1,
+          "targets": {
+            "type": "selfFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "ECP02-051EN": {
+    "printingType": "evolved",
+    "attack": 2,
+    "defense": 2,
+    "evolvesFrom": "ECP02-050EN",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "keywords": [],
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "searchDeckSummonMultiple",
+          "filter": {
+            "trait": "iM@S CG",
+            "cardType": "follower",
+            "maxCost": 2
+          },
+          "lookAt": 4,
+          "maxTotalCost": 2,
+          "remainderTo": "deckBottom"
+        }
+      },
+      {
+        "timing": "onAllyFollowerEnter",
+        "filter": {
+          "identityNameContains": "Mirei Hayasaka",
+          "cardType": "follower"
+        },
+        "effect": {
+          "op": "buff",
+          "atk": 1,
+          "def": 1,
+          "targets": {
+            "type": "selfFollower",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "onAllyFollowerEnter",
+        "filter": {
+          "identityNameContains": "Syoko Hoshi",
+          "cardType": "follower"
+        },
+        "effect": {
+          "op": "buff",
+          "atk": 1,
+          "def": 1,
+          "targets": {
+            "type": "selfFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "ECP02-052EN": {
+    "printingType": "base",
+    "cost": 2,
+    "attack": 3,
+    "defense": 2,
+    "keywords": [
+      "fanfare"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "abilities": [
+      {
+        "timing": "passive",
+        "condition": {
+          "type": "fieldTraitMin",
+          "trait": "Cool",
+          "count": 3
+        },
+        "effect": {
+          "op": "passiveKeywords",
+          "keywords": [
+            "storm"
+          ]
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "optionalCost",
+          "label": "[cost02], Lesson (1)",
+          "cost": {
+            "op": "sequence",
+            "steps": [
+              {
+                "op": "spendPp",
+                "amount": 2
+              },
+              {
+                "op": "banishFromExArea",
+                "filter": {
+                  "trait": "Magical Item"
+                },
+                "count": 1
+              }
+            ]
+          },
+          "then": {
+            "op": "tutorFromDeck",
+            "filter": {
+              "identityNameContains": "Ranko Kanzaki",
+              "cardType": "follower"
+            },
+            "to": "exArea",
+            "playCostReduction": 4
+          }
+        }
+      }
+    ]
+  },
+  "ECP02-058EN": {
+    "printingType": "base",
+    "cost": 3,
+    "attack": 2,
+    "defense": 2,
+    "keywords": [
+      "fanfare"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "fieldTraitMin",
+            "trait": "Cool",
+            "count": 3
+          },
+          "then": {
+            "op": "tutorFromCemetery",
+            "filter": {
+              "trait": "Cool",
+              "cardType": "follower",
+              "maxCost": 3,
+              "excludeIdentityName": "Koume Shirasaka [Haunted Gown]"
+            },
+            "to": "field"
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "cost": {
+          "pp": 1,
+          "engage": true
+        },
+        "effect": {
+          "op": "optionalCost",
+          "label": "Lesson (1)",
+          "cost": {
+            "op": "banishFromExArea",
+            "filter": {
+              "trait": "Magical Item"
+            },
+            "count": 1
+          },
+          "then": {
+            "op": "tutorFromDeck",
+            "filter": {
+              "cardNo": "CP02-085EN"
+            },
+            "to": "exArea",
+            "playCostReduction": 2
+          }
+        }
+      }
+    ]
+  },
+  "ECP02-065EN": {
+    "printingType": "base",
+    "cost": 3,
+    "attack": 3,
+    "defense": 3,
+    "evolvesTo": "ECP02-066EN",
+    "evolveCost": 1,
+    "keywords": [
+      "evolve"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "abilities": []
+  },
+  "ECP02-066EN": {
+    "printingType": "evolved",
+    "attack": 4,
+    "defense": 4,
+    "evolvesFrom": "ECP02-065EN",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "keywords": [],
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "rollDie",
+          "sides": 6,
+          "outcomes": [
+            {
+              "on": [
+                1
+              ],
+              "effect": {
+                "op": "draw",
+                "count": 2
+              }
+            },
+            {
+              "on": [
+                2
+              ],
+              "effect": {
+                "op": "sequence",
+                "steps": [
+                  {
+                    "op": "dealDamageAllEnemies",
+                    "amount": 3,
+                    "followersOnly": false
+                  },
+                  {
+                    "op": "healLeader",
+                    "amount": 3
+                  }
+                ]
+              }
+            },
+            {
+              "on": [
+                3
+              ],
+              "effect": {
+                "op": "buryOpponentMaxAttackFollower"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CSD02b-001EN": {
+    "printingType": "base",
+    "cost": 3,
+    "attack": 3,
+    "defense": 3,
+    "keywords": [
+      "storm",
+      "fanfare"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "fieldTraitMin",
+            "trait": "Cool",
+            "count": 3
+          },
+          "then": {
+            "op": "grantKeyword",
+            "keyword": "storm",
+            "targets": {
+              "type": "selfFollower",
+              "count": 1
+            }
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "oncePerTurn": true,
+        "cost": {
+          "pp": 0
+        },
+        "effect": {
+          "op": "optionalCost",
+          "label": "[cost01], Lesson (1)",
+          "cost": {
+            "op": "sequence",
+            "steps": [
+              {
+                "op": "spendPp",
+                "amount": 1
+              },
+              {
+                "op": "banishFromExArea",
+                "filter": {
+                  "trait": "Magical Item"
+                },
+                "count": 1
+              }
+            ]
+          },
+          "then": {
+            "op": "buff",
+            "atk": 1,
+            "def": 0,
+            "targets": {
+              "type": "self"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "CSD02b-002EN": {
+    "printingType": "base",
+    "cost": 5,
+    "attack": 3,
+    "defense": 3,
+    "keywords": [
+      "fanfare"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "searchDeckSummonMultiple",
+          "filter": {
+            "trait": "Cool",
+            "cardType": "follower"
+          },
+          "lookAt": 5,
+          "maxTotalCost": 4,
+          "remainderTo": "deckBottom"
+        }
+      }
+    ]
+  },
+  "CSD02b-003EN": {
+    "printingType": "base",
+    "cost": 1,
+    "attack": 3,
+    "defense": 2,
+    "cardType": "follower",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "keywords": [],
+    "abilities": [
+      {
+        "timing": "startOfEnd",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "fieldTraitMax",
+            "trait": "Cool",
+            "count": 1
+          },
+          "then": {
+            "op": "dealDamage",
+            "amount": 1,
+            "targets": {
+              "type": "self"
+            }
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "cost": {
+          "pp": 0
+        },
+        "effect": {
+          "op": "optionalCost",
+          "label": "[cost03], Lesson (1)",
+          "cost": {
+            "op": "sequence",
+            "steps": [
+              {
+                "op": "spendPp",
+                "amount": 3
+              },
+              {
+                "op": "banishFromExArea",
+                "filter": {
+                  "trait": "Magical Item"
+                },
+                "count": 1
+              }
+            ]
+          },
+          "then": {
+            "op": "buffFieldTrait",
+            "trait": "iM@S CG",
+            "atk": 1,
+            "def": 0
+          }
+        }
+      }
+    ]
+  },
+  "CSD02b-004EN": {
+    "printingType": "base",
+    "cost": 4,
+    "attack": 4,
+    "defense": 4,
+    "keywords": [
+      "fanfare"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "tutorFromDeck",
+          "filter": {
+            "trait": "Cool",
+            "cardType": "follower",
+            "maxCost": 2
+          },
+          "to": "field"
+        }
+      }
+    ]
+  },
+  "CSD02b-007EN": {
+    "printingType": "base",
+    "cost": 1,
+    "attack": 2,
+    "defense": 2,
+    "evolvesTo": "CSD02b-008EN",
+    "evolveCost": 2,
+    "keywords": [
+      "evolve"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "abilities": []
+  },
+  "CSD02b-008EN": {
+    "printingType": "evolved",
+    "attack": 3,
+    "defense": 3,
+    "evolvesFrom": "CSD02b-007EN",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "keywords": [],
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "optionalCost",
+          "label": "[cost03]",
+          "cost": {
+            "op": "spendPp",
+            "amount": 3
+          },
+          "then": {
+            "op": "dealDamage",
+            "amount": 3,
+            "targets": {
+              "type": "enemyLeader"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "CP02-055EN": {
+    "printingType": "base",
+    "cost": 7,
+    "attack": 4,
+    "defense": 4,
+    "keywords": [
+      "fanfare"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "tutorFromDeck",
+              "filter": {
+                "cardType": "follower",
+                "maxCost": 3
+              },
+              "to": "field"
+            },
+            {
+              "op": "tutorFromDeck",
+              "filter": {
+                "cardType": "follower",
+                "maxCost": 1
+              },
+              "to": "field"
+            }
+          ]
+        }
+      },
+      {
+        "timing": "onAllyFollowerEnter",
+        "filter": {
+          "trait": "iM@S CG",
+          "cardType": "follower"
+        },
+        "effect": {
+          "op": "dealDamage",
+          "amount": 2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "CP02-069EN": {
+    "printingType": "base",
+    "cost": 4,
+    "attack": 3,
+    "defense": 3,
+    "evolvesTo": "CP02-070EN",
+    "evolveCost": 1,
+    "keywords": [
+      "fanfare",
+      "evolve"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "cost": {
+          "pp": 0
+        },
+        "effect": {
+          "op": "optionalCost",
+          "label": "[cost01], Lesson (2)",
+          "cost": {
+            "op": "sequence",
+            "steps": [
+              {
+                "op": "spendPp",
+                "amount": 1
+              },
+              {
+                "op": "banishFromExArea",
+                "filter": {
+                  "trait": "Magical Item"
+                },
+                "count": 2
+              }
+            ]
+          },
+          "then": {
+            "op": "sequence",
+            "steps": [
+              {
+                "op": "dealDamage",
+                "amount": 2,
+                "targets": {
+                  "type": "enemyFollower",
+                  "count": 1
+                }
+              },
+              {
+                "op": "dealDamage",
+                "amount": 2,
+                "targets": {
+                  "type": "enemyFollower",
+                  "count": 1
+                }
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "CP02-070EN": {
+    "printingType": "evolved",
+    "attack": 4,
+    "defense": 4,
+    "evolvesFrom": "CP02-069EN",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "keywords": [],
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {
+            "trait": "iM@S CG"
+          },
+          "lookAt": 4,
+          "to": "exArea",
+          "optional": true,
+          "remainderTo": "cemetery"
+        }
+      },
+      {
+        "timing": "activated",
+        "cost": {
+          "pp": 0
+        },
+        "effect": {
+          "op": "optionalCost",
+          "label": "[cost01], Lesson (2)",
+          "cost": {
+            "op": "sequence",
+            "steps": [
+              {
+                "op": "spendPp",
+                "amount": 1
+              },
+              {
+                "op": "banishFromExArea",
+                "filter": {
+                  "trait": "Magical Item"
+                },
+                "count": 2
+              }
+            ]
+          },
+          "then": {
+            "op": "sequence",
+            "steps": [
+              {
+                "op": "dealDamage",
+                "amount": 2,
+                "targets": {
+                  "type": "enemyFollower",
+                  "count": 1
+                }
+              },
+              {
+                "op": "dealDamage",
+                "amount": 2,
+                "targets": {
+                  "type": "enemyFollower",
+                  "count": 1
+                }
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "CP02-085EN": {
+    "printingType": "base",
+    "cost": 2,
+    "cardType": "spell",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "keywords": [],
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "dealDamage",
+              "amount": 3,
+              "targets": {
+                "type": "enemyFollower",
+                "count": 1
+              }
+            },
+            {
+              "op": "buffFieldTrait",
+              "trait": "iM@S CG",
+              "atk": 1,
+              "def": 0
+            }
+          ]
         }
       }
     ]

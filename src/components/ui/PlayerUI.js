@@ -33,6 +33,7 @@ import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import FiberManualRecordOutlinedIcon from "@mui/icons-material/FiberManualRecordOutlined";
 import sepOn from "../../assets/logo/sep_on.png";
 import sepOff from "../../assets/logo/sep_off.png";
+import HideUiButton from "./HideUiButton";
 
 const StyledRating = styled(Rating)({
   "& .MuiRating-iconFilled": {
@@ -68,6 +69,13 @@ export default function PlayerUI({ name }) {
   const reduxSelfOnlineStatus = useSelector(
     (state) => state.card.selfOnlineStatus,
   );
+  const gameMode = useSelector((state) => state.gameState.gameMode);
+  const automated = gameMode === "automated";
+  const sepLit = automated ? reduxCurrentSuperEvo : superEvo;
+
+  useEffect(() => {
+    if (automated) setSEP(reduxCurrentSuperEvo);
+  }, [automated, reduxCurrentSuperEvo]);
 
   useEffect(() => {
     if (!healthDidMount.current) {
@@ -234,6 +242,7 @@ export default function PlayerUI({ name }) {
   return (
     <div
       style={{
+        position: "relative",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -242,6 +251,7 @@ export default function PlayerUI({ name }) {
         gap: "1em",
       }}
     >
+      <HideUiButton sx={{ position: "absolute", top: 0, right: 0 }} />
       <div style={{ height: "60px", width: "60px" }}>
         {reduxShowDice && (
           <motion.div>
@@ -417,19 +427,18 @@ export default function PlayerUI({ name }) {
           </div>
           <div
             style={{
-              cursor: "pointer",
+              cursor: automated ? "default" : "pointer",
               height: "50px",
               width: "100px",
               zIndex: 1,
             }}
-            onClick={() => handleSuperEvo()}
+            onClick={automated ? undefined : () => handleSuperEvo()}
           >
-            {superEvo && (
+            {sepLit ? (
               <div>
                 <img height={50} width={100} src={sepOn} alt={"sep"} />
               </div>
-            )}
-            {!superEvo && (
+            ) : (
               <div>
                 <img height={50} width={100} src={sepOff} alt={"sep"} />
               </div>

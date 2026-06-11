@@ -195,6 +195,26 @@ function passQuick(state, player) {
         (0, vitest_1.expect)(played.state.players[0].zones.banish.some((c) => c.instanceId === gold.instanceId)).toBe(true);
         (0, vitest_1.expect)(played.state.players[0].pp).toBe(0);
     });
+    (0, vitest_1.it)("offers quick play from EX area during quick window", () => {
+        let state = (0, factory_1.createInitialGameState)(0);
+        state.phase = "main";
+        state.activePlayer = 0;
+        state.quickWindow = "endPhase";
+        state.quickWindowPlayer = 1;
+        state.pendingChoices = null;
+        state.players[1].pp = 1;
+        const quickSpell = (0, factory_1.createCardInstance)("BP17-T18EN", 1);
+        state.players[1].zones.exArea.push(quickSpell);
+        const view = (0, filterView_1.createPlayerView)(state, 1);
+        (0, vitest_1.expect)(view.legalActions).toContain(`QUICK_PLAY:${quickSpell.instanceId}`);
+        (0, vitest_1.expect)(view.legalActions).toContain("PASS_QUICK_WINDOW");
+        const played = (0, applyAction_1.applyAction)(state, 1, {
+            type: "QUICK_PLAY",
+            handInstanceId: quickSpell.instanceId,
+        });
+        (0, vitest_1.expect)(played.ok).toBe(true);
+        (0, vitest_1.expect)(played.state.players[1].zones.exArea.some((c) => c.instanceId === quickSpell.instanceId)).toBe(false);
+    });
     (0, vitest_1.it)("only offers pass quick window when quick cards are playable", () => {
         let state = (0, factory_1.createInitialGameState)(0);
         state.phase = "main";

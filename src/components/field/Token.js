@@ -7,6 +7,8 @@ import { setCurrentCard } from "../../redux/CardSlice";
 import CardMUI from "@mui/material/Card";
 import Card from "../hand/Card";
 import img from "../../assets/pin_bellringer_angel.png";
+import { useUiModalOpen } from "../hooks/useUiChromeVisible";
+import { ModalHideUiRow } from "../ui/HideUiButton";
 
 const style = {
   position: "relative",
@@ -24,6 +26,7 @@ const style = {
 export default function Token({ ready, setReady, setTokenReady, setHovering }) {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
+  const modalOpen = useUiModalOpen(open);
   const [contextMenu, setContextMenu] = React.useState(null);
   const [textInput, setTextInput] = useState("");
   const [filteredTokens, setFilteredTokens] = useState(allTokens);
@@ -85,7 +88,7 @@ export default function Token({ ready, setReady, setTokenReady, setHovering }) {
         </div>
       </div>
       <Modal
-        open={open}
+        open={modalOpen}
         onClose={handleModalClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
@@ -96,6 +99,7 @@ export default function Token({ ready, setReady, setTokenReady, setHovering }) {
         }}
       >
         <Box sx={style}>
+          <ModalHideUiRow />
           <input
             style={{
               padding: ".3em",

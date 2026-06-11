@@ -32,6 +32,7 @@ function createCardInstance(cardNo, owner, controller) {
         persistentPlayCostReduction: 0,
         abilitiesActivatedThisTurn: [],
         grantedLastWords: [],
+        grantedOnCardPlayed: [],
     };
 }
 function emptyPlayer(player) {
@@ -82,5 +83,6 @@ function createInitialGameState(firstPlayer = 0) {
         quickWindow: null,
         eventLog: [],
         resolutionContext: null,
+        revealedCards: [],
     };
 }

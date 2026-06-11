@@ -6,6 +6,7 @@ function resetCardInstanceState(card) {
     card.modifiers = [];
     card.grantedKeywords = [];
     card.grantedLastWords = [];
+    card.grantedOnCardPlayed = [];
     card.playCostReduction = 0;
     card.persistentPlayCostReduction = 0;
     card.abilitiesActivatedThisTurn = [];

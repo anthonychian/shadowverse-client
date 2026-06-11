@@ -25,6 +25,7 @@ import WifiIcon from "@mui/icons-material/Wifi";
 import sepOn from "../../assets/logo/sep_on.png";
 import sepOff from "../../assets/logo/sep_off.png";
 import "../../css/EnemyUI.css";
+import HideUiButton from "./HideUiButton";
 
 const StyledRating = styled(Rating)({
   "& .MuiRating-iconFilled": {
@@ -202,6 +203,7 @@ export default function EnemyUI() {
   return (
     <div
       style={{
+        position: "relative",
         paddingTop: "3em",
         display: "flex",
         alignItems: "center",
@@ -211,6 +213,7 @@ export default function EnemyUI() {
         gap: "1em",
       }}
     >
+      <HideUiButton sx={{ position: "absolute", top: 0, right: 0 }} />
       <Snackbar
         anchorOrigin={{ vertical: "top", horizontal: "center" }}
         open={reduxEnemyViewingDeck}

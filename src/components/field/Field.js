@@ -107,6 +107,8 @@ import useReceiveFullState from "../hooks/useReceiveFullState";
 import useStoreState from "../hooks/useStoreState";
 import useHeartbeat from "../hooks/useHeartbeat";
 import { useEngineSync } from "../hooks/useEngineSync";
+import { useUiChromeVisible, useUiModalOpen } from "../hooks/useUiChromeVisible";
+import HideUiButton, { ModalHideUiRow } from "../ui/HideUiButton";
 import { setSelectedAttackerId } from "../../redux/GameStateSlice";
 import { getNameByCardNoClient } from "../../engine/cardLookup";
 
@@ -222,6 +224,9 @@ export default function Field({
   const engineView = useSelector((state) => state.gameState.engineView);
   const playerSlot = useSelector((state) => state.gameState.playerSlot);
   const { sendAction } = useEngineSync();
+  const chromeVisible = useUiChromeVisible();
+  const enemyHandModalOpen = useUiModalOpen(reduxShowEnemyHand);
+  const enemyCardModalOpen = useUiModalOpen(reduxShowEnemyCard);
 
   // useState
   const [cardback, setCardback] = useState();
@@ -1152,6 +1157,15 @@ export default function Field({
     instanceId &&
     legalActions.includes(`PLAY:${instanceId}`);
 
+  const canQuickPlayCard = (instanceId) =>
+    automated &&
+    !pendingChoices &&
+    instanceId &&
+    legalActions.includes(`QUICK_PLAY:${instanceId}`);
+
+  const canPlayFromExArea = (instanceId) =>
+    canPlayCard(instanceId) || canQuickPlayCard(instanceId);
+
   const canAttackWith = (instanceId) =>
     automated &&
     leaderActive &&
@@ -1171,8 +1185,12 @@ export default function Field({
     if (!isEnemy && instanceId && selectedAttackerId === instanceId) {
       return { outline: "3px solid #ff9800", borderRadius: "8px", cursor: "pointer" };
     }
-    if (!isEnemy && idx >= 5 && canPlayCard(instanceId)) {
-      return { outline: "2px solid #2196f3", borderRadius: "8px", cursor: "pointer" };
+    if (!isEnemy && idx >= 5 && canPlayFromExArea(instanceId)) {
+      return {
+        outline: canQuickPlayCard(instanceId) ? "2px solid #9c27b0" : "2px solid #2196f3",
+        borderRadius: "8px",
+        cursor: "pointer",
+      };
     }
     if (!isEnemy && idx < 5 && canAttackWith(instanceId)) {
       return { outline: "2px solid #4caf50", borderRadius: "8px", cursor: "pointer" };
@@ -1187,6 +1205,10 @@ export default function Field({
     const instanceId = fieldInstanceIds[idx];
     if (!instanceId || reduxField[idx] === 0) return;
     if (idx >= 5) {
+      if (canQuickPlayCard(instanceId)) {
+        sendAction({ type: "QUICK_PLAY", handInstanceId: instanceId });
+        return;
+      }
       if (canPlayCard(instanceId)) {
         sendAction({ type: "PLAY_CARD", handInstanceId: instanceId });
         return;
@@ -1398,7 +1420,7 @@ export default function Field({
         </div>
       </Tooltip>
       <Menu
-        open={automatedFieldMenu !== null}
+        open={chromeVisible && automatedFieldMenu !== null}
         onClose={closeAutomatedFieldMenu}
         anchorReference="anchorPosition"
         anchorPosition={
@@ -1433,7 +1455,7 @@ export default function Field({
           ))}
       </Menu>
       <Menu
-        open={contextMenu !== null}
+        open={chromeVisible && contextMenu !== null}
         onClose={handleClose}
         anchorReference="anchorPosition"
         anchorPosition={
@@ -1517,7 +1539,7 @@ export default function Field({
         )}
       </Menu>
       <Menu
-        open={contextEvoMenu !== null}
+        open={chromeVisible && contextEvoMenu !== null}
         onClose={handleEvoClose}
         anchorReference="anchorPosition"
         anchorPosition={
@@ -1575,7 +1597,7 @@ export default function Field({
       {/* Show Enemy Hand Modal */}
 
       <Modal
-        open={reduxShowEnemyHand}
+        open={enemyHandModalOpen}
         onClose={handleModalClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
@@ -1586,6 +1608,7 @@ export default function Field({
         }}
       >
         <Box sx={style}>
+          <ModalHideUiRow />
           <Typography
             sx={{
               color: "white",
@@ -1627,7 +1650,7 @@ export default function Field({
       {/* Show Enemy Card Modal */}
 
       <Modal
-        open={reduxShowEnemyCard}
+        open={enemyCardModalOpen}
         onClose={handleShowCardModalClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
@@ -1650,6 +1673,9 @@ export default function Field({
             border: "none",
           }}
         >
+          <HideUiButton
+            sx={{ position: "fixed", top: 16, left: 16, zIndex: 1400 }}
+          />
           <CardMUI
             sx={{
               backgroundColor: "transparent",

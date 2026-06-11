@@ -13,6 +13,7 @@ export const GameStateSlice = createSlice({
     instanceMap: {},
     selectedAttackerId: null,
     lastSeq: 0,
+    uiChromeHidden: false,
   },
   reducers: {
     setGameMode: (state, action) => {
@@ -44,6 +45,9 @@ export const GameStateSlice = createSlice({
     setSelectedAttackerId: (state, action) => {
       state.selectedAttackerId = action.payload;
     },
+    setUiChromeHidden: (state, action) => {
+      state.uiChromeHidden = action.payload;
+    },
     resetEngine: (state) => {
       state.engineView = null;
       state.pendingChoices = null;
@@ -53,6 +57,7 @@ export const GameStateSlice = createSlice({
       state.instanceMap = {};
       state.selectedAttackerId = null;
       state.lastSeq = 0;
+      state.uiChromeHidden = false;
     },
   },
 });
@@ -63,6 +68,7 @@ export const {
   setEngineView,
   setInstanceMap,
   setSelectedAttackerId,
+  setUiChromeHidden,
   resetEngine,
 } =
   GameStateSlice.actions;

@@ -477,4 +477,62 @@ describe("batch 8 regression fixes", () => {
       false,
     );
   });
+
+  it("jiemon evolved search puts unselected cards on deck bottom not cemetery", () => {
+    let state = createInitialGameState(0);
+    state.phase = "main";
+    state.activePlayer = 0;
+    state.turnNumber = 2;
+    state.pendingChoices = null;
+    state.players[0].pp = 5;
+    state.players[0].evoPoints = 2;
+
+    const festive1 = createCardInstance("BP14-030EN", 0);
+    const festive2 = createCardInstance("BP14-034EN", 0);
+    const festive3 = createCardInstance("BP14-035EN", 0);
+    const nonFestive = createCardInstance("MVP-012", 0);
+    const festive4 = createCardInstance("BP14-118EN", 0);
+    state.players[0].zones.deck.push(festive1, festive2, nonFestive, festive3, festive4);
+
+    state.players[0].zones.exArea.push(
+      createCardInstance("BP14-T02EN", 0),
+      createCardInstance("BP14-T02EN", 0),
+    );
+
+    const jiemonBase = createCardInstance("BP14-022EN", 0);
+    jiemonBase.onFieldSinceTurnStart = true;
+    state.players[0].zones.field.push(jiemonBase);
+    state.players[0].zones.evolveDeck.push(createCardInstance("BP14-023EN", 0));
+
+    const evolved = applyAction(state, 0, {
+      type: "EVOLVE",
+      fieldInstanceId: jiemonBase.instanceId,
+      useEvoPoint: false,
+    });
+    expect(evolved.ok).toBe(true);
+    expect(evolved.state.pendingChoices?.type).toBe("searchDeckTop");
+
+    const cemeteryBefore = evolved.state.players[0].zones.cemetery.length;
+
+    const picked = applyAction(evolved.state, 0, {
+      type: "CHOICE_RESPONSE",
+      payload: { instanceId: festive1.instanceId },
+    });
+    expect(picked.ok).toBe(true);
+    expect(picked.state.players[0].zones.exArea.some((c) => c.instanceId === festive1.instanceId)).toBe(
+      true,
+    );
+    expect(picked.state.players[0].zones.cemetery.length).toBe(cemeteryBefore);
+    expect(picked.state.players[0].zones.deck.length).toBe(4);
+
+    const deckIds = picked.state.players[0].zones.deck.map((c) => c.instanceId);
+    expect(deckIds).toEqual(
+      expect.arrayContaining([
+        festive2.instanceId,
+        nonFestive.instanceId,
+        festive3.instanceId,
+        festive4.instanceId,
+      ]),
+    );
+  });
 });

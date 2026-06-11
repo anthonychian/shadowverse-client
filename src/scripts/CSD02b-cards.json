@@ -1,0 +1,465 @@
+[
+  {
+    "cardNo": "CSD02b-001EN",
+    "name": "Rin Shibuya [Triad Primus]",
+    "type": "base",
+    "cardType": "follower",
+    "class": "sword",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "cost": 3,
+    "attack": 3,
+    "defense": 3,
+    "cardText": "Storm.\n[fanfare]  If there are at least 3 Cool followers on your field, select another follower with 3 attack or less on your field and give it Storm.\n[act]  [cost01] , Lesson (1): Give this follower [attack] +1. Activate only once per turn.",
+    "keywords": [
+      "fanfare"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "CSD02b-T01EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CSD02b/CSD02b-001EN.png"
+  },
+  {
+    "cardNo": "CSD02b-002EN",
+    "name": "Nao Kamiya [Over the Rainbow]",
+    "type": "base",
+    "cardType": "follower",
+    "class": "sword",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "cost": 5,
+    "attack": 3,
+    "defense": 3,
+    "cardText": "[fanfare]  Look at the top 5 cards of your deck. From among them, you may summon up to 2 Cool followers that cost a total of 4 or less. Put the rest on the bottom of your deck in any order.",
+    "keywords": [
+      "fanfare"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CSD02b/CSD02b-002EN.png"
+  },
+  {
+    "cardNo": "CSD02b-003EN",
+    "name": "Karen Hojo [Song for Life]",
+    "type": "base",
+    "cardType": "follower",
+    "class": "sword",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "cost": 1,
+    "attack": 3,
+    "defense": 2,
+    "cardText": "At the start of your end phase, if there are no other Cool followers on your field, deal 1 damage to this follower.\n[act]  [cost03] , Lesson (1): Give each follower on your field [attack] +1.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "CSD02b-T01EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CSD02b/CSD02b-003EN.png"
+  },
+  {
+    "cardNo": "CSD02b-004EN",
+    "name": "Yasuha Okazaki",
+    "type": "base",
+    "cardType": "follower",
+    "class": "rune",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "cost": 4,
+    "attack": 4,
+    "defense": 4,
+    "cardText": "[fanfare]  Search your deck for a Cool follower that costs 2 or less, summon it, then shuffle your deck.",
+    "keywords": [
+      "fanfare"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CSD02b/CSD02b-004EN.png"
+  },
+  {
+    "cardNo": "CSD02b-005EN",
+    "name": "Yukimi Sajo",
+    "type": "base",
+    "cardType": "follower",
+    "class": "abyss",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "cost": 2,
+    "attack": 2,
+    "defense": 2,
+    "cardText": "[evolve]  [cost01] : Evolve this follower.\n[fanfare]  [cost02] , Lesson (1): Give this follower [attack] +1/[defense] +1. (To perform Lesson (1), banish a Magical Item token from your EX area.)",
+    "keywords": [
+      "fanfare",
+      "evolve"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "CSD02b-006EN",
+      "CSD02b-T01EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CSD02b/CSD02b-005EN.png",
+    "evolvesTo": "CSD02b-006EN"
+  },
+  {
+    "cardNo": "CSD02b-006EN",
+    "name": "Yukimi Sajo Evolved",
+    "type": "evolved",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "class": "abyss",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "cost": null,
+    "attack": 3,
+    "defense": 3,
+    "cardText": "On Evolve - Select another Cool follower on your field. Give it [attack] +1, Rush, and Assail. (Followers with Assail can attack reserved followers.)",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "CSD02b-005EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CSD02b/CSD02b-006EN.png",
+    "evolvesFrom": "CSD02b-005EN"
+  },
+  {
+    "cardNo": "CSD02b-007EN",
+    "name": "Kako Takafuji",
+    "type": "base",
+    "cardType": "follower",
+    "class": "haven",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "cost": 1,
+    "attack": 2,
+    "defense": 2,
+    "cardText": "[evolve]  [cost02] : Evolve this follower.",
+    "keywords": [
+      "evolve"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "CSD02b-008EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CSD02b/CSD02b-007EN.png",
+    "evolvesTo": "CSD02b-008EN"
+  },
+  {
+    "cardNo": "CSD02b-008EN",
+    "name": "Kako Takafuji Evolved",
+    "type": "evolved",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "class": "haven",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "cost": null,
+    "attack": 3,
+    "defense": 3,
+    "cardText": "On Evolve - [cost03] : Select an enemy leader and deal it 3 damage.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "CSD02b-007EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CSD02b/CSD02b-008EN.png",
+    "evolvesFrom": "CSD02b-007EN"
+  },
+  {
+    "cardNo": "CSD02b-009EN",
+    "name": "Chizuru Matsuo",
+    "type": "base",
+    "cardType": "follower",
+    "class": "sword",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "cost": 2,
+    "attack": 2,
+    "defense": 3,
+    "cardText": "[fanfare]  Select another Cool follower on your field and give it [attack] +1.\n[lastwords]  Select a Cool follower on your field and give it [attack] +1.",
+    "keywords": [
+      "fanfare"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CSD02b/CSD02b-009EN.png"
+  },
+  {
+    "cardNo": "CSD02b-010EN",
+    "name": "Seira Mizuki",
+    "type": "base",
+    "cardType": "follower",
+    "class": "rune",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "cost": 5,
+    "attack": 4,
+    "defense": 4,
+    "cardText": "[evolve]  [cost02] : Evolve this follower.\nStorm. (Followers with Storm can attack enemy followers and leaders on the turn they're put onto your field.)",
+    "keywords": [
+      "evolve"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "CSD02b-011EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CSD02b/CSD02b-010EN.png",
+    "evolvesTo": "CSD02b-011EN"
+  },
+  {
+    "cardNo": "CSD02b-011EN",
+    "name": "Seira Mizuki Evolved",
+    "type": "evolved",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "class": "rune",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "cost": null,
+    "attack": 5,
+    "defense": 5,
+    "cardText": "Storm.\nOn Evolve - Select an enemy follower on the field and deal it 5 damage.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "CSD02b-010EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CSD02b/CSD02b-011EN.png",
+    "evolvesFrom": "CSD02b-010EN"
+  },
+  {
+    "cardNo": "CSD02b-012EN",
+    "name": "Honoka Ayase",
+    "type": "base",
+    "cardType": "follower",
+    "class": "forest",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "cost": 1,
+    "attack": 2,
+    "defense": 1,
+    "cardText": "[fanfare]  Select another iM@S CG follower on your field and give it Rush. (Followers with Rush can attack enemy followers on the turn they're put onto your field.)",
+    "keywords": [
+      "fanfare"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CSD02b/CSD02b-012EN.png"
+  },
+  {
+    "cardNo": "CSD02b-013EN",
+    "name": "Otoha Umeki",
+    "type": "base",
+    "cardType": "follower",
+    "class": "forest",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "cost": 2,
+    "attack": 1,
+    "defense": 3,
+    "cardText": "Whenever you play a card, select an enemy follower on the field and deal it 1 damage.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CSD02b/CSD02b-013EN.png"
+  },
+  {
+    "cardNo": "CSD02b-014EN",
+    "name": "A Single Vessel",
+    "type": "base",
+    "cardType": "amulet",
+    "class": "forest",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "cost": 2,
+    "attack": null,
+    "defense": null,
+    "cardText": "[fanfare]  [lastwords]  Select an enemy follower on the field and deal it 3 damage.\n[act]  [cost02] , [engage] , discard a card: Bury this card.",
+    "keywords": [
+      "fanfare"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CSD02b/CSD02b-014EN.png"
+  },
+  {
+    "cardNo": "CSD02b-015EN",
+    "name": "Full Bloom Panorama",
+    "type": "base",
+    "cardType": "spell",
+    "class": "rune",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "cost": 5,
+    "attack": null,
+    "defense": null,
+    "cardText": "[quick]\nSelect up to 2 enemy followers on the field and destroy them.",
+    "keywords": [
+      "quick"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CSD02b/CSD02b-015EN.png"
+  },
+  {
+    "cardNo": "CSD02b-016EN",
+    "name": "Noa Takamine",
+    "type": "base",
+    "cardType": "follower",
+    "class": "dragon",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "cost": 5,
+    "attack": 4,
+    "defense": 4,
+    "cardText": "[evolve]  [cost01] : Evolve this follower.",
+    "keywords": [
+      "evolve"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "CSD02b-017EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CSD02b/CSD02b-016EN.png",
+    "evolvesTo": "CSD02b-017EN"
+  },
+  {
+    "cardNo": "CSD02b-017EN",
+    "name": "Noa Takamine Evolved",
+    "type": "evolved",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "class": "dragon",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "cost": null,
+    "attack": 5,
+    "defense": 5,
+    "cardText": "On Evolve - Select an enemy follower on the field and deal it damage equal to your max play points.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "CSD02b-016EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CSD02b/CSD02b-017EN.png",
+    "evolvesFrom": "CSD02b-016EN"
+  },
+  {
+    "cardNo": "CSD02b-018EN",
+    "name": "Rookie Trainer",
+    "type": "base",
+    "cardType": "follower",
+    "class": "neutral",
+    "traits": [
+      "iM@S CG"
+    ],
+    "cost": 1,
+    "attack": 2,
+    "defense": 2,
+    "cardText": "[act]  [engage] : Select another iM@S CG follower on your field and give it [attack] +1.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CSD02b/CSD02b-018EN.png"
+  },
+  {
+    "cardNo": "CSD02b-LD01EN",
+    "name": "Rin Shibuya [Stage of Magic]",
+    "type": "base",
+    "cardType": "leader",
+    "class": "sword",
+    "traits": [
+      "-"
+    ],
+    "cost": null,
+    "attack": null,
+    "defense": null,
+    "cardText": "",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CSD02b/CSD02b-LD01EN.png"
+  },
+  {
+    "cardNo": "CSD02b-T01EN",
+    "name": "Cool Earrings TOKEN",
+    "type": "token",
+    "cardType": "spell",
+    "specialType": "token",
+    "class": "neutral",
+    "traits": [
+      "iM@S CG"
+    ],
+    "cost": 4,
+    "attack": null,
+    "defense": null,
+    "cardText": "Give your leader [defense] +1. Draw a card.\n----------\n(At the start of the game, if your deck is based on the THE IDOLM@STER CINDERELLA GIRLS universe, put 5 Magical Item tokens into your EX area.)",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "CP02-T01EN",
+      "CP02-T02EN",
+      "CP02-T03EN",
+      "CP02-T05EN",
+      "CP02-T06EN",
+      "CP02-T07EN",
+      "CP02-T08EN",
+      "CP02-T09EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CSD02b/CSD02b-T01EN.png"
+  }
+]

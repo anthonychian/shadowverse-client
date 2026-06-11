@@ -92,6 +92,7 @@ import {
   exitGame,
   setRematchStatus,
 } from "../../redux/CardSlice";
+import HideUiButton from "./HideUiButton";
 
 export default function Selection({ setSelectedOption }) {
   // redux state
@@ -597,6 +598,7 @@ export default function Selection({ setSelectedOption }) {
           zIndex: 1000,
         }}
       >
+        <HideUiButton size="medium" />
         <IconButton
           onClick={handleDrawerOpen}
           sx={{

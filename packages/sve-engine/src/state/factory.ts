@@ -29,6 +29,7 @@ export function createCardInstance(cardNo: string, owner: PlayerId, controller?:
     persistentPlayCostReduction: 0,
     abilitiesActivatedThisTurn: [],
     grantedLastWords: [],
+    grantedOnCardPlayed: [],
   };
 }
 
@@ -81,5 +82,6 @@ export function createInitialGameState(firstPlayer: PlayerId = 0): GameState {
     quickWindow: null,
     eventLog: [],
     resolutionContext: null,
+    revealedCards: [],
   };
 }

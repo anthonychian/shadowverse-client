@@ -1,12 +1,17 @@
+import { COOL_EARRINGS_CARD_NO } from "../deck/detectIdentity";
 import { createCardInstance } from "../state/factory";
 import { isBoxed } from "../state/passives";
 import { drawCard, shuffleDeck } from "../state/zones";
-import { CardInstance, GameState, PlayerId } from "../types";
+import { CardInstance, GameState, PlayerId, UniverseId } from "../types";
 
 function clearTurnScopedCardState(card: CardInstance): void {
   card.abilitiesActivatedThisTurn = [];
+  card.counters = {};
   card.modifiers = card.modifiers.filter((m) => !m.untilEndOfTurn);
   card.playCostReduction = 0;
+  if (card.grantedOnCardPlayed?.length) {
+    card.grantedOnCardPlayed = card.grantedOnCardPlayed.filter((g) => !g.untilEndOfTurn);
+  }
 }
 
 function refreshFieldCard(card: CardInstance, state: GameState): void {
@@ -28,6 +33,7 @@ export interface DeckInput {
   mainDeck: string[];
   evolveDeck: string[];
   leaderCardNo?: string;
+  universe?: UniverseId | null;
 }
 
 export function loadDecks(
@@ -44,6 +50,12 @@ export function loadDecks(
       createCardInstance(cardNo, pid),
     );
     next = shuffleDeck(next, pid);
+    if (input.universe === "idolmaster") {
+      const p = next.players[pid];
+      for (let i = 0; i < 5 && p.zones.exArea.length < p.exLimit; i++) {
+        p.zones.exArea.push(createCardInstance(COOL_EARRINGS_CARD_NO, pid, pid));
+      }
+    }
     for (let i = 0; i < 4; i++) {
       next = drawCard(next, pid);
     }

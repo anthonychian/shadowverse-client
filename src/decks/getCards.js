@@ -5167,8 +5167,10 @@ export const cardImage = (cardName) => {
       return "../textures/BP12-T01EN.png";
     case "Twilight Blade TOKEN":
       return "../textures/BP12-T02EN.png";
+    case "Armored Tentacle":
     case "Armored Tentacle TOKEN":
       return "../textures/BP12-T03EN.png";
+    case "Assault Tentacle":
     case "Assault Tentacle TOKEN":
       return "../textures/BP12-T04EN.png";
     case "Medusiana TOKEN":

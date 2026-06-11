@@ -80,8 +80,12 @@ for (const [cardNo, overlay] of Object.entries(handAuthored)) {
   if (registry.has(cardNo)) continue;
   const gameplayNo = reprintMap.get(cardNo) ?? cardNo;
   const base = registry.get(gameplayNo);
-  if (!base) continue;
-  registerCardDef(cardNo, mergePrintingWithGameplay({ ...base, cardNo, name: base.name }, base, overlay));
+  if (base) {
+    registerCardDef(cardNo, mergePrintingWithGameplay({ ...base, cardNo, name: base.name }, base, overlay));
+    continue;
+  }
+  const stub = genericStub(cardNo);
+  registerCardDef(cardNo, mergePrintingWithGameplay(stub, stub, overlay as Partial<CardDefinition>));
 }
 
 const OFFICIAL_CARD_NO = /^[A-Z0-9]+-[A-Z0-9]+EN$/i;

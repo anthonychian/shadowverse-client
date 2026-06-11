@@ -124,15 +124,35 @@ function onFollowerEntersField(state, instanceId, player) {
     found.card.enteredFieldTurn = state.turnNumber;
     found.card.onFieldSinceTurnStart = false;
     (0, trigger_queue_1.queueFanfare)(state, instanceId, player);
+    (0, trigger_queue_1.queueAllyFollowerEnterTriggers)(state, instanceId, player);
+    (0, trigger_queue_1.queueCemeteryOnAllyFollowerEnter)(state, instanceId, player);
 }
 function onCardEntersExArea(state, instanceId, player) {
     (0, trigger_queue_1.onCardEntersExAreaTriggers)(state, instanceId, player);
 }
+function markOnCardPlayedTriggerUsed(state, trigger) {
+    if (trigger.timing !== "onCardPlayed" || !trigger.abilityKey)
+        return;
+    const found = (0, queries_1.findInstance)(state, trigger.sourceInstanceId);
+    if (!found)
+        return;
+    const { ability, abilityKey } = trigger;
+    if (ability.oncePerTurn && !found.card.abilitiesActivatedThisTurn.includes(abilityKey)) {
+        found.card.abilitiesActivatedThisTurn.push(abilityKey);
+    }
+    if (ability.maxPerTurn != null) {
+        found.card.counters[abilityKey] = (found.card.counters[abilityKey] ?? 0) + 1;
+    }
+}
 function resolveOneTrigger(state, trigger) {
     let next = structuredClone(state);
     next.pendingTriggers = next.pendingTriggers.filter((t) => t.id !== trigger.id);
-    next.resolutionContext = (0, effect_utils_1.contextForTriggerResolution)(next, trigger.sourceInstanceId, trigger.ability.effect);
+    next.resolutionContext = {
+        ...(0, effect_utils_1.contextForTriggerResolution)(next, trigger.sourceInstanceId, trigger.ability.effect),
+        forcedTargetId: trigger.forcedTargetId,
+    };
     next = (0, resolver_1.resolveEffect)(next, trigger.ability.effect, trigger.controller);
+    markOnCardPlayedTriggerUsed(next, trigger);
     if ((0, effect_utils_1.shouldClearResolutionContext)(next)) {
         next.resolutionContext = null;
     }

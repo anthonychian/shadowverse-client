@@ -23,6 +23,16 @@ function cardMatchesFilter(cardNo, filter) {
         return false;
     if (filter.cardType && def.cardType !== filter.cardType)
         return false;
+    if (filter.identityNameContains) {
+        const needle = filter.identityNameContains.toLowerCase();
+        if (!(0, reprints_1.normalizeIdentityName)(def.name).toLowerCase().includes(needle))
+            return false;
+    }
+    if (filter.excludeIdentityName) {
+        const excluded = (0, reprints_1.normalizeIdentityName)(filter.excludeIdentityName);
+        if ((0, reprints_1.normalizeIdentityName)(def.name) === excluded)
+            return false;
+    }
     return true;
 }
 function countTraitInZone(state, player, zone, trait) {
@@ -73,6 +83,33 @@ function evalCondition(state, player, condition) {
             return (0, queries_1.getPlayer)(state, player).zones.cemetery.filter((c) => (0, registry_1.getCardDef)(c.cardNo)?.class === condition.cardClass).length >= condition.count;
         case "ownDeckClassMin":
             return (0, queries_1.getPlayer)(state, player).zones.deck.filter((c) => (0, registry_1.getCardDef)(c.cardNo)?.class === condition.cardClass).length >= condition.count;
+        case "fieldFollowerMinCost": {
+            let matches = 0;
+            for (const card of (0, queries_1.getPlayer)(state, player).zones.field) {
+                const def = (0, registry_1.getCardDef)((0, queries_1.resolveCardNo)(state, card));
+                if (!def?.traits?.includes(condition.trait))
+                    continue;
+                if ((0, queries_1.resolveCardDefCost)(card.cardNo) >= condition.minCost)
+                    matches += 1;
+            }
+            return matches >= condition.count;
+        }
+        case "buriedExactCost":
+            return (state.resolutionContext?.buriedCosts ?? []).some((c) => c === condition.cost);
+        case "buriedAtLeastCost":
+            return (state.resolutionContext?.buriedCosts ?? []).some((c) => c >= condition.cost);
+        case "discardedCardType": {
+            const cardNo = state.resolutionContext?.lastDiscardedCardNo;
+            if (!cardNo)
+                return false;
+            return (0, registry_1.getCardDef)(cardNo)?.cardType === condition.cardType;
+        }
+        case "handMin":
+            return (0, queries_1.getPlayer)(state, player).zones.hand.length >= condition.count;
+        case "ownCemeteryMin":
+            return (0, queries_1.getPlayer)(state, player).zones.cemetery.length >= condition.count;
+        case "fieldTraitMax":
+            return countTraitInZone(state, player, "field", condition.trait) <= condition.count;
         default:
             return false;
     }

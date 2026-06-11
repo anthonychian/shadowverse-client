@@ -183,6 +183,9 @@ export const CardSlice = createSlice({
         room: state.room,
       });
     },
+    setLeaderSilent: (state, action) => {
+      state.leader = action.payload;
+    },
     setHealth: (state, action) => {
       state.playerHealth = action.payload;
       socket.emit("send msg", {
@@ -2483,6 +2486,9 @@ export const CardSlice = createSlice({
       if (s.playerHealth !== undefined) state.playerHealth = s.playerHealth;
       if (s.leaderActive !== undefined) state.leaderActive = s.leaderActive;
       if (s.superEvoActive !== undefined) state.superEvoActive = s.superEvoActive;
+      if (s.enemySuperEvoActive !== undefined) {
+        state.enemySuperEvoActive = s.enemySuperEvoActive;
+      }
       if (s.enemyHand !== undefined) state.enemyHand = s.enemyHand;
       if (s.enemyField !== undefined) state.enemyField = s.enemyField;
       if (s.enemyEvoField !== undefined) state.enemyEvoField = s.enemyEvoField;
@@ -2896,6 +2902,7 @@ export const {
   setPlayPoints,
   setHealth,
   setLeader,
+  setLeaderSilent,
   setCardBack,
   setEnemyCardBack,
   setEnemyLeader,

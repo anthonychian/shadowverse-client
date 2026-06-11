@@ -7,6 +7,7 @@ const resolver_1 = require("../effects/resolver");
 const setup_1 = require("../phases/setup");
 const confirmation_1 = require("../rules/confirmation");
 const effect_utils_1 = require("../rules/effect-utils");
+const reveal_1 = require("../state/reveal");
 const trigger_queue_1 = require("../rules/trigger-queue");
 const conditions_1 = require("../state/conditions");
 const card_reset_1 = require("../state/card-reset");
@@ -73,11 +74,14 @@ function continueEndPhaseFlow(state) {
     return proceedAfterEndMainQuick(next);
 }
 function preserveResumeContext(next, sourceId, stack, tail) {
-    const appended = next.resolutionContext?.resumeAfterChoice ?? [];
+    const prev = next.resolutionContext;
+    const appended = prev?.resumeAfterChoice ?? [];
     next.resolutionContext = {
         sourceInstanceId: sourceId,
         effectStack: stack,
         resumeAfterChoice: appended.length > 0 ? appended : tail,
+        buriedCosts: prev?.buriedCosts,
+        lastDiscardedCardNo: prev?.lastDiscardedCardNo,
         deferTriggers: true,
     };
     return next;
@@ -96,10 +100,13 @@ function continueAfterChoice(state, player) {
     }
     while (next.resolutionContext?.resumeAfterChoice?.length) {
         const [head, ...tail] = next.resolutionContext.resumeAfterChoice;
+        const prev = next.resolutionContext;
         next.resolutionContext = {
             sourceInstanceId: sourceId,
             effectStack: stack,
             resumeAfterChoice: tail,
+            buriedCosts: prev?.buriedCosts,
+            lastDiscardedCardNo: prev?.lastDiscardedCardNo,
             deferTriggers: true,
         };
         next = (0, resolver_1.resolveEffect)(next, head, player, { deferConfirmation: true });
@@ -283,6 +290,16 @@ function handleChoiceResponse(state, player, payload) {
             }
             else {
                 next.players[player].zones.cemetery.push(card);
+                if (choice.action === "discard" && choice.fromZone === "hand") {
+                    next.resolutionContext = {
+                        ...next.resolutionContext,
+                        sourceInstanceId: next.resolutionContext?.sourceInstanceId,
+                        effectStack: next.resolutionContext?.effectStack ?? [],
+                        resumeAfterChoice: next.resolutionContext?.resumeAfterChoice,
+                        deferTriggers: next.resolutionContext?.deferTriggers,
+                        lastDiscardedCardNo: card.cardNo,
+                    };
+                }
             }
         }
         if (choice.resumeActivate) {
@@ -299,6 +316,38 @@ function handleChoiceResponse(state, player, payload) {
             next = finishActivateAfterCost(next, player, sourceInstanceId, activateZone, abilityKey);
             return ok(finishChoiceResolution(next, player));
         }
+        return ok(finishChoiceResolution(next, player));
+    }
+    if (choice.type === "selectDeckSummon") {
+        const ids = payload.instanceIds || [];
+        let totalCost = 0;
+        const p = next.players[player];
+        for (const id of ids) {
+            if (!choice.topInstanceIds.includes(id))
+                return fail(state, "Invalid card");
+            const option = choice.options.find((o) => o.instanceId === id);
+            if (!option?.eligible)
+                return fail(state, "Card does not match filter");
+            totalCost += option.cost;
+        }
+        if (totalCost > choice.maxTotalCost) {
+            return fail(state, `Total cost must be ${choice.maxTotalCost} or less`);
+        }
+        const slots = p.fieldLimit - p.zones.field.length;
+        if (ids.length > slots)
+            return fail(state, "Not enough field space");
+        for (const id of ids) {
+            const idx = p.zones.deck.findIndex((c) => c.instanceId === id);
+            if (idx < 0)
+                continue;
+            const [card] = p.zones.deck.splice(idx, 1);
+            if (p.zones.field.length >= p.fieldLimit)
+                break;
+            p.zones.field.push(card);
+            (0, confirmation_1.onFollowerEntersField)(next, card.instanceId, player);
+        }
+        const remaining = choice.topInstanceIds.filter((id) => !ids.includes(id));
+        next = sendSearchRemainder(next, player, remaining, choice.remainderTo);
         return ok(finishChoiceResolution(next, player));
     }
     if (choice.type === "selectCemeterySummon") {
@@ -366,6 +415,9 @@ function handleChoiceResponse(state, player, payload) {
         if (!found || found.zone !== choice.fromZone || found.player !== player) {
             return fail(state, "Invalid card");
         }
+        if ((0, reveal_1.shouldRevealBeforeHand)(choice.to, choice.fromZone, choice.reveal)) {
+            next = (0, reveal_1.revealCard)(next, player, instanceId, found.card.cardNo);
+        }
         next = (0, resolver_1.moveZoneCardTo)(next, player, instanceId, choice.fromZone, choice.to);
         if (choice.to === "exArea" && choice.playCostReduction) {
             const moved = (0, queries_1.findInstance)(next, instanceId);
@@ -388,6 +440,9 @@ function handleChoiceResponse(state, player, payload) {
         const option = choice.options.find((o) => o.instanceId === instanceId);
         if (!option?.eligible)
             return fail(state, "Card does not match filter");
+        if ((0, reveal_1.shouldRevealBeforeHand)(choice.to, "deck", choice.reveal)) {
+            next = (0, reveal_1.revealCard)(next, player, instanceId, option.cardNo);
+        }
         next = (0, resolver_1.moveZoneCardTo)(next, player, instanceId, "deck", choice.to);
         if (choice.to === "exArea" && choice.playCostReduction) {
             const moved = (0, queries_1.findInstance)(next, instanceId);
@@ -566,6 +621,7 @@ function playCard(state, player, handInstanceId, targets, fromQuickWindow = fals
     else if (def.cardType === "follower" || def.cardType === "amulet") {
         next = (0, zones_1.moveCard)(next, handInstanceId, "field", player);
     }
+    (0, trigger_queue_1.queueOnCardPlayed)(next, handInstanceId, player);
     next = (0, confirmation_1.runConfirmationTiming)(next);
     return ok(next);
 }
@@ -932,16 +988,19 @@ function resolveActivate(state, player, sourceInstanceId, zone, useEvoPoint) {
         const matches = p.zones.exArea.filter((c) => (0, conditions_1.cardMatchesFilter)(c.cardNo, filter));
         if (matches.length < total)
             return fail(state, "Cannot pay activate cost");
-        const othersNeeded = total - 1;
-        const others = matches.filter((c) => c.instanceId !== sourceInstanceId);
-        if (othersNeeded > 0 && others.length > othersNeeded) {
+        const sourceInEx = matches.some((c) => c.instanceId === sourceInstanceId);
+        const needFromEx = sourceInEx ? total - 1 : total;
+        const pool = sourceInEx
+            ? matches.filter((c) => c.instanceId !== sourceInstanceId)
+            : matches;
+        if (needFromEx > 0 && pool.length > needFromEx) {
             next.pendingChoices = {
                 type: "selectZoneCards",
                 player,
                 fromZone: "exArea",
-                count: othersNeeded,
+                count: needFromEx,
                 action: "banish",
-                options: others.map((c) => ({
+                options: pool.map((c) => ({
                     instanceId: c.instanceId,
                     cardNo: c.cardNo,
                     label: (0, registry_1.getCardDef)(c.cardNo)?.name || c.cardNo,
@@ -950,10 +1009,9 @@ function resolveActivate(state, player, sourceInstanceId, zone, useEvoPoint) {
             };
             return ok(next);
         }
-        const toBanish = [
-            sourceInstanceId,
-            ...others.slice(0, othersNeeded).map((c) => c.instanceId),
-        ];
+        const toBanish = sourceInEx
+            ? [sourceInstanceId, ...pool.slice(0, needFromEx).map((c) => c.instanceId)]
+            : pool.slice(0, needFromEx).map((c) => c.instanceId);
         for (const id of toBanish) {
             const idx = p.zones.exArea.findIndex((c) => c.instanceId === id);
             if (idx < 0)
@@ -1002,20 +1060,21 @@ function resolveActivate(state, player, sourceInstanceId, zone, useEvoPoint) {
 function applyAction(state, player, action) {
     if (state.phase === "gameOver")
         return fail(state, "Game is over");
-    if (state.pendingChoices &&
+    let workingState = action.type !== "CHOICE_RESPONSE" ? (0, reveal_1.clearRevealedCards)(state) : state;
+    if (workingState.pendingChoices &&
         action.type !== "CHOICE_RESPONSE" &&
         action.type !== "MULLIGAN") {
-        return fail(state, "Must resolve pending choice first");
+        return fail(workingState, "Must resolve pending choice first");
     }
     switch (action.type) {
         case "MULLIGAN":
-            if (state.phase !== "mulligan")
-                return fail(state, "Not mulligan phase");
-            return ok((0, setup_1.applyMulligan)(state, player, action.redraw));
+            if (workingState.phase !== "mulligan")
+                return fail(workingState, "Not mulligan phase");
+            return ok((0, setup_1.applyMulligan)(workingState, player, action.redraw));
         case "CHOICE_RESPONSE":
-            return handleChoiceResponse(state, player, action.payload);
+            return handleChoiceResponse(workingState, player, action.payload);
         case "PLAY_CARD":
-            return playCard(state, player, action.handInstanceId, action.targets);
+            return playCard(workingState, player, action.handInstanceId, action.targets);
         case "QUICK_PLAY":
             if (state.quickWindow === null)
                 return fail(state, "No quick window");
@@ -1092,6 +1151,15 @@ function applyAction(state, player, action) {
             if (phaseErr)
                 return phaseErr;
             return resolveActivate(state, player, action.exAreaInstanceId, "exArea");
+        }
+        case "ACTIVATE_HAND": {
+            const activeErr = assertActivePlayer(state, player, "Not your turn");
+            if (activeErr)
+                return activeErr;
+            const phaseErr = assertPhase(state, ["main"], "Cannot activate now");
+            if (phaseErr)
+                return phaseErr;
+            return resolveActivate(state, player, action.handInstanceId, "hand", action.useEvoPoint);
         }
         case "CONCEDE": {
             const next = structuredClone(state);

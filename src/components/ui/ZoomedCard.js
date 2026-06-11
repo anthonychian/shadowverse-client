@@ -7,18 +7,27 @@ export default function ZoomedCard({ hovering, name, scale = 1 }) {
       {hovering && (
         <div
           style={{
-            position: "absolute",
+            position: "fixed",
             top: "10%",
+            left: 0,
+            width: "20vw",
             height: "60%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "flex-start",
             zIndex: 100,
-            // Scaled here on the element itself (not via a wrapped ancestor) so
-            // it stays positioned relative to the viewport while matching the
-            // rest of the UI's scale.
-            transform: `scale(${scale})`,
-            transformOrigin: "top center",
+            pointerEvents: "none",
           }}
         >
-          <img height={"100%"} src={cardImage(name)} alt={name} />
+          <img
+            height={"100%"}
+            src={cardImage(name)}
+            alt={name}
+            style={{
+              transform: `scale(${scale})`,
+              transformOrigin: "top center",
+            }}
+          />
         </div>
       )}
     </>

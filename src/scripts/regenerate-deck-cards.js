@@ -1002,6 +1002,26 @@ function buildAbilities(cardNo, card, text) {
         { timing: "spell", quick: true, effect: { op: "healLeader", amount: 1 } },
       ];
 
+    case "BP12-T03EN":
+      return [
+        {
+          timing: "lastWords",
+          effect: { op: "healLeader", amount: 4 },
+        },
+      ];
+
+    case "BP12-T04EN":
+      return [
+        {
+          timing: "lastWords",
+          effect: {
+            op: "dealDamage",
+            amount: 4,
+            targets: { type: "enemyFollower", count: 1 },
+          },
+        },
+      ];
+
     default:
       return null;
   }
@@ -1017,6 +1037,9 @@ function extraKeywords(cardNo, card, text) {
   if (cardNo === "BP07-U05EN") kw.add("storm");
   if (cardNo === "BP12-082EN") kw.add("ward");
   if (cardNo === "BP17-083EN") kw.add("ward");
+  if (cardNo === "BP07-037EN") kw.add("rush");
+  if (cardNo === "BP12-T03EN") kw.add("ward");
+  if (cardNo === "BP12-T04EN") kw.add("storm");
   if (cardNo === "BP14-018EN") kw.add("advanced");
   if (cardNo === "BP14-019EN") kw.add("advanced");
   return [...kw];

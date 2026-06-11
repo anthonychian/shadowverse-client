@@ -18,6 +18,7 @@ export declare function resolveCardNo(state: GameState | undefined, card: CardIn
 export { isBoxed } from "./passives";
 /** Printed play cost; evolved promos with cost 0 inherit from their base form. */
 export declare function resolveCardDefCost(cardNo: string): number;
+/** EX-area discount from passives on the card being played and followers on field (e.g. Tetra Evo). */
 export declare function getExAreaPlayCostReduction(state: GameState, player: PlayerId, cardNo: string): number;
 export declare function getPassivePlayCostReduction(state: GameState, player: PlayerId, cardNo: string): number;
 export declare function getEffectivePlayCost(card: CardInstance, cardNo: string, state?: GameState, player?: PlayerId, fromZone?: string): number;
@@ -31,7 +32,7 @@ export declare function getEvolveCost(evoCardNo: string, baseCardNo?: string): n
 export declare function hasKeyword(card: CardInstance, keyword: Keyword, state?: GameState, player?: PlayerId): boolean;
 export declare function clampDamageToFollower(state: GameState, card: CardInstance, player: PlayerId, amount: number): number;
 export declare function canEvolveFollower(state: GameState, player: PlayerId, fieldInstanceId: string): boolean;
-export declare function getActivatedAbilities(state: GameState, card: CardInstance, player: PlayerId, zone: "field" | "cemetery" | "exArea"): {
+export declare function getActivatedAbilities(state: GameState, card: CardInstance, player: PlayerId, zone: "field" | "cemetery" | "exArea" | "hand"): {
     ability: AbilityDefinition;
     key: string;
 }[];

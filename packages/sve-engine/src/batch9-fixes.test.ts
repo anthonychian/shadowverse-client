@@ -231,6 +231,32 @@ describe("batch 9 regression fixes", () => {
     expect(played.state.players[0].pp).toBe(0);
   });
 
+  it("offers quick play from EX area during quick window", () => {
+    let state = createInitialGameState(0);
+    state.phase = "main";
+    state.activePlayer = 0;
+    state.quickWindow = "endPhase";
+    state.quickWindowPlayer = 1;
+    state.pendingChoices = null;
+    state.players[1].pp = 1;
+
+    const quickSpell = createCardInstance("BP17-T18EN", 1);
+    state.players[1].zones.exArea.push(quickSpell);
+
+    const view = createPlayerView(state, 1);
+    expect(view.legalActions).toContain(`QUICK_PLAY:${quickSpell.instanceId}`);
+    expect(view.legalActions).toContain("PASS_QUICK_WINDOW");
+
+    const played = applyAction(state, 1, {
+      type: "QUICK_PLAY",
+      handInstanceId: quickSpell.instanceId,
+    });
+    expect(played.ok).toBe(true);
+    expect(played.state.players[1].zones.exArea.some((c) => c.instanceId === quickSpell.instanceId)).toBe(
+      false,
+    );
+  });
+
   it("only offers pass quick window when quick cards are playable", () => {
     let state = createInitialGameState(0);
     state.phase = "main";

@@ -4,6 +4,7 @@ const {
   applyAction,
   createPlayerView,
   resetIdCounter,
+  detectDeckIdentity,
 } = require("sve-engine");
 
 class GameRoom {
@@ -38,8 +39,21 @@ class GameRoom {
 
   startAutomatedGame(decks) {
     resetIdCounter();
+    const preparedDecks = decks.map((deck) => {
+      const identity = detectDeckIdentity([
+        ...(deck.mainDeck || []),
+        ...(deck.evolveDeck || []),
+      ]);
+      return {
+        ...deck,
+        universe: deck.universe ?? identity.universe ?? undefined,
+      };
+    });
+    this.deckIdentities = preparedDecks.map((deck) =>
+      detectDeckIdentity([...(deck.mainDeck || []), ...(deck.evolveDeck || [])]),
+    );
     let state = createInitialGameState(0);
-    state = loadDecks(state, decks);
+    state = loadDecks(state, preparedDecks);
     this.state = state;
     this.seq += 1;
     return this.broadcastViews();
@@ -61,9 +75,20 @@ class GameRoom {
 
   broadcastViews() {
     if (!this.state) return null;
+    const viewFor = (slot) => {
+      const view = createPlayerView(this.state, slot);
+      const opponent = slot === 0 ? 1 : 0;
+      if (this.deckIdentities?.[slot]) {
+        view.selfLeader = this.deckIdentities[slot].leader;
+      }
+      if (this.deckIdentities?.[opponent]) {
+        view.opponentLeader = this.deckIdentities[opponent].leader;
+      }
+      return view;
+    };
     return {
-      0: createPlayerView(this.state, 0),
-      1: createPlayerView(this.state, 1),
+      0: viewFor(0),
+      1: viewFor(1),
       seq: this.seq,
       phase: this.state.phase,
       winner: this.state.winner,

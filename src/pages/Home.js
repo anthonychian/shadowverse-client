@@ -29,6 +29,8 @@ import { cardImage } from "../decks/getCards";
 import { socket, saveRoom, playerId } from "../sockets";
 import { setGameMode, setPlayerSlot, resetEngine } from "../redux/GameStateSlice";
 import { deckToEnginePayload, defaultMvpDeck } from "../engine/adapter";
+import { detectDeckIdentity } from "../decks/detectDeck";
+import { setLeader } from "../redux/CardSlice";
 import { applyEnginePayload } from "../engine/sync";
 import { store } from "../redux/store";
 
@@ -293,6 +295,11 @@ export default function Home() {
     }
     setEvoDeck((deck) => [...deck, card]);
   };
+  const applyDeckLeader = (deck) => {
+    const identity = detectDeckIdentity(deck.deck || [], deck.evoDeck || []);
+    dispatch(setLeader(identity.leader));
+  };
+
   const handleSelectDeck = (deck, idx) => {
     deckMap.clear();
     evoDeckMap.clear();
@@ -304,6 +311,7 @@ export default function Home() {
     }
     const newDeck = deck;
     setSelectedDeck(newDeck);
+    applyDeckLeader(newDeck);
     let res = [];
     for (let i = 0; i < reduxDecks.length; i++) {
       if (i === idx) res.push(true);

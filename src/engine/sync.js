@@ -1,6 +1,13 @@
 import { setEngineView, setInstanceMap, resetEngine } from "../redux/GameStateSlice";
-import { syncFromEngine } from "../redux/CardSlice";
+import {
+  syncFromEngine,
+  setLeaderSilent,
+  setEnemyLeader,
+  setShowEnemyCard,
+  setEnemyCard,
+} from "../redux/CardSlice";
 import { engineViewToRedux } from "./adapter";
+import { getNameByCardNoClient } from "./cardLookup";
 import { store } from "../redux/store";
 
 /**
@@ -41,5 +48,17 @@ export function applyEnginePayload(dispatch, payload, knownSlot = null) {
   if (!mapped) return false;
   dispatch(syncFromEngine(mapped));
   dispatch(setInstanceMap(mapped.instanceMap));
+  if (view.selfLeader) dispatch(setLeaderSilent(view.selfLeader));
+  if (view.opponentLeader) dispatch(setEnemyLeader(view.opponentLeader));
+
+  const self = view.self;
+  const opponentReveals = (view.state?.revealedCards ?? []).filter((r) => r.owner !== self);
+  if (opponentReveals.length > 0) {
+    const latest = opponentReveals[opponentReveals.length - 1];
+    const name = getNameByCardNoClient(latest.cardNo) || latest.cardNo;
+    dispatch(setEnemyCard(name));
+    dispatch(setShowEnemyCard(true));
+  }
+
   return true;
 }

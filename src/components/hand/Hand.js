@@ -88,6 +88,12 @@ export default function Hand({
     return null;
   };
 
+  const canActivateHand = (index) => {
+    const instanceId = handInstanceIds[index];
+    if (!automated || !leaderActive || pendingChoices || !instanceId) return false;
+    return legalActions.includes(`ACTIVATE_HAND:${instanceId}`);
+  };
+
   const handleAutomatedPlay = (index) => {
     const instanceId = handInstanceIds[index];
     const mode = getPlayMode(index);
@@ -97,6 +103,63 @@ export default function Hand({
     } else {
       sendAction({ type: "PLAY_CARD", handInstanceId: instanceId });
     }
+  };
+
+  const handleAutomatedActivateHand = (index) => {
+    const instanceId = handInstanceIds[index ?? cardIndex];
+    if (!instanceId || !canActivateHand(index ?? cardIndex)) return;
+    sendAction({ type: "ACTIVATE_HAND", handInstanceId: instanceId });
+    handleClose();
+  };
+
+  const handleAutomatedHandClick = (index) => {
+    const playMode = getPlayMode(index);
+    if (playMode) {
+      handleAutomatedPlay(index);
+      return;
+    }
+    if (canActivateHand(index)) {
+      handleAutomatedActivateHand(index);
+    }
+  };
+
+  const getAutomatedHandStyle = (index) => {
+    const playMode = getPlayMode(index);
+    const activate = canActivateHand(index);
+    if (!playMode && !activate) return {};
+    const style = { borderRadius: "8px", cursor: "pointer" };
+    if (playMode) {
+      style.outline = "3px solid #4caf50";
+    } else if (activate) {
+      style.outline = "3px solid #ff9800";
+    }
+    return style;
+  };
+
+  const getAutomatedHandTitle = (index) => {
+    const playMode = getPlayMode(index);
+    const activate = canActivateHand(index);
+    if (playMode && activate) return "Click to play; right-click for Activate";
+    if (playMode) return "Click to play";
+    if (activate) return "Click to activate";
+    return undefined;
+  };
+
+  const handleHandContextMenu = (event, name, index) => {
+    if (automated) {
+      if (!leaderActive || pendingChoices) return;
+      const instanceId = handInstanceIds[index];
+      if (!instanceId || (!getPlayMode(index) && !canActivateHand(index))) return;
+      setName(name);
+      setCardIndex(index);
+      event.preventDefault();
+      setContextMenu({
+        mouseX: event.clientX + 2,
+        mouseY: event.clientY - 6,
+      });
+      return;
+    }
+    if (!ready) handleContextMenu(event, name, index);
   };
 
   return (
@@ -111,11 +174,44 @@ export default function Hand({
             : undefined
         }
       >
-        <MenuItem onClick={handleCardToField}>Field</MenuItem>
-        <MenuItem onClick={handleCardToCemetery}>Cemetery</MenuItem>
-        <MenuItem onClick={handleCardToTopOfDeck}>Top of Deck</MenuItem>
-        <MenuItem onClick={handleCardToBotOfDeck}>Bot of Deck</MenuItem>
-        {/* <MenuItem onClick={handleShowHand}>Show Hand</MenuItem> */}
+        {automated ? (
+          <>
+            {getPlayMode(cardIndex) === "quick" && (
+              <MenuItem
+                onClick={() => {
+                  handleAutomatedPlay(cardIndex);
+                  handleClose();
+                }}
+              >
+                Quick Play
+              </MenuItem>
+            )}
+            {leaderActive &&
+              handInstanceIds[cardIndex] &&
+              legalActions.includes(`PLAY:${handInstanceIds[cardIndex]}`) && (
+                <MenuItem
+                  onClick={() => {
+                    handleAutomatedPlay(cardIndex);
+                    handleClose();
+                  }}
+                >
+                  Play
+                </MenuItem>
+              )}
+            {canActivateHand(cardIndex) && (
+              <MenuItem onClick={() => handleAutomatedActivateHand(cardIndex)}>
+                Activate
+              </MenuItem>
+            )}
+          </>
+        ) : (
+          <>
+            <MenuItem onClick={handleCardToField}>Field</MenuItem>
+            <MenuItem onClick={handleCardToCemetery}>Cemetery</MenuItem>
+            <MenuItem onClick={handleCardToTopOfDeck}>Top of Deck</MenuItem>
+            <MenuItem onClick={handleCardToBotOfDeck}>Bot of Deck</MenuItem>
+          </>
+        )}
       </Menu>
       <div
         style={{
@@ -132,20 +228,14 @@ export default function Hand({
       >
         {items.map((card, index) => (
           <div
-            onContextMenu={(e) => {
-              if (!ready && !automated) handleContextMenu(e, card.name, index);
-            }}
+            onContextMenu={(e) => handleHandContextMenu(e, card.name, index)}
             onClick={() => {
-              if (getPlayMode(index)) handleAutomatedPlay(index);
+              if (automated) handleAutomatedHandClick(index);
             }}
             key={card.idx}
             value={card}
-            style={{
-              cursor: getPlayMode(index) ? "pointer" : undefined,
-              outline: getPlayMode(index) ? "3px solid #4caf50" : undefined,
-              borderRadius: getPlayMode(index) ? "8px" : undefined,
-            }}
-            title={getPlayMode(index) ? "Click to play" : undefined}
+            style={automated ? getAutomatedHandStyle(index) : undefined}
+            title={automated ? getAutomatedHandTitle(index) : undefined}
           >
             <Card
               name={card.name}

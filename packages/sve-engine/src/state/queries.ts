@@ -8,7 +8,24 @@ import {
   isBoxed,
 } from "./passives";
 import { canAdvanceActivate, isAdvanceAbility } from "../rules/effect-utils";
-import { AbilityDefinition, CardInstance, GameState, Keyword, PlayerId } from "../types";
+import { AbilityDefinition, CardInstance, Effect, GameState, Keyword, PlayerId } from "../types";
+
+function canActivateEffectResolve(state: GameState, player: PlayerId, effect: Effect): boolean {
+  switch (effect.op) {
+    case "sequence":
+      return effect.steps.every((step) => canActivateEffectResolve(state, player, step));
+    case "if":
+      return canActivateEffectResolve(state, player, effect.then);
+    case "discardFromHand": {
+      const need = effect.count ?? 1;
+      return getPlayer(state, player).zones.hand.filter((c) =>
+        cardMatchesFilter(c.cardNo, effect.filter),
+      ).length >= need;
+    }
+    default:
+      return true;
+  }
+}
 
 export function getPlayer(state: GameState, player: PlayerId) {
   return state.players[player];
@@ -94,19 +111,44 @@ export function resolveCardDefCost(cardNo: string): number {
   return def.cost;
 }
 
+function exAreaReductionFromAbilities(
+  abilities: AbilityDefinition[] | undefined,
+  state: GameState,
+  player: PlayerId,
+  cardNo: string,
+): number {
+  let reduction = 0;
+  for (const ability of abilities ?? []) {
+    if (ability.timing !== "passive") continue;
+    if (ability.condition && !evalCondition(state, player, ability.condition)) continue;
+    if (ability.filter && !cardMatchesFilter(cardNo, ability.filter)) continue;
+    if (ability.effect.op === "exAreaPlayCostReduction") {
+      reduction += ability.effect.amount;
+    }
+  }
+  return reduction;
+}
+
+/** EX-area discount from passives on the card being played and followers on field (e.g. Tetra Evo). */
 export function getExAreaPlayCostReduction(
   state: GameState,
   player: PlayerId,
   cardNo: string,
 ): number {
-  const def = getCardDef(cardNo);
-  let reduction = 0;
-  for (const ability of def?.abilities ?? []) {
-    if (ability.timing !== "passive") continue;
-    if (ability.condition && !evalCondition(state, player, ability.condition)) continue;
-    if (ability.effect.op === "exAreaPlayCostReduction") {
-      reduction += ability.effect.amount;
-    }
+  let reduction = exAreaReductionFromAbilities(
+    getCardDef(cardNo)?.abilities,
+    state,
+    player,
+    cardNo,
+  );
+  for (const source of getPlayer(state, player).zones.field) {
+    if (isBoxed(source, state)) continue;
+    reduction += exAreaReductionFromAbilities(
+      getCardDef(resolveCardNo(state, source))?.abilities,
+      state,
+      player,
+      cardNo,
+    );
   }
   return reduction;
 }
@@ -226,7 +268,7 @@ export function getActivatedAbilities(
   state: GameState,
   card: CardInstance,
   player: PlayerId,
-  zone: "field" | "cemetery" | "exArea",
+  zone: "field" | "cemetery" | "exArea" | "hand",
 ): { ability: AbilityDefinition; key: string }[] {
   if (zone === "field" && isBoxed(card, state)) return [];
   const def = getCardDef(resolveCardNo(state, card));
@@ -267,6 +309,7 @@ export function getActivatedAbilities(
       if (have < need) continue;
     }
     if (zone === "field" && a.cost?.engage && card.engaged) continue;
+    if (!canActivateEffectResolve(state, player, a.effect)) continue;
     results.push({ ability: a, key });
   }
   return results;

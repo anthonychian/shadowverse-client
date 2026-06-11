@@ -8,6 +8,7 @@ import "../../css/PlayPoints.css";
 import { setLeaderActive } from "../../redux/CardSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { setPlayPoints } from "../../redux/CardSlice";
+import HideUiButton from "./HideUiButton";
 
 export default function Scoreboard({ name }) {
   const dispatch = useDispatch();
@@ -138,7 +139,8 @@ export default function Scoreboard({ name }) {
   };
 
   return (
-    <div className="PlayPointsContainer">
+    <div className="PlayPointsContainer" style={{ position: "relative" }}>
+      <HideUiButton sx={{ position: "absolute", top: 4, right: 4, zIndex: 2 }} />
       <div className="CircleContainer">
         <div className="circles">
           {[...Array(10)].map((x, idx) =>

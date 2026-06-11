@@ -28,6 +28,8 @@ import viridiaCardBack from "../../assets/cardbacks/viridia.png";
 import wilbertCardBack from "../../assets/cardbacks/wilbert.png";
 
 import "../../css/Card.css";
+import { useUiModalOpen } from "../hooks/useUiChromeVisible";
+import { ModalHideUiRow } from "../ui/HideUiButton";
 
 const img = require("../../assets/pin_bellringer_angel.png");
 
@@ -48,6 +50,7 @@ const style = {
 export default function EnemyEvoDeck({ setHovering, ready }) {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
+  const modalOpen = useUiModalOpen(open);
   const [cardback, setCardback] = useState();
   const reduxEnemyCardBack = useSelector((state) => state.card.enemyCardback);
   const reduxEnemyEvoDeck = useSelector((state) => state.card.enemyEvoDeck);
@@ -143,7 +146,7 @@ export default function EnemyEvoDeck({ setHovering, ready }) {
       </div>
 
       <Modal
-        open={open}
+        open={modalOpen}
         onClose={handleModalClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
@@ -154,6 +157,7 @@ export default function EnemyEvoDeck({ setHovering, ready }) {
         }}
       >
         <Box sx={style}>
+          <ModalHideUiRow />
           <CardMUI
             sx={{
               backgroundColor: "rgba(0, 0, 0, 0.7)",

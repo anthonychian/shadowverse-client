@@ -101,6 +101,12 @@ function resolveDamageAmount(state, player, amount) {
             return def?.traits?.includes(amount.trait);
         }).length;
     }
+    if (amount.op === "fieldTraitCount") {
+        return (0, queries_1.getPlayer)(state, player).zones.field.filter((c) => {
+            const def = (0, registry_1.getCardDef)(c.cardNo);
+            return def?.traits?.includes(amount.trait);
+        }).length;
+    }
     return 0;
 }
 function promptSelectZoneCards(state, player, fromZone, count, action, matches, resumeActivate) {
@@ -161,7 +167,7 @@ function zoneCardOptions(cards) {
         cardNo: c.cardNo,
     }));
 }
-function promptSelectZoneCard(state, player, fromZone, to, matches, optional, playCostReduction) {
+function promptSelectZoneCard(state, player, fromZone, to, matches, optional, playCostReduction, reveal) {
     const next = structuredClone(state);
     next.pendingChoices = (0, effect_utils_1.withChoiceContext)(next, {
         type: "selectZoneCard",
@@ -170,11 +176,12 @@ function promptSelectZoneCard(state, player, fromZone, to, matches, optional, pl
         to,
         optional,
         playCostReduction,
+        reveal,
         options: zoneCardOptions(matches),
     });
     return next;
 }
-function promptSearchDeckTop(state, player, top, filter, to, optional, playCostReduction, remainderTo = "cemetery") {
+function promptSearchDeckTop(state, player, top, filter, to, optional, playCostReduction, remainderTo = "cemetery", reveal) {
     const next = structuredClone(state);
     next.pendingChoices = (0, effect_utils_1.withChoiceContext)(next, {
         type: "searchDeckTop",
@@ -185,11 +192,32 @@ function promptSearchDeckTop(state, player, top, filter, to, optional, playCostR
         optional,
         playCostReduction,
         remainderTo,
+        reveal,
         reasonLabel: "Search deck",
         options: top.map((c) => ({
             instanceId: c.instanceId,
             label: (0, registry_1.getCardDef)(c.cardNo)?.name || c.cardNo,
             cardNo: c.cardNo,
+            eligible: (0, conditions_1.cardMatchesFilter)(c.cardNo, filter),
+        })),
+    });
+    return next;
+}
+function promptSelectDeckSummon(state, player, top, filter, maxTotalCost, remainderTo) {
+    const next = structuredClone(state);
+    next.pendingChoices = (0, effect_utils_1.withChoiceContext)(next, {
+        type: "selectDeckSummon",
+        player,
+        maxTotalCost,
+        filter,
+        topInstanceIds: top.map((c) => c.instanceId),
+        remainderTo,
+        reasonLabel: "Summon followers from deck",
+        options: top.map((c) => ({
+            instanceId: c.instanceId,
+            label: (0, registry_1.getCardDef)(c.cardNo)?.name || c.cardNo,
+            cardNo: c.cardNo,
+            cost: (0, queries_1.resolveCardDefCost)(c.cardNo),
             eligible: (0, conditions_1.cardMatchesFilter)(c.cardNo, filter),
         })),
     });
@@ -261,6 +289,18 @@ function canSatisfyOptionalCost(state, player, effect) {
         }
         case "selectFromHand":
             return (0, queries_1.getPlayer)(state, player).zones.hand.some((c) => (0, conditions_1.cardMatchesFilter)(c.cardNo, effect.filter));
+        case "banishFromExArea": {
+            const need = effect.count ?? 1;
+            return ((0, queries_1.getPlayer)(state, player).zones.exArea.filter((c) => (0, conditions_1.cardMatchesFilter)(c.cardNo, effect.filter)).length >= need);
+        }
+        case "banishFromCemetery": {
+            const need = effect.count ?? 1;
+            return ((0, queries_1.getPlayer)(state, player).zones.cemetery.filter((c) => (0, conditions_1.cardMatchesFilter)(c.cardNo, effect.filter)).length >= need);
+        }
+        case "spendPp":
+            return (0, queries_1.getPlayer)(state, player).pp >= effect.amount;
+        case "sequence":
+            return effect.steps.every((step) => canSatisfyOptionalCost(state, player, step));
         default:
             return true;
     }
@@ -273,6 +313,8 @@ function resolveEffect(state, effect, player, options) {
             effectStack: next.resolutionContext?.effectStack ?? [],
             resumeAfterChoice: next.resolutionContext?.resumeAfterChoice,
             forcedTargetId: next.resolutionContext?.forcedTargetId,
+            buriedCosts: next.resolutionContext?.buriedCosts,
+            lastDiscardedCardNo: next.resolutionContext?.lastDiscardedCardNo,
             deferTriggers: true,
         };
     }
@@ -285,6 +327,47 @@ function resolveEffect(state, effect, player, options) {
         case "recoverPp": {
             const p = next.players[player];
             p.pp = Math.min(p.pp + effect.amount, p.maxPp);
+            break;
+        }
+        case "spendPp": {
+            const p = next.players[player];
+            p.pp = Math.max(0, p.pp - effect.amount);
+            break;
+        }
+        case "rollDie": {
+            const roll = Math.floor(Math.random() * effect.sides) + 1;
+            next.eventLog.push({ type: "diceRoll", player, data: { roll } });
+            const outcome = effect.outcomes.find((o) => o.on.includes(roll));
+            if (outcome) {
+                next = resolveEffect(next, outcome.effect, player, options);
+                if (next.pendingChoices)
+                    return next;
+            }
+            break;
+        }
+        case "buryOpponentMaxAttackFollower": {
+            for (const opp of [(0, queries_1.opponentOf)(player)]) {
+                const field = (0, queries_1.getPlayer)(next, opp).zones.field;
+                if (field.length === 0)
+                    continue;
+                let best = field[0];
+                let bestAtk = (0, queries_1.getEffectiveStats)(best, next).atk;
+                for (const card of field.slice(1)) {
+                    const atk = (0, queries_1.getEffectiveStats)(card, next).atk;
+                    if (atk > bestAtk) {
+                        best = card;
+                        bestAtk = atk;
+                    }
+                }
+                const p = next.players[opp];
+                const idx = p.zones.field.findIndex((c) => c.instanceId === best.instanceId);
+                if (idx < 0)
+                    continue;
+                const [buried] = p.zones.field.splice(idx, 1);
+                (0, card_reset_1.resetCardInstanceState)(buried);
+                p.zones.cemetery.push(buried);
+                next.eventLog.push({ type: "bury", player: opp });
+            }
             break;
         }
         case "healLeader":
@@ -324,6 +407,8 @@ function resolveEffect(state, effect, player, options) {
             const p = next.players[player];
             const sourceId = next.resolutionContext?.sourceInstanceId || "effect";
             for (const card of p.zones.field) {
+                if (effect.excludeSelf && card.instanceId === sourceId)
+                    continue;
                 const def = (0, registry_1.getCardDef)(card.cardNo);
                 if (!def?.traits?.includes(effect.trait))
                     continue;
@@ -366,11 +451,25 @@ function resolveEffect(state, effect, player, options) {
             next = applyGrantKeyword(next, player, effect.keyword, effect.targets);
             break;
         case "destroy": {
+            const forced = next.resolutionContext?.forcedTargetId;
             const candidates = getTargetCandidates(next, player, effect.targets);
             if (candidates.length === 0)
                 break;
-            (0, confirmation_1.queueLastWords)(next, candidates[0], player);
-            next = (0, zones_1.destroyFollower)(next, candidates[0]);
+            let targetId;
+            if (forced) {
+                if (!candidates.includes(forced))
+                    break;
+                targetId = forced;
+            }
+            else if (shouldPromptTargetSelection(effect.targets, candidates) &&
+                !next.pendingChoices) {
+                return promptSelectTarget(next, player, effect, candidates);
+            }
+            else {
+                targetId = candidates[0];
+            }
+            (0, confirmation_1.queueLastWords)(next, targetId, player);
+            next = (0, zones_1.destroyFollower)(next, targetId);
             break;
         }
         case "summon": {
@@ -442,6 +541,8 @@ function resolveEffect(state, effect, player, options) {
                 effectStack: next.resolutionContext?.effectStack ?? [],
                 resumeAfterChoice: next.resolutionContext?.resumeAfterChoice,
                 forcedTargetId: next.resolutionContext?.forcedTargetId,
+                buriedCosts: next.resolutionContext?.buriedCosts,
+                lastDiscardedCardNo: next.resolutionContext?.lastDiscardedCardNo,
                 deferTriggers: true,
             };
             for (let i = 0; i < effect.steps.length; i++) {
@@ -541,7 +642,7 @@ function resolveEffect(state, effect, player, options) {
             if (matches.length === 0)
                 break;
             if (!next.pendingChoices) {
-                return promptSelectZoneCard(next, player, "cemetery", effect.to, matches, undefined, effect.playCostReduction);
+                return promptSelectZoneCard(next, player, "cemetery", effect.to, matches, undefined, effect.playCostReduction, effect.reveal);
             }
             break;
         }
@@ -591,7 +692,7 @@ function resolveEffect(state, effect, player, options) {
             if (matches.length === 0)
                 break;
             if (!next.pendingChoices) {
-                return promptSelectZoneCard(next, player, "deck", effect.to, matches);
+                return promptSelectZoneCard(next, player, "deck", effect.to, matches, undefined, effect.playCostReduction, effect.reveal);
             }
             break;
         }
@@ -601,7 +702,7 @@ function resolveEffect(state, effect, player, options) {
             if (top.length === 0)
                 break;
             if (!next.pendingChoices) {
-                return promptSearchDeckTop(next, player, top, effect.filter, effect.to, effect.optional, effect.playCostReduction, effect.remainderTo ?? "cemetery");
+                return promptSearchDeckTop(next, player, top, effect.filter, effect.to, effect.optional, effect.playCostReduction, effect.remainderTo ?? "cemetery", effect.reveal);
             }
             break;
         }
@@ -699,10 +800,20 @@ function resolveEffect(state, effect, player, options) {
             if (!sourceId)
                 break;
             const p = next.players[player];
-            const idx = p.zones.cemetery.findIndex((c) => c.instanceId === sourceId);
-            if (idx < 0 || p.zones.exArea.length >= p.exLimit)
+            if (p.zones.exArea.length >= p.exLimit)
                 break;
-            const [card] = p.zones.cemetery.splice(idx, 1);
+            let fromZone = null;
+            let idx = p.zones.cemetery.findIndex((c) => c.instanceId === sourceId);
+            if (idx >= 0)
+                fromZone = "cemetery";
+            if (fromZone === null) {
+                idx = p.zones.hand.findIndex((c) => c.instanceId === sourceId);
+                if (idx >= 0)
+                    fromZone = "hand";
+            }
+            if (fromZone === null || idx < 0)
+                break;
+            const [card] = p.zones[fromZone].splice(idx, 1);
             p.zones.exArea.push(card);
             (0, confirmation_1.onCardEntersExArea)(next, card.instanceId, player);
             break;
@@ -716,7 +827,7 @@ function resolveEffect(state, effect, player, options) {
                 return next;
             }
             if (!next.pendingChoices) {
-                return promptSelectZoneCard(next, player, "hand", effect.to, matches, effect.optional);
+                return promptSelectZoneCard(next, player, "hand", effect.to, matches, effect.optional, effect.playCostReduction);
             }
             break;
         }
@@ -736,6 +847,12 @@ function resolveEffect(state, effect, player, options) {
                     continue;
                 p.zones.hand.splice(i, 1);
                 p.zones.cemetery.push(card);
+                next.resolutionContext = {
+                    ...next.resolutionContext,
+                    sourceInstanceId: next.resolutionContext?.sourceInstanceId,
+                    effectStack: next.resolutionContext?.effectStack ?? [],
+                    lastDiscardedCardNo: card.cardNo,
+                };
                 remaining--;
             }
             break;
@@ -866,6 +983,70 @@ function resolveEffect(state, effect, player, options) {
             }
             break;
         }
+        case "searchDeckSummonMultiple": {
+            const p = next.players[player];
+            const top = p.zones.deck.slice(0, effect.lookAt);
+            if (top.length === 0)
+                break;
+            if (!next.pendingChoices) {
+                return promptSelectDeckSummon(next, player, top, effect.filter, effect.maxTotalCost, effect.remainderTo ?? "deckBottom");
+            }
+            break;
+        }
+        case "buryFieldFollowers": {
+            const p = next.players[player];
+            const sourceId = next.resolutionContext?.sourceInstanceId;
+            const buriedCosts = [];
+            const toBury = p.zones.field.filter((card) => {
+                if (effect.excludeSelf && card.instanceId === sourceId)
+                    return false;
+                if (!(0, conditions_1.cardMatchesFilter)(card.cardNo, effect.filter))
+                    return false;
+                if (effect.minCost != null && (0, queries_1.resolveCardDefCost)(card.cardNo) < effect.minCost) {
+                    return false;
+                }
+                return true;
+            });
+            for (const card of toBury) {
+                buriedCosts.push((0, queries_1.resolveCardDefCost)(card.cardNo));
+                (0, confirmation_1.queueLastWords)(next, card.instanceId, player);
+                next = (0, zones_1.destroyFollower)(next, card.instanceId);
+            }
+            next.resolutionContext = {
+                ...next.resolutionContext,
+                sourceInstanceId: next.resolutionContext?.sourceInstanceId,
+                effectStack: next.resolutionContext?.effectStack ?? [],
+                buriedCosts,
+            };
+            break;
+        }
+        case "dealDamageAllEnemies": {
+            const opp = (0, queries_1.opponentOf)(player);
+            if (!effect.followersOnly) {
+                next = dealDamageToLeader(next, opp, effect.amount);
+            }
+            for (const card of [...next.players[opp].zones.field]) {
+                next = dealDamageToFollower(next, card.instanceId, effect.amount);
+            }
+            break;
+        }
+        case "grantOnCardPlayed": {
+            const sourceId = next.resolutionContext?.sourceInstanceId;
+            const found = sourceId ? (0, queries_1.findInstance)(next, sourceId) : null;
+            if (!found)
+                break;
+            if (!found.card.grantedOnCardPlayed)
+                found.card.grantedOnCardPlayed = [];
+            found.card.grantedOnCardPlayed.push({
+                filter: effect.filter,
+                effect: effect.effect,
+                untilEndOfTurn: effect.untilEndOfTurn,
+                oncePerTurn: effect.oncePerTurn,
+                maxPerTurn: effect.maxPerTurn,
+                label: effect.label,
+            });
+            break;
+        }
         case "passiveKeywords":
         case "auraGrantKeyword":
         case "damageCap":
@@ -895,6 +1076,11 @@ function canEffectResolve(state, player, effect) {
         case "chooseMultiple":
             return effect.options.some((o) => (!o.additionalPpCost || state.players[player].pp >= o.additionalPpCost) &&
                 canEffectResolve(state, player, o.effect));
+        case "discardFromHand": {
+            const need = effect.count ?? 1;
+            const matches = (0, queries_1.getPlayer)(state, player).zones.hand.filter((c) => (0, conditions_1.cardMatchesFilter)(c.cardNo, effect.filter));
+            return matches.length >= need;
+        }
         default:
             return true;
     }
@@ -906,6 +1092,8 @@ function canPlayCardFromZones(state, player, cardNo) {
     if (def.cardType === "spell") {
         const spell = def.abilities?.find((a) => a.timing === "spell");
         if (!spell)
+            return false;
+        if (spell.condition && !(0, conditions_1.evalCondition)(state, player, spell.condition))
             return false;
         return canEffectResolve(state, player, spell.effect);
     }

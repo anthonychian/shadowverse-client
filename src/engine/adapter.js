@@ -5,6 +5,15 @@ import {
   getCardStatsClient,
 } from "./cardLookup";
 import { cardImage, getCardNoFromName } from "../decks/getCards";
+import { detectDeckIdentity } from "../decks/detectDeck";
+
+/** SEP is usable once turn threshold is met (7 for first player, 6 for second). */
+function canSuperEvolveNow(state, playerId) {
+  const p = state.players[playerId];
+  if (!p || p.superEvoPoints <= 0) return false;
+  const threshold = playerId === state.firstPlayer ? 7 : 6;
+  return p.turnsPassed >= threshold;
+}
 
 /**
  * Maps authoritative engine PlayerView state into legacy Redux CardSlice shape
@@ -171,7 +180,8 @@ export function engineViewToRedux(view, playerSlot) {
     enemyHealth: es.leaderDef,
     leaderActive: view.state.activePlayer === self && view.state.phase === "main",
     enemyLeaderActive: view.state.activePlayer === enemy && view.state.phase === "main",
-    superEvoActive: ps.superEvoPoints > 0,
+    superEvoActive: canSuperEvolveNow(view.state, self),
+    enemySuperEvoActive: canSuperEvolveNow(view.state, enemy),
     instanceMap: buildInstanceMap(ps),
   };
 }
@@ -203,9 +213,14 @@ function resolveCardNo(name, evoFallback) {
 }
 
 export function deckToEnginePayload(mainDeckNames, evoDeckNames) {
+  const identity = detectDeckIdentity(mainDeckNames, evoDeckNames);
   const mainDeck = mainDeckNames.map((name) => resolveCardNo(name, "MVP-012"));
   const evolveDeck = evoDeckNames.map((name) => resolveCardNo(name, "MVP-014"));
-  return { mainDeck, evolveDeck };
+  return {
+    mainDeck,
+    evolveDeck,
+    universe: identity.universe ?? undefined,
+  };
 }
 
 /** Default MVP deck for rules-enforced mode when selected deck has no engine mapping. */

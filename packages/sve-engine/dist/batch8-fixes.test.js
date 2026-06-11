@@ -403,4 +403,47 @@ function resolveAllChoices(state, player) {
             : attack.state;
         (0, vitest_1.expect)(after.players[1].zones.field.some((c) => c.instanceId === capped.instanceId)).toBe(false);
     });
+    (0, vitest_1.it)("jiemon evolved search puts unselected cards on deck bottom not cemetery", () => {
+        let state = (0, factory_1.createInitialGameState)(0);
+        state.phase = "main";
+        state.activePlayer = 0;
+        state.turnNumber = 2;
+        state.pendingChoices = null;
+        state.players[0].pp = 5;
+        state.players[0].evoPoints = 2;
+        const festive1 = (0, factory_1.createCardInstance)("BP14-030EN", 0);
+        const festive2 = (0, factory_1.createCardInstance)("BP14-034EN", 0);
+        const festive3 = (0, factory_1.createCardInstance)("BP14-035EN", 0);
+        const nonFestive = (0, factory_1.createCardInstance)("MVP-012", 0);
+        const festive4 = (0, factory_1.createCardInstance)("BP14-118EN", 0);
+        state.players[0].zones.deck.push(festive1, festive2, nonFestive, festive3, festive4);
+        state.players[0].zones.exArea.push((0, factory_1.createCardInstance)("BP14-T02EN", 0), (0, factory_1.createCardInstance)("BP14-T02EN", 0));
+        const jiemonBase = (0, factory_1.createCardInstance)("BP14-022EN", 0);
+        jiemonBase.onFieldSinceTurnStart = true;
+        state.players[0].zones.field.push(jiemonBase);
+        state.players[0].zones.evolveDeck.push((0, factory_1.createCardInstance)("BP14-023EN", 0));
+        const evolved = (0, applyAction_1.applyAction)(state, 0, {
+            type: "EVOLVE",
+            fieldInstanceId: jiemonBase.instanceId,
+            useEvoPoint: false,
+        });
+        (0, vitest_1.expect)(evolved.ok).toBe(true);
+        (0, vitest_1.expect)(evolved.state.pendingChoices?.type).toBe("searchDeckTop");
+        const cemeteryBefore = evolved.state.players[0].zones.cemetery.length;
+        const picked = (0, applyAction_1.applyAction)(evolved.state, 0, {
+            type: "CHOICE_RESPONSE",
+            payload: { instanceId: festive1.instanceId },
+        });
+        (0, vitest_1.expect)(picked.ok).toBe(true);
+        (0, vitest_1.expect)(picked.state.players[0].zones.exArea.some((c) => c.instanceId === festive1.instanceId)).toBe(true);
+        (0, vitest_1.expect)(picked.state.players[0].zones.cemetery.length).toBe(cemeteryBefore);
+        (0, vitest_1.expect)(picked.state.players[0].zones.deck.length).toBe(4);
+        const deckIds = picked.state.players[0].zones.deck.map((c) => c.instanceId);
+        (0, vitest_1.expect)(deckIds).toEqual(vitest_1.expect.arrayContaining([
+            festive2.instanceId,
+            nonFestive.instanceId,
+            festive3.instanceId,
+            festive4.instanceId,
+        ]));
+    });
 });

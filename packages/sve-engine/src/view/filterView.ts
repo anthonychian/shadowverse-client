@@ -46,6 +46,12 @@ export function createPlayerView(state: GameState, self: PlayerId): PlayerView {
       if (pp >= cost && canPlayCardFromZones(state, self, card.cardNo)) {
         legalActions.push(`PLAY:${card.instanceId}`);
       }
+      const handActivated = getActivatedAbilities(state, card, self, "hand");
+      if (handActivated.length > 0) {
+        const activateCost = handActivated[0].ability.cost?.pp ?? 0;
+        const ppPay = computeEvolvePayment(activateCost, pp, p.evoPoints, false);
+        if (ppPay.ok) legalActions.push(`ACTIVATE_HAND:${card.instanceId}`);
+      }
     }
     for (const card of p.zones.exArea) {
       const cost = getEffectivePlayCost(card, card.cardNo, state, self, "exArea");
@@ -123,10 +129,14 @@ export function createPlayerView(state: GameState, self: PlayerId): PlayerView {
   if (state.quickWindow && state.quickWindowPlayer === self && !state.pendingChoices) {
     const pp = state.players[self].pp;
     let hasQuickPlay = false;
-    for (const card of state.players[self].zones.hand) {
+    const quickZones: Array<{ card: (typeof state.players)[0]["zones"]["hand"][0]; fromZone: "hand" | "exArea" }> = [
+      ...state.players[self].zones.hand.map((card) => ({ card, fromZone: "hand" as const })),
+      ...state.players[self].zones.exArea.map((card) => ({ card, fromZone: "exArea" as const })),
+    ];
+    for (const { card, fromZone } of quickZones) {
       const def = getCardDef(card.cardNo);
       if (!def?.abilities?.some((a) => a.quick)) continue;
-      const cost = getEffectivePlayCost(card, card.cardNo, state, self, "hand");
+      const cost = getEffectivePlayCost(card, card.cardNo, state, self, fromZone);
       if (pp >= cost && canPlayCardFromZones(state, self, card.cardNo)) {
         legalActions.push(`QUICK_PLAY:${card.instanceId}`);
         hasQuickPlay = true;
