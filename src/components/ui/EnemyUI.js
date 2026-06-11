@@ -11,10 +11,8 @@ import abyss from "../../assets/logo/abyss.png";
 import dragon from "../../assets/logo/dragon.png";
 import haven from "../../assets/logo/haven.png";
 import rune from "../../assets/logo/rune.png";
-import uma from "../../assets/logo/carrot.png";
-import cool from "../../assets/logo/cool.png";
-import cute from "../../assets/logo/cute.png";
-import passion from "../../assets/logo/passion.png";
+import umamusume from "../../assets/logo/umamusume.png";
+import idolmaster from "../../assets/logo/idolmaster.png";
 import vanguard from "../../assets/logo/vanguard.png";
 
 import { styled } from "@mui/material/styles";
@@ -188,15 +186,15 @@ export default function EnemyUI() {
       case "Daria":
         return rune;
       case "Manhatten Cafe":
-        return uma;
+        return umamusume;
       case "Maruzensky":
-        return uma;
+        return umamusume;
       case "Rin":
-        return cool;
+        return idolmaster;
       case "Uzuki":
-        return cute;
+        return idolmaster;
       case "Mio":
-        return passion;
+        return idolmaster;
       case "Vanguard":
         return vanguard;
       default:
