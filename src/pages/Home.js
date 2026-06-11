@@ -111,6 +111,11 @@ export default function Home() {
   const announcements = [
     {
       date: "2026-06-11",
+      title: "Lobby Board added",
+      body: "Join, host, or reconnect to games from the new active games board.",
+    },
+    {
+      date: "2026-06-11",
       title: "New deck builder",
       body: "The deck builder has been redesigned with a new layout and full card metadata.",
     },
