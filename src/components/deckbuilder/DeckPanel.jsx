@@ -175,7 +175,15 @@ export default function DeckPanel({
           "&.Mui-disabled": { color: "rgba(255,255,255,0.4)" },
         }}
       >
-        {canCreate ? "Save Deck" : `Need ${Math.max(0, 40 - deckLen)} more cards`}
+        {canCreate
+          ? "Save Deck"
+          : deckLen < 40
+            ? `Need ${Math.max(0, 40 - deckLen)} more cards`
+            : !name.trim()
+              ? "Enter a deck name"
+              : !deckClass
+                ? "Select a deck class"
+                : "Save Deck"}
       </Button>
     </div>
   );

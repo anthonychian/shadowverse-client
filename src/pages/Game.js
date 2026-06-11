@@ -8,18 +8,52 @@ import PlayPoints from "../components/ui/PlayPoints";
 import Hand from "../components/hand/Hand";
 import Field from "../components/field/Field";
 import { motion } from "framer-motion";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { useLocation } from "react-router-dom";
 import ZoomedCard from "../components/ui/ZoomedCard";
+import { setLeader } from "../redux/CardSlice";
+import { randomLeaderForClass } from "../decks/classLeaders";
 import initialWallpaper from "../../src/assets/wallpapers/3.png";
 
 export default function Game(callback) {
   const [wallpaper, setWallpaper] = useState(initialWallpaper);
   const [selectedOption, setSelectedOption] = useState("Galmieux");
   const reduxLeader = useSelector((state) => state.card.leader);
+  const reduxDeckClass = useSelector((state) => state.card.deckClass);
+  const dispatch = useDispatch();
+  const location = useLocation();
 
   useEffect(() => {
     if (reduxLeader) setSelectedOption(reduxLeader);
   }, [reduxLeader]);
+
+  // Track the live leader so the delayed re-emit below sends whatever is current
+  // (respecting a manual change), not a stale captured value.
+  const leaderRef = useRef("");
+  useEffect(() => {
+    leaderRef.current = reduxLeader;
+  }, [reduxLeader]);
+
+  // On a fresh game load (both players entering a new game — not a reconnect),
+  // auto-pick a random leader from the deck's class pool. Runs once on mount;
+  // the deck class was stashed in Redux on game entry. The player can still
+  // change leaders from the usual grid.
+  useEffect(() => {
+    if (!location.state?.fresh) return;
+    const leader = randomLeaderForClass(reduxDeckClass);
+    if (!leader) return;
+    // Commit immediately so the player sees their leader right away (no flash of
+    // the default). Both clients mount at game start, so the opponent's listener
+    // may not have caught this first emit — re-emit the current leader shortly
+    // after to guarantee delivery. setEnemyLeader is idempotent, so a duplicate
+    // is harmless, and reading the live value respects a manual change made in
+    // the meantime.
+    dispatch(setLeader(leader));
+    const t = setTimeout(() => {
+      if (leaderRef.current) dispatch(setLeader(leaderRef.current));
+    }, 1500);
+    return () => clearTimeout(t);
+  }, []);
   const constraintsRef = useRef(null);
   const [ready, setReady] = useState(false);
   // const [dragging, setDragging] = useState(false);

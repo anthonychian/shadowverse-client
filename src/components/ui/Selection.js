@@ -26,6 +26,7 @@ import imageMaru from "../../assets/leaders/Maru.png";
 import imageRin from "../../assets/leaders/Rin.png";
 import imageUzuki from "../../assets/leaders/Uzuki.png";
 import imageMio from "../../assets/leaders/Mio.png";
+import imageVanguard from "../../assets/leaders/Vanguard.png";
 
 import dragon from "../../assets/logo/dragon.png";
 import defaultCardBack from "../../assets/cardbacks/default.png";
@@ -145,8 +146,10 @@ export default function Selection({ setSelectedOption }) {
 
   const exitToHome = () => {
     dispatch(exitGame());
-    clearSavedRoom();
-    clearSavedState(reduxRoom.toString());
+    // Free our slot in the room but KEEP the saved room/state in sessionStorage.
+    // The opponent may still be there, so the Home board offers a private
+    // Reconnect back into this game; the saved state makes that rejoin instant.
+    // (If the room dies, Home's reconnect probe clears the stale entry.)
     socket.emit("leave_room", reduxRoom.toString());
     navigate("/");
   };
@@ -908,6 +911,18 @@ export default function Selection({ setSelectedOption }) {
               }}
             >
               <img width="100px" src={imageMio} alt="Mio" />
+            </IconButton>
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectLeader(e);
+              }}
+            >
+              <img width="100px" src={imageVanguard} alt="Vanguard" />
             </IconButton>
           </Card>
         </Box>

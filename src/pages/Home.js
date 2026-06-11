@@ -23,10 +23,21 @@ import {
   setEvoDeck,
   setRoom,
   setActiveUsers,
+  setDeckClass,
 } from "../redux/CardSlice";
 import { deleteDeck } from "../redux/DeckSlice";
 import { cardImage } from "../decks/getCards";
-import { socket, saveRoom } from "../sockets";
+import { computeDeckClass } from "../decks/cardDetails";
+import {
+  socket,
+  saveRoom,
+  getSavedRoom,
+  clearSavedRoom,
+  clearSavedState,
+  getDisplayName,
+  saveDisplayName,
+} from "../sockets";
+import ActiveGamesBoard from "../components/ui/ActiveGamesBoard";
 
 import ArrowBackIosNew from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
@@ -50,6 +61,19 @@ import {
 
 import "../css/Home.css";
 
+// Names of the leaders shown on the Home screen, keyed by `leaderNum` (see
+// randomLeader). Used as the default lobby display name so an un-named player is
+// labelled after the leader currently on their Home page rather than "Anonymous".
+const LEADER_NAMES = {
+  1: "Galmieux",
+  2: "Kuon",
+  3: "Korwa",
+  4: "Viridia",
+  5: "Tsubaki",
+  6: "Grimnir",
+  7: "Piercye",
+};
+
 export default function Home() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -68,6 +92,16 @@ export default function Home() {
   const [openSnack, setOpenSnack] = useState(false);
   const [deckIdx, setDeckIdx] = useState(0);
 
+  // Lobby board state. `rooms` is the live list of joinable public games pushed
+  // by the server; `myRoom` is the room this tab is currently hosting (shown in
+  // its own section with a public/private toggle), or null if none.
+  const [rooms, setRooms] = useState([]);
+  const [myRoom, setMyRoom] = useState(null);
+  const [displayName, setDisplayName] = useState(getDisplayName());
+  // A room this player was in and can rejoin (private to them — see the lobby
+  // effect). null when there's nothing to reconnect to.
+  const [reconnectRoom, setReconnectRoom] = useState(null);
+
   const reduxDecks = useSelector((state) => state.deck.decks);
   const reduxActiveUsers = useSelector((state) => state.card.activeUsers);
   const numLeaders = 7;
@@ -75,6 +109,16 @@ export default function Home() {
   // Announcements board — add new entries to the top of this list.
   // Each entry: { date, title, body }
   const announcements = [
+    {
+      date: "2026-06-11",
+      title: "New deck builder",
+      body: "The deck builder has been redesigned with a new layout and full card metadata.",
+    },
+    {
+      date: "2026-06-11",
+      title: "Automatic reconnection after desync",
+      body: "Games now self-heal from desyncs and automatically reconnect you to keep play in sync.",
+    },
     {
       date: "2026-05-30",
       title: "Card list updated to BP17",
@@ -85,31 +129,64 @@ export default function Home() {
       title: "Announcements board added",
       body: "This board will show the latest set updates, new features, and other news.",
     },
-    {
-      date: "2026-05-30",
-      title: "Responsive board scaling",
-      body: "The game board and UI now scale smoothly across different screen resolutions.",
-    },
-    {
-      date: "2026-05-30",
-      title: "Reconnect to active games",
-      body: "Reloading the page now reconnects you to your active game instead of dropping you out.",
-    },
-    {
-      date: "2026-05-30",
-      title: "Faster deck builder",
-      body: "The deck builder card list now loads faster and scrolls more smoothly.",
-    },
   ];
 
   useEffect(() => {
-    socket.on("start_game", () => {
-      handleNavigateToGame();
+    const onStartGame = () => handleNavigateToGame();
+    const onActiveUsers = (data) => dispatch(setActiveUsers(data));
+    socket.on("start_game", onStartGame);
+    socket.on("active_users", onActiveUsers);
+    // Remove these on unmount; otherwise each return trip to Home stacks another
+    // start_game handler (firing navigate multiple times) and leaves a stale one
+    // alive that could yank the host into a game while they're off another page.
+    return () => {
+      socket.off("start_game", onStartGame);
+      socket.off("active_users", onActiveUsers);
+    };
+  }, [socket]);
+
+  // Subscribe to the lobby so the active-games board updates live. Request the
+  // current snapshot on mount (also covers reconnects, since the listener stays
+  // registered). Leave the lobby channel on unmount (e.g. navigating to a game).
+  useEffect(() => {
+    socket.on("rooms_update", (data) => {
+      setRooms(Array.isArray(data) ? data : []);
+      // The lobby changed (someone created/joined/left/disconnected). Re-probe
+      // our saved room so a stale Reconnect card clears the moment the last
+      // player leaves it (room drops to 0 connected). Without this the probe
+      // would only run once on mount and the button would linger.
+      const saved = getSavedRoom();
+      if (saved) socket.emit("check_room", { room: saved });
     });
 
-    socket.on("active_users", (data) => {
-      dispatch(setActiveUsers(data));
+    // Reconnect probe: if this tab remembers a room, ask the server (privately)
+    // whether it's still rejoinable. Offer a Reconnect card only when the room
+    // is alive (an opponent is there) and this socket isn't already a member of
+    // it — i.e. a game we dropped out of, not our own open lobby room. A dead
+    // room (0 connected) is forgotten so the stale entry doesn't linger.
+    socket.on("room_status", ({ room, connected, isMember }) => {
+      if (room !== getSavedRoom()) return;
+      if (!isMember && connected >= 1 && connected < 2) {
+        setReconnectRoom(room);
+      } else {
+        setReconnectRoom(null);
+        if (connected === 0) {
+          clearSavedRoom();
+          clearSavedState(room);
+        }
+      }
     });
+
+    socket.emit("lobby_join");
+    socket.emit("request_rooms");
+    const saved = getSavedRoom();
+    if (saved) socket.emit("check_room", { room: saved });
+
+    return () => {
+      socket.emit("lobby_leave");
+      socket.off("rooms_update");
+      socket.off("room_status");
+    };
   }, [socket]);
 
   useEffect(() => {
@@ -143,14 +220,36 @@ export default function Home() {
     setOpenDialogue(false);
   };
 
+  // A deck's class: its declared class (required in the builder) or, for legacy
+  // decks, computed from contents.
+  const deckClassOf = (d) =>
+    (d && (d.class || computeDeckClass(d.deck))) || "";
+
   const handleCreateRoom = () => {
     if (Object.keys(selectedDeck).length !== 0) {
       if (socket.id) {
-        const roomNumber = parseInt(Math.random() * 10000000);
-        setRoomNumber(roomNumber.toString());
-        dispatch(setRoom(roomNumber.toString()));
-        saveRoom(roomNumber.toString());
-        socket.emit("create_room", roomNumber.toString());
+        const roomId = parseInt(Math.random() * 10000000).toString();
+        // Hosting a fresh game abandons any game we could have reconnected to.
+        const prev = getSavedRoom();
+        if (prev && prev !== roomId) clearSavedState(prev);
+        setReconnectRoom(null);
+        setRoomNumber(roomId);
+        dispatch(setRoom(roomId));
+        saveRoom(roomId);
+        // New rooms default to public so they appear on everyone's board; the
+        // host can flip to private from the board afterwards.
+        const room = {
+          roomId,
+          hostName: displayName || LEADER_NAMES[leaderNum] || "Challenger",
+          // Prefer the deck's declared class (now required in the builder); fall
+          // back to computing it from the card contents for legacy decks.
+          deckClass: deckClassOf(selectedDeck),
+          isPrivate: false,
+        };
+        // Stash the class so the game can auto-pick a matching leader on load.
+        dispatch(setDeckClass(room.deckClass));
+        setMyRoom(room);
+        socket.emit("create_room", room);
       }
     }
   };
@@ -159,10 +258,56 @@ export default function Home() {
       if (roomNumber !== "") {
         setRoomNumber(roomNumber.toString());
         dispatch(setRoom(roomNumber.toString()));
+        dispatch(setDeckClass(deckClassOf(selectedDeck)));
         saveRoom(roomNumber.toString());
         socket.emit("join_room", roomNumber.toString());
       }
     }
+  };
+
+  // Join an open game straight from the board. Mirrors handleJoinRoom but takes
+  // the target room id directly. Requires a selected deck (same guard as the
+  // manual join/create flows) — without it there's nothing to play.
+  const handleJoinPublicRoom = (roomId) => {
+    if (Object.keys(selectedDeck).length === 0) return;
+    setRoomNumber(roomId);
+    dispatch(setRoom(roomId));
+    dispatch(setDeckClass(deckClassOf(selectedDeck)));
+    saveRoom(roomId);
+    socket.emit("join_room", roomId);
+  };
+
+  // Rejoin a game we previously dropped out of. The room/state are still in
+  // sessionStorage, so navigating to /game lets Field.js run its normal rejoin +
+  // state-resync handshake on mount.
+  const handleReconnect = (roomId) => {
+    dispatch(setRoom(roomId));
+    saveRoom(roomId);
+    navigate("/game");
+  };
+
+  const handleTogglePrivacy = (isPrivate) => {
+    if (!myRoom) return;
+    setMyRoom({ ...myRoom, isPrivate });
+    socket.emit("set_room_privacy", { roomId: myRoom.roomId, isPrivate });
+  };
+
+  // Close the room we're hosting: tell the server to drop it (which de-registers
+  // it from everyone's board) and clear our local state so the slot is gone.
+  const handleCloseRoom = () => {
+    if (!myRoom) return;
+    socket.emit("leave_room", myRoom.roomId);
+    clearSavedState(myRoom.roomId);
+    clearSavedRoom();
+    setMyRoom(null);
+    setRoomNumber("");
+    dispatch(setRoom(""));
+  };
+
+  const handleDisplayNameChange = (event) => {
+    const value = event.target.value;
+    setDisplayName(value);
+    saveDisplayName(value);
   };
 
   const handleDeleteDeck = () => {
@@ -194,17 +339,23 @@ export default function Home() {
   };
 
   const handleNavigateToDeck = () => {
+    // Leaving matchmaking for the builder — close any room we're hosting so it
+    // doesn't linger on everyone's board as an unjoinable ghost.
+    handleCloseRoom();
     navigate("/deck");
   };
 
   const handleEditDeck = () => {
+    handleCloseRoom();
     navigate("/deck", {
       state: { deckName: name },
     });
   };
 
   const handleNavigateToGame = () => {
-    navigate("/game");
+    // Mark this as a fresh game start (vs. a reconnect) so the game auto-selects
+    // a leader for the deck's class on load.
+    navigate("/game", { state: { fresh: true } });
   };
 
   const handleCardSelection = (card) => {
@@ -677,23 +828,50 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {roomNumber !== "" && (
-        <div
+      <div
+        style={{
+          position: "absolute",
+          top: "3%",
+          left: "50%",
+          transform: "translateX(-50%)",
+          width: "380px",
+          maxWidth: "32vw",
+          zIndex: 3,
+          display: "flex",
+          flexDirection: "column",
+          gap: "0.5em",
+        }}
+      >
+        <input
           style={{
-            position: "absolute",
-            top: "0%",
-            left: "40%",
-            height: "40px",
-            // width: "40px",
-            color: "white",
-            fontSize: "50px",
+            padding: ".5em .8em",
+            fontSize: "14px",
+            width: "100%",
+            boxSizing: "border-box",
+            textAlign: "center",
+            color: "#daf6ff",
+            backgroundColor: "rgba(10, 14, 20, 0.75)",
+            border: "1px solid rgba(72, 171, 224, 0.5)",
+            borderRadius: "8px",
+            outline: "none",
             fontFamily: "Noto Serif JP, serif",
-            borderRadius: "7px",
           }}
-        >
-          Joining Room: 1/2 players...
-        </div>
-      )}
+          type="text"
+          maxLength={20}
+          value={displayName}
+          onChange={handleDisplayNameChange}
+          placeholder={LEADER_NAMES[leaderNum] || "Display name..."}
+        />
+        <ActiveGamesBoard
+          rooms={rooms}
+          myRoom={myRoom}
+          reconnectRoom={reconnectRoom}
+          onJoin={handleJoinPublicRoom}
+          onReconnect={handleReconnect}
+          onTogglePrivacy={handleTogglePrivacy}
+          onCloseRoom={handleCloseRoom}
+        />
+      </div>
       <div
         style={{
           position: "absolute",

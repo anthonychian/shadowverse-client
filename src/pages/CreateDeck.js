@@ -306,7 +306,10 @@ export default function CreateDeck() {
   };
 
   // ---------- save ----------
-  const canCreate = deck.length >= 40 && name.trim().length > 0;
+  // Class is now required: the lobby board labels each game by its host's deck
+  // class, so a deck must declare one before it can be saved.
+  const canCreate =
+    deck.length >= 40 && name.trim().length > 0 && deckClass !== "";
   const handleSubmit = () => {
     if (!canCreate) return;
     dispatch(deleteDeck(deckName));

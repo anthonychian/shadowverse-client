@@ -25,6 +25,9 @@ export const CLASS_LABELS = {
   abyss: "Abysscraft",
   haven: "Havencraft",
   neutral: "Neutral",
+  idolmaster: "THE IDOLM@STER CINDERELLA GIRLS",
+  umamusume: "Umamusume: Pretty Derby",
+  vanguard: "Cardfight!! Vanguard",
 };
 
 // Class accent colors for chips / borders.
@@ -36,6 +39,9 @@ export const CLASS_COLORS = {
   abyss: "#b8455a",
   haven: "#e8dca0",
   neutral: "#9aa0a6",
+  idolmaster: "#8f9fe8",
+  umamusume: "#e8913a",
+  vanguard: "#e02020",
 };
 
 // Human-readable set names, keyed by the filter value used in CreateDeck.
@@ -72,4 +78,7 @@ export const SET_ORDER = [
   "set 6", "set 5", "set 4", "set 3", "uma", "set 2", "set 1",
 ];
 
-export const CLASS_ORDER = ["forest", "sword", "rune", "dragon", "abyss", "haven", "neutral"];
+export const CLASS_ORDER = [
+  "forest", "sword", "rune", "dragon", "abyss", "haven", "neutral",
+  "idolmaster", "umamusume", "vanguard",
+];

@@ -34,6 +34,9 @@ export const CardSlice = createSlice({
     rematchStatus: false,
     enemyRematchStatus: false,
     leader: "",
+    // The selected deck's class, stashed on game entry so the game can auto-pick
+    // a matching leader. Not synced to the opponent (purely local).
+    deckClass: "",
     evoPoints: 0,
     enemyEvoPoints: 0,
     playPoints: { available: 0, max: 0 },
@@ -176,6 +179,9 @@ export const CardSlice = createSlice({
         data: state.leader,
         room: state.room,
       });
+    },
+    setDeckClass: (state, action) => {
+      state.deckClass = action.payload;
     },
     setHealth: (state, action) => {
       state.playerHealth = action.payload;
@@ -2851,6 +2857,7 @@ export const {
   setPlayPoints,
   setHealth,
   setLeader,
+  setDeckClass,
   setCardBack,
   setEnemyCardBack,
   setEnemyLeader,

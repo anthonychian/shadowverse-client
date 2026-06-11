@@ -7,6 +7,44 @@ import cardData from "./cardData.json";
 
 export const getDetails = (name) => cardData[name] || null;
 
+// Collab "classes" aren't stored in the `class` field — those cards carry a base
+// craft (often neutral) — but they're identifiable by trait. Detect them so a
+// collab deck is labelled by its collab rather than its base craft.
+const collabClass = (name) => {
+  const t = (cardData[name] && cardData[name].trait) || "";
+  if (/Vanguard/i.test(t)) return "vanguard";
+  if (/iM@S/i.test(t)) return "idolmaster";
+  if (/Umamusume|Tracen Academy/i.test(t)) return "umamusume";
+  return null;
+};
+
+// A card's class for deck-identity purposes: its collab class if it is a collab
+// card, otherwise its base craft (forest/sword/.../neutral).
+export const cardClass = (name) =>
+  collabClass(name) || (cardData[name] && cardData[name].class) || "";
+
+// A deck's overall class = its most common non-neutral card class. Most decks
+// are mono-class; for a rare multi-class deck the majority wins (e.g. 21 dragon
+// + 19 sword -> dragon). Neutral cards don't vote. Returns "" for an empty or
+// all-neutral deck. Used as a fallback when a deck has no explicit class set.
+export const computeDeckClass = (cards) => {
+  const tally = {};
+  for (const name of cards || []) {
+    const c = cardClass(name);
+    if (!c || c === "neutral") continue;
+    tally[c] = (tally[c] || 0) + 1;
+  }
+  let best = "";
+  let bestN = 0;
+  for (const c in tally) {
+    if (tally[c] > bestN) {
+      best = c;
+      bestN = tally[c];
+    }
+  }
+  return best;
+};
+
 // Numeric cost, or null for cards that show "-"/"X"/no cost (leaders, most
 // evolved followers, tokens). Used for cost bucketing + the mana curve.
 export const getCost = (name) => {

@@ -25,6 +25,7 @@ import imageMaru from "../../assets/leaders/Maru.png";
 import imageRin from "../../assets/leaders/Rin.png";
 import imageUzuki from "../../assets/leaders/Uzuki.png";
 import imageMio from "../../assets/leaders/Mio.png";
+import imageVanguard from "../../assets/leaders/Vanguard.png";
 
 import "../../css/Leader.css";
 
@@ -105,6 +106,9 @@ export default function Leader({ name, active }) {
       break;
     case "Mio":
       image = imageMio;
+      break;
+    case "Vanguard":
+      image = imageVanguard;
       break;
     default:
       image = imageGalmieux;

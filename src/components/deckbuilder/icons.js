@@ -2,6 +2,9 @@
 // src/decks/icons.json, images under public/textures/icons/). Card images are
 // referenced app-wide as "../textures/<file>", so icons share that base.
 import icons from "../../decks/icons.json";
+import idolmaster from "../../assets/logo/idolmaster.png";
+import umamusume from "../../assets/logo/umamusume.png";
+import vanguard from "../../assets/logo/vanguard.png";
 
 const BASE = "../textures/";
 
@@ -17,7 +20,11 @@ const CLASS_TOKEN = {
   neutral: "[neutral]",
 };
 
-export const classIcon = (cls) => iconUrl(CLASS_TOKEN[cls]);
+// Collab classes aren't in the scraped icon manifest — use the official logos
+// bundled under assets/logo.
+const COLLAB_ICON = { idolmaster, umamusume, vanguard };
+
+export const classIcon = (cls) => COLLAB_ICON[cls] || iconUrl(CLASS_TOKEN[cls]);
 export const ATTACK_ICON = iconUrl("[attack]");
 export const DEFENSE_ICON = iconUrl("[defense]");
 
