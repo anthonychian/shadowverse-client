@@ -997,18 +997,26 @@ function resolveEffect(state, effect, player, options) {
             const p = next.players[player];
             const sourceId = next.resolutionContext?.sourceInstanceId;
             const buriedCosts = [];
-            const toBury = p.zones.field.filter((card) => {
-                if (effect.excludeSelf && card.instanceId === sourceId)
-                    return false;
-                if (!(0, conditions_1.cardMatchesFilter)(card.cardNo, effect.filter))
-                    return false;
-                if (effect.minCost != null && (0, queries_1.resolveCardDefCost)(card.cardNo) < effect.minCost) {
-                    return false;
-                }
-                return true;
-            });
+            let toBury;
+            if (effect.sourceOnly && sourceId) {
+                const source = (0, queries_1.findInstance)(next, sourceId);
+                toBury = source?.zone === "field" ? [source.card] : [];
+            }
+            else {
+                toBury = p.zones.field.filter((card) => {
+                    if (effect.excludeSelf && card.instanceId === sourceId)
+                        return false;
+                    const cardNo = (0, queries_1.resolveCardNo)(next, card);
+                    if (effect.filter && !(0, conditions_1.cardMatchesFilter)(cardNo, effect.filter))
+                        return false;
+                    if (effect.minCost != null && (0, queries_1.resolveCardDefCost)(cardNo) < effect.minCost) {
+                        return false;
+                    }
+                    return true;
+                });
+            }
             for (const card of toBury) {
-                buriedCosts.push((0, queries_1.resolveCardDefCost)(card.cardNo));
+                buriedCosts.push((0, queries_1.resolveCardDefCost)((0, queries_1.resolveCardNo)(next, card)));
                 (0, confirmation_1.queueLastWords)(next, card.instanceId, player);
                 next = (0, zones_1.destroyFollower)(next, card.instanceId);
             }

@@ -80,6 +80,46 @@ const index_1 = require("./index");
         (0, vitest_1.expect)(destroyed.state.players[1].zones.field.some((c) => c.instanceId === enemyA.instanceId)).toBe(true);
         (0, vitest_1.expect)(destroyed.state.players[1].zones.field.some((c) => c.instanceId === enemyB.instanceId)).toBe(false);
     });
+    (0, vitest_1.it)("Fumika evolved bury option buries herself and summons another Fumika from deck", () => {
+        let state = (0, index_1.createInitialGameState)(0);
+        state.phase = "main";
+        state.activePlayer = 0;
+        state.turnNumber = 2;
+        state.pendingChoices = null;
+        state.players[0].pp = 10;
+        state.players[0].maxPp = 10;
+        state.players[0].evoPoints = 2;
+        const base = (0, index_1.createCardInstance)("ECP02-037EN", 0);
+        base.onFieldSinceTurnStart = true;
+        state.players[0].zones.field.push(base);
+        const evo = (0, index_1.createCardInstance)("ECP02-038EN", 0);
+        state.players[0].zones.evolveDeck.push(evo);
+        const deckCopy = (0, index_1.createCardInstance)("ECP02-037EN", 0);
+        state.players[0].zones.deck.unshift(deckCopy);
+        const evolved = (0, applyAction_1.applyAction)(state, 0, {
+            type: "EVOLVE",
+            fieldInstanceId: base.instanceId,
+            evolveDeckInstanceId: evo.instanceId,
+            useEvoPoint: false,
+        });
+        (0, vitest_1.expect)(evolved.ok).toBe(true);
+        (0, vitest_1.expect)(evolved.state.pendingChoices?.type).toBe("choose");
+        const chose = (0, applyAction_1.applyAction)(evolved.state, 0, {
+            type: "CHOICE_RESPONSE",
+            payload: { optionIndex: 1 },
+        });
+        (0, vitest_1.expect)(chose.ok).toBe(true);
+        (0, vitest_1.expect)(chose.state.players[0].pp).toBe(5);
+        const finished = (0, applyAction_1.applyAction)(chose.state, 0, {
+            type: "CHOICE_RESPONSE",
+            payload: { instanceId: deckCopy.instanceId },
+        });
+        (0, vitest_1.expect)(finished.ok).toBe(true);
+        (0, vitest_1.expect)(finished.state.players[0].zones.field).toHaveLength(1);
+        (0, vitest_1.expect)(finished.state.players[0].zones.field[0].instanceId).toBe(deckCopy.instanceId);
+        (0, vitest_1.expect)(finished.state.players[0].zones.field.some((c) => c.instanceId === base.instanceId)).toBe(false);
+        (0, vitest_1.expect)(finished.state.players[0].zones.cemetery.some((c) => c.instanceId === base.instanceId)).toBe(true);
+    });
     (0, vitest_1.it)("idolmaster universe starts with Magical Items in EX", () => {
         let state = (0, index_1.createInitialGameState)(0);
         state = (0, index_1.loadDecks)(state, [

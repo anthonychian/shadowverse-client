@@ -3595,9 +3595,7 @@
                 "steps": [
                   {
                     "op": "buryFieldFollowers",
-                    "filter": {
-                      "cardNo": "ECP02-038EN"
-                    }
+                    "sourceOnly": true
                   },
                   {
                     "op": "tutorFromDeck",

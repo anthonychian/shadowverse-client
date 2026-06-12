@@ -253,9 +253,10 @@ export type Effect =
     }
   | {
       op: "buryFieldFollowers";
-      filter: DeckFilter;
+      filter?: DeckFilter;
       minCost?: number;
       excludeSelf?: boolean;
+      sourceOnly?: boolean;
     }
   | { op: "dealDamageAllEnemies"; amount: number; followersOnly?: boolean }
   | {

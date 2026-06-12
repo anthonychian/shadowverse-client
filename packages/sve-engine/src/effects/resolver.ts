@@ -1754,16 +1754,23 @@ export function resolveEffect(
       const p = next.players[player];
       const sourceId = next.resolutionContext?.sourceInstanceId;
       const buriedCosts: number[] = [];
-      const toBury = p.zones.field.filter((card) => {
-        if (effect.excludeSelf && card.instanceId === sourceId) return false;
-        if (!cardMatchesFilter(card.cardNo, effect.filter)) return false;
-        if (effect.minCost != null && resolveCardDefCost(card.cardNo) < effect.minCost) {
-          return false;
-        }
-        return true;
-      });
+      let toBury;
+      if (effect.sourceOnly && sourceId) {
+        const source = findInstance(next, sourceId);
+        toBury = source?.zone === "field" ? [source.card] : [];
+      } else {
+        toBury = p.zones.field.filter((card) => {
+          if (effect.excludeSelf && card.instanceId === sourceId) return false;
+          const cardNo = resolveCardNo(next, card);
+          if (effect.filter && !cardMatchesFilter(cardNo, effect.filter)) return false;
+          if (effect.minCost != null && resolveCardDefCost(cardNo) < effect.minCost) {
+            return false;
+          }
+          return true;
+        });
+      }
       for (const card of toBury) {
-        buriedCosts.push(resolveCardDefCost(card.cardNo));
+        buriedCosts.push(resolveCardDefCost(resolveCardNo(next, card)));
         queueLastWords(next, card.instanceId, player);
         next = destroyFollower(next, card.instanceId);
       }

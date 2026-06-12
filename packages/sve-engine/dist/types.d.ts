@@ -364,9 +364,10 @@ export type Effect = {
     remainderTo?: "cemetery" | "deckBottom";
 } | {
     op: "buryFieldFollowers";
-    filter: DeckFilter;
+    filter?: DeckFilter;
     minCost?: number;
     excludeSelf?: boolean;
+    sourceOnly?: boolean;
 } | {
     op: "dealDamageAllEnemies";
     amount: number;

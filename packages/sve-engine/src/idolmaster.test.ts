@@ -90,6 +90,56 @@ describe("idolmaster DSL", () => {
     );
   });
 
+  it("Fumika evolved bury option buries herself and summons another Fumika from deck", () => {
+    let state = createInitialGameState(0);
+    state.phase = "main";
+    state.activePlayer = 0;
+    state.turnNumber = 2;
+    state.pendingChoices = null;
+    state.players[0].pp = 10;
+    state.players[0].maxPp = 10;
+    state.players[0].evoPoints = 2;
+
+    const base = createCardInstance("ECP02-037EN", 0);
+    base.onFieldSinceTurnStart = true;
+    state.players[0].zones.field.push(base);
+    const evo = createCardInstance("ECP02-038EN", 0);
+    state.players[0].zones.evolveDeck.push(evo);
+    const deckCopy = createCardInstance("ECP02-037EN", 0);
+    state.players[0].zones.deck.unshift(deckCopy);
+
+    const evolved = applyAction(state, 0, {
+      type: "EVOLVE",
+      fieldInstanceId: base.instanceId,
+      evolveDeckInstanceId: evo.instanceId,
+      useEvoPoint: false,
+    });
+    expect(evolved.ok).toBe(true);
+    expect(evolved.state.pendingChoices?.type).toBe("choose");
+
+    const chose = applyAction(evolved.state, 0, {
+      type: "CHOICE_RESPONSE",
+      payload: { optionIndex: 1 },
+    });
+    expect(chose.ok).toBe(true);
+    expect(chose.state.players[0].pp).toBe(5);
+
+    const finished = applyAction(chose.state, 0, {
+      type: "CHOICE_RESPONSE",
+      payload: { instanceId: deckCopy.instanceId },
+    });
+    expect(finished.ok).toBe(true);
+
+    expect(finished.state.players[0].zones.field).toHaveLength(1);
+    expect(finished.state.players[0].zones.field[0].instanceId).toBe(deckCopy.instanceId);
+    expect(finished.state.players[0].zones.field.some((c) => c.instanceId === base.instanceId)).toBe(
+      false,
+    );
+    expect(finished.state.players[0].zones.cemetery.some((c) => c.instanceId === base.instanceId)).toBe(
+      true,
+    );
+  });
+
   it("idolmaster universe starts with Magical Items in EX", () => {
     let state = createInitialGameState(0);
     state = loadDecks(state, [
