@@ -66,6 +66,7 @@ function CardTile({ name, count, maxed, selected, onInspect, onAdd, onRemove }) 
       onHoverStart={() => setHover(true)}
       onHoverEnd={() => setHover(false)}
       onClick={() => onInspect(name)}
+      onDoubleClick={() => { if (!maxed && onAdd) onAdd(name); }}
       style={{
         position: "relative", width: W, height: H, cursor: "pointer", borderRadius: 8,
         outline: selected ? `3px solid ${COLORS.glow}` : "none",
