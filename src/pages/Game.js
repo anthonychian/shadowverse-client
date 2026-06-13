@@ -61,6 +61,10 @@ export default function Game(callback) {
   const [readyToPlaceOnFieldFromHand, setReadyToPlaceOnFieldFromHand] =
     useState(false);
   const reduxCurrentCard = useSelector((state) => state.card.currentCard);
+  const reduxMyArt = useSelector((state) => state.card.myArt);
+  const reduxEnemyArt = useSelector((state) => state.card.enemyArt);
+  // The zoomed card can be either player's; my own choices take precedence.
+  const zoomArt = { ...reduxEnemyArt, ...reduxMyArt };
 
   // The board reports the scale it computed; the side panels (HP, leader, play
   // points, chat) shrink by the same factor so everything matches. Capped at 1
@@ -101,6 +105,7 @@ export default function Game(callback) {
           name={reduxCurrentCard}
           hovering={hovering}
           scale={sideScale}
+          art={zoomArt}
         />
         <div style={leftScaleStyle}>
           <PlayPoints name={selectedOption} />

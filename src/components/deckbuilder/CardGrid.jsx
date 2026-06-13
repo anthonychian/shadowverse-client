@@ -84,7 +84,7 @@ function CardTile({ name, cardNo, cardKey, count, maxed, selected, onInspect, on
       onHoverStart={() => setHover(true)}
       onHoverEnd={() => setHover(false)}
       onClick={() => onInspect(name, cardKey, cardNo)}
-      onDoubleClick={() => { if (!maxed && onAdd) onAdd(name); }}
+      onDoubleClick={() => { if (!maxed && onAdd) onAdd(name, cardNo); }}
       style={{
         position: "relative", width: W, height: H, cursor: "pointer", borderRadius: 8,
         outline: selected ? `3px solid ${COLORS.glow}` : "none",
@@ -123,7 +123,7 @@ function CardTile({ name, cardNo, cardKey, count, maxed, selected, onInspect, on
       </button>
 
       <button
-        onClick={(e) => { e.stopPropagation(); if (!maxed) onAdd(name); }}
+        onClick={(e) => { e.stopPropagation(); if (!maxed) onAdd(name, cardNo); }}
         disabled={maxed}
         title={maxed ? "At copy limit" : "Add to deck"}
         style={{

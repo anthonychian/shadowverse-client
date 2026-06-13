@@ -24,10 +24,11 @@ import {
   setRoom,
   setActiveUsers,
   setDeckClass,
+  setMyArt,
 } from "../redux/CardSlice";
 import { deleteDeck } from "../redux/DeckSlice";
-import { cardImage } from "../decks/getCards";
-import { computeDeckClass } from "../decks/cardDetails";
+import { cardImage, artImage } from "../decks/getCards";
+import { computeDeckClass, getCost } from "../decks/cardDetails";
 import {
   socket,
   saveRoom,
@@ -73,6 +74,18 @@ const LEADER_NAMES = {
   6: "Grimnir",
   7: "Piercye",
 };
+
+// Order deck entries by play-point cost (then name), matching the deck builder's
+// DeckPanel so the Home preview reads the same way.
+const sortedEntries = (map) =>
+  [...map.entries()].sort((a, b) => {
+    const ca = getCost(a[0]);
+    const cb = getCost(b[0]);
+    const va = ca == null ? 99 : ca;
+    const vb = cb == null ? 99 : cb;
+    if (va !== vb) return va - vb;
+    return a[0].localeCompare(b[0]);
+  });
 
 export default function Home() {
   const navigate = useNavigate();
@@ -416,6 +429,10 @@ export default function Home() {
     setShowSelected(res);
 
     dispatch(setDeck(newDeck.deck.toSorted(() => Math.random() - 0.5)));
+    // Carry the deck's rarity/art choices into the game so cards render with the
+    // chosen printing (synced to the opponent via full-state). Game-safe: only
+    // affects which texture is shown, never card identity.
+    dispatch(setMyArt(newDeck.art || {}));
 
     dispatch(
       setEvoDeck(
@@ -733,15 +750,16 @@ export default function Home() {
                     >
                       <img
                         height={"160px"}
-                        src={cardImage(deck.deck[0])}
+                        src={artImage(deck.deck[0], deck.art)}
                         alt={"cardback"}
                       />
                     </div>
                     <div style={{ zIndex: 2 }}>
                       <img
                         height={"160px"}
-                        src={cardImage(
+                        src={artImage(
                           deck.deck[Math.floor(deck.deck.length / 2)],
+                          deck.art,
                         )}
                         alt={"cardback"}
                       />
@@ -756,7 +774,7 @@ export default function Home() {
                     >
                       <img
                         height={"160px"}
-                        src={cardImage(deck.deck[deck.deck.length - 1])}
+                        src={artImage(deck.deck[deck.deck.length - 1], deck.art)}
                         alt={"cardback"}
                       />
                     </div>
@@ -1185,7 +1203,7 @@ export default function Home() {
             }}
             variant="outlined"
           >
-            {Array.from(deckMap.entries()).map((entry, idx) => {
+            {sortedEntries(deckMap).map((entry, idx) => {
               const [key, value] = entry;
               return (
                 <div
@@ -1211,7 +1229,7 @@ export default function Home() {
                       // style={{ aspectRatio: 110 / 150, height: "30vh" }}
                       // width={"110px"}
                       height={"350px"}
-                      src={cardImage(key)}
+                      src={artImage(key, selectedDeck.art)}
                       alt={key}
                     />
                   </div>
@@ -1251,7 +1269,7 @@ export default function Home() {
                 width: "100%",
               }}
             ></div>
-            {Array.from(evoDeckMap.entries()).map((entry, idx) => {
+            {sortedEntries(evoDeckMap).map((entry, idx) => {
               const [key, value] = entry;
               return (
                 <div
@@ -1270,7 +1288,7 @@ export default function Home() {
                     // style={{ aspectRatio: 110 / 150, maxHeight: "120px" }}
                     // width={"110px"}
                     // height={"150px"}
-                    src={cardImage(key)}
+                    src={artImage(key, selectedDeck.art)}
                     alt={key}
                   />
                   <div

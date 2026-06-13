@@ -146,3 +146,26 @@
   height: 161px;
   width: 115px;
 }
+
+/* Lift a hovered card frame (and the keyword status boxes that overflow past
+   its edge) above neighbouring cards. The slot wrappers and the card itself use
+   these classes, so hovering raises the whole stack above sibling slots. */
+.none:hover,
+.box:hover,
+.box2:hover,
+.aura:hover,
+.bane:hover,
+.ward:hover {
+  z-index: 50;
+}
+
+/* Per-slot wrapper on the field. Each slot shares the same base z-index, so the
+   right-hand neighbour would otherwise paint over a hovered card's overflowing
+   status boxes; raising it on hover puts the whole hovered slot on top. */
+.fieldSlot {
+  position: relative;
+  z-index: 2;
+}
+.fieldSlot:hover {
+  z-index: 100;
+}

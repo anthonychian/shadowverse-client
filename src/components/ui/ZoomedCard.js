@@ -1,7 +1,7 @@
 import React from "react";
-import { cardImage } from "../../decks/getCards";
+import { artImage } from "../../decks/getCards";
 
-export default function ZoomedCard({ hovering, name, scale = 1 }) {
+export default function ZoomedCard({ hovering, name, scale = 1, art }) {
   return (
     <>
       {hovering && (
@@ -18,7 +18,7 @@ export default function ZoomedCard({ hovering, name, scale = 1 }) {
             transformOrigin: "top center",
           }}
         >
-          <img height={"100%"} src={cardImage(name)} alt={name} />
+          <img height={"100%"} src={artImage(name, art)} alt={name} />
         </div>
       )}
     </>

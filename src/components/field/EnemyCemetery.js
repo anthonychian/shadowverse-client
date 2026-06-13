@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { cardImage } from "../../decks/getCards";
+import { artImage, artThumb } from "../../decks/getCards";
 import {
   Modal,
   Box,
@@ -38,6 +38,7 @@ export default function EnemyCemetery({ setHovering, ready }) {
   const [banishSelected, setBanishSelected] = useState(false);
 
   const reduxEnemyCemetery = useSelector((state) => state.card.enemyCemetery);
+  const reduxEnemyArt = useSelector((state) => state.card.enemyArt);
   const reduxEnemyBanish = useSelector((state) => state.card.enemyBanish);
 
   const handleModalOpen = () => {
@@ -80,7 +81,11 @@ export default function EnemyCemetery({ setHovering, ready }) {
           <img
             // height={"160px"}
             className={"cardStyle"}
-            src={cardImage(reduxEnemyCemetery[0])}
+            src={artThumb(reduxEnemyCemetery[0], reduxEnemyArt)}
+            onError={(e) => {
+              if (e.currentTarget.src.indexOf("/thumbs/") !== -1)
+                e.currentTarget.src = artImage(reduxEnemyCemetery[0], reduxEnemyArt);
+            }}
             alt={"cardback"}
           />
         )}

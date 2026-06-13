@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { cardImage } from "../../decks/getCards";
+import { artImage, artThumb } from "../../decks/getCards";
 import { socket } from "../../sockets";
 import {
   Menu,
@@ -45,6 +45,7 @@ export default function Cemetery({
   const [cardIndex, setCardIndex] = useState(-1);
 
   const reduxCemetery = useSelector((state) => state.card.cemetery);
+  const reduxMyArt = useSelector((state) => state.card.myArt);
   const reduxBanish = useSelector((state) => state.card.banish);
   const reduxRoom = useSelector((state) => state.card.room);
 
@@ -167,7 +168,11 @@ export default function Cemetery({
         {reduxCemetery && reduxCemetery.length > 0 && (
           <img
             className={"cardStyle"}
-            src={cardImage(reduxCemetery[0])}
+            src={artThumb(reduxCemetery[0], reduxMyArt)}
+            onError={(e) => {
+              if (e.currentTarget.src.indexOf("/thumbs/") !== -1)
+                e.currentTarget.src = artImage(reduxCemetery[0], reduxMyArt);
+            }}
             alt={"cardback"}
           />
         )}

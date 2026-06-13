@@ -50,7 +50,7 @@ import shutenCardBack from "../../assets/cardbacks/shuten.png";
 import tidalgunnerCardBack from "../../assets/cardbacks/tidalgunner.png";
 import viridiaCardBack from "../../assets/cardbacks/viridia.png";
 import wilbertCardBack from "../../assets/cardbacks/wilbert.png";
-import { cardImage } from "../../decks/getCards";
+import { artImage, artThumb } from "../../decks/getCards";
 
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
@@ -94,6 +94,10 @@ import {
 export default function Selection({ setSelectedOption }) {
   // redux state
   const reduxChatLog = useSelector((state) => state.card.gameLog);
+  const reduxMyArt = useSelector((state) => state.card.myArt);
+  const reduxEnemyArt = useSelector((state) => state.card.enemyArt);
+  // Log entries can reference either player's cards; mine take precedence.
+  const logArt = { ...reduxEnemyArt, ...reduxMyArt };
   const reduxEnemyRematchStatus = useSelector(
     (state) => state.card.enemyRematchStatus,
   );
@@ -464,7 +468,11 @@ export default function Selection({ setSelectedOption }) {
                           style={{
                             height: "160px",
                           }}
-                          src={cardImage(x.card)}
+                          src={artThumb(x.card, logArt)}
+                          onError={(e) => {
+                            if (e.currentTarget.src.indexOf("/thumbs/") !== -1)
+                              e.currentTarget.src = artImage(x.card, logArt);
+                          }}
                           alt={x.card}
                         />
                       </div>
@@ -502,7 +510,11 @@ export default function Selection({ setSelectedOption }) {
                           style={{
                             height: "160px",
                           }}
-                          src={cardImage(x.card)}
+                          src={artThumb(x.card, logArt)}
+                          onError={(e) => {
+                            if (e.currentTarget.src.indexOf("/thumbs/") !== -1)
+                              e.currentTarget.src = artImage(x.card, logArt);
+                          }}
                           alt={x.card}
                         />
                       </div>

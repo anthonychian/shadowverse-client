@@ -59,10 +59,25 @@ export default function CreateDeck() {
   // The specific printing being inspected, so the preview shows the same art as
   // the clicked tile (null = use the card's default name-keyed image).
   const [inspectedCardNo, setInspectedCardNo] = useState(null);
+  // name -> the card number of the rarity/art the user picked for that card.
+  // Builder-only and saved as an additive `art` field; the Game keeps using
+  // names for everything, so this never affects gameplay or sync.
+  const [artByName, setArtByName] = useState(new Map());
   const inspect = (name, key, cardNo) => {
     setCardName(name);
     setInspectedKey(key != null ? key : name);
-    setInspectedCardNo(cardNo != null ? cardNo : null);
+    // When no explicit printing is given (e.g. inspecting from the deck list),
+    // show the art previously chosen for this card, else its canonical printing
+    // (so the rarity picker highlights the art currently in use).
+    const no =
+      cardNo != null ? cardNo : artByName.get(name) || canonicalNoByName.get(name) || null;
+    setInspectedCardNo(no);
+  };
+  // Choose (or change) the rarity/art for the inspected card: updates the live
+  // preview and the deck-list art, and is remembered when the deck is saved.
+  const handleSelectPrinting = (no) => {
+    setInspectedCardNo(no);
+    if (cardName) setArtByName((m) => new Map(m).set(cardName, no));
   };
 
   // filters
@@ -176,6 +191,19 @@ export default function CreateDeck() {
     return c >= 3;
   };
 
+  // Add wrappers that also remember which printing/art was chosen. They only set
+  // a default art (the added tile's printing) when none is chosen yet, so adding
+  // from the pool never clobbers an explicit rarity pick made in the inspector
+  // (handleSelectPrinting always overrides).
+  const addMain = (name, cardNo) => {
+    if (cardNo) setArtByName((m) => (m.has(name) ? m : new Map(m).set(name, cardNo)));
+    handleCardSelection(name);
+  };
+  const addEvo = (name, cardNo) => {
+    if (cardNo) setArtByName((m) => (m.has(name) ? m : new Map(m).set(name, cardNo)));
+    handleEvoCardSelection(name);
+  };
+
   const handleFillDeckMap = (cards) => cards.forEach((c) => handleCardSelection(c));
   const handleFillEvoDeckMap = (cards) => cards.forEach((c) => handleEvoCardSelection(c));
 
@@ -186,6 +214,7 @@ export default function CreateDeck() {
       if (d.deck?.length) handleFillDeckMap(d.deck);
       if (d.evoDeck?.length) handleFillEvoDeckMap(d.evoDeck);
       if (d.class) setDeckClass(d.class);
+      if (d.art) setArtByName(new Map(Object.entries(d.art)));
     }
     if (id) {
       try {
@@ -194,6 +223,7 @@ export default function CreateDeck() {
         if (decoded[0].evoDeck?.length) handleFillEvoDeckMap(decoded[0].evoDeck);
         if (decoded[0].name) setName(decoded[0].name);
         if (decoded[0].class) setDeckClass(decoded[0].class);
+        if (decoded[0].art) setArtByName(new Map(Object.entries(decoded[0].art)));
       } catch {
         navigate("/deck");
       }
@@ -281,6 +311,8 @@ export default function CreateDeck() {
     return opts;
   }, []);
   const inspectedPrinting = inspectedCardNo ? printingByNo.get(inspectedCardNo) : null;
+  // Every printing of the inspected card, so its rarity/art can be chosen.
+  const inspectedPrintings = cardName ? printingsByName.get(cardName) || [] : [];
 
   // In the dedup ("Duplicates hidden") view we show one tile per card. Pick a
   // single canonical printing per name — the one matching the name-keyed
@@ -506,7 +538,11 @@ export default function CreateDeck() {
   const handleSubmit = () => {
     if (!canCreate) return;
     dispatch(deleteDeck(deckName));
-    dispatch(createDeck({ name, class: deckClass, deck, evoDeck }));
+    // `art` (name -> chosen printing card number) is an additive field; the Game
+    // ignores it and continues to read `deck`/`evoDeck` as name lists.
+    const art = {};
+    for (const [n, no] of artByName) if (deckMap.has(n) || evoDeckMap.has(n)) art[n] = no;
+    dispatch(createDeck({ name, class: deckClass, deck, evoDeck, art }));
     navigate("/");
   };
 
@@ -541,10 +577,13 @@ export default function CreateDeck() {
             cardNo={inspectedCardNo}
             rarity={inspectedPrinting ? inspectedPrinting.rarity : undefined}
             cardSet={inspectedPrinting ? inspectedPrinting.cardSet : undefined}
+            printings={inspectedPrintings}
+            selectedCardNo={inspectedCardNo}
+            onSelectPrinting={handleSelectPrinting}
             count={inspectedCount}
             atLimit={inspectedAtLimit}
             isDouble={cardName ? isDoubleEvo(cardName) : false}
-            onAdd={() => cardName && (inspectedIsEvo ? handleEvoCardSelection(cardName) : handleCardSelection(cardName))}
+            onAdd={() => cardName && (inspectedIsEvo ? addEvo(cardName, inspectedCardNo) : addMain(cardName, inspectedCardNo))}
             onRemove={() => cardName && (inspectedIsEvo ? handleEvoCardRemove(cardName) : handleCardRemove(cardName))}
             onPrev={() => navInspect(-1)}
             onNext={() => navInspect(1)}
@@ -577,7 +616,7 @@ export default function CreateDeck() {
               scrollTargetId="poolScroll"
               inspectedKey={inspectedKey}
               onInspect={inspect}
-              onAdd={mainSelected ? handleCardSelection : handleEvoCardSelection}
+              onAdd={mainSelected ? addMain : addEvo}
               onRemove={mainSelected ? handleCardRemove : handleEvoCardRemove}
               isAtLimit={mainSelected ? mainAtLimit : evoAtLimit}
               countOf={mainSelected ? (n) => deckMap.get(n) || 0 : (n) => evoDeckMap.get(n) || 0}
@@ -590,6 +629,7 @@ export default function CreateDeck() {
           <DeckPanel
             deckMap={deckMap} evoDeckMap={evoDeckMap}
             deckLen={deck.length} evoLen={evoDeck.length}
+            artNoOf={(n) => artByName.get(n) || null}
             onInspect={(n) => inspect(n)}
             onAdd={handleCardSelection} onRemove={handleCardRemove}
             onAddEvo={handleEvoCardSelection} onRemoveEvo={handleEvoCardRemove}

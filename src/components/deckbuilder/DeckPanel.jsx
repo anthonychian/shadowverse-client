@@ -15,7 +15,7 @@ const sortedEntries = (map) =>
     return a[0].localeCompare(b[0]);
   });
 
-const DeckRow = ({ name, count, onInspect, onAdd, onRemove, addDisabled }) => (
+const DeckRow = ({ name, count, artNo, onInspect, onAdd, onRemove, addDisabled }) => (
   <div
     style={{
       display: "flex", alignItems: "center", gap: 8, padding: "3px 6px",
@@ -25,7 +25,18 @@ const DeckRow = ({ name, count, onInspect, onAdd, onRemove, addDisabled }) => (
     onMouseEnter={(e) => (e.currentTarget.style.background = COLORS.rowHover)}
     onMouseLeave={(e) => (e.currentTarget.style.background = COLORS.row)}
   >
-    <img src={cardImage(name)} alt={name} width={34} height={48} style={{ borderRadius: 3, flexShrink: 0 }} />
+    <img
+      src={artNo ? `../textures/thumbs/${artNo}.png` : cardImage(name)}
+      onError={(e) => {
+        // Fall back to the full chosen-art image, then the default art.
+        if (artNo && e.currentTarget.src.indexOf("/thumbs/") !== -1) {
+          e.currentTarget.src = `../textures/${artNo}.png`;
+        } else if (e.currentTarget.src.indexOf("/textures/") !== -1 && artNo) {
+          e.currentTarget.src = cardImage(name);
+        }
+      }}
+      alt={name} width={34} height={48} style={{ borderRadius: 3, flexShrink: 0 }}
+    />
     <span style={{ color: COLORS.glow, fontFamily: FONT, fontSize: 14, width: 22, textAlign: "center" }}>{count}</span>
     <span
       style={{
@@ -96,6 +107,7 @@ const SectionHeader = ({ title, count, max }) => (
 
 export default function DeckPanel({
   deckMap, evoDeckMap, deckLen, evoLen,
+  artNoOf,
   onInspect, onAdd, onRemove, onAddEvo, onRemoveEvo,
   isAtLimit, isEvoAtLimit,
   name, onNameChange, deckClass, onDeckClass, canCreate, onCreate, onImport, onExport,
@@ -143,7 +155,8 @@ export default function DeckPanel({
         <ManaCurve map={deckMap} />
         {deckLen === 0 && <Empty>Add cards to your main deck</Empty>}
         {sortedEntries(deckMap).map(([n, c]) => (
-          <DeckRow key={n} name={n} count={c} onInspect={onInspect} onAdd={onAdd}
+          <DeckRow key={n} name={n} count={c} artNo={artNoOf ? artNoOf(n) : null}
+            onInspect={onInspect} onAdd={onAdd}
             onRemove={onRemove} addDisabled={isAtLimit(n)} />
         ))}
 
@@ -151,7 +164,8 @@ export default function DeckPanel({
         <SectionHeader title="Evolve Deck" count={evoLen} max={10} />
         {evoLen === 0 && <Empty>Add cards to your evolve deck</Empty>}
         {sortedEntries(evoDeckMap).map(([n, c]) => (
-          <DeckRow key={n} name={n} count={c} onInspect={onInspect} onAdd={onAddEvo}
+          <DeckRow key={n} name={n} count={c} artNo={artNoOf ? artNoOf(n) : null}
+            onInspect={onInspect} onAdd={onAddEvo}
             onRemove={onRemoveEvo} addDisabled={isEvoAtLimit(n)} />
         ))}
       </div>

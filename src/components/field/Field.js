@@ -32,9 +32,6 @@ import {
   hideAtk,
   hideDef,
   modifyCounter,
-  addAura,
-  addBane,
-  addWard,
   showStatus,
   hideStatus,
   duplicateCardOnField,
@@ -59,6 +56,8 @@ import {
   setEnemyAura,
   setEnemyBane,
   setEnemyWard,
+  toggleKeyword,
+  setEnemyKeyword,
   setEnemyBanish,
   setEnemyViewingDeck,
   setEnemyViewingHand,
@@ -85,7 +84,7 @@ import {
   setSelfOnlineStatus,
   restoreOwnState,
 } from "../../redux/CardSlice";
-import { cardImage } from "../../decks/getCards";
+import { artImage } from "../../decks/getCards";
 import { motion } from "framer-motion";
 import CardMUI from "@mui/material/Card";
 import { useDispatch, useSelector } from "react-redux";
@@ -150,6 +149,9 @@ const BOTTOM_RESERVE = 210; // vertical space kept below the field for the playe
 const MIN_SCALE = 0.4;
 const MAX_SCALE = 1.3;
 
+// Keyword statuses offered by "Add Status", shown as black boxes on the card.
+const KEYWORDS = ["Aura", "Ward", "Bane", "Storm", "Rush", "Intimidate"];
+
 export default function Field({
   ready,
   setReady,
@@ -187,6 +189,7 @@ export default function Field({
   const reduxShowEnemyHand = useSelector((state) => state.card.showEnemyHand);
   const reduxShowEnemyCard = useSelector((state) => state.card.showEnemyCard);
   const reduxEnemyCard = useSelector((state) => state.card.enemyCard);
+  const reduxEnemyArt = useSelector((state) => state.card.enemyArt);
   const reduxCounterField = useSelector((state) => state.card.counterField);
   const reduxEnemyCounterField = useSelector(
     (state) => state.card.enemyCounterField,
@@ -197,6 +200,10 @@ export default function Field({
   const reduxEnemyBaneField = useSelector((state) => state.card.enemyBaneField);
   const reduxWardField = useSelector((state) => state.card.wardField);
   const reduxEnemyWardField = useSelector((state) => state.card.enemyWardField);
+  const reduxKeywordField = useSelector((state) => state.card.keywordField);
+  const reduxEnemyKeywordField = useSelector(
+    (state) => state.card.enemyKeywordField,
+  );
   const reduxEnemyCardBack = useSelector((state) => state.card.enemyCardback);
   const reduxCardSelectedInHand = useSelector(
     (state) => state.card.cardSelectedInHand,
@@ -366,6 +373,9 @@ export default function Field({
         case "ward":
           dispatch(setEnemyWard(update.data));
           break;
+        case "keyword":
+          dispatch(setEnemyKeyword(update.data));
+          break;
         case "banish":
           dispatch(setEnemyBanish(update.data));
           break;
@@ -452,6 +462,8 @@ export default function Field({
                 dispatch(setEnemyBane(fullState.enemyBane));
               if (fullState.enemyWard !== undefined)
                 dispatch(setEnemyWard(fullState.enemyWard));
+              if (fullState.enemyKeyword !== undefined)
+                dispatch(setEnemyKeyword(fullState.enemyKeyword));
               if (fullState.enemyBanish !== undefined)
                 dispatch(setEnemyBanish(fullState.enemyBanish));
               if (fullState.enemyCustomValues !== undefined)
@@ -1007,6 +1019,14 @@ export default function Field({
     dispatch(hideStatus(index));
   };
 
+  // Toggle a keyword status (Aura/Ward/Bane/Storm/Rush/Intimidate) on the card,
+  // shown as a black box. The context menu is deliberately left OPEN here so
+  // several keywords can be checked in one go; other menu items still close it.
+  const handleToggleKeyword = (keyword) => {
+    dispatch(showStatus(index));
+    dispatch(toggleKeyword({ index, keyword }));
+  };
+
   const handleAddCounter = () => {
     handleClose();
     handleEvoClose();
@@ -1016,70 +1036,6 @@ export default function Field({
         index: index,
       }),
     );
-  };
-
-  const handleAddAura = () => {
-    handleClose();
-    handleEvoClose();
-    dispatch(
-      addAura({
-        value: 1,
-        index: index,
-      }),
-    );
-  };
-  const handleRemoveAura = () => {
-    handleClose();
-    handleEvoClose();
-    dispatch(
-      addAura({
-        value: 0,
-        index: index,
-      }),
-    );
-    dispatch(hideStatus(index));
-  };
-  const handleAddBane = () => {
-    handleClose();
-    handleEvoClose();
-    dispatch(
-      addBane({
-        value: 1,
-        index: index,
-      }),
-    );
-  };
-  const handleRemoveBane = () => {
-    handleClose();
-    handleEvoClose();
-    dispatch(
-      addBane({
-        value: 0,
-        index: index,
-      }),
-    );
-    dispatch(hideStatus(index));
-  };
-  const handleAddWard = () => {
-    handleClose();
-    handleEvoClose();
-    dispatch(
-      addWard({
-        value: 1,
-        index: index,
-      }),
-    );
-  };
-  const handleRemoveWard = () => {
-    handleClose();
-    handleEvoClose();
-    dispatch(
-      addWard({
-        value: 0,
-        index: index,
-      }),
-    );
-    dispatch(hideStatus(index));
   };
 
   const handleMoveOnField = () => {
@@ -1285,33 +1241,13 @@ export default function Field({
         {reduxCustomStatus[index] && (
           <MenuItem onClick={handleHideStatus}>Hide Status</MenuItem>
         )}
-        {reduxAuraField[index] === 0 &&
-          reduxBaneField[index] === 0 &&
-          reduxWardField[index] === 0 &&
-          reduxCustomStatus[index] && (
-            <MenuItem onClick={handleAddAura}>Add Aura</MenuItem>
-          )}
-        {reduxAuraField[index] === 0 &&
-          reduxBaneField[index] === 0 &&
-          reduxWardField[index] === 0 &&
-          reduxCustomStatus[index] && (
-            <MenuItem onClick={handleAddBane}>Add Bane</MenuItem>
-          )}
-        {reduxAuraField[index] === 0 &&
-          reduxBaneField[index] === 0 &&
-          reduxWardField[index] === 0 &&
-          reduxCustomStatus[index] && (
-            <MenuItem onClick={handleAddWard}>Add Ward</MenuItem>
-          )}
-        {reduxAuraField[index] === 1 && reduxCustomStatus[index] && (
-          <MenuItem onClick={handleRemoveAura}>Remove Aura</MenuItem>
-        )}
-        {reduxBaneField[index] === 1 && reduxCustomStatus[index] && (
-          <MenuItem onClick={handleRemoveBane}>Remove Bane</MenuItem>
-        )}
-        {reduxWardField[index] === 1 && reduxCustomStatus[index] && (
-          <MenuItem onClick={handleRemoveWard}>Remove Ward</MenuItem>
-        )}
+        {reduxCustomStatus[index] &&
+          KEYWORDS.map((kw) => (
+            <MenuItem key={kw} onClick={() => handleToggleKeyword(kw)}>
+              {(reduxKeywordField[index] || []).includes(kw) ? "✓ " : ""}
+              {kw}
+            </MenuItem>
+          ))}
       </Menu>
       <Menu
         open={contextEvoMenu !== null}
@@ -1340,33 +1276,13 @@ export default function Field({
         {reduxCounterField[index] < 1 && reduxCustomStatus[index] && (
           <MenuItem onClick={handleAddCounter}>Add Counter</MenuItem>
         )}
-        {reduxAuraField[index] === 0 &&
-          reduxBaneField[index] === 0 &&
-          reduxWardField[index] === 0 &&
-          reduxCustomStatus[index] && (
-            <MenuItem onClick={handleAddAura}>Add Aura</MenuItem>
-          )}
-        {reduxAuraField[index] === 0 &&
-          reduxBaneField[index] === 0 &&
-          reduxWardField[index] === 0 &&
-          reduxCustomStatus[index] && (
-            <MenuItem onClick={handleAddBane}>Add Bane</MenuItem>
-          )}
-        {reduxAuraField[index] === 0 &&
-          reduxBaneField[index] === 0 &&
-          reduxWardField[index] === 0 &&
-          reduxCustomStatus[index] && (
-            <MenuItem onClick={handleAddWard}>Add Ward</MenuItem>
-          )}
-        {reduxAuraField[index] === 1 && reduxCustomStatus[index] && (
-          <MenuItem onClick={handleRemoveAura}>Remove Aura</MenuItem>
-        )}
-        {reduxBaneField[index] === 1 && reduxCustomStatus[index] && (
-          <MenuItem onClick={handleRemoveBane}>Remove Bane</MenuItem>
-        )}
-        {reduxWardField[index] === 1 && reduxCustomStatus[index] && (
-          <MenuItem onClick={handleRemoveWard}>Remove Ward</MenuItem>
-        )}
+        {reduxCustomStatus[index] &&
+          KEYWORDS.map((kw) => (
+            <MenuItem key={kw} onClick={() => handleToggleKeyword(kw)}>
+              {(reduxKeywordField[index] || []).includes(kw) ? "✓ " : ""}
+              {kw}
+            </MenuItem>
+          ))}
       </Menu>
 
       {/* Show Enemy Hand Modal */}
@@ -1478,7 +1394,7 @@ export default function Field({
             >
               <img
                 className={"cardStyle"}
-                src={cardImage(reduxEnemyCard)}
+                src={artImage(reduxEnemyCard, reduxEnemyArt)}
                 alt={reduxEnemyCard}
               />
             </motion.div>
@@ -1668,13 +1584,12 @@ export default function Field({
             <motion.div
               key={`enemy1-${idx}`}
               style={{
-                zIndex: 2,
                 // position: "absolute",
                 // backgroundColor: "#131219",
                 // borderRadius: "10px",
                 // border: "4px solid #555559",
               }}
-              className={"cardStyle"}
+              className={"cardStyle fieldSlot"}
               onClick={() => handleSelectEnemyCardOnField(cardPos(idx))}
             >
               {reduxEnemyField[cardPos(idx)] !== 0 &&
@@ -1689,6 +1604,7 @@ export default function Field({
                     aura={reduxEnemyAuraField[cardPos(idx)]}
                     bane={reduxEnemyBaneField[cardPos(idx)]}
                     ward={reduxEnemyWardField[cardPos(idx)]}
+                    keywords={reduxEnemyKeywordField[cardPos(idx)]}
                     opponentField={true}
                     onField={true}
                     idx={idx}
@@ -1709,6 +1625,7 @@ export default function Field({
                   aura={reduxEnemyAuraField[cardPos(idx)]}
                   bane={reduxEnemyBaneField[cardPos(idx)]}
                   ward={reduxEnemyWardField[cardPos(idx)]}
+                  keywords={reduxEnemyKeywordField[cardPos(idx)]}
                   opponentField={true}
                   onField={true}
                   idx={idx}
@@ -1846,7 +1763,7 @@ export default function Field({
             EX Area
           </span>
           {reduxField.map((card, idx) => (
-            <div style={{ zIndex: 2 }} key={`card-${idx}`}>
+            <div className="fieldSlot" key={`card-${idx}`}>
               {ready && (
                 <motion.div
                   onClick={() => {
@@ -1889,6 +1806,7 @@ export default function Field({
                       aura={reduxAuraField[idx]}
                       bane={reduxBaneField[idx]}
                       ward={reduxWardField[idx]}
+                      keywords={reduxKeywordField[idx]}
                       idx={idx}
                       onField={true}
                       key={`card1-${idx}`}
@@ -1944,6 +1862,7 @@ export default function Field({
                       aura={reduxAuraField[idx]}
                       bane={reduxBaneField[idx]}
                       ward={reduxWardField[idx]}
+                      keywords={reduxKeywordField[idx]}
                       idx={idx}
                       onField={true}
                       key={`card2-${idx}`}
@@ -1963,6 +1882,7 @@ export default function Field({
                       aura={reduxAuraField[idx]}
                       bane={reduxBaneField[idx]}
                       ward={reduxWardField[idx]}
+                      keywords={reduxKeywordField[idx]}
                       idx={idx}
                       onField={true}
                       key={`evo2-${idx}`}

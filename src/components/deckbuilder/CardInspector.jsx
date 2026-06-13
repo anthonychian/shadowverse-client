@@ -47,6 +47,9 @@ export default function CardInspector({
   cardNo,
   rarity,
   cardSet,
+  printings = [],
+  selectedCardNo,
+  onSelectPrinting,
   count = 0,
   atLimit = false,
   isDouble = false,
@@ -76,6 +79,14 @@ export default function CardInspector({
   const costNum = parseInt(d.cost, 10);
   const hasAtk = isFollower && d.attack && d.attack !== "-";
   const hasDef = isFollower && d.defense && d.defense !== "-";
+
+  // Rarity / art picker: one option per printing. When the same rarity exists in
+  // more than one set, append the set code so the options stay distinguishable.
+  const rarityCounts = {};
+  printings.forEach((p) => { rarityCounts[p.rarity] = (rarityCounts[p.rarity] || 0) + 1; });
+  const labelFor = (p) =>
+    rarityCounts[p.rarity] > 1 ? `${p.rarity || "—"} · ${p.set}` : p.rarity || "—";
+  const showPicker = printings.length > 1 && typeof onSelectPrinting === "function";
 
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100%", gap: 12 }}>
@@ -116,6 +127,36 @@ export default function CardInspector({
         {d.cardType && <Badge>{d.cardType}</Badge>}
         {effRarity && effRarity !== "-" && <Badge color="rgba(243,196,75,0.85)">{effRarity}</Badge>}
       </div>
+
+      {/* rarity / art picker — choose which printing's art this card uses */}
+      {showPicker && (
+        <div>
+          <div style={{ color: COLORS.textDim, fontFamily: FONT, fontSize: 11, textTransform: "uppercase", letterSpacing: 0.5, marginBottom: 6 }}>
+            Rarity / Art
+          </div>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+            {printings.map((p) => {
+              const active = p.cardNo === selectedCardNo;
+              return (
+                <span
+                  key={p.cardNo}
+                  onClick={() => onSelectPrinting(p.cardNo)}
+                  title={`${p.rarity || "—"} — ${p.cardSet || p.set}`}
+                  style={{
+                    cursor: "pointer", userSelect: "none", whiteSpace: "nowrap",
+                    padding: "3px 10px", borderRadius: 999, fontSize: 12, fontFamily: FONT,
+                    border: `1px solid ${active ? COLORS.glow : COLORS.border}`,
+                    background: active ? COLORS.glow : "rgba(255,255,255,0.04)",
+                    color: active ? "#fff" : COLORS.textDim,
+                  }}
+                >
+                  {labelFor(p)}
+                </span>
+              );
+            })}
+          </div>
+        </div>
+      )}
 
       {/* cost / attack / defense banner */}
       {(hasCost || hasAtk || hasDef) && (

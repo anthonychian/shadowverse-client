@@ -23,6 +23,8 @@ import {
   setEnemyLeaderActive,
   setEnemySuperEvoActive,
   setEnemyPlayPoints,
+  setEnemyArt,
+  setEnemyKeyword,
   restoreOwnState,
 } from "../../redux/CardSlice";
 
@@ -45,10 +47,13 @@ const applyEnemyState = (dispatch, s) => {
   if (s.currentCard !== undefined) dispatch(setEnemyCard(s.currentCard));
   if (s.banish !== undefined) dispatch(setEnemyBanish(s.banish));
   if (s.auraField !== undefined) dispatch(setEnemyAura(s.auraField));
+  if (s.keywordField !== undefined) dispatch(setEnemyKeyword(s.keywordField));
   if (s.counterField !== undefined) dispatch(setEnemyCounter(s.counterField));
   if (s.customValues !== undefined)
     dispatch(setEnemyCustomValues(s.customValues));
   if (s.engagedField !== undefined) dispatch(setEnemyEngaged(s.engagedField));
+  // The opponent's own art choices (their `myArt`) become our enemy art.
+  if (s.myArt !== undefined) dispatch(setEnemyArt(s.myArt));
 };
 
 const useReceiveFullState = () => {

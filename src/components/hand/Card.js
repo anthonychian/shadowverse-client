@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { cardImage } from "../../decks/getCards";
+import { artImage, artThumb } from "../../decks/getCards";
 import { motion } from "framer-motion";
 import {
   modifyAtk,
@@ -37,6 +37,7 @@ export default function Card({
   aura,
   bane,
   ward,
+  keywords = [],
   handLength,
   inHand = false,
   inHandIndex = -1,
@@ -47,10 +48,19 @@ export default function Card({
   const [def, setDef] = useState(0);
   const [counter, setCounter] = useState(0);
   const [hoverInput, setHoverInput] = useState(false);
+  // Keyword status badges show compact (inside the card) by default and expand
+  // to large vertical labels beside the card on hover.
+  const [kwHover, setKwHover] = useState(false);
 
   const reduxEnemyCardSelectedInHand = useSelector(
     (state) => state.card.enemyCardSelectedInHand
   );
+
+  // Rarity/art choice: opponent's field cards use the synced enemy art, all
+  // other cards (my hand, my field) use my own. Falls back to default art.
+  const reduxMyArt = useSelector((state) => state.card.myArt);
+  const reduxEnemyArt = useSelector((state) => state.card.enemyArt);
+  const artMap = opponentField ? reduxEnemyArt : reduxMyArt;
 
   const reduxCardSelectedOnField = useSelector(
     (state) => state.card.cardSelectedOnField
@@ -106,6 +116,7 @@ export default function Card({
   };
 
   const handleHoverStart = () => {
+    setKwHover(true);
     if (!ready) {
       setHovering(true);
       if (name.slice(0, 6) === "Carrot" || name === "Drive Point") {
@@ -123,6 +134,7 @@ export default function Card({
   };
 
   const handleHoverEnd = () => {
+    setKwHover(false);
     setHovering(false);
   };
 
@@ -149,10 +161,9 @@ export default function Card({
     <>
       <motion.div
         onTap={handleTap}
-        // style={{
-        //   height: "160px",
-        //   position: "relative",
-        // }}
+        // Lift the whole card (and its overflowing keyword labels) above
+        // neighbouring cards while hovered so the black boxes aren't clipped.
+        style={{ position: "relative", zIndex: kwHover ? 999 : "auto" }}
         animate={engaged ? { rotate: -90 } : { rotate: 0 }}
         initial={false}
         onHoverStart={() => handleHoverStart()}
@@ -177,15 +188,113 @@ export default function Card({
               (reduxEnemyCardSelectedInHand - handLength + 1) * -1 ===
                 inHandIndex
             ? "box2"
-            : aura === 1
-            ? "aura"
-            : bane === 1
-            ? "bane"
-            : ward === 1
-            ? "ward"
             : "none"
         }
       >
+        {keywords && keywords.length > 0 && kwHover && (
+          // Hover: larger badge. Not engaged -> sits above the card's top edge,
+          // spanning the card width. Engaged -> the card is rotated -90°, so we
+          // counter-rotate +90° (text reads normally) and push it to the card's
+          // visual top.
+          <div
+            style={
+              engaged
+                ? {
+                    // Card is rotated -90°; its visual top edge is the card's
+                    // height (161px), so size the (counter-rotated) bar to that
+                    // and stretch the box to span it.
+                    position: "absolute",
+                    top: "50%",
+                    left: "50%",
+                    width: 161,
+                    transform:
+                      "translate(-50%, -50%) rotate(90deg) translateY(-90px)",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "stretch",
+                    gap: 3,
+                    zIndex: 20,
+                    pointerEvents: "none",
+                  }
+                : {
+                    position: "absolute",
+                    bottom: "100%",
+                    left: 0,
+                    width: "100%",
+                    marginBottom: 4,
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "stretch",
+                    gap: 3,
+                    zIndex: 20,
+                    pointerEvents: "none",
+                  }
+            }
+          >
+            {keywords.map((kw) => (
+              <div
+                key={kw}
+                style={{
+                  background: "#000",
+                  color: "#fff",
+                  fontFamily: "Noto Serif JP, serif",
+                  fontSize: 18,
+                  fontWeight: 700,
+                  lineHeight: 1,
+                  letterSpacing: 0.5,
+                  padding: "5px 0",
+                  textAlign: "center",
+                  borderRadius: 4,
+                  border: "1px solid rgba(255,255,255,0.9)",
+                  whiteSpace: "nowrap",
+                  boxShadow: "0 1px 4px rgba(0,0,0,0.7)",
+                }}
+              >
+                {kw}
+              </div>
+            ))}
+          </div>
+        )}
+        {keywords && keywords.length > 0 && !kwHover && (
+          // Default + any engaged state: the original compact badge at the top
+          // of the card (rotates with the card when engaged).
+          <div
+            style={{
+              position: "absolute",
+              top: 4,
+              left: "50%",
+              transform: "translateX(-50%)",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: 2,
+              zIndex: 20,
+              pointerEvents: "none",
+            }}
+          >
+            {keywords.map((kw) => (
+              <div
+                key={kw}
+                style={{
+                  background: "#000",
+                  color: "#fff",
+                  fontFamily: "Noto Serif JP, serif",
+                  fontSize: 11,
+                  fontWeight: 700,
+                  lineHeight: 1,
+                  letterSpacing: 0.5,
+                  padding: "3px 7px",
+                  borderRadius: 3,
+                  border: "1px solid rgba(255,255,255,0.85)",
+                  whiteSpace: "nowrap",
+                  boxShadow: "0 1px 3px rgba(0,0,0,0.7)",
+                }}
+              >
+                {kw}
+              </div>
+            ))}
+          </div>
+        )}
         {counterVal > 0 && (
           <>
             <input
@@ -221,11 +330,23 @@ export default function Card({
           <img
             style={{ opacity: 1 }}
             height={"100%"}
-            src={cardImage(cardBeneath)}
+            src={artThumb(cardBeneath, artMap)}
+            onError={(e) => {
+              if (e.currentTarget.src.indexOf("/thumbs/") !== -1)
+                e.currentTarget.src = artImage(cardBeneath, artMap);
+            }}
             alt={name}
           />
         ) : (
-          <img height={"100%"} src={cardImage(name)} alt={name} />
+          <img
+            height={"100%"}
+            src={artThumb(name, artMap)}
+            onError={(e) => {
+              if (e.currentTarget.src.indexOf("/thumbs/") !== -1)
+                e.currentTarget.src = artImage(name, artMap);
+            }}
+            alt={name}
+          />
         )}
 
         {showAtk && (

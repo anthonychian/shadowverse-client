@@ -1,3 +1,22 @@
+// Resolve a deck card's image honoring a per-deck rarity/art choice. `art` is the
+// deck's optional { name: cardNo } map saved by the builder; when a card has a
+// chosen printing, use that printing's texture, else fall back to the default
+// name-keyed art. The Game keeps using names, so this only affects display.
+export const artImage = (cardName, art) =>
+  art && art[cardName] ? `../textures/${art[cardName]}.png` : cardImage(cardName);
+
+// Rewrite a "../textures/X.png" path to its lightweight thumbnail
+// ("../textures/thumbs/X.png"). Non-texture paths (require()'d assets, etc.)
+// pass through unchanged. Use for many-at-once card displays (hand/field/etc.);
+// keep the full-size image for the large hover preview.
+export const toThumb = (src) =>
+  src && src.includes("/textures/") && !src.includes("/textures/thumbs/")
+    ? src.replace("/textures/", "/textures/thumbs/")
+    : src;
+
+// Thumbnail variant of artImage, honoring the per-card art choice.
+export const artThumb = (cardName, art) => toThumb(artImage(cardName, art));
+
 export const cardImage = (cardName) => {
   switch (cardName) {
     case "Aria, Lady of the Woods":
@@ -5806,7 +5825,7 @@ export const cardImage = (cardName) => {
     case "Beachside Memories":
       return "../textures/PR-466EN.png";
     case "Summer Encounter":
-      return "../textures/PR-467EN.png";
+      return "../textures/PR-467EN.png";
     case "#UNICUS":
       return "../textures/CP02-U13aEN.png";
     case "Close-Knit Ambitions":

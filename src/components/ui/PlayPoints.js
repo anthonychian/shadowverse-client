@@ -255,15 +255,13 @@ export default function Scoreboard({ name }) {
         </div>
       </div>
       <div className="turnContainer">
-        <div className="nextTurnContainer">
-          <div className="buttonText" onClick={() => nextTurn()}>
-            Next Turn
-          </div>
+        {/* onClick lives on the whole pill (not just the text) so the padded
+            clickable area matches the visible button. */}
+        <div className="nextTurnContainer" onClick={() => nextTurn()}>
+          <div className="buttonText">Next Turn</div>
         </div>
-        <div className="endTurnContainer">
-          <div className="buttonText" onClick={() => endTurn()}>
-            End Turn
-          </div>
+        <div className="endTurnContainer" onClick={() => endTurn()}>
+          <div className="buttonText">End Turn</div>
         </div>
       </div>
     </div>
