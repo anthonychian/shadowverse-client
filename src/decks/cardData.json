@@ -227,6 +227,18 @@
     "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage.",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
   },
+  "Acolyte's Light": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Faith",
+    "rarity": "Silver",
+    "cost": "4",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[quick] Select an enemy follower on the field. Banish it and give your leader [defense]+2.",
+    "cardSet": "Starter Deck #6 “Maculate Ablution”"
+  },
   "Actress Feria": {
     "class": "neutral",
     "type": "base",
@@ -467,18 +479,6 @@
     "effect": "On Evolve - Search your deck for a Roly-Poly Mk II, summon it, then shuffle. On Super-Evolve - Select a Machina card in your cemetery and put it into your EX area. It costs 3 less to play this turn.",
     "cardSet": "Booster Set \"Convergent Destinies\""
   },
-  "Aenea, Gentle Amethyst": {
-    "class": "abyss",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #10 \"Gods of the Arcana\""
-  },
   "Aerial Craft": {
     "class": "haven",
     "type": "base",
@@ -707,6 +707,18 @@
     "effect": "[feed] [cost01]: Race this follower. While there are at least 20 Umamusume cards in your cemetery, this follower has Storm and \"Strike - Give this follower [attack]+3/[defense]+3.\" On Race - Select up to 1 enemy follower on the field and deal it 3 damage. Give this follower [attack]+1/[defense]+1 and bury the top 2 cards of your deck.",
     "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\""
   },
+  "Airi Totoki [Anniversary Princess]": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "iM@S CG / Passion",
+    "rarity": "Promo",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[evolve] [cost01]: Evolve this. [fanfare] [cost01], Lesson (1), discard a Passion card: Select an enemy follower on the field and deal it 3 damage.",
+    "cardSet": "Promo Cards"
+  },
   "Airi Totoki [Cinderella Girl]": {
     "class": "sword",
     "type": "base",
@@ -934,18 +946,6 @@
     "defense": "5",
     "effect": "Storm. [fanfare] Select another Levin follower on your field and give it [attack]+1. [act] [cost03]: Refresh this. Activate only if there are at least 10 [swordcraft] followers in your cemetery, and only once per turn.",
     "cardSet": "Booster Set \"New World Genesis\""
-  },
-  "Albert, Tempestuous Doom": {
-    "class": "sword",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #5 “Omens Eternal”"
   },
   "Albert, Thunderous Doom": {
     "class": "sword",
@@ -1186,6 +1186,18 @@
     "defense": "6",
     "effect": "On Evolve - Select 3 cards with different names in your cemetery. If they each cost the same number of play points, add them to your hand.",
     "cardSet": "Booster Set #8 \"Alterchaotica\""
+  },
+  "Alucard": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Vampire",
+    "rarity": "Gold",
+    "cost": "7",
+    "attack": "4",
+    "defense": "4",
+    "effect": "Storm. [fanfare] Necrocharge (10): Give this follower [attack]+2. Strike: Select an enemy follower on the field. Deal it 4 damage and give your leader [defense]+4.",
+    "cardSet": "Starter Deck #5 “Waltz of the Undying Night”"
   },
   "Aluzard, Timeworn Vampire": {
     "class": "abyss",
@@ -1463,6 +1475,18 @@
     "effect": "[fanfare] Recover 2 play points. Whenever you play a card during your turn, if it's the 3rd you've played this turn, recover 2 play points. If it's the 5th, give each follower on your field [attack]+1/[defense]+1.",
     "cardSet": "Crossover Set “THE IDOLM@STER CINDERELLA GIRLS”"
   },
+  "Anastasia [All-Out Vacation]": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "iM@S CG / Cool",
+    "rarity": "Promo",
+    "cost": "5",
+    "attack": "2",
+    "defense": "4",
+    "effect": "[fanfare] Recover 2 play points. Whenever you play a card during your turn, if it's the 3rd you've played this turn, recover 2 play points. If it's the 5th, give each follower on your field [attack]+1/[defense]+1.",
+    "cardSet": "Promo Cards"
+  },
   "Anastasia [Seize the Light]": {
     "class": "forest",
     "type": "base",
@@ -1528,12 +1552,12 @@
     "type": "token",
     "cardType": "Follower / Token",
     "trait": "Supreme",
-    "rarity": "-",
+    "rarity": "Promo",
     "cost": "1",
     "attack": "3",
     "defense": "1",
     "effect": "Rush.",
-    "cardSet": "Booster Set #5 “Omens Eternal”"
+    "cardSet": "Promo Cards"
   },
   "Ancient Elf": {
     "class": "forest",
@@ -1750,18 +1774,6 @@
     "defense": "3",
     "effect": "On Evolve - Look at the top 4 cards of your deck. You may put a Festive card from among them into your EX area. Put the rest on the bottom of your deck in any order.",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
-  },
-  "Anne & Grea, Bonds Everlasting": {
-    "class": "rune",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #5 “Omens Eternal”"
   },
   "Anne & Grea, Mysterian Duo": {
     "class": "rune",
@@ -2423,6 +2435,30 @@
     "effect": "This follower can't attack enemies. At the start of your main phase, Necrocharge (10) - Summon a Ghost token. [act] Bury another follower: Choose one of the following. Activate only once per turn. (1) Draw a card. (2) Summon 2 Ghost tokens. (3) Bury the top 2 cards of your deck.",
     "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\""
   },
+  "Ardent Nun": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Faith",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[evolve][cost01]: Evolve this follower. Ward. During each opponent's turn, this follower deals 1 more damage.",
+    "cardSet": "Starter Deck #6 “Maculate Ablution”"
+  },
+  "Ardent Nun Evolved": {
+    "class": "haven",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Faith",
+    "rarity": "Bronze",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3",
+    "effect": "Ward. During each opponent's turn, this follower deals 2 more damage.",
+    "cardSet": "Starter Deck #6 “Maculate Ablution”"
+  },
   "Ardent Torch": {
     "class": "dragon",
     "type": "base",
@@ -2447,17 +2483,17 @@
     "effect": "This card costs 1 less to play if there's a follower with both the Pixie and Princess traits in your EX area. ---------- Select a Pixie token on your field and deal damage equal to its attack to each enemy follower on the field.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
   },
-  "Aria, Dancing Fairy": {
+  "Aria, Fairy Princess": {
     "class": "forest",
     "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #1 “Advent of Genesis”"
+    "cardType": "Follower",
+    "trait": "Pixie / Princess",
+    "rarity": "Legendary",
+    "cost": "6",
+    "attack": "5",
+    "defense": "5",
+    "effect": "Ward. [fanfare] Put up to 9 Fairy tokens onto your field or into your EX area. While this card is on your field, your other Pixie followers have Rush.",
+    "cardSet": "Starter Deck #1 “Regal Fairy Princess”"
   },
   "Aria, Lady of the Woods": {
     "class": "forest",
@@ -2518,18 +2554,6 @@
     "defense": "3",
     "effect": "Rush. [lastwords] Select an [abysscraft] follower that costs 5 or less in your cemetery and summon it.",
     "cardSet": "Booster Set #8 \"Alterchaotica\""
-  },
-  "Arisa": {
-    "class": "forest",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #1 “Advent of Genesis”"
   },
   "Arisa, Evergreen Arrow": {
     "class": "forest",
@@ -2764,12 +2788,12 @@
     "type": "token",
     "cardType": "Follower / Token",
     "trait": "Machina",
-    "rarity": "-",
+    "rarity": "Promo",
     "cost": "1",
     "attack": "1",
     "defense": "1",
     "effect": "[act] [engage], bury 3 Machina followers: Select an enemy follower on the field and deal it 5 damage.",
-    "cardSet": "Booster Set #7 \"Verdant Steel\""
+    "cardSet": "Promo Cards"
   },
   "Astaroth's Reckoning TOKEN": {
     "class": "neutral",
@@ -2866,18 +2890,6 @@
     "defense": "-",
     "effect": "Choose one of the following. (1) Banish 2 cards named Repair Mode from your EX area: Search your deck for a Machina follower that costs 3 or less, summon it, then shuffle your deck. (2) Banish 5 cards named Repair Mode from your EX area: Search your deck for a Machina follower that costs 6 or less, summon it, then shuffle your deck.",
     "cardSet": "Booster Set #7 \"Verdant Steel\""
-  },
-  "Aurelia, Blooming Blade": {
-    "class": "sword",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #1 “Advent of Genesis”"
   },
   "Aurelia, Regal Saber": {
     "class": "sword",
@@ -3575,6 +3587,18 @@
     "effect": "On Evolve - Select an enemy card that costs 2 or less on the field and destroy it.",
     "cardSet": "Booster Set #6 “Paragons of the Colosseum”"
   },
+  "Beachside Memories": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "iM@S CG / Passion",
+    "rarity": "Promo",
+    "cost": "3",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[quick] Select an enemy follower on the field. Deal it 5 damage and, if there's a Passion follower on your field, draw a card.",
+    "cardSet": "Promo Cards"
+  },
   "Bear Pelt Warrior": {
     "class": "abyss",
     "type": "base",
@@ -3634,6 +3658,18 @@
     "defense": "3",
     "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage.",
     "cardSet": "Booster Set \"Convergent Destinies\""
+  },
+  "Beastly Vow": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Amulet",
+    "trait": "Faith / Beast",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "-",
+    "defense": "-",
+    "effect": "This card is put onto the field engaged. [act][cost01], [engage], put this card into its owner's cemetery: Summon a Holy Tiger token.",
+    "cardSet": "Starter Deck #6 “Maculate Ablution”"
   },
   "Beating of the Dragonwings": {
     "class": "dragon",
@@ -4595,18 +4631,6 @@
     "effect": "On Evolve - Discard a card: Select an enemy follower on the field. Deal it damage equal to the discarded card's cost and draw a card. On Super-Evolve - Give your leader [defense]+5. At the start of your end phase, if there are at least 7 [dragoncraft] cards in your cemetery that cost 7 or more, deal 7 damage to each enemy leader.",
     "cardSet": "Booster Set \"New World Genesis\""
   },
-  "C.C.": {
-    "class": "forest",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #4 “Cosmic Mythos”"
-  },
   "C.C., Woodland Witch": {
     "class": "forest",
     "type": "base",
@@ -4780,12 +4804,12 @@
     "type": "evolved",
     "cardType": "Spell / Evolved",
     "trait": "-",
-    "rarity": "-",
+    "rarity": "Promo",
     "cost": "-",
     "attack": "-",
     "defense": "-",
-    "effect": "You can serve a Carrot to an Umamusume follower to race it. (Racing followers have Rush.) ---------- You can put up to 10 of this card into your evolve deck.",
-    "cardSet": "Crossover Set “Umamusume: Pretty Derby”"
+    "effect": "You can serve a Carrot to an Umamusume follower to race it. ---------- You can put up to 10 of this card into your evolve deck.",
+    "cardSet": "Promo Cards"
   },
   "Cassiopeia": {
     "class": "forest",
@@ -4966,18 +4990,6 @@
     "defense": "5",
     "effect": "On Evolve - Put a Mimi, Infernal Right Paw and Coco, Infernal Left Paw token into your EX area.",
     "cardSet": "Booster Set #1 “Advent of Genesis”"
-  },
-  "Cerberus, Festive Hound": {
-    "class": "abyss",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #5 “Omens Eternal”"
   },
   "Cerberus, Hellfire Unleashed": {
     "class": "abyss",
@@ -5290,18 +5302,6 @@
     "defense": "3",
     "effect": "Ward. On Evolve - Look at the top 4 cards of your deck. You may reveal a Beast card from among them and add it to your hand. Put the rest on the bottom of your deck in any order.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
-  },
-  "Charles zi Britannia": {
-    "class": "haven",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #4 “Cosmic Mythos”"
   },
   "Charming Gentlemouse": {
     "class": "rune",
@@ -5783,17 +5783,53 @@
     "effect": "Summon a Shield Guardian and Knight token. If there is an enemy follower that costs at least 6 play points on the field, give the summoned tokens [attack]+3/[defense]+3 and recover 2 play points.",
     "cardSet": "Booster Set #5 “Omens Eternal”"
   },
+  "Conjure Golem": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Alchemist",
+    "rarity": "Bronze",
+    "cost": "1",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[quick] Put a Guardform Golem or Strikeform Golem token into your EX area.",
+    "cardSet": "Starter Deck #3 “Mysteries of Conjuration”"
+  },
   "Cool Earrings TOKEN": {
     "class": "neutral",
     "type": "token",
     "cardType": "Spell / Token",
     "trait": "iM@S CG",
-    "rarity": "-",
+    "rarity": "Promo",
     "cost": "4",
     "attack": "-",
     "defense": "-",
     "effect": "Give your leader [defense]+1. Draw a card. ---------- (At the start of the game, if your deck is based on the THE IDOLM@STER CINDERELLA GIRLS universe, put 5 Magical Item tokens into your EX area.)",
-    "cardSet": "Crossover Set “THE IDOLM@STER CINDERELLA GIRLS”"
+    "cardSet": "Promo Cards"
+  },
+  "Cool Pendant TOKEN": {
+    "class": "neutral",
+    "type": "token",
+    "cardType": "Spell / Token",
+    "trait": "iM@S CG",
+    "rarity": "Promo",
+    "cost": "4",
+    "attack": "-",
+    "defense": "-",
+    "effect": "Give your leader [defense]+1. Draw a card. ---------- (At the start of the game, if your deck is based on the THE IDOLM@STER CINDERELLA GIRLS universe, put 5 Magical Item tokens into your EX area.)",
+    "cardSet": "Promo Cards"
+  },
+  "Cool Tiara TOKEN": {
+    "class": "neutral",
+    "type": "token",
+    "cardType": "Spell / Token",
+    "trait": "iM@S CG",
+    "rarity": "Promo",
+    "cost": "4",
+    "attack": "-",
+    "defense": "-",
+    "effect": "Give your leader [defense]+1. Draw a card. ---------- (At the start of the game, if your deck is based on the THE IDOLM@STER CINDERELLA GIRLS universe, put 5 Magical Item tokens into your EX area.)",
+    "cardSet": "Promo Cards"
   },
   "Coral Assault": {
     "class": "forest",
@@ -5818,18 +5854,6 @@
     "defense": "1",
     "effect": "Rush. [fanfare] Give this follower [attack]+X, where X is the number of other Marine followers on your field.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
-  },
-  "Cornelia li Britannia": {
-    "class": "rune",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #4 “Cosmic Mythos”"
   },
   "Corrosive Thorns": {
     "class": "forest",
@@ -6424,12 +6448,36 @@
     "type": "token",
     "cardType": "Spell / Token",
     "trait": "iM@S CG",
-    "rarity": "-",
+    "rarity": "Promo",
     "cost": "4",
     "attack": "-",
     "defense": "-",
     "effect": "Give your leader [defense]+1. Draw a card. ---------- (At the start of the game, if your deck is based on the THE IDOLM@STER CINDERELLA GIRLS universe, put 5 Magical Item tokens into your EX area.)",
-    "cardSet": "Crossover Set “THE IDOLM@STER CINDERELLA GIRLS”"
+    "cardSet": "Promo Cards"
+  },
+  "Cute Pendant TOKEN": {
+    "class": "neutral",
+    "type": "token",
+    "cardType": "Spell / Token",
+    "trait": "iM@S CG",
+    "rarity": "Promo",
+    "cost": "4",
+    "attack": "-",
+    "defense": "-",
+    "effect": "Give your leader [defense]+1. Draw a card. ---------- (At the start of the game, if your deck is based on the THE IDOLM@STER CINDERELLA GIRLS universe, put 5 Magical Item tokens into your EX area.)",
+    "cardSet": "Promo Cards"
+  },
+  "Cute Tiara TOKEN": {
+    "class": "neutral",
+    "type": "token",
+    "cardType": "Spell / Token",
+    "trait": "iM@S CG",
+    "rarity": "Promo",
+    "cost": "4",
+    "attack": "-",
+    "defense": "-",
+    "effect": "Give your leader [defense]+1. Draw a card. ---------- (At the start of the game, if your deck is based on the THE IDOLM@STER CINDERELLA GIRLS universe, put 5 Magical Item tokens into your EX area.)",
+    "cardSet": "Promo Cards"
   },
   "Cyclical Fate": {
     "class": "haven",
@@ -6538,18 +6586,6 @@
     "defense": "-",
     "effect": "[fanfare] Search your deck for a follower with \"Nao Kamiya\" in its name, reveal it, add it to your hand, then shuffle. [act] [engage], bury this: Select a Cool follower on your field and give it Rush and Assail.",
     "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\""
-  },
-  "Daria, Dimension Drifter": {
-    "class": "rune",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #3 “Flame of Lævateinn”"
   },
   "Daria, Dimensional Witch": {
     "class": "rune",
@@ -7103,6 +7139,30 @@
     "effect": "On Evolve - Summon a Paper Shikigami token. Whenever a Shikigami follower is put onto your field, give it [attack]+1 and Rush.",
     "cardSet": "Booster Set #6 “Paragons of the Colosseum”"
   },
+  "Demonflame Mage": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Mage",
+    "rarity": "Silver",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3",
+    "effect": "[evolve][cost01]: Evolve this follower.",
+    "cardSet": "Starter Deck #3 “Mysteries of Conjuration”"
+  },
+  "Demonflame Mage Evolved": {
+    "class": "rune",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Mage",
+    "rarity": "Silver",
+    "cost": "-",
+    "attack": "4",
+    "defense": "4",
+    "effect": "On Evolve: Deal 2 damage to each enemy follower on the field.",
+    "cardSet": "Starter Deck #3 “Mysteries of Conjuration”"
+  },
   "Demonic Dragon Berserker, Yaksha": {
     "class": "dragon",
     "type": "base",
@@ -7336,12 +7396,12 @@
     "type": "token",
     "cardType": "Follower / Token",
     "trait": "Wyrmkin",
-    "rarity": "-",
+    "rarity": "Promo",
     "cost": "5",
     "attack": "6",
     "defense": "6",
-    "effect": "Ward. While there's an Aiela, Devoted Knight on your field, this follower doesn't take ability damage.",
-    "cardSet": "Booster Set #10 \"Gods of the Arcana\""
+    "effect": "Ward. While there's an Aiela, Devoted Knight on your field, this doesn't take ability damage.",
+    "cardSet": "Promo Cards"
   },
   "Diamond Master": {
     "class": "haven",
@@ -8020,12 +8080,12 @@
     "type": "base",
     "cardType": "Spell",
     "trait": "Wyrmkin",
-    "rarity": "Promo",
+    "rarity": "Gold",
     "cost": "2",
     "attack": "-",
     "defense": "-",
-    "effect": "Choose one of the following. (1) Increase your max play points by 1. (2) Draw a card.",
-    "cardSet": "Promo Cards"
+    "effect": "Choose one of the following effects. (1) Increase your maximum play points by 1. (2) Draw a card.",
+    "cardSet": "Starter Deck #4 “Wrath of the Greatwyrm” Worlds Beyond Dragoncraft Starter Set"
   },
   "Dragon Spawning": {
     "class": "dragon",
@@ -8068,12 +8128,36 @@
     "type": "token",
     "cardType": "Follower / Token",
     "trait": "Wyrmkin",
-    "rarity": "-",
+    "rarity": "Promo",
     "cost": "4",
     "attack": "5",
     "defense": "5",
     "effect": "",
-    "cardSet": "Booster Set #1 “Advent of Genesis”"
+    "cardSet": "Promo Cards"
+  },
+  "Dragon Warrior": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Wyrmkin",
+    "rarity": "Silver",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3",
+    "effect": "[evolve][cost01]: Evolve this follower.",
+    "cardSet": "Starter Deck #4 “Wrath of the Greatwyrm” Worlds Beyond Dragoncraft Starter Set"
+  },
+  "Dragon Warrior Evolved": {
+    "class": "dragon",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Wyrmkin",
+    "rarity": "Silver",
+    "cost": "-",
+    "attack": "4",
+    "defense": "4",
+    "effect": "On Evolve: Select an enemy follower on the field and deal it 3 damage.",
+    "cardSet": "Starter Deck #4 “Wrath of the Greatwyrm” Worlds Beyond Dragoncraft Starter Set"
   },
   "Dragon Wings": {
     "class": "dragon",
@@ -8219,6 +8303,18 @@
     "effect": "Whenever a Dragonewt follower on your field attacks, deal 2 damage to each enemy leader.",
     "cardSet": "Booster Set #7 \"Verdant Steel\""
   },
+  "Dragonewt Princess": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Dragonewt / Princess",
+    "rarity": "Silver",
+    "cost": "2",
+    "attack": "2",
+    "defense": "3",
+    "effect": "[fanfare] If Overflow is active for you, select an enemy follower on the field and deal it 4 damage. (Overflow becomes active if your maximum number of play points is at least 7.)",
+    "cardSet": "Starter Deck #4 “Wrath of the Greatwyrm” Worlds Beyond Dragoncraft Starter Set"
+  },
   "Dragonewt Scholar": {
     "class": "dragon",
     "type": "base",
@@ -8266,6 +8362,18 @@
     "defense": "3",
     "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage. [act] Remove 2 divine water counters from a Soothing Dragonspring on your field: Draw a card. Activate only once per turn.",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
+  },
+  "Dragonguard": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Dragonheart",
+    "rarity": "Silver",
+    "cost": "4",
+    "attack": "4",
+    "defense": "5",
+    "effect": "Ward. (This follower can be engaged when it's put onto your field or during your end phase. When followers with Ward are engaged, your opponent can only attack them.) [fanfare] If Overflow is active for you, give this follower [attack]+2/[defense]+2.",
+    "cardSet": "Starter Deck #4 “Wrath of the Greatwyrm” Worlds Beyond Dragoncraft Starter Set"
   },
   "Dragonic Executioner": {
     "class": "dragon",
@@ -8338,6 +8446,42 @@
     "defense": "2",
     "effect": "[act][cost01], [engage], put this card into its owner's cemetery: Look at the top 3 cards of your deck. You may reveal a [dragoncraft] follower that costs 3 play points or less from among them and add it to your hand. Put the remaining cards on the bottom of your deck in any order.",
     "cardSet": "Booster Set #4 “Cosmic Mythos”"
+  },
+  "Dragonrend Quake": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Wyrmkin",
+    "rarity": "Promo",
+    "cost": "4",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[quick] This card costs 3 less to play if your leader is [dragoncraft]. ---------- Select 2 followers on the field. Deal the first follower damage equal to the second's attack. Deal the second follower damage equal to the first's attack.",
+    "cardSet": "Promo Cards"
+  },
+  "Dragonrider": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Dragonheart",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[evolve][cost01]: Evolve this follower. [fanfare] If Overflow is active for you, put a Dragon token into your EX area.",
+    "cardSet": "Starter Deck #4 “Wrath of the Greatwyrm” Worlds Beyond Dragoncraft Starter Set"
+  },
+  "Dragonrider Evolved": {
+    "class": "dragon",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Dragonheart",
+    "rarity": "Bronze",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3",
+    "effect": "On Evolve: If Overflow is active for you, give this follower [attack]+2. (Overflow becomes active if your maximum number of play points is at least 7.)",
+    "cardSet": "Starter Deck #4 “Wrath of the Greatwyrm” Worlds Beyond Dragoncraft Starter Set"
   },
   "Dragonskull Bludgeoner": {
     "class": "dragon",
@@ -8531,6 +8675,18 @@
     "effect": "Strike: Select an enemy follower on the field and give it [attack]-1.",
     "cardSet": "Booster Set #4 “Cosmic Mythos”"
   },
+  "Dual Flames": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Amulet",
+    "trait": "Faith / Beast",
+    "rarity": "Silver",
+    "cost": "4",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[fanfare] Summon a Holy Tiger token. [act][cost02], [engage], put this card into its owner's cemetery: Summon a Holy Tiger token.",
+    "cardSet": "Starter Deck #6 “Maculate Ablution”"
+  },
   "Dual Rage": {
     "class": "dragon",
     "type": "base",
@@ -8572,12 +8728,12 @@
     "type": "token",
     "cardType": "Amulet / Token",
     "trait": "Wasteland / Mount / Beast",
-    "rarity": "-",
+    "rarity": "Promo",
     "cost": "1",
     "attack": "-",
     "defense": "-",
     "effect": "[act] Bury this card: Select a follower on your field and, if it's a Wasteland follower, give it [attack]+1/[defense]+1.",
-    "cardSet": "Booster Set \"Bullet of Fate\""
+    "cardSet": "Promo Cards"
   },
   "Dwarf Perfumer": {
     "class": "forest",
@@ -8987,6 +9143,18 @@
     "effect": "[quick] Select up to 2 enemy followers on the field and deal X damage divided between them. X equals the number of cards in your EX area.",
     "cardSet": "Booster Set #3 “Flame of Lævateinn”"
   },
+  "Elf Wanderer": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Elf",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "2",
+    "defense": "3",
+    "effect": "Assail. (Followers with Assail can attack reserved followers.) This follower ignores Ward.",
+    "cardSet": "Starter Deck #1 “Regal Fairy Princess”"
+  },
   "Elimination Unleashed": {
     "class": "rune",
     "type": "base",
@@ -9251,18 +9419,6 @@
     "effect": "[fanfare] Select a Vanguard follower on your field and refresh it. For the rest of this turn, it can't attack enemy leaders. ---------- (If this card is revealed by a drive check, refresh a follower on your field. For the rest of this turn, it can't attack enemy leaders.)",
     "cardSet": "Crossover Set \"Cardfight!! Vanguard\""
   },
-  "Emmylou, Wee Witchette": {
-    "class": "rune",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #7 \"Verdant Steel\""
-  },
   "Emmylou, Witch of Wonder": {
     "class": "rune",
     "type": "base",
@@ -9323,6 +9479,18 @@
     "effect": "At the start of your end phase, select an enemy follower on the field. Deal 4 damage to it and 2 damage to its leader.",
     "cardSet": "Booster Set #5 “Omens Eternal”"
   },
+  "Enchanted Dress TOKEN": {
+    "class": "neutral",
+    "type": "token",
+    "cardType": "Spell / Token",
+    "trait": "iM@S CG",
+    "rarity": "Promo",
+    "cost": "4",
+    "attack": "-",
+    "defense": "-",
+    "effect": "Give your leader [defense]+1. Draw a card. ---------- (At the start of the game, if your deck is based on the THE IDOLM@STER CINDERELLA GIRLS universe, put 5 Magical Item tokens into your EX area.)",
+    "cardSet": "Promo Cards"
+  },
   "Enchanted Knight": {
     "class": "haven",
     "type": "base",
@@ -9346,6 +9514,18 @@
     "defense": "2",
     "effect": "Ward. On Evolve - If there are at least 4 followers with Ward on your field, draw 2 cards.",
     "cardSet": "Booster Set \"Bullet of Fate\""
+  },
+  "Enchanted Slippers TOKEN": {
+    "class": "neutral",
+    "type": "token",
+    "cardType": "Spell / Token",
+    "trait": "iM@S CG",
+    "rarity": "Promo",
+    "cost": "4",
+    "attack": "-",
+    "defense": "-",
+    "effect": "Give your leader [defense]+1. Draw a card. ---------- (At the start of the game, if your deck is based on the THE IDOLM@STER CINDERELLA GIRLS universe, put 5 Magical Item tokens into your EX area.)",
+    "cardSet": "Promo Cards"
   },
   "Enforcer": {
     "class": "rune",
@@ -9407,30 +9587,6 @@
     "effect": "While this card is on your field, during your turn, your followers named Kaguya don't take damage. At the start of your main phase, banish this card.",
     "cardSet": "Booster Set #2 “Reign of Bahamut”"
   },
-  "Erasmus, Magical Sage": {
-    "class": "rune",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #1 “Advent of Genesis”"
-  },
-  "Erika": {
-    "class": "sword",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #1 “Advent of Genesis”"
-  },
   "Erika, Loyal Swordsavant": {
     "class": "sword",
     "type": "base",
@@ -9442,18 +9598,6 @@
     "defense": "1",
     "effect": "Storm. [fanfare] Summon a Steelclad Knight, Shield Guardian, or Knight token. Strike - If there are 5 [swordcraft] cards on your field, give this [attack]+2.",
     "cardSet": "Booster Set \"Convergent Destinies\""
-  },
-  "Eris": {
-    "class": "haven",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #1 “Advent of Genesis”"
   },
   "Eris, Atoned Priestess": {
     "class": "haven",
@@ -9635,6 +9779,18 @@
     "effect": "Rush. Twin Drive. Once on each of your turns, when you drive check a Trigger, draw a card.",
     "cardSet": "Crossover Set \"Cardfight!! Vanguard\""
   },
+  "Evolution Point": {
+    "class": "",
+    "type": "base",
+    "cardType": "-",
+    "trait": "-",
+    "rarity": "Promo",
+    "cost": "-",
+    "attack": "-",
+    "defense": "-",
+    "effect": "At the start of the game, the player going second gets 3 Evolution Points. When paying an [evolve] cost, you may use an Evolution Point in lieu of 1 play point by turning it facedown. (Only one can be used per evolution.)",
+    "cardSet": "Promo Cards"
+  },
   "Execution": {
     "class": "neutral",
     "type": "base",
@@ -9707,6 +9863,18 @@
     "effect": "Storm. Intimidate.",
     "cardSet": "Booster Set \"New World Genesis\""
   },
+  "Fafnir": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Wyrmkin",
+    "rarity": "Legendary",
+    "cost": "8",
+    "attack": "7",
+    "defense": "8",
+    "effect": "[fanfare] Deal 5 damage to each enemy follower on the field.",
+    "cardSet": "Starter Deck #4 “Wrath of the Greatwyrm” Worlds Beyond Dragoncraft Starter Set"
+  },
   "Fairy Assault": {
     "class": "forest",
     "type": "base",
@@ -9730,6 +9898,18 @@
     "defense": "5",
     "effect": "[act] Banish a Pixie follower in your EX area: Give your leader [defense]+3 and draw a card. This ability can be activated once per turn.",
     "cardSet": "Booster Set #1 “Advent of Genesis”"
+  },
+  "Fairy Caster": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Elf",
+    "rarity": "Silver",
+    "cost": "4",
+    "attack": "3",
+    "defense": "3",
+    "effect": "[fanfare] Summon 3 Fairy tokens. If your field becomes full from this effect, put any remaining tokens into your EX area.",
+    "cardSet": "Starter Deck #1 “Regal Fairy Princess”"
   },
   "Fairy Circle": {
     "class": "forest",
@@ -9832,12 +10012,12 @@
     "type": "token",
     "cardType": "Follower / Token",
     "trait": "Pixie",
-    "rarity": "-",
+    "rarity": "Promo",
     "cost": "1",
     "attack": "1",
     "defense": "1",
     "effect": "",
-    "cardSet": "Booster Set #1 “Advent of Genesis”"
+    "cardSet": "Promo Cards"
   },
   "Fairy Tamer": {
     "class": "forest",
@@ -9892,12 +10072,12 @@
     "type": "token",
     "cardType": "Follower / Token",
     "trait": "Pixie",
-    "rarity": "-",
+    "rarity": "Promo",
     "cost": "0",
     "attack": "1",
     "defense": "1",
     "effect": "",
-    "cardSet": "Booster Set #1 “Advent of Genesis”"
+    "cardSet": "Promo Cards"
   },
   "Fairylight Guide": {
     "class": "forest",
@@ -10103,17 +10283,17 @@
     "effect": "[fanfare] Select an enemy follower on the field. During its controller's next turn, it can't attack enemies.",
     "cardSet": "Booster Set #3 “Flame of Lævateinn”"
   },
-  "Fennie, Resplendent Phoenix": {
-    "class": "dragon",
+  "Fencer": {
+    "class": "sword",
     "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #10 \"Gods of the Arcana\""
+    "cardType": "Follower",
+    "trait": "Commander / Noble",
+    "rarity": "Bronze",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3",
+    "effect": "[fanfare] Select another follower on your field and give it [attack]+1/[defense]+1.",
+    "cardSet": "Starter Deck #2 “Blade of Resentment” Worlds Beyond Swordcraft Starter Set"
   },
   "Fenrir": {
     "class": "abyss",
@@ -10306,6 +10486,18 @@
     "defense": "3",
     "effect": "[feed][cost01]: Race this follower. On Race: Give this follower [attack]+1/[defense]+1. Give your leader [defense]+2. Put the top 2 cards of your deck into your cemetery.",
     "cardSet": "Crossover Set “Umamusume: Pretty Derby”"
+  },
+  "Fire Chain": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Mage",
+    "rarity": "Silver",
+    "cost": "2",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[quick] Select up to 2 enemy followers on the field and deal 3 damage divided between them.",
+    "cardSet": "Starter Deck #3 “Mysteries of Conjuration”"
   },
   "Fire Drake Whelp TOKEN": {
     "class": "dragon",
@@ -10547,6 +10739,30 @@
     "effect": "Select a card on your field. Return it to its owner's hand and give your leader [defense]+1.",
     "cardSet": "Booster Set #3 “Flame of Lævateinn”"
   },
+  "Floral Fencer": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Officer",
+    "rarity": "Silver",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3",
+    "effect": "[evolve][cost01]: Evolve this follower.",
+    "cardSet": "Starter Deck #2 “Blade of Resentment” Worlds Beyond Swordcraft Starter Set"
+  },
+  "Floral Fencer Evolved": {
+    "class": "sword",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Officer",
+    "rarity": "Silver",
+    "cost": "-",
+    "attack": "4",
+    "defense": "4",
+    "effect": "On Evolve: Summon a Steelclad Knight and Knight token.",
+    "cardSet": "Starter Deck #2 “Blade of Resentment” Worlds Beyond Swordcraft Starter Set"
+  },
   "Flower Doll": {
     "class": "forest",
     "type": "base",
@@ -10684,12 +10900,12 @@
     "type": "token",
     "cardType": "Follower / Token",
     "trait": "Vampire",
-    "rarity": "-",
+    "rarity": "Promo",
     "cost": "1",
     "attack": "1",
     "defense": "1",
     "effect": "",
-    "cardSet": "Booster Set #1 “Advent of Genesis”"
+    "cardSet": "Promo Cards"
   },
   "Forest Defender": {
     "class": "forest",
@@ -10871,18 +11087,6 @@
     "effect": "Storm. Intimidate. [fanfare] If you have 10 max play points, give this [attack]+1 and Aura.",
     "cardSet": "Booster Set \"New World Genesis\""
   },
-  "Forte, Duskwing Tyrant": {
-    "class": "dragon",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #7 \"Verdant Steel\""
-  },
   "Forte, Sovereign Supreme": {
     "class": "dragon",
     "type": "base",
@@ -10984,12 +11188,12 @@
     "type": "token",
     "cardType": "Follower / Token",
     "trait": "Festive / Zealot / Beast",
-    "rarity": "-",
+    "rarity": "Promo",
     "cost": "1",
     "attack": "0",
     "defense": "1",
     "effect": "Ward. [fanfare] Give your leader [defense]+1.",
-    "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
+    "cardSet": "Promo Cards"
   },
   "Fragrantwood Whispers": {
     "class": "forest",
@@ -11291,6 +11495,18 @@
     "effect": "Rush. Strike - Select an enemy follower on the field and deal it 5 damage.",
     "cardSet": "Booster Set \"Bullet of Fate\""
   },
+  "Fumika Sagisawa": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "iM@S CG / Cool",
+    "rarity": "Promo",
+    "cost": "7",
+    "attack": "4",
+    "defense": "4",
+    "effect": "[fanfare] Search your deck for a 3-cost follower and 1-cost follower, summon them, then shuffle your deck. Whenever another iM@S CG follower is put onto your field, select an enemy follower on the field and deal it 2 damage.",
+    "cardSet": "Promo Cards"
+  },
   "Fumika Sagisawa [Cinderella Girl]": {
     "class": "dragon",
     "type": "base",
@@ -11410,18 +11626,6 @@
     "defense": "6",
     "effect": "On Evolve: Select an Omen card that costs 2 play points or less in your cemetery and play it for 0 play points. During your turn, whenever this follower takes ability damage, select an enemy leader or enemy follower on the field and deal it 3 damage.",
     "cardSet": "Booster Set #5 “Omens Eternal”"
-  },
-  "Galmieux, the Fifth Omen": {
-    "class": "dragon",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #10 \"Gods of the Arcana\""
   },
   "Galua of Two Breaths": {
     "class": "dragon",
@@ -11602,6 +11806,18 @@
     "defense": "9",
     "effect": "Storm.",
     "cardSet": "Booster Set \"New World Genesis\""
+  },
+  "Genesis of Legend": {
+    "class": "neutral",
+    "type": "base",
+    "cardType": "Amulet",
+    "trait": "Mercenary",
+    "rarity": "Promo",
+    "cost": "4",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[fanfare] Each player reveals up to 1 non-spell card from their hand simultaneously. Each player who revealed an X-cost card summons it. X equals the cost of the 2nd card when the revealed cards are ordered from highest cost to lowest. [q][act] [cost02], [engage], bury this card: Select an enemy follower on the field and destroy it.",
+    "cardSet": "Promo Cards"
   },
   "Geno, Machine Artisan": {
     "class": "sword",
@@ -11800,12 +12016,12 @@
     "type": "token",
     "cardType": "Follower / Token",
     "trait": "Departed",
-    "rarity": "-",
+    "rarity": "Promo",
     "cost": "1",
     "attack": "1",
     "defense": "1",
     "effect": "Storm. At the start of your end phase, banish this card.",
-    "cardSet": "Booster Set #1 “Advent of Genesis”"
+    "cardSet": "Promo Cards"
   },
   "Ghostwriter": {
     "class": "abyss",
@@ -12107,6 +12323,18 @@
     "effect": "Select an enemy follower on the field and deal it 2 damage. If there is a Gilnelise, Omen of Craving on your field, banish the selected follower instead.",
     "cardSet": "Booster Set #5 “Omens Eternal”"
   },
+  "Glint Dragon": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Wyrmkin",
+    "rarity": "Bronze",
+    "cost": "4",
+    "attack": "5",
+    "defense": "3",
+    "effect": "[fanfare] Select an enemy follower on the field and deal it 3 damage.",
+    "cardSet": "Starter Deck #4 “Wrath of the Greatwyrm” Worlds Beyond Dragoncraft Starter Set"
+  },
   "Glistering Angel": {
     "class": "neutral",
     "type": "base",
@@ -12136,12 +12364,12 @@
     "type": "token",
     "cardType": "Spell / Token",
     "trait": "Festive / Thief / Loot",
-    "rarity": "-",
+    "rarity": "Promo",
     "cost": "0",
     "attack": "-",
     "defense": "-",
     "effect": "[act] [cost01], banish this and 2 other cards named Glittering Gold from your EX area: Give your leader [defense]+1. Draw a card.",
-    "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
+    "cardSet": "Promo Cards"
   },
   "Glitz & Glam☆Parade": {
     "class": "rune",
@@ -12671,6 +12899,18 @@
     "effect": "Stack. [fanfare] Select an enemy follower on the field and deal it 2 damage.",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
   },
+  "Grand Summoning": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Alchemist",
+    "rarity": "Promo",
+    "cost": "8",
+    "attack": "-",
+    "defense": "-",
+    "effect": "Search your deck for a follower that costs 3 or less and a follower that costs 5 or less and summon them. If your leader is [runecraft], also search your deck for a follower that costs 7 or less, summon it, and recover 2 play points. Shuffle your deck.",
+    "cardSet": "Promo Cards"
+  },
   "Grass Wonder": {
     "class": "dragon",
     "type": "base",
@@ -12976,12 +13216,12 @@
     "type": "token",
     "cardType": "Follower / Token",
     "trait": "Golem",
-    "rarity": "-",
+    "rarity": "Promo",
     "cost": "2",
     "attack": "2",
     "defense": "3",
     "effect": "Ward.",
-    "cardSet": "Booster Set #1 “Advent of Genesis”"
+    "cardSet": "Promo Cards"
   },
   "Guardian Golem TOKEN": {
     "class": "rune",
@@ -12994,6 +13234,30 @@
     "defense": "5",
     "effect": "Ward. [lastwords] Give your leader [defense]+2.",
     "cardSet": "Booster Set \"New World Genesis\""
+  },
+  "Guardian Nun": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Faith",
+    "rarity": "Bronze",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3",
+    "effect": "[evolve][cost01]: Evolve this follower. Ward. [fanfare] If there is an amulet on your field, give this follower [defense]+1.",
+    "cardSet": "Starter Deck #6 “Maculate Ablution”"
+  },
+  "Guardian Nun Evolved": {
+    "class": "haven",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Faith",
+    "rarity": "Bronze",
+    "cost": "-",
+    "attack": "4",
+    "defense": "4",
+    "effect": "Ward. On Evolve: Give your leader [defense]+2.",
+    "cardSet": "Starter Deck #6 “Maculate Ablution”"
   },
   "Guardian Sun": {
     "class": "haven",
@@ -13271,6 +13535,18 @@
     "effect": "Ward. [fanfare] Select another [havencraft] follower on your field with Ward and, if there are at least 3 followers on your field with Ward, give it Storm.",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
   },
+  "Hare of Illusions": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Amulet",
+    "trait": "Faith",
+    "rarity": "Gold",
+    "cost": "0",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[act][engage], put this card into its owner's cemetery: Select an enemy follower on the field and engage it. [act][cost10], [engage], put this card into its owner's cemetery: Banish each follower on the field.",
+    "cardSet": "Starter Deck #6 “Maculate Ablution”"
+  },
   "Harnessed Flame": {
     "class": "neutral",
     "type": "base",
@@ -13540,12 +13816,12 @@
     "type": "token",
     "cardType": "Follower / Token",
     "trait": "Wyrmkin",
-    "rarity": "-",
+    "rarity": "Promo",
     "cost": "2",
     "attack": "4",
     "defense": "3",
     "effect": "Rush.",
-    "cardSet": "Booster Set #2 “Reign of Bahamut”"
+    "cardSet": "Promo Cards"
   },
   "Hermit of Destruction": {
     "class": "rune",
@@ -14008,12 +14284,12 @@
     "type": "token",
     "cardType": "Follower / Token",
     "trait": "Avian",
-    "rarity": "-",
+    "rarity": "Promo",
     "cost": "3",
     "attack": "2",
     "defense": "2",
     "effect": "Storm.",
-    "cardSet": "Booster Set #1 “Advent of Genesis”"
+    "cardSet": "Promo Cards"
   },
   "Holy Fowl of Ivory": {
     "class": "haven",
@@ -14092,12 +14368,12 @@
     "type": "token",
     "cardType": "Follower / Token",
     "trait": "Beast",
-    "rarity": "-",
+    "rarity": "Promo",
     "cost": "4",
     "attack": "4",
     "defense": "4",
     "effect": "Rush.",
-    "cardSet": "Booster Set #1 “Advent of Genesis”"
+    "cardSet": "Promo Cards"
   },
   "Holybright Altar": {
     "class": "haven",
@@ -14447,18 +14723,6 @@
     "effect": "While there's another Draconic Duelist card on your field, this follower has Rush and Assail. [fanfare] [cost01]: If Overflow is active for you, search your deck for a Hypersonic Dragonewt, summon it, then shuffle your deck.",
     "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\""
   },
-  "Ian & Adelle, Transcendent Love": {
-    "class": "dragon",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #5 “Omens Eternal”"
-  },
   "Ice Dancing Dragonewt": {
     "class": "dragon",
     "type": "base",
@@ -14747,6 +15011,18 @@
     "effect": "[act] Banish this card from your cemetery: Select an enemy follower on the field. Deal it 4 damage and draw a card. Activate only if there's a XIV. Luzen, Temperance on your field. ---------- Deal 2 damage to your leader. Draw 2 cards.",
     "cardSet": "Booster Set #10 \"Gods of the Arcana\""
   },
+  "Insight": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Mage",
+    "rarity": "Silver",
+    "cost": "1",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[quick] Draw a card.",
+    "cardSet": "Starter Deck #3 “Mysteries of Conjuration”"
+  },
   "Instant Poison TOKEN": {
     "class": "rune",
     "type": "token",
@@ -14927,18 +15203,6 @@
     "effect": "[fanfare] If there are at least 2 Heroic cards in your cemetery, give this follower [defense]+1 and Ward.",
     "cardSet": "Booster Set #3 “Flame of Lævateinn”"
   },
-  "Isabelle": {
-    "class": "rune",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #1 “Advent of Genesis”"
-  },
   "Isabelle, Intrepid Mage": {
     "class": "rune",
     "type": "base",
@@ -14999,18 +15263,6 @@
     "effect": "Stack. [fanfare] Give your leader [defense]+3.",
     "cardSet": "Booster Set #3 “Flame of Lævateinn”"
   },
-  "Itsuki Mitsutagawa": {
-    "class": "forest",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #3 “Flame of Lævateinn”"
-  },
   "Itsurugi, Eager Admirer": {
     "class": "abyss",
     "type": "base",
@@ -15023,9 +15275,9 @@
     "effect": "[adv] [cost04], banish this: You may summon an Itsurugi, Paradise's End from your evolve deck. Activate only if there are at least 5 Festive cards or at least 10 [abysscraft] cards in your cemetery. [fanfare] Put a Wolfling's Struggle token into your EX area.",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
   },
-  "Itsurugi, Paradise's End": {
+  "Itsurugi, End of Paradise ADVANCED": {
     "class": "abyss",
-    "type": "base",
+    "type": "evolved",
     "cardType": "Follower / Advanced",
     "trait": "Festive / Demon / Beast",
     "rarity": "Legendary",
@@ -15118,18 +15370,6 @@
     "defense": "4",
     "effect": "[fanfare] Banish an Izudia, Omen of Unkilling from your cemetery: Select an enemy follower on the field and change its defense to 1. [act] [engage]: Select an enemy follower on the field and deal it 1 damage. When it's put from the field into the cemetery this turn, put an Annihilating Onslaught token into your EX area.",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
-  },
-  "Izudia, the Sixth Omen": {
-    "class": "forest",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #10 \"Gods of the Arcana\""
   },
   "Jabberwock": {
     "class": "dragon",
@@ -15310,18 +15550,6 @@
     "defense": "4",
     "effect": "Assail. On Evolve: Look at the top 4 cards of your deck. From among them, you may reveal a Levin follower with a different name from this card and add it to your hand. Put the remaining cards on the bottom of your deck in any order.",
     "cardSet": "Booster Set #2 “Reign of Bahamut”"
-  },
-  "Jeremiah Gottwald": {
-    "class": "rune",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #4 “Cosmic Mythos”"
   },
   "Jerva of Draconic Mail": {
     "class": "dragon",
@@ -15671,18 +15899,6 @@
     "effect": "You may reroll each die or dice roll you make once. On Evolve - Roll a 6-sided die. If you roll a 1, draw 2 cards. If you roll a 2, deal 3 damage to each enemy leader and give your leader [defense]+3. If you roll a 3, each opponent buries a follower with the highest attack among followers on their field.",
     "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\""
   },
-  "Kallen Kozuki": {
-    "class": "dragon",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #4 “Cosmic Mythos”"
-  },
   "Kallen, Crimson Yaksha": {
     "class": "dragon",
     "type": "base",
@@ -15947,18 +16163,6 @@
     "effect": "Rush. Drain.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
   },
-  "Khawy, Underworld Arbiter": {
-    "class": "abyss",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #4 “Cosmic Mythos”"
-  },
   "Killer Instincts": {
     "class": "sword",
     "type": "base",
@@ -16108,12 +16312,12 @@
     "type": "token",
     "cardType": "Follower / Token",
     "trait": "Officer",
-    "rarity": "-",
+    "rarity": "Promo",
     "cost": "1",
     "attack": "1",
     "defense": "1",
     "effect": "",
-    "cardSet": "Booster Set #1 “Advent of Genesis”"
+    "cardSet": "Promo Cards"
   },
   "Knight of Conviction, Bors": {
     "class": "sword",
@@ -16487,6 +16691,18 @@
     "effect": "Select an enemy follower on the field. Deal it 3 damage and give [attack]+1 to each follower that costs 1 or less on your field.",
     "cardSet": "Crossover Set “THE IDOLM@STER CINDERELLA GIRLS”"
   },
+  "Latham, Vanguard Captain": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Commander",
+    "rarity": "Gold",
+    "cost": "2",
+    "attack": "3",
+    "defense": "3",
+    "effect": "",
+    "cardSet": "Starter Deck #2 “Blade of Resentment” Worlds Beyond Swordcraft Starter Set"
+  },
   "Laura, Crimson Strife": {
     "class": "abyss",
     "type": "base",
@@ -16546,18 +16762,6 @@
     "defense": "3",
     "effect": "[fanfare] Search your deck for a Nano, the Dawnblade, summon it, then shuffle. Whenever a Nano, the Dawnblade on your field evolves, choose one. (1) Put a Twilight Blade token into your EX area. (2) Give your leader [defense]+2.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
-  },
-  "Lelouch Lamperouge": {
-    "class": "abyss",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #4 “Cosmic Mythos”"
   },
   "Lelouch, Leader of the Black Knights": {
     "class": "abyss",
@@ -16655,6 +16859,30 @@
     "effect": "Whenever a [swordcraft] follower is put onto your field, give it [attack]+3/[defense]+3 and Rush.",
     "cardSet": "Booster Set #2 “Reign of Bahamut”"
   },
+  "Lesser Mummy": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Departed",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Necrocharge (10): Give this follower Storm. (If your cemetery contains at least 10 cards, perform Necrocharge (10).)",
+    "cardSet": "Starter Deck #5 “Waltz of the Undying Night”"
+  },
+  "Lesser Mummy Evolved": {
+    "class": "abyss",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Departed",
+    "rarity": "Bronze",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3",
+    "effect": "Strike: Summon a Ghost token.",
+    "cardSet": "Starter Deck #5 “Waltz of the Undying Night”"
+  },
   "Leviathan, the Furious": {
     "class": "dragon",
     "type": "base",
@@ -16702,18 +16930,6 @@
     "defense": "4",
     "effect": "[act] [engage]: Select an enemy follower on the field. Deal it 4 damage, draw a card, and, if there are at least 3 Hunter cards in your cemetery, you may summon a Hunter follower that costs 3 or less from your hand.",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
-  },
-  "Li Xingke": {
-    "class": "dragon",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #4 “Cosmic Mythos”"
   },
   "Liam, Crazed Creator": {
     "class": "forest",
@@ -16798,18 +17014,6 @@
     "defense": "2",
     "effect": "[ride] [cost01]: Give this follower Drive. On Drive - Give this follower [attack]+1/[defense]+1. Look at the top card of your deck. You may reveal it and add it to your hand. If you revealed a 1-cost Aqua Force follower, give your leader [defense]+2.",
     "cardSet": "Crossover Set \"Cardfight!! Vanguard\""
-  },
-  "Light Tenryu": {
-    "class": "dragon",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #3 “Flame of Lævateinn”"
   },
   "Lightning Blast": {
     "class": "dragon",
@@ -16906,6 +17110,30 @@
     "defense": "5",
     "effect": "On Super-Evolve - Select up to 2 enemy followers on the field and destroy them. Add 2 to a Stack on your field. [act] Earth Rite: Give this Assail. [lastwords] Earth Rite: Put this onto its owner's field engaged.",
     "cardSet": "Booster Set \"New World Genesis\""
+  },
+  "Lilith": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Put a Forest Bat token into your EX area.",
+    "cardSet": "Starter Deck #5 “Waltz of the Undying Night”"
+  },
+  "Lilith Evolved": {
+    "class": "abyss",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Demon",
+    "rarity": "Bronze",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3",
+    "effect": "Strike: Give your leader [defense]+2.",
+    "cardSet": "Starter Deck #5 “Waltz of the Undying Night”"
   },
   "Lilje, Butler of the Mists": {
     "class": "sword",
@@ -17051,18 +17279,6 @@
     "effect": "[fanfare] Put a Destruction in White and Destruction in Black token into your EX area.",
     "cardSet": "Booster Set #5 “Omens Eternal”"
   },
-  "Lishenna, the Second Omen": {
-    "class": "rune",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #10 \"Gods of the Arcana\""
-  },
   "Little Dragon Nanny": {
     "class": "dragon",
     "type": "base",
@@ -17123,18 +17339,6 @@
     "effect": "On Evolve - Select an enemy follower on the field and deal it 3 damage. On Super-Evolve - Increase your max play points by 1. Give your leader [defense]+2.",
     "cardSet": "Booster Set \"New World Genesis\""
   },
-  "Liza, Greenwood Queen": {
-    "class": "forest",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #5 “Omens Eternal”"
-  },
   "Lizard Runner, Undeux": {
     "class": "dragon",
     "type": "base",
@@ -17188,12 +17392,12 @@
     "type": "token",
     "cardType": "Follower / Token",
     "trait": "Puppetry",
-    "rarity": "-",
+    "rarity": "Promo",
     "cost": "0",
     "attack": "2",
     "defense": "4",
     "effect": "Ward. [fanfare] Give your leader [defense]+2. While this card is on the field, its name is also Puppet.",
-    "cardSet": "Booster Set #8 \"Alterchaotica\""
+    "cardSet": "Promo Cards"
   },
   "Loathing Desire": {
     "class": "abyss",
@@ -17301,18 +17505,6 @@
     "attack": "3",
     "defense": "4",
     "effect": "If there is a Princess Juliet on your field, this card costs 2 less to play. Ward. At the start of your end phase, if there is a Princess Juliet on your field, give your leader [defense]+2.",
-    "cardSet": "Booster Set #4 “Cosmic Mythos”"
-  },
-  "Lorena, Gentle Piety": {
-    "class": "haven",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
     "cardSet": "Booster Set #4 “Cosmic Mythos”"
   },
   "Lounes, Levin Apprentice": {
@@ -17531,18 +17723,6 @@
     "effect": "[fanfare] Summon a Shield Guardian or Knight token. [act] [cost00]: Select an enemy follower on the field. Deal it 5 damage and draw a card. Activate only if there are at least 3 Officer token followers on your field with different names, and only once per turn.",
     "cardSet": "Booster Set \"New World Genesis\""
   },
-  "Luna": {
-    "class": "abyss",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #1 “Advent of Genesis”"
-  },
   "Luna's Doll TOKEN": {
     "class": "abyss",
     "type": "token",
@@ -17638,18 +17818,6 @@
     "defense": "3",
     "effect": "Bane. During your turn, whenever an enemy follower is put from the field into the cemetery, deal 1 damage to its leader. [act] [engage]: Select another follower on your field and give it Bane.",
     "cardSet": "Booster Set #8 \"Alterchaotica\""
-  },
-  "Lycoris, Soothing Venom": {
-    "class": "forest",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #6 “Paragons of the Colosseum”"
   },
   "Lymaga, Forest Champion": {
     "class": "forest",
@@ -17759,9 +17927,9 @@
     "effect": "Ward. Reduce damage dealt to this follower by 1. At the start of your end phase, give your leader [defense]+3. This follower's name is also Lævateinn Dragon.",
     "cardSet": "Booster Set #4 “Cosmic Mythos”"
   },
-  "Lævateinn Dragon, Dual Form α": {
+  "Lævateinn Dragon, Dual Form α ADVANCED": {
     "class": "dragon",
-    "type": "base",
+    "type": "evolved",
     "cardType": "Follower / Advanced",
     "trait": "Wyrmkin / Armed",
     "rarity": "Legendary",
@@ -17771,9 +17939,9 @@
     "effect": "Rush. Strike - Select an enemy follower on the field. Deal it 4 damage and give your leader [defense]+2. [lastwords] Select a Lævateinn Dragon in your cemetery and put it onto your field engaged.",
     "cardSet": "Booster Set #10 \"Gods of the Arcana\""
   },
-  "Lævateinn Dragon, Dual Form β": {
+  "Lævateinn Dragon, Dual Form β ADVANCED": {
     "class": "dragon",
-    "type": "base",
+    "type": "evolved",
     "cardType": "Follower / Advanced",
     "trait": "Wyrmkin / Armed",
     "rarity": "Legendary",
@@ -17783,9 +17951,9 @@
     "effect": "Ward. [fanfare] Deal 2 damage to each enemy follower on the field. Give your leader [defense]+4. [act] [cost01], bury a Draconic Weapon: Draw a card. You may summon an Armed follower that costs 3 or less from your hand. Activate only once per turn.",
     "cardSet": "Booster Set #10 \"Gods of the Arcana\""
   },
-  "Lævateinn Dragon, Dual Form γ": {
+  "Lævateinn Dragon, Dual Form γ ADVANCED": {
     "class": "dragon",
-    "type": "base",
+    "type": "evolved",
     "cardType": "Follower / Advanced",
     "trait": "Wyrmkin / Armed",
     "rarity": "Legendary",
@@ -17903,6 +18071,18 @@
     "effect": "[lastwords] Earth Rite: Put this follower onto its owner's field.",
     "cardSet": "Booster Set #4 “Cosmic Mythos”"
   },
+  "Magic Missile": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Mage",
+    "rarity": "Bronze",
+    "cost": "3",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[quick] Select an enemy follower on the field. Deal it 2 damage and draw a card.",
+    "cardSet": "Starter Deck #3 “Mysteries of Conjuration”"
+  },
   "Magic Owl": {
     "class": "rune",
     "type": "base",
@@ -17920,12 +18100,12 @@
     "type": "token",
     "cardType": "Amulet / Token",
     "trait": "Earth Sigil",
-    "rarity": "-",
+    "rarity": "Promo",
     "cost": "1",
     "attack": "-",
     "defense": "-",
-    "effect": "Stack. (Amulets with Stack are put onto the field with 1 Stack counter and have the following abilities. When this card would leave the field, remove 1 Stack counter from it instead. When this card's Stack count reaches 0, destroy it. [act][engage]: Select another amulet with Stack on your field and transfer all this card's Stack counters to that card.",
-    "cardSet": "Booster Set #1 “Advent of Genesis”"
+    "effect": "Stack.",
+    "cardSet": "Promo Cards"
   },
   "Magical Augmentation": {
     "class": "rune",
@@ -18515,18 +18695,6 @@
     "effect": "When playing this, remove 2 divine water counters from a Soothing Dragonspring on your field: This costs 2 less to play. ---------- Select an enemy follower on the field. Destroy it and draw a card.",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
   },
-  "Marcotte, Heretical Celebrant": {
-    "class": "haven",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #10 \"Gods of the Arcana\""
-  },
   "Marcotte, Heretical Sister": {
     "class": "haven",
     "type": "base",
@@ -18922,18 +19090,6 @@
     "defense": "5",
     "effect": "Ward. On Evolve - Destroy each other follower on the field. At the start of each opponent's main phase, give your leader [defense]+2.",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
-  },
-  "Marwynn, the Fourth Omen": {
-    "class": "haven",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #10 \"Gods of the Arcana\""
   },
   "Masamune, Raging Dragon": {
     "class": "dragon",
@@ -19451,18 +19607,6 @@
     "effect": "[feed][cost01]: Race this follower. When an amulet or Mejiro Family follower you control leaves the field, give this follower Storm.",
     "cardSet": "Crossover Set “Umamusume: Pretty Derby”"
   },
-  "Melna, Princess of Munmarath": {
-    "class": "sword",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #10 \"Gods of the Arcana\""
-  },
   "Melodious Monody TOKEN": {
     "class": "rune",
     "type": "token",
@@ -19691,18 +19835,6 @@
     "effect": "[quick] Look at the top 2 cards of your deck. You may reveal a spell from among them and add it to your hand. Put the remaining cards on the bottom of your deck in any order.",
     "cardSet": "Booster Set #5 “Omens Eternal”"
   },
-  "Michelle, Purehearted Mindreader": {
-    "class": "forest",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #2 “Reign of Bahamut”"
-  },
   "Michelle, the Mind Reader": {
     "class": "forest",
     "type": "base",
@@ -19751,6 +19883,18 @@
     "effect": "Select a follower on your field and an enemy follower on the field. Give the first follower [attack]+1/[defense]+1, then deal the second follower damage equal to the first's attack.",
     "cardSet": "Booster Set \"Convergent Destinies\""
   },
+  "Midnight Vampire": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Vampire",
+    "rarity": "Silver",
+    "cost": "3",
+    "attack": "2",
+    "defense": "4",
+    "effect": "[fanfare] Summon a Forest Bat token. While this card is on your field, your Forest Bat tokens have Drain. (When a follower with Drain attacks and deals damage, its leader gains defense equal to the damage dealt.)",
+    "cardSet": "Starter Deck #5 “Waltz of the Undying Night”"
+  },
   "Miho Kohinata": {
     "class": "sword",
     "type": "base",
@@ -19786,6 +19930,18 @@
     "defense": "2",
     "effect": "[fanfare] Look at the top card of your deck. If it's a Cute card, you may reveal it and add it to your hand. While there are at least 3 Cute followers on your field, this follower has Rush.",
     "cardSet": "Crossover Starter Deck “Cute”"
+  },
+  "Miho Kohinata [Summer Firsts]": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "iM@S CG / Cute",
+    "rarity": "Promo",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2",
+    "effect": "While there are at least 3 Cute followers on your field, this has Rush. [fanfare] Look at the top card of your deck. If it's a Cute card, you may reveal it and add it to your hand.",
+    "cardSet": "Promo Cards"
   },
   "Miho Kohinata [Youthful Romance]": {
     "class": "sword",
@@ -19835,6 +19991,18 @@
     "effect": "[fanfare] Search your deck for an iM@S CG spell, put it into your EX area, then shuffle. It costs 3 less to play this turn. [act] Lesson (1): Select an iM@S CG spell in your cemetery and put it into your EX area. It costs 3 less to play this turn. Activate only if there are at least 10 Passion cards in your cemetery, and only once per turn.",
     "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\""
   },
+  "Miku Maekawa": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "iM@S CG / Cute",
+    "rarity": "Promo",
+    "cost": "2",
+    "attack": "3",
+    "defense": "1",
+    "effect": "Strike - Select an enemy follower on the field and deal it 2 damage. [act] [cost01], Lesson (1): Give this follower Storm.",
+    "cardSet": "Promo Cards"
+  },
   "Miku Maekawa [Meownderful World]": {
     "class": "forest",
     "type": "base",
@@ -19846,6 +20014,18 @@
     "defense": "1",
     "effect": "Storm. [lastwords] Lesson (1): Search your deck for a follower with \"Miku Maekawa\" in its name, reveal it, add it to your hand, then shuffle.",
     "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\""
+  },
+  "Miku Maekawa [Summer Cat Rendezvous]": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "iM@S CG / Cute",
+    "rarity": "Promo",
+    "cost": "2",
+    "attack": "3",
+    "defense": "1",
+    "effect": "Strike - Select an enemy follower on the field and deal it 2 damage. [act] [cost01], Lesson (1): Give this Storm.",
+    "cardSet": "Promo Cards"
   },
   "Milady, Mystic Queen": {
     "class": "rune",
@@ -20038,6 +20218,18 @@
     "defense": "3",
     "effect": "On Evolve - Look at the top 2 cards of your deck. You may reveal an iM@S CG card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. On Super-Evolve - You may summon a Passion follower that costs 6 or less from your hand.",
     "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\""
+  },
+  "Mio Honda [Mermaid Star]": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "iM@S CG / Passion",
+    "rarity": "Promo",
+    "cost": "6",
+    "attack": "5",
+    "defense": "5",
+    "effect": "Rush. [fanfare] Look at the top 2 cards of your deck. You may summon a Passion follower from among them. Bury the rest. [act] [cost02], Lesson (2): Look at the top 2 cards of your deck. You may summon a Passion follower from among them. Bury the rest.",
+    "cardSet": "Promo Cards"
   },
   "Mio Honda [Positive Passion]": {
     "class": "sword",
@@ -20387,18 +20579,6 @@
     "effect": "Draw 3 cards.",
     "cardSet": "Crossover Set “THE IDOLM@STER CINDERELLA GIRLS”"
   },
-  "Momo, A New Adventure": {
-    "class": "sword",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #10 \"Gods of the Arcana\""
-  },
   "Momoka Sakurai": {
     "class": "forest",
     "type": "base",
@@ -20518,6 +20698,18 @@
     "defense": "-",
     "effect": "[act] [cost04], banish this card from your cemetery: Select an Amaterasu and Tsukuyomi in your cemetery and summon them. ---------- Search your deck for an Amaterasu or Tsukuyomi, summon it, then shuffle your deck.",
     "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\""
+  },
+  "Moonlight Assassin": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Assassin",
+    "rarity": "Silver",
+    "cost": "2",
+    "attack": "3",
+    "defense": "2",
+    "effect": "[act][cost01]: Give this follower Bane. (Followers attacking or attacked by a follower with Bane are destroyed after damage is exchanged.)",
+    "cardSet": "Starter Deck #2 “Blade of Resentment” Worlds Beyond Swordcraft Starter Set"
   },
   "Moonrise Werewolf": {
     "class": "abyss",
@@ -20872,12 +21064,12 @@
     "type": "token",
     "cardType": "Follower / Token",
     "trait": "Supreme",
-    "rarity": "-",
+    "rarity": "Promo",
     "cost": "3",
     "attack": "2",
     "defense": "3",
     "effect": "Ward. [fanfare] Draw a card.",
-    "cardSet": "Booster Set #5 “Omens Eternal”"
+    "cardSet": "Promo Cards"
   },
   "Mystic King": {
     "class": "rune",
@@ -20914,6 +21106,18 @@
     "defense": "-",
     "effect": "[quick] Put a card from your hand on the bottom of your deck. Draw a card.",
     "cardSet": "Booster Set #4 “Cosmic Mythos”"
+  },
+  "Mythril Golem": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Golem",
+    "rarity": "Legendary",
+    "cost": "6",
+    "attack": "5",
+    "defense": "6",
+    "effect": "[fanfare] Deal 3 damage to each enemy follower on the field. Spellchain (7): Deal 5 damage instead. SC (15): Deal 5 damage to each enemy leader. (If you have at least 7 spells in your cemetery, perform Spellchain (7). Then, if you have at least 15 spells, perform SC (15).)",
+    "cardSet": "Starter Deck #3 “Mysteries of Conjuration”"
   },
   "Mánagarmr Scout": {
     "class": "dragon",
@@ -21172,12 +21376,12 @@
     "type": "token",
     "cardType": "Amulet / Token",
     "trait": "Natura",
-    "rarity": "-",
+    "rarity": "Promo",
     "cost": "1",
     "attack": "-",
     "defense": "-",
     "effect": "When this card leaves the field, draw a card, then discard a card. [act] [cost01]: Bury this card.",
-    "cardSet": "Booster Set #7 \"Verdant Steel\""
+    "cardSet": "Promo Cards"
   },
   "Natsuki Kimura [Scarlet Love Song]": {
     "class": "abyss",
@@ -21479,6 +21683,18 @@
     "effect": "[fanfare] Lesson (5): Destroy each enemy card on the field.",
     "cardSet": "Crossover Set “THE IDOLM@STER CINDERELLA GIRLS”"
   },
+  "New Year's Soul Devil": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon / New Year",
+    "rarity": "Promo",
+    "cost": "2",
+    "attack": "2",
+    "defense": "4",
+    "effect": "[fanfare] The coming year will be filled with happiness. ---------- This card can't be used in official events.",
+    "cardSet": "Promo Cards"
+  },
   "Newfound Allies": {
     "class": "dragon",
     "type": "base",
@@ -21538,6 +21754,18 @@
     "defense": "4",
     "effect": "On Evolve - Select a Machina card that costs 2 or less in your cemetery and put it into your EX area. It costs 2 less to play this turn.",
     "cardSet": "Booster Set #7 \"Verdant Steel\""
+  },
+  "Night Horde": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Vampire",
+    "rarity": "Silver",
+    "cost": "3",
+    "attack": "-",
+    "defense": "-",
+    "effect": "Summon 2 Forest Bat tokens. Select an enemy follower on the field and deal it X damage. X equals the number of Forest Bat tokens on your field.",
+    "cardSet": "Starter Deck #5 “Waltz of the Undying Night”"
   },
   "Night on the Town": {
     "class": "sword",
@@ -21755,9 +21983,9 @@
     "effect": "Ward. [fanfare] Look at the top 5 cards of your deck. You may summon a follower that costs 6 or less from among them. Put the rest on the bottom of your deck in any order. [act] [cost01], discard this: Summon a Steelclad Knight token.",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
   },
-  "Noble Shikigami": {
+  "Noble Shikigami ADVANCED": {
     "class": "rune",
-    "type": "base",
+    "type": "evolved",
     "cardType": "Follower / Advanced",
     "trait": "Shikigami",
     "rarity": "Legendary",
@@ -21851,6 +22079,30 @@
     "effect": "Storm.",
     "cardSet": "Booster Set #1 “Advent of Genesis”"
   },
+  "Oathless Knight": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Officer",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "1",
+    "defense": "1",
+    "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Summon a Knight token.",
+    "cardSet": "Starter Deck #2 “Blade of Resentment” Worlds Beyond Swordcraft Starter Set"
+  },
+  "Oathless Knight Evolved": {
+    "class": "sword",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Officer",
+    "rarity": "Bronze",
+    "cost": "-",
+    "attack": "3",
+    "defense": "1",
+    "effect": "Assail. (Followers with Assail can attack reserved followers.)",
+    "cardSet": "Starter Deck #2 “Blade of Resentment” Worlds Beyond Swordcraft Starter Set"
+  },
   "Oceanus": {
     "class": "neutral",
     "type": "base",
@@ -21910,18 +22162,6 @@
     "defense": "4",
     "effect": "On Evolve: Select a card in an opponent's cemetery and put it into your EX area. [act] [cost08]: Select a card in an opponent's cemetery and play it for 0 play points. If there are at least 10 cards in opponents' cemeteries, any card you play from the EX area costs 2 less.",
     "cardSet": "Booster Set #5 “Omens Eternal”"
-  },
-  "Octrice, the Eighth Omen": {
-    "class": "sword",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #10 \"Gods of the Arcana\""
   },
   "Odette, White Swan": {
     "class": "haven",
@@ -22163,18 +22403,6 @@
     "effect": "[fanfare] Select up to 1 card in your cemetery and put it into your deck 3rd from the top. Once on each of your turns, when you drive check a Trigger, deal 2 damage to each enemy leader and give your leader [defense]+2.",
     "cardSet": "Crossover Set \"Cardfight!! Vanguard\""
   },
-  "Oracle of the Waterwyrm": {
-    "class": "dragon",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #6 “Paragons of the Colosseum”"
-  },
   "Orator of the Bones": {
     "class": "abyss",
     "type": "base",
@@ -22234,18 +22462,6 @@
     "defense": "4",
     "effect": "On Evolve - Select an enemy follower on the field and deal it damage equal to 2 times the number of Festive cards and/or Mage cards you've played this turn.",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
-  },
-  "Orchis, Heartful Puppet": {
-    "class": "forest",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #10 \"Gods of the Arcana\""
   },
   "Orchis, Newfound Heart": {
     "class": "forest",
@@ -22336,12 +22552,12 @@
     "type": "token",
     "cardType": "Follower / Token",
     "trait": "Marine",
-    "rarity": "-",
+    "rarity": "Promo",
     "cost": "1",
     "attack": "2",
     "defense": "1",
     "effect": "Rush.",
-    "cardSet": "Booster Set #8 \"Alterchaotica\""
+    "cardSet": "Promo Cards"
   },
   "Ouroboros": {
     "class": "dragon",
@@ -22600,12 +22816,36 @@
     "type": "token",
     "cardType": "Spell / Token",
     "trait": "iM@S CG",
-    "rarity": "-",
+    "rarity": "Promo",
     "cost": "4",
     "attack": "-",
     "defense": "-",
     "effect": "Give your leader [defense]+1. Draw a card. ---------- (At the start of the game, if your deck is based on the THE IDOLM@STER CINDERELLA GIRLS universe, put 5 Magical Item tokens into your EX area.)",
-    "cardSet": "Crossover Set “THE IDOLM@STER CINDERELLA GIRLS”"
+    "cardSet": "Promo Cards"
+  },
+  "Passion Pendant TOKEN": {
+    "class": "neutral",
+    "type": "token",
+    "cardType": "Spell / Token",
+    "trait": "iM@S CG",
+    "rarity": "Promo",
+    "cost": "4",
+    "attack": "-",
+    "defense": "-",
+    "effect": "Give your leader [defense]+1. Draw a card. ---------- (At the start of the game, if your deck is based on the THE IDOLM@STER CINDERELLA GIRLS universe, put 5 Magical Item tokens into your EX area.)",
+    "cardSet": "Promo Cards"
+  },
+  "Passion Tiara TOKEN": {
+    "class": "neutral",
+    "type": "token",
+    "cardType": "Spell / Token",
+    "trait": "iM@S CG",
+    "rarity": "Promo",
+    "cost": "4",
+    "attack": "-",
+    "defense": "-",
+    "effect": "Give your leader [defense]+1. Draw a card. ---------- (At the start of the game, if your deck is based on the THE IDOLM@STER CINDERELLA GIRLS universe, put 5 Magical Item tokens into your EX area.)",
+    "cardSet": "Promo Cards"
   },
   "Passionate Potioneer": {
     "class": "rune",
@@ -22738,6 +22978,30 @@
     "defense": "5",
     "effect": "Ward.",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
+  },
+  "Penguin Wizard": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Arcanaform",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "1",
+    "defense": "4",
+    "effect": "[evolve][cost01]: Evolve this follower. [act][engage], discard a spell: Draw a card.",
+    "cardSet": "Starter Deck #3 “Mysteries of Conjuration”"
+  },
+  "Penguin Wizard Evolved": {
+    "class": "rune",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Arcanaform",
+    "rarity": "Bronze",
+    "cost": "-",
+    "attack": "2",
+    "defense": "5",
+    "effect": "On Evolve: Refresh this card. [act][engage], discard a spell: Draw a card.",
+    "cardSet": "Starter Deck #3 “Mysteries of Conjuration”"
   },
   "Perpetual Despair": {
     "class": "haven",
@@ -22967,6 +23231,18 @@
     "effect": "[act] [cost04], bury this card: Give your leader [defense]+2. Draw 2 cards. [lastwords] Summon a Holy Falcon token.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
   },
+  "Pinion Prayer": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Amulet",
+    "trait": "Faith / Avian",
+    "rarity": "Bronze",
+    "cost": "1",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[act][cost01], [engage], put this card into its owner's cemetery: Summon a Holy Falcon token.",
+    "cardSet": "Starter Deck #6 “Maculate Ablution”"
+  },
   "Pinion Prince": {
     "class": "haven",
     "type": "base",
@@ -23038,6 +23314,30 @@
     "defense": "-",
     "effect": "Banish each card on the field and in the EX area. Each player banishes the top 10 cards of their deck.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
+  },
+  "Playful Necromancer": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Necromancer",
+    "rarity": "Silver",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3",
+    "effect": "[evolve][cost01]: Evolve this follower.",
+    "cardSet": "Starter Deck #5 “Waltz of the Undying Night”"
+  },
+  "Playful Necromancer Evolved": {
+    "class": "abyss",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Necromancer",
+    "rarity": "Silver",
+    "cost": "-",
+    "attack": "4",
+    "defense": "4",
+    "effect": "On Evolve: Summon 3 Ghost tokens.",
+    "cardSet": "Starter Deck #5 “Waltz of the Undying Night”"
   },
   "Plucky Treasure Hunter": {
     "class": "neutral",
@@ -23231,6 +23531,30 @@
     "effect": "Stack. [fanfare] Select an enemy follower with 4 defense or less on the field and banish it.",
     "cardSet": "Booster Set #1 “Advent of Genesis”"
   },
+  "Priest of the Cudgel": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Faith",
+    "rarity": "Silver",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3",
+    "effect": "[evolve][cost01]: Evolve this follower.",
+    "cardSet": "Starter Deck #6 “Maculate Ablution”"
+  },
+  "Priest of the Cudgel Evolved": {
+    "class": "haven",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Faith",
+    "rarity": "Silver",
+    "cost": "-",
+    "attack": "4",
+    "defense": "4",
+    "effect": "On Evolve: Select an enemy follower with 3 defense or less on the field and banish it.",
+    "cardSet": "Starter Deck #6 “Maculate Ablution”"
+  },
   "Priestess of Foresight": {
     "class": "haven",
     "type": "base",
@@ -23254,18 +23578,6 @@
     "defense": "7",
     "effect": "Ward. On Evolve - Select up to 2 enemy followers on the field and destroy them.",
     "cardSet": "Booster Set #10 \"Gods of the Arcana\""
-  },
-  "Prim, Adventuring Princess": {
-    "class": "sword",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #2 “Reign of Bahamut”"
   },
   "Prim, Innocent Princess": {
     "class": "sword",
@@ -23483,6 +23795,18 @@
     "effect": "[fanfare] Select an enemy follower with 4 defense or less on the field and banish it. [act] [cost05], [engage], bury this card: Select an enemy follower on the field and banish it.",
     "cardSet": "Crossover Set “THE IDOLM@STER CINDERELLA GIRLS”"
   },
+  "Pulsefire Assault": {
+    "class": "neutral",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Mercenary",
+    "rarity": "Ultimate",
+    "cost": "2",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[quick] Select an enemy follower on the field and deal it 3 damage. If it's an evolved follower, deal 4 damage instead.",
+    "cardSet": "Worlds Beyond Swordcraft Starter Set"
+  },
   "Pumpkin Dragon": {
     "class": "dragon",
     "type": "base",
@@ -23512,12 +23836,12 @@
     "type": "token",
     "cardType": "Follower / Token",
     "trait": "Puppetry",
-    "rarity": "-",
+    "rarity": "Promo",
     "cost": "1",
     "attack": "1",
     "defense": "1",
     "effect": "Rush.",
-    "cardSet": "Booster Set #5 “Omens Eternal”"
+    "cardSet": "Promo Cards"
   },
   "Pure Metamorphosis": {
     "class": "haven",
@@ -23711,6 +24035,18 @@
     "effect": "While this card is on your field, each Queen Hemera the White on your field has Assail. [act] [engage]: Select up to 2 other [swordcraft] followers on your field and give them [attack]+1.",
     "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\""
   },
+  "Queen Vampire": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Vampire",
+    "rarity": "Legendary",
+    "cost": "6",
+    "attack": "5",
+    "defense": "5",
+    "effect": "[fanfare] Summon 2 Forest Bat tokens. [act][engage], give your leader [defense]-1: Summon 2 Forest Bat tokens. Whenever a Forest Bat token is put onto your field, give it [attack]+1 and Ward.",
+    "cardSet": "Starter Deck #5 “Waltz of the Undying Night”"
+  },
   "Queen Vampire, Sultry Evening": {
     "class": "abyss",
     "type": "base",
@@ -23722,6 +24058,30 @@
     "defense": "4",
     "effect": "[fanfare] Select an enemy follower on the field and deal it 4 damage. At the start of your end phase, if there are at least 3 other Vampire cards on your field, deal 3 damage to each enemy leader and give your leader [defense]+3.",
     "cardSet": "Special Set \"Seaside Memories\""
+  },
+  "Quickblader": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Officer",
+    "rarity": "Bronze",
+    "cost": "1",
+    "attack": "1",
+    "defense": "1",
+    "effect": "[evolve][cost03]: Evolve this follower. Storm. (Followers with Storm can attack enemy followers and leaders on the turn they're put onto your field.)",
+    "cardSet": "Starter Deck #2 “Blade of Resentment” Worlds Beyond Swordcraft Starter Set"
+  },
+  "Quickblader Evolved": {
+    "class": "sword",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Officer",
+    "rarity": "Bronze",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3",
+    "effect": "Storm.",
+    "cardSet": "Starter Deck #2 “Blade of Resentment” Worlds Beyond Swordcraft Starter Set"
   },
   "Quickdraw Maven": {
     "class": "sword",
@@ -23903,18 +24263,6 @@
     "effect": "When playing this, bury 3 Mage followers that cost 2 or more: This costs 9 less to play. ---------- [fanfare] Look at the top 3 cards of your deck. You may put one of them into your EX area. Put the rest on the bottom of your deck in any order. [act] Discard a Raio, Omen of Truth: Select an enemy follower on the field. Deal it 9 damage and put an Ersatz Elimination token into your EX area.",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
   },
-  "Raio, the Ninth Omen": {
-    "class": "rune",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #10 \"Gods of the Arcana\""
-  },
   "Ralmia, Astrowing": {
     "class": "sword",
     "type": "base",
@@ -23950,18 +24298,6 @@
     "defense": "3",
     "effect": "Storm. On Evolve - [cost03]: Give this follower [attack]+1/[defense]+1 for every other follower on your field.",
     "cardSet": "Booster Set #6 “Paragons of the Colosseum”"
-  },
-  "Ramina, Crescent Beast": {
-    "class": "haven",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #1 “Advent of Genesis”"
   },
   "Rana, Dual Cannon Abbess": {
     "class": "haven",
@@ -24203,6 +24539,18 @@
     "effect": "Follower Strike - For the rest of this turn, this follower doesn't take damage. At the start of your end phase, refresh this card.",
     "cardSet": "Booster Set \"Bullet of Fate\""
   },
+  "Regal Wildcat": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Commander / Beast",
+    "rarity": "Promo",
+    "cost": "5",
+    "attack": "4",
+    "defense": "4",
+    "effect": "Storm. [fanfare] Select another follower on your field and give it [attack]+2/[defense]+2 and Storm. If your leader is [swordcraft], give to each other follower on your field instead.",
+    "cardSet": "Promo Cards"
+  },
   "Regalore, Steel Chimera": {
     "class": "rune",
     "type": "base",
@@ -24359,9 +24707,9 @@
     "effect": "Choose 1. If there are at least 10 cards in opponents' cemeteries, choose up to 2 instead. (1) Select an enemy follower on the field and deal it 3 damage. If there are at least 10 cards in opponents' cemeteries, deal 8 damage instead. (2) Look at the top 3 cards of your deck. You may reveal a Thief card from among them and add it to your hand. Put the rest on the bottom of your deck in any order.",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
   },
-  "Rending Blast": {
+  "Rending Blast ADVANCED": {
     "class": "rune",
-    "type": "base",
+    "type": "evolved",
     "cardType": "Spell / Advanced",
     "trait": "Mage / Academic / Princess / Cutthroat",
     "rarity": "Legendary",
@@ -24388,12 +24736,12 @@
     "type": "token",
     "cardType": "Spell / Token",
     "trait": "Machina",
-    "rarity": "-",
+    "rarity": "Promo",
     "cost": "1",
     "attack": "-",
     "defense": "-",
     "effect": "[quick] Give your leader [defense]+1.",
-    "cardSet": "Booster Set #7 \"Verdant Steel\""
+    "cardSet": "Promo Cards"
   },
   "Resentful Blaze TOKEN": {
     "class": "rune",
@@ -24538,6 +24886,18 @@
     "defense": "7",
     "effect": "[fanfare] Deal 7 damage to each enemy follower on the field. If there are at least 3 Cute cards, at least 3 Cool cards, and at least 3 Passion cards in your cemetery, give this Storm and recover 1 play point. [q][act] [cost01], Lesson (1), discard this: Select an enemy follower on the field and deal it 2 damage.",
     "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\""
+  },
+  "Riamu's Reverie": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "iM@S CG / Passion",
+    "rarity": "Promo",
+    "cost": "2",
+    "attack": "-",
+    "defense": "-",
+    "effect": "This card costs 1 more to play for every follower on the field. ---------- Deal 7 damage to each follower on the field.",
+    "cardSet": "Promo Cards"
   },
   "Rice Shower": {
     "class": "abyss",
@@ -24935,6 +25295,30 @@
     "effect": "Assail. Bane. While there's another Machina follower on your field, this follower has Rush.",
     "cardSet": "Booster Set #7 \"Verdant Steel\""
   },
+  "Roc": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Beast",
+    "rarity": "Bronze",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3",
+    "effect": "[evolve][cost00]: Evolve this follower. Strike: Give this follower [attack]+1.",
+    "cardSet": "Starter Deck #4 “Wrath of the Greatwyrm” Worlds Beyond Dragoncraft Starter Set"
+  },
+  "Roc Evolved": {
+    "class": "dragon",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Beast",
+    "rarity": "Bronze",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3",
+    "effect": "Strike: Give this follower [attack]+1/[defense]+1.",
+    "cardSet": "Starter Deck #4 “Wrath of the Greatwyrm” Worlds Beyond Dragoncraft Starter Set"
+  },
   "Rock Whale": {
     "class": "dragon",
     "type": "base",
@@ -25199,6 +25583,30 @@
     "effect": "Rush. [fanfare] Put a Thorn Burst token into your EX area.",
     "cardSet": "Booster Set #2 “Reign of Bahamut”"
   },
+  "Rose Gardener": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Verdant",
+    "rarity": "Silver",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3",
+    "effect": "[evolve][cost01]: Evolve this follower.",
+    "cardSet": "Starter Deck #1 “Regal Fairy Princess”"
+  },
+  "Rose Gardener Evolved": {
+    "class": "forest",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Verdant",
+    "rarity": "Silver",
+    "cost": "-",
+    "attack": "4",
+    "defense": "4",
+    "effect": "On Evolve: Select an enemy follower on the field and return it to its owner's hand. Combo (3): Draw a card. (Tokens returned to a player's hand are removed from the game.)",
+    "cardSet": "Starter Deck #1 “Regal Fairy Princess”"
+  },
   "Rose Queen": {
     "class": "forest",
     "type": "base",
@@ -25246,18 +25654,6 @@
     "defense": "-",
     "effect": "Choose one of the following. (1) Search your deck for an Arthurian follower, reveal it, and add it to your hand. (2) Select an Arthurian follower on your field and give it [attack]+1/[defense]+2.",
     "cardSet": "Booster Set #4 “Cosmic Mythos”"
-  },
-  "Rowen": {
-    "class": "dragon",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #1 “Advent of Genesis”"
   },
   "Rowen, Dragon Lance": {
     "class": "dragon",
@@ -25403,18 +25799,6 @@
     "effect": "Rush. Assail. [fanfare] Select an enemy follower on the field. If there are at least 3 cards on your field named Rulenye, Echoing Scream, destroy it and deal 3 damage to its leader. [lastwords] Put a Scream Diffusion token into your EX area. Bury the top card of your deck.",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
   },
-  "Rulenye, the Third Omen": {
-    "class": "abyss",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #10 \"Gods of the Arcana\""
-  },
   "Ruler of Cocytus": {
     "class": "neutral",
     "type": "base",
@@ -25426,6 +25810,18 @@
     "defense": "6",
     "effect": "[fanfare] Deal 6 damage to your leader. Put a Silent Rider, Servant of Cocytus, Demon of Purgatory, and Astaroth's Reckoning token into your EX area.",
     "cardSet": "Booster Set \"New World Genesis\""
+  },
+  "Rune Blade Summoner": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Mage",
+    "rarity": "Gold",
+    "cost": "3",
+    "attack": "1",
+    "defense": "1",
+    "effect": "[fanfare] Spellchain (5): Give this follower [attack]+4/[defense]+4. SC (10): Give this follower Storm. (If you have at least 5 spells in your cemetery, perform Spellchain (5). Then, if you have at least 10 spells, perform SC (10).)",
+    "cardSet": "Starter Deck #3 “Mysteries of Conjuration”"
   },
   "Runic Guardian": {
     "class": "rune",
@@ -25823,6 +26219,30 @@
     "effect": "Storm. On Evolve - Select an enemy follower that costs 3 or less on the field and return it to its owner's hand.",
     "cardSet": "Booster Set #10 \"Gods of the Arcana\""
   },
+  "Sammy, Wizard's Apprentice": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Mage",
+    "rarity": "Bronze",
+    "cost": "1",
+    "attack": "2",
+    "defense": "1",
+    "effect": "[evolve][cost02]: Evolve this follower. [fanfare] Look at the top card of your deck. You may put it into your cemetery.",
+    "cardSet": "Starter Deck #3 “Mysteries of Conjuration”"
+  },
+  "Sammy, Wizard's Apprentice Evolved": {
+    "class": "rune",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Mage",
+    "rarity": "Bronze",
+    "cost": "-",
+    "attack": "3",
+    "defense": "2",
+    "effect": "On Evolve: Each player draws a card.",
+    "cardSet": "Starter Deck #3 “Mysteries of Conjuration”"
+  },
   "Samurai": {
     "class": "sword",
     "type": "base",
@@ -26111,6 +26531,18 @@
     "effect": "On Evolve: Summon 3 Otohime's Bodyguard tokens. If your field becomes full from this effect, put any remaining tokens into your EX area.",
     "cardSet": "Booster Set #1 “Advent of Genesis”"
   },
+  "Seabrand Dragon": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Marine",
+    "rarity": "Bronze",
+    "cost": "4",
+    "attack": "4",
+    "defense": "4",
+    "effect": "[fanfare] If Overflow is active for you, give this follower Storm. (Followers with Storm can attack enemy followers and leaders on the turn they're put onto your field.)",
+    "cardSet": "Starter Deck #4 “Wrath of the Greatwyrm” Worlds Beyond Dragoncraft Starter Set"
+  },
   "Seal Dragon, Blockade": {
     "class": "dragon",
     "type": "base",
@@ -26219,9 +26651,9 @@
     "effect": "[fanfare] Look at the top 3 cards of your deck. You may reveal a [forestcraft] card that costs 2 or less from among them and add it to your hand. Put the rest on the bottom of your deck in any order. If you revealed a card, discard a card. [act] [cost03], banish this card and 2 other cards from your cemetery: You may summon a Sekka, Ninefold Blaze from your evolve deck.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
   },
-  "Sekka, Ninefold Blaze": {
+  "Sekka, Ninefold Blaze ADVANCED": {
     "class": "forest",
-    "type": "base",
+    "type": "evolved",
     "cardType": "Follower / Advanced",
     "trait": "Wasteland / Hunter / Beast",
     "rarity": "Special",
@@ -26380,12 +26812,12 @@
     "type": "token",
     "cardType": "Follower / Token",
     "trait": "Demon",
-    "rarity": "-",
+    "rarity": "Promo",
     "cost": "1",
     "attack": "0",
     "defense": "1",
     "effect": "Bane.",
-    "cardSet": "Booster Set #4 “Cosmic Mythos”"
+    "cardSet": "Promo Cards"
   },
   "Serpent Wrath": {
     "class": "dragon",
@@ -27287,9 +27719,9 @@
     "effect": "Storm. [fanfare] If there's an evolved follower on your field, give this follower [attack]+1/[defense]+1.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
   },
-  "Sincere Masquerade Ghost": {
+  "Sincere Masquerade Ghost ADVANCED": {
     "class": "abyss",
-    "type": "base",
+    "type": "evolved",
     "cardType": "Follower / Advanced",
     "trait": "Departed",
     "rarity": "Legendary",
@@ -27418,6 +27850,18 @@
     "defense": "3",
     "effect": "[ride] [cost01]: Give this follower Drive. On Drive - Give this follower [attack]+1/[defense]+1. Look at the top 3 cards of your deck. You may reveal a Shadow Paladin card from among them and add it to your hand. Bury the rest. [fanfare] Select an enemy follower on the field and deal it 4 damage.",
     "cardSet": "Crossover Set \"Cardfight!! Vanguard\""
+  },
+  "Skullfane": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Zealot / Eidolon",
+    "rarity": "Legendary",
+    "cost": "7",
+    "attack": "6",
+    "defense": "6",
+    "effect": "[fanfare] Look at the top 4 cards of your deck. You may reveal an amulet from among them and put it onto your field. Put the remaining cards into your cemetery. Whenever an amulet you control leaves the field, deal 2 damage to each enemy leader and enemy follower on the field.",
+    "cardSet": "Starter Deck #6 “Maculate Ablution”"
   },
   "Sky Sprite": {
     "class": "haven",
@@ -27659,18 +28103,6 @@
     "effect": "Select a Rulenye, Omen of Silence in your cemetery. Summon it. Necrocharge (10) - Each opponent discards a random card.",
     "cardSet": "Booster Set #8 \"Alterchaotica\""
   },
-  "Sonia, Guardian of Silence": {
-    "class": "haven",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #7 \"Verdant Steel\""
-  },
   "Soothing Dragonspring": {
     "class": "dragon",
     "type": "base",
@@ -27887,6 +28319,18 @@
     "effect": "[fanfare] Put the top 2 cards of your deck into your cemetery.",
     "cardSet": "Booster Set #1 “Advent of Genesis”"
   },
+  "Spawn of the Abyss Evolved": {
+    "class": "abyss",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Demon",
+    "rarity": "Promo",
+    "cost": "-",
+    "attack": "7",
+    "defense": "8",
+    "effect": "At the start of your end phase, if your leader is [abysscraft], give your leader [defense]+4, draw 2 cards, then each opponent discards 2 cards and buries 2 followers.",
+    "cardSet": "Promo Cards"
+  },
   "Special Week": {
     "class": "dragon",
     "type": "base",
@@ -27971,9 +28415,9 @@
     "effect": "Select an enemy follower on the field. Engage it and draw a card. It doesn't refresh during its controller's next start phase.",
     "cardSet": "Booster Set \"Bullet of Fate\""
   },
-  "Spinaria & Lucille, Keepers": {
+  "Spinaria & Lucille, Keepers ADVANCED": {
     "class": "forest",
-    "type": "base",
+    "type": "evolved",
     "cardType": "Follower / Advanced",
     "trait": "Supreme",
     "rarity": "Legendary",
@@ -28012,12 +28456,12 @@
     "type": "base",
     "cardType": "Follower",
     "trait": "Supreme",
-    "rarity": "Special",
+    "rarity": "Legendary",
     "cost": "3",
     "attack": "1",
     "defense": "3",
-    "effect": "Whenever a follower on your field evolves, give your leader [defense]+2. [fanfare] Select a [forestcraft] follower that costs 2 or less in your cemetery and put it into your EX area. It costs 2 less to play this turn.",
-    "cardSet": "Special Set \"Seaside Memories\""
+    "effect": "Whenever a follower on your field evolves, give your leader [defense]+2. [fanfare] Select a [forestcraft] follower in your cemetery that costs 2 or less and put it into your EX area. It costs 2 less to play this turn.",
+    "cardSet": "Showdown Deck: Forestcraft"
   },
   "Spirit Curator": {
     "class": "abyss",
@@ -28492,12 +28936,12 @@
     "type": "token",
     "cardType": "Follower / Token",
     "trait": "Officer",
-    "rarity": "-",
+    "rarity": "Promo",
     "cost": "2",
     "attack": "2",
     "defense": "2",
     "effect": "",
-    "cardSet": "Booster Set #1 “Advent of Genesis”"
+    "cardSet": "Promo Cards"
   },
   "Steelclad Minotaur": {
     "class": "neutral",
@@ -28660,12 +29104,12 @@
     "type": "token",
     "cardType": "Follower / Token",
     "trait": "Golem",
-    "rarity": "-",
+    "rarity": "Promo",
     "cost": "2",
     "attack": "3",
     "defense": "2",
     "effect": "Rush.",
-    "cardSet": "Booster Set #1 “Advent of Genesis”"
+    "cardSet": "Promo Cards"
   },
   "Stringmaster": {
     "class": "forest",
@@ -28690,18 +29134,6 @@
     "defense": "-",
     "effect": "As an additional cost to play this card, engage 2 cards named Naterran Great Tree on your field. ---------- Select an enemy follower on the field and up to 1 Natura follower on your field. Deal 5 damage to the first follower and 2 damage to its leader. Give the second [attack]+1/[defense]+1.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
-  },
-  "Subaru Makabe": {
-    "class": "abyss",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #3 “Flame of Lævateinn”"
   },
   "Substitution": {
     "class": "forest",
@@ -28750,6 +29182,42 @@
     "defense": "2",
     "effect": "Storm. On Evolve: Combo (3) - Give this follower [attack]+1/[defense]+1. Combo (5) - Give [attack]+3/[defense]+3 instead.",
     "cardSet": "Booster Set #4 “Cosmic Mythos”"
+  },
+  "Summer Encounter": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "iM@S CG / Cool",
+    "rarity": "Promo",
+    "cost": "2",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[quick] Select an enemy follower on the field that costs 3 or less. Destroy it and bury the top card of your deck.",
+    "cardSet": "Promo Cards"
+  },
+  "Summer Sea Breeze": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "iM@S CG / Cool",
+    "rarity": "Promo",
+    "cost": "1",
+    "attack": "-",
+    "defense": "-",
+    "effect": "Draw a card. If there's a follower on your field that costs 5 or more, recover 1 play point.",
+    "cardSet": "Promo Cards"
+  },
+  "Summon Bloodkin": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Vampire",
+    "rarity": "Bronze",
+    "cost": "1",
+    "attack": "-",
+    "defense": "-",
+    "effect": "Summon a Forest Bat token. Put a Forest Bat token into your EX area.",
+    "cardSet": "Starter Deck #5 “Waltz of the Undying Night”"
   },
   "Summoning Drills": {
     "class": "rune",
@@ -28835,6 +29303,18 @@
     "effect": "[feed] [cost01]: Race this follower. Ward. [fanfare] Give your leader [defense]+3. If Overflow is active for you, increase your max play points by 1. [act] [engage]: Select an Umamusume card that costs 7 or more in your cemetery and add it to your hand. Activate only if Overflow is active for you.",
     "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\""
   },
+  "Super-Evolution Point": {
+    "class": "",
+    "type": "base",
+    "cardType": "Super-Evolution Point",
+    "trait": "-",
+    "rarity": "Promo",
+    "cost": "-",
+    "attack": "-",
+    "defense": "-",
+    "effect": "At the start of the game, each player gets 1 Super-Evolution Point. When paying an [evolve] cost, you may additionally use a Super-Evolution Point by turning it facedown to give the follower [attack]+1/[defense]+1 and trigger any On Super-Evolve abilities it has. Use only on turn 7 or later when going first and turn 6 or later when going second.",
+    "cardSet": "Promo Cards"
+  },
   "Supercharged Guitarist": {
     "class": "neutral",
     "type": "base",
@@ -28895,18 +29375,6 @@
     "effect": "Follower Strike - Give this follower [attack]+2/[defense]+2.",
     "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\""
   },
-  "Suzaku Kururugi": {
-    "class": "sword",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #4 “Cosmic Mythos”"
-  },
   "Suzuho Ueda": {
     "class": "forest",
     "type": "base",
@@ -28942,6 +29410,18 @@
     "defense": "1",
     "effect": "This card costs 2 less to play if there are at least 5 Umamusume spells in your cemetery. ---------- [feed] [cost01]: Race this follower. [fanfare] Select a 1-cost Umamusume spell in your cemetery and put it into your EX area. It costs 1 less to play this turn.",
     "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\""
+  },
+  "Sweet Sentiments": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "iM@S CG / Cool",
+    "rarity": "Promo",
+    "cost": "2",
+    "attack": "-",
+    "defense": "-",
+    "effect": "Select an enemy follower on the field. Deal it 3 damage and give [attack]+1 to each follower that costs 1 or less on your field.",
+    "cardSet": "Promo Cards"
   },
   "Sweet-Tooth Medusa": {
     "class": "rune",
@@ -29098,6 +29578,18 @@
     "defense": "1",
     "effect": "[fanfare] Select up to 2 enemy followers on the field and deal 2 damage divided between them. If Overflow is active for you, deal 4 damage divided between them instead.",
     "cardSet": "Booster Set #6 “Paragons of the Colosseum”"
+  },
+  "Sylvan Justice": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Elf",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[quick] Select an enemy follower on the field. Deal it 3 damage and put a Fairy token into your EX area.",
+    "cardSet": "Starter Deck #1 “Regal Fairy Princess”"
   },
   "Sylvia, Grand Arbiter": {
     "class": "neutral",
@@ -29303,9 +29795,9 @@
     "effect": "[adv] [cost04], banish this: You may summon a Taketsumi, Creator of Paradise from your evolve deck. Activate only if there are at least 5 Festive cards or at least 10 [swordcraft] cards in your cemetery. [fanfare] Draw a card. Discard a card. Put a Glittering Gold token into your EX area.",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
   },
-  "Taketsumi, Creator of Paradise": {
+  "Taketsumi, Beginning of Paradise ADVANCED": {
     "class": "sword",
-    "type": "base",
+    "type": "evolved",
     "cardType": "Follower / Advanced",
     "trait": "Festive / Commander",
     "rarity": "Legendary",
@@ -29800,12 +30292,12 @@
     "type": "token",
     "cardType": "Spell / Token",
     "trait": "Verdant",
-    "rarity": "-",
+    "rarity": "Promo",
     "cost": "2",
     "attack": "-",
     "defense": "-",
     "effect": "Select an enemy leader or enemy follower on the field. Deal it 3 damage and draw a card.",
-    "cardSet": "Booster Set #1 “Advent of Genesis”"
+    "cardSet": "Promo Cards"
   },
   "Thornclad Arbiter": {
     "class": "haven",
@@ -29950,6 +30442,18 @@
     "defense": "1",
     "effect": "[fanfare] Put a Puppet token into your EX area. Then, if there are at least 3 cards in your EX area, give your leader [defense]+1.",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
+  },
+  "Titania's Sanctuary": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Amulet",
+    "trait": "Pixie / Princess",
+    "rarity": "Gold",
+    "cost": "2",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[fanfare] Give each Pixie token on your field [attack]+1/[defense]+1. While this card is on your field, your Pixie tokens have Assail. Whenever a Pixie token is put onto your field, give it [attack]+1/[defense]+1.",
+    "cardSet": "Starter Deck #1 “Regal Fairy Princess”"
   },
   "Titanic Showdown": {
     "class": "neutral",
@@ -30227,6 +30731,30 @@
     "effect": "Destroy each card on the field. Each player buries each card in their EX area. Discard your hand. Look at the top 5 cards of your deck. You may put any number of them into your EX area. Bury the rest.",
     "cardSet": "Booster Set #10 \"Gods of the Arcana\""
   },
+  "Treant": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Fae-Touched",
+    "rarity": "Bronze",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3",
+    "effect": "[evolve][cost02]: Evolve this follower. [fanfare] Combo (3): Change this card's [evolve] cost to 0. (If you've played at least 3 cards this turn, including this one, perform Combo (3).)",
+    "cardSet": "Starter Deck #1 “Regal Fairy Princess”"
+  },
+  "Treant Evolved": {
+    "class": "forest",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Fae-Touched",
+    "rarity": "Bronze",
+    "cost": "-",
+    "attack": "5",
+    "defense": "5",
+    "effect": "",
+    "cardSet": "Starter Deck #1 “Regal Fairy Princess”"
+  },
   "Treasure Map": {
     "class": "neutral",
     "type": "base",
@@ -30442,6 +30970,18 @@
     "defense": "-",
     "effect": "Choose one of the following. If there are at least 2 Mage followers on your field, choose up to 2 instead. (1) Draw 2 cards. (2) Deal 3 damage to each enemy leader. (3) Select an enemy follower on the field and deal it 3 damage.",
     "cardSet": "Booster Set #5 “Omens Eternal”"
+  },
+  "Tsubaki": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Assassin / Ninja",
+    "rarity": "Legendary",
+    "cost": "6",
+    "attack": "5",
+    "defense": "4",
+    "effect": "[fanfare] Choose one of the following effects. (1) Select an enemy follower on the field and destroy it. (2) Give this follower Storm. (Followers with Storm can attack enemy followers and leaders on the turn they're put onto your field.)",
+    "cardSet": "Starter Deck #2 “Blade of Resentment” Worlds Beyond Swordcraft Starter Set"
   },
   "Tsubaki of the Demon Blade": {
     "class": "sword",
@@ -30731,6 +31271,18 @@
     "effect": "This card costs 1 more to play for every follower on the field. ---------- Deal 7 damage to each follower on the field.",
     "cardSet": "Crossover Set “THE IDOLM@STER CINDERELLA GIRLS”"
   },
+  "Unbridled Fury": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Officer",
+    "rarity": "Bronze",
+    "cost": "1",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[quick] Select an enemy follower on the field and deal it X damage. X equals the number of followers on your field.",
+    "cardSet": "Starter Deck #2 “Blade of Resentment” Worlds Beyond Swordcraft Starter Set"
+  },
   "Undead King": {
     "class": "abyss",
     "type": "base",
@@ -30754,6 +31306,18 @@
     "defense": "5",
     "effect": "Ward. [lastwords] Select an enemy follower on the field. Destroy it and give your leader [defense]+X. X equals the selected follower's attack.",
     "cardSet": "Booster Set #2 “Reign of Bahamut”"
+  },
+  "Undying Resentment": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Departed",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[quick] Select an enemy follower on the field. Deal it 3 damage and put the top card of your deck into your cemetery.",
+    "cardSet": "Starter Deck #5 “Waltz of the Undying Night”"
   },
   "Undying Resolve": {
     "class": "abyss",
@@ -30899,18 +31463,6 @@
     "effect": "On Evolve: Select a card in an opponent's EX area and banish it.",
     "cardSet": "Booster Set #1 “Advent of Genesis”"
   },
-  "Urias": {
-    "class": "abyss",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #1 “Advent of Genesis”"
-  },
   "Urias, Final Vampire": {
     "class": "abyss",
     "type": "base",
@@ -31031,9 +31583,9 @@
     "effect": "On Evolve - [cost02]: Destroy each enemy follower on the field. Change each enemy leader's defense to 6.",
     "cardSet": "Booster Set #10 \"Gods of the Arcana\""
   },
-  "VII. Oluon, Runaway Chariot": {
+  "VII. Oluon, Runaway Chariot ADVANCED": {
     "class": "sword",
-    "type": "base",
+    "type": "evolved",
     "cardType": "Follower / Advanced",
     "trait": "Arcana / Commander",
     "rarity": "Legendary",
@@ -31258,18 +31810,6 @@
     "defense": "2",
     "effect": "While Sanguine is active for you, this follower has Storm. Strike: Deal X damage to each enemy leader. X equals the number of times your leader has lost defense this turn. If your leader's defense is 7, give this follower [attack]+2/[defense]+2.",
     "cardSet": "Booster Set #5 “Omens Eternal”"
-  },
-  "Valnareik, the Seventh Omen": {
-    "class": "abyss",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #10 \"Gods of the Arcana\""
   },
   "Valse, Champion Deadeye": {
     "class": "sword",
@@ -31552,12 +32092,12 @@
     "type": "token",
     "cardType": "Follower / Token",
     "trait": "Puppetry / Cutthroat",
-    "rarity": "-",
+    "rarity": "Promo",
     "cost": "0",
     "attack": "4",
     "defense": "1",
     "effect": "Rush. Assail. [fanfare] Draw a card. While this card is on the field, its name is also Puppet.",
-    "cardSet": "Booster Set #8 \"Alterchaotica\""
+    "cardSet": "Promo Cards"
   },
   "Victorious Grappler": {
     "class": "sword",
@@ -31751,6 +32291,18 @@
     "effect": "[act] [cost01]: Reveal the top card of your deck. If it's a 2-cost card, put it into your EX area. It costs 2 less to play this turn. Activate only once per turn.",
     "cardSet": "Booster Set #8 \"Alterchaotica\""
   },
+  "Waltzing Fairy": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Pixie",
+    "rarity": "Silver",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3",
+    "effect": "[fanfare][lastwords] Put a Fairy token into your EX area.",
+    "cardSet": "Starter Deck #1 “Regal Fairy Princess”"
+  },
   "Wandering Chef": {
     "class": "neutral",
     "type": "base",
@@ -31834,6 +32386,30 @@
     "defense": "3",
     "effect": "On Evolve, put a follower from your field into its owner's cemetery: Select an enemy follower on the field and destroy it.",
     "cardSet": "Booster Set #1 “Advent of Genesis”"
+  },
+  "Water Fairy": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Pixie",
+    "rarity": "Bronze",
+    "cost": "1",
+    "attack": "1",
+    "defense": "1",
+    "effect": "[evolve][cost02]: Evolve this follower. [lastwords] Put a Fairy token into your EX area.",
+    "cardSet": "Starter Deck #1 “Regal Fairy Princess”"
+  },
+  "Water Fairy Evolved": {
+    "class": "forest",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Pixie",
+    "rarity": "Bronze",
+    "cost": "-",
+    "attack": "2",
+    "defense": "2",
+    "effect": "On Evolve: Summon a Fairy token. [lastwords] Put a Fairy token into your EX area.",
+    "cardSet": "Starter Deck #1 “Regal Fairy Princess”"
   },
   "Water General of Wave-Like Spirals, Benedict": {
     "class": "forest",
@@ -31978,6 +32554,18 @@
     "defense": "-",
     "effect": "[fanfare] Summon 2 Holy Falcon tokens. Whenever a Holy Falcon is put onto your field, give it [attack]+1/[defense]+1.",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
+  },
+  "White General": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Commander",
+    "rarity": "Silver",
+    "cost": "4",
+    "attack": "5",
+    "defense": "3",
+    "effect": "Rush. (Followers with Rush can attack enemy followers on the turn they're put onto your field.) Strike: Select another follower on your field and give it [attack]+2.",
+    "cardSet": "Starter Deck #2 “Blade of Resentment” Worlds Beyond Swordcraft Starter Set"
   },
   "White Hare of Inaba": {
     "class": "haven",
@@ -32915,9 +33503,9 @@
     "effect": "If your leader would take damage, it takes that much minus 1 instead. Opponents can't draw cards outside of their start phase. [fanfare] Each player discards down to 2 cards.",
     "cardSet": "Booster Set #10 \"Gods of the Arcana\""
   },
-  "XXI. Zelgenea, O Great World": {
+  "XXI. Zelgenea, O Great World ADVANCED": {
     "class": "neutral",
-    "type": "base",
+    "type": "evolved",
     "cardType": "Follower / Advanced",
     "trait": "Arcana / Deity",
     "rarity": "Legendary",
@@ -33226,18 +33814,6 @@
     "defense": "4",
     "effect": "[q][act][engage]: Select an enemy follower on the field and deal it 1 damage.",
     "cardSet": "Booster Set #2 “Reign of Bahamut”"
-  },
-  "Yuti, Meus Princess": {
-    "class": "haven",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #3 “Flame of Lævateinn”"
   },
   "Yuuki Otokura [Ripples of My Heart]": {
     "class": "rune",
@@ -33563,18 +34139,6 @@
     "effect": "When playing this card, bury a follower with \"Zirnitra\" in its name: This card costs 3 less to play. ---------- [fanfare] Summon a Dragon token. Draw a card for every Wyrmkin token on your field. While this card is on your field, each Wyrmkin token on your field has Storm.",
     "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\""
   },
-  "Zirnitra, Zealous Wings": {
-    "class": "dragon",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #1 “Advent of Genesis”"
-  },
   "Zizdvend, Fate's Arbiter": {
     "class": "rune",
     "type": "base",
@@ -33611,18 +34175,6 @@
     "effect": "[act][engage], discard a follower: Select an enemy follower on the field. Deal X damage to it and Y damage to its leader. X equals the discarded follower's cost. Y equals half the discarded follower's cost (rounded up).",
     "cardSet": "Booster Set #4 “Cosmic Mythos”"
   },
-  "Zoe, Golden Princess": {
-    "class": "haven",
-    "type": "base",
-    "cardType": "Leader",
-    "trait": "-",
-    "rarity": "-",
-    "cost": "-",
-    "attack": "-",
-    "defense": "-",
-    "effect": "",
-    "cardSet": "Booster Set #5 “Omens Eternal”"
-  },
   "Zoe, Princess of Goldenia": {
     "class": "haven",
     "type": "base",
@@ -33652,12 +34204,12 @@
     "type": "base",
     "cardType": "Follower",
     "trait": "Faith / Princess",
-    "rarity": "Special",
+    "rarity": "Legendary",
     "cost": "1",
     "attack": "0",
     "defense": "1",
     "effect": "[fanfare] Select an enemy follower on the field. If your leader has gained at least 4 defense this turn, destroy it and draw a card.",
-    "cardSet": "Special Set \"Seaside Memories\""
+    "cardSet": "Showdown Deck: Havencraft"
   },
   "Zwei, Murderous Puppet": {
     "class": "forest",

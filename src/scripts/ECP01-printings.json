@@ -1,0 +1,3270 @@
+[
+  {
+    "cardNo": "ECP01-001EN",
+    "name": "Hokko Tarumae",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "4",
+      "attack": "2",
+      "defense": "2",
+      "effect": "This card costs X less to play. X equals the number of Umamusume cards on your field. ---------- [evolve] [cost01]: Evolve this follower. [feed] [cost01]: Race this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-001EN.png"
+  },
+  {
+    "cardNo": "ECP01-002EN",
+    "name": "Hokko Tarumae Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Umamusume",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-002EN.png"
+  },
+  {
+    "cardNo": "ECP01-003EN",
+    "name": "Sakura Laurel",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[feed] [cost01]: Race this follower. [fanfare] Select an enemy follower on the field and, if there's another Umamusume card on your field, deal it 4 damage. [act] [engage]: Give this follower [attack]+2/[defense]+2 and Ward. Give your leader [defense]+2. Activate only if there are 5 Umamusume cards on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-003EN.png"
+  },
+  {
+    "cardNo": "ECP01-004EN",
+    "name": "Sounds of Earth",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "9",
+      "attack": "3",
+      "defense": "2",
+      "effect": "This card costs X less to play. X equals 2 times the number of Umamusume cards on your field. ---------- [feed] [cost01]: Race this follower. [fanfare] Return an Umamusume card not named Sounds of Earth from your field to its owner's hand: Select an enemy follower on the field and deal it 5 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-004EN.png"
+  },
+  {
+    "cardNo": "ECP01-005EN",
+    "name": "Haru Urara [Sunny Passion ♪]",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[feed] [cost01]: Race this follower. On Race - Give this follower [attack]+1/[defense]+1. Look at the top 5 cards of your deck. You may summon an Umamusume follower that costs 2 or less from among them. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-006EN",
+    "name": "Yamanin Zephyr",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[feed] [cost01]: Race this follower. Ward. [fanfare] Choose one. If this card was put onto the field by an Umamusume card's ability, choose up to 2 instead. (1) Select an enemy follower on the field and return it to its owner's hand. (2) Search your deck for an Umamusume follower that costs 2 or less, summon it, then shuffle."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-007EN",
+    "name": "Sakura Bakushin O",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[feed] [cost01]: Race this follower. Storm. Strike - If there are 3 or 4 Umamusume cards on your field, draw a card, then discard a card. If there are 5, draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-008EN",
+    "name": "Mihono Bourbon",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[feed] [cost01]: Race this follower. [feed][feed] [cost02]: Race this follower 2 times. [feed][feed][feed] [cost03]: Race this follower 3 times. On Race - Select up to 1 enemy follower on the field and deal it 3 damage. Give this follower [attack]+1/[defense]+1."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-009EN",
+    "name": "A MORE MARVELOUS WORLD! ☆",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Amulet",
+      "trait": "Umamusume",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Look at the top card of your deck. If it's an Umamusume card, you may reveal it and add it to your hand. [act] [cost02], [engage], bury this card: Give your leader [defense]+2."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-010EN",
+    "name": "Gentildonna",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "7",
+      "attack": "6",
+      "defense": "6",
+      "effect": "[evolve] [cost01]: Evolve this follower. [feed] [cost01]: Race this follower. Your opponents' [fanfare] and On Evolve abilities don't trigger."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-010EN.png"
+  },
+  {
+    "cardNo": "ECP01-011EN",
+    "name": "Gentildonna Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Umamusume",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "-",
+      "attack": "7",
+      "defense": "7",
+      "effect": "Your opponents' [fanfare] and On Evolve abilities don't trigger. On Evolve - Deal 7 damage to each other follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-011EN.png"
+  },
+  {
+    "cardNo": "ECP01-012EN",
+    "name": "Symboli Rudolf [Enchaînement]",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[feed] [cost01]: Race this follower. [feed][feed] [cost02]: Race this follower 2 times. [feed][feed][feed] [cost03]: Race this follower 3 times. On Race - Give this follower [attack]+1/[defense]+1. Look at the top 3 cards of your deck. You may summon an Umamusume follower that costs 3 or less from among them. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-012EN.png"
+  },
+  {
+    "cardNo": "ECP01-013EN",
+    "name": "Sirius Symboli [Escorte Étoile]",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[feed] [cost01]: Race this follower. Storm. Intimidate. [fanfare] If there are at least 3 Umamusume cards on your field, give this follower [defense]+1 and \"Strike - Draw a card. Discard a card.\""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-013EN.png"
+  },
+  {
+    "cardNo": "ECP01-014EN",
+    "name": "Aston Machan",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[feed] [cost01]: Race this follower. On Race - Select up to 1 enemy follower on the field and deal it 4 damage. Give this follower [attack]+1/[defense]+1 and deal it 2 damage."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-015EN",
+    "name": "Symboli Kris S",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[feed] [cost01]: Race this follower. Storm. [act] [engage] 4 other Umamusume cards on your field: Give this follower [attack]+5."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-016EN",
+    "name": "Tap Dance City",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[feed] [cost01]: Race this follower. [fanfare] Search your deck for a 1-cost Umamusume follower, summon it, then shuffle."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-017EN",
+    "name": "Biwa Hayahide",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume / BNW",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[feed] [cost01]: Race this follower. Ward. On Race - Give this follower [attack]+1/[defense]+1. Search your deck for up to 3 BNW cards with different names, put them into your EX area, then shuffle. They cost 3 less to play this turn."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-018EN",
+    "name": "Teio-Oo-Oo!!!",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Umamusume",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Look at the top 7 cards of your deck. You may summon an Umamusume follower that costs 5 or less from among them. Put the rest on the bottom of your deck in any order. If you summoned a Tokai Teio, look at the top 7 cards of your deck. You may summon an Umamusume follower that costs 4 or less from among them. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-019EN",
+    "name": "Cheval Grand",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [feed] [cost01]: Race this follower. [fanfare] Select a faceup Carrot in your evolve deck and, if there are at least 10 Umamusume cards in your cemetery, turn it facedown."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-019EN.png"
+  },
+  {
+    "cardNo": "ECP01-020EN",
+    "name": "Cheval Grand Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Umamusume",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage. If there are at least 10 Umamusume cards in your cemetery, deal 4 damage instead. Twice on each of your turns, when an enemy follower that took damage this turn from an Umamusume card you control is put from the field into the cemetery, draw a card, then discard a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-020EN.png"
+  },
+  {
+    "cardNo": "ECP01-021EN",
+    "name": "Tanino Gimlet",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[feed] [cost01]: Race this follower. On Race - Select up to 1 enemy follower on the field and deal it 4 damage. Give this follower [attack]+1/[defense]+1. [fanfare] Search your deck for a Vodka and 1-cost Umamusume spell, reveal them, add them to your hand, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-021EN.png"
+  },
+  {
+    "cardNo": "ECP01-022EN",
+    "name": "Narita Top Road [Peachy Silhouette]",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[feed] [cost01]: Race this follower. Storm. On Race - Give this follower [attack]+1/[defense]+1. Strike - Banish 3 Umamusume followers with Storm from your cemetery: Deal each enemy follower on the field damage equal to this follower's attack."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-022EN.png"
+  },
+  {
+    "cardNo": "ECP01-023EN",
+    "name": "Verxina",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[feed] [cost01]: Race this follower. Ward. [fanfare] Discard an Umamusume card: Deal 2 damage to each enemy leader. Give your leader [defense]+2. Draw 2 cards. Whenever a Cheval Grand or Vivlos is put onto your field, select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-024EN",
+    "name": "Vivlos",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "3",
+      "attack": "5",
+      "defense": "2",
+      "effect": "This card costs 2 less to play if there's a Cheval Grand or Verxina on your field. ---------- [feed] [cost01]: Race this follower. Rush. Assail."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-025EN",
+    "name": "Daitaku Helios",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[feed] [cost01]: Race this follower. [fanfare] Select an enemy follower on the field and deal it 1 damage. If there's an Umamusume card that costs 4 or more on your field, deal 3 damage instead."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-026EN",
+    "name": "Sweep Tosho",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "2",
+      "attack": "0",
+      "defense": "1",
+      "effect": "This card costs 2 less to play if there are at least 5 Umamusume spells in your cemetery. ---------- [feed] [cost01]: Race this follower. [fanfare] Select a 1-cost Umamusume spell in your cemetery and put it into your EX area. It costs 1 less to play this turn."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-027EN",
+    "name": "Lucky Star in the Sky",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Umamusume",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Look at the top card of your deck. If it's an Umamusume card, you may reveal it and add it to your hand. If there are at least 5 Umamusume spells in your cemetery, give your leader [defense]+2."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-028EN",
+    "name": "Neo Universe",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost02]: Evolve this follower. [feed] [cost01]: Race this follower. [fanfare] Select an enemy follower on the field. If Overflow is active for you, deal it 4 damage and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-028EN.png"
+  },
+  {
+    "cardNo": "ECP01-029EN",
+    "name": "Neo Universe Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Umamusume",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Choose one. (1) Discard an Umamusume card: Increase your max play points by 1. (2) Discard 3 Umamusume cards: Increase your max play points by 2. At the start of your end phase, select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-029EN.png"
+  },
+  {
+    "cardNo": "ECP01-030EN",
+    "name": "Mr. C.B.",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[feed] [cost01]: Race this follower. On Race - Give this follower [attack]+1/[defense]+1. Refresh it. Draw a card. [act] [engage], discard an Umamusume card: Select an enemy follower on the field. Deal it 5 damage and, if you discarded an Umamusume card that costs 7 or more, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-030EN.png"
+  },
+  {
+    "cardNo": "ECP01-031EN",
+    "name": "Katsuragi Ace",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "7",
+      "attack": "5",
+      "defense": "4",
+      "effect": "When this card is discarded by the ability of an Umamusume card you control, if Overflow is active for you, [cost03]: Summon this card. ---------- [feed] [cost01]: Race this follower. Storm. [fanfare] Select an enemy follower on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-031EN.png"
+  },
+  {
+    "cardNo": "ECP01-032EN",
+    "name": "Super Creek [Piece of Mind]",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "5",
+      "effect": "[feed] [cost01]: Race this follower. Ward. [fanfare] Give your leader [defense]+3. If Overflow is active for you, increase your max play points by 1. [act] [engage]: Select an Umamusume card that costs 7 or more in your cemetery and add it to your hand. Activate only if Overflow is active for you."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-033EN",
+    "name": "Tsurumaru Tsuyoshi",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[feed] [cost01]: Race this follower. [fanfare] Select an enemy follower on the field and deal it damage equal to the number of faceup cards named Carrot in your evolve deck."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-034EN",
+    "name": "El Condor Pasa",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "7",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[feed] [cost01]: Race this follower. Storm. [fanfare] Search your deck for a Champion's Passion, summon it, then shuffle."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-035EN",
+    "name": "Nishino Flower",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[feed] [cost01]: Race this follower. On Race - Give this follower [attack]+1/[defense]+1. Search your deck for a Seiun Sky, summon it, then shuffle."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-036EN",
+    "name": "Pious Flame, Heavens Scorcher",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Umamusume",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "When playing this card, discard an Umamusume card: This card costs 2 less to play. ---------- Select an enemy follower on the field. Deal it 5 damage and, if you discarded an Umamusume card that costs 7 or more when playing this card, draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-037EN",
+    "name": "Hishi Miracle",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [feed] [cost01]: Race this follower. [fanfare] Bury the top 2 cards of your deck. If their base costs are the same, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-037EN.png"
+  },
+  {
+    "cardNo": "ECP01-038EN",
+    "name": "Hishi Miracle Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Umamusume",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "At the start of your end phase, if there are at least 9 faceup cards named Carrot in your evolve deck, each opponent buries the top 20 cards of their deck. On Evolve - Discard 2 Umamusume cards: Draw 2 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-038EN.png"
+  },
+  {
+    "cardNo": "ECP01-039EN",
+    "name": "Daiichi Ruby",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "6",
+      "attack": "2",
+      "defense": "4",
+      "effect": "[feed] [cost01]: Race this follower. [fanfare] Select up to 1 Umamusume follower that costs 4 or less and up to 1 Umamusume follower that costs 2 or less in your cemetery and summon them engaged. Whenever another Umamusume follower is put from your field into the cemetery, deal 1 damage to each enemy leader and give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-039EN.png"
+  },
+  {
+    "cardNo": "ECP01-040EN",
+    "name": "Duramente",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[feed] [cost01]: Race this follower. On Race - Give this follower [attack]+1/[defense]+1. If there are at least 10 Umamusume cards in your cemetery, recover 3 play points. [fanfare] Select an enemy follower on the field. Destroy it, deal 2 damage to its leader, give your leader [defense]+2, and bury the top 2 cards of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-040EN.png"
+  },
+  {
+    "cardNo": "ECP01-041EN",
+    "name": "Matikanetannhauser [Machitan☆Adventure]",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[feed] [cost01]: Race this follower. On Race - Select up to 1 Umamusume follower that costs 3 or less in your cemetery and summon it. Give this follower [attack]+1/[defense]+1. [fanfare] Bury the top card of your deck."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-042EN",
+    "name": "K.S.Miracle",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "2",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[feed] [cost01]: Race this follower. Ward. At the start of your main phase, destroy this card. [lastwords] Discard an Umamusume card: Draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-043EN",
+    "name": "Air Shakur",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[feed] [cost01]: Race this follower. While there are at least 20 Umamusume cards in your cemetery, this follower has Storm and \"Strike - Give this follower [attack]+3/[defense]+3.\" On Race - Select up to 1 enemy follower on the field and deal it 3 damage. Give this follower [attack]+1/[defense]+1 and bury the top 2 cards of your deck."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-044EN",
+    "name": "Manhattan Cafe",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[feed] [cost01]: Race this follower. [fanfare] Bury the top card of your deck. [act] [engage], bury this card: Select a 2-cost Umamusume follower in your cemetery and summon it. Activate only if there are at least 10 Umamusume cards in your cemetery."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-045EN",
+    "name": "TT Ignition!",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Umamusume",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Bury the top 4 cards of your deck. Deal damage to each follower on the field equal to the number of Umamusume cards buried this way."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-046EN",
+    "name": "Satono Crown",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [feed] [cost01]: Race this follower. [fanfare] Select an enemy leader. If your leader has less defense than it, give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-046EN.png"
+  },
+  {
+    "cardNo": "ECP01-047EN",
+    "name": "Satono Crown Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Umamusume",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Look at the top 4 cards of your deck. You may put up to 2 Umamusume cards from among them into your EX area. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-047EN.png"
+  },
+  {
+    "cardNo": "ECP01-048EN",
+    "name": "Mejiro Ramonu",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Umamusume / Mejiro Family",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[feed] [cost01]: Race this follower. [fanfare] Choose up to X, where X equals the number of Mejiro Family cards on your field. (1) Select an enemy follower on the field and banish it. (2) Give this follower Storm. (3) Give your leader [defense]+2. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-048EN.png"
+  },
+  {
+    "cardNo": "ECP01-049EN",
+    "name": "Jungle Pocket",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[feed] [cost01]: Race this follower. [fanfare] Discard an Umamusume card: Draw a card. If you discarded an Umamusume card that costs 7 or more, draw 2 instead. [act] [engage]: Select an enemy follower on the field and, if there are at least 3 Umamusume cards on your field, deal it 2 damage. If there are 5, deal 2 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-049EN.png"
+  },
+  {
+    "cardNo": "ECP01-050EN",
+    "name": "Wonder Acute",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[feed] [cost01]: Race this follower. On Race - Give this follower [attack]+1/[defense]+1. You may summon an Umamusume follower that costs 2 or less or Umamusume amulet that costs 2 or less from your hand. [fanfare] Draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-051EN",
+    "name": "Mejiro Ardan [Hopeful Petals Dancing in the Night]",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Umamusume / Mejiro Family",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "6",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[feed] [cost01]: Race this follower. On Race - Give this follower [attack]+1/[defense]+1. Search your deck for up to 2 Mejiro Family followers and/or Mejiro Family amulets that cost a total of 6 or less, summon them, then shuffle."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-052EN",
+    "name": "Matikanefukukitaru",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "7",
+      "attack": "7",
+      "defense": "7",
+      "effect": "[feed] [cost01]: Race this follower. Whenever a Fate's Forecast is put onto your field, give your leader [defense]+7. [fanfare] Shuffle your cemetery into your deck, then look at the top 7 cards. You may summon any number of cards named Fate's Forecast from among them. Put the rest on the bottom of your deck in any order. [lastwords] Shuffle this card into its owner's deck."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-053EN",
+    "name": "Mejiro Palmer [Moonlit Devil ♪]",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Umamusume / Mejiro Family",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "1",
+      "effect": "[feed] [cost01]: Race this follower. Storm. This card doesn't refresh during your start phase. At the start of your main phase, [cost01]: Refresh this card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-054EN",
+    "name": "Bring 'Em Home, Please!",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Umamusume / Mejiro Family",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Select an enemy follower on the field and deal it damage equal to 2 times the number of Mejiro Family cards on your field. Whenever a Mejiro McQueen is put onto your field, select an enemy follower on the field and deal it 3 damage. [lastwords] Select an unevolved Mejiro McQueen on your field and evolve it."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-055EN",
+    "name": "Progenitors and Guides",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "6",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Discard an Umamusume card: Recover 4 play points. [act] [engage]: Choose one. (1) Select an Umamusume follower that costs 5 or less in your cemetery and add it to your hand. (2) Select up to 2 faceup cards named Carrot in your evolve deck and turn them facedown. Gain 1 Evolution Point. (3) Give each other Umamusume follower on your field [attack]+1/[defense]+1."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-056EN",
+    "name": "Balliamo?",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Umamusume",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Search your deck for an Umamusume follower, reveal it, add it to your hand, then shuffle."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-057EN",
+    "name": "Ryoka Tsurugi",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Tracen Academy",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "6",
+      "attack": "2",
+      "defense": "4",
+      "effect": "[fanfare] You may summon an Umamusume follower from your hand and give it \"At the start of your end phase, return this card to its owner's hand.\" At the start of your end phase, select your leader or an Umamusume follower on your field and give it [defense]+2."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-058EN",
+    "name": "A Super Successful Event! Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Evolved",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": "You can put up to 10 of this card into your evolve deck."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-059EN",
+    "name": "Hungry for a Miracle Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Evolved",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": "You can put up to 10 of this card into your evolve deck."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-060EN",
+    "name": "At the End of the Day Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Evolved",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": "You can put up to 10 of this card into your evolve deck."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-061EN",
+    "name": "Forth! Into the Great Age of Agriculture! Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Evolved",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": "You can put up to 10 of this card into your evolve deck."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-062EN",
+    "name": "Workshop! Farmers for a Day! Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Evolved",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": "You can put up to 10 of this card into your evolve deck."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-P01EN",
+    "name": "Haru Urara [Sunny Passion ♪]",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold / Premium",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[feed] [cost01]: Race this follower. On Race - Give this follower [attack]+1/[defense]+1. Look at the top 5 cards of your deck. You may summon an Umamusume follower that costs 2 or less from among them. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-P01EN.png"
+  },
+  {
+    "cardNo": "ECP01-P02EN",
+    "name": "Yamanin Zephyr",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold / Premium",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[feed] [cost01]: Race this follower. Ward. [fanfare] Choose one. If this card was put onto the field by an Umamusume card's ability, choose up to 2 instead. (1) Select an enemy follower on the field and return it to its owner's hand. (2) Search your deck for an Umamusume follower that costs 2 or less, summon it, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-P02EN.png"
+  },
+  {
+    "cardNo": "ECP01-P03EN",
+    "name": "Sakura Bakushin O",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold / Premium",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[feed] [cost01]: Race this follower. Storm. Strike - If there are 3 or 4 Umamusume cards on your field, draw a card, then discard a card. If there are 5, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-P03EN.png"
+  },
+  {
+    "cardNo": "ECP01-P04EN",
+    "name": "Mihono Bourbon",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold / Premium",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[feed] [cost01]: Race this follower. [feed][feed] [cost02]: Race this follower 2 times. [feed][feed][feed] [cost03]: Race this follower 3 times. On Race - Select up to 1 enemy follower on the field and deal it 3 damage. Give this follower [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-P04EN.png"
+  },
+  {
+    "cardNo": "ECP01-P05EN",
+    "name": "A MORE MARVELOUS WORLD! ☆",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Amulet",
+      "trait": "Umamusume",
+      "rarity": "Gold / Premium",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Look at the top card of your deck. If it's an Umamusume card, you may reveal it and add it to your hand. [act] [cost02], [engage], bury this card: Give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-P05EN.png"
+  },
+  {
+    "cardNo": "ECP01-P06EN",
+    "name": "Aston Machan",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold / Premium",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[feed] [cost01]: Race this follower. On Race - Select up to 1 enemy follower on the field and deal it 4 damage. Give this follower [attack]+1/[defense]+1 and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-P06EN.png"
+  },
+  {
+    "cardNo": "ECP01-P07EN",
+    "name": "Symboli Kris S",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold / Premium",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[feed] [cost01]: Race this follower. Storm. [act] [engage] 4 other Umamusume cards on your field: Give this follower [attack]+5."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-P07EN.png"
+  },
+  {
+    "cardNo": "ECP01-P08EN",
+    "name": "Tap Dance City",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold / Premium",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[feed] [cost01]: Race this follower. [fanfare] Search your deck for a 1-cost Umamusume follower, summon it, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-P08EN.png"
+  },
+  {
+    "cardNo": "ECP01-P09EN",
+    "name": "Biwa Hayahide",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume / BNW",
+      "rarity": "Gold / Premium",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[feed] [cost01]: Race this follower. Ward. On Race - Give this follower [attack]+1/[defense]+1. Search your deck for up to 3 BNW cards with different names, put them into your EX area, then shuffle. They cost 3 less to play this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-P09EN.png"
+  },
+  {
+    "cardNo": "ECP01-P10EN",
+    "name": "Teio-Oo-Oo!!!",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Umamusume",
+      "rarity": "Gold / Premium",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Look at the top 7 cards of your deck. You may summon an Umamusume follower that costs 5 or less from among them. Put the rest on the bottom of your deck in any order. If you summoned a Tokai Teio, look at the top 7 cards of your deck. You may summon an Umamusume follower that costs 4 or less from among them. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-P10EN.png"
+  },
+  {
+    "cardNo": "ECP01-P11EN",
+    "name": "Verxina",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold / Premium",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[feed] [cost01]: Race this follower. Ward. [fanfare] Discard an Umamusume card: Deal 2 damage to each enemy leader. Give your leader [defense]+2. Draw 2 cards. Whenever a Cheval Grand or Vivlos is put onto your field, select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-P11EN.png"
+  },
+  {
+    "cardNo": "ECP01-P12EN",
+    "name": "Vivlos",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold / Premium",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "3",
+      "attack": "5",
+      "defense": "2",
+      "effect": "This card costs 2 less to play if there's a Cheval Grand or Verxina on your field. ---------- [feed] [cost01]: Race this follower. Rush. Assail."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-P12EN.png"
+  },
+  {
+    "cardNo": "ECP01-P13EN",
+    "name": "Daitaku Helios",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold / Premium",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[feed] [cost01]: Race this follower. [fanfare] Select an enemy follower on the field and deal it 1 damage. If there's an Umamusume card that costs 4 or more on your field, deal 3 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-P13EN.png"
+  },
+  {
+    "cardNo": "ECP01-P14EN",
+    "name": "Sweep Tosho",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold / Premium",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "2",
+      "attack": "0",
+      "defense": "1",
+      "effect": "This card costs 2 less to play if there are at least 5 Umamusume spells in your cemetery. ---------- [feed] [cost01]: Race this follower. [fanfare] Select a 1-cost Umamusume spell in your cemetery and put it into your EX area. It costs 1 less to play this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-P14EN.png"
+  },
+  {
+    "cardNo": "ECP01-P15EN",
+    "name": "Lucky Star in the Sky",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Umamusume",
+      "rarity": "Gold / Premium",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Look at the top card of your deck. If it's an Umamusume card, you may reveal it and add it to your hand. If there are at least 5 Umamusume spells in your cemetery, give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-P15EN.png"
+  },
+  {
+    "cardNo": "ECP01-P16EN",
+    "name": "Super Creek [Piece of Mind]",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold / Premium",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "5",
+      "effect": "[feed] [cost01]: Race this follower. Ward. [fanfare] Give your leader [defense]+3. If Overflow is active for you, increase your max play points by 1. [act] [engage]: Select an Umamusume card that costs 7 or more in your cemetery and add it to your hand. Activate only if Overflow is active for you."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-P16EN.png"
+  },
+  {
+    "cardNo": "ECP01-P17EN",
+    "name": "Tsurumaru Tsuyoshi",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold / Premium",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[feed] [cost01]: Race this follower. [fanfare] Select an enemy follower on the field and deal it damage equal to the number of faceup cards named Carrot in your evolve deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-P17EN.png"
+  },
+  {
+    "cardNo": "ECP01-P18EN",
+    "name": "El Condor Pasa",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold / Premium",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "7",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[feed] [cost01]: Race this follower. Storm. [fanfare] Search your deck for a Champion's Passion, summon it, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-P18EN.png"
+  },
+  {
+    "cardNo": "ECP01-P19EN",
+    "name": "Nishino Flower",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold / Premium",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[feed] [cost01]: Race this follower. On Race - Give this follower [attack]+1/[defense]+1. Search your deck for a Seiun Sky, summon it, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-P19EN.png"
+  },
+  {
+    "cardNo": "ECP01-P20EN",
+    "name": "Pious Flame, Heavens Scorcher",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Umamusume",
+      "rarity": "Gold / Premium",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "When playing this card, discard an Umamusume card: This card costs 2 less to play. ---------- Select an enemy follower on the field. Deal it 5 damage and, if you discarded an Umamusume card that costs 7 or more when playing this card, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-P20EN.png"
+  },
+  {
+    "cardNo": "ECP01-P21EN",
+    "name": "Matikanetannhauser [Machitan☆Adventure]",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold / Premium",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[feed] [cost01]: Race this follower. On Race - Select up to 1 Umamusume follower that costs 3 or less in your cemetery and summon it. Give this follower [attack]+1/[defense]+1. [fanfare] Bury the top card of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-P21EN.png"
+  },
+  {
+    "cardNo": "ECP01-P22EN",
+    "name": "K.S.Miracle",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold / Premium",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "2",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[feed] [cost01]: Race this follower. Ward. At the start of your main phase, destroy this card. [lastwords] Discard an Umamusume card: Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-P22EN.png"
+  },
+  {
+    "cardNo": "ECP01-P23EN",
+    "name": "Air Shakur",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold / Premium",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[feed] [cost01]: Race this follower. While there are at least 20 Umamusume cards in your cemetery, this follower has Storm and \"Strike - Give this follower [attack]+3/[defense]+3.\" On Race - Select up to 1 enemy follower on the field and deal it 3 damage. Give this follower [attack]+1/[defense]+1 and bury the top 2 cards of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-P23EN.png"
+  },
+  {
+    "cardNo": "ECP01-P24EN",
+    "name": "Manhattan Cafe",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold / Premium",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[feed] [cost01]: Race this follower. [fanfare] Bury the top card of your deck. [act] [engage], bury this card: Select a 2-cost Umamusume follower in your cemetery and summon it. Activate only if there are at least 10 Umamusume cards in your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-P24EN.png"
+  },
+  {
+    "cardNo": "ECP01-P25EN",
+    "name": "TT Ignition!",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Umamusume",
+      "rarity": "Gold / Premium",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Bury the top 4 cards of your deck. Deal damage to each follower on the field equal to the number of Umamusume cards buried this way."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-P25EN.png"
+  },
+  {
+    "cardNo": "ECP01-P26EN",
+    "name": "Wonder Acute",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold / Premium",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[feed] [cost01]: Race this follower. On Race - Give this follower [attack]+1/[defense]+1. You may summon an Umamusume follower that costs 2 or less or Umamusume amulet that costs 2 or less from your hand. [fanfare] Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-P26EN.png"
+  },
+  {
+    "cardNo": "ECP01-P27EN",
+    "name": "Mejiro Ardan [Hopeful Petals Dancing in the Night]",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Umamusume / Mejiro Family",
+      "rarity": "Gold / Premium",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "6",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[feed] [cost01]: Race this follower. On Race - Give this follower [attack]+1/[defense]+1. Search your deck for up to 2 Mejiro Family followers and/or Mejiro Family amulets that cost a total of 6 or less, summon them, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-P27EN.png"
+  },
+  {
+    "cardNo": "ECP01-P28EN",
+    "name": "Matikanefukukitaru",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Gold / Premium",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "7",
+      "attack": "7",
+      "defense": "7",
+      "effect": "[feed] [cost01]: Race this follower. Whenever a Fate's Forecast is put onto your field, give your leader [defense]+7. [fanfare] Shuffle your cemetery into your deck, then look at the top 7 cards. You may summon any number of cards named Fate's Forecast from among them. Put the rest on the bottom of your deck in any order. [lastwords] Shuffle this card into its owner's deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-P28EN.png"
+  },
+  {
+    "cardNo": "ECP01-P29EN",
+    "name": "Mejiro Palmer [Moonlit Devil ♪]",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Umamusume / Mejiro Family",
+      "rarity": "Gold / Premium",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "1",
+      "effect": "[feed] [cost01]: Race this follower. Storm. This card doesn't refresh during your start phase. At the start of your main phase, [cost01]: Refresh this card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-P29EN.png"
+  },
+  {
+    "cardNo": "ECP01-P30EN",
+    "name": "Bring 'Em Home, Please!",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Umamusume / Mejiro Family",
+      "rarity": "Gold / Premium",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Select an enemy follower on the field and deal it damage equal to 2 times the number of Mejiro Family cards on your field. Whenever a Mejiro McQueen is put onto your field, select an enemy follower on the field and deal it 3 damage. [lastwords] Select an unevolved Mejiro McQueen on your field and evolve it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-P30EN.png"
+  },
+  {
+    "cardNo": "ECP01-P31EN",
+    "name": "Ryoka Tsurugi",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Tracen Academy",
+      "rarity": "Gold / Premium",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "6",
+      "attack": "2",
+      "defense": "4",
+      "effect": "[fanfare] You may summon an Umamusume follower from your hand and give it \"At the start of your end phase, return this card to its owner's hand.\" At the start of your end phase, select your leader or an Umamusume follower on your field and give it [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-P31EN.png"
+  },
+  {
+    "cardNo": "ECP01-SL01EN",
+    "name": "Hokko Tarumae",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Super Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "4",
+      "attack": "2",
+      "defense": "2",
+      "effect": "This card costs X less to play. X equals the number of Umamusume cards on your field. ---------- [evolve] [cost01]: Evolve this follower. [feed] [cost01]: Race this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SL01EN.png"
+  },
+  {
+    "cardNo": "ECP01-SL02EN",
+    "name": "Hokko Tarumae Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Umamusume",
+      "rarity": "Super Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SL02EN.png"
+  },
+  {
+    "cardNo": "ECP01-SL03EN",
+    "name": "Sakura Laurel",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Super Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[feed] [cost01]: Race this follower. [fanfare] Select an enemy follower on the field and, if there's another Umamusume card on your field, deal it 4 damage. [act] [engage]: Give this follower [attack]+2/[defense]+2 and Ward. Give your leader [defense]+2. Activate only if there are 5 Umamusume cards on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SL03EN.png"
+  },
+  {
+    "cardNo": "ECP01-SL04EN",
+    "name": "Sounds of Earth",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Super Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "9",
+      "attack": "3",
+      "defense": "2",
+      "effect": "This card costs X less to play. X equals 2 times the number of Umamusume cards on your field. ---------- [feed] [cost01]: Race this follower. [fanfare] Return an Umamusume card not named Sounds of Earth from your field to its owner's hand: Select an enemy follower on the field and deal it 5 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SL04EN.png"
+  },
+  {
+    "cardNo": "ECP01-SL05EN",
+    "name": "Gentildonna",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Super Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "7",
+      "attack": "6",
+      "defense": "6",
+      "effect": "[evolve] [cost01]: Evolve this follower. [feed] [cost01]: Race this follower. Your opponents' [fanfare] and On Evolve abilities don't trigger."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SL05EN.png"
+  },
+  {
+    "cardNo": "ECP01-SL06EN",
+    "name": "Gentildonna Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Umamusume",
+      "rarity": "Super Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "-",
+      "attack": "7",
+      "defense": "7",
+      "effect": "Your opponents' [fanfare] and On Evolve abilities don't trigger. On Evolve - Deal 7 damage to each other follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SL06EN.png"
+  },
+  {
+    "cardNo": "ECP01-SL07EN",
+    "name": "Symboli Rudolf [Enchaînement]",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Super Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[feed] [cost01]: Race this follower. [feed][feed] [cost02]: Race this follower 2 times. [feed][feed][feed] [cost03]: Race this follower 3 times. On Race - Give this follower [attack]+1/[defense]+1. Look at the top 3 cards of your deck. You may summon an Umamusume follower that costs 3 or less from among them. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SL07EN.png"
+  },
+  {
+    "cardNo": "ECP01-SL08EN",
+    "name": "Sirius Symboli [Escorte Étoile]",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Super Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[feed] [cost01]: Race this follower. Storm. Intimidate. [fanfare] If there are at least 3 Umamusume cards on your field, give this follower [defense]+1 and \"Strike - Draw a card. Discard a card.\""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SL08EN.png"
+  },
+  {
+    "cardNo": "ECP01-SL09EN",
+    "name": "Cheval Grand",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Super Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [feed] [cost01]: Race this follower. [fanfare] Select a faceup Carrot in your evolve deck and, if there are at least 10 Umamusume cards in your cemetery, turn it facedown."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SL09EN.png"
+  },
+  {
+    "cardNo": "ECP01-SL10EN",
+    "name": "Cheval Grand Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Umamusume",
+      "rarity": "Super Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage. If there are at least 10 Umamusume cards in your cemetery, deal 4 damage instead. Twice on each of your turns, when an enemy follower that took damage this turn from an Umamusume card you control is put from the field into the cemetery, draw a card, then discard a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SL10EN.png"
+  },
+  {
+    "cardNo": "ECP01-SL11EN",
+    "name": "Tanino Gimlet",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Super Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[feed] [cost01]: Race this follower. On Race - Select up to 1 enemy follower on the field and deal it 4 damage. Give this follower [attack]+1/[defense]+1. [fanfare] Search your deck for a Vodka and 1-cost Umamusume spell, reveal them, add them to your hand, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SL11EN.png"
+  },
+  {
+    "cardNo": "ECP01-SL12EN",
+    "name": "Narita Top Road [Peachy Silhouette]",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Super Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[feed] [cost01]: Race this follower. Storm. On Race - Give this follower [attack]+1/[defense]+1. Strike - Banish 3 Umamusume followers with Storm from your cemetery: Deal each enemy follower on the field damage equal to this follower's attack."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SL12EN.png"
+  },
+  {
+    "cardNo": "ECP01-SL13EN",
+    "name": "Neo Universe",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Super Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost02]: Evolve this follower. [feed] [cost01]: Race this follower. [fanfare] Select an enemy follower on the field. If Overflow is active for you, deal it 4 damage and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SL13EN.png"
+  },
+  {
+    "cardNo": "ECP01-SL14EN",
+    "name": "Neo Universe Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Umamusume",
+      "rarity": "Super Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Choose one. (1) Discard an Umamusume card: Increase your max play points by 1. (2) Discard 3 Umamusume cards: Increase your max play points by 2. At the start of your end phase, select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SL14EN.png"
+  },
+  {
+    "cardNo": "ECP01-SL15EN",
+    "name": "Mr. C.B.",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Super Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[feed] [cost01]: Race this follower. On Race - Give this follower [attack]+1/[defense]+1. Refresh it. Draw a card. [act] [engage], discard an Umamusume card: Select an enemy follower on the field. Deal it 5 damage and, if you discarded an Umamusume card that costs 7 or more, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SL15EN.png"
+  },
+  {
+    "cardNo": "ECP01-SL16EN",
+    "name": "Katsuragi Ace",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Super Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "7",
+      "attack": "5",
+      "defense": "4",
+      "effect": "When this card is discarded by the ability of an Umamusume card you control, if Overflow is active for you, [cost03]: Summon this card. ---------- [feed] [cost01]: Race this follower. Storm. [fanfare] Select an enemy follower on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SL16EN.png"
+  },
+  {
+    "cardNo": "ECP01-SL17EN",
+    "name": "Hishi Miracle",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Super Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [feed] [cost01]: Race this follower. [fanfare] Bury the top 2 cards of your deck. If their base costs are the same, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SL17EN.png"
+  },
+  {
+    "cardNo": "ECP01-SL18EN",
+    "name": "Hishi Miracle Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Umamusume",
+      "rarity": "Super Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "At the start of your end phase, if there are at least 9 faceup cards named Carrot in your evolve deck, each opponent buries the top 20 cards of their deck. On Evolve - Discard 2 Umamusume cards: Draw 2 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SL18EN.png"
+  },
+  {
+    "cardNo": "ECP01-SL19EN",
+    "name": "Daiichi Ruby",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Super Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "6",
+      "attack": "2",
+      "defense": "4",
+      "effect": "[feed] [cost01]: Race this follower. [fanfare] Select up to 1 Umamusume follower that costs 4 or less and up to 1 Umamusume follower that costs 2 or less in your cemetery and summon them engaged. Whenever another Umamusume follower is put from your field into the cemetery, deal 1 damage to each enemy leader and give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SL19EN.png"
+  },
+  {
+    "cardNo": "ECP01-SL20EN",
+    "name": "Duramente",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Super Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[feed] [cost01]: Race this follower. On Race - Give this follower [attack]+1/[defense]+1. If there are at least 10 Umamusume cards in your cemetery, recover 3 play points. [fanfare] Select an enemy follower on the field. Destroy it, deal 2 damage to its leader, give your leader [defense]+2, and bury the top 2 cards of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SL20EN.png"
+  },
+  {
+    "cardNo": "ECP01-SL21EN",
+    "name": "Satono Crown",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Super Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [feed] [cost01]: Race this follower. [fanfare] Select an enemy leader. If your leader has less defense than it, give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SL21EN.png"
+  },
+  {
+    "cardNo": "ECP01-SL22EN",
+    "name": "Satono Crown Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Umamusume",
+      "rarity": "Super Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Look at the top 4 cards of your deck. You may put up to 2 Umamusume cards from among them into your EX area. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SL22EN.png"
+  },
+  {
+    "cardNo": "ECP01-SL23EN",
+    "name": "Mejiro Ramonu",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Umamusume / Mejiro Family",
+      "rarity": "Super Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[feed] [cost01]: Race this follower. [fanfare] Choose up to X, where X equals the number of Mejiro Family cards on your field. (1) Select an enemy follower on the field and banish it. (2) Give this follower Storm. (3) Give your leader [defense]+2. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SL23EN.png"
+  },
+  {
+    "cardNo": "ECP01-SL24EN",
+    "name": "Jungle Pocket",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Super Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[feed] [cost01]: Race this follower. [fanfare] Discard an Umamusume card: Draw a card. If you discarded an Umamusume card that costs 7 or more, draw 2 instead. [act] [engage]: Select an enemy follower on the field and, if there are at least 3 Umamusume cards on your field, deal it 2 damage. If there are 5, deal 2 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SL24EN.png"
+  },
+  {
+    "cardNo": "ECP01-SL25EN",
+    "name": "Progenitors and Guides",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Super Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "6",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Discard an Umamusume card: Recover 4 play points. [act] [engage]: Choose one. (1) Select an Umamusume follower that costs 5 or less in your cemetery and add it to your hand. (2) Select up to 2 faceup cards named Carrot in your evolve deck and turn them facedown. Gain 1 Evolution Point. (3) Give each other Umamusume follower on your field [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SL25EN.png"
+  },
+  {
+    "cardNo": "ECP01-SL26EN",
+    "name": "Balliamo?",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Umamusume",
+      "rarity": "Super Legendary",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Search your deck for an Umamusume follower, reveal it, add it to your hand, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SL26EN.png"
+  },
+  {
+    "cardNo": "ECP01-SL27EN",
+    "name": "A Super Successful Event! Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Evolved",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": "You can put up to 10 of this card into your evolve deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SL27EN.png"
+  },
+  {
+    "cardNo": "ECP01-SL28EN",
+    "name": "Hungry for a Miracle Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Evolved",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": "You can put up to 10 of this card into your evolve deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SL28EN.png"
+  },
+  {
+    "cardNo": "ECP01-SL29EN",
+    "name": "At the End of the Day Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Evolved",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": "You can put up to 10 of this card into your evolve deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SL29EN.png"
+  },
+  {
+    "cardNo": "ECP01-SL30EN",
+    "name": "Forth! Into the Great Age of Agriculture! Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Evolved",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": "You can put up to 10 of this card into your evolve deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SL30EN.png"
+  },
+  {
+    "cardNo": "ECP01-SL31EN",
+    "name": "Workshop! Farmers for a Day! Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Evolved",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": "You can put up to 10 of this card into your evolve deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SL31EN.png"
+  },
+  {
+    "cardNo": "ECP01-SP01EN",
+    "name": "Hokko Tarumae",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "4",
+      "attack": "2",
+      "defense": "2",
+      "effect": "This card costs X less to play. X equals the number of Umamusume cards on your field. ---------- [evolve] [cost01]: Evolve this follower. [feed] [cost01]: Race this follower."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-SP02EN",
+    "name": "Hokko Tarumae Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Umamusume",
+      "rarity": "Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-SP03EN",
+    "name": "Sakura Laurel",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[feed] [cost01]: Race this follower. [fanfare] Select an enemy follower on the field and, if there's another Umamusume card on your field, deal it 4 damage. [act] [engage]: Give this follower [attack]+2/[defense]+2 and Ward. Give your leader [defense]+2. Activate only if there are 5 Umamusume cards on your field."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-SP04EN",
+    "name": "Sounds of Earth",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "9",
+      "attack": "3",
+      "defense": "2",
+      "effect": "This card costs X less to play. X equals 2 times the number of Umamusume cards on your field. ---------- [feed] [cost01]: Race this follower. [fanfare] Return an Umamusume card not named Sounds of Earth from your field to its owner's hand: Select an enemy follower on the field and deal it 5 damage."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-SP05EN",
+    "name": "Gentildonna",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "7",
+      "attack": "6",
+      "defense": "6",
+      "effect": "[evolve] [cost01]: Evolve this follower. [feed] [cost01]: Race this follower. Your opponents' [fanfare] and On Evolve abilities don't trigger."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-SP06EN",
+    "name": "Gentildonna Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Umamusume",
+      "rarity": "Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "-",
+      "attack": "7",
+      "defense": "7",
+      "effect": "Your opponents' [fanfare] and On Evolve abilities don't trigger. On Evolve - Deal 7 damage to each other follower on the field."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-SP07EN",
+    "name": "Symboli Rudolf [Enchaînement]",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[feed] [cost01]: Race this follower. [feed][feed] [cost02]: Race this follower 2 times. [feed][feed][feed] [cost03]: Race this follower 3 times. On Race - Give this follower [attack]+1/[defense]+1. Look at the top 3 cards of your deck. You may summon an Umamusume follower that costs 3 or less from among them. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-SP08EN",
+    "name": "Sirius Symboli [Escorte Étoile]",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[feed] [cost01]: Race this follower. Storm. Intimidate. [fanfare] If there are at least 3 Umamusume cards on your field, give this follower [defense]+1 and \"Strike - Draw a card. Discard a card.\""
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-SP09EN",
+    "name": "Cheval Grand",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [feed] [cost01]: Race this follower. [fanfare] Select a faceup Carrot in your evolve deck and, if there are at least 10 Umamusume cards in your cemetery, turn it facedown."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-SP10EN",
+    "name": "Cheval Grand Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Umamusume",
+      "rarity": "Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage. If there are at least 10 Umamusume cards in your cemetery, deal 4 damage instead. Twice on each of your turns, when an enemy follower that took damage this turn from an Umamusume card you control is put from the field into the cemetery, draw a card, then discard a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-SP11EN",
+    "name": "Tanino Gimlet",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[feed] [cost01]: Race this follower. On Race - Select up to 1 enemy follower on the field and deal it 4 damage. Give this follower [attack]+1/[defense]+1. [fanfare] Search your deck for a Vodka and 1-cost Umamusume spell, reveal them, add them to your hand, then shuffle."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-SP12EN",
+    "name": "Narita Top Road [Peachy Silhouette]",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[feed] [cost01]: Race this follower. Storm. On Race - Give this follower [attack]+1/[defense]+1. Strike - Banish 3 Umamusume followers with Storm from your cemetery: Deal each enemy follower on the field damage equal to this follower's attack."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-SP13EN",
+    "name": "Neo Universe",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost02]: Evolve this follower. [feed] [cost01]: Race this follower. [fanfare] Select an enemy follower on the field. If Overflow is active for you, deal it 4 damage and draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-SP14EN",
+    "name": "Neo Universe Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Umamusume",
+      "rarity": "Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Choose one. (1) Discard an Umamusume card: Increase your max play points by 1. (2) Discard 3 Umamusume cards: Increase your max play points by 2. At the start of your end phase, select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-SP15EN",
+    "name": "Mr. C.B.",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[feed] [cost01]: Race this follower. On Race - Give this follower [attack]+1/[defense]+1. Refresh it. Draw a card. [act] [engage], discard an Umamusume card: Select an enemy follower on the field. Deal it 5 damage and, if you discarded an Umamusume card that costs 7 or more, draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-SP16EN",
+    "name": "Katsuragi Ace",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "7",
+      "attack": "5",
+      "defense": "4",
+      "effect": "When this card is discarded by the ability of an Umamusume card you control, if Overflow is active for you, [cost03]: Summon this card. ---------- [feed] [cost01]: Race this follower. Storm. [fanfare] Select an enemy follower on the field and destroy it."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-SP17EN",
+    "name": "Hishi Miracle",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [feed] [cost01]: Race this follower. [fanfare] Bury the top 2 cards of your deck. If their base costs are the same, draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-SP18EN",
+    "name": "Hishi Miracle Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Umamusume",
+      "rarity": "Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "At the start of your end phase, if there are at least 9 faceup cards named Carrot in your evolve deck, each opponent buries the top 20 cards of their deck. On Evolve - Discard 2 Umamusume cards: Draw 2 cards."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-SP19EN",
+    "name": "Daiichi Ruby",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "6",
+      "attack": "2",
+      "defense": "4",
+      "effect": "[feed] [cost01]: Race this follower. [fanfare] Select up to 1 Umamusume follower that costs 4 or less and up to 1 Umamusume follower that costs 2 or less in your cemetery and summon them engaged. Whenever another Umamusume follower is put from your field into the cemetery, deal 1 damage to each enemy leader and give your leader [defense]+1."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-SP20EN",
+    "name": "Duramente",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[feed] [cost01]: Race this follower. On Race - Give this follower [attack]+1/[defense]+1. If there are at least 10 Umamusume cards in your cemetery, recover 3 play points. [fanfare] Select an enemy follower on the field. Destroy it, deal 2 damage to its leader, give your leader [defense]+2, and bury the top 2 cards of your deck."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-SP21EN",
+    "name": "Satono Crown",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [feed] [cost01]: Race this follower. [fanfare] Select an enemy leader. If your leader has less defense than it, give your leader [defense]+2."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-SP22EN",
+    "name": "Satono Crown Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Umamusume",
+      "rarity": "Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Look at the top 4 cards of your deck. You may put up to 2 Umamusume cards from among them into your EX area. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-SP23EN",
+    "name": "Mejiro Ramonu",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Umamusume / Mejiro Family",
+      "rarity": "Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[feed] [cost01]: Race this follower. [fanfare] Choose up to X, where X equals the number of Mejiro Family cards on your field. (1) Select an enemy follower on the field and banish it. (2) Give this follower Storm. (3) Give your leader [defense]+2. Draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-SP24EN",
+    "name": "Jungle Pocket",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[feed] [cost01]: Race this follower. [fanfare] Discard an Umamusume card: Draw a card. If you discarded an Umamusume card that costs 7 or more, draw 2 instead. [act] [engage]: Select an enemy follower on the field and, if there are at least 3 Umamusume cards on your field, deal it 2 damage. If there are 5, deal 2 damage to its leader."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP01-SSP01EN",
+    "name": "Hokko Tarumae",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Super Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "4",
+      "attack": "2",
+      "defense": "2",
+      "effect": "This card costs X less to play. X equals the number of Umamusume cards on your field. ---------- [evolve] [cost01]: Evolve this follower. [feed] [cost01]: Race this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SSP01EN.png"
+  },
+  {
+    "cardNo": "ECP01-SSP02EN",
+    "name": "Hokko Tarumae Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Umamusume",
+      "rarity": "Super Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SSP02EN.png"
+  },
+  {
+    "cardNo": "ECP01-SSP03EN",
+    "name": "Sakura Laurel",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Super Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[feed] [cost01]: Race this follower. [fanfare] Select an enemy follower on the field and, if there's another Umamusume card on your field, deal it 4 damage. [act] [engage]: Give this follower [attack]+2/[defense]+2 and Ward. Give your leader [defense]+2. Activate only if there are 5 Umamusume cards on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SSP03EN.png"
+  },
+  {
+    "cardNo": "ECP01-SSP04EN",
+    "name": "Sounds of Earth",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Super Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "9",
+      "attack": "3",
+      "defense": "2",
+      "effect": "This card costs X less to play. X equals 2 times the number of Umamusume cards on your field. ---------- [feed] [cost01]: Race this follower. [fanfare] Return an Umamusume card not named Sounds of Earth from your field to its owner's hand: Select an enemy follower on the field and deal it 5 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SSP04EN.png"
+  },
+  {
+    "cardNo": "ECP01-SSP05EN",
+    "name": "Gentildonna",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Super Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "7",
+      "attack": "6",
+      "defense": "6",
+      "effect": "[evolve] [cost01]: Evolve this follower. [feed] [cost01]: Race this follower. Your opponents' [fanfare] and On Evolve abilities don't trigger."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SSP05EN.png"
+  },
+  {
+    "cardNo": "ECP01-SSP06EN",
+    "name": "Gentildonna Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Umamusume",
+      "rarity": "Super Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "-",
+      "attack": "7",
+      "defense": "7",
+      "effect": "Your opponents' [fanfare] and On Evolve abilities don't trigger. On Evolve - Deal 7 damage to each other follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SSP06EN.png"
+  },
+  {
+    "cardNo": "ECP01-SSP07EN",
+    "name": "Symboli Rudolf [Enchaînement]",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Super Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[feed] [cost01]: Race this follower. [feed][feed] [cost02]: Race this follower 2 times. [feed][feed][feed] [cost03]: Race this follower 3 times. On Race - Give this follower [attack]+1/[defense]+1. Look at the top 3 cards of your deck. You may summon an Umamusume follower that costs 3 or less from among them. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SSP07EN.png"
+  },
+  {
+    "cardNo": "ECP01-SSP08EN",
+    "name": "Sirius Symboli [Escorte Étoile]",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Super Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[feed] [cost01]: Race this follower. Storm. Intimidate. [fanfare] If there are at least 3 Umamusume cards on your field, give this follower [defense]+1 and \"Strike - Draw a card. Discard a card.\""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SSP08EN.png"
+  },
+  {
+    "cardNo": "ECP01-SSP09EN",
+    "name": "Cheval Grand",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Super Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [feed] [cost01]: Race this follower. [fanfare] Select a faceup Carrot in your evolve deck and, if there are at least 10 Umamusume cards in your cemetery, turn it facedown."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SSP09EN.png"
+  },
+  {
+    "cardNo": "ECP01-SSP10EN",
+    "name": "Cheval Grand Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Umamusume",
+      "rarity": "Super Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage. If there are at least 10 Umamusume cards in your cemetery, deal 4 damage instead. Twice on each of your turns, when an enemy follower that took damage this turn from an Umamusume card you control is put from the field into the cemetery, draw a card, then discard a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SSP10EN.png"
+  },
+  {
+    "cardNo": "ECP01-SSP11EN",
+    "name": "Tanino Gimlet",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Super Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[feed] [cost01]: Race this follower. On Race - Select up to 1 enemy follower on the field and deal it 4 damage. Give this follower [attack]+1/[defense]+1. [fanfare] Search your deck for a Vodka and 1-cost Umamusume spell, reveal them, add them to your hand, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SSP11EN.png"
+  },
+  {
+    "cardNo": "ECP01-SSP12EN",
+    "name": "Narita Top Road [Peachy Silhouette]",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Super Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[feed] [cost01]: Race this follower. Storm. On Race - Give this follower [attack]+1/[defense]+1. Strike - Banish 3 Umamusume followers with Storm from your cemetery: Deal each enemy follower on the field damage equal to this follower's attack."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SSP12EN.png"
+  },
+  {
+    "cardNo": "ECP01-SSP13EN",
+    "name": "Neo Universe",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Super Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost02]: Evolve this follower. [feed] [cost01]: Race this follower. [fanfare] Select an enemy follower on the field. If Overflow is active for you, deal it 4 damage and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SSP13EN.png"
+  },
+  {
+    "cardNo": "ECP01-SSP14EN",
+    "name": "Neo Universe Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Umamusume",
+      "rarity": "Super Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Choose one. (1)?Discard an Umamusume card: Increase your max play points by 1. (2)?Discard 3 Umamusume cards: Increase your max play points by 2. At the start of your end phase, select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SSP14EN.png"
+  },
+  {
+    "cardNo": "ECP01-SSP15EN",
+    "name": "Mr. C.B.",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Super Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[feed] [cost01]: Race this follower. On Race - Give this follower [attack]+1/[defense]+1. Refresh it. Draw a card. [act] [engage], discard an Umamusume card: Select an enemy follower on the field. Deal it 5 damage and, if you discarded an Umamusume card that costs 7 or more, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SSP15EN.png"
+  },
+  {
+    "cardNo": "ECP01-SSP16EN",
+    "name": "Katsuragi Ace",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Super Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "7",
+      "attack": "5",
+      "defense": "4",
+      "effect": "When this card is discarded by the ability of an Umamusume card you control, if Overflow is active for you, [cost03]: Summon this card. ---------- [feed] [cost01]: Race this follower. Storm. [fanfare] Select an enemy follower on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SSP16EN.png"
+  },
+  {
+    "cardNo": "ECP01-SSP17EN",
+    "name": "Hishi Miracle",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Super Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [feed] [cost01]: Race this follower. [fanfare] Bury the top 2 cards of your deck. If their base costs are the same, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SSP17EN.png"
+  },
+  {
+    "cardNo": "ECP01-SSP18EN",
+    "name": "Hishi Miracle Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Umamusume",
+      "rarity": "Super Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "At the start of your end phase, if there are at least 9 faceup cards named Carrot in your evolve deck, each opponent buries the top 20 cards of their deck. On Evolve - Discard 2 Umamusume cards: Draw 2 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SSP18EN.png"
+  },
+  {
+    "cardNo": "ECP01-SSP19EN",
+    "name": "Daiichi Ruby",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Super Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "6",
+      "attack": "2",
+      "defense": "4",
+      "effect": "[feed] [cost01]: Race this follower. [fanfare] Select up to 1 Umamusume follower that costs 4 or less and up to 1 Umamusume follower that costs 2 or less in your cemetery and summon them engaged. Whenever another Umamusume follower is put from your field into the cemetery, deal 1 damage to each enemy leader and give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SSP19EN.png"
+  },
+  {
+    "cardNo": "ECP01-SSP20EN",
+    "name": "Duramente",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Super Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[feed] [cost01]: Race this follower. On Race - Give this follower [attack]+1/[defense]+1. If there are at least 10 Umamusume cards in your cemetery, recover 3 play points. [fanfare] Select an enemy follower on the field. Destroy it, deal 2 damage to its leader, give your leader [defense]+2, and bury the top 2 cards of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SSP20EN.png"
+  },
+  {
+    "cardNo": "ECP01-SSP21EN",
+    "name": "Satono Crown",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Super Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [feed] [cost01]: Race this follower. [fanfare] Select an enemy leader. If your leader has less defense than it, give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SSP21EN.png"
+  },
+  {
+    "cardNo": "ECP01-SSP22EN",
+    "name": "Satono Crown Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Umamusume",
+      "rarity": "Super Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Look at the top 4 cards of your deck. You may put up to 2 Umamusume cards from among them into your EX area. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SSP22EN.png"
+  },
+  {
+    "cardNo": "ECP01-SSP23EN",
+    "name": "Mejiro Ramonu",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Umamusume / Mejiro Family",
+      "rarity": "Super Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[feed] [cost01]: Race this follower. [fanfare] Choose up to X, where X equals the number of Mejiro Family cards on your field. (1) Select an enemy follower on the field and banish it. (2) Give this follower Storm. (3) Give your leader [defense]+2. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SSP23EN.png"
+  },
+  {
+    "cardNo": "ECP01-SSP24EN",
+    "name": "Jungle Pocket",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Umamusume",
+      "rarity": "Super Special",
+      "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[feed] [cost01]: Race this follower. [fanfare] Discard an Umamusume card: Draw a card. If you discarded an Umamusume card that costs 7 or more, draw 2 instead. [act] [engage]: Select an enemy follower on the field and, if there are at least 3 Umamusume cards on your field, deal it 2 damage. If there are 5, deal 2 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP01/ECP01-SSP24EN.png"
+  }
+]

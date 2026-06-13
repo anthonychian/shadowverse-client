@@ -21,14 +21,19 @@ import {
   Button, TextField, Dialog, DialogActions, DialogContent, DialogContentText,
   DialogTitle, Snackbar, SnackbarContent, IconButton,
 } from "@mui/material";
-import { matchesFilters, hasActiveFilters, getCost } from "../decks/cardDetails";
+import { matchesFilters, hasActiveFilters, getCost, getDetails } from "../decks/cardDetails";
+import cardPrintings from "../decks/cardPrintings.json";
 import FilterBar from "../components/deckbuilder/FilterBar";
 import CardGrid from "../components/deckbuilder/CardGrid";
 import CardInspector from "../components/deckbuilder/CardInspector";
 import DeckPanel from "../components/deckbuilder/DeckPanel";
-import { COLORS, FONT } from "../components/deckbuilder/theme";
+import { COLORS, FONT, SET_CODE_ORDER, SET_CODE_LABELS } from "../components/deckbuilder/theme";
 
 const CARD_PAGE_SIZE = 60;
+
+// Non-deckable entries that exist as cards in the data but should never appear
+// in the deck-builder pool (game-mechanic markers).
+const HIDDEN_NAMES = new Set(["Evolution Point", "Super-Evolution Point"]);
 
 export default function CreateDeck() {
   const location = useLocation();
@@ -46,12 +51,27 @@ export default function CreateDeck() {
   const [mainSelected, setMainSelected] = useState(true);
   const [name, setName] = useState(deckName || "");
   const [deckClass, setDeckClass] = useState("");
-  const [cardName, setCardName] = useState(null); // inspected card
+  const [cardName, setCardName] = useState(null); // inspected card (by name)
+  // Which pool tile is highlighted. In the "show all printings" view several
+  // tiles share a name, so the highlight is keyed by the tile (card number),
+  // not the name — otherwise clicking one printing highlights them all.
+  const [inspectedKey, setInspectedKey] = useState(null);
+  // The specific printing being inspected, so the preview shows the same art as
+  // the clicked tile (null = use the card's default name-keyed image).
+  const [inspectedCardNo, setInspectedCardNo] = useState(null);
+  const inspect = (name, key, cardNo) => {
+    setCardName(name);
+    setInspectedKey(key != null ? key : name);
+    setInspectedCardNo(cardNo != null ? cardNo : null);
+  };
 
   // filters
   const [search, setSearch] = useState("");
   const [buttonFilterSet, setButtonFilterSet] = useState("all");
   const [buttonFilterClass, setButtonFilterClass] = useState("all");
+  // When true (default) the pool shows each card once; when false it reveals
+  // every printing (each set/rarity a card was released in).
+  const [excludeDupes, setExcludeDupes] = useState(true);
   const [types, setTypes] = useState([]);
   const [traits, setTraits] = useState([]);
   const [rarities, setRarities] = useState([]);
@@ -211,26 +231,176 @@ export default function CreateDeck() {
       case "haven": return haven; case "haven evo": return havenEvo;
       case "neutral": return neutral; case "neutral evo": return neutralEvo;
       case "all": return allCards; case "all evo": return allCardsEvo;
+      // "main" = the numbered booster sets BP01–BP17 (the default view).
+      case "main":
+        return [].concat(set1, set2, set3, set4, set5, set6, set7, set8, set9,
+          set10, set11, set12, set13, set14, set15, set16, set17);
+      case "main evo":
+        return [].concat(set1Evo, set2Evo, set3Evo, set4Evo, set5Evo, set6Evo,
+          set7Evo, set8Evo, set9Evo, set10Evo, set11Evo, set12Evo, set13Evo,
+          set14Evo, set15Evo, set16Evo, set17Evo);
       default: return allCards;
     }
   };
 
+  // card NAME -> its printings (one per set/rarity it was released in), used to
+  // expand the pool when "Exclude duplicates" is off. Tokens are excluded.
+  const printingsByName = useMemo(() => {
+    const m = new Map();
+    for (const p of cardPrintings) {
+      if (!m.has(p.name)) m.set(p.name, []);
+      m.get(p.name).push(p);
+    }
+    return m;
+  }, []);
+  // card number -> printing, so the inspector can show the exact set/rarity of
+  // the printing being viewed (these differ across reprints of the same card).
+  const printingByNo = useMemo(() => {
+    const m = new Map();
+    for (const p of cardPrintings) m.set(p.cardNo, p);
+    return m;
+  }, []);
+  // Set family of a printing: the card-number prefix with any sub-bundle letter
+  // dropped (e.g. "GFB01a"/"CSD02b" -> "GFB01"/"CSD02").
+  const setFamily = (code) => code.replace(/[a-z]+$/, "");
+  // card NAME -> set families it has a printing in (drives the Set filter).
+  const setsByName = useMemo(() => {
+    const m = new Map();
+    for (const p of cardPrintings) {
+      if (!m.has(p.name)) m.set(p.name, new Set());
+      m.get(p.name).add(setFamily(p.set));
+    }
+    return m;
+  }, []);
+  // Ordered Set-filter options for the families actually present in the data.
+  const setOptions = useMemo(() => {
+    const present = new Set();
+    for (const p of cardPrintings) present.add(setFamily(p.set));
+    const opts = SET_CODE_ORDER.filter((c) => present.has(c)).map((c) => ({ code: c, label: SET_CODE_LABELS[c] || c }));
+    for (const c of [...present].sort()) if (!SET_CODE_ORDER.includes(c)) opts.push({ code: c, label: c });
+    return opts;
+  }, []);
+  const inspectedPrinting = inspectedCardNo ? printingByNo.get(inspectedCardNo) : null;
+
+  // In the dedup ("Duplicates hidden") view we show one tile per card. Pick a
+  // single canonical printing per name — the one matching the name-keyed
+  // cardData (its set + rarity) — and use it for the art so the displayed image
+  // stays consistent with the set/rarity shown in the inspector. Falls back to
+  // the first printing if none matches.
+  const canonicalNoByName = useMemo(() => {
+    const m = new Map();
+    for (const [name, list] of printingsByName) {
+      const d = getDetails(name) || {};
+      const match = list.find((p) => p.cardSet === d.cardSet && p.rarity === d.rarity) || list[0];
+      if (match) m.set(name, match.cardNo);
+    }
+    return m;
+  }, [printingsByName]);
+
   // ---------- filtered pool (set ∩ class ∩ search ∩ detail filters) ----------
+  // Each entry is { name, cardNo?, key }: `name` drives selection/limits (the
+  // deck is keyed by name), `cardNo` (printings view only) picks which art to
+  // show. Tokens are never listed in the deck builder.
   const displayed = useMemo(() => {
     const main = mainSelected;
     const base = main ? allCards : allCardsEvo;
-    const setKey = buttonFilterSet === "all" ? (main ? "all" : "all evo") : main ? buttonFilterSet : buttonFilterSet + " evo";
     const classKey = buttonFilterClass === "all" ? (main ? "all" : "all evo") : main ? buttonFilterClass : buttonFilterClass + " evo";
-    const baseSet = new Set(base);
     const classSet = new Set(getCardsFromName(classKey));
-    let list = getCardsFromName(setKey).filter((n) => baseSet.has(n) && classSet.has(n));
+    let names = base.filter((n) => classSet.has(n) && !n.endsWith(" TOKEN") && !HIDDEN_NAMES.has(n));
+    // Set filter: "all" = no constraint, "main" = the BP01–17 boosters,
+    // otherwise a specific set family (card has a printing in that set).
+    if (buttonFilterSet === "main") {
+      const mainSet = new Set(getCardsFromName(main ? "main" : "main evo"));
+      names = names.filter((n) => mainSet.has(n));
+    } else if (buttonFilterSet !== "all") {
+      names = names.filter((n) => {
+        const f = setsByName.get(n);
+        return !!f && f.has(buttonFilterSet);
+      });
+    }
     const q = search.trim().toLowerCase();
-    if (q) list = list.filter((n) => n.toLowerCase().includes(q));
-    const filters = { types, traits, rarities, costs, attacks, defenses };
-    if (hasActiveFilters(filters)) list = list.filter((n) => matchesFilters(n, filters));
-    return list;
+    if (q) names = names.filter((n) => n.toLowerCase().includes(q));
+    // Rarity is applied per-mode below (per-name when deduping, per-printing
+    // when showing all printings), so exclude it from the shared name filter.
+    const nameFilters = { types, traits, rarities: [], costs, attacks, defenses };
+    if (hasActiveFilters(nameFilters)) names = names.filter((n) => matchesFilters(n, nameFilters));
+
+    // A printing belongs to the selected set ("all" = any, "main" = BP01–17,
+    // otherwise the exact set family). Used so a reprinted card only surfaces
+    // the printings that actually belong to the filtered set.
+    const inSelectedSet = (p) => {
+      if (buttonFilterSet === "all") return true;
+      const f = setFamily(p.set);
+      if (buttonFilterSet === "main") return /^BP(0[1-9]|1[0-7])$/.test(f);
+      return f === buttonFilterSet;
+    };
+
+    // Stable display order: group by set (same order as the Set dropdown —
+    // newest boosters first, then crossovers, special, gloryfinder, worlds
+    // beyond, showdown/starter, promos), then by card number within each set.
+    // Cards whose set isn't in SET_CODE_ORDER sort to the end.
+    const setRank = (code) => {
+      const i = SET_CODE_ORDER.indexOf(code);
+      return i === -1 ? SET_CODE_ORDER.length : i;
+    };
+    const noOf = (it) => it.cardNo || canonicalNoByName.get(it.name) || "";
+    const sortItems = (arr) =>
+      arr.sort((a, b) => {
+        const na = noOf(a);
+        const nb = noOf(b);
+        const ra = setRank(setFamily(na.split("-")[0] || ""));
+        const rb = setRank(setFamily(nb.split("-")[0] || ""));
+        if (ra !== rb) return ra - rb;
+        return na.localeCompare(nb, undefined, { numeric: true });
+      });
+
+    if (excludeDupes) {
+      const REGULAR = new Set(["Bronze", "Silver", "Gold", "Legendary"]);
+      // Represent each card by a regular-rarity printing (so the default view
+      // shows its Legendary/Gold/etc. art, never an alt-art Ultimate / Special /
+      // Super Special / Super Legendary / Premium), taken from the selected set
+      // when one is filtered. Falls back to alt-art only if no regular exists.
+      const pickRep = (n) => {
+        const all = printingsByName.get(n) || [];
+        const list = buttonFilterSet === "all" ? all : all.filter(inSelectedSet);
+        if (!list.length) return null;
+        const regs = list.filter((p) => REGULAR.has(p.rarity));
+        const pool = regs.length ? regs : list;
+        const d = getDetails(n) || {};
+        return (
+          pool.find((p) => p.cardSet === d.cardSet && p.rarity === d.rarity) ||
+          pool.find((p) => p.rarity === d.rarity) ||
+          pool[0]
+        );
+      };
+      const out = [];
+      for (const n of names) {
+        const rep = pickRep(n);
+        // Filter on the rarity that's actually shown (the chosen printing).
+        const rarity = rep ? rep.rarity : (getDetails(n) || {}).rarity;
+        if (rarities.length && !rarities.includes(rarity)) continue;
+        out.push({ name: n, key: n, cardNo: rep ? rep.cardNo : canonicalNoByName.get(n) });
+      }
+      return sortItems(out);
+    }
+
+    // Show every printing of each card that belongs to the selected set; the
+    // rarity filter applies per printing.
+    const items = [];
+    for (const n of names) {
+      const prs = (printingsByName.get(n) || []).filter(inSelectedSet);
+      if (prs.length) {
+        for (const p of prs) {
+          if (rarities.length && !rarities.includes(p.rarity)) continue;
+          items.push({ name: n, cardNo: p.cardNo, key: p.cardNo });
+        }
+      } else if (buttonFilterSet === "all" && !rarities.length) {
+        items.push({ name: n, key: n });
+      }
+    }
+    return sortItems(items);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [mainSelected, buttonFilterSet, buttonFilterClass, search, types, traits, rarities, costs, attacks, defenses]);
+  }, [mainSelected, buttonFilterSet, buttonFilterClass, search, types, traits, rarities, costs, attacks, defenses, excludeDupes, printingsByName, canonicalNoByName, setsByName]);
 
   useEffect(() => setVisibleCount(CARD_PAGE_SIZE), [displayed]);
 
@@ -273,9 +443,9 @@ export default function CreateDeck() {
         const va = ca == null ? 99 : ca, vb = cb == null ? 99 : cb;
         return va !== vb ? va - vb : a.localeCompare(b);
       });
-    if (deck.length > 0) { initedRef.current = true; setCardName(byCost([...deckMap.keys()])[0]); }
-    else if (evoDeck.length > 0) { initedRef.current = true; setCardName(byCost([...evoDeckMap.keys()])[0]); }
-    else if (!willLoadDeck && displayed.length > 0) { initedRef.current = true; setCardName(displayed[0]); }
+    if (deck.length > 0) { initedRef.current = true; inspect(byCost([...deckMap.keys()])[0]); }
+    else if (evoDeck.length > 0) { initedRef.current = true; inspect(byCost([...evoDeckMap.keys()])[0]); }
+    else if (!willLoadDeck && displayed.length > 0) { initedRef.current = true; inspect(displayed[0].name, displayed[0].key, displayed[0].cardNo); }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [deck, evoDeck, displayed, cardName, willLoadDeck]);
 
@@ -286,10 +456,11 @@ export default function CreateDeck() {
     : 0;
   const inspectedAtLimit = cardName ? (inspectedIsEvo ? evoAtLimit(cardName) : mainAtLimit(cardName)) : true;
   const navInspect = (dir) => {
-    const idx = displayed.indexOf(cardName);
+    let idx = displayed.findIndex((it) => (it.key ?? it.name) === inspectedKey);
+    if (idx === -1) idx = displayed.findIndex((it) => it.name === cardName);
     if (idx === -1) return;
     const ni = idx + dir;
-    if (ni >= 0 && ni < displayed.length) setCardName(displayed[ni]);
+    if (ni >= 0 && ni < displayed.length) inspect(displayed[ni].name, displayed[ni].key, displayed[ni].cardNo);
   };
 
   // ---------- import / export ----------
@@ -367,6 +538,9 @@ export default function CreateDeck() {
         <aside style={col(420)}>
           <CardInspector
             name={cardName}
+            cardNo={inspectedCardNo}
+            rarity={inspectedPrinting ? inspectedPrinting.rarity : undefined}
+            cardSet={inspectedPrinting ? inspectedPrinting.cardSet : undefined}
             count={inspectedCount}
             atLimit={inspectedAtLimit}
             isDouble={cardName ? isDoubleEvo(cardName) : false}
@@ -383,7 +557,7 @@ export default function CreateDeck() {
           <FilterBar
             mainSelected={mainSelected} onToggleDeck={setMainSelected}
             search={search} onSearch={setSearch}
-            set={buttonFilterSet} onSet={setButtonFilterSet}
+            set={buttonFilterSet} onSet={setButtonFilterSet} setOptions={setOptions}
             klass={buttonFilterClass} onClass={setButtonFilterClass}
             types={types} onTypes={setTypes}
             traits={traits} onTraits={setTraits}
@@ -391,17 +565,18 @@ export default function CreateDeck() {
             costs={costs} onCosts={setCosts}
             attacks={attacks} onAttacks={setAttacks}
             defenses={defenses} onDefenses={setDefenses}
+            excludeDupes={excludeDupes} onExcludeDupes={setExcludeDupes}
             onClear={clearFilters}
           />
           <div id="poolScroll" style={{ flex: 1, minHeight: 0, overflowY: "auto", background: COLORS.inset }}>
             <CardGrid
-              names={displayed}
+              items={displayed}
               visibleCount={visibleCount}
               onLoadMore={() => setVisibleCount((c) => c + CARD_PAGE_SIZE)}
               hasMore={displayed.length > visibleCount}
               scrollTargetId="poolScroll"
-              inspectedName={cardName}
-              onInspect={setCardName}
+              inspectedKey={inspectedKey}
+              onInspect={inspect}
               onAdd={mainSelected ? handleCardSelection : handleEvoCardSelection}
               onRemove={mainSelected ? handleCardRemove : handleEvoCardRemove}
               isAtLimit={mainSelected ? mainAtLimit : evoAtLimit}
@@ -415,7 +590,7 @@ export default function CreateDeck() {
           <DeckPanel
             deckMap={deckMap} evoDeckMap={evoDeckMap}
             deckLen={deck.length} evoLen={evoDeck.length}
-            onInspect={setCardName}
+            onInspect={(n) => inspect(n)}
             onAdd={handleCardSelection} onRemove={handleCardRemove}
             onAddEvo={handleEvoCardSelection} onRemoveEvo={handleEvoCardRemove}
             isAtLimit={mainAtLimit} isEvoAtLimit={evoAtLimit}

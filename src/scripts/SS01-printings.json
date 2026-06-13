@@ -1,0 +1,572 @@
+[
+  {
+    "cardNo": "SD02-001EN",
+    "name": "Tsubaki",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Assassin / Ninja",
+      "rarity": "Legendary",
+      "cardSet": "Starter Deck #2 “Blade of Resentment” Worlds Beyond Swordcraft Starter Set",
+      "cost": "6",
+      "attack": "5",
+      "defense": "4",
+      "effect": "[fanfare] Choose one of the following effects. (1) Select an enemy follower on the field and destroy it. (2) Give this follower Storm. (Followers with Storm can attack enemy followers and leaders on the turn they're put onto your field.)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD02/SD02-001EN.png"
+  },
+  {
+    "cardNo": "SD02-002EN",
+    "name": "Latham, Vanguard Captain",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander",
+      "rarity": "Gold",
+      "cardSet": "Starter Deck #2 “Blade of Resentment” Worlds Beyond Swordcraft Starter Set",
+      "cost": "2",
+      "attack": "3",
+      "defense": "3",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD02/SD02-002EN.png"
+  },
+  {
+    "cardNo": "SD02-003EN",
+    "name": "Floral Fencer",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Silver",
+      "cardSet": "Starter Deck #2 “Blade of Resentment” Worlds Beyond Swordcraft Starter Set",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve][cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD02/SD02-003EN.png"
+  },
+  {
+    "cardNo": "SD02-004EN",
+    "name": "Floral Fencer Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Officer",
+      "rarity": "Silver",
+      "cardSet": "Starter Deck #2 “Blade of Resentment” Worlds Beyond Swordcraft Starter Set",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve: Summon a Steelclad Knight and Knight token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD02/SD02-004EN.png"
+  },
+  {
+    "cardNo": "SD02-005EN",
+    "name": "Moonlight Assassin",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Assassin",
+      "rarity": "Silver",
+      "cardSet": "Starter Deck #2 “Blade of Resentment” Worlds Beyond Swordcraft Starter Set",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[act][cost01]: Give this follower Bane. (Followers attacking or attacked by a follower with Bane are destroyed after damage is exchanged.)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD02/SD02-005EN.png"
+  },
+  {
+    "cardNo": "SD02-006EN",
+    "name": "White General",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander",
+      "rarity": "Silver",
+      "cardSet": "Starter Deck #2 “Blade of Resentment” Worlds Beyond Swordcraft Starter Set",
+      "cost": "4",
+      "attack": "5",
+      "defense": "3",
+      "effect": "Rush. (Followers with Rush can attack enemy followers on the turn they're put onto your field.) Strike: Select another follower on your field and give it [attack]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD02/SD02-006EN.png"
+  },
+  {
+    "cardNo": "SD02-007EN",
+    "name": "Ninja Trainee",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Ninja",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #2 “Blade of Resentment” Worlds Beyond Swordcraft Starter Set",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD02/SD02-007EN.png"
+  },
+  {
+    "cardNo": "SD02-008EN",
+    "name": "Veteran Lancer",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #2 “Blade of Resentment” Worlds Beyond Swordcraft Starter Set",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Ward. (This follower can be engaged when it's put onto your field or during your end phase. When followers with Ward are engaged, your opponent can only attack them.)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD02/SD02-008EN.png"
+  },
+  {
+    "cardNo": "SD02-009EN",
+    "name": "Fencer",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Noble",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #2 “Blade of Resentment” Worlds Beyond Swordcraft Starter Set",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Select another follower on your field and give it [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD02/SD02-009EN.png"
+  },
+  {
+    "cardNo": "SD02-010EN",
+    "name": "Oathless Knight",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #2 “Blade of Resentment” Worlds Beyond Swordcraft Starter Set",
+      "cost": "2",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Summon a Knight token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD02/SD02-010EN.png"
+  },
+  {
+    "cardNo": "SD02-011EN",
+    "name": "Oathless Knight Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #2 “Blade of Resentment” Worlds Beyond Swordcraft Starter Set",
+      "cost": "-",
+      "attack": "3",
+      "defense": "1",
+      "effect": "Assail. (Followers with Assail can attack reserved followers.)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD02/SD02-011EN.png"
+  },
+  {
+    "cardNo": "SD02-012EN",
+    "name": "Quickblader",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #2 “Blade of Resentment” Worlds Beyond Swordcraft Starter Set",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve][cost03]: Evolve this follower. Storm. (Followers with Storm can attack enemy followers and leaders on the turn they're put onto your field.)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD02/SD02-012EN.png"
+  },
+  {
+    "cardNo": "SD02-013EN",
+    "name": "Quickblader Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #2 “Blade of Resentment” Worlds Beyond Swordcraft Starter Set",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD02/SD02-013EN.png"
+  },
+  {
+    "cardNo": "SD02-014EN",
+    "name": "Forge Weaponry",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #2 “Blade of Resentment” Worlds Beyond Swordcraft Starter Set",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select a follower on your field. Give it [attack]+1/[defense]+1 and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD02/SD02-014EN.png"
+  },
+  {
+    "cardNo": "SD02-015EN",
+    "name": "Onslaught",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #2 “Blade of Resentment” Worlds Beyond Swordcraft Starter Set",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field. Deal it 5 damage and put a Knight token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD02/SD02-015EN.png"
+  },
+  {
+    "cardNo": "SD02-016EN",
+    "name": "Unbridled Fury",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #2 “Blade of Resentment” Worlds Beyond Swordcraft Starter Set",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field and deal it X damage. X equals the number of followers on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD02/SD02-016EN.png"
+  },
+  {
+    "cardNo": "SD02-017EN",
+    "name": "Goblin",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Goblinoid",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #2 “Blade of Resentment” Worlds Beyond Swordcraft Starter Set",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost04]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD02/SD02-017EN.png"
+  },
+  {
+    "cardNo": "SD02-018EN",
+    "name": "Goblin Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Goblinoid",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #2 “Blade of Resentment” Worlds Beyond Swordcraft Starter Set",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD02/SD02-018EN.png"
+  },
+  {
+    "cardNo": "SD02-019EN",
+    "name": "Fighter",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Mercenary",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #2 “Blade of Resentment” Worlds Beyond Swordcraft Starter Set",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD02/SD02-019EN.png"
+  },
+  {
+    "cardNo": "SD02-020EN",
+    "name": "Angelic Sword Maiden",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Angel",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #2 “Blade of Resentment” Worlds Beyond Swordcraft Starter Set",
+      "cost": "5",
+      "attack": "4",
+      "defense": "6",
+      "effect": "Ward. (This follower can be engaged when it's put onto your field or during your end phase. When followers with Ward are engaged, your opponent can only attack them.)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD02/SD02-020EN.png"
+  },
+  {
+    "cardNo": "SD02-LD01EN",
+    "name": "Erika",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Starter Deck #2 “Blade of Resentment” Worlds Beyond Swordcraft Starter Set",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD02/SD02-LD01EN.png"
+  },
+  {
+    "cardNo": "SD02-T01EN",
+    "name": "Knight TOKEN",
+    "type": "token",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Token",
+      "trait": "Officer",
+      "rarity": "-",
+      "cardSet": "Starter Deck #2 “Blade of Resentment” Worlds Beyond Swordcraft Starter Set",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD02/SD02-T01EN.png"
+  },
+  {
+    "cardNo": "SD02-T02EN",
+    "name": "Steelclad Knight TOKEN",
+    "type": "token",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Token",
+      "trait": "Officer",
+      "rarity": "-",
+      "cardSet": "Starter Deck #2 “Blade of Resentment” Worlds Beyond Swordcraft Starter Set",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD02/SD02-T02EN.png"
+  },
+  {
+    "cardNo": "SS01-001EN",
+    "name": "Monochrome Duel",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Commander / Fable",
+      "rarity": "Gold",
+      "cardSet": "Worlds Beyond Swordcraft Starter Set",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] [cost02], banish this card from your cemetery: Give each Knight on your field [attack]+1 and Storm. ---------- Search your deck for a Queen Hemera the White and Queen Magnus the Black, summon them, then shuffle your deck. Give them [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SS01/SS01-001EN.png"
+  },
+  {
+    "cardNo": "SS01-002EN",
+    "name": "Queen Hemera the White",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Fable / Lightborne",
+      "rarity": "Silver",
+      "cardSet": "Worlds Beyond Swordcraft Starter Set",
+      "cost": "3",
+      "attack": "4",
+      "defense": "3",
+      "effect": "Rush. [fanfare] Summon a Knight token. If there's a Queen Magnus the Black on your field, summon 2 instead. Strike - Put a Knight token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SS01/SS01-002EN.png"
+  },
+  {
+    "cardNo": "SS01-003EN",
+    "name": "Queen Magnus the Black",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Fable / Cutthroat",
+      "rarity": "Silver",
+      "cardSet": "Worlds Beyond Swordcraft Starter Set",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "While this card is on your field, each Queen Hemera the White on your field has Assail. [act] [engage]: Select up to 2 other [swordcraft] followers on your field and give them [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SS01/SS01-003EN.png"
+  },
+  {
+    "cardNo": "SS01-004EN",
+    "name": "Savage Swordsman",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Worlds Beyond Swordcraft Starter Set",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] If there's a token follower on your field, give this follower [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SS01/SS01-004EN.png"
+  },
+  {
+    "cardNo": "SS01-005EN",
+    "name": "Novice Trooper",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Worlds Beyond Swordcraft Starter Set",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SS01/SS01-005EN.png"
+  },
+  {
+    "cardNo": "SS01-LD01EN",
+    "name": "Marie Malisse",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Worlds Beyond Swordcraft Starter Set",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SS01/SS01-LD01EN.png"
+  },
+  {
+    "cardNo": "SS01-U01EN",
+    "name": "Pulsefire Assault",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Mercenary",
+      "rarity": "Ultimate",
+      "cardSet": "Worlds Beyond Swordcraft Starter Set",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field and deal it 3 damage. If it's an evolved follower, deal 4 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SS01/SS01-U01EN.png"
+  }
+]

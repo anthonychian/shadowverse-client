@@ -1,0 +1,439 @@
+[
+  {
+    "cardNo": "SDD05-001EN",
+    "name": "VI. Milteo, The Lovers",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Arcana / Demon",
+      "rarity": "Legendary",
+      "cardSet": "Showdown Deck: Abysscraft",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Discard a card: Reveal cards from the top of your deck until you reveal 2 followers that cost 3 or less. Summon them. Shuffle the rest and put them on the bottom of your deck. At the start of your end phase, Necrocharge (20) - Evolve this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD05/SDD05-001EN.png"
+  },
+  {
+    "cardNo": "SDD05-002EN",
+    "name": "VI. Milteo, The Lovers Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arcana / Demon",
+      "rarity": "Legendary",
+      "cardSet": "Showdown Deck: Abysscraft",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "On Evolve - [cost02]: Destroy each enemy follower on the field. Change each enemy leader's defense to 6."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD05/SDD05-002EN.png"
+  },
+  {
+    "cardNo": "SDD05-003EN",
+    "name": "Iceschillendrig, Gilded Autocrat",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Departed / Demon",
+      "rarity": "Legendary",
+      "cardSet": "Showdown Deck: Abysscraft",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] If there's no Magitrain on your field, summon one. Whenever this becomes engaged, each opponent discards a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD05/SDD05-003EN.png"
+  },
+  {
+    "cardNo": "SDD05-004EN",
+    "name": "Iceschillendrig, Gilded Autocrat Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wasteland / Departed / Demon",
+      "rarity": "Legendary",
+      "cardSet": "Showdown Deck: Abysscraft",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "On Evolve - Discard a card: Select 2 followers in your cemetery and add them to your hand. Whenever this becomes engaged, each opponent discards a card. During your turn, whenever a player discards a card, select an enemy follower on the field and engage it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD05/SDD05-004EN.png"
+  },
+  {
+    "cardNo": "SDD05-005EN",
+    "name": "Illganeau, Horror Astray",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Departed / Demon",
+      "rarity": "Legendary",
+      "cardSet": "Showdown Deck: Abysscraft",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[fanfare] Select a Wasteland follower in your cemetery that costs 3 or less. Necrocharge (10) - You may summon it. If you do, banish this. [lastwords] Put this into its owner's EX area. Bury the top card of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD05/SDD05-005EN.png"
+  },
+  {
+    "cardNo": "SDD05-006EN",
+    "name": "Demonlord Eachtar",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed",
+      "rarity": "Gold",
+      "cardSet": "Showdown Deck: Abysscraft",
+      "cost": "7",
+      "attack": "5",
+      "defense": "6",
+      "effect": "Each [abysscraft] follower on your field has Rush. [fanfare] Necrocharge (10) - Select up to 2 [abysscraft] followers in your cemetery that cost 2 or less and summon them. Give each other follower on your field [attack]+1/[defense]+1. NC (20) - Give [attack]+3/[defense]+3 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD05/SDD05-006EN.png"
+  },
+  {
+    "cardNo": "SDD05-007EN",
+    "name": "Doublame, Duke and Dame",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Gold",
+      "cardSet": "Showdown Deck: Abysscraft",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Bury the top card of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD05/SDD05-007EN.png"
+  },
+  {
+    "cardNo": "SDD05-008EN",
+    "name": "Doublame, Duke and Dame Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Demon",
+      "rarity": "Gold",
+      "cardSet": "Showdown Deck: Abysscraft",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage. Necrocharge (10) - Deal 4 damage instead. (If your cemetery contains at least 10 cards, perform Necrocharge (10).)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD05/SDD05-008EN.png"
+  },
+  {
+    "cardNo": "SDD05-009EN",
+    "name": "Greatpick Corpse",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Departed",
+      "rarity": "Gold",
+      "cardSet": "Showdown Deck: Abysscraft",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Bury another card: Select an enemy follower on the field and deal it 4 damage. Once per turn, when a 1-cost token card you control leaves the field, summon a token of the same name."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD05/SDD05-009EN.png"
+  },
+  {
+    "cardNo": "SDD05-010EN",
+    "name": "Kagero, Swordbound Soul",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Departed",
+      "rarity": "Gold",
+      "cardSet": "Showdown Deck: Abysscraft",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Necrocharge (10) - This has Rush and Bane. (After this follower fights another follower, destroy that follower.) [fanfare] Choose 1. (1) Select a Soulstrike in your cemetery and put it into your EX area. NC (20) - It costs 2 less to play this turn. (2) Bury the top 2 cards of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD05/SDD05-010EN.png"
+  },
+  {
+    "cardNo": "SDD05-011EN",
+    "name": "Chris, Beyond the Patch",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed / Cutthroat",
+      "rarity": "Gold",
+      "cardSet": "Showdown Deck: Abysscraft",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Select an [abysscraft] follower in your cemetery not named Chris, Beyond the Patch that costs 5 or less. Necrocharge (10) - Summon it and give it Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD05/SDD05-011EN.png"
+  },
+  {
+    "cardNo": "SDD05-012EN",
+    "name": "Dead to Rights",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Wasteland / Departed / Demon",
+      "rarity": "Gold",
+      "cardSet": "Showdown Deck: Abysscraft",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] Banish this and an Iceschillendrig, Gilded Autocrat from your cemetery: Select an enemy follower on the field and engage it. ---------- [quick] Select an enemy follower on the field and give it [attack]-2/[defense]-2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD05/SDD05-012EN.png"
+  },
+  {
+    "cardNo": "SDD05-013EN",
+    "name": "Wretch",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Departed / Demon",
+      "rarity": "Silver",
+      "cardSet": "Showdown Deck: Abysscraft",
+      "cost": "3",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. Activate only if this was put onto the field from the cemetery. Rush. (Followers with Rush can attack enemy followers on the turn they're put onto your field.) [lastwords] Summon a Bullet Bike token. Bury the top 2 cards of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD05/SDD05-013EN.png"
+  },
+  {
+    "cardNo": "SDD05-014EN",
+    "name": "Wretch Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wasteland / Departed / Demon",
+      "rarity": "Silver",
+      "cardSet": "Showdown Deck: Abysscraft",
+      "cost": "-",
+      "attack": "4",
+      "defense": "3",
+      "effect": "Storm. On Evolve - Select an enemy follower on the field and deal it 5 damage. [lastwords] Summon a Bullet Bike token. Bury the top 2 cards of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD05/SDD05-014EN.png"
+  },
+  {
+    "cardNo": "SDD05-015EN",
+    "name": "Wretched Tryst",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Wasteland / Departed / Demon",
+      "rarity": "Silver",
+      "cardSet": "Showdown Deck: Abysscraft",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select 2 Wasteland followers in your cemetery that cost 3 or less. Necrocharge (10) - Summon them."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD05/SDD05-015EN.png"
+  },
+  {
+    "cardNo": "SDD05-016EN",
+    "name": "Soulstrike",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Wasteland / Departed",
+      "rarity": "Silver",
+      "cardSet": "Showdown Deck: Abysscraft",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field and deal it 4 damage. Necrocharge (20) - Deal 4 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD05/SDD05-016EN.png"
+  },
+  {
+    "cardNo": "SDD05-017EN",
+    "name": "Grave Desecration",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Amulet",
+      "trait": "Departed",
+      "rarity": "Silver",
+      "cardSet": "Showdown Deck: Abysscraft",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Bury the top 2 cards of your deck. [act] [cost02], [engage], bury this: Select a Departed follower in your cemetery and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD05/SDD05-017EN.png"
+  },
+  {
+    "cardNo": "SDD05-018EN",
+    "name": "Skeleton Dreamer",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Departed",
+      "rarity": "Bronze",
+      "cardSet": "Showdown Deck: Abysscraft",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Whenever this gains attack or defense, give it Storm. (Followers with Storm can attack enemy followers and leaders on the turn they're put onto your field.) [lastwords] Summon a Bullet Bike token. Bury the top card of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD05/SDD05-018EN.png"
+  },
+  {
+    "cardNo": "SDD05-019EN",
+    "name": "Wandering Chef",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Wasteland / Chef",
+      "rarity": "Silver",
+      "cardSet": "Showdown Deck: Abysscraft",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] If there's a Mount card on your field or in your EX area, give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD05/SDD05-019EN.png"
+  },
+  {
+    "cardNo": "SDD05-020EN",
+    "name": "Wandering Chef Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Wasteland / Chef",
+      "rarity": "Silver",
+      "cardSet": "Showdown Deck: Abysscraft",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Look at the top 4 cards of your deck. You may reveal a Wasteland card from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD05/SDD05-020EN.png"
+  },
+  {
+    "cardNo": "SDD05-LD01EN",
+    "name": "Diawl",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Showdown Deck: Abysscraft",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD05/SDD05-LD01EN.png"
+  },
+  {
+    "cardNo": "SDD05-T01EN",
+    "name": "Magitrain TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Amulet / Token",
+      "trait": "Wasteland / Mount",
+      "rarity": "-",
+      "cardSet": "Showdown Deck: Abysscraft",
+      "cost": "5",
+      "attack": "4",
+      "defense": "5",
+      "effect": "[act] [cost01], [engage] any number of followers on your field that cost a total of 5 or more: Maneuver this. (For the rest of this turn, it becomes a follower with [attack]4/[defense]5.) Rush. Strike - Select an engaged enemy follower on the field. Destroy it and give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD05/SDD05-T01EN.png"
+  },
+  {
+    "cardNo": "SDD05-T02EN",
+    "name": "Bullet Bike TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Amulet / Token",
+      "trait": "Wasteland / Mount",
+      "rarity": "-",
+      "cardSet": "Showdown Deck: Abysscraft",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] Bury this: Select a follower on your field. Give it Rush and, if it's a Wasteland follower, [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD05/SDD05-T02EN.png"
+  }
+]

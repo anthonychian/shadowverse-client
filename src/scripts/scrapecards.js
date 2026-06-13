@@ -45,6 +45,12 @@ const JSON_ONLY = process.argv.includes("--json-only");
 // unreliable (returns nothing, or doesn't list every card) - e.g. the collab
 // sets - so the scrape matches exactly what's wired into the app.
 const FROM_GETCARDS = process.argv.includes("--from-getcards");
+// Capture EVERY printing (incl. alt-art Ultimate/Special/Super-Legend/Premium/
+// Parallel/Promo) without the by-name dedup, writing them to
+// <EXPANSION>-printings.json (the deduped <EXPANSION>-cards.json is left
+// untouched, so the name-keyed Game pipeline is unaffected). Details already in
+// <EXPANSION>-cards.json are reused, so only the extra alt-art cards are fetched.
+const ALL_PRINTINGS = process.argv.includes("--all-printings");
 
 if (!EXPANSION) {
   console.error("Usage: node src/scripts/scrapecards.js <EXPANSION> [--no-images] [--json-only] [--from-getcards]");
@@ -59,6 +65,7 @@ const detailUrl = (cardNo) => `${BASE_URL}/cards/?cardno=${cardNo}&view=text`;
 const TEXTURES_DIR = path.join(__dirname, "..", "..", "public", "textures");
 const ICONS_DIR = path.join(TEXTURES_DIR, "icons");
 const OUTPUT_JSON = path.join(__dirname, `${EXPANSION}-cards.json`);
+const PRINTINGS_JSON = path.join(__dirname, `${EXPANSION}-printings.json`);
 // Keyword/stat icons are shared across every set, so the manifest is not
 // expansion-specific; each run merges its icons into this one file.
 const ICON_MANIFEST = path.join(__dirname, "icons.json");
@@ -269,8 +276,21 @@ async function scrapeCards() {
   const detailed = [];
   // Unique keyword/stat icons across the whole set: src -> alt token.
   const iconMap = new Map();
+  // In all-printings mode, reuse records already in <EXP>-cards.json so only the
+  // extra alt-art cards trigger a network fetch.
+  const existingByNo = new Map();
+  if (ALL_PRINTINGS && fs.existsSync(OUTPUT_JSON)) {
+    try {
+      for (const r of JSON.parse(fs.readFileSync(OUTPUT_JSON, "utf8"))) existingByNo.set(r.cardNo, r);
+    } catch {}
+  }
   for (let i = 0; i < listCards.length; i++) {
     const c = listCards[i];
+    if (ALL_PRINTINGS && existingByNo.has(c.cardNo)) {
+      detailed.push(existingByNo.get(c.cardNo));
+      process.stdout.write(`  [${i + 1}/${listCards.length}] ${c.cardNo} (cached)\r`);
+      continue;
+    }
     let detail;
     try {
       detail = await fetchDetail(c.cardNo);
@@ -286,12 +306,18 @@ async function scrapeCards() {
     const ct = (detail.cardType || "").toLowerCase();
     const isToken = c.cardNo.includes("-T") || ct.includes("token");
     const isEvolved = ct.includes("evolved");
+    // "Advanced" evolve cards (Card Type "Follower / Advanced") live in the
+    // evolve deck like evolved cards, but the Game keys them by an " ADVANCED"
+    // suffix (Field.js/EvoDeck.js match name.slice(-8) === "ADVANCED"), so we
+    // must name them that way rather than " Evolved".
+    const isAdvanced = ct.includes("advanced");
 
     let name = baseName;
     if (isEvolved) name += " Evolved";
+    else if (isAdvanced) name += " ADVANCED";
     if (isToken) name += " TOKEN";
 
-    const type = isToken ? "token" : isEvolved ? "evolved" : "base";
+    const type = isToken ? "token" : isEvolved || isAdvanced ? "evolved" : "base";
     const cls = CLASS_MAP[(detail.cls || "").toLowerCase()] || "";
 
     detailed.push({
@@ -320,34 +346,40 @@ async function scrapeCards() {
   }
   process.stdout.write("\n");
 
-  // Canonical card slots are the plain-numbered cards (001-) and tokens (T##).
-  // P## (parallel foil), SL## (super legendary), SP## (special) and U## (ultimate)
-  // are alternate-art reprints of those, so we keep a canonical card over an alt
-  // whenever they share a name. Always process canonical slots first so the
-  // canonical card number / image wins the dedup.
-  const isCanonical = (no) =>
-    new RegExp(`^${EXPANSION}-(\\d+|T\\d+)EN$`).test(no);
-  const ordered = [
-    ...detailed.filter((c) => isCanonical(c.cardNo)),
-    ...detailed.filter((c) => !isCanonical(c.cardNo)),
-  ];
-
-  const byName = new Map();
+  let outputList;
   const skipped = [];
-  const deduped = [];
-  for (const c of ordered) {
-    if (byName.has(c.name)) {
-      // A later (alt-art) card with a name we already have - drop it.
-      skipped.push(`${c.cardNo} (alt of ${byName.get(c.name)}: "${c.name}")`);
-      continue;
+  if (ALL_PRINTINGS) {
+    // Keep every printing (no by-name dedup) so each alt-art version is its own
+    // entry. Written to a separate file; <EXPANSION>-cards.json is left alone.
+    outputList = detailed
+      .slice()
+      .sort((a, b) => a.cardNo.localeCompare(b.cardNo, undefined, { numeric: true }));
+    fs.writeFileSync(PRINTINGS_JSON, JSON.stringify(outputList, null, 2));
+  } else {
+    // Canonical card slots are the plain-numbered cards (001-) and tokens (T##).
+    // P## (parallel foil), SL## (super legendary), SP## (special) and U## (ultimate)
+    // are alternate-art reprints of those, so we keep a canonical card over an alt
+    // whenever they share a name. Always process canonical slots first so the
+    // canonical card number / image wins the dedup.
+    const isCanonical = (no) => new RegExp(`^${EXPANSION}-(\\d+|T\\d+)EN$`).test(no);
+    const ordered = [
+      ...detailed.filter((c) => isCanonical(c.cardNo)),
+      ...detailed.filter((c) => !isCanonical(c.cardNo)),
+    ];
+    const byName = new Map();
+    const deduped = [];
+    for (const c of ordered) {
+      if (byName.has(c.name)) {
+        skipped.push(`${c.cardNo} (alt of ${byName.get(c.name)}: "${c.name}")`);
+        continue;
+      }
+      byName.set(c.name, c.cardNo);
+      deduped.push(c);
     }
-    byName.set(c.name, c.cardNo);
-    deduped.push(c);
+    deduped.sort((a, b) => a.cardNo.localeCompare(b.cardNo, undefined, { numeric: true }));
+    fs.writeFileSync(OUTPUT_JSON, JSON.stringify(deduped, null, 2));
+    outputList = deduped;
   }
-
-  deduped.sort((a, b) => a.cardNo.localeCompare(b.cardNo, undefined, { numeric: true }));
-
-  fs.writeFileSync(OUTPUT_JSON, JSON.stringify(deduped, null, 2));
 
   // Merge the icon manifest: maps each bracket token that appears in a card's
   // `details.effect` (e.g. "[fanfare]") to its icon image path, so the app can
@@ -370,13 +402,13 @@ async function scrapeCards() {
   }
 
   const byClass = {};
-  for (const c of deduped) byClass[c.class || "(none)"] = (byClass[c.class || "(none)"] || 0) + 1;
+  for (const c of outputList) byClass[c.class || "(none)"] = (byClass[c.class || "(none)"] || 0) + 1;
 
-  console.log(`\nCard data saved to: ${OUTPUT_JSON}`);
-  console.log(`  Base cards:    ${deduped.filter((c) => c.type === "base").length}`);
-  console.log(`  Evolved cards: ${deduped.filter((c) => c.type === "evolved").length}`);
-  console.log(`  Token cards:   ${deduped.filter((c) => c.type === "token").length}`);
-  console.log(`  Total kept:    ${deduped.length}`);
+  console.log(`\nCard data saved to: ${ALL_PRINTINGS ? PRINTINGS_JSON : OUTPUT_JSON}`);
+  console.log(`  Base cards:    ${outputList.filter((c) => c.type === "base").length}`);
+  console.log(`  Evolved cards: ${outputList.filter((c) => c.type === "evolved").length}`);
+  console.log(`  Token cards:   ${outputList.filter((c) => c.type === "token").length}`);
+  console.log(`  Total ${ALL_PRINTINGS ? "printings" : "kept"}:    ${outputList.length}`);
   console.log(`  Class breakdown:`, byClass);
   if (skipped.length) {
     console.log(`  Skipped ${skipped.length} alt-art reprints (kept canonical card for each name).`);
@@ -393,7 +425,7 @@ async function scrapeCards() {
   let dl = 0;
   let exists = 0;
   let fail = 0;
-  for (const card of deduped) {
+  for (const card of outputList) {
     const filepath = path.join(TEXTURES_DIR, `${card.cardNo}.png`);
     if (fs.existsSync(filepath)) {
       exists++;

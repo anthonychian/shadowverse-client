@@ -37,8 +37,19 @@ if (files.length === 0) {
   process.exit(1);
 }
 
-// A record is "complete" if it carries real gameplay metadata.
-const completeness = (d) => (d && d.rarity ? 2 : 0) + (d && d.effect ? 1 : 0);
+// When a card has several printings, keep the most representative one. Prefer a
+// regular-rarity printing (Bronze/Silver/Gold/Legendary) over alt-art reprints
+// (Premium/Special/Ultimate/Promo), so a card's default set + rarity reflect its
+// normal release rather than a promo/foil. Effect text breaks ties.
+const RARITY_PREF = {
+  Bronze: 6, Silver: 6, Gold: 6, Legendary: 6,
+  Premium: 4, Special: 3, Ultimate: 3, Promo: 2,
+};
+const completeness = (d) => {
+  if (!d) return -1;
+  const rar = RARITY_PREF[d.rarity] != null ? RARITY_PREF[d.rarity] : d.rarity ? 1 : 0;
+  return rar * 2 + (d.effect ? 1 : 0);
+};
 
 const byName = {};
 let total = 0;
@@ -46,8 +57,10 @@ for (const f of files) {
   const cards = JSON.parse(fs.readFileSync(path.join(SCRIPTS_DIR, f), "utf8"));
   for (const c of cards) {
     if (!c.name) continue;
-    total++;
     const d = c.details || {};
+    // Leader cards aren't deckable and are excluded from the builder data.
+    if ((d.cardType || "").toLowerCase().includes("leader")) continue;
+    total++;
     const rec = {
       class: c.class || "",
       type: c.type || "", // base | evolved | token

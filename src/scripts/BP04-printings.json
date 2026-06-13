@@ -1,0 +1,4030 @@
+[
+  {
+    "cardNo": "BP04-001EN",
+    "name": "Cassiopeia",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Fae-Touched / Celestial",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "5",
+      "attack": "4",
+      "defense": "5",
+      "effect": "[fanfare] Select any number of enemy followers on the field and deal X damage divided between them. X equals the total number of cards in your hand and EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-001EN.png"
+  },
+  {
+    "cardNo": "BP04-002EN",
+    "name": "C.C., Woodland Witch",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Fae-Touched / Celestial",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "5",
+      "attack": "4",
+      "defense": "5",
+      "effect": "[fanfare] Select any number of enemy followers on the field and deal X damage divided between them. X equals the total number of cards in your hand and EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-002EN.png"
+  },
+  {
+    "cardNo": "BP04-003EN",
+    "name": "Deepwood Anomaly",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Verdant",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "7",
+      "attack": "8",
+      "defense": "8",
+      "effect": "[evolve][cost01]: Evolve this follower. When this follower deals attack damage to an enemy leader, you win the game."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-003EN.png"
+  },
+  {
+    "cardNo": "BP04-004EN",
+    "name": "Deepwood Anomaly Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Verdant",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "10",
+      "defense": "10",
+      "effect": "On Evolve: Select an enemy follower on the field and put it on the bottom of its owner's deck. When this follower deals attack damage to an enemy leader, you win the game."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-004EN.png"
+  },
+  {
+    "cardNo": "BP04-005EN",
+    "name": "King Elephant",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Hunter / Beast",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "6",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve][cost04]: Evolve this follower. Storm. [fanfare] Select any number of cards on your field. Return them to their owners' hands and give this follower [attack]+X/[defense]+X. X equals the number of cards in your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-005EN.png"
+  },
+  {
+    "cardNo": "BP04-006EN",
+    "name": "King Elephant Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Hunter / Beast",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Storm. On Evolve: Give this follower [attack]+X/[defense]+X. X equals the number of cards in your hand. This follower ignores Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-006EN.png"
+  },
+  {
+    "cardNo": "BP04-007EN",
+    "name": "Fashionista Nelcha",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[act][engage]: Combo (3) - Choose one of the following. (1) Select another follower on your field and give it [attack]+2/[defense]+2. (2) Select an enemy follower on the field and give it [attack]-2/[defense]-2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-007EN.png"
+  },
+  {
+    "cardNo": "BP04-008EN",
+    "name": "Spring-Green Protection",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Amulet",
+      "trait": "Elf",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act][cost01], [engage], put this card into its owner's cemetery: Select a [forestcraft] follower on your field and give it [defense]+1. Combo (3): Give it [attack]+1 more. When this card leaves the field, put a Fairy Wisp token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-008EN.png"
+  },
+  {
+    "cardNo": "BP04-009EN",
+    "name": "Inviolable Verdancy",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Amulet",
+      "trait": "Elf",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act][cost01], [engage], put this card into its owner's cemetery: Select a [forestcraft] follower on your field and give it [defense]+1. Combo (3): Give it [attack]+1 more. When this card leaves the field, put a Fairy Wisp token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-009EN.png"
+  },
+  {
+    "cardNo": "BP04-010EN",
+    "name": "Sukuna, Brave and Small",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Hunter",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve][cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-010EN.png"
+  },
+  {
+    "cardNo": "BP04-011EN",
+    "name": "Sukuna, Brave and Small Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Hunter",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Storm. On Evolve: Combo (3) - Give this follower [attack]+1/[defense]+1. Combo (5) - Give [attack]+3/[defense]+3 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-011EN.png"
+  },
+  {
+    "cardNo": "BP04-012EN",
+    "name": "Dolorblade Demon",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Hunter",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare][lastwords] Deal 1 damage to each enemy leader and enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-012EN.png"
+  },
+  {
+    "cardNo": "BP04-013EN",
+    "name": "Elf Song",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Pixie",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Summon a Fairy token. Combo (3): Give each [forestcraft] follower on your field [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-013EN.png"
+  },
+  {
+    "cardNo": "BP04-014EN",
+    "name": "Starry Elf",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf / Celestial",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Search your deck for an amulet, reveal it, and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-014EN.png"
+  },
+  {
+    "cardNo": "BP04-015EN",
+    "name": "Fita the Gentle Elf",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "1",
+      "effect": "[evolve][cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-015EN.png"
+  },
+  {
+    "cardNo": "BP04-016EN",
+    "name": "Fita the Gentle Elf Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Elf",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "2",
+      "effect": "On Evolve: Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-016EN.png"
+  },
+  {
+    "cardNo": "BP04-017EN",
+    "name": "Dryad",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Fae-Touched / Verdant",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Strike: Select an enemy follower on the field and give it [attack]-1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-017EN.png"
+  },
+  {
+    "cardNo": "BP04-018EN",
+    "name": "Beetle Warrior",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Hunter / Insect",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[fanfare] Combo (3): Give this follower [attack]+1/[defense]+1 and Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-018EN.png"
+  },
+  {
+    "cardNo": "BP04-019EN",
+    "name": "Ivy Spellbomb",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Elf",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field and deal it 5 damage. Combo (3): Deal 3 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-019EN.png"
+  },
+  {
+    "cardNo": "BP04-020EN",
+    "name": "Mars, Silent Flame General",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Celestial",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[evolve][cost00]: Evolve this follower. Whenever an Officer follower is put onto your field, give it [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-020EN.png"
+  },
+  {
+    "cardNo": "BP04-021EN",
+    "name": "Mars, Silent Flame General Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Commander / Celestial",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "3",
+      "effect": "On Evolve, [cost0X]: Search your deck for an Officer follower that costs X play points or less and put it onto your field. X equals a number of your choice. Whenever an Officer follower is put onto your field, give it [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-021EN.png"
+  },
+  {
+    "cardNo": "BP04-022EN",
+    "name": "Gawain of the Round Table",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Arthurian",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Rush. [fanfare] Reveal 2 Commander or Arthurian cards in your hand: Recover 2 play points. While this card is on your field, the 1st Commander card you play each turn costs 1 less."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-022EN.png"
+  },
+  {
+    "cardNo": "BP04-023EN",
+    "name": "Barbarossa",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "5",
+      "attack": "6",
+      "defense": "5",
+      "effect": "If there are at least 3 enemy cards on the field, this card costs 2 less to play. [evolve][cost01]: Evolve this follower. Assail."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-023EN.png"
+  },
+  {
+    "cardNo": "BP04-024EN",
+    "name": "Barbarossa Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Commander",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "7",
+      "defense": "6",
+      "effect": "Assail. [lastwords] Put this card into its owner's EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-024EN.png"
+  },
+  {
+    "cardNo": "BP04-025EN",
+    "name": "Perseus",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Celestial",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] If there are at least 4 followers on your field (including this one), give this follower [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-025EN.png"
+  },
+  {
+    "cardNo": "BP04-026EN",
+    "name": "Cyclone Blade",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Commander",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a Commander follower on your field and deal X damage to each enemy follower on the field. X equals the selected follower's attack."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-026EN.png"
+  },
+  {
+    "cardNo": "BP04-027EN",
+    "name": "Chivalrous Charge",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Commander",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a Commander follower on your field and deal X damage to each enemy follower on the field. X equals the selected follower's attack."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-027EN.png"
+  },
+  {
+    "cardNo": "BP04-028EN",
+    "name": "Shrouded Assassin",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Assassin",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "2",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[evolve][cost02]: Evolve this follower. Bane."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-028EN.png"
+  },
+  {
+    "cardNo": "BP04-029EN",
+    "name": "Shrouded Assassin Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Assassin",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "4",
+      "effect": "Assail. Bane."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-029EN.png"
+  },
+  {
+    "cardNo": "BP04-030EN",
+    "name": "Lord General Romeo",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Prince",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "If there is a Princess Juliet on your field, this card costs 2 less to play. Ward. At the start of your end phase, if there is a Princess Juliet on your field, give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-030EN.png"
+  },
+  {
+    "cardNo": "BP04-031EN",
+    "name": "Round Table Assembly",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Commander / Arthurian",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose one of the following. (1) Search your deck for an Arthurian follower, reveal it, and add it to your hand. (2) Select an Arthurian follower on your field and give it [attack]+1/[defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-031EN.png"
+  },
+  {
+    "cardNo": "BP04-032EN",
+    "name": "Princess Juliet",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Princess",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "2",
+      "effect": "If there is a Lord General Romeo on your field, this card costs 2 less to play. Storm. At the start of your end phase, if there is a Lord General Romeo on your field, select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-032EN.png"
+  },
+  {
+    "cardNo": "BP04-033EN",
+    "name": "Flail Knight",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Strike: Select an enemy follower on the field. Deal 1 damage to it and its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-033EN.png"
+  },
+  {
+    "cardNo": "BP04-034EN",
+    "name": "Pollux",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Celestial",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "4",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] If there is a non-Swordcraft follower on your field, give this follower [attack]+1/[defense]+1 and Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-034EN.png"
+  },
+  {
+    "cardNo": "BP04-035EN",
+    "name": "Tristan of the Round Table",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Arthurian",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost01]: Evolve this follower. Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-035EN.png"
+  },
+  {
+    "cardNo": "BP04-036EN",
+    "name": "Tristan of the Round Table Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Officer / Arthurian",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Ward. On Evolve: Select an Arthurian card in your cemetery and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-036EN.png"
+  },
+  {
+    "cardNo": "BP04-037EN",
+    "name": "Armor of the Stars",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Celestial",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a follower on your field. Give it [attack]+1/[defense]+2 and Aura."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-037EN.png"
+  },
+  {
+    "cardNo": "BP04-038EN",
+    "name": "Wordwielder Ginger",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "7",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve][cost02]: Evolve this follower. [fanfare] You may put a follower from your hand onto your field. Its [fanfare] abilities can't be performed. For the rest of this turn, it can't attack enemies."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-038EN.png"
+  },
+  {
+    "cardNo": "BP04-039EN",
+    "name": "Wordwielder Ginger Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "On Evolve: You may put any number of followers from your hand onto your field. Their [fanfare] abilities can't be performed. For the rest of this turn, they can't attack enemies."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-039EN.png"
+  },
+  {
+    "cardNo": "BP04-040EN",
+    "name": "Giant Chimera",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Arcanaform / Forbidden",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "7",
+      "attack": "7",
+      "defense": "7",
+      "effect": "[fanfare] Spellchain (10): Deal 5 damage to each enemy leader and enemy follower on the field. SC (20): Deal 10 damage instead. SC (30): Deal 30 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-040EN.png"
+  },
+  {
+    "cardNo": "BP04-041EN",
+    "name": "Star Reader Stella",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Celestial",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Look at the top 4 cards of your deck. Add one of them to your hand, put one into your cemetery, put one on top of your deck, and put one on the bottom of your deck. Strike: Look at the top card of your deck. You may put it into your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-041EN.png"
+  },
+  {
+    "cardNo": "BP04-042EN",
+    "name": "Europa",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Celestial",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "2",
+      "attack": "1",
+      "defense": "3",
+      "effect": "[evolve][cost02]: Evolve this follower. [fanfare] Select a faceup Europa in your evolve deck. Turn it facedown and give this follower [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-042EN.png"
+  },
+  {
+    "cardNo": "BP04-043EN",
+    "name": "Europa Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Celestial",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "5",
+      "effect": "Storm. Bane. Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-043EN.png"
+  },
+  {
+    "cardNo": "BP04-044EN",
+    "name": "Chain of Calling",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Look at the top 5 cards of your deck. You may reveal a [runecraft] follower from among them and add it to your hand. Put the remaining cards on the bottom of your deck in any order. Spellchain (10): Recover 1 play point."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-044EN.png"
+  },
+  {
+    "cardNo": "BP04-045EN",
+    "name": "Noble Instruction",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Look at the top 5 cards of your deck. You may reveal a [runecraft] follower from among them and add it to your hand. Put the remaining cards on the bottom of your deck in any order. Spellchain (10): Recover 1 play point."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-045EN.png"
+  },
+  {
+    "cardNo": "BP04-046EN",
+    "name": "Freshman Lou",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "2",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[fanfare] Search your deck for a spell that costs 1 play point, reveal it, and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-046EN.png"
+  },
+  {
+    "cardNo": "BP04-047EN",
+    "name": "Magic Illusionist",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost02]: Evolve this follower. [lastwords] Earth Rite: Put this follower onto its owner's field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-047EN.png"
+  },
+  {
+    "cardNo": "BP04-048EN",
+    "name": "Magic Illusionist Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[lastwords] Earth Rite: Put this follower onto its owner's field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-048EN.png"
+  },
+  {
+    "cardNo": "BP04-049EN",
+    "name": "Concentration",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Give your leader [defense]+3. Draw a card. Earth Rite: Draw 2 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-049EN.png"
+  },
+  {
+    "cardNo": "BP04-050EN",
+    "name": "Show of Loyalty",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Give your leader [defense]+3. Draw a card. Earth Rite: Draw 2 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-050EN.png"
+  },
+  {
+    "cardNo": "BP04-051EN",
+    "name": "Dazzling Healer",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] If there is a spell in your cemetery, give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-051EN.png"
+  },
+  {
+    "cardNo": "BP04-052EN",
+    "name": "Dazzling Healer Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve: Spellchain (5) - Give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-052EN.png"
+  },
+  {
+    "cardNo": "BP04-053EN",
+    "name": "Mage of Nightfall",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Intimidate. [fanfare] Earth Rite: Give this follower [attack]+2/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-053EN.png"
+  },
+  {
+    "cardNo": "BP04-054EN",
+    "name": "Astrologist of the Mist",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Celestial",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Ward. [fanfare] Earth Rite: Give each follower on your field [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-054EN.png"
+  },
+  {
+    "cardNo": "BP04-055EN",
+    "name": "Magic Owl",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Arcanaform",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Rush. [fanfare][lastwords] Discard a spell: Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-055EN.png"
+  },
+  {
+    "cardNo": "BP04-056EN",
+    "name": "Starseer's Telescope",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet",
+      "trait": "Mage / Earth Sigil / Celestial",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "0",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Stack. [fanfare] Look at the top card of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-056EN.png"
+  },
+  {
+    "cardNo": "BP04-057EN",
+    "name": "Sibyl of the Waterwyrm",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[fanfare] If Overflow is active for you, give this follower [attack]+1/[defense]+1 and increase your maximum play points by 1. At the start of your end phase, give your leader [defense]+1. If Overflow is active for you, give [defense]+2 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-057EN.png"
+  },
+  {
+    "cardNo": "BP04-058EN",
+    "name": "Kallen, Crimson Yaksha",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[fanfare] If Overflow is active for you, give this follower [attack]+1/[defense]+1 and increase your maximum play points by 1. At the start of your end phase, give your leader [defense]+1. If Overflow is active for you, give [defense]+2 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-058EN.png"
+  },
+  {
+    "cardNo": "BP04-059EN",
+    "name": "Python",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "6",
+      "attack": "6",
+      "defense": "7",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Search your deck for up to 10 cards and banish them."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-059EN.png"
+  },
+  {
+    "cardNo": "BP04-060EN",
+    "name": "Python Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wyrmkin",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "8",
+      "defense": "9",
+      "effect": "On Evolve: Search your deck for up to 10 cards and banish them."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-060EN.png"
+  },
+  {
+    "cardNo": "BP04-061EN",
+    "name": "Lævateinn Dragon, Defense Form Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wyrmkin / Armed",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "5",
+      "defense": "7",
+      "effect": "Ward. Reduce damage dealt to this follower by 1. At the start of your end phase, give your leader [defense]+3. This follower's name is also Lævateinn Dragon."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-061EN.png"
+  },
+  {
+    "cardNo": "BP04-062EN",
+    "name": "Lævateinn Dragon, Blast Form Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wyrmkin / Armed",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "Intimidate. On Evolve: Deal X damage to each enemy follower on the field. X equals 2 times the number of Armed followers on your field. This follower's name is also Lævateinn Dragon."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-062EN.png"
+  },
+  {
+    "cardNo": "BP04-063EN",
+    "name": "Prime Dragon Keeper",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "3",
+      "attack": "1",
+      "defense": "5",
+      "effect": "[fanfare] If Overflow is active for you, give this follower [attack]+1/[defense]+1 and Intimidate. Whenever another [dragoncraft] follower that costs 3 play points or less is put onto your field, select an enemy follower on the field. Deal 2 damage to it and 1 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-063EN.png"
+  },
+  {
+    "cardNo": "BP04-064EN",
+    "name": "Star Phoenix",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Phoenix / Celestial",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost01]: Evolve this follower. During your turn, when you play a [dragoncraft] spell, [cost01]: Put this card from your cemetery onto your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-064EN.png"
+  },
+  {
+    "cardNo": "BP04-065EN",
+    "name": "Star Phoenix Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Phoenix / Celestial",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Strike: Select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-065EN.png"
+  },
+  {
+    "cardNo": "BP04-066EN",
+    "name": "Lightning Blast",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Wyrmkin",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] You may play this card for 5 more play points. Select an enemy follower on the field and banish it. If you played this card for 5 more play points, instead of banishing that follower, banish each enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-066EN.png"
+  },
+  {
+    "cardNo": "BP04-067EN",
+    "name": "Guren Revolt",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Wyrmkin",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] You may play this card for 5 more play points. Select an enemy follower on the field and banish it. If you played this card for 5 more play points, instead of banishing that follower, banish each enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-067EN.png"
+  },
+  {
+    "cardNo": "BP04-068EN",
+    "name": "Venomous Pucewyrm",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "4",
+      "attack": "6",
+      "defense": "7",
+      "effect": "[fanfare] Discard a card. At the start of your main phase, discard a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-068EN.png"
+  },
+  {
+    "cardNo": "BP04-069EN",
+    "name": "Cetus",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Marine / Celestial",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[evolve][cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-069EN.png"
+  },
+  {
+    "cardNo": "BP04-070EN",
+    "name": "Cetus Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Marine / Celestial",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "On Evolve: Destroy each of the lowest-cost enemy followers on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-070EN.png"
+  },
+  {
+    "cardNo": "BP04-071EN",
+    "name": "Dragonewt Fist",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Dragonewt / Wyrmkin",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "When this card is discarded, you may put it into your EX area. ---------- Select an enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-071EN.png"
+  },
+  {
+    "cardNo": "BP04-072EN",
+    "name": "Divine Tiger",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Dragonewt / Wyrmkin",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "When this card is discarded, you may put it into your EX area. ---------- Select an enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-072EN.png"
+  },
+  {
+    "cardNo": "BP04-073EN",
+    "name": "Dragonrearer Matilda",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[act][cost01], [engage], put this card into its owner's cemetery: Look at the top 3 cards of your deck. You may reveal a [dragoncraft] follower that costs 3 play points or less from among them and add it to your hand. Put the remaining cards on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-073EN.png"
+  },
+  {
+    "cardNo": "BP04-074EN",
+    "name": "Aqua Nereid",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Marine",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "2",
+      "attack": "0",
+      "defense": "1",
+      "effect": "Ward. [fanfare] Summon a Megalorca token. If Overflow is active for you, give it Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-074EN.png"
+  },
+  {
+    "cardNo": "BP04-075EN",
+    "name": "Hippocampus",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Marine",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "3",
+      "attack": "1",
+      "defense": "5",
+      "effect": "[evolve][cost04]: Evolve this follower. Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-075EN.png"
+  },
+  {
+    "cardNo": "BP04-076EN",
+    "name": "Hippocampus Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Marine",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "7",
+      "defense": "7",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-076EN.png"
+  },
+  {
+    "cardNo": "BP04-077EN",
+    "name": "Scaled Berserker",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "6",
+      "attack": "6",
+      "defense": "7",
+      "effect": "Rush. Whenever this follower takes damage, give it [attack]+2/[defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-077EN.png"
+  },
+  {
+    "cardNo": "BP04-078EN",
+    "name": "Dragon's Nest",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Amulet",
+      "trait": "Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act][engage], put this card into its owner's cemetery: Give your leader [defense]+2. If Overflow is active for you, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-078EN.png"
+  },
+  {
+    "cardNo": "BP04-079EN",
+    "name": "Venomfang Medusa",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon / Gorgon",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[act][cost00]: Summon a Serpent token. This ability can be activated once per turn. [q][act][engage], put 2 cards named Serpent from your field into their owners' cemeteries: Select an enemy follower on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-079EN.png"
+  },
+  {
+    "cardNo": "BP04-080EN",
+    "name": "Howling Demon",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon / Musical",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "5",
+      "attack": "5",
+      "defense": "4",
+      "effect": "[evolve][cost03]: Evolve this follower. [fanfare] Select an enemy follower on the field and deal it 4 damage. If Sanguine is active for you, deal 8 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-080EN.png"
+  },
+  {
+    "cardNo": "BP04-081EN",
+    "name": "Howling Demon Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Demon / Musical",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "7",
+      "defense": "6",
+      "effect": "Storm. On Evolve: If Sanguine is active for you, give your leader [defense]+5."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-081EN.png"
+  },
+  {
+    "cardNo": "BP04-082EN",
+    "name": "Demonlord Eachtar",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "7",
+      "attack": "5",
+      "defense": "6",
+      "effect": "[fanfare] Necrocharge (10): Select up to 2 [abysscraft] followers that cost 2 play points or less in your cemetery and put them onto your field. Give each other follower on your field [attack]+1/[defense]+1. NC (20): Give [attack]+3/[defense]+3 instead. While this card is on your field, each [abysscraft] follower on your field has Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-082EN.png"
+  },
+  {
+    "cardNo": "BP04-083EN",
+    "name": "Lelouch, Leader of the Black Knights",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "7",
+      "attack": "5",
+      "defense": "6",
+      "effect": "[fanfare] Necrocharge (10): Select up to 2 [abysscraft] followers that cost 2 play points or less in your cemetery and put them onto your field. Give each other follower on your field [attack]+1/[defense]+1. NC (20): Give [attack]+3/[defense]+3 instead. While this card is on your field, each [abysscraft] follower on your field has Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-083EN.png"
+  },
+  {
+    "cardNo": "BP04-084EN",
+    "name": "Stheno",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon / Gorgon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "5",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Summon a Serpent token. Whenever a Serpent is put onto your field, select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-084EN.png"
+  },
+  {
+    "cardNo": "BP04-085EN",
+    "name": "Stheno Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Demon / Gorgon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "5",
+      "effect": "On Evolve: Summon a Serpent token. Whenever a Serpent is put onto your field, select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-085EN.png"
+  },
+  {
+    "cardNo": "BP04-086EN",
+    "name": "Trial of the Gorgons",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Demon / Gorgon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "7",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Search your deck for a Venomfang Medusa, Stheno, and Euryale and put them onto your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-086EN.png"
+  },
+  {
+    "cardNo": "BP04-087EN",
+    "name": "Fenrir",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "4",
+      "attack": "3",
+      "defense": "5",
+      "effect": "[evolve][cost01]: Evolve this follower. During your turn, whenever this follower takes damage, select an enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-087EN.png"
+  },
+  {
+    "cardNo": "BP04-088EN",
+    "name": "Fenrir Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Demon",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "6",
+      "effect": "During your turn, whenever this follower takes damage, select an enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-088EN.png"
+  },
+  {
+    "cardNo": "BP04-089EN",
+    "name": "Euryale",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon / Gorgon",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Put a Serpent token into your EX area. While this card is on your field, each Venomfang Medusa and Stheno on your field has Aura."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-089EN.png"
+  },
+  {
+    "cardNo": "BP04-090EN",
+    "name": "Grave Desecration",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Amulet",
+      "trait": "Departed",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Put the top 2 cards of your deck into your cemetery. [act][cost02], [engage], put this card into its owner's cemetery: Select a Departed follower in your cemetery and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-090EN.png"
+  },
+  {
+    "cardNo": "BP04-091EN",
+    "name": "Emperor's Command",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Amulet",
+      "trait": "Departed",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Put the top 2 cards of your deck into your cemetery. [act][cost02], [engage], put this card into its owner's cemetery: Select a Departed follower in your cemetery and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-091EN.png"
+  },
+  {
+    "cardNo": "BP04-092EN",
+    "name": "Demonic Drummer",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon / Musical",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Ward. [fanfare][cost02]: Search your deck for a Demonic Drummer and put it onto your field. [lastwords] Give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-092EN.png"
+  },
+  {
+    "cardNo": "BP04-093EN",
+    "name": "Castor",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed / Celestial",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[lastwords][cost02]: Put this follower onto its owner's field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-093EN.png"
+  },
+  {
+    "cardNo": "BP04-094EN",
+    "name": "Frogbat",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] Banish 2 cards in your cemetery: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-094EN.png"
+  },
+  {
+    "cardNo": "BP04-095EN",
+    "name": "Frogbat Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Demon / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "At the start of your end phase, give this follower and your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-095EN.png"
+  },
+  {
+    "cardNo": "BP04-096EN",
+    "name": "Scorpius",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon / Celestial",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Bane. Strike: Deal 1 damage to each leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-096EN.png"
+  },
+  {
+    "cardNo": "BP04-097EN",
+    "name": "Venomous Bite",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Demon",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Summon a Serpent token. If there is a Gorgon follower on your field, give the Serpent token Rush and Assail."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-097EN.png"
+  },
+  {
+    "cardNo": "BP04-098EN",
+    "name": "Aether of the White Wing",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Luminary / Lightborne",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "7",
+      "attack": "3",
+      "defense": "5",
+      "effect": "Ward. [fanfare] Search your deck for a [havencraft] follower with a different name from this card that costs less than your maximum play points and put it onto your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-098EN.png"
+  },
+  {
+    "cardNo": "BP04-099EN",
+    "name": "Dark Jeanne",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Zealot",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Deal 2 damage to each other follower on the field. Give each other follower on your field [attack]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-099EN.png"
+  },
+  {
+    "cardNo": "BP04-100EN",
+    "name": "Dark Jeanne Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Zealot",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "On Evolve: If your leader's [defense] is at least 5, select an enemy follower on the field. Deal 4 damage to it and each leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-100EN.png"
+  },
+  {
+    "cardNo": "BP04-101EN",
+    "name": "Zoe, Princess of Goldenia",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Princess",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Deal 2 damage to your leader. Put the top 2 cards of your deck into your cemetery. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-101EN.png"
+  },
+  {
+    "cardNo": "BP04-102EN",
+    "name": "Zoe, Princess of Goldenia Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith / Princess",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve: Select an enemy follower on the field and banish it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-102EN.png"
+  },
+  {
+    "cardNo": "BP04-103EN",
+    "name": "Andromeda",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Celestial / Princess",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] For the rest of this turn, your leader and each follower currently on your field (including this one) have \"This doesn't take ability damage.\""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-103EN.png"
+  },
+  {
+    "cardNo": "BP04-104EN",
+    "name": "Globe of the Starways",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith / Celestial",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Search your deck for an amulet, reveal it, and add it to your hand. [q][act] [cost02], [engage], put this card into its owner's cemetery: Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-104EN.png"
+  },
+  {
+    "cardNo": "BP04-105EN",
+    "name": "Dark Charisma",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith / Celestial",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Search your deck for an amulet, reveal it, and add it to your hand. [q][act] [cost02], [engage], put this card into its owner's cemetery: Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-105EN.png"
+  },
+  {
+    "cardNo": "BP04-106EN",
+    "name": "Star Priestess",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Celestial",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "6",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] Banish an amulet on your field: Evolve this follower. [fanfare][engage] 2 amulets on your field: Select an enemy follower on the field. Deal it 3 damage and give your leader [defense]+3."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-106EN.png"
+  },
+  {
+    "cardNo": "BP04-107EN",
+    "name": "Star Priestess Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith / Celestial",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve: Select an amulet in your cemetery and put it onto your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-107EN.png"
+  },
+  {
+    "cardNo": "BP04-108EN",
+    "name": "Calydonian Boar",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Beast",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Rush. Once per turn, when an amulet you control leaves the field, give this follower [attack]+2/[defense]+2 and Assail."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-108EN.png"
+  },
+  {
+    "cardNo": "BP04-109EN",
+    "name": "Star Torrent",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Faith / Celestial",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Deal 3 damage to each engaged enemy follower on the field. If there is an amulet on your field, give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-109EN.png"
+  },
+  {
+    "cardNo": "BP04-110EN",
+    "name": "Starchaser Sprite",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Celestial",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[fanfare][engage] 2 amulets on your field: Draw 2 cards. Discard a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-110EN.png"
+  },
+  {
+    "cardNo": "BP04-111EN",
+    "name": "Sister of Punishment",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Zealot",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Once per turn, when an amulet you control leaves the field, select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-111EN.png"
+  },
+  {
+    "cardNo": "BP04-112EN",
+    "name": "Mist Shaman",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-112EN.png"
+  },
+  {
+    "cardNo": "BP04-113EN",
+    "name": "Mist Shaman Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve: Select another follower on your field and give it Aura."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-113EN.png"
+  },
+  {
+    "cardNo": "BP04-114EN",
+    "name": "Octobishop",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Ward. At the start of your end phase, give this follower [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-114EN.png"
+  },
+  {
+    "cardNo": "BP04-115EN",
+    "name": "Candelabra of Prayers",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Once per turn, when another amulet is put onto your field, give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-115EN.png"
+  },
+  {
+    "cardNo": "BP04-116EN",
+    "name": "Zodiac Demon",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Deity / Celestial",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "6",
+      "attack": "6",
+      "defense": "6",
+      "effect": "[act][engage], discard a follower: Select an enemy follower on the field. Deal X damage to it and Y damage to its leader. X equals the discarded follower's cost. Y equals half the discarded follower's cost (rounded up)."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-116EN.png"
+  },
+  {
+    "cardNo": "BP04-117EN",
+    "name": "Israfil",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Angel / Deity",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "8",
+      "attack": "8",
+      "defense": "8",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Give your leader [defense]+4. Strike: Deal 3 damage to each enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-117EN.png"
+  },
+  {
+    "cardNo": "BP04-118EN",
+    "name": "Israfil Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Angel / Deity",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "10",
+      "defense": "10",
+      "effect": "Strike: Deal 5 damage to each enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-118EN.png"
+  },
+  {
+    "cardNo": "BP04-119EN",
+    "name": "Grimnir, War Cyclone",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Lightborne",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[evolve][cost02]: Evolve this follower. Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-119EN.png"
+  },
+  {
+    "cardNo": "BP04-120EN",
+    "name": "Grimnir, War Cyclone Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Lightborne",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "5",
+      "defense": "6",
+      "effect": "Ward. On Evolve, [cost04]: Deal 4 damage to each enemy leader and enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-120EN.png"
+  },
+  {
+    "cardNo": "BP04-121EN",
+    "name": "Arriet, Soothing Harpist",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Musical",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "5",
+      "attack": "4",
+      "defense": "5",
+      "effect": "[fanfare] Select an engaged follower on your field. Give it [attack]+2/[defense]+2 and refresh it. For the rest of this turn, it can't attack enemies."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-121EN.png"
+  },
+  {
+    "cardNo": "BP04-122EN",
+    "name": "Staircase to Paradise",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Amulet",
+      "trait": "Angel",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Whenever a follower is put from your field into a cemetery, put a soul counter on this card. [act][engage], put this card into its owner's cemetery: Look at the top 5 cards of your deck. You may reveal up to 2 followers from among them and add them to your hand. Put the remaining cards on the bottom of your deck in any order. This ability can be activated if this card has at least 6 soul counters."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-122EN.png"
+  },
+  {
+    "cardNo": "BP04-123EN",
+    "name": "Purehearted Singer",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Musical",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "3",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[fanfare][lastwords] Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-123EN.png"
+  },
+  {
+    "cardNo": "BP04-124EN",
+    "name": "Goblin Princess",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Goblinoid / Princess",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "3",
+      "attack": "2",
+      "defense": "1",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Search your deck for a [neutral] follower that costs 1 play point and put it onto your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-124EN.png"
+  },
+  {
+    "cardNo": "BP04-125EN",
+    "name": "Goblin Princess Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Goblinoid / Princess",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "2",
+      "effect": "On Evolve: Put a Goblin King token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-125EN.png"
+  },
+  {
+    "cardNo": "BP04-126EN",
+    "name": "Mystic Ring",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Lightborne",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Put a card from your hand on the bottom of your deck. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-126EN.png"
+  },
+  {
+    "cardNo": "BP04-127EN",
+    "name": "Owlcat",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-127EN.png"
+  },
+  {
+    "cardNo": "BP04-128EN",
+    "name": "Owlcat Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve: Select an enemy follower with 1 attack or less or 1 defense on the field and banish it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-128EN.png"
+  },
+  {
+    "cardNo": "BP04-129EN",
+    "name": "Mr. Full Moon",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Lightborne / Celestial",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "5",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare][lastwords] Select an enemy follower on the field and give it [attack]-3/[defense]-3."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-129EN.png"
+  },
+  {
+    "cardNo": "BP04-130EN",
+    "name": "Night's Way",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Amulet",
+      "trait": "Lightborne / Celestial",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act][engage]: If there are no cards in your EX area, put the top card of your deck into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-130EN.png"
+  },
+  {
+    "cardNo": "BP04-LD01EN",
+    "name": "C.C.",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-LD01EN.png"
+  },
+  {
+    "cardNo": "BP04-LD02EN",
+    "name": "Suzaku Kururugi",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-LD02EN.png"
+  },
+  {
+    "cardNo": "BP04-LD03EN",
+    "name": "Cornelia li Britannia",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-LD03EN.png"
+  },
+  {
+    "cardNo": "BP04-LD04EN",
+    "name": "Jeremiah Gottwald",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-LD04EN.png"
+  },
+  {
+    "cardNo": "BP04-LD05EN",
+    "name": "Kallen Kozuki",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-LD05EN.png"
+  },
+  {
+    "cardNo": "BP04-LD06EN",
+    "name": "Li Xingke",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-LD06EN.png"
+  },
+  {
+    "cardNo": "BP04-LD07EN",
+    "name": "Lelouch Lamperouge",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-LD07EN.png"
+  },
+  {
+    "cardNo": "BP04-LD08EN",
+    "name": "Khawy, Underworld Arbiter",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-LD08EN.png"
+  },
+  {
+    "cardNo": "BP04-LD09EN",
+    "name": "Charles zi Britannia",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-LD09EN.png"
+  },
+  {
+    "cardNo": "BP04-LD10EN",
+    "name": "Lorena, Gentle Piety",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-LD10EN.png"
+  },
+  {
+    "cardNo": "BP04-LDⓈ01EN",
+    "name": "Lelouch Lamperouge",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-LDⓈ01EN.png"
+  },
+  {
+    "cardNo": "BP04-P01EN",
+    "name": "Fashionista Nelcha",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[act][engage]: Combo (3) - Choose one of the following. (1) Select another follower on your field and give it [attack]+2/[defense]+2. (2) Select an enemy follower on the field and give it [attack]-2/[defense]-2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-P01EN.png"
+  },
+  {
+    "cardNo": "BP04-P02EN",
+    "name": "Sukuna, Brave and Small",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Hunter",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve][cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-P02EN.png"
+  },
+  {
+    "cardNo": "BP04-P03EN",
+    "name": "Sukuna, Brave and Small Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Hunter",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Storm. On Evolve: Combo (3) - Give this follower [attack]+1/[defense]+1. Combo (5) - Give [attack]+3/[defense]+3 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-P03EN.png"
+  },
+  {
+    "cardNo": "BP04-P04EN",
+    "name": "Beetle Warrior",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Hunter / Insect",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[fanfare] Combo (3): Give this follower [attack]+1/[defense]+1 and Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-P04EN.png"
+  },
+  {
+    "cardNo": "BP04-P05EN",
+    "name": "Ivy Spellbomb",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Elf",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field and deal it 5 damage. Combo (3): Deal 3 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-P05EN.png"
+  },
+  {
+    "cardNo": "BP04-P06EN",
+    "name": "Perseus",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Celestial",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] If there are at least 4 followers on your field (including this one), give this follower [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-P06EN.png"
+  },
+  {
+    "cardNo": "BP04-P07EN",
+    "name": "Shrouded Assassin",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Assassin",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "2",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[evolve][cost02]: Evolve this follower. Bane."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-P07EN.png"
+  },
+  {
+    "cardNo": "BP04-P08EN",
+    "name": "Shrouded Assassin Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Assassin",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "4",
+      "effect": "Assail. Bane."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-P08EN.png"
+  },
+  {
+    "cardNo": "BP04-P09EN",
+    "name": "Lord General Romeo",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Prince",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "If there is a Princess Juliet on your field, this card costs 2 less to play. Ward. At the start of your end phase, if there is a Princess Juliet on your field, give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-P09EN.png"
+  },
+  {
+    "cardNo": "BP04-P10EN",
+    "name": "Princess Juliet",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Princess",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "2",
+      "effect": "If there is a Lord General Romeo on your field, this card costs 2 less to play. Storm. At the start of your end phase, if there is a Lord General Romeo on your field, select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-P10EN.png"
+  },
+  {
+    "cardNo": "BP04-P11EN",
+    "name": "Star Reader Stella",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Celestial",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Look at the top 4 cards of your deck. Add one of them to your hand, put one into your cemetery, put one on top of your deck, and put one on the bottom of your deck. Strike: Look at the top card of your deck. You may put it into your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-P11EN.png"
+  },
+  {
+    "cardNo": "BP04-P12EN",
+    "name": "Freshman Lou",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "2",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[fanfare] Search your deck for a spell that costs 1 play point, reveal it, and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-P12EN.png"
+  },
+  {
+    "cardNo": "BP04-P13EN",
+    "name": "Magic Illusionist",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost02]: Evolve this follower. [lastwords] Earth Rite: Put this follower onto its owner's field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-P13EN.png"
+  },
+  {
+    "cardNo": "BP04-P14EN",
+    "name": "Magic Illusionist Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[lastwords] Earth Rite: Put this follower onto its owner's field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-P14EN.png"
+  },
+  {
+    "cardNo": "BP04-P15EN",
+    "name": "Starseer's Telescope",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet",
+      "trait": "Mage / Earth Sigil / Celestial",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "0",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Stack. [fanfare] Look at the top card of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-P15EN.png"
+  },
+  {
+    "cardNo": "BP04-P16EN",
+    "name": "Star Phoenix",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Phoenix / Celestial",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost01]: Evolve this follower. During your turn, when you play a [dragoncraft] spell, [cost01]: Put this card from your cemetery onto your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-P16EN.png"
+  },
+  {
+    "cardNo": "BP04-P17EN",
+    "name": "Star Phoenix Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Phoenix / Celestial",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Strike: Select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-P17EN.png"
+  },
+  {
+    "cardNo": "BP04-P18EN",
+    "name": "Lightning Blast",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Wyrmkin",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] You may play this card for 5 more play points. Select an enemy follower on the field and banish it. If you played this card for 5 more play points, instead of banishing that follower, banish each enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-P18EN.png"
+  },
+  {
+    "cardNo": "BP04-P19EN",
+    "name": "Dragonewt Fist",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Dragonewt / Wyrmkin",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "When this card is discarded, you may put it into your EX area. ---------- Select an enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-P19EN.png"
+  },
+  {
+    "cardNo": "BP04-P20EN",
+    "name": "Aqua Nereid",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Marine",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "2",
+      "attack": "0",
+      "defense": "1",
+      "effect": "Ward. [fanfare] Summon a Megalorca token. If Overflow is active for you, give it Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-P20EN.png"
+  },
+  {
+    "cardNo": "BP04-P21EN",
+    "name": "Stheno",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon / Gorgon",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "5",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Summon a Serpent token. Whenever a Serpent is put onto your field, select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-P21EN.png"
+  },
+  {
+    "cardNo": "BP04-P22EN",
+    "name": "Stheno Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Demon / Gorgon",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "5",
+      "effect": "On Evolve: Summon a Serpent token. Whenever a Serpent is put onto your field, select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-P22EN.png"
+  },
+  {
+    "cardNo": "BP04-P23EN",
+    "name": "Trial of the Gorgons",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Demon / Gorgon",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "7",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Search your deck for a Venomfang Medusa, Stheno, and Euryale and put them onto your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-P23EN.png"
+  },
+  {
+    "cardNo": "BP04-P24EN",
+    "name": "Euryale",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon / Gorgon",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Put a Serpent token into your EX area. While this card is on your field, each Venomfang Medusa and Stheno on your field has Aura."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-P24EN.png"
+  },
+  {
+    "cardNo": "BP04-P25EN",
+    "name": "Venomous Bite",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Demon",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Summon a Serpent token. If there is a Gorgon follower on your field, give the Serpent token Rush and Assail."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-P25EN.png"
+  },
+  {
+    "cardNo": "BP04-P26EN",
+    "name": "Zoe, Princess of Goldenia",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Princess",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Deal 2 damage to your leader. Put the top 2 cards of your deck into your cemetery. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-P26EN.png"
+  },
+  {
+    "cardNo": "BP04-P27EN",
+    "name": "Zoe, Princess of Goldenia Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith / Princess",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve: Select an enemy follower on the field and banish it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-P27EN.png"
+  },
+  {
+    "cardNo": "BP04-P28EN",
+    "name": "Star Torrent",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Faith / Celestial",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Deal 3 damage to each engaged enemy follower on the field. If there is an amulet on your field, give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-P28EN.png"
+  },
+  {
+    "cardNo": "BP04-P29EN",
+    "name": "Starchaser Sprite",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Celestial",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[fanfare][engage] 2 amulets on your field: Draw 2 cards. Discard a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-P29EN.png"
+  },
+  {
+    "cardNo": "BP04-P30EN",
+    "name": "Octobishop",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Beast",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Ward. At the start of your end phase, give this follower [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-P30EN.png"
+  },
+  {
+    "cardNo": "BP04-P31EN",
+    "name": "Grimnir, War Cyclone",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Lightborne",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[evolve][cost02]: Evolve this follower. Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-P31EN.png"
+  },
+  {
+    "cardNo": "BP04-P32EN",
+    "name": "Grimnir, War Cyclone Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Lightborne",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "5",
+      "defense": "6",
+      "effect": "Ward. On Evolve, [cost04]: Deal 4 damage to each enemy leader and enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-P32EN.png"
+  },
+  {
+    "cardNo": "BP04-P33EN",
+    "name": "Staircase to Paradise",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Amulet",
+      "trait": "Angel",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Whenever a follower is put from your field into a cemetery, put a soul counter on this card. [act][engage], put this card into its owner's cemetery: Look at the top 5 cards of your deck. You may reveal up to 2 followers from among them and add them to your hand. Put the remaining cards on the bottom of your deck in any order. This ability can be activated if this card has at least 6 soul counters."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-P33EN.png"
+  },
+  {
+    "cardNo": "BP04-P34EN",
+    "name": "Mystic Ring",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Lightborne",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Put a card from your hand on the bottom of your deck. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-P34EN.png"
+  },
+  {
+    "cardNo": "BP04-P35EN",
+    "name": "Night's Way",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Amulet",
+      "trait": "Lightborne / Celestial",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act][engage]: If there are no cards in your EX area, put the top card of your deck into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-P35EN.png"
+  },
+  {
+    "cardNo": "BP04-SL01EN",
+    "name": "Cassiopeia",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Fae-Touched / Celestial",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "5",
+      "attack": "4",
+      "defense": "5",
+      "effect": "[fanfare] Select any number of enemy followers on the field and deal X damage divided between them. X equals the total number of cards in your hand and EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-SL01EN.png"
+  },
+  {
+    "cardNo": "BP04-SL02EN",
+    "name": "Deepwood Anomaly",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Verdant",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "7",
+      "attack": "8",
+      "defense": "8",
+      "effect": "[evolve][cost01]: Evolve this follower. When this follower deals attack damage to an enemy leader, you win the game."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-SL02EN.png"
+  },
+  {
+    "cardNo": "BP04-SL03EN",
+    "name": "Deepwood Anomaly Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Verdant",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "10",
+      "defense": "10",
+      "effect": "On Evolve: Select an enemy follower on the field and put it on the bottom of its owner's deck. When this follower deals attack damage to an enemy leader, you win the game."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-SL03EN.png"
+  },
+  {
+    "cardNo": "BP04-SL04EN",
+    "name": "Mars, Silent Flame General",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Celestial",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[evolve][cost00]: Evolve this follower. Whenever an Officer follower is put onto your field, give it [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-SL04EN.png"
+  },
+  {
+    "cardNo": "BP04-SL05EN",
+    "name": "Mars, Silent Flame General Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Commander / Celestial",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "3",
+      "effect": "On Evolve, [cost0X]: Search your deck for an Officer follower that costs X play points or less and put it onto your field. X equals a number of your choice. Whenever an Officer follower is put onto your field, give it [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-SL05EN.png"
+  },
+  {
+    "cardNo": "BP04-SL06EN",
+    "name": "Gawain of the Round Table",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Arthurian",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Rush. [fanfare] Reveal 2 Commander or Arthurian cards in your hand: Recover 2 play points. While this card is on your field, the 1st Commander card you play each turn costs 1 less."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-SL06EN.png"
+  },
+  {
+    "cardNo": "BP04-SL07EN",
+    "name": "Wordwielder Ginger",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "7",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve][cost02]: Evolve this follower. [fanfare] You may put a follower from your hand onto your field. Its [fanfare] abilities can't be performed. For the rest of this turn, it can't attack enemies."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-SL07EN.png"
+  },
+  {
+    "cardNo": "BP04-SL08EN",
+    "name": "Wordwielder Ginger Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "On Evolve: You may put any number of followers from your hand onto your field. Their [fanfare] abilities can't be performed. For the rest of this turn, they can't attack enemies."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-SL08EN.png"
+  },
+  {
+    "cardNo": "BP04-SL09EN",
+    "name": "Giant Chimera",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Arcanaform / Forbidden",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "7",
+      "attack": "7",
+      "defense": "7",
+      "effect": "[fanfare] Spellchain (10): Deal 5 damage to each enemy leader and enemy follower on the field. SC (20): Deal 10 damage instead. SC (30): Deal 30 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-SL09EN.png"
+  },
+  {
+    "cardNo": "BP04-SL10EN",
+    "name": "Sibyl of the Waterwyrm",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[fanfare] If Overflow is active for you, give this follower [attack]+1/[defense]+1 and increase your maximum play points by 1. At the start of your end phase, give your leader [defense]+1. If Overflow is active for you, give [defense]+2 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-SL10EN.png"
+  },
+  {
+    "cardNo": "BP04-SL11EN",
+    "name": "Python",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "6",
+      "attack": "6",
+      "defense": "7",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Search your deck for up to 10 cards and banish them."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-SL11EN.png"
+  },
+  {
+    "cardNo": "BP04-SL12EN",
+    "name": "Python Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wyrmkin",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "8",
+      "defense": "9",
+      "effect": "On Evolve: Search your deck for up to 10 cards and banish them."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-SL12EN.png"
+  },
+  {
+    "cardNo": "BP04-SL13EN",
+    "name": "Lævateinn Dragon, Defense Form Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wyrmkin / Armed",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "5",
+      "defense": "7",
+      "effect": "Ward. Reduce damage dealt to this follower by 1. At the start of your end phase, give your leader [defense]+3. This follower's name is also Lævateinn Dragon."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-SL13EN.png"
+  },
+  {
+    "cardNo": "BP04-SL14EN",
+    "name": "Lævateinn Dragon, Blast Form Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wyrmkin / Armed",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "Intimidate. On Evolve: Deal X damage to each enemy follower on the field. X equals 2 times the number of Armed followers on your field. This follower's name is also Lævateinn Dragon."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-SL14EN.png"
+  },
+  {
+    "cardNo": "BP04-SL15EN",
+    "name": "Venomfang Medusa",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon / Gorgon",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[act][cost00]: Summon a Serpent token. This ability can be activated once per turn. [q][act][engage], put 2 cards named Serpent from your field into their owners' cemeteries: Select an enemy follower on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-SL15EN.png"
+  },
+  {
+    "cardNo": "BP04-SL16EN",
+    "name": "Howling Demon",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon / Musical",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "5",
+      "attack": "5",
+      "defense": "4",
+      "effect": "[evolve][cost03]: Evolve this follower. [fanfare] Select an enemy follower on the field and deal it 4 damage. If Sanguine is active for you, deal 8 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-SL16EN.png"
+  },
+  {
+    "cardNo": "BP04-SL17EN",
+    "name": "Howling Demon Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Demon / Musical",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "7",
+      "defense": "6",
+      "effect": "Storm. On Evolve: If Sanguine is active for you, give your leader [defense]+5."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-SL17EN.png"
+  },
+  {
+    "cardNo": "BP04-SL18EN",
+    "name": "Aether of the White Wing",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Luminary / Lightborne",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "7",
+      "attack": "3",
+      "defense": "5",
+      "effect": "Ward. [fanfare] Search your deck for a [havencraft] follower with a different name from this card that costs less than your maximum play points and put it onto your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-SL18EN.png"
+  },
+  {
+    "cardNo": "BP04-SL19EN",
+    "name": "Dark Jeanne",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Zealot",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Deal 2 damage to each other follower on the field. Give each other follower on your field [attack]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-SL19EN.png"
+  },
+  {
+    "cardNo": "BP04-SL20EN",
+    "name": "Dark Jeanne Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Zealot",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "On Evolve: If your leader's [defense] is at least 5, select an enemy follower on the field. Deal 4 damage to it and each leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-SL20EN.png"
+  },
+  {
+    "cardNo": "BP04-SL21EN",
+    "name": "Zodiac Demon",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Deity / Celestial",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "6",
+      "attack": "6",
+      "defense": "6",
+      "effect": "[act][engage], discard a follower: Select an enemy follower on the field. Deal X damage to it and Y damage to its leader. X equals the discarded follower's cost. Y equals half the discarded follower's cost (rounded up)."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-SL21EN.png"
+  },
+  {
+    "cardNo": "BP04-SL22EN",
+    "name": "Israfil",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Angel / Deity",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "8",
+      "attack": "8",
+      "defense": "8",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Give your leader [defense]+4. Strike: Deal 3 damage to each enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-SL22EN.png"
+  },
+  {
+    "cardNo": "BP04-SL23EN",
+    "name": "Israfil Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Angel / Deity",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "10",
+      "defense": "10",
+      "effect": "Strike: Deal 5 damage to each enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-SL23EN.png"
+  },
+  {
+    "cardNo": "BP04-SP01EN",
+    "name": "Lelouch, Righteous Emperor",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed",
+      "rarity": "Special",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "7",
+      "attack": "5",
+      "defense": "6",
+      "effect": "[fanfare] Necrocharge (10): Select up to 2 [abysscraft] followers that cost 2 play points or less in your cemetery and put them onto your field. Give each other follower on your field [attack]+1/[defense]+1. NC (20): Give [attack]+3/[defense]+3 instead. While this card is on your field, each [abysscraft] follower on your field has Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-SP01EN.png"
+  },
+  {
+    "cardNo": "BP04-T01EN",
+    "name": "Serpent TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Token",
+      "trait": "Demon",
+      "rarity": "-",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "1",
+      "attack": "0",
+      "defense": "1",
+      "effect": "Bane."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-T01EN.png"
+  },
+  {
+    "cardNo": "BP04-T02EN",
+    "name": "Goblin King TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Token",
+      "trait": "Goblinoid",
+      "rarity": "-",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "4",
+      "attack": "6",
+      "defense": "6",
+      "effect": "Ward. [fanfare] Give each other Goblinoid follower on your field [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-T02EN.png"
+  },
+  {
+    "cardNo": "BP04-T03EN",
+    "name": "Fairy Wisp TOKEN",
+    "type": "token",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Token",
+      "trait": "Pixie",
+      "rarity": "-",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "0",
+      "attack": "1",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-T03EN.png"
+  },
+  {
+    "cardNo": "BP04-T04EN",
+    "name": "Fairy TOKEN",
+    "type": "token",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Token",
+      "trait": "Pixie",
+      "rarity": "-",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-T04EN.png"
+  },
+  {
+    "cardNo": "BP04-T05EN",
+    "name": "Megalorca TOKEN",
+    "type": "token",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Token",
+      "trait": "Marine",
+      "rarity": "-",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-T05EN.png"
+  },
+  {
+    "cardNo": "BP04-U01EN",
+    "name": "Cassiopeia",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Fae-Touched / Celestial",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "5",
+      "attack": "4",
+      "defense": "5",
+      "effect": "[fanfare] Select any number of enemy followers on the field and deal X damage divided between them. X equals the total number of cards in your hand and EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-U01EN.png"
+  },
+  {
+    "cardNo": "BP04-U02EN",
+    "name": "Gawain of the Round Table",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Arthurian",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Rush. [fanfare] Reveal 2 Commander or Arthurian cards in your hand: Recover 2 play points. While this card is on your field, the 1st Commander card you play each turn costs 1 less."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-U02EN.png"
+  },
+  {
+    "cardNo": "BP04-U03EN",
+    "name": "Europa Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Celestial",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "5",
+      "effect": "Storm. Bane. Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-U03EN.png"
+  },
+  {
+    "cardNo": "BP04-U04EN",
+    "name": "Prime Dragon Keeper",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "3",
+      "attack": "1",
+      "defense": "5",
+      "effect": "[fanfare] If Overflow is active for you, give this follower [attack]+1/[defense]+1 and Intimidate. Whenever another [dragoncraft] follower that costs 3 play points or less is put onto your field, select an enemy follower on the field. Deal 2 damage to it and 1 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-U04EN.png"
+  },
+  {
+    "cardNo": "BP04-U05EN",
+    "name": "Venomfang Medusa",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon / Gorgon",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[act][cost00]: Summon a Serpent token. This ability can be activated once per turn. [q][act][engage], put 2 cards named Serpent from your field into their owners' cemeteries: Select an enemy follower on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-U05EN.png"
+  },
+  {
+    "cardNo": "BP04-U06EN",
+    "name": "Aether of the White Wing",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Luminary / Lightborne",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "7",
+      "attack": "3",
+      "defense": "5",
+      "effect": "Ward. [fanfare] Search your deck for a [havencraft] follower with a different name from this card that costs less than your maximum play points and put it onto your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-U06EN.png"
+  },
+  {
+    "cardNo": "BP04-U07EN",
+    "name": "Israfil Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Angel / Deity",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #4 “Cosmic Mythos”",
+      "cost": "-",
+      "attack": "10",
+      "defense": "10",
+      "effect": "Strike: Deal 5 damage to each enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP04/BP04-U07EN.png"
+  }
+]

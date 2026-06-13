@@ -2109,25 +2109,6 @@
     "imgSrc": ""
   },
   {
-    "cardNo": "BP14-SP01EN",
-    "name": "Merlin",
-    "type": "base",
-    "class": "rune",
-    "details": {
-      "format": "Any",
-      "class": "Runecraft",
-      "cardType": "Follower",
-      "trait": "Mage",
-      "rarity": "Special",
-      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
-      "cost": "3",
-      "attack": "3",
-      "defense": "2",
-      "effect": "[evolve] [cost02]: Evolve this. [fanfare] Search your deck for a spell, reveal it, add it to your hand, then shuffle."
-    },
-    "imgSrc": ""
-  },
-  {
     "cardNo": "BP14-SP02EN",
     "name": "Paracelise, Demon of Greed Evolved",
     "type": "evolved",

@@ -2128,25 +2128,6 @@
     "imgSrc": ""
   },
   {
-    "cardNo": "BP13-SP02EN",
-    "name": "Jeanne d'Arc",
-    "type": "base",
-    "class": "haven",
-    "details": {
-      "format": "Any",
-      "class": "Havencraft",
-      "cardType": "Follower",
-      "trait": "Luminary",
-      "rarity": "Special",
-      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
-      "cost": "4",
-      "attack": "3",
-      "defense": "4",
-      "effect": "[evolve] [cost02]: Evolve this follower. [fanfare] Deal 2 damage to each enemy follower on the field."
-    },
-    "imgSrc": ""
-  },
-  {
     "cardNo": "BP13-T01EN",
     "name": "Anne's Summoning TOKEN",
     "type": "token",

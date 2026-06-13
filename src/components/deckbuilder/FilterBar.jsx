@@ -10,7 +10,7 @@ import {
   CARD_TYPES, TRAITS, RARITIES, COST_BUCKETS, STAT_BUCKETS, hasActiveFilters,
 } from "../../decks/cardDetails";
 import {
-  COLORS, FONT, SET_ORDER, SET_LABELS, CLASS_ORDER, CLASS_LABELS, CLASS_COLORS,
+  COLORS, FONT, CLASS_ORDER, CLASS_LABELS, CLASS_COLORS,
 } from "./theme";
 import { classIcon } from "./icons";
 
@@ -66,7 +66,7 @@ const toggleInArray = (arr, v, setter) =>
 export default function FilterBar({
   mainSelected, onToggleDeck,
   search, onSearch,
-  set, onSet,
+  set, onSet, setOptions = [],
   klass, onClass,
   types, onTypes,
   traits, onTraits,
@@ -74,6 +74,7 @@ export default function FilterBar({
   costs, onCosts,
   attacks, onAttacks,
   defenses, onDefenses,
+  excludeDupes, onExcludeDupes,
   onClear,
 }) {
   const filters = { types, traits, rarities, costs, attacks, defenses };
@@ -106,6 +107,10 @@ export default function FilterBar({
 
         <div style={{ flex: 1 }} />
 
+        <Pill active={excludeDupes} onClick={() => onExcludeDupes(!excludeDupes)}>
+          {excludeDupes ? "Duplicates hidden" : "Duplicates shown"}
+        </Pill>
+
         <Button
           size="small" variant="outlined" onClick={() => setShow((s) => !s)}
           startIcon={<TuneIcon />} endIcon={show ? <ExpandLessIcon /> : <ExpandMoreIcon />}
@@ -132,9 +137,10 @@ export default function FilterBar({
       <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
         <FormControl size="small" sx={{ ...fieldSx, minWidth: 190 }}>
           <InputLabel>Set</InputLabel>
-          <Select label="Set" value={set} onChange={(e) => onSet(e.target.value)}>
+          <Select label="Set" value={set} onChange={(e) => onSet(e.target.value)}
+            MenuProps={{ PaperProps: { style: { maxHeight: 420 } } }}>
             <MenuItem value="all">All Sets</MenuItem>
-            {SET_ORDER.map((s) => <MenuItem key={s} value={s}>{SET_LABELS[s]}</MenuItem>)}
+            {setOptions.map((s) => <MenuItem key={s.code} value={s.code}>{s.label}</MenuItem>)}
           </Select>
         </FormControl>
 

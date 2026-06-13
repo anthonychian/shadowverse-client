@@ -1,0 +1,439 @@
+[
+  {
+    "cardNo": "SD03-001EN",
+    "name": "Mythril Golem",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Golem",
+      "rarity": "Legendary",
+      "cardSet": "Starter Deck #3 “Mysteries of Conjuration”",
+      "cost": "6",
+      "attack": "5",
+      "defense": "6",
+      "effect": "[fanfare] Deal 3 damage to each enemy follower on the field. Spellchain (7): Deal 5 damage instead. SC (15): Deal 5 damage to each enemy leader. (If you have at least 7 spells in your cemetery, perform Spellchain (7). Then, if you have at least 15 spells, perform SC (15).)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD03/SD03-001EN.png"
+  },
+  {
+    "cardNo": "SD03-002EN",
+    "name": "Rune Blade Summoner",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Gold",
+      "cardSet": "Starter Deck #3 “Mysteries of Conjuration”",
+      "cost": "3",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[fanfare] Spellchain (5): Give this follower [attack]+4/[defense]+4. SC (10): Give this follower Storm. (If you have at least 5 spells in your cemetery, perform Spellchain (5). Then, if you have at least 10 spells, perform SC (10).)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD03/SD03-002EN.png"
+  },
+  {
+    "cardNo": "SD03-003EN",
+    "name": "Demonflame Mage",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Silver",
+      "cardSet": "Starter Deck #3 “Mysteries of Conjuration”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve][cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD03/SD03-003EN.png"
+  },
+  {
+    "cardNo": "SD03-004EN",
+    "name": "Demonflame Mage Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage",
+      "rarity": "Silver",
+      "cardSet": "Starter Deck #3 “Mysteries of Conjuration”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve: Deal 2 damage to each enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD03/SD03-004EN.png"
+  },
+  {
+    "cardNo": "SD03-005EN",
+    "name": "Insight",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage",
+      "rarity": "Silver",
+      "cardSet": "Starter Deck #3 “Mysteries of Conjuration”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD03/SD03-005EN.png"
+  },
+  {
+    "cardNo": "SD03-006EN",
+    "name": "Fire Chain",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage",
+      "rarity": "Silver",
+      "cardSet": "Starter Deck #3 “Mysteries of Conjuration”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select up to 2 enemy followers on the field and deal 3 damage divided between them."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD03/SD03-006EN.png"
+  },
+  {
+    "cardNo": "SD03-007EN",
+    "name": "Lightning Shooter",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #3 “Mysteries of Conjuration”",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Select an enemy follower on the field and deal it 2 damage. Spellchain (5): Deal 4 damage instead. SC (10): Deal 2 damage to that follower's leader. (If you have at least 5 spells in your cemetery, perform Spellchain (5). Then, if you have at least 10 spells, perform SC (10).)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD03/SD03-007EN.png"
+  },
+  {
+    "cardNo": "SD03-008EN",
+    "name": "Penguin Wizard",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Arcanaform",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #3 “Mysteries of Conjuration”",
+      "cost": "2",
+      "attack": "1",
+      "defense": "4",
+      "effect": "[evolve][cost01]: Evolve this follower. [act][engage], discard a spell: Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD03/SD03-008EN.png"
+  },
+  {
+    "cardNo": "SD03-009EN",
+    "name": "Penguin Wizard Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arcanaform",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #3 “Mysteries of Conjuration”",
+      "cost": "-",
+      "attack": "2",
+      "defense": "5",
+      "effect": "On Evolve: Refresh this card. [act][engage], discard a spell: Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD03/SD03-009EN.png"
+  },
+  {
+    "cardNo": "SD03-010EN",
+    "name": "Sammy, Wizard's Apprentice",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #3 “Mysteries of Conjuration”",
+      "cost": "1",
+      "attack": "2",
+      "defense": "1",
+      "effect": "[evolve][cost02]: Evolve this follower. [fanfare] Look at the top card of your deck. You may put it into your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD03/SD03-010EN.png"
+  },
+  {
+    "cardNo": "SD03-011EN",
+    "name": "Sammy, Wizard's Apprentice Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #3 “Mysteries of Conjuration”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "2",
+      "effect": "On Evolve: Each player draws a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD03/SD03-011EN.png"
+  },
+  {
+    "cardNo": "SD03-012EN",
+    "name": "Wind Blast",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #3 “Mysteries of Conjuration”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field and deal it 2 damage. Spellchain (10): Deal 4 damage instead. (If you have at least 10 spells in your cemetery, excluding this card, perform Spellchain (10).)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD03/SD03-012EN.png"
+  },
+  {
+    "cardNo": "SD03-013EN",
+    "name": "Sorcery Cache",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #3 “Mysteries of Conjuration”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Look at the top 4 cards of your deck. You may reveal a spell from among them and add it to your hand. You may also put a spell into your cemetery. Put the remaining cards on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD03/SD03-013EN.png"
+  },
+  {
+    "cardNo": "SD03-014EN",
+    "name": "Fiery Embrace",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #3 “Mysteries of Conjuration”",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field and destroy it. Spellchain (10): Deal 3 damage to that follower's leader. (If you have at least 10 spells in your cemetery, excluding this card, perform Spellchain (10).)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD03/SD03-014EN.png"
+  },
+  {
+    "cardNo": "SD03-015EN",
+    "name": "Magic Missile",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #3 “Mysteries of Conjuration”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field. Deal it 2 damage and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD03/SD03-015EN.png"
+  },
+  {
+    "cardNo": "SD03-016EN",
+    "name": "Conjure Golem",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Alchemist",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #3 “Mysteries of Conjuration”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Put a Guardform Golem or Strikeform Golem token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD03/SD03-016EN.png"
+  },
+  {
+    "cardNo": "SD03-017EN",
+    "name": "Healing Angel",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Angel",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #3 “Mysteries of Conjuration”",
+      "cost": "3",
+      "attack": "2",
+      "defense": "4",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD03/SD03-017EN.png"
+  },
+  {
+    "cardNo": "SD03-018EN",
+    "name": "Healing Angel Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Angel",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #3 “Mysteries of Conjuration”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "5",
+      "effect": "On Evolve: Give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD03/SD03-018EN.png"
+  },
+  {
+    "cardNo": "SD03-019EN",
+    "name": "Angelic Snipe",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Angel",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #3 “Mysteries of Conjuration”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD03/SD03-019EN.png"
+  },
+  {
+    "cardNo": "SD03-020EN",
+    "name": "Angelic Barrage",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Angel",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #3 “Mysteries of Conjuration”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Deal 1 damage to each enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD03/SD03-020EN.png"
+  },
+  {
+    "cardNo": "SD03-LD01EN",
+    "name": "Isabelle",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Starter Deck #3 “Mysteries of Conjuration”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD03/SD03-LD01EN.png"
+  },
+  {
+    "cardNo": "SD03-T01EN",
+    "name": "Strikeform Golem TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Token",
+      "trait": "Golem",
+      "rarity": "-",
+      "cardSet": "Starter Deck #3 “Mysteries of Conjuration”",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "Rush. (Followers with Rush can attack enemy followers on the turn they're put onto your field.)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD03/SD03-T01EN.png"
+  },
+  {
+    "cardNo": "SD03-T02EN",
+    "name": "Guardform Golem TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Token",
+      "trait": "Golem",
+      "rarity": "-",
+      "cardSet": "Starter Deck #3 “Mysteries of Conjuration”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Ward. (This follower can be engaged when it's put onto your field or during your end phase. When followers with Ward are engaged, your opponent can only attack them.)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD03/SD03-T02EN.png"
+  }
+]

@@ -4,7 +4,7 @@ import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import { cardImage } from "../../decks/getCards";
 import { getCost } from "../../decks/cardDetails";
-import { COLORS, FONT, CLASS_ORDER, CLASS_LABELS, CLASS_COLORS } from "./theme";
+import { COLORS, FONT, CLASS_ORDER, CLASS_LABELS, CLASS_COLORS, displayName } from "./theme";
 import { classIcon } from "./icons";
 
 const sortedEntries = (map) =>
@@ -32,9 +32,9 @@ const DeckRow = ({ name, count, onInspect, onAdd, onRemove, addDisabled }) => (
         flex: 1, color: COLORS.text, fontFamily: FONT, fontSize: 13,
         whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis",
       }}
-      title={name}
+      title={displayName(name)}
     >
-      {name}
+      {displayName(name)}
     </span>
     <RowBtn onClick={(e) => { e.stopPropagation(); onRemove(name); }}><RemoveIcon sx={{ fontSize: 16 }} /></RowBtn>
     <RowBtn disabled={addDisabled} onClick={(e) => { e.stopPropagation(); if (!addDisabled) onAdd(name); }}>

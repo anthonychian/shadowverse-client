@@ -2,7 +2,7 @@ import React from "react";
 import { cardImage } from "../../decks/getCards";
 import { getDetails } from "../../decks/cardDetails";
 import EffectText from "./EffectText";
-import { COLORS, FONT, CLASS_LABELS } from "./theme";
+import { COLORS, FONT, CLASS_LABELS, displayName } from "./theme";
 import { classIcon, ATTACK_ICON, DEFENSE_ICON, costIcon } from "./icons";
 import ArrowBackIosNew from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIos from "@mui/icons-material/ArrowForwardIos";
@@ -44,6 +44,9 @@ const costFallback = {
 
 export default function CardInspector({
   name,
+  cardNo,
+  rarity,
+  cardSet,
   count = 0,
   atLimit = false,
   isDouble = false,
@@ -64,6 +67,10 @@ export default function CardInspector({
   }
 
   const d = getDetails(name) || {};
+  // Rarity and set differ per printing; prefer the inspected printing's values
+  // (passed in) over the name-keyed defaults.
+  const effRarity = rarity != null ? rarity : d.rarity;
+  const effCardSet = cardSet != null ? cardSet : d.cardSet;
   const isFollower = (d.cardType || "").toLowerCase().startsWith("follower");
   const hasCost = d.cost && d.cost !== "-";
   const costNum = parseInt(d.cost, 10);
@@ -76,7 +83,7 @@ export default function CardInspector({
       <div style={{ position: "relative", display: "flex", justifyContent: "center" }}>
         <ArrowBackIosNew onClick={onPrev} sx={arrowSx("left")} />
         <img
-          src={cardImage(name)}
+          src={cardNo ? `../textures/${cardNo}.png` : cardImage(name)}
           alt={name}
           style={{ width: "100%", maxWidth: 360, borderRadius: 10, boxShadow: "0 6px 24px rgba(0,0,0,0.6)" }}
         />
@@ -95,7 +102,7 @@ export default function CardInspector({
 
       {/* Name */}
       <div style={{ fontFamily: FONT, color: COLORS.text, fontSize: 19, fontWeight: 700, lineHeight: 1.2 }}>
-        {name}
+        {displayName(name)}
       </div>
 
       {/* class · type · rarity */}
@@ -107,7 +114,7 @@ export default function CardInspector({
           </span>
         )}
         {d.cardType && <Badge>{d.cardType}</Badge>}
-        {d.rarity && d.rarity !== "-" && <Badge color="rgba(243,196,75,0.85)">{d.rarity}</Badge>}
+        {effRarity && effRarity !== "-" && <Badge color="rgba(243,196,75,0.85)">{effRarity}</Badge>}
       </div>
 
       {/* cost / attack / defense banner */}
@@ -161,8 +168,8 @@ export default function CardInspector({
         </div>
       )}
 
-      {d.cardSet && (
-        <div style={{ fontFamily: FONT, color: COLORS.textDim, fontSize: 11 }}>{d.cardSet}</div>
+      {effCardSet && (
+        <div style={{ fontFamily: FONT, color: COLORS.textDim, fontSize: 11 }}>{effCardSet}</div>
       )}
 
       {/* Copy stepper */}

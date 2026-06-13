@@ -5,7 +5,7 @@ export const cardImage = (cardName) => {
     case "Aria, Lady of the Woods Evolved":
       return "../textures/BP16-002EN.png";
     case "Orchis, Newfound Heart":
-      return "../textures/BP16-U01EN.png";
+      return "../textures/BP16-003EN.png";
     case "Nazuri, Bestial Innkeeper":
       return "../textures/BP16-004EN.png";
     case "Glade, Fragrantwood Ward":
@@ -41,7 +41,7 @@ export const cardImage = (cardName) => {
     case "Amelia, Silver Captain Evolved":
       return "../textures/BP16-020EN.png";
     case "Albert, Levin Stormsaber":
-      return "../textures/BP16-U02EN.png";
+      return "../textures/BP16-021EN.png";
     case "Ginne, Bewitching Courtesan":
       return "../textures/BP16-022EN.png";
     case "Zirconia, Ironcrown Ward":
@@ -75,7 +75,7 @@ export const cardImage = (cardName) => {
     case "Ironcrown Majesty":
       return "../textures/BP16-037EN.png";
     case "Anne & Grea, Mysterian Duo":
-      return "../textures/BP16-U03EN.png";
+      return "../textures/BP16-038EN.png";
     case "Lilanthim, Anathema of Edacity":
       return "../textures/BP16-039EN.png";
     case "Lilanthim, Anathema of Edacity Evolved":
@@ -113,7 +113,7 @@ export const cardImage = (cardName) => {
     case "Truth Summons":
       return "../textures/BP16-056EN.png";
     case "Forte, Blackwing Dragoon":
-      return "../textures/BP16-U04EN.png";
+      return "../textures/BP16-057EN.png";
     case "Burnite, Anathema of Flame":
       return "../textures/BP16-058EN.png";
     case "Burnite, Anathema of Flame Evolved":
@@ -153,7 +153,7 @@ export const cardImage = (cardName) => {
     case "Goldennote Melody":
       return "../textures/BP16-076EN.png";
     case "Cerberus, Hellfire Unleashed":
-      return "../textures/BP16-U05EN.png";
+      return "../textures/BP16-077EN.png";
     case "Aragavy, Eternal Hunter":
       return "../textures/BP16-078EN.png";
     case "Aragavy, Eternal Hunter Evolved":
@@ -189,7 +189,7 @@ export const cardImage = (cardName) => {
     case "Shadowcrypt Memorial":
       return "../textures/BP16-094EN.png";
     case "Lapis, Shining Seraph":
-      return "../textures/BP16-U06EN.png";
+      return "../textures/BP16-095EN.png";
     case "Rodeo, Anathema of Judgment":
       return "../textures/BP16-096EN.png";
     case "Rodeo, Anathema of Judgment Evolved":
@@ -225,9 +225,9 @@ export const cardImage = (cardName) => {
     case "Darkhaven Grace":
       return "../textures/BP16-112EN.png";
     case "Olivia, Heroic Dark Angel":
-      return "../textures/BP16-U07EN.png";
+      return "../textures/BP16-113EN.png";
     case "Olivia, Heroic Dark Angel Evolved":
-      return "../textures/BP16-SP01EN.png";
+      return "../textures/BP16-114EN.png";
     case "Ruler of Cocytus":
       return "../textures/BP16-115EN.png";
     case "Phildau, Lionheart Ward":
@@ -1345,7 +1345,7 @@ export const cardImage = (cardName) => {
     case "Queen Vampire, Sultry Evening":
       return "../textures/SP01-SP20EN.png";
     case "Zoe, Shore's Melody":
-      return "../textures/SP01-SP25EN.png";
+      return "../textures/SDD06-003EN.png";
     case "Alice, Golden Afternoon":
       return "../textures/SP01-SP31EN.png";
 
@@ -1354,7 +1354,7 @@ export const cardImage = (cardName) => {
     case "Loxis, Homestead Pioneer Evolved":
       return "../textures/BP11-002EN.png";
     case "Shamu & Shama, Posh Felines":
-      return "../textures/BP11-U01EN.png";
+      return "../textures/BP11-003EN.png";
     case "Terrorformer":
       return "../textures/BP11-004EN.png";
     case "Terrorformer Evolved":
@@ -1384,7 +1384,7 @@ export const cardImage = (cardName) => {
     case "Scavenge":
       return "../textures/BP11-017EN.png";
     case "Nahtnaught, Cursed Queen":
-      return "../textures/BP11-SP01EN.png";
+      return "../textures/BP11-018EN.png";
     case "Bunny & Baron, Specter Duo":
       return "../textures/BP11-019EN.png";
     case "Bunny & Baron, Specter Duo Evolved":
@@ -1422,7 +1422,7 @@ export const cardImage = (cardName) => {
     case "Vincent, the Peacekeeper Evolved":
       return "../textures/BP11-036EN.png";
     case "Maiser, Neighborhood Hero":
-      return "../textures/BP11-U03EN.png";
+      return "../textures/BP11-037EN.png";
     case "Magical Gunslinger":
       return "../textures/BP11-038EN.png";
     case "Magical Gunslinger Evolved":
@@ -1456,7 +1456,7 @@ export const cardImage = (cardName) => {
     case "Reggie, Peerless Artisan Evolved":
       return "../textures/BP11-053EN.png";
     case "Resplendent Phoenix":
-      return "../textures/BP11-U04EN.png";
+      return "../textures/BP11-054EN.png";
     case "Georgius":
       return "../textures/BP11-055EN.png";
     case "Georgius Evolved":
@@ -1488,7 +1488,7 @@ export const cardImage = (cardName) => {
     case "Iceschillendrig, Gilded Autocrat":
       return "../textures/BP11-069EN.png";
     case "Iceschillendrig, Gilded Autocrat Evolved":
-      return "../textures/BP11-U05EN.png";
+      return "../textures/BP11-070EN.png";
     case "Illganeau, Horror Astray":
       return "../textures/BP11-071EN.png";
     case "Hazhan, Demonblade Knight":
@@ -1520,7 +1520,7 @@ export const cardImage = (cardName) => {
     case "Spiderweb Array":
       return "../textures/BP11-085EN.png";
     case "Selena, Sugarkiss Assassin":
-      return "../textures/BP11-U06EN.png";
+      return "../textures/BP11-086EN.png";
     case "Anvelt, Judgment's Cannon":
       return "../textures/BP11-087EN.png";
     case "Anvelt, Judgment's Cannon Evolved":
@@ -1556,7 +1556,7 @@ export const cardImage = (cardName) => {
     case "Sylvia, Grand Arbiter":
       return "../textures/BP11-103EN.png";
     case "Sylvia, Grand Arbiter Evolved":
-      return "../textures/BP11-U07EN.png";
+      return "../textures/BP11-104EN.png";
     case "Quixotic Adventurer":
       return "../textures/BP11-105EN.png";
     case "Quixotic Adventurer Evolved":
@@ -1890,7 +1890,7 @@ export const cardImage = (cardName) => {
       return "../textures/CP03-127EN.png";
 
     case "XII. Wolfraud, The Hanged Man":
-      return "../textures/BP10-U01EN.png";
+      return "../textures/BP10-001EN.png";
     case "XII. Wolfraud, The Hanged Man Evolved":
       return "../textures/BP10-002EN.png";
     case "Lucille, Keeper of Relics":
@@ -1926,7 +1926,7 @@ export const cardImage = (cardName) => {
     case "Fairy Assault":
       return "../textures/BP10-018EN.png";
     case "VII. Oluon, The Chariot":
-      return "../textures/BP10-U02EN.png";
+      return "../textures/BP10-019EN.png";
     case "VII. Oluon, Runaway Chariot ADVANCED":
       return "../textures/BP10-020EN.png";
     case "Alyaska, War Hawker":
@@ -1962,7 +1962,7 @@ export const cardImage = (cardName) => {
     case "Pompous Summons":
       return "../textures/BP10-036EN.png";
     case "0. Lhynkal, The Fool":
-      return "../textures/BP10-U03EN.png";
+      return "../textures/BP10-037EN.png";
     case "0. Lhynkal, The Fool Evolved":
       return "../textures/BP10-038EN.png";
     case "Runie, Resolute Diviner":
@@ -1996,7 +1996,7 @@ export const cardImage = (cardName) => {
     case "Magical Augmentation":
       return "../textures/BP10-053EN.png";
     case "XI. Erntz, Justice":
-      return "../textures/BP10-U04EN.png";
+      return "../textures/BP10-054EN.png";
     case "XI. Erntz, Justice Evolved":
       return "../textures/BP10-055EN.png";
     case "Aiela, Devoted Knight":
@@ -2036,7 +2036,7 @@ export const cardImage = (cardName) => {
     case "Dragon Spawning":
       return "../textures/BP10-073EN.png";
     case "VI. Milteo, The Lovers":
-      return "../textures/BP10-U05EN.png";
+      return "../textures/BP10-074EN.png";
     case "VI. Milteo, The Lovers Evolved":
       return "../textures/BP10-075EN.png";
     case "XIV. Luzen, Temperance":
@@ -2072,7 +2072,7 @@ export const cardImage = (cardName) => {
     case "Colossal Grudge":
       return "../textures/BP10-091EN.png";
     case "VIII. Sofina, Strength":
-      return "../textures/BP10-U06EN.png";
+      return "../textures/BP10-092EN.png";
     case "VIII. Sofina, Strength Evolved":
       return "../textures/BP10-093EN.png";
     case "X. Slaus, Wheel of Fortune":
@@ -2107,7 +2107,7 @@ export const cardImage = (cardName) => {
       return "../textures/BP10-108EN.png";
 
     case "XXI. Zelgenea, The World":
-      return "../textures/BP10-U07EN.png";
+      return "../textures/BP10-109EN.png";
     case "XXI. Zelgenea, O Great World ADVANCED":
       return "../textures/BP10-110EN.png";
     case "Starbright Deity":
@@ -2136,7 +2136,7 @@ export const cardImage = (cardName) => {
       return "../textures/BP10-122EN.png";
 
     case "Yggdrasil":
-      return "../textures/BP09-U01EN.png";
+      return "../textures/BP09-001EN.png";
     case "White Vanara":
       return "../textures/BP09-002EN.png";
     case "White Vanara Evolved":
@@ -2178,7 +2178,7 @@ export const cardImage = (cardName) => {
     case "Celia, Despair's Messenger":
       return "../textures/BP09-019EN_URA.png";
     case "Spartacus":
-      return "../textures/BP09-U02EN.png";
+      return "../textures/BP09-020EN.png";
     case "Prim, Innocent Princess":
       return "../textures/BP09-021EN.png";
     case "Prim, Innocent Princess Evolved":
@@ -2212,9 +2212,9 @@ export const cardImage = (cardName) => {
     case "Ceridwen, Eternity Hunter Evolved":
       return "../textures/BP09-036EN.png";
     case "Faust, Truthseeker":
-      return "../textures/BP09-U03EN.png";
+      return "../textures/BP09-037EN.png";
     case "Anne, Mysterian Prodigy":
-      return "../textures/BP09-SP01EN.png";
+      return "../textures/BP09-038EN.png";
     case "Grea, Mysterian Dragoness":
       return "../textures/BP09-039EN.png";
     case "Grea, Mysterian Dragoness Evolved":
@@ -2266,13 +2266,13 @@ export const cardImage = (cardName) => {
     case "Jerva of Draconic Mail":
       return "../textures/BP09-062EN.png";
     case "Jerva of Draconic Mail Evolved":
-      return "../textures/BP09-U04EN.png";
+      return "../textures/BP09-063EN.png";
     case "Zirnitra, Dragon's Flame":
       return "../textures/BP09-064EN.png";
     case "Romelia, Lightning Striker":
       return "../textures/BP09-065EN.png";
     case "Romelia, Lightning Striker Evolved":
-      return "../textures/BP09-SP02EN.png";
+      return "../textures/BP09-066EN.png";
     case "Masamune, Raging Dragon":
       return "../textures/BP09-067EN.png";
     case "Lindworm":
@@ -2326,7 +2326,7 @@ export const cardImage = (cardName) => {
     case "Vania, Blood Queen":
       return "../textures/BP09-090EN_URA.png";
     case "Arcus, Spirited Manager":
-      return "../textures/BP09-U05EN.png";
+      return "../textures/BP09-091EN.png";
     case "Oldblood King":
       return "../textures/BP09-092EN.png";
     case "Oldblood King Evolved":
@@ -2358,7 +2358,7 @@ export const cardImage = (cardName) => {
     case "Jeanne, Beacon of Salvation":
       return "../textures/BP09-106EN.png";
     case "Jeanne, Beacon of Salvation Evolved":
-      return "../textures/BP09-U06EN.png";
+      return "../textures/BP09-107EN.png";
     case "Tutankhamun":
       return "../textures/BP09-108EN.png";
     case "Ceryneian Hind":
@@ -2394,7 +2394,7 @@ export const cardImage = (cardName) => {
     case "Marduk":
       return "../textures/BP09-123EN.png";
     case "Marduk Evolved":
-      return "../textures/BP09-U07EN.png";
+      return "../textures/BP09-124EN.png";
     case "Moon and Sun":
       return "../textures/BP09-125EN.png";
     case "Paradise Vanguard":
@@ -2425,7 +2425,7 @@ export const cardImage = (cardName) => {
     case "Forest Oracle Pascale":
       return "../textures/BP08-001EN.png";
     case "Orchis, Puppet Girl":
-      return "../textures/BP08-U01EN.png";
+      return "../textures/BP08-002EN.png";
     case "Orchis, Resolute Puppet":
       return "../textures/BP08-003ENfront.png";
     case "Orchis, Vengeful Puppet":
@@ -2463,7 +2463,7 @@ export const cardImage = (cardName) => {
     case "Dionne, Dancing Blade":
       return "../textures/BP08-019EN.png";
     case "Dionne, Dancing Blade Evolved":
-      return "../textures/BP08-U02EN.png";
+      return "../textures/BP08-020EN.png";
     case "Roland the Incorruptible":
       return "../textures/BP08-021EN.png";
     case "Roland the Incorruptible Evolved":
@@ -2531,7 +2531,7 @@ export const cardImage = (cardName) => {
     case "Azi Dahaka":
       return "../textures/BP08-053EN.png";
     case "Azi Dahaka Evolved":
-      return "../textures/BP08-U04EN.png";
+      return "../textures/BP08-054EN.png";
     case "Annerose":
       return "../textures/BP08-055EN.png";
     case "Annerose Evolved":
@@ -2599,7 +2599,7 @@ export const cardImage = (cardName) => {
     case "Godsworn Alexiel":
       return "../textures/BP08-087EN.png";
     case "Godsworn Alexiel Evolved":
-      return "../textures/BP08-U06EN.png";
+      return "../textures/BP08-088EN.png";
     case "Eidolon of Madness":
       return "../textures/BP08-089EN.png";
     case "Eidolon of Madness Evolved":
@@ -2639,7 +2639,7 @@ export const cardImage = (cardName) => {
     case "Sahaquiel Evolved":
       return "../textures/BP08-107EN.png";
     case "Tart Man":
-      return "../textures/BP08-U07EN.png";
+      return "../textures/BP08-108EN.png";
     case "Slash of the One":
       return "../textures/BP08-109EN.png";
     case "Reina, Evolution's Herald":
@@ -2662,7 +2662,7 @@ export const cardImage = (cardName) => {
     case "Ladica, the Stoneclaw":
       return "../textures/BP07-001EN.png";
     case "Ladica, the Stoneclaw Evolved":
-      return "../textures/BP07-U01EN.png";
+      return "../textures/BP07-002EN.png";
     case "Cynthia, the Queen's Blade":
       return "../textures/BP07-003EN.png";
     case "Primal Giant":
@@ -2700,7 +2700,7 @@ export const cardImage = (cardName) => {
     case "Mistolina, Forest Princess":
       return "../textures/BP07-020EN.png";
     case "Tsubaki of the Demon Blade":
-      return "../textures/BP07-U02EN.png";
+      return "../textures/BP07-021EN.png";
     case "Leod, the Crescent Blade":
       return "../textures/BP07-022EN.png";
     case "Leod, the Crescent Blade Evolved":
@@ -2735,7 +2735,7 @@ export const cardImage = (cardName) => {
     case "Belphomet, Lord of Aiolon":
       return "../textures/BP07-037EN.png";
     case "Riley, Hydroshaman":
-      return "../textures/BP07-U03EN.png";
+      return "../textures/BP07-038EN.png";
     case "Eleanor, Cosmic Flower":
       return "../textures/BP07-039EN.png";
     case "Eleanor, Cosmic Flower Evolved":
@@ -2765,7 +2765,7 @@ export const cardImage = (cardName) => {
     case "Valdain, Cursed Shadow":
       return "../textures/BP07-052EN.png";
     case "Valdain, Cursed Shadow Evolved":
-      return "../textures/BP07-U04EN.png";
+      return "../textures/BP07-053EN.png";
     case "Neptune, Tidemistress":
       return "../textures/BP07-054EN.png";
     case "Wildfire Tyrannosaur":
@@ -2799,7 +2799,7 @@ export const cardImage = (cardName) => {
     case "Mono, Garnet Rebel":
       return "../textures/BP07-069EN.png";
     case "Mono, Garnet Rebel Evolved":
-      return "../textures/BP07-U05EN.png";
+      return "../textures/BP07-070EN.png";
     case "Kudlak":
       return "../textures/BP07-071EN.png";
     case "Aenea, Amethyst Rebel":
@@ -2835,7 +2835,7 @@ export const cardImage = (cardName) => {
     case "Limonia, Flawed Saint Evolved":
       return "../textures/BP07-087EN.png";
     case "Lapis, Glorious Seraph":
-      return "../textures/BP07-U06EN.png";
+      return "../textures/BP07-088EN.png";
     case "Father Refinement":
       return "../textures/BP07-089EN.png";
     case "Marione, Light of Balance":
@@ -2865,7 +2865,7 @@ export const cardImage = (cardName) => {
     case "Meowskers Ambush!":
       return "../textures/BP07-102EN.png";
     case "Technolord":
-      return "../textures/BP07-U07EN.png";
+      return "../textures/BP07-103EN.png";
     case "Technolord (b)":
       return "../textures/BP07-103EN.png";
     case "Viridia Magna":
@@ -3192,7 +3192,7 @@ export const cardImage = (cardName) => {
     case "Lymaga, Forest Champion":
       return "../textures/BP06-001EN.png";
     case "Lymaga, Forest Champion Evolved":
-      return "../textures/BP06-U01EN.png";
+      return "../textures/BP06-002EN.png";
     case "Amataz, Fairy Blader":
       return "../textures/BP06-003EN.png";
     case "Greenbrier Elf":
@@ -3228,7 +3228,7 @@ export const cardImage = (cardName) => {
     case "Ralmia, Sonic Racer":
       return "../textures/BP06-019EN.png";
     case "Ralmia, Sonic Racer Evolved":
-      return "../textures/BP06-U02EN.png";
+      return "../textures/BP06-020EN.png";
     case "Steadfast Samurai":
       return "../textures/BP06-021EN.png";
     case "Hero of Antiquity":
@@ -3258,7 +3258,7 @@ export const cardImage = (cardName) => {
     case "Breakneck Draw":
       return "../textures/BP06-034EN.png";
     case "Kuon, Founder of Onmyodo":
-      return "../textures/BP06-U03EN.png";
+      return "../textures/BP06-035EN.png";
     case "Mysteria, Magic Founder":
       return "../textures/BP06-036EN.png";
     case "Mysteria, Magic Founder Evolved":
@@ -3296,7 +3296,7 @@ export const cardImage = (cardName) => {
     case "Garyu, Surpreme Dragonkin Evolved":
       return "../textures/BP06-053EN.png";
     case "Filene, Whitefrost Dragonewt":
-      return "../textures/BP06-U04EN.png";
+      return "../textures/BP06-054EN.png";
     case "Phoenix Empress":
       return "../textures/BP06-055EN.png";
     case "Wyrm God of the Skies":
@@ -3328,7 +3328,7 @@ export const cardImage = (cardName) => {
     case "Ginsetsu, Great Fox":
       return "../textures/BP06-069EN.png";
     case "Ginsetsu, Great Fox Evolved":
-      return "../textures/BP06-U05EN.png";
+      return "../textures/BP06-070EN.png";
     case "Aragavy the Berserker":
       return "../textures/BP06-071EN.png";
     case "Shuten-Doji":
@@ -3364,7 +3364,7 @@ export const cardImage = (cardName) => {
     case "Karula, Arts Master":
       return "../textures/BP06-087EN.png";
     case "Karula, Arts Master Evolved":
-      return "../textures/BP06-U06EN.png";
+      return "../textures/BP06-088EN.png";
     case "Saintly Leader":
       return "../textures/BP06-089EN.png";
     case "Phantom Blade Wielder":
@@ -3398,7 +3398,7 @@ export const cardImage = (cardName) => {
     case "Badb Catha":
       return "../textures/BP06-104EN.png";
     case "Badb Catha Evolved":
-      return "../textures/BP06-U07EN.png";
+      return "../textures/BP06-105EN.png";
     case "Mithra, Daybreak Diety":
       return "../textures/BP06-106EN.png";
     case "Mithra, Daybreak Diety Evolved":
@@ -3427,7 +3427,7 @@ export const cardImage = (cardName) => {
     case "Izudia, Omen of Unkilling":
       return "../textures/BP05-001EN.png";
     case "Izudia, Omen of Unkilling Evolved":
-      return "../textures/BP05-U01EN.png";
+      return "../textures/BP05-002EN.png";
     case "Spinaria, Keeper of Enigmas":
       return "../textures/BP05-003EN.png";
     case "Apostle of Unkilling":
@@ -3462,7 +3462,7 @@ export const cardImage = (cardName) => {
     case "Octrice, Omen of Usurpation":
       return "../textures/BP05-018EN.png";
     case "Octrice, Omen of Usurpation Evolved":
-      return "../textures/BP05-U02EN.png";
+      return "../textures/BP05-019EN.png";
     case "Magna Legacy":
       return "../textures/BP05-020EN.png";
     case "Apostle of Usurpation":
@@ -3499,7 +3499,7 @@ export const cardImage = (cardName) => {
     case "Raio, Omen of Truth Evolved":
       return "../textures/BP05-036EN.png";
     case "Lishenna, Omen of Destruction":
-      return "../textures/BP05-U03EN.png";
+      return "../textures/BP05-037EN.png";
     case "Apostle of Truth":
       return "../textures/BP05-038EN.png";
     case "Apostle of Truth Evolved":
@@ -3530,9 +3530,9 @@ export const cardImage = (cardName) => {
       return "../textures/BP05-051EN.png";
 
     case "Galmieux, Omen of Disdain":
-      return "../textures/SP01-U16EN.png";
+      return "../textures/BP05-052EN.png";
     case "Galmieux, Omen of Disdain Evolved":
-      return "../textures/BP05-U04EN.png";
+      return "../textures/BP05-053EN.png";
     case "Electromagical Rhino":
       return "../textures/BP05-054EN.png";
     case "Apostle of Disdain":
@@ -3565,7 +3565,7 @@ export const cardImage = (cardName) => {
       return "../textures/BP05-068EN.png";
 
     case "Valnareik, Omen of Lust":
-      return "../textures/BP05-U05EN.png";
+      return "../textures/BP05-069EN.png";
     case "Rulenye, Omen of Silence":
       return "../textures/BP05-070EN.png";
     case "Rulenye, Omen of Silence Evolved":
@@ -3602,7 +3602,7 @@ export const cardImage = (cardName) => {
     case "Marwynn, Omen of Repose":
       return "../textures/BP05-086EN.png";
     case "Marwynn, Omen of Repose Evolved":
-      return "../textures/BP05-U06EN.png";
+      return "../textures/BP05-087EN.png";
     case "Deus Ex Machina":
       return "../textures/BP05-088EN.png";
     case "Apostle of Repose":
@@ -3639,7 +3639,7 @@ export const cardImage = (cardName) => {
     case "Mjerrabaine, Omen of One Evolved":
       return "../textures/BP05-104EN.png";
     case "Gilnelise, Omen of Craving":
-      return "../textures/BP05-U07EN.png";
+      return "../textures/BP05-105EN.png";
     case "Apostle of Craving":
       return "../textures/BP05-106EN.png";
     case "Apostle of Craving Evolved":
@@ -3666,7 +3666,7 @@ export const cardImage = (cardName) => {
       return "../textures/BP05-117EN.png";
 
     case "Cassiopeia":
-      return "../textures/BP04-U01EN.png";
+      return "../textures/BP04-001EN.png";
     case "C.C., Woodland Witch":
       return "../textures/BP04-002EN.png";
     case "Deepwood Anomaly":
@@ -3708,7 +3708,7 @@ export const cardImage = (cardName) => {
     case "Mars, Silent Flame General Evolved":
       return "../textures/BP04-021EN.png";
     case "Gawain of the Round Table":
-      return "../textures/BP04-U02EN.png";
+      return "../textures/BP04-022EN.png";
     case "Barbarossa":
       return "../textures/BP04-023EN.png";
     case "Barbarossa Evolved":
@@ -3750,7 +3750,7 @@ export const cardImage = (cardName) => {
     case "Europa":
       return "../textures/BP04-042EN.png";
     case "Europa Evolved":
-      return "../textures/BP04-U03EN.png";
+      return "../textures/BP04-043EN.png";
     case "Chain of Calling":
       return "../textures/BP04-044EN.png";
     case "Noble Instruction":
@@ -3790,7 +3790,7 @@ export const cardImage = (cardName) => {
     case "Lævateinn Dragon, Blast Form Evolved":
       return "../textures/BP04-062EN.png";
     case "Prime Dragon Keeper":
-      return "../textures/BP04-U04EN.png";
+      return "../textures/BP04-063EN.png";
     case "Star Phoenix":
       return "../textures/BP04-064EN.png";
     case "Star Phoenix Evolved":
@@ -3822,7 +3822,7 @@ export const cardImage = (cardName) => {
     case "Dragon's Nest":
       return "../textures/BP04-078EN.png";
     case "Venomfang Medusa":
-      return "../textures/BP04-U05EN.png";
+      return "../textures/BP04-079EN.png";
     case "Howling Demon":
       return "../textures/BP04-080EN.png";
     case "Howling Demon Evolved":
@@ -3830,7 +3830,7 @@ export const cardImage = (cardName) => {
     case "Demonlord Eachtar":
       return "../textures/BP04-082EN.png";
     case "Lelouch, Leader of the Black Knights":
-      return "../textures/BP04-SP01EN.png";
+      return "../textures/BP04-083EN.png";
     case "Stheno":
       return "../textures/BP04-084EN.png";
     case "Stheno Evolved":
@@ -3860,7 +3860,7 @@ export const cardImage = (cardName) => {
     case "Venomous Bite":
       return "../textures/BP04-097EN.png";
     case "Aether of the White Wing":
-      return "../textures/BP04-U06EN.png";
+      return "../textures/BP04-098EN.png";
     case "Dark Jeanne":
       return "../textures/BP04-099EN.png";
     case "Dark Jeanne Evolved":
@@ -3900,7 +3900,7 @@ export const cardImage = (cardName) => {
     case "Israfil":
       return "../textures/BP04-117EN.png";
     case "Israfil Evolved":
-      return "../textures/BP04-U07EN.png";
+      return "../textures/BP04-118EN.png";
     case "Grimnir, War Cyclone":
       return "../textures/BP04-119EN.png";
     case "Grimnir, War Cyclone Evolved":
@@ -3933,7 +3933,7 @@ export const cardImage = (cardName) => {
     case "Cosmos Fang Evolved":
       return "../textures/BP03-003EN.png";
     case "Magical Fairy, Lilac":
-      return "../textures/BP03-U01EN.png";
+      return "../textures/BP03-004EN.png";
     case "Slade Blossoming Wolf":
       return "../textures/BP03-005EN.png";
     case "Slade Blossoming Wolf Evolved":
@@ -3961,7 +3961,7 @@ export const cardImage = (cardName) => {
     case "Woodland Band":
       return "../textures/BP03-017EN.png";
     case "Cinderella":
-      return "../textures/BP03-U02EN.png";
+      return "../textures/BP03-018EN.png";
     case "Valiant Fencer":
       return "../textures/BP03-019EN.png";
     case "Valiant Fencer Evolved":
@@ -3995,9 +3995,9 @@ export const cardImage = (cardName) => {
     case "Heroic Entry":
       return "../textures/BP03-034EN.png";
     case "Wizardess of Oz":
-      return "../textures/BP03-U03EN.png";
+      return "../textures/BP03-035EN.png";
     case "Witch of Calamity, Millie Parfait":
-      return "../textures/BP03-SP01EN.png";
+      return "../textures/BP03-036EN.png";
     case "Mystic King":
       return "../textures/BP03-037EN.png";
     case "Mystic King Evolved":
@@ -4071,7 +4071,7 @@ export const cardImage = (cardName) => {
     case "Armor Burst":
       return "../textures/BP03-072EN.png";
     case "Dark Alice":
-      return "../textures/BP03-U05EN.png";
+      return "../textures/BP03-073EN.png";
     case "Masquerade Ghost":
       return "../textures/BP03-074EN.png";
     case "Masquerade Ghost Evolved":
@@ -4111,7 +4111,7 @@ export const cardImage = (cardName) => {
     case "Diamond Master Evolved":
       return "../textures/BP03-092EN.png";
     case "Odette, White Swan":
-      return "../textures/BP03-U06EN.png";
+      return "../textures/BP03-093EN.png";
     case "Wingy Chirpy Gemstone":
       return "../textures/BP03-094EN.png";
     case "Wingy Chirpy Gemstone Evolved":
@@ -4141,7 +4141,7 @@ export const cardImage = (cardName) => {
     case "Alice, Wonderland Explorer":
       return "../textures/BP03-107EN.png";
     case "Alice, Wonderland Explorer Evolved":
-      return "../textures/BP03-U07EN.png";
+      return "../textures/BP03-108EN.png";
     case "Angel of Chaos":
       return "../textures/BP03-109EN.png";
     case "Rapunzel":
@@ -4349,7 +4349,7 @@ export const cardImage = (cardName) => {
     case "Crystalia Tia":
       return "../textures/BP02-001EN.png";
     case "Crystalia Tia Evolved":
-      return "../textures/BP02-U01EN.png";
+      return "../textures/BP02-002EN.png";
     case "White Wolf of Eldwood":
       return "../textures/BP02-003EN.png";
     case "Elf Girl Liza":
@@ -4387,7 +4387,7 @@ export const cardImage = (cardName) => {
     case "Alexander":
       return "../textures/BP02-020EN.png";
     case "Amelia, Silver Paladin":
-      return "../textures/BP02-U02EN.png";
+      return "../textures/BP02-021EN.png";
     case "Leonidas":
       return "../textures/BP02-022EN.png";
     case "Leonidas Evolved":
@@ -4451,7 +4451,7 @@ export const cardImage = (cardName) => {
     case "Imperial Dragoon":
       return "../textures/BP02-052EN.png";
     case "Imperial Dragoon Evolved":
-      return "../textures/BP02-U04EN.png";
+      return "../textures/BP02-053EN.png";
     case "Dragonsong Flute":
       return "../textures/BP02-054EN.png";
     case "Neptune":
@@ -4483,7 +4483,7 @@ export const cardImage = (cardName) => {
     case "Draconic Armor":
       return "../textures/BP02-068EN.png";
     case "Vania, Vampire Princess":
-      return "../textures/BP02-U05EN.png";
+      return "../textures/BP02-069EN.png";
     case "Soul Dealer":
       return "../textures/BP02-070EN.png";
     case "Soul Dealer Evolved":
@@ -4526,7 +4526,7 @@ export const cardImage = (cardName) => {
     case "Kaguya":
       return "../textures/BP02-089EN.png";
     case "Kaguya Evolved":
-      return "../textures/BP02-U06EN.png";
+      return "../textures/BP02-090EN.png";
     case "Tribunal of Good and Evil":
       return "../textures/BP02-091EN.png";
     case "Elana's Prayer":
@@ -4556,7 +4556,7 @@ export const cardImage = (cardName) => {
     case "Bahamut":
       return "../textures/BP02-104EN.png";
     case "Bahamut Evolved":
-      return "../textures/BP02-U07EN.png";
+      return "../textures/BP02-105EN.png";
     case "Demonic Simulacrum":
       return "../textures/BP02-106EN.png";
     case "Archangel Reina":
@@ -4564,7 +4564,7 @@ export const cardImage = (cardName) => {
     case "Archangel Reina Evolved":
       return "../textures/BP02-108EN.png";
     case "Surefire Bullet":
-      return "../textures/SS01-U01EN.png";
+      return "../textures/BP02-109EN.png";
     case "Unicorn Dancer Unicorn":
       return "../textures/BP02-110EN.png";
     case "Unicorn Dancer Unicorn Evolved":
@@ -4629,7 +4629,7 @@ export const cardImage = (cardName) => {
     case "Undying Resentment":
       return "../textures/SD05-015EN.png";
     case "Summon Bloodkin":
-      return "../textures/PR-211EN.png";
+      return "../textures/SD05-016EN.png";
     case "Fafnir":
       return "../textures/SD04-001EN.png";
     case "Dragon Oracle":
@@ -4728,7 +4728,7 @@ export const cardImage = (cardName) => {
       return "../textures/SD01-016EN.png";
 
     case "Rose Queen":
-      return "../textures/BP01-U01EN.png";
+      return "../textures/BP01-001EN.png";
     case "Ancient Elf":
       return "../textures/BP01-002EN.png";
     case "Ancient Elf Evolved":
@@ -4780,7 +4780,7 @@ export const cardImage = (cardName) => {
     case "Sea Queen Otohime":
       return "../textures/BP01-026EN.png";
     case "Sea Queen Otohime Evolved":
-      return "../textures/BP01-U02EN.png";
+      return "../textures/BP01-027EN.png";
     case "Aurelia, Regal Saber":
       return "../textures/BP01-028EN.png";
     case "Shadowed Assassin":
@@ -4830,7 +4830,7 @@ export const cardImage = (cardName) => {
     case "Arch Summoner Erasmus":
       return "../textures/BP01-051EN.png";
     case "Merlin":
-      return "../textures/BP14-SP01EN.png";
+      return "../textures/BP01-052EN.png";
     case "Merlin Evolved":
       return "../textures/BP01-053EN.png";
     case "Ancient Alchemist":
@@ -4842,7 +4842,7 @@ export const cardImage = (cardName) => {
     case "Dimension Shift":
       return "../textures/BP01-057EN.png";
     case "Juno's Secret Laboratory":
-      return "../textures/BP01-U03EN.png";
+      return "../textures/BP01-058EN.png";
     case "Spectral Wizard":
       return "../textures/BP01-059EN.png";
     case "Spectral Wizard Evolved":
@@ -4879,11 +4879,11 @@ export const cardImage = (cardName) => {
     case "Teachings of Creation":
       return "../textures/BP01-075EN.png";
     case "Dark Dragoon Forte":
-      return "../textures/BP11-SP02EN.png";
+      return "../textures/BP01-076EN.png";
     case "Dark Dragoon Forte Evolved":
-      return "../textures/BP01-U04EN.png";
+      return "../textures/BP01-077EN.png";
     case "Aiela, Dragon Knight":
-      return "../textures/BP01-P16EN.png";
+      return "../textures/BP01-079EN.png";
     case "Zirnitra":
       return "../textures/BP01-078EN.png";
     case "Genesis Dragon":
@@ -4935,7 +4935,7 @@ export const cardImage = (cardName) => {
     case "Lord Atomy":
       return "../textures/BP01-103EN.png";
     case "Medusa":
-      return "../textures/BP01-U05EN.png";
+      return "../textures/BP01-104EN.png";
     case "Righteous Devil":
       return "../textures/BP01-105EN.png";
     case "Righteous Devil Evolved":
@@ -4981,9 +4981,9 @@ export const cardImage = (cardName) => {
     case "Moon Al-mi'raj":
       return "../textures/BP01-126EN.png";
     case "Jeanne d'Arc":
-      return "../textures/BP13-SP02EN.png";
+      return "../textures/BP01-127EN.png";
     case "Jeanne d'Arc Evolved":
-      return "../textures/BP01-U06EN.png";
+      return "../textures/BP01-128EN.png";
     case "Arch Priestess Laelia":
       return "../textures/BP01-129EN.png";
     case "Arch Priestess Laelia Evolved":
@@ -5029,7 +5029,7 @@ export const cardImage = (cardName) => {
     case "Death Sentence":
       return "../textures/BP01-150EN.png";
     case "Gabriel":
-      return "../textures/BP01-U07EN.png";
+      return "../textures/BP01-151EN.png";
     case "Lucifer":
       return "../textures/BP01-152EN.png";
     case "Lucifer Evolved":
@@ -5067,7 +5067,7 @@ export const cardImage = (cardName) => {
     case "Execution":
       return "../textures/BP01-169EN.png";
     case "Trail of Light":
-      return "../textures/PR-020EN.png";
+      return "../textures/BP01-170EN.png";
     case "Goblin":
       return "../textures/BP01-171EN.png";
     case "Goblin Evolved":
@@ -5085,9 +5085,9 @@ export const cardImage = (cardName) => {
     case "Healing Angel Evolved":
       return "../textures/BP01-178EN.png";
     case "Angelic Snipe":
-      return "../textures/PR-017EN.png";
+      return "../textures/BP01-179EN.png";
     case "Angelic Barrage":
-      return "../textures/PR-018EN.png";
+      return "../textures/BP01-180EN.png";
 
     case "Guardian Golem TOKEN":
       return "../textures/BP16-T01EN.png";
@@ -5699,6 +5699,267 @@ export const cardImage = (cardName) => {
       return "../textures/ECP02-U11EN.png";
     case "Miyu Mifune [Parfum Géranium]":
       return "../textures/ECP02-U12EN.png";
+    case "Tsubaki":
+      return "../textures/SD02-001EN.png";
+    case "Sammy, Wizard's Apprentice":
+      return "../textures/SD03-010EN.png";
+    case "Sammy, Wizard's Apprentice Evolved":
+      return "../textures/SD03-011EN.png";
+    case "Magic Missile":
+      return "../textures/SD03-015EN.png";
+    case "Spinaria, Wavering Will":
+      return "../textures/SDD01-003EN.png";
+    case "Godsent Stride":
+      return "../textures/SDD02-015EN.png";
+    case "Slade, Blossoming Wolf":
+      return "../textures/BP03-005EN.png";
+    case "Slade, Blossoming Wolf Evolved":
+      return "../textures/BP03-006EN.png";
+    case "Biofabrication":
+      return "../textures/BP06-113EN.png";
+    case "Regal Wildcat":
+      return "../textures/PR-440EN.png";
+    case "Mithra, Daybreak Deity":
+      return "../textures/BP06-106EN.png";
+    case "Mithra, Daybreak Deity Evolved":
+      return "../textures/BP06-107EN.png";
+    case "Serpent Wrath":
+      return "../textures/BP01-090EN.png";
+    case "Colette, Holy Gunner":
+      return "../textures/BP08-093EN.png";
+    case "Colette, Holy Gunner Evolved":
+      return "../textures/BP08-094EN.png";
+    case "Albert, Levin Saber":
+      return "../textures/BP02-018EN.png";
+    case "Albert, Levin Saber Evolved":
+      return "../textures/BP02-019EN.png";
+    case "Genesis of Legend":
+      return "../textures/PR-137EN.png";
+    case "Wingy, Chirpy Gemstone":
+      return "../textures/BP03-094EN.png";
+    case "Wingy, Chirpy Gemstone Evolved":
+      return "../textures/BP03-095EN.png";
+    case "Fervent Machine Soldier":
+      return "../textures/BP05-026EN.png";
+    case "Unicorn Dancer Unica":
+      return "../textures/BP02-110EN.png";
+    case "Unicorn Dancer Unica Evolved":
+      return "../textures/BP02-111EN.png";
+    case "Jabberwock":
+      return "../textures/BP03-055EN.png";
+    case "Grand Summoning":
+      return "../textures/PR-219EN.png";
+    case "Dragonrend Quake":
+      return "../textures/PR-138EN.png";
+    case "Spawn of the Abyss Evolved":
+      return "../textures/PR-220EN.png";
+    case "Mimi, Infernal Right Paw TOKEN":
+      return "../textures/BP01-T12EN.png";
+    case "Coco, Infernal Left Paw TOKEN":
+      return "../textures/BP01-T13EN.png";
+    case "Pulsefire Assault":
+      return "../textures/SS01-U01EN.png";
+    case "New Year's Soul Devil":
+      return "../textures/NY2024-001EN.png";
+    case "Baalt, King of the Elves":
+      return "../textures/BP02-010EN.png";
+    case "Carrot Evolved":
+      return "../textures/PR-042EN.png";
+    case "Sparkling☆Days":
+      return "../textures/CP02-028EN.png";
+    case "Riamu's Reverie":
+      return "../textures/PR-146EN.png";
+    case "Sweet Sentiments":
+      return "../textures/PR-147EN.png";
+    case "Marlone, Light of Balance Evolved":
+      return "../textures/BP07-091EN.png";
+    case "Blue Storm Supreme Dragon, Glory Maelstrom Evolved":
+      return "../textures/CP03-002EN.png";
+    case "Evolution Point":
+      return "../textures/PR-388EN.png";
+    case "Super-Evolution Point":
+      return "../textures/PR-389EN.png";
+    case "Airi Totoki [Anniversary Princess]":
+      return "../textures/PR-451EN.png";
+    case "Cute Pendant TOKEN":
+      return "../textures/PR-453EN.png";
+    case "Cute Tiara TOKEN":
+      return "../textures/PR-454EN.png";
+    case "Cool Pendant TOKEN":
+      return "../textures/PR-456EN.png";
+    case "Cool Tiara TOKEN":
+      return "../textures/PR-457EN.png";
+    case "Passion Pendant TOKEN":
+      return "../textures/PR-459EN.png";
+    case "Passion Tiara TOKEN":
+      return "../textures/PR-460EN.png";
+    case "Anastasia [All-Out Vacation]":
+      return "../textures/PR-461EN.png";
+    case "Miku Maekawa [Summer Cat Rendezvous]":
+      return "../textures/PR-462EN.png";
+    case "Summer Sea Breeze":
+      return "../textures/PR-463EN.png";
+    case "Miho Kohinata [Summer Firsts]":
+      return "../textures/PR-464EN.png";
+    case "Mio Honda [Mermaid Star]":
+      return "../textures/PR-465EN.png";
+    case "Beachside Memories":
+      return "../textures/PR-466EN.png";
+    case "Summer Encounter":
+      return "../textures/PR-467EN.png";
+    case "#UNICUS":
+      return "../textures/CP02-U13aEN.png";
+    case "Close-Knit Ambitions":
+      return "../textures/CP01-080EN.png";
+    case "Harbinger of the Night":
+      return "../textures/BP03-119EN.png";
+    case "Ms. Tart Man":
+      return "../textures/BP08-U07EN.png";
+    case "Tazuna Hayakawa [Tracen Reception]":
+      return "../textures/CSD01-007EN.png";
+    case "* (Asterisk)":
+      return "../textures/CP02-U01aEN.png";
+    case "Aiko Takamori [Handmade Happiness]":
+      return "../textures/CSD02c-002EN.png";
+    case "Cheshire Cat":
+      return "../textures/BP07-012EN.png";
+    case "Grand Archer Selwyn":
+      return "../textures/BP02-006EN.png";
+    case "Minami Nitta [Water's Edge Bride]":
+      return "../textures/ECP02-004EN.png";
+    case "Otoha Umeki":
+      return "../textures/CP02-016EN.png";
+    case "Yuki Himekawa [Full Swing☆Cheer]":
+      return "../textures/ECP02-005EN.png";
+    case "Agnes Digital":
+      return "../textures/CP01-033EN.png";
+    case "Daria, Dimensional Witch":
+      return "../textures/BP02-035EN.png";
+    case "Hagoromo Komachi":
+      return "../textures/CP02-U06aEN.png";
+    case "Mika Jougasaki [My★Style]":
+      return "../textures/ECP02-027EN.png";
+    case "Multipart Experiment":
+      return "../textures/BP02-045EN.png";
+    case "Prophetess of Creation":
+      return "../textures/BP08-037EN.png";
+    case "Yuuki Otokura [Together with Me]":
+      return "../textures/ECP02-028EN.png";
+    case "Akari Tsujino [Twice as Lovely]":
+      return "../textures/ECP02-040EN.png";
+    case "Aqua Nereid":
+      return "../textures/BP04-074EN.png";
+    case "BRIGHT:LIGHTS":
+      return "../textures/CP02-U08aEN.png";
+    case "Garyu, Supreme Dragonkin":
+      return "../textures/BP06-052EN.png";
+    case "Gattling Claw Dragon":
+      return "../textures/CP03-077EN.png";
+    case "Iron Tail Dragon":
+      return "../textures/CP03-080EN.png";
+    case "Riamu Yumemi [Party Night]":
+      return "../textures/ECP02-041EN.png";
+    case "Slaughtering Dragonewt":
+      return "../textures/BP10-060EN.png";
+    case "Asuka Ninomiya [Sweet & Charming]":
+      return "../textures/ECP02-052EN.png";
+    case "Lelouch, Righteous Emperor":
+      return "../textures/BP04-SP01EN.png";
+    case "Nephthys":
+      return "../textures/BP08-071EN.png";
+    case "Ranko Kanzaki [Cinderella Girl]":
+      return "../textures/ECP02-047EN.png";
+    case "Silvernail Markswoman":
+      return "../textures/BP14-082EN.png";
+    case "Eve Santaclaus [Cinderella Girl]":
+      return "../textures/ECP02-063EN.png";
+    case "Evil-Eye Princess, Euryale":
+      return "../textures/CP03-110EN.png";
+    case "Marlone, Light of Balance":
+      return "../textures/BP07-090EN.png";
+    case "Miyu Mifune [Rouge Couture]":
+      return "../textures/ECP02-064EN.png";
+    case "Psychic☆Maiden":
+      return "../textures/CP02-096EN.png";
+    case "Sapphire Priestess":
+      return "../textures/BP02-095EN.png";
+    case "T. M. Opera O":
+      return "../textures/CP01-078EN.png";
+    case "Rin Shibuya [Cinderella Girl]":
+      return "../textures/ECP02-012EN.png";
+    case "Uzuki Shimamura [Cinderella Girl]":
+      return "../textures/ECP02-015EN.png";
+    case "A Super Successful Event! Evolved":
+      return "../textures/ECP01-058EN.png";
+    case "At the End of the Day Evolved":
+      return "../textures/ECP01-060EN.png";
+    case "Forth! Into the Great Age of Agriculture! Evolved":
+      return "../textures/ECP01-061EN.png";
+    case "Harbinger of the Night Evolved":
+      return "../textures/BP03-120EN.png";
+    case "Hungry for a Miracle Evolved":
+      return "../textures/ECP01-059EN.png";
+    case "Workshop! Farmers for a Day! Evolved":
+      return "../textures/ECP01-062EN.png";
+    case "Barking Manticore Evolved":
+      return "../textures/CP03-047EN.png";
+    case "Daria, Dimensional Witch Evolved":
+      return "../textures/BP02-036EN.png";
+    case "Mysterian Whitewyrm Evolved":
+      return "../textures/BP09-042EN.png";
+    case "Blazing Flare Dragon Evolved":
+      return "../textures/CP03-067EN.png";
+    case "Embodiment of Victory, Aleph Evolved":
+      return "../textures/CSD03b-005EN.png";
+    case "Garyu, Supreme Dragonkin Evolved":
+      return "../textures/BP06-053EN.png";
+    case "Lævateinn Dragon, Attack Form Evolved":
+      return "../textures/BP03-058EN.png";
+    case "Slaughtering Dragonewt Evolved":
+      return "../textures/BP10-061EN.png";
+    case "Virtuous Lindworm Evolved":
+      return "../textures/BP09-069EN.png";
+    case "Celia, Hope's Strategist Evolved":
+      return "../textures/BP09-019EN.png";
+    case "King of Knights, Alfred Evolved":
+      return "../textures/CSD03a-002EN.png";
+    case "Soul Saver Dragon Evolved":
+      return "../textures/CP03-026EN.png";
+    case "Ceryneian Lighthind Evolved":
+      return "../textures/BP09-110EN.png";
+    case "SugarSugar☆Mi〜n Evolved":
+      return "../textures/CP02-U12aEN.png";
+    case "Fortuna Regina Evolved":
+      return "../textures/CP02-U09aEN.png";
+    case "Silvernail Markswoman Evolved":
+      return "../textures/BP14-083EN.png";
+    case "Vania, Kind Queen Evolved":
+      return "../textures/BP09-090EN.png";
+    case "Grand Archer Selwyn Evolved":
+      return "../textures/BP02-007EN.png";
+    case "Navalgazer Dragon Evolved":
+      return "../textures/CP03-006EN.png";
+    case "Orchis, Resolute Puppet Evolved":
+      return "../textures/BP08-003EN.png";
+    case "Paula, Gentle Warmth Evolved":
+      return "../textures/BP09-005EN.png";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     default:

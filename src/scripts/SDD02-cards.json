@@ -1,0 +1,496 @@
+[
+  {
+    "cardNo": "SDD02-001EN",
+    "name": "Ralmia, Sonic Racer",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Supreme",
+      "rarity": "Legendary",
+      "cardSet": "Showdown Deck: Swordcraft",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[evolve] [cost03]: Evolve this. This card's [evolve] costs 1 less for every other follower on your field. Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD02/SDD02-001EN.png"
+  },
+  {
+    "cardNo": "SDD02-002EN",
+    "name": "Ralmia, Sonic Racer Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Officer / Supreme",
+      "rarity": "Legendary",
+      "cardSet": "Showdown Deck: Swordcraft",
+      "cost": "-",
+      "attack": "4",
+      "defense": "3",
+      "effect": "Storm. On Evolve - [cost03]: Give this [attack]+1/[defense]+1 for every other follower on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD02/SDD02-002EN.png"
+  },
+  {
+    "cardNo": "SDD02-003EN",
+    "name": "Nahtnaught, Cursed Queen",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Commander",
+      "rarity": "Legendary",
+      "cardSet": "Showdown Deck: Swordcraft",
+      "cost": "4",
+      "attack": "3",
+      "defense": "5",
+      "effect": "[fanfare] Search your deck for a 1-cost [swordcraft] card, put it into your EX area, then shuffle. [act] [cost00]: Select an enemy follower on the field and engage it. It becomes Boxed until the end of its controller's next turn. Activate only once per turn. (Boxed followers lose all abilities and don't refresh during the start phase.)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD02/SDD02-003EN.png"
+  },
+  {
+    "cardNo": "SDD02-004EN",
+    "name": "Bunny & Baron, Specter Duo",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Thief",
+      "rarity": "Legendary",
+      "cardSet": "Showdown Deck: Swordcraft",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD02/SDD02-004EN.png"
+  },
+  {
+    "cardNo": "SDD02-005EN",
+    "name": "Bunny & Baron, Specter Duo Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wasteland / Thief",
+      "rarity": "Legendary",
+      "cardSet": "Showdown Deck: Swordcraft",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Choose 1. (1) Summon a Val, Trusty Getaway Car token. (2) Search your deck for a Desperados' Shot, reveal it, add it to your hand, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD02/SDD02-005EN.png"
+  },
+  {
+    "cardNo": "SDD02-006EN",
+    "name": "Leod, the Crescent Blade",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Assassin",
+      "rarity": "Gold",
+      "cardSet": "Showdown Deck: Swordcraft",
+      "cost": "2",
+      "attack": "1",
+      "defense": "3",
+      "effect": "[evolve] [cost02]: Evolve this. While this is reserved on your field, it has Intimidate and Aura. (Followers with Intimidate can't be attacked.) At the start of your end phase, select an enemy follower on the field and deal it 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD02/SDD02-006EN.png"
+  },
+  {
+    "cardNo": "SDD02-007EN",
+    "name": "Leod, the Crescent Blade Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Assassin",
+      "rarity": "Gold",
+      "cardSet": "Showdown Deck: Swordcraft",
+      "cost": "-",
+      "attack": "2",
+      "defense": "4",
+      "effect": "While this is reserved on your field, it has Intimidate and Aura. (Cards with Aura can't be selected for enemy spells or abilities.) On Evolve - Select an enemy leader or enemy follower on the field and deal it 2 damage. At the start of your end phase, select an enemy follower on the field and deal it 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD02/SDD02-007EN.png"
+  },
+  {
+    "cardNo": "SDD02-008EN",
+    "name": "Prudent General",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Arcana / Commander",
+      "rarity": "Gold",
+      "cardSet": "Showdown Deck: Swordcraft",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. Each [swordcraft] token on your field has Rush. [fanfare] Summon a Steelclad Knight token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD02/SDD02-008EN.png"
+  },
+  {
+    "cardNo": "SDD02-009EN",
+    "name": "Prudent General Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arcana / Commander",
+      "rarity": "Gold",
+      "cardSet": "Showdown Deck: Swordcraft",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Each [swordcraft] token on your field has Rush. On Evolve - Summon a Steelclad Knight token. Give each Steelclad Knight on your field [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD02/SDD02-009EN.png"
+  },
+  {
+    "cardNo": "SDD02-010EN",
+    "name": "Radical Gunslinger",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Officer",
+      "rarity": "Gold",
+      "cardSet": "Showdown Deck: Swordcraft",
+      "cost": "1",
+      "attack": "0",
+      "defense": "1",
+      "effect": "[fanfare] Summon a Dutiful Steed token. [act] [engage] this and 2 Mount cards on your field: Select an enemy leader or enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD02/SDD02-010EN.png"
+  },
+  {
+    "cardNo": "SDD02-011EN",
+    "name": "Tyrant's Order",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Wasteland / Commander",
+      "rarity": "Gold",
+      "cardSet": "Showdown Deck: Swordcraft",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select up to 1 Boxed enemy follower on the field and destroy it. Search your deck for a Wasteland follower, reveal it, add it to your hand, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD02/SDD02-011EN.png"
+  },
+  {
+    "cardNo": "SDD02-012EN",
+    "name": "Outlaw Gunner",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Officer / Thief",
+      "rarity": "Silver",
+      "cardSet": "Showdown Deck: Swordcraft",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Summon a Bullet Bike token. [lastwords] Deal 2 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD02/SDD02-012EN.png"
+  },
+  {
+    "cardNo": "SDD02-013EN",
+    "name": "Desperados' Shot",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Wasteland / Thief",
+      "rarity": "Silver",
+      "cardSet": "Showdown Deck: Swordcraft",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field and deal it 4 damage. If there's a Bunny & Baron, Specter Duo and Val, Trusty Getaway Car on your field, deal 6 damage instead and deal 2 damage to the selected follower's leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD02/SDD02-013EN.png"
+  },
+  {
+    "cardNo": "SDD02-014EN",
+    "name": "Naht's Henchman",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Officer",
+      "rarity": "Bronze",
+      "cardSet": "Showdown Deck: Swordcraft",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "This costs 1 less to play from the EX area if there's a Nahtnaught, Cursed Queen on your field. ---------- [fanfare] If there's a Nahtnaught, Cursed Queen on your field, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD02/SDD02-014EN.png"
+  },
+  {
+    "cardNo": "SDD02-015EN",
+    "name": "Godsent Stride",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Showdown Deck: Swordcraft",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a follower on your field. Give it [attack]+3/[defense]+2 and Rush. (Followers with Rush can attack enemy followers on the turn they're put onto your field.)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD02/SDD02-015EN.png"
+  },
+  {
+    "cardNo": "SDD02-016EN",
+    "name": "Quixotic Adventurer",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Wasteland / Mercenary",
+      "rarity": "Gold",
+      "cardSet": "Showdown Deck: Swordcraft",
+      "cost": "1",
+      "attack": "2",
+      "defense": "1",
+      "effect": "[evolve] [cost04]: Evolve this. [fanfare] Put a Dutiful Steed token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD02/SDD02-016EN.png"
+  },
+  {
+    "cardNo": "SDD02-017EN",
+    "name": "Quixotic Adventurer Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Wasteland / Mercenary",
+      "rarity": "Gold",
+      "cardSet": "Showdown Deck: Swordcraft",
+      "cost": "-",
+      "attack": "5",
+      "defense": "4",
+      "effect": "[lastwords] You may put a Dutiful Steed, Bullet Bike, and Arcane Personnel Carrier token onto your field or into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD02/SDD02-017EN.png"
+  },
+  {
+    "cardNo": "SDD02-018EN",
+    "name": "Rivaylian Bandit",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Wasteland / Mercenary",
+      "rarity": "Bronze",
+      "cardSet": "Showdown Deck: Swordcraft",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this. Whenever this gains attack or defense, give it Storm. (Followers with Storm can attack enemy followers and leaders on the turn they're put onto your field.)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD02/SDD02-018EN.png"
+  },
+  {
+    "cardNo": "SDD02-019EN",
+    "name": "Rivaylian Bandit Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Wasteland / Mercenary",
+      "rarity": "Bronze",
+      "cardSet": "Showdown Deck: Swordcraft",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - Select an enemy follower on the field and, if there are at least 2 Mount cards on your field and/or in your EX area, deal it 2 damage. Whenever this gains attack or defense, give it Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD02/SDD02-019EN.png"
+  },
+  {
+    "cardNo": "SDD02-020EN",
+    "name": "Vagabond Lizard",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Wasteland / Mercenary",
+      "rarity": "Bronze",
+      "cardSet": "Showdown Deck: Swordcraft",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] You may put a Bullet Bike token onto your field or into your EX area. [lastwords] Put a Dutiful Steed token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD02/SDD02-020EN.png"
+  },
+  {
+    "cardNo": "SDD02-LD01EN",
+    "name": "Marie Malisse",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Showdown Deck: Swordcraft",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD02/SDD02-LD01EN.png"
+  },
+  {
+    "cardNo": "SDD02-T01EN",
+    "name": "Steelclad Knight TOKEN",
+    "type": "token",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Token",
+      "trait": "Officer",
+      "rarity": "-",
+      "cardSet": "Showdown Deck: Swordcraft",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD02/SDD02-T01EN.png"
+  },
+  {
+    "cardNo": "SDD02-T02EN",
+    "name": "Val, Trusty Getaway Car TOKEN",
+    "type": "token",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Amulet / Token",
+      "trait": "Wasteland / Mount",
+      "rarity": "-",
+      "cardSet": "Showdown Deck: Swordcraft",
+      "cost": "2",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[act] [engage] a Bunny & Baron, Specter Duo on your field: Maneuver this. (For the rest of this turn, it becomes a follower with [attack]3/[defense]3.) [act] [cost01], [engage] 2 followers on your field: Maneuver this. Storm. Strike - If there's another Wasteland follower on your field, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD02/SDD02-T02EN.png"
+  },
+  {
+    "cardNo": "SDD02-T03EN",
+    "name": "Dutiful Steed TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Amulet / Token",
+      "trait": "Wasteland / Mount / Beast",
+      "rarity": "-",
+      "cardSet": "Showdown Deck: Swordcraft",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] Bury this: Select a follower on your field and, if it's a Wasteland follower, give it [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD02/SDD02-T03EN.png"
+  },
+  {
+    "cardNo": "SDD02-T04EN",
+    "name": "Bullet Bike TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Amulet / Token",
+      "trait": "Wasteland / Mount",
+      "rarity": "-",
+      "cardSet": "Showdown Deck: Swordcraft",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] Bury this: Select a follower on your field. Give it Rush and, if it's a Wasteland follower, [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD02/SDD02-T04EN.png"
+  },
+  {
+    "cardNo": "SDD02-T05EN",
+    "name": "Arcane Personnel Carrier TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Amulet / Token",
+      "trait": "Wasteland / Mount",
+      "rarity": "-",
+      "cardSet": "Showdown Deck: Swordcraft",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] Bury this: Select a follower on your field. Give it Ward and, if it's a Wasteland follower, [defense]+1. (While you have engaged followers with Ward, opponents can't attack your other followers or leader. You may engage a follower with Ward when it's put onto your field or during your end phase.)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD02/SDD02-T05EN.png"
+  }
+]

@@ -1,0 +1,572 @@
+[
+  {
+    "cardNo": "SDD03-001EN",
+    "name": "Sweet-Tooth Medusa",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Gorgon",
+      "rarity": "Legendary",
+      "cardSet": "Showdown Deck: Runecraft",
+      "cost": "4",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[evolve] [cost02]: Evolve this. [fanfare] Search your deck for a card that costs 2 or less, reveal it, add it to your hand, then shuffle. During your turn, whenever an enemy follower is put from the field into the cemetery, summon a Serpent token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD03/SDD03-001EN.png"
+  },
+  {
+    "cardNo": "SDD03-002EN",
+    "name": "Sweet-Tooth Medusa Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Gorgon",
+      "rarity": "Legendary",
+      "cardSet": "Showdown Deck: Runecraft",
+      "cost": "-",
+      "attack": "4",
+      "defense": "5",
+      "effect": "On Evolve - Select up to 2 enemy followers on the field and deal 5 damage divided between them. During your turn, whenever an enemy follower is put from the field into the cemetery, summon a Serpent token. [q][act] Bury 2 cards named Serpent: The next card you play this turn costs 2 less."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD03/SDD03-002EN.png"
+  },
+  {
+    "cardNo": "SDD03-003EN",
+    "name": "Ceridwen, Eternity Hunter",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Alchemist / Forbidden",
+      "rarity": "Legendary",
+      "cardSet": "Showdown Deck: Runecraft",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Earth Rite: Put an Instant Poison token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD03/SDD03-003EN.png"
+  },
+  {
+    "cardNo": "SDD03-004EN",
+    "name": "Ceridwen, Eternity Hunter Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Alchemist / Forbidden",
+      "rarity": "Legendary",
+      "cardSet": "Showdown Deck: Runecraft",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "The 1st Forbidden token you play each turn costs 2 less. On Evolve - Earth Rite: Put an Eternal Potion token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD03/SDD03-004EN.png"
+  },
+  {
+    "cardNo": "SDD03-005EN",
+    "name": "Faust, Truthseeker",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Alchemist",
+      "rarity": "Legendary",
+      "cardSet": "Showdown Deck: Runecraft",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Search your deck for up to 2 Earth Sigil amulets that cost a total of 4 or less, put them into your EX area, then shuffle. They cost 0 to play this turn. At the start of your end phase, Earth Rite: Select a follower on your field. Give it [attack]+1/[defense]+1 and deal 2 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD03/SDD03-005EN.png"
+  },
+  {
+    "cardNo": "SDD03-006EN",
+    "name": "Ancient Alchemist",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Alchemist",
+      "rarity": "Gold",
+      "cardSet": "Showdown Deck: Runecraft",
+      "cost": "3",
+      "attack": "2",
+      "defense": "5",
+      "effect": "[evolve] [cost03]: Evolve this. [fanfare] Earth Rite: Put 2 Guardform Golem tokens into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD03/SDD03-006EN.png"
+  },
+  {
+    "cardNo": "SDD03-007EN",
+    "name": "Ancient Alchemist Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Alchemist",
+      "rarity": "Gold",
+      "cardSet": "Showdown Deck: Runecraft",
+      "cost": "-",
+      "attack": "3",
+      "defense": "6",
+      "effect": "Any Golem follower you play costs 1 less. Whenever a Golem follower is put onto your field, select an enemy leader or enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD03/SDD03-007EN.png"
+  },
+  {
+    "cardNo": "SDD03-008EN",
+    "name": "Riley, Hydroshaman",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Gold",
+      "cardSet": "Showdown Deck: Runecraft",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[fanfare] Earth Rite: Choose 1. If this was put onto the field from the cemetery, choose up to 3 instead. (1) Select an enemy follower on the field and deal it 5 damage. (2) Give this [attack]+3. (3) Draw 2 cards. [act] [cost06]: Summon this from your cemetery. Give it Storm and \"[lastwords] Banish this.\""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD03/SDD03-008EN.png"
+  },
+  {
+    "cardNo": "SDD03-009EN",
+    "name": "Acid Golem",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Golem / Arcanaform / Forbidden",
+      "rarity": "Gold",
+      "cardSet": "Showdown Deck: Runecraft",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Earth Rite: Select an enemy leader or enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD03/SDD03-009EN.png"
+  },
+  {
+    "cardNo": "SDD03-010EN",
+    "name": "Acid Golem Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Golem / Arcanaform / Forbidden",
+      "rarity": "Gold",
+      "cardSet": "Showdown Deck: Runecraft",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD03/SDD03-010EN.png"
+  },
+  {
+    "cardNo": "SDD03-011EN",
+    "name": "Artistic Arcanist",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Silver",
+      "cardSet": "Showdown Deck: Runecraft",
+      "cost": "3",
+      "attack": "1",
+      "defense": "4",
+      "effect": "[evolve] [cost02]: Evolve this. Rush. Bane. Drain. (When a follower with Drain attacks and deals damage, its leader gains defense equal to the damage dealt.) [act] Earth Rite: Select another follower on your field and give it Rush, Bane, or Drain."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD03/SDD03-011EN.png"
+  },
+  {
+    "cardNo": "SDD03-012EN",
+    "name": "Artistic Arcanist Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage",
+      "rarity": "Silver",
+      "cardSet": "Showdown Deck: Runecraft",
+      "cost": "-",
+      "attack": "3",
+      "defense": "6",
+      "effect": "Bane. Drain. On Evolve - Select an enemy follower on the field and put it into its owner's EX area. [act] Earth Rite: Select another follower on your field and give it Rush, Bane, or Drain."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD03/SDD03-012EN.png"
+  },
+  {
+    "cardNo": "SDD03-013EN",
+    "name": "Price of Magic",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet",
+      "trait": "Earth Sigil",
+      "rarity": "Silver",
+      "cardSet": "Showdown Deck: Runecraft",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Stack. [fanfare] Select an enemy follower on the field with 4 defense or less and banish it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD03/SDD03-013EN.png"
+  },
+  {
+    "cardNo": "SDD03-014EN",
+    "name": "Gingerbread House",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet",
+      "trait": "Earth Sigil / Fable",
+      "rarity": "Silver",
+      "cardSet": "Showdown Deck: Runecraft",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Stack. [fanfare] Give your leader [defense]+3."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD03/SDD03-014EN.png"
+  },
+  {
+    "cardNo": "SDD03-015EN",
+    "name": "Summoning Drills",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet",
+      "trait": "Alchemist / Earth Sigil",
+      "rarity": "Silver",
+      "cardSet": "Showdown Deck: Runecraft",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Stack. [fanfare] Summon a Guardform Golem token. [fanfare] Discard a card: Put a Strikeform Golem token into your EX area. Give each Golem follower on your field and in your EX area [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD03/SDD03-015EN.png"
+  },
+  {
+    "cardNo": "SDD03-016EN",
+    "name": "Rabbit Mage",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Showdown Deck: Runecraft",
+      "cost": "2",
+      "attack": "2",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Summon a Magic Sediment token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD03/SDD03-016EN.png"
+  },
+  {
+    "cardNo": "SDD03-017EN",
+    "name": "Rabbit Mage Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Showdown Deck: Runecraft",
+      "cost": "-",
+      "attack": "3",
+      "defense": "2",
+      "effect": "On Evolve - Look at the top 4 cards of your deck. You may reveal a card with Earth Rite from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD03/SDD03-017EN.png"
+  },
+  {
+    "cardNo": "SDD03-018EN",
+    "name": "Beastfaced Mage",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Showdown Deck: Runecraft",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[act] [engage], Earth Rite: Select an enemy follower on the field and deal it 2 damage. [lastwords] Summon a Magic Sediment token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD03/SDD03-018EN.png"
+  },
+  {
+    "cardNo": "SDD03-019EN",
+    "name": "Teachings of Creation",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet",
+      "trait": "Earth Sigil",
+      "rarity": "Bronze",
+      "cardSet": "Showdown Deck: Runecraft",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Stack. [fanfare] Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD03/SDD03-019EN.png"
+  },
+  {
+    "cardNo": "SDD03-020EN",
+    "name": "Red-Hot Ritual",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet",
+      "trait": "Earth Sigil",
+      "rarity": "Bronze",
+      "cardSet": "Showdown Deck: Runecraft",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Stack. [fanfare] Select an enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD03/SDD03-020EN.png"
+  },
+  {
+    "cardNo": "SDD03-021EN",
+    "name": "Witch's Cauldron",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet",
+      "trait": "Mage / Earth Sigil",
+      "rarity": "Bronze",
+      "cardSet": "Showdown Deck: Runecraft",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Stack. [fanfare] Look at the top 4 cards of your deck. You may reveal a card with Earth Rite from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD03/SDD03-021EN.png"
+  },
+  {
+    "cardNo": "SDD03-022EN",
+    "name": "Mirror of Truth",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet",
+      "trait": "Mage / Earth Sigil",
+      "rarity": "Bronze",
+      "cardSet": "Showdown Deck: Runecraft",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Stack. [fanfare] Select an Alchemist follower in your cemetery that costs 3 or less and summon it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD03/SDD03-022EN.png"
+  },
+  {
+    "cardNo": "SDD03-023EN",
+    "name": "Grand Spire",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet",
+      "trait": "Mage / Earth Sigil",
+      "rarity": "Bronze",
+      "cardSet": "Showdown Deck: Runecraft",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Stack. [fanfare] Select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD03/SDD03-023EN.png"
+  },
+  {
+    "cardNo": "SDD03-LD01EN",
+    "name": "Kaori Yuihara",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Showdown Deck: Runecraft",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD03/SDD03-LD01EN.png"
+  },
+  {
+    "cardNo": "SDD03-T01EN",
+    "name": "Strikeform Golem TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Token",
+      "trait": "Golem",
+      "rarity": "-",
+      "cardSet": "Showdown Deck: Runecraft",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "Rush. (Followers with Rush can attack enemy followers on the turn they're put onto your field.)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD03/SDD03-T01EN.png"
+  },
+  {
+    "cardNo": "SDD03-T02EN",
+    "name": "Guardform Golem TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Token",
+      "trait": "Golem",
+      "rarity": "-",
+      "cardSet": "Showdown Deck: Runecraft",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Ward. (While you have engaged followers with Ward, opponents can't attack your other followers or leader. You may engage this when it's put onto your field or during your end phase.)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD03/SDD03-T02EN.png"
+  },
+  {
+    "cardNo": "SDD03-T03EN",
+    "name": "Magic Sediment TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet / Token",
+      "trait": "Earth Sigil",
+      "rarity": "-",
+      "cardSet": "Showdown Deck: Runecraft",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Stack. (Amulets with Stack have the following abilities: \"This is put onto the field with 1 Stack counter on it.\" \"When this would leave the field, remove 1 Stack counter from it instead.\" \"When this has 0 Stack counters, bury it.\" \"[act] [engage]: Select another amulet on your field with Stack and transfer all this card's Stack counters to that card.\")"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD03/SDD03-T03EN.png"
+  },
+  {
+    "cardNo": "SDD03-T04EN",
+    "name": "Instant Poison TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell / Token",
+      "trait": "Alchemist / Forbidden",
+      "rarity": "-",
+      "cardSet": "Showdown Deck: Runecraft",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field. Deal 4 damage to it and 2 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD03/SDD03-T04EN.png"
+  },
+  {
+    "cardNo": "SDD03-T05EN",
+    "name": "Eternal Potion TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell / Token",
+      "trait": "Alchemist / Forbidden",
+      "rarity": "-",
+      "cardSet": "Showdown Deck: Runecraft",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a [runecraft] follower in your cemetery that costs 3 or less and summon it. Give it Rush and \"At the start of your end phase, destroy this.\""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD03/SDD03-T05EN.png"
+  },
+  {
+    "cardNo": "SDD03-T06EN",
+    "name": "Serpent TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Token",
+      "trait": "Demon",
+      "rarity": "-",
+      "cardSet": "Showdown Deck: Runecraft",
+      "cost": "1",
+      "attack": "0",
+      "defense": "1",
+      "effect": "Bane. (After this follower fights another follower, destroy that follower.)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD03/SDD03-T06EN.png"
+  }
+]

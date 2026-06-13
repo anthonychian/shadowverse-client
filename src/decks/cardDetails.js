@@ -4,6 +4,7 @@
 // scraper output) and is keyed by card NAME -> details. See that script.
 
 import cardData from "./cardData.json";
+import cardPrintings from "./cardPrintings.json";
 
 export const getDetails = (name) => cardData[name] || null;
 
@@ -72,18 +73,29 @@ export const traitTokens = (name) => {
 
 // ---- Distinct filter option lists (computed once) ----
 
-export const CARD_TYPES = ["Follower", "Spell", "Amulet", "Leader"];
+export const CARD_TYPES = ["Follower", "Spell", "Amulet"];
 
 // Fixed display order; only those actually present are kept.
-const RARITY_ORDER = ["Legendary", "Gold", "Silver", "Bronze", "Ultimate", "Special", "Premium"];
+const RARITY_ORDER = [
+  "Bronze", "Silver", "Gold", "Legendary", "Super Legendary",
+  "Ultimate", "Special", "Super Special", "Premium", "Promo",
+];
 
 export const RARITIES = (() => {
   const present = new Set();
+  // Options come from both the name-keyed data (dedup view) and the per-printing
+  // data (the "show all printings" view exposes alt-art rarities like Ultimate).
   for (const name in cardData) {
     const r = cardData[name].rarity;
     if (r && r !== "-") present.add(r);
   }
-  return RARITY_ORDER.filter((r) => present.has(r));
+  for (const p of cardPrintings) {
+    if (p.rarity && p.rarity !== "-") present.add(p.rarity);
+  }
+  // Keep the fixed order; append any present rarity not in the list at the end.
+  const ordered = RARITY_ORDER.filter((r) => present.has(r));
+  for (const r of present) if (!RARITY_ORDER.includes(r)) ordered.push(r);
+  return ordered;
 })();
 
 export const TRAITS = (() => {

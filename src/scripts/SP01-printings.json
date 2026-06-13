@@ -1,0 +1,3270 @@
+[
+  {
+    "cardNo": "SP01-001EN",
+    "name": "Spinaria, Wavering Will",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Supreme",
+      "rarity": "Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "3",
+      "attack": "1",
+      "defense": "3",
+      "effect": "Whenever a follower on your field evolves, give your leader [defense]+2. [fanfare] Select a [forestcraft] follower that costs 2 or less in your cemetery and put it into your EX area. It costs 2 less to play this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-001EN.png"
+  },
+  {
+    "cardNo": "SP01-002EN",
+    "name": "Orchis, Puppet Girl",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Puppetry",
+      "rarity": "Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower into an Orchis, Resolute Puppet. [evolve] [cost04]: Evolve this follower into an Orchis, Vengeful Puppet. Activate only if there are at least 3 Puppetry cards in your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-002EN.png"
+  },
+  {
+    "cardNo": "SP01-003EN",
+    "name": "Aria, Fairy Princess",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Pixie / Princess",
+      "rarity": "Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Ward. Each other Pixie follower on your field has Rush. [fanfare] Put up to 9 Fairy tokens onto your field and/or into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-003EN.png"
+  },
+  {
+    "cardNo": "SP01-004EN",
+    "name": "Zwei, Murderous Puppet",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Puppetry / Cutthroat",
+      "rarity": "Gold",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost02]: Evolve this follower. [fanfare] Select a Puppet in your EX area and transform it into a Victoria token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-004EN.png"
+  },
+  {
+    "cardNo": "SP01-005EN",
+    "name": "Zwei, Murderous Puppet Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Puppetry / Cutthroat",
+      "rarity": "Gold",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Select a Victoria on your field. It doesn't take damage this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-005EN.png"
+  },
+  {
+    "cardNo": "SP01-006EN",
+    "name": "Fita the Gentle Elf",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf",
+      "rarity": "Gold",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-006EN.png"
+  },
+  {
+    "cardNo": "SP01-007EN",
+    "name": "Fita the Gentle Elf Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Elf",
+      "rarity": "Gold",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "2",
+      "effect": "On Evolve - Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-007EN.png"
+  },
+  {
+    "cardNo": "SP01-008EN",
+    "name": "Crystalia Lily",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Crystalian",
+      "rarity": "Gold",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "3",
+      "effect": "[evolve] [cost02]: Evolve this follower. [fanfare] Look at the top 2 cards of your deck. You may reveal a Crystalian or Pixie follower from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-008EN.png"
+  },
+  {
+    "cardNo": "SP01-009EN",
+    "name": "Crystalia Lily Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Crystalian",
+      "rarity": "Gold",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "4",
+      "effect": "On Evolve - Select an enemy follower on the field and put it on the bottom of its owner's deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-009EN.png"
+  },
+  {
+    "cardNo": "SP01-010EN",
+    "name": "Amelia, Sunny Paladin",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander",
+      "rarity": "Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Whenever an Officer follower is put onto your field, select an enemy follower on the field and deal it 3 damage. [act] [cost00]: You may summon an Officer follower that costs 2 or less from your hand or EX area. Activate only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-010EN.png"
+  },
+  {
+    "cardNo": "SP01-011EN",
+    "name": "Celia, Sky Commander",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander",
+      "rarity": "Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower into a Celia, Hope's Strategist. [evolve] [cost04]: Evolve this follower into a Celia, Despair's Messenger."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-011EN.png"
+  },
+  {
+    "cardNo": "SP01-012EN",
+    "name": "Ralmia, Sonic Racer",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Supreme",
+      "rarity": "Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[evolve] [cost03]: Evolve this follower. This card's [evolve] costs 1 less for every other follower on your field. Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-012EN.png"
+  },
+  {
+    "cardNo": "SP01-013EN",
+    "name": "Ralmia, Sonic Racer Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Officer / Supreme",
+      "rarity": "Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "3",
+      "effect": "Storm. On Evolve - [cost03]: Give this follower [attack]+1/[defense]+1 for every other follower on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-013EN.png"
+  },
+  {
+    "cardNo": "SP01-014EN",
+    "name": "Albert, Levin Saber",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Levin",
+      "rarity": "Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "5",
+      "effect": "[evolve] [cost03]: Evolve this follower. Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-014EN.png"
+  },
+  {
+    "cardNo": "SP01-015EN",
+    "name": "Albert, Levin Saber Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Commander / Levin",
+      "rarity": "Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "5",
+      "effect": "Storm. On Evolve - For the rest of this turn, this follower doesn't take combat damage. Strike - Refresh this follower. Perform only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-015EN.png"
+  },
+  {
+    "cardNo": "SP01-016EN",
+    "name": "Jeno, Levin Vanguard",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Levin",
+      "rarity": "Gold",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-016EN.png"
+  },
+  {
+    "cardNo": "SP01-017EN",
+    "name": "Jeno, Levin Vanguard Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Officer / Levin",
+      "rarity": "Gold",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Assail. On Evolve - Look at the top 4 cards of your deck. From among them, you may reveal a Levin follower not named Jeno, Levin Vanguard and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-017EN.png"
+  },
+  {
+    "cardNo": "SP01-018EN",
+    "name": "Yurius, Levin Duke",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Noble / Levin",
+      "rarity": "Gold",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "2",
+      "attack": "0",
+      "defense": "4",
+      "effect": "[q][act] [engage]: Select an enemy follower on the field and deal it 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-018EN.png"
+  },
+  {
+    "cardNo": "SP01-019EN",
+    "name": "Falise, Innocent Sea Spray",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic",
+      "rarity": "Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "6",
+      "attack": "4",
+      "defense": "5",
+      "effect": "[fanfare] Look at the top 5 cards of your deck. From among them, you may put up to 1 Mage follower that costs 3 or less and up to 1 Mage spell that costs 3 or less into your EX area. They cost 3 less to play this turn. Put the rest on the bottom of your deck in any order. Whenever you play a Mage card, select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-019EN.png"
+  },
+  {
+    "cardNo": "SP01-020EN",
+    "name": "Anne, Mysterian Prodigy",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Choose one. If there are at least 10 Academic cards in your cemetery, choose up to 2 instead. (1) Search your deck for an Anne's Sorcery, put it into your EX area, then shuffle. The next Anne's Sorcery you play this turn costs 5 less. (2) Search your deck for a Grea, Mysterian Dragoness, summon it, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-020EN.png"
+  },
+  {
+    "cardNo": "SP01-021EN",
+    "name": "Grea, Mysterian Dragoness",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Select an enemy follower on the field. If there are at least 10 Academic cards in your cemetery, deal 4 damage to it and 1 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-021EN.png"
+  },
+  {
+    "cardNo": "SP01-022EN",
+    "name": "Grea, Mysterian Dragoness Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "If an Academic spell you control would deal damage, it deals that much plus 1 instead. On Evolve - Search your deck for a Grea's Ember, put it into your EX area, then shuffle. The next Grea's Ember you play this turn costs 1 less."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-022EN.png"
+  },
+  {
+    "cardNo": "SP01-023EN",
+    "name": "Elusa, Magic Wunderkind",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic",
+      "rarity": "Gold",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost02]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-023EN.png"
+  },
+  {
+    "cardNo": "SP01-024EN",
+    "name": "Elusa, Magic Wunderkind Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Academic",
+      "rarity": "Gold",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - Search your deck for an Arcanaform follower, reveal it, add it to your hand, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-024EN.png"
+  },
+  {
+    "cardNo": "SP01-025EN",
+    "name": "Freshman Lou",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic",
+      "rarity": "Gold",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[fanfare] Search your deck for a 1-cost spell, reveal it, add it to your hand, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-025EN.png"
+  },
+  {
+    "cardNo": "SP01-026EN",
+    "name": "Sharon, Seaside Nymph",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Marine",
+      "rarity": "Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "7",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Recover 5 play points. [act] [engage]: Choose up to 2. (1) Select an enemy follower on the field. It can't attack enemies during its controller's next turn. (2) The next time 1 or more followers are put onto your field this turn, give one [attack]+1/[defense]+1. (3) Give your leader [defense]+2. (4) Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-026EN.png"
+  },
+  {
+    "cardNo": "SP01-027EN",
+    "name": "Filene, Whitefrost Dragonewt",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt",
+      "rarity": "Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "3",
+      "effect": "[fanfare] Select an enemy follower on the field and engage it. It doesn't refresh during its controller's next start phase. [fanfare] If Overflow is active for you, search your deck for a Whitefrost Whisper, put it into your EX area, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-027EN.png"
+  },
+  {
+    "cardNo": "SP01-028EN",
+    "name": "Galmieux, Omen of Disdain",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Omen / Wyrmkin",
+      "rarity": "Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[evolve] [cost02]: Evolve this follower. During your turn, whenever this follower takes ability damage, change its [evolve] cost to 0 for the rest of the turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-028EN.png"
+  },
+  {
+    "cardNo": "SP01-029EN",
+    "name": "Galmieux, Omen of Disdain Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Wyrmkin",
+      "rarity": "Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "On Evolve - Select an Omen card that costs 2 or less in your cemetery and play it for 0 play points. During your turn, whenever this follower takes ability damage, select an enemy leader or enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-029EN.png"
+  },
+  {
+    "cardNo": "SP01-030EN",
+    "name": "Annerose",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt / Princess",
+      "rarity": "Gold",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] If Overflow is active for you, look at the top 3 cards of your deck. You may reveal a Dragonewt card from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-030EN.png"
+  },
+  {
+    "cardNo": "SP01-031EN",
+    "name": "Annerose Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonewt / Princess",
+      "rarity": "Gold",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-031EN.png"
+  },
+  {
+    "cardNo": "SP01-032EN",
+    "name": "Queen Vampire, Sultry Evening",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vampire",
+      "rarity": "Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Select an enemy follower on the field and deal it 4 damage. At the start of your end phase, if there are at least 3 other Vampire cards on your field, deal 3 damage to each enemy leader and give your leader [defense]+3."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-032EN.png"
+  },
+  {
+    "cardNo": "SP01-033EN",
+    "name": "Ginsetsu, Great Fox",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Arena / Yokai",
+      "rarity": "Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "6",
+      "attack": "1",
+      "defense": "5",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Put 5 One-Tailed Fox tokens into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-033EN.png"
+  },
+  {
+    "cardNo": "SP01-034EN",
+    "name": "Ginsetsu, Great Fox Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arena / Yokai",
+      "rarity": "Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "1",
+      "defense": "9",
+      "effect": "Any Yokai follower you play costs 2 less. If a Yokai follower on your field would deal damage, it deals that much plus 1 instead. Whenever a Yokai follower you control leaves the field, give this follower [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-034EN.png"
+  },
+  {
+    "cardNo": "SP01-035EN",
+    "name": "Cerberus",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost02]: Evolve this follower. [fanfare] Put a Mimi, Infernal Right Paw or Coco, Infernal Left Paw token into your EX area. Necrocharge (10) - Put both instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-035EN.png"
+  },
+  {
+    "cardNo": "SP01-036EN",
+    "name": "Cerberus Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Demon",
+      "rarity": "Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "On Evolve - Put a Mimi, Infernal Right Paw and Coco, Infernal Left Paw token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-036EN.png"
+  },
+  {
+    "cardNo": "SP01-037EN",
+    "name": "Vuella, One-Winged Demon",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Gold",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[act] [cost01]: Reveal the top card of your deck. If it's a 2-cost card, put it into your EX area. It costs 2 less to play this turn. Activate only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-037EN.png"
+  },
+  {
+    "cardNo": "SP01-038EN",
+    "name": "Underworld Watchman Khawy",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Necromancer",
+      "rarity": "Gold",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Ward. [lastwords] Select an enemy follower on the field. Destroy it and give your leader [defense]+X. X equals the selected follower's attack."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-038EN.png"
+  },
+  {
+    "cardNo": "SP01-039EN",
+    "name": "Zoe, Shore's Melody",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Princess",
+      "rarity": "Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "1",
+      "attack": "0",
+      "defense": "1",
+      "effect": "[fanfare] Select an enemy follower on the field. If your leader has gained at least 4 defense this turn, destroy it and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-039EN.png"
+  },
+  {
+    "cardNo": "SP01-040EN",
+    "name": "Jeanne, Beacon of Salvation",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Luminary",
+      "rarity": "Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Draw a card. If there are at least 2 followers with \"Jeanne\" in their name in your cemetery, give this follower [attack]+1/[defense]+1 and Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-040EN.png"
+  },
+  {
+    "cardNo": "SP01-041EN",
+    "name": "Jeanne, Beacon of Salvation Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith / Luminary",
+      "rarity": "Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "4",
+      "effect": "On Evolve - You may summon a [havencraft] follower that costs 2 or less from your hand. Strike - Select a [havencraft] follower that costs 2 or less on your field and give it [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-041EN.png"
+  },
+  {
+    "cardNo": "SP01-042EN",
+    "name": "Wilbert, Grand Knight",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Arena / Luminary",
+      "rarity": "Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "5",
+      "effect": "Ward. [fanfare] Look at the top 5 cards of your deck. From among them, you may summon a follower with Ward not named Wilbert, Grand Knight that costs 5 or less. Put the rest on the bottom of your deck in any order. Whenever a follower with Ward is put from your field into the cemetery, deal 1 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-042EN.png"
+  },
+  {
+    "cardNo": "SP01-043EN",
+    "name": "Aether of the White Wing",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Luminary / Lightborne",
+      "rarity": "Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "7",
+      "attack": "3",
+      "defense": "5",
+      "effect": "Ward. [fanfare] Search your deck for a [havencraft] follower not named Aether of the White Wing that costs less than your max play points, summon it, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-043EN.png"
+  },
+  {
+    "cardNo": "SP01-044EN",
+    "name": "Sekhmet",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Beast",
+      "rarity": "Gold",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[act] [engage], bury an amulet: Select an enemy follower on the field. Deal 4 damage to it and 1 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-044EN.png"
+  },
+  {
+    "cardNo": "SP01-045EN",
+    "name": "Alice, Golden Afternoon",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Fable",
+      "rarity": "Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Draw a card. [fanfare] Select an enemy follower that costs 4 or less on the field. If this card wasn't put onto the field from hand, put the selected follower into its owner's EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-045EN.png"
+  },
+  {
+    "cardNo": "SP01-046EN",
+    "name": "Dark Angel Olivia",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Fallen Angel",
+      "rarity": "Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Choose up to 2. (1) Gain 1 Evolution Point. (2) Give your leader [defense]+3. (3) Draw a card. (4) Each opponent discards a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-046EN.png"
+  },
+  {
+    "cardNo": "SP01-047EN",
+    "name": "Ephemera, Sword Angel",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Angel",
+      "rarity": "Gold",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "1",
+      "effect": "Rush. [fanfare] If there are at least 3 cards on an opponent's field, give this follower [attack]+1 and Assail."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-047EN.png"
+  },
+  {
+    "cardNo": "SP01-048EN",
+    "name": "Mithra, Daybreak Deity",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Lightborne",
+      "rarity": "Gold",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Each player rolls a 6-sided die. If they roll a 1, 2, or 3, they draw 2 cards. If they roll a 4, 5, or 6, they discard 2 random cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-048EN.png"
+  },
+  {
+    "cardNo": "SP01-049EN",
+    "name": "Mithra, Daybreak Deity Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Lightborne",
+      "rarity": "Gold",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "On Evolve - Declare any number from 1 to 6, then roll a 6-sided die. If you roll the declared number, give your leader [defense]+5, search your deck for any card, put it into your EX area, shuffle, then recover all your play points."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-049EN.png"
+  },
+  {
+    "cardNo": "SP01-050EN",
+    "name": "Lyrial, Archer Throne",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Angel",
+      "rarity": "Gold",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "5",
+      "effect": "Your leader doesn't take ability damage. [q][act] [engage]: Deal 2 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-050EN.png"
+  },
+  {
+    "cardNo": "SP01-051EN",
+    "name": "Feena, Dynamite Daredevil",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Mercenary",
+      "rarity": "Gold",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[fanfare] Choose one. (1) Look at the top 5 cards of your deck. You may reveal a 1-cost follower from among them and add it to your hand. Put the rest on the bottom of your deck in any order. (2) Select a 1-cost enemy follower on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-051EN.png"
+  },
+  {
+    "cardNo": "SP01-052EN",
+    "name": "Arriet, Soothing Harpist",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Musical",
+      "rarity": "Gold",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "5",
+      "effect": "[fanfare] Select an engaged follower on your field. Give it [attack]+2/[defense]+2 and refresh it. For the rest of this turn, it can't attack enemies."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-052EN.png"
+  },
+  {
+    "cardNo": "SP01-053EN",
+    "name": "Actress Feria",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Musical / Fable / Princess",
+      "rarity": "Gold",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[act] [engage]: Select another Fable follower on your field and place a Fable counter on it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-053EN.png"
+  },
+  {
+    "cardNo": "SP01-054EN",
+    "name": "Gourmet Emperor Khaiza",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Fiend / Chef",
+      "rarity": "Gold",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Select an enemy follower that costs 2 or less on the field. Destroy it and give its leader [defense]+3."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-054EN.png"
+  },
+  {
+    "cardNo": "SP01-SL01EN",
+    "name": "Spinaria, Wavering Will",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Supreme",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "3",
+      "attack": "1",
+      "defense": "3",
+      "effect": "Whenever a follower on your field evolves, give your leader [defense]+2. [fanfare] Select a [forestcraft] follower that costs 2 or less in your cemetery and put it into your EX area. It costs 2 less to play this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL01EN.png"
+  },
+  {
+    "cardNo": "SP01-SL02EN",
+    "name": "Orchis, Puppet Girl",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Puppetry",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower into an Orchis, Resolute Puppet. [evolve] [cost04]: Evolve this follower into an Orchis, Vengeful Puppet. Activate only if there are at least 3 Puppetry cards in your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL02EN.png"
+  },
+  {
+    "cardNo": "SP01-SL03EN",
+    "name": "Aria, Fairy Princess",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Pixie / Princess",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Ward. Each other Pixie follower on your field has Rush. [fanfare] Put up to 9 Fairy tokens onto your field and/or into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL03EN.png"
+  },
+  {
+    "cardNo": "SP01-SL04EN",
+    "name": "Zwei, Murderous Puppet",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Puppetry / Cutthroat",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost02]: Evolve this follower. [fanfare] Select a Puppet in your EX area and transform it into a Victoria token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL04EN.png"
+  },
+  {
+    "cardNo": "SP01-SL05EN",
+    "name": "Zwei, Murderous Puppet Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Puppetry / Cutthroat",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Select a Victoria on your field. It doesn't take damage this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL05EN.png"
+  },
+  {
+    "cardNo": "SP01-SL06EN",
+    "name": "Fita the Gentle Elf",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL06EN.png"
+  },
+  {
+    "cardNo": "SP01-SL07EN",
+    "name": "Fita the Gentle Elf Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Elf",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "2",
+      "effect": "On Evolve - Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL07EN.png"
+  },
+  {
+    "cardNo": "SP01-SL08EN",
+    "name": "Crystalia Lily",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Crystalian",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "3",
+      "effect": "[evolve] [cost02]: Evolve this follower. [fanfare] Look at the top 2 cards of your deck. You may reveal a Crystalian or Pixie follower from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL08EN.png"
+  },
+  {
+    "cardNo": "SP01-SL09EN",
+    "name": "Crystalia Lily Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Crystalian",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "4",
+      "effect": "On Evolve - Select an enemy follower on the field and put it on the bottom of its owner's deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL09EN.png"
+  },
+  {
+    "cardNo": "SP01-SL10EN",
+    "name": "Amelia, Sunny Paladin",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Whenever an Officer follower is put onto your field, select an enemy follower on the field and deal it 3 damage. [act] [cost00]: You may summon an Officer follower that costs 2 or less from your hand or EX area. Activate only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL10EN.png"
+  },
+  {
+    "cardNo": "SP01-SL11EN",
+    "name": "Celia, Sky Commander",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower into a Celia, Hope's Strategist. [evolve] [cost04]: Evolve this follower into a Celia, Despair's Messenger."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL11EN.png"
+  },
+  {
+    "cardNo": "SP01-SL12EN",
+    "name": "Ralmia, Sonic Racer",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Supreme",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[evolve] [cost03]: Evolve this follower. This card's [evolve] costs 1 less for every other follower on your field. Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL12EN.png"
+  },
+  {
+    "cardNo": "SP01-SL13EN",
+    "name": "Ralmia, Sonic Racer Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Officer / Supreme",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "3",
+      "effect": "Storm. On Evolve - [cost03]: Give this follower [attack]+1/[defense]+1 for every other follower on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL13EN.png"
+  },
+  {
+    "cardNo": "SP01-SL14EN",
+    "name": "Albert, Levin Saber",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Levin",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "5",
+      "effect": "[evolve] [cost03]: Evolve this follower. Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL14EN.png"
+  },
+  {
+    "cardNo": "SP01-SL15EN",
+    "name": "Albert, Levin Saber Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Commander / Levin",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "5",
+      "effect": "Storm. On Evolve - For the rest of this turn, this follower doesn't take combat damage. Strike - Refresh this follower. Perform only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL15EN.png"
+  },
+  {
+    "cardNo": "SP01-SL16EN",
+    "name": "Jeno, Levin Vanguard",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Levin",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL16EN.png"
+  },
+  {
+    "cardNo": "SP01-SL17EN",
+    "name": "Jeno, Levin Vanguard Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Officer / Levin",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Assail. On Evolve - Look at the top 4 cards of your deck. From among them, you may reveal a Levin follower not named Jeno, Levin Vanguard and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL17EN.png"
+  },
+  {
+    "cardNo": "SP01-SL18EN",
+    "name": "Yurius, Levin Duke",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Noble / Levin",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "2",
+      "attack": "0",
+      "defense": "4",
+      "effect": "[q][act] [engage]: Select an enemy follower on the field and deal it 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL18EN.png"
+  },
+  {
+    "cardNo": "SP01-SL19EN",
+    "name": "Falise, Innocent Sea Spray",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "6",
+      "attack": "4",
+      "defense": "5",
+      "effect": "[fanfare] Look at the top 5 cards of your deck. From among them, you may put up to 1 Mage follower that costs 3 or less and up to 1 Mage spell that costs 3 or less into your EX area. They cost 3 less to play this turn. Put the rest on the bottom of your deck in any order. Whenever you play a Mage card, select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL19EN.png"
+  },
+  {
+    "cardNo": "SP01-SL20EN",
+    "name": "Anne, Mysterian Prodigy",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Choose one. If there are at least 10 Academic cards in your cemetery, choose up to 2 instead. (1) Search your deck for an Anne's Sorcery, put it into your EX area, then shuffle. The next Anne's Sorcery you play this turn costs 5 less. (2) Search your deck for a Grea, Mysterian Dragoness, summon it, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL20EN.png"
+  },
+  {
+    "cardNo": "SP01-SL21EN",
+    "name": "Grea, Mysterian Dragoness",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Select an enemy follower on the field. If there are at least 10 Academic cards in your cemetery, deal 4 damage to it and 1 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL21EN.png"
+  },
+  {
+    "cardNo": "SP01-SL22EN",
+    "name": "Grea, Mysterian Dragoness Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "If an Academic spell you control would deal damage, it deals that much plus 1 instead. On Evolve - Search your deck for a Grea's Ember, put it into your EX area, then shuffle. The next Grea's Ember you play this turn costs 1 less."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL22EN.png"
+  },
+  {
+    "cardNo": "SP01-SL23EN",
+    "name": "Elusa, Magic Wunderkind",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost02]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL23EN.png"
+  },
+  {
+    "cardNo": "SP01-SL24EN",
+    "name": "Elusa, Magic Wunderkind Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Academic",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - Search your deck for an Arcanaform follower, reveal it, add it to your hand, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL24EN.png"
+  },
+  {
+    "cardNo": "SP01-SL25EN",
+    "name": "Freshman Lou",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[fanfare] Search your deck for a 1-cost spell, reveal it, add it to your hand, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL25EN.png"
+  },
+  {
+    "cardNo": "SP01-SL26EN",
+    "name": "Sharon, Seaside Nymph",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Marine",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "7",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Recover 5 play points. [act] [engage]: Choose up to 2. (1) Select an enemy follower on the field. It can't attack enemies during its controller's next turn. (2) The next time 1 or more followers are put onto your field this turn, give one [attack]+1/[defense]+1. (3) Give your leader [defense]+2. (4) Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL26EN.png"
+  },
+  {
+    "cardNo": "SP01-SL27EN",
+    "name": "Filene, Whitefrost Dragonewt",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "3",
+      "effect": "[fanfare] Select an enemy follower on the field and engage it. It doesn't refresh during its controller's next start phase. [fanfare] If Overflow is active for you, search your deck for a Whitefrost Whisper, put it into your EX area, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL27EN.png"
+  },
+  {
+    "cardNo": "SP01-SL28EN",
+    "name": "Galmieux, Omen of Disdain",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Omen / Wyrmkin",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[evolve] [cost02]: Evolve this follower. During your turn, whenever this follower takes ability damage, change its [evolve] cost to 0 for the rest of the turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL28EN.png"
+  },
+  {
+    "cardNo": "SP01-SL29EN",
+    "name": "Galmieux, Omen of Disdain Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Wyrmkin",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "On Evolve - Select an Omen card that costs 2 or less in your cemetery and play it for 0 play points. During your turn, whenever this follower takes ability damage, select an enemy leader or enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL29EN.png"
+  },
+  {
+    "cardNo": "SP01-SL30EN",
+    "name": "Annerose",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt / Princess",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] If Overflow is active for you, look at the top 3 cards of your deck. You may reveal a Dragonewt card from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL30EN.png"
+  },
+  {
+    "cardNo": "SP01-SL31EN",
+    "name": "Annerose Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonewt / Princess",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL31EN.png"
+  },
+  {
+    "cardNo": "SP01-SL32EN",
+    "name": "Queen Vampire, Sultry Evening",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vampire",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Select an enemy follower on the field and deal it 4 damage. At the start of your end phase, if there are at least 3 other Vampire cards on your field, deal 3 damage to each enemy leader and give your leader [defense]+3."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL32EN.png"
+  },
+  {
+    "cardNo": "SP01-SL33EN",
+    "name": "Ginsetsu, Great Fox",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Arena / Yokai",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "6",
+      "attack": "1",
+      "defense": "5",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Put 5 One-Tailed Fox tokens into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL33EN.png"
+  },
+  {
+    "cardNo": "SP01-SL34EN",
+    "name": "Ginsetsu, Great Fox Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arena / Yokai",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "1",
+      "defense": "9",
+      "effect": "Any Yokai follower you play costs 2 less. If a Yokai follower on your field would deal damage, it deals that much plus 1 instead. Whenever a Yokai follower you control leaves the field, give this follower [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL34EN.png"
+  },
+  {
+    "cardNo": "SP01-SL35EN",
+    "name": "Cerberus",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost02]: Evolve this follower. [fanfare] Put a Mimi, Infernal Right Paw or Coco, Infernal Left Paw token into your EX area. Necrocharge (10) - Put both instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL35EN.png"
+  },
+  {
+    "cardNo": "SP01-SL36EN",
+    "name": "Cerberus Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Demon",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "On Evolve - Put a Mimi, Infernal Right Paw and Coco, Infernal Left Paw token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL36EN.png"
+  },
+  {
+    "cardNo": "SP01-SL37EN",
+    "name": "Vuella, One-Winged Demon",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[act] [cost01]: Reveal the top card of your deck. If it's a 2-cost card, put it into your EX area. It costs 2 less to play this turn. Activate only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL37EN.png"
+  },
+  {
+    "cardNo": "SP01-SL38EN",
+    "name": "Underworld Watchman Khawy",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Necromancer",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Ward. [lastwords] Select an enemy follower on the field. Destroy it and give your leader [defense]+X. X equals the selected follower's attack."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL38EN.png"
+  },
+  {
+    "cardNo": "SP01-SL39EN",
+    "name": "Zoe, Shore's Melody",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Princess",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "1",
+      "attack": "0",
+      "defense": "1",
+      "effect": "[fanfare] Select an enemy follower on the field. If your leader has gained at least 4 defense this turn, destroy it and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL39EN.png"
+  },
+  {
+    "cardNo": "SP01-SL40EN",
+    "name": "Jeanne, Beacon of Salvation",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Luminary",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Draw a card. If there are at least 2 followers with \"Jeanne\" in their name in your cemetery, give this follower [attack]+1/[defense]+1 and Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL40EN.png"
+  },
+  {
+    "cardNo": "SP01-SL41EN",
+    "name": "Jeanne, Beacon of Salvation Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith / Luminary",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "4",
+      "effect": "On Evolve - You may summon a [havencraft] follower that costs 2 or less from your hand. Strike - Select a [havencraft] follower that costs 2 or less on your field and give it [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL41EN.png"
+  },
+  {
+    "cardNo": "SP01-SL42EN",
+    "name": "Wilbert, Grand Knight",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Arena / Luminary",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "5",
+      "effect": "Ward. [fanfare] Look at the top 5 cards of your deck. From among them, you may summon a follower with Ward not named Wilbert, Grand Knight that costs 5 or less. Put the rest on the bottom of your deck in any order. Whenever a follower with Ward is put from your field into the cemetery, deal 1 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL42EN.png"
+  },
+  {
+    "cardNo": "SP01-SL43EN",
+    "name": "Aether of the White Wing",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Luminary / Lightborne",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "7",
+      "attack": "3",
+      "defense": "5",
+      "effect": "Ward. [fanfare] Search your deck for a [havencraft] follower not named Aether of the White Wing that costs less than your max play points, summon it, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL43EN.png"
+  },
+  {
+    "cardNo": "SP01-SL44EN",
+    "name": "Sekhmet",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Beast",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[act] [engage], bury an amulet: Select an enemy follower on the field. Deal 4 damage to it and 1 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL44EN.png"
+  },
+  {
+    "cardNo": "SP01-SL45EN",
+    "name": "Alice, Golden Afternoon",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Fable",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Draw a card. [fanfare] Select an enemy follower that costs 4 or less on the field. If this card wasn't put onto the field from hand, put the selected follower into its owner's EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL45EN.png"
+  },
+  {
+    "cardNo": "SP01-SL46EN",
+    "name": "Dark Angel Olivia",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Fallen Angel",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Choose up to 2. (1) Gain 1 Evolution Point. (2) Give your leader [defense]+3. (3) Draw a card. (4) Each opponent discards a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL46EN.png"
+  },
+  {
+    "cardNo": "SP01-SL47EN",
+    "name": "Ephemera, Sword Angel",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Angel",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "1",
+      "effect": "Rush. [fanfare] If there are at least 3 cards on an opponent's field, give this follower [attack]+1 and Assail."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL47EN.png"
+  },
+  {
+    "cardNo": "SP01-SL48EN",
+    "name": "Mithra, Daybreak Deity",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Lightborne",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Each player rolls a 6-sided die. If they roll a 1, 2, or 3, they draw 2 cards. If they roll a 4, 5, or 6, they discard 2 random cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL48EN.png"
+  },
+  {
+    "cardNo": "SP01-SL49EN",
+    "name": "Mithra, Daybreak Deity Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Lightborne",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "On Evolve - Declare any number from 1 to 6, then roll a 6-sided die. If you roll the declared number, give your leader [defense]+5, search your deck for any card, put it into your EX area, shuffle, then recover all your play points."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL49EN.png"
+  },
+  {
+    "cardNo": "SP01-SL50EN",
+    "name": "Lyrial, Archer Throne",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Angel",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "5",
+      "effect": "Your leader doesn't take ability damage. [q][act] [engage]: Deal 2 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL50EN.png"
+  },
+  {
+    "cardNo": "SP01-SL51EN",
+    "name": "Feena, Dynamite Daredevil",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Mercenary",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[fanfare] Choose one. (1) Look at the top 5 cards of your deck. You may reveal a 1-cost follower from among them and add it to your hand. Put the rest on the bottom of your deck in any order. (2) Select a 1-cost enemy follower on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL51EN.png"
+  },
+  {
+    "cardNo": "SP01-SL52EN",
+    "name": "Arriet, Soothing Harpist",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Musical",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "5",
+      "effect": "[fanfare] Select an engaged follower on your field. Give it [attack]+2/[defense]+2 and refresh it. For the rest of this turn, it can't attack enemies."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL52EN.png"
+  },
+  {
+    "cardNo": "SP01-SL53EN",
+    "name": "Actress Feria",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Musical / Fable / Princess",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[act] [engage]: Select another Fable follower on your field and place a Fable counter on it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL53EN.png"
+  },
+  {
+    "cardNo": "SP01-SL54EN",
+    "name": "Gourmet Emperor Khaiza",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Fiend / Chef",
+      "rarity": "Super Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Select an enemy follower that costs 2 or less on the field. Destroy it and give its leader [defense]+3."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SL54EN.png"
+  },
+  {
+    "cardNo": "SP01-SP01EN",
+    "name": "Spinaria, Wavering Will",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Supreme",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "3",
+      "attack": "1",
+      "defense": "3",
+      "effect": "Whenever a follower on your field evolves, give your leader [defense]+2. [fanfare] Select a [forestcraft] follower that costs 2 or less in your cemetery and put it into your EX area. It costs 2 less to play this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SP01EN.png"
+  },
+  {
+    "cardNo": "SP01-SP02EN",
+    "name": "Spinaria, Wavering Will",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Supreme",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "3",
+      "attack": "1",
+      "defense": "3",
+      "effect": "Whenever a follower on your field evolves, give your leader [defense]+2. [fanfare] Select a [forestcraft] follower that costs 2 or less in your cemetery and put it into your EX area. It costs 2 less to play this turn."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "SP01-SP03EN",
+    "name": "Orchis, Puppet Girl",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Puppetry",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower into an Orchis, Resolute Puppet. [evolve] [cost04]: Evolve this follower into an Orchis, Vengeful Puppet. Activate only if there are at least 3 Puppetry cards in your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SP03EN.png"
+  },
+  {
+    "cardNo": "SP01-SP04EN",
+    "name": "Aria, Fairy Princess",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Pixie / Princess",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Ward. Each other Pixie follower on your field has Rush. [fanfare] Put up to 9 Fairy tokens onto your field and/or into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SP04EN.png"
+  },
+  {
+    "cardNo": "SP01-SP05EN",
+    "name": "Amelia, Sunny Paladin",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Whenever an Officer follower is put onto your field, select an enemy follower on the field and deal it 3 damage. [act] [cost00]: You may summon an Officer follower that costs 2 or less from your hand or EX area. Activate only once per turn."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "SP01-SP06EN",
+    "name": "Celia, Sky Commander",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower into a Celia, Hope's Strategist. [evolve] [cost04]: Evolve this follower into a Celia, Despair's Messenger."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SP06EN.png"
+  },
+  {
+    "cardNo": "SP01-SP07EN",
+    "name": "Ralmia, Sonic Racer",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Supreme",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[evolve] [cost03]: Evolve this follower. This card's [evolve] costs 1 less for every other follower on your field. Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SP07EN.png"
+  },
+  {
+    "cardNo": "SP01-SP08EN",
+    "name": "Ralmia, Sonic Racer Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Officer / Supreme",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "3",
+      "effect": "Storm. On Evolve - [cost03]: Give this follower [attack]+1/[defense]+1 for every other follower on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SP08EN.png"
+  },
+  {
+    "cardNo": "SP01-SP09EN",
+    "name": "Albert, Levin Saber",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Levin",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "5",
+      "effect": "[evolve] [cost03]: Evolve this follower. Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SP09EN.png"
+  },
+  {
+    "cardNo": "SP01-SP10EN",
+    "name": "Albert, Levin Saber Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Commander / Levin",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "5",
+      "effect": "Storm. On Evolve - For the rest of this turn, this follower doesn't take combat damage. Strike - Refresh this follower. Perform only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SP10EN.png"
+  },
+  {
+    "cardNo": "SP01-SP11EN",
+    "name": "Falise, Innocent Sea Spray",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "6",
+      "attack": "4",
+      "defense": "5",
+      "effect": "[fanfare] Look at the top 5 cards of your deck. From among them, you may put up to 1 Mage follower that costs 3 or less and up to 1 Mage spell that costs 3 or less into your EX area. They cost 3 less to play this turn. Put the rest on the bottom of your deck in any order. Whenever you play a Mage card, select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SP11EN.png"
+  },
+  {
+    "cardNo": "SP01-SP12EN",
+    "name": "Falise, Innocent Sea Spray",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "6",
+      "attack": "4",
+      "defense": "5",
+      "effect": "[fanfare] Look at the top 5 cards of your deck. From among them, you may put up to 1 Mage follower that costs 3 or less and up to 1 Mage spell that costs 3 or less into your EX area. They cost 3 less to play this turn. Put the rest on the bottom of your deck in any order. Whenever you play a Mage card, select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "SP01-SP13EN",
+    "name": "Anne, Mysterian Prodigy",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Choose one. If there are at least 10 Academic cards in your cemetery, choose up to 2 instead. (1) Search your deck for an Anne's Sorcery, put it into your EX area, then shuffle. The next Anne's Sorcery you play this turn costs 5 less. (2) Search your deck for a Grea, Mysterian Dragoness, summon it, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SP13EN.png"
+  },
+  {
+    "cardNo": "SP01-SP14EN",
+    "name": "Grea, Mysterian Dragoness",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Select an enemy follower on the field. If there are at least 10 Academic cards in your cemetery, deal 4 damage to it and 1 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SP14EN.png"
+  },
+  {
+    "cardNo": "SP01-SP15EN",
+    "name": "Grea, Mysterian Dragoness Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "If an Academic spell you control would deal damage, it deals that much plus 1 instead. On Evolve - Search your deck for a Grea's Ember, put it into your EX area, then shuffle. The next Grea's Ember you play this turn costs 1 less."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SP15EN.png"
+  },
+  {
+    "cardNo": "SP01-SP16EN",
+    "name": "Sharon, Seaside Nymph",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Marine",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "7",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Recover 5 play points. [act] [engage]: Choose up to 2. (1) Select an enemy follower on the field. It can't attack enemies during its controller's next turn. (2) The next time 1 or more followers are put onto your field this turn, give one [attack]+1/[defense]+1. (3) Give your leader [defense]+2. (4) Draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "SP01-SP17EN",
+    "name": "Filene, Whitefrost Dragonewt",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "3",
+      "effect": "[fanfare] Select an enemy follower on the field and engage it. It doesn't refresh during its controller's next start phase. [fanfare] If Overflow is active for you, search your deck for a Whitefrost Whisper, put it into your EX area, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SP17EN.png"
+  },
+  {
+    "cardNo": "SP01-SP18EN",
+    "name": "Galmieux, Omen of Disdain",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Omen / Wyrmkin",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[evolve] [cost02]: Evolve this follower. During your turn, whenever this follower takes ability damage, change its [evolve] cost to 0 for the rest of the turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SP18EN.png"
+  },
+  {
+    "cardNo": "SP01-SP19EN",
+    "name": "Galmieux, Omen of Disdain Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Wyrmkin",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "On Evolve - Select an Omen card that costs 2 or less in your cemetery and play it for 0 play points. During your turn, whenever this follower takes ability damage, select an enemy leader or enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SP19EN.png"
+  },
+  {
+    "cardNo": "SP01-SP20EN",
+    "name": "Queen Vampire, Sultry Evening",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vampire",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Select an enemy follower on the field and deal it 4 damage. At the start of your end phase, if there are at least 3 other Vampire cards on your field, deal 3 damage to each enemy leader and give your leader [defense]+3."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "SP01-SP21EN",
+    "name": "Ginsetsu, Great Fox",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Arena / Yokai",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "6",
+      "attack": "1",
+      "defense": "5",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Put 5 One-Tailed Fox tokens into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SP21EN.png"
+  },
+  {
+    "cardNo": "SP01-SP22EN",
+    "name": "Ginsetsu, Great Fox Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arena / Yokai",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "1",
+      "defense": "9",
+      "effect": "Any Yokai follower you play costs 2 less. If a Yokai follower on your field would deal damage, it deals that much plus 1 instead. Whenever a Yokai follower you control leaves the field, give this follower [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SP22EN.png"
+  },
+  {
+    "cardNo": "SP01-SP23EN",
+    "name": "Cerberus",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost02]: Evolve this follower. [fanfare] Put a Mimi, Infernal Right Paw or Coco, Infernal Left Paw token into your EX area. Necrocharge (10) - Put both instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SP23EN.png"
+  },
+  {
+    "cardNo": "SP01-SP24EN",
+    "name": "Cerberus Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Demon",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "On Evolve - Put a Mimi, Infernal Right Paw and Coco, Infernal Left Paw token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SP24EN.png"
+  },
+  {
+    "cardNo": "SP01-SP25EN",
+    "name": "Zoe, Shore's Melody",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Princess",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "1",
+      "attack": "0",
+      "defense": "1",
+      "effect": "[fanfare] Select an enemy follower on the field. If your leader has gained at least 4 defense this turn, destroy it and draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "SP01-SP26EN",
+    "name": "Jeanne, Beacon of Salvation",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Luminary",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Draw a card. If there are at least 2 followers with \"Jeanne\" in their name in your cemetery, give this follower [attack]+1/[defense]+1 and Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SP26EN.png"
+  },
+  {
+    "cardNo": "SP01-SP27EN",
+    "name": "Jeanne, Beacon of Salvation Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith / Luminary",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "4",
+      "effect": "On Evolve - You may summon a [havencraft] follower that costs 2 or less from your hand. Strike - Select a [havencraft] follower that costs 2 or less on your field and give it [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SP27EN.png"
+  },
+  {
+    "cardNo": "SP01-SP28EN",
+    "name": "Wilbert, Grand Knight",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Arena / Luminary",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "5",
+      "effect": "Ward. [fanfare] Look at the top 5 cards of your deck. From among them, you may summon a follower with Ward not named Wilbert, Grand Knight that costs 5 or less. Put the rest on the bottom of your deck in any order. Whenever a follower with Ward is put from your field into the cemetery, deal 1 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SP28EN.png"
+  },
+  {
+    "cardNo": "SP01-SP29EN",
+    "name": "Aether of the White Wing",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Luminary / Lightborne",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "7",
+      "attack": "3",
+      "defense": "5",
+      "effect": "Ward. [fanfare] Search your deck for a [havencraft] follower not named Aether of the White Wing that costs less than your max play points, summon it, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SP29EN.png"
+  },
+  {
+    "cardNo": "SP01-SP30EN",
+    "name": "Alice, Golden Afternoon",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Fable",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Draw a card. [fanfare] Select an enemy follower that costs 4 or less on the field. If this card wasn't put onto the field from hand, put the selected follower into its owner's EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SP30EN.png"
+  },
+  {
+    "cardNo": "SP01-SP31EN",
+    "name": "Alice, Golden Afternoon",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Fable",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Draw a card. [fanfare] Select an enemy follower that costs 4 or less on the field. If this card wasn't put onto the field from hand, put the selected follower into its owner's EX area."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "SP01-SP32EN",
+    "name": "Dark Angel Olivia",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Fallen Angel",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Choose up to 2. (1) Gain 1 Evolution Point. (2) Give your leader [defense]+3. (3) Draw a card. (4) Each opponent discards a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-SP32EN.png"
+  },
+  {
+    "cardNo": "SP01-T01EN",
+    "name": "Fairy TOKEN",
+    "type": "token",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Token",
+      "trait": "Pixie",
+      "rarity": "-",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-T01EN.png"
+  },
+  {
+    "cardNo": "SP01-T02EN",
+    "name": "Knight TOKEN",
+    "type": "token",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Token",
+      "trait": "Officer",
+      "rarity": "-",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-T02EN.png"
+  },
+  {
+    "cardNo": "SP01-T03EN",
+    "name": "Naterran Great Tree TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Amulet / Token",
+      "trait": "Natura",
+      "rarity": "-",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "When this card leaves the field, draw a card, then discard a card. [act] [cost01]: Bury this card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-T03EN.png"
+  },
+  {
+    "cardNo": "SP01-U01EN",
+    "name": "Spinaria, Wavering Will",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Supreme",
+      "rarity": "Ultimate",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "3",
+      "attack": "1",
+      "defense": "3",
+      "effect": "Whenever a follower on your field evolves, give your leader [defense]+2. [fanfare] Select a [forestcraft] follower that costs 2 or less in your cemetery and put it into your EX area. It costs 2 less to play this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-U01EN.png"
+  },
+  {
+    "cardNo": "SP01-U02EN",
+    "name": "Orchis, Puppet Girl",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Puppetry",
+      "rarity": "Ultimate",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower into an Orchis, Resolute Puppet. [evolve] [cost04]: Evolve this follower into an Orchis, Vengeful Puppet. Activate only if there are at least 3 Puppetry cards in your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-U02EN.png"
+  },
+  {
+    "cardNo": "SP01-U03EN",
+    "name": "Aria, Fairy Princess",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Pixie / Princess",
+      "rarity": "Ultimate",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Ward. Each other Pixie follower on your field has Rush. [fanfare] Put up to 9 Fairy tokens onto your field and/or into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-U03EN.png"
+  },
+  {
+    "cardNo": "SP01-U04EN",
+    "name": "Amelia, Sunny Paladin",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander",
+      "rarity": "Ultimate",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Whenever an Officer follower is put onto your field, select an enemy follower on the field and deal it 3 damage. [act] [cost00]: You may summon an Officer follower that costs 2 or less from your hand or EX area. Activate only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-U04EN.png"
+  },
+  {
+    "cardNo": "SP01-U05EN",
+    "name": "Celia, Sky Commander",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander",
+      "rarity": "Ultimate",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower into a Celia, Hope's Strategist. [evolve] [cost04]: Evolve this follower into a Celia, Despair's Messenger."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-U05EN.png"
+  },
+  {
+    "cardNo": "SP01-U06EN",
+    "name": "Ralmia, Sonic Racer",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Supreme",
+      "rarity": "Ultimate",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[evolve] [cost03]: Evolve this follower. This card's [evolve] costs 1 less for every other follower on your field. Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-U06EN.png"
+  },
+  {
+    "cardNo": "SP01-U07EN",
+    "name": "Ralmia, Sonic Racer Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Officer / Supreme",
+      "rarity": "Ultimate",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "3",
+      "effect": "Storm. On Evolve - [cost03]: Give this follower [attack]+1/[defense]+1 for every other follower on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-U07EN.png"
+  },
+  {
+    "cardNo": "SP01-U08EN",
+    "name": "Albert, Levin Saber",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Levin",
+      "rarity": "Ultimate",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "5",
+      "effect": "[evolve] [cost03]: Evolve this follower. Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-U08EN.png"
+  },
+  {
+    "cardNo": "SP01-U09EN",
+    "name": "Albert, Levin Saber Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Commander / Levin",
+      "rarity": "Ultimate",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "5",
+      "effect": "Storm. On Evolve - For the rest of this turn, this follower doesn't take combat damage. Strike - Refresh this follower. Perform only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-U09EN.png"
+  },
+  {
+    "cardNo": "SP01-U10EN",
+    "name": "Falise, Innocent Sea Spray",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic",
+      "rarity": "Ultimate",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "6",
+      "attack": "4",
+      "defense": "5",
+      "effect": "[fanfare] Look at the top 5 cards of your deck. From among them, you may put up to 1 Mage follower that costs 3 or less and up to 1 Mage spell that costs 3 or less into your EX area. They cost 3 less to play this turn. Put the rest on the bottom of your deck in any order. Whenever you play a Mage card, select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-U10EN.png"
+  },
+  {
+    "cardNo": "SP01-U11EN",
+    "name": "Anne, Mysterian Prodigy",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Ultimate",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Choose one. If there are at least 10 Academic cards in your cemetery, choose up to 2 instead. (1) Search your deck for an Anne's Sorcery, put it into your EX area, then shuffle. The next Anne's Sorcery you play this turn costs 5 less. (2) Search your deck for a Grea, Mysterian Dragoness, summon it, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-U11EN.png"
+  },
+  {
+    "cardNo": "SP01-U12EN",
+    "name": "Grea, Mysterian Dragoness",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Ultimate",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Select an enemy follower on the field. If there are at least 10 Academic cards in your cemetery, deal 4 damage to it and 1 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-U12EN.png"
+  },
+  {
+    "cardNo": "SP01-U13EN",
+    "name": "Grea, Mysterian Dragoness Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Ultimate",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "If an Academic spell you control would deal damage, it deals that much plus 1 instead. On Evolve - Search your deck for a Grea's Ember, put it into your EX area, then shuffle. The next Grea's Ember you play this turn costs 1 less."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-U13EN.png"
+  },
+  {
+    "cardNo": "SP01-U14EN",
+    "name": "Sharon, Seaside Nymph",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Marine",
+      "rarity": "Ultimate",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "7",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Recover 5 play points. [act] [engage]: Choose up to 2. (1) Select an enemy follower on the field. It can't attack enemies during its controller's next turn. (2) The next time 1 or more followers are put onto your field this turn, give one [attack]+1/[defense]+1. (3) Give your leader [defense]+2. (4) Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-U14EN.png"
+  },
+  {
+    "cardNo": "SP01-U15EN",
+    "name": "Filene, Whitefrost Dragonewt",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt",
+      "rarity": "Ultimate",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "3",
+      "effect": "[fanfare] Select an enemy follower on the field and engage it. It doesn't refresh during its controller's next start phase. [fanfare] If Overflow is active for you, search your deck for a Whitefrost Whisper, put it into your EX area, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-U15EN.png"
+  },
+  {
+    "cardNo": "SP01-U16EN",
+    "name": "Galmieux, Omen of Disdain",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Omen / Wyrmkin",
+      "rarity": "Ultimate",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[evolve] [cost02]: Evolve this follower. During your turn, whenever this follower takes ability damage, change its [evolve] cost to 0 for the rest of the turn."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "SP01-U17EN",
+    "name": "Galmieux, Omen of Disdain Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Wyrmkin",
+      "rarity": "Ultimate",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "On Evolve - Select an Omen card that costs 2 or less in your cemetery and play it for 0 play points. During your turn, whenever this follower takes ability damage, select an enemy leader or enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-U17EN.png"
+  },
+  {
+    "cardNo": "SP01-U18EN",
+    "name": "Queen Vampire, Sultry Evening",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vampire",
+      "rarity": "Ultimate",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Select an enemy follower on the field and deal it 4 damage. At the start of your end phase, if there are at least 3 other Vampire cards on your field, deal 3 damage to each enemy leader and give your leader [defense]+3."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-U18EN.png"
+  },
+  {
+    "cardNo": "SP01-U19EN",
+    "name": "Ginsetsu, Great Fox",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Arena / Yokai",
+      "rarity": "Ultimate",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "6",
+      "attack": "1",
+      "defense": "5",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Put 5 One-Tailed Fox tokens into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-U19EN.png"
+  },
+  {
+    "cardNo": "SP01-U20EN",
+    "name": "Ginsetsu, Great Fox Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arena / Yokai",
+      "rarity": "Ultimate",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "1",
+      "defense": "9",
+      "effect": "Any Yokai follower you play costs 2 less. If a Yokai follower on your field would deal damage, it deals that much plus 1 instead. Whenever a Yokai follower you control leaves the field, give this follower [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-U20EN.png"
+  },
+  {
+    "cardNo": "SP01-U21EN",
+    "name": "Cerberus",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Ultimate",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost02]: Evolve this follower. [fanfare] Put a Mimi, Infernal Right Paw or Coco, Infernal Left Paw token into your EX area. Necrocharge (10) - Put both instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-U21EN.png"
+  },
+  {
+    "cardNo": "SP01-U22EN",
+    "name": "Cerberus Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Demon",
+      "rarity": "Ultimate",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "On Evolve - Put a Mimi, Infernal Right Paw and Coco, Infernal Left Paw token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-U22EN.png"
+  },
+  {
+    "cardNo": "SP01-U23EN",
+    "name": "Zoe, Shore's Melody",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Princess",
+      "rarity": "Ultimate",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "1",
+      "attack": "0",
+      "defense": "1",
+      "effect": "[fanfare] Select an enemy follower on the field. If your leader has gained at least 4 defense this turn, destroy it and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-U23EN.png"
+  },
+  {
+    "cardNo": "SP01-U24EN",
+    "name": "Jeanne, Beacon of Salvation",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Luminary",
+      "rarity": "Ultimate",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Draw a card. If there are at least 2 followers with \"Jeanne\" in their name in your cemetery, give this follower [attack]+1/[defense]+1 and Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-U24EN.png"
+  },
+  {
+    "cardNo": "SP01-U25EN",
+    "name": "Jeanne, Beacon of Salvation Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith / Luminary",
+      "rarity": "Ultimate",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "4",
+      "effect": "On Evolve - You may summon a [havencraft] follower that costs 2 or less from your hand. Strike - Select a [havencraft] follower that costs 2 or less on your field and give it [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-U25EN.png"
+  },
+  {
+    "cardNo": "SP01-U26EN",
+    "name": "Wilbert, Grand Knight",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Arena / Luminary",
+      "rarity": "Ultimate",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "5",
+      "effect": "Ward. [fanfare] Look at the top 5 cards of your deck. From among them, you may summon a follower with Ward not named Wilbert, Grand Knight that costs 5 or less. Put the rest on the bottom of your deck in any order. Whenever a follower with Ward is put from your field into the cemetery, deal 1 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-U26EN.png"
+  },
+  {
+    "cardNo": "SP01-U27EN",
+    "name": "Aether of the White Wing",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Luminary / Lightborne",
+      "rarity": "Ultimate",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "7",
+      "attack": "3",
+      "defense": "5",
+      "effect": "Ward. [fanfare] Search your deck for a [havencraft] follower not named Aether of the White Wing that costs less than your max play points, summon it, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-U27EN.png"
+  },
+  {
+    "cardNo": "SP01-U28EN",
+    "name": "Alice, Golden Afternoon",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Fable",
+      "rarity": "Ultimate",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Draw a card. [fanfare] Select an enemy follower that costs 4 or less on the field. If this card wasn't put onto the field from hand, put the selected follower into its owner's EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-U28EN.png"
+  },
+  {
+    "cardNo": "SP01-U29EN",
+    "name": "Dark Angel Olivia",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Fallen Angel",
+      "rarity": "Ultimate",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Choose up to 2. (1) Gain 1 Evolution Point. (2) Give your leader [defense]+3. (3) Draw a card. (4) Each opponent discards a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/SP01-U29EN.png"
+  }
+]

@@ -12,9 +12,18 @@ import { COLORS, FONT } from "./theme";
 const W = 124;
 const H = 173;
 
+// The card LIST uses downscaled thumbnails (public/textures/thumbs/) to keep the
+// pool light; the inspector/deck still load the full-size originals. Rewrite a
+// "../textures/X.png" path to its thumb; if a thumb is ever missing the <img>
+// onError swaps back to the full image.
+const thumbSrc = (src) =>
+  src && src.includes("/textures/") && !src.includes("/textures/thumbs/")
+    ? src.replace("/textures/", "/textures/thumbs/")
+    : src;
+
 export default function CardGrid({
-  names, visibleCount, onLoadMore, hasMore, scrollTargetId,
-  onInspect, onAdd, onRemove, isAtLimit, countOf, inspectedName,
+  items, visibleCount, onLoadMore, hasMore, scrollTargetId,
+  onInspect, onAdd, onRemove, isAtLimit, countOf, inspectedKey,
 }) {
   return (
     <InfiniteScroll
@@ -29,19 +38,24 @@ export default function CardGrid({
         alignItems: "flex-start", padding: "14px 14px 80px",
       }}
     >
-      {names.slice(0, visibleCount).map((name, idx) => (
-        <CardTile
-          key={name + idx}
-          name={name}
-          count={countOf ? countOf(name) : 0}
-          maxed={isAtLimit ? isAtLimit(name) : false}
-          selected={name === inspectedName}
-          onInspect={onInspect}
-          onAdd={onAdd}
-          onRemove={onRemove}
-        />
-      ))}
-      {names.length === 0 && (
+      {items.slice(0, visibleCount).map((item, idx) => {
+        const itemKey = item.key || item.name;
+        return (
+          <CardTile
+            key={itemKey + "@" + idx}
+            name={item.name}
+            cardNo={item.cardNo}
+            cardKey={itemKey}
+            count={countOf ? countOf(item.name) : 0}
+            maxed={isAtLimit ? isAtLimit(item.name) : false}
+            selected={itemKey === inspectedKey}
+            onInspect={onInspect}
+            onAdd={onAdd}
+            onRemove={onRemove}
+          />
+        );
+      })}
+      {items.length === 0 && (
         <div style={{ color: COLORS.textDim, fontFamily: FONT, padding: 40 }}>
           No cards match these filters.
         </div>
@@ -50,8 +64,12 @@ export default function CardGrid({
   );
 }
 
-function CardTile({ name, count, maxed, selected, onInspect, onAdd, onRemove }) {
+function CardTile({ name, cardNo, cardKey, count, maxed, selected, onInspect, onAdd, onRemove }) {
   const [hover, setHover] = React.useState(false);
+  // In the "show all printings" view a specific printing is requested by card
+  // number; otherwise fall back to the name-keyed image used everywhere else.
+  const fullSrc = cardNo ? `../textures/${cardNo}.png` : cardImage(name);
+  const src = thumbSrc(fullSrc);
   const btnBase = {
     position: "absolute", bottom: 6, width: 28, height: 28, borderRadius: "50%",
     border: "none", display: "flex", alignItems: "center", justifyContent: "center",
@@ -65,7 +83,7 @@ function CardTile({ name, count, maxed, selected, onInspect, onAdd, onRemove }) 
       transition={{ duration: 0.12 }}
       onHoverStart={() => setHover(true)}
       onHoverEnd={() => setHover(false)}
-      onClick={() => onInspect(name)}
+      onClick={() => onInspect(name, cardKey, cardNo)}
       onDoubleClick={() => { if (!maxed && onAdd) onAdd(name); }}
       style={{
         position: "relative", width: W, height: H, cursor: "pointer", borderRadius: 8,
@@ -74,7 +92,13 @@ function CardTile({ name, count, maxed, selected, onInspect, onAdd, onRemove }) 
       }}
     >
       <LazyLoadImage
-        width={W} height={H} effect="opacity" src={cardImage(name)} alt={name}
+        width={W} height={H} effect="opacity" src={src} alt={name}
+        onError={(e) => {
+          // Thumb missing -> fall back to the full-size image once.
+          if (e.currentTarget.src.indexOf("/textures/thumbs/") !== -1) {
+            e.currentTarget.src = fullSrc;
+          }
+        }}
         placeholder={
           <Skeleton sx={{ bgcolor: "grey", opacity: 0.4 }} animation="wave"
             variant="rounded" width={W} height={H} />

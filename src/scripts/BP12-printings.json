@@ -1,0 +1,2282 @@
+[
+  {
+    "cardNo": "BP12-001EN",
+    "name": "Awakened Gaia",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Natura / Verdant",
+      "rarity": "Legendary",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "11",
+      "attack": "5",
+      "defense": "5",
+      "effect": "This card costs 5 less to play for every 5 Natura cards in your cemetery. ---------- [fanfare] Select an enemy follower on the field and destroy it."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-002EN",
+    "name": "Elf Queen of Abundant Life",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf",
+      "rarity": "Legendary",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Combo (3) - Draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-004EN",
+    "name": "Carbuncle, Immortal Jewel",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Fae-Touched / Beast",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "4",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost02]: Evolve this follower. [fanfare] Put a Carbuncle's Sparkle token into your EX area."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-005EN",
+    "name": "Carbuncle, Immortal Jewel Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Fae-Touched / Beast",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Put a Carbuncle's Sparkle token into your EX area. Give each Carbuncle's Sparkle in your EX area \"This card costs 2 less to play.\""
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-006EN",
+    "name": "Irene, Harvest Defender",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "6",
+      "attack": "6",
+      "defense": "6",
+      "effect": "Rush. Assail. During your turn, this follower doesn't take damage. Strike - Draw a card and refresh this follower. Perform only once per turn."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-007EN",
+    "name": "Intertwined Resolve",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Natura / Elf / Beast",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose one. (1) Put a Natura card from your field into its owner's EX area: Select an enemy follower on the field and deal it 3 damage. (2) Summon 2 Fairy tokens."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-008EN",
+    "name": "Forest Defender",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Hunter / Beast",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. Whenever another Hunter follower on your field attacks, select an enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-009EN",
+    "name": "Forest Defender Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Hunter / Beast",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "5",
+      "effect": "Whenever another Hunter follower on your field attacks, select an enemy follower on the field and deal it 3 damage. On Evolve - Look at the top 4 cards of your deck. You may summon a Hunter follower that costs 3 or less from among them. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-010EN",
+    "name": "Windfall Fay",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Pixie",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Whenever you play a card during your turn, if it's the 3rd you've played this turn, give your leader [defense]+1. If it's the 5th, draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-011EN",
+    "name": "Aria's Whirlwind",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Pixie / Princess",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "This card costs 1 less to play if there's a follower with both the Pixie and Princess traits in your EX area. ---------- Select a Pixie token on your field and deal damage equal to its attack to each enemy follower on the field."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-012EN",
+    "name": "Forest Hatcheteer",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf / Hunter",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost04]: Evolve this follower. Rush. Strike - Select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-013EN",
+    "name": "Forest Hatcheteer Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Elf / Hunter",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "Strike - Select an enemy follower on the field. Destroy it and deal 3 damage to its leader."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-014EN",
+    "name": "Springleaf Sprite",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Natura / Fae-Touched",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[fanfare] Put a Naterran Great Tree token into your EX area. When this card leaves the field, put a Naterran Great Tree token into your EX area."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-015EN",
+    "name": "Elven Pikeman",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf / Hunter",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Storm."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-016EN",
+    "name": "Fairy Officer",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Pixie",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[fanfare] Select an enemy follower on the field. Put 2 Fairy tokens into your EX area, then deal the selected follower damage equal to the number of Pixie tokens in your EX area."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-017EN",
+    "name": "Fairy Menhir",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Amulet",
+      "trait": "Pixie",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Look at the top 3 cards of your deck. You may reveal a Pixie card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. [act] [engage], bury this card: Give your leader [defense]+1. Activate only if there are at least 3 Pixie followers in your EX area."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-018EN",
+    "name": "Patrick, Rhiceros Knight",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Natura / Commander / Beast",
+      "rarity": "Legendary",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. Ward. [fanfare] You may put a Naterran Great Tree token onto your field or into your EX area."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-019EN",
+    "name": "Patrick, Rhiceros Knight Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Natura / Commander / Beast",
+      "rarity": "Legendary",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Ward. On Evolve - If there are at least 5 Natura cards on your field and/or in your EX area, recover 5 play points."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-021EN",
+    "name": "Ironfist Beast Warrior",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Beast",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "6",
+      "effect": "When this card is discarded, you may put it into your EX area. ---------- [evolve] [cost03]: Evolve this follower. Ward. [fanfare] Put the top card of your deck into your EX area."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-022EN",
+    "name": "Ironfist Beast Warrior Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Commander / Beast",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "-",
+      "attack": "6",
+      "defense": "8",
+      "effect": "Ward. On Evolve - Put the top card of your deck into your EX area. The next card you play from the EX area this turn costs 10 less."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-023EN",
+    "name": "Alwida, Pirate Queen",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Thief",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Choose one. (1) The next Alwida's Command you play this turn costs 5 less. (2) The next Thief card you play this turn costs 3 less. Whenever a Thief follower on your field attacks, select an enemy follower on the field and deal it 4 damage. Its controller buries the top card of their deck."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-024EN",
+    "name": "Stroke of Conviction",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Natura / Commander / Officer / Beast / Princess",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "As an additional cost to play this card, engage 2 cards named Naterran Great Tree on your field. ---------- Select an enemy follower on the field and up to 1 Natura follower on your field. Deal 5 damage to the first follower and 2 damage to its leader. Give the second [attack]+1/[defense]+1."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-025EN",
+    "name": "Nano, the Dawnblade",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Supreme",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this follower. Bane. While there's a Lecia, Sky Saber on your field, this follower has Assail."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-026EN",
+    "name": "Nano, the Dawnblade Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Officer / Supreme",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Bane. While there's a Lecia, Sky Saber on your field, this follower has Assail."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-027EN",
+    "name": "Panther Scout",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Natura / Thief / Beast",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Storm. [fanfare] You may put a Naterran Great Tree token onto your field or into your EX area."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-028EN",
+    "name": "King's Welcome",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Maid / Noble",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "If there's a Commander follower and Officer follower on your field, draw 2 cards."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-029EN",
+    "name": "Lilje, Butler of the Mists",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. Ward. Each Azord, Duke of the Mists on your field has Storm and \"Strike - Give this follower [attack]+2/[defense]+2.\""
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-030EN",
+    "name": "Lilje, Butler of the Mists Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Ward. Each Azord, Duke of the Mists on your field has Storm and \"Strike - Give this follower [attack]+2/[defense]+2.\" On Evolve - Search your deck for an Azord, Duke of the Mists, reveal it, add it to your hand, then shuffle."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-031EN",
+    "name": "Sheena, Maid of the Mists",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Maid",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "Rush. [fanfare] Select an enemy follower on the field and deal it 1 damage. If there's an Azord, Duke of the Mists on your field, deal 5 damage instead."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-032EN",
+    "name": "Wolf Fang Swordsman",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Bane. [act] [cost04]: Give this follower [attack]+2/[defense]+2 and Storm."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-033EN",
+    "name": "Splendid Fencer",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Noble",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Select an Officer follower on your field and give it [attack]+2."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-034EN",
+    "name": "Ivory Sword Dance",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Commander / Princess",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select up to 2 enemy followers on the field and deal X damage divided between them. X equals the highest attack among followers on your field."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-035EN",
+    "name": "Belphomet, Worldreaver",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Machina / Supreme",
+      "rarity": "Legendary",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Summon an Armored Tentacle token. [act] [cost03], banish 2 Machina tokens from your EX area, put this card from your hand into your EX area: Summon an Armored Tentacle or Assault Tentacle token."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-036EN",
+    "name": "Belphomet, Worldreaver Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Machina / Supreme",
+      "rarity": "Legendary",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "On Evolve - Discard a Machina card: Summon an Assault Tentacle token. [act] [cost02], banish a Machina token from your EX area: Summon an Assault Tentacle token."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-038EN",
+    "name": "Regalore, Steel Chimera",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Machina / Arcanaform / Forbidden",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "14",
+      "attack": "6",
+      "defense": "6",
+      "effect": "This card costs X less. X equals the number of cards with different base costs in your cemetery. ---------- [evolve] [cost01]: Evolve this follower. Ward."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-039EN",
+    "name": "Regalore, Steel Chimera Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Machina / Arcanaform / Forbidden",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "-",
+      "attack": "7",
+      "defense": "7",
+      "effect": "Ward. On Evolve - Select an enemy follower on the field and return it to its owner's hand. Summon an Assembly Droid token and give it [attack]+X/[defense]+X, where X equals the selected follower's cost."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-040EN",
+    "name": "Melvie, Princess Witch",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Rush. [fanfare] If there are at least 5 Mage followers in your cemetery, give this follower [attack]+4. [fanfare] Spellchain (5) - Give this follower [defense]+4."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-041EN",
+    "name": "Sorcery in Solidarity",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Machina / Mage / Golem",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "If there are at least 5 Machina cards in your cemetery, search your deck for a Machina follower that costs 3 or less and a 1-cost [runecraft] spell, summon the follower, put the spell into your EX area, then shuffle."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-042EN",
+    "name": "Chaos Wielder",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Forbidden",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Spellchain (5) - Recover 2 play points."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-043EN",
+    "name": "Chaos Wielder Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Forbidden",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field. Deal it 2 damage and, if there are at least 5 Mage followers in your cemetery, draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-044EN",
+    "name": "Rebel Against Fate",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Machina / Supreme",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "7",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Banish this card. Each player returns their hand and cemetery to their deck, shuffles, then draws 5 cards. The next card you play this turn costs 7 less."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-045EN",
+    "name": "Arcane Item Shop",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet",
+      "trait": "Mage / Alchemist",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "7",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] If there are no followers in your cemetery, recover 6 play points. Whenever you play a [runecraft] spell, select an enemy leader or enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-046EN",
+    "name": "Gigahand Golem",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Golem",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[evolve] [cost05]: Evolve this follower. [fanfare] Summon a Magic Sediment token. [act] Earth Rite: Select another Golem follower on your field and give it [attack]+1/[defense]+1. Activate only once per turn."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-047EN",
+    "name": "Gigahand Golem Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Golem",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "-",
+      "attack": "6",
+      "defense": "5",
+      "effect": "On Evolve - Summon a Guardform Golem and Strikeform Golem token. [act] Earth Rite: Select another Golem follower on your field and give it [attack]+2/[defense]+2. Activate only once per turn."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-048EN",
+    "name": "Device Diviner",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Machina / Alchemist",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Put an Assembly Droid or Repair Mode token into your EX area. Once per turn, when you play a Machina card, give your leader [defense]+1."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-049EN",
+    "name": "Mechabook Sorcerer",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Machina / Mage",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Discard a Machina card: Draw a card. Put an Assembly Droid and Repair Mode token into your EX area. Then, if there are 5 Machina cards in your EX area, recover 1 play point."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-050EN",
+    "name": "Chain Lightning",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "At the start of your end phase, if this card is in your EX area, bury it. ---------- Deal 4 damage to each enemy leader. If there are at least 2 Mage followers on your field, put this card into its owner's EX area."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-051EN",
+    "name": "Mystic Absorption",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field. Deal it 4 damage and, if there are at least 2 Mage followers on your field, give your leader [defense]+2."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-052EN",
+    "name": "Shipsbane Plesiosaurus",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Natura / Wyrmkin / Marine",
+      "rarity": "Legendary",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Banish a Naterran Great Tree from your field: Draw a card. During your turn, whenever you discard 1 or more cards, select an enemy leader or enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-054EN",
+    "name": "Jerva, Wyrm Transcendent",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Legendary",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "9",
+      "attack": "6",
+      "defense": "6",
+      "effect": "When this card is discarded, you may put it into your EX area. ---------- Ward. [fanfare] Deal 6 damage to each other follower on the field and each enemy leader. [act] [cost03], bury this card from your EX area: Select an enemy follower on the field and deal it 6 damage. Activate only if Overflow is active for you."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-055EN",
+    "name": "Steelcap Pachycephalosaurus",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Natura / Wyrmkin",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [lastwords] Summon a Naterran Great Tree token."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-056EN",
+    "name": "Steelcap Pachycephalosaurus Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Natura / Wyrmkin",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage. If you've discarded a card this turn, deal 4 damage instead. [lastwords] Summon a Naterran Great Tree token."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-057EN",
+    "name": "Giselle, Mermaid Healer",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Marine",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "While Overflow is active for you, each other Marine follower on your field has Rush and Assail. [fanfare] Give your leader [defense]+2."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-058EN",
+    "name": "Cursed Furor",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Natura / Dragonewt / Cutthroat",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "While Overflow is active for you, this card has [quick]. ---------- Select an enemy follower on the field. Deal it 4 damage and summon a Naterran Great Tree token."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-059EN",
+    "name": "Assault Dragoon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost02]: Evolve this follower. [act] [engage]: Select a [dragoncraft] follower that costs 2 or less on your field. Give it [attack]+1/[defense]+1 and Storm."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-060EN",
+    "name": "Assault Dragoon Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonheart",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select a [dragoncraft] follower that costs 2 or less in your cemetery and summon it. [act] [engage]: Select a [dragoncraft] follower that costs 2 or less on your field. Give it [attack]+1/[defense]+1 and Storm."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-061EN",
+    "name": "Petalspine Stegosaurus",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Natura / Wyrmkin",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Discard 2 cards: Draw 2 cards. [act] [engage]: Select an enemy follower on the field and deal it 5 damage. Activate only if there are at least 5 Natura cards in your cemetery. [lastwords] Summon a Naterran Great Tree token."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-062EN",
+    "name": "Phoenix Howl",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Phoenix / Celestial",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose up to 2. (1) Select an enemy follower on the field and deal it 2 damage. (2) [costX][costX]: Search your deck for up to X cards named Star Phoenix, give them Rush, then shuffle. X equals a number of your choice."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-063EN",
+    "name": "Dragoon Medic",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "1",
+      "attack": "0",
+      "defense": "1",
+      "effect": "When this card is discarded, you may put it into your EX area. ---------- [evolve] [cost02]: Evolve this follower. At the start of your end phase, give your leader [defense]+1."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-064EN",
+    "name": "Dragoon Medic Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonheart",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "-",
+      "attack": "1",
+      "defense": "2",
+      "effect": "At the start of your end phase, give your leader [defense]+2."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-065EN",
+    "name": "Rockback Ankylosaurus",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Natura / Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Summon a Naterran Great Tree token. [fanfare] [cost01], discard a card: Select an enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-066EN",
+    "name": "Ruinous Dragon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "7",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Search your deck for a [dragoncraft] spell that costs 5 or less or a non-[dragoncraft] spell that costs 2 or less, put it into your EX area, then shuffle. It costs 5 less to play this turn."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-067EN",
+    "name": "Dragon Aficionado",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] If Overflow is active for you, search your deck for a 1-cost [dragoncraft] follower, reveal it, add it to your hand, then shuffle."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-068EN",
+    "name": "Overwhelming Crush",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field. Destroy it, search your deck for a [dragoncraft] follower, reveal it, add it to your hand, then shuffle."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-069EN",
+    "name": "Neun, Daybreak Vampire",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Machina / Vampire",
+      "rarity": "Legendary",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Summon an Assembly Droid or Forest Bat token. Put an Assembly Droid or Forest Bat token into your EX area."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-070EN",
+    "name": "Neun, Daybreak Vampire Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Machina / Vampire",
+      "rarity": "Legendary",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Give each 1-cost follower on your field and in your EX area [attack]+1."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-072EN",
+    "name": "Jackshovel Gravedigger",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Machina / Necromancer",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "2",
+      "attack": "0",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this follower. Bane. [fanfare] If this card was put onto the field by an ability, evolve it."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-073EN",
+    "name": "Jackshovel Gravedigger Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Machina / Necromancer",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "-",
+      "attack": "1",
+      "defense": "2",
+      "effect": "Bane. On Evolve - Summon an Assembly Droid token. Bury the top card of your deck."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-074EN",
+    "name": "Medusa, Evil-Eyed Serpent",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon / Gorgon",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[fanfare] Put a Medusiana token into your EX area. [act] [engage], bury a Demon token from your field or EX area: Select an enemy follower on the field and destroy it."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-075EN",
+    "name": "Friends Forever",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Machina / Necromancer / Demon",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select up to 2 Machina followers that cost a total of 5 or less in your cemetery and summon them."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-076EN",
+    "name": "Liberté, Werewolf Pup",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Beast",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this follower."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-077EN",
+    "name": "Liberté, Werewolf Pup Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Beast",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - If Sanguine is active for you, give your leader [defense]+2 and draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-078EN",
+    "name": "Hellfire Hound",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon / Beast",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Banish 6 cards from your cemetery: Select any number of enemy followers on the field and deal 6 damage divided between them."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-079EN",
+    "name": "Garnet Waltz",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Machina / Demon / Vampire",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose one. (1) Deal 2 damage to each enemy leader and 1 damage to your own. (2) Summon an Assembly Droid token. Put an Assembly Droid token into your EX area. If there's a Mono, Garnet Rebel on your field, summon the second token instead."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-080EN",
+    "name": "Bloodstained Berserker",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "4",
+      "effect": "[evolve] [cost02]: Evolve this follower. Storm. [fanfare] Give this follower [attack]+X/[defense]+X, where X equals the number of cards named Bloodstained Berserker in your cemetery."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-081EN",
+    "name": "Bloodstained Berserker Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Demon",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "-",
+      "attack": "6",
+      "defense": "5",
+      "effect": "Storm. On Evolve - Select an enemy follower on the field and destroy it."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-082EN",
+    "name": "Roly-Poly Mk I",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Machina / Demon",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "3",
+      "effect": "Ward. While there's an Aenea, Amethyst Rebel on your field, if this follower would take more than 1 damage, it takes 1 instead. [act] [cost01]: Summon this card from your cemetery. Give it [attack]+1 and \"[lastwords] Banish this card.\" Activate only if there's an Aenea, Amethyst Rebel on your field."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-083EN",
+    "name": "Mechasaw Deathbringer",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Machina / Departed",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "3",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[act] [cost01], bury this card: Bury the top 2 cards of your deck. [lastwords] Select an enemy follower on the field and destroy it."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-084EN",
+    "name": "Ghoul",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Bury another Departed follower: Draw 2 cards. Discard a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-085EN",
+    "name": "Viper Lash",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Demon / Gorgon",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field. Deal it 5 damage, summon a Serpent token, and put a Serpent token into your EX area."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-086EN",
+    "name": "Rola, Inferno Dragoon",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Machina / Faith / Eidolon",
+      "rarity": "Legendary",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost02]: Evolve this follower. [fanfare] Put a Repair Mode token into your EX area. If this card was put onto the field by an ability, evolve it."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-088EN",
+    "name": "Charaton, Iceflame Priest",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Legendary",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Bury an amulet: Select an enemy follower on the field. Deal it 4 damage and recover 4 play points. Once on each of your turns, when an amulet you control leaves the field, deal 1 damage to each enemy leader."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-089EN",
+    "name": "Gullias, Silverbeast Lord",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Machina / Faith / Supreme",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "6",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Select a Machina follower that costs 2 or less in your cemetery and summon it. [act], banish 2 cards named Repair Mode from your EX area: Give this follower Storm."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-090EN",
+    "name": "Gullias, Silverbeast Lord Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Machina / Faith / Supreme",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "5",
+      "effect": "On Evolve - Choose one. (1) Select an enemy follower on the field and deal it 5 damage. (2) Give each other Machina follower on your field [attack]+1/[defense]+1. [act], banish 2 cards named Repair Mode from your EX area: Give this follower Storm."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-091EN",
+    "name": "Robowhip Reverend",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Machina / Faith / Zealot",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Put a Repair Mode token into your EX area. If this card was put onto the field by an ability, give each Machina follower on your field [attack]+1/[defense]+1."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-092EN",
+    "name": "Major Prayers",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Natura / Faith / Lightborne / Beast",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose one. (1) Give your leader [defense]+2. Draw 2 cards. (2) Search your deck for up to 2 different cards with \"Meowskers\" in their names, summon them, then shuffle."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-093EN",
+    "name": "Holylight Convert",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "4",
+      "attack": "1",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. Ward. At the start of your end phase, give this follower [attack]+X, where X equals the number of followers with Ward on your field."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-094EN",
+    "name": "Holylight Convert Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "5",
+      "effect": "Ward. On Evolve - Search your deck for a follower with Ward that costs 3 or less, summon it, then shuffle. At the start of your end phase, give this follower [attack]+X, where X equals the number of followers with Ward on your field."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-095EN",
+    "name": "Smilecure Priest",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Beast",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "4",
+      "effect": "This card can't be played from the EX area. ---------- Ward. [fanfare] Give your leader [defense]+2. [act] [cost01], banish this card from your EX area: Give your leader [defense]+1. Draw a card. [lastwords] Put this card into its owner's EX area."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-096EN",
+    "name": "Salvation Ex Limonia",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Machina / Faith / Zealot / Eidolon",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "When playing this card, discard a Heavenly Aegis: This card costs 2 less to play. ---------- Select a Machina follower that costs 3 or less in your cemetery and summon it. If it's a Limonia, Flawed Saint, put a Repair Mode token into your EX area."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-097EN",
+    "name": "Sol Sister",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. Ward."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-098EN",
+    "name": "Sol Sister Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Ward. On Evolve - Select an enemy follower on the field and deal it X damage. X equals the number of amulets on your field plus 1."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-099EN",
+    "name": "Robowing Precant",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Machina / Faith",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Put a Repair Mode token into your EX area. Then, if there are at least 3 cards named Repair Mode in your EX area, draw a card. Whenever you play a Repair Mode, select a follower on your field and give it Bane."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-100EN",
+    "name": "Fortune Fowl",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Avian",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "3",
+      "attack": "4",
+      "defense": "1",
+      "effect": "Rush. [lastwords] [cost01]: Summon a Holy Falcon token."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-101EN",
+    "name": "Pilgrims' Path",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] [cost04], bury this card: Give your leader [defense]+2. Draw 2 cards. [lastwords] Summon a Holy Falcon token."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-102EN",
+    "name": "Fiery Paean",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Put a Holy Tiger token into your EX area. [act] [engage]: Select a Holy Tiger on your field and give it Storm."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-104EN",
+    "name": "Changewing Cherub",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Machina / Natura / Angel",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Put a Repair Mode or Naterran Great Tree token into your EX area."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-105EN",
+    "name": "Changewing Cherub Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Machina / Natura / Angel",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - Select an enemy follower on the field and, if there are at least 5 Machina cards and/or Natura cards on your field and/or in your EX area, deal it 2 damage."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-106EN",
+    "name": "Seraphic Blade",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Angel",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose one. (1) Select an enemy card that costs 2 or less on the field and destroy it. (2) [cost02]: Select an enemy card that costs 6 or less on the field and destroy it."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-107EN",
+    "name": "Travelers' Respite",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Wasteland / Natura",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Look at the top 3 cards of your deck. You may reveal a Wasteland card or Natura card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. If there's a Wasteland card on your field or in your EX area, give your leader [defense]+1."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-108EN",
+    "name": "Romantic Chanteuse",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Musical",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Select an enemy follower on the field and engage it. [act] [cost02]: Select an enemy follower on the field and engage it."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-109EN",
+    "name": "Romantic Chanteuse Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Musical",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Give each enemy follower on the field \"This follower doesn't deal damage\" for the rest of this turn. [act] [cost02]: Select an enemy follower on the field and engage it."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-110EN",
+    "name": "Giving Gourmet",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Chef",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Give your leader [defense]+3. [lastwords] Choose one. (1) Search your deck for a Chef follower that costs 3 or less, summon it, then shuffle. (2) Draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-111EN",
+    "name": "Goblin Warpack",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Goblinoid",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "This card can only be played if there are at least 3 Goblinoid followers on your field. ---------- Select an enemy follower on the field. Destroy it and deal 2 damage to its leader."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-112EN",
+    "name": "Plucky Treasure Hunter",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Mercenary",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-113EN",
+    "name": "Plucky Treasure Hunter Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Mercenary",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "3",
+      "effect": "On Evolve - Discard a card: Roll a 6-sided die. If you roll a 4, 5, or 6, draw 3 cards."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-114EN",
+    "name": "Wayfaring Illustrator",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Mercenary",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Select an enemy follower on the field. Search your deck for an X-cost follower, put it into your EX area, then shuffle. X equals the selected follower's cost."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-115EN",
+    "name": "We've Got a Case!",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Detective",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Declare any card name. Reveal the top card of your deck. If it has the declared name, draw 2 cards. If not, draw 1 card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-T01EN",
+    "name": "Carbuncle's Sparkle TOKEN",
+    "type": "token",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell / Token",
+      "trait": "Fae-Touched / Beast",
+      "rarity": "-",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose one. (1) Select a follower on the field and return it to its owner's hand. (2) Give your leader [defense]+4. (3) Draw 2 cards."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-T02EN",
+    "name": "Twilight Blade TOKEN",
+    "type": "token",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell / Token",
+      "trait": "Commander / Officer",
+      "rarity": "-",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "As an additional cost to play this card, engage a Lecia, Sky Saber and Nano, the Dawnblade on your field. ---------- Deal 10 damage to each enemy leader and enemy follower on the field."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-T03EN",
+    "name": "Armored Tentacle TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Token",
+      "trait": "Machina / Supreme",
+      "rarity": "-",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "4",
+      "effect": "Ward. [lastwords] Give your leader [defense]+4."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-T04EN",
+    "name": "Assault Tentacle TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Token",
+      "trait": "Machina / Supreme",
+      "rarity": "-",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "3",
+      "attack": "4",
+      "defense": "2",
+      "effect": "Storm. [lastwords] Select an enemy follower on the field and deal it 4 damage."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-T05EN",
+    "name": "Medusiana TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Token",
+      "trait": "Demon / Gorgon",
+      "rarity": "-",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "3",
+      "attack": "1",
+      "defense": "5",
+      "effect": "Rush. Assail. Bane. [fanfare] Give your leader [defense]+X, where X equals the number of Demon followers on your field. [lastwords] Each opponent buries a follower."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-U01EN",
+    "name": "Elf Queen of Abundant Life Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Elf",
+      "rarity": "Ultimate",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "3",
+      "effect": "On Evolve - Select up to 2 enemy followers on the field and deal 2 damage divided between them. Combo (3) - Deal 4 damage divided between them instead."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-U02EN",
+    "name": "Lecia, Sky Saber",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander",
+      "rarity": "Ultimate",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Search your deck for a Nano, the Dawnblade, summon it, then shuffle. Whenever a Nano, the Dawnblade on your field evolves, choose one. (1) Put a Twilight Blade token into your EX area. (2) Give your leader [defense]+2."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-U03EN",
+    "name": "Daria, Infinity Witch",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Ultimate",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Look at the top 3 cards of your deck. From among them, you may reveal up to 1 Mage follower and up to 1 Mage spell and add them to your hand. Put the rest on the bottom of your deck in any order. [act] [engage]: You may put a [runecraft] spell from your hand into your EX area. It costs 3 less to play this turn. Activate only if there are at least 5 Mage followers in your cemetery."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-U04EN",
+    "name": "Shipsbane Plesiosaurus Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Natura / Wyrmkin / Marine",
+      "rarity": "Ultimate",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "On Evolve - Discard a card: Give your leader [defense]+2. During your turn, whenever you discard 1 or more cards, select an enemy leader or enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-U05EN",
+    "name": "Gremory, Death Teller",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Ultimate",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Ward. [fanfare] Bury the top 2 cards of your deck. [act] [cost01]: Summon this card from your cemetery. Give it \"[lastwords] Banish this card.\" Activate only if there are at least 10 cards in your cemetery and no cards named Gremory, Death Teller on your field."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-U06EN",
+    "name": "Rola, Inferno Dragoon Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Machina / Faith / Eidolon",
+      "rarity": "Ultimate",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Choose one. (1) Select an enemy follower on the field and deal it damage equal to the number of Machina followers on your field. (2) Give this follower Storm."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP12-U07EN",
+    "name": "Natur Al'machinus",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Machina / Natura / Deity",
+      "rarity": "Ultimate",
+      "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "When this card is discarded, [engage] a Naterran Great Tree on your field: Select a Natura card not named Natur Al'machinus in your cemetery and add it to your hand. ---------- [fanfare] Look at the top 3 cards of your deck. You may reveal a Machina card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. Put a Repair Mode token into your EX area. Recover 3 play points."
+    },
+    "imgSrc": ""
+  }
+]

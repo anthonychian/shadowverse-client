@@ -46,6 +46,7 @@ export const CLASS_COLORS = {
 
 // Human-readable set names, keyed by the filter value used in CreateDeck.
 export const SET_LABELS = {
+  main: "Main Sets (BP01–17)",
   "set 17": "Convergent Destinies",
   "set 16": "New World Genesis",
   "set 15": "Trial of the Omens",
@@ -73,12 +74,53 @@ export const SET_LABELS = {
 
 // Ordered list of sets for the dropdown (newest first, matching the old UI).
 export const SET_ORDER = [
+  "main",
   "set 17", "set 16", "set 15", "set 14", "uma2", "set 13", "set 12", "sea",
   "set 11", "vg", "set 10", "set 9", "set 8", "set 7", "idol", "idol2",
   "set 6", "set 5", "set 4", "set 3", "uma", "set 2", "set 1",
 ];
 
+// The deck-builder Set filter is keyed by the real set-family code (the card
+// number prefix, e.g. "BP01"; sub-bundles like "GFB01a" collapse to "GFB01").
+// Order = newest boosters first, then crossovers, special, gloryfinder, worlds
+// beyond, showdown/starter decks, then promos.
+export const SET_CODE_ORDER = [
+  "BP17", "BP16", "BP15", "BP14", "BP13", "BP12", "BP11", "BP10", "BP09",
+  "BP08", "BP07", "BP06", "BP05", "BP04", "BP03", "BP02", "BP01",
+  "ECP02", "ECP01", "CP03", "CP02", "CP01", "SP01",
+  "GFB01", "GFD02", "GFD01", "SS02", "SS01",
+  "SDD06", "SDD05", "SDD04", "SDD03", "SDD02", "SDD01",
+  "SD06", "SD05", "SD04", "SD03", "SD02", "SD01",
+  "CSD03", "CSD02", "CSD01", "PR",
+];
+
+// Card names carry an " ADVANCED" suffix so the Game can register Advanced
+// evolve cards (it matches name.slice(-8) === "ADVANCED"). That suffix is an
+// internal marker, not part of the printed card name, so strip it for display.
+export const displayName = (n) => (n || "").replace(/ ADVANCED$/, "");
+
+export const SET_CODE_LABELS = {
+  BP17: "Convergent Destinies", BP16: "New World Genesis", BP15: "Trial of the Omens",
+  BP14: "Banquet of Dreams", BP13: "Dominion of Darkness", BP12: "Worldreaver's Descent",
+  BP11: "Bullet of Fate", BP10: "Gods of the Arcana", BP09: "Duet of Dawn and Dusk",
+  BP08: "Alterchaotica", BP07: "Verdant Steel", BP06: "Paragons of the Colosseum",
+  BP05: "Omens Eternal", BP04: "Cosmic Mythos", BP03: "Flame of Lævateinn",
+  BP02: "Reign of Bahamut", BP01: "Advent of Genesis",
+  ECP02: "iDOLM@STER CG EX", ECP01: "Umamusume: Pretty Derby EX",
+  CP03: "Cardfight!! Vanguard", CP02: "iDOLM@STER Cinderella Girls", CP01: "Umamusume: Pretty Derby",
+  SP01: "Seaside Memories",
+  GFB01: "Gloryfinder Bundle #1", GFD02: "Gloryfinder: Treacherous Ambitions",
+  GFD01: "Gloryfinder: Luxheart Legends",
+  SS02: "Worlds Beyond: Dragoncraft", SS01: "Worlds Beyond: Swordcraft",
+  SDD01: "Showdown: Forestcraft", SDD02: "Showdown: Swordcraft", SDD03: "Showdown: Runecraft",
+  SDD04: "Showdown: Dragoncraft", SDD05: "Showdown: Abysscraft", SDD06: "Showdown: Havencraft",
+  SD01: "Starter: Regal Fairy Princess", SD02: "Starter: Blade of Resentment",
+  SD03: "Starter: Mysteries of Conjuration", SD04: "Starter: Wrath of the Greatwyrm",
+  SD05: "Starter: Waltz of the Undying Night", SD06: "Starter: Maculate Ablution",
+  CSD03: "Crossover Starter: Knight/Apocalypse", CSD02: "Crossover Starter: Cute/Cool/Passion",
+  CSD01: "Crossover Starter: Umamusume", PR: "Promo Cards",
+};
+
 export const CLASS_ORDER = [
   "forest", "sword", "rune", "dragon", "abyss", "haven", "neutral",
-  "idolmaster", "umamusume", "vanguard",
 ];
