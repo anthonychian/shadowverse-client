@@ -22,20 +22,33 @@ const SENTENCE_END = new Set([".", "!", "?"]);
 
 const isToken = (part) => /^\[[^\]]+\]$/.test(part);
 
+// A run of 3+ dashes is a section separator (e.g. a cost/passive clause split
+// from the main effect). Render it as a line break, swallowing surrounding
+// whitespace so the next section starts cleanly on its own line.
+const isDivider = (part) => /^\s*-{3,}\s*$/.test(part);
+
 // Renders card effect text, swapping inline [keyword] tokens (e.g. "[fanfare]",
 // "[cost02]") for their icon from the manifest. Unknown tokens stay as text.
 // A line break is inserted before each ability keyword that follows effect text
 // so distinct abilities sit on their own lines — but consecutive keyword tokens
 // (e.g. "[act][engage]") stay together because the break only fires when the
-// keyword follows regular text, not another token.
+// keyword follows regular text, not another token. Section separators ("----")
+// also become line breaks.
 export default function EffectText({ text, iconSize = 17, style }) {
   if (!text) return null;
-  const parts = text.split(/(\[[^\]]+\])/g);
+  const parts = text.split(/(\[[^\]]+\]|\s*-{3,}\s*)/g);
   const out = [];
   let lastNonSpace = null; // last non-whitespace char rendered so far
 
   parts.forEach((part, i) => {
     if (part === "") return;
+
+    if (isDivider(part)) {
+      // Avoid a leading blank line if the text somehow opens with a separator.
+      if (out.length) out.push(<br key={`hr${i}`} />);
+      lastNonSpace = null; // next keyword shouldn't add a second break
+      return;
+    }
 
     if (isToken(part)) {
       const key = part.toLowerCase();
