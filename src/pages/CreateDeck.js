@@ -234,6 +234,28 @@ export default function CreateDeck() {
 
   useEffect(() => setVisibleCount(CARD_PAGE_SIZE), [displayed]);
 
+  // react-infinite-scroll-component only loads the next page in response to a
+  // scroll event on the pool. Whenever the current page (visibleCount cards)
+  // doesn't overflow the container, no scrollbar appears and the user can
+  // never trigger loading the rest. Guarantee that, at any size, either every
+  // card is shown or the pool overflows (giving a scrollbar that the infinite
+  // scroll then uses for the remainder): keep loading pages until one of those
+  // holds. A ResizeObserver re-checks on any height change of the pool — window
+  // resize, browser zoom, collapsing the Filters panel, etc.
+  useEffect(() => {
+    const el = document.getElementById("poolScroll");
+    if (!el) return;
+    const fill = () => {
+      if (displayed.length > visibleCount && el.scrollHeight <= el.clientHeight) {
+        setVisibleCount((c) => c + CARD_PAGE_SIZE);
+      }
+    };
+    fill();
+    const ro = new ResizeObserver(fill);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [displayed, visibleCount]);
+
   // Show a card preview as soon as the page loads: the first card of an existing
   // deck if one is being loaded, otherwise the first card in the pool. Runs once.
   const initedRef = useRef(false);
