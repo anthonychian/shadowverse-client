@@ -5,78 +5,75 @@ import icons from "../../decks/icons.json";
 // so keyword icons live under the same base.
 const TEXTURES_BASE = "../textures/";
 
-// [keyword] tokens that introduce a distinct ability. Each such ability starts
-// on its own line so multi-ability cards read cleanly. Cost/stat/class tokens
-// (e.g. "[cost02]", "[attack]", "[runecraft]") are intentionally excluded —
-// those appear inline within a sentence and must not force a line break.
-const ABILITY_KEYS = new Set([
-  "[fanfare]", "[lastwords]", "[act]", "[evolve]", "[engage]",
-  "[feed]", "[adv]", "[ride]",
-]);
+// [keyword] tokens that introduce a distinct ability. A new line begins before
+// one of these when it follows the end of a sentence. Cost/stat/class tokens
+// (e.g. "[cost02]", "[attack]", "[runecraft]") are excluded — those appear
+// inline within a sentence and must not force a break.
+const ABILITY_TOKENS = "fanfare|lastwords|act|evolve|engage|feed|adv|ride";
 
-// An ability keyword only starts a new line when it follows the end of the
-// previous sentence. This keeps a keyword that's part of an ongoing clause on
-// the same line: an activate cost ("[act] [cost02], [engage], ...": comma) or
-// a granted keyword ("...gains [evolve] and [feed]": no terminator).
-const SENTENCE_END = new Set([".", "!", "?"]);
+// Plain-text ability lead-ins that begin a new ability line (the card splits
+// here even though there's no bracketed icon). High-confidence triggers and
+// keyword abilities only — generic sentence starters ("If", "Deal", "Put",
+// "X equals", ...) are intentionally excluded so the sentences that merely
+// continue an ability stay on the same line. Bare keyword abilities
+// ("Ward.", "Bane.", "Assail.", ...) are also excluded so a run of them stays
+// grouped on one line, as on the card; only keyword abilities that carry a
+// description (a ":" or " (cost)") get their own line.
+const LEAD = [
+  "Once per turn", "Once per match",
+  "At the start of", "At the end of", "At the beginning of",
+  "Whenever", "Each time", "The first time",
+  "On Evolve", "On Super-Evolve",
+  "While ", "During ",
+  "Strike:", "Clash:",
+  "Combo \\(", "Enhance \\(", "Accelerate \\(", "Crystallize \\(",
+  "Spellboost:", "Earth Rite:", "Necromancy \\(",
+  "Vengeance:", "Resonance:", "Awakening:", "Necrocharge \\(", "Spellchain \\(",
+].join("|");
 
-const isToken = (part) => /^\[[^\]]+\]$/.test(part);
+// Match zero-or-more whitespace after the sentence end so a break is inserted
+// even when the source jams the next ability right against the period.
+const TOKEN_BREAK = new RegExp("([.!?])\\s*(\\[(?:" + ABILITY_TOKENS + ")\\])", "gi");
+const LEAD_BREAK = new RegExp("([.!?])\\s*(" + LEAD + ")", "g");
 
-// A run of 3+ dashes is a section separator (e.g. a cost/passive clause split
-// from the main effect). Render it as a line break, swallowing surrounding
-// whitespace so the next section starts cleanly on its own line.
-const isDivider = (part) => /^\s*-{3,}\s*$/.test(part);
+// Turn the run-on effect string into one with explicit "\n" between abilities:
+// section separators ("----"), bracketed ability keywords starting a new
+// sentence, and plain-text ability lead-ins starting a new sentence.
+function withLineBreaks(text) {
+  return text
+    .replace(/\s*-{3,}\s*/g, "\n")
+    .replace(TOKEN_BREAK, "$1\n$2")
+    .replace(LEAD_BREAK, "$1\n$2")
+    .replace(/[ \t]*\n[ \t]*/g, "\n")
+    .replace(/\n{2,}/g, "\n")
+    .replace(/^\n+|\n+$/g, "");
+}
 
 // Renders card effect text, swapping inline [keyword] tokens (e.g. "[fanfare]",
-// "[cost02]") for their icon from the manifest. Unknown tokens stay as text.
-// A line break is inserted before each ability keyword that follows effect text
-// so distinct abilities sit on their own lines — but consecutive keyword tokens
-// (e.g. "[act][engage]") stay together because the break only fires when the
-// keyword follows regular text, not another token. Section separators ("----")
-// also become line breaks.
+// "[cost02]") for their icon from the manifest, and placing each ability on its
+// own line. Unknown tokens stay as text.
 export default function EffectText({ text, iconSize = 17, style }) {
   if (!text) return null;
-  const parts = text.split(/(\[[^\]]+\]|\s*-{3,}\s*)/g);
-  const out = [];
-  let lastNonSpace = null; // last non-whitespace char rendered so far
-
-  parts.forEach((part, i) => {
-    if (part === "") return;
-
-    if (isDivider(part)) {
-      // Avoid a leading blank line if the text somehow opens with a separator.
-      if (out.length) out.push(<br key={`hr${i}`} />);
-      lastNonSpace = null; // next keyword shouldn't add a second break
-      return;
-    }
-
-    if (isToken(part)) {
-      const key = part.toLowerCase();
-      // Start a new line before an ability keyword that begins a new sentence.
-      if (ABILITY_KEYS.has(key) && SENTENCE_END.has(lastNonSpace)) {
-        out.push(<br key={`br${i}`} />);
-      }
-      const file = icons[part] || icons[key];
-      out.push(
-        file ? (
-          <img
-            key={i}
-            src={TEXTURES_BASE + file}
-            alt={part}
-            title={part}
-            style={{ height: iconSize, verticalAlign: "text-bottom", margin: "0 1px" }}
-          />
-        ) : (
-          <React.Fragment key={i}>{part}</React.Fragment>
-        )
-      );
-      lastNonSpace = "]";
-    } else {
-      out.push(<React.Fragment key={i}>{part}</React.Fragment>);
-      const trimmed = part.replace(/\s+$/, "");
-      if (trimmed.length) lastNonSpace = trimmed[trimmed.length - 1];
-    }
-  });
-
-  return <span style={style}>{out}</span>;
+  const parts = withLineBreaks(text).split(/(\n|\[[^\]]+\])/g);
+  return (
+    <span style={style}>
+      {parts.map((part, i) => {
+        if (part === "") return null;
+        if (part === "\n") return <br key={i} />;
+        const file = icons[part] || icons[part.toLowerCase()];
+        if (file) {
+          return (
+            <img
+              key={i}
+              src={TEXTURES_BASE + file}
+              alt={part}
+              title={part}
+              style={{ height: iconSize, verticalAlign: "text-bottom", margin: "0 1px" }}
+            />
+          );
+        }
+        return <React.Fragment key={i}>{part}</React.Fragment>;
+      })}
+    </span>
+  );
 }
