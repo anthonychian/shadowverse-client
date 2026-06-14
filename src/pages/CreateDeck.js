@@ -2,6 +2,8 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import ReplyIcon from "@mui/icons-material/Reply";
 import CloseIcon from "@mui/icons-material/Close";
+import StyleIcon from "@mui/icons-material/Style";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import wallpaper3 from "../../src/assets/wallpapers/3.png";
 import {
   allCards, set17, set16, set15, set14, setUMA2, set13, set12, setSEA, set11,
@@ -101,6 +103,13 @@ export default function CreateDeck() {
   const [openImport, setOpenImport] = useState(false);
   const [openSnack, setOpenSnack] = useState(false);
 
+  // ---------- responsive / mobile ----------
+  // On phone-sized screens the two side columns (card preview + deck) are hidden
+  // and surfaced as modals instead, leaving the card pool full-width.
+  const isMobile = useMediaQuery("(max-width: 768px)");
+  const [mobileInspectOpen, setMobileInspectOpen] = useState(false);
+  const [mobileDeckOpen, setMobileDeckOpen] = useState(false);
+
   const evoNameSet = useMemo(() => new Set(allCardsEvo), []);
   const isEvoCard = (n) => evoNameSet.has(n);
 
@@ -189,6 +198,20 @@ export default function CreateDeck() {
     if (evoDeck.length >= 10) return true;
     if (card === "Carrot" || card === "Drive Point") return false;
     return c >= 3;
+  };
+
+  // Per-card copy max (the "/ N" shown on in-deck pool cards). null = no fixed
+  // copy cap for that card (Onion Patch / Carrot / Drive Point), so only a count
+  // is shown. Mirrors the copy-limit predicates above.
+  const mainCopyMax = (card) => {
+    if (card === "Rapid Fire") return 6;
+    if (card === "Shenlong" || card === "Curse Crafter") return 1;
+    if (card === "Onion Patch") return null;
+    return 3;
+  };
+  const evoCopyMax = (card) => {
+    if (card === "Carrot" || card === "Drive Point") return null;
+    return 3;
   };
 
   // Add wrappers that also remember which printing/art was chosen. They only set
@@ -550,6 +573,55 @@ export default function CreateDeck() {
     setTypes([]); setTraits([]); setRarities([]); setCosts([]); setAttacks([]); setDefenses([]);
   };
 
+  // On mobile, tapping a card pops the preview modal open over the pool.
+  const handleInspect = (n, key, cardNo) => {
+    inspect(n, key, cardNo);
+    if (isMobile) setMobileInspectOpen(true);
+  };
+  // Tapping a deck row (inside the deck modal) inspects that card; on mobile it
+  // surfaces the preview modal on top of the deck modal.
+  const handleDeckInspect = (n) => {
+    inspect(n);
+    if (isMobile) setMobileInspectOpen(true);
+  };
+
+  const inspectorEl = (
+    <CardInspector
+      name={cardName}
+      cardNo={inspectedCardNo}
+      rarity={inspectedPrinting ? inspectedPrinting.rarity : undefined}
+      cardSet={inspectedPrinting ? inspectedPrinting.cardSet : undefined}
+      printings={inspectedPrintings}
+      selectedCardNo={inspectedCardNo}
+      onSelectPrinting={handleSelectPrinting}
+      count={inspectedCount}
+      atLimit={inspectedAtLimit}
+      isDouble={cardName ? isDoubleEvo(cardName) : false}
+      onAdd={() => cardName && (inspectedIsEvo ? addEvo(cardName, inspectedCardNo) : addMain(cardName, inspectedCardNo))}
+      onRemove={() => cardName && (inspectedIsEvo ? handleEvoCardRemove(cardName) : handleCardRemove(cardName))}
+      onPrev={() => navInspect(-1)}
+      onNext={() => navInspect(1)}
+      onSwap={handleDoubleEvoClick}
+      large={isMobile}
+    />
+  );
+
+  const deckPanelEl = (
+    <DeckPanel
+      deckMap={deckMap} evoDeckMap={evoDeckMap}
+      deckLen={deck.length} evoLen={evoDeck.length}
+      artNoOf={(n) => artByName.get(n) || null}
+      onInspect={handleDeckInspect}
+      onAdd={handleCardSelection} onAddEvo={handleEvoCardSelection}
+      onRemove={handleCardRemove} onRemoveEvo={handleEvoCardRemove}
+      copyMaxOf={mainCopyMax} evoCopyMaxOf={evoCopyMax}
+      name={name} onNameChange={setName}
+      deckClass={deckClass} onDeckClass={setDeckClass}
+      canCreate={canCreate} onCreate={handleSubmit}
+      onImport={() => setOpenImport(true)} onExport={handleOpenSnack}
+    />
+  );
+
   return (
     <div
       onContextMenu={(e) => e.preventDefault()}
@@ -566,30 +638,22 @@ export default function CreateDeck() {
           <span style={{ fontFamily: FONT, fontSize: 16 }}>Home</span>
         </div>
         <div style={{ flex: 1 }} />
+        {/* On mobile the deck column is hidden; this button opens it as a modal. */}
+        {isMobile && (
+          <Button
+            size="small" variant="outlined" onClick={() => setMobileDeckOpen(true)}
+            startIcon={<StyleIcon />}
+            sx={{ color: COLORS.text, borderColor: COLORS.border, fontFamily: FONT, textTransform: "none" }}
+          >
+            Deck ({deck.length})
+          </Button>
+        )}
       </div>
 
-      {/* 3-column body */}
-      <div style={{ flex: 1, minHeight: 0, display: "flex", gap: 10, padding: "0 12px 12px" }}>
-        {/* LEFT — inspector */}
-        <aside style={col(420)}>
-          <CardInspector
-            name={cardName}
-            cardNo={inspectedCardNo}
-            rarity={inspectedPrinting ? inspectedPrinting.rarity : undefined}
-            cardSet={inspectedPrinting ? inspectedPrinting.cardSet : undefined}
-            printings={inspectedPrintings}
-            selectedCardNo={inspectedCardNo}
-            onSelectPrinting={handleSelectPrinting}
-            count={inspectedCount}
-            atLimit={inspectedAtLimit}
-            isDouble={cardName ? isDoubleEvo(cardName) : false}
-            onAdd={() => cardName && (inspectedIsEvo ? addEvo(cardName, inspectedCardNo) : addMain(cardName, inspectedCardNo))}
-            onRemove={() => cardName && (inspectedIsEvo ? handleEvoCardRemove(cardName) : handleCardRemove(cardName))}
-            onPrev={() => navInspect(-1)}
-            onNext={() => navInspect(1)}
-            onSwap={handleDoubleEvoClick}
-          />
-        </aside>
+      {/* body — 3 columns on desktop; pool-only on mobile (sides become modals) */}
+      <div style={{ flex: 1, minHeight: 0, display: "flex", gap: 10, padding: isMobile ? "0 0 6px" : "0 12px 12px" }}>
+        {/* LEFT — inspector (desktop only) */}
+        {!isMobile && <aside style={col(420)}>{inspectorEl}</aside>}
 
         {/* CENTER — filters + pool */}
         <main style={{ flex: 1, minWidth: 0, display: "flex", flexDirection: "column", background: COLORS.panel, borderRadius: 12, overflow: "hidden" }}>
@@ -615,32 +679,80 @@ export default function CreateDeck() {
               hasMore={displayed.length > visibleCount}
               scrollTargetId="poolScroll"
               inspectedKey={inspectedKey}
-              onInspect={inspect}
+              onInspect={handleInspect}
               onAdd={mainSelected ? addMain : addEvo}
               onRemove={mainSelected ? handleCardRemove : handleEvoCardRemove}
               isAtLimit={mainSelected ? mainAtLimit : evoAtLimit}
               countOf={mainSelected ? (n) => deckMap.get(n) || 0 : (n) => evoDeckMap.get(n) || 0}
+              copyMaxOf={mainSelected ? mainCopyMax : evoCopyMax}
+              isMobile={isMobile}
             />
           </div>
         </main>
 
-        {/* RIGHT — deck */}
-        <aside style={col(340)}>
-          <DeckPanel
-            deckMap={deckMap} evoDeckMap={evoDeckMap}
-            deckLen={deck.length} evoLen={evoDeck.length}
-            artNoOf={(n) => artByName.get(n) || null}
-            onInspect={(n) => inspect(n)}
-            onAdd={handleCardSelection} onRemove={handleCardRemove}
-            onAddEvo={handleEvoCardSelection} onRemoveEvo={handleEvoCardRemove}
-            isAtLimit={mainAtLimit} isEvoAtLimit={evoAtLimit}
-            name={name} onNameChange={setName}
-            deckClass={deckClass} onDeckClass={setDeckClass}
-            canCreate={canCreate} onCreate={handleSubmit}
-            onImport={() => setOpenImport(true)} onExport={handleOpenSnack}
-          />
-        </aside>
+        {/* RIGHT — deck (desktop only) */}
+        {!isMobile && <aside style={col(340)}>{deckPanelEl}</aside>}
       </div>
+
+      {/* mobile: card preview modal */}
+      {isMobile && (
+        <Dialog
+          open={mobileInspectOpen}
+          onClose={() => setMobileInspectOpen(false)}
+          fullScreen
+          PaperProps={{
+            sx: {
+              // Transparent so the dimmed pool behind shows through; only the
+              // centered panel card is opaque.
+              backgroundColor: "transparent",
+              backgroundImage: "none",
+              boxShadow: "none",
+            },
+          }}
+        >
+          <div style={{ position: "relative", height: "100%", overflow: "hidden" }}>
+            <IconButton
+              onClick={() => setMobileInspectOpen(false)}
+              sx={{
+                position: "absolute", top: 10, right: 10, zIndex: 3, color: COLORS.text,
+                background: "rgba(0,0,0,0.45)", "&:hover": { background: "rgba(0,0,0,0.65)" },
+              }}
+            >
+              <CloseIcon />
+            </IconButton>
+            <div style={{ height: "100%", display: "flex", padding: "18px 14px", boxSizing: "border-box" }}>
+              {/* Fixed-height panel card (like the desktop left column): the card
+                  image stays anchored at the top and the effect text scrolls
+                  inside, so navigating between cards no longer shifts the layout. */}
+              <div style={{ width: "100%", maxWidth: 640, margin: "0 auto", background: "rgba(28, 31, 38, 0.97)", borderRadius: 16, padding: 16, boxSizing: "border-box", boxShadow: "0 12px 40px rgba(0,0,0,0.65), 0 0 0 1px rgba(255,255,255,0.06)", display: "flex", flexDirection: "column" }}>
+                {inspectorEl}
+              </div>
+            </div>
+          </div>
+        </Dialog>
+      )}
+
+      {/* mobile: deck modal (opened from the top bar) */}
+      {isMobile && (
+        <Dialog
+          open={mobileDeckOpen}
+          onClose={() => setMobileDeckOpen(false)}
+          fullScreen
+          PaperProps={{ sx: { background: COLORS.inset2, backgroundImage: "none" } }}
+        >
+          <div style={{ display: "flex", flexDirection: "column", height: "100%" }}>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "10px 14px", borderBottom: `1px solid ${COLORS.border}` }}>
+              <span style={{ fontFamily: FONT, color: COLORS.text, fontSize: 18, fontWeight: 700 }}>Your Deck</span>
+              <IconButton onClick={() => setMobileDeckOpen(false)} sx={{ color: COLORS.text }}>
+                <CloseIcon />
+              </IconButton>
+            </div>
+            <div style={{ flex: 1, minHeight: 0, padding: "12px 30px" }}>
+              {deckPanelEl}
+            </div>
+          </div>
+        </Dialog>
+      )}
 
       {/* import dialog */}
       <Dialog open={openImport} onClose={() => setOpenImport(false)} PaperProps={{ component: "form" }}>

@@ -1,9 +1,9 @@
 import React from "react";
 import { TextField, Button, Select, MenuItem, FormControl, InputLabel } from "@mui/material";
-import AddIcon from "@mui/icons-material/Add";
-import RemoveIcon from "@mui/icons-material/Remove";
-import { cardImage } from "../../decks/getCards";
-import { getCost } from "../../decks/cardDetails";
+import SearchIcon from "@mui/icons-material/Search";
+import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
+import { cardImage, toThumb } from "../../decks/getCards";
+import { getCost, primaryType } from "../../decks/cardDetails";
 import { COLORS, FONT, CLASS_ORDER, CLASS_LABELS, CLASS_COLORS, displayName } from "./theme";
 import { classIcon } from "./icons";
 
@@ -15,18 +15,21 @@ const sortedEntries = (map) =>
     return a[0].localeCompare(b[0]);
   });
 
-const DeckRow = ({ name, count, artNo, onInspect, onAdd, onRemove, addDisabled }) => (
+// A deck entry shown as a card thumbnail (Deck Log style): full art with a
+// bottom bar matching the pool cards — white-circle magnifier (inspect),
+// "count / max", and white-circle trash (remove a copy).
+const DeckCard = ({ name, count, copyMax, artNo, onInspect, onAdd, onRemove }) => (
   <div
+    onClick={() => onAdd && onAdd(name)}
+    title={displayName(name)}
     style={{
-      display: "flex", alignItems: "center", gap: 8, padding: "3px 6px",
-      borderRadius: 6, background: COLORS.row, cursor: "pointer",
+      position: "relative", borderRadius: 6, overflow: "hidden", cursor: "pointer",
+      aspectRatio: "124 / 173", background: COLORS.inset,
     }}
-    onClick={() => onInspect(name)}
-    onMouseEnter={(e) => (e.currentTarget.style.background = COLORS.rowHover)}
-    onMouseLeave={(e) => (e.currentTarget.style.background = COLORS.row)}
   >
     <img
-      src={artNo ? `../textures/thumbs/${artNo}.png` : cardImage(name)}
+      src={artNo ? `../textures/thumbs/${artNo}.png` : toThumb(cardImage(name))}
+      loading="lazy" decoding="async"
       onError={(e) => {
         // Fall back to the full chosen-art image, then the default art.
         if (artNo && e.currentTarget.src.indexOf("/thumbs/") !== -1) {
@@ -35,40 +38,52 @@ const DeckRow = ({ name, count, artNo, onInspect, onAdd, onRemove, addDisabled }
           e.currentTarget.src = cardImage(name);
         }
       }}
-      alt={name} width={34} height={48} style={{ borderRadius: 3, flexShrink: 0 }}
+      alt={name}
+      style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
     />
-    <span style={{ color: COLORS.glow, fontFamily: FONT, fontSize: 14, width: 22, textAlign: "center" }}>{count}</span>
-    <span
-      style={{
-        flex: 1, color: COLORS.text, fontFamily: FONT, fontSize: 13,
-        whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis",
-      }}
-      title={displayName(name)}
-    >
-      {displayName(name)}
-    </span>
-    <RowBtn onClick={(e) => { e.stopPropagation(); onRemove(name); }}><RemoveIcon sx={{ fontSize: 16 }} /></RowBtn>
-    <RowBtn disabled={addDisabled} onClick={(e) => { e.stopPropagation(); if (!addDisabled) onAdd(name); }}>
-      <AddIcon sx={{ fontSize: 16 }} />
-    </RowBtn>
+    <div style={deckBar}>
+      <button
+        onClick={(e) => { e.stopPropagation(); onInspect(name); }}
+        title="Inspect card" style={deckBarBtn}
+      >
+        <SearchIcon sx={{ fontSize: 32 }} />
+      </button>
+      <span style={deckBarCount}>{copyMax == null ? count : `${count} / ${copyMax}`}</span>
+      <button
+        onClick={(e) => { e.stopPropagation(); if (onRemove) onRemove(name); }}
+        title="Remove from deck" style={deckBarBtn}
+      >
+        <DeleteOutlineIcon sx={{ fontSize: 32 }} />
+      </button>
+    </div>
   </div>
 );
 
-const RowBtn = ({ children, onClick, disabled }) => (
-  <button
-    onClick={onClick} disabled={disabled}
-    style={{
-      width: 24, height: 24, borderRadius: 5, border: "none", flexShrink: 0,
-      background: disabled ? "rgba(255,255,255,0.06)" : "rgba(255,255,255,0.16)",
-      color: disabled ? "rgba(255,255,255,0.3)" : "#fff",
-      display: "flex", alignItems: "center", justifyContent: "center",
-      cursor: disabled ? "default" : "pointer",
-    }}
-  >
-    {children}
-  </button>
-);
+const deckBar = {
+  position: "absolute", left: 0, right: 0, bottom: 0,
+  display: "flex", alignItems: "center", justifyContent: "space-between", padding: "8px 12px",
+  borderBottomLeftRadius: 6, borderBottomRightRadius: 6,
+  background: "linear-gradient(to top, rgba(0,0,0,0.88), rgba(0,0,0,0.78) 60%, rgba(0,0,0,0))",
+};
+const deckBarBtn = {
+  width: 38, height: 38, borderRadius: "50%", flexShrink: 0,
+  background: "rgba(255,255,255,0.95)", color: "#1b1f27",
+  border: "none", padding: 0, cursor: "pointer",
+  display: "flex", alignItems: "center", justifyContent: "center",
+  boxShadow: "0 2px 6px rgba(0,0,0,0.55)",
+};
+const deckBarCount = {
+  color: "#fff", fontFamily: FONT, fontSize: 18, fontWeight: 700, whiteSpace: "nowrap",
+  textShadow: "0 1px 3px rgba(0,0,0,0.95)",
+};
+const deckGrid = {
+  display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10, marginBottom: 6,
+};
 
+// Cost (mana) curve, styled after Deck Log: a "Cost" heading, a row of count
+// pills (always shown, including 0) above salmon bars rising from a common
+// baseline, with the 0–8+ axis below.
+const CURVE_BAR = "#ed8a8a";
 const ManaCurve = ({ map }) => {
   const buckets = Array(9).fill(0); // 0..7, 8+
   for (const [name, count] of map.entries()) {
@@ -78,27 +93,98 @@ const ManaCurve = ({ map }) => {
   }
   const max = Math.max(1, ...buckets);
   return (
-    <div
-      style={{
-        display: "flex", alignItems: "flex-end", gap: 4, height: 78,
-        padding: "8px 6px 6px", marginBottom: 14,
-        borderBottom: `1px solid ${COLORS.border}`,
-      }}
-    >
-      {buckets.map((v, i) => (
-        <div key={i} style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", gap: 4 }}>
-          <div style={{ color: COLORS.textDim, fontSize: 10, fontFamily: FONT }}>{v || ""}</div>
-          <div style={{ width: "100%", height: `${(v / max) * 46}px`, background: COLORS.glow, borderRadius: 2, opacity: v ? 0.85 : 0.15 }} />
-          <div style={{ color: COLORS.textDim, fontSize: 10, fontFamily: FONT }}>{i === 8 ? "8+" : i}</div>
+    <div style={{ background: COLORS.inset, borderRadius: 10, padding: "8px 8px 6px", marginBottom: 12 }}>
+      <div style={{ textAlign: "center", color: COLORS.text, fontFamily: FONT, fontSize: 13, fontWeight: 700, marginBottom: 6 }}>
+        Cost
+      </div>
+      <div style={{ display: "flex", gap: 4, marginBottom: 5 }}>
+        {buckets.map((v, i) => (
+          <div key={i} style={{ flex: 1, display: "flex", justifyContent: "center" }}>
+            <span style={costPill}>{v}</span>
+          </div>
+        ))}
+      </div>
+      <div style={{ display: "flex", alignItems: "flex-end", gap: 4, height: 54 }}>
+        {buckets.map((v, i) => (
+          <div key={i} style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "flex-end", height: "100%" }}>
+            <div style={{ width: "72%", margin: "0 auto", height: `${(v / max) * 100}%`, minHeight: v ? 3 : 0, background: CURVE_BAR, borderRadius: "3px 3px 0 0" }} />
+          </div>
+        ))}
+      </div>
+      <div style={{ display: "flex", gap: 4, marginTop: 4 }}>
+        {buckets.map((v, i) => (
+          <div key={i} style={{ flex: 1, textAlign: "center", color: COLORS.textDim, fontSize: 10, fontFamily: FONT }}>
+            {i === 8 ? "8+" : i}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const costPill = {
+  minWidth: 16, padding: "1px 6px", borderRadius: 999, fontSize: 11, fontWeight: 700,
+  fontFamily: FONT, lineHeight: 1.4, textAlign: "center", color: "#fff",
+  background: "rgba(0,0,0,0.6)", border: `1px solid ${COLORS.border}`,
+};
+
+// One "｜ Label ：value" line in the deck breakdown (gold tick + label + count).
+const StatLine = ({ label, value }) => (
+  <div style={{ display: "flex", alignItems: "center", gap: 6, padding: "2px 0" }}>
+    <span style={{ width: 3, height: 13, background: COLORS.gold, borderRadius: 2, flexShrink: 0 }} />
+    <span style={{ color: COLORS.textDim, fontFamily: FONT, fontSize: 13 }}>{label}</span>
+    <span style={{ color: COLORS.textDim, fontFamily: FONT, fontSize: 13 }}>：</span>
+    <span style={{ color: COLORS.text, fontFamily: FONT, fontSize: 13, fontWeight: 700 }}>{value}</span>
+  </div>
+);
+
+const pcsStyle = {
+  color: COLORS.text, fontFamily: FONT, fontSize: 19, fontWeight: 700,
+  whiteSpace: "nowrap", alignSelf: "center",
+};
+
+// Deck Log-style breakdown: main-deck card types (Follower/Spell/Amulet) with a
+// "n / 50 pcs" total, a divider, then the evolve deck (Evolved/Advanced) with a
+// "n / 10 pcs" total. Advanced evolve cards carry a " ADVANCED" name suffix.
+const Breakdown = ({ deckMap, evoDeckMap, deckLen, evoLen }) => {
+  const main = { Follower: 0, Spell: 0, Amulet: 0 };
+  for (const [name, c] of deckMap.entries()) {
+    const t = primaryType(name);
+    if (main[t] != null) main[t] += c;
+  }
+  let evolved = 0, advanced = 0;
+  for (const [name, c] of evoDeckMap.entries()) {
+    if (/ ADVANCED$/.test(name)) advanced += c;
+    else evolved += c;
+  }
+  return (
+    <div style={{ background: COLORS.inset, borderRadius: 10, padding: "10px 12px", marginBottom: 12 }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <div>
+          <StatLine label="Follower" value={main.Follower} />
+          <StatLine label="Spell" value={main.Spell} />
+          <StatLine label="Amulet" value={main.Amulet} />
         </div>
-      ))}
+        <div style={pcsStyle}>{deckLen} / 50 pcs</div>
+      </div>
+      <div style={{ borderTop: `1px solid ${COLORS.border}`, margin: "8px 0" }} />
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <div>
+          <StatLine label="Evolved" value={evolved} />
+          <StatLine label="Advanced" value={advanced} />
+        </div>
+        <div style={pcsStyle}>{evoLen} / 10 pcs</div>
+      </div>
     </div>
   );
 };
 
 const SectionHeader = ({ title, count, max }) => (
-  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", padding: "2px 4px" }}>
-    <span style={{ color: COLORS.text, fontFamily: FONT, fontSize: 15, fontWeight: 700 }}>{title}</span>
+  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "2px 4px" }}>
+    <span style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
+      <span style={{ width: 4, height: 16, background: COLORS.glow, borderRadius: 2 }} />
+      <span style={{ color: COLORS.text, fontFamily: FONT, fontSize: 15, fontWeight: 700 }}>{title}</span>
+    </span>
     <span style={{ color: count >= max ? COLORS.gold : COLORS.textDim, fontFamily: FONT, fontSize: 13 }}>
       {count}/{max}
     </span>
@@ -108,8 +194,7 @@ const SectionHeader = ({ title, count, max }) => (
 export default function DeckPanel({
   deckMap, evoDeckMap, deckLen, evoLen,
   artNoOf,
-  onInspect, onAdd, onRemove, onAddEvo, onRemoveEvo,
-  isAtLimit, isEvoAtLimit,
+  onInspect, onAdd, onAddEvo, onRemove, onRemoveEvo, copyMaxOf, evoCopyMaxOf,
   name, onNameChange, deckClass, onDeckClass, canCreate, onCreate, onImport, onExport,
 }) {
   const inputSx = {
@@ -120,54 +205,58 @@ export default function DeckPanel({
   };
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100%", gap: 10 }}>
-      <TextField
-        size="small" placeholder="Deck name…" value={name} onChange={(e) => onNameChange(e.target.value)}
-        sx={inputSx}
-      />
-      <FormControl size="small" sx={inputSx}>
-        <InputLabel>Deck Class</InputLabel>
-        <Select label="Deck Class" value={deckClass} onChange={(e) => onDeckClass(e.target.value)}
-          renderValue={(v) => (
-            <span style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
-              {classIcon(v) ? (
-                <img src={classIcon(v)} alt="" style={{ height: 18 }} />
-              ) : (
-                <span style={{ width: 10, height: 10, borderRadius: "50%", background: CLASS_COLORS[v] || "#888" }} />
-              )}
-              {CLASS_LABELS[v] || "Choose a class"}
-            </span>
-          )}
-        >
-          {CLASS_ORDER.map((c) => (
-            <MenuItem key={c} value={c}>
+      {/* scrollable deck contents (deck name + class scroll along with it) */}
+      <div style={{ flex: "1 1 auto", minHeight: 0, overflowY: "auto", display: "flex", flexDirection: "column", gap: 10 }}>
+        <TextField
+          size="small" placeholder="Deck name…" value={name} onChange={(e) => onNameChange(e.target.value)}
+          sx={inputSx}
+        />
+        <FormControl size="small" sx={inputSx}>
+          <InputLabel>Deck Class</InputLabel>
+          <Select label="Deck Class" value={deckClass} onChange={(e) => onDeckClass(e.target.value)}
+            renderValue={(v) => (
               <span style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
-                {classIcon(c) && <img src={classIcon(c)} alt="" style={{ height: 18 }} />}
-                {CLASS_LABELS[c]}
+                {classIcon(v) ? (
+                  <img src={classIcon(v)} alt="" style={{ height: 18 }} />
+                ) : (
+                  <span style={{ width: 10, height: 10, borderRadius: "50%", background: CLASS_COLORS[v] || "#888" }} />
+                )}
+                {CLASS_LABELS[v] || "Choose a class"}
               </span>
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
+            )}
+          >
+            {CLASS_ORDER.map((c) => (
+              <MenuItem key={c} value={c}>
+                <span style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
+                  {classIcon(c) && <img src={classIcon(c)} alt="" style={{ height: 18 }} />}
+                  {CLASS_LABELS[c]}
+                </span>
+              </MenuItem>
+            ))}
+          </Select>
+        </FormControl>
 
-      {/* scrollable deck contents */}
-      <div style={{ flex: "1 1 auto", minHeight: 0, overflowY: "auto", display: "flex", flexDirection: "column", gap: 4 }}>
-        <SectionHeader title="Main Deck" count={deckLen} max={50} />
         <ManaCurve map={deckMap} />
+        <Breakdown deckMap={deckMap} evoDeckMap={evoDeckMap} deckLen={deckLen} evoLen={evoLen} />
+
+        <SectionHeader title="Main Deck" count={deckLen} max={50} />
         {deckLen === 0 && <Empty>Add cards to your main deck</Empty>}
-        {sortedEntries(deckMap).map(([n, c]) => (
-          <DeckRow key={n} name={n} count={c} artNo={artNoOf ? artNoOf(n) : null}
-            onInspect={onInspect} onAdd={onAdd}
-            onRemove={onRemove} addDisabled={isAtLimit(n)} />
-        ))}
+        <div style={deckGrid}>
+          {sortedEntries(deckMap).map(([n, c]) => (
+            <DeckCard key={n} name={n} count={c} copyMax={copyMaxOf ? copyMaxOf(n) : 3}
+              artNo={artNoOf ? artNoOf(n) : null} onInspect={onInspect} onAdd={onAdd} onRemove={onRemove} />
+          ))}
+        </div>
 
         <div style={{ height: 8 }} />
         <SectionHeader title="Evolve Deck" count={evoLen} max={10} />
         {evoLen === 0 && <Empty>Add cards to your evolve deck</Empty>}
-        {sortedEntries(evoDeckMap).map(([n, c]) => (
-          <DeckRow key={n} name={n} count={c} artNo={artNoOf ? artNoOf(n) : null}
-            onInspect={onInspect} onAdd={onAddEvo}
-            onRemove={onRemoveEvo} addDisabled={isEvoAtLimit(n)} />
-        ))}
+        <div style={deckGrid}>
+          {sortedEntries(evoDeckMap).map(([n, c]) => (
+            <DeckCard key={n} name={n} count={c} copyMax={evoCopyMaxOf ? evoCopyMaxOf(n) : 3}
+              artNo={artNoOf ? artNoOf(n) : null} onInspect={onInspect} onAdd={onAddEvo} onRemove={onRemoveEvo} />
+          ))}
+        </div>
       </div>
 
       {/* actions */}

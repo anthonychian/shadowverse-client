@@ -107,10 +107,6 @@ export default function FilterBar({
 
         <div style={{ flex: 1 }} />
 
-        <Pill active={excludeDupes} onClick={() => onExcludeDupes(!excludeDupes)}>
-          {excludeDupes ? "Duplicates hidden" : "Duplicates shown"}
-        </Pill>
-
         <Button
           size="small" variant="outlined" onClick={() => setShow((s) => !s)}
           startIcon={<TuneIcon />} endIcon={show ? <ExpandLessIcon /> : <ExpandMoreIcon />}
@@ -185,6 +181,10 @@ export default function FilterBar({
         {CARD_TYPES.map((t) => (
           <Pill key={t} active={types.includes(t)} onClick={() => toggleInArray(types, t, onTypes)}>{t}</Pill>
         ))}
+      </Row>
+
+      <Row label="Display">
+        <Pill active={excludeDupes} onClick={() => onExcludeDupes(!excludeDupes)}>Duplicates</Pill>
       </Row>
 
       <Row label="Cost">
