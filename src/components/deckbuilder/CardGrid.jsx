@@ -37,10 +37,10 @@ export default function CardGrid({
       style={
         isMobile
           ? {
-              // Mobile: same 3-column grid + padding as the deck view, so cards
-              // are large and well-spaced (fewer accidental taps on neighbours).
-              display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10,
-              alignItems: "start", padding: "12px 30px 80px",
+              // Mobile: 2-column grid so each card is wide enough for the full
+              // in-deck control bar (magnifier / count / trash) without crowding.
+              display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 10,
+              alignItems: "start", padding: "12px 22px 80px",
             }
           : {
               display: "flex", flexWrap: "wrap", gap: 9, justifyContent: "flex-start",

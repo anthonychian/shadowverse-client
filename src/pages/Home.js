@@ -27,7 +27,8 @@ import {
   setMyArt,
 } from "../redux/CardSlice";
 import { deleteDeck } from "../redux/DeckSlice";
-import { cardImage, artImage } from "../decks/getCards";
+import { cardImage, artImage, artThumb } from "../decks/getCards";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import { computeDeckClass, getCost } from "../decks/cardDetails";
 import {
   socket,
@@ -114,6 +115,12 @@ export default function Home() {
   // A room this player was in and can rejoin (private to them — see the lobby
   // effect). null when there's nothing to reconnect to.
   const [reconnectRoom, setReconnectRoom] = useState(null);
+
+  // Phone layout: a single scrollable column instead of the desktop's
+  // absolutely-positioned panels. The announcements board collapses behind a
+  // toggle and the Discord/DingDongDB links are hidden to save space.
+  const isMobile = useMediaQuery("(max-width: 768px)");
+  const [showAnnounce, setShowAnnounce] = useState(false);
 
   const reduxDecks = useSelector((state) => state.deck.decks);
   const reduxActiveUsers = useSelector((state) => state.card.activeUsers);
@@ -560,14 +567,16 @@ export default function Home() {
     <div
       onContextMenu={(e) => e.nativeEvent.preventDefault()}
       style={{
-        height: "100vh",
+        height: isMobile ? "auto" : "100vh",
+        minHeight: "100vh",
         width: "100vw",
         background: "url(" + wallpaper + ") center center fixed",
         backgroundSize: "cover",
         display: "flex",
         // justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "row",
+        alignItems: isMobile ? "stretch" : "center",
+        flexDirection: isMobile ? "column" : "row",
+        overflowY: isMobile ? "auto" : "hidden",
       }}
     >
       <Dialog
@@ -597,6 +606,8 @@ export default function Home() {
         message="Copied link to clipboard"
         action={action}
       />
+      {!isMobile && (
+      <>
       <div
         style={{
           height: "100vh",
@@ -1055,6 +1066,263 @@ export default function Home() {
           <Chip color="primary" label="DingDongDB" clickable />
         </a>
       </div>
+      </>
+      )}
+
+      {isMobile && (
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            gap: 16,
+            width: "100%",
+            maxWidth: 460,
+            margin: "0 auto",
+            padding: "18px 14px 36px",
+            boxSizing: "border-box",
+          }}
+        >
+          {/* Player Name */}
+          {reduxActiveUsers !== 0 && (
+            <div
+              style={{
+                fontSize: 14,
+                fontFamily: "Share Tech Mono, monospace",
+                color: "#daf6ff",
+                textShadow: "0 0 12px rgba(10, 175, 230, 0.8)",
+              }}
+            >
+              {reduxActiveUsers} users online
+            </div>
+          )}
+          <input
+            style={{
+              padding: ".6em .8em",
+              fontSize: 15,
+              width: "100%",
+              boxSizing: "border-box",
+              textAlign: "center",
+              color: "#daf6ff",
+              backgroundColor: "rgba(10, 14, 20, 0.75)",
+              border: "1px solid rgba(72, 171, 224, 0.5)",
+              borderRadius: 8,
+              outline: "none",
+              fontFamily: "Noto Serif JP, serif",
+            }}
+            type="text"
+            maxLength={20}
+            value={displayName}
+            onChange={handleDisplayNameChange}
+            placeholder={LEADER_NAMES[leaderNum] || "Display name..."}
+          />
+
+          {/* Active Games */}
+          <div style={{ width: "100%" }}>
+            <ActiveGamesBoard
+              rooms={rooms}
+              myRoom={myRoom}
+              reconnectRoom={reconnectRoom}
+              onJoin={handleJoinPublicRoom}
+              onReconnect={handleReconnect}
+              onTogglePrivacy={handleTogglePrivacy}
+              onCloseRoom={handleCloseRoom}
+            />
+          </div>
+
+          {/* PLAY */}
+          <Button
+            onClick={handleCreateRoom}
+            sx={{
+              position: "relative",
+              fontFamily: "Noto Serif JP,serif",
+              textTransform: "none",
+              fontWeight: "bold",
+              color: "black",
+              width: "100%",
+              maxWidth: 300,
+              height: 70,
+              borderRadius: "50px",
+              "&:hover": { boxShadow: "0 0 30px 10px #48abe0" },
+            }}
+          >
+            <img height={82} src={buttonImage} alt="button" style={{ maxWidth: "100%" }} />
+            <div style={{ position: "absolute", fontSize: 30 }}>PLAY</div>
+          </Button>
+
+          {/* JOIN ROOM */}
+          <Button
+            onClick={handleJoinRoom}
+            sx={{
+              position: "relative",
+              fontFamily: "Noto Serif JP,serif",
+              textTransform: "none",
+              fontWeight: "bold",
+              color: "black",
+              height: 50,
+              width: 220,
+              borderRadius: "50px",
+              "&:hover": { boxShadow: "0 0 30px 10px #48abe0" },
+            }}
+          >
+            <img height={58} src={buttonImage} alt="button" />
+            <div style={{ position: "absolute", fontSize: 18 }}>JOIN ROOM</div>
+          </Button>
+
+          {/* Room Code */}
+          <input
+            style={{
+              padding: ".5em",
+              fontSize: 15,
+              width: "70%",
+              textAlign: "center",
+              fontFamily: "Noto Serif JP, serif",
+              borderRadius: 6,
+              border: "1px solid rgba(72, 171, 224, 0.5)",
+            }}
+            type="text"
+            value={roomNumber}
+            onChange={handleRoomNumberInput}
+            placeholder="Room Code..."
+          />
+
+          {/* decks: New Deck + saved decks (horizontal scroll) */}
+          <div
+            style={{
+              width: "100%",
+              display: "flex",
+              flexDirection: "row",
+              overflowX: "auto",
+              gap: 10,
+              padding: "4px 2px",
+              alignItems: "flex-start",
+            }}
+          >
+            <div style={{ flexShrink: 0, width: 92 }}>
+              <Button
+                onClick={handleNavigateToDeck}
+                sx={{
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  minWidth: 0,
+                  width: "100%",
+                  p: 0.5,
+                  "&:hover": { boxShadow: "0 0 24px 8px #48abe0" },
+                }}
+              >
+                <img height={120} src={cardback} alt="cardback" />
+                <div style={{ color: "white", fontSize: 13, fontFamily: "Noto Serif JP,serif" }}>NEW DECK</div>
+              </Button>
+            </div>
+            {reduxDecks.map((deck, idx) => (
+              <div
+                key={idx}
+                onClick={() => handleSelectDeck(deck, idx)}
+                onContextMenu={(e) => handleContextMenu(e, deck, idx)}
+                style={{
+                  flexShrink: 0,
+                  width: 92,
+                  cursor: "pointer",
+                  borderRadius: 8,
+                  padding: 4,
+                  boxSizing: "border-box",
+                  background: showSelected[idx] ? "rgba(72, 171, 224, 0.30)" : "transparent",
+                  border: showSelected[idx]
+                    ? "1px solid rgba(72, 171, 224, 0.7)"
+                    : "1px solid transparent",
+                }}
+              >
+                <img
+                  src={artThumb(deck.deck[Math.floor(deck.deck.length / 2)], deck.art)}
+                  alt={deck.name}
+                  loading="lazy"
+                  style={{ width: "100%", borderRadius: 6, display: "block" }}
+                />
+                <div
+                  style={{
+                    marginTop: 4,
+                    color: "white",
+                    fontSize: 12,
+                    fontFamily: "Noto Serif JP,serif",
+                    textAlign: "center",
+                    whiteSpace: "nowrap",
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                    background: "#131219",
+                    borderRadius: 4,
+                    padding: "2px 4px",
+                  }}
+                >
+                  {deck.name}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* announcements (collapsible) */}
+          <div style={{ width: "100%" }}>
+            <Button
+              fullWidth
+              onClick={() => setShowAnnounce((s) => !s)}
+              endIcon={<span style={{ fontSize: 13 }}>{showAnnounce ? "▲" : "▼"}</span>}
+              sx={{
+                fontFamily: "Share Tech Mono, monospace",
+                textTransform: "none",
+                letterSpacing: "0.08em",
+                color: "#daf6ff",
+                backgroundColor: "rgba(10, 14, 20, 0.75)",
+                border: "1px solid rgba(72, 171, 224, 0.5)",
+                borderRadius: "10px",
+                justifyContent: "space-between",
+                px: 2,
+                py: 1,
+              }}
+            >
+              ANNOUNCEMENTS
+            </Button>
+            {showAnnounce && (
+              <div
+                style={{
+                  marginTop: 8,
+                  backgroundColor: "rgba(10, 14, 20, 0.75)",
+                  border: "1px solid rgba(72, 171, 224, 0.5)",
+                  borderRadius: 10,
+                  padding: "0.25em 1em 1em",
+                  maxHeight: 320,
+                  overflowY: "auto",
+                }}
+              >
+                {announcements.map((item, idx) => (
+                  <div
+                    key={idx}
+                    style={{
+                      paddingTop: "0.75em",
+                      paddingBottom: "0.75em",
+                      borderBottom:
+                        idx < announcements.length - 1
+                          ? "1px solid rgba(255, 255, 255, 0.1)"
+                          : "none",
+                    }}
+                  >
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: "0.5em" }}>
+                      <span style={{ color: "#ffffff", fontSize: 15, fontFamily: "Noto Serif JP, serif", fontWeight: "bold" }}>
+                        {item.title}
+                      </span>
+                      <span style={{ color: "#7da7bd", fontSize: 12, fontFamily: "Share Tech Mono, monospace", whiteSpace: "nowrap" }}>
+                        {item.date}
+                      </span>
+                    </div>
+                    <div style={{ color: "#c9d6dd", fontSize: 13, fontFamily: "Noto Serif JP, serif", marginTop: "0.25em", lineHeight: 1.35 }}>
+                      {item.body}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      )}
       <Menu
         open={contextMenu !== null}
         onClose={handleClose}

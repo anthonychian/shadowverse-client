@@ -79,7 +79,7 @@ const deckBarCount = {
   textShadow: "0 1px 3px rgba(0,0,0,0.95)",
 };
 const deckGrid = {
-  display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10, marginBottom: 6,
+  display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 10, marginBottom: 6,
 };
 
 // Compact list row used on desktop (the original right-panel look): thumbnail +

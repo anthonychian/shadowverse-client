@@ -671,6 +671,7 @@ export default function CreateDeck() {
             defenses={defenses} onDefenses={setDefenses}
             excludeDupes={excludeDupes} onExcludeDupes={setExcludeDupes}
             onClear={clearFilters}
+            isMobile={isMobile}
           />
           <div id="poolScroll" style={{ flex: 1, minHeight: 0, overflowY: "auto", background: COLORS.inset }}>
             <CardGrid

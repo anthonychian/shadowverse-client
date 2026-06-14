@@ -23,23 +23,24 @@ const fieldSx = {
   "& .MuiSvgIcon-root": { color: COLORS.textDim },
 };
 
-// --- little reusable controls (chip + number pill) ---
-const pillSx = (active, accent) => ({
-  padding: "4px 12px", borderRadius: 999, fontSize: 12.5, fontFamily: FONT,
+// --- little reusable controls (chip + number pill). `m` = compact (mobile). ---
+const pillSx = (active, accent, m) => ({
+  padding: m ? "3px 9px" : "4px 12px", borderRadius: 999, fontSize: m ? 11 : 12.5, fontFamily: FONT,
   cursor: "pointer", userSelect: "none", whiteSpace: "nowrap",
-  display: "inline-flex", alignItems: "center", gap: 6, transition: "all .12s",
+  display: "inline-flex", alignItems: "center", gap: m ? 4 : 6, transition: "all .12s",
   border: `1px solid ${active ? accent || COLORS.glow : COLORS.border}`,
   background: active ? accent || COLORS.glow : "rgba(255,255,255,0.04)",
   color: active ? "#fff" : COLORS.textDim,
 });
-const Pill = ({ active, accent, onClick, children }) => (
-  <span style={pillSx(active, accent)} onClick={onClick}>{children}</span>
+const Pill = ({ active, accent, onClick, compact, children }) => (
+  <span style={pillSx(active, accent, compact)} onClick={onClick}>{children}</span>
 );
-const NumPill = ({ active, onClick, children }) => (
+const NumPill = ({ active, onClick, compact, children }) => (
   <span
     onClick={onClick}
     style={{
-      width: 30, height: 30, borderRadius: 7, fontSize: 13, fontFamily: FONT,
+      width: compact ? 22 : 30, height: compact ? 22 : 30, borderRadius: compact ? 6 : 7,
+      fontSize: compact ? 11 : 13, fontFamily: FONT,
       cursor: "pointer", userSelect: "none", display: "inline-flex",
       alignItems: "center", justifyContent: "center", transition: "all .12s",
       border: `1px solid ${active ? COLORS.glow : COLORS.border}`,
@@ -51,12 +52,12 @@ const NumPill = ({ active, onClick, children }) => (
   </span>
 );
 
-const Row = ({ label, children }) => (
-  <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-    <span style={{ width: 64, flexShrink: 0, color: COLORS.textDim, fontFamily: FONT, fontSize: 11, letterSpacing: 0.8, textTransform: "uppercase" }}>
+const Row = ({ label, compact, children }) => (
+  <div style={{ display: "flex", alignItems: "center", gap: compact ? 8 : 14 }}>
+    <span style={{ width: compact ? 40 : 64, flexShrink: 0, color: COLORS.textDim, fontFamily: FONT, fontSize: compact ? 9 : 11, letterSpacing: compact ? 0.4 : 0.8, textTransform: "uppercase" }}>
       {label}
     </span>
-    <div style={{ display: "flex", flexWrap: "wrap", gap: 7, flex: 1 }}>{children}</div>
+    <div style={{ display: "flex", flexWrap: "wrap", gap: compact ? 5 : 7, flex: 1 }}>{children}</div>
   </div>
 );
 
@@ -75,25 +76,29 @@ export default function FilterBar({
   attacks, onAttacks,
   defenses, onDefenses,
   excludeDupes, onExcludeDupes,
-  onClear,
+  onClear, isMobile,
 }) {
+  const m = !!isMobile;
   const filters = { types, traits, rarities, costs, attacks, defenses };
   const active = hasActiveFilters(filters);
   const [show, setShow] = useState(true);
   return (
     <div
       style={{
-        display: "flex", flexDirection: "column", gap: show ? 13 : 0, padding: "14px 18px",
+        display: "flex", flexDirection: "column", gap: show ? (m ? 8 : 13) : 0,
+        padding: m ? "8px 10px" : "14px 18px",
         background: COLORS.inset2, borderBottom: `1px solid ${COLORS.border}`,
       }}
     >
-      {/* always-visible: deck toggle + search + set + filters toggle */}
-      <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
+      {/* always-visible: deck toggle + search + filters toggle. On mobile this
+          stays on one row (no wrap); the Filters button is icon-only. */}
+      <div style={{ display: "flex", gap: m ? 6 : 12, alignItems: "center", flexWrap: m ? "nowrap" : "wrap" }}>
         <ToggleButtonGroup
           size="small" exclusive value={mainSelected ? "main" : "evo"}
           onChange={(_, v) => v && onToggleDeck(v === "main")}
           sx={{
-            "& .MuiToggleButton-root": { color: COLORS.textDim, borderColor: COLORS.border, fontFamily: FONT, textTransform: "none", padding: "4px 14px" },
+            flexShrink: 0,
+            "& .MuiToggleButton-root": { color: COLORS.textDim, borderColor: COLORS.border, fontFamily: FONT, textTransform: "none", padding: m ? "2px 8px" : "4px 14px", fontSize: m ? 11 : 14 },
             "& .MuiToggleButton-root.Mui-selected": { color: "#fff", background: COLORS.glow },
             "& .MuiToggleButton-root.Mui-selected:hover": { background: COLORS.glow },
           }}
@@ -103,19 +108,24 @@ export default function FilterBar({
         </ToggleButtonGroup>
 
         <TextField size="small" placeholder="Search cards…" value={search}
-          onChange={(e) => onSearch(e.target.value)} sx={{ ...fieldSx, flex: "1 1 200px" }} />
+          onChange={(e) => onSearch(e.target.value)}
+          sx={{ ...fieldSx, flex: m ? "1 1 40px" : "1 1 200px", minWidth: 0, "& .MuiInputBase-input": { fontSize: m ? 13 : undefined } }} />
 
-        <div style={{ flex: 1 }} />
+        {!m && <div style={{ flex: 1 }} />}
 
         <Button
           size="small" variant="outlined" onClick={() => setShow((s) => !s)}
-          startIcon={<TuneIcon />} endIcon={show ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+          startIcon={m ? undefined : <TuneIcon />}
+          endIcon={m ? undefined : (show ? <ExpandLessIcon /> : <ExpandMoreIcon />)}
           sx={{
             color: COLORS.text, borderColor: active ? COLORS.glow : COLORS.border,
-            fontFamily: FONT, textTransform: "none",
+            fontFamily: FONT, textTransform: "none", flexShrink: 0,
+            ...(m ? { minWidth: 0, padding: "4px 8px" } : {}),
           }}
         >
-          Filters{active ? <span style={{ marginLeft: 6, width: 7, height: 7, borderRadius: "50%", background: COLORS.gold }} /> : null}
+          {m
+            ? <TuneIcon sx={{ fontSize: 19 }} />
+            : <>Filters{active ? <span style={{ marginLeft: 6, width: 7, height: 7, borderRadius: "50%", background: COLORS.gold }} /> : null}</>}
         </Button>
       </div>
 
@@ -130,8 +140,8 @@ export default function FilterBar({
       {show && (
       <>
       {/* set + rarity + trait dropdowns */}
-      <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
-        <FormControl size="small" sx={{ ...fieldSx, minWidth: 190 }}>
+      <div style={{ display: "flex", gap: m ? 8 : 12, alignItems: "center", flexWrap: "wrap" }}>
+        <FormControl size="small" sx={{ ...fieldSx, ...(m ? { flex: "1 1 120px", minWidth: 0 } : { minWidth: 190 }) }}>
           <InputLabel>Set</InputLabel>
           <Select label="Set" value={set} onChange={(e) => onSet(e.target.value)}
             MenuProps={{ PaperProps: { style: { maxHeight: 420 } } }}>
@@ -140,7 +150,7 @@ export default function FilterBar({
           </Select>
         </FormControl>
 
-        <FormControl size="small" sx={{ ...fieldSx, minWidth: 160 }}>
+        <FormControl size="small" sx={{ ...fieldSx, ...(m ? { flex: "1 1 110px", minWidth: 0 } : { minWidth: 160 }) }}>
           <InputLabel>Rarity</InputLabel>
           <Select multiple label="Rarity" value={rarities}
             onChange={(e) => onRarities(typeof e.target.value === "string" ? e.target.value.split(",") : e.target.value)}
@@ -151,7 +161,7 @@ export default function FilterBar({
 
         <Autocomplete multiple size="small" options={TRAITS} value={traits}
           onChange={(_, v) => onTraits(v)} disableCloseOnSelect
-          sx={{ ...fieldSx, width: 240 }}
+          sx={{ ...fieldSx, ...(m ? { flex: "1 1 100%" } : { width: 240 }) }}
           renderInput={(params) => <TextField {...params} label="Trait" placeholder="Trait…" />}
           renderTags={(value, getTagProps) =>
             value.map((option, index) => (
@@ -166,42 +176,43 @@ export default function FilterBar({
         )}
       </div>
 
-      <Row label="Class">
-        <Pill active={klass === "all"} onClick={() => onClass("all")}>All</Pill>
+      <Row label="Class" compact={m}>
+        <Pill compact={m} active={klass === "all"} onClick={() => onClass("all")}>All</Pill>
         {CLASS_ORDER.map((c) => (
-          <Pill key={c} active={klass === c} accent={CLASS_COLORS[c]}
+          <Pill key={c} compact={m} active={klass === c} accent={CLASS_COLORS[c]}
             onClick={() => onClass(klass === c ? "all" : c)}>
-            {classIcon(c) && <img src={classIcon(c)} alt="" style={{ height: 17 }} />}
-            {CLASS_LABELS[c]}
+            {/* mobile: show only the class icon to save space; desktop: icon + name */}
+            {classIcon(c) && <img src={classIcon(c)} alt={CLASS_LABELS[c]} title={CLASS_LABELS[c]} style={{ height: m ? 20 : 17 }} />}
+            {(!m || !classIcon(c)) && CLASS_LABELS[c]}
           </Pill>
         ))}
       </Row>
 
-      <Row label="Type">
+      <Row label="Type" compact={m}>
         {CARD_TYPES.map((t) => (
-          <Pill key={t} active={types.includes(t)} onClick={() => toggleInArray(types, t, onTypes)}>{t}</Pill>
+          <Pill key={t} compact={m} active={types.includes(t)} onClick={() => toggleInArray(types, t, onTypes)}>{t}</Pill>
         ))}
       </Row>
 
-      <Row label="Display">
-        <Pill active={excludeDupes} onClick={() => onExcludeDupes(!excludeDupes)}>Duplicates</Pill>
+      <Row label="Display" compact={m}>
+        <Pill compact={m} active={excludeDupes} onClick={() => onExcludeDupes(!excludeDupes)}>Duplicates</Pill>
       </Row>
 
-      <Row label="Cost">
+      <Row label="Cost" compact={m}>
         {COST_BUCKETS.map((c) => (
-          <NumPill key={c} active={costs.includes(c)} onClick={() => toggleInArray(costs, c, onCosts)}>{c}</NumPill>
+          <NumPill key={c} compact={m} active={costs.includes(c)} onClick={() => toggleInArray(costs, c, onCosts)}>{c}</NumPill>
         ))}
       </Row>
 
-      <Row label="Attack">
+      <Row label="Attack" compact={m}>
         {STAT_BUCKETS.map((a) => (
-          <NumPill key={a} active={attacks.includes(a)} onClick={() => toggleInArray(attacks, a, onAttacks)}>{a}</NumPill>
+          <NumPill key={a} compact={m} active={attacks.includes(a)} onClick={() => toggleInArray(attacks, a, onAttacks)}>{a}</NumPill>
         ))}
       </Row>
 
-      <Row label="Defense">
+      <Row label="Defense" compact={m}>
         {STAT_BUCKETS.map((dv) => (
-          <NumPill key={dv} active={defenses.includes(dv)} onClick={() => toggleInArray(defenses, dv, onDefenses)}>{dv}</NumPill>
+          <NumPill key={dv} compact={m} active={defenses.includes(dv)} onClick={() => toggleInArray(defenses, dv, onDefenses)}>{dv}</NumPill>
         ))}
       </Row>
       </>
