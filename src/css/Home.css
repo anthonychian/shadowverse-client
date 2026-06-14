@@ -1,3 +1,17 @@
+/* Hide scrollbars everywhere on the Home page (content stays scrollable by
+   touch/drag where needed — e.g. the deck carousel). Covers both axes. */
+.home-root,
+.home-root * {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* old IE/Edge */
+}
+.home-root::-webkit-scrollbar,
+.home-root *::-webkit-scrollbar {
+  display: none; /* WebKit (Chrome/Safari) */
+  width: 0;
+  height: 0;
+}
+
 /* default styles */
 .LeaderContainerHome {
   height: 100vh;

@@ -20,9 +20,9 @@ const sortedEntries = (map) =>
 // A deck entry shown as a card thumbnail (Deck Log style): full art with a
 // bottom bar matching the pool cards — white-circle magnifier (inspect),
 // "count / max", and white-circle trash (remove a copy).
-const DeckCard = ({ name, count, copyMax, artNo, onInspect, onAdd, onRemove }) => (
+const DeckCard = ({ name, count, copyMax, artNo, onInspect, onAdd, onRemove, readOnly }) => (
   <div
-    onClick={() => onAdd && onAdd(name)}
+    onClick={() => (readOnly ? onInspect(name) : onAdd && onAdd(name))}
     title={displayName(name)}
     style={{
       position: "relative", borderRadius: 6, overflow: "hidden", cursor: "pointer",
@@ -43,6 +43,8 @@ const DeckCard = ({ name, count, copyMax, artNo, onInspect, onAdd, onRemove }) =
       alt={name}
       style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
     />
+    {/* read-only preview: magnifier (inspect) + count, no trash. Editable:
+        magnifier + count + trash. */}
     <div style={deckBar}>
       <button
         onClick={(e) => { e.stopPropagation(); onInspect(name); }}
@@ -51,12 +53,14 @@ const DeckCard = ({ name, count, copyMax, artNo, onInspect, onAdd, onRemove }) =
         <SearchIcon sx={{ fontSize: 32 }} />
       </button>
       <span style={deckBarCount}>{copyMax == null ? count : `${count} / ${copyMax}`}</span>
-      <button
-        onClick={(e) => { e.stopPropagation(); if (onRemove) onRemove(name); }}
-        title="Remove from deck" style={deckBarBtn}
-      >
-        <DeleteOutlineIcon sx={{ fontSize: 32 }} />
-      </button>
+      {!readOnly && (
+        <button
+          onClick={(e) => { e.stopPropagation(); if (onRemove) onRemove(name); }}
+          title="Remove from deck" style={deckBarBtn}
+        >
+          <DeleteOutlineIcon sx={{ fontSize: 32 }} />
+        </button>
+      )}
     </div>
   </div>
 );
@@ -256,6 +260,7 @@ export default function DeckPanel({
   onInspect, onAdd, onAddEvo, onRemove, onRemoveEvo,
   isAtLimit, isEvoAtLimit, copyMaxOf, evoCopyMaxOf, isMobile,
   name, onNameChange, deckClass, onDeckClass, canCreate, onCreate, onImport, onExport,
+  readOnly = false,
 }) {
   const inputSx = {
     "& .MuiInputLabel-root": { color: COLORS.textDim, fontFamily: FONT },
@@ -267,34 +272,55 @@ export default function DeckPanel({
     <div style={{ display: "flex", flexDirection: "column", height: "100%", gap: 10 }}>
       {/* scrollable deck contents (deck name + class scroll along with it) */}
       <div style={{ flex: "1 1 auto", minHeight: 0, overflowY: "auto", display: "flex", flexDirection: "column", gap: 10 }}>
-        <TextField
-          size="small" placeholder="Deck name…" value={name} onChange={(e) => onNameChange(e.target.value)}
-          sx={inputSx}
-        />
-        <FormControl size="small" sx={inputSx}>
-          <InputLabel>Deck Class</InputLabel>
-          <Select label="Deck Class" value={deckClass} onChange={(e) => onDeckClass(e.target.value)}
-            renderValue={(v) => (
-              <span style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
-                {classIcon(v) ? (
-                  <img src={classIcon(v)} alt="" style={{ height: 18 }} />
+        {readOnly ? (
+          // Preview: name + class shown but not editable.
+          <div style={{ display: "flex", flexDirection: "column", gap: 6, padding: "2px 40px 0 2px" }}>
+            <div style={{ color: COLORS.text, fontFamily: FONT, fontSize: 19, fontWeight: 700, lineHeight: 1.2 }}>
+              {name || "Untitled deck"}
+            </div>
+            {deckClass && (
+              <div style={{ display: "inline-flex", alignItems: "center", gap: 8, color: COLORS.textDim, fontFamily: FONT, fontSize: 14 }}>
+                {classIcon(deckClass) ? (
+                  <img src={classIcon(deckClass)} alt="" style={{ height: 20 }} />
                 ) : (
-                  <span style={{ width: 10, height: 10, borderRadius: "50%", background: CLASS_COLORS[v] || "#888" }} />
+                  <span style={{ width: 10, height: 10, borderRadius: "50%", background: CLASS_COLORS[deckClass] || "#888" }} />
                 )}
-                {CLASS_LABELS[v] || "Choose a class"}
-              </span>
+                {CLASS_LABELS[deckClass] || deckClass}
+              </div>
             )}
-          >
-            {CLASS_ORDER.map((c) => (
-              <MenuItem key={c} value={c}>
-                <span style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
-                  {classIcon(c) && <img src={classIcon(c)} alt="" style={{ height: 18 }} />}
-                  {CLASS_LABELS[c]}
-                </span>
-              </MenuItem>
-            ))}
-          </Select>
-        </FormControl>
+          </div>
+        ) : (
+          <>
+            <TextField
+              size="small" placeholder="Deck name…" value={name} onChange={(e) => onNameChange(e.target.value)}
+              sx={inputSx}
+            />
+            <FormControl size="small" sx={inputSx}>
+              <InputLabel>Deck Class</InputLabel>
+              <Select label="Deck Class" value={deckClass} onChange={(e) => onDeckClass(e.target.value)}
+                renderValue={(v) => (
+                  <span style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
+                    {classIcon(v) ? (
+                      <img src={classIcon(v)} alt="" style={{ height: 18 }} />
+                    ) : (
+                      <span style={{ width: 10, height: 10, borderRadius: "50%", background: CLASS_COLORS[v] || "#888" }} />
+                    )}
+                    {CLASS_LABELS[v] || "Choose a class"}
+                  </span>
+                )}
+              >
+                {CLASS_ORDER.map((c) => (
+                  <MenuItem key={c} value={c}>
+                    <span style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
+                      {classIcon(c) && <img src={classIcon(c)} alt="" style={{ height: 18 }} />}
+                      {CLASS_LABELS[c]}
+                    </span>
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+          </>
+        )}
 
         <ManaCurve map={deckMap} />
         <Breakdown deckMap={deckMap} evoDeckMap={evoDeckMap} deckLen={deckLen} evoLen={evoLen} />
@@ -305,7 +331,7 @@ export default function DeckPanel({
           <div style={deckGrid}>
             {sortedEntries(deckMap).map(([n, c]) => (
               <DeckCard key={n} name={n} count={c} copyMax={copyMaxOf ? copyMaxOf(n) : 3}
-                artNo={artNoOf ? artNoOf(n) : null} onInspect={onInspect} onAdd={onAdd} onRemove={onRemove} />
+                artNo={artNoOf ? artNoOf(n) : null} onInspect={onInspect} onAdd={onAdd} onRemove={onRemove} readOnly={readOnly} />
             ))}
           </div>
         ) : (
@@ -325,7 +351,7 @@ export default function DeckPanel({
           <div style={deckGrid}>
             {sortedEntries(evoDeckMap).map(([n, c]) => (
               <DeckCard key={n} name={n} count={c} copyMax={evoCopyMaxOf ? evoCopyMaxOf(n) : 3}
-                artNo={artNoOf ? artNoOf(n) : null} onInspect={onInspect} onAdd={onAddEvo} onRemove={onRemoveEvo} />
+                artNo={artNoOf ? artNoOf(n) : null} onInspect={onInspect} onAdd={onAddEvo} onRemove={onRemoveEvo} readOnly={readOnly} />
             ))}
           </div>
         ) : (
@@ -339,35 +365,39 @@ export default function DeckPanel({
         )}
       </div>
 
-      {/* actions */}
-      <div style={{ display: "flex", gap: 8 }}>
-        <Button fullWidth variant="outlined" onClick={onImport}
-          sx={{ color: COLORS.text, borderColor: COLORS.border, fontFamily: FONT, textTransform: "none" }}>
-          Import
-        </Button>
-        <Button fullWidth variant="outlined" onClick={onExport}
-          sx={{ color: COLORS.text, borderColor: COLORS.border, fontFamily: FONT, textTransform: "none" }}>
-          Export
-        </Button>
-      </div>
-      <Button
-        fullWidth variant="contained" disabled={!canCreate} onClick={onCreate}
-        sx={{
-          fontFamily: FONT, fontWeight: 700, textTransform: "none",
-          background: canCreate ? COLORS.glow : "rgba(255,255,255,0.1)",
-          "&.Mui-disabled": { color: "rgba(255,255,255,0.4)" },
-        }}
-      >
-        {canCreate
-          ? "Save Deck"
-          : deckLen < 40
-            ? `Need ${Math.max(0, 40 - deckLen)} more cards`
-            : !name.trim()
-              ? "Enter a deck name"
-              : !deckClass
-                ? "Select a deck class"
-                : "Save Deck"}
-      </Button>
+      {/* actions (hidden in read-only preview) */}
+      {!readOnly && (
+        <>
+          <div style={{ display: "flex", gap: 8 }}>
+            <Button fullWidth variant="outlined" onClick={onImport}
+              sx={{ color: COLORS.text, borderColor: COLORS.border, fontFamily: FONT, textTransform: "none" }}>
+              Import
+            </Button>
+            <Button fullWidth variant="outlined" onClick={onExport}
+              sx={{ color: COLORS.text, borderColor: COLORS.border, fontFamily: FONT, textTransform: "none" }}>
+              Export
+            </Button>
+          </div>
+          <Button
+            fullWidth variant="contained" disabled={!canCreate} onClick={onCreate}
+            sx={{
+              fontFamily: FONT, fontWeight: 700, textTransform: "none",
+              background: canCreate ? COLORS.glow : "rgba(255,255,255,0.1)",
+              "&.Mui-disabled": { color: "rgba(255,255,255,0.4)" },
+            }}
+          >
+            {canCreate
+              ? "Save Deck"
+              : deckLen < 40
+                ? `Need ${Math.max(0, 40 - deckLen)} more cards`
+                : !name.trim()
+                  ? "Enter a deck name"
+                  : !deckClass
+                    ? "Select a deck class"
+                    : "Save Deck"}
+          </Button>
+        </>
+      )}
     </div>
   );
 }

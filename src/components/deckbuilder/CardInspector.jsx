@@ -59,17 +59,18 @@ export default function CardInspector({
   onNext,
   onSwap,
   large = false,
+  readOnly = false,
 }) {
   // In the fullscreen mobile preview there's plenty of room, so scale the image,
   // text and stepper up; the desktop column keeps the compact sizes.
-  const imgMax = large ? 470 : 360;
-  const gap = large ? 18 : 12;
-  const nameSize = large ? 30 : 19;
-  const metaSize = large ? 17 : 13;
-  const effectSize = large ? 19 : 14;
-  const statValSize = large ? 30 : 23;
-  const stepSize = large ? 58 : 44;
-  const countSize = large ? 30 : 22;
+  const imgMax = large ? 380 : 360;
+  const gap = large ? 10 : 12;
+  const nameSize = large ? 22 : 19;
+  const metaSize = large ? 14 : 13;
+  const effectSize = large ? 13 : 14;
+  const statValSize = large ? 20 : 23;
+  const stepSize = large ? 52 : 44;
+  const countSize = large ? 26 : 22;
   if (!name) {
     return (
       <div style={emptyStyle}>
@@ -103,15 +104,22 @@ export default function CardInspector({
     <div style={{ display: "flex", flexDirection: "column", height: "100%", gap }}>
       {/* Card image with navigation. In large mode a side gutter keeps the
           arrows off the card art. */}
-      <div style={{ position: "relative", display: "flex", justifyContent: "center", padding: large ? "0 46px" : 0 }}>
-        <ArrowBackIosNew onClick={onPrev} sx={arrowSx("left", large)} />
+      <div style={{ position: "relative", display: "flex", justifyContent: "center", padding: 0 }}>
+        {/* Nav arrows are desktop-only — the mobile (large) preview has none. */}
+        {!readOnly && !large && <ArrowBackIosNew onClick={onPrev} sx={arrowSx("left", large)} />}
         <img
           src={cardNo ? `../textures/${cardNo}.png` : cardImage(name)}
           alt={name}
-          style={{ width: "100%", maxWidth: imgMax, borderRadius: 10, boxShadow: "0 6px 24px rgba(0,0,0,0.6)" }}
+          style={
+            large
+              ? // Cap the height so the rest (name, stats, full description) fits
+                // on one screen and the description box stays large.
+                { maxWidth: imgMax, maxHeight: "32vh", width: "auto", height: "auto", borderRadius: 10, boxShadow: "0 6px 24px rgba(0,0,0,0.6)" }
+              : { width: "100%", maxWidth: imgMax, borderRadius: 10, boxShadow: "0 6px 24px rgba(0,0,0,0.6)" }
+          }
         />
-        <ArrowForwardIos onClick={onNext} sx={arrowSx("right", large)} />
-        {isDouble && (
+        {!readOnly && !large && <ArrowForwardIos onClick={onNext} sx={arrowSx("right", large)} />}
+        {isDouble && !readOnly && (
           <SwapHorizIcon
             onClick={onSwap}
             sx={{
@@ -132,12 +140,14 @@ export default function CardInspector({
       <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 8 }}>
         {d.class && (
           <span style={{ display: "inline-flex", alignItems: "center", gap: 6, color: COLORS.text, fontFamily: FONT, fontSize: metaSize }}>
-            {classIcon(d.class) && <img src={classIcon(d.class)} alt={d.class} style={{ height: large ? 28 : 22 }} />}
+            {classIcon(d.class) && <img src={classIcon(d.class)} alt={d.class} style={{ height: large ? 22 : 22 }} />}
             {CLASS_LABELS[d.class] || d.class}
           </span>
         )}
         {d.cardType && <Badge>{d.cardType}</Badge>}
-        {effRarity && effRarity !== "-" && <Badge color="rgba(243,196,75,0.85)">{effRarity}</Badge>}
+        {/* Only show the rarity badge when the Rarity/Art picker isn't shown —
+            otherwise the selected rarity would appear twice. */}
+        {!showPicker && effRarity && effRarity !== "-" && <Badge color="rgba(243,196,75,0.85)">{effRarity}</Badge>}
       </div>
 
       {/* rarity / art picker — choose which printing's art this card uses */}
@@ -172,28 +182,28 @@ export default function CardInspector({
 
       {/* cost / attack / defense banner */}
       {(hasCost || hasAtk || hasDef) && (
-        <div style={{ ...statBanner, minHeight: large ? 64 : 52, padding: large ? "10px 22px" : "8px 18px" }}>
+        <div style={{ ...statBanner, minHeight: large ? 44 : 52, padding: large ? "6px 16px" : "8px 18px" }}>
           {hasCost && (
             <span style={statItem}>
               {costIcon(costNum) ? (
-                <img src={costIcon(costNum)} alt="cost" style={{ height: large ? 46 : 36 }} />
+                <img src={costIcon(costNum)} alt="cost" style={{ height: large ? 28 : 36 }} />
               ) : (
-                <span style={{ ...costFallback, width: large ? 44 : 34, height: large ? 44 : 34, fontSize: large ? 24 : 18 }}>{d.cost}</span>
+                <span style={{ ...costFallback, width: large ? 28 : 34, height: large ? 28 : 34, fontSize: large ? 16 : 18 }}>{d.cost}</span>
               )}
-              <span style={{ ...statLabel, fontSize: large ? 15 : 12 }}>Cost</span>
+              <span style={{ ...statLabel, fontSize: large ? 12 : 12 }}>Cost</span>
             </span>
           )}
           {(hasAtk || hasDef) && (
             <span style={{ display: "inline-flex", alignItems: "center", gap: 18 }}>
               {hasAtk && (
                 <span style={statItem}>
-                  <img src={ATTACK_ICON} alt="attack" style={{ height: large ? 34 : 27 }} />
+                  <img src={ATTACK_ICON} alt="attack" style={{ height: large ? 22 : 27 }} />
                   <span style={{ ...statVal, fontSize: statValSize }}>{d.attack}</span>
                 </span>
               )}
               {hasDef && (
                 <span style={statItem}>
-                  <img src={DEFENSE_ICON} alt="defense" style={{ height: large ? 34 : 27 }} />
+                  <img src={DEFENSE_ICON} alt="defense" style={{ height: large ? 22 : 27 }} />
                   <span style={{ ...statVal, fontSize: statValSize }}>{d.defense}</span>
                 </span>
               )}
@@ -212,9 +222,11 @@ export default function CardInspector({
       {d.effect && (
         <div
           style={{
-            fontFamily: FONT, color: COLORS.text, fontSize: effectSize, lineHeight: 1.5,
-            background: COLORS.inset, borderRadius: 8, padding: large ? "14px 16px" : "10px 12px",
-            overflowY: "auto", flex: "1 1 auto", minHeight: 0,
+            fontFamily: FONT, color: COLORS.text, fontSize: effectSize, lineHeight: 1.45,
+            background: COLORS.inset, borderRadius: 8, padding: large ? "10px 12px" : "10px 12px",
+            overflowY: "auto", flex: "1 1 auto",
+            // Description box stays large in the mobile preview — never small.
+            minHeight: large ? "30vh" : 0,
           }}
         >
           <EffectText text={d.effect} />
@@ -225,14 +237,16 @@ export default function CardInspector({
         <div style={{ fontFamily: FONT, color: COLORS.textDim, fontSize: large ? 13 : 11 }}>{effCardSet}</div>
       )}
 
-      {/* Copy stepper */}
-      <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: large ? 20 : 14, paddingTop: 4 }}>
-        <StepBtn size={stepSize} onClick={onRemove} disabled={count <= 0}><RemoveIcon sx={{ fontSize: large ? 30 : 24 }} /></StepBtn>
-        <div style={{ fontFamily: FONT, color: COLORS.text, fontSize: countSize, minWidth: large ? 92 : 70, textAlign: "center" }}>
-          {count} <span style={{ fontSize: large ? 16 : 13, color: COLORS.textDim }}>in deck</span>
+      {/* Copy stepper (hidden in read-only preview) */}
+      {!readOnly && (
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: large ? 20 : 14, paddingTop: 4 }}>
+          <StepBtn size={stepSize} onClick={onRemove} disabled={count <= 0}><RemoveIcon sx={{ fontSize: large ? 30 : 24 }} /></StepBtn>
+          <div style={{ fontFamily: FONT, color: COLORS.text, fontSize: countSize, minWidth: large ? 92 : 70, textAlign: "center" }}>
+            {count} <span style={{ fontSize: large ? 16 : 13, color: COLORS.textDim }}>in deck</span>
+          </div>
+          <StepBtn size={stepSize} onClick={onAdd} disabled={atLimit} accent><AddIcon sx={{ fontSize: large ? 30 : 24 }} /></StepBtn>
         </div>
-        <StepBtn size={stepSize} onClick={onAdd} disabled={atLimit} accent><AddIcon sx={{ fontSize: large ? 30 : 24 }} /></StepBtn>
-      </div>
+      )}
     </div>
   );
 }

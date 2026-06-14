@@ -81,7 +81,8 @@ export default function FilterBar({
   const m = !!isMobile;
   const filters = { types, traits, rarities, costs, attacks, defenses };
   const active = hasActiveFilters(filters);
-  const [show, setShow] = useState(true);
+  // Filters start collapsed on mobile (tap Filters to expand), open on desktop.
+  const [show, setShow] = useState(() => !isMobile);
   return (
     <div
       style={{

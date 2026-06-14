@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import wallpaper from "../../src/assets/wallpapers/3.png";
@@ -40,6 +40,8 @@ import {
   saveDisplayName,
 } from "../sockets";
 import ActiveGamesBoard from "../components/ui/ActiveGamesBoard";
+import DeckPanel from "../components/deckbuilder/DeckPanel";
+import CardInspector from "../components/deckbuilder/CardInspector";
 
 import ArrowBackIosNew from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
@@ -74,6 +76,31 @@ const LEADER_NAMES = {
   5: "Tsubaki",
   6: "Grimnir",
   7: "Piercye",
+};
+
+// Per-card copy max for the read-only deck Preview's "n / max" counts (mirrors
+// the deck builder's limits). null = no fixed cap (show just the count).
+const mainCopyMax = (card) => {
+  if (card === "Rapid Fire") return 6;
+  if (card === "Shenlong" || card === "Curse Crafter") return 1;
+  if (card === "Onion Patch") return null;
+  return 3;
+};
+const evoCopyMax = (card) => {
+  if (card === "Carrot" || card === "Drive Point") return null;
+  return 3;
+};
+
+// One slot in the mobile deck carousel. A fixed-width centering slot so each
+// item (scaled via transform, which doesn't affect layout) snaps to the centre.
+const CAROUSEL_SLOT_W = 150;
+const carouselSlot = {
+  flexShrink: 0,
+  width: CAROUSEL_SLOT_W,
+  scrollSnapAlign: "center",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "flex-start",
 };
 
 // Order deck entries by play-point cost (then name), matching the deck builder's
@@ -121,6 +148,15 @@ export default function Home() {
   // toggle and the Discord/DingDongDB links are hidden to save space.
   const isMobile = useMediaQuery("(max-width: 768px)");
   const [showAnnounce, setShowAnnounce] = useState(false);
+  // Mobile deck carousel (infinite/looping). carouselActiveK = global slot index
+  // (across the 3 rendered copies) nearest the centre — that slot scales up.
+  const carouselRef = useRef(null);
+  const carouselSettleRef = useRef(null);
+  const [carouselActiveK, setCarouselActiveK] = useState(0);
+  // Read-only deck Preview: inspect a single card via the magnifier.
+  const [previewInspectName, setPreviewInspectName] = useState(null);
+  const [previewInspectCardNo, setPreviewInspectCardNo] = useState(null);
+  const [previewInspectOpen, setPreviewInspectOpen] = useState(false);
 
   const reduxDecks = useSelector((state) => state.deck.decks);
   const reduxActiveUsers = useSelector((state) => state.card.activeUsers);
@@ -222,6 +258,18 @@ export default function Home() {
     setShowSelected(new Array(reduxDecks.length).fill(false));
   }, [reduxDecks]);
 
+  // Centre the carousel on New Deck (middle copy) on mount / when the deck count
+  // changes, so there's a full copy to swipe to on each side.
+  useEffect(() => {
+    if (!isMobile) return;
+    const el = carouselRef.current;
+    if (!el) return;
+    const n = reduxDecks.length + 1;
+    el.scrollLeft = n * CAROUSEL_SLOT_W;
+    setCarouselActiveK(n);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isMobile, reduxDecks.length]);
+
   // const handleStartHover = (key) => {
   //   setHover(true);
   //   setHoverCard(key);
@@ -236,6 +284,14 @@ export default function Home() {
     if (selectedDeck.deck.length > 0) setOpen(true);
   };
   const handleModalClose = () => setOpen(false);
+
+  // Open the read-only card inspector for a deck card in the mobile Preview,
+  // honouring the deck's chosen art (printing) for that card.
+  const openPreviewInspect = (cardName) => {
+    setPreviewInspectName(cardName);
+    setPreviewInspectCardNo((selectedDeck.art && selectedDeck.art[cardName]) || null);
+    setPreviewInspectOpen(true);
+  };
 
   const handleOpenDialogue = () => {
     setOpenDialogue(true);
@@ -497,6 +553,39 @@ export default function Home() {
     }
   };
 
+  // ---- mobile deck carousel (infinite, swipeable both directions) ----
+  // The list is rendered as 3 identical copies. As the user swipes, the slot
+  // nearest the centre is marked active (scaled up). When scrolling settles we
+  // jump by one copy-width — instantly, and invisibly since the copies are
+  // identical — to keep the view in the middle copy, so it never runs out of
+  // room to swipe in either direction.
+  const recenterCarousel = () => {
+    const el = carouselRef.current;
+    if (!el) return;
+    const copyW = (reduxDecks.length + 1) * CAROUSEL_SLOT_W; // one copy of the list
+    if (el.scrollLeft < copyW - 1) el.scrollLeft += copyW;
+    else if (el.scrollLeft >= 2 * copyW - 1) el.scrollLeft -= copyW;
+  };
+  const handleCarouselScroll = () => {
+    const el = carouselRef.current;
+    if (!el) return;
+    const k = Math.round(el.scrollLeft / CAROUSEL_SLOT_W);
+    setCarouselActiveK((p) => (p === k ? p : k));
+    if (carouselSettleRef.current) clearTimeout(carouselSettleRef.current);
+    carouselSettleRef.current = setTimeout(recenterCarousel, 130);
+  };
+  // Tap the centred item to use it; tap an off-centre item to bring it to centre.
+  const onCarouselItemClick = (e, action) => {
+    const el = carouselRef.current;
+    const slot = e.currentTarget.closest("[data-k]");
+    if (!el || !slot) return;
+    const elRect = el.getBoundingClientRect();
+    const r = slot.getBoundingClientRect();
+    const delta = r.left + r.width / 2 - (elRect.left + elRect.width / 2);
+    if (Math.abs(delta) < r.width / 2) action();
+    else el.scrollBy({ left: delta, behavior: "smooth" });
+  };
+
   // const deckToImage = () => {
   //   var element = document.getElementById("deckPreview");
   //   html2canvas(element).then(function (canvas) {
@@ -565,10 +654,17 @@ export default function Home() {
 
   return (
     <div
+      className="home-root"
       onContextMenu={(e) => e.nativeEvent.preventDefault()}
       style={{
-        height: isMobile ? "auto" : "100vh",
-        minHeight: "100vh",
+        // On mobile, pin the page to the viewport so it can't scroll/overscroll
+        // in any direction (content is designed to fit one screen).
+        position: isMobile ? "fixed" : "relative",
+        top: isMobile ? 0 : undefined,
+        left: isMobile ? 0 : undefined,
+        right: isMobile ? 0 : undefined,
+        bottom: isMobile ? 0 : undefined,
+        height: isMobile ? "100dvh" : "100vh",
         width: "100vw",
         background: "url(" + wallpaper + ") center center fixed",
         backgroundSize: "cover",
@@ -576,12 +672,14 @@ export default function Home() {
         // justifyContent: "center",
         alignItems: isMobile ? "stretch" : "center",
         flexDirection: isMobile ? "column" : "row",
-        overflowY: isMobile ? "auto" : "hidden",
+        overflow: "hidden",
+        overscrollBehavior: "none",
       }}
     >
       <Dialog
         open={openDialogue}
         onClose={handleCloseDialogue}
+        disableScrollLock
         PaperProps={{
           component: "form",
         }}
@@ -1070,8 +1168,39 @@ export default function Home() {
       )}
 
       {isMobile && (
+        <>
+        {/* animated leader character — large, fixed behind the UI, rising from
+            the bottom to about the middle of the screen */}
+        {leaderImage && (
+          <div
+            style={{
+              position: "fixed",
+              left: 0,
+              right: 0,
+              bottom: 0,
+              height: "80vh",
+              display: "flex",
+              alignItems: "flex-end",
+              justifyContent: "center",
+              overflow: "hidden",
+              zIndex: 0,
+              pointerEvents: "none",
+            }}
+          >
+            <img
+              className="LeaderImageMobile"
+              src={leaderImage}
+              alt=""
+              style={{ height: "100%", width: "auto", maxWidth: "none" }}
+            />
+          </div>
+        )}
         <div
           style={{
+            position: "relative",
+            zIndex: 1,
+            height: "100dvh",
+            overflow: "hidden",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
@@ -1079,11 +1208,11 @@ export default function Home() {
             width: "100%",
             maxWidth: 460,
             margin: "0 auto",
-            padding: "18px 14px 36px",
+            padding: "18px 14px 28px",
             boxSizing: "border-box",
           }}
         >
-          {/* Player Name */}
+          {/* users online */}
           {reduxActiveUsers !== 0 && (
             <div
               style={{
@@ -1096,29 +1225,10 @@ export default function Home() {
               {reduxActiveUsers} users online
             </div>
           )}
-          <input
-            style={{
-              padding: ".6em .8em",
-              fontSize: 15,
-              width: "100%",
-              boxSizing: "border-box",
-              textAlign: "center",
-              color: "#daf6ff",
-              backgroundColor: "rgba(10, 14, 20, 0.75)",
-              border: "1px solid rgba(72, 171, 224, 0.5)",
-              borderRadius: 8,
-              outline: "none",
-              fontFamily: "Noto Serif JP, serif",
-            }}
-            type="text"
-            maxLength={20}
-            value={displayName}
-            onChange={handleDisplayNameChange}
-            placeholder={LEADER_NAMES[leaderNum] || "Display name..."}
-          />
 
-          {/* Active Games */}
-          <div style={{ width: "100%" }}>
+          {/* Active Games (capped so the column never needs to scroll; the
+              room list scrolls internally) */}
+          <div style={{ width: "100%", flexShrink: 0 }}>
             <ActiveGamesBoard
               rooms={rooms}
               myRoom={myRoom}
@@ -1127,141 +1237,14 @@ export default function Home() {
               onReconnect={handleReconnect}
               onTogglePrivacy={handleTogglePrivacy}
               onCloseRoom={handleCloseRoom}
+              maxHeight="42vh"
+              isMobile
             />
           </div>
 
-          {/* PLAY */}
-          <Button
-            onClick={handleCreateRoom}
-            sx={{
-              position: "relative",
-              fontFamily: "Noto Serif JP,serif",
-              textTransform: "none",
-              fontWeight: "bold",
-              color: "black",
-              width: "100%",
-              maxWidth: 300,
-              height: 70,
-              borderRadius: "50px",
-              "&:hover": { boxShadow: "0 0 30px 10px #48abe0" },
-            }}
-          >
-            <img height={82} src={buttonImage} alt="button" style={{ maxWidth: "100%" }} />
-            <div style={{ position: "absolute", fontSize: 30 }}>PLAY</div>
-          </Button>
-
-          {/* JOIN ROOM */}
-          <Button
-            onClick={handleJoinRoom}
-            sx={{
-              position: "relative",
-              fontFamily: "Noto Serif JP,serif",
-              textTransform: "none",
-              fontWeight: "bold",
-              color: "black",
-              height: 50,
-              width: 220,
-              borderRadius: "50px",
-              "&:hover": { boxShadow: "0 0 30px 10px #48abe0" },
-            }}
-          >
-            <img height={58} src={buttonImage} alt="button" />
-            <div style={{ position: "absolute", fontSize: 18 }}>JOIN ROOM</div>
-          </Button>
-
-          {/* Room Code */}
-          <input
-            style={{
-              padding: ".5em",
-              fontSize: 15,
-              width: "70%",
-              textAlign: "center",
-              fontFamily: "Noto Serif JP, serif",
-              borderRadius: 6,
-              border: "1px solid rgba(72, 171, 224, 0.5)",
-            }}
-            type="text"
-            value={roomNumber}
-            onChange={handleRoomNumberInput}
-            placeholder="Room Code..."
-          />
-
-          {/* decks: New Deck + saved decks (horizontal scroll) */}
-          <div
-            style={{
-              width: "100%",
-              display: "flex",
-              flexDirection: "row",
-              overflowX: "auto",
-              gap: 10,
-              padding: "4px 2px",
-              alignItems: "flex-start",
-            }}
-          >
-            <div style={{ flexShrink: 0, width: 92 }}>
-              <Button
-                onClick={handleNavigateToDeck}
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  minWidth: 0,
-                  width: "100%",
-                  p: 0.5,
-                  "&:hover": { boxShadow: "0 0 24px 8px #48abe0" },
-                }}
-              >
-                <img height={120} src={cardback} alt="cardback" />
-                <div style={{ color: "white", fontSize: 13, fontFamily: "Noto Serif JP,serif" }}>NEW DECK</div>
-              </Button>
-            </div>
-            {reduxDecks.map((deck, idx) => (
-              <div
-                key={idx}
-                onClick={() => handleSelectDeck(deck, idx)}
-                onContextMenu={(e) => handleContextMenu(e, deck, idx)}
-                style={{
-                  flexShrink: 0,
-                  width: 92,
-                  cursor: "pointer",
-                  borderRadius: 8,
-                  padding: 4,
-                  boxSizing: "border-box",
-                  background: showSelected[idx] ? "rgba(72, 171, 224, 0.30)" : "transparent",
-                  border: showSelected[idx]
-                    ? "1px solid rgba(72, 171, 224, 0.7)"
-                    : "1px solid transparent",
-                }}
-              >
-                <img
-                  src={artThumb(deck.deck[Math.floor(deck.deck.length / 2)], deck.art)}
-                  alt={deck.name}
-                  loading="lazy"
-                  style={{ width: "100%", borderRadius: 6, display: "block" }}
-                />
-                <div
-                  style={{
-                    marginTop: 4,
-                    color: "white",
-                    fontSize: 12,
-                    fontFamily: "Noto Serif JP,serif",
-                    textAlign: "center",
-                    whiteSpace: "nowrap",
-                    overflow: "hidden",
-                    textOverflow: "ellipsis",
-                    background: "#131219",
-                    borderRadius: 4,
-                    padding: "2px 4px",
-                  }}
-                >
-                  {deck.name}
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* announcements (collapsible) */}
-          <div style={{ width: "100%" }}>
+          {/* announcements (collapsible) — directly under Active Games. The
+              expanded panel is an overlay so it never reflows / moves anything. */}
+          <div style={{ width: "100%", position: "relative", zIndex: 5, flexShrink: 0 }}>
             <Button
               fullWidth
               onClick={() => setShowAnnounce((s) => !s)}
@@ -1284,13 +1267,18 @@ export default function Home() {
             {showAnnounce && (
               <div
                 style={{
-                  marginTop: 8,
-                  backgroundColor: "rgba(10, 14, 20, 0.75)",
+                  position: "absolute",
+                  top: "calc(100% + 8px)",
+                  left: 0,
+                  right: 0,
+                  zIndex: 6,
+                  backgroundColor: "rgba(10, 14, 20, 0.96)",
                   border: "1px solid rgba(72, 171, 224, 0.5)",
                   borderRadius: 10,
                   padding: "0.25em 1em 1em",
-                  maxHeight: 320,
+                  maxHeight: 232,
                   overflowY: "auto",
+                  boxShadow: "0 8px 24px rgba(0, 0, 0, 0.6)",
                 }}
               >
                 {announcements.map((item, idx) => (
@@ -1321,11 +1309,95 @@ export default function Home() {
               </div>
             )}
           </div>
+
+          {/* decks carousel (mobile): infinite/looping — swipe either direction
+              to bring New Deck or a deck to the centre (it scales up). Tap the
+              centred item to use it (New Deck → builder; a deck → options), or
+              tap a side item to bring it to the centre. */}
+          <div
+            ref={carouselRef}
+            onScroll={handleCarouselScroll}
+            style={{
+              width: "100%",
+              marginTop: "auto",
+              flexShrink: 0,
+              display: "flex",
+              overflowX: "auto",
+              scrollSnapType: "x mandatory",
+              paddingLeft: "calc(50% - 75px)",
+              paddingRight: "calc(50% - 75px)",
+              boxSizing: "border-box",
+              WebkitOverflowScrolling: "touch",
+            }}
+          >
+            {[0, 1, 2].map((copy) => {
+              const items = [
+                { type: "new" },
+                ...reduxDecks.map((deck, idx) => ({ type: "deck", deck, idx })),
+              ];
+              const n = items.length;
+              return items.map((it, logical) => {
+                const gk = copy * n + logical;
+                const active = carouselActiveK === gk;
+                const tileStyle = {
+                  cursor: "pointer",
+                  transform: active ? "scale(1)" : "scale(0.78)",
+                  opacity: active ? 1 : 0.5,
+                  transition: "transform .2s ease, opacity .2s ease",
+                };
+                return (
+                  <div key={`${copy}-${logical}`} data-k={gk} style={carouselSlot}>
+                    {it.type === "new" ? (
+                      <div
+                        onClick={(e) => onCarouselItemClick(e, handleNavigateToDeck)}
+                        style={{ ...tileStyle, display: "flex", flexDirection: "column", alignItems: "center" }}
+                      >
+                        <img height={150} src={cardback} alt="cardback" style={{ display: "block" }} />
+                        <div style={{ color: "white", fontSize: 14, fontFamily: "Noto Serif JP,serif", marginTop: 4 }}>NEW DECK</div>
+                      </div>
+                    ) : (
+                      <div
+                        onClick={(e) => onCarouselItemClick(e, () => handleContextMenu(e, it.deck, it.idx))}
+                        onContextMenu={(e) => e.preventDefault()}
+                        style={{ ...tileStyle, width: 110 }}
+                      >
+                        <img
+                          src={artThumb(it.deck.deck[Math.floor(it.deck.deck.length / 2)], it.deck.art)}
+                          alt={it.deck.name}
+                          loading="lazy"
+                          style={{ width: "100%", borderRadius: 8, display: "block" }}
+                        />
+                        <div
+                          style={{
+                            marginTop: 4,
+                            color: "white",
+                            fontSize: 13,
+                            fontFamily: "Noto Serif JP,serif",
+                            textAlign: "center",
+                            whiteSpace: "nowrap",
+                            overflow: "hidden",
+                            textOverflow: "ellipsis",
+                            background: "#131219",
+                            borderRadius: 4,
+                            padding: "2px 4px",
+                          }}
+                        >
+                          {it.deck.name}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                );
+              });
+            })}
+          </div>
         </div>
+        </>
       )}
       <Menu
         open={contextMenu !== null}
         onClose={handleClose}
+        disableScrollLock
         anchorReference="anchorPosition"
         anchorPosition={
           contextMenu !== null
@@ -1348,8 +1420,9 @@ export default function Home() {
       </Menu>
       <Modal
         sx={{ backgroundColor: "rgba(31, 31, 31)" }}
-        open={open}
+        open={open && !isMobile}
         onClose={handleModalClose}
+        disableScrollLock
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
@@ -1583,6 +1656,82 @@ export default function Home() {
           </CardMUI>
         </Box>
       </Modal>
+
+      {/* Mobile deck Preview — the deck-view layout, read-only (no add/remove,
+          no trash, name/class shown but not editable; inspect via magnifier). */}
+      {isMobile && (
+        <Dialog
+          open={open}
+          onClose={handleModalClose}
+          fullScreen
+          disableScrollLock
+          PaperProps={{ sx: { background: "rgba(10, 14, 20, 0.96)", backgroundImage: "none" } }}
+        >
+          <div style={{ position: "relative", height: "100%", display: "flex", flexDirection: "column", padding: "10px 18px 12px", boxSizing: "border-box" }}>
+            <IconButton
+              onClick={handleModalClose}
+              sx={{ position: "absolute", top: 2, right: 14, zIndex: 4, color: "#fff" }}
+            >
+              <CloseIcon />
+            </IconButton>
+            <DeckPanel
+              readOnly
+              isMobile
+              deckMap={deckMap}
+              evoDeckMap={evoDeckMap}
+              deckLen={selectedDeck.deck ? selectedDeck.deck.length : 0}
+              evoLen={selectedDeck.evoDeck ? selectedDeck.evoDeck.length : 0}
+              artNoOf={(n) => (selectedDeck.art && selectedDeck.art[n]) || null}
+              onInspect={openPreviewInspect}
+              copyMaxOf={mainCopyMax}
+              evoCopyMaxOf={evoCopyMax}
+              name={selectedDeck.name}
+              deckClass={deckClassOf(selectedDeck)}
+            />
+          </div>
+        </Dialog>
+      )}
+
+      {/* Mobile Preview card inspector (opened by the magnifier) */}
+      {isMobile && (
+        <Dialog
+          open={previewInspectOpen}
+          onClose={() => setPreviewInspectOpen(false)}
+          fullScreen
+          disableScrollLock
+          PaperProps={{ sx: { backgroundColor: "transparent", backgroundImage: "none", boxShadow: "none" } }}
+        >
+          <div style={{ position: "relative", height: "100%", overflow: "hidden" }}>
+            <IconButton
+              onClick={() => setPreviewInspectOpen(false)}
+              sx={{
+                position: "absolute", top: 10, right: 10, zIndex: 3, color: "#fff",
+                background: "rgba(0,0,0,0.45)", "&:hover": { background: "rgba(0,0,0,0.65)" },
+              }}
+            >
+              <CloseIcon />
+            </IconButton>
+            <div style={{ height: "100%", display: "flex", padding: "18px 14px", boxSizing: "border-box" }}>
+              <div
+                style={{
+                  width: "100%",
+                  maxWidth: 640,
+                  margin: "0 auto",
+                  background: "rgba(28, 31, 38, 0.97)",
+                  borderRadius: 16,
+                  padding: 16,
+                  boxSizing: "border-box",
+                  boxShadow: "0 12px 40px rgba(0,0,0,0.65), 0 0 0 1px rgba(255,255,255,0.06)",
+                  display: "flex",
+                  flexDirection: "column",
+                }}
+              >
+                <CardInspector name={previewInspectName} cardNo={previewInspectCardNo} large readOnly />
+              </div>
+            </div>
+          </div>
+        </Dialog>
+      )}
     </div>
   );
 }

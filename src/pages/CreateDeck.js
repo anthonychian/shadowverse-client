@@ -744,7 +744,7 @@ export default function CreateDeck() {
         >
           <div style={{ display: "flex", flexDirection: "column", height: "100%" }}>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "10px 14px", borderBottom: `1px solid ${COLORS.border}` }}>
-              <span style={{ fontFamily: FONT, color: COLORS.text, fontSize: 18, fontWeight: 700 }}>Your Deck</span>
+              <span style={{ fontFamily: FONT, color: COLORS.text, fontSize: 18, fontWeight: 700 }}>Deck</span>
               <IconButton onClick={() => setMobileDeckOpen(false)} sx={{ color: COLORS.text }}>
                 <CloseIcon />
               </IconButton>

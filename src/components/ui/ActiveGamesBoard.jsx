@@ -108,6 +108,8 @@ export default function ActiveGamesBoard({
   onReconnect,
   onTogglePrivacy,
   onCloseRoom,
+  maxHeight = "70vh",
+  isMobile = false,
 }) {
   // Never list the host's own room in the public section — it shows in "Your
   // room" instead, even while public (so they don't see a Join button on it).
@@ -119,7 +121,7 @@ export default function ActiveGamesBoard({
     <div
       style={{
         width: "100%",
-        maxHeight: "70vh",
+        maxHeight,
         display: "flex",
         flexDirection: "column",
         backgroundColor: "rgba(10, 14, 20, 0.75)",
@@ -294,8 +296,12 @@ export default function ActiveGamesBoard({
             }}
           >
             No open games right now.
-            <br />
-            Press PLAY to host one.
+            {!isMobile && (
+              <>
+                <br />
+                Press PLAY to host one.
+              </>
+            )}
           </div>
         ) : (
           publicRooms.map((room) => (
