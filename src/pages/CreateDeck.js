@@ -614,7 +614,8 @@ export default function CreateDeck() {
       onInspect={handleDeckInspect}
       onAdd={handleCardSelection} onAddEvo={handleEvoCardSelection}
       onRemove={handleCardRemove} onRemoveEvo={handleEvoCardRemove}
-      copyMaxOf={mainCopyMax} evoCopyMaxOf={evoCopyMax}
+      isAtLimit={mainAtLimit} isEvoAtLimit={evoAtLimit}
+      copyMaxOf={mainCopyMax} evoCopyMaxOf={evoCopyMax} isMobile={isMobile}
       name={name} onNameChange={setName}
       deckClass={deckClass} onDeckClass={setDeckClass}
       canCreate={canCreate} onCreate={handleSubmit}

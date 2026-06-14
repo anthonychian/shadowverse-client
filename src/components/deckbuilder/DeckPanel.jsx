@@ -2,6 +2,8 @@ import React from "react";
 import { TextField, Button, Select, MenuItem, FormControl, InputLabel } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
 import { cardImage, toThumb } from "../../decks/getCards";
 import { getCost, primaryType } from "../../decks/cardDetails";
 import { COLORS, FONT, CLASS_ORDER, CLASS_LABELS, CLASS_COLORS, displayName } from "./theme";
@@ -79,6 +81,63 @@ const deckBarCount = {
 const deckGrid = {
   display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10, marginBottom: 6,
 };
+
+// Compact list row used on desktop (the original right-panel look): thumbnail +
+// count + name with inline add/remove. Mobile uses the DeckCard grid instead.
+const DeckRow = ({ name, count, artNo, onInspect, onAdd, onRemove, addDisabled }) => (
+  <div
+    style={{
+      display: "flex", alignItems: "center", gap: 8, padding: "3px 6px",
+      borderRadius: 6, background: COLORS.row, cursor: "pointer",
+    }}
+    onClick={() => onInspect(name)}
+    onMouseEnter={(e) => (e.currentTarget.style.background = COLORS.rowHover)}
+    onMouseLeave={(e) => (e.currentTarget.style.background = COLORS.row)}
+  >
+    <img
+      src={artNo ? `../textures/thumbs/${artNo}.png` : toThumb(cardImage(name))}
+      loading="lazy" decoding="async"
+      onError={(e) => {
+        // Fall back to the full chosen-art image, then the default art.
+        if (artNo && e.currentTarget.src.indexOf("/thumbs/") !== -1) {
+          e.currentTarget.src = `../textures/${artNo}.png`;
+        } else if (e.currentTarget.src.indexOf("/textures/") !== -1 && artNo) {
+          e.currentTarget.src = cardImage(name);
+        }
+      }}
+      alt={name} width={34} height={48} style={{ borderRadius: 3, flexShrink: 0 }}
+    />
+    <span style={{ color: COLORS.glow, fontFamily: FONT, fontSize: 14, width: 22, textAlign: "center" }}>{count}</span>
+    <span
+      style={{
+        flex: 1, color: COLORS.text, fontFamily: FONT, fontSize: 13,
+        whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis",
+      }}
+      title={displayName(name)}
+    >
+      {displayName(name)}
+    </span>
+    <RowBtn onClick={(e) => { e.stopPropagation(); onRemove(name); }}><RemoveIcon sx={{ fontSize: 16 }} /></RowBtn>
+    <RowBtn disabled={addDisabled} onClick={(e) => { e.stopPropagation(); if (!addDisabled) onAdd(name); }}>
+      <AddIcon sx={{ fontSize: 16 }} />
+    </RowBtn>
+  </div>
+);
+
+const RowBtn = ({ children, onClick, disabled }) => (
+  <button
+    onClick={onClick} disabled={disabled}
+    style={{
+      width: 24, height: 24, borderRadius: 5, border: "none", flexShrink: 0,
+      background: disabled ? "rgba(255,255,255,0.06)" : "rgba(255,255,255,0.16)",
+      color: disabled ? "rgba(255,255,255,0.3)" : "#fff",
+      display: "flex", alignItems: "center", justifyContent: "center",
+      cursor: disabled ? "default" : "pointer",
+    }}
+  >
+    {children}
+  </button>
+);
 
 // Cost (mana) curve, styled after Deck Log: a "Cost" heading, a row of count
 // pills (always shown, including 0) above salmon bars rising from a common
@@ -194,7 +253,8 @@ const SectionHeader = ({ title, count, max }) => (
 export default function DeckPanel({
   deckMap, evoDeckMap, deckLen, evoLen,
   artNoOf,
-  onInspect, onAdd, onAddEvo, onRemove, onRemoveEvo, copyMaxOf, evoCopyMaxOf,
+  onInspect, onAdd, onAddEvo, onRemove, onRemoveEvo,
+  isAtLimit, isEvoAtLimit, copyMaxOf, evoCopyMaxOf, isMobile,
   name, onNameChange, deckClass, onDeckClass, canCreate, onCreate, onImport, onExport,
 }) {
   const inputSx = {
@@ -241,22 +301,42 @@ export default function DeckPanel({
 
         <SectionHeader title="Main Deck" count={deckLen} max={50} />
         {deckLen === 0 && <Empty>Add cards to your main deck</Empty>}
-        <div style={deckGrid}>
-          {sortedEntries(deckMap).map(([n, c]) => (
-            <DeckCard key={n} name={n} count={c} copyMax={copyMaxOf ? copyMaxOf(n) : 3}
-              artNo={artNoOf ? artNoOf(n) : null} onInspect={onInspect} onAdd={onAdd} onRemove={onRemove} />
-          ))}
-        </div>
+        {isMobile ? (
+          <div style={deckGrid}>
+            {sortedEntries(deckMap).map(([n, c]) => (
+              <DeckCard key={n} name={n} count={c} copyMax={copyMaxOf ? copyMaxOf(n) : 3}
+                artNo={artNoOf ? artNoOf(n) : null} onInspect={onInspect} onAdd={onAdd} onRemove={onRemove} />
+            ))}
+          </div>
+        ) : (
+          <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+            {sortedEntries(deckMap).map(([n, c]) => (
+              <DeckRow key={n} name={n} count={c} artNo={artNoOf ? artNoOf(n) : null}
+                onInspect={onInspect} onAdd={onAdd} onRemove={onRemove}
+                addDisabled={isAtLimit ? isAtLimit(n) : false} />
+            ))}
+          </div>
+        )}
 
         <div style={{ height: 8 }} />
         <SectionHeader title="Evolve Deck" count={evoLen} max={10} />
         {evoLen === 0 && <Empty>Add cards to your evolve deck</Empty>}
-        <div style={deckGrid}>
-          {sortedEntries(evoDeckMap).map(([n, c]) => (
-            <DeckCard key={n} name={n} count={c} copyMax={evoCopyMaxOf ? evoCopyMaxOf(n) : 3}
-              artNo={artNoOf ? artNoOf(n) : null} onInspect={onInspect} onAdd={onAddEvo} onRemove={onRemoveEvo} />
-          ))}
-        </div>
+        {isMobile ? (
+          <div style={deckGrid}>
+            {sortedEntries(evoDeckMap).map(([n, c]) => (
+              <DeckCard key={n} name={n} count={c} copyMax={evoCopyMaxOf ? evoCopyMaxOf(n) : 3}
+                artNo={artNoOf ? artNoOf(n) : null} onInspect={onInspect} onAdd={onAddEvo} onRemove={onRemoveEvo} />
+            ))}
+          </div>
+        ) : (
+          <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+            {sortedEntries(evoDeckMap).map(([n, c]) => (
+              <DeckRow key={n} name={n} count={c} artNo={artNoOf ? artNoOf(n) : null}
+                onInspect={onInspect} onAdd={onAddEvo} onRemove={onRemoveEvo}
+                addDisabled={isEvoAtLimit ? isEvoAtLimit(n) : false} />
+            ))}
+          </div>
+        )}
       </div>
 
       {/* actions */}
