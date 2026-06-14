@@ -21,7 +21,7 @@ import { createDeck, deleteDeck } from "../redux/DeckSlice";
 import { useNavigate, useLocation } from "react-router-dom";
 import {
   Button, TextField, Dialog, DialogActions, DialogContent, DialogContentText,
-  DialogTitle, Snackbar, SnackbarContent, IconButton,
+  DialogTitle, Snackbar, SnackbarContent, IconButton, CircularProgress, Divider,
 } from "@mui/material";
 import { matchesFilters, hasActiveFilters, getCost, getDetails } from "../decks/cardDetails";
 import cardPrintings from "../decks/cardPrintings.json";
@@ -29,13 +29,43 @@ import FilterBar from "../components/deckbuilder/FilterBar";
 import CardGrid from "../components/deckbuilder/CardGrid";
 import CardInspector from "../components/deckbuilder/CardInspector";
 import DeckPanel from "../components/deckbuilder/DeckPanel";
-import { COLORS, FONT, SET_CODE_ORDER, SET_CODE_LABELS } from "../components/deckbuilder/theme";
+import { COLORS, FONT, SET_CODE_ORDER, SET_CODE_LABELS, CLASS_LABELS } from "../components/deckbuilder/theme";
+import { SERVER_URL } from "../sockets";
 
 const CARD_PAGE_SIZE = 60;
 
 // Non-deckable entries that exist as cards in the data but should never appear
 // in the deck-builder pool (game-mechanic markers).
 const HIDDEN_NAMES = new Set(["Evolution Point", "Super-Evolution Point"]);
+
+// Card number (e.g. "BP05-P25EN") -> card name, for translating an external
+// decklist (bushiroad decklog) into the names the builder works with. Built
+// once from the static printings data. First printing wins for a given number.
+const NAME_BY_CARD_NO = (() => {
+  const m = {};
+  for (const p of cardPrintings) {
+    if (p.cardNo && !(p.cardNo in m)) m[p.cardNo] = p.name;
+  }
+  return m;
+})();
+
+// Reverse of CLASS_LABELS: decklog reports a deck's class as a display label
+// (e.g. "Dragoncraft"); map it back to our internal class key (e.g. "dragon").
+const CLASS_KEY_BY_LABEL = (() => {
+  const m = {};
+  for (const k in CLASS_LABELS) m[CLASS_LABELS[k]] = k;
+  return m;
+})();
+
+// Pull a decklog share code out of a pasted code or full URL
+// (https://decklog-en.bushiroad.com/view/26JXU -> "26JXU").
+const extractDecklogCode = (raw) => {
+  const s = String(raw || "").trim();
+  const fromUrl = s.match(/\/view\/([A-Za-z0-9]+)/);
+  if (fromUrl) return fromUrl[1].toUpperCase();
+  const bare = s.match(/^[A-Za-z0-9]+$/);
+  return bare ? s.toUpperCase() : "";
+};
 
 export default function CreateDeck() {
   const location = useLocation();
@@ -102,6 +132,10 @@ export default function CreateDeck() {
   const [importTextFieldVal, setImportTextFieldVal] = useState("");
   const [openImport, setOpenImport] = useState(false);
   const [openSnack, setOpenSnack] = useState(false);
+  // decklog (bushiroad) import: paste a share code or full /view/<code> URL.
+  const [decklogCode, setDecklogCode] = useState("");
+  const [decklogLoading, setDecklogLoading] = useState(false);
+  const [decklogError, setDecklogError] = useState("");
 
   // ---------- responsive / mobile ----------
   // On phone-sized screens the two side columns (card preview + deck) are hidden
@@ -542,6 +576,76 @@ export default function CreateDeck() {
     setDeck([]); setDeckMap(new Map()); setEvoDeck([]); setEvoDeckMap(new Map());
     setImportTextFieldVal("");
   };
+
+  // Replace the whole deck with imported cards. Builds fresh state objects
+  // directly (rather than going through handleCardSelection, which reads stale
+  // render-time deck lengths) so re-importing over a full deck works cleanly.
+  // Still honours per-card copy caps and the 50/10 deck-size limits.
+  const applyImportedDeck = (mainNames, evoNames) => {
+    const build = (names, copyMaxOf, totalCap) => {
+      const map = new Map();
+      const arr = [];
+      for (const c of names) {
+        if (arr.length >= totalCap) break;
+        const max = copyMaxOf(c);
+        const cur = map.get(c) || 0;
+        if (max != null && cur >= max) continue;
+        map.set(c, cur + 1);
+        arr.push(c);
+      }
+      return { map, arr };
+    };
+    const m = build(mainNames, mainCopyMax, 50);
+    const e = build(evoNames, evoCopyMax, 10);
+    setDeck(m.arr); setDeckMap(m.map);
+    setEvoDeck(e.arr); setEvoDeckMap(e.map);
+  };
+
+  // Fetch a deck from bushiroad decklog (via the server proxy — decklog sends no
+  // CORS headers, so the browser can't call it directly) and fill the builder.
+  const handleDecklogImport = async () => {
+    const code = extractDecklogCode(decklogCode);
+    if (!code) { setDecklogError("Enter a decklog code or URL."); return; }
+    setDecklogLoading(true); setDecklogError("");
+    try {
+      const base = SERVER_URL.replace(/\/$/, "");
+      const res = await fetch(`${base}/api/decklog/${code}`);
+      if (!res.ok) {
+        const j = await res.json().catch(() => ({}));
+        throw new Error(j.error || `Request failed (${res.status})`);
+      }
+      const data = await res.json();
+      const mainNames = [];
+      const evoNames = [];
+      const missing = [];
+      for (const c of data.list || []) {
+        const nm = NAME_BY_CARD_NO[c.card_number];
+        if (!nm) { missing.push(c.card_number); continue; }
+        const n = Math.max(1, c.num || 1);
+        for (let i = 0; i < n; i++) (isEvoCard(nm) ? evoNames : mainNames).push(nm);
+      }
+      if (mainNames.length === 0 && evoNames.length === 0) {
+        throw new Error("None of this deck's cards were recognised.");
+      }
+      applyImportedDeck(mainNames, evoNames);
+      // Adopt decklog's class + title when we can, so the deck is ready to save.
+      const cls = CLASS_KEY_BY_LABEL[data.deck_param2];
+      if (cls) setDeckClass(cls);
+      if (data.title && !name) setName(data.title);
+      if (missing.length) {
+        setDecklogError(
+          `Imported, but ${missing.length} card(s) weren't recognised and were skipped.`,
+        );
+      } else {
+        setOpenImport(false);
+        setDecklogCode("");
+      }
+    } catch (e) {
+      setDecklogError(e.message || "Failed to import from decklog.");
+    } finally {
+      setDecklogLoading(false);
+    }
+  };
   const handleDeckImportFormat = () => {
     let s1 = ""; deckMap.forEach((v, k) => (s1 += `${v} ${k}\n`));
     let s2 = ""; evoDeckMap.forEach((v, k) => (s2 += `${v} ${k}\n`));
@@ -757,11 +861,40 @@ export default function CreateDeck() {
       )}
 
       {/* import dialog */}
-      <Dialog open={openImport} onClose={() => setOpenImport(false)} PaperProps={{ component: "form" }}>
+      <Dialog open={openImport} onClose={() => setOpenImport(false)} PaperProps={{ component: "form" }} fullWidth maxWidth="sm">
         <DialogTitle>Import Deck</DialogTitle>
         <DialogContent>
-          <DialogContentText>Paste a decklist (count + card name per line; blank line separates main and evolve).</DialogContentText>
-          <TextField autoFocus required margin="dense" fullWidth multiline variant="standard"
+          <DialogContentText sx={{ fontWeight: 600 }}>From decklog</DialogContentText>
+          <DialogContentText sx={{ fontSize: 13 }}>
+            Paste a bushiroad decklog code or share URL (e.g. https://decklog-en.bushiroad.com/view/26JXU).
+          </DialogContentText>
+          <div style={{ display: "flex", gap: 8, alignItems: "flex-start", marginTop: 6 }}>
+            <TextField
+              autoFocus margin="dense" fullWidth variant="standard" placeholder="decklog code or URL"
+              value={decklogCode}
+              onChange={(e) => { setDecklogCode(e.target.value); setDecklogError(""); }}
+              onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); handleDecklogImport(); } }}
+              disabled={decklogLoading}
+            />
+            <Button
+              onClick={handleDecklogImport} disabled={decklogLoading || !decklogCode.trim()}
+              variant="contained" sx={{ mt: 1, flexShrink: 0, whiteSpace: "nowrap" }}
+              startIcon={decklogLoading ? <CircularProgress size={16} color="inherit" /> : null}
+            >
+              {decklogLoading ? "Loading…" : "Import"}
+            </Button>
+          </div>
+          {decklogError && (
+            <DialogContentText sx={{ color: COLORS.danger || "#e57373", fontSize: 13, mt: 1 }}>
+              {decklogError}
+            </DialogContentText>
+          )}
+
+          <Divider sx={{ my: 2 }} />
+
+          <DialogContentText sx={{ fontWeight: 600 }}>Paste a decklist</DialogContentText>
+          <DialogContentText sx={{ fontSize: 13 }}>Count + card name per line; a blank line separates main and evolve.</DialogContentText>
+          <TextField required margin="dense" fullWidth multiline variant="standard"
             value={importTextFieldVal} onChange={(e) => setImportTextFieldVal(e.target.value)} />
         </DialogContent>
         <DialogActions>

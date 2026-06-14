@@ -6,7 +6,7 @@ import io from "socket.io-client";
 // Use a local server when developing on localhost, otherwise the deployed one.
 // This lets two browsers play against `node index.js` on :5000 for testing,
 // without touching the production target.
-const SERVER_URL =
+export const SERVER_URL =
   typeof window !== "undefined" &&
   (window.location.hostname === "localhost" ||
     window.location.hostname === "127.0.0.1")
