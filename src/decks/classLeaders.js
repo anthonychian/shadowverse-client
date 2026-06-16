@@ -8,11 +8,11 @@
 // (still manually selectable). Vanguard has no dedicated leader image yet, so it
 // uses Galmieux as a placeholder.
 export const CLASS_LEADERS = {
-  forest: ["Sekka", "Hozumi", "CC", "Orchis"],
+  forest: ["Sekka", "CC", "Piercye"],
   sword: ["Bunny", "Albert"],
   rune: ["Lishenna", "Ceridwen", "Kuon"],
-  dragon: ["SiLong", "Drache", "Forte", "Galmieux"],
-  abyss: ["Icy", "Anisage", "Vania", "Mono"],
+  dragon: ["SiLong", "Forte", "Galmieux"],
+  abyss: ["Icy", "Anisage", "Vania", "Mono", "Amy"],
   haven: ["Rola", "Jeanne"],
   umamusume: ["Manhatten Cafe", "Maruzensky"],
   vanguard: ["Vanguard"],

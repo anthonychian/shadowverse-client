@@ -25,6 +25,7 @@ import Rating from "@mui/material/Rating";
 import WifiOffIcon from "@mui/icons-material/WifiOff";
 import WifiIcon from "@mui/icons-material/Wifi";
 import "../../css/EnemyUI.css";
+import "../../css/LeaderPanel.css";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import FiberManualRecordOutlinedIcon from "@mui/icons-material/FiberManualRecordOutlined";
 import sepOn from "../../assets/logo/sep_on.png";
@@ -132,6 +133,8 @@ export default function PlayerUI({ name }) {
         return forest;
       case "CC":
         return forest;
+      case "Piercye":
+        return forest;
       case "Orchis":
         return forest;
       case "Bunny":
@@ -145,6 +148,8 @@ export default function PlayerUI({ name }) {
       case "Vania":
         return abyss;
       case "Mono":
+        return abyss;
+      case "Amy":
         return abyss;
       case "Lishenna":
         return rune;
@@ -192,6 +197,8 @@ export default function PlayerUI({ name }) {
         return "linear-gradient(-60deg, #16a085 0%, #f4d03f 100%)";
       case "Hozumi":
         return "linear-gradient(-60deg, #16a085 0%, #f4d03f 100%)";
+      case "Piercye":
+        return "linear-gradient(-60deg, #16a085 0%, #f4d03f 100%)";
       case "Bunny":
         return "linear-gradient(110.3deg, rgb(238, 179, 123) 8.7%, rgb(216, 103, 77) 47.5%, rgb(114, 43, 54) 89.1%)";
       case "Albert":
@@ -203,6 +210,8 @@ export default function PlayerUI({ name }) {
       case "Vania":
         return "linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(247, 30, 30) 100.3%)";
       case "Mono":
+        return "linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(247, 30, 30) 100.3%)";
+      case "Amy":
         return "linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(247, 30, 30) 100.3%)";
       case "Kuon":
         return "linear-gradient(181deg, rgb(2, 0, 97) 15%, rgb(97, 149, 219) 158.5%)";
@@ -226,171 +235,61 @@ export default function PlayerUI({ name }) {
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        width: "20vw",
-        height: "150px",
-        gap: "1em",
-      }}
-    >
-      <Leader name={name} active={reduxLeaderActive} />
+    <div className="leaderPanel">
+      {/* Hero: the animated leader with its class logo (and the wifi badge). */}
+      <div className="leaderStageWrap">
+        <Leader
+          name={name}
+          active={reduxLeaderActive}
+          width={300}
+          height={300}
+          side="mine"
+        />
 
-      {reduxSelfOnlineStatus ? (
-        <div className={"onlineStatus"} title={"Connected"}>
-          <WifiIcon sx={{ height: 40, width: 40 }} />
+        <div className="classBadge">
+          <img src={getClassFromLeader(name)} alt={name} />
         </div>
-      ) : (
-        <div className={"offlineStatus"} title={"Disconnected — reconnecting…"}>
-          <WifiOffIcon sx={{ height: 40, width: 40 }} />
-        </div>
-      )}
 
-      <div style={{ opacity: 0.75 }}>
-        <img height={70} width={70} src={getClassFromLeader(name)} alt={name} />
+        {!reduxSelfOnlineStatus && (
+          <div
+            className="wifiBadge wifiOff"
+            title="Disconnected — reconnecting…"
+          >
+            <WifiOffIcon sx={{ height: 22, width: 22 }} />
+          </div>
+        )}
       </div>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          flexDirection: "column",
-          gap: "1em",
-        }}
-      >
-        <div
-          style={{
-            position: "relative",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            flexDirection: "column",
-            gap: "1em",
-          }}
-        >
-          <div
-            style={{
-              fontFamily: "Noto Serif JP, serif",
-              background: getColorFromLeader(name),
-              outline: "7px ridge rgba(0, 0, 0, 1.0)",
-              userSelect: "none",
-              height: "60px",
-              width: "150px",
-              display: "flex",
-              justifyContent: "space-evenly",
-              alignItems: "center",
-              fontSize: "45px",
-              zIndex: 1,
-            }}
-          >
-            <IconButton
-              size="large"
-              className="decButton"
-              onClick={() => decrementPlayerPoints()}
-            >
-              <RemoveIcon
-                sx={{ color: "white", width: "30px", height: "50px" }}
-              />
-            </IconButton>
-            <div
-              style={{
-                color: "white",
-                // color: playerHealth > 19 ? "white" : "red"
-              }}
-            >
-              {playerHealth}
-            </div>
-            <IconButton size="large" onClick={() => incrementPlayerPoints()}>
-              <AddIcon
-                sx={{ color: "white", width: "30px", height: "50px" }}
-                className="incButton"
-              />
-            </IconButton>
-          </div>
-          <div
-            style={{
-              height: "40px",
-              width: "150px",
-              display: "flex",
-              justifyContent: "space-evenly",
-              alignItems: "center",
-              background:
-                "linear-gradient(to right, rgb(5, 117, 230), rgb(2, 27, 121))",
-              fontFamily: "Noto Serif JP, serif",
-              fontSize: "30px",
-              outline: "7px ridge rgba(0, 0, 0, 1.0)",
-              color: "white",
-              zIndex: 1,
-            }}
-          >
-            {reduxCurrentPlayPoints} / {reduxMaxPlayPoints}
-            {/* <div>
-              <Badge color="info" size="small" badgeContent={ep}>
-                <div
-                  style={{
-                    fontFamily: "Noto Serif JP, serif",
-                    fontSize: "17px",
-                  }}
-                >
-                  EP
-                </div>
 
-                <input
-                  value={ep}
-                  onChange={handleEP}
-                  type="number"
-                  min={0}
-                  style={{
-                    position: "absolute",
-                    zIndex: 10,
-                    top: "0px",
-                    left: "30px",
-                    width: "15px",
-                    fontSize: "20px",
-                    fontFamily: "Noto Serif JP, serif",
-                    textAlign: "center",
-                    backgroundColor: "transparent",
-                    color: "transparent",
-                    border: "none",
-                    outline: "none",
-                    transform: "rotateY(180deg)",
-                  }}
-                />
-              </Badge>
-            </div> */}
-          </div>
-          <div
-            style={{
-              height: "30px",
-              width: "150px",
-              display: "flex",
-              justifyContent: "space-evenly",
-              alignItems: "center",
-              background:
-                "linear-gradient(to right, rgb(5, 117, 230), rgb(2, 27, 121))",
-              fontFamily: "Noto Serif JP, serif",
-              fontSize: "30px",
-              outline: "3px ridge rgba(0, 0, 0, 1.0)",
-              color: "white",
-              zIndex: 1,
-            }}
+      {/* Secondary: HP, play points, EP, super-evo grouped together. */}
+      <div className="statRibbon">
+        <div className="hpBlock" style={{ background: getColorFromLeader(name) }}>
+          <IconButton
+            size="small"
+            className="hpAdjust decButton"
+            onClick={() => decrementPlayerPoints()}
           >
-            <div
-              style={{
-                fontFamily: "Noto Serif JP, serif",
-                fontSize: "17px",
-              }}
-            >
-              EP
-            </div>
+            <RemoveIcon sx={{ color: "white", width: "26px", height: "26px" }} />
+          </IconButton>
+          <span className="hpValue">{playerHealth}</span>
+          <IconButton
+            size="small"
+            className="hpAdjust incButton"
+            onClick={() => incrementPlayerPoints()}
+          >
+            <AddIcon sx={{ color: "white", width: "26px", height: "26px" }} />
+          </IconButton>
+        </div>
+
+        <div className="ppEpStack">
+          <div className="ppPill">
+            {reduxCurrentPlayPoints} / {reduxMaxPlayPoints}
+          </div>
+          <div className="epRow">
+            <span className="epLabel">EP</span>
             <StyledRating
               name="customized-color"
               value={ep}
-              // precision={1}
               max={3}
-              // onChange={(event) => handleEP(event)}
               onChange={(event, newValue) => {
                 handleEP(newValue);
               }}
@@ -398,26 +297,14 @@ export default function PlayerUI({ name }) {
               emptyIcon={<FiberManualRecordOutlinedIcon fontSize="inherit" />}
             />
           </div>
-          <div
-            style={{
-              cursor: "pointer",
-              height: "50px",
-              width: "100px",
-              zIndex: 1,
-            }}
-            onClick={() => handleSuperEvo()}
-          >
-            {superEvo && (
-              <div>
-                <img height={50} width={100} src={sepOn} alt={"sep"} />
-              </div>
-            )}
-            {!superEvo && (
-              <div>
-                <img height={50} width={100} src={sepOff} alt={"sep"} />
-              </div>
-            )}
-          </div>
+        </div>
+
+        <div
+          className="evoBlock"
+          onClick={() => handleSuperEvo()}
+          title="Super Evolve"
+        >
+          <img src={superEvo ? sepOn : sepOff} alt="super evo" />
         </div>
       </div>
     </div>

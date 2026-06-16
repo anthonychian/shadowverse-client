@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import imageSiLong from "../../assets/leaders/SiLong.png";
 import imageForte from "../../assets/leaders/Forte.png";
 import imageGalmieux from "../../assets/leaders/Galmieux.png";
-import imageDrache from "../../assets/leaders/Drache.png";
 import imageLishenna from "../../assets/leaders/Lishenna.png";
 import imageCeridwen from "../../assets/leaders/Ceridwen.png";
 import imageKuon from "../../assets/leaders/Kuon.png";
@@ -12,8 +11,6 @@ import imageDaria from "../../assets/leaders/Daria.png";
 import imageBunny from "../../assets/leaders/Bunny.png";
 import imageAlbert from "../../assets/leaders/Albert.png";
 import imageSekka from "../../assets/leaders/Sekka.png";
-import imageHozumi from "../../assets/leaders/Hozumi.png";
-import imageOrchis from "../../assets/leaders/Orchis.png";
 import imageCC from "../../assets/leaders/CC.png";
 import imageIcy from "../../assets/leaders/Icy.png";
 import imageAnisage from "../../assets/leaders/Anisage.png";
@@ -50,6 +47,7 @@ import shutenCardBack from "../../assets/cardbacks/shuten.png";
 import tidalgunnerCardBack from "../../assets/cardbacks/tidalgunner.png";
 import viridiaCardBack from "../../assets/cardbacks/viridia.png";
 import wilbertCardBack from "../../assets/cardbacks/wilbert.png";
+import { SVGDB_LEADER_PORTRAIT } from "./leaderIds";
 import { artImage, artThumb } from "../../decks/getCards";
 
 import useMediaQuery from "@mui/material/useMediaQuery";
@@ -642,18 +640,6 @@ export default function Selection({ setSelectedOption }) {
                 selectLeader(e);
               }}
             >
-              <img width="100px" src={imageDrache} alt="Drache" />
-            </IconButton>
-            <IconButton
-              sx={{
-                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
-                color: "white",
-                backgroundColor: "rgba(0, 0, 0, 0.6)",
-              }}
-              onClick={(e) => {
-                selectLeader(e);
-              }}
-            >
               <img width="100px" src={imageForte} alt="Forte" />
             </IconButton>
             <IconButton
@@ -762,18 +748,6 @@ export default function Selection({ setSelectedOption }) {
                 selectLeader(e);
               }}
             >
-              <img width="100px" src={imageHozumi} alt="Hozumi" />
-            </IconButton>
-            <IconButton
-              sx={{
-                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
-                color: "white",
-                backgroundColor: "rgba(0, 0, 0, 0.6)",
-              }}
-              onClick={(e) => {
-                selectLeader(e);
-              }}
-            >
               <img width="100px" src={imageCC} alt="CC" />
             </IconButton>
             <IconButton
@@ -786,7 +760,11 @@ export default function Selection({ setSelectedOption }) {
                 selectLeader(e);
               }}
             >
-              <img width="100px" src={imageOrchis} alt="Orchis" />
+              <img
+                width="100px"
+                src={SVGDB_LEADER_PORTRAIT.Piercye}
+                alt="Piercye"
+              />
             </IconButton>
             <IconButton
               sx={{
@@ -811,6 +789,18 @@ export default function Selection({ setSelectedOption }) {
               }}
             >
               <img width="100px" src={imageAnisage} alt="Anisage" />
+            </IconButton>
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectLeader(e);
+              }}
+            >
+              <img width="100px" src={SVGDB_LEADER_PORTRAIT.Amy} alt="Amy" />
             </IconButton>
             <IconButton
               sx={{

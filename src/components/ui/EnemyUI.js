@@ -21,6 +21,7 @@ import WifiIcon from "@mui/icons-material/Wifi";
 import sepOn from "../../assets/logo/sep_on.png";
 import sepOff from "../../assets/logo/sep_off.png";
 import "../../css/EnemyUI.css";
+import "../../css/LeaderPanel.css";
 
 const StyledRating = styled(Rating)({
   "& .MuiRating-iconFilled": {
@@ -95,6 +96,8 @@ export default function EnemyUI() {
         return "linear-gradient(-60deg, #16a085 0%, #f4d03f 100%)";
       case "Hozumi":
         return "linear-gradient(-60deg, #16a085 0%, #f4d03f 100%)";
+      case "Piercye":
+        return "linear-gradient(-60deg, #16a085 0%, #f4d03f 100%)";
       case "Bunny":
         return "linear-gradient(110.3deg, rgb(238, 179, 123) 8.7%, rgb(216, 103, 77) 47.5%, rgb(114, 43, 54) 89.1%)";
       case "Albert":
@@ -106,6 +109,8 @@ export default function EnemyUI() {
       case "Vania":
         return "linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(247, 30, 30) 100.3%)";
       case "Mono":
+        return "linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(247, 30, 30) 100.3%)";
+      case "Amy":
         return "linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(247, 30, 30) 100.3%)";
       case "Kuon":
         return "linear-gradient(181deg, rgb(2, 0, 97) 15%, rgb(97, 149, 219) 158.5%)";
@@ -147,6 +152,8 @@ export default function EnemyUI() {
         return forest;
       case "CC":
         return forest;
+      case "Piercye":
+        return forest;
       case "Orchis":
         return forest;
       case "Bunny":
@@ -160,6 +167,8 @@ export default function EnemyUI() {
       case "Vania":
         return abyss;
       case "Mono":
+        return abyss;
+      case "Amy":
         return abyss;
       case "Lishenna":
         return rune;
@@ -187,17 +196,7 @@ export default function EnemyUI() {
   };
 
   return (
-    <div
-      style={{
-        paddingTop: "3em",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        height: "150px",
-        width: "20vw",
-        gap: "1em",
-      }}
-    >
+    <div className="leaderPanel">
       <Snackbar
         anchorOrigin={{ vertical: "top", horizontal: "center" }}
         open={reduxEnemyViewingDeck}
@@ -325,133 +324,58 @@ export default function EnemyUI() {
         />
       </Snackbar>
 
-      <Leader name={reduxEnemyLeader} active={reduxEnemyLeaderActive} />
-
-      {reduxEnemyOnlineStatus ? (
-        <div className={"onlineStatus"}>
-          <WifiIcon sx={{ height: 40, width: 40 }} />
-        </div>
-      ) : (
-        <div className={"offlineStatus"}>
-          <WifiOffIcon sx={{ height: 40, width: 40 }} />
-        </div>
-      )}
-
-      <div style={{ opacity: 0.75 }}>
-        <img
-          height={70}
-          width={70}
-          src={getClassFromLeader(reduxEnemyLeader)}
-          alt={reduxEnemyLeader}
+      {/* Hero: the animated leader with its class logo (and the wifi badge). */}
+      <div className="leaderStageWrap">
+        <Leader
+          name={reduxEnemyLeader}
+          active={reduxEnemyLeaderActive}
+          width={300}
+          height={300}
+          side="enemy"
         />
-      </div>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          flexDirection: "column",
-          gap: "1em",
-        }}
-      >
-        <div
-          style={{
-            fontFamily: "Noto Serif JP, serif",
-            background: getColorFromLeader(reduxEnemyLeader),
-            outline: "7px ridge rgba(0, 0, 0, 1.0)",
-            userSelect: "none",
-            height: "60px",
-            width: "150px",
-            display: "flex",
-            justifyContent: "space-evenly",
-            alignItems: "center",
-            fontSize: "45px",
-            color: "white",
-            zIndex: 1,
-          }}
-        >
-          {reduxEnemyHealth}
-        </div>
-        <div
-          style={{
-            height: "50px",
-            width: "150px",
-            display: "flex",
-            justifyContent: "space-evenly",
-            alignItems: "center",
-            background:
-              "linear-gradient(to right, rgb(5, 117, 230), rgb(2, 27, 121))",
-            fontFamily: "Noto Serif JP, serif",
-            fontSize: "30px",
-            outline: "7px ridge rgba(0, 0, 0, 1.0)",
-            color: "white",
-            zIndex: 1,
-          }}
-        >
-          {reduxCurrentEnemyPlayPoints} / {reduxMaxEnemyPlayPoints}
-          {/* <div>
-            <Badge color="info" size="small" badgeContent={reduxEnemyEvoPoints}>
-              <div
-                style={{
-                  fontFamily: "Noto Serif JP, serif",
-                  fontSize: "17px",
-                }}
-              >
-                EP
-              </div>
-            </Badge>
-          </div> */}
-        </div>
-        <div
-          style={{
-            height: "30px",
-            width: "150px",
-            display: "flex",
-            justifyContent: "space-evenly",
-            alignItems: "center",
-            background:
-              "linear-gradient(to right, rgb(5, 117, 230), rgb(2, 27, 121))",
-            fontFamily: "Noto Serif JP, serif",
-            fontSize: "30px",
-            outline: "3px ridge rgba(0, 0, 0, 1.0)",
-            color: "white",
-            zIndex: 1,
-          }}
-        >
-          <div
-            style={{
-              fontFamily: "Noto Serif JP, serif",
-              fontSize: "17px",
-            }}
-          >
-            EP
-          </div>
-          <StyledRating
-            name="customized-color"
-            value={reduxEnemyEvoPoints}
-            readOnly={true}
-            max={3}
-            icon={<FiberManualRecordIcon fontSize="inherit" />}
-            emptyIcon={<FiberManualRecordOutlinedIcon fontSize="inherit" />}
+
+        <div className="classBadge">
+          <img
+            src={getClassFromLeader(reduxEnemyLeader)}
+            alt={reduxEnemyLeader}
           />
         </div>
+
+        {!reduxEnemyOnlineStatus && (
+          <div className="wifiBadge wifiOff" title="Disconnected">
+            <WifiOffIcon sx={{ height: 22, width: 22 }} />
+          </div>
+        )}
+      </div>
+
+      {/* Secondary: HP, play points, EP, super-evo grouped together (read-only). */}
+      <div className="statRibbon">
         <div
-          style={{
-            height: "50px",
-            width: "100px",
-            zIndex: 1,
-          }}
+          className="hpBlock"
+          style={{ background: getColorFromLeader(reduxEnemyLeader) }}
         >
-          {reduxEnemySuperEvo && (
-            <div>
-              <img height={50} width={100} src={sepOn} alt="sep" />
-            </div>
-          )}
-          {!reduxEnemySuperEvo && (
-            <div>
-              <img height={50} width={100} src={sepOff} alt="sep" />
-            </div>
-          )}
+          <span className="hpValue">{reduxEnemyHealth}</span>
+        </div>
+
+        <div className="ppEpStack">
+          <div className="ppPill">
+            {reduxCurrentEnemyPlayPoints} / {reduxMaxEnemyPlayPoints}
+          </div>
+          <div className="epRow">
+            <span className="epLabel">EP</span>
+            <StyledRating
+              name="customized-color"
+              value={reduxEnemyEvoPoints}
+              readOnly={true}
+              max={3}
+              icon={<FiberManualRecordIcon fontSize="inherit" />}
+              emptyIcon={<FiberManualRecordOutlinedIcon fontSize="inherit" />}
+            />
+          </div>
+        </div>
+
+        <div className="evoBlock evoStatic">
+          <img src={reduxEnemySuperEvo ? sepOn : sepOff} alt="super evo" />
         </div>
       </div>
     </div>
