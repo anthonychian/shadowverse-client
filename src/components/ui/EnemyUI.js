@@ -1,9 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Snackbar, SnackbarContent } from "@mui/material/";
-import { motion } from "framer-motion";
-import Dice from "react-dice-roll";
-import { useDispatch, useSelector } from "react-redux";
-import { setEnemyDice } from "../../redux/CardSlice";
+import { useSelector } from "react-redux";
 import Leader from "./Leader";
 import sword from "../../assets/logo/sword.png";
 import forest from "../../assets/logo/forest.png";
@@ -36,7 +33,6 @@ const StyledRating = styled(Rating)({
 });
 
 export default function EnemyUI() {
-  const dispatch = useDispatch();
   const reduxCurrentEnemyPlayPoints = useSelector(
     (state) => state.card.enemyPlayPoints.available,
   );
@@ -73,21 +69,9 @@ export default function EnemyUI() {
   const reduxEnemyViewingHand = useSelector(
     (state) => state.card.enemyViewingHand,
   );
-  const reduxEnemyDice = useSelector((state) => state.card.enemyDice);
   const reduxEnemyOnlineStatus = useSelector(
     (state) => state.card.enemyOnlineStatus,
   );
-
-  useEffect(() => {
-    if (reduxEnemyDice.show) {
-      const timeoutId = setTimeout(() => {
-        dispatch(setEnemyDice({ show: false, roll: 1 }));
-      }, 2000);
-
-      // Cleanup function to clear the timeout if the component unmounts
-      return () => clearTimeout(timeoutId);
-    }
-  }, [reduxEnemyDice]);
 
   const getColorFromLeader = (name) => {
     switch (name) {
@@ -341,22 +325,6 @@ export default function EnemyUI() {
         />
       </Snackbar>
 
-      <div style={{ height: "60px", width: "60px" }}>
-        {reduxEnemyDice.show && (
-          <motion.div
-            id="dice"
-            initial={{ opacity: 1.0 }}
-            transition={{ delay: 1, duration: 1 }}
-            animate={{ opacity: 0.0 }}
-          >
-            <Dice
-              defaultValue={reduxEnemyDice.roll}
-              size={60}
-              faceBg={"transparent"}
-            />
-          </motion.div>
-        )}
-      </div>
       <Leader name={reduxEnemyLeader} active={reduxEnemyLeaderActive} />
 
       {reduxEnemyOnlineStatus ? (

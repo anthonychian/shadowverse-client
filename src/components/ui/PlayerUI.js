@@ -7,7 +7,6 @@ import {
   setHealth,
   setEvoPoints,
   setSuperEvoActive,
-  setDice,
 } from "../../redux/CardSlice";
 import { socket } from "../../sockets";
 import Leader from "./Leader";
@@ -20,8 +19,6 @@ import rune from "../../assets/logo/rune.png";
 import umamusume from "../../assets/logo/umamusume.png";
 import idolmaster from "../../assets/logo/idolmaster.png";
 import vanguard from "../../assets/logo/vanguard.png";
-import Dice from "react-dice-roll";
-import { motion } from "framer-motion";
 
 import { styled } from "@mui/material/styles";
 import Rating from "@mui/material/Rating";
@@ -61,7 +58,6 @@ export default function PlayerUI({ name }) {
   const reduxCurrentPlayPoints = useSelector(
     (state) => state.card.playPoints.available,
   );
-  const reduxShowDice = useSelector((state) => state.card.showDice);
   const reduxLeaderActive = useSelector((state) => state.card.leaderActive);
   const reduxRoom = useSelector((state) => state.card.room);
   const reduxSelfOnlineStatus = useSelector(
@@ -106,11 +102,6 @@ export default function PlayerUI({ name }) {
       data: !superEvo,
       room: reduxRoom,
     });
-  };
-
-  const handleDiceRoll = (value) => {
-    console.log(value);
-    dispatch(setDice({ show: true, roll: value }));
   };
 
   // const incrementEP = () => {
@@ -245,17 +236,6 @@ export default function PlayerUI({ name }) {
         gap: "1em",
       }}
     >
-      <div style={{ height: "60px", width: "60px" }}>
-        {reduxShowDice && (
-          <motion.div>
-            <Dice
-              size={60}
-              faceBg={"transparent"}
-              onRoll={(value) => handleDiceRoll(value)}
-            />
-          </motion.div>
-        )}
-      </div>
       <Leader name={name} active={reduxLeaderActive} />
 
       {reduxSelfOnlineStatus ? (

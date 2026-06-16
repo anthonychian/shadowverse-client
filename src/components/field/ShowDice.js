@@ -1,23 +1,27 @@
 import React from "react";
 import dice from "../../assets/logo/dice.png";
-import { useDispatch, useSelector } from "react-redux";
-import { setShowDice } from "../../redux/CardSlice";
+import { useDispatch } from "react-redux";
+import { setDice } from "../../redux/CardSlice";
+import { playDiceRoll } from "./diceBus";
 
 import img from "../../assets/pin_bellringer_angel.png";
 
 export default function ShowDice() {
   const dispatch = useDispatch();
-  const reduxShowDice = useSelector((state) => state.card.showDice);
 
-  const handleToggle = () => {
-    if (reduxShowDice) dispatch(setShowDice(false));
-    else dispatch(setShowDice(true));
+  // Roll 1-6: log + broadcast the result to the opponent (setDice), and play the
+  // toss animation locally. The opponent replays the same toss off the synced
+  // value, so both players see the same throw and the same result.
+  const handleRoll = () => {
+    const value = 1 + Math.floor(Math.random() * 6);
+    dispatch(setDice({ show: true, roll: value }));
+    playDiceRoll(value);
   };
 
   return (
     <>
       <div
-        onClick={handleToggle}
+        onClick={handleRoll}
         style={{
           cursor: `url(${img}) 55 55, auto`,
         }}

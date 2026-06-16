@@ -24,6 +24,7 @@ import {
   setCurrentCardIndex,
   setViewingCemetery,
 } from "../../redux/CardSlice";
+import { registerCemetery } from "./handDrag";
 // import cardback from "../../assets/cardbacks/default.png";
 import "../../css/Card.css";
 
@@ -152,6 +153,7 @@ export default function Cemetery({
   return (
     <>
       <div
+        ref={(el) => registerCemetery(el)}
         onClick={handleModalOpen}
         style={{
           // height: "160px",

@@ -20,6 +20,8 @@ import {
   setViewingDeckLog,
 } from "../../redux/CardSlice";
 import { Menu, MenuItem, Modal, Box, Popover } from "@mui/material";
+import { triggerGameAnimation } from "./animationBus";
+import { DeckFx } from "./GameFx";
 
 import CardMUI from "@mui/material/Card";
 import Card from "../hand/Card";
@@ -169,9 +171,18 @@ export default function Deck({
     handleModalRevealOpen();
   };
 
+  // Draw the top card, and play a draw animation (on both boards) when there's
+  // actually a card to draw. Shared by the deck click and the "Draw" menu item.
+  const doDraw = () => {
+    if (reduxDeck.length === 0) return;
+    dispatch(drawFromDeck());
+    triggerGameAnimation("draw", reduxRoom);
+  };
+
   const handleShuffle = () => {
     // handlePopoverClose();
     dispatch(shuffleDeck());
+    if (reduxDeck.length > 0) triggerGameAnimation("shuffle", reduxRoom);
   };
 
   const handleMulligan = () => {
@@ -180,12 +191,13 @@ export default function Deck({
   };
 
   const handleDraw = () => {
-    dispatch(drawFromDeck());
+    doDraw();
   };
 
   const handleDrawFour = () => {
     // handlePopoverClose();
     dispatch(drawFourFromDeck());
+    if (reduxDeck.length > 0) triggerGameAnimation("draw", reduxRoom);
   };
 
   const handleShuffleHand = () => {
@@ -385,13 +397,15 @@ export default function Deck({
       <div
         onMouseEnter={(event) => handlePopoverOpen(event)}
         onClick={() => {
-          if (!ready) dispatch(drawFromDeck());
+          if (!ready) doDraw();
         }}
         style={{
           cursor: `url(${img}) 55 55, auto`,
+          position: "relative",
         }}
       >
         <img className={"cardStyle"} src={cardback} alt={"cardback"} />
+        <DeckFx side="player" />
       </div>
 
       <Popover

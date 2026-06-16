@@ -108,6 +108,11 @@ import useHeartbeat from "../hooks/useHeartbeat";
 
 import Token from "./Token";
 import ShowDice from "./ShowDice";
+import { playGameAnimation, triggerGameAnimation } from "./animationBus";
+import { DeckFx, EvoLayer } from "./GameFx";
+import { registerFieldGrid } from "./handDrag";
+import FieldDropHints from "./FieldDropHints";
+import DiceRoll from "./DiceRoll";
 
 import defaultCardBack from "../../assets/cardbacks/default.png";
 import aeneaCardBack from "../../assets/cardbacks/aenea.png";
@@ -427,6 +432,11 @@ export default function Field({
         case "chat":
           dispatch(setEnemyChat(update.data));
           dispatch(setLastChatMessage(update.data));
+          break;
+        case "animate":
+          // Cosmetic-only effect the opponent played (draw / shuffle / evolve).
+          // Replay it on their half of our board so both players see it.
+          playGameAnimation({ kind: update.data, side: "enemy" });
           break;
         case "full_state_sync":
           // Handle full state synchronization (used on reconnection)
@@ -812,6 +822,7 @@ export default function Field({
             index: indexClicked,
           }),
         );
+        triggerGameAnimation("evolve", reduxCurrentRoom);
       }
       if (readyToRide) {
         setReadyToRide(false);
@@ -1036,6 +1047,75 @@ export default function Field({
         index: index,
       }),
     );
+  };
+
+  // Shared move logic (base or evo) used by drag-to-move. Mirrors the
+  // readyToMove* click flow: move the card plus its values/counters/engaged/
+  // status to the new slot, then clear the old slot.
+  const moveFieldCard = (cardName, fromIndex, toIndex, isEvo) => {
+    if (isEvo) {
+      dispatch(
+        moveEvoAndBaseOnField({
+          card: cardName,
+          evoCard: cardName,
+          prevIndex: fromIndex,
+          index: toIndex,
+        }),
+      );
+    } else {
+      dispatch(
+        moveCardOnField({ card: cardName, prevIndex: fromIndex, index: toIndex }),
+      );
+    }
+    dispatch(moveValuesAtIndex({ prevIndex: fromIndex, index: toIndex }));
+    dispatch(moveCountersAtIndex({ prevIndex: fromIndex, index: toIndex }));
+    dispatch(moveEngagedAtIndex({ prevIndex: fromIndex, index: toIndex }));
+    dispatch(moveStatusAtIndex({ prevIndex: fromIndex, index: toIndex }));
+    dispatch(clearValuesAtIndex(fromIndex));
+    dispatch(clearEngagedAtIndex(fromIndex));
+    dispatch(clearCountersAtIndex(fromIndex));
+    dispatch(clearStatusAtIndex(fromIndex));
+  };
+
+  const clearFieldSlot = (i) => {
+    dispatch(clearValuesAtIndex(i));
+    dispatch(clearEngagedAtIndex(i));
+    dispatch(clearCountersAtIndex(i));
+    dispatch(clearStatusAtIndex(i));
+  };
+
+  // Drop handler for dragging the player's own field cards. `dest` is one of:
+  //   { type: "field", index } -> move to an empty slot
+  //   { type: "cemetery" }     -> send to cemetery
+  //   { type: "hand" }         -> return to hand
+  // Anything invalid is a no-op (the card snaps back). Cemetery/Hand mirror the
+  // right-click menu, which only offers them for base cards — the underlying
+  // reducers don't unwind an evolved stack — so those are skipped for evo cards.
+  const handleFieldDrop = (fromIndex, dest) => {
+    const isEvo = reduxEvoField[fromIndex] !== 0;
+    if (dest.type === "cemetery") {
+      if (isEvo) return;
+      const card = reduxField[fromIndex];
+      if (!card) return;
+      dispatch(placeToCemeteryFromField({ card, index: fromIndex }));
+      clearFieldSlot(fromIndex);
+      return;
+    }
+    if (dest.type === "hand") {
+      if (isEvo) return;
+      const card = reduxField[fromIndex];
+      if (!card) return;
+      dispatch(addToHandFromField({ card, index: fromIndex }));
+      clearFieldSlot(fromIndex);
+      return;
+    }
+    // field move
+    const toIndex = dest.index;
+    if (toIndex < 0 || toIndex === fromIndex) return;
+    if (reduxField[toIndex] !== 0) return;
+    const cardName = isEvo ? reduxEvoField[fromIndex] : reduxField[fromIndex];
+    if (!cardName || cardName === 0) return;
+    moveFieldCard(cardName, fromIndex, toIndex, isEvo);
   };
 
   const handleMoveOnField = () => {
@@ -1430,30 +1510,52 @@ export default function Field({
               width: `${BASE_WIDTH}px`,
               display: "flex",
               flexDirection: "row",
-              minHeight: "130px",
+              // Reserve one card's height at all times (cardbacks are 161px tall,
+              // see .cardStyle). The old 130px minHeight was shorter than a card,
+              // so the opponent drawing their first card (or playing their last)
+              // grew this row ~31px and shoved the whole board down for the
+              // viewer. A constant height keeps the board fixed, matching the
+              // player-side hand fix.
+              height: "161px",
               justifyContent: "center",
               alignItems: "center",
               paddingBottom: "2em",
             }}
           >
-            {reduxEnemyHand.map((_, idx) => (
-              <img
-                style={
-                  reduxCardSelectedInHand === idx
-                    ? {
-                        filter:
-                          "sepia() saturate(4) hue-rotate(315deg) brightness(100%) opacity(5)",
-                        cursor: `url(${img}) 55 55, auto`,
-                      }
-                    : { cursor: `url(${img}) 55 55, auto` }
-                }
-                key={idx}
-                className={"cardStyle"}
-                src={cardback}
-                alt={"cardback"}
-                onClick={() => handleSelectEnemyCardInHand(idx)}
-              />
-            ))}
+            {reduxEnemyHand.map((_, idx) => {
+              // Keep the opponent's hand within the board width: while the cards
+              // fit they sit side by side, but once they'd overflow (cardbacks
+              // are 115px wide, so ~10 cards for the 1100px board) a shared
+              // negative margin overlaps them so the hand stays within BASE_WIDTH.
+              const n = reduxEnemyHand.length;
+              const ENEMY_CARD_W = 115;
+              const overlap =
+                n > 1
+                  ? Math.max(0, (n * ENEMY_CARD_W - BASE_WIDTH) / (n - 1))
+                  : 0;
+              const baseStyle = {
+                cursor: `url(${img}) 55 55, auto`,
+                marginLeft: idx === 0 ? 0 : -overlap,
+              };
+              return (
+                <img
+                  style={
+                    reduxCardSelectedInHand === idx
+                      ? {
+                          ...baseStyle,
+                          filter:
+                            "sepia() saturate(4) hue-rotate(315deg) brightness(100%) opacity(5)",
+                        }
+                      : baseStyle
+                  }
+                  key={idx}
+                  className={"cardStyle"}
+                  src={cardback}
+                  alt={"cardback"}
+                  onClick={() => handleSelectEnemyCardInHand(idx)}
+                />
+              );
+            })}
           </div>
         </div>
 
@@ -1512,6 +1614,7 @@ export default function Field({
             >
               <img className={"cardStyle"} src={cardback} alt={"cardback"} />
             </div>
+            <DeckFx side="enemy" />
             {/* {showOpponentDeckSize && ( */}
             <div
               style={{
@@ -1715,6 +1818,7 @@ export default function Field({
         </div>
         {/* Player Field (1-5) & Ex Area (6-10) */}
         <div
+          ref={(el) => registerFieldGrid(el)}
           style={{
             height: "35vh",
             minHeight: "330px",
@@ -1869,6 +1973,7 @@ export default function Field({
                       name={reduxField[idx]}
                       setHovering={setHovering}
                       ready={ready}
+                      onFieldDrop={handleFieldDrop}
                     />
                   )}
                   {reduxEvoField[idx] !== 0 && (
@@ -1890,6 +1995,7 @@ export default function Field({
                       setHovering={setHovering}
                       ready={ready}
                       cardBeneath={reduxField[idx]}
+                      onFieldDrop={handleFieldDrop}
                     />
                   )}
                 </div>
@@ -1951,6 +2057,12 @@ export default function Field({
           </div>
         </div>
       </div>
+      {/* Board-wide overlay for the evolve burst (positioned per side). */}
+      <EvoLayer />
+      {/* Drop-zone hints shown while dragging a card from the hand. */}
+      <FieldDropHints />
+      {/* Dice toss animation (shown to both players). */}
+      <DiceRoll />
         </div>
       </div>
       </div>

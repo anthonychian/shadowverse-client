@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Card from "./Card";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -10,6 +10,7 @@ import {
 } from "../../redux/CardSlice";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import { registerHand } from "../field/handDrag";
 
 export default function Hand({
   constraintsRef,
@@ -19,20 +20,31 @@ export default function Hand({
   setHovering,
 }) {
   const reduxHand = useSelector((state) => state.card.hand);
-  const [items, setItems] = useState(reduxHand);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    setItems(arrToObjArr(reduxHand));
-  }, [reduxHand]);
+  // Give every hand card a fresh unique id whenever the hand changes, and key by
+  // that id (not the array index). With index keys, removing a card (e.g.
+  // playing one) shifts every later card's key, so React reuses the dragged
+  // card's motion instance for a different card — which then inherits the
+  // leftover drag transform and visibly flies toward the drop zone before
+  // snapping back. Unique ids unmount the played card's instance cleanly, so no
+  // other card ever picks up its transform.
+  const idCounterRef = useRef(0);
+  const [items, setItems] = useState(() =>
+    reduxHand.map((name) => ({ id: idCounterRef.current++, name }))
+  );
 
-  const arrToObjArr = (arr) => {
-    return arr.map((x, idx) => ({ idx: idx, name: x }));
-  };
+  useEffect(() => {
+    setItems(reduxHand.map((name) => ({ id: idCounterRef.current++, name })));
+  }, [reduxHand]);
 
   const [contextMenu, setContextMenu] = React.useState(null);
   const [name, setName] = useState("");
   const [cardIndex, setCardIndex] = useState(-1);
+  // While a card is being dragged out of the hand we must not clip it: the hand
+  // becomes a scroll/clip container once it holds >9 cards, which would cut off
+  // a card dragged upward toward the field.
+  const [dragging, setDragging] = useState(false);
 
   const handleContextMenu = (event, name, index) => {
     setName(name);
@@ -90,16 +102,23 @@ export default function Hand({
         {/* <MenuItem onClick={handleShowHand}>Show Hand</MenuItem> */}
       </Menu>
       <div
+        ref={(el) => registerHand(el)}
         style={{
           zIndex: 100,
           display: "flex",
-          // height: "20em",
+          // Reserve one card's height at all times (cards are 161px tall, see
+          // .cardStyle). Without this the row collapses to 0 when the hand is
+          // empty and jumps to full height on the first card, reflowing the flex
+          // column above it and shoving the whole board. A constant height keeps
+          // the board (and every other div) fixed; the populated look is
+          // unchanged. overflow stays visible so a hover-lifted card isn't clipped.
+          height: "161px",
           width: "50vw",
           alignItems: "start",
           justifyContent: "center",
           // justifyContent: "flex-start",
-          overflowX: reduxHand.length > 9 ? "scroll" : "visible",
-          overflowY: reduxHand.length > 9 ? "clip" : "visible",
+          overflowX: dragging ? "visible" : reduxHand.length > 9 ? "scroll" : "visible",
+          overflowY: dragging ? "visible" : reduxHand.length > 9 ? "clip" : "visible",
         }}
       >
         {items.map((card, index) => (
@@ -107,7 +126,7 @@ export default function Hand({
             onContextMenu={(e) => {
               if (!ready) handleContextMenu(e, card.name, index);
             }}
-            key={card.idx}
+            key={card.id}
             value={card}
           >
             <Card
@@ -118,6 +137,9 @@ export default function Hand({
               setHovering={setHovering}
               ready={ready}
               inHand={true}
+              handDragging={dragging}
+              onCardDragStart={() => setDragging(true)}
+              onCardDragEnd={() => setDragging(false)}
             />
           </div>
         ))}

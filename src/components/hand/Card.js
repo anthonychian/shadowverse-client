@@ -1,14 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { artImage, artThumb } from "../../decks/getCards";
-import { motion } from "framer-motion";
+import { motion, useDragControls } from "framer-motion";
 import {
   modifyAtk,
   modifyDef,
   setCurrentCard,
   modifyCounter,
   setEngaged,
+  placeToFieldFromHand,
+  placeToCemeteryFromHand,
 } from "../../redux/CardSlice";
 import { useDispatch, useSelector } from "react-redux";
+import {
+  fieldIndexAt,
+  isOverCemetery,
+  isOverHand,
+  setDragHover,
+} from "../field/handDrag";
 import cancel from "../../assets/logo/cancel.png";
 import carrot from "../../assets/logo/carrot.png";
 import drive from "../../assets/logo/drive.png";
@@ -17,6 +25,11 @@ import atkImg from "../../assets/logo/atk.png";
 import defImg from "../../assets/logo/def.png";
 
 import "../../css/Card.css";
+
+// How far (px) a field card must be dragged before it starts moving. Below this
+// the gesture is treated as a tap (engage), so tapping stays reliable and only a
+// deliberate drag relocates the card.
+const FIELD_DRAG_THRESHOLD = 10;
 
 export default function Card({
   name,
@@ -41,6 +54,11 @@ export default function Card({
   handLength,
   inHand = false,
   inHandIndex = -1,
+  constraintsRef,
+  handDragging = false,
+  onCardDragStart,
+  onCardDragEnd,
+  onFieldDrop,
 }) {
   let numOfCarrots = 0;
   const dispatch = useDispatch();
@@ -68,6 +86,9 @@ export default function Card({
   const reduxEnemyCardSelectedOnField = useSelector(
     (state) => state.card.enemyCardSelectedOnField
   );
+  // Live field state, so a drag-drop only fills an empty zone (mirrors the
+  // click-to-place flow, which also rejects occupied slots).
+  const reduxField = useSelector((state) => state.card.field);
 
   useEffect(() => {
     setAtk(Number(atkVal));
@@ -78,11 +99,180 @@ export default function Card({
     setCounter(Number(counterVal));
   }, [counterVal]);
 
+  // Field drag-to-move uses a manual drag start (dragListener disabled) so we
+  // can require a real drag distance before moving — small movements stay taps.
+  const dragControls = useDragControls();
+  const fieldDragStart = useRef(null);
+  // Set true once a field drag crosses the threshold, so the trailing tap/click
+  // that fires on release doesn't also engage the card. Reset on next press.
+  const suppressTapRef = useRef(false);
+  const fieldDraggable = onField && !opponentField && !ready;
+  // An evolved field card (has a base card beneath). Cemetery/Hand drops are
+  // base-card only, so evo cards can only be moved between field slots.
+  const isEvoFieldCard = onField && !!cardBeneath && cardBeneath !== 0;
+
   const handleTap = () => {
+    if (suppressTapRef.current) {
+      suppressTapRef.current = false;
+      return;
+    }
     if (onField && !opponentField && !ready && !hoverInput) {
       dispatch(setEngaged(idx));
     }
   };
+
+  const handleFieldPointerDown = (e) => {
+    if (e.button !== 0) return; // left button only; leave right-click for menus
+    fieldDragStart.current = { x: e.clientX, y: e.clientY };
+    suppressTapRef.current = false;
+  };
+  const handleFieldPointerMove = (e) => {
+    if (!fieldDragStart.current || suppressTapRef.current) return;
+    // Only while the left button is held — pointermove also fires on plain
+    // hover, which must never start a drag.
+    if (e.buttons !== 1) {
+      fieldDragStart.current = null;
+      return;
+    }
+    const dx = e.clientX - fieldDragStart.current.x;
+    const dy = e.clientY - fieldDragStart.current.y;
+    if (Math.hypot(dx, dy) > FIELD_DRAG_THRESHOLD) {
+      suppressTapRef.current = true;
+      dragControls.start(e);
+    }
+  };
+  const handleFieldPointerUp = () => {
+    fieldDragStart.current = null;
+  };
+  // Base field cards can also go to the cemetery or back to hand; evo cards can
+  // only be moved between slots.
+  const fieldExtraTargets = !isEvoFieldCard;
+  const handleFieldDragStart = () => {
+    setDragHover({
+      active: true,
+      index: -1,
+      cemetery: false,
+      hand: false,
+      showCemetery: fieldExtraTargets,
+      showHand: fieldExtraTargets,
+    });
+  };
+  const handleFieldDrag = (_event, info) => {
+    const { x, y } = info.point;
+    setDragHover({
+      active: true,
+      index: fieldIndexAt(x, y),
+      cemetery: fieldExtraTargets && isOverCemetery(x, y),
+      hand: fieldExtraTargets && isOverHand(x, y),
+      showCemetery: fieldExtraTargets,
+      showHand: fieldExtraTargets,
+    });
+  };
+  const handleFieldDragEnd = (_event, info) => {
+    setDragHover({
+      active: false,
+      index: -1,
+      cemetery: false,
+      hand: false,
+      showCemetery: false,
+      showHand: false,
+    });
+    if (!onFieldDrop) return;
+    const { x, y } = info.point;
+    let dest;
+    if (fieldExtraTargets && isOverCemetery(x, y)) dest = { type: "cemetery" };
+    else if (fieldExtraTargets && isOverHand(x, y)) dest = { type: "hand" };
+    else dest = { type: "field", index: fieldIndexAt(x, y) };
+    onFieldDrop(idx, dest);
+  };
+
+  // ---- drag a hand card onto a field zone or the cemetery ----
+  // Dropping over an empty field zone plays the card there; dropping over the
+  // cemetery pile discards it; anywhere else snaps it back to the hand
+  // (dragSnapToOrigin). These mirror the right-click "Field"/"Cemetery" menu
+  // actions and coexist with the click-to-place flow.
+  const handleCardDragStart = () => {
+    if (onCardDragStart) onCardDragStart();
+    setDragHover({
+      active: true,
+      index: -1,
+      cemetery: false,
+      hand: false,
+      showCemetery: true,
+      showHand: false,
+    });
+  };
+  const handleCardDrag = (_event, info) => {
+    setDragHover({
+      active: true,
+      index: fieldIndexAt(info.point.x, info.point.y),
+      cemetery: isOverCemetery(info.point.x, info.point.y),
+      hand: false,
+      showCemetery: true,
+      showHand: false,
+    });
+  };
+  const handleCardDragEnd = (_event, info) => {
+    setDragHover({
+      active: false,
+      index: -1,
+      cemetery: false,
+      hand: false,
+      showCemetery: false,
+      showHand: false,
+    });
+    if (onCardDragEnd) onCardDragEnd();
+    const { x, y } = info.point;
+    if (isOverCemetery(x, y)) {
+      dispatch(placeToCemeteryFromHand({ name: name, index: inHandIndex }));
+      return;
+    }
+    const dropIndex = fieldIndexAt(x, y);
+    if (dropIndex >= 0 && reduxField[dropIndex] === 0) {
+      dispatch(
+        placeToFieldFromHand({
+          card: name,
+          indexInHand: inHandIndex,
+          index: dropIndex,
+        })
+      );
+    }
+  };
+
+  // Drag props differ by where the card lives. Hand cards auto-drag (small
+  // built-in threshold) and drop to a field zone or the cemetery. Field cards
+  // use a manual drag start gated by FIELD_DRAG_THRESHOLD so a tap still
+  // engages; they drop to another field slot to reposition.
+  let dragProps = {};
+  if (inHand && !ready) {
+    dragProps = {
+      drag: true,
+      dragConstraints: constraintsRef,
+      dragSnapToOrigin: true,
+      dragElastic: 0.15,
+      dragMomentum: false,
+      whileDrag: { scale: 1.15, zIndex: 9999, cursor: "grabbing" },
+      onDragStart: handleCardDragStart,
+      onDrag: handleCardDrag,
+      onDragEnd: handleCardDragEnd,
+    };
+  } else if (fieldDraggable) {
+    dragProps = {
+      drag: true,
+      dragListener: false,
+      dragControls: dragControls,
+      dragSnapToOrigin: true,
+      dragElastic: 0.1,
+      dragMomentum: false,
+      whileDrag: { scale: 1.08, zIndex: 9999, cursor: "grabbing" },
+      onPointerDown: handleFieldPointerDown,
+      onPointerMove: handleFieldPointerMove,
+      onPointerUp: handleFieldPointerUp,
+      onDragStart: handleFieldDragStart,
+      onDrag: handleFieldDrag,
+      onDragEnd: handleFieldDragEnd,
+    };
+  }
 
   const handleAtkInput = (event) => {
     setAtk(Number(event.target.value));
@@ -116,6 +306,10 @@ export default function Card({
   };
 
   const handleHoverStart = () => {
+    // While any hand card is being dragged, don't let the pointer passing over
+    // other cards lift them or hijack the zoom preview — the rest of the hand
+    // should stay put.
+    if (handDragging) return;
     setKwHover(true);
     if (!ready) {
       setHovering(true);
@@ -161,24 +355,18 @@ export default function Card({
     <>
       <motion.div
         onTap={handleTap}
+        {...dragProps}
         // Lift the whole card (and its overflowing keyword labels) above
         // neighbouring cards while hovered so the black boxes aren't clipped.
-        style={{ position: "relative", zIndex: kwHover ? 999 : "auto" }}
+        style={{
+          position: "relative",
+          zIndex: kwHover ? 999 : "auto",
+          cursor: `url(${img}) 55 55, auto`,
+        }}
         animate={engaged ? { rotate: -90 } : { rotate: 0 }}
         initial={false}
         onHoverStart={() => handleHoverStart()}
         onHoverEnd={() => handleHoverEnd()}
-        whileHover={
-          !ready && {
-            // boxShadow:
-            //   "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 1.0)",
-            translateY: inHand ? -80 : -25,
-            scale: inHand ? 1.5 : 1.3,
-            cursor: `url(${img}) 55 55, auto`,
-            overlay: "auto",
-            // display: "inline-block",
-          }
-        }
         className={
           cardPos(reduxCardSelectedOnField) === idx && opponentField
             ? "box2"
