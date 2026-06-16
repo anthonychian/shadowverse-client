@@ -5782,8 +5782,6 @@ export const cardImage = (cardName) => {
       return "../textures/NY2024-001EN.png";
     case "Baalt, King of the Elves":
       return "../textures/BP02-010EN.png";
-    case "Carrot Evolved":
-      return "../textures/PR-042EN.png";
     case "Sparkling☆Days":
       return "../textures/CP02-028EN.png";
     case "Riamu's Reverie":

@@ -4799,7 +4799,7 @@
     "effect": "On Evolve - Put a Carbuncle's Sparkle token into your EX area. Give each Carbuncle's Sparkle in your EX area \"This card costs 2 less to play.\"",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
   },
-  "Carrot Evolved": {
+  "Carrot": {
     "class": "neutral",
     "type": "evolved",
     "cardType": "Spell / Evolved",

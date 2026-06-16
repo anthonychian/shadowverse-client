@@ -26,7 +26,6 @@ export const allCardsEvo = [
   "Harbinger of the Night Evolved",
   "Hungry for a Miracle Evolved",
   "Workshop! Farmers for a Day! Evolved",
-  "Carrot Evolved",
   "Marlone, Light of Balance Evolved",
   "Blue Storm Supreme Dragon, Glory Maelstrom Evolved",
   "Albert, Levin Saber Evolved",
@@ -2219,7 +2218,6 @@ export const neutralEvo = [
 
   "Unicorn Dancer Unica Evolved",
 
-  "Carrot Evolved",
 ];
 
 export const set17Evo = [
@@ -2286,7 +2284,7 @@ export const setPREvo = [
   "Lilith Evolved",
   "Priest of the Cudgel Evolved",
   "Crystalia Tia Evolved",
-  "Carrot Evolved",
+  "Carrot",
   "Oathless Knight Evolved",
   "Dragon Summoner Evolved",
   "Dragontamer Evolved",

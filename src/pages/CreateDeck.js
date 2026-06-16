@@ -38,6 +38,12 @@ const CARD_PAGE_SIZE = 60;
 // in the deck-builder pool (game-mechanic markers).
 const HIDDEN_NAMES = new Set(["Evolution Point", "Super-Evolution Point"]);
 
+// Evolve-deck cards exempt from the normal 3-copy cap: their own text lets you
+// run up to a full evolve deck of them (e.g. Carrot: "You can put up to 10 of
+// this card into your evolve deck."). Only the 10-card evolve deck size limits
+// how many of these you can add.
+const UNLIMITED_EVO = new Set(["Carrot", "Drive Point"]);
+
 // Card number (e.g. "BP05-P25EN") -> card name, for translating an external
 // decklist (bushiroad decklog) into the names the builder works with. Built
 // once from the static printings data. First printing wins for a given number.
@@ -198,7 +204,7 @@ export default function CreateDeck() {
   const handleEvoCardSelection = (card) => {
     if (evoDeck.length < 10) {
       if (evoDeckMap.has(card)) {
-        if (evoDeckMap.get(card) === 3 && card !== "Carrot" && card !== "Drive Point") {
+        if (evoDeckMap.get(card) === 3 && !UNLIMITED_EVO.has(card)) {
           return;
         } else {
           evoDeckMap.set(card, evoDeckMap.get(card) + 1);
@@ -230,7 +236,7 @@ export default function CreateDeck() {
   const evoAtLimit = (card) => {
     const c = evoDeckMap.get(card) || 0;
     if (evoDeck.length >= 10) return true;
-    if (card === "Carrot" || card === "Drive Point") return false;
+    if (UNLIMITED_EVO.has(card)) return false;
     return c >= 3;
   };
 
@@ -244,7 +250,7 @@ export default function CreateDeck() {
     return 3;
   };
   const evoCopyMax = (card) => {
-    if (card === "Carrot" || card === "Drive Point") return null;
+    if (UNLIMITED_EVO.has(card)) return null;
     return 3;
   };
 
