@@ -113,14 +113,17 @@ import { DeckFx, EvoLayer } from "./GameFx";
 import {
   registerFieldGrid,
   registerEnemyFieldGrid,
+  registerEnemyHand,
   fieldSlotCenter,
   enemyFieldSlotCenter,
+  enemyHandCenter,
 } from "./handDrag";
 import FieldDropHints from "./FieldDropHints";
 import DiceRoll from "./DiceRoll";
 import PlayReveal from "./PlayReveal";
 import {
   triggerCardReveal,
+  triggerHandReveal,
   playCardReveal,
   onHideChange,
   isHidden,
@@ -454,6 +457,16 @@ export default function Field({
           // Cosmetic-only effect the opponent played (draw / shuffle / evolve).
           // Replay it on their half of our board so both players see it.
           playGameAnimation({ kind: update.data, side: "enemy" });
+          break;
+        case "cardToHand":
+          // Opponent added a card to hand — reveal it centre-screen and fly it
+          // up to their hand (the top hand on our screen).
+          playCardReveal({
+            name: (update.data || {}).name,
+            side: "enemy",
+            kind: "hand",
+            target: enemyHandCenter(),
+          });
           break;
         case "cardPlayed": {
           // Opponent played a card to the field — reveal it centre-screen and
@@ -986,6 +999,7 @@ export default function Field({
     dispatch(clearEngagedAtIndex(index));
     dispatch(clearCountersAtIndex(index));
     dispatch(clearStatusAtIndex(index));
+    triggerHandReveal(name, reduxCurrentRoom);
   };
   const handleCardToTopDeck = () => {
     handleClose();
@@ -1165,6 +1179,7 @@ export default function Field({
       if (!canReturn) return;
       dispatch(addToHandFromField({ card: baseCard, index: fromIndex }));
       clearFieldSlot(fromIndex);
+      triggerHandReveal(baseCard, reduxCurrentRoom);
       return;
     }
     // field move
@@ -1567,6 +1582,7 @@ export default function Field({
           }}
         >
           <div
+            ref={(el) => registerEnemyHand(el)}
             style={{
               width: `${BASE_WIDTH}px`,
               display: "flex",

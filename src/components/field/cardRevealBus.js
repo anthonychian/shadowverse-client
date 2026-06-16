@@ -1,4 +1,5 @@
 import { socket } from "../../sockets";
+import { handCenter } from "./handDrag";
 
 // Pub/sub for the "card played" reveal. When a card is played to the field it's
 // shown large in the centre, flies to its slot, and only *then* becomes visible
@@ -41,12 +42,13 @@ export const onHideChange = (cb) => {
 export const isHidden = (side, index) =>
   (side === "enemy" ? hiddenEnemy : hiddenMine).has(index);
 
-// Play the reveal locally: hide the slot until it lands, and emit the reveal
-// (with the slot's viewport position so the card flies there).
-export const playCardReveal = ({ name, side, index, target }) => {
+// Play the reveal locally. `kind` is "field" (played to a slot — particles, and
+// the slot stays hidden until the reveal lands) or "hand" (added to hand — the
+// card simply flies toward the hand, no particles, no hiding).
+export const playCardReveal = ({ name, side, index, target, kind = "field" }) => {
   if (!name || name === 0) return;
-  hideSlot(side, index);
-  revealListeners.forEach((cb) => cb({ id: ++nextId, name, side, target }));
+  if (kind === "field") hideSlot(side, index);
+  revealListeners.forEach((cb) => cb({ id: ++nextId, name, side, target, kind }));
 };
 
 // Reveal on your own screen AND tell the opponent to reveal it on theirs. Each
@@ -55,4 +57,13 @@ export const triggerCardReveal = (name, room, index, target) => {
   if (!name || name === 0) return;
   playCardReveal({ name, side: "player", index, target });
   if (room) socket.emit("send msg", { type: "cardPlayed", data: { name, index }, room });
+};
+
+// "Added to hand" reveal: shows the card centre-screen, then flies it toward the
+// hand (yours at the bottom, the opponent's at the top). Each side targets its
+// own hand; only the card name travels.
+export const triggerHandReveal = (name, room) => {
+  if (!name || name === 0) return;
+  playCardReveal({ name, side: "player", kind: "hand", target: handCenter() });
+  if (room) socket.emit("send msg", { type: "cardToHand", data: { name }, room });
 };

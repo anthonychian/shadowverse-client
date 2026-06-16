@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { artImage, artThumb } from "../../decks/getCards";
-import { socket } from "../../sockets";
 import {
   Menu,
   MenuItem,
@@ -26,6 +25,7 @@ import {
 } from "../../redux/CardSlice";
 import { registerCemetery } from "./handDrag";
 // import cardback from "../../assets/cardbacks/default.png";
+import { triggerHandReveal } from "./cardRevealBus";
 import "../../css/Card.css";
 
 const img = require("../../assets/pin_bellringer_angel.png");
@@ -106,16 +106,7 @@ export default function Cemetery({
     handleModalClose();
     handleClose();
     dispatch(addToHandFromCemetery({ name: name, index: cardIndex }));
-    socket.emit("send msg", {
-      type: "showCard",
-      data: true,
-      room: reduxRoom,
-    });
-    socket.emit("send msg", {
-      type: "cardRevealed",
-      data: name,
-      room: reduxRoom,
-    });
+    triggerHandReveal(name, reduxRoom);
   };
 
   const handleCardToFieldFromBanish = () => {
@@ -129,16 +120,7 @@ export default function Cemetery({
     handleModalClose();
     handleClose();
     dispatch(addToHandFromBanish({ name: name, index: cardIndex }));
-    socket.emit("send msg", {
-      type: "showCard",
-      data: true,
-      room: reduxRoom,
-    });
-    socket.emit("send msg", {
-      type: "cardRevealed",
-      data: name,
-      room: reduxRoom,
-    });
+    triggerHandReveal(name, reduxRoom);
   };
 
   const handleCemeterySelected = () => {

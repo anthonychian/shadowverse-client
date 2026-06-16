@@ -15,15 +15,16 @@ import { onCardReveal, REVEAL_MS } from "./cardRevealBus";
 const DUR = REVEAL_MS / 1000;
 const PARTICLES = 22;
 
-function RevealCard({ src, side, target }) {
+function RevealCard({ src, side, target, kind }) {
   const vw = typeof window !== "undefined" ? window.innerWidth : 1000;
   const vh = typeof window !== "undefined" ? window.innerHeight : 800;
-  // Vector from screen centre to the slot (where particles converge).
+  // Vector from screen centre to the destination (slot, or the hand).
   const dx = target ? target.x - vw / 2 : 0;
   const dy = target ? target.y - vh / 2 : (side === "player" ? 0.22 : -0.22) * vh;
 
-  // Fixed per-reveal particle layout: each starts scattered over the card and
-  // converges near the slot, staggered slightly.
+  // Fixed per-reveal particle layout (field reveals only): each starts scattered
+  // over the card and converges near the slot, staggered slightly. Computed
+  // before any early return so the hook order stays stable.
   const particles = useMemo(
     () =>
       Array.from({ length: PARTICLES }, () => ({
@@ -37,6 +38,40 @@ function RevealCard({ src, side, target }) {
       })),
     [dx, dy],
   );
+
+  // "Added to hand": no particles — the card itself flips in, then shrinks and
+  // flies toward the hand (down to yours, up to the opponent's) and fades.
+  if (kind === "hand") {
+    return (
+      <div style={{ position: "fixed", left: "50%", top: "50%", width: 0, height: 0 }}>
+        <div style={{ position: "absolute", transform: "translate(-50%, -50%)", perspective: 1200 }}>
+          <motion.div
+            style={{ transformStyle: "preserve-3d" }}
+            initial={{ opacity: 0, scale: 0.6, rotateY: 180, x: 0, y: 0 }}
+            animate={{
+              opacity: [0, 1, 1, 0],
+              scale: [0.6, 1, 1, 0.28],
+              rotateY: [180, 0, 0, 0],
+              x: [0, 0, 0, dx],
+              y: [0, 0, 0, dy],
+            }}
+            transition={{ duration: DUR, times: [0, 0.22, 0.5, 1], ease: "easeInOut" }}
+          >
+            <img
+              src={src}
+              alt="card to hand"
+              style={{
+                height: "42vh",
+                width: "auto",
+                borderRadius: 12,
+                boxShadow: "0 16px 48px rgba(0,0,0,0.75)",
+              }}
+            />
+          </motion.div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div style={{ position: "fixed", left: "50%", top: "50%", width: 0, height: 0 }}>
@@ -131,7 +166,10 @@ export default function PlayReveal() {
       const id = ++idRef.current;
       const art = evt.side === "enemy" ? enemyArt : myArt;
       const src = artImage(evt.name, art);
-      setItems((cur) => [...cur, { id, src, side: evt.side, target: evt.target }]);
+      setItems((cur) => [
+        ...cur,
+        { id, src, side: evt.side, target: evt.target, kind: evt.kind },
+      ]);
       timers.current.push(
         setTimeout(() => setItems((cur) => cur.filter((i) => i.id !== id)), REVEAL_MS + 250),
       );
@@ -150,7 +188,7 @@ export default function PlayReveal() {
   return createPortal(
     <div style={{ position: "fixed", inset: 0, pointerEvents: "none", zIndex: 99998 }}>
       {items.map((it) => (
-        <RevealCard key={it.id} src={it.src} side={it.side} target={it.target} />
+        <RevealCard key={it.id} src={it.src} side={it.side} target={it.target} kind={it.kind} />
       ))}
     </div>,
     document.body,

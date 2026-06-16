@@ -73,6 +73,17 @@ export const isOverHand = (x, y) => {
   return !!r && x >= r.left && x <= r.right && y >= r.top && y <= r.bottom;
 };
 
+// The opponent's hand row (top of the screen), registered by Field. Lets the
+// "added to hand" reveal fly toward the right hand on each screen.
+let enemyHandEl = null;
+export const registerEnemyHand = (el) => {
+  enemyHandEl = el || null;
+};
+const rectCenter = (r) => (r ? { x: r.left + r.width / 2, y: r.top + r.height / 2 } : null);
+export const handCenter = () => rectCenter(getHandRect());
+export const enemyHandCenter = () =>
+  rectCenter(enemyHandEl ? enemyHandEl.getBoundingClientRect() : null);
+
 // Hover bus: the dragged card publishes its live state ({ active, index,
 // cemetery, hand, showCemetery, showHand }); the drop-hint overlay subscribes.
 const hoverListeners = new Set();

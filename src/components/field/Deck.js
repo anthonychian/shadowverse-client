@@ -21,6 +21,7 @@ import {
 } from "../../redux/CardSlice";
 import { Menu, MenuItem, Modal, Box, Popover } from "@mui/material";
 import { triggerGameAnimation } from "./animationBus";
+import { triggerHandReveal } from "./cardRevealBus";
 import { DeckFx } from "./GameFx";
 
 import CardMUI from "@mui/material/Card";
@@ -216,16 +217,7 @@ export default function Deck({
     handleCardClose();
     handleModalClose();
     dispatch(addToHandFromDeck({ card: name, index: index }));
-    socket.emit("send msg", {
-      type: "showCard",
-      data: true,
-      room: reduxRoom,
-    });
-    socket.emit("send msg", {
-      type: "cardRevealed",
-      data: name,
-      room: reduxRoom,
-    });
+    triggerHandReveal(name, reduxRoom);
   };
   const handleAddFromDeckToHandWithoutRevealing = () => {
     handleCardClose();
@@ -254,16 +246,7 @@ export default function Deck({
     handleCardClose();
     setPartialDeck(partialDeck.filter((_, i) => i !== index));
     dispatch(addToHandFromDeck({ card: name, index: index }));
-    socket.emit("send msg", {
-      type: "showCard",
-      data: true,
-      room: reduxRoom,
-    });
-    socket.emit("send msg", {
-      type: "cardRevealed",
-      data: name,
-      room: reduxRoom,
-    });
+    triggerHandReveal(name, reduxRoom);
   };
 
   const handleToBanish = () => {
