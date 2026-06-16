@@ -110,9 +110,21 @@ import Token from "./Token";
 import ShowDice from "./ShowDice";
 import { playGameAnimation, triggerGameAnimation } from "./animationBus";
 import { DeckFx, EvoLayer } from "./GameFx";
-import { registerFieldGrid } from "./handDrag";
+import {
+  registerFieldGrid,
+  registerEnemyFieldGrid,
+  fieldSlotCenter,
+  enemyFieldSlotCenter,
+} from "./handDrag";
 import FieldDropHints from "./FieldDropHints";
 import DiceRoll from "./DiceRoll";
+import PlayReveal from "./PlayReveal";
+import {
+  triggerCardReveal,
+  playCardReveal,
+  onHideChange,
+  isHidden,
+} from "./cardRevealBus";
 
 import defaultCardBack from "../../assets/cardbacks/default.png";
 import aeneaCardBack from "../../assets/cardbacks/aenea.png";
@@ -246,6 +258,11 @@ export default function Field({
   const boardWrapperRef = useRef(null);
   const boardRef = useRef(null);
   const [boardScale, setBoardScale] = useState(1);
+
+  // Re-render when the set of mid-reveal (hidden) field slots changes, so a
+  // played card pops into view exactly when its reveal animation lands.
+  const [, bumpHidden] = useState(0);
+  useEffect(() => onHideChange(() => bumpHidden((n) => n + 1)), []);
 
   useEffect(() => {
     const wrapper = boardWrapperRef.current;
@@ -438,6 +455,22 @@ export default function Field({
           // Replay it on their half of our board so both players see it.
           playGameAnimation({ kind: update.data, side: "enemy" });
           break;
+        case "cardPlayed": {
+          // Opponent played a card to the field — reveal it centre-screen and
+          // fly it onto its slot on their (top) board; the card stays hidden
+          // there until the reveal lands. Their field index maps to our enemy
+          // grid cell via cardPos.
+          const { name: playedName, index: playedIndex } = update.data || {};
+          // Map their field index to our enemy-grid cell (same as cardPos).
+          const cell = playedIndex < 5 ? playedIndex + 5 : playedIndex - 5;
+          playCardReveal({
+            name: playedName,
+            side: "enemy",
+            index: playedIndex,
+            target: enemyFieldSlotCenter(cell),
+          });
+          break;
+        }
         case "full_state_sync":
           // Handle full state synchronization (used on reconnection)
           // This bypasses the queue and directly updates all state
@@ -648,6 +681,10 @@ export default function Field({
   };
 
   const handleClick = (name, indexClicked) => {
+    // The card placed onto an empty slot this click (any source), so the
+    // "played" reveal fires once at the end — but only for the field itself
+    // (top row, indices 0-4), never the EX area (bottom row, 5-9).
+    let playedCard = null;
     if (reduxField[indexClicked] === 0 && !readyToEvo && !readyToFeed) {
       if (readyToPlaceOnFieldFromHand) {
         setReadyToPlaceOnFieldFromHand(false);
@@ -658,6 +695,7 @@ export default function Field({
             index: indexClicked,
           }),
         );
+        playedCard = reduxCurrentCard;
       }
       if (tokenReady) {
         setTokenReady(false);
@@ -667,6 +705,7 @@ export default function Field({
             index: indexClicked,
           }),
         );
+        playedCard = name;
         // dispatch(clearValuesAtIndex(index));
         // dispatch(clearEngagedAtIndex(index));
         // dispatch(clearCountersAtIndex(index));
@@ -680,6 +719,7 @@ export default function Field({
             index: indexClicked,
           }),
         );
+        playedCard = name;
       }
       if (readyToMoveOnField) {
         setReadyToMoveOnField(false);
@@ -718,6 +758,8 @@ export default function Field({
         dispatch(clearEngagedAtIndex(index));
         dispatch(clearCountersAtIndex(index));
         dispatch(clearStatusAtIndex(index));
+        // Reveal when promoting a card from the EX area (5-9) up to the field.
+        if (index >= 5) playedCard = name;
       }
       if (readyToMoveEvoOnField) {
         setReadyToMoveEvoOnField(false);
@@ -757,6 +799,8 @@ export default function Field({
         dispatch(clearEngagedAtIndex(index));
         dispatch(clearCountersAtIndex(index));
         dispatch(clearStatusAtIndex(index));
+        // Reveal when promoting an evolved card from the EX area up to the field.
+        if (index >= 5) playedCard = name;
       }
       if (readyToDuplicateOnField) {
         setReadyToDuplicateOnField(false);
@@ -787,6 +831,7 @@ export default function Field({
             deckIndex: deckIndex,
           }),
         );
+        playedCard = name;
       }
       if (readyFromCemetery) {
         setReadyFromCemetery(false);
@@ -797,6 +842,7 @@ export default function Field({
             index: indexClicked,
           }),
         );
+        playedCard = name;
       }
       if (readyFromBanish) {
         setReadyFromBanish(false);
@@ -807,7 +853,16 @@ export default function Field({
             index: indexClicked,
           }),
         );
+        playedCard = name;
       }
+      // Reveal a card played to the field (top row only; EX area 5-9 is silent).
+      if (playedCard !== null && indexClicked < 5)
+        triggerCardReveal(
+          playedCard,
+          reduxCurrentRoom,
+          indexClicked,
+          fieldSlotCenter(indexClicked),
+        );
     } else if (
       (readyToFeed || readyToEvo || readyToRide) &&
       reduxField[indexClicked] !== 0 &&
@@ -1089,23 +1144,26 @@ export default function Field({
   //   { type: "cemetery" }     -> send to cemetery
   //   { type: "hand" }         -> return to hand
   // Anything invalid is a no-op (the card snaps back). Cemetery/Hand mirror the
-  // right-click menu, which only offers them for base cards — the underlying
-  // reducers don't unwind an evolved stack — so those are skipped for evo cards.
+  // right-click menu, which only offers them for plain base cards: tokens and
+  // advanced cards can't be returned, and the reducers don't unwind an evolved
+  // stack — so those are skipped for cemetery/hand (they can still be moved).
   const handleFieldDrop = (fromIndex, dest) => {
     const isEvo = reduxEvoField[fromIndex] !== 0;
+    const baseCard = reduxField[fromIndex];
+    const canReturn =
+      !isEvo &&
+      typeof baseCard === "string" &&
+      !isToken(baseCard) &&
+      !isAdvanced(baseCard);
     if (dest.type === "cemetery") {
-      if (isEvo) return;
-      const card = reduxField[fromIndex];
-      if (!card) return;
-      dispatch(placeToCemeteryFromField({ card, index: fromIndex }));
+      if (!canReturn) return;
+      dispatch(placeToCemeteryFromField({ card: baseCard, index: fromIndex }));
       clearFieldSlot(fromIndex);
       return;
     }
     if (dest.type === "hand") {
-      if (isEvo) return;
-      const card = reduxField[fromIndex];
-      if (!card) return;
-      dispatch(addToHandFromField({ card, index: fromIndex }));
+      if (!canReturn) return;
+      dispatch(addToHandFromField({ card: baseCard, index: fromIndex }));
       clearFieldSlot(fromIndex);
       return;
     }
@@ -1116,6 +1174,9 @@ export default function Field({
     const cardName = isEvo ? reduxEvoField[fromIndex] : reduxField[fromIndex];
     if (!cardName || cardName === 0) return;
     moveFieldCard(cardName, fromIndex, toIndex, isEvo);
+    // Promoting from the EX area (5-9) up to the field (0-4) plays the reveal.
+    if (fromIndex >= 5 && toIndex < 5)
+      triggerCardReveal(cardName, reduxCurrentRoom, toIndex, fieldSlotCenter(toIndex));
   };
 
   const handleMoveOnField = () => {
@@ -1638,6 +1699,7 @@ export default function Field({
 
         {/* Enemy Field (1-5) & Ex Area (6-10) */}
         <div
+          ref={(el) => registerEnemyFieldGrid(el)}
           style={{
             height: "35vh",
             minHeight: "330px",
@@ -1715,6 +1777,7 @@ export default function Field({
                     name={reduxEnemyField[cardPos(idx)]}
                     setHovering={setHovering}
                     ready={ready}
+                    hidden={isHidden("enemy", cardPos(idx))}
                   />
                 )}
               {reduxEnemyEvoField[cardPos(idx)] !== 0 && (
@@ -1737,6 +1800,7 @@ export default function Field({
                   setHovering={setHovering}
                   ready={ready}
                   cardBeneath={reduxEnemyField[cardPos(idx)]}
+                  hidden={isHidden("enemy", cardPos(idx))}
                 />
               )}
             </motion.div>
@@ -1974,6 +2038,7 @@ export default function Field({
                       setHovering={setHovering}
                       ready={ready}
                       onFieldDrop={handleFieldDrop}
+                      hidden={isHidden("mine", idx)}
                     />
                   )}
                   {reduxEvoField[idx] !== 0 && (
@@ -1996,6 +2061,7 @@ export default function Field({
                       ready={ready}
                       cardBeneath={reduxField[idx]}
                       onFieldDrop={handleFieldDrop}
+                      hidden={isHidden("mine", idx)}
                     />
                   )}
                 </div>
@@ -2063,6 +2129,8 @@ export default function Field({
       <FieldDropHints />
       {/* Dice toss animation (shown to both players). */}
       <DiceRoll />
+      {/* "Card played" reveal: shows the card centre-screen, then onto the field. */}
+      <PlayReveal />
         </div>
       </div>
       </div>

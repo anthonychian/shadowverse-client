@@ -15,8 +15,10 @@ import {
   fieldIndexAt,
   isOverCemetery,
   isOverHand,
+  fieldSlotCenter,
   setDragHover,
 } from "../field/handDrag";
+import { triggerCardReveal } from "../field/cardRevealBus";
 import cancel from "../../assets/logo/cancel.png";
 import carrot from "../../assets/logo/carrot.png";
 import drive from "../../assets/logo/drive.png";
@@ -59,6 +61,7 @@ export default function Card({
   onCardDragStart,
   onCardDragEnd,
   onFieldDrop,
+  hidden = false,
 }) {
   let numOfCarrots = 0;
   const dispatch = useDispatch();
@@ -89,6 +92,7 @@ export default function Card({
   // Live field state, so a drag-drop only fills an empty zone (mirrors the
   // click-to-place flow, which also rejects occupied slots).
   const reduxField = useSelector((state) => state.card.field);
+  const reduxRoom = useSelector((state) => state.card.room);
 
   useEffect(() => {
     setAtk(Number(atkVal));
@@ -107,9 +111,14 @@ export default function Card({
   // that fires on release doesn't also engage the card. Reset on next press.
   const suppressTapRef = useRef(false);
   const fieldDraggable = onField && !opponentField && !ready;
-  // An evolved field card (has a base card beneath). Cemetery/Hand drops are
-  // base-card only, so evo cards can only be moved between field slots.
+  // Cemetery/Hand drops are for plain base cards only. Evolved cards (have a
+  // base beneath), tokens, and advanced cards can only be moved between field
+  // slots — so they don't offer or accept cemetery/hand drops.
   const isEvoFieldCard = onField && !!cardBeneath && cardBeneath !== 0;
+  const isSpecialFieldCard =
+    onField &&
+    typeof name === "string" &&
+    (name.slice(-5) === "TOKEN" || name.slice(-8) === "ADVANCED");
 
   const handleTap = () => {
     if (suppressTapRef.current) {
@@ -144,9 +153,9 @@ export default function Card({
   const handleFieldPointerUp = () => {
     fieldDragStart.current = null;
   };
-  // Base field cards can also go to the cemetery or back to hand; evo cards can
-  // only be moved between slots.
-  const fieldExtraTargets = !isEvoFieldCard;
+  // Base field cards can also go to the cemetery or back to hand; evolved,
+  // token, and advanced cards can only be moved between slots.
+  const fieldExtraTargets = !isEvoFieldCard && !isSpecialFieldCard;
   const handleFieldDragStart = () => {
     setDragHover({
       active: true,
@@ -236,6 +245,9 @@ export default function Card({
           index: dropIndex,
         })
       );
+      // Reveal only when played to the field (top row, 0-4), not the EX area.
+      if (dropIndex < 5)
+        triggerCardReveal(name, reduxRoom, dropIndex, fieldSlotCenter(dropIndex));
     }
   };
 
@@ -362,6 +374,11 @@ export default function Card({
           position: "relative",
           zIndex: kwHover ? 999 : "auto",
           cursor: `url(${img}) 55 55, auto`,
+          // Kept invisible while its "card played" reveal flies to this slot;
+          // it fades in once the reveal lands (see PlayReveal / cardRevealBus).
+          opacity: hidden ? 0 : 1,
+          pointerEvents: hidden ? "none" : undefined,
+          transition: "opacity 0.18s ease-out",
         }}
         animate={engaged ? { rotate: -90 } : { rotate: 0 }}
         initial={false}

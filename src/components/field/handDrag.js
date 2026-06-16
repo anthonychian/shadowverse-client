@@ -24,6 +24,30 @@ export const fieldIndexAt = (x, y) => {
   return row * 5 + col;
 };
 
+// The opponent's field grid (as shown on this screen), registered by Field.
+// Used to fly the "card played" reveal onto the exact slot when the opponent
+// plays a card.
+let enemyFieldGridEl = null;
+export const registerEnemyFieldGrid = (el) => {
+  enemyFieldGridEl = el || null;
+};
+export const getEnemyFieldGridRect = () =>
+  enemyFieldGridEl ? enemyFieldGridEl.getBoundingClientRect() : null;
+
+// Viewport centre of grid cell `cell` (0..9, row-major 5x2) within a grid rect.
+const slotCenter = (rect, cell) => {
+  if (!rect) return null;
+  const col = cell % 5;
+  const row = cell < 5 ? 0 : 1;
+  return {
+    x: rect.left + (col + 0.5) * (rect.width / 5),
+    y: rect.top + (row + 0.5) * (rect.height / 2),
+  };
+};
+export const fieldSlotCenter = (cell) => slotCenter(getFieldGridRect(), cell);
+export const enemyFieldSlotCenter = (cell) =>
+  slotCenter(getEnemyFieldGridRect(), cell);
+
 // The player's cemetery pile, registered by Cemetery via a ref callback. A
 // second drop target for hand cards (discard).
 let cemeteryEl = null;
