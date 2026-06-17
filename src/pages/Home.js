@@ -589,11 +589,16 @@ export default function Home() {
 
   // Shared deck carousel — used by both the desktop and mobile Home layouts.
   // An infinite/looping strip of deck tiles plus a New Deck tile: scroll/swipe
-  // to bring an item to the centre (it scales up), then tap the centred item to
-  // use it (New Deck → builder; a deck → options menu) or tap a side item to
-  // bring it to the centre. `extraStyle` lets a caller tweak placement (e.g. the
-  // mobile column pins it to the bottom with marginTop: auto).
-  const renderDeckCarousel = (extraStyle = {}) => (
+  // to bring an item to the centre (it scales up), then tap the centred item, or
+  // tap a side item to bring it to the centre.
+  // - desktop: tapping the centred deck *selects* it (so the PLAY/JOIN buttons
+  //   in the left panel act on it); right-click opens the Preview/Edit/Delete
+  //   options menu. The selected deck is highlighted.
+  // - mobile: tapping the centred deck opens the options menu directly (there's
+  //   no separate PLAY button there).
+  // `extraStyle` lets a caller tweak placement (e.g. the mobile column pins it
+  // to the bottom with marginTop: auto).
+  const renderDeckCarousel = ({ extraStyle = {}, desktop = false } = {}) => (
     <div
       ref={carouselRef}
       onScroll={handleCarouselScroll}
@@ -637,15 +642,40 @@ export default function Home() {
                 </div>
               ) : (
                 <div
-                  onClick={(e) => onCarouselItemClick(e, () => handleContextMenu(e, it.deck, it.idx))}
-                  onContextMenu={(e) => e.preventDefault()}
+                  onClick={(e) =>
+                    onCarouselItemClick(
+                      e,
+                      desktop
+                        ? () => handleSelectDeck(it.deck, it.idx)
+                        : () => handleContextMenu(e, it.deck, it.idx),
+                    )
+                  }
+                  onContextMenu={
+                    desktop
+                      ? (e) => handleContextMenu(e, it.deck, it.idx)
+                      : (e) => e.preventDefault()
+                  }
                   style={{ ...tileStyle, width: 110 }}
                 >
                   <img
                     src={artThumb(it.deck.deck[Math.floor(it.deck.deck.length / 2)], it.deck.art)}
                     alt={it.deck.name}
                     loading="lazy"
-                    style={{ width: "100%", borderRadius: 8, display: "block" }}
+                    style={{
+                      width: "100%",
+                      borderRadius: 8,
+                      display: "block",
+                      // Highlight the selected deck on desktop so it's clear
+                      // which one PLAY/JOIN will use.
+                      outline:
+                        desktop && showSelected[it.idx]
+                          ? "3px solid #48abe0"
+                          : "none",
+                      boxShadow:
+                        desktop && showSelected[it.idx]
+                          ? "0 0 14px 2px rgba(72, 171, 224, 0.7)"
+                          : "none",
+                    }}
                   />
                   <div
                     style={{
@@ -892,7 +922,7 @@ export default function Home() {
             width: "100%",
           }}
         >
-          {renderDeckCarousel()}
+          {renderDeckCarousel({ desktop: true })}
         </div>
       </div>
       <div
@@ -1250,7 +1280,7 @@ export default function Home() {
               centred item to use it (New Deck → builder; a deck → options), or
               tap a side item to bring it to the centre. Pinned to the bottom of
               the column via marginTop: auto. */}
-          {renderDeckCarousel({ marginTop: "auto" })}
+          {renderDeckCarousel({ extraStyle: { marginTop: "auto" } })}
         </div>
         </>
       )}
