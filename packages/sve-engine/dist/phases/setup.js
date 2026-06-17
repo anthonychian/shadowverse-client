@@ -26,6 +26,12 @@ function refreshFieldCard(card, state) {
         card.onFieldSinceTurnStart = false;
         return;
     }
+    if (card.skipRefreshOnTurn != null && state.turnNumber === card.skipRefreshOnTurn) {
+        card.skipRefreshOnTurn = undefined;
+        card.engaged = true;
+        card.onFieldSinceTurnStart = false;
+        return;
+    }
     card.boxedUntilTurn = undefined;
     card.engaged = false;
     card.onFieldSinceTurnStart = true;

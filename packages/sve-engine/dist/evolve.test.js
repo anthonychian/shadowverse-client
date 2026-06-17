@@ -121,4 +121,70 @@ const queries_1 = require("./state/queries");
         (0, vitest_1.expect)(attacker.evolvedThisTurn).toBe(true);
         (0, vitest_1.expect)((0, queries_1.hasKeyword)(attacker, "rush", evolved)).toBe(true);
     });
+    (0, vitest_1.it)("evolved rush follower on board since turn start can attack the enemy leader", () => {
+        let state = (0, factory_1.createInitialGameState)(0);
+        state.phase = "main";
+        state.activePlayer = 0;
+        state.turnNumber = 2;
+        state.pendingChoices = null;
+        state.players[0].pp = 5;
+        state.players[0].evoPoints = 2;
+        const leod = (0, factory_1.createCardInstance)("SDD02-006EN", 0);
+        leod.onFieldSinceTurnStart = true;
+        state.players[0].zones.field.push(leod);
+        const evo = (0, factory_1.createCardInstance)("SDD02-007EN", 0);
+        state.players[0].zones.evolveDeck.push(evo);
+        let current = (0, applyAction_1.applyAction)(state, 0, {
+            type: "EVOLVE",
+            fieldInstanceId: leod.instanceId,
+            evolveDeckInstanceId: evo.instanceId,
+            useEvoPoint: false,
+        }).state;
+        if (current.pendingChoices?.type === "choose") {
+            current = (0, applyAction_1.applyAction)(current, 0, {
+                type: "CHOICE_RESPONSE",
+                payload: { optionIndex: 0 },
+            }).state;
+        }
+        (0, vitest_1.expect)(current.players[0].zones.field[0].onFieldSinceTurnStart).toBe(true);
+        const attack = (0, applyAction_1.applyAction)(current, 0, {
+            type: "ATTACK",
+            attackerId: leod.instanceId,
+            targetId: "leader",
+        });
+        (0, vitest_1.expect)(attack.ok).toBe(true);
+        (0, vitest_1.expect)(attack.state.players[1].leaderDef).toBeLessThan(20);
+    });
+    (0, vitest_1.it)("evolved rush follower played this turn cannot attack the enemy leader", () => {
+        let state = (0, factory_1.createInitialGameState)(0);
+        state.phase = "main";
+        state.activePlayer = 0;
+        state.turnNumber = 2;
+        state.pendingChoices = null;
+        state.players[0].pp = 5;
+        state.players[0].evoPoints = 2;
+        const leod = (0, factory_1.createCardInstance)("SDD02-006EN", 0);
+        leod.onFieldSinceTurnStart = false;
+        state.players[0].zones.field.push(leod);
+        const evo = (0, factory_1.createCardInstance)("SDD02-007EN", 0);
+        state.players[0].zones.evolveDeck.push(evo);
+        let current = (0, applyAction_1.applyAction)(state, 0, {
+            type: "EVOLVE",
+            fieldInstanceId: leod.instanceId,
+            evolveDeckInstanceId: evo.instanceId,
+            useEvoPoint: false,
+        }).state;
+        if (current.pendingChoices?.type === "choose") {
+            current = (0, applyAction_1.applyAction)(current, 0, {
+                type: "CHOICE_RESPONSE",
+                payload: { optionIndex: 0 },
+            }).state;
+        }
+        const attack = (0, applyAction_1.applyAction)(current, 0, {
+            type: "ATTACK",
+            attackerId: leod.instanceId,
+            targetId: "leader",
+        });
+        (0, vitest_1.expect)(attack.ok).toBe(false);
+    });
 });

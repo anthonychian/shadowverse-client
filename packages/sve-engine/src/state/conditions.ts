@@ -14,7 +14,16 @@ import {
 export function cardMatchesFilter(cardNo: string, filter: DeckFilter): boolean {
   const def = getCardDef(cardNo);
   if (!def) return false;
-  if (filter.cardNo && cardNo !== filter.cardNo) return false;
+  if (filter.identityName) {
+    if (normalizeIdentityName(def.name) !== normalizeIdentityName(filter.identityName)) return false;
+  } else if (filter.cardNo) {
+    const ref = getCardDef(filter.cardNo);
+    if (ref) {
+      if (normalizeIdentityName(def.name) !== normalizeIdentityName(ref.name)) return false;
+    } else if (cardNo !== filter.cardNo) {
+      return false;
+    }
+  }
   if (filter.trait && !def.traits?.includes(filter.trait)) return false;
   if (filter.cardClass && def.class !== filter.cardClass) return false;
   const cost = resolveCardDefCost(cardNo);
@@ -41,6 +50,30 @@ function countTraitInZone(
   return getPlayer(state, player).zones[zone].filter((c) =>
     getCardDef(resolveCardNo(state, c))?.traits?.includes(trait),
   ).length;
+}
+
+function countCemeteryTraitBeforeSourceEnters(
+  state: GameState,
+  player: PlayerId,
+  trait: string,
+): number {
+  const sourceId = state.resolutionContext?.sourceInstanceId;
+  return getPlayer(state, player).zones.cemetery.filter((c) => {
+    if (sourceId && c.instanceId === sourceId) return false;
+    return getCardDef(resolveCardNo(state, c))?.traits?.includes(trait);
+  }).length;
+}
+
+function countCemeteryClassBeforeSourceEnters(
+  state: GameState,
+  player: PlayerId,
+  cardClass: string,
+): number {
+  const sourceId = state.resolutionContext?.sourceInstanceId;
+  return getPlayer(state, player).zones.cemetery.filter((c) => {
+    if (sourceId && c.instanceId === sourceId) return false;
+    return getCardDef(resolveCardNo(state, c))?.class === cardClass;
+  }).length;
 }
 
 export function evalCondition(state: GameState, player: PlayerId, condition: Condition): boolean {
@@ -77,6 +110,10 @@ export function evalCondition(state: GameState, player: PlayerId, condition: Con
     }
     case "ownCemeteryTraitMin":
       return countTraitInZone(state, player, "cemetery", condition.trait) >= condition.count;
+    case "ownCemeteryTraitMinBeforeSourceEnters":
+      return (
+        countCemeteryTraitBeforeSourceEnters(state, player, condition.trait) >= condition.count
+      );
     case "ownDeckTraitMin":
       return countTraitInZone(state, player, "deck", condition.trait) >= condition.count;
     case "fieldTraitMin":
@@ -87,6 +124,10 @@ export function evalCondition(state: GameState, player: PlayerId, condition: Con
       return getPlayer(state, player).zones.cemetery.filter(
         (c) => getCardDef(c.cardNo)?.class === condition.cardClass,
       ).length >= condition.count;
+    case "ownCemeteryClassMinBeforeSourceEnters":
+      return (
+        countCemeteryClassBeforeSourceEnters(state, player, condition.cardClass) >= condition.count
+      );
     case "ownDeckClassMin":
       return getPlayer(state, player).zones.deck.filter(
         (c) => getCardDef(c.cardNo)?.class === condition.cardClass,

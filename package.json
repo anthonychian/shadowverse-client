@@ -54,6 +54,7 @@
     "test": "react-scripts test",
     "test:engine": "npm run test -w sve-engine",
     "server": "npm run start -w shadowverse-server",
+    "build:server": "npm run build -w sve-engine",
     "merge:cards": "node src/scripts/mergecards.js",
     "scrape:decks": "node src/scripts/scrapecardnos.js --file src/scripts/deck-lists/festive-sword.json src/scripts/deck-lists/abyss-machina.json",
     "regenerate:deck-cards": "node src/scripts/regenerate-deck-cards.js",

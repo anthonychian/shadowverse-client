@@ -1,5 +1,5 @@
 import { getCardDef, getGameplayCardNo } from "../cards/registry";
-import { cardIdentityKey } from "../cards/reprints";
+import { cardIdentityKey, normalizeIdentityName } from "../cards/reprints";
 import { cardMatchesFilter, evalCondition } from "./conditions";
 import {
   getAuraKeywords,
@@ -325,6 +325,17 @@ export function evolveCardsMatch(fieldCardNo: string, evoCardNo: string): boolea
   }
   if (evoDef?.evolvesFrom && getGameplayCardNo(fieldCardNo) === getGameplayCardNo(evoDef.evolvesFrom)) {
     return true;
+  }
+  if (baseDef && evoDef) {
+    const baseKind = cardIdentityKey(baseDef).split("|")[1];
+    const evoKind = cardIdentityKey(evoDef).split("|")[1];
+    if (
+      baseKind === "base" &&
+      evoKind === "evolved" &&
+      normalizeIdentityName(baseDef.name) === normalizeIdentityName(evoDef.name)
+    ) {
+      return true;
+    }
   }
   return false;
 }

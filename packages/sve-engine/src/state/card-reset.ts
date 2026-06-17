@@ -15,6 +15,7 @@ export function resetCardInstanceState(card: CardInstance): void {
   card.superEvolved = false;
   card.enteredFromHand = undefined;
   card.boxedUntilTurn = undefined;
+  card.skipRefreshOnTurn = undefined;
   card.foughtWithBane = false;
   card.foughtWithInstanceId = undefined;
   card.onFieldSinceTurnStart = false;

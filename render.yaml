@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: shadowverse-server
+    runtime: node
+    buildCommand: npm install && npm run build -w sve-engine
+    startCommand: npm run server
+    healthCheckPath: /health

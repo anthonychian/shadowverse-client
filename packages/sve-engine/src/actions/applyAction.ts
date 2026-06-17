@@ -91,6 +91,10 @@ function proceedAfterEndMainQuick(state: GameState): GameState {
 
 function continueEndPhaseFlow(state: GameState): GameState {
   let next = structuredClone(state);
+  if (next.endPhaseQuickResolved) {
+    next.quickWindow = null;
+    next.quickWindowPlayer = null;
+  }
   if (next.pendingChoices || next.pendingTriggers.length > 0) return next;
 
   const player = next.activePlayer;
@@ -236,11 +240,31 @@ function continuePausedCombat(state: GameState): GameState {
   return next;
 }
 
+function spellEffectFullyResolved(state: GameState): boolean {
+  return (
+    !state.pendingChoices &&
+    (state.resolutionContext?.resumeAfterChoice?.length ?? 0) === 0 &&
+    state.pendingTriggers.length === 0
+  );
+}
+
+function maybeBuryResolvedSpells(state: GameState, player: PlayerId): GameState {
+  if (!spellEffectFullyResolved(state)) return state;
+  let next = state;
+  for (const card of [...next.players[player].zones.resolutionZone]) {
+    const def = getCardDef(resolveCardNo(next, card));
+    if (def?.cardType !== "spell") continue;
+    next = moveCard(next, card.instanceId, "cemetery", player);
+  }
+  return next;
+}
+
 function finishChoiceResolution(state: GameState, player: PlayerId): GameState {
   let next = state;
   if (!next.pendingChoices) {
     next = continueAfterChoice(next, player);
   }
+  next = maybeBuryResolvedSpells(next, player);
   next = runConfirmationTiming(next);
   if (!next.pendingChoices) {
     next = continuePausedCombat(next);
@@ -687,10 +711,20 @@ function playCard(
   }
 
   if (def.cardType === "spell") {
+    next.resolutionContext = {
+      sourceInstanceId: handInstanceId,
+      effectStack: [],
+      resumeAfterChoice: next.resolutionContext?.resumeAfterChoice,
+      buriedCosts: next.resolutionContext?.buriedCosts,
+      lastDiscardedCardNo: next.resolutionContext?.lastDiscardedCardNo,
+      deferTriggers: next.resolutionContext?.deferTriggers,
+    };
     next = resolveSpell(next, found.card.cardNo, player);
-    const res = findInstance(next, handInstanceId);
-    if (res) {
-      next = moveCard(next, handInstanceId, "cemetery", player);
+    if (spellEffectFullyResolved(next)) {
+      const res = findInstance(next, handInstanceId);
+      if (res?.zone === "resolutionZone") {
+        next = moveCard(next, handInstanceId, "cemetery", player);
+      }
     }
   } else if (def.cardType === "follower" || def.cardType === "amulet") {
     next = moveCard(next, handInstanceId, "field", player);
@@ -936,7 +970,8 @@ function evolve(
 
   fieldOnNext.card.linkedEvoInstanceId = evolveDeckInstanceIdResolved;
   fieldOnNext.card.evolvedThisTurn = true;
-  fieldOnNext.card.onFieldSinceTurnStart = false;
+  // Evolving grants rush for this turn; keep leader-attack eligibility if already on board since turn start.
+  fieldOnNext.card.onFieldSinceTurnStart = fieldFound.card.onFieldSinceTurnStart;
 
   if (useSuperEvo && next.players[player].superEvoPoints > 0) {
     const threshold = player === next.firstPlayer ? 7 : 6;
@@ -1237,6 +1272,8 @@ export function applyAction(
       if (state.quickWindow === "endPhase") {
         let next = structuredClone(state);
         next.endPhaseQuickResolved = true;
+        next.quickWindow = null;
+        next.quickWindowPlayer = null;
         next = continueEndPhaseFlow(next);
         return ok(next);
       }
@@ -1259,10 +1296,10 @@ export function applyAction(
     case "END_MAIN": {
       const activeErr = assertActivePlayer(state, player, "Not your turn");
       if (activeErr) return activeErr;
-      if (state.quickWindow === "endPhase") {
+      if (state.quickWindow === "endPhase" && !state.endPhaseQuickResolved) {
         return fail(state, "Opponent must resolve quick window first");
       }
-      if (state.combat?.phase === "quickWindow") {
+      if (state.quickWindow === "afterAttack" || state.combat?.phase === "quickWindow") {
         return fail(state, "Resolve quick window first");
       }
       if (state.combat?.phase === "declared") {

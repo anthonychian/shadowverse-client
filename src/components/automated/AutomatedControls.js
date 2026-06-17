@@ -98,7 +98,7 @@ export default function AutomatedControls() {
 
         <Button variant="contained" size="small" color="secondary" onClick={() => sendAction({ type: "PASS_QUICK_WINDOW" })}>
 
-          Pass Quick
+          End Quick Phase
 
         </Button>
 

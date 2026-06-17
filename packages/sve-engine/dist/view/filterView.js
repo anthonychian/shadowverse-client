@@ -113,9 +113,11 @@ function createPlayerView(state, self) {
             }
         }
     }
-    if (state.quickWindow && state.quickWindowPlayer === self && !state.pendingChoices) {
+    if (state.quickWindow &&
+        state.quickWindowPlayer === self &&
+        !state.pendingChoices &&
+        state.pendingTriggers.length === 0) {
         const pp = state.players[self].pp;
-        let hasQuickPlay = false;
         const quickZones = [
             ...state.players[self].zones.hand.map((card) => ({ card, fromZone: "hand" })),
             ...state.players[self].zones.exArea.map((card) => ({ card, fromZone: "exArea" })),
@@ -127,12 +129,9 @@ function createPlayerView(state, self) {
             const cost = (0, queries_1.getEffectivePlayCost)(card, card.cardNo, state, self, fromZone);
             if (pp >= cost && (0, resolver_1.canPlayCardFromZones)(state, self, card.cardNo)) {
                 legalActions.push(`QUICK_PLAY:${card.instanceId}`);
-                hasQuickPlay = true;
             }
         }
-        if (hasQuickPlay) {
-            legalActions.push("PASS_QUICK_WINDOW");
-        }
+        legalActions.push("PASS_QUICK_WINDOW");
     }
     if (state.pendingChoices?.player === self) {
         legalActions.push("CHOICE_REQUIRED");

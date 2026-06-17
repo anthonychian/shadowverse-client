@@ -476,8 +476,11 @@ function resolveEffect(state, effect, player, options) {
             const p = next.players[player];
             const zone = effect.zone === "exArea" ? p.zones.exArea : p.zones.field;
             const limit = effect.zone === "exArea" ? p.exLimit : p.fieldLimit;
+            const tokenCardNo = effect.tokenCardNo ?? (effect.tokenName ? (0, registry_1.resolveCardNoByIdentity)(effect.tokenName) : undefined);
+            if (!tokenCardNo)
+                break;
             for (let i = 0; i < effect.count && zone.length < limit; i++) {
-                const token = (0, factory_1.createCardInstance)(effect.tokenCardNo, player, player);
+                const token = (0, factory_1.createCardInstance)(tokenCardNo, player, player);
                 zone.push(token);
                 if (effect.zone === "field") {
                     (0, confirmation_1.onFollowerEntersField)(next, token.instanceId, player);
@@ -667,7 +670,7 @@ function resolveEffect(state, effect, player, options) {
                 break;
             fieldOnNext.card.linkedEvoInstanceId = evoCard.instanceId;
             fieldOnNext.card.evolvedThisTurn = true;
-            fieldOnNext.card.onFieldSinceTurnStart = false;
+            // Preserve leader-attack eligibility when evolving a follower already on board since turn start.
             next.players[player].flags.evolvedThisTurn = true;
             next.players[player].zones.evolveZone.push({
                 fieldInstanceId: sourceId,
@@ -707,16 +710,29 @@ function resolveEffect(state, effect, player, options) {
             break;
         }
         case "engage": {
+            const forced = next.resolutionContext?.forcedTargetId;
             const candidates = getTargetCandidates(next, player, effect.targets);
             if (candidates.length === 0)
                 break;
-            let targetId = candidates[0];
-            if (candidates.length >= 1 && !next.pendingChoices) {
+            let targetId;
+            if (forced) {
+                if (!candidates.includes(forced))
+                    break;
+                targetId = forced;
+            }
+            else if (candidates.length >= 1 && !next.pendingChoices) {
                 return promptSelectTarget(next, player, effect, candidates);
             }
+            else {
+                targetId = candidates[0];
+            }
             const found = (0, queries_1.findInstance)(next, targetId);
-            if (found)
+            if (found) {
                 found.card.engaged = true;
+                if (effect.skipRefreshNextStart) {
+                    found.card.skipRefreshOnTurn = next.turnNumber + 1;
+                }
+            }
             break;
         }
         case "box": {

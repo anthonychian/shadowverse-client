@@ -1,5 +1,31 @@
 import { CardDefinition } from "../types";
 
+/** Gameplay fields shared across all printings of the same card identity. */
+export function pickSharedHandOverlay(overlay: Partial<CardDefinition>): Partial<CardDefinition> {
+  const shared: Partial<CardDefinition> = {};
+  if (overlay.abilities?.length) shared.abilities = overlay.abilities;
+  if (overlay.keywords?.length) shared.keywords = overlay.keywords;
+  if (overlay.evolveCost != null) shared.evolveCost = overlay.evolveCost;
+  if (overlay.cost != null) shared.cost = overlay.cost;
+  if (overlay.attack != null) shared.attack = overlay.attack;
+  if (overlay.defense != null) shared.defense = overlay.defense;
+  if (overlay.cardType) shared.cardType = overlay.cardType;
+  if (overlay.traits?.length) shared.traits = overlay.traits;
+  if (overlay.printingType) shared.printingType = overlay.printingType;
+  return shared;
+}
+
+export function mergeSharedHandOverlays(
+  ...overlays: (Partial<CardDefinition> | undefined)[]
+): Partial<CardDefinition> {
+  let merged: Partial<CardDefinition> = {};
+  for (const overlay of overlays) {
+    if (!overlay) continue;
+    merged = { ...merged, ...pickSharedHandOverlay(overlay) };
+  }
+  return merged;
+}
+
 export function normalizeIdentityName(name: string): string {
   return name
     .replace(/\s+TOKEN$/i, "")
@@ -44,7 +70,8 @@ function cardRichness(card: Partial<CardDefinition>): number {
   return score;
 }
 
-function pickCanonicalInGroup(cards: CardDefinition[]): CardDefinition {
+/** Pick the richest card from a group (e.g. alternate printings of one identity). */
+export function pickCanonicalInGroup(cards: CardDefinition[]): CardDefinition {
   return [...cards].sort((a, b) => {
     const diff = cardRichness(b) - cardRichness(a);
     if (diff !== 0) return diff;

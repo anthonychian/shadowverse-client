@@ -4,7 +4,11 @@ export function useUiChromeVisible() {
   return !useSelector((s) => s.gameState.uiChromeHidden);
 }
 
-export function useUiModalOpen(isOpen) {
+/** @param {boolean} isOpen
+ *  @param {{ persistWhenChromeHidden?: boolean }} [options]
+ */
+export function useUiModalOpen(isOpen, { persistWhenChromeHidden = false } = {}) {
   const visible = useUiChromeVisible();
+  if (persistWhenChromeHidden) return Boolean(isOpen);
   return Boolean(isOpen) && visible;
 }

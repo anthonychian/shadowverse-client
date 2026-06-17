@@ -255,9 +255,19 @@ describe("batch 9 regression fixes", () => {
     expect(played.state.players[1].zones.exArea.some((c) => c.instanceId === quickSpell.instanceId)).toBe(
       false,
     );
+    expect(played.state.quickWindow).toBe("endPhase");
+    expect(played.state.quickWindowPlayer).toBe(1);
+
+    const afterPlayView = createPlayerView(played.state, 1);
+    expect(afterPlayView.legalActions).toContain("PASS_QUICK_WINDOW");
+    expect(afterPlayView.legalActions.some((a) => a.startsWith("QUICK_PLAY:"))).toBe(false);
+
+    const passed = applyAction(played.state, 1, { type: "PASS_QUICK_WINDOW" });
+    expect(passed.ok).toBe(true);
+    expect(passed.state.quickWindow).toBeNull();
   });
 
-  it("only offers pass quick window when quick cards are playable", () => {
+  it("always offers end quick phase while in quick window", () => {
     let state = createInitialGameState(0);
     state.phase = "main";
     state.activePlayer = 0;
@@ -266,11 +276,43 @@ describe("batch 9 regression fixes", () => {
     state.pendingChoices = null;
 
     const view = createPlayerView(state, 1);
-    expect(view.legalActions.includes("PASS_QUICK_WINDOW")).toBe(false);
+    expect(view.legalActions).toContain("PASS_QUICK_WINDOW");
 
     state.players[1].zones.hand.push(createCardInstance("BP17-T18EN", 1));
     state.players[1].pp = 1;
     const viewWithQuick = createPlayerView(state, 1);
-    expect(viewWithQuick.legalActions.includes("PASS_QUICK_WINDOW")).toBe(true);
+    expect(viewWithQuick.legalActions).toContain("PASS_QUICK_WINDOW");
+    expect(viewWithQuick.legalActions.some((a) => a.startsWith("QUICK_PLAY:"))).toBe(true);
+  });
+
+  it("clears end-phase quick window immediately when opponent passes", () => {
+    let state = createInitialGameState(0);
+    state.phase = "end";
+    state.activePlayer = 0;
+    state.pendingChoices = null;
+    state.quickWindow = "endPhase";
+    state.quickWindowPlayer = 1;
+    state.endPhaseQuickResolved = false;
+    state.players[0].flags.endStartAbilitiesQueued = true;
+
+    const passed = applyAction(state, 1, { type: "PASS_QUICK_WINDOW" });
+    expect(passed.ok).toBe(true);
+    expect(passed.state.quickWindow).toBeNull();
+  });
+
+  it("does not block END_MAIN after the opponent end-phase quick window was resolved", () => {
+    let state = createInitialGameState(0);
+    state.phase = "main";
+    state.activePlayer = 0;
+    state.turnNumber = 3;
+    state.pendingChoices = null;
+    state.quickWindow = "endPhase";
+    state.quickWindowPlayer = 1;
+    state.endPhaseQuickResolved = true;
+    state.players[0].flags.endStartAbilitiesQueued = false;
+
+    const ended = applyAction(state, 0, { type: "END_MAIN" });
+    expect(ended.ok).toBe(true);
+    expect(ended.state.quickWindow).toBeNull();
   });
 });

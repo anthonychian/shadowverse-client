@@ -41,7 +41,7 @@ export default function Cemetery({
 }) {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
-  const modalOpen = useUiModalOpen(open);
+  const modalOpen = useUiModalOpen(open, { persistWhenChromeHidden: true });
   const [name, setName] = useState("");
   const [contextMenu, setContextMenu] = React.useState(null);
   const [cemeterySelected, setCemeterySelected] = useState(true);

@@ -62,7 +62,7 @@ export default function EvoDeck({
 }) {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
-  const modalOpen = useUiModalOpen(open);
+  const modalOpen = useUiModalOpen(open, { persistWhenChromeHidden: true });
   const [showEvo, setShowEvo] = useState(false);
   const [showFeed, setShowFeed] = useState(false);
   const [showRide, setShowRide] = useState(false);

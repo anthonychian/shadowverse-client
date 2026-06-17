@@ -314,6 +314,15 @@ function evolveCardsMatch(fieldCardNo, evoCardNo) {
     if (evoDef?.evolvesFrom && (0, registry_1.getGameplayCardNo)(fieldCardNo) === (0, registry_1.getGameplayCardNo)(evoDef.evolvesFrom)) {
         return true;
     }
+    if (baseDef && evoDef) {
+        const baseKind = (0, reprints_1.cardIdentityKey)(baseDef).split("|")[1];
+        const evoKind = (0, reprints_1.cardIdentityKey)(evoDef).split("|")[1];
+        if (baseKind === "base" &&
+            evoKind === "evolved" &&
+            (0, reprints_1.normalizeIdentityName)(baseDef.name) === (0, reprints_1.normalizeIdentityName)(evoDef.name)) {
+            return true;
+        }
+    }
     return false;
 }
 function findMatchingEvolveCard(state, player, fieldInstanceId) {

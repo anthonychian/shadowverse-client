@@ -1,10 +1,45 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.pickSharedHandOverlay = pickSharedHandOverlay;
+exports.mergeSharedHandOverlays = mergeSharedHandOverlays;
 exports.normalizeIdentityName = normalizeIdentityName;
 exports.cardIdentityKey = cardIdentityKey;
 exports.isCanonicalSlot = isCanonicalSlot;
+exports.pickCanonicalInGroup = pickCanonicalInGroup;
 exports.buildReprintMap = buildReprintMap;
 exports.mergePrintingWithGameplay = mergePrintingWithGameplay;
+/** Gameplay fields shared across all printings of the same card identity. */
+function pickSharedHandOverlay(overlay) {
+    const shared = {};
+    if (overlay.abilities?.length)
+        shared.abilities = overlay.abilities;
+    if (overlay.keywords?.length)
+        shared.keywords = overlay.keywords;
+    if (overlay.evolveCost != null)
+        shared.evolveCost = overlay.evolveCost;
+    if (overlay.cost != null)
+        shared.cost = overlay.cost;
+    if (overlay.attack != null)
+        shared.attack = overlay.attack;
+    if (overlay.defense != null)
+        shared.defense = overlay.defense;
+    if (overlay.cardType)
+        shared.cardType = overlay.cardType;
+    if (overlay.traits?.length)
+        shared.traits = overlay.traits;
+    if (overlay.printingType)
+        shared.printingType = overlay.printingType;
+    return shared;
+}
+function mergeSharedHandOverlays(...overlays) {
+    let merged = {};
+    for (const overlay of overlays) {
+        if (!overlay)
+            continue;
+        merged = { ...merged, ...pickSharedHandOverlay(overlay) };
+    }
+    return merged;
+}
 function normalizeIdentityName(name) {
     return name
         .replace(/\s+TOKEN$/i, "")
@@ -45,6 +80,7 @@ function cardRichness(card) {
         score += 2;
     return score;
 }
+/** Pick the richest card from a group (e.g. alternate printings of one identity). */
 function pickCanonicalInGroup(cards) {
     return [...cards].sort((a, b) => {
         const diff = cardRichness(b) - cardRichness(a);

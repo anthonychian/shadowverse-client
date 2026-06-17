@@ -67,4 +67,38 @@ describe("reprints", () => {
     expect(merged.cardText).toContain("Quick");
     expect(merged.abilities?.length).toBe(1);
   });
+
+  it("shares hand-authored abilities across printings of the same identity", () => {
+    const cards: Record<string, CardDefinition> = {
+      "BP07-SL13EN": {
+        cardNo: "BP07-SL13EN",
+        name: "Mono, Garnet Rebel",
+        class: "abyss",
+        cardType: "follower",
+        printingType: "base",
+        cost: 2,
+        attack: 3,
+        defense: 2,
+        traits: ["Machina"],
+        keywords: ["evolve"],
+        cardText: "Promo text.",
+      },
+      "BP07-069EN": {
+        cardNo: "BP07-069EN",
+        name: "Mono, Garnet Rebel",
+        class: "abyss",
+        cardType: "follower",
+        printingType: "base",
+        cost: 2,
+        attack: 3,
+        defense: 2,
+        traits: ["Machina"],
+        keywords: ["evolve"],
+        cardText: "Regular text with more detail about the card effect.",
+      },
+    };
+    const map = buildReprintMap(cards);
+    expect(map.get("BP07-069EN")).toBeTruthy();
+    expect(map.get("BP07-SL13EN")).toBeTruthy();
+  });
 });

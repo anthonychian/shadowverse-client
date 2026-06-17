@@ -101,8 +101,8 @@
       {
         "timing": "passive",
         "condition": {
-          "type": "namedFollowerOnField",
-          "cardNo": "BP11-018EN"
+          "type": "namedFollowerOnFieldByName",
+          "identityName": "Nahtnaught, Cursed Queen"
         },
         "effect": {
           "op": "exAreaPlayCostReduction",
@@ -114,8 +114,8 @@
         "effect": {
           "op": "if",
           "condition": {
-            "type": "namedFollowerOnField",
-            "cardNo": "BP11-018EN"
+            "type": "namedFollowerOnFieldByName",
+            "identityName": "Nahtnaught, Cursed Queen"
           },
           "then": {
             "op": "draw",
@@ -183,7 +183,7 @@
               {
                 "op": "summonFromEvolveDeck",
                 "filter": {
-                  "cardNo": "BP14-019EN"
+                  "identityName": "Taketsumi, Creator of Paradise"
                 }
               }
             ]
@@ -204,7 +204,7 @@
                 {
                   "op": "summonFromEvolveDeck",
                   "filter": {
-                    "cardNo": "BP14-019EN"
+                    "identityName": "Taketsumi, Creator of Paradise"
                   }
                 }
               ]
@@ -284,28 +284,28 @@
             {
               "op": "if",
               "condition": {
-                "type": "ownCemeteryTraitMin",
+                "type": "ownCemeteryTraitMinBeforeSourceEnters",
                 "trait": "Festive",
                 "count": 5
               },
               "then": {
                 "op": "tutorFromDeck",
                 "filter": {
-                  "cardNo": "BP14-018EN"
+                  "identityName": "Taketsumi, Aconite Paladin"
                 },
                 "to": "field"
               },
               "else": {
                 "op": "if",
                 "condition": {
-                  "type": "ownCemeteryClassMin",
+                  "type": "ownCemeteryClassMinBeforeSourceEnters",
                   "cardClass": "sword",
                   "count": 10
                 },
                 "then": {
                   "op": "tutorFromDeck",
                   "filter": {
-                    "cardNo": "BP14-018EN"
+                    "identityName": "Taketsumi, Aconite Paladin"
                   },
                   "to": "field"
                 }
@@ -622,7 +622,8 @@
               {
                 "label": "Engage enemy follower (no refresh next turn)",
                 "effect": {
-                  "op": "box",
+                  "op": "engage",
+                  "skipRefreshNextStart": true,
                   "targets": {
                     "type": "enemyFollower",
                     "count": 1
@@ -663,7 +664,8 @@
               {
                 "label": "Engage enemy follower (no refresh next turn)",
                 "effect": {
-                  "op": "box",
+                  "op": "engage",
+                  "skipRefreshNextStart": true,
                   "targets": {
                     "type": "enemyFollower",
                     "count": 1
@@ -825,7 +827,7 @@
             {
               "op": "banishFromExArea",
               "filter": {
-                "cardNo": "BP14-T02EN"
+                "identityName": "Glittering Gold"
               },
               "count": 2
             },
@@ -871,9 +873,9 @@
     "abilities": [
       {
         "timing": "onExAreaEntry",
-        "filter": {
-          "cardNo": "BP14-T02EN"
-        },
+          "filter": {
+            "identityName": "Glittering Gold"
+          },
         "effect": {
           "op": "damageFollowerAndLeader",
           "followerAmount": 3,
@@ -1132,7 +1134,7 @@
               "effect": {
                 "op": "tutorFromCemetery",
                 "filter": {
-                  "cardNo": "BP07-SL13EN"
+                  "identityName": "Mono, Garnet Rebel"
                 },
                 "to": "field"
               }
@@ -1794,7 +1796,7 @@
         "cost": {
           "pp": 2,
           "banishFromCemetery": {
-            "cardNo": "BP07-075EN"
+            "identityName": "Alpha Drive"
           },
           "banishCount": 1
         },
@@ -1826,7 +1828,7 @@
         "effect": {
           "op": "tutorFromDeck",
           "filter": {
-            "cardNo": "BP17-083EN"
+            "identityName": "Roly-Poly Mk II"
           },
           "to": "field"
         }
@@ -1931,7 +1933,7 @@
         "cost": {
           "pp": 1,
           "banishFromExArea": {
-            "cardNo": "BP14-T02EN"
+            "identityName": "Glittering Gold"
           },
           "banishCount": 3
         },
@@ -2492,7 +2494,7 @@
             {
               "op": "searchDeckChoose",
               "filter": {
-                "cardNo": "BP07-041EN"
+                "identityName": "Delta Cannon"
               },
               "lookAt": 4,
               "to": "hand",
@@ -3505,7 +3507,7 @@
             {
               "op": "buryFieldFollowers",
               "filter": {
-                "cardNo": "ECP02-026EN"
+                "identityName": "Syuko Shiomi [Cinderella Girl]"
               }
             },
             {
@@ -3917,7 +3919,7 @@
           "then": {
             "op": "tutorFromDeck",
             "filter": {
-              "cardNo": "CP02-085EN"
+              "identityName": "Last Daylight"
             },
             "to": "exArea",
             "playCostReduction": 2

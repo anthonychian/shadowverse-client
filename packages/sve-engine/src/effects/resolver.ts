@@ -1,4 +1,4 @@
-import { getCardDef } from "../cards/registry";
+import { getCardDef, resolveCardNoByIdentity } from "../cards/registry";
 
 import { onCardEntersExArea, onFollowerEntersField, queueLastWords } from "../rules/confirmation";
 
@@ -833,9 +833,14 @@ export function resolveEffect(
 
       const limit = effect.zone === "exArea" ? p.exLimit : p.fieldLimit;
 
+      const tokenCardNo =
+        effect.tokenCardNo ?? (effect.tokenName ? resolveCardNoByIdentity(effect.tokenName) : undefined);
+
+      if (!tokenCardNo) break;
+
       for (let i = 0; i < effect.count && zone.length < limit; i++) {
 
-        const token = createCardInstance(effect.tokenCardNo, player, player);
+        const token = createCardInstance(tokenCardNo, player, player);
 
         zone.push(token);
 
@@ -1146,7 +1151,7 @@ export function resolveEffect(
 
       fieldOnNext.card.evolvedThisTurn = true;
 
-      fieldOnNext.card.onFieldSinceTurnStart = false;
+      // Preserve leader-attack eligibility when evolving a follower already on board since turn start.
 
       next.players[player].flags.evolvedThisTurn = true;
 
@@ -1237,21 +1242,38 @@ export function resolveEffect(
 
     case "engage": {
 
+      const forced = next.resolutionContext?.forcedTargetId;
+
       const candidates = getTargetCandidates(next, player, effect.targets);
 
       if (candidates.length === 0) break;
 
-      let targetId = candidates[0];
+      let targetId: string;
 
-      if (candidates.length >= 1 && !next.pendingChoices) {
+      if (forced) {
+
+        if (!candidates.includes(forced)) break;
+
+        targetId = forced;
+
+      } else if (candidates.length >= 1 && !next.pendingChoices) {
 
         return promptSelectTarget(next, player, effect, candidates);
+
+      } else {
+
+        targetId = candidates[0];
 
       }
 
       const found = findInstance(next, targetId);
 
-      if (found) found.card.engaged = true;
+      if (found) {
+        found.card.engaged = true;
+        if (effect.skipRefreshNextStart) {
+          found.card.skipRefreshOnTurn = next.turnNumber + 1;
+        }
+      }
 
       break;
 

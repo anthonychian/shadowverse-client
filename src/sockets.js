@@ -4,7 +4,7 @@ import io from "socket.io-client";
 //export const socket = io("https://juvenile-closed-stork.glitch.me", {
 
 // Use a local server when developing on localhost, otherwise the deployed one.
-// This lets two browsers play against `node index.js` on :5000 for testing,
+// This lets two browsers play against `npm run server` on :5000 for testing,
 // without touching the production target.
 const SERVER_URL =
   typeof window !== "undefined" &&

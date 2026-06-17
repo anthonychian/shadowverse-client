@@ -10,8 +10,20 @@ function cardMatchesFilter(cardNo, filter) {
     const def = (0, registry_1.getCardDef)(cardNo);
     if (!def)
         return false;
-    if (filter.cardNo && cardNo !== filter.cardNo)
-        return false;
+    if (filter.identityName) {
+        if ((0, reprints_1.normalizeIdentityName)(def.name) !== (0, reprints_1.normalizeIdentityName)(filter.identityName))
+            return false;
+    }
+    else if (filter.cardNo) {
+        const ref = (0, registry_1.getCardDef)(filter.cardNo);
+        if (ref) {
+            if ((0, reprints_1.normalizeIdentityName)(def.name) !== (0, reprints_1.normalizeIdentityName)(ref.name))
+                return false;
+        }
+        else if (cardNo !== filter.cardNo) {
+            return false;
+        }
+    }
     if (filter.trait && !def.traits?.includes(filter.trait))
         return false;
     if (filter.cardClass && def.class !== filter.cardClass)
@@ -37,6 +49,22 @@ function cardMatchesFilter(cardNo, filter) {
 }
 function countTraitInZone(state, player, zone, trait) {
     return (0, queries_1.getPlayer)(state, player).zones[zone].filter((c) => (0, registry_1.getCardDef)((0, queries_1.resolveCardNo)(state, c))?.traits?.includes(trait)).length;
+}
+function countCemeteryTraitBeforeSourceEnters(state, player, trait) {
+    const sourceId = state.resolutionContext?.sourceInstanceId;
+    return (0, queries_1.getPlayer)(state, player).zones.cemetery.filter((c) => {
+        if (sourceId && c.instanceId === sourceId)
+            return false;
+        return (0, registry_1.getCardDef)((0, queries_1.resolveCardNo)(state, c))?.traits?.includes(trait);
+    }).length;
+}
+function countCemeteryClassBeforeSourceEnters(state, player, cardClass) {
+    const sourceId = state.resolutionContext?.sourceInstanceId;
+    return (0, queries_1.getPlayer)(state, player).zones.cemetery.filter((c) => {
+        if (sourceId && c.instanceId === sourceId)
+            return false;
+        return (0, registry_1.getCardDef)((0, queries_1.resolveCardNo)(state, c))?.class === cardClass;
+    }).length;
 }
 function evalCondition(state, player, condition) {
     switch (condition.type) {
@@ -73,6 +101,8 @@ function evalCondition(state, player, condition) {
         }
         case "ownCemeteryTraitMin":
             return countTraitInZone(state, player, "cemetery", condition.trait) >= condition.count;
+        case "ownCemeteryTraitMinBeforeSourceEnters":
+            return (countCemeteryTraitBeforeSourceEnters(state, player, condition.trait) >= condition.count);
         case "ownDeckTraitMin":
             return countTraitInZone(state, player, "deck", condition.trait) >= condition.count;
         case "fieldTraitMin":
@@ -81,6 +111,8 @@ function evalCondition(state, player, condition) {
             return countTraitInZone(state, player, "hand", condition.trait) >= condition.count;
         case "ownCemeteryClassMin":
             return (0, queries_1.getPlayer)(state, player).zones.cemetery.filter((c) => (0, registry_1.getCardDef)(c.cardNo)?.class === condition.cardClass).length >= condition.count;
+        case "ownCemeteryClassMinBeforeSourceEnters":
+            return (countCemeteryClassBeforeSourceEnters(state, player, condition.cardClass) >= condition.count);
         case "ownDeckClassMin":
             return (0, queries_1.getPlayer)(state, player).zones.deck.filter((c) => (0, registry_1.getCardDef)(c.cardNo)?.class === condition.cardClass).length >= condition.count;
         case "fieldFollowerMinCost": {

@@ -214,8 +214,16 @@ function passQuick(state, player) {
         });
         (0, vitest_1.expect)(played.ok).toBe(true);
         (0, vitest_1.expect)(played.state.players[1].zones.exArea.some((c) => c.instanceId === quickSpell.instanceId)).toBe(false);
+        (0, vitest_1.expect)(played.state.quickWindow).toBe("endPhase");
+        (0, vitest_1.expect)(played.state.quickWindowPlayer).toBe(1);
+        const afterPlayView = (0, filterView_1.createPlayerView)(played.state, 1);
+        (0, vitest_1.expect)(afterPlayView.legalActions).toContain("PASS_QUICK_WINDOW");
+        (0, vitest_1.expect)(afterPlayView.legalActions.some((a) => a.startsWith("QUICK_PLAY:"))).toBe(false);
+        const passed = (0, applyAction_1.applyAction)(played.state, 1, { type: "PASS_QUICK_WINDOW" });
+        (0, vitest_1.expect)(passed.ok).toBe(true);
+        (0, vitest_1.expect)(passed.state.quickWindow).toBeNull();
     });
-    (0, vitest_1.it)("only offers pass quick window when quick cards are playable", () => {
+    (0, vitest_1.it)("always offers end quick phase while in quick window", () => {
         let state = (0, factory_1.createInitialGameState)(0);
         state.phase = "main";
         state.activePlayer = 0;
@@ -223,10 +231,38 @@ function passQuick(state, player) {
         state.quickWindowPlayer = 1;
         state.pendingChoices = null;
         const view = (0, filterView_1.createPlayerView)(state, 1);
-        (0, vitest_1.expect)(view.legalActions.includes("PASS_QUICK_WINDOW")).toBe(false);
+        (0, vitest_1.expect)(view.legalActions).toContain("PASS_QUICK_WINDOW");
         state.players[1].zones.hand.push((0, factory_1.createCardInstance)("BP17-T18EN", 1));
         state.players[1].pp = 1;
         const viewWithQuick = (0, filterView_1.createPlayerView)(state, 1);
-        (0, vitest_1.expect)(viewWithQuick.legalActions.includes("PASS_QUICK_WINDOW")).toBe(true);
+        (0, vitest_1.expect)(viewWithQuick.legalActions).toContain("PASS_QUICK_WINDOW");
+        (0, vitest_1.expect)(viewWithQuick.legalActions.some((a) => a.startsWith("QUICK_PLAY:"))).toBe(true);
+    });
+    (0, vitest_1.it)("clears end-phase quick window immediately when opponent passes", () => {
+        let state = (0, factory_1.createInitialGameState)(0);
+        state.phase = "end";
+        state.activePlayer = 0;
+        state.pendingChoices = null;
+        state.quickWindow = "endPhase";
+        state.quickWindowPlayer = 1;
+        state.endPhaseQuickResolved = false;
+        state.players[0].flags.endStartAbilitiesQueued = true;
+        const passed = (0, applyAction_1.applyAction)(state, 1, { type: "PASS_QUICK_WINDOW" });
+        (0, vitest_1.expect)(passed.ok).toBe(true);
+        (0, vitest_1.expect)(passed.state.quickWindow).toBeNull();
+    });
+    (0, vitest_1.it)("does not block END_MAIN after the opponent end-phase quick window was resolved", () => {
+        let state = (0, factory_1.createInitialGameState)(0);
+        state.phase = "main";
+        state.activePlayer = 0;
+        state.turnNumber = 3;
+        state.pendingChoices = null;
+        state.quickWindow = "endPhase";
+        state.quickWindowPlayer = 1;
+        state.endPhaseQuickResolved = true;
+        state.players[0].flags.endStartAbilitiesQueued = false;
+        const ended = (0, applyAction_1.applyAction)(state, 0, { type: "END_MAIN" });
+        (0, vitest_1.expect)(ended.ok).toBe(true);
+        (0, vitest_1.expect)(ended.state.quickWindow).toBeNull();
     });
 });

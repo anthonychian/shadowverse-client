@@ -214,7 +214,11 @@ function buildAbilities(cardNo, card, text) {
               { op: "summon", tokenCardNo: GOLD, count: 1, zone: "exArea" },
               {
                 op: "if",
-                condition: { type: "ownCemeteryTraitMin", trait: "Festive", count: 5 },
+                condition: {
+                  type: "ownCemeteryTraitMinBeforeSourceEnters",
+                  trait: "Festive",
+                  count: 5,
+                },
                 then: {
                   op: "tutorFromDeck",
                   filter: { cardNo: "BP14-018EN" },
@@ -222,7 +226,11 @@ function buildAbilities(cardNo, card, text) {
                 },
                 else: {
                   op: "if",
-                  condition: { type: "ownCemeteryClassMin", cardClass: "sword", count: 10 },
+                  condition: {
+                    type: "ownCemeteryClassMinBeforeSourceEnters",
+                    cardClass: "sword",
+                    count: 10,
+                  },
                   then: {
                     op: "tutorFromDeck",
                     filter: { cardNo: "BP14-018EN" },

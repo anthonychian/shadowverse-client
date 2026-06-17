@@ -51,6 +51,10 @@ function proceedAfterEndMainQuick(state) {
 }
 function continueEndPhaseFlow(state) {
     let next = structuredClone(state);
+    if (next.endPhaseQuickResolved) {
+        next.quickWindow = null;
+        next.quickWindowPlayer = null;
+    }
     if (next.pendingChoices || next.pendingTriggers.length > 0)
         return next;
     const player = next.activePlayer;
@@ -183,11 +187,29 @@ function continuePausedCombat(state) {
     }
     return next;
 }
+function spellEffectFullyResolved(state) {
+    return (!state.pendingChoices &&
+        (state.resolutionContext?.resumeAfterChoice?.length ?? 0) === 0 &&
+        state.pendingTriggers.length === 0);
+}
+function maybeBuryResolvedSpells(state, player) {
+    if (!spellEffectFullyResolved(state))
+        return state;
+    let next = state;
+    for (const card of [...next.players[player].zones.resolutionZone]) {
+        const def = (0, registry_1.getCardDef)((0, queries_1.resolveCardNo)(next, card));
+        if (def?.cardType !== "spell")
+            continue;
+        next = (0, zones_1.moveCard)(next, card.instanceId, "cemetery", player);
+    }
+    return next;
+}
 function finishChoiceResolution(state, player) {
     let next = state;
     if (!next.pendingChoices) {
         next = continueAfterChoice(next, player);
     }
+    next = maybeBuryResolvedSpells(next, player);
     next = (0, confirmation_1.runConfirmationTiming)(next);
     if (!next.pendingChoices) {
         next = continuePausedCombat(next);
@@ -612,10 +634,20 @@ function playCard(state, player, handInstanceId, targets, fromQuickWindow = fals
         inResolution.card.enteredFromHand = found.zone === "hand";
     }
     if (def.cardType === "spell") {
+        next.resolutionContext = {
+            sourceInstanceId: handInstanceId,
+            effectStack: [],
+            resumeAfterChoice: next.resolutionContext?.resumeAfterChoice,
+            buriedCosts: next.resolutionContext?.buriedCosts,
+            lastDiscardedCardNo: next.resolutionContext?.lastDiscardedCardNo,
+            deferTriggers: next.resolutionContext?.deferTriggers,
+        };
         next = (0, resolver_1.resolveSpell)(next, found.card.cardNo, player);
-        const res = (0, queries_1.findInstance)(next, handInstanceId);
-        if (res) {
-            next = (0, zones_1.moveCard)(next, handInstanceId, "cemetery", player);
+        if (spellEffectFullyResolved(next)) {
+            const res = (0, queries_1.findInstance)(next, handInstanceId);
+            if (res?.zone === "resolutionZone") {
+                next = (0, zones_1.moveCard)(next, handInstanceId, "cemetery", player);
+            }
         }
     }
     else if (def.cardType === "follower" || def.cardType === "amulet") {
@@ -827,7 +859,8 @@ function evolve(state, player, fieldInstanceId, evolveDeckInstanceId, useSuperEv
         return fail(state, "Invalid field card");
     fieldOnNext.card.linkedEvoInstanceId = evolveDeckInstanceIdResolved;
     fieldOnNext.card.evolvedThisTurn = true;
-    fieldOnNext.card.onFieldSinceTurnStart = false;
+    // Evolving grants rush for this turn; keep leader-attack eligibility if already on board since turn start.
+    fieldOnNext.card.onFieldSinceTurnStart = fieldFound.card.onFieldSinceTurnStart;
     if (useSuperEvo && next.players[player].superEvoPoints > 0) {
         const threshold = player === next.firstPlayer ? 7 : 6;
         if (next.players[player].turnsPassed >= threshold) {
@@ -1097,6 +1130,8 @@ function applyAction(state, player, action) {
             if (state.quickWindow === "endPhase") {
                 let next = structuredClone(state);
                 next.endPhaseQuickResolved = true;
+                next.quickWindow = null;
+                next.quickWindowPlayer = null;
                 next = continueEndPhaseFlow(next);
                 return ok(next);
             }
@@ -1110,10 +1145,10 @@ function applyAction(state, player, action) {
             const activeErr = assertActivePlayer(state, player, "Not your turn");
             if (activeErr)
                 return activeErr;
-            if (state.quickWindow === "endPhase") {
+            if (state.quickWindow === "endPhase" && !state.endPhaseQuickResolved) {
                 return fail(state, "Opponent must resolve quick window first");
             }
-            if (state.combat?.phase === "quickWindow") {
+            if (state.quickWindow === "afterAttack" || state.combat?.phase === "quickWindow") {
                 return fail(state, "Resolve quick window first");
             }
             if (state.combat?.phase === "declared") {

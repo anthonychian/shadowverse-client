@@ -132,4 +132,78 @@ describe("evolve", () => {
     expect(attacker.evolvedThisTurn).toBe(true);
     expect(hasKeyword(attacker, "rush", evolved)).toBe(true);
   });
+
+  it("evolved rush follower on board since turn start can attack the enemy leader", () => {
+    let state = createInitialGameState(0);
+    state.phase = "main";
+    state.activePlayer = 0;
+    state.turnNumber = 2;
+    state.pendingChoices = null;
+    state.players[0].pp = 5;
+    state.players[0].evoPoints = 2;
+
+    const leod = createCardInstance("SDD02-006EN", 0);
+    leod.onFieldSinceTurnStart = true;
+    state.players[0].zones.field.push(leod);
+    const evo = createCardInstance("SDD02-007EN", 0);
+    state.players[0].zones.evolveDeck.push(evo);
+
+    let current = applyAction(state, 0, {
+      type: "EVOLVE",
+      fieldInstanceId: leod.instanceId,
+      evolveDeckInstanceId: evo.instanceId,
+      useEvoPoint: false,
+    }).state;
+    if (current.pendingChoices?.type === "choose") {
+      current = applyAction(current, 0, {
+        type: "CHOICE_RESPONSE",
+        payload: { optionIndex: 0 },
+      }).state;
+    }
+    expect(current.players[0].zones.field[0].onFieldSinceTurnStart).toBe(true);
+
+    const attack = applyAction(current, 0, {
+      type: "ATTACK",
+      attackerId: leod.instanceId,
+      targetId: "leader",
+    });
+    expect(attack.ok).toBe(true);
+    expect(attack.state.players[1].leaderDef).toBeLessThan(20);
+  });
+
+  it("evolved rush follower played this turn cannot attack the enemy leader", () => {
+    let state = createInitialGameState(0);
+    state.phase = "main";
+    state.activePlayer = 0;
+    state.turnNumber = 2;
+    state.pendingChoices = null;
+    state.players[0].pp = 5;
+    state.players[0].evoPoints = 2;
+
+    const leod = createCardInstance("SDD02-006EN", 0);
+    leod.onFieldSinceTurnStart = false;
+    state.players[0].zones.field.push(leod);
+    const evo = createCardInstance("SDD02-007EN", 0);
+    state.players[0].zones.evolveDeck.push(evo);
+
+    let current = applyAction(state, 0, {
+      type: "EVOLVE",
+      fieldInstanceId: leod.instanceId,
+      evolveDeckInstanceId: evo.instanceId,
+      useEvoPoint: false,
+    }).state;
+    if (current.pendingChoices?.type === "choose") {
+      current = applyAction(current, 0, {
+        type: "CHOICE_RESPONSE",
+        payload: { optionIndex: 0 },
+      }).state;
+    }
+
+    const attack = applyAction(current, 0, {
+      type: "ATTACK",
+      attackerId: leod.instanceId,
+      targetId: "leader",
+    });
+    expect(attack.ok).toBe(false);
+  });
 });

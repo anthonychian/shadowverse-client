@@ -73,6 +73,8 @@ export type TargetSelector = {
 };
 export type DeckFilter = {
     cardNo?: string;
+    /** Match cards whose normalized identity name equals this value (all printings). */
+    identityName?: string;
     trait?: string;
     cardClass?: string;
     maxCost?: number;
@@ -110,6 +112,10 @@ export type Condition = {
     trait: string;
     count: number;
 } | {
+    type: "ownCemeteryTraitMinBeforeSourceEnters";
+    trait: string;
+    count: number;
+} | {
     type: "ownDeckTraitMin";
     trait: string;
     count: number;
@@ -123,6 +129,10 @@ export type Condition = {
     count: number;
 } | {
     type: "ownCemeteryClassMin";
+    cardClass: string;
+    count: number;
+} | {
+    type: "ownCemeteryClassMinBeforeSourceEnters";
     cardClass: string;
     count: number;
 } | {
@@ -193,7 +203,8 @@ export type Effect = {
     targets: TargetSelector;
 } | {
     op: "summon";
-    tokenCardNo: string;
+    tokenCardNo?: string;
+    tokenName?: string;
     count: number;
     zone: "field" | "exArea";
 } | {
@@ -324,6 +335,7 @@ export type Effect = {
 } | {
     op: "engage";
     targets: TargetSelector;
+    skipRefreshNextStart?: boolean;
 } | {
     op: "box";
     targets: TargetSelector;
@@ -408,6 +420,8 @@ export interface CardInstance {
     enteredFromHand?: boolean;
     /** Follower is boxed until this turn number (exclusive end at start phase). */
     boxedUntilTurn?: number;
+    /** Skip refresh on this controller start phase turn, then clear. */
+    skipRefreshOnTurn?: number;
     /** PP reduction for the rest of this turn (tutor/search EX discounts; cleared end of turn). */
     playCostReduction: number;
     /** Permanent PP reduction on this instance (e.g. Nicola last words). */

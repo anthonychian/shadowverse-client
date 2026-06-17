@@ -9,8 +9,11 @@ function describeEffect(effect) {
             return "choose an option";
         case "chooseMultiple":
             return "choose options";
-        case "summon":
-            return `summon ${(0, registry_1.getCardDef)(effect.tokenCardNo)?.name ?? effect.tokenCardNo}`;
+        case "summon": {
+            const tokenLabel = effect.tokenName ??
+                (effect.tokenCardNo ? ((0, registry_1.getCardDef)(effect.tokenCardNo)?.name ?? effect.tokenCardNo) : "token");
+            return `summon ${tokenLabel}`;
+        }
         case "dealDamage":
             return "deal damage";
         case "damageFollowerAndLeader":

@@ -2,7 +2,15 @@ import * as fs from "fs";
 import * as path from "path";
 import { CardDefinition } from "../types";
 import { MVP_CARD_DEFS } from "./mvp-cards";
-import { buildReprintMap, mergePrintingWithGameplay } from "./reprints";
+import {
+  buildReprintMap,
+  cardIdentityKey,
+  mergePrintingWithGameplay,
+  mergeSharedHandOverlays,
+  normalizeIdentityName,
+  pickCanonicalInGroup,
+  pickSharedHandOverlay,
+} from "./reprints";
 
 let scrapedCards: Record<string, CardDefinition> = {};
 const cardsPath = path.join(__dirname, "..", "..", "data", "cards.json");
@@ -43,6 +51,41 @@ function toCardDef(raw: Record<string, unknown>): CardDefinition {
 
 const reprintMap = buildReprintMap(scrapedCards as Record<string, CardDefinition>);
 
+function identityKeyForHandEntry(cardNo: string, overlay: Partial<CardDefinition>): string {
+  const raw = scrapedCards[cardNo] as CardDefinition | undefined;
+  const name = String(overlay.name ?? raw?.name ?? cardNo);
+  return cardIdentityKey({
+    name,
+    printingType: overlay.printingType ?? raw?.printingType ?? (raw as { type?: string })?.type,
+    specialType: overlay.specialType ?? raw?.specialType,
+    type: overlay.printingType ?? (raw as { type?: string })?.type,
+  });
+}
+
+const handAuthoredByIdentity = new Map<string, Partial<CardDefinition>>();
+for (const [cardNo, overlay] of Object.entries(handAuthored)) {
+  const key = identityKeyForHandEntry(cardNo, overlay);
+  const prev = handAuthoredByIdentity.get(key);
+  handAuthoredByIdentity.set(
+    key,
+    mergeSharedHandOverlays(prev, pickSharedHandOverlay(overlay)),
+  );
+}
+
+function handOverlayForPrinting(
+  cardNo: string,
+  printing: CardDefinition,
+): Partial<CardDefinition> {
+  const handForPrinting = handAuthored[cardNo];
+  const handByIdentity = handAuthoredByIdentity.get(cardIdentityKey(printing));
+  const shared = mergeSharedHandOverlays(handForPrinting, handByIdentity);
+  return {
+    ...shared,
+    evolvesFrom: handForPrinting?.evolvesFrom ?? printing.evolvesFrom,
+    evolvesTo: handForPrinting?.evolvesTo ?? printing.evolvesTo,
+  };
+}
+
 function registerCardDef(cardNo: string, def: CardDefinition): void {
   registry.set(cardNo, def);
 }
@@ -55,19 +98,13 @@ for (const raw of Object.values(scrapedCards)) {
     gameplayNo !== cardNo && scrapedCards[gameplayNo]
       ? toCardDef(scrapedCards[gameplayNo] as unknown as Record<string, unknown>)
       : printing;
-  const handForPrinting = handAuthored[cardNo];
-  const handForGameplay = gameplayNo !== cardNo ? handAuthored[gameplayNo] : undefined;
-  const handOverlay = {
-    ...(handForGameplay || {}),
-    ...(handForPrinting || {}),
-    abilities: handForPrinting?.abilities || handForGameplay?.abilities,
-    keywords: handForPrinting?.keywords || handForGameplay?.keywords,
-    evolvesFrom: handForPrinting?.evolvesFrom || handForGameplay?.evolvesFrom,
-    evolvesTo: handForPrinting?.evolvesTo || handForGameplay?.evolvesTo,
-  };
   registerCardDef(
     cardNo,
-    mergePrintingWithGameplay(printing, gameplaySource, handOverlay as Partial<CardDefinition>),
+    mergePrintingWithGameplay(
+      printing,
+      gameplaySource,
+      handOverlayForPrinting(cardNo, printing) as Partial<CardDefinition>,
+    ),
   );
 }
 
@@ -81,11 +118,23 @@ for (const [cardNo, overlay] of Object.entries(handAuthored)) {
   const gameplayNo = reprintMap.get(cardNo) ?? cardNo;
   const base = registry.get(gameplayNo);
   if (base) {
-    registerCardDef(cardNo, mergePrintingWithGameplay({ ...base, cardNo, name: base.name }, base, overlay));
+    const stub = { ...base, cardNo, name: base.name };
+    registerCardDef(
+      cardNo,
+      mergePrintingWithGameplay(
+        stub,
+        base,
+        handOverlayForPrinting(cardNo, stub) as Partial<CardDefinition>,
+      ),
+    );
     continue;
   }
   const stub = genericStub(cardNo);
-  registerCardDef(cardNo, mergePrintingWithGameplay(stub, stub, overlay as Partial<CardDefinition>));
+  const shared = mergeSharedHandOverlays(
+    handAuthoredByIdentity.get(identityKeyForHandEntry(cardNo, overlay)),
+    pickSharedHandOverlay(overlay),
+  );
+  registerCardDef(cardNo, mergePrintingWithGameplay(stub, stub, shared as Partial<CardDefinition>));
 }
 
 const OFFICIAL_CARD_NO = /^[A-Z0-9]+-[A-Z0-9]+EN$/i;
@@ -121,7 +170,8 @@ export function getCardDef(cardNo: string): CardDefinition | undefined {
     const gameplay = registry.get(gameplayNo);
     if (gameplay) {
       const stub = genericStub(cardNo);
-      return mergePrintingWithGameplay(stub, gameplay, handAuthored[cardNo] || handAuthored[gameplayNo]);
+      const overlay = handOverlayForPrinting(cardNo, stub);
+      return mergePrintingWithGameplay(stub, gameplay, overlay);
     }
   }
 
@@ -133,6 +183,20 @@ export function getGameplayCardNo(cardNo: string): string {
   return reprintMap.get(cardNo) ?? cardNo;
 }
 
+/** Resolve any printing of a card or token by normalized identity name. */
+export function resolveCardNoByIdentity(identityName: string): string | undefined {
+  const target = normalizeIdentityName(identityName).toLowerCase();
+  const candidates: CardDefinition[] = [];
+  for (const raw of Object.values(scrapedCards)) {
+    const card = raw as CardDefinition;
+    if (normalizeIdentityName(card.name).toLowerCase() === target) {
+      candidates.push(card);
+    }
+  }
+  if (candidates.length === 0) return undefined;
+  return pickCanonicalInGroup(candidates).cardNo;
+}
+
 export function getAllCardDefs(): CardDefinition[] {
   return [...registry.values()];
 }
@@ -142,5 +206,6 @@ export function registerCard(def: CardDefinition): void {
 }
 
 export function getCardByName(name: string): CardDefinition | undefined {
-  return [...registry.values()].find((c) => c.name === name);
+  const cardNo = resolveCardNoByIdentity(name);
+  return cardNo ? getCardDef(cardNo) : undefined;
 }

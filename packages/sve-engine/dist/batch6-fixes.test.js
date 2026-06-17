@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const vitest_1 = require("vitest");
 const applyAction_1 = require("./actions/applyAction");
+const setup_1 = require("./phases/setup");
 const factory_1 = require("./state/factory");
 const queries_1 = require("./state/queries");
 const trigger_queue_1 = require("./rules/trigger-queue");
@@ -130,6 +131,58 @@ const trigger_queue_1 = require("./rules/trigger-queue");
         (0, vitest_1.expect)(current.pendingChoices).toBeNull();
         (0, vitest_1.expect)(current.players[0].zones.exArea.length).toBeGreaterThanOrEqual(2);
         (0, vitest_1.expect)(current.players[0].zones.hand.length).toBe(1);
+    });
+    (0, vitest_1.it)("ginne engage option engages without boxing enemy follower", () => {
+        let state = (0, factory_1.createInitialGameState)(0);
+        state.phase = "main";
+        state.activePlayer = 0;
+        state.turnNumber = 5;
+        state.pendingChoices = null;
+        state.players[0].pp = 5;
+        const ginne = (0, factory_1.createCardInstance)("BP16-022EN", 0);
+        const enemy = (0, factory_1.createCardInstance)("MVP-002", 1);
+        state.players[0].zones.hand.push(ginne);
+        state.players[1].zones.field.push(enemy);
+        const played = (0, applyAction_1.applyAction)(state, 0, { type: "PLAY_CARD", handInstanceId: ginne.instanceId });
+        (0, vitest_1.expect)(played.ok).toBe(true);
+        const chose = (0, applyAction_1.applyAction)(played.state, 0, {
+            type: "CHOICE_RESPONSE",
+            payload: { optionIndices: [0] },
+        });
+        (0, vitest_1.expect)(chose.ok).toBe(true);
+        const engaged = (0, applyAction_1.applyAction)(chose.state, 0, {
+            type: "CHOICE_RESPONSE",
+            payload: { targetId: enemy.instanceId },
+        });
+        (0, vitest_1.expect)(engaged.ok).toBe(true);
+        const enemyOnBoard = engaged.state.players[1].zones.field.find((c) => c.instanceId === enemy.instanceId);
+        (0, vitest_1.expect)(enemyOnBoard.engaged).toBe(true);
+        (0, vitest_1.expect)((0, queries_1.isBoxed)(enemyOnBoard, engaged.state)).toBe(false);
+        (0, vitest_1.expect)((0, queries_1.hasKeyword)(enemyOnBoard, "ward", engaged.state, 1)).toBe(true);
+        (0, vitest_1.expect)(enemyOnBoard.skipRefreshOnTurn).toBe(6);
+    });
+    (0, vitest_1.it)("ginne engage skips refresh only on controller next start phase", () => {
+        let state = (0, factory_1.createInitialGameState)(0);
+        state.phase = "main";
+        state.activePlayer = 0;
+        state.turnNumber = 5;
+        state.pendingChoices = null;
+        state.players[0].pp = 5;
+        const ginne = (0, factory_1.createCardInstance)("BP16-022EN", 0);
+        const enemy = (0, factory_1.createCardInstance)("MVP-002", 1);
+        enemy.skipRefreshOnTurn = 6;
+        enemy.engaged = true;
+        state.players[1].zones.field.push(enemy);
+        state.activePlayer = 1;
+        state.turnNumber = 6;
+        state = (0, setup_1.beginStartPhase)(state);
+        const onField = state.players[1].zones.field[0];
+        (0, vitest_1.expect)(onField.engaged).toBe(true);
+        (0, vitest_1.expect)(onField.skipRefreshOnTurn).toBeUndefined();
+        state.activePlayer = 1;
+        state.turnNumber = 8;
+        state = (0, setup_1.beginStartPhase)(state);
+        (0, vitest_1.expect)(state.players[1].zones.field[0].engaged).toBe(false);
     });
     (0, vitest_1.it)("hagglers gambit costs 0 with three glittering gold in ex area", () => {
         const spell = (0, factory_1.createCardInstance)("BP14-035EN", 0);
