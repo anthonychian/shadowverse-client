@@ -8,6 +8,41 @@ import cardPrintings from "./cardPrintings.json";
 
 export const getDetails = (name) => cardData[name] || null;
 
+// Some cards exist under more than one name but are the very same card — alt-art
+// collab cards, e.g. "Anastasia" and "Anastasia [All-Out Vacation]". They share
+// a single deckbuilding copy limit: 3 of one + 3 of the other (6 total) is
+// illegal; the cap of 3 is across the group. Two names are the same card when
+// they share a base name (the part before any "[...]" suffix) AND have identical
+// class/type/cost/stats/effect. The signature guards against same-character but
+// different cards (e.g. "Anastasia" vs the cheaper "Anastasia [Seize the
+// Light]"). Built once from cardData; auto-detects future alt-art cards.
+const aliasBaseName = (n) =>
+  n.replace(/\s*\[[^\]]*\]/g, "").replace(/\s+Evolved$/, "").trim();
+const cardSignature = (c) =>
+  [c.class, c.cardType, c.cost, c.attack, c.defense, c.effect].join("|||");
+
+const SAME_CARD_NAMES = (() => {
+  const groups = new Map();
+  for (const name in cardData) {
+    if (name.endsWith(" TOKEN")) continue;
+    const key = aliasBaseName(name) + "###" + cardSignature(cardData[name]);
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(name);
+  }
+  const byName = {};
+  for (const names of groups.values()) {
+    if (names.length < 2) continue;
+    for (const n of names) byName[n] = names;
+  }
+  return byName;
+})();
+
+// All names that share a copy limit with `name` — the card itself plus any
+// same-card aliases. Returns just [name] for a card with no alias. The returned
+// array is shared by every member of a group, so it doubles as a stable group
+// identity (e.g. via .join()).
+export const sameNameCards = (name) => SAME_CARD_NAMES[name] || [name];
+
 // Collab "classes" aren't stored in the `class` field — those cards carry a base
 // craft (often neutral) — but they're identifiable by trait. Detect them so a
 // collab deck is labelled by its collab rather than its base craft.

@@ -62,6 +62,7 @@ export const allCardsEvo = [
   "Steelwing Evolved",
   "Maisha, Purgation's Vessel Evolved",
   "Hoverboard Mercenary Evolved",
+  "Relic Goddess",
   "Anastasia [Seize the Light] Evolved",
   "Riina Tada [Wannabe Legend] Evolved",
   "Hinako Kita [True Dream] Evolved",
@@ -2105,6 +2106,7 @@ export const havenEvo = [
   "Marlone, Peace Advocate Evolved",
   "Aerial Craft Evolved",
   "Steelwing Evolved",
+  "Relic Goddess",
 
   "Nana Abe [Cinderella Girl] Evolved",
   "Kako Takafuji [Lady Luck] Evolved",
@@ -2247,6 +2249,7 @@ export const set17Evo = [
   "Steelwing Evolved",
   "Maisha, Purgation's Vessel Evolved",
   "Hoverboard Mercenary Evolved",
+  "Relic Goddess",
 ];
 
 export const setIDOL2Evo = [

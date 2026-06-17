@@ -147,7 +147,6 @@ export const allCards = [
   "Soul Commander",
   "Midnight Gossip",
   "Eris, Atoned Priestess",
-  "Relic Goddess",
   "Yuwan, Dimensional Avenger",
   "Meowskers, Fluffy Consul",
   "Marlone, Peace Advocate",
@@ -2527,7 +2526,6 @@ export const set17 = [
   "Soul Commander",
   "Midnight Gossip",
   "Eris, Atoned Priestess",
-  "Relic Goddess",
   "Yuwan, Dimensional Avenger",
   "Meowskers, Fluffy Consul",
   "Marlone, Peace Advocate",
@@ -6642,7 +6640,6 @@ export const haven = [
   "Death Sentence",
 
   "Eris, Atoned Priestess",
-  "Relic Goddess",
   "Yuwan, Dimensional Avenger",
   "Meowskers, Fluffy Consul",
   "Marlone, Peace Advocate",

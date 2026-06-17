@@ -23,7 +23,7 @@ import {
   Button, TextField, Dialog, DialogActions, DialogContent, DialogContentText,
   DialogTitle, Snackbar, SnackbarContent, IconButton, CircularProgress, Divider,
 } from "@mui/material";
-import { matchesFilters, hasActiveFilters, getCost, getDetails } from "../decks/cardDetails";
+import { matchesFilters, hasActiveFilters, getCost, getDetails, sameNameCards } from "../decks/cardDetails";
 import cardPrintings from "../decks/cardPrintings.json";
 import FilterBar from "../components/deckbuilder/FilterBar";
 import CardGrid from "../components/deckbuilder/CardGrid";
@@ -176,22 +176,16 @@ export default function CreateDeck() {
   };
 
   // ---------- deck mutation (limits preserved from the original) ----------
+  // Total copies a deck holds across a card's same-name aliases (alt-art collab
+  // cards share one copy limit). For a card with no alias this is just its own
+  // count, so non-collab cards behave exactly as before.
+  const groupCount = (map, card) =>
+    sameNameCards(card).reduce((sum, n) => sum + (map.get(n) || 0), 0);
+
   const handleCardSelection = (card) => {
-    if (deck.length < 50) {
-      if (deckMap.has(card)) {
-        if (deckMap.get(card) === 6 && card === "Rapid Fire") return;
-        if (deckMap.get(card) === 1 && card === "Shenlong") return;
-        if (deckMap.get(card) === 1 && card === "Curse Crafter") return;
-        if (deckMap.get(card) === 3 && card !== "Onion Patch" && card !== "Rapid Fire") {
-          return;
-        } else {
-          deckMap.set(card, deckMap.get(card) + 1);
-        }
-      } else {
-        deckMap.set(card, 1);
-      }
-      setDeck((d) => [...d, card]);
-    }
+    if (mainAtLimit(card)) return;
+    deckMap.set(card, (deckMap.get(card) || 0) + 1);
+    setDeck((d) => [...d, card]);
   };
   const handleCardRemove = (card) => {
     if (deck.length > 0 && deckMap.has(card)) {
@@ -202,18 +196,9 @@ export default function CreateDeck() {
     }
   };
   const handleEvoCardSelection = (card) => {
-    if (evoDeck.length < 10) {
-      if (evoDeckMap.has(card)) {
-        if (evoDeckMap.get(card) === 3 && !UNLIMITED_EVO.has(card)) {
-          return;
-        } else {
-          evoDeckMap.set(card, evoDeckMap.get(card) + 1);
-        }
-      } else {
-        evoDeckMap.set(card, 1);
-      }
-      setEvoDeck((d) => [...d, card]);
-    }
+    if (evoAtLimit(card)) return;
+    evoDeckMap.set(card, (evoDeckMap.get(card) || 0) + 1);
+    setEvoDeck((d) => [...d, card]);
   };
   const handleEvoCardRemove = (card) => {
     if (evoDeck.length > 0 && evoDeckMap.has(card)) {
@@ -224,20 +209,20 @@ export default function CreateDeck() {
     }
   };
 
-  // copy-limit predicates (mirror the handlers) for greying / disabling UI
+  // copy-limit predicates (the single source of truth for the handlers above and
+  // for greying / disabling UI). The default 3-copy cap counts copies across a
+  // card's same-name aliases, so alt-art collab cards share one limit of 3.
   const mainAtLimit = (card) => {
-    const c = deckMap.get(card) || 0;
     if (deck.length >= 50) return true;
-    if (card === "Rapid Fire") return c >= 6;
-    if (card === "Shenlong" || card === "Curse Crafter") return c >= 1;
+    if (card === "Rapid Fire") return (deckMap.get(card) || 0) >= 6;
+    if (card === "Shenlong" || card === "Curse Crafter") return (deckMap.get(card) || 0) >= 1;
     if (card === "Onion Patch") return false;
-    return c >= 3;
+    return groupCount(deckMap, card) >= 3;
   };
   const evoAtLimit = (card) => {
-    const c = evoDeckMap.get(card) || 0;
     if (evoDeck.length >= 10) return true;
     if (UNLIMITED_EVO.has(card)) return false;
-    return c >= 3;
+    return groupCount(evoDeckMap, card) >= 3;
   };
 
   // Per-card copy max (the "/ N" shown on in-deck pool cards). null = no fixed
@@ -547,7 +532,7 @@ export default function CreateDeck() {
   // ---------- inspector ----------
   const inspectedIsEvo = cardName ? isEvoCard(cardName) : false;
   const inspectedCount = cardName
-    ? inspectedIsEvo ? evoDeckMap.get(cardName) || 0 : deckMap.get(cardName) || 0
+    ? groupCount(inspectedIsEvo ? evoDeckMap : deckMap, cardName)
     : 0;
   const inspectedAtLimit = cardName ? (inspectedIsEvo ? evoAtLimit(cardName) : mainAtLimit(cardName)) : true;
   const navInspect = (dir) => {
@@ -594,9 +579,9 @@ export default function CreateDeck() {
       for (const c of names) {
         if (arr.length >= totalCap) break;
         const max = copyMaxOf(c);
-        const cur = map.get(c) || 0;
-        if (max != null && cur >= max) continue;
-        map.set(c, cur + 1);
+        // Cap by copies across same-name aliases so a shared limit isn't doubled.
+        if (max != null && groupCount(map, c) >= max) continue;
+        map.set(c, (map.get(c) || 0) + 1);
         arr.push(c);
       }
       return { map, arr };
@@ -624,16 +609,31 @@ export default function CreateDeck() {
       const mainNames = [];
       const evoNames = [];
       const missing = [];
-      for (const c of data.list || []) {
-        const nm = NAME_BY_CARD_NO[c.card_number];
-        if (!nm) { missing.push(c.card_number); continue; }
-        const n = Math.max(1, c.num || 1);
-        for (let i = 0; i < n; i++) (isEvoCard(nm) ? evoNames : mainNames).push(nm);
-      }
+      // name -> the exact printing (card number) decklog listed it at, so the
+      // imported deck shows the same rarity/art the user picked there. Keyed by
+      // name (like artByName); first printing seen for a name wins.
+      const art = {};
+      // decklog splits a deck across separate arrays: `list` is the main deck
+      // and `sub_list` is the evolve deck (`p_list` is the leader, ignored).
+      // Each entry already carries the specific printing's card_number.
+      const collect = (entries, out) => {
+        for (const c of entries || []) {
+          const nm = NAME_BY_CARD_NO[c.card_number];
+          if (!nm) { missing.push(c.card_number); continue; }
+          if (!(nm in art)) art[nm] = c.card_number;
+          const n = Math.max(1, c.num || 1);
+          for (let i = 0; i < n; i++) out.push(nm);
+        }
+      };
+      collect(data.list, mainNames);
+      collect(data.sub_list, evoNames);
       if (mainNames.length === 0 && evoNames.length === 0) {
         throw new Error("None of this deck's cards were recognised.");
       }
       applyImportedDeck(mainNames, evoNames);
+      // Replace the art map to match the freshly imported deck (applyImportedDeck
+      // likewise replaces the deck rather than merging).
+      setArtByName(new Map(Object.entries(art)));
       // Adopt decklog's class + title when we can, so the deck is ready to save.
       const cls = CLASS_KEY_BY_LABEL[data.deck_param2];
       if (cls) setDeckClass(cls);
@@ -795,7 +795,7 @@ export default function CreateDeck() {
               onAdd={mainSelected ? addMain : addEvo}
               onRemove={mainSelected ? handleCardRemove : handleEvoCardRemove}
               isAtLimit={mainSelected ? mainAtLimit : evoAtLimit}
-              countOf={mainSelected ? (n) => deckMap.get(n) || 0 : (n) => evoDeckMap.get(n) || 0}
+              countOf={mainSelected ? (n) => groupCount(deckMap, n) : (n) => groupCount(evoDeckMap, n)}
               copyMaxOf={mainSelected ? mainCopyMax : evoCopyMax}
               isMobile={isMobile}
             />
