@@ -1,0 +1,5189 @@
+[
+  {
+    "cardNo": "BP01-001EN",
+    "name": "Rose Queen",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Verdant",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "8",
+      "attack": "7",
+      "defense": "7",
+      "effect": "[fanfare] Select any number of Pixie followers in your EX area and transform them into Thorn Burst tokens. [act][engage]: Recover X play points. X equals the number of Thorn Burst tokens in your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-001EN.png"
+  },
+  {
+    "cardNo": "BP01-002EN",
+    "name": "Ancient Elf",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost01]: Evolve this follower. Ward. [fanfare] Return another card on your field to its owner's hand: Give this follower [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-002EN.png"
+  },
+  {
+    "cardNo": "BP01-003EN",
+    "name": "Ancient Elf Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Elf",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Ward. On Evolve, return another card on your field to its owner's hand: Give this follower [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-003EN.png"
+  },
+  {
+    "cardNo": "BP01-004EN",
+    "name": "Rhinoceroach",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Insect",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve][cost00]: Evolve this follower. Rush. [fanfare] Give this follower [attack]+X. X equals the number of cards you've played this turn, excluding this card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-004EN.png"
+  },
+  {
+    "cardNo": "BP01-005EN",
+    "name": "Rhinoceroach Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Insect",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "1",
+      "defense": "1",
+      "effect": "On Evolve: Choose one of the following effects. (1) Give this follower Storm. (2) Select an enemy follower on the field and deal it X damage. X equals this follower's attack."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-005EN.png"
+  },
+  {
+    "cardNo": "BP01-006EN",
+    "name": "Robin Hood",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Hunter",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "5",
+      "attack": "4",
+      "defense": "5",
+      "effect": "[fanfare] Select an enemy follower on the field and deal it 4 damage. [act][cost01], [engage]: Select an enemy follower on the field and deal it 4 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-006EN.png"
+  },
+  {
+    "cardNo": "BP01-007EN",
+    "name": "Silver Bolt",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Elf",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "7",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy leader or enemy follower on the field. Draw a card and then deal X damage to the selected enemy. X equals the number of cards in your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-007EN.png"
+  },
+  {
+    "cardNo": "BP01-008EN",
+    "name": "Homecoming",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Elf",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field. Its controller puts it on the top or bottom of its owner's deck. Combo (5): Each opponent puts each follower from their field on the top or bottom of its owner's deck instead. (The controllers determine the placement. Tokens put into a player's deck are removed from the game.)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-008EN.png"
+  },
+  {
+    "cardNo": "BP01-009EN",
+    "name": "Elven Princess Mage",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf / Princess",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve][cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-009EN.png"
+  },
+  {
+    "cardNo": "BP01-010EN",
+    "name": "Elven Princess Mage Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Elf / Princess",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve: Put 2 Fairy Wisp tokens into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-010EN.png"
+  },
+  {
+    "cardNo": "BP01-011EN",
+    "name": "Blessed Fairy Dancer",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Pixie",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Give [attack]+1/[defense]+1 to each other Pixie follower on your field and in your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-011EN.png"
+  },
+  {
+    "cardNo": "BP01-012EN",
+    "name": "Elf Child May",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[fanfare] Select an enemy follower on the field and deal it 1 damage. When this card is returned to hand from your field, select an enemy follower on the field and deal it 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-012EN.png"
+  },
+  {
+    "cardNo": "BP01-013EN",
+    "name": "Fairy Beast",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Pixie / Beast",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[act] Banish a Pixie follower in your EX area: Give your leader [defense]+3 and draw a card. This ability can be activated once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-013EN.png"
+  },
+  {
+    "cardNo": "BP01-014EN",
+    "name": "Noble Fairy",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Pixie / Princess",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Ward. [fanfare] Combo (3): Select an enemy follower on the field. Destroy it and summon a Fairy token on that follower's field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-014EN.png"
+  },
+  {
+    "cardNo": "BP01-015EN",
+    "name": "Nature's Guidance",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Pixie",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a card on your field. Return it to its owner's hand and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-015EN.png"
+  },
+  {
+    "cardNo": "BP01-016EN",
+    "name": "Harvest Festival",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Amulet",
+      "trait": "Elf",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act][cost01], [engage], put this card into its owner's cemetery: Give your leader [defense]+1. When this card leaves the field, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-016EN.png"
+  },
+  {
+    "cardNo": "BP01-017EN",
+    "name": "Elf Metallurgist",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[fanfare] Select an enemy follower on the field and deal it 1 damage. Combo (3): Deal 3 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-017EN.png"
+  },
+  {
+    "cardNo": "BP01-018EN",
+    "name": "Archer",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Hunter",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "1",
+      "defense": "4",
+      "effect": "[evolve][cost01]: Evolve this follower. Whenever another follower is put onto your field, select an enemy follower on the field and deal it 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-018EN.png"
+  },
+  {
+    "cardNo": "BP01-019EN",
+    "name": "Archer Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Hunter",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "1",
+      "defense": "4",
+      "effect": "Whenever another follower is put onto your field, select up to 2 enemy followers on the field and deal them 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-019EN.png"
+  },
+  {
+    "cardNo": "BP01-020EN",
+    "name": "Fairy Whisperer",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[fanfare] Summon a Fairy token. Put a Fairy token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-020EN.png"
+  },
+  {
+    "cardNo": "BP01-021EN",
+    "name": "Okami",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "4",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Whenever another follower is put onto your field, give this follower [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-021EN.png"
+  },
+  {
+    "cardNo": "BP01-022EN",
+    "name": "Mana Elk",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "4",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Whenever one of your Pixie followers attacks, select an enemy leader or enemy follower on the field and deal it 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-022EN.png"
+  },
+  {
+    "cardNo": "BP01-023EN",
+    "name": "Fairy Circle",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Pixie",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Put 3 Fairy tokens into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-023EN.png"
+  },
+  {
+    "cardNo": "BP01-024EN",
+    "name": "Woodkin Curse",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Fae-Touched",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field. It cannot deal damage this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-024EN.png"
+  },
+  {
+    "cardNo": "BP01-025EN",
+    "name": "Woodland Refuge",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Amulet",
+      "trait": "Fae-Touched",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Select a Pixie follower on your field and give it [attack]+1. [act][cost01], [engage]: Return this card to its owner's hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-025EN.png"
+  },
+  {
+    "cardNo": "BP01-026EN",
+    "name": "Sea Queen Otohime",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Princess",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "4",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[evolve][cost02]: Evolve this follower. [fanfare] Summon an Otohime's Bodyguard token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-026EN.png"
+  },
+  {
+    "cardNo": "BP01-027EN",
+    "name": "Sea Queen Otohime Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Commander / Princess",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "5",
+      "effect": "On Evolve: Summon 3 Otohime's Bodyguard tokens. If your field becomes full from this effect, put any remaining tokens into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-027EN.png"
+  },
+  {
+    "cardNo": "BP01-028EN",
+    "name": "Aurelia, Regal Saber",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Princess",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "5",
+      "attack": "4",
+      "defense": "6",
+      "effect": "Rush. Assail. Ward. [fanfare] Select an enemy leader. If there are at least 3 cards on their field, give this follower [attack]+2/[defense]+2 and Aura."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-028EN.png"
+  },
+  {
+    "cardNo": "BP01-029EN",
+    "name": "Shadowed Assassin",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Assassin",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve][cost02]: Evolve this follower. [fanfare] Select an enemy follower on the field and engage it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-029EN.png"
+  },
+  {
+    "cardNo": "BP01-030EN",
+    "name": "Shadowed Assassin Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Assassin",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "On Evolve: Select an engaged enemy follower and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-030EN.png"
+  },
+  {
+    "cardNo": "BP01-031EN",
+    "name": "Frontguard General",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "7",
+      "attack": "6",
+      "defense": "8",
+      "effect": "Ward. [lastwords] Summon 2 Steelclad Knight tokens and give them Ward. You may engage any number of them."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-031EN.png"
+  },
+  {
+    "cardNo": "BP01-032EN",
+    "name": "Alwida's Command",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Thief",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Summon a Viking, Steelclad Knight, and Knight token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-032EN.png"
+  },
+  {
+    "cardNo": "BP01-033EN",
+    "name": "Royal Banner",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Amulet",
+      "trait": "Commander",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Give each [swordcraft] follower on your field [attack]+1/[defense]+1. Whenever a [swordcraft] follower is put onto your field, give it [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-033EN.png"
+  },
+  {
+    "cardNo": "BP01-034EN",
+    "name": "Maid Leader",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Maid",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve][cost02]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-034EN.png"
+  },
+  {
+    "cardNo": "BP01-035EN",
+    "name": "Maid Leader Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Officer / Maid",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve: Search your deck for a follower with [evolve], reveal it, and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-035EN.png"
+  },
+  {
+    "cardNo": "BP01-036EN",
+    "name": "Gemstaff Commander",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[fanfare] Search your deck for a [swordcraft] follower, reveal it, and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-036EN.png"
+  },
+  {
+    "cardNo": "BP01-037EN",
+    "name": "Sage Commander",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Give each other follower on your field [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-037EN.png"
+  },
+  {
+    "cardNo": "BP01-038EN",
+    "name": "Swordsman",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "2",
+      "defense": "1",
+      "effect": "[fanfare] Select an enemy follower on the field and engage it. [act][engage]: Select an enemy follower on the field and engage it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-038EN.png"
+  },
+  {
+    "cardNo": "BP01-039EN",
+    "name": "Pompous Princess",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Princess",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Look at the top 5 cards of your deck. You may put a follower that costs 1 play point from among them onto your field. Put the remaining cards on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-039EN.png"
+  },
+  {
+    "cardNo": "BP01-040EN",
+    "name": "Ninja Master",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Ninja",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Search your deck for a Ninja card, reveal it, and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-040EN.png"
+  },
+  {
+    "cardNo": "BP01-041EN",
+    "name": "Arthurian Light",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Amulet",
+      "trait": "Commander",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act][cost01], [engage]: Summon a Knight token and give it Storm. [act][cost02], [engage]: Select an enemy follower on the field and engage it. [act][cost03], [engage]: Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-041EN.png"
+  },
+  {
+    "cardNo": "BP01-042EN",
+    "name": "Ninja Trainee",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Ninja",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-042EN.png"
+  },
+  {
+    "cardNo": "BP01-043EN",
+    "name": "Fervid Soldier",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost02]: Evolve this follower. Whenever another follower is put onto your field, give this follower [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-043EN.png"
+  },
+  {
+    "cardNo": "BP01-044EN",
+    "name": "Fervid Soldier Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Whenever another follower is put onto your field, give this follower [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-044EN.png"
+  },
+  {
+    "cardNo": "BP01-045EN",
+    "name": "Luminous Knight",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "3",
+      "defense": "1",
+      "effect": "[fanfare] Select another follower on your field and give it [attack]+1. [lastwords] Select a follower on your field and give it [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-045EN.png"
+  },
+  {
+    "cardNo": "BP01-046EN",
+    "name": "Veteran Lancer",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-046EN.png"
+  },
+  {
+    "cardNo": "BP01-047EN",
+    "name": "Navy Lieutenant",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Select another follower on your field and give it Assail."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-047EN.png"
+  },
+  {
+    "cardNo": "BP01-048EN",
+    "name": "Novice Trooper",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-048EN.png"
+  },
+  {
+    "cardNo": "BP01-049EN",
+    "name": "Forge Weaponry",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select a follower on your field. Give it [attack]+1/[defense]+1 and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-049EN.png"
+  },
+  {
+    "cardNo": "BP01-050EN",
+    "name": "Onslaught",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field. Deal it 5 damage and put a Knight token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-050EN.png"
+  },
+  {
+    "cardNo": "BP01-051EN",
+    "name": "Arch Summoner Erasmus",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "7",
+      "attack": "6",
+      "defense": "8",
+      "effect": "[fanfare] Earth Rite: Select an enemy follower on the field. Deal 6 damage to it and 2 damage to its leader. [act][engage], Earth Rite: Select an enemy follower on the field. Deal 6 damage to it and 2 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-051EN.png"
+  },
+  {
+    "cardNo": "BP01-052EN",
+    "name": "Merlin",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[evolve][cost02]: Evolve this follower. [fanfare] Search your deck for a spell, reveal it, and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-052EN.png"
+  },
+  {
+    "cardNo": "BP01-053EN",
+    "name": "Merlin Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "3",
+      "effect": "On Evolve: Select a spell that costs 3 play points or less in your cemetery and play it for 0 play points."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-053EN.png"
+  },
+  {
+    "cardNo": "BP01-054EN",
+    "name": "Ancient Alchemist",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Alchemist",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "2",
+      "defense": "5",
+      "effect": "[evolve][cost03]: Evolve this follower. [fanfare] Earth Rite: Put 2 Guardform Golem tokens into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-054EN.png"
+  },
+  {
+    "cardNo": "BP01-055EN",
+    "name": "Ancient Alchemist Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Alchemist",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "6",
+      "effect": "While this card is on your field, your Golem followers cost 1 less to play. Whenever a Golem follower is put onto your field, select an enemy leader or enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-055EN.png"
+  },
+  {
+    "cardNo": "BP01-056EN",
+    "name": "Arcane Enlightenment",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Put the top card of your deck into your EX area. Repeat until your EX area is full. At the start of your next end phase, banish each card in your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-056EN.png"
+  },
+  {
+    "cardNo": "BP01-057EN",
+    "name": "Dimension Shift",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "12",
+      "attack": "-",
+      "defense": "-",
+      "effect": "When playing this card, banish 10 spells in your cemetery: This card costs 7 play points to play. Take another turn after this one."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-057EN.png"
+  },
+  {
+    "cardNo": "BP01-058EN",
+    "name": "Juno's Secret Laboratory",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet",
+      "trait": "Alchemist",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Summon a Guardform Golem or Strikeform Golem token. [act][engage]: Summon a Magic Sediment token. [act][engage], Earth Rite: Summon a Guardform Golem or Strikeform Golem token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-058EN.png"
+  },
+  {
+    "cardNo": "BP01-059EN",
+    "name": "Spectral Wizard",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost02]: Evolve this follower. [fanfare] Look at the top card of your deck. If it's a spell, you may reveal it and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-059EN.png"
+  },
+  {
+    "cardNo": "BP01-060EN",
+    "name": "Spectral Wizard Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve, discard a spell: Select an enemy follower on the field and deal it 4 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-060EN.png"
+  },
+  {
+    "cardNo": "BP01-061EN",
+    "name": "Flame Destroyer",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Arcanaform",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "9",
+      "attack": "7",
+      "defense": "7",
+      "effect": "Spellchain (5): This card costs 3 less to play. SC (10): It costs 6 less instead. SC (15): It costs 9 less instead. Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-061EN.png"
+  },
+  {
+    "cardNo": "BP01-062EN",
+    "name": "Dragonbond Mage",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "Whenever you play a spell, place 1 spell counter on this card. [act] Remove 3 spell counters from this card: Select an enemy follower on the field and deal it 5 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-062EN.png"
+  },
+  {
+    "cardNo": "BP01-063EN",
+    "name": "Golem Protection",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Alchemist",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Summon 2 Guardform Golem tokens. Earth Rite: Give each Golem follower on your field [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-063EN.png"
+  },
+  {
+    "cardNo": "BP01-064EN",
+    "name": "Alchemical Lore",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Deal 4 damage to each enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-064EN.png"
+  },
+  {
+    "cardNo": "BP01-065EN",
+    "name": "Fate's Hand",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Draw 2 cards. Spellchain (10): Recover 1 play point."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-065EN.png"
+  },
+  {
+    "cardNo": "BP01-066EN",
+    "name": "Price of Magic",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet",
+      "trait": "Earth Sigil",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Stack. [fanfare] Select an enemy follower with 4 defense or less on the field and banish it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-066EN.png"
+  },
+  {
+    "cardNo": "BP01-067EN",
+    "name": "Runic Guardian",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Alchemist",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "Ward. [fanfare] Choose one of the following effects. (1) Earth Rite: Give this follower [attack]+1/[defense]+2. (2) Summon a Magic Sediment token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-067EN.png"
+  },
+  {
+    "cardNo": "BP01-068EN",
+    "name": "Crafty Warlock",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Alchemist",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost01]: Evolve this follower. [lastwords] Summon a Magic Sediment token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-068EN.png"
+  },
+  {
+    "cardNo": "BP01-069EN",
+    "name": "Crafty Warlock Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Alchemist",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[lastwords] Summon a Magic Sediment token. Add 1 to a Stack on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-069EN.png"
+  },
+  {
+    "cardNo": "BP01-070EN",
+    "name": "Lightning Shooter",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Select an enemy follower on the field and deal it 2 damage. Spellchain (5): Deal 4 damage instead. SC (10): Deal 2 damage to that follower's leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-070EN.png"
+  },
+  {
+    "cardNo": "BP01-071EN",
+    "name": "Wind Blast",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field and deal it 2 damage. Spellchain (10): Deal 4 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-071EN.png"
+  },
+  {
+    "cardNo": "BP01-072EN",
+    "name": "Sorcery Cache",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Look at the top 4 cards of your deck. You may reveal a spell from among them and add it to your hand. You may also put a spell into your cemetery. Put the remaining cards on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-072EN.png"
+  },
+  {
+    "cardNo": "BP01-073EN",
+    "name": "Fiery Embrace",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field and destroy it. Spellchain (10): Deal 3 damage to that follower's leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-073EN.png"
+  },
+  {
+    "cardNo": "BP01-074EN",
+    "name": "Alchemist's Workshop",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet",
+      "trait": "Earth Sigil",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Stack. [fanfare] Summon a Strikeform Golem token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-074EN.png"
+  },
+  {
+    "cardNo": "BP01-075EN",
+    "name": "Teachings of Creation",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet",
+      "trait": "Earth Sigil",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Stack. [fanfare] Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-075EN.png"
+  },
+  {
+    "cardNo": "BP01-076EN",
+    "name": "Dark Dragoon Forte",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "4",
+      "attack": "5",
+      "defense": "1",
+      "effect": "[evolve][cost02]: Evolve this follower. Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-076EN.png"
+  },
+  {
+    "cardNo": "BP01-077EN",
+    "name": "Dark Dragoon Forte Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonheart",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "7",
+      "defense": "3",
+      "effect": "Storm. Aura."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-077EN.png"
+  },
+  {
+    "cardNo": "BP01-078EN",
+    "name": "Zirnitra",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[fanfare] Put a Dragon token into your EX area. [act][cost02], [engage]: Select a Dragon token in your EX area. Put it onto your field and give it Rush. If Overflow is active for you, recover 2 play points."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-078EN.png"
+  },
+  {
+    "cardNo": "BP01-079EN",
+    "name": "Aiela, Dragon Knight",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "2",
+      "effect": "Assail. [lastwords] Increase your maximum play points by 1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-079EN.png"
+  },
+  {
+    "cardNo": "BP01-080EN",
+    "name": "Genesis Dragon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "9",
+      "attack": "10",
+      "defense": "12",
+      "effect": "Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-080EN.png"
+  },
+  {
+    "cardNo": "BP01-081EN",
+    "name": "Shapeshifting Mage",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] If Overflow is active for you, give this follower [attack]+3/[defense]+3."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-081EN.png"
+  },
+  {
+    "cardNo": "BP01-082EN",
+    "name": "Shapeshifting Mage Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonewt",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Assail. Bane."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-082EN.png"
+  },
+  {
+    "cardNo": "BP01-083EN",
+    "name": "Phoenix Roost",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Amulet",
+      "trait": "Phoenix",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "At the start of each player's main phase, that player looks at the top card of their deck. If it's a follower, they may put it onto their field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-083EN.png"
+  },
+  {
+    "cardNo": "BP01-084EN",
+    "name": "Wyvern Cavalier",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Put the top card of your deck into your EX area. It costs 2 less to play."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-084EN.png"
+  },
+  {
+    "cardNo": "BP01-085EN",
+    "name": "Dragonewt Scholar",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Intimidate. Strike: Draw a card, then discard a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-085EN.png"
+  },
+  {
+    "cardNo": "BP01-086EN",
+    "name": "Shenlong",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "5",
+      "attack": "4",
+      "defense": "5",
+      "effect": "[evolve][cost02]: Evolve this follower. Ward. [fanfare] Draw 2 cards, then discard a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-086EN.png"
+  },
+  {
+    "cardNo": "BP01-087EN",
+    "name": "Shenlong Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wyrmkin",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "5",
+      "defense": "6",
+      "effect": "Ward. On Evolve: Give your leader [defense]+5."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-087EN.png"
+  },
+  {
+    "cardNo": "BP01-088EN",
+    "name": "Imprisoned Dragon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Ward. This follower can't attack enemies."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-088EN.png"
+  },
+  {
+    "cardNo": "BP01-089EN",
+    "name": "Conflagration",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Wyrmkin",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Deal 5 damage to each follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-089EN.png"
+  },
+  {
+    "cardNo": "BP01-090EN",
+    "name": "Serpent Wrath",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Wyrmkin",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field. Deal it 5 damage and, if Overflow is active for you, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-090EN.png"
+  },
+  {
+    "cardNo": "BP01-091EN",
+    "name": "Wyrm Spire",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Amulet",
+      "trait": "Dragonewt",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "6",
+      "attack": "-",
+      "defense": "-",
+      "effect": "While this card is on your field, your Dragon tokens have Rush. [act][engage]: Select a follower on the field and destroy it. Its controller summons a Dragon token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-091EN.png"
+  },
+  {
+    "cardNo": "BP01-092EN",
+    "name": "Ivory Dragon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve][cost00]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-092EN.png"
+  },
+  {
+    "cardNo": "BP01-093EN",
+    "name": "Ivory Dragon Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve: If Overflow is active for you, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-093EN.png"
+  },
+  {
+    "cardNo": "BP01-094EN",
+    "name": "Fire Lizard",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[fanfare] Select an enemy leader or enemy follower on the field and deal it 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-094EN.png"
+  },
+  {
+    "cardNo": "BP01-095EN",
+    "name": "Ace Dragoon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "0",
+      "defense": "2",
+      "effect": "Rush. [fanfare] Select another follower on the field and give this follower [attack]+X. X equals the selected follower's attack."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-095EN.png"
+  },
+  {
+    "cardNo": "BP01-096EN",
+    "name": "Mist Dragon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Intimidate."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-096EN.png"
+  },
+  {
+    "cardNo": "BP01-097EN",
+    "name": "Dread Dragon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "7",
+      "attack": "7",
+      "defense": "7",
+      "effect": "[fanfare] Select an enemy follower on the field and deal it 7 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-097EN.png"
+  },
+  {
+    "cardNo": "BP01-098EN",
+    "name": "Blazing Breath",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field and deal it 2 damage. If Overflow is active for you, deal 4 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-098EN.png"
+  },
+  {
+    "cardNo": "BP01-099EN",
+    "name": "Dragon Wings",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Deal 2 damage to each follower on the field. If Overflow is active for you, deal 3 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-099EN.png"
+  },
+  {
+    "cardNo": "BP01-100EN",
+    "name": "Dragon Emissary",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Look at the top 5 cards of your deck. You may reveal a [dragoncraft] card that costs at least 5 play points from among them and add it to your hand. Put the remaining cards on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-100EN.png"
+  },
+  {
+    "cardNo": "BP01-101EN",
+    "name": "Cerberus",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost02]: Evolve this follower. [fanfare] Put a Mimi, Infernal Right Paw or Coco, Infernal Left Paw token into your EX area. Necrocharge (10) - Put both instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-101EN.png"
+  },
+  {
+    "cardNo": "BP01-102EN",
+    "name": "Cerberus Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Demon",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "On Evolve - Put a Mimi, Infernal Right Paw and Coco, Infernal Left Paw token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-102EN.png"
+  },
+  {
+    "cardNo": "BP01-103EN",
+    "name": "Lord Atomy",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "9",
+      "attack": "6",
+      "defense": "6",
+      "effect": "When playing this card, put 4 reserved [abysscraft] cards from your field into their owners' cemeteries, or banish 4 [abysscraft] cards in your EX area: This card costs 9 less to play."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-103EN.png"
+  },
+  {
+    "cardNo": "BP01-104EN",
+    "name": "Medusa",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "6",
+      "attack": "6",
+      "defense": "6",
+      "effect": "If Sanguine is active for you, this card costs 1 less to play. Necrocharge (10): This card costs 1 less to play. Bane. [act][engage]: Select an enemy follower on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-104EN.png"
+  },
+  {
+    "cardNo": "BP01-105EN",
+    "name": "Righteous Devil",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "4",
+      "attack": "2",
+      "defense": "4",
+      "effect": "[evolve] Give your leader [defense]-3: Evolve this follower. Bane."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-105EN.png"
+  },
+  {
+    "cardNo": "BP01-106EN",
+    "name": "Righteous Devil Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Demon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "5",
+      "effect": "Assail. Bane. Whenever an enemy follower is destroyed, deal 1 damage to its leader and give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-106EN.png"
+  },
+  {
+    "cardNo": "BP01-107EN",
+    "name": "Mordecai the Duelist",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[lastwords] Give your leader [defense]-3: Put this follower onto its owner's field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-107EN.png"
+  },
+  {
+    "cardNo": "BP01-108EN",
+    "name": "Dire Bond",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Amulet",
+      "trait": "Demon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Deal 1 damage to your leader. Draw a card. [act][cost02], [engage], put this card into its owner's cemetery: Deal 1 damage to your leader. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-108EN.png"
+  },
+  {
+    "cardNo": "BP01-109EN",
+    "name": "Hell's Unleasher",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[act][engage], put this card into its owner's cemetery: Select a follower that costs at least 3 play points in your cemetery and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-109EN.png"
+  },
+  {
+    "cardNo": "BP01-110EN",
+    "name": "Crazed Executioner",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Cutthroat",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve][cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-110EN.png"
+  },
+  {
+    "cardNo": "BP01-111EN",
+    "name": "Crazed Executioner Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Cutthroat",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve: Deal 2 damage to your leader. Select an opponent. They reveal their hand. Select a card in their hand. The opponent discards that card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-111EN.png"
+  },
+  {
+    "cardNo": "BP01-112EN",
+    "name": "Dark Summoner",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[fanfare] If Sanguine is active for you, give this follower [attack]+1/[defense]+1 and Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-112EN.png"
+  },
+  {
+    "cardNo": "BP01-113EN",
+    "name": "Dark General",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "4",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] If Sanguine is active for you, give this follower Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-113EN.png"
+  },
+  {
+    "cardNo": "BP01-114EN",
+    "name": "Phantom Howl",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Departed",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Summon 4 Ghost tokens."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-114EN.png"
+  },
+  {
+    "cardNo": "BP01-115EN",
+    "name": "Death's Breath",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Departed",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "6",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a follower that costs 8 play points or less in your cemetery. Put it onto your field and give it Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-115EN.png"
+  },
+  {
+    "cardNo": "BP01-116EN",
+    "name": "Soul Conversion",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Departed",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select a follower on your field. Destroy it and draw 2 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-116EN.png"
+  },
+  {
+    "cardNo": "BP01-117EN",
+    "name": "Skeleton Fighter",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] If Sanguine is active for you, give this follower [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-117EN.png"
+  },
+  {
+    "cardNo": "BP01-118EN",
+    "name": "Ambling Wraith",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "2",
+      "defense": "1",
+      "effect": "[fanfare] Deal 1 damage to each leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-118EN.png"
+  },
+  {
+    "cardNo": "BP01-119EN",
+    "name": "Spectre",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "1",
+      "effect": "Bane. [fanfare] Give your leader [defense]-2: Give this follower Rush. Put the top card of your deck into your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-119EN.png"
+  },
+  {
+    "cardNo": "BP01-120EN",
+    "name": "Spartoi Sergeant",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Put the top 2 cards of your deck into your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-120EN.png"
+  },
+  {
+    "cardNo": "BP01-121EN",
+    "name": "Rabbit Necromancer",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Necromancer",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[lastwords] Deal 2 damage to each leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-121EN.png"
+  },
+  {
+    "cardNo": "BP01-122EN",
+    "name": "Wardrobe Raider",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve][cost00]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-122EN.png"
+  },
+  {
+    "cardNo": "BP01-123EN",
+    "name": "Wardrobe Raider Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Demon",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve, put a follower from your field into its owner's cemetery: Select an enemy follower on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-123EN.png"
+  },
+  {
+    "cardNo": "BP01-124EN",
+    "name": "Undead King",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "6",
+      "attack": "6",
+      "defense": "6",
+      "effect": "[fanfare] Select up to 2 followers in your cemetery and add them to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-124EN.png"
+  },
+  {
+    "cardNo": "BP01-125EN",
+    "name": "Razory Claw",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Demon",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Deal 2 damage to your leader. Select an enemy leader or enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-125EN.png"
+  },
+  {
+    "cardNo": "BP01-126EN",
+    "name": "Moon Al-mi'raj",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Beast",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "5",
+      "attack": "4",
+      "defense": "5",
+      "effect": "Storm. Follower Strike: Give this follower [attack]+2. At the start of your end phase, give this follower [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-126EN.png"
+  },
+  {
+    "cardNo": "BP01-127EN",
+    "name": "Jeanne d'Arc",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Luminary",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "4",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[evolve][cost02]: Evolve this follower. [fanfare] Deal 2 damage to each enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-127EN.png"
+  },
+  {
+    "cardNo": "BP01-128EN",
+    "name": "Jeanne d'Arc Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Luminary",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "5",
+      "effect": "On Evolve: Deal 2 damage to each enemy follower on the field. Give each other follower on your field [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-128EN.png"
+  },
+  {
+    "cardNo": "BP01-129EN",
+    "name": "Arch Priestess Laelia",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "4",
+      "attack": "0",
+      "defense": "6",
+      "effect": "[evolve][cost01]: Evolve this follower. While this card is on your field, your followers deal damage equal to their defense."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-129EN.png"
+  },
+  {
+    "cardNo": "BP01-130EN",
+    "name": "Arch Priestess Laelia Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "0",
+      "defense": "6",
+      "effect": "While this card is on your field, your followers deal damage equal to their defense. At the start of your end phase, give this follower [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-130EN.png"
+  },
+  {
+    "cardNo": "BP01-131EN",
+    "name": "Themis's Decree",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Faith",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Destroy each follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-131EN.png"
+  },
+  {
+    "cardNo": "BP01-132EN",
+    "name": "Chorus of Prayer",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Faith",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "7",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select up to 3 amulets that cost 5 play points or less in your cemetery and put them onto your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-132EN.png"
+  },
+  {
+    "cardNo": "BP01-133EN",
+    "name": "Sacred Plea",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act][engage], put this card into its owner's cemetery: Draw a card. [act][cost02], [engage], put this card into its owner's cemetery: Draw 2 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-133EN.png"
+  },
+  {
+    "cardNo": "BP01-134EN",
+    "name": "Temple Defender",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Ward. Reduce damage dealt to this follower by 1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-134EN.png"
+  },
+  {
+    "cardNo": "BP01-135EN",
+    "name": "Prism Priestess",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve][cost02]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-135EN.png"
+  },
+  {
+    "cardNo": "BP01-136EN",
+    "name": "Prism Priestess Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve: Search your deck for an amulet, reveal it, and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-136EN.png"
+  },
+  {
+    "cardNo": "BP01-137EN",
+    "name": "Cleric Lancer",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "4",
+      "attack": "1",
+      "defense": "5",
+      "effect": "Ward. During each opponent's turn, this follower deals 4 more damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-137EN.png"
+  },
+  {
+    "cardNo": "BP01-138EN",
+    "name": "Shrine Knight Maiden",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Ward. Aura."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-138EN.png"
+  },
+  {
+    "cardNo": "BP01-139EN",
+    "name": "Blackened Scripture",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Zealot",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower with 3 defense or less on the field and banish it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-139EN.png"
+  },
+  {
+    "cardNo": "BP01-140EN",
+    "name": "Dark Offering",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Zealot",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select a card on your field. Destroy it, give your leader [defense]+3, and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-140EN.png"
+  },
+  {
+    "cardNo": "BP01-141EN",
+    "name": "Holy Sentinel",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith / Beast",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Once on each of your turns, when another amulet you control leaves the field, summon a Holy Tiger token and give it Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-141EN.png"
+  },
+  {
+    "cardNo": "BP01-142EN",
+    "name": "Cruel Priestess",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Zealot",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Select an amulet that costs 5 play points or less in your cemetery and put it onto your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-142EN.png"
+  },
+  {
+    "cardNo": "BP01-143EN",
+    "name": "Sister Initiate",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[fanfare] If there is an amulet on your field, give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-143EN.png"
+  },
+  {
+    "cardNo": "BP01-144EN",
+    "name": "Mainyu",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Zealot",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost01]: Evolve this follower. Aura."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-144EN.png"
+  },
+  {
+    "cardNo": "BP01-145EN",
+    "name": "Mainyu Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Zealot",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Aura."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-145EN.png"
+  },
+  {
+    "cardNo": "BP01-146EN",
+    "name": "Snake Priestess",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Zealot",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "3",
+      "effect": "Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-146EN.png"
+  },
+  {
+    "cardNo": "BP01-147EN",
+    "name": "Curate",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Give your leader [defense]+5. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-147EN.png"
+  },
+  {
+    "cardNo": "BP01-148EN",
+    "name": "Hallowed Dogma",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Faith",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Look at the top 5 cards of your deck. You may reveal an amulet from among them and add it to your hand. Put the remaining cards on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-148EN.png"
+  },
+  {
+    "cardNo": "BP01-149EN",
+    "name": "Guardian Sun",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Select a follower on your field and give it Ward. [act][cost02], [engage], put this card into its owner's cemetery: Select a follower with Ward on your field and give it [attack]+2/[defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-149EN.png"
+  },
+  {
+    "cardNo": "BP01-150EN",
+    "name": "Death Sentence",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Zealot",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "This card is put onto the field engaged. [act][engage], put this card into its owner's cemetery: Select an enemy follower on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-150EN.png"
+  },
+  {
+    "cardNo": "BP01-151EN",
+    "name": "Gabriel",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Angel",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "6",
+      "attack": "4",
+      "defense": "3",
+      "effect": "Ward. [fanfare] Select another follower on your field. Give it [attack]+4/[defense]+3 and Assail."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-151EN.png"
+  },
+  {
+    "cardNo": "BP01-152EN",
+    "name": "Lucifer",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Angel / Fallen Angel",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "7",
+      "attack": "6",
+      "defense": "7",
+      "effect": "[evolve][cost00]: Evolve this follower. Ward. At the start of your end phase, give your leader [defense]+4."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-152EN.png"
+  },
+  {
+    "cardNo": "BP01-153EN",
+    "name": "Lucifer Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Angel / Fallen Angel",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "8",
+      "defense": "7",
+      "effect": "Bane. At the start of your end phase, deal 4 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-153EN.png"
+  },
+  {
+    "cardNo": "BP01-154EN",
+    "name": "Flame and Glass",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Archfiend",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "10",
+      "attack": "7",
+      "defense": "7",
+      "effect": "Storm. Strike: Deal 3 damage to each enemy follower on the field. If there is a Harnessed Flame and Harnessed Glass in your cemetery, deal 7 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-154EN.png"
+  },
+  {
+    "cardNo": "BP01-155EN",
+    "name": "Urd",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Deity",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "4",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Select an enemy follower on the field and put it into its owner's EX area. (Evolved followers put into the EX area are removed from the game.)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-155EN.png"
+  },
+  {
+    "cardNo": "BP01-156EN",
+    "name": "Urd Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Deity",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve: Select a card in an opponent's EX area and banish it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-156EN.png"
+  },
+  {
+    "cardNo": "BP01-157EN",
+    "name": "Wind God",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Deity",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "4",
+      "attack": "1",
+      "defense": "5",
+      "effect": "[fanfare] Select a follower on your field and give it [attack]+1. At the start of your end phase, give each follower on your field [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-157EN.png"
+  },
+  {
+    "cardNo": "BP01-158EN",
+    "name": "Gilgamesh",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Deity",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "7",
+      "attack": "6",
+      "defense": "6",
+      "effect": "Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-158EN.png"
+  },
+  {
+    "cardNo": "BP01-159EN",
+    "name": "Bellringer Angel",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Angel",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "0",
+      "defense": "2",
+      "effect": "[evolve][cost02]: Evolve this follower. Ward. [lastwords] Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-159EN.png"
+  },
+  {
+    "cardNo": "BP01-160EN",
+    "name": "Bellringer Angel Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Angel",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "0",
+      "defense": "2",
+      "effect": "Ward. On Evolve: Select an enemy follower on the field and deal it 2 damage. [lastwords] Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-160EN.png"
+  },
+  {
+    "cardNo": "BP01-161EN",
+    "name": "Altered Fate",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Deity",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Each player returns their hand to their deck, shuffles it, and draws X cards. X equals the number of cards they returned to their deck. You draw 1 more card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-161EN.png"
+  },
+  {
+    "cardNo": "BP01-162EN",
+    "name": "Path to Purgatory",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Amulet",
+      "trait": "Archfiend",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Draw 3 cards. Deal 3 damage to your leader. At the start of your end phase, if your leader's [defense] is 6 or less, [engage], put this card into its owner's cemetery: Deal 6 damage to each enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-162EN.png"
+  },
+  {
+    "cardNo": "BP01-163EN",
+    "name": "Lizardman",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Mercenary",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "4",
+      "defense": "3",
+      "effect": "Assail."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-163EN.png"
+  },
+  {
+    "cardNo": "BP01-164EN",
+    "name": "Goblinmount Demon",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Goblinoid",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "5",
+      "attack": "6",
+      "defense": "6",
+      "effect": "[evolve][cost00]: Evolve this follower. Ward. [fanfare] Deal 2 damage to each other follower on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-164EN.png"
+  },
+  {
+    "cardNo": "BP01-165EN",
+    "name": "Goblinmount Demon Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Goblinoid",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "7",
+      "defense": "7",
+      "effect": "Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-165EN.png"
+  },
+  {
+    "cardNo": "BP01-166EN",
+    "name": "Harnessed Flame",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Fiend",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[act][cost01], put this card and a Harnessed Glass from your field into their owners' cemeteries: Search your deck for a Flame and Glass and put it onto your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-166EN.png"
+  },
+  {
+    "cardNo": "BP01-167EN",
+    "name": "Harnessed Glass",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Fiend",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Draw a card. Put a card from your hand on the bottom of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-167EN.png"
+  },
+  {
+    "cardNo": "BP01-168EN",
+    "name": "Demonic Strike",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Fiend",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy leader or enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-168EN.png"
+  },
+  {
+    "cardNo": "BP01-169EN",
+    "name": "Execution",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Fiend",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy card on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-169EN.png"
+  },
+  {
+    "cardNo": "BP01-170EN",
+    "name": "Trail of Light",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Lightborne",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "When this card is discarded, draw a card. ---------- Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-170EN.png"
+  },
+  {
+    "cardNo": "BP01-171EN",
+    "name": "Goblin",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Goblinoid",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost04]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-171EN.png"
+  },
+  {
+    "cardNo": "BP01-172EN",
+    "name": "Goblin Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Goblinoid",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-172EN.png"
+  },
+  {
+    "cardNo": "BP01-173EN",
+    "name": "Fighter",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Mercenary",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-173EN.png"
+  },
+  {
+    "cardNo": "BP01-174EN",
+    "name": "Goliath",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Gigant",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[evolve][cost02]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-174EN.png"
+  },
+  {
+    "cardNo": "BP01-175EN",
+    "name": "Goliath Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Gigant",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "5",
+      "defense": "6",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-175EN.png"
+  },
+  {
+    "cardNo": "BP01-176EN",
+    "name": "Angelic Sword Maiden",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Angel",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "5",
+      "attack": "4",
+      "defense": "6",
+      "effect": "Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-176EN.png"
+  },
+  {
+    "cardNo": "BP01-177EN",
+    "name": "Healing Angel",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Angel",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "2",
+      "defense": "4",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-177EN.png"
+  },
+  {
+    "cardNo": "BP01-178EN",
+    "name": "Healing Angel Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Angel",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "5",
+      "effect": "On Evolve: Give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-178EN.png"
+  },
+  {
+    "cardNo": "BP01-179EN",
+    "name": "Angelic Snipe",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Angel",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-179EN.png"
+  },
+  {
+    "cardNo": "BP01-180EN",
+    "name": "Angelic Barrage",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Angel",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Deal 1 damage to each enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-180EN.png"
+  },
+  {
+    "cardNo": "BP01-LD01EN",
+    "name": "Arisa",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-LD01EN.png"
+  },
+  {
+    "cardNo": "BP01-LD02EN",
+    "name": "Aria, Dancing Fairy",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-LD02EN.png"
+  },
+  {
+    "cardNo": "BP01-LD03EN",
+    "name": "Erika",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-LD03EN.png"
+  },
+  {
+    "cardNo": "BP01-LD04EN",
+    "name": "Aurelia, Blooming Blade",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-LD04EN.png"
+  },
+  {
+    "cardNo": "BP01-LD05EN",
+    "name": "Isabelle",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-LD05EN.png"
+  },
+  {
+    "cardNo": "BP01-LD06EN",
+    "name": "Erasmus, Magical Sage",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-LD06EN.png"
+  },
+  {
+    "cardNo": "BP01-LD07EN",
+    "name": "Rowen",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-LD07EN.png"
+  },
+  {
+    "cardNo": "BP01-LD08EN",
+    "name": "Zirnitra, Zealous Wings",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-LD08EN.png"
+  },
+  {
+    "cardNo": "BP01-LD09EN",
+    "name": "Luna",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-LD09EN.png"
+  },
+  {
+    "cardNo": "BP01-LD10EN",
+    "name": "Urias",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-LD10EN.png"
+  },
+  {
+    "cardNo": "BP01-LD11EN",
+    "name": "Eris",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-LD11EN.png"
+  },
+  {
+    "cardNo": "BP01-LD12EN",
+    "name": "Ramina, Crescent Beast",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-LD12EN.png"
+  },
+  {
+    "cardNo": "BP01-P01EN",
+    "name": "Homecoming",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Elf",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field. Its controller puts it on the top or bottom of its owner's deck. Combo (5): Each opponent puts each follower from their field on the top or bottom of its owner's deck instead. (The controllers determine the placement. Tokens put into a player's deck are removed from the game.)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-P01EN.png"
+  },
+  {
+    "cardNo": "BP01-P02EN",
+    "name": "Elf Child May",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[fanfare] Select an enemy follower on the field and deal it 1 damage. When this card is returned to hand from your field, select an enemy follower on the field and deal it 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-P02EN.png"
+  },
+  {
+    "cardNo": "BP01-P03EN",
+    "name": "Archer",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Hunter",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "1",
+      "defense": "4",
+      "effect": "[evolve][cost01]: Evolve this follower. Whenever another follower is put onto your field, select an enemy follower on the field and deal it 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-P03EN.png"
+  },
+  {
+    "cardNo": "BP01-P04EN",
+    "name": "Archer Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Hunter",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "1",
+      "defense": "4",
+      "effect": "Whenever another follower is put onto your field, select up to 2 enemy followers on the field and deal them 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-P04EN.png"
+  },
+  {
+    "cardNo": "BP01-P05EN",
+    "name": "Fairy Circle",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Pixie",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Put 3 Fairy tokens into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-P05EN.png"
+  },
+  {
+    "cardNo": "BP01-P06EN",
+    "name": "Alwida's Command",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Thief",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Summon a Viking, Steelclad Knight, and Knight token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-P06EN.png"
+  },
+  {
+    "cardNo": "BP01-P07EN",
+    "name": "Maid Leader",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Maid",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve][cost02]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-P07EN.png"
+  },
+  {
+    "cardNo": "BP01-P08EN",
+    "name": "Maid Leader Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Officer / Maid",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve: Search your deck for a follower with [evolve], reveal it, and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-P08EN.png"
+  },
+  {
+    "cardNo": "BP01-P09EN",
+    "name": "Sage Commander",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Give each other follower on your field [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-P09EN.png"
+  },
+  {
+    "cardNo": "BP01-P10EN",
+    "name": "Novice Trooper",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-P10EN.png"
+  },
+  {
+    "cardNo": "BP01-P11EN",
+    "name": "Dimension Shift",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "12",
+      "attack": "-",
+      "defense": "-",
+      "effect": "When playing this card, banish 10 spells in your cemetery: This card costs 7 play points to play. Take another turn after this one."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-P11EN.png"
+  },
+  {
+    "cardNo": "BP01-P12EN",
+    "name": "Spectral Wizard",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost02]: Evolve this follower. [fanfare] Look at the top card of your deck. If it's a spell, you may reveal it and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-P12EN.png"
+  },
+  {
+    "cardNo": "BP01-P13EN",
+    "name": "Spectral Wizard Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve, discard a spell: Select an enemy follower on the field and deal it 4 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-P13EN.png"
+  },
+  {
+    "cardNo": "BP01-P14EN",
+    "name": "Price of Magic",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet",
+      "trait": "Earth Sigil",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Stack. [fanfare] Select an enemy follower with 4 defense or less on the field and banish it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-P14EN.png"
+  },
+  {
+    "cardNo": "BP01-P15EN",
+    "name": "Sorcery Cache",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Look at the top 4 cards of your deck. You may reveal a spell from among them and add it into your hand. You may also put a spell into your cemetery. Put the remaining cards on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-P15EN.png"
+  },
+  {
+    "cardNo": "BP01-P16EN",
+    "name": "Aiela, Dragon Knight",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "2",
+      "effect": "Piercing Attack. [lastwords] Increase your maximum play points by 1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-P16EN.png"
+  },
+  {
+    "cardNo": "BP01-P17EN",
+    "name": "Shenlong",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "5",
+      "attack": "4",
+      "defense": "5",
+      "effect": "[evolve][cost02]: Evolve this follower. Ward. [fanfare] Draw 2 cards, then discard a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-P17EN.png"
+  },
+  {
+    "cardNo": "BP01-P18EN",
+    "name": "Shenlong Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wyrmkin",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "5",
+      "defense": "6",
+      "effect": "Ward. On Evolve: Give your leader [defense]+5."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-P18EN.png"
+  },
+  {
+    "cardNo": "BP01-P19EN",
+    "name": "Wyrm Spire",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Amulet",
+      "trait": "Dragonewt",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "6",
+      "attack": "-",
+      "defense": "-",
+      "effect": "While this card is on your field, your Dragon tokens have Rush. [act][engage]: Select a follower on the field and destroy it. Its controller summons a Dragon token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-P19EN.png"
+  },
+  {
+    "cardNo": "BP01-P20EN",
+    "name": "Blazing Breath",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Wyrmkin",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field and deal it 2 damage. If Overflow is active for you, deal 4 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-P20EN.png"
+  },
+  {
+    "cardNo": "BP01-P21EN",
+    "name": "Mordecai the Duelist",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[lastwords] Give your leader [defense]-3: Put this follower onto its owner's field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-P21EN.png"
+  },
+  {
+    "cardNo": "BP01-P22EN",
+    "name": "Crazed Executioner",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Cutthroat",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve][cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-P22EN.png"
+  },
+  {
+    "cardNo": "BP01-P23EN",
+    "name": "Crazed Executioner Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Cutthroat",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve: Deal 2 damage to your leader. Select an opponent. They reveal their hand. Select a card in their hand. The opponent discards that card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-P23EN.png"
+  },
+  {
+    "cardNo": "BP01-P24EN",
+    "name": "Dark General",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "4",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] If Sanguine is active for you, give this follower Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-P24EN.png"
+  },
+  {
+    "cardNo": "BP01-P25EN",
+    "name": "Rabbit Necromancer",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Necromancer",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[lastwords] Deal 2 damage to each leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-P25EN.png"
+  },
+  {
+    "cardNo": "BP01-P26EN",
+    "name": "Themis's Decree",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Faith",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Destroy each follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-P26EN.png"
+  },
+  {
+    "cardNo": "BP01-P27EN",
+    "name": "Prism Priestess",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve][cost02]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-P27EN.png"
+  },
+  {
+    "cardNo": "BP01-P28EN",
+    "name": "Prism Priestess Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve: Search your deck for an amulet, reveal it, and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-P28EN.png"
+  },
+  {
+    "cardNo": "BP01-P29EN",
+    "name": "Blackened Scripture",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Zealot",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower with 3 defense or less on the field and banish it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-P29EN.png"
+  },
+  {
+    "cardNo": "BP01-P30EN",
+    "name": "Death Sentence",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Zealot",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "This card is put onto the field engaged. [act][engage], put this card into its owner's cemetery: Select an enemy follower on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-P30EN.png"
+  },
+  {
+    "cardNo": "BP01-P31EN",
+    "name": "Wind God",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Deity",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "4",
+      "attack": "1",
+      "defense": "5",
+      "effect": "[fanfare] Select a follower on your field and give it [attack]+1. At the start of your end phase, give each follower on your field [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-P31EN.png"
+  },
+  {
+    "cardNo": "BP01-P32EN",
+    "name": "Bellringer Angel",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Angel",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "0",
+      "defense": "2",
+      "effect": "[evolve][cost02]: Evolve this follower. Ward. [lastwords] Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-P32EN.png"
+  },
+  {
+    "cardNo": "BP01-P33EN",
+    "name": "Bellringer Angel Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Angel",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "0",
+      "defense": "2",
+      "effect": "Ward. On Evolve: Select an enemy follower on the field and deal it 2 damage. [lastwords] Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-P33EN.png"
+  },
+  {
+    "cardNo": "BP01-P34EN",
+    "name": "Harnessed Flame",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Fiend",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[act][cost01], put this card and a Harnessed Glass from your field into their owners' cemeteries: Search your deck for a Flame and Glass and put it onto your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-P34EN.png"
+  },
+  {
+    "cardNo": "BP01-P35EN",
+    "name": "Harnessed Glass",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Fiend",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Draw a card. Put a card from your hand on the bottom of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-P35EN.png"
+  },
+  {
+    "cardNo": "BP01-SL01EN",
+    "name": "Rose Queen",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Verdant",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "8",
+      "attack": "7",
+      "defense": "7",
+      "effect": "[fanfare] Select any number of Pixie followers in your EX area and transform them into Thorn Burst tokens. [act][engage]: Recover X play points. X equals the number of Thorn Burst tokens in your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-SL01EN.png"
+  },
+  {
+    "cardNo": "BP01-SL02EN",
+    "name": "Ancient Elf",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost01]: Evolve this follower. Ward. [fanfare] Return another card on your field to its owner's hand: Give this follower [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-SL02EN.png"
+  },
+  {
+    "cardNo": "BP01-SL03EN",
+    "name": "Ancient Elf Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Elf",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Ward. On Evolve, return another card on your field to its owner's hand: Give this follower [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-SL03EN.png"
+  },
+  {
+    "cardNo": "BP01-SL04EN",
+    "name": "Sea Queen Otohime",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Princess",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "4",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[evolve][cost02]: Evolve this follower. [fanfare] Summon an Otohime's Bodyguard token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-SL04EN.png"
+  },
+  {
+    "cardNo": "BP01-SL05EN",
+    "name": "Sea Queen Otohime Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Commander / Princess",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "5",
+      "effect": "On Evolve: Summon 3 Otohime's Bodyguard tokens. If your field becomes full from this effect, put any remaining tokens into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-SL05EN.png"
+  },
+  {
+    "cardNo": "BP01-SL06EN",
+    "name": "Aurelia, Regal Saber",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Princess",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "5",
+      "attack": "4",
+      "defense": "6",
+      "effect": "Rush. Assail. Ward. [fanfare] Select an enemy leader. If there are at least 3 cards on their field, give this follower [attack]+2/[defense]+2 and Aura."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-SL06EN.png"
+  },
+  {
+    "cardNo": "BP01-SL07EN",
+    "name": "Arch Summoner Erasmus",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "7",
+      "attack": "6",
+      "defense": "8",
+      "effect": "[fanfare] Earth Rite: Select an enemy follower on the field. Deal 6 damage to it and 2 damage to its leader. [act][engage], Earth Rite: Select an enemy follower on the field. Deal 6 damage to it and 2 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-SL07EN.png"
+  },
+  {
+    "cardNo": "BP01-SL08EN",
+    "name": "Merlin",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[evolve][cost02]: Evolve this follower. [fanfare] Search your deck for a spell, reveal it, and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-SL08EN.png"
+  },
+  {
+    "cardNo": "BP01-SL09EN",
+    "name": "Merlin Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "3",
+      "effect": "On Evolve: Select a spell that costs 3 play points or less in your cemetery and play it for 0 play points."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-SL09EN.png"
+  },
+  {
+    "cardNo": "BP01-SL10EN",
+    "name": "Dark Dragoon Forte",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "4",
+      "attack": "5",
+      "defense": "1",
+      "effect": "[evolve][cost02]: Evolve this follower. Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-SL10EN.png"
+  },
+  {
+    "cardNo": "BP01-SL11EN",
+    "name": "Dark Dragoon Forte Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonheart",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "7",
+      "defense": "3",
+      "effect": "Storm. Aura."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-SL11EN.png"
+  },
+  {
+    "cardNo": "BP01-SL12EN",
+    "name": "Zirnitra",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[fanfare] Put a Dragon token into your EX area. [act][cost02], [engage]: Select a Dragon token in your EX area. Put it onto your field and give it Rush. If Overflow is active for you, recover 2 play points."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-SL12EN.png"
+  },
+  {
+    "cardNo": "BP01-SL13EN",
+    "name": "Cerberus",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost02]: Evolve this follower. [fanfare] Put a Mimi, Infernal Right Paw or Coco, Infernal Left Paw token into your EX area. Necrocharge (10) - Put both instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-SL13EN.png"
+  },
+  {
+    "cardNo": "BP01-SL14EN",
+    "name": "Cerberus Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Demon",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "On Evolve - Put a Mimi, Infernal Right Paw and Coco, Infernal Left Paw token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-SL14EN.png"
+  },
+  {
+    "cardNo": "BP01-SL15EN",
+    "name": "Lord Atomy",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "9",
+      "attack": "6",
+      "defense": "6",
+      "effect": "When playing this card, put 4 reserved [abysscraft] cards from your field into their owners' cemeteries, or banish 4 [abysscraft] cards in your EX area: This card costs 9 less to play."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-SL15EN.png"
+  },
+  {
+    "cardNo": "BP01-SL16EN",
+    "name": "Moon Al-mi'raj",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Beast",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "5",
+      "attack": "4",
+      "defense": "5",
+      "effect": "Storm. Follower Strike: Give this follower [attack]+2. At the start of your end phase, give this follower [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-SL16EN.png"
+  },
+  {
+    "cardNo": "BP01-SL17EN",
+    "name": "Jeanne d'Arc",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Luminary",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "4",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[evolve][cost02]: Evolve this follower. [fanfare] Deal 2 damage to each enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-SL17EN.png"
+  },
+  {
+    "cardNo": "BP01-SL18EN",
+    "name": "Jeanne d'Arc Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Luminary",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "5",
+      "effect": "On Evolve: Deal 2 damage to each enemy follower on the field. Give each other follower on your field [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-SL18EN.png"
+  },
+  {
+    "cardNo": "BP01-SL19EN",
+    "name": "Gabriel",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Angel",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "6",
+      "attack": "4",
+      "defense": "3",
+      "effect": "Ward. [fanfare] Select another follower on your field. Give it [attack]+4/[defense]+3 and Assail."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-SL19EN.png"
+  },
+  {
+    "cardNo": "BP01-SL20EN",
+    "name": "Lucifer",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Angel / Fallen Angel",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "7",
+      "attack": "6",
+      "defense": "7",
+      "effect": "[evolve][cost00]: Evolve this follower. Ward. At the start of your end phase, give your leader [defense]+4."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-SL20EN.png"
+  },
+  {
+    "cardNo": "BP01-SL21EN",
+    "name": "Lucifer Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Angel / Fallen Angel",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "8",
+      "defense": "7",
+      "effect": "Bane. At the start of your end phase, deal 4 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-SL21EN.png"
+  },
+  {
+    "cardNo": "BP01-SL22EN",
+    "name": "Flame and Glass",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Archfiend",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "10",
+      "attack": "7",
+      "defense": "7",
+      "effect": "Storm. Strike: Deal 3 damage to each enemy follower on the field. If there is a Harnessed Flame and Harnessed Glass in your cemetery, deal 7 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-SL22EN.png"
+  },
+  {
+    "cardNo": "BP01-T01EN",
+    "name": "Thorn Burst TOKEN",
+    "type": "token",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell / Token",
+      "trait": "Verdant",
+      "rarity": "-",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy leader or enemy follower on the field. Deal it 3 damage and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-T01EN.png"
+  },
+  {
+    "cardNo": "BP01-T02EN",
+    "name": "Fairy Wisp TOKEN",
+    "type": "token",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Token",
+      "trait": "Pixie",
+      "rarity": "-",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "0",
+      "attack": "1",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-T02EN.png"
+  },
+  {
+    "cardNo": "BP01-T03EN",
+    "name": "Fairy TOKEN",
+    "type": "token",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Token",
+      "trait": "Pixie",
+      "rarity": "-",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-T03EN.png"
+  },
+  {
+    "cardNo": "BP01-T04EN",
+    "name": "Otohime's Bodyguard TOKEN",
+    "type": "token",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Token",
+      "trait": "Officer",
+      "rarity": "-",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "2",
+      "effect": "Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-T04EN.png"
+  },
+  {
+    "cardNo": "BP01-T05EN",
+    "name": "Knight TOKEN",
+    "type": "token",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Token",
+      "trait": "Officer",
+      "rarity": "-",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-T05EN.png"
+  },
+  {
+    "cardNo": "BP01-T06EN",
+    "name": "Viking TOKEN",
+    "type": "token",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Token",
+      "trait": "Thief",
+      "rarity": "-",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "2",
+      "effect": "Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-T06EN.png"
+  },
+  {
+    "cardNo": "BP01-T07EN",
+    "name": "Steelclad Knight TOKEN",
+    "type": "token",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Token",
+      "trait": "Officer",
+      "rarity": "-",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-T07EN.png"
+  },
+  {
+    "cardNo": "BP01-T08EN",
+    "name": "Strikeform Golem TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Token",
+      "trait": "Golem",
+      "rarity": "-",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-T08EN.png"
+  },
+  {
+    "cardNo": "BP01-T09EN",
+    "name": "Guardform Golem TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Token",
+      "trait": "Golem",
+      "rarity": "-",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-T09EN.png"
+  },
+  {
+    "cardNo": "BP01-T10EN",
+    "name": "Magic Sediment TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet / Token",
+      "trait": "Earth Sigil",
+      "rarity": "-",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Stack. (Amulets with Stack are put onto the field with 1 Stack counter and have the following abilities. When this card would leave the field, remove 1 Stack counter from it instead. When this card's Stack count reaches 0, destroy it. [act][engage]: Select another amulet with Stack on your field and transfer all this card's Stack counters to that card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-T10EN.png"
+  },
+  {
+    "cardNo": "BP01-T11EN",
+    "name": "Dragon TOKEN",
+    "type": "token",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Token",
+      "trait": "Wyrmkin",
+      "rarity": "-",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "4",
+      "attack": "5",
+      "defense": "5",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-T11EN.png"
+  },
+  {
+    "cardNo": "BP01-T12EN",
+    "name": "Mimi, Infernal Right Paw TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell / Token",
+      "trait": "Demon",
+      "rarity": "-",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "0",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-T12EN.png"
+  },
+  {
+    "cardNo": "BP01-T13EN",
+    "name": "Coco, Infernal Left Paw TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell / Token",
+      "trait": "Demon",
+      "rarity": "-",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "0",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a follower on your field and give it [attack]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-T13EN.png"
+  },
+  {
+    "cardNo": "BP01-T14EN",
+    "name": "Ghost TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Token",
+      "trait": "Departed",
+      "rarity": "-",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Storm. At the start of your end phase, banish this card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-T14EN.png"
+  },
+  {
+    "cardNo": "BP01-T15EN",
+    "name": "Forest Bat TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Token",
+      "trait": "Vampire",
+      "rarity": "-",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-T15EN.png"
+  },
+  {
+    "cardNo": "BP01-T16EN",
+    "name": "Holy Falcon TOKEN",
+    "type": "token",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Token",
+      "trait": "Avian",
+      "rarity": "-",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-T16EN.png"
+  },
+  {
+    "cardNo": "BP01-T17EN",
+    "name": "Holy Tiger TOKEN",
+    "type": "token",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Token",
+      "trait": "Beast",
+      "rarity": "-",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-T17EN.png"
+  },
+  {
+    "cardNo": "BP01-U01EN",
+    "name": "Rose Queen",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Verdant",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "8",
+      "attack": "7",
+      "defense": "7",
+      "effect": "[fanfare] Select any number of Pixie followers in your EX area and transform them into Thorn Burst tokens. [act][engage]: Recover X play points. X equals the number of Thorn Burst tokens in your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-U01EN.png"
+  },
+  {
+    "cardNo": "BP01-U02EN",
+    "name": "Sea Queen Otohime Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Commander / Princess",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "5",
+      "effect": "On Evolve: Summon 3 Otohime's Bodyguard tokens. If your field becomes full from this effect, put any remaining tokens into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-U02EN.png"
+  },
+  {
+    "cardNo": "BP01-U03EN",
+    "name": "Juno's Secret Laboratory",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet",
+      "trait": "Alchemist",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Summon a Guardform Golem or Strikeform Golem token. [act][engage]: Summon a Magic Sediment token. [act][engage], Earth Rite: Summon a Guardform Golem or Strikeform Golem token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-U03EN.png"
+  },
+  {
+    "cardNo": "BP01-U04EN",
+    "name": "Dark Dragoon Forte Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonheart",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "7",
+      "defense": "3",
+      "effect": "Storm. Aura."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-U04EN.png"
+  },
+  {
+    "cardNo": "BP01-U05EN",
+    "name": "Medusa",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "6",
+      "attack": "6",
+      "defense": "6",
+      "effect": "If Sanguine is active for you, this card costs 1 less to play. Necrocharge (10): This card costs 1 less to play. Bane. [act][engage]: Select an enemy follower on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-U05EN.png"
+  },
+  {
+    "cardNo": "BP01-U06EN",
+    "name": "Jeanne d'Arc Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Luminary",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "5",
+      "effect": "On Evolve: Deal 2 damage to each enemy follower on the field. Give each other follower on your field [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-U06EN.png"
+  },
+  {
+    "cardNo": "BP01-U07EN",
+    "name": "Gabriel",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Angel",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #1 “Advent of Genesis”",
+      "cost": "6",
+      "attack": "4",
+      "defense": "3",
+      "effect": "Ward. [fanfare] Select another follower on your field. Give it [attack]+4/[defense]+3 and Assail."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-U07EN.png"
+  }
+]

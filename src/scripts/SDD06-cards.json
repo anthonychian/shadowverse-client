@@ -1,0 +1,363 @@
+[
+  {
+    "cardNo": "SDD06-001EN",
+    "name": "Godsworn Alexiel",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Lightborne",
+      "rarity": "Legendary",
+      "cardSet": "Showdown Deck: Havencraft",
+      "cost": "7",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this. Ward. [fanfare] Give your leader [defense]+X, where X equals 2 times the number of amulets on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD06/SDD06-001EN.png"
+  },
+  {
+    "cardNo": "SDD06-002EN",
+    "name": "Godsworn Alexiel Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith / Lightborne",
+      "rarity": "Legendary",
+      "cardSet": "Showdown Deck: Havencraft",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Ward. (While you have engaged followers with Ward, opponents can't attack your other followers or leader. You may engage this when it's put onto your field or during your end phase.) On Evolve - Select an enemy follower on the field. Deal it and its leader damage equal to 2 times the number of amulets on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD06/SDD06-002EN.png"
+  },
+  {
+    "cardNo": "SDD06-003EN",
+    "name": "Zoe, Shore's Melody",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Princess",
+      "rarity": "Legendary",
+      "cardSet": "Showdown Deck: Havencraft",
+      "cost": "1",
+      "attack": "0",
+      "defense": "1",
+      "effect": "[fanfare] Select an enemy follower on the field. If your leader has gained at least 4 defense this turn, destroy it and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD06/SDD06-003EN.png"
+  },
+  {
+    "cardNo": "SDD06-004EN",
+    "name": "Sekhmet",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Beast",
+      "rarity": "Gold",
+      "cardSet": "Showdown Deck: Havencraft",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[act] [engage], bury an amulet: Select an enemy follower on the field. Deal 4 damage to it and 1 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD06/SDD06-004EN.png"
+  },
+  {
+    "cardNo": "SDD06-005EN",
+    "name": "Themis's Decree",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Faith",
+      "rarity": "Gold",
+      "cardSet": "Showdown Deck: Havencraft",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Destroy each follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD06/SDD06-005EN.png"
+  },
+  {
+    "cardNo": "SDD06-006EN",
+    "name": "Vengeful Radiance",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Zealot / Cutthroat",
+      "rarity": "Gold",
+      "cardSet": "Showdown Deck: Havencraft",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] This can't be played during your turn. ---------- Select up to 2 enemy followers on the field and deal 4 damage divided between them."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD06/SDD06-006EN.png"
+  },
+  {
+    "cardNo": "SDD06-007EN",
+    "name": "Sacred Plea",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith",
+      "rarity": "Gold",
+      "cardSet": "Showdown Deck: Havencraft",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] [engage], bury this: Draw a card. [act] [cost02], [engage], bury this: Draw 2 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD06/SDD06-007EN.png"
+  },
+  {
+    "cardNo": "SDD06-008EN",
+    "name": "Globe of the Starways",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith / Celestial",
+      "rarity": "Gold",
+      "cardSet": "Showdown Deck: Havencraft",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Search your deck for an amulet, reveal it, add it to your hand, then shuffle. [q][act] [cost02], [engage], bury this: Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD06/SDD06-008EN.png"
+  },
+  {
+    "cardNo": "SDD06-009EN",
+    "name": "Prism Priestess",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Silver",
+      "cardSet": "Showdown Deck: Havencraft",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost02]: Evolve this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD06/SDD06-009EN.png"
+  },
+  {
+    "cardNo": "SDD06-010EN",
+    "name": "Prism Priestess Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith",
+      "rarity": "Silver",
+      "cardSet": "Showdown Deck: Havencraft",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - Search your deck for an amulet, reveal it, add it to your hand, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD06/SDD06-010EN.png"
+  },
+  {
+    "cardNo": "SDD06-011EN",
+    "name": "Dark Offering",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Zealot",
+      "rarity": "Silver",
+      "cardSet": "Showdown Deck: Havencraft",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select a card on your field. Destroy it, give your leader [defense]+3, and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD06/SDD06-011EN.png"
+  },
+  {
+    "cardNo": "SDD06-012EN",
+    "name": "Candelabra of Prayers",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith",
+      "rarity": "Bronze",
+      "cardSet": "Showdown Deck: Havencraft",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Once per turn, when another amulet is put onto your field, give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD06/SDD06-012EN.png"
+  },
+  {
+    "cardNo": "SDD06-013EN",
+    "name": "Moriae Encomium",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Zealot",
+      "rarity": "Bronze",
+      "cardSet": "Showdown Deck: Havencraft",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Draw a card. [lastwords] Select an enemy follower on the field with 3 defense or less and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD06/SDD06-013EN.png"
+  },
+  {
+    "cardNo": "SDD06-014EN",
+    "name": "Sacred Gavel",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith",
+      "rarity": "Bronze",
+      "cardSet": "Showdown Deck: Havencraft",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Select an enemy follower on the field and deal it 3 damage. [lastwords] Give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD06/SDD06-014EN.png"
+  },
+  {
+    "cardNo": "SDD06-015EN",
+    "name": "XXI. Zelgenea, The World",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Arcana / Deity",
+      "rarity": "Legendary",
+      "cardSet": "Showdown Deck: Havencraft",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Select an enemy follower on the field. If there are no other followers on your field, destroy it and draw a card. [fanfare] If your leader's defense is 10 or less, give it [defense]+5. [act] [cost10], banish this from your cemetery: You may put a XXI. Zelgenea, O Great World from your evolve deck into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD06/SDD06-015EN.png"
+  },
+  {
+    "cardNo": "SDD06-016EN",
+    "name": "XXI. Zelgenea, O Great World ADVANCED",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Advanced",
+      "trait": "Arcana / Deity",
+      "rarity": "Legendary",
+      "cardSet": "Showdown Deck: Havencraft",
+      "cost": "10",
+      "attack": "10",
+      "defense": "10",
+      "effect": "At the start of your end phase, if this is in your EX area, deal 4 damage to each enemy leader and enemy follower on the field. ---------- [fanfare] Deal 10 damage to each enemy leader and enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD06/SDD06-016EN.png"
+  },
+  {
+    "cardNo": "SDD06-017EN",
+    "name": "Paradise Vanguard",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Angel",
+      "rarity": "Gold",
+      "cardSet": "Showdown Deck: Havencraft",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] If there are at least 5 Angel cards in your cemetery, select an enemy follower on the field and banish it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD06/SDD06-017EN.png"
+  },
+  {
+    "cardNo": "SDD06-018EN",
+    "name": "Paradise Vanguard Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Angel",
+      "rarity": "Gold",
+      "cardSet": "Showdown Deck: Havencraft",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field that costs 4 or less and banish it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD06/SDD06-018EN.png"
+  },
+  {
+    "cardNo": "SDD06-LD01EN",
+    "name": "Esperanza",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Showdown Deck: Havencraft",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD06/SDD06-LD01EN.png"
+  }
+]

@@ -1,0 +1,439 @@
+[
+  {
+    "cardNo": "SD06-001EN",
+    "name": "Skullfane",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Zealot / Eidolon",
+      "rarity": "Legendary",
+      "cardSet": "Starter Deck #6 “Maculate Ablution”",
+      "cost": "7",
+      "attack": "6",
+      "defense": "6",
+      "effect": "[fanfare] Look at the top 4 cards of your deck. You may reveal an amulet from among them and put it onto your field. Put the remaining cards into your cemetery. Whenever an amulet you control leaves the field, deal 2 damage to each enemy leader and enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD06/SD06-001EN.png"
+  },
+  {
+    "cardNo": "SD06-002EN",
+    "name": "Hare of Illusions",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith",
+      "rarity": "Gold",
+      "cardSet": "Starter Deck #6 “Maculate Ablution”",
+      "cost": "0",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act][engage], put this card into its owner's cemetery: Select an enemy follower on the field and engage it. [act][cost10], [engage], put this card into its owner's cemetery: Banish each follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD06/SD06-002EN.png"
+  },
+  {
+    "cardNo": "SD06-003EN",
+    "name": "Priest of the Cudgel",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Silver",
+      "cardSet": "Starter Deck #6 “Maculate Ablution”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve][cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD06/SD06-003EN.png"
+  },
+  {
+    "cardNo": "SD06-004EN",
+    "name": "Priest of the Cudgel Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith",
+      "rarity": "Silver",
+      "cardSet": "Starter Deck #6 “Maculate Ablution”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve: Select an enemy follower with 3 defense or less on the field and banish it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD06/SD06-004EN.png"
+  },
+  {
+    "cardNo": "SD06-005EN",
+    "name": "Acolyte's Light",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Faith",
+      "rarity": "Silver",
+      "cardSet": "Starter Deck #6 “Maculate Ablution”",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field. Banish it and give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD06/SD06-005EN.png"
+  },
+  {
+    "cardNo": "SD06-006EN",
+    "name": "Dual Flames",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith / Beast",
+      "rarity": "Silver",
+      "cardSet": "Starter Deck #6 “Maculate Ablution”",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Summon a Holy Tiger token. [act][cost02], [engage], put this card into its owner's cemetery: Summon a Holy Tiger token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD06/SD06-006EN.png"
+  },
+  {
+    "cardNo": "SD06-007EN",
+    "name": "Cruel Priestess",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Zealot",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #6 “Maculate Ablution”",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Select an amulet that costs 5 play points or less in your cemetery and put it onto your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD06/SD06-007EN.png"
+  },
+  {
+    "cardNo": "SD06-008EN",
+    "name": "Snake Priestess",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Zealot",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #6 “Maculate Ablution”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "3",
+      "effect": "Ward. (This follower can be engaged when it's put onto your field or during your end phase. When followers with Ward are engaged, your opponent can only attack them.)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD06/SD06-008EN.png"
+  },
+  {
+    "cardNo": "SD06-009EN",
+    "name": "Ardent Nun",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #6 “Maculate Ablution”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost01]: Evolve this follower. Ward. During each opponent's turn, this follower deals 1 more damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD06/SD06-009EN.png"
+  },
+  {
+    "cardNo": "SD06-010EN",
+    "name": "Ardent Nun Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #6 “Maculate Ablution”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Ward. During each opponent's turn, this follower deals 2 more damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD06/SD06-010EN.png"
+  },
+  {
+    "cardNo": "SD06-011EN",
+    "name": "Guardian Nun",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #6 “Maculate Ablution”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve][cost01]: Evolve this follower. Ward. [fanfare] If there is an amulet on your field, give this follower [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD06/SD06-011EN.png"
+  },
+  {
+    "cardNo": "SD06-012EN",
+    "name": "Guardian Nun Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #6 “Maculate Ablution”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Ward. On Evolve: Give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD06/SD06-012EN.png"
+  },
+  {
+    "cardNo": "SD06-013EN",
+    "name": "Hallowed Dogma",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Faith",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #6 “Maculate Ablution”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Look at the top 5 cards of your deck. You may reveal an amulet from among them and add it to your hand. Put the remaining cards on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD06/SD06-013EN.png"
+  },
+  {
+    "cardNo": "SD06-014EN",
+    "name": "Death Sentence",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Zealot",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #6 “Maculate Ablution”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "This card is put onto the field engaged. [act][engage], put this card into its owner's cemetery: Select an enemy follower on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD06/SD06-014EN.png"
+  },
+  {
+    "cardNo": "SD06-015EN",
+    "name": "Pinion Prayer",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith / Avian",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #6 “Maculate Ablution”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act][cost01], [engage], put this card into its owner's cemetery: Summon a Holy Falcon token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD06/SD06-015EN.png"
+  },
+  {
+    "cardNo": "SD06-016EN",
+    "name": "Beastly Vow",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #6 “Maculate Ablution”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "This card is put onto the field engaged. [act][cost01], [engage], put this card into its owner's cemetery: Summon a Holy Tiger token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD06/SD06-016EN.png"
+  },
+  {
+    "cardNo": "SD06-017EN",
+    "name": "Angelic Sword Maiden",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Angel",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #6 “Maculate Ablution”",
+      "cost": "5",
+      "attack": "4",
+      "defense": "6",
+      "effect": "Ward. (This follower can be engaged when it's put onto your field or during your end phase. When followers with Ward are engaged, your opponent can only attack them.)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD06/SD06-017EN.png"
+  },
+  {
+    "cardNo": "SD06-018EN",
+    "name": "Healing Angel",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Angel",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #6 “Maculate Ablution”",
+      "cost": "3",
+      "attack": "2",
+      "defense": "4",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD06/SD06-018EN.png"
+  },
+  {
+    "cardNo": "SD06-019EN",
+    "name": "Healing Angel Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Angel",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #6 “Maculate Ablution”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "5",
+      "effect": "On Evolve: Give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD06/SD06-019EN.png"
+  },
+  {
+    "cardNo": "SD06-020EN",
+    "name": "Angelic Snipe",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Angel",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #6 “Maculate Ablution”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD06/SD06-020EN.png"
+  },
+  {
+    "cardNo": "SD06-LD01EN",
+    "name": "Eris",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Starter Deck #6 “Maculate Ablution”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD06/SD06-LD01EN.png"
+  },
+  {
+    "cardNo": "SD06-T01EN",
+    "name": "Holy Falcon TOKEN",
+    "type": "token",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Token",
+      "trait": "Avian",
+      "rarity": "-",
+      "cardSet": "Starter Deck #6 “Maculate Ablution”",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Storm. (Followers with Storm can attack enemy followers and leaders on the turn they're put onto your field.)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD06/SD06-T01EN.png"
+  },
+  {
+    "cardNo": "SD06-T02EN",
+    "name": "Holy Tiger TOKEN",
+    "type": "token",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Token",
+      "trait": "Beast",
+      "rarity": "-",
+      "cardSet": "Starter Deck #6 “Maculate Ablution”",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Rush. (Followers with Rush can attack enemy followers on the turn they're put onto your field.)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD06/SD06-T02EN.png"
+  }
+]

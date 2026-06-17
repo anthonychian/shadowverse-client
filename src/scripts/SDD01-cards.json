@@ -1,0 +1,439 @@
+[
+  {
+    "cardNo": "SDD01-001EN",
+    "name": "Amataz, Fairy Blader",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf / Fae-Touched",
+      "rarity": "Legendary",
+      "cardSet": "Showdown Deck: Forestcraft",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Put a Fairy token into your EX area. Give each Pixie follower in your EX area [attack]+1/[defense]+1. [act] [engage]: Select up to 2 Pixie followers on your field that cost 1 or less and give them Storm. (Followers with Storm can attack enemy followers and leaders on the turn they're put onto your field.)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD01/SDD01-001EN.png"
+  },
+  {
+    "cardNo": "SDD01-002EN",
+    "name": "Cynthia, the Queen's Blade",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf",
+      "rarity": "Legendary",
+      "cardSet": "Showdown Deck: Forestcraft",
+      "cost": "6",
+      "attack": "4",
+      "defense": "6",
+      "effect": "Each Pixie token on your field has Storm and Assail. [fanfare] Put a Fairy Wisp token into your EX area. Give each Pixie token on your field [attack]+2. Whenever a Pixie token is put onto your field, give it [attack]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD01/SDD01-002EN.png"
+  },
+  {
+    "cardNo": "SDD01-003EN",
+    "name": "Spinaria, Wavering Will",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Supreme",
+      "rarity": "Legendary",
+      "cardSet": "Showdown Deck: Forestcraft",
+      "cost": "3",
+      "attack": "1",
+      "defense": "3",
+      "effect": "Whenever a follower on your field evolves, give your leader [defense]+2. [fanfare] Select a [forestcraft] follower in your cemetery that costs 2 or less and put it into your EX area. It costs 2 less to play this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD01/SDD01-003EN.png"
+  },
+  {
+    "cardNo": "SDD01-004EN",
+    "name": "Aria, Miasma Fairy",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Pixie / Princess / Cutthroat",
+      "rarity": "Legendary",
+      "cardSet": "Showdown Deck: Forestcraft",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "This can't be played from the EX area. ---------- [evolve] [cost01]: Evolve this. While this is on your field or in your EX area, each Pixie token follower on your field has Rush. [fanfare] Put a Fairy token into your EX area. [lastwords] You may put this into its owner's EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD01/SDD01-004EN.png"
+  },
+  {
+    "cardNo": "SDD01-005EN",
+    "name": "Aria, Miasma Fairy Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Pixie / Princess / Cutthroat",
+      "rarity": "Legendary",
+      "cardSet": "Showdown Deck: Forestcraft",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Each Pixie token follower on your field has Rush. (Followers with Rush can attack enemy followers on the turn they're put onto your field.) On Evolve - Search your deck for a Pixie amulet that costs 2 or less, summon it, then shuffle. [lastwords] You may put this into its owner's EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD01/SDD01-005EN.png"
+  },
+  {
+    "cardNo": "SDD01-006EN",
+    "name": "Fashionista Nelcha",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf",
+      "rarity": "Gold",
+      "cardSet": "Showdown Deck: Forestcraft",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[act] [engage]: Combo (3) - Choose 1. (1) Select another follower on your field and give it [attack]+2/[defense]+2. (2) Select an enemy follower on the field and give it [attack]-2/[defense]-2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD01/SDD01-006EN.png"
+  },
+  {
+    "cardNo": "SDD01-007EN",
+    "name": "Titania's Sanctuary",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Amulet",
+      "trait": "Pixie / Princess",
+      "rarity": "Gold",
+      "cardSet": "Showdown Deck: Forestcraft",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Each Pixie token on your field has Assail. (Followers with Assail can attack reserved followers.) [fanfare] Give each Pixie token on your field [attack]+1/[defense]+1. Whenever a Pixie token is put onto your field, give it [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD01/SDD01-007EN.png"
+  },
+  {
+    "cardNo": "SDD01-008EN",
+    "name": "Blessed Fairy Dancer",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Pixie",
+      "rarity": "Silver",
+      "cardSet": "Showdown Deck: Forestcraft",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Give [attack]+1/[defense]+1 to each other Pixie follower on your field and in your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD01/SDD01-008EN.png"
+  },
+  {
+    "cardNo": "SDD01-009EN",
+    "name": "Sukuna, Brave and Small",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Hunter",
+      "rarity": "Silver",
+      "cardSet": "Showdown Deck: Forestcraft",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD01/SDD01-009EN.png"
+  },
+  {
+    "cardNo": "SDD01-010EN",
+    "name": "Sukuna, Brave and Small Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Hunter",
+      "rarity": "Silver",
+      "cardSet": "Showdown Deck: Forestcraft",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Storm. On Evolve, Combo (3) - Give this [attack]+1/[defense]+1. Combo (5) - Give [attack]+3/[defense]+3 instead. (If you've played at least 3 cards this turn, including this one, perform Combo (3). Then, if you've played at least 5, perform Combo (5).)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD01/SDD01-010EN.png"
+  },
+  {
+    "cardNo": "SDD01-011EN",
+    "name": "Sunbright Elf",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf",
+      "rarity": "Silver",
+      "cardSet": "Showdown Deck: Forestcraft",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Give each Pixie token follower in your EX area [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD01/SDD01-011EN.png"
+  },
+  {
+    "cardNo": "SDD01-012EN",
+    "name": "Sunbright Elf Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Elf",
+      "rarity": "Silver",
+      "cardSet": "Showdown Deck: Forestcraft",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Summon up to 2 Pixie token followers from your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD01/SDD01-012EN.png"
+  },
+  {
+    "cardNo": "SDD01-013EN",
+    "name": "Nature's Guidance",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Pixie",
+      "rarity": "Silver",
+      "cardSet": "Showdown Deck: Forestcraft",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a card on your field. Return it to its owner's hand and draw a card. (Tokens returned to a player's hand are removed from the game.)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD01/SDD01-013EN.png"
+  },
+  {
+    "cardNo": "SDD01-014EN",
+    "name": "Elf Song",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Pixie",
+      "rarity": "Silver",
+      "cardSet": "Showdown Deck: Forestcraft",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Summon a Fairy token. Combo (3) - Give each [forestcraft] follower on your field [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD01/SDD01-014EN.png"
+  },
+  {
+    "cardNo": "SDD01-015EN",
+    "name": "Spiritshine",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Fae-Touched",
+      "rarity": "Silver",
+      "cardSet": "Showdown Deck: Forestcraft",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose 1. (1) Select a Pixie token on your field or in your EX area and give it [attack]+2/[defense]+2. (2) Put 2 Fairy tokens into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD01/SDD01-015EN.png"
+  },
+  {
+    "cardNo": "SDD01-016EN",
+    "name": "Tree of Wonders",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Amulet",
+      "trait": "Pixie",
+      "rarity": "Silver",
+      "cardSet": "Showdown Deck: Forestcraft",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Put a Fairy token into your EX area. [act] [engage], bury this: Draw 2 cards. Activate only if there are at least 3 Pixie followers in your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD01/SDD01-016EN.png"
+  },
+  {
+    "cardNo": "SDD01-017EN",
+    "name": "Fairy Slugger",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Pixie",
+      "rarity": "Bronze",
+      "cardSet": "Showdown Deck: Forestcraft",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD01/SDD01-017EN.png"
+  },
+  {
+    "cardNo": "SDD01-018EN",
+    "name": "Fairy Slugger Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Pixie",
+      "rarity": "Bronze",
+      "cardSet": "Showdown Deck: Forestcraft",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Put a Fairy Wisp and Fairy token into your EX area. Then, if there are at least 3 Pixie followers in your EX area, give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD01/SDD01-018EN.png"
+  },
+  {
+    "cardNo": "SDD01-019EN",
+    "name": "Feybolt Archer",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Pixie / Hunter",
+      "rarity": "Bronze",
+      "cardSet": "Showdown Deck: Forestcraft",
+      "cost": "2",
+      "attack": "2",
+      "defense": "1",
+      "effect": "[fanfare] Summon a Fairy token. Look at the top 3 cards of your deck. You may reveal a Pixie card from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD01/SDD01-019EN.png"
+  },
+  {
+    "cardNo": "SDD01-020EN",
+    "name": "Fairy Circle",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Pixie",
+      "rarity": "Bronze",
+      "cardSet": "Showdown Deck: Forestcraft",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Put 3 Fairy tokens into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD01/SDD01-020EN.png"
+  },
+  {
+    "cardNo": "SDD01-LD01EN",
+    "name": "Lovesign",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Showdown Deck: Forestcraft",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD01/SDD01-LD01EN.png"
+  },
+  {
+    "cardNo": "SDD01-T01EN",
+    "name": "Fairy Wisp TOKEN",
+    "type": "token",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Token",
+      "trait": "Pixie",
+      "rarity": "-",
+      "cardSet": "Showdown Deck: Forestcraft",
+      "cost": "0",
+      "attack": "1",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD01/SDD01-T01EN.png"
+  },
+  {
+    "cardNo": "SDD01-T02EN",
+    "name": "Fairy TOKEN",
+    "type": "token",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Token",
+      "trait": "Pixie",
+      "rarity": "-",
+      "cardSet": "Showdown Deck: Forestcraft",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD01/SDD01-T02EN.png"
+  }
+]

@@ -1,0 +1,439 @@
+[
+  {
+    "cardNo": "SD05-001EN",
+    "name": "Queen Vampire",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vampire",
+      "rarity": "Legendary",
+      "cardSet": "Starter Deck #5 “Waltz of the Undying Night”",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Summon 2 Forest Bat tokens. [act][engage], give your leader [defense]-1: Summon 2 Forest Bat tokens. Whenever a Forest Bat token is put onto your field, give it [attack]+1 and Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD05/SD05-001EN.png"
+  },
+  {
+    "cardNo": "SD05-002EN",
+    "name": "Alucard",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vampire",
+      "rarity": "Gold",
+      "cardSet": "Starter Deck #5 “Waltz of the Undying Night”",
+      "cost": "7",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Storm. [fanfare] Necrocharge (10): Give this follower [attack]+2. Strike: Select an enemy follower on the field. Deal it 4 damage and give your leader [defense]+4."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD05/SD05-002EN.png"
+  },
+  {
+    "cardNo": "SD05-003EN",
+    "name": "Playful Necromancer",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Necromancer",
+      "rarity": "Silver",
+      "cardSet": "Starter Deck #5 “Waltz of the Undying Night”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve][cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD05/SD05-003EN.png"
+  },
+  {
+    "cardNo": "SD05-004EN",
+    "name": "Playful Necromancer Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Necromancer",
+      "rarity": "Silver",
+      "cardSet": "Starter Deck #5 “Waltz of the Undying Night”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve: Summon 3 Ghost tokens."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD05/SD05-004EN.png"
+  },
+  {
+    "cardNo": "SD05-005EN",
+    "name": "Midnight Vampire",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vampire",
+      "rarity": "Silver",
+      "cardSet": "Starter Deck #5 “Waltz of the Undying Night”",
+      "cost": "3",
+      "attack": "2",
+      "defense": "4",
+      "effect": "[fanfare] Summon a Forest Bat token. While this card is on your field, your Forest Bat tokens have Drain. (When a follower with Drain attacks and deals damage, its leader gains defense equal to the damage dealt.)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD05/SD05-005EN.png"
+  },
+  {
+    "cardNo": "SD05-006EN",
+    "name": "Night Horde",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Vampire",
+      "rarity": "Silver",
+      "cardSet": "Starter Deck #5 “Waltz of the Undying Night”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Summon 2 Forest Bat tokens. Select an enemy follower on the field and deal it X damage. X equals the number of Forest Bat tokens on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD05/SD05-006EN.png"
+  },
+  {
+    "cardNo": "SD05-007EN",
+    "name": "Spectre",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #5 “Waltz of the Undying Night”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "1",
+      "effect": "Bane. (Followers attacking or attacked by a follower with Bane are destroyed after damage is exchanged.) [fanfare] Give your leader [defense]-2: Give this follower Rush. Put the top card of your deck into your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD05/SD05-007EN.png"
+  },
+  {
+    "cardNo": "SD05-008EN",
+    "name": "Spartoi Sergeant",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #5 “Waltz of the Undying Night”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Put the top 2 cards of your deck into your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD05/SD05-008EN.png"
+  },
+  {
+    "cardNo": "SD05-009EN",
+    "name": "Undead King",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #5 “Waltz of the Undying Night”",
+      "cost": "6",
+      "attack": "6",
+      "defense": "6",
+      "effect": "[fanfare] Select up to 2 followers in your cemetery and add them to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD05/SD05-009EN.png"
+  },
+  {
+    "cardNo": "SD05-010EN",
+    "name": "Lesser Mummy",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #5 “Waltz of the Undying Night”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Necrocharge (10): Give this follower Storm. (If your cemetery contains at least 10 cards, perform Necrocharge (10).)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD05/SD05-010EN.png"
+  },
+  {
+    "cardNo": "SD05-011EN",
+    "name": "Lesser Mummy Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Departed",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #5 “Waltz of the Undying Night”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Strike: Summon a Ghost token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD05/SD05-011EN.png"
+  },
+  {
+    "cardNo": "SD05-012EN",
+    "name": "Lilith",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #5 “Waltz of the Undying Night”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Put a Forest Bat token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD05/SD05-012EN.png"
+  },
+  {
+    "cardNo": "SD05-013EN",
+    "name": "Lilith Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Demon",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #5 “Waltz of the Undying Night”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Strike: Give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD05/SD05-013EN.png"
+  },
+  {
+    "cardNo": "SD05-014EN",
+    "name": "Razory Claw",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Demon",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #5 “Waltz of the Undying Night”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Deal 2 damage to your leader. Select an enemy leader or enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD05/SD05-014EN.png"
+  },
+  {
+    "cardNo": "SD05-015EN",
+    "name": "Undying Resentment",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Departed",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #5 “Waltz of the Undying Night”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field. Deal it 3 damage and put the top card of your deck into your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD05/SD05-015EN.png"
+  },
+  {
+    "cardNo": "SD05-016EN",
+    "name": "Summon Bloodkin",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Vampire",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #5 “Waltz of the Undying Night”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Summon a Forest Bat token. Put a Forest Bat token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD05/SD05-016EN.png"
+  },
+  {
+    "cardNo": "SD05-017EN",
+    "name": "Fighter",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Mercenary",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #5 “Waltz of the Undying Night”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD05/SD05-017EN.png"
+  },
+  {
+    "cardNo": "SD05-018EN",
+    "name": "Goliath",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Gigant",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #5 “Waltz of the Undying Night”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[evolve][cost02]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD05/SD05-018EN.png"
+  },
+  {
+    "cardNo": "SD05-019EN",
+    "name": "Goliath Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Gigant",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #5 “Waltz of the Undying Night”",
+      "cost": "-",
+      "attack": "5",
+      "defense": "6",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD05/SD05-019EN.png"
+  },
+  {
+    "cardNo": "SD05-020EN",
+    "name": "Angelic Sword Maiden",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Angel",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #5 “Waltz of the Undying Night”",
+      "cost": "5",
+      "attack": "4",
+      "defense": "6",
+      "effect": "Ward. (This follower can be engaged when it's put onto your field or during your end phase. When followers with Ward are engaged, your opponent can only attack them.)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD05/SD05-020EN.png"
+  },
+  {
+    "cardNo": "SD05-LD01EN",
+    "name": "Luna",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Starter Deck #5 “Waltz of the Undying Night”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD05/SD05-LD01EN.png"
+  },
+  {
+    "cardNo": "SD05-T01EN",
+    "name": "Ghost TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Token",
+      "trait": "Departed",
+      "rarity": "-",
+      "cardSet": "Starter Deck #5 “Waltz of the Undying Night”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Storm. (Followers with Storm can attack enemy followers and leaders on the turn they're put onto your field.) At the start of your end phase, banish this card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD05/SD05-T01EN.png"
+  },
+  {
+    "cardNo": "SD05-T02EN",
+    "name": "Forest Bat TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Token",
+      "trait": "Vampire",
+      "rarity": "-",
+      "cardSet": "Starter Deck #5 “Waltz of the Undying Night”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD05/SD05-T02EN.png"
+  }
+]

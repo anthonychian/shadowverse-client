@@ -1,0 +1,363 @@
+[
+  {
+    "cardNo": "SDD04-001EN",
+    "name": "Filene, Whitefrost Dragonewt",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt",
+      "rarity": "Legendary",
+      "cardSet": "Showdown Deck: Dragoncraft",
+      "cost": "1",
+      "attack": "1",
+      "defense": "3",
+      "effect": "[fanfare] Select an enemy follower on the field and engage it. It doesn't refresh during its controller's next start phase. [fanfare] If Overflow is active for you, search your deck for a Whitefrost Whisper, put it into your EX area, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD04/SDD04-001EN.png"
+  },
+  {
+    "cardNo": "SDD04-002EN",
+    "name": "XI. Erntz, Justice",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Arcana / Wyrmkin",
+      "rarity": "Legendary",
+      "cardSet": "Showdown Deck: Dragoncraft",
+      "cost": "8",
+      "attack": "8",
+      "defense": "8",
+      "effect": "Ward. [fanfare] Put the top card of your deck into your EX area. If you put a card that costs 5 or more into your EX area, evolve this or return it to its owner's hand. When this leaves the field, give your leader [defense]+8."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD04/SDD04-002EN.png"
+  },
+  {
+    "cardNo": "SDD04-003EN",
+    "name": "XI. Erntz, Justice Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arcana / Wyrmkin",
+      "rarity": "Legendary",
+      "cardSet": "Showdown Deck: Dragoncraft",
+      "cost": "-",
+      "attack": "11",
+      "defense": "11",
+      "effect": "Storm. (Followers with Storm can attack enemy followers and leaders on the turn they're put onto your field.) This ignores Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD04/SDD04-003EN.png"
+  },
+  {
+    "cardNo": "SDD04-004EN",
+    "name": "Jerva, Wyrm Transcendent",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Legendary",
+      "cardSet": "Showdown Deck: Dragoncraft",
+      "cost": "9",
+      "attack": "6",
+      "defense": "6",
+      "effect": "When this is discarded, you may put it into your EX area. ---------- Ward. [fanfare] Deal 6 damage to each other follower on the field and each enemy leader. [act] [cost03], bury this from your EX area: Select an enemy follower on the field and deal it 6 damage. Activate only if Overflow is active for you."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD04/SDD04-004EN.png"
+  },
+  {
+    "cardNo": "SDD04-005EN",
+    "name": "Wildfire Tyrannosaur",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Natura / Wyrmkin",
+      "rarity": "Gold",
+      "cardSet": "Showdown Deck: Dragoncraft",
+      "cost": "8",
+      "attack": "6",
+      "defense": "6",
+      "effect": "When this is discarded, [cost01]: Select an enemy follower on the field and deal it 3 damage. ---------- [act] Banish a Naterran Great Tree from your field: Deal 3 damage to each enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD04/SDD04-005EN.png"
+  },
+  {
+    "cardNo": "SDD04-006EN",
+    "name": "Dragon-Devouring Dread",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin / Cutthroat",
+      "rarity": "Gold",
+      "cardSet": "Showdown Deck: Dragoncraft",
+      "cost": "9",
+      "attack": "8",
+      "defense": "8",
+      "effect": "[fanfare] For every [dragoncraft] card in your cemetery that costs 7 or more, select up to 1 enemy follower on the field and banish it. [act] [cost03], discard this and a [dragoncraft] card that costs 7 or more: Draw a card. Increase your max play points by 1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD04/SDD04-006EN.png"
+  },
+  {
+    "cardNo": "SDD04-007EN",
+    "name": "Frostbite Dragon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Gold",
+      "cardSet": "Showdown Deck: Dragoncraft",
+      "cost": "7",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Select up to 2 enemy followers on the field and engage them."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD04/SDD04-007EN.png"
+  },
+  {
+    "cardNo": "SDD04-008EN",
+    "name": "Frostbite Dragon Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wyrmkin",
+      "rarity": "Gold",
+      "cardSet": "Showdown Deck: Dragoncraft",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "On Evolve - Each enemy follower on the field doesn't refresh during its controller's next start phase. [lastwords] Destroy each engaged enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD04/SDD04-008EN.png"
+  },
+  {
+    "cardNo": "SDD04-009EN",
+    "name": "Dragon Oracle",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Wyrmkin",
+      "rarity": "Gold",
+      "cardSet": "Showdown Deck: Dragoncraft",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose 1. (1) Increase your max play points by 1. (2) Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD04/SDD04-009EN.png"
+  },
+  {
+    "cardNo": "SDD04-010EN",
+    "name": "Whitefrost Whisper",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Dragonewt",
+      "rarity": "Gold",
+      "cardSet": "Showdown Deck: Dragoncraft",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "This costs 1 less to play if Overflow is active for you. (Overflow is active if you have at least 7 max play points.) ---------- Select an engaged enemy follower on the field and destroy it. If there's a Filene, Whitefrost Dragonewt on your field, deal 2 damage to the selected follower's leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD04/SDD04-010EN.png"
+  },
+  {
+    "cardNo": "SDD04-011EN",
+    "name": "Whitefrost Blizzard",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Dragonewt",
+      "rarity": "Gold",
+      "cardSet": "Showdown Deck: Dragoncraft",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "This costs 2 less to play if there's a follower on your field with \"Filene\" in its name. ---------- Select any number of enemy followers on the field and deal X damage divided between them. X equals your max play points."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD04/SDD04-011EN.png"
+  },
+  {
+    "cardNo": "SDD04-012EN",
+    "name": "Roy, Dragoncleaver",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Draconic Duelist / Cutthroat",
+      "rarity": "Silver",
+      "cardSet": "Showdown Deck: Dragoncraft",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Search your deck for a 2-cost [dragoncraft] spell, reveal it, add it to your hand, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD04/SDD04-012EN.png"
+  },
+  {
+    "cardNo": "SDD04-013EN",
+    "name": "Roy, Dragoncleaver Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Draconic Duelist / Cutthroat",
+      "rarity": "Silver",
+      "cardSet": "Showdown Deck: Dragoncraft",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage. If it's a Wyrmkin follower, deal 5 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD04/SDD04-013EN.png"
+  },
+  {
+    "cardNo": "SDD04-014EN",
+    "name": "Azureflame Dragonewt",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt",
+      "rarity": "Silver",
+      "cardSet": "Showdown Deck: Dragoncraft",
+      "cost": "7",
+      "attack": "6",
+      "defense": "6",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Select an enemy follower on the field and deal it 6 damage. [act] [cost01], discard this and a [dragoncraft] card that costs 7 or more: Select an enemy follower on the field and deal it 4 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD04/SDD04-014EN.png"
+  },
+  {
+    "cardNo": "SDD04-015EN",
+    "name": "Azureflame Dragonewt Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonewt",
+      "rarity": "Silver",
+      "cardSet": "Showdown Deck: Dragoncraft",
+      "cost": "-",
+      "attack": "7",
+      "defense": "7",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 6 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD04/SDD04-015EN.png"
+  },
+  {
+    "cardNo": "SDD04-016EN",
+    "name": "Pumpkin Dragon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Showdown Deck: Dragoncraft",
+      "cost": "8",
+      "attack": "6",
+      "defense": "6",
+      "effect": "Ward. (While you have engaged followers with Ward, opponents can't attack your other followers or leader. You may engage this when it's put onto your field or during your end phase.) [fanfare] Give your leader [defense]+5. Draw 2 cards. [act] [cost02], discard this and a [dragoncraft] card that costs 7 or more: Give your leader [defense]+5."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD04/SDD04-016EN.png"
+  },
+  {
+    "cardNo": "SDD04-017EN",
+    "name": "Orbed Cancer",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Marine",
+      "rarity": "Bronze",
+      "cardSet": "Showdown Deck: Dragoncraft",
+      "cost": "7",
+      "attack": "6",
+      "defense": "7",
+      "effect": "[fanfare] Draw 3 cards. [act] [cost01], discard this and a [dragoncraft] card that costs 7 or more: Draw 2 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD04/SDD04-017EN.png"
+  },
+  {
+    "cardNo": "SDD04-018EN",
+    "name": "Thunderous Roar",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Showdown Deck: Dragoncraft",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] As an additional cost to play this, you may discard a [dragoncraft] card that costs 7 or more. ---------- Select an enemy follower on the field and deal it 3 damage. If you paid this card's additional cost, deal 4 damage instead and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD04/SDD04-018EN.png"
+  },
+  {
+    "cardNo": "SDD04-LD01EN",
+    "name": "Galan",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Showdown Deck: Dragoncraft",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD04/SDD04-LD01EN.png"
+  }
+]

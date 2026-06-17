@@ -1,9 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Snackbar, SnackbarContent } from "@mui/material/";
-import { motion } from "framer-motion";
-import Dice from "react-dice-roll";
-import { useDispatch, useSelector } from "react-redux";
-import { setEnemyDice } from "../../redux/CardSlice";
+import { useSelector } from "react-redux";
 import Leader from "./Leader";
 import sword from "../../assets/logo/sword.png";
 import forest from "../../assets/logo/forest.png";
@@ -11,10 +8,9 @@ import abyss from "../../assets/logo/abyss.png";
 import dragon from "../../assets/logo/dragon.png";
 import haven from "../../assets/logo/haven.png";
 import rune from "../../assets/logo/rune.png";
-import uma from "../../assets/logo/carrot.png";
-import cool from "../../assets/logo/cool.png";
-import cute from "../../assets/logo/cute.png";
-import passion from "../../assets/logo/passion.png";
+import umamusume from "../../assets/logo/umamusume.png";
+import idolmaster from "../../assets/logo/idolmaster.png";
+import vanguard from "../../assets/logo/vanguard.png";
 
 import { styled } from "@mui/material/styles";
 import Rating from "@mui/material/Rating";
@@ -25,6 +21,7 @@ import WifiIcon from "@mui/icons-material/Wifi";
 import sepOn from "../../assets/logo/sep_on.png";
 import sepOff from "../../assets/logo/sep_off.png";
 import "../../css/EnemyUI.css";
+import "../../css/LeaderPanel.css";
 import HideUiButton from "./HideUiButton";
 
 const StyledRating = styled(Rating)({
@@ -38,7 +35,6 @@ const StyledRating = styled(Rating)({
 });
 
 export default function EnemyUI() {
-  const dispatch = useDispatch();
   const reduxCurrentEnemyPlayPoints = useSelector(
     (state) => state.card.enemyPlayPoints.available,
   );
@@ -75,21 +71,9 @@ export default function EnemyUI() {
   const reduxEnemyViewingHand = useSelector(
     (state) => state.card.enemyViewingHand,
   );
-  const reduxEnemyDice = useSelector((state) => state.card.enemyDice);
   const reduxEnemyOnlineStatus = useSelector(
     (state) => state.card.enemyOnlineStatus,
   );
-
-  useEffect(() => {
-    if (reduxEnemyDice.show) {
-      const timeoutId = setTimeout(() => {
-        dispatch(setEnemyDice({ show: false, roll: 1 }));
-      }, 2000);
-
-      // Cleanup function to clear the timeout if the component unmounts
-      return () => clearTimeout(timeoutId);
-    }
-  }, [reduxEnemyDice]);
 
   const getColorFromLeader = (name) => {
     switch (name) {
@@ -113,6 +97,8 @@ export default function EnemyUI() {
         return "linear-gradient(-60deg, #16a085 0%, #f4d03f 100%)";
       case "Hozumi":
         return "linear-gradient(-60deg, #16a085 0%, #f4d03f 100%)";
+      case "Piercye":
+        return "linear-gradient(-60deg, #16a085 0%, #f4d03f 100%)";
       case "Bunny":
         return "linear-gradient(110.3deg, rgb(238, 179, 123) 8.7%, rgb(216, 103, 77) 47.5%, rgb(114, 43, 54) 89.1%)";
       case "Albert":
@@ -124,6 +110,8 @@ export default function EnemyUI() {
       case "Vania":
         return "linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(247, 30, 30) 100.3%)";
       case "Mono":
+        return "linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(247, 30, 30) 100.3%)";
+      case "Amy":
         return "linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(247, 30, 30) 100.3%)";
       case "Kuon":
         return "linear-gradient(181deg, rgb(2, 0, 97) 15%, rgb(97, 149, 219) 158.5%)";
@@ -139,6 +127,8 @@ export default function EnemyUI() {
         return "linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%)";
       case "Mio":
         return "linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%)";
+      case "Vanguard":
+        return "linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(247, 30, 30) 100.3%)";
       default:
         return "linear-gradient(to right, rgb(252, 74, 26), rgb(247, 183, 51))";
     }
@@ -163,6 +153,8 @@ export default function EnemyUI() {
         return forest;
       case "CC":
         return forest;
+      case "Piercye":
+        return forest;
       case "Orchis":
         return forest;
       case "Bunny":
@@ -177,6 +169,8 @@ export default function EnemyUI() {
         return abyss;
       case "Mono":
         return abyss;
+      case "Amy":
+        return abyss;
       case "Lishenna":
         return rune;
       case "Ceridwen":
@@ -186,34 +180,25 @@ export default function EnemyUI() {
       case "Daria":
         return rune;
       case "Manhatten Cafe":
-        return uma;
+        return umamusume;
       case "Maruzensky":
-        return uma;
+        return umamusume;
       case "Rin":
-        return cool;
+        return idolmaster;
       case "Uzuki":
-        return cute;
+        return idolmaster;
       case "Mio":
-        return passion;
+        return idolmaster;
+      case "Vanguard":
+        return vanguard;
       default:
         return dragon;
     }
   };
 
   return (
-    <div
-      style={{
-        position: "relative",
-        paddingTop: "3em",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        height: "150px",
-        width: "20vw",
-        gap: "1em",
-      }}
-    >
-      <HideUiButton sx={{ position: "absolute", top: 0, right: 0 }} />
+    <div className="leaderPanel" style={{ position: "relative" }}>
+      <HideUiButton sx={{ position: "absolute", top: 0, right: 0, zIndex: 2 }} />
       <Snackbar
         anchorOrigin={{ vertical: "top", horizontal: "center" }}
         open={reduxEnemyViewingDeck}
@@ -341,149 +326,58 @@ export default function EnemyUI() {
         />
       </Snackbar>
 
-      <div style={{ height: "60px", width: "60px" }}>
-        {reduxEnemyDice.show && (
-          <motion.div
-            id="dice"
-            initial={{ opacity: 1.0 }}
-            transition={{ delay: 1, duration: 1 }}
-            animate={{ opacity: 0.0 }}
-          >
-            <Dice
-              defaultValue={reduxEnemyDice.roll}
-              size={60}
-              faceBg={"transparent"}
-            />
-          </motion.div>
-        )}
-      </div>
-      <Leader name={reduxEnemyLeader} active={reduxEnemyLeaderActive} />
-
-      {reduxEnemyOnlineStatus ? (
-        <div className={"onlineStatus"}>
-          <WifiIcon sx={{ height: 40, width: 40 }} />
-        </div>
-      ) : (
-        <div className={"offlineStatus"}>
-          <WifiOffIcon sx={{ height: 40, width: 40 }} />
-        </div>
-      )}
-
-      <div style={{ opacity: 0.75 }}>
-        <img
-          height={70}
-          width={70}
-          src={getClassFromLeader(reduxEnemyLeader)}
-          alt={reduxEnemyLeader}
+      {/* Hero: the animated leader with its class logo (and the wifi badge). */}
+      <div className="leaderStageWrap">
+        <Leader
+          name={reduxEnemyLeader}
+          active={reduxEnemyLeaderActive}
+          width={300}
+          height={300}
+          side="enemy"
         />
-      </div>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          flexDirection: "column",
-          gap: "1em",
-        }}
-      >
-        <div
-          style={{
-            fontFamily: "Noto Serif JP, serif",
-            background: getColorFromLeader(reduxEnemyLeader),
-            outline: "7px ridge rgba(0, 0, 0, 1.0)",
-            userSelect: "none",
-            height: "60px",
-            width: "150px",
-            display: "flex",
-            justifyContent: "space-evenly",
-            alignItems: "center",
-            fontSize: "45px",
-            color: "white",
-            zIndex: 1,
-          }}
-        >
-          {reduxEnemyHealth}
-        </div>
-        <div
-          style={{
-            height: "50px",
-            width: "150px",
-            display: "flex",
-            justifyContent: "space-evenly",
-            alignItems: "center",
-            background:
-              "linear-gradient(to right, rgb(5, 117, 230), rgb(2, 27, 121))",
-            fontFamily: "Noto Serif JP, serif",
-            fontSize: "30px",
-            outline: "7px ridge rgba(0, 0, 0, 1.0)",
-            color: "white",
-            zIndex: 1,
-          }}
-        >
-          {reduxCurrentEnemyPlayPoints} / {reduxMaxEnemyPlayPoints}
-          {/* <div>
-            <Badge color="info" size="small" badgeContent={reduxEnemyEvoPoints}>
-              <div
-                style={{
-                  fontFamily: "Noto Serif JP, serif",
-                  fontSize: "17px",
-                }}
-              >
-                EP
-              </div>
-            </Badge>
-          </div> */}
-        </div>
-        <div
-          style={{
-            height: "30px",
-            width: "150px",
-            display: "flex",
-            justifyContent: "space-evenly",
-            alignItems: "center",
-            background:
-              "linear-gradient(to right, rgb(5, 117, 230), rgb(2, 27, 121))",
-            fontFamily: "Noto Serif JP, serif",
-            fontSize: "30px",
-            outline: "3px ridge rgba(0, 0, 0, 1.0)",
-            color: "white",
-            zIndex: 1,
-          }}
-        >
-          <div
-            style={{
-              fontFamily: "Noto Serif JP, serif",
-              fontSize: "17px",
-            }}
-          >
-            EP
-          </div>
-          <StyledRating
-            name="customized-color"
-            value={reduxEnemyEvoPoints}
-            readOnly={true}
-            max={3}
-            icon={<FiberManualRecordIcon fontSize="inherit" />}
-            emptyIcon={<FiberManualRecordOutlinedIcon fontSize="inherit" />}
+
+        <div className="classBadge">
+          <img
+            src={getClassFromLeader(reduxEnemyLeader)}
+            alt={reduxEnemyLeader}
           />
         </div>
+
+        {!reduxEnemyOnlineStatus && (
+          <div className="wifiBadge wifiOff" title="Disconnected">
+            <WifiOffIcon sx={{ height: 22, width: 22 }} />
+          </div>
+        )}
+      </div>
+
+      {/* Secondary: HP, play points, EP, super-evo grouped together (read-only). */}
+      <div className="statRibbon">
         <div
-          style={{
-            height: "50px",
-            width: "100px",
-            zIndex: 1,
-          }}
+          className="hpBlock"
+          style={{ background: getColorFromLeader(reduxEnemyLeader) }}
         >
-          {reduxEnemySuperEvo && (
-            <div>
-              <img height={50} width={100} src={sepOn} alt="sep" />
-            </div>
-          )}
-          {!reduxEnemySuperEvo && (
-            <div>
-              <img height={50} width={100} src={sepOff} alt="sep" />
-            </div>
-          )}
+          <span className="hpValue">{reduxEnemyHealth}</span>
+        </div>
+
+        <div className="ppEpStack">
+          <div className="ppPill">
+            {reduxCurrentEnemyPlayPoints} / {reduxMaxEnemyPlayPoints}
+          </div>
+          <div className="epRow">
+            <span className="epLabel">EP</span>
+            <StyledRating
+              name="customized-color"
+              value={reduxEnemyEvoPoints}
+              readOnly={true}
+              max={3}
+              icon={<FiberManualRecordIcon fontSize="inherit" />}
+              emptyIcon={<FiberManualRecordOutlinedIcon fontSize="inherit" />}
+            />
+          </div>
+        </div>
+
+        <div className="evoBlock evoStatic">
+          <img src={reduxEnemySuperEvo ? sepOn : sepOff} alt="super evo" />
         </div>
       </div>
     </div>

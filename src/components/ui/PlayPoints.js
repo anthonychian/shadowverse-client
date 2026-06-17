@@ -258,18 +258,16 @@ export default function Scoreboard({ name }) {
           </div>
         </div>
       </div>}
-      {!automated && <div className="turnContainer">
-        <div className="nextTurnContainer">
-          <div className="buttonText" onClick={() => nextTurn()}>
-            Next Turn
-          </div>
+      {!automated && (
+      <div className="turnContainer">
+        <div className="nextTurnContainer" onClick={() => nextTurn()}>
+          <div className="buttonText">Next Turn</div>
         </div>
-        <div className="endTurnContainer">
-          <div className="buttonText" onClick={() => endTurn()}>
-            End Turn
-          </div>
+        <div className="endTurnContainer" onClick={() => endTurn()}>
+          <div className="buttonText">End Turn</div>
         </div>
-      </div>}
+      </div>
+      )}
       {automated && (
         <div className="turnContainer">
           <div className="points" style={{ color: "white", marginTop: 8 }}>

@@ -1,0 +1,4581 @@
+[
+  {
+    "cardNo": "BP09-001EN",
+    "name": "Yggdrasil",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Fae-Touched / Verdant",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "5",
+      "attack": "3",
+      "defense": "5",
+      "effect": "[fanfare] Search your deck for a [forestcraft] spell, reveal it, add it to your hand, then shuffle your deck. [act] [cost01]: Select a [forestcraft] spell that costs X or less in your cemetery and put it into your EX area. It costs 0 to play this turn. X equals the number of [forestcraft] spells with different names in your cemetery. Activate only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-001EN.png"
+  },
+  {
+    "cardNo": "BP09-002EN",
+    "name": "White Vanara",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Fae-Touched / Beast",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "4",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. Whenever another follower is put onto your field, give this follower [attack]+1/[defense]+1. If that follower is a Beast follower, give [attack]+2/[defense]+2 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-002EN.png"
+  },
+  {
+    "cardNo": "BP09-003EN",
+    "name": "White Vanara Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Fae-Touched / Beast",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "While this follower's attack is at least 4, it has Ward. While at least 7, it has Storm. While at least 10, it ignores Ward. Strike - Select an enemy follower on the field and deal it damage equal to this follower's attack."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-003EN.png"
+  },
+  {
+    "cardNo": "BP09-004EN",
+    "name": "Paula, Icy Warmth",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Pixie",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower into a Paula, Gentle Warmth or Paula, Passionate Warmth."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-004EN.png"
+  },
+  {
+    "cardNo": "BP09-005EN",
+    "name": "Paula, Gentle Warmth Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Pixie",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Look at the top 5 cards of your deck. You may reveal a [forestcraft] spell from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-005EN.png"
+  },
+  {
+    "cardNo": "BP09-006EN",
+    "name": "Greenglen Axeman",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf / Hunter",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "3",
+      "attack": "4",
+      "defense": "3",
+      "effect": "Once on each of your turns, when you discard a [forestcraft] spell, draw a card. [act] [engage], discard a card: Choose one of the following. (1) Select an enemy follower on the field and deal it 4 damage. (2) Deal 2 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-006EN.png"
+  },
+  {
+    "cardNo": "BP09-007EN",
+    "name": "Wrath of Nature",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Fae-Touched / Verdant / Cutthroat",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Deal 3 damage to each enemy follower on the field. If there are at least 5 [forestcraft] spells with different names in your cemetery, deal 5 damage instead and deal 2 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-007EN.png"
+  },
+  {
+    "cardNo": "BP09-008EN",
+    "name": "Storied Falconer",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Hunter / Beast",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Summon a Holy Falcon token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-008EN.png"
+  },
+  {
+    "cardNo": "BP09-009EN",
+    "name": "Storied Falconer Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Hunter / Beast",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Select a Holy Falcon on your field. Give it [attack]+1 and Bane."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-009EN.png"
+  },
+  {
+    "cardNo": "BP09-010EN",
+    "name": "Owl Man",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Hunter / Beast",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "1",
+      "effect": "[fanfare] Select another Beast follower on your field and give it [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-010EN.png"
+  },
+  {
+    "cardNo": "BP09-011EN",
+    "name": "Blessings of Creation",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Fae-Touched / Verdant / Lightborne",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Draw a card. If there are at least 5 [forestcraft] spells with different names in your cemetery, give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-011EN.png"
+  },
+  {
+    "cardNo": "BP09-012EN",
+    "name": "Grasshopper Conductor",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Fae-Touched / Insect",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] If there are at least 5 [forestcraft] spells with different names in your cemetery, select an enemy follower on the field and deal it 4 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-012EN.png"
+  },
+  {
+    "cardNo": "BP09-013EN",
+    "name": "Grasshopper Conductor Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Fae-Touched / Insect",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Search your deck for a [forestcraft] spell that costs 1 or less, reveal it, add it to your hand, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-013EN.png"
+  },
+  {
+    "cardNo": "BP09-014EN",
+    "name": "Elf General",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "5",
+      "effect": "Ward. [fanfare] Summon 2 Fairy tokens. Give them [attack]+1/[defense]+1 and Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-014EN.png"
+  },
+  {
+    "cardNo": "BP09-015EN",
+    "name": "Lila, Arborist",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Verdant",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Discard a card: Give your leader [defense]+1. If you discarded a [forestcraft] spell, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-015EN.png"
+  },
+  {
+    "cardNo": "BP09-016EN",
+    "name": "Substitution",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Puppetry",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower that costs 3 or less on the field. Return it to its owner's hand and put a Puppet token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-016EN.png"
+  },
+  {
+    "cardNo": "BP09-017EN",
+    "name": "Flower of Fairies",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Amulet",
+      "trait": "Pixie / Verdant",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Put a Fairy Wisp token into your EX area. [act] [engage], bury this card: Summon a Fairy token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-017EN.png"
+  },
+  {
+    "cardNo": "BP09-018EN",
+    "name": "Celia, Sky Commander",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower into a Celia, Hope's Strategist. [evolve] [cost04]: Evolve this follower into a Celia, Despair's Messenger."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-018EN.png"
+  },
+  {
+    "cardNo": "BP09-019EN",
+    "name": "Celia, Hope's Strategist Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Commander / Lightborne",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - Summon a Shield Guardian token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-019EN.png"
+  },
+  {
+    "cardNo": "BP09-020EN",
+    "name": "Spartacus",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "6",
+      "effect": "Ward. At the start of your end phase, discard any number of cards and draw that many cards plus 1. Then, if there's 1 card or less in your deck, you win the game."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-020EN.png"
+  },
+  {
+    "cardNo": "BP09-021EN",
+    "name": "Prim, Innocent Princess",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Princess",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Summon a Knight token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-021EN.png"
+  },
+  {
+    "cardNo": "BP09-022EN",
+    "name": "Prim, Innocent Princess Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Commander / Princess",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - Search your deck for a Nonja, Silent Maid, reveal it, add it to your hand, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-022EN.png"
+  },
+  {
+    "cardNo": "BP09-023EN",
+    "name": "Nonja, Silent Maid",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Maid",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "3",
+      "attack": "4",
+      "defense": "4",
+      "effect": "This card costs 1 less to play if there's a Prim, Innocent Princess on your field. ---------- [fanfare] Draw 2 cards. Discard 2 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-023EN.png"
+  },
+  {
+    "cardNo": "BP09-024EN",
+    "name": "Monochrome Duel",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Commander / Fable",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] [cost02], banish this card from your cemetery: Give each Knight on your field [attack]+1 and Storm. ---------- Search your deck for a Queen Hemera the White and Queen Magnus the Black, summon them, then shuffle your deck. Give them [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-024EN.png"
+  },
+  {
+    "cardNo": "BP09-025EN",
+    "name": "Dario, Demon Count",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Noble",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. Assail."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-025EN.png"
+  },
+  {
+    "cardNo": "BP09-026EN",
+    "name": "Dario, Demon Count Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Commander / Noble",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Assail. During your turn, whenever an enemy follower is put from the field into the cemetery, give this follower [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-026EN.png"
+  },
+  {
+    "cardNo": "BP09-027EN",
+    "name": "Queen Hemera the White",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Fable / Lightborne",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "3",
+      "attack": "4",
+      "defense": "3",
+      "effect": "Rush. [fanfare] Summon a Knight token. If there's a Queen Magnus the Black on your field, summon 2 instead. Strike - Put a Knight token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-027EN.png"
+  },
+  {
+    "cardNo": "BP09-028EN",
+    "name": "Queen Magnus the Black",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Fable / Cutthroat",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "While this card is on your field, each Queen Hemera the White on your field has Assail. [act] [engage]: Select up to 2 other [swordcraft] followers on your field and give them [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-028EN.png"
+  },
+  {
+    "cardNo": "BP09-029EN",
+    "name": "Axe Princess",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Princess",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost04]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-029EN.png"
+  },
+  {
+    "cardNo": "BP09-030EN",
+    "name": "Axe Princess Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Commander / Princess",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 4 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-030EN.png"
+  },
+  {
+    "cardNo": "BP09-031EN",
+    "name": "Master Samurai",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "4",
+      "effect": "Rush. [fanfare] Select an enemy follower on the field and deal it damage equal to this follower's attack."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-031EN.png"
+  },
+  {
+    "cardNo": "BP09-032EN",
+    "name": "Savage Swordsman",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] If there's a token follower on your field, give this follower [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-032EN.png"
+  },
+  {
+    "cardNo": "BP09-033EN",
+    "name": "Tycoon",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Noble / Merchant",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "5",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Discard 3 cards: Draw 3 cards. Recover 2 play points."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-033EN.png"
+  },
+  {
+    "cardNo": "BP09-034EN",
+    "name": "Frontline Ramparts",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Amulet",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[q][act] [engage], bury this card: Select an enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-034EN.png"
+  },
+  {
+    "cardNo": "BP09-035EN",
+    "name": "Ceridwen, Eternity Hunter",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Alchemist / Forbidden",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Earth Rite: Put an Instant Poison token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-035EN.png"
+  },
+  {
+    "cardNo": "BP09-036EN",
+    "name": "Ceridwen, Eternity Hunter Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Alchemist / Forbidden",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Earth Rite: Put an Eternal Potion token into your EX area. While this card is on your field, the 1st Forbidden token you play each turn costs 2 less."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-036EN.png"
+  },
+  {
+    "cardNo": "BP09-037EN",
+    "name": "Faust, Truthseeker",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Alchemist",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Search your deck for up to 2 Earth Sigil amulets that cost a total of 4 or less, put them into your EX area, then shuffle your deck. They cost 0 to play this turn. At the start of your end phase, Earth Rite: Select a follower on your field. Give it [attack]+1/[defense]+1 and deal 2 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-037EN.png"
+  },
+  {
+    "cardNo": "BP09-038EN",
+    "name": "Anne, Mysterian Prodigy",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Choose one of the following. If there are at least 10 Academic cards in your cemetery, choose up to 2 instead. (1) Search your deck for an Anne's Sorcery, put it into your EX area, then shuffle your deck. The next Anne's Sorcery you play this turn costs 5 less. (2) Search your deck for a Grea, Mysterian Dragoness, summon it, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-038EN.png"
+  },
+  {
+    "cardNo": "BP09-039EN",
+    "name": "Grea, Mysterian Dragoness",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Select an enemy follower on the field. If there are at least 10 Academic cards in your cemetery, deal 4 damage to it and 1 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-039EN.png"
+  },
+  {
+    "cardNo": "BP09-040EN",
+    "name": "Grea, Mysterian Dragoness Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Search your deck for a Grea's Ember, put it into your EX area, then shuffle your deck. The next Grea's Ember you play this turn costs 1 less. While this card is on your field, if an Academic spell you control would deal damage, it deals that much plus 1 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-040EN.png"
+  },
+  {
+    "cardNo": "BP09-041EN",
+    "name": "Mysterian Wyrmist",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Academic",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost02]: Evolve this follower into a Mysterian Whitewyrm or Mysterian Blackwyrm. Activate only if there are at least 5 Academic cards in your cemetery. [fanfare] You may discard an Academic card. If you do, draw a card. If you don't, bury this card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-041EN.png"
+  },
+  {
+    "cardNo": "BP09-042EN",
+    "name": "Mysterian Whitewyrm Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Academic / Lightborne",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Ward. On Evolve - Give your leader [defense]+3."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-042EN.png"
+  },
+  {
+    "cardNo": "BP09-043EN",
+    "name": "Snowman King",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Arcanaform",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "6",
+      "attack": "4",
+      "defense": "6",
+      "effect": "While this card is on the field, followers that cost 3 or less on the field can't attack enemies. [lastwords] Give your leader [defense]+3."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-043EN.png"
+  },
+  {
+    "cardNo": "BP09-044EN",
+    "name": "Owen, Knight of Mysteria",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "Rush. [fanfare] If there are at least 5 Academic cards in your cemetery, give this follower [attack]+1/[defense]+1 and Assail. Strike - Put a Mysterian Missile token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-044EN.png"
+  },
+  {
+    "cardNo": "BP09-045EN",
+    "name": "Absolute Zeroblade",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Deal 1 damage to each enemy follower on the field. Spellchain (10) - Deal 1 damage again. SC (15) - Deal 1 damage again."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-045EN.png"
+  },
+  {
+    "cardNo": "BP09-046EN",
+    "name": "Anne's Sorcery",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose one of the following. (1) Select an enemy leader or enemy follower on the field. Deal it 4 damage and draw a card. (2) [cost03]: Select an enemy leader or enemy follower on the field. If there are at least 10 Academic cards in your cemetery, deal it 8 damage and draw 2 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-046EN.png"
+  },
+  {
+    "cardNo": "BP09-047EN",
+    "name": "Grea's Ember",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field and deal it 2 damage. If there are at least 5 Academic cards in your cemetery, deal 3 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-047EN.png"
+  },
+  {
+    "cardNo": "BP09-048EN",
+    "name": "Bergent, Onion Patchmaster",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Arcanaform",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Look at the top 5 cards of your deck. You may summon up to 2 cards named Onion Patch from among them. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-048EN.png"
+  },
+  {
+    "cardNo": "BP09-049EN",
+    "name": "Bergent, Onion Patchmaster Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Arcanaform",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "While this card is on your field, if an Onion Patch on your field would deal damage, it deals that much plus 1 instead. [act] [cost01], [engage]: Search your deck for up to 2 cards named Onion Patch, summon them, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-049EN.png"
+  },
+  {
+    "cardNo": "BP09-050EN",
+    "name": "Palla, Student Teacher",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Draw a card. If there are at least 5 Academic cards in your cemetery, recover 1 play point."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-050EN.png"
+  },
+  {
+    "cardNo": "BP09-051EN",
+    "name": "Vayle, Mysterian Summoner",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Arcanaform / Academic",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "4",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-051EN.png"
+  },
+  {
+    "cardNo": "BP09-052EN",
+    "name": "Vayle, Mysterian Summoner Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Arcanaform / Academic",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Look at the top 5 cards of your deck. You may put up to 2 Academic cards that cost 2 or less from among them into your EX area. They cost 2 less to play this turn. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-052EN.png"
+  },
+  {
+    "cardNo": "BP09-053EN",
+    "name": "Mysterian Knowledge",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage / Academic",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "As an additional cost to play this card, reveal 2 Academic cards from your hand. ---------- Draw a card. Put a Mysterian Missile token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-053EN.png"
+  },
+  {
+    "cardNo": "BP09-054EN",
+    "name": "Summoning Drills",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet",
+      "trait": "Alchemist / Earth Sigil",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Stack. [fanfare] Summon a Guardform Golem token. [fanfare] Discard a card: Put a Strikeform Golem token into your EX area. Give each Golem follower on your field and in your EX area [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-054EN.png"
+  },
+  {
+    "cardNo": "BP09-055EN",
+    "name": "Witch of Foresight",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Look at the top card of your deck. You may bury it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-055EN.png"
+  },
+  {
+    "cardNo": "BP09-056EN",
+    "name": "Witch of Foresight Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "4",
+      "effect": "On Evolve - Look at the top card of your deck. You may bury it. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-056EN.png"
+  },
+  {
+    "cardNo": "BP09-057EN",
+    "name": "Beastfaced Mage",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[act] [engage], Earth Rite: Select an enemy follower on the field and deal it 2 damage. [lastwords] Summon a Magic Sediment token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-057EN.png"
+  },
+  {
+    "cardNo": "BP09-058EN",
+    "name": "Onion Patch",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Arcanaform",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Rush. While there are at least 5 cards named Onion Patch in your cemetery, this follower has Storm and \"Strike - Select an enemy follower on the field and deal it 1 damage.\" ---------- You can put up to 50 of this card into your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-058EN.png"
+  },
+  {
+    "cardNo": "BP09-059EN",
+    "name": "Tico, Mysterian Spellnerd",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Ward. [lastwords] Look at the top card of your deck. If it's an Academic card, you may reveal it and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-059EN.png"
+  },
+  {
+    "cardNo": "BP09-060EN",
+    "name": "Mr. Bertrand, Magic Mentor",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[fanfare] Choose one of the following. (1) Put a Mysterian Missile token into your EX area. (2) Select an Academic spell in your cemetery and, if there are at least 5 Academic cards in your cemetery, add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-060EN.png"
+  },
+  {
+    "cardNo": "BP09-061EN",
+    "name": "Staff of Whirlwinds",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Deal each enemy leader and enemy follower on the field damage equal to the number of [runecraft] followers on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-061EN.png"
+  },
+  {
+    "cardNo": "BP09-062EN",
+    "name": "Jerva of Draconic Mail",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Discard your hand. At the start of your end phase, deal 5 damage to each other follower on the field and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-062EN.png"
+  },
+  {
+    "cardNo": "BP09-063EN",
+    "name": "Jerva of Draconic Mail Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonheart",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "At the start of your end phase, deal 5 damage to each other follower on the field and each enemy leader and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-063EN.png"
+  },
+  {
+    "cardNo": "BP09-064EN",
+    "name": "Zirnitra, Dragon's Flame",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt / Wyrmkin",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "6",
+      "attack": "3",
+      "defense": "4",
+      "effect": "When playing this card, bury a follower with \"Zirnitra\" in its name: This card costs 3 less to play. ---------- [fanfare] Summon a Dragon token. Draw a card for every Wyrmkin token on your field. While this card is on your field, each Wyrmkin token on your field has Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-064EN.png"
+  },
+  {
+    "cardNo": "BP09-065EN",
+    "name": "Romelia, Lightning Striker",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt / Draconic Duelist",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "3",
+      "attack": "1",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. Bane. [lastwords] If there's an Aftershock on your field, place a lightning counter on each Aftershock on your field. If not, summon one."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-065EN.png"
+  },
+  {
+    "cardNo": "BP09-066EN",
+    "name": "Romelia, Lightning Striker Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonewt / Draconic Duelist",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "4",
+      "effect": "Assail. Bane. On Evolve - Select an enemy follower on the field and, if there's an amulet on your field, deal it 3 damage. [lastwords] If there's an Aftershock on your field, place a lightning counter on each Aftershock on your field. If not, summon one."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-066EN.png"
+  },
+  {
+    "cardNo": "BP09-067EN",
+    "name": "Masamune, Raging Dragon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart / Draconic Duelist",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Bane. [fanfare] If there are at least 3 Draconic Duelist cards on your field, give this follower [attack]+2/[defense]+2 and Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-067EN.png"
+  },
+  {
+    "cardNo": "BP09-068EN",
+    "name": "Lindworm",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "10",
+      "attack": "10",
+      "defense": "10",
+      "effect": "[evolve] [cost05]: Evolve this follower into a Virtuous Lindworm or Iniquitous Lindworm. [fanfare] Recover play points equal to the number of [dragoncraft] spells in your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-068EN.png"
+  },
+  {
+    "cardNo": "BP09-069EN",
+    "name": "Virtuous Lindworm Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wyrmkin / Lightborne",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "10",
+      "defense": "10",
+      "effect": "Ward. At the start of your end phase, give your leader [defense]+6 and draw 3 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-069EN.png"
+  },
+  {
+    "cardNo": "BP09-070EN",
+    "name": "Dragonplate Warrior",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "5",
+      "attack": "3",
+      "defense": "5",
+      "effect": "[fanfare] If Overflow is active for you, recover 2 play points. During your turn, whenever you play a [dragoncraft] spell, deal 2 damage to each enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-070EN.png"
+  },
+  {
+    "cardNo": "BP09-071EN",
+    "name": "Poseidon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Marine / Draconic Duelist",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "8",
+      "attack": "4",
+      "defense": "7",
+      "effect": "Ward. [fanfare] Search your deck for up to 2 Draconic Duelist followers with different names that cost 2 or less, summon them, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-071EN.png"
+  },
+  {
+    "cardNo": "BP09-072EN",
+    "name": "Pure-Voiced Dragoon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart / Draconic Duelist",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "5",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[fanfare] Search your deck for a Draconic Duelist follower that costs 4 or less, summon it, then shuffle your deck. If Overflow is active for you, give your leader [defense]+3."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-072EN.png"
+  },
+  {
+    "cardNo": "BP09-073EN",
+    "name": "Force of the Dragonewt",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Dragonewt",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field. Deal it 3 damage, draw a card, then discard a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-073EN.png"
+  },
+  {
+    "cardNo": "BP09-074EN",
+    "name": "Roy, Dragoncleaver",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Draconic Duelist / Cutthroat",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Search your deck for a 2-cost [dragoncraft] spell, reveal it, add it to your hand, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-074EN.png"
+  },
+  {
+    "cardNo": "BP09-075EN",
+    "name": "Roy, Dragoncleaver Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Draconic Duelist / Cutthroat",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage. If it's a Wyrmkin follower, deal 5 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-075EN.png"
+  },
+  {
+    "cardNo": "BP09-076EN",
+    "name": "Galua of Two Breaths",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "4",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] [cost02]: Select an enemy card on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-076EN.png"
+  },
+  {
+    "cardNo": "BP09-077EN",
+    "name": "Katakura Kojuro",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Draconic Duelist",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Select another Draconic Duelist follower on your field and, if Overflow is active for you, give it [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-077EN.png"
+  },
+  {
+    "cardNo": "BP09-078EN",
+    "name": "Katakura Kojuro Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Draconic Duelist",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Look at the top 4 cards of your deck. You may reveal a Draconic Duelist follower from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-078EN.png"
+  },
+  {
+    "cardNo": "BP09-079EN",
+    "name": "Dragoon Scyther",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart / Draconic Duelist",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Bane. While there's another Draconic Duelist card on your field, this follower has Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-079EN.png"
+  },
+  {
+    "cardNo": "BP09-080EN",
+    "name": "Gargouille",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Draconic Duelist / Dragonewt / Cutthroat",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "5",
+      "effect": "Rush. Ward. [fanfare] If there are at least 3 Draconic Duelist cards on your field, draw 2 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-080EN.png"
+  },
+  {
+    "cardNo": "BP09-081EN",
+    "name": "Waters of the Megalorca",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Marine",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Summon a Megalorca token. If Overflow is active for you, summon 2 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-081EN.png"
+  },
+  {
+    "cardNo": "BP09-082EN",
+    "name": "Heroic Dragonslayer",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin / Cutthroat",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] If Overflow is active for you, give this follower [attack]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-082EN.png"
+  },
+  {
+    "cardNo": "BP09-083EN",
+    "name": "Heroic Dragonslayer Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wyrmkin / Cutthroat",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it damage equal to this follower's attack."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-083EN.png"
+  },
+  {
+    "cardNo": "BP09-084EN",
+    "name": "Dragonclad Blademaster",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Draconic Duelist / Cutthroat",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[act] [engage]: Select an enemy follower on the field and deal it 3 damage. Activate only if there are at least 3 Draconic Duelist cards on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-084EN.png"
+  },
+  {
+    "cardNo": "BP09-085EN",
+    "name": "Drakewing Assassin",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt / Cutthroat",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Select an enemy follower on the field and deal it damage equal to the number of [dragoncraft] spells in your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-085EN.png"
+  },
+  {
+    "cardNo": "BP09-086EN",
+    "name": "Coda, Twilight Dragoon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "4",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[fanfare] Summon a Dragon token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-086EN.png"
+  },
+  {
+    "cardNo": "BP09-087EN",
+    "name": "Hypersonic Dragonewt",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt / Draconic Duelist",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "1",
+      "effect": "While there's another Draconic Duelist card on your field, this follower has Rush and Assail. [fanfare] [cost01]: If Overflow is active for you, search your deck for a Hypersonic Dragonewt, summon it, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-087EN.png"
+  },
+  {
+    "cardNo": "BP09-088EN",
+    "name": "Dragon's Handspur",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field. Deal it 2 damage and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-088EN.png"
+  },
+  {
+    "cardNo": "BP09-089EN",
+    "name": "Vania, Nightshade Vampire",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vampire / Princess",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower into a Vania, Kind Queen. [evolve] [cost03]: Evolve this follower into a Vania, Blood Queen. Activate only if there are at least 5 Vampire cards in your cemetery. [fanfare] Put a Forest Bat token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-089EN.png"
+  },
+  {
+    "cardNo": "BP09-090EN",
+    "name": "Vania, Kind Queen Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Vampire / Princess / Lightborne",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Draw a card. Discard a card. While this card is on your field, any Forest Bat you play costs 1 less. Whenever a Forest Bat is put onto your field, give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-090EN.png"
+  },
+  {
+    "cardNo": "BP09-091EN",
+    "name": "Arcus, Spirited Manager",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed / Necromancer",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "5",
+      "defense": "5",
+      "effect": "This follower can't attack enemies. At the start of your main phase, Necrocharge (10) - Summon a Ghost token. [act] Bury another follower: Choose one of the following. Activate only once per turn. (1) Draw a card. (2) Summon 2 Ghost tokens. (3) Bury the top 2 cards of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-091EN.png"
+  },
+  {
+    "cardNo": "BP09-092EN",
+    "name": "Oldblood King",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vampire",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "4",
+      "attack": "2",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Summon 2 Forest Bat tokens. While this card is on your field, each Forest Bat on your field has Rush and Assail."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-092EN.png"
+  },
+  {
+    "cardNo": "BP09-093EN",
+    "name": "Oldblood King Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Vampire",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "5",
+      "effect": "On Evolve - Give each Forest Bat on your field [attack]+1. While this card is on your field, each Forest Bat on your field has Rush and Assail."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-093EN.png"
+  },
+  {
+    "cardNo": "BP09-094EN",
+    "name": "Darkfeast Bat",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vampire / Beast",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "6",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Select an enemy follower on the field. Deal 4 damage to it and its leader and, if Sanguine is active for you, recover 3 play points."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-094EN.png"
+  },
+  {
+    "cardNo": "BP09-095EN",
+    "name": "Gift for Bloodkin",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Vampire / Princess",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "This card costs 2 less to play if there are at least 5 Vampire cards in your cemetery. ---------- Summon 2 Forest Bat tokens. If there's a follower with \"Vania\" in its name in your cemetery, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-095EN.png"
+  },
+  {
+    "cardNo": "BP09-096EN",
+    "name": "Big Soul Hunter",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Necromancer / Cutthroat",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-096EN.png"
+  },
+  {
+    "cardNo": "BP09-097EN",
+    "name": "Big Soul Hunter Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Necromancer / Cutthroat",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "5",
+      "effect": "On Evolve - Each opponent buries a follower with the highest attack among followers on their field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-097EN.png"
+  },
+  {
+    "cardNo": "BP09-098EN",
+    "name": "Raven, Eventide Vampire",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vampire",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[act] [engage], bury a Forest Bat: Choose one of the following. (1) Select an enemy follower on the field. Deal it 4 damage and draw a card. (2) Deal 2 damage to each enemy leader. Give your leader [defense]+2. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-098EN.png"
+  },
+  {
+    "cardNo": "BP09-099EN",
+    "name": "Blood Moon",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Amulet",
+      "trait": "Beast",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Search your deck for a Beast follower, reveal it, add it to your hand, then shuffle your deck. [act] [engage], bury this card: Deal 1 damage to each leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-099EN.png"
+  },
+  {
+    "cardNo": "BP09-100EN",
+    "name": "Orator of the Bones",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Necromancer",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-100EN.png"
+  },
+  {
+    "cardNo": "BP09-101EN",
+    "name": "Orator of the Bones Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Necromancer",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - Select an [abysscraft] follower in your cemetery and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-101EN.png"
+  },
+  {
+    "cardNo": "BP09-102EN",
+    "name": "Raven, Noontide Vampire",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vampire / Lightborne",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[fanfare] Put a Forest Bat token into your EX area. Once on each of your turns, when a Forest Bat is put onto your field, give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-102EN.png"
+  },
+  {
+    "cardNo": "BP09-103EN",
+    "name": "Raven, Midnight Vampire",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vampire / Cutthroat",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "1",
+      "effect": "[fanfare] Put a Forest Bat token into your EX area. Once on each of your turns, when a Forest Bat is put onto your field, deal 1 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-103EN.png"
+  },
+  {
+    "cardNo": "BP09-104EN",
+    "name": "Death the Nyctophile",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "6",
+      "effect": "Rush. [lastwords] Select an enemy follower on the field. Destroy it and deal 3 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-104EN.png"
+  },
+  {
+    "cardNo": "BP09-105EN",
+    "name": "Poltergeist",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Departed",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Bury the top 2 cards of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-105EN.png"
+  },
+  {
+    "cardNo": "BP09-106EN",
+    "name": "Jeanne, Beacon of Salvation",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Luminary",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Draw a card. If there are at least 2 followers with \"Jeanne\" in their name in your cemetery, give this follower [attack]+1/[defense]+1 and Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-106EN.png"
+  },
+  {
+    "cardNo": "BP09-107EN",
+    "name": "Jeanne, Beacon of Salvation Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith / Luminary",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "4",
+      "effect": "On Evolve - You may summon a [havencraft] follower that costs 2 or less from your hand. Strike - Select a [havencraft] follower that costs 2 or less on your field and give it [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-107EN.png"
+  },
+  {
+    "cardNo": "BP09-108EN",
+    "name": "Tutankhamun",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Luminary",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "4",
+      "attack": "5",
+      "defense": "4",
+      "effect": "Ward. [fanfare] Draw a card. Put a card from your hand on the bottom of your deck. [lastwords] [cost01]: Search your deck for a Tutankhamun, summon it engaged, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-108EN.png"
+  },
+  {
+    "cardNo": "BP09-109EN",
+    "name": "Ceryneian Hind",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Beast",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower into a Ceryneian Lighthind or Ceryneian Darkhind. [fanfare] Look at the top 5 cards of your deck. You may reveal an amulet from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-109EN.png"
+  },
+  {
+    "cardNo": "BP09-110EN",
+    "name": "Ceryneian Lighthind Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith / Beast / Lightborne",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Ward. On Evolve - Bury an amulet: Give your leader [defense]+4."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-110EN.png"
+  },
+  {
+    "cardNo": "BP09-111EN",
+    "name": "Heavenly Knight",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Eidolon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "5",
+      "attack": "3",
+      "defense": "7",
+      "effect": "Storm. Ward. [fanfare] If there are at least 2 amulets on your field, give this follower [attack]+2 and your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-111EN.png"
+  },
+  {
+    "cardNo": "BP09-112EN",
+    "name": "Tenko's Shrine",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith / Beast",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Whenever your leader gains defense, [engage]: Select an enemy leader or enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-112EN.png"
+  },
+  {
+    "cardNo": "BP09-113EN",
+    "name": "Jeweled Priestess",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Lightborne",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-113EN.png"
+  },
+  {
+    "cardNo": "BP09-114EN",
+    "name": "Jeweled Priestess Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith / Lightborne",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - You may summon an amulet that costs 2 or less from your hand. Once per turn, when an amulet is put onto your field, give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-114EN.png"
+  },
+  {
+    "cardNo": "BP09-115EN",
+    "name": "Whitefang Temple",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith / Beast",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "At the start of your end phase, place a prayer counter on this card and give your leader [defense]+1. At the start of your main phase, if this card has at least 3 prayer counters, bury it, then search your deck for a Faith follower that costs 4 or less, summon it, and shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-115EN.png"
+  },
+  {
+    "cardNo": "BP09-116EN",
+    "name": "Opposing Statues",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Eidolon / Avian",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Search your deck for a Holy Fowl of Ivory, summon it, then shuffle your deck. [fanfare] Bury another amulet: Search your deck for a Hexed Fowl of Ebon, summon it, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-116EN.png"
+  },
+  {
+    "cardNo": "BP09-117EN",
+    "name": "Lycaon",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Zealot / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Discard an amulet: Select an enemy follower on the field. Deal it 5 damage and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-117EN.png"
+  },
+  {
+    "cardNo": "BP09-118EN",
+    "name": "Lycaon Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Zealot / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "On Evolve - Discard an amulet: Select an enemy follower on the field. Deal it 5 damage and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-118EN.png"
+  },
+  {
+    "cardNo": "BP09-119EN",
+    "name": "Holy Fowl of Ivory",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Avian",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "Ward. [fanfare] If there's an amulet on your field, give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-119EN.png"
+  },
+  {
+    "cardNo": "BP09-120EN",
+    "name": "Hexed Fowl of Ebon",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Zealot / Avian",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "3",
+      "attack": "4",
+      "defense": "3",
+      "effect": "Rush. [fanfare] If there's an amulet on your field, deal 2 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-120EN.png"
+  },
+  {
+    "cardNo": "BP09-121EN",
+    "name": "Deathscythe Nun",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Zealot",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Bane. [fanfare] Select another [havencraft] follower on your field and give it Bane."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-121EN.png"
+  },
+  {
+    "cardNo": "BP09-122EN",
+    "name": "Moriae Encomium",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Zealot",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Draw a card. [lastwords] Select an enemy follower with 3 defense or less on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-122EN.png"
+  },
+  {
+    "cardNo": "BP09-123EN",
+    "name": "Marduk",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Deity",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Bury the top 2 cards of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-123EN.png"
+  },
+  {
+    "cardNo": "BP09-124EN",
+    "name": "Marduk Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Deity",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "On Evolve - If there are at least 5 spells in your cemetery, give your leader [defense]+5 and draw a card. On Evolve - If there are at least 5 amulets in your cemetery, deal 5 damage to each enemy follower on the field and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-124EN.png"
+  },
+  {
+    "cardNo": "BP09-125EN",
+    "name": "Moon and Sun",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Deity",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] [cost04], banish this card from your cemetery: Select an Amaterasu and Tsukuyomi in your cemetery and summon them. ---------- Search your deck for an Amaterasu or Tsukuyomi, summon it, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-125EN.png"
+  },
+  {
+    "cardNo": "BP09-126EN",
+    "name": "Paradise Vanguard",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Angel",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] If there are at least 5 Angel cards in your cemetery, select an enemy follower on the field and banish it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-126EN.png"
+  },
+  {
+    "cardNo": "BP09-127EN",
+    "name": "Paradise Vanguard Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Angel",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower that costs 4 or less on the field and banish it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-127EN.png"
+  },
+  {
+    "cardNo": "BP09-128EN",
+    "name": "Amaterasu",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Deity / Lightborne",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Ward. Whenever this card becomes engaged, give your leader [defense]+1. If there's a Tsukuyomi on your field, give [defense]+2 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-128EN.png"
+  },
+  {
+    "cardNo": "BP09-129EN",
+    "name": "Tsukuyomi",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Deity / Cutthroat",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "Rush. Whenever this card becomes engaged, deal 1 damage to each enemy leader. If there's an Amaterasu on your field, deal 2 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-129EN.png"
+  },
+  {
+    "cardNo": "BP09-130EN",
+    "name": "Suttungr",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Gigant",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Select up to 2 enemy followers on the field and engage them. They don't refresh during their controller's next start phase."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-130EN.png"
+  },
+  {
+    "cardNo": "BP09-131EN",
+    "name": "Suttungr Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Gigant",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Follower Strike - Give this follower [attack]+2/[defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-131EN.png"
+  },
+  {
+    "cardNo": "BP09-132EN",
+    "name": "Oceanus",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Deity / Lightborne",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Whenever a follower on your field evolves, choose one of the following. (1) Select an enemy follower on the field and deal it 2 damage. (2) Give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-132EN.png"
+  },
+  {
+    "cardNo": "BP09-133EN",
+    "name": "Divine Retribution",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Deity",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field. Destroy it and, if there's an evolved follower on your field, put this card into its owner's EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-133EN.png"
+  },
+  {
+    "cardNo": "BP09-134EN",
+    "name": "Valkyrie of Chaos",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Fallen Angel / Cutthroat",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-134EN.png"
+  },
+  {
+    "cardNo": "BP09-135EN",
+    "name": "Valkyrie of Chaos Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Fallen Angel / Cutthroat",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-135EN.png"
+  },
+  {
+    "cardNo": "BP09-136EN",
+    "name": "Valkyrie of Order",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Angel / Lightborne",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "1",
+      "effect": "[fanfare] [costX]: Give this follower [attack]+X/[defense]+X, where X equals a number of your choice."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-136EN.png"
+  },
+  {
+    "cardNo": "BP09-137EN",
+    "name": "Fount of Angels",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Amulet",
+      "trait": "Angel",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Look at the top 3 cards of your deck. You may reveal an Angel or Fallen Angel card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. [act] [engage], bury this card: Give your leader [defense]+1. Activate only if there are at least 2 Angel and/or Fallen Angel followers on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-137EN.png"
+  },
+  {
+    "cardNo": "BP09-P01EN",
+    "name": "Paula, Icy Warmth",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Pixie",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower into a Paula, Gentle Warmth or Paula, Passionate Warmth."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P01EN.png"
+  },
+  {
+    "cardNo": "BP09-P02EN",
+    "name": "Paula, Gentle Warmth Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Pixie",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Look at the top 5 cards of your deck. You may reveal a [forestcraft] spell from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P02EN.png"
+  },
+  {
+    "cardNo": "BP09-P03EN",
+    "name": "Wrath of Nature",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Fae-Touched / Verdant / Cutthroat",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Deal 3 damage to each enemy follower on the field. If there are at least 5 [forestcraft] spells with different names in your cemetery, deal 5 damage instead and deal 2 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P03EN.png"
+  },
+  {
+    "cardNo": "BP09-P04EN",
+    "name": "Blessings of Creation",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Fae-Touched / Verdant / Lightborne",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Draw a card. If there are at least 5 [forestcraft] spells with different names in your cemetery, give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P04EN.png"
+  },
+  {
+    "cardNo": "BP09-P05EN",
+    "name": "Flower of Fairies",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Amulet",
+      "trait": "Pixie / Verdant",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Put a Fairy Wisp token into your EX area. [act] [engage], bury this card: Summon a Fairy token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P05EN.png"
+  },
+  {
+    "cardNo": "BP09-P06EN",
+    "name": "Prim, Innocent Princess",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Princess",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Summon a Knight token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P06EN.png"
+  },
+  {
+    "cardNo": "BP09-P07EN",
+    "name": "Prim, Innocent Princess Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Commander / Princess",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - Search your deck for a Nonja, Silent Maid, reveal it, add it to your hand, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P07EN.png"
+  },
+  {
+    "cardNo": "BP09-P08EN",
+    "name": "Monochrome Duel",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Commander / Fable",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] [cost02], banish this card from your cemetery: Give each Knight on your field [attack]+1 and Storm. ---------- Search your deck for a Queen Hemera the White and Queen Magnus the Black, summon them, then shuffle your deck. Give them [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P08EN.png"
+  },
+  {
+    "cardNo": "BP09-P09EN",
+    "name": "Queen Hemera the White",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Fable / Lightborne",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "3",
+      "attack": "4",
+      "defense": "3",
+      "effect": "Rush. [fanfare] Summon a Knight token. If there's a Queen Magnus the Black on your field, summon 2 instead. Strike - Put a Knight token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P09EN.png"
+  },
+  {
+    "cardNo": "BP09-P10EN",
+    "name": "Queen Magnus the Black",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Fable / Cutthroat",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "While this card is on your field, each Queen Hemera the White on your field has Assail. [act] [engage]: Select up to 2 other [swordcraft] followers on your field and give them [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P10EN.png"
+  },
+  {
+    "cardNo": "BP09-P11EN",
+    "name": "Mysterian Wyrmist",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Academic",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost02]: Evolve this follower into a Mysterian Whitewyrm or Mysterian Blackwyrm. Activate only if there are at least 5 Academic cards in your cemetery. [fanfare] You may discard an Academic card. If you do, draw a card. If you don't, bury this card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P11EN.png"
+  },
+  {
+    "cardNo": "BP09-P12EN",
+    "name": "Mysterian Whitewyrm Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Academic / Lightborne",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Ward. On Evolve - Give your leader [defense]+3."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P12EN.png"
+  },
+  {
+    "cardNo": "BP09-P13EN",
+    "name": "Owen, Knight of Mysteria",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "Rush. [fanfare] If there are at least 5 Academic cards in your cemetery, give this follower [attack]+1/[defense]+1 and Assail. Strike - Put a Mysterian Missile token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P13EN.png"
+  },
+  {
+    "cardNo": "BP09-P14EN",
+    "name": "Anne's Sorcery",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose one of the following. (1) Select an enemy leader or enemy follower on the field. Deal it 4 damage and draw a card. (2) [cost03]: Select an enemy leader or enemy follower on the field. If there are at least 10 Academic cards in your cemetery, deal it 8 damage and draw 2 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P14EN.png"
+  },
+  {
+    "cardNo": "BP09-P15EN",
+    "name": "Grea's Ember",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field and deal it 2 damage. If there are at least 5 Academic cards in your cemetery, deal 3 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P15EN.png"
+  },
+  {
+    "cardNo": "BP09-P16EN",
+    "name": "Bergent, Onion Patchmaster",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Arcanaform",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Look at the top 5 cards of your deck. You may summon up to 2 cards named Onion Patch from among them. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P16EN.png"
+  },
+  {
+    "cardNo": "BP09-P17EN",
+    "name": "Bergent, Onion Patchmaster Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Arcanaform",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "While this card is on your field, if an Onion Patch on your field would deal damage, it deals that much plus 1 instead. [act] [cost01], [engage]: Search your deck for up to 2 cards named Onion Patch, summon them, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P17EN.png"
+  },
+  {
+    "cardNo": "BP09-P18EN",
+    "name": "Vayle, Mysterian Summoner",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Arcanaform / Academic",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "4",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P18EN.png"
+  },
+  {
+    "cardNo": "BP09-P19EN",
+    "name": "Vayle, Mysterian Summoner Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Arcanaform / Academic",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Look at the top 5 cards of your deck. You may put up to 2 Academic cards that cost 2 or less from among them into your EX area. They cost 2 less to play this turn. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P19EN.png"
+  },
+  {
+    "cardNo": "BP09-P20EN",
+    "name": "Mysterian Knowledge",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage / Academic",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "As an additional cost to play this card, reveal 2 Academic cards from your hand. ---------- Draw a card. Put a Mysterian Missile token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P20EN.png"
+  },
+  {
+    "cardNo": "BP09-P21EN",
+    "name": "Onion Patch",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Arcanaform",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Rush. While there are at least 5 cards named Onion Patch in your cemetery, this follower has Storm and \"Strike - Select an enemy follower on the field and deal it 1 damage.\" ---------- You can put up to 50 of this card into your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P21EN.png"
+  },
+  {
+    "cardNo": "BP09-P22EN",
+    "name": "Mr. Bertrand, Magic Mentor",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[fanfare] Choose one of the following. (1) Put a Mysterian Missile token into your EX area. (2) Select an Academic spell in your cemetery and, if there are at least 5 Academic cards in your cemetery, add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P22EN.png"
+  },
+  {
+    "cardNo": "BP09-P23EN",
+    "name": "Lindworm",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "10",
+      "attack": "10",
+      "defense": "10",
+      "effect": "[evolve] [cost05]: Evolve this follower into a Virtuous Lindworm or Iniquitous Lindworm. [fanfare] Recover play points equal to the number of [dragoncraft] spells in your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P23EN.png"
+  },
+  {
+    "cardNo": "BP09-P24EN",
+    "name": "Virtuous Lindworm Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wyrmkin / Lightborne",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "10",
+      "defense": "10",
+      "effect": "Ward. At the start of your end phase, give your leader [defense]+6 and draw 3 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P24EN.png"
+  },
+  {
+    "cardNo": "BP09-P25EN",
+    "name": "Poseidon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Marine / Draconic Duelist",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "8",
+      "attack": "4",
+      "defense": "7",
+      "effect": "Ward. [fanfare] Search your deck for up to 2 Draconic Duelist followers with different names that cost 2 or less, summon them, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P25EN.png"
+  },
+  {
+    "cardNo": "BP09-P26EN",
+    "name": "Pure-Voiced Dragoon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart / Draconic Duelist",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "5",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[fanfare] Search your deck for a Draconic Duelist follower that costs 4 or less, summon it, then shuffle your deck. If Overflow is active for you, give your leader [defense]+3."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P26EN.png"
+  },
+  {
+    "cardNo": "BP09-P27EN",
+    "name": "Roy, Dragoncleaver",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Draconic Duelist / Cutthroat",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Search your deck for a 2-cost [dragoncraft] spell, reveal it, add it to your hand, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P27EN.png"
+  },
+  {
+    "cardNo": "BP09-P28EN",
+    "name": "Roy, Dragoncleaver Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Draconic Duelist / Cutthroat",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage. If it's a Wyrmkin follower, deal 5 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P28EN.png"
+  },
+  {
+    "cardNo": "BP09-P29EN",
+    "name": "Katakura Kojuro",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Draconic Duelist",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Select another Draconic Duelist follower on your field and, if Overflow is active for you, give it [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P29EN.png"
+  },
+  {
+    "cardNo": "BP09-P30EN",
+    "name": "Katakura Kojuro Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Draconic Duelist",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Look at the top 4 cards of your deck. You may reveal a Draconic Duelist follower from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P30EN.png"
+  },
+  {
+    "cardNo": "BP09-P31EN",
+    "name": "Dragoon Scyther",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart / Draconic Duelist",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Bane. While there's another Draconic Duelist card on your field, this follower has Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P31EN.png"
+  },
+  {
+    "cardNo": "BP09-P32EN",
+    "name": "Gargouille",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Draconic Duelist / Dragonewt / Cutthroat",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "5",
+      "effect": "Rush. Ward. [fanfare] If there are at least 3 Draconic Duelist cards on your field, draw 2 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P32EN.png"
+  },
+  {
+    "cardNo": "BP09-P33EN",
+    "name": "Waters of the Megalorca",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Marine",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Summon a Megalorca token. If Overflow is active for you, summon 2 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P33EN.png"
+  },
+  {
+    "cardNo": "BP09-P34EN",
+    "name": "Hypersonic Dragonewt",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt / Draconic Duelist",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "1",
+      "effect": "While there's another Draconic Duelist card on your field, this follower has Rush and Assail. [fanfare] [cost01]: If Overflow is active for you, search your deck for a Hypersonic Dragonewt, summon it, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P34EN.png"
+  },
+  {
+    "cardNo": "BP09-P35EN",
+    "name": "Oldblood King",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vampire",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "4",
+      "attack": "2",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Summon 2 Forest Bat tokens. While this card is on your field, each Forest Bat on your field has Rush and Assail."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P35EN.png"
+  },
+  {
+    "cardNo": "BP09-P36EN",
+    "name": "Oldblood King Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Vampire",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "5",
+      "effect": "On Evolve - Give each Forest Bat on your field [attack]+1. While this card is on your field, each Forest Bat on your field has Rush and Assail."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P36EN.png"
+  },
+  {
+    "cardNo": "BP09-P37EN",
+    "name": "Raven, Eventide Vampire",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vampire",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[act] [engage], bury a Forest Bat: Choose one of the following. (1) Select an enemy follower on the field. Deal it 4 damage and draw a card. (2) Deal 2 damage to each enemy leader. Give your leader [defense]+2. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P37EN.png"
+  },
+  {
+    "cardNo": "BP09-P38EN",
+    "name": "Raven, Noontide Vampire",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vampire / Lightborne",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[fanfare] Put a Forest Bat token into your EX area. Once on each of your turns, when a Forest Bat is put onto your field, give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P38EN.png"
+  },
+  {
+    "cardNo": "BP09-P39EN",
+    "name": "Raven, Midnight Vampire",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vampire / Cutthroat",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "1",
+      "effect": "[fanfare] Put a Forest Bat token into your EX area. Once on each of your turns, when a Forest Bat is put onto your field, deal 1 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P39EN.png"
+  },
+  {
+    "cardNo": "BP09-P40EN",
+    "name": "Ceryneian Hind",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Beast",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower into a Ceryneian Lighthind or Ceryneian Darkhind. [fanfare] Look at the top 5 cards of your deck. You may reveal an amulet from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P40EN.png"
+  },
+  {
+    "cardNo": "BP09-P41EN",
+    "name": "Ceryneian Lighthind Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith / Beast / Lightborne",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Ward. On Evolve - Bury an amulet: Give your leader [defense]+4."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P41EN.png"
+  },
+  {
+    "cardNo": "BP09-P42EN",
+    "name": "Jeweled Priestess",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Lightborne",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P42EN.png"
+  },
+  {
+    "cardNo": "BP09-P43EN",
+    "name": "Jeweled Priestess Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith / Lightborne",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - You may summon an amulet that costs 2 or less from your hand. Once per turn, when an amulet is put onto your field, give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P43EN.png"
+  },
+  {
+    "cardNo": "BP09-P44EN",
+    "name": "Whitefang Temple",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith / Beast",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "At the start of your end phase, place a prayer counter on this card and give your leader [defense]+1. At the start of your main phase, if this card has at least 3 prayer counters, bury it, then search your deck for a Faith follower that costs 4 or less, summon it, and shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P44EN.png"
+  },
+  {
+    "cardNo": "BP09-P45EN",
+    "name": "Amaterasu",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Deity / Lightborne",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Ward. Whenever this card becomes engaged, give your leader [defense]+1. If there's a Tsukuyomi on your field, give [defense]+2 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P45EN.png"
+  },
+  {
+    "cardNo": "BP09-P46EN",
+    "name": "Tsukuyomi",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Deity / Cutthroat",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "Rush. Whenever this card becomes engaged, deal 1 damage to each enemy leader. If there's an Amaterasu on your field, deal 2 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P46EN.png"
+  },
+  {
+    "cardNo": "BP09-P47EN",
+    "name": "Instant Poison TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell / Token",
+      "trait": "Alchemist / Forbidden",
+      "rarity": "Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field. Deal 4 damage to it and 2 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P47EN.png"
+  },
+  {
+    "cardNo": "BP09-P48EN",
+    "name": "Eternal Potion TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell / Token",
+      "trait": "Alchemist / Forbidden",
+      "rarity": "Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a [runecraft] follower that costs 3 or less in your cemetery and summon it. Give it Rush and \"At the start of your end phase, destroy this card.\""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P48EN.png"
+  },
+  {
+    "cardNo": "BP09-P49EN",
+    "name": "Mysterian Missile TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell / Token",
+      "trait": "Mage / Academic",
+      "rarity": "Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field and deal it 3 damage. If there are at least 10 Academic cards in your cemetery, deal 2 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P49EN.png"
+  },
+  {
+    "cardNo": "BP09-P50EN",
+    "name": "Aftershock TOKEN",
+    "type": "token",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Amulet / Token",
+      "trait": "Dragonewt / Draconic Duelist",
+      "rarity": "Premium",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Whenever a Draconic Duelist follower is put onto your field, place a lightning counter on this card. [act] [engage]: Select a [dragoncraft] follower on your field and give it [attack]+2. Activate only if this card has at least 5 lightning counters. [act] [engage]: Select an enemy follower on the field. Destroy it and deal 3 damage to its leader. Activate only if this card has at least 10 lightning counters."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-P50EN.png"
+  },
+  {
+    "cardNo": "BP09-SL01EN",
+    "name": "Yggdrasil",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Fae-Touched / Verdant",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "5",
+      "attack": "3",
+      "defense": "5",
+      "effect": "[fanfare] Search your deck for a [forestcraft] spell, reveal it, add it to your hand, then shuffle your deck. [act] [cost01]: Select a [forestcraft] spell that costs X or less in your cemetery and put it into your EX area. It costs 0 to play this turn. X equals the number of [forestcraft] spells with different names in your cemetery. Activate only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-SL01EN.png"
+  },
+  {
+    "cardNo": "BP09-SL02EN",
+    "name": "White Vanara",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Fae-Touched / Beast",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "4",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. Whenever another follower is put onto your field, give this follower [attack]+1/[defense]+1. If that follower is a Beast follower, give [attack]+2/[defense]+2 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-SL02EN.png"
+  },
+  {
+    "cardNo": "BP09-SL03EN",
+    "name": "White Vanara Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Fae-Touched / Beast",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "While this follower's attack is at least 4, it has Ward. While at least 7, it has Storm. While at least 10, it ignores Ward. Strike - Select an enemy follower on the field and deal it damage equal to this follower's attack."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-SL03EN.png"
+  },
+  {
+    "cardNo": "BP09-SL04EN",
+    "name": "Celia, Sky Commander",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower into a Celia, Hope's Strategist. [evolve] [cost04]: Evolve this follower into a Celia, Despair's Messenger."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-SL04EN.png"
+  },
+  {
+    "cardNo": "BP09-SL05EN",
+    "name": "Celia, Hope's Strategist Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Commander / Lightborne",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - Summon a Shield Guardian token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-SL05EN.png"
+  },
+  {
+    "cardNo": "BP09-SL06EN",
+    "name": "Spartacus",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "6",
+      "effect": "Ward. At the start of your end phase, discard any number of cards and draw that many cards plus 1. Then, if there's 1 card or less in your deck, you win the game."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-SL06EN.png"
+  },
+  {
+    "cardNo": "BP09-SL07EN",
+    "name": "Ceridwen, Eternity Hunter",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Alchemist / Forbidden",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Earth Rite: Put an Instant Poison token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-SL07EN.png"
+  },
+  {
+    "cardNo": "BP09-SL08EN",
+    "name": "Ceridwen, Eternity Hunter Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Alchemist / Forbidden",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Earth Rite: Put an Eternal Potion token into your EX area. While this card is on your field, the 1st Forbidden token you play each turn costs 2 less."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-SL08EN.png"
+  },
+  {
+    "cardNo": "BP09-SL09EN",
+    "name": "Faust, Truthseeker",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Alchemist",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Search your deck for up to 2 Earth Sigil amulets that cost a total of 4 or less, put them into your EX area, then shuffle your deck. They cost 0 to play this turn. At the start of your end phase, Earth Rite: Select a follower on your field. Give it [attack]+1/[defense]+1 and deal 2 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-SL09EN.png"
+  },
+  {
+    "cardNo": "BP09-SL10EN",
+    "name": "Anne, Mysterian Prodigy",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Choose one of the following. If there are at least 10 Academic cards in your cemetery, choose up to 2 instead. (1) Search your deck for an Anne's Sorcery, put it into your EX area, then shuffle your deck. The next Anne's Sorcery you play this turn costs 5 less. (2) Search your deck for a Grea, Mysterian Dragoness, summon it, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-SL10EN.png"
+  },
+  {
+    "cardNo": "BP09-SL11EN",
+    "name": "Grea, Mysterian Dragoness",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Select an enemy follower on the field. If there are at least 10 Academic cards in your cemetery, deal 4 damage to it and 1 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-SL11EN.png"
+  },
+  {
+    "cardNo": "BP09-SL12EN",
+    "name": "Grea, Mysterian Dragoness Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Search your deck for a Grea's Ember, put it into your EX area, then shuffle your deck. The next Grea's Ember you play this turn costs 1 less. While this card is on your field, if an Academic spell you control would deal damage, it deals that much plus 1 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-SL12EN.png"
+  },
+  {
+    "cardNo": "BP09-SL13EN",
+    "name": "Jerva of Draconic Mail",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Discard your hand. At the start of your end phase, deal 5 damage to each other follower on the field and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-SL13EN.png"
+  },
+  {
+    "cardNo": "BP09-SL14EN",
+    "name": "Jerva of Draconic Mail Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonheart",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "At the start of your end phase, deal 5 damage to each other follower on the field and each enemy leader and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-SL14EN.png"
+  },
+  {
+    "cardNo": "BP09-SL15EN",
+    "name": "Zirnitra, Dragon's Flame",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt / Wyrmkin",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "6",
+      "attack": "3",
+      "defense": "4",
+      "effect": "When playing this card, bury a follower with \"Zirnitra\" in its name: This card costs 3 less to play. ---------- [fanfare] Summon a Dragon token. Draw a card for every Wyrmkin token on your field. While this card is on your field, each Wyrmkin token on your field has Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-SL15EN.png"
+  },
+  {
+    "cardNo": "BP09-SL16EN",
+    "name": "Romelia, Lightning Striker",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt / Draconic Duelist",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "3",
+      "attack": "1",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. Bane. [lastwords] If there's an Aftershock on your field, place a lightning counter on each Aftershock on your field. If not, summon one."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-SL16EN.png"
+  },
+  {
+    "cardNo": "BP09-SL17EN",
+    "name": "Romelia, Lightning Striker Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonewt / Draconic Duelist",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "4",
+      "effect": "Assail. Bane. On Evolve - Select an enemy follower on the field and, if there's an amulet on your field, deal it 3 damage. [lastwords] If there's an Aftershock on your field, place a lightning counter on each Aftershock on your field. If not, summon one."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-SL17EN.png"
+  },
+  {
+    "cardNo": "BP09-SL18EN",
+    "name": "Masamune, Raging Dragon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart / Draconic Duelist",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Bane. [fanfare] If there are at least 3 Draconic Duelist cards on your field, give this follower [attack]+2/[defense]+2 and Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-SL18EN.png"
+  },
+  {
+    "cardNo": "BP09-SL19EN",
+    "name": "Vania, Nightshade Vampire",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vampire / Princess",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower into a Vania, Kind Queen. [evolve] [cost03]: Evolve this follower into a Vania, Blood Queen. Activate only if there are at least 5 Vampire cards in your cemetery. [fanfare] Put a Forest Bat token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-SL19EN.png"
+  },
+  {
+    "cardNo": "BP09-SL20EN",
+    "name": "Vania, Kind Queen Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Vampire / Princess / Lightborne",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Draw a card. Discard a card. While this card is on your field, any Forest Bat you play costs 1 less. Whenever a Forest Bat is put onto your field, give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-SL20EN.png"
+  },
+  {
+    "cardNo": "BP09-SL21EN",
+    "name": "Arcus, Spirited Manager",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed / Necromancer",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "5",
+      "defense": "5",
+      "effect": "This follower can't attack enemies. At the start of your main phase, Necrocharge (10) - Summon a Ghost token. [act] Bury another follower: Choose one of the following. Activate only once per turn. (1) Draw a card. (2) Summon 2 Ghost tokens. (3) Bury the top 2 cards of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-SL21EN.png"
+  },
+  {
+    "cardNo": "BP09-SL22EN",
+    "name": "Jeanne, Beacon of Salvation",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Luminary",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Draw a card. If there are at least 2 followers with \"Jeanne\" in their name in your cemetery, give this follower [attack]+1/[defense]+1 and Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-SL22EN.png"
+  },
+  {
+    "cardNo": "BP09-SL23EN",
+    "name": "Jeanne, Beacon of Salvation Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith / Luminary",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "4",
+      "effect": "On Evolve - You may summon a [havencraft] follower that costs 2 or less from your hand. Strike - Select a [havencraft] follower that costs 2 or less on your field and give it [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-SL23EN.png"
+  },
+  {
+    "cardNo": "BP09-SL24EN",
+    "name": "Tutankhamun",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Luminary",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "4",
+      "attack": "5",
+      "defense": "4",
+      "effect": "Ward. [fanfare] Draw a card. Put a card from your hand on the bottom of your deck. [lastwords] [cost01]: Search your deck for a Tutankhamun, summon it engaged, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-SL24EN.png"
+  },
+  {
+    "cardNo": "BP09-SL25EN",
+    "name": "Marduk",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Deity",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Bury the top 2 cards of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-SL25EN.png"
+  },
+  {
+    "cardNo": "BP09-SL26EN",
+    "name": "Marduk Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Deity",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "On Evolve - If there are at least 5 spells in your cemetery, give your leader [defense]+5 and draw a card. On Evolve - If there are at least 5 amulets in your cemetery, deal 5 damage to each enemy follower on the field and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-SL26EN.png"
+  },
+  {
+    "cardNo": "BP09-SL27EN",
+    "name": "Moon and Sun",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Deity",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] [cost04], banish this card from your cemetery: Select an Amaterasu and Tsukuyomi in your cemetery and summon them. ---------- Search your deck for an Amaterasu or Tsukuyomi, summon it, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-SL27EN.png"
+  },
+  {
+    "cardNo": "BP09-SP01EN",
+    "name": "Anne, Mysterian Prodigy",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Special",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Choose one of the following. If there are at least 10 Academic cards in your cemetery, choose up to 2 instead. (1) Search your deck for an Anne's Sorcery, put it into your EX area, then shuffle your deck. The next Anne's Sorcery you play this turn costs 5 less. (2) Search your deck for a Grea, Mysterian Dragoness, summon it, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-SP01EN.png"
+  },
+  {
+    "cardNo": "BP09-SP02EN",
+    "name": "Romelia, Lightning Striker Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonewt / Draconic Duelist",
+      "rarity": "Special",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "4",
+      "effect": "Assail. Bane. On Evolve - Select an enemy follower on the field and, if there's an amulet on your field, deal it 3 damage. [lastwords] If there's an Aftershock on your field, place a lightning counter on each Aftershock on your field. If not, summon one."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-SP02EN.png"
+  },
+  {
+    "cardNo": "BP09-T01EN",
+    "name": "Instant Poison TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell / Token",
+      "trait": "Alchemist / Forbidden",
+      "rarity": "-",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field. Deal 4 damage to it and 2 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-T01EN.png"
+  },
+  {
+    "cardNo": "BP09-T02EN",
+    "name": "Eternal Potion TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell / Token",
+      "trait": "Alchemist / Forbidden",
+      "rarity": "-",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a [runecraft] follower that costs 3 or less in your cemetery and summon it. Give it Rush and \"At the start of your end phase, destroy this card.\""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-T02EN.png"
+  },
+  {
+    "cardNo": "BP09-T03EN",
+    "name": "Mysterian Missile TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell / Token",
+      "trait": "Mage / Academic",
+      "rarity": "-",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field and deal it 3 damage. If there are at least 10 Academic cards in your cemetery, deal 2 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-T03EN.png"
+  },
+  {
+    "cardNo": "BP09-T04EN",
+    "name": "Aftershock TOKEN",
+    "type": "token",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Amulet / Token",
+      "trait": "Dragonewt / Draconic Duelist",
+      "rarity": "-",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Whenever a Draconic Duelist follower is put onto your field, place a lightning counter on this card. [act] [engage]: Select a [dragoncraft] follower on your field and give it [attack]+2. Activate only if this card has at least 5 lightning counters. [act] [engage]: Select an enemy follower on the field. Destroy it and deal 3 damage to its leader. Activate only if this card has at least 10 lightning counters."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-T04EN.png"
+  },
+  {
+    "cardNo": "BP09-T05EN",
+    "name": "Fairy Wisp TOKEN",
+    "type": "token",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Token",
+      "trait": "Pixie",
+      "rarity": "-",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "0",
+      "attack": "1",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-T05EN.png"
+  },
+  {
+    "cardNo": "BP09-T06EN",
+    "name": "Fairy TOKEN",
+    "type": "token",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Token",
+      "trait": "Pixie",
+      "rarity": "-",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-T06EN.png"
+  },
+  {
+    "cardNo": "BP09-T07EN",
+    "name": "Knight TOKEN",
+    "type": "token",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Token",
+      "trait": "Officer",
+      "rarity": "-",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-T07EN.png"
+  },
+  {
+    "cardNo": "BP09-T08EN",
+    "name": "Steelclad Knight TOKEN",
+    "type": "token",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Token",
+      "trait": "Officer",
+      "rarity": "-",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-T08EN.png"
+  },
+  {
+    "cardNo": "BP09-T09EN",
+    "name": "Shield Guardian TOKEN",
+    "type": "token",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Token",
+      "trait": "Officer",
+      "rarity": "-",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-T09EN.png"
+  },
+  {
+    "cardNo": "BP09-T10EN",
+    "name": "Strikeform Golem TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Token",
+      "trait": "Golem",
+      "rarity": "-",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-T10EN.png"
+  },
+  {
+    "cardNo": "BP09-T11EN",
+    "name": "Guardform Golem TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Token",
+      "trait": "Golem",
+      "rarity": "-",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-T11EN.png"
+  },
+  {
+    "cardNo": "BP09-T12EN",
+    "name": "Magic Sediment TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet / Token",
+      "trait": "Earth Sigil",
+      "rarity": "-",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Stack."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-T12EN.png"
+  },
+  {
+    "cardNo": "BP09-T13EN",
+    "name": "Dragon TOKEN",
+    "type": "token",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Token",
+      "trait": "Wyrmkin",
+      "rarity": "-",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "4",
+      "attack": "5",
+      "defense": "5",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-T13EN.png"
+  },
+  {
+    "cardNo": "BP09-T14EN",
+    "name": "Megalorca TOKEN",
+    "type": "token",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Token",
+      "trait": "Marine",
+      "rarity": "-",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-T14EN.png"
+  },
+  {
+    "cardNo": "BP09-T15EN",
+    "name": "Ghost TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Token",
+      "trait": "Departed",
+      "rarity": "-",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Storm. At the start of your end phase, banish this card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-T15EN.png"
+  },
+  {
+    "cardNo": "BP09-T16EN",
+    "name": "Forest Bat TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Token",
+      "trait": "Vampire",
+      "rarity": "-",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-T16EN.png"
+  },
+  {
+    "cardNo": "BP09-T17EN",
+    "name": "Holy Falcon TOKEN",
+    "type": "token",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Token",
+      "trait": "Avian",
+      "rarity": "-",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-T17EN.png"
+  },
+  {
+    "cardNo": "BP09-T18EN",
+    "name": "Puppet TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Token",
+      "trait": "Puppetry",
+      "rarity": "-",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-T18EN.png"
+  },
+  {
+    "cardNo": "BP09-U01EN",
+    "name": "Yggdrasil",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Fae-Touched / Verdant",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "5",
+      "attack": "3",
+      "defense": "5",
+      "effect": "[fanfare] Search your deck for a [forestcraft] spell, reveal it, add it to your hand, then shuffle your deck. [act] [cost01]: Select a [forestcraft] spell that costs X or less in your cemetery and put it into your EX area. It costs 0 to play this turn. X equals the number of [forestcraft] spells with different names in your cemetery. Activate only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-U01EN.png"
+  },
+  {
+    "cardNo": "BP09-U02EN",
+    "name": "Spartacus",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "6",
+      "effect": "Ward. At the start of your end phase, discard any number of cards and draw that many cards plus 1. Then, if there's 1 card or less in your deck, you win the game."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-U02EN.png"
+  },
+  {
+    "cardNo": "BP09-U03EN",
+    "name": "Faust, Truthseeker",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Alchemist",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Search your deck for up to 2 Earth Sigil amulets that cost a total of 4 or less, put them into your EX area, then shuffle your deck. They cost 0 to play this turn. At the start of your end phase, Earth Rite: Select a follower on your field. Give it [attack]+1/[defense]+1 and deal 2 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-U03EN.png"
+  },
+  {
+    "cardNo": "BP09-U04EN",
+    "name": "Jerva of Draconic Mail Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonheart",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "At the start of your end phase, deal 5 damage to each other follower on the field and each enemy leader and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-U04EN.png"
+  },
+  {
+    "cardNo": "BP09-U05EN",
+    "name": "Arcus, Spirited Manager",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed / Necromancer",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "2",
+      "attack": "5",
+      "defense": "5",
+      "effect": "This follower can't attack enemies. At the start of your main phase, Necrocharge (10) - Summon a Ghost token. [act] Bury another follower: Choose one of the following. Activate only once per turn. (1) Draw a card. (2) Summon 2 Ghost tokens. (3) Bury the top 2 cards of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-U05EN.png"
+  },
+  {
+    "cardNo": "BP09-U06EN",
+    "name": "Jeanne, Beacon of Salvation Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith / Luminary",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "4",
+      "effect": "On Evolve - You may summon a [havencraft] follower that costs 2 or less from your hand. Strike - Select a [havencraft] follower that costs 2 or less on your field and give it [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-U06EN.png"
+  },
+  {
+    "cardNo": "BP09-U07EN",
+    "name": "Marduk Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Deity",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\"",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "On Evolve - If there are at least 5 spells in your cemetery, give your leader [defense]+5 and draw a card. On Evolve - If there are at least 5 amulets in your cemetery, deal 5 damage to each enemy follower on the field and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-U07EN.png"
+  }
+]

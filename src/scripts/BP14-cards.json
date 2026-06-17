@@ -1,0 +1,2415 @@
+[
+  {
+    "cardNo": "BP14-001EN",
+    "name": "Hozumi, Enchanting Hostess",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Festive / Beast",
+      "rarity": "Legendary",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] The next Festive card you play this turn costs 2 less."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-002EN",
+    "name": "Hozumi, Enchanting Hostess Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Festive / Beast",
+      "rarity": "Legendary",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[act] [cost02], banish another Festive card from your field: Search your deck for a follower that costs 7 or less, summon it, then shuffle. Activate only if you've played at least 3 cards this turn, and only once per turn."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-004EN",
+    "name": "Bastion of Seasons",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Fae-Touched / Verdant",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "4",
+      "attack": "2",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this. While this has 3 seasonal counters or less, it can't attack enemies. At the start of your end phase, select a follower on the field. Give it [attack]+X/[defense]+X or deal it X damage, and place a seasonal counter on this. X equals this follower's attack."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-005EN",
+    "name": "Bastion of Seasons Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Fae-Touched / Verdant",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "5",
+      "effect": "While this has 3 seasonal counters or less, it can't attack enemies. On Evolve - Select an enemy follower on the field and deal it 4 damage. At the start of your end phase, select a follower on the field. Give it [attack]+X/[defense]+X or deal it X damage, and place a seasonal counter on this. X equals this follower's attack."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-006EN",
+    "name": "Spirit of the Spring",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Fae-Touched",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "At the start of your end phase, discard a card: Put the top card of your deck into your EX area. [act] Return a card in your EX area to its owner's hand: Put a card from your hand into your EX area. Activate only once per turn."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-007EN",
+    "name": "Illusions of Comfort",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Festive / Beast",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "This costs 1 less to play from the EX area. This costs 1 less to play if there's a Hozumi, Enchanting Hostess on your field. ---------- Select an enemy follower on the field. Return it to its owner's hand and give your leader [defense]+1."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-008EN",
+    "name": "Elven Waitress",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Festive / Elf",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Put a card from your hand on the bottom of your deck: Give your leader [defense]+2."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-009EN",
+    "name": "Elven Waitress Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Festive / Elf",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Look at the top 4 cards of your deck. You may put a Festive card from among them into your EX area. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-010EN",
+    "name": "Tinkering Shopkeeper",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Festive / Puppetry / Supreme",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "1",
+      "effect": "[fanfare] Put a Puppet token into your EX area. Then, if there are at least 3 cards in your EX area, give your leader [defense]+1."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-011EN",
+    "name": "Craftsman's Pride",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Puppetry",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "As an additional cost to play this, banish a card from your EX area. ---------- Put 3 Puppet tokens into your EX area."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-012EN",
+    "name": "Karakuri Servant",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Festive / Puppetry / Supreme",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Put a Puppet token into your EX area."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-013EN",
+    "name": "Karakuri Servant Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Festive / Puppetry / Supreme",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage. If there are at least 3 cards in your EX area, deal 3 damage instead."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-014EN",
+    "name": "Fairylight Guide",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Festive / Pixie",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] [cost01]: Select a card in an opponent's EX area and, if there are at least 3 cards in your EX area, transform it into a Fairy token."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-015EN",
+    "name": "Woodland Pest Control",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Hunter / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "1",
+      "effect": "Rush. [fanfare] If there are at least 3 Hunter cards in your cemetery, give this [attack]+2 and Assail."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-016EN",
+    "name": "Windswept Lancer",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf / Hunter",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Assail. Strike - Deal 3 damage to each enemy leader. Give this [attack]+1/[defense]+1."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-017EN",
+    "name": "Elven Craftsmanship",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Elf / Hunter",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field. Deal it 3 damage, draw a card, then discard a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-018EN",
+    "name": "Taketsumi, Aconite Paladin",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Festive / Commander",
+      "rarity": "Legendary",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[adv] [cost04], banish this: You may summon a Taketsumi, Creator of Paradise from your evolve deck. Activate only if there are at least 5 Festive cards or at least 10 [swordcraft] cards in your cemetery. [fanfare] Draw a card. Discard a card. Put a Glittering Gold token into your EX area."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-019EN",
+    "name": "Taketsumi, Beginning of Paradise ADVANCED",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Advanced",
+      "trait": "Festive / Commander",
+      "rarity": "Legendary",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "4",
+      "attack": "5",
+      "defense": "6",
+      "effect": "[fanfare] Summon 2 Sootspawn tokens. [act] [engage]: Select an enemy follower on the field. Deal 5 damage to it and 3 damage to its leader."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-020EN",
+    "name": "Mars, Belligerent Flame",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Celestial",
+      "rarity": "Legendary",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. Bane."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-022EN",
+    "name": "Jiemon, Thief Lord",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Festive / Commander / Thief",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this. Each other Festive follower on your field has Storm. [fanfare] Put a Glittering Gold token into your EX area."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-023EN",
+    "name": "Jiemon, Thief Lord Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Festive / Commander / Thief",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "5",
+      "effect": "Each other Festive follower on your field has Storm. On Evolve - Banish 2 cards named Glittering Gold from your EX area: Look at the top 5 cards of your deck. You may put a Festive card that costs 3 or less from among them into your EX area. It costs 3 less to play this turn. Put the rest on the bottom of your deck in any order. [act] [cost01]: Play this follower's On Evolve ability."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-024EN",
+    "name": "Bumpkin Recruit",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[fanfare] If there are at least 5 [swordcraft] followers in your cemetery, give this [attack]+1 and Rush. [lastwords] Draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-025EN",
+    "name": "Hero of the Hunt",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Festive / Commander",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field. Deal it 5 damage, put a Glittering Gold token into your EX area, and, if there are at least 5 Festive cards or at least 10 [swordcraft] cards in your cemetery, search your deck for a Taketsumi, Aconite Paladin, summon it, then shuffle."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-026EN",
+    "name": "Masterful Musician",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Festive / Thief",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Put a Glittering Gold token into your EX area. If there's a Jiemon, Thief Lord on your field, give your leader [defense]+3."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-027EN",
+    "name": "Masterful Musician Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Festive / Thief",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Whenever a Glittering Gold token is put into your EX area, select an enemy follower on the field. Deal 3 damage to it and 1 damage to its leader. On Evolve - Put a Glittering Gold token into your EX area."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-028EN",
+    "name": "War Hero",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Select an enemy follower on the field. Deal it 4 damage and draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-029EN",
+    "name": "Noble Shieldmaiden",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Noble",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "7",
+      "attack": "6",
+      "defense": "5",
+      "effect": "Ward. [fanfare] Look at the top 5 cards of your deck. You may summon a follower that costs 6 or less from among them. Put the rest on the bottom of your deck in any order. [act] [cost01], discard this: Summon a Steelclad Knight token."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-030EN",
+    "name": "Front Desk Frog",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Festive / Thief / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Put a Glittering Gold token into your EX area. If there's a Jiemon, Thief Lord on your field, evolve this."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-031EN",
+    "name": "Front Desk Frog Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Festive / Thief / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field. Deal it 2 damage and, if there are at least 3 Festive cards in your EX area, draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-032EN",
+    "name": "Violent Soldier",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "6",
+      "attack": "6",
+      "defense": "5",
+      "effect": "Storm."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-033EN",
+    "name": "Hasty Axeman",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "5",
+      "attack": "7",
+      "defense": "6",
+      "effect": "[fanfare] Select an enemy follower on the field and engage it."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-034EN",
+    "name": "Night on the Town",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Festive / Commander / Thief",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose 1. (1) Select an enemy follower on the field. Deal it 2 damage and put a Glittering Gold token into your EX area. (2) Select an enemy follower on the field and, if there are at least 3 Festive cards in your EX area, deal it 4 damage."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-035EN",
+    "name": "Haggler's Gambit",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Merchant",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "This costs 1 less to play if there are at least 3 cards in your EX area named Glittering Gold. ---------- Draw a card. Put a Glittering Gold token into your EX area."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-037EN",
+    "name": "Riley, Astral Shaman",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Legendary",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost02]: Evolve this. Activate only if you've used Earth Rite to remove at least 2 Stack counters from cards on your field with Stack this turn. [fanfare] Summon a Magic Sediment token."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-038EN",
+    "name": "Riley, Astral Shaman Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage",
+      "rarity": "Legendary",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Search your deck for a follower with Earth Rite that costs X or less, summon it, then shuffle. X equals your max play points."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-039EN",
+    "name": "Bergent, Layered Sorceress",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Arcanaform",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "This can't be played from the EX area. ---------- [evolve] [cost01]: Evolve this. At the start of your end phase, if this is in your EX area, look at the top card of your deck. If it's an Onion Patch, you may summon it. Otherwise, put it on the top or bottom of your deck."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-040EN",
+    "name": "Bergent, Layered Sorceress Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Arcanaform",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Discard an Onion Patch: Draw 2 cards. [lastwords] You may put this into its owner's EX area."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-041EN",
+    "name": "Arctic Chimera",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Arcanaform / Forbidden",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Rush. Strike - Select an enemy follower on the field and deal it damage equal to this follower's attack. [lastwords] Earth Rite: Put this onto its owner's field, change its attack and defense to 2, and give it Storm."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-042EN",
+    "name": "Story of a Lifetime",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Festive / Mage / Forbidden",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Look at the top 4 cards of your deck. From among them, reveal 2 and add them to your hand. Bury the rest. If there's a Yukishima, Master Biographer on your field, recover 1 play point."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-043EN",
+    "name": "Orchestral Mage",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Festive / Mage / Forbidden",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] If you've played another Festive card this turn, give this Storm or Drain."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-044EN",
+    "name": "Orchestral Mage Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Festive / Mage / Forbidden",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it damage equal to 2 times the number of Festive cards and/or Mage cards you've played this turn."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-045EN",
+    "name": "Tempestuous Alchemist",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Alchemist",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Select an enemy follower on the field. Deal it 3 damage and add 1 to a Stack on your field."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-046EN",
+    "name": "Dream Come True",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Arcanaform",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "7",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Put the top card of your deck into your EX area. Repeat until your EX area is full. This turn, the next card you play that was put into your EX area this way costs 0."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-047EN",
+    "name": "Chakram Wizard",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Select an enemy follower on the field and, if there's another Mage follower on your field, deal the selected follower 3 damage."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-048EN",
+    "name": "Chakram Wizard Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field. Deal it 3 damage, draw a card, then discard a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-049EN",
+    "name": "Owl Receptionist",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Festive / Arcanaform / Forbidden",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "3",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[fanfare] The next Festive card that costs 3 or less or Mage card that costs 3 or less you play this turn costs 3 less. If there's a Yukishima, Master Biographer on your field, give your leader [defense]+2."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-050EN",
+    "name": "Earthen Fist",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field and deal it 5 damage. Earth Rite: Deal 2 damage to its leader."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-051EN",
+    "name": "Magical Reserves",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "6",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Draw 2 cards. Deal each enemy follower on the field damage equal to the number of cards in your hand."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-052EN",
+    "name": "Grand Spire",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet",
+      "trait": "Mage / Earth Sigil",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Stack. [fanfare] Select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-053EN",
+    "name": "Si Long, Draconic God-Queen",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Festive / Dragonewt",
+      "rarity": "Legendary",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Put a Tidal Tyranny token into your EX area. If Overflow is active for you, give your leader [defense]+2."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-055EN",
+    "name": "Sacred Springs Dragon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Festive / Wyrmkin",
+      "rarity": "Legendary",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Rush. Assail. [fanfare] Search your deck for a Soothing Dragonspring, summon it, then shuffle. Strike - Remove 2 divine water counters from a Soothing Dragonspring on your field: Draw a card. The next time this would take damage this turn, it doesn't."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-056EN",
+    "name": "Frostbite Dragon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "7",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Select up to 2 enemy followers on the field and engage them."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-057EN",
+    "name": "Frostbite Dragon Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wyrmkin",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "On Evolve - Each enemy follower on the field doesn't refresh during its controller's next start phase. [lastwords] Destroy each engaged enemy follower on the field."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-058EN",
+    "name": "Dragonskull Bludgeoner",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin / Cutthroat / Draconic Duelist",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Select an enemy follower on the field and, if Overflow is active for you, deal it 3 damage."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-059EN",
+    "name": "Soothing Dragonspring",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Amulet",
+      "trait": "Festive / Wyrmkin",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Place 10 divine water counters on this. Once on each of your turns, when a Festive follower is put onto your field, give your leader [defense]+1. At the start of your end phase, remove a divine water counter from this. Then, if this has no divine water counters, bury it and deal 5 damage to each enemy follower on the field."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-060EN",
+    "name": "Dragonfolk Stoker",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Festive / Dragonewt",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-061EN",
+    "name": "Dragonfolk Stoker Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Festive / Dragonewt",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage. [act] Remove 2 divine water counters from a Soothing Dragonspring on your field: Draw a card. Activate only once per turn."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-062EN",
+    "name": "Leviathan, the Furious",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin / Marine",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "4",
+      "attack": "5",
+      "defense": "4",
+      "effect": "[fanfare] Select an enemy follower on the field. It doesn't refresh during its controller's next start phase. At the start of your end phase, select an engaged enemy follower on the field and deal it 2 damage. If Overflow is active for you, deal 4 damage instead."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-063EN",
+    "name": "March of the Dragonspring",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Festive / Wyrmkin",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "When playing this, remove 2 divine water counters from a Soothing Dragonspring on your field: This costs 2 less to play. ---------- Select an enemy follower on the field. Destroy it and draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-064EN",
+    "name": "Dragon Breeder",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost02]: Evolve this."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-065EN",
+    "name": "Dragon Breeder Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonheart",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - Look at the top 4 cards of your deck. You may put a [dragoncraft] follower that costs 3 or less from among them into your EX area and give it [attack]+1/[defense]+1. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-066EN",
+    "name": "Dragon-Drawn Carriage",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Festive / Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Look at the top 4 cards of your deck. You may reveal a Festive card from among them and put it on the top of your deck. Put the rest on the bottom in any order. [act] Remove 2 divine water counters from a Soothing Dragonspring on your field: Give this [attack]+1 and Storm. Activate only once per turn."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-067EN",
+    "name": "Loyal Sea Serpent",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart / Marine",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Ward. [fanfare] [cost04]: Summon a Dragon token. Whenever a [dragoncraft] token follower is put onto your field, give your leader [defense]+2."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-068EN",
+    "name": "Mermaid Song",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Marine",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "When playing this, [engage] a Marine follower on your field: This costs 2 less to play. ---------- Select an enemy follower on the field. Engage it and draw a card. It doesn't refresh during its controller's next start phase."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-069EN",
+    "name": "Aquatic Authority",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Dragonheart / Marine",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Look at the top 3 cards of your deck. You may put a Marine card from among them into your EX area. If Overflow is active for you, it costs 1 less to play this turn. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-070EN",
+    "name": "Itsurugi, Eager Admirer",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Festive / Demon / Beast",
+      "rarity": "Legendary",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[adv] [cost04], banish this: You may summon an Itsurugi, Paradise's End from your evolve deck. Activate only if there are at least 5 Festive cards or at least 10 [abysscraft] cards in your cemetery. [fanfare] Put a Wolfling's Struggle token into your EX area."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-071EN",
+    "name": "Itsurugi, End of Paradise ADVANCED",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Advanced",
+      "trait": "Festive / Demon / Beast",
+      "rarity": "Legendary",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "4",
+      "attack": "6",
+      "defense": "5",
+      "effect": "[fanfare] Select up to 3 enemy followers on the field. Deal 5 damage to one and 2 damage to the others. During your turn, whenever an enemy follower is put from the field into the cemetery, deal 1 damage to its leader and give your leader [defense]+1."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-072EN",
+    "name": "Paracelise, Demon of Greed",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Festive / Demon",
+      "rarity": "Legendary",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. Activate only if there are 0 cards in your hand. [fanfare] Put the top card of your deck into your EX area. Discard a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-074EN",
+    "name": "Anisage, Lost Forsaken",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Festive / Departed",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "When this is discarded or banished from your hand, you may put it into your EX area. ---------- [evolve] [cost01]: Evolve this."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-075EN",
+    "name": "Anisage, Lost Forsaken Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Festive / Departed",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Look at the top 4 cards of your deck. You may put a Festive card from among them into your EX area. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-076EN",
+    "name": "Frigid Necromancer",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Necromancer",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[act] [engage]: Select a follower in your cemetery that costs 8 or less. Summon it and change its attack and defense to 1. [lastwords] Banish this."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-078EN",
+    "name": "Briared Vampire",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vampire",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-079EN",
+    "name": "Briared Vampire Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Vampire",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - Put the top card of your deck into your EX area. Discard a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-080EN",
+    "name": "Room Service Demon",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Festive / Demon",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Select an enemy follower on the field. Deal it 3 damage and, if there are 2 cards or less in your hand, recover 2 play points. If there are 0, deal 2 damage to its leader."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-081EN",
+    "name": "Undying Resolve",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Festive / Departed",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "When this is discarded or banished from your hand, select an [abysscraft] follower on your field and give it Bane. ---------- Select a Festive follower in your cemetery that costs 2 or less. Summon it and, if it's an Anisage, Lost Forsaken, give it [attack]+1 and Storm."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-082EN",
+    "name": "Silvernail Markswoman",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vampire / Cutthroat",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[evolve] [cost05]: Evolve this. [fanfare] Select an enemy follower on the field. Deal it 2 damage and discard a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-083EN",
+    "name": "Silvernail Markswoman Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Vampire / Cutthroat",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "4",
+      "effect": "On Evolve - Select an enemy follower on the field. Deal 4 damage to it and its leader, and discard a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-084EN",
+    "name": "Parkour Werewolf",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "This doesn't take ability damage. Strike - Deal 2 damage to each enemy leader. Give your leader [defense]+2. [act] [cost02]: Give this Storm."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-085EN",
+    "name": "Bat Usher",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Festive / Demon / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] If there are 2 cards or less in your hand, give this [attack]+1. If there are 0, give it Storm."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-086EN",
+    "name": "Creeping Malice",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Demon",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field. Deal 5 damage to it and 3 damage to your leader."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-087EN",
+    "name": "Full Moon Leap",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Demon / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an [abysscraft] follower on your field. Give it [attack]+1 and, if there are 0 cards in your hand, give it Storm."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-088EN",
+    "name": "All-Feeling Divine",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Festive / Zealot / Eidolon",
+      "rarity": "Legendary",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Summon a Fox of Invitation token. [act] [cost02], banish this from your cemetery: Summon a Fox of Invitation token. Give each Fox of Invitation on your field [attack]+2/[defense]+1."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-089EN",
+    "name": "All-Feeling Divine Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Festive / Zealot / Eidolon",
+      "rarity": "Legendary",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it damage equal to 2 times the number of Zealot followers on your field."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-091EN",
+    "name": "Nekhbet",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Avian",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "This can't be played from the EX area. ---------- [evolve] [cost01]: Evolve this. At the start of each opponent's end phase, if this is in your EX area, [cost02]: Deal 2 damage to each enemy leader. Give your leader [defense]+2."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-092EN",
+    "name": "Nekhbet Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith / Avian",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Recover 2 play points. [lastwords] Put this into its owner's EX area."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-093EN",
+    "name": "Impious Bishop",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Zealot",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "4",
+      "attack": "2",
+      "defense": "4",
+      "effect": "Ward. [fanfare] Look at the top 5 cards of your deck. You may put a Zealot card that costs 2 or less from among them into your EX area. It costs 2 less to play this turn. Put the rest on the bottom of your deck in any order. Once per turn, when your leader gains [defense], select an enemy follower on the field and deal it 4 damage."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-094EN",
+    "name": "Chamber of Cleansing",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Festive / Zealot",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Put 2 Fox of Invitation tokens into your EX area. [act] [engage], bury this: Summon a Fox of Invitation from your EX area. Activate only if there's a Zealot follower that costs 2 or more on your field."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-095EN",
+    "name": "Winged Gatekeeper",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Festive / Zealot / Avian",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Put a Fox of Invitation token into your EX area."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-096EN",
+    "name": "Winged Gatekeeper Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Festive / Zealot / Avian",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage. Whenever your leader gains [defense], deal 1 damage to each enemy leader."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-097EN",
+    "name": "Boomerang Sister",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "3",
+      "attack": "4",
+      "defense": "3",
+      "effect": "[fanfare] Banish a card from your EX area: Select an enemy follower on the field and put it into its owner's EX area. [act] [cost02], banish a card from your EX area: Select an enemy follower on the field and put it into its owner's EX area."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-098EN",
+    "name": "Spiritual Blow",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Faith",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field and banish it."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-099EN",
+    "name": "Twinblade Featherfolk",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Avian",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Select an enemy follower on the field and bury the top card of your deck. If you buried a non-[havencraft] card, deal 4 damage to the selected follower."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-100EN",
+    "name": "Twinblade Featherfolk Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Avian",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 4 damage."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-101EN",
+    "name": "Fox of Fortune",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Festive / Zealot / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Ward. [fanfare] Put a Fox of Invitation token into your EX area. Whenever your leader gains [defense], [engage]: Draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-102EN",
+    "name": "Pegasus Knight",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Rush. Once on each of your turns, when your leader gains [defense], summon a Holy Falcon token. Whenever a [havencraft] token follower is put onto your field, select an enemy follower on the field and engage it."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-103EN",
+    "name": "Al-mi'raj Defender",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Ward. [fanfare] Look at the top 5 cards of your deck. You may put one of them into your EX area. If it's a Beast follower that costs 4 or less, it costs 4 less to play this turn. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-104EN",
+    "name": "White Eagle Baptism",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith / Eidolon / Avian",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "6",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Summon 2 Holy Falcon tokens. Whenever a Holy Falcon is put onto your field, give it [attack]+1/[defense]+1."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-105EN",
+    "name": "Magna Saber",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Festive / Machina / Supreme / Magna",
+      "rarity": "Legendary",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this. Activate only if there are at least 3 Festive cards on your field and/or in your EX area. Ward. [fanfare] Select an enemy follower on the field and deal it 4 damage."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-106EN",
+    "name": "Magna Saber Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Festive / Machina / Supreme / Magna",
+      "rarity": "Legendary",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Ward. On Evolve - Select up to 2 enemy followers on the field and deal 5 damage divided between them."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-108EN",
+    "name": "Glistering Angel",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Angel",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. Ward. [fanfare] If there are at least 5 Angel cards in your cemetery, give your leader [defense]+2."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-109EN",
+    "name": "Glistering Angel Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Angel",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Ward. On Evolve - Look at the top 4 cards of your deck. You may reveal an Angel or Fallen Angel card from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-110EN",
+    "name": "Angel's Blessing",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Angel",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Give your leader [defense]+2. Draw 2 cards."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-111EN",
+    "name": "Magna Transformation",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Amulet",
+      "trait": "Festive / Machina / Supreme / Magna",
+      "rarity": "Gold",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Search your deck for a Magna Saber, put it into your EX area, then shuffle. Whenever a Magna Saber on your field evolves, bury this: Give your leader [defense]+1."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-112EN",
+    "name": "Gunslinger Automaton",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Mercenary / Supreme",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Put the top card of your deck into your EX area."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-113EN",
+    "name": "Gunslinger Automaton Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Mercenary / Supreme",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Summon an Ancient Artifact token."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-114EN",
+    "name": "Ogre Weaponmaster",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Gigant",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "6",
+      "attack": "6",
+      "defense": "6",
+      "effect": "[fanfare] Choose 1. (1) Select an enemy follower on the field and deal it 6 damage. (2) Deal 3 damage to each enemy follower on the field."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-115EN",
+    "name": "Stay in Paradise",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Festive",
+      "rarity": "Silver",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Look at the top 4 cards of your deck. You may put a Festive card from among them into your EX area. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-116EN",
+    "name": "Brave Goblin",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Goblinoid",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] [cost02], discard a Goblinoid card: Select an enemy follower on the field. Deal it 4 damage and give this [attack]+2/[defense]+2."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-117EN",
+    "name": "Brave Goblin Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Goblinoid",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-118EN",
+    "name": "Torchbearing Guide",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Festive / Mercenary",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Put a Festive card from your hand into your EX area: Draw a card. If there are at least 3 Festive cards in your EX area, give this [attack]+1/[defense]+1."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-119EN",
+    "name": "Goblin Assault",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Goblinoid",
+      "rarity": "Bronze",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "When playing this, discard a Goblinoid card: This costs 2 less to play. ---------- Select an enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-SP01EN",
+    "name": "Merlin",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Special",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[evolve] [cost02]: Evolve this. [fanfare] Search your deck for a spell, reveal it, add it to your hand, then shuffle."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-SP02EN",
+    "name": "Paracelise, Demon of Greed Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Festive / Demon",
+      "rarity": "Special",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Select an enemy follower on the field. Deal 5 damage to it, 2 damage to its leader, give your leader [defense]+2, and put the top card of your deck into your EX area."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-T01EN",
+    "name": "Sootspawn TOKEN",
+    "type": "token",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Token",
+      "trait": "Festive",
+      "rarity": "-",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Ward. [lastwords] Select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-T02EN",
+    "name": "Glittering Gold TOKEN",
+    "type": "token",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell / Token",
+      "trait": "Festive / Thief / Loot",
+      "rarity": "-",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "0",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] [cost01], banish this and 2 other cards named Glittering Gold from your EX area: Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-T03EN",
+    "name": "Flame General's Regalia TOKEN",
+    "type": "token",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Amulet / Token",
+      "trait": "Commander / Celestial",
+      "rarity": "-",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Whenever a follower on your field evolves, select an enemy follower on the field and deal it 2 damage. [act] [cost01], [engage], bury this: Select a Commander follower on your field and give it \"Strike - Deal 2 damage to each enemy leader.\""
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-T04EN",
+    "name": "Tidal Tyranny TOKEN",
+    "type": "token",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell / Token",
+      "trait": "Festive / Dragonewt",
+      "rarity": "-",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field and deal it 4 damage. If Overflow is active for you, deal 6 damage instead."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-T05EN",
+    "name": "Wolfling's Struggle TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell / Token",
+      "trait": "Festive / Demon / Beast",
+      "rarity": "-",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "0",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field. Deal it 1 damage, and you may discard a card. If you do, bury the top card of your deck."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-T06EN",
+    "name": "Fox of Invitation TOKEN",
+    "type": "token",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Token",
+      "trait": "Festive / Zealot / Beast",
+      "rarity": "-",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "1",
+      "attack": "0",
+      "defense": "1",
+      "effect": "Ward. [fanfare] Give your leader [defense]+1."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-T07EN",
+    "name": "Mercurial Might TOKEN",
+    "type": "token",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell / Token",
+      "trait": "Faith / Supreme",
+      "rarity": "-",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] If your leader would take damage this turn, it takes that much minus 1 instead. Draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-U01EN",
+    "name": "Levon, Scentbound Sword",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Hunter",
+      "rarity": "Ultimate",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[act] [engage]: Select an enemy follower on the field. Deal it 4 damage, draw a card, and, if there are at least 3 Hunter cards in your cemetery, you may summon a Hunter follower that costs 3 or less from your hand."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-U02EN",
+    "name": "Mars, Belligerent Flame Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Commander / Celestial",
+      "rarity": "Ultimate",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "4",
+      "effect": "Bane. On Evolve - Select an enemy follower on the field and deal it 2 damage. [lastwords] Summon a Flame General's Regalia token."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-U03EN",
+    "name": "Yukishima, Master Biographer",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Festive / Mage / Forbidden",
+      "rarity": "Ultimate",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "5",
+      "effect": "[fanfare] The next Festive card that costs 3 or less or Mage card that costs 3 or less you play this turn costs 3 less. Whenever you play a Festive card that costs 3 or less or a Mage card that costs 3 or less, select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-U04EN",
+    "name": "Si Long, Draconic God-Queen Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Festive / Dragonewt",
+      "rarity": "Ultimate",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - The next Festive card you play this turn costs 2 less."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-U05EN",
+    "name": "Eternal Contract",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Festive / Demon",
+      "rarity": "Ultimate",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] [cost01], banish this from your cemetery: Select up to 3 cards in your cemetery and/or banished zone named Paracelise, Demon of Greed and shuffle them into your deck. You may turn any faceup cards in your evolve deck named Paracelise, Demon of Greed facedown. ---------- Do the following 2 times. \"Put the top card of your deck into your EX area. Banish a card from your hand.\""
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-U06EN",
+    "name": "Shion, Immortal Aegis",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Supreme",
+      "rarity": "Ultimate",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "6",
+      "attack": "3",
+      "defense": "7",
+      "effect": "Ward. This can't be destroyed by abilities. If this or your leader would take damage, they take that much minus 1 instead. [fanfare] Put a Mercurial Might token into your EX area."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-U07EN",
+    "name": "Flame and Glass, Duality",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Deity / Archfiend",
+      "rarity": "Ultimate",
+      "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
+      "cost": "6",
+      "attack": "7",
+      "defense": "7",
+      "effect": "[fanfare] Banish a Fiend or Archfiend card from your cemetery: Select up to 2 enemy cards on the field and destroy them. [act] Banish a Fiend or Archfiend card from your cemetery: Give this Storm."
+    },
+    "imgSrc": ""
+  }
+]

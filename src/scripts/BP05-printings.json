@@ -1,0 +1,4049 @@
+[
+  {
+    "cardNo": "BP05-001EN",
+    "name": "Izudia, Omen of Unkilling",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Omen / Hunter",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] If there are at least 3 Hunter cards in your cemetery, select an enemy follower on the field. Change it into an amulet and give it \"[act] [cost02]: Put this card into its owner's cemetery.\" (It keeps all existing abilities, including [evolve] and [feed].)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-001EN.png"
+  },
+  {
+    "cardNo": "BP05-002EN",
+    "name": "Izudia, Omen of Unkilling Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Hunter",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[act] [engage]: Deal 6 damage to each enemy leader with at least 10 defense."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-002EN.png"
+  },
+  {
+    "cardNo": "BP05-003EN",
+    "name": "Spinaria, Keeper of Enigmas",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Supreme",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "5",
+      "attack": "3",
+      "defense": "5",
+      "effect": "Ward. [fanfare] Look at the top 4 cards of your deck. From among them, you may reveal up to 1 [forestcraft] follower and up to 1 [forestcraft] spell and add them to your hand. Put the remaining cards on the bottom of your deck in any order. Combo (3): Recover 3 play points."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-003EN.png"
+  },
+  {
+    "cardNo": "BP05-004EN",
+    "name": "Apostle of Unkilling",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Omen / Hunter",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-004EN.png"
+  },
+  {
+    "cardNo": "BP05-005EN",
+    "name": "Apostle of Unkilling Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Hunter",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve: Search your deck for a Hunter follower that costs 2 play points or less, put it onto your field, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-005EN.png"
+  },
+  {
+    "cardNo": "BP05-006EN",
+    "name": "Morton the Manipulator",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Supreme",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "At the start of your end phase, an opponent chooses one of the following. (1) They can't draw a card during their next start phase. (2) They can't increase their maximum play points by 1 during their next start phase. (3) They can't play followers during their next main phase."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-006EN.png"
+  },
+  {
+    "cardNo": "BP05-007EN",
+    "name": "Fairy Torrent",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Pixie",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select up to 2 Pixie followers on your field and put them into their owners' EX areas. If at least 1 Pixie follower was put into an EX area by this ability, give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-007EN.png"
+  },
+  {
+    "cardNo": "BP05-008EN",
+    "name": "Disciple of Unkilling",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Omen / Hunter",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "1",
+      "defense": "3",
+      "effect": "[fanfare] Look at the top card of your deck. If it's a Hunter card, you may reveal it and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-008EN.png"
+  },
+  {
+    "cardNo": "BP05-009EN",
+    "name": "Noah, Vengeful Puppeteer",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Puppetry",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "5",
+      "attack": "3",
+      "defense": "6",
+      "effect": "[evolve] [cost02]: Evolve this follower. [fanfare] Put 2 Puppet tokens into your EX area. Whenever a Puppet is put onto your field, give it [attack]+1 and Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-009EN.png"
+  },
+  {
+    "cardNo": "BP05-010EN",
+    "name": "Noah, Vengeful Puppeteer Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Puppetry",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "7",
+      "effect": "While this card is on your field, any Puppet you play costs 1 less. Whenever a Puppet is put onto your field, give it [attack]+1 and Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-010EN.png"
+  },
+  {
+    "cardNo": "BP05-011EN",
+    "name": "Mark of the Unkilling",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Omen / Hunter",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field and deal it X damage. X equals its defense minus 1. If there are at least 3 Hunter cards in your cemetery, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-011EN.png"
+  },
+  {
+    "cardNo": "BP05-012EN",
+    "name": "Servant of Unkilling",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Omen / Hunter",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] If there are at least 3 Hunter cards in your cemetery, give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-012EN.png"
+  },
+  {
+    "cardNo": "BP05-013EN",
+    "name": "Mechanical Bowman",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Hunter / Supreme",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Banish a card in your EX area: Select an enemy follower on the field and deal it 5 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-013EN.png"
+  },
+  {
+    "cardNo": "BP05-014EN",
+    "name": "Flower Doll",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Puppetry / Verdant",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Put a Puppet token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-014EN.png"
+  },
+  {
+    "cardNo": "BP05-015EN",
+    "name": "Flower Doll Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Puppetry / Verdant",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[lastwords] Select up to 1 Puppetry follower in your cemetery (including this one) and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-015EN.png"
+  },
+  {
+    "cardNo": "BP05-016EN",
+    "name": "Automaton Soldier",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Puppetry / Insect",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "Ward. [fanfare] Put 2 Puppet tokens into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-016EN.png"
+  },
+  {
+    "cardNo": "BP05-017EN",
+    "name": "Mark of the Six",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Omen / Hunter",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] The next time your leader would take damage this turn, it doesn't take damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-017EN.png"
+  },
+  {
+    "cardNo": "BP05-018EN",
+    "name": "Octrice, Omen of Usurpation",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Omen / Thief",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost02]: Evolve this follower. [evolve] [cost00]: Evolve this follower. This ability can be activated if there are at least 10 cards in opponents' cemeteries. [fanfare] Each opponent puts the top 2 cards of their deck into their cemetery. [act] [cost08]: Select a card in an opponent's cemetery and play it for 0 play points."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-018EN.png"
+  },
+  {
+    "cardNo": "BP05-019EN",
+    "name": "Octrice, Omen of Usurpation Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Thief",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve: Select a card in an opponent's cemetery and put it into your EX area. [act] [cost08]: Select a card in an opponent's cemetery and play it for 0 play points. If there are at least 10 cards in opponents' cemeteries, any card you play from the EX area costs 2 less."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-019EN.png"
+  },
+  {
+    "cardNo": "BP05-020EN",
+    "name": "Magna Legacy",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Supreme / Magna",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "8",
+      "attack": "8",
+      "defense": "8",
+      "effect": "[fanfare] Banish the top half of your deck (round up). Deal 4 damage to each enemy leader and enemy follower on the field. If at least 15 cards were banished by this ability, deal 8 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-020EN.png"
+  },
+  {
+    "cardNo": "BP05-021EN",
+    "name": "Apostle of Usurpation",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Omen / Thief",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "4",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Each opponent puts the top 2 cards of their deck into their cemetery. Then, if there are at least 10 cards in opponents' cemeteries, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-021EN.png"
+  },
+  {
+    "cardNo": "BP05-022EN",
+    "name": "Apostle of Usurpation Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Thief",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "5",
+      "effect": "On Evolve: Select an enemy follower on the field and deal it 4 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-022EN.png"
+  },
+  {
+    "cardNo": "BP05-023EN",
+    "name": "Empyreal Swordsman",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "5",
+      "attack": "5",
+      "defense": "4",
+      "effect": "At the start of your end phase, select an enemy follower on the field. Deal 4 damage to it and 2 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-023EN.png"
+  },
+  {
+    "cardNo": "BP05-024EN",
+    "name": "Confront Adversity",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Officer",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Summon a Shield Guardian and Knight token. If there is an enemy follower that costs at least 6 play points on the field, give the summoned tokens [attack]+3/[defense]+3 and recover 2 play points."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-024EN.png"
+  },
+  {
+    "cardNo": "BP05-025EN",
+    "name": "Disciple of Usurpation",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Omen / Thief",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "2",
+      "effect": "Storm. Strike: Each opponent puts the top card of their deck into their cemetery. Then, if there are at least 10 cards in opponents' cemeteries, give this follower [attack]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-025EN.png"
+  },
+  {
+    "cardNo": "BP05-026EN",
+    "name": "Fervent Machine Soldier",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Supreme",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[fanfare] Discard a Commander card: Search your deck for a Commander card, reveal it, add it to your hand, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-026EN.png"
+  },
+  {
+    "cardNo": "BP05-027EN",
+    "name": "Geno, Machine Artisan",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Supreme",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. Whenever you play an amulet, select a follower on your field and give it [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-027EN.png"
+  },
+  {
+    "cardNo": "BP05-028EN",
+    "name": "Geno, Machine Artisan Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Commander / Supreme",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve: Search your deck for an amulet, reveal it, add it to your hand, then shuffle your deck. Whenever you play an amulet, select a follower on your field and give it [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-028EN.png"
+  },
+  {
+    "cardNo": "BP05-029EN",
+    "name": "Servant of Usurpation",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Omen / Thief",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[fanfare] Each opponent puts the top card of their deck into their cemetery. During your turn, whenever a card is put from an opponent's deck into the cemetery, give this follower [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-029EN.png"
+  },
+  {
+    "cardNo": "BP05-030EN",
+    "name": "Captain Meteo",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "8",
+      "attack": "7",
+      "defense": "7",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Select an enemy leader and deal it 4 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-030EN.png"
+  },
+  {
+    "cardNo": "BP05-031EN",
+    "name": "Captain Meteo Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Commander",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "8",
+      "defense": "8",
+      "effect": "On Evolve: Select an enemy follower on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-031EN.png"
+  },
+  {
+    "cardNo": "BP05-032EN",
+    "name": "Gravikinetic Warrior",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Supreme",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Select a token follower on your field and give it [attack]+2/[defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-032EN.png"
+  },
+  {
+    "cardNo": "BP05-033EN",
+    "name": "Usurping Spineblade",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Omen / Thief",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field. Deal it 3 damage, and each opponent puts the top card of their deck into their cemetery. Then, if there are at least 10 cards in opponents' cemeteries, deal 2 more damage to the selected follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-033EN.png"
+  },
+  {
+    "cardNo": "BP05-034EN",
+    "name": "Avaritia",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Omen / Thief",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Look at the top 4 cards of your deck. You may reveal a Thief card from among them and add it to your hand. Put the remaining cards on the bottom of your deck in any order. If you revealed an Octrice, Omen of Usurpation, return this card to its owner's hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-034EN.png"
+  },
+  {
+    "cardNo": "BP05-035EN",
+    "name": "Raio, Omen of Truth",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Omen / Mage",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "7",
+      "attack": "7",
+      "defense": "7",
+      "effect": "[evolve] [cost02]: Evolve this follower. [fanfare] Discard a Mage card: Select an enemy follower on the field and deal it 9 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-035EN.png"
+  },
+  {
+    "cardNo": "BP05-036EN",
+    "name": "Raio, Omen of Truth Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Mage",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "9",
+      "defense": "9",
+      "effect": "On Evolve: Look at the top 9 cards of your deck. You may put up to 3 cards that cost 3 play points or less from among them into your EX area. They cost 3 less to play this turn. Put the remaining cards on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-036EN.png"
+  },
+  {
+    "cardNo": "BP05-037EN",
+    "name": "Lishenna, Omen of Destruction",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Omen / Idolatry",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "4",
+      "attack": "2",
+      "defense": "4",
+      "effect": "[fanfare] Put a Destruction in White and Destruction in Black token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-037EN.png"
+  },
+  {
+    "cardNo": "BP05-038EN",
+    "name": "Apostle of Truth",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Omen / Mage",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] If there are at least 3 Mage followers on your field, give this follower [attack]+2/[defense]+2 and Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-038EN.png"
+  },
+  {
+    "cardNo": "BP05-039EN",
+    "name": "Apostle of Truth Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Mage",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve: Select an enemy follower on the field and deal it X damage. X equals 2 times the number of Mage followers on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-039EN.png"
+  },
+  {
+    "cardNo": "BP05-040EN",
+    "name": "Safira, Synthetic Beast",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Arcanaform / Forbidden",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "4",
+      "attack": "2",
+      "defense": "6",
+      "effect": "Rush. [fanfare] Give this follower [attack]+X. X equals the number of [runecraft] followers in your cemetery. [act] [cost05]: Give this follower Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-040EN.png"
+  },
+  {
+    "cardNo": "BP05-041EN",
+    "name": "Destructive Refrain",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Omen / Idolatry",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose one of the following. (1) Search your deck for a Lishenna, Omen of Destruction, reveal it, add it to your hand, then shuffle your deck. (2) [cost02]: Deal X damage to each enemy follower on the field. X equals the number of Idolatry cards on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-041EN.png"
+  },
+  {
+    "cardNo": "BP05-042EN",
+    "name": "Iron Staff Mechanic",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Supreme",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Search your deck for a card that costs 1 play point, put it into your EX area, then shuffle your deck. It costs 1 less to play this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-042EN.png"
+  },
+  {
+    "cardNo": "BP05-043EN",
+    "name": "Iron Staff Mechanic Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Supreme",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "On Evolve: Search your deck for a card that costs 1 play point, put it into your EX area, then shuffle your deck. It costs 1 less to play this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-043EN.png"
+  },
+  {
+    "cardNo": "BP05-044EN",
+    "name": "Truth's Adjudication",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Omen / Mage",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose one of the following. If there are at least 2 Mage followers on your field, choose up to 2 instead. (1) Draw 2 cards. (2) Deal 3 damage to each enemy leader. (3) Select an enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-044EN.png"
+  },
+  {
+    "cardNo": "BP05-045EN",
+    "name": "Monochromatic Destruction",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Omen / Idolatry",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field. Deal it 2 damage and, if there are at least 2 Idolatry cards on your field, deal 2 damage to its leader and give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-045EN.png"
+  },
+  {
+    "cardNo": "BP05-046EN",
+    "name": "Disciple of Truth",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Omen / Mage",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Whenever you play a Mage card, give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-046EN.png"
+  },
+  {
+    "cardNo": "BP05-047EN",
+    "name": "Disciple of Destruction",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Omen / Idolatry",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "Ward. [fanfare] If there are at least 3 Idolatry cards on your field, draw 2 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-047EN.png"
+  },
+  {
+    "cardNo": "BP05-048EN",
+    "name": "Servant of Destruction",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Omen / Idolatry",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost02]: Evolve this follower. [fanfare] If there are at least 3 Idolatry cards on your field, change this card's [evolve] cost to 0 for the rest of this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-048EN.png"
+  },
+  {
+    "cardNo": "BP05-049EN",
+    "name": "Servant of Destruction Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Idolatry",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve: Select an enemy follower on the field. Deal 2 damage to it and its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-049EN.png"
+  },
+  {
+    "cardNo": "BP05-050EN",
+    "name": "Honest Cohort",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Omen / Mage",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field and deal it 3 damage. If there is a Raio, Omen of Truth on your field, deal 6 damage to the selected follower and 3 damage to its leader instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-050EN.png"
+  },
+  {
+    "cardNo": "BP05-051EN",
+    "name": "Metaproduction",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage / Supreme",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Look at the top 2 cards of your deck. You may reveal a spell from among them and add it to your hand. Put the remaining cards on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-051EN.png"
+  },
+  {
+    "cardNo": "BP05-052EN",
+    "name": "Galmieux, Omen of Disdain",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Omen / Wyrmkin",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[evolve] [cost02]: Evolve this follower. During your turn, whenever this follower takes ability damage, change its [evolve] cost to 0 for the rest of the turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-052EN.png"
+  },
+  {
+    "cardNo": "BP05-053EN",
+    "name": "Galmieux, Omen of Disdain Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Wyrmkin",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "On Evolve: Select an Omen card that costs 2 play points or less in your cemetery and play it for 0 play points. During your turn, whenever this follower takes ability damage, select an enemy leader or enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-053EN.png"
+  },
+  {
+    "cardNo": "BP05-054EN",
+    "name": "Electromagical Rhino",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Gigant / Supreme",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "5",
+      "attack": "0",
+      "defense": "7",
+      "effect": "Storm. [fanfare] Give this follower [attack]+3. Put the top 4 cards of your deck into your cemetery. If an Electromagical Rhino was put into your cemetery by this ability, repeat this [fanfare]. [lastwords] Select any number of cards named Electromagical Rhino in your cemetery (including this one). Return them to your deck and shuffle it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-054EN.png"
+  },
+  {
+    "cardNo": "BP05-055EN",
+    "name": "Apostle of Disdain",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Omen / Wyrmkin",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "3",
+      "attack": "2",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. During your turn, whenever this follower takes ability damage, give it [attack]+1 and Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-055EN.png"
+  },
+  {
+    "cardNo": "BP05-056EN",
+    "name": "Apostle of Disdain Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Wyrmkin",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "5",
+      "effect": "On Evolve, discard a card: Look at the top 5 cards of your deck. From among them, you may reveal up to 2 Omen cards and add them to your hand. Put the remaining cards on the bottom of your deck in any order. During your turn, whenever this follower takes ability damage, give it [attack]+1 and Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-056EN.png"
+  },
+  {
+    "cardNo": "BP05-057EN",
+    "name": "God Bullet Golem",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Gigant / Supreme",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "6",
+      "attack": "7",
+      "defense": "7",
+      "effect": "This follower can't attack enemy leaders. [act] [engage], put another follower from your field into its owner's cemetery: Select an enemy leader or enemy follower on the field and deal it X damage. X equals the attack of the follower you put into the cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-057EN.png"
+  },
+  {
+    "cardNo": "BP05-058EN",
+    "name": "Disdainful Rending",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Omen / Wyrmkin",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a follower on your field and an enemy follower on the field. Deal 1 damage to the first follower and 3 damage to the second."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-058EN.png"
+  },
+  {
+    "cardNo": "BP05-059EN",
+    "name": "Disciple of Disdain",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Omen / Wyrmkin",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[act] [cost00]: Select a follower on your field and deal it 1 damage. This ability can be activated once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-059EN.png"
+  },
+  {
+    "cardNo": "BP05-060EN",
+    "name": "Cursed Stone",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Gigant / Supreme",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-060EN.png"
+  },
+  {
+    "cardNo": "BP05-061EN",
+    "name": "Cursed Stone Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Gigant / Supreme",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Ward. On Evolve: Select an enemy follower on the field. For the rest of this turn and during each opponent's next turn, it loses all abilities and can't attack enemies."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-061EN.png"
+  },
+  {
+    "cardNo": "BP05-062EN",
+    "name": "Amethyst Giant",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Gigant / Supreme",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "9",
+      "attack": "7",
+      "defense": "7",
+      "effect": "[fanfare] Discard a card: Give this follower Rush and Aura. Strike: Refresh this follower. This ability can be performed once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-062EN.png"
+  },
+  {
+    "cardNo": "BP05-063EN",
+    "name": "Servant of Disdain",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Omen / Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] If Overflow is active for you, select another follower on the field. Deal 1 damage to it and this follower. During your turn, whenever this follower takes ability damage, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-063EN.png"
+  },
+  {
+    "cardNo": "BP05-064EN",
+    "name": "Silver Automaton",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Gigant / Supreme",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "4",
+      "attack": "4",
+      "defense": "5",
+      "effect": "Ward. [lastwords] Put 2 Puppet tokens into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-064EN.png"
+  },
+  {
+    "cardNo": "BP05-065EN",
+    "name": "Airship Whale",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Marine / Supreme",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[evolve] [cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-065EN.png"
+  },
+  {
+    "cardNo": "BP05-066EN",
+    "name": "Airship Whale Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Marine / Supreme",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "On Evolve: Look at the top 5 cards of your deck. You may put a follower that costs 3 play points or less from among them onto your field. Put the remaining cards on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-066EN.png"
+  },
+  {
+    "cardNo": "BP05-067EN",
+    "name": "Colossal Construct",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Gigant / Supreme",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "7",
+      "attack": "6",
+      "defense": "7",
+      "effect": "Ward. [fanfare] Return 5 cards from your cemetery to your deck and shuffle it: Select an enemy follower on the field and deal it 5 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-067EN.png"
+  },
+  {
+    "cardNo": "BP05-068EN",
+    "name": "Total Domination",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Omen / Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a follower on your field. Deal 2 damage to it and each enemy follower on the field. Then, if there is a Galmieux, Omen of Disdain on your field, deal 2 more damage to each enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-068EN.png"
+  },
+  {
+    "cardNo": "BP05-069EN",
+    "name": "Valnareik, Omen of Lust",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Omen / Demon",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "While Sanguine is active for you, this follower has Storm. Strike: Deal X damage to each enemy leader. X equals the number of times your leader has lost defense this turn. If your leader's defense is 7, give this follower [attack]+2/[defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-069EN.png"
+  },
+  {
+    "cardNo": "BP05-070EN",
+    "name": "Rulenye, Omen of Silence",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Omen / Necromancer",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Necrocharge (10): Select an enemy follower that costs 3 play points or less on the field and destroy it. While this card is on your field, any spell an opponent plays costs 1 more."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-070EN.png"
+  },
+  {
+    "cardNo": "BP05-071EN",
+    "name": "Rulenye, Omen of Silence Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Necromancer",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve: Each opponent discards a random card. While this card is on your field, any spell an opponent plays costs 1 more."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-071EN.png"
+  },
+  {
+    "cardNo": "BP05-072EN",
+    "name": "Apostle of Lust",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Omen / Demon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[act] [engage], give your leader [defense]-1: Select a follower that costs 2 play points or less in your cemetery and put it onto your field. Whenever another Demon follower is put onto your field, give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-072EN.png"
+  },
+  {
+    "cardNo": "BP05-073EN",
+    "name": "Apostle of Silence",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Omen / Necromancer",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. At the start of your end phase, select an enemy leader. If there are 3 cards or less in its controller's hand, deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-073EN.png"
+  },
+  {
+    "cardNo": "BP05-074EN",
+    "name": "Apostle of Silence Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Necromancer",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "On Evolve: Select an enemy follower on the field and deal it 3 damage. If there are 3 cards or less in its controller's hand, destroy it instead. At the start of your end phase, select an enemy leader. If there are 3 cards or less in its controller's hand, deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-074EN.png"
+  },
+  {
+    "cardNo": "BP05-075EN",
+    "name": "Disciple of Lust",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Omen / Demon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[fanfare] Deal 1 damage to each leader. Strike: Deal 1 damage to each leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-075EN.png"
+  },
+  {
+    "cardNo": "BP05-076EN",
+    "name": "Masked Puppet",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon / Puppetry",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "3",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Put a Puppet token into your EX area. During your turn, whenever a follower is put from your field into the cemetery, give this follower [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-076EN.png"
+  },
+  {
+    "cardNo": "BP05-077EN",
+    "name": "Masked Puppet Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Demon / Puppetry",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "4",
+      "effect": "On Evolve: Summon 2 Puppet tokens. During your turn, whenever a follower is put from your field into the cemetery, give this follower [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-077EN.png"
+  },
+  {
+    "cardNo": "BP05-078EN",
+    "name": "Wings of Lust",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Omen / Demon",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose up to 2 of the following. (1) Select a follower on your field. Give it Rush and deal 1 damage to your leader. (2) Select an enemy follower on the field. Deal 2 damage to it and 1 damage to your leader. (3) Deal 1 damage to your leader. Draw a card. Discard a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-078EN.png"
+  },
+  {
+    "cardNo": "BP05-079EN",
+    "name": "Silent Purge",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Omen / Necromancer",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field and destroy it. Its controller discards a random card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-079EN.png"
+  },
+  {
+    "cardNo": "BP05-080EN",
+    "name": "Servant of Lust",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Omen / Demon",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "3",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Deal 1 damage to your leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-080EN.png"
+  },
+  {
+    "cardNo": "BP05-081EN",
+    "name": "Servant of Lust Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Demon",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "2",
+      "effect": "On Evolve, give your leader [defense]-1: Select an enemy follower on the field and deal it X damage. X equals the number of times your leader has lost defense this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-081EN.png"
+  },
+  {
+    "cardNo": "BP05-082EN",
+    "name": "Servant of Silence",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Omen / Necromancer",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Whenever an opponent discards a card, deal 2 damage to their leader and put the top 2 cards of your deck into your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-082EN.png"
+  },
+  {
+    "cardNo": "BP05-083EN",
+    "name": "Hamelin",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon / Supreme",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[fanfare] Select a token card in your EX area. Put a token of the same name into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-083EN.png"
+  },
+  {
+    "cardNo": "BP05-084EN",
+    "name": "Embracing Wings",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Omen / Demon",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field. Destroy it, deal 2 damage to your leader, and select up to 1 Valnareik, Omen of Lust in your cemetery and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-084EN.png"
+  },
+  {
+    "cardNo": "BP05-085EN",
+    "name": "Thundering Roar",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Omen / Necromancer",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose one of the following. Necrocharge (10): Choose up to 2 instead. (1) Each opponent discards a random card. (2) Select an enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-085EN.png"
+  },
+  {
+    "cardNo": "BP05-086EN",
+    "name": "Marwynn, Omen of Repose",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Omen / Zealot",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost04]: Evolve this follower. [evolve] Skip your next turn: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-086EN.png"
+  },
+  {
+    "cardNo": "BP05-087EN",
+    "name": "Marwynn, Omen of Repose Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Zealot",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "8",
+      "defense": "8",
+      "effect": "Ward. Aura. On Evolve: Increase your maximum play points by 1. Give your leader [defense]+3. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-087EN.png"
+  },
+  {
+    "cardNo": "BP05-088EN",
+    "name": "Deus Ex Machina",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Luminary / Supreme",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "5",
+      "attack": "4",
+      "defense": "6",
+      "effect": "At the start of your end phase, choose one of the following. (1) Discard your hand. Draw 4 cards. (2) Recover 4 play points."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-088EN.png"
+  },
+  {
+    "cardNo": "BP05-089EN",
+    "name": "Apostle of Repose",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Omen / Zealot",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "3",
+      "attack": "2",
+      "defense": "4",
+      "effect": "[evolve] [cost02]: Evolve this follower. At the start of each opponent's main phase, recover 1 play point."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-089EN.png"
+  },
+  {
+    "cardNo": "BP05-090EN",
+    "name": "Apostle of Repose Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Zealot",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "5",
+      "effect": "On Evolve: Select a reserved enemy follower on the field and banish it. At the start of each opponent's main phase, recover 2 play points."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-090EN.png"
+  },
+  {
+    "cardNo": "BP05-091EN",
+    "name": "Hakrabi",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Luminary / Zealot",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "3",
+      "attack": "4",
+      "defense": "3",
+      "effect": "Ward. [fanfare] Discard an amulet: Search your deck for an amulet that costs 1 play point, put it onto your field, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-091EN.png"
+  },
+  {
+    "cardNo": "BP05-092EN",
+    "name": "Ancient Protector",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Eidolon / Lightborne",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "While this card is on your field, you can't lose the game, and opponents can't win. When your leader's defense becomes 0 or less, put this card into its owner's cemetery and change your leader's defense to 1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-092EN.png"
+  },
+  {
+    "cardNo": "BP05-093EN",
+    "name": "Disciple of Repose",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Omen / Zealot",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "At the start of each opponent's main phase, select an enemy follower on the field and deal it 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-093EN.png"
+  },
+  {
+    "cardNo": "BP05-094EN",
+    "name": "Unidentified Subject",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Zealot",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "5",
+      "attack": "3",
+      "defense": "7",
+      "effect": "[evolve] [cost02]: Evolve this follower. Whenever you draw a card outside of your start phase, give this follower [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-094EN.png"
+  },
+  {
+    "cardNo": "BP05-095EN",
+    "name": "Unidentified Subject Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Zealot",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "7",
+      "effect": "On Evolve: Draw 2 cards. Whenever you draw a card outside of your start phase, give this follower [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-095EN.png"
+  },
+  {
+    "cardNo": "BP05-096EN",
+    "name": "Silver Cog Spinner",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Luminary / Lightborne",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "4",
+      "attack": "5",
+      "defense": "4",
+      "effect": "[fanfare] If there are at least 5 cards in your hand, recover 2 play points. If there are 5 or less cards, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-096EN.png"
+  },
+  {
+    "cardNo": "BP05-097EN",
+    "name": "Servant of Repose",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Omen / Zealot",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "At the start of each opponent's main phase, give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-097EN.png"
+  },
+  {
+    "cardNo": "BP05-098EN",
+    "name": "Demon's Epitaph",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Eidolon / Supreme",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[evolve] Discard a card: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-098EN.png"
+  },
+  {
+    "cardNo": "BP05-099EN",
+    "name": "Demon's Epitaph Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Eidolon / Supreme",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "4",
+      "effect": "Bane. [lastwords] Deal 2 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-099EN.png"
+  },
+  {
+    "cardNo": "BP05-100EN",
+    "name": "The Saviors",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Omen / Zealot",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose one of the following. (1) Search your deck for a Marwynn, Omen of Repose, reveal it, add it to your hand, then shuffle your deck. (2) Select an enemy follower with 2 defense or less on the field and banish it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-100EN.png"
+  },
+  {
+    "cardNo": "BP05-101EN",
+    "name": "Realm of Repose",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Omen / Zealot",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[q][act] [engage], put this card into its owner's cemetery: For the rest of this turn, if your leader would take more than 4 damage, it takes 4 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-101EN.png"
+  },
+  {
+    "cardNo": "BP05-102EN",
+    "name": "Ancient Amplifier",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Eidolon / Supreme",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Summon a Mystic Artifact token. [act] [cost01], [engage], put this card into its owner's cemetery: Select a token follower on your field and give it [attack]+2/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-102EN.png"
+  },
+  {
+    "cardNo": "BP05-103EN",
+    "name": "Mjerrabaine, Omen of One",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Omen",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[evolve] [cost01]: Evolve this follower. Rush. At the start of your end phase, if there are 2 cards or less in your hand, deal 3 damage to each enemy leader. If there are 0 cards in your hand, deal 3 damage to each enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-103EN.png"
+  },
+  {
+    "cardNo": "BP05-104EN",
+    "name": "Mjerrabaine, Omen of One Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "At the start of your end phase, refresh this card and, if there are 2 cards or less in your hand, deal 5 damage to each enemy leader. If there are 0 cards in your hand, deal 5 damage to each enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-104EN.png"
+  },
+  {
+    "cardNo": "BP05-105EN",
+    "name": "Gilnelise, Omen of Craving",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Omen",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "4",
+      "attack": "3",
+      "defense": "5",
+      "effect": "Drain. [fanfare] [cost03]: Search your deck for an Apostle of Craving and Craving's Splendor, put them into your EX area, then shuffle your deck. [fanfare] If each player has 10 maximum play points, draw 3 cards. Whenever you play a [neutral] card, deal 1 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-105EN.png"
+  },
+  {
+    "cardNo": "BP05-106EN",
+    "name": "Apostle of Craving",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Omen",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "If there is a Gilnelise, Omen of Craving on your field, this card costs 3 less to play from the EX area. [evolve] [cost01]: Evolve this follower. [fanfare] Select another follower on your field and give it Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-106EN.png"
+  },
+  {
+    "cardNo": "BP05-107EN",
+    "name": "Apostle of Craving Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve: Select another follower on the field. Deal it 3 damage and give it [attack]+3."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-107EN.png"
+  },
+  {
+    "cardNo": "BP05-108EN",
+    "name": "Lyrial, Archer Throne",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Angel",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "3",
+      "attack": "2",
+      "defense": "5",
+      "effect": "[q][act] [engage]: Deal 2 damage to each enemy leader. While this card is on your field, your leader doesn't take ability damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-108EN.png"
+  },
+  {
+    "cardNo": "BP05-109EN",
+    "name": "Feena, Dynamite Daredevil",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Mercenary",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[fanfare] Choose one of the following. (1) Look at the top 5 cards of your deck. You may reveal a follower that costs 1 play point from among them and add it to your hand. Put the remaining cards on the bottom of your deck in any order. (2) Select an enemy follower that costs 1 play point on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-109EN.png"
+  },
+  {
+    "cardNo": "BP05-110EN",
+    "name": "Rosa, Mech Wing Maiden",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Angel / Supreme",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "1",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-110EN.png"
+  },
+  {
+    "cardNo": "BP05-111EN",
+    "name": "Rosa, Mech Wing Maiden Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Angel / Supreme",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "2",
+      "defense": "4",
+      "effect": "Ward. On Evolve: Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-111EN.png"
+  },
+  {
+    "cardNo": "BP05-112EN",
+    "name": "Enlightenment",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Omen",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a follower on your field and give it [attack]+1/[defense]+1. If it's a Mjerrabaine, Omen of One, give [attack]+3/[defense]+3 and Assail instead, and for the rest of this turn, it has \"This follower doesn't take damage.\""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-112EN.png"
+  },
+  {
+    "cardNo": "BP05-113EN",
+    "name": "Craving's Splendor",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Omen",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] If there is a Gilnelise, Omen of Craving on your field, this card costs 3 less to play from the EX area. Select an enemy follower on the field. Deal it 4 damage and give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-113EN.png"
+  },
+  {
+    "cardNo": "BP05-114EN",
+    "name": "Cat Cannoneer",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Mercenary / Supreme",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-114EN.png"
+  },
+  {
+    "cardNo": "BP05-115EN",
+    "name": "Cat Cannoneer Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Mercenary / Supreme",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve: Summon an Ancient Artifact token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-115EN.png"
+  },
+  {
+    "cardNo": "BP05-116EN",
+    "name": "Steel Demolitionist",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Mercenary / Supreme",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Banish a card in your EX area: Select an enemy leader or enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-116EN.png"
+  },
+  {
+    "cardNo": "BP05-117EN",
+    "name": "Gliesaray",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Omen",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field and deal it 2 damage. If there is a Gilnelise, Omen of Craving on your field, banish the selected follower instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-117EN.png"
+  },
+  {
+    "cardNo": "BP05-LD01EN",
+    "name": "Liza, Greenwood Queen",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-LD01EN.png"
+  },
+  {
+    "cardNo": "BP05-LD02EN",
+    "name": "Albert, Tempestuous Doom",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-LD02EN.png"
+  },
+  {
+    "cardNo": "BP05-LD03EN",
+    "name": "Anne & Grea, Bonds Everlasting",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-LD03EN.png"
+  },
+  {
+    "cardNo": "BP05-LD04EN",
+    "name": "Ian & Adelle, Transcendent Love",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-LD04EN.png"
+  },
+  {
+    "cardNo": "BP05-LD05EN",
+    "name": "Cerberus, Festive Hound",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-LD05EN.png"
+  },
+  {
+    "cardNo": "BP05-LD06EN",
+    "name": "Zoe, Golden Princess",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-LD06EN.png"
+  },
+  {
+    "cardNo": "BP05-P01EN",
+    "name": "Apostle of Unkilling",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Omen / Hunter",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P01EN.png"
+  },
+  {
+    "cardNo": "BP05-P02EN",
+    "name": "Apostle of Unkilling Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Hunter",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve: Search your deck for a Hunter follower that costs 2 play points or less, put it onto your field, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P02EN.png"
+  },
+  {
+    "cardNo": "BP05-P03EN",
+    "name": "Disciple of Unkilling",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Omen / Hunter",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "1",
+      "defense": "3",
+      "effect": "[fanfare] Look at the top card of your deck. If it's a Hunter card, you may reveal it and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P03EN.png"
+  },
+  {
+    "cardNo": "BP05-P04EN",
+    "name": "Noah, Vengeful Puppeteer",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Puppetry",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "5",
+      "attack": "3",
+      "defense": "6",
+      "effect": "[evolve] [cost02]: Evolve this follower. [fanfare] Put 2 Puppet tokens into your EX area. Whenever a Puppet is put onto your field, give it [attack]+1 and Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P04EN.png"
+  },
+  {
+    "cardNo": "BP05-P05EN",
+    "name": "Noah, Vengeful Puppeteer Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Puppetry",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "7",
+      "effect": "While this card is on your field, any Puppet you play costs 1 less. Whenever a Puppet is put onto your field, give it [attack]+1 and Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P05EN.png"
+  },
+  {
+    "cardNo": "BP05-P06EN",
+    "name": "Mark of the Unkilling",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Omen / Hunter",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field and deal it X damage. X equals its defense minus 1. If there are at least 3 Hunter cards in your cemetery, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P06EN.png"
+  },
+  {
+    "cardNo": "BP05-P07EN",
+    "name": "Servant of Unkilling",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Omen / Hunter",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] If there are at least 3 Hunter cards in your cemetery, give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P07EN.png"
+  },
+  {
+    "cardNo": "BP05-P08EN",
+    "name": "Mark of the Six",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Omen / Hunter",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] The next time your leader would take damage this turn, it doesn't take damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P08EN.png"
+  },
+  {
+    "cardNo": "BP05-P09EN",
+    "name": "Apostle of Usurpation",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Omen / Thief",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "4",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Each opponent puts the top 2 cards of their deck into their cemetery. Then, if there are at least 10 cards in opponents' cemeteries, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P09EN.png"
+  },
+  {
+    "cardNo": "BP05-P10EN",
+    "name": "Apostle of Usurpation Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Thief",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "5",
+      "effect": "On Evolve: Select an enemy follower on the field and deal it 4 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P10EN.png"
+  },
+  {
+    "cardNo": "BP05-P11EN",
+    "name": "Disciple of Usurpation",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Omen / Thief",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "2",
+      "effect": "Storm. Strike: Each opponent puts the top card of their deck into their cemetery. Then, if there are at least 10 cards in opponents' cemeteries, give this follower [attack]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P11EN.png"
+  },
+  {
+    "cardNo": "BP05-P12EN",
+    "name": "Servant of Usurpation",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Omen / Thief",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[fanfare] Each opponent puts the top card of their deck into their cemetery. During your turn, whenever a card is put from an opponent's deck into the cemetery, give this follower [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P12EN.png"
+  },
+  {
+    "cardNo": "BP05-P13EN",
+    "name": "Usurping Spineblade",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Omen / Thief",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field. Deal it 3 damage, and each opponent puts the top card of their deck into their cemetery. Then, if there are at least 10 cards in opponents' cemeteries, deal 2 more damage to the selected follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P13EN.png"
+  },
+  {
+    "cardNo": "BP05-P14EN",
+    "name": "Avaritia",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Omen / Thief",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Look at the top 4 cards of your deck. You may reveal a Thief card from among them and add it to your hand. Put the remaining cards on the bottom of your deck in any order. If you revealed an Octrice, Omen of Usurpation, return this card to its owner's hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P14EN.png"
+  },
+  {
+    "cardNo": "BP05-P15EN",
+    "name": "Apostle of Truth",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Omen / Mage",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] If there are at least 3 Mage followers on your field, give this follower [attack]+2/[defense]+2 and Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P15EN.png"
+  },
+  {
+    "cardNo": "BP05-P16EN",
+    "name": "Apostle of Truth Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Mage",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve: Select an enemy follower on the field and deal it X damage. X equals 2 times the number of Mage followers on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P16EN.png"
+  },
+  {
+    "cardNo": "BP05-P17EN",
+    "name": "Destructive Refrain",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Omen / Idolatry",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose one of the following. (1) Search your deck for a Lishenna, Omen of Destruction, reveal it, add it to your hand, then shuffle your deck. (2) [cost02]: Deal X damage to each enemy follower on the field. X equals the number of Idolatry cards on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P17EN.png"
+  },
+  {
+    "cardNo": "BP05-P18EN",
+    "name": "Truth's Adjudication",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Omen / Mage",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose one of the following. If there are at least 2 Mage followers on your field, choose up to 2 instead. (1) Draw 2 cards. (2) Deal 3 damage to each enemy leader. (3) Select an enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P18EN.png"
+  },
+  {
+    "cardNo": "BP05-P19EN",
+    "name": "Monochromatic Destruction",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Omen / Idolatry",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field. Deal it 2 damage and, if there are at least 2 Idolatry cards on your field, deal 2 damage to its leader and give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P19EN.png"
+  },
+  {
+    "cardNo": "BP05-P20EN",
+    "name": "Disciple of Truth",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Omen / Mage",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Whenever you play a Mage card, give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P20EN.png"
+  },
+  {
+    "cardNo": "BP05-P21EN",
+    "name": "Disciple of Destruction",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Omen / Idolatry",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "Ward. [fanfare] If there are at least 3 Idolatry cards on your field, draw 2 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P21EN.png"
+  },
+  {
+    "cardNo": "BP05-P22EN",
+    "name": "Servant of Destruction",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Omen / Idolatry",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost02]: Evolve this follower. [fanfare] If there are at least 3 Idolatry cards on your field, change this card's [evolve] cost to 0 for the rest of this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P22EN.png"
+  },
+  {
+    "cardNo": "BP05-P23EN",
+    "name": "Servant of Destruction Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Idolatry",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve: Select an enemy follower on the field. Deal 2 damage to it and its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P23EN.png"
+  },
+  {
+    "cardNo": "BP05-P24EN",
+    "name": "Honest Cohort",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Omen / Mage",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field and deal it 3 damage. If there is a Raio, Omen of Truth on your field, deal 6 damage to the selected follower and 3 damage to its leader instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P24EN.png"
+  },
+  {
+    "cardNo": "BP05-P25EN",
+    "name": "Apostle of Disdain",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Omen / Wyrmkin",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "3",
+      "attack": "2",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. During your turn, whenever this follower takes ability damage, give it [attack]+1 and Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P25EN.png"
+  },
+  {
+    "cardNo": "BP05-P26EN",
+    "name": "Apostle of Disdain Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Wyrmkin",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "5",
+      "effect": "On Evolve, discard a card: Look at the top 5 cards of your deck. From among them, you may reveal up to 2 Omen cards and add them to your hand. Put the remaining cards on the bottom of your deck in any order. During your turn, whenever this follower takes ability damage, give it [attack]+1 and Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P26EN.png"
+  },
+  {
+    "cardNo": "BP05-P27EN",
+    "name": "Disdainful Rending",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Omen / Wyrmkin",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a follower on your field and an enemy follower on the field. Deal 1 damage to the first follower and 3 damage to the second."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P27EN.png"
+  },
+  {
+    "cardNo": "BP05-P28EN",
+    "name": "Disciple of Disdain",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Omen / Wyrmkin",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[act] [cost00]: Select a follower on your field and deal it 1 damage. This ability can be activated once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P28EN.png"
+  },
+  {
+    "cardNo": "BP05-P29EN",
+    "name": "Servant of Disdain",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Omen / Wyrmkin",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] If Overflow is active for you, select another follower on the field. Deal 1 damage to it and this follower. During your turn, whenever this follower takes ability damage, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P29EN.png"
+  },
+  {
+    "cardNo": "BP05-P30EN",
+    "name": "Total Domination",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Omen / Wyrmkin",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a follower on your field. Deal 2 damage to it and each enemy follower on the field. Then, if there is a Galmieux, Omen of Disdain on your field, deal 2 more damage to each enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P30EN.png"
+  },
+  {
+    "cardNo": "BP05-P31EN",
+    "name": "Apostle of Lust",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Omen / Demon",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[act] [engage], give your leader [defense]-1: Select a follower that costs 2 play points or less in your cemetery and put it onto your field. Whenever another Demon follower is put onto your field, give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P31EN.png"
+  },
+  {
+    "cardNo": "BP05-P32EN",
+    "name": "Apostle of Silence",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Omen / Necromancer",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. At the start of your end phase, select an enemy leader. If there are 3 cards or less in its controller's hand, deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P32EN.png"
+  },
+  {
+    "cardNo": "BP05-P33EN",
+    "name": "Apostle of Silence Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Necromancer",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "On Evolve: Select an enemy follower on the field and deal it 3 damage. If there are 3 cards or less in its controller's hand, destroy it instead. At the start of your end phase, select an enemy leader. If there are 3 cards or less in its controller's hand, deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P33EN.png"
+  },
+  {
+    "cardNo": "BP05-P34EN",
+    "name": "Disciple of Lust",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Omen / Demon",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[fanfare] Deal 1 damage to each leader. Strike: Deal 1 damage to each leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P34EN.png"
+  },
+  {
+    "cardNo": "BP05-P35EN",
+    "name": "Wings of Lust",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Omen / Demon",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose up to 2 of the following. (1) Select a follower on your field. Give it Rush and deal 1 damage to your leader. (2) Select an enemy follower on the field. Deal 2 damage to it and 1 damage to your leader. (3) Deal 1 damage to your leader. Draw a card. Discard a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P35EN.png"
+  },
+  {
+    "cardNo": "BP05-P36EN",
+    "name": "Silent Purge",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Omen / Necromancer",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field and destroy it. Its controller discards a random card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P36EN.png"
+  },
+  {
+    "cardNo": "BP05-P37EN",
+    "name": "Servant of Lust",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Omen / Demon",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "3",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Deal 1 damage to your leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P37EN.png"
+  },
+  {
+    "cardNo": "BP05-P38EN",
+    "name": "Servant of Lust Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Demon",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "2",
+      "effect": "On Evolve, give your leader [defense]-1: Select an enemy follower on the field and deal it X damage. X equals the number of times your leader has lost defense this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P38EN.png"
+  },
+  {
+    "cardNo": "BP05-P39EN",
+    "name": "Servant of Silence",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Omen / Necromancer",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Whenever an opponent discards a card, deal 2 damage to their leader and put the top 2 cards of your deck into your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P39EN.png"
+  },
+  {
+    "cardNo": "BP05-P40EN",
+    "name": "Embracing Wings",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Omen / Demon",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field. Destroy it, deal 2 damage to your leader, and select up to 1 Valnareik, Omen of Lust in your cemetery and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P40EN.png"
+  },
+  {
+    "cardNo": "BP05-P41EN",
+    "name": "Thundering Roar",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Omen / Necromancer",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose one of the following. Necrocharge (10): Choose up to 2 instead. (1) Each opponent discards a random card. (2) Select an enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P41EN.png"
+  },
+  {
+    "cardNo": "BP05-P42EN",
+    "name": "Apostle of Repose",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Omen / Zealot",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "3",
+      "attack": "2",
+      "defense": "4",
+      "effect": "[evolve] [cost02]: Evolve this follower. At the start of each opponent's main phase, recover 1 play point."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P42EN.png"
+  },
+  {
+    "cardNo": "BP05-P43EN",
+    "name": "Apostle of Repose Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Zealot",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "5",
+      "effect": "On Evolve: Select a reserved enemy follower on the field and banish it. At the start of each opponent's main phase, recover 2 play points."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P43EN.png"
+  },
+  {
+    "cardNo": "BP05-P44EN",
+    "name": "Disciple of Repose",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Omen / Zealot",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "At the start of each opponent's main phase, select an enemy follower on the field and deal it 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P44EN.png"
+  },
+  {
+    "cardNo": "BP05-P45EN",
+    "name": "Servant of Repose",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Omen / Zealot",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "At the start of each opponent's main phase, give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P45EN.png"
+  },
+  {
+    "cardNo": "BP05-P46EN",
+    "name": "The Saviors",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Omen / Zealot",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose one of the following. (1) Search your deck for a Marwynn, Omen of Repose, reveal it, add it to your hand, then shuffle your deck. (2) Select an enemy follower with 2 defense or less on the field and banish it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P46EN.png"
+  },
+  {
+    "cardNo": "BP05-P47EN",
+    "name": "Realm of Repose",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Omen / Zealot",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[q][act] [engage], put this card into its owner's cemetery: For the rest of this turn, if your leader would take more than 4 damage, it takes 4 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P47EN.png"
+  },
+  {
+    "cardNo": "BP05-P48EN",
+    "name": "Apostle of Craving",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Omen",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "If there is a Gilnelise, Omen of Craving on your field, this card costs 3 less to play from the EX area. [evolve] [cost01]: Evolve this follower. [fanfare] Select another follower on your field and give it Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P48EN.png"
+  },
+  {
+    "cardNo": "BP05-P49EN",
+    "name": "Apostle of Craving Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve: Select another follower on the field. Deal it 3 damage and give it [attack]+3."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P49EN.png"
+  },
+  {
+    "cardNo": "BP05-P50EN",
+    "name": "Rosa, Mech Wing Maiden",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Angel / Supreme",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "1",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P50EN.png"
+  },
+  {
+    "cardNo": "BP05-P51EN",
+    "name": "Rosa, Mech Wing Maiden Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Angel / Supreme",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "2",
+      "defense": "4",
+      "effect": "Ward. On Evolve: Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P51EN.png"
+  },
+  {
+    "cardNo": "BP05-P52EN",
+    "name": "Enlightenment",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Omen",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a follower on your field and give it [attack]+1/[defense]+1. If it's a Mjerrabaine, Omen of One, give [attack]+3/[defense]+3 and Assail instead, and for the rest of this turn, it has \"This follower doesn't take damage.\""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P52EN.png"
+  },
+  {
+    "cardNo": "BP05-P53EN",
+    "name": "Craving's Splendor",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Omen",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] If there is a Gilnelise, Omen of Craving on your field, this card costs 3 less to play from the EX area. Select an enemy follower on the field. Deal it 4 damage and give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P53EN.png"
+  },
+  {
+    "cardNo": "BP05-P54EN",
+    "name": "Gliesaray",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Omen",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field and deal it 2 damage. If there is a Gilnelise, Omen of Craving on your field, banish the selected follower instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-P54EN.png"
+  },
+  {
+    "cardNo": "BP05-SL01EN",
+    "name": "Izudia, Omen of Unkilling",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Omen / Hunter",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] If there are at least 3 Hunter cards in your cemetery, select an enemy follower on the field. Change it into an amulet and give it \"[act] [cost02]: Put this card into its owner's cemetery.\" (It keeps all existing abilities, including [evolve] and [feed].)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-SL01EN.png"
+  },
+  {
+    "cardNo": "BP05-SL02EN",
+    "name": "Izudia, Omen of Unkilling Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Hunter",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[act] [engage]: Deal 6 damage to each enemy leader with at least 10 defense."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-SL02EN.png"
+  },
+  {
+    "cardNo": "BP05-SL03EN",
+    "name": "Spinaria, Keeper of Enigmas",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Supreme",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "5",
+      "attack": "3",
+      "defense": "5",
+      "effect": "Ward. [fanfare] Look at the top 4 cards of your deck. From among them, you may reveal up to 1 [forestcraft] follower and up to 1 [forestcraft] spell and add them to your hand. Put the remaining cards on the bottom of your deck in any order. Combo (3): Recover 3 play points."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-SL03EN.png"
+  },
+  {
+    "cardNo": "BP05-SL04EN",
+    "name": "Octrice, Omen of Usurpation",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Omen / Thief",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost02]: Evolve this follower. [evolve] [cost00]: Evolve this follower. This ability can be activated if there are at least 10 cards in opponents' cemeteries. [fanfare] Each opponent puts the top 2 cards of their deck into their cemetery. [act] [cost08]: Select a card in an opponent's cemetery and play it for 0 play points."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-SL04EN.png"
+  },
+  {
+    "cardNo": "BP05-SL05EN",
+    "name": "Octrice, Omen of Usurpation Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Thief",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve: Select a card in an opponent's cemetery and put it into your EX area. [act] [cost08]: Select a card in an opponent's cemetery and play it for 0 play points. If there are at least 10 cards in opponents' cemeteries, any card you play from the EX area costs 2 less."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-SL05EN.png"
+  },
+  {
+    "cardNo": "BP05-SL06EN",
+    "name": "Magna Legacy",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Supreme / Magna",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "8",
+      "attack": "8",
+      "defense": "8",
+      "effect": "[fanfare] Banish the top half of your deck (round up). Deal 4 damage to each enemy leader and enemy follower on the field. If at least 15 cards were banished by this ability, deal 8 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-SL06EN.png"
+  },
+  {
+    "cardNo": "BP05-SL07EN",
+    "name": "Raio, Omen of Truth",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Omen / Mage",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "7",
+      "attack": "7",
+      "defense": "7",
+      "effect": "[evolve] [cost02]: Evolve this follower. [fanfare] Discard a Mage card: Select an enemy follower on the field and deal it 9 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-SL07EN.png"
+  },
+  {
+    "cardNo": "BP05-SL08EN",
+    "name": "Raio, Omen of Truth Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Mage",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "9",
+      "defense": "9",
+      "effect": "On Evolve: Look at the top 9 cards of your deck. You may put up to 3 cards that cost 3 play points or less from among them into your EX area. They cost 3 less to play this turn. Put the remaining cards on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-SL08EN.png"
+  },
+  {
+    "cardNo": "BP05-SL09EN",
+    "name": "Lishenna, Omen of Destruction",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Omen / Idolatry",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "4",
+      "attack": "2",
+      "defense": "4",
+      "effect": "[fanfare] Put a Destruction in White and Destruction in Black token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-SL09EN.png"
+  },
+  {
+    "cardNo": "BP05-SL10EN",
+    "name": "Galmieux, Omen of Disdain",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Omen / Wyrmkin",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[evolve] [cost02]: Evolve this follower. During your turn, whenever this follower takes ability damage, change its [evolve] cost to 0 for the rest of the turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-SL10EN.png"
+  },
+  {
+    "cardNo": "BP05-SL11EN",
+    "name": "Galmieux, Omen of Disdain Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Wyrmkin",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "On Evolve: Select an Omen card that costs 2 play points or less in your cemetery and play it for 0 play points. During your turn, whenever this follower takes ability damage, select an enemy leader or enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-SL11EN.png"
+  },
+  {
+    "cardNo": "BP05-SL12EN",
+    "name": "Electromagical Rhino",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Gigant / Supreme",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "5",
+      "attack": "0",
+      "defense": "7",
+      "effect": "Storm. [fanfare] Give this follower [attack]+3. Put the top 4 cards of your deck into your cemetery. If an Electromagical Rhino was put into your cemetery by this ability, repeat this [fanfare]. [lastwords] Select any number of cards named Electromagical Rhino in your cemetery (including this one). Return them to your deck and shuffle it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-SL12EN.png"
+  },
+  {
+    "cardNo": "BP05-SL13EN",
+    "name": "Valnareik, Omen of Lust",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Omen / Demon",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "While Sanguine is active for you, this follower has Storm. Strike: Deal X damage to each enemy leader. X equals the number of times your leader has lost defense this turn. If your leader's defense is 7, give this follower [attack]+2/[defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-SL13EN.png"
+  },
+  {
+    "cardNo": "BP05-SL14EN",
+    "name": "Rulenye, Omen of Silence",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Omen / Necromancer",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Necrocharge (10): Select an enemy follower that costs 3 play points or less on the field and destroy it. While this card is on your field, any spell an opponent plays costs 1 more."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-SL14EN.png"
+  },
+  {
+    "cardNo": "BP05-SL15EN",
+    "name": "Rulenye, Omen of Silence Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Necromancer",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve: Each opponent discards a random card. While this card is on your field, any spell an opponent plays costs 1 more."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-SL15EN.png"
+  },
+  {
+    "cardNo": "BP05-SL16EN",
+    "name": "Marwynn, Omen of Repose",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Omen / Zealot",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost04]: Evolve this follower. [evolve] Skip your next turn: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-SL16EN.png"
+  },
+  {
+    "cardNo": "BP05-SL17EN",
+    "name": "Marwynn, Omen of Repose Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Zealot",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "8",
+      "defense": "8",
+      "effect": "Ward. Aura. On Evolve: Increase your maximum play points by 1. Give your leader [defense]+3. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-SL17EN.png"
+  },
+  {
+    "cardNo": "BP05-SL18EN",
+    "name": "Deus Ex Machina",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Luminary / Supreme",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "5",
+      "attack": "4",
+      "defense": "6",
+      "effect": "At the start of your end phase, choose one of the following. (1) Discard your hand. Draw 4 cards. (2) Recover 4 play points."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-SL18EN.png"
+  },
+  {
+    "cardNo": "BP05-SL19EN",
+    "name": "Mjerrabaine, Omen of One",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Omen",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[evolve] [cost01]: Evolve this follower. Rush. At the start of your end phase, if there are 2 cards or less in your hand, deal 3 damage to each enemy leader. If there are 0 cards in your hand, deal 3 damage to each enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-SL19EN.png"
+  },
+  {
+    "cardNo": "BP05-SL20EN",
+    "name": "Mjerrabaine, Omen of One Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "At the start of your end phase, refresh this card and, if there are 2 cards or less in your hand, deal 5 damage to each enemy leader. If there are 0 cards in your hand, deal 5 damage to each enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-SL20EN.png"
+  },
+  {
+    "cardNo": "BP05-SL21EN",
+    "name": "Gilnelise, Omen of Craving",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Omen",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "4",
+      "attack": "3",
+      "defense": "5",
+      "effect": "Drain. [fanfare] [cost03]: Search your deck for an Apostle of Craving and Craving's Splendor, put them into your EX area, then shuffle your deck. [fanfare] If each player has 10 maximum play points, draw 3 cards. Whenever you play a [neutral] card, deal 1 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-SL21EN.png"
+  },
+  {
+    "cardNo": "BP05-T01EN",
+    "name": "Destruction in White TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet / Token",
+      "trait": "Omen / Idolatry",
+      "rarity": "-",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "At the start of your main phase, give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-T01EN.png"
+  },
+  {
+    "cardNo": "BP05-T02EN",
+    "name": "Destruction in Black TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet / Token",
+      "trait": "Omen / Idolatry",
+      "rarity": "-",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "At the start of your main phase, deal 2 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-T02EN.png"
+  },
+  {
+    "cardNo": "BP05-T03EN",
+    "name": "Puppet TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Token",
+      "trait": "Puppetry",
+      "rarity": "-",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-T03EN.png"
+  },
+  {
+    "cardNo": "BP05-T04EN",
+    "name": "Ancient Artifact TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Token",
+      "trait": "Supreme",
+      "rarity": "-",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "1",
+      "attack": "3",
+      "defense": "1",
+      "effect": "Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-T04EN.png"
+  },
+  {
+    "cardNo": "BP05-T05EN",
+    "name": "Mystic Artifact TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Token",
+      "trait": "Supreme",
+      "rarity": "-",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "3",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Ward. [fanfare] Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-T05EN.png"
+  },
+  {
+    "cardNo": "BP05-T06EN",
+    "name": "Knight TOKEN",
+    "type": "token",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Token",
+      "trait": "Officer",
+      "rarity": "-",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-T06EN.png"
+  },
+  {
+    "cardNo": "BP05-T07EN",
+    "name": "Shield Guardian TOKEN",
+    "type": "token",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Token",
+      "trait": "Officer",
+      "rarity": "-",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-T07EN.png"
+  },
+  {
+    "cardNo": "BP05-U01EN",
+    "name": "Izudia, Omen of Unkilling Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Hunter",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[act] [engage]: Deal 6 damage to each enemy leader with at least 10 defense."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-U01EN.png"
+  },
+  {
+    "cardNo": "BP05-U02EN",
+    "name": "Octrice, Omen of Usurpation Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Thief",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve: Select a card in an opponent's cemetery and put it into your EX area. [act] [cost08]: Select a card in an opponent's cemetery and play it for 0 play points. If there are at least 10 cards in opponents' cemeteries, any card you play from the EX area costs 2 less."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-U02EN.png"
+  },
+  {
+    "cardNo": "BP05-U03EN",
+    "name": "Lishenna, Omen of Destruction",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Omen / Idolatry",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "4",
+      "attack": "2",
+      "defense": "4",
+      "effect": "[fanfare] Put a Destruction in White and Destruction in Black token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-U03EN.png"
+  },
+  {
+    "cardNo": "BP05-U04EN",
+    "name": "Galmieux, Omen of Disdain Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Wyrmkin",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "On Evolve: Select an Omen card that costs 2 play points or less in your cemetery and play it for 0 play points. During your turn, whenever this follower takes ability damage, select an enemy leader or enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-U04EN.png"
+  },
+  {
+    "cardNo": "BP05-U05EN",
+    "name": "Valnareik, Omen of Lust",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Omen / Demon",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "While Sanguine is active for you, this follower has Storm. Strike: Deal X damage to each enemy leader. X equals the number of times your leader has lost defense this turn. If your leader's defense is 7, give this follower [attack]+2/[defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-U05EN.png"
+  },
+  {
+    "cardNo": "BP05-U06EN",
+    "name": "Marwynn, Omen of Repose Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Zealot",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "-",
+      "attack": "8",
+      "defense": "8",
+      "effect": "Ward. Aura. On Evolve: Increase your maximum play points by 1. Give your leader [defense]+3. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-U06EN.png"
+  },
+  {
+    "cardNo": "BP05-U07EN",
+    "name": "Gilnelise, Omen of Craving",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Omen",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "4",
+      "attack": "3",
+      "defense": "5",
+      "effect": "Drain. [fanfare] [cost03]: Search your deck for an Apostle of Craving and Craving's Splendor, put them into your EX area, then shuffle your deck. [fanfare] If each player has 10 maximum play points, draw 3 cards. Whenever you play a [neutral] card, deal 1 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-U07EN.png"
+  },
+  {
+    "cardNo": "BP05-UT01EN",
+    "name": "Fairy TOKEN",
+    "type": "token",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Token",
+      "trait": "Pixie",
+      "rarity": "-",
+      "cardSet": "Booster Set #5 “Omens Eternal”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-UT01EN.png"
+  }
+]

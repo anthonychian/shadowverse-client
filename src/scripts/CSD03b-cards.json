@@ -1,0 +1,230 @@
+[
+  {
+    "cardNo": "CSD03b-001EN",
+    "name": "Dragonic Overlord",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Kagero",
+      "rarity": "Legendary",
+      "cardSet": "Crossover Starter Deck \"Apocalyptic Fire\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. Twin Drive. While Overflow is active for you, and there's another Kagero follower on your field, this follower has Storm. (Followers with Storm can attack enemy followers and leaders on the turn they're put onto your field.)"
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD03b-002EN",
+    "name": "Dragonic Overlord Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Vanguard / Kagero",
+      "rarity": "Legendary",
+      "cardSet": "Crossover Starter Deck \"Apocalyptic Fire\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Twin Drive. While Overflow is active for you, and there's another Kagero follower on your field, this follower has Storm. On Evolve - Select an enemy follower on the field. Deal it 5 damage and, if Overflow is active for you, for the rest of this turn, this follower has \"Once per turn, when this follower deals combat damage, refresh it.\""
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD03b-003EN",
+    "name": "Dragon Monk, Goku",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Kagero",
+      "rarity": "Legendary",
+      "cardSet": "Crossover Starter Deck \"Apocalyptic Fire\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Ward. [act] [engage], banish 4 Kagero cards from your cemetery: Deal 4 damage to each enemy leader and enemy follower on the field."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD03b-004EN",
+    "name": "Dragon Knight, Aleph",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Kagero",
+      "rarity": "Gold",
+      "cardSet": "Crossover Starter Deck \"Apocalyptic Fire\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower into an Embodiment of Victory, Aleph. [fanfare] If there's an Embodiment of Armor, Bahr and Embodiment of Spear, Tahr in your cemetery, evolve this follower into an Embodiment of Victory, Aleph."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD03b-005EN",
+    "name": "Embodiment of Victory, Aleph Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Vanguard / Kagero",
+      "rarity": "Gold",
+      "cardSet": "Crossover Starter Deck \"Apocalyptic Fire\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Twin Drive. (Whenever a follower with Twin Drive attacks, it performs 2 drive checks.) On Evolve - Look at the top 3 cards of your deck. You may put a Kagero follower not named Dragon Knight, Aleph from among them into your EX area. It costs 3 less to play this turn. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD03b-006EN",
+    "name": "Berserk Dragon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Kagero",
+      "rarity": "Gold",
+      "cardSet": "Crossover Starter Deck \"Apocalyptic Fire\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[ride] [cost01]: Give this follower Drive. On Drive - Select up to 1 enemy follower on the field. Deal it 3 damage and give this follower [attack]+1/[defense]+1. [fanfare] Discard a Kagero card: Select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD03b-007EN",
+    "name": "Wyvern Guard, Barri",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Vanguard / Kagero",
+      "rarity": "Gold",
+      "cardSet": "Crossover Starter Deck \"Apocalyptic Fire\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Choose one. (1) Select an enemy follower on the field and deal it 2 damage. (2) Discard a Kagero card: Select an enemy follower on the field. Deal 3 damage to it and 1 damage to its leader."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD03b-008EN",
+    "name": "Dragon Knight, Nehalem",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Kagero",
+      "rarity": "Silver",
+      "cardSet": "Crossover Starter Deck \"Apocalyptic Fire\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[ride] [cost01]: Give this follower Drive. On Drive - Select up to 1 enemy follower on the field. Deal it 2 damage and give this follower [attack]+1/[defense]+1. Strike - Deal 1 damage to each enemy leader."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD03b-009EN",
+    "name": "Embodiment of Armor, Bahr",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Kagero",
+      "rarity": "Silver",
+      "cardSet": "Crossover Starter Deck \"Apocalyptic Fire\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "Ward. (While you have engaged followers with Ward, opponents can't attack your other followers or leader. You may engage this follower when it's put onto your field or during your end phase.) [fanfare] Draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD03b-010EN",
+    "name": "Chain-Attack Sutherland",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Kagero",
+      "rarity": "Silver",
+      "cardSet": "Crossover Starter Deck \"Apocalyptic Fire\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Select a Vanguard follower on your field and give it [attack]+3. [act] [engage], bury this card: Select an enemy follower on the field and deal it damage equal to this follower's attack."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD03b-011EN",
+    "name": "Follower, Reas",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Vanguard / Kagero",
+      "rarity": "Silver",
+      "cardSet": "Crossover Starter Deck \"Apocalyptic Fire\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[ride] [cost02]: Give this follower Drive. On Drive - Give this follower [attack]+1/[defense]+1. Search your deck for a Kagero follower, reveal it, add it to your hand, then shuffle."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "CSD03b-016EN",
+    "name": "Lizard Runner, Undeux",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Amulet",
+      "trait": "Vanguard / Kagero",
+      "rarity": "Bronze",
+      "cardSet": "Crossover Starter Deck \"Apocalyptic Fire\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Starting Amulet. [act] [engage], bury this card: Select a Vanguard follower on your field and give it [attack]+1/[defense]+1. ---------- (At the start of the game, if your deck is based on the Cardfight!! Vanguard universe, put a card with Starting Amulet from your deck onto your field.)"
+    },
+    "imgSrc": ""
+  }
+]

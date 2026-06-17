@@ -1,14 +1,24 @@
-import React, { useState, useEffect } from "react";
-import { cardImage } from "../../decks/getCards";
-import { motion } from "framer-motion";
+import React, { useState, useEffect, useRef } from "react";
+import { artImage, artThumb } from "../../decks/getCards";
+import { motion, useDragControls } from "framer-motion";
 import {
   modifyAtk,
   modifyDef,
   setCurrentCard,
   modifyCounter,
   setEngaged,
+  placeToFieldFromHand,
+  placeToCemeteryFromHand,
 } from "../../redux/CardSlice";
 import { useDispatch, useSelector } from "react-redux";
+import {
+  fieldIndexAt,
+  isOverCemetery,
+  isOverHand,
+  fieldSlotCenter,
+  setDragHover,
+} from "../field/handDrag";
+import { triggerCardReveal } from "../field/cardRevealBus";
 import cancel from "../../assets/logo/cancel.png";
 import carrot from "../../assets/logo/carrot.png";
 import drive from "../../assets/logo/drive.png";
@@ -17,6 +27,11 @@ import atkImg from "../../assets/logo/atk.png";
 import defImg from "../../assets/logo/def.png";
 
 import "../../css/Card.css";
+
+// How far (px) a field card must be dragged before it starts moving. Below this
+// the gesture is treated as a tap (engage), so tapping stays reliable and only a
+// deliberate drag relocates the card.
+const FIELD_DRAG_THRESHOLD = 10;
 
 export default function Card({
   name,
@@ -38,9 +53,16 @@ export default function Card({
   aura,
   bane,
   ward,
+  keywords = [],
   handLength,
   inHand = false,
   inHandIndex = -1,
+  constraintsRef,
+  handDragging = false,
+  onCardDragStart,
+  onCardDragEnd,
+  onFieldDrop,
+  hidden = false,
 }) {
   let numOfCarrots = 0;
   const dispatch = useDispatch();
@@ -48,10 +70,19 @@ export default function Card({
   const [def, setDef] = useState(0);
   const [counter, setCounter] = useState(0);
   const [hoverInput, setHoverInput] = useState(false);
+  // Keyword status badges show compact (inside the card) by default and expand
+  // to large vertical labels beside the card on hover.
+  const [kwHover, setKwHover] = useState(false);
 
   const reduxEnemyCardSelectedInHand = useSelector(
     (state) => state.card.enemyCardSelectedInHand
   );
+
+  // Rarity/art choice: opponent's field cards use the synced enemy art, all
+  // other cards (my hand, my field) use my own. Falls back to default art.
+  const reduxMyArt = useSelector((state) => state.card.myArt);
+  const reduxEnemyArt = useSelector((state) => state.card.enemyArt);
+  const artMap = opponentField ? reduxEnemyArt : reduxMyArt;
 
   const reduxCardSelectedOnField = useSelector(
     (state) => state.card.cardSelectedOnField
@@ -60,6 +91,10 @@ export default function Card({
     (state) => state.card.enemyCardSelectedOnField
   );
   const gameMode = useSelector((state) => state.gameState.gameMode);
+  // Live field state, so a drag-drop only fills an empty zone (mirrors the
+  // click-to-place flow, which also rejects occupied slots).
+  const reduxField = useSelector((state) => state.card.field);
+  const reduxRoom = useSelector((state) => state.card.room);
 
   useEffect(() => {
     setAtk(Number(atkVal));
@@ -70,12 +105,189 @@ export default function Card({
     setCounter(Number(counterVal));
   }, [counterVal]);
 
+  // Field drag-to-move uses a manual drag start (dragListener disabled) so we
+  // can require a real drag distance before moving — small movements stay taps.
+  const dragControls = useDragControls();
+  const fieldDragStart = useRef(null);
+  // Set true once a field drag crosses the threshold, so the trailing tap/click
+  // that fires on release doesn't also engage the card. Reset on next press.
+  const suppressTapRef = useRef(false);
+  const fieldDraggable = onField && !opponentField && !ready;
+  // Cemetery/Hand drops are for plain base cards only. Evolved cards (have a
+  // base beneath), tokens, and advanced cards can only be moved between field
+  // slots — so they don't offer or accept cemetery/hand drops.
+  const isEvoFieldCard = onField && !!cardBeneath && cardBeneath !== 0;
+  const isSpecialFieldCard =
+    onField &&
+    typeof name === "string" &&
+    (name.slice(-5) === "TOKEN" || name.slice(-8) === "ADVANCED");
+
   const handleTap = () => {
     if (gameMode === "automated") return;
+    if (suppressTapRef.current) {
+      suppressTapRef.current = false;
+      return;
+    }
     if (onField && !opponentField && !ready && !hoverInput) {
       dispatch(setEngaged(idx));
     }
   };
+
+  const handleFieldPointerDown = (e) => {
+    if (e.button !== 0) return; // left button only; leave right-click for menus
+    fieldDragStart.current = { x: e.clientX, y: e.clientY };
+    suppressTapRef.current = false;
+  };
+  const handleFieldPointerMove = (e) => {
+    if (!fieldDragStart.current || suppressTapRef.current) return;
+    // Only while the left button is held — pointermove also fires on plain
+    // hover, which must never start a drag.
+    if (e.buttons !== 1) {
+      fieldDragStart.current = null;
+      return;
+    }
+    const dx = e.clientX - fieldDragStart.current.x;
+    const dy = e.clientY - fieldDragStart.current.y;
+    if (Math.hypot(dx, dy) > FIELD_DRAG_THRESHOLD) {
+      suppressTapRef.current = true;
+      dragControls.start(e);
+    }
+  };
+  const handleFieldPointerUp = () => {
+    fieldDragStart.current = null;
+  };
+  // Base field cards can also go to the cemetery or back to hand; evolved,
+  // token, and advanced cards can only be moved between slots.
+  const fieldExtraTargets = !isEvoFieldCard && !isSpecialFieldCard;
+  const handleFieldDragStart = () => {
+    setDragHover({
+      active: true,
+      index: -1,
+      cemetery: false,
+      hand: false,
+      showCemetery: fieldExtraTargets,
+      showHand: fieldExtraTargets,
+    });
+  };
+  const handleFieldDrag = (_event, info) => {
+    const { x, y } = info.point;
+    setDragHover({
+      active: true,
+      index: fieldIndexAt(x, y),
+      cemetery: fieldExtraTargets && isOverCemetery(x, y),
+      hand: fieldExtraTargets && isOverHand(x, y),
+      showCemetery: fieldExtraTargets,
+      showHand: fieldExtraTargets,
+    });
+  };
+  const handleFieldDragEnd = (_event, info) => {
+    setDragHover({
+      active: false,
+      index: -1,
+      cemetery: false,
+      hand: false,
+      showCemetery: false,
+      showHand: false,
+    });
+    if (!onFieldDrop) return;
+    const { x, y } = info.point;
+    let dest;
+    if (fieldExtraTargets && isOverCemetery(x, y)) dest = { type: "cemetery" };
+    else if (fieldExtraTargets && isOverHand(x, y)) dest = { type: "hand" };
+    else dest = { type: "field", index: fieldIndexAt(x, y) };
+    onFieldDrop(idx, dest);
+  };
+
+  // ---- drag a hand card onto a field zone or the cemetery ----
+  // Dropping over an empty field zone plays the card there; dropping over the
+  // cemetery pile discards it; anywhere else snaps it back to the hand
+  // (dragSnapToOrigin). These mirror the right-click "Field"/"Cemetery" menu
+  // actions and coexist with the click-to-place flow.
+  const handleCardDragStart = () => {
+    if (onCardDragStart) onCardDragStart();
+    setDragHover({
+      active: true,
+      index: -1,
+      cemetery: false,
+      hand: false,
+      showCemetery: true,
+      showHand: false,
+    });
+  };
+  const handleCardDrag = (_event, info) => {
+    setDragHover({
+      active: true,
+      index: fieldIndexAt(info.point.x, info.point.y),
+      cemetery: isOverCemetery(info.point.x, info.point.y),
+      hand: false,
+      showCemetery: true,
+      showHand: false,
+    });
+  };
+  const handleCardDragEnd = (_event, info) => {
+    setDragHover({
+      active: false,
+      index: -1,
+      cemetery: false,
+      hand: false,
+      showCemetery: false,
+      showHand: false,
+    });
+    if (onCardDragEnd) onCardDragEnd();
+    const { x, y } = info.point;
+    if (isOverCemetery(x, y)) {
+      dispatch(placeToCemeteryFromHand({ name: name, index: inHandIndex }));
+      return;
+    }
+    const dropIndex = fieldIndexAt(x, y);
+    if (dropIndex >= 0 && reduxField[dropIndex] === 0) {
+      dispatch(
+        placeToFieldFromHand({
+          card: name,
+          indexInHand: inHandIndex,
+          index: dropIndex,
+        })
+      );
+      // Reveal only when played to the field (top row, 0-4), not the EX area.
+      if (dropIndex < 5)
+        triggerCardReveal(name, reduxRoom, dropIndex, fieldSlotCenter(dropIndex));
+    }
+  };
+
+  // Drag props differ by where the card lives. Hand cards auto-drag (small
+  // built-in threshold) and drop to a field zone or the cemetery. Field cards
+  // use a manual drag start gated by FIELD_DRAG_THRESHOLD so a tap still
+  // engages; they drop to another field slot to reposition.
+  let dragProps = {};
+  if (inHand && !ready) {
+    dragProps = {
+      drag: true,
+      dragConstraints: constraintsRef,
+      dragSnapToOrigin: true,
+      dragElastic: 0.15,
+      dragMomentum: false,
+      whileDrag: { scale: 1.15, zIndex: 9999, cursor: "grabbing" },
+      onDragStart: handleCardDragStart,
+      onDrag: handleCardDrag,
+      onDragEnd: handleCardDragEnd,
+    };
+  } else if (fieldDraggable) {
+    dragProps = {
+      drag: true,
+      dragListener: false,
+      dragControls: dragControls,
+      dragSnapToOrigin: true,
+      dragElastic: 0.1,
+      dragMomentum: false,
+      whileDrag: { scale: 1.08, zIndex: 9999, cursor: "grabbing" },
+      onPointerDown: handleFieldPointerDown,
+      onPointerMove: handleFieldPointerMove,
+      onPointerUp: handleFieldPointerUp,
+      onDragStart: handleFieldDragStart,
+      onDrag: handleFieldDrag,
+      onDragEnd: handleFieldDragEnd,
+    };
+  }
 
   const handleAtkInput = (event) => {
     setAtk(Number(event.target.value));
@@ -109,6 +321,11 @@ export default function Card({
   };
 
   const handleHoverStart = () => {
+    // While any hand card is being dragged, don't let the pointer passing over
+    // other cards lift them or hijack the zoom preview — the rest of the hand
+    // should stay put.
+    if (handDragging) return;
+    setKwHover(true);
     if (!ready) {
       setHovering(true);
       if (name.slice(0, 6) === "Carrot" || name === "Drive Point") {
@@ -126,6 +343,7 @@ export default function Card({
   };
 
   const handleHoverEnd = () => {
+    setKwHover(false);
     setHovering(false);
   };
 
@@ -152,25 +370,23 @@ export default function Card({
     <>
       <motion.div
         onTap={handleTap}
-        // style={{
-        //   height: "160px",
-        //   position: "relative",
-        // }}
+        {...dragProps}
+        // Lift the whole card (and its overflowing keyword labels) above
+        // neighbouring cards while hovered so the black boxes aren't clipped.
+        style={{
+          position: "relative",
+          zIndex: kwHover ? 999 : "auto",
+          cursor: `url(${img}) 55 55, auto`,
+          // Kept invisible while its "card played" reveal flies to this slot;
+          // it fades in once the reveal lands (see PlayReveal / cardRevealBus).
+          opacity: hidden ? 0 : 1,
+          pointerEvents: hidden ? "none" : undefined,
+          transition: "opacity 0.18s ease-out",
+        }}
         animate={engaged ? { rotate: -90 } : { rotate: 0 }}
         initial={false}
         onHoverStart={() => handleHoverStart()}
         onHoverEnd={() => handleHoverEnd()}
-        whileHover={
-          !ready && {
-            // boxShadow:
-            //   "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 1.0)",
-            translateY: inHand ? -80 : -25,
-            scale: inHand ? 1.5 : 1.3,
-            cursor: `url(${img}) 55 55, auto`,
-            overlay: "auto",
-            // display: "inline-block",
-          }
-        }
         className={
           cardPos(reduxCardSelectedOnField) === idx && opponentField
             ? "box2"
@@ -180,12 +396,6 @@ export default function Card({
               (reduxEnemyCardSelectedInHand - handLength + 1) * -1 ===
                 inHandIndex
             ? "box2"
-            : aura === 1
-            ? "aura"
-            : bane === 1
-            ? "bane"
-            : ward === 1
-            ? "ward"
             : "none"
         }
       >
@@ -209,6 +419,110 @@ export default function Card({
             }}
           >
             {discountedPlayCost}
+          </div>
+        )}
+        {keywords && keywords.length > 0 && kwHover && (
+          // Hover: larger badge. Not engaged -> sits above the card's top edge,
+          // spanning the card width. Engaged -> the card is rotated -90°, so we
+          // counter-rotate +90° (text reads normally) and push it to the card's
+          // visual top.
+          <div
+            style={
+              engaged
+                ? {
+                    // Card is rotated -90°; its visual top edge is the card's
+                    // height (161px), so size the (counter-rotated) bar to that
+                    // and stretch the box to span it.
+                    position: "absolute",
+                    top: "50%",
+                    left: "50%",
+                    width: 161,
+                    transform:
+                      "translate(-50%, -50%) rotate(90deg) translateY(-90px)",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "stretch",
+                    gap: 3,
+                    zIndex: 20,
+                    pointerEvents: "none",
+                  }
+                : {
+                    position: "absolute",
+                    bottom: "100%",
+                    left: 0,
+                    width: "100%",
+                    marginBottom: 4,
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "stretch",
+                    gap: 3,
+                    zIndex: 20,
+                    pointerEvents: "none",
+                  }
+            }
+          >
+            {keywords.map((kw) => (
+              <div
+                key={kw}
+                style={{
+                  background: "#000",
+                  color: "#fff",
+                  fontFamily: "Noto Serif JP, serif",
+                  fontSize: 18,
+                  fontWeight: 700,
+                  lineHeight: 1,
+                  letterSpacing: 0.5,
+                  padding: "5px 0",
+                  textAlign: "center",
+                  borderRadius: 4,
+                  border: "1px solid rgba(255,255,255,0.9)",
+                  whiteSpace: "nowrap",
+                  boxShadow: "0 1px 4px rgba(0,0,0,0.7)",
+                }}
+              >
+                {kw}
+              </div>
+            ))}
+          </div>
+        )}
+        {keywords && keywords.length > 0 && !kwHover && (
+          // Default + any engaged state: the original compact badge at the top
+          // of the card (rotates with the card when engaged).
+          <div
+            style={{
+              position: "absolute",
+              top: 4,
+              left: "50%",
+              transform: "translateX(-50%)",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              gap: 2,
+              zIndex: 20,
+              pointerEvents: "none",
+            }}
+          >
+            {keywords.map((kw) => (
+              <div
+                key={kw}
+                style={{
+                  background: "#000",
+                  color: "#fff",
+                  fontFamily: "Noto Serif JP, serif",
+                  fontSize: 11,
+                  fontWeight: 700,
+                  lineHeight: 1,
+                  letterSpacing: 0.5,
+                  padding: "3px 7px",
+                  borderRadius: 3,
+                  border: "1px solid rgba(255,255,255,0.85)",
+                  whiteSpace: "nowrap",
+                  boxShadow: "0 1px 3px rgba(0,0,0,0.7)",
+                }}
+              >
+                {kw}
+              </div>
+            ))}
           </div>
         )}
         {counterVal > 0 && (
@@ -246,11 +560,23 @@ export default function Card({
           <img
             style={{ opacity: 1 }}
             height={"100%"}
-            src={cardImage(cardBeneath)}
+            src={artThumb(cardBeneath, artMap)}
+            onError={(e) => {
+              if (e.currentTarget.src.indexOf("/thumbs/") !== -1)
+                e.currentTarget.src = artImage(cardBeneath, artMap);
+            }}
             alt={name}
           />
         ) : (
-          <img height={"100%"} src={cardImage(name)} alt={name} />
+          <img
+            height={"100%"}
+            src={artThumb(name, artMap)}
+            onError={(e) => {
+              if (e.currentTarget.src.indexOf("/thumbs/") !== -1)
+                e.currentTarget.src = artImage(name, artMap);
+            }}
+            alt={name}
+          />
         )}
 
         {showAtk && (

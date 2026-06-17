@@ -1,0 +1,3574 @@
+[
+  {
+    "cardNo": "BP07-001EN",
+    "name": "Ladica, the Stoneclaw",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Natura / Beast",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "4",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[evolve] [cost01]: Evolve this follower. Activate only if you've played at least 5 cards this turn. Whenever a Naterran Great Tree is put onto your field, recover 1 play point."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-001EN.png"
+  },
+  {
+    "cardNo": "BP07-002EN",
+    "name": "Ladica, the Stoneclaw Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Natura / Beast",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "Storm. Whenever a Naterran Great Tree is put onto your field, recover 1 play point."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-002EN.png"
+  },
+  {
+    "cardNo": "BP07-003EN",
+    "name": "Cynthia, the Queen's Blade",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "6",
+      "attack": "4",
+      "defense": "6",
+      "effect": "[fanfare] Put a Fairy Wisp token into your EX area. Give each Pixie token on your field [attack]+2. While this card is on your field, each Pixie token on your field has Storm and Assail. Whenever a Pixie token is put onto your field, give it [attack]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-003EN.png"
+  },
+  {
+    "cardNo": "BP07-004EN",
+    "name": "Primal Giant",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Natura / Fae-Touched",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "9",
+      "attack": "7",
+      "defense": "7",
+      "effect": "When this card is discarded, put a Naterran Great Tree token into your EX area. When playing this card, bury 4 Natura cards: This card costs 4 less to play. ---------- [fanfare] Select a [forestcraft] follower that costs 5 or less in your cemetery and summon it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-004EN.png"
+  },
+  {
+    "cardNo": "BP07-005EN",
+    "name": "Setus, the Beastblade",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Beast",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "5",
+      "attack": "3",
+      "defense": "5",
+      "effect": "[evolve] [cost02]: Evolve this follower. Ward. At the start of your end phase, give your leader [defense]+4 and, if a follower was put from your field into the cemetery this turn, give this follower [attack]+2/[defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-005EN.png"
+  },
+  {
+    "cardNo": "BP07-006EN",
+    "name": "Setus, the Beastblade Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Beast",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "6",
+      "effect": "Ward. On Evolve - Select a follower that costs 3 or less in your cemetery and summon it. At the start of your end phase, give your leader [defense]+4 and, if a follower was put from your field into the cemetery this turn, give this follower [attack]+2/[defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-006EN.png"
+  },
+  {
+    "cardNo": "BP07-007EN",
+    "name": "Send 'Em Packing",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Natura / Beast",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "0",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a Ladica, the Stoneclaw on your field and give it [attack]+1/[defense]+1. Combo (5) - Deal damage equal to its attack to each enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-007EN.png"
+  },
+  {
+    "cardNo": "BP07-008EN",
+    "name": "Blossom Spirit",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Natura / Fae-Touched",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Put a Naterran Great Tree or Fairy token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-008EN.png"
+  },
+  {
+    "cardNo": "BP07-009EN",
+    "name": "Blossom Spirit Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Natura / Fae-Touched",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "4",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage. If there are at least 3 cards in your EX area, deal 4 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-009EN.png"
+  },
+  {
+    "cardNo": "BP07-010EN",
+    "name": "Avatar of Fruition",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Natura / Fae-Touched",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[fanfare] Put a Naterran Great Tree token into your EX area. While this card is on your field, any Naterran Great Tree you play costs 1 less."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-010EN.png"
+  },
+  {
+    "cardNo": "BP07-011EN",
+    "name": "Divine Smithing",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Elf",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select up to 2 Pixie followers on your field or in your EX area and give them [attack]+1. Combo (3) - Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-011EN.png"
+  },
+  {
+    "cardNo": "BP07-012EN",
+    "name": "Cheshire Cat",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Beast / Fable",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[fanfare] Select an enemy leader or enemy follower on the field and deal it 1 damage. If this card wasn't put onto the field from hand, deal 2 damage instead. [act] [engage], put this card on the bottom of its owner's deck: Select a Fable follower on your field or in your EX area and place 2 Fable counters on it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-012EN.png"
+  },
+  {
+    "cardNo": "BP07-013EN",
+    "name": "Ghastly Treant",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Natura / Verdant",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Put a Naterran Great Tree token into your EX area. [act] Banish a Naterran Great Tree from your field: Give your leader [defense]+3. Activate only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-013EN.png"
+  },
+  {
+    "cardNo": "BP07-014EN",
+    "name": "Forest Hermit",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Hunter",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Put a Naterran Great Tree token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-014EN.png"
+  },
+  {
+    "cardNo": "BP07-015EN",
+    "name": "Forest Hermit Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Hunter",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - Select a Natura card in your cemetery and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-015EN.png"
+  },
+  {
+    "cardNo": "BP07-016EN",
+    "name": "Marvelously Mad Hatter",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Fable",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] If there's another Fable card on your field, search your deck for a Fable follower, put it into your EX area, then shuffle your deck. You may place a Fable counter on that follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-016EN.png"
+  },
+  {
+    "cardNo": "BP07-017EN",
+    "name": "Fertile Aether",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Natura",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Put a Naterran Great Tree token into your EX area. Combo (3) - Put 2 instead and give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-017EN.png"
+  },
+  {
+    "cardNo": "BP07-018EN",
+    "name": "Bayleon, Sovereign Light",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Natura / Commander / Beast",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. Ward. [fanfare] You may put a Naterran Great Tree token onto your field or into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-018EN.png"
+  },
+  {
+    "cardNo": "BP07-019EN",
+    "name": "Bayleon, Sovereign Light Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Natura / Commander / Beast",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Ward. On Evolve - Look at the top 4 cards of your deck. You may put up to 2 Natura cards from among them into your EX area. Put the rest on the bottom of your deck in any order. [act] Banish 2 cards named Naterran Great Tree from your field: Select a Natura follower on your field and give it [attack]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-019EN.png"
+  },
+  {
+    "cardNo": "BP07-020EN",
+    "name": "Mistolina, Forest Princess",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Natura / Commander / Princess",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "6",
+      "attack": "4",
+      "defense": "6",
+      "effect": "Storm. [fanfare] Select a Princess's Strike in your cemetery and play it for 0 play points. [act] [engage] 2 cards named Naterran Great Tree on your field: Give this follower [attack]+3. Give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-020EN.png"
+  },
+  {
+    "cardNo": "BP07-021EN",
+    "name": "Tsubaki of the Demon Blade",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Assassin / Ninja",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "3",
+      "attack": "4",
+      "defense": "3",
+      "effect": "[fanfare] If there are at least 5 [swordcraft] followers in your cemetery, select an enemy follower on the field and destroy it. While there are at least 10 [swordcraft] followers in your cemetery, this follower has Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-021EN.png"
+  },
+  {
+    "cardNo": "BP07-022EN",
+    "name": "Leod, the Crescent Blade",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Assassin",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "3",
+      "effect": "[evolve] [cost02]: Evolve this follower. While this card is reserved on your field, it has Intimidate and Aura. At the start of your end phase, select an enemy follower on the field and deal it 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-022EN.png"
+  },
+  {
+    "cardNo": "BP07-023EN",
+    "name": "Leod, the Crescent Blade Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Assassin",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "4",
+      "effect": "On Evolve - Select an enemy leader or enemy follower on the field and deal it 2 damage. While this card is reserved on your field, it has Intimidate and Aura. At the start of your end phase, select an enemy follower on the field and deal it 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-023EN.png"
+  },
+  {
+    "cardNo": "BP07-024EN",
+    "name": "King's Might",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Natura / Commander / Beast",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "When playing this card, [engage] 2 cards named Naterran Great Tree on your field: This card costs 2 less to play. This card costs 1 less to play if there's a Bayleon, Sovereign Light on your field. ---------- Select an enemy follower on the field and deal it 4 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-024EN.png"
+  },
+  {
+    "cardNo": "BP07-025EN",
+    "name": "Troya, Thunder of Hagelberg",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Assassin",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. Bane."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-025EN.png"
+  },
+  {
+    "cardNo": "BP07-026EN",
+    "name": "Troya, Thunder of Hagelberg Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Officer / Assassin",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Bane. On Evolve - Select an enemy follower on the field and deal it 2 damage. If there are at least 2 Assassin followers in your cemetery, destroy it instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-026EN.png"
+  },
+  {
+    "cardNo": "BP07-027EN",
+    "name": "Valse, Champion Deadeye",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[act] [cost01], [engage]: Select an enemy leader or enemy follower on the field and deal it damage equal to this follower's attack. [act] [cost03], [engage]: Select an enemy amulet on the field and banish it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-027EN.png"
+  },
+  {
+    "cardNo": "BP07-028EN",
+    "name": "Princess's Strike",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Natura / Commander / Princess",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field and deal it 2 damage. If there's a Mistolina, Forest Princess on your field, deal 6 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-028EN.png"
+  },
+  {
+    "cardNo": "BP07-029EN",
+    "name": "Swift Tigress",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Natura / Officer / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "3",
+      "attack": "4",
+      "defense": "3",
+      "effect": "[fanfare] [engage] a Naterran Great Tree on your field: Give this follower Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-029EN.png"
+  },
+  {
+    "cardNo": "BP07-030EN",
+    "name": "Lupine Axeman",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Natura / Officer / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] You may put a Naterran Great Tree token onto your field or into your EX area. [act] [engage] this card and any number of cards named Naterran Great Tree on your field: Select an enemy follower on the field and deal it damage equal to the number of cards named Naterran Great Tree engaged this way."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-030EN.png"
+  },
+  {
+    "cardNo": "BP07-031EN",
+    "name": "Dauntless Commander",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-031EN.png"
+  },
+  {
+    "cardNo": "BP07-032EN",
+    "name": "Dauntless Commander Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Commander",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[lastwords] Put this card into its owner's EX area unevolved."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-032EN.png"
+  },
+  {
+    "cardNo": "BP07-033EN",
+    "name": "Tempered Aether",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Natura",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Put a Naterran Great Tree token onto your field and into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-033EN.png"
+  },
+  {
+    "cardNo": "BP07-034EN",
+    "name": "Elegance in Action",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Officer / Maid",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "When this card is discarded, select an enemy follower on the field and engage it. ---------- Select an enemy follower on the field. Engage it and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-034EN.png"
+  },
+  {
+    "cardNo": "BP07-035EN",
+    "name": "Tetra, Sapphire Rebel",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Machina / Golem",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Put a Repair Mode token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-035EN.png"
+  },
+  {
+    "cardNo": "BP07-036EN",
+    "name": "Tetra, Sapphire Rebel Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Machina / Golem",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "While this card is on your field, any Machina card you play from the EX area costs 1 less. 4 times per turn, when you play a Machina card, select an enemy follower on the field and deal it 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-036EN.png"
+  },
+  {
+    "cardNo": "BP07-037EN",
+    "name": "Belphomet, Lord of Aiolon",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Machina / Supreme",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "7",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Rush. [fanfare] Look at the top 5 cards of your deck. From among them, you may summon any number of Machina followers that cost a total of 6 or less. Put the rest on the bottom of your deck in any order. At the start of your end phase, give each other Machina follower on your field [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-037EN.png"
+  },
+  {
+    "cardNo": "BP07-038EN",
+    "name": "Riley, Hydroshaman",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[fanfare] Earth Rite: Choose one of the following. If this card was put onto the field from the cemetery, choose up to 3 instead. (1) Select an enemy follower on the field and deal it 5 damage. (2) Give this follower [attack]+3. (3) Draw 2 cards. [act] [cost06]: Summon this card from your cemetery. Give it Storm and \"[lastwords] Banish this card.\""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-038EN.png"
+  },
+  {
+    "cardNo": "BP07-039EN",
+    "name": "Eleanor, Cosmic Flower",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Discard a spell: Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-039EN.png"
+  },
+  {
+    "cardNo": "BP07-040EN",
+    "name": "Eleanor, Cosmic Flower Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Search your deck for a Splendid Conjury, put it into your EX area, then shuffle your deck. Spellchain (10) - It costs 2 less to play this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-040EN.png"
+  },
+  {
+    "cardNo": "BP07-041EN",
+    "name": "Delta Cannon",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Machina / Golem",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "When a Tetra, Sapphire Rebel is put onto your field, [cost01]: Put this card from your cemetery into your EX area. ---------- [quick] Select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-041EN.png"
+  },
+  {
+    "cardNo": "BP07-042EN",
+    "name": "Displacer Bot",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Machina / Golem",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[evolve] [cost02]: Evolve this follower. Ward. [fanfare] Look at the top 4 cards of your deck. You may put a Machina card from among them into your EX area. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-042EN.png"
+  },
+  {
+    "cardNo": "BP07-043EN",
+    "name": "Displacer Bot Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Machina / Golem",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "3",
+      "effect": "Ward. On Evolve - Select an enemy follower on the field and deal it damage equal to 2 times the number of Machina cards in your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-043EN.png"
+  },
+  {
+    "cardNo": "BP07-044EN",
+    "name": "Mechanized Lifeform",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Machina / Forbidden",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "1",
+      "effect": "[fanfare] Put a Repair Mode token into your EX area. Once per turn, when you play a Machina card, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-044EN.png"
+  },
+  {
+    "cardNo": "BP07-045EN",
+    "name": "Splendid Conjury",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select up to 3 enemy followers on the field and deal 3 damage divided between them. If there's an Eleanor, Cosmic Flower on your field, deal 5 damage divided between them instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-045EN.png"
+  },
+  {
+    "cardNo": "BP07-046EN",
+    "name": "Mechastaff Sorcerer",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Machina / Mage",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Put an Assembly Droid or Repair Mode token into your EX area. [act] [engage], banish a Machina card from your EX area: Select an enemy follower on the field and deal it damage equal to the number of Machina cards in your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-046EN.png"
+  },
+  {
+    "cardNo": "BP07-047EN",
+    "name": "Prototype Warrior",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Machina / Golem",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "1",
+      "effect": "[fanfare] Choose one of the following. (1) Put an Assembly Droid token into your EX area. (2) If there are at least 3 Machina cards in your EX area, give this follower [attack]+1/[defense]+1 and Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-047EN.png"
+  },
+  {
+    "cardNo": "BP07-048EN",
+    "name": "Magiblade Witch",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-048EN.png"
+  },
+  {
+    "cardNo": "BP07-049EN",
+    "name": "Magiblade Witch Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Choose one of the following. (1) Summon a Magic Sediment token. (2) Earth Rite: Select up to 2 enemy followers on the field and deal 4 damage divided between them."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-049EN.png"
+  },
+  {
+    "cardNo": "BP07-050EN",
+    "name": "Presto Chango",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy card on the field and put it on the bottom of its owner's deck. Its controller may summon a follower or amulet from their hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-050EN.png"
+  },
+  {
+    "cardNo": "BP07-051EN",
+    "name": "Sagacious Core",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet",
+      "trait": "Machina",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Look at the top 2 cards of your deck. You may reveal a Machina card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. [act] [engage], bury this card: Deal 1 damage to each enemy leader. Activate only if there are at least 3 Machina cards in your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-051EN.png"
+  },
+  {
+    "cardNo": "BP07-052EN",
+    "name": "Valdain, Cursed Shadow",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Natura / Dragonewt",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost02]: Evolve this follower. [evolve] [cost00]: Evolve this follower. Activate only if there are at least 10 Natura cards in your cemetery. [fanfare] Look at the top 3 cards of your deck. You may reveal a Natura card from among them and add it to your hand. Bury the rest."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-052EN.png"
+  },
+  {
+    "cardNo": "BP07-053EN",
+    "name": "Valdain, Cursed Shadow Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Natura / Dragonewt",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "On Evolve - Choose one of the following. (1) Select an enemy follower on the field. Deal it 4 damage, search your deck for a Shadow's Corrosion and put it into your EX area, then shuffle your deck. (2) Select a Shadow's Corrosion in your cemetery and play it for 0 play points."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-053EN.png"
+  },
+  {
+    "cardNo": "BP07-054EN",
+    "name": "Neptune, Tidemistress",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart / Marine",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "7",
+      "attack": "6",
+      "defense": "6",
+      "effect": "Ward. [fanfare] Look at the top 5 cards of your deck. From among them, you may reveal up to 2 Marine followers not named Neptune, Tidemistress and add them to your hand. Put the rest on the bottom of your deck in any order. You may summon a Marine follower that costs 5 or less from your hand and give it [attack]+2/[defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-054EN.png"
+  },
+  {
+    "cardNo": "BP07-055EN",
+    "name": "Wildfire Tyrannosaur",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Natura / Wyrmkin",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "8",
+      "attack": "6",
+      "defense": "6",
+      "effect": "When this card is discarded, [cost01]: Select an enemy follower on the field and deal it 3 damage. ---------- [act] Banish a Naterran Great Tree from your field: Deal 3 damage to each enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-055EN.png"
+  },
+  {
+    "cardNo": "BP07-056EN",
+    "name": "Marion, Elegant Dragonewt",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] If Overflow is active for you, look at the top 3 cards of your deck. You may put a [dragoncraft] follower from among them into your EX area. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-056EN.png"
+  },
+  {
+    "cardNo": "BP07-057EN",
+    "name": "Marion, Elegant Dragonewt Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonewt",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - Select another [dragoncraft] follower on your field or in your EX area and give it [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-057EN.png"
+  },
+  {
+    "cardNo": "BP07-058EN",
+    "name": "Shadow's Corrosion",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Natura / Dragonewt",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "This card can't be played from the EX area. At the start of your end phase, if this card is in your EX area, deal 1 damage to each enemy leader for every 5 Natura cards in your cemetery. ---------- Select an enemy follower on the field. Deal it 4 damage and, if there's a Valdain, Cursed Shadow on your field, put this card into its owner's EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-058EN.png"
+  },
+  {
+    "cardNo": "BP07-059EN",
+    "name": "Bubbleborne Mermaid",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Marine",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Give your leader [defense]+1 for every Marine follower on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-059EN.png"
+  },
+  {
+    "cardNo": "BP07-060EN",
+    "name": "Hoarfrost Triceratops",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Natura / Wyrmkin",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Banish a Naterran Great Tree from your field: Give this follower [attack]+2/[defense]+2. [lastwords] Summon a Naterran Great Tree token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-060EN.png"
+  },
+  {
+    "cardNo": "BP07-061EN",
+    "name": "Hoarfrost Triceratops Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Natura / Wyrmkin",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 3 damage. [lastwords] Summon a Naterran Great Tree token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-061EN.png"
+  },
+  {
+    "cardNo": "BP07-062EN",
+    "name": "Whirlwind Pteranodon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Natura / Wyrmkin",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[fanfare] Banish a Naterran Great Tree from your field: Increase your max play points by 1. [lastwords] Summon a Naterran Great Tree token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-062EN.png"
+  },
+  {
+    "cardNo": "BP07-063EN",
+    "name": "Dragonewt Needler",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "4",
+      "effect": "Whenever a Dragonewt follower on your field attacks, deal 2 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-063EN.png"
+  },
+  {
+    "cardNo": "BP07-064EN",
+    "name": "Lightning Velociraptor",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Natura / Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[fanfare] Summon a Naterran Great Tree token. If Overflow is active for you, summon up to 2 instead and give this follower Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-064EN.png"
+  },
+  {
+    "cardNo": "BP07-065EN",
+    "name": "Doting Dragoneer",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost02]: Evolve this follower. [fanfare] If Overflow is active for you, select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-065EN.png"
+  },
+  {
+    "cardNo": "BP07-066EN",
+    "name": "Doting Dragoneer Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonheart",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select a [dragoncraft] follower that costs 3 or less in your cemetery and summon it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-066EN.png"
+  },
+  {
+    "cardNo": "BP07-067EN",
+    "name": "Boomfish",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Marine",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[act] [cost02], bury this card: Deal 3 damage to each follower on the field and your leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-067EN.png"
+  },
+  {
+    "cardNo": "BP07-068EN",
+    "name": "Feral Aether",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Natura",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Summon a Naterran Great Tree token. If Overflow is active for you, summon up to 3 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-068EN.png"
+  },
+  {
+    "cardNo": "BP07-069EN",
+    "name": "Mono, Garnet Rebel",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Machina / Demon",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. Activate only if there are 5 Machina followers on your field. [act] Banish 2 Machina cards from your cemetery: Summon an Assembly Droid token. Activate only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-069EN.png"
+  },
+  {
+    "cardNo": "BP07-070EN",
+    "name": "Mono, Garnet Rebel Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Machina / Demon",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "4",
+      "effect": "Storm. [act] [cost02], banish an Alpha Drive from your cemetery: Give each Machina follower on your field [attack]+2/[defense]+2 and Rush. Activate only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-070EN.png"
+  },
+  {
+    "cardNo": "BP07-071EN",
+    "name": "Kudlak",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vampire",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "7",
+      "attack": "4",
+      "defense": "6",
+      "effect": "[fanfare] Select up to 2 Vampire cards that cost a total of 6 or less in your cemetery and put them into your EX area. They cost 0 play points to play this turn. [act] [engage]: Select an enemy follower on the field and deal it damage equal to the number of Vampire cards on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-071EN.png"
+  },
+  {
+    "cardNo": "BP07-072EN",
+    "name": "Aenea, Amethyst Rebel",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Machina / Demon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "4",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Search your deck for a Machina follower that costs 3 or less, summon it, then shuffle your deck. [lastwords] Give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-072EN.png"
+  },
+  {
+    "cardNo": "BP07-073EN",
+    "name": "Doublame, Duke and Dame",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Bury the top card of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-073EN.png"
+  },
+  {
+    "cardNo": "BP07-074EN",
+    "name": "Doublame, Duke and Dame Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Demon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage. Necrocharge (10) - Deal 4 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-074EN.png"
+  },
+  {
+    "cardNo": "BP07-075EN",
+    "name": "Alpha Drive",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Machina / Demon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose one of the following. (1) Select a Machina follower in your cemetery and add it to your hand. (2) Select a Mono, Garnet Rebel in your cemetery and summon it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-075EN.png"
+  },
+  {
+    "cardNo": "BP07-076EN",
+    "name": "Nicola, Forbidden Strength",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Machina / Departed",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Bury the top 2 cards of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-076EN.png"
+  },
+  {
+    "cardNo": "BP07-077EN",
+    "name": "Nicola, Forbidden Strength Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Machina / Departed",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Select a Machina card that costs 2 or less in your cemetery and put it into your EX area. It costs 2 less to play this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-077EN.png"
+  },
+  {
+    "cardNo": "BP07-078EN",
+    "name": "Hellblaze Demon",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Discard a card: Put the top card of your deck into your EX area. If it's a follower, give it [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-078EN.png"
+  },
+  {
+    "cardNo": "BP07-079EN",
+    "name": "Forbidden Art",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Machina / Departed",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field and deal it 4 damage. If there's a Nicola, Forbidden Strength on your field, deal 6 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-079EN.png"
+  },
+  {
+    "cardNo": "BP07-080EN",
+    "name": "Robozombie",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Machina / Departed",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "4",
+      "attack": "2",
+      "defense": "5",
+      "effect": "Assail. Bane. While there's another Machina follower on your field, this follower has Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-080EN.png"
+  },
+  {
+    "cardNo": "BP07-081EN",
+    "name": "Bone Drone",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Machina / Departed",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[lastwords] Summon an Assembly Droid token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-081EN.png"
+  },
+  {
+    "cardNo": "BP07-082EN",
+    "name": "Berserk Demon",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "4",
+      "attack": "6",
+      "defense": "6",
+      "effect": "[evolve] [cost03]: Evolve this follower. [fanfare] Deal 3 damage to your leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-082EN.png"
+  },
+  {
+    "cardNo": "BP07-083EN",
+    "name": "Berserk Demon Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Demon",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "8",
+      "defense": "8",
+      "effect": "On Evolve - Select up to 2 enemy followers on the field and destroy them."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-083EN.png"
+  },
+  {
+    "cardNo": "BP07-084EN",
+    "name": "Ghostwriter",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Whenever a follower on your field evolves, summon 2 Ghost tokens. [act] [engage]: Select a Ghost on your field and give it Bane."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-084EN.png"
+  },
+  {
+    "cardNo": "BP07-085EN",
+    "name": "Sanguine Core",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Amulet",
+      "trait": "Machina",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Look at the top 2 cards of your deck. You may reveal a Machina card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. [act] [engage], bury this card: Put an Assembly Droid token into your EX area. Activate only if there are at least 5 Machina cards in your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-085EN.png"
+  },
+  {
+    "cardNo": "BP07-086EN",
+    "name": "Limonia, Flawed Saint",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Machina / Faith / Zealot / Eidolon",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[evolve] [cost07]: Evolve this follower. [fanfare] Put a Repair Mode token into your EX area. [act] Banish a Repair Mode from your EX area: This card's [evolve] costs 1 less this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-086EN.png"
+  },
+  {
+    "cardNo": "BP07-087EN",
+    "name": "Limonia, Flawed Saint Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Machina / Faith / Zealot / Eidolon",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "4",
+      "effect": "On Evolve - Destroy each enemy follower on the field. [act] [cost00]: Select a Machina follower that costs 2 or less in your cemetery and summon it. Activate only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-087EN.png"
+  },
+  {
+    "cardNo": "BP07-088EN",
+    "name": "Lapis, Glorious Seraph",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Luminary / Lightborne",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "5",
+      "attack": "3",
+      "defense": "7",
+      "effect": "Ward. When this card leaves the field, draw a card for every prayer counter on it. At the start of your end phase, select a card on your field. Place a prayer counter on it and give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-088EN.png"
+  },
+  {
+    "cardNo": "BP07-089EN",
+    "name": "Father Refinement",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Machina / Faith / Zealot",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Rush. [fanfare] Put 2 Repair Mode tokens into your EX area. Recover 2 play points. Strike - Draw a card. If there are 5 cards named Repair Mode in your EX area, draw 2 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-089EN.png"
+  },
+  {
+    "cardNo": "BP07-090EN",
+    "name": "Marlone, Light of Balance",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Each player puts a Repair Mode token into their EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-090EN.png"
+  },
+  {
+    "cardNo": "BP07-091EN",
+    "name": "Marlone, Light of Balance Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Select an enemy follower that costs X or less on the field and destroy it. X equals the number of cards in your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-091EN.png"
+  },
+  {
+    "cardNo": "BP07-092EN",
+    "name": "Augmentation Bestowal",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Machina / Faith",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose one of the following. (1) Banish 2 cards named Repair Mode from your EX area: Search your deck for a Machina follower that costs 3 or less, summon it, then shuffle your deck. (2) Banish 5 cards named Repair Mode from your EX area: Search your deck for a Machina follower that costs 6 or less, summon it, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-092EN.png"
+  },
+  {
+    "cardNo": "BP07-093EN",
+    "name": "Bunny-Eared Administrator",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Beast / Fable",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "1",
+      "effect": "[fanfare] If this card wasn't put onto the field from hand, select an enemy follower on the field and deal it 3 damage. [act] [cost01], discard this card: Give your leader [defense]+1. Put this card into your deck 3rd from the top."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-093EN.png"
+  },
+  {
+    "cardNo": "BP07-094EN",
+    "name": "Robofalcon",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Machina / Avian",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. Storm. Strike - Put a Repair Mode token into your EX area. Then, if there are at least 3 cards named Repair Mode in your EX area, give this follower [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-094EN.png"
+  },
+  {
+    "cardNo": "BP07-095EN",
+    "name": "Robofalcon Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Machina / Avian",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "4",
+      "effect": "Storm. On Evolve - Put a Repair Mode token into your EX area. Strike - Put a Repair Mode token into your EX area. Then, if there are at least 3 cards named Repair Mode in your EX area, give this follower [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-095EN.png"
+  },
+  {
+    "cardNo": "BP07-096EN",
+    "name": "Marcotte, Heretical Sister",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Zealot",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "3",
+      "effect": "Ward. [fanfare] Draw a card. If there are 5 cards in your EX area, instead search your deck for any card, add it to your hand, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-096EN.png"
+  },
+  {
+    "cardNo": "BP07-097EN",
+    "name": "Ironknuckle Nun",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Machina / Faith",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Ward. [fanfare][lastwords] Put a Repair Mode token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-097EN.png"
+  },
+  {
+    "cardNo": "BP07-098EN",
+    "name": "Dark Bishop",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Fable",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-098EN.png"
+  },
+  {
+    "cardNo": "BP07-099EN",
+    "name": "Dark Bishop Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith / Fable",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Look at the top 5 cards of your deck. From among them, you may summon a Fable follower that costs 5 or less or Fable amulet that costs 5 or less. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-099EN.png"
+  },
+  {
+    "cardNo": "BP07-100EN",
+    "name": "Meowskers, Ruff-Tuff Major",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Natura / Lightborne / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "3",
+      "effect": "Storm. Strike - Select an enemy leader or enemy follower on the field and deal it 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-100EN.png"
+  },
+  {
+    "cardNo": "BP07-101EN",
+    "name": "Saintly Core",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Machina",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Look at the top 2 cards of your deck. You may reveal a Machina card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. [act] [engage], bury this card: Put a Repair Mode token into your EX area. Activate only if there are at least 2 Machina followers on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-101EN.png"
+  },
+  {
+    "cardNo": "BP07-102EN",
+    "name": "Meowskers Ambush!",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Natura / Lightborne / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Look at the top 3 cards of your deck. You may reveal a [havencraft] follower from among them and add it to your hand. Put the rest on the bottom of your deck in any order. [act] [cost01], [engage], bury this card: You may summon a follower with \"Meowskers\" in its name from your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-102EN.png"
+  },
+  {
+    "cardNo": "BP07-103EN",
+    "name": "Technolord",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Machina / Deity",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "6",
+      "attack": "6",
+      "defense": "6",
+      "effect": "[fanfare] Banish 3 Machina cards from your cemetery: Choose up to 2 of the following. (1) Select an enemy follower on the field and destroy it. (2) Select an enemy amulet on the field and destroy it. (3) Deal 3 damage to each enemy leader. (4) Search your deck for a Machina card not named Technolord, reveal it, add it to your hand, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-103EN.png"
+  },
+  {
+    "cardNo": "BP07-104EN",
+    "name": "Viridia Magna",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Natura / Deity",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "4",
+      "attack": "0",
+      "defense": "4",
+      "effect": "Rush. Assail. Bane. [lastwords] Banish a Naterran Great Tree from your field or EX area: Put this card onto its owner's field engaged and evolve it. If you didn't evolve it, banish it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-104EN.png"
+  },
+  {
+    "cardNo": "BP07-105EN",
+    "name": "Viridia Magna Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Natura / Deity",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Ward. [lastwords] Give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-105EN.png"
+  },
+  {
+    "cardNo": "BP07-106EN",
+    "name": "Mechawing Angel",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Machina / Angel",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Ward. [fanfare] Put an Assembly Droid or Repair Mode token into your EX area. [act] [engage]: Select an enemy follower on the field and deal it 4 damage. Activate only if there are at least 5 Machina cards in your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-106EN.png"
+  },
+  {
+    "cardNo": "BP07-107EN",
+    "name": "Desert Pathfinder",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Natura / Mercenary",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] You may put a Naterran Great Tree token onto your field or into your EX area. Then, if there are at least 5 Natura cards on your field and/or in your EX area, look at the top 3 cards of your deck. You may reveal a Natura card from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-107EN.png"
+  },
+  {
+    "cardNo": "BP07-108EN",
+    "name": "Maisha, Hero of Purgation",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Supreme",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[evolve] [cost02]: Evolve this follower. Strike - Select a [neutral] spell that costs 3 or less in your cemetery and play it for 0 play points."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-108EN.png"
+  },
+  {
+    "cardNo": "BP07-109EN",
+    "name": "Maisha, Hero of Purgation Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Supreme",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "4",
+      "effect": "On Evolve - [cost05]: Bury the top 5 cards of your deck. Give this follower Storm. Strike - Select a [neutral] spell that costs 3 or less in your cemetery and play it for 0 play points."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-109EN.png"
+  },
+  {
+    "cardNo": "BP07-110EN",
+    "name": "Robogoblin",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Machina / Goblinoid",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [lastwords] Put a Repair Mode token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-110EN.png"
+  },
+  {
+    "cardNo": "BP07-111EN",
+    "name": "Robogoblin Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Machina / Goblinoid",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Summon an Assembly Droid token. [lastwords] Put a Repair Mode token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-111EN.png"
+  },
+  {
+    "cardNo": "BP07-112EN",
+    "name": "Colorful Cook",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Natura / Chef",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[fanfare] You may put a Naterran Great Tree token onto your field or into your EX area. Give your leader [defense]+1. [lastwords] Discard a Natura card: Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-112EN.png"
+  },
+  {
+    "cardNo": "BP07-113EN",
+    "name": "Purgation's Blade",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Supreme",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field. Destroy it and give each Maisha, Hero of Purgation on your field [attack]+1 for every follower in your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-113EN.png"
+  },
+  {
+    "cardNo": "BP07-114EN",
+    "name": "Aldis, Trendsetting Seraph",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Angel",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "5",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Give your leader [defense]+3."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-114EN.png"
+  },
+  {
+    "cardNo": "BP07-115EN",
+    "name": "Aldis, Trendsetting Seraph Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Angel",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "6",
+      "effect": "[lastwords] Deal 3 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-115EN.png"
+  },
+  {
+    "cardNo": "BP07-116EN",
+    "name": "Mechagun Wielder",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Machina / Mercenary",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[fanfare] Put an Assembly Droid or Repair Mode token into your EX area. [lastwords] Discard a Machina card: Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-116EN.png"
+  },
+  {
+    "cardNo": "BP07-117EN",
+    "name": "Extreme Carrot",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Natura / Mercenary",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Rush. [lastwords] [cost01], banish a Naterran Great Tree from your field or EX area: Search your deck for an Extreme Carrot, summon it, then shuffle your deck. Give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-117EN.png"
+  },
+  {
+    "cardNo": "BP07-LD01EN",
+    "name": "Emmylou, Wee Witchette",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-LD01EN.png"
+  },
+  {
+    "cardNo": "BP07-LD02EN",
+    "name": "Forte, Duskwing Tyrant",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-LD02EN.png"
+  },
+  {
+    "cardNo": "BP07-LD03EN",
+    "name": "Sonia, Guardian of Silence",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-LD03EN.png"
+  },
+  {
+    "cardNo": "BP07-P01EN",
+    "name": "Send 'Em Packing",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Natura / Beast",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "0",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a Ladica, the Stoneclaw on your field and give it [attack]+1/[defense]+1. Combo (5) - Deal damage equal to its attack to each enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-P01EN.png"
+  },
+  {
+    "cardNo": "BP07-P02EN",
+    "name": "Blossom Spirit",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Natura / Fae-Touched",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Put a Naterran Great Tree or Fairy token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-P02EN.png"
+  },
+  {
+    "cardNo": "BP07-P03EN",
+    "name": "Blossom Spirit Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Natura / Fae-Touched",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "4",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage. If there are at least 3 cards in your EX area, deal 4 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-P03EN.png"
+  },
+  {
+    "cardNo": "BP07-P04EN",
+    "name": "Avatar of Fruition",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Natura / Fae-Touched",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[fanfare] Put a Naterran Great Tree token into your EX area. While this card is on your field, any Naterran Great Tree you play costs 1 less."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-P04EN.png"
+  },
+  {
+    "cardNo": "BP07-P05EN",
+    "name": "Fertile Aether",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Natura",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Put a Naterran Great Tree token into your EX area. Combo (3) - Put 2 instead and give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-P05EN.png"
+  },
+  {
+    "cardNo": "BP07-P06EN",
+    "name": "King's Might",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Natura / Commander / Beast",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "When playing this card, [engage] 2 cards named Naterran Great Tree on your field: This card costs 2 less to play. This card costs 1 less to play if there's a Bayleon, Sovereign Light on your field. ---------- Select an enemy follower on the field and deal it 4 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-P06EN.png"
+  },
+  {
+    "cardNo": "BP07-P07EN",
+    "name": "Troya, Thunder of Hagelberg",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Assassin",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. Bane."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-P07EN.png"
+  },
+  {
+    "cardNo": "BP07-P08EN",
+    "name": "Troya, Thunder of Hagelberg Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Officer / Assassin",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Bane. On Evolve - Select an enemy follower on the field and deal it 2 damage. If there are at least 2 Assassin followers in your cemetery, destroy it instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-P08EN.png"
+  },
+  {
+    "cardNo": "BP07-P09EN",
+    "name": "Princess's Strike",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Natura / Commander / Princess",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field and deal it 2 damage. If there's a Mistolina, Forest Princess on your field, deal 6 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-P09EN.png"
+  },
+  {
+    "cardNo": "BP07-P10EN",
+    "name": "Tempered Aether",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Natura",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Put a Naterran Great Tree token onto your field and into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-P10EN.png"
+  },
+  {
+    "cardNo": "BP07-P11EN",
+    "name": "Delta Cannon",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Machina / Golem",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "When a Tetra, Sapphire Rebel is put onto your field, [cost01]: Put this card from your cemetery into your EX area. ---------- [quick] Select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-P11EN.png"
+  },
+  {
+    "cardNo": "BP07-P12EN",
+    "name": "Displacer Bot",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Machina / Golem",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[evolve] [cost02]: Evolve this follower. Ward. [fanfare] Look at the top 4 cards of your deck. You may put a Machina card from among them into your EX area. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-P12EN.png"
+  },
+  {
+    "cardNo": "BP07-P13EN",
+    "name": "Displacer Bot Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Machina / Golem",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "3",
+      "effect": "Ward. On Evolve - Select an enemy follower on the field and deal it damage equal to 2 times the number of Machina cards in your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-P13EN.png"
+  },
+  {
+    "cardNo": "BP07-P14EN",
+    "name": "Splendid Conjury",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select up to 3 enemy followers on the field and deal 3 damage divided between them. If there's an Eleanor, Cosmic Flower on your field, deal 5 damage divided between them instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-P14EN.png"
+  },
+  {
+    "cardNo": "BP07-P15EN",
+    "name": "Sagacious Core",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet",
+      "trait": "Machina",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Look at the top 2 cards of your deck. You may reveal a Machina card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. [act] [engage], bury this card: Deal 1 damage to each enemy leader. Activate only if there are at least 3 Machina cards in your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-P15EN.png"
+  },
+  {
+    "cardNo": "BP07-P16EN",
+    "name": "Shadow's Corrosion",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Natura / Dragonewt",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "This card can't be played from the EX area. At the start of your end phase, if this card is in your EX area, deal 1 damage to each enemy leader for every 5 Natura cards in your cemetery. ---------- Select an enemy follower on the field. Deal it 4 damage and, if there's a Valdain, Cursed Shadow on your field, put this card into its owner's EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-P16EN.png"
+  },
+  {
+    "cardNo": "BP07-P17EN",
+    "name": "Hoarfrost Triceratops",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Natura / Wyrmkin",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Banish a Naterran Great Tree from your field: Give this follower [attack]+2/[defense]+2. [lastwords] Summon a Naterran Great Tree token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-P17EN.png"
+  },
+  {
+    "cardNo": "BP07-P18EN",
+    "name": "Hoarfrost Triceratops Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Natura / Wyrmkin",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 3 damage. [lastwords] Summon a Naterran Great Tree token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-P18EN.png"
+  },
+  {
+    "cardNo": "BP07-P19EN",
+    "name": "Lightning Velociraptor",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Natura / Wyrmkin",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[fanfare] Summon a Naterran Great Tree token. If Overflow is active for you, summon up to 2 instead and give this follower Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-P19EN.png"
+  },
+  {
+    "cardNo": "BP07-P20EN",
+    "name": "Feral Aether",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Natura",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Summon a Naterran Great Tree token. If Overflow is active for you, summon up to 3 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-P20EN.png"
+  },
+  {
+    "cardNo": "BP07-P21EN",
+    "name": "Alpha Drive",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Machina / Demon",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose one of the following. (1) Select a Machina follower in your cemetery and add it to your hand. (2) Select a Mono, Garnet Rebel in your cemetery and summon it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-P21EN.png"
+  },
+  {
+    "cardNo": "BP07-P22EN",
+    "name": "Nicola, Forbidden Strength",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Machina / Departed",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Bury the top 2 cards of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-P22EN.png"
+  },
+  {
+    "cardNo": "BP07-P23EN",
+    "name": "Nicola, Forbidden Strength Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Machina / Departed",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Select a Machina card that costs 2 or less in your cemetery and put it into your EX area. It costs 2 less to play this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-P23EN.png"
+  },
+  {
+    "cardNo": "BP07-P24EN",
+    "name": "Forbidden Art",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Machina / Departed",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field and deal it 4 damage. If there's a Nicola, Forbidden Strength on your field, deal 6 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-P24EN.png"
+  },
+  {
+    "cardNo": "BP07-P25EN",
+    "name": "Sanguine Core",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Amulet",
+      "trait": "Machina",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Look at the top 2 cards of your deck. You may reveal a Machina card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. [act] [engage], bury this card: Put an Assembly Droid token into your EX area. Activate only if there are at least 5 Machina cards in your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-P25EN.png"
+  },
+  {
+    "cardNo": "BP07-P26EN",
+    "name": "Augmentation Bestowal",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Machina / Faith",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose one of the following. (1) Banish 2 cards named Repair Mode from your EX area: Search your deck for a Machina follower that costs 3 or less, summon it, then shuffle your deck. (2) Banish 5 cards named Repair Mode from your EX area: Search your deck for a Machina follower that costs 6 or less, summon it, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-P26EN.png"
+  },
+  {
+    "cardNo": "BP07-P27EN",
+    "name": "Robofalcon",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Machina / Avian",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. Storm. Strike - Put a Repair Mode token into your EX area. Then, if there are at least 3 cards named Repair Mode in your EX area, give this follower [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-P27EN.png"
+  },
+  {
+    "cardNo": "BP07-P28EN",
+    "name": "Robofalcon Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Machina / Avian",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "4",
+      "effect": "Storm. On Evolve - Put a Repair Mode token into your EX area. Strike - Put a Repair Mode token into your EX area. Then, if there are at least 3 cards named Repair Mode in your EX area, give this follower [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-P28EN.png"
+  },
+  {
+    "cardNo": "BP07-P29EN",
+    "name": "Meowskers, Ruff-Tuff Major",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Natura / Lightborne / Beast",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "3",
+      "effect": "Storm. Strike - Select an enemy leader or enemy follower on the field and deal it 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-P29EN.png"
+  },
+  {
+    "cardNo": "BP07-P30EN",
+    "name": "Saintly Core",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Machina",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Look at the top 2 cards of your deck. You may reveal a Machina card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. [act] [engage], bury this card: Put a Repair Mode token into your EX area. Activate only if there are at least 2 Machina followers on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-P30EN.png"
+  },
+  {
+    "cardNo": "BP07-P31EN",
+    "name": "Robogoblin",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Machina / Goblinoid",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [lastwords] Put a Repair Mode token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-P31EN.png"
+  },
+  {
+    "cardNo": "BP07-P32EN",
+    "name": "Robogoblin Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Machina / Goblinoid",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Summon an Assembly Droid token. [lastwords] Put a Repair Mode token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-P32EN.png"
+  },
+  {
+    "cardNo": "BP07-P33EN",
+    "name": "Purgation's Blade",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Supreme",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field. Destroy it and give each Maisha, Hero of Purgation on your field [attack]+1 for every follower in your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-P33EN.png"
+  },
+  {
+    "cardNo": "BP07-SL01EN",
+    "name": "Ladica, the Stoneclaw",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Natura / Beast",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "4",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[evolve] [cost01]: Evolve this follower. Activate only if you've played at least 5 cards this turn. Whenever a Naterran Great Tree is put onto your field, recover 1 play point."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-SL01EN.png"
+  },
+  {
+    "cardNo": "BP07-SL02EN",
+    "name": "Ladica, the Stoneclaw Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Natura / Beast",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "Storm. Whenever a Naterran Great Tree is put onto your field, recover 1 play point."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-SL02EN.png"
+  },
+  {
+    "cardNo": "BP07-SL03EN",
+    "name": "Cynthia, the Queen's Blade",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "6",
+      "attack": "4",
+      "defense": "6",
+      "effect": "[fanfare] Put a Fairy Wisp token into your EX area. Give each Pixie token on your field [attack]+2. While this card is on your field, each Pixie token on your field has Storm and Assail. Whenever a Pixie token is put onto your field, give it [attack]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-SL03EN.png"
+  },
+  {
+    "cardNo": "BP07-SL04EN",
+    "name": "Bayleon, Sovereign Light",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Natura / Commander / Beast",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. Ward. [fanfare] You may put a Naterran Great Tree token onto your field or into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-SL04EN.png"
+  },
+  {
+    "cardNo": "BP07-SL05EN",
+    "name": "Bayleon, Sovereign Light Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Natura / Commander / Beast",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Ward. On Evolve - Look at the top 4 cards of your deck. You may put up to 2 Natura cards from among them into your EX area. Put the rest on the bottom of your deck in any order. [act] Banish 2 cards named Naterran Great Tree from your field: Select a Natura follower on your field and give it [attack]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-SL05EN.png"
+  },
+  {
+    "cardNo": "BP07-SL06EN",
+    "name": "Mistolina, Forest Princess",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Natura / Commander / Princess",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "6",
+      "attack": "4",
+      "defense": "6",
+      "effect": "Storm. [fanfare] Select a Princess's Strike in your cemetery and play it for 0 play points. [act] [engage] 2 cards named Naterran Great Tree on your field: Give this follower [attack]+3. Give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-SL06EN.png"
+  },
+  {
+    "cardNo": "BP07-SL07EN",
+    "name": "Tetra, Sapphire Rebel",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Machina / Golem",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Put a Repair Mode token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-SL07EN.png"
+  },
+  {
+    "cardNo": "BP07-SL08EN",
+    "name": "Tetra, Sapphire Rebel Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Machina / Golem",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "While this card is on your field, any Machina card you play from the EX area costs 1 less. 4 times per turn, when you play a Machina card, select an enemy follower on the field and deal it 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-SL08EN.png"
+  },
+  {
+    "cardNo": "BP07-SL09EN",
+    "name": "Belphomet, Lord of Aiolon",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Machina / Supreme",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "7",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Rush. [fanfare] Look at the top 5 cards of your deck. From among them, you may summon any number of Machina followers that cost a total of 6 or less. Put the rest on the bottom of your deck in any order. At the start of your end phase, give each other Machina follower on your field [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-SL09EN.png"
+  },
+  {
+    "cardNo": "BP07-SL10EN",
+    "name": "Valdain, Cursed Shadow",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Natura / Dragonewt",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost02]: Evolve this follower. [evolve] [cost00]: Evolve this follower. Activate only if there are at least 10 Natura cards in your cemetery. [fanfare] Look at the top 3 cards of your deck. You may reveal a Natura card from among them and add it to your hand. Bury the rest."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-SL10EN.png"
+  },
+  {
+    "cardNo": "BP07-SL11EN",
+    "name": "Valdain, Cursed Shadow Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Natura / Dragonewt",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "On Evolve - Choose one of the following. (1) Select an enemy follower on the field. Deal it 4 damage, search your deck for a Shadow's Corrosion and put it into your EX area, then shuffle your deck. (2) Select a Shadow's Corrosion in your cemetery and play it for 0 play points."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-SL11EN.png"
+  },
+  {
+    "cardNo": "BP07-SL12EN",
+    "name": "Neptune, Tidemistress",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart / Marine",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "7",
+      "attack": "6",
+      "defense": "6",
+      "effect": "Ward. [fanfare] Look at the top 5 cards of your deck. From among them, you may reveal up to 2 Marine followers not named Neptune, Tidemistress and add them to your hand. Put the rest on the bottom of your deck in any order. You may summon a Marine follower that costs 5 or less from your hand and give it [attack]+2/[defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-SL12EN.png"
+  },
+  {
+    "cardNo": "BP07-SL13EN",
+    "name": "Mono, Garnet Rebel",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Machina / Demon",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. Activate only if there are 5 Machina followers on your field. [act] Banish 2 Machina cards from your cemetery: Summon an Assembly Droid token. Activate only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-SL13EN.png"
+  },
+  {
+    "cardNo": "BP07-SL14EN",
+    "name": "Mono, Garnet Rebel Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Machina / Demon",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "4",
+      "effect": "Storm. [act] [cost02], banish an Alpha Drive from your cemetery: Give each Machina follower on your field [attack]+2/[defense]+2 and Rush. Activate only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-SL14EN.png"
+  },
+  {
+    "cardNo": "BP07-SL15EN",
+    "name": "Kudlak",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vampire",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "7",
+      "attack": "4",
+      "defense": "6",
+      "effect": "[fanfare] Select up to 2 Vampire cards that cost a total of 6 or less in your cemetery and put them into your EX area. They cost 0 play points to play this turn. [act] [engage]: Select an enemy follower on the field and deal it damage equal to the number of Vampire cards on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-SL15EN.png"
+  },
+  {
+    "cardNo": "BP07-SL16EN",
+    "name": "Limonia, Flawed Saint",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Machina / Faith / Zealot / Eidolon",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[evolve] [cost07]: Evolve this follower. [fanfare] Put a Repair Mode token into your EX area. [act] Banish a Repair Mode from your EX area: This card's [evolve] costs 1 less this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-SL16EN.png"
+  },
+  {
+    "cardNo": "BP07-SL17EN",
+    "name": "Limonia, Flawed Saint Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Machina / Faith / Zealot / Eidolon",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "4",
+      "effect": "On Evolve - Destroy each enemy follower on the field. [act] [cost00]: Select a Machina follower that costs 2 or less in your cemetery and summon it. Activate only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-SL17EN.png"
+  },
+  {
+    "cardNo": "BP07-SL18EN",
+    "name": "Lapis, Glorious Seraph",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Luminary / Lightborne",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "5",
+      "attack": "3",
+      "defense": "7",
+      "effect": "Ward. When this card leaves the field, draw a card for every prayer counter on it. At the start of your end phase, select a card on your field. Place a prayer counter on it and give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-SL18EN.png"
+  },
+  {
+    "cardNo": "BP07-SL19EN",
+    "name": "Technolord",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Machina / Deity",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "6",
+      "attack": "6",
+      "defense": "6",
+      "effect": "[fanfare] Banish 3 Machina cards from your cemetery: Choose up to 2 of the following. (1) Select an enemy follower on the field and destroy it. (2) Select an enemy amulet on the field and destroy it. (3) Deal 3 damage to each enemy leader. (4) Search your deck for a Machina card not named Technolord, reveal it, add it to your hand, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-SL19EN.png"
+  },
+  {
+    "cardNo": "BP07-SL20EN",
+    "name": "Viridia Magna",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Natura / Deity",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "4",
+      "attack": "0",
+      "defense": "4",
+      "effect": "Rush. Assail. Bane. [lastwords] Banish a Naterran Great Tree from your field or EX area: Put this card onto its owner's field engaged and evolve it. If you didn't evolve it, banish it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-SL20EN.png"
+  },
+  {
+    "cardNo": "BP07-SL21EN",
+    "name": "Viridia Magna Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Natura / Deity",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Ward. [lastwords] Give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-SL21EN.png"
+  },
+  {
+    "cardNo": "BP07-T01EN",
+    "name": "Assembly Droid TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Token",
+      "trait": "Machina",
+      "rarity": "-",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[act] [engage], bury 3 Machina followers: Select an enemy follower on the field and deal it 5 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-T01EN.png"
+  },
+  {
+    "cardNo": "BP07-T02EN",
+    "name": "Repair Mode TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Token",
+      "trait": "Machina",
+      "rarity": "-",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-T02EN.png"
+  },
+  {
+    "cardNo": "BP07-T03EN",
+    "name": "Naterran Great Tree TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Amulet / Token",
+      "trait": "Natura",
+      "rarity": "-",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "When this card leaves the field, draw a card, then discard a card. [act] [cost01]: Bury this card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-T03EN.png"
+  },
+  {
+    "cardNo": "BP07-T04EN",
+    "name": "Fairy Wisp TOKEN",
+    "type": "token",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Token",
+      "trait": "Pixie",
+      "rarity": "-",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "0",
+      "attack": "1",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-T04EN.png"
+  },
+  {
+    "cardNo": "BP07-T05EN",
+    "name": "Fairy TOKEN",
+    "type": "token",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Token",
+      "trait": "Pixie",
+      "rarity": "-",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-T05EN.png"
+  },
+  {
+    "cardNo": "BP07-T06EN",
+    "name": "Magic Sediment TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet / Token",
+      "trait": "Earth Sigil",
+      "rarity": "-",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Stack."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-T06EN.png"
+  },
+  {
+    "cardNo": "BP07-T07EN",
+    "name": "Ghost TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Token",
+      "trait": "Departed",
+      "rarity": "-",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Storm. At the start of your end phase, banish this card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-T07EN.png"
+  },
+  {
+    "cardNo": "BP07-U01EN",
+    "name": "Ladica, the Stoneclaw Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Natura / Beast",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "Storm. Whenever a Naterran Great Tree is put onto your field, recover 1 play point."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-U01EN.png"
+  },
+  {
+    "cardNo": "BP07-U02EN",
+    "name": "Tsubaki of the Demon Blade",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Assassin / Ninja",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "3",
+      "attack": "4",
+      "defense": "3",
+      "effect": "[fanfare] If there are at least 5 [swordcraft] followers in your cemetery, select an enemy follower on the field and destroy it. While there are at least 10 [swordcraft] followers in your cemetery, this follower has Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-U02EN.png"
+  },
+  {
+    "cardNo": "BP07-U03EN",
+    "name": "Riley, Hydroshaman",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[fanfare] Earth Rite: Choose one of the following. If this card was put onto the field from the cemetery, choose up to 3 instead. (1) Select an enemy follower on the field and deal it 5 damage. (2) Give this follower [attack]+3. (3) Draw 2 cards. [act] [cost06]: Summon this card from your cemetery. Give it Storm and \"[lastwords] Banish this card.\""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-U03EN.png"
+  },
+  {
+    "cardNo": "BP07-U04EN",
+    "name": "Valdain, Cursed Shadow Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Natura / Dragonewt",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "On Evolve - Choose one of the following. (1) Select an enemy follower on the field. Deal it 4 damage, search your deck for a Shadow's Corrosion and put it into your EX area, then shuffle your deck. (2) Select a Shadow's Corrosion in your cemetery and play it for 0 play points."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-U04EN.png"
+  },
+  {
+    "cardNo": "BP07-U05EN",
+    "name": "Mono, Garnet Rebel Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Machina / Demon",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "4",
+      "effect": "Storm. [act] [cost02], banish an Alpha Drive from your cemetery: Give each Machina follower on your field [attack]+2/[defense]+2 and Rush. Activate only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-U05EN.png"
+  },
+  {
+    "cardNo": "BP07-U06EN",
+    "name": "Lapis, Glorious Seraph",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Luminary / Lightborne",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "5",
+      "attack": "3",
+      "defense": "7",
+      "effect": "Ward. When this card leaves the field, draw a card for every prayer counter on it. At the start of your end phase, select a card on your field. Place a prayer counter on it and give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-U06EN.png"
+  },
+  {
+    "cardNo": "BP07-U07EN",
+    "name": "Technolord",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Machina / Deity",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #7 \"Verdant Steel\"",
+      "cost": "6",
+      "attack": "6",
+      "defense": "6",
+      "effect": "[fanfare] Banish 3 Machina cards from your cemetery: Choose up to 2 of the following. (1) Select an enemy follower on the field and destroy it. (2) Select an enemy amulet on the field and destroy it. (3) Deal 3 damage to each enemy leader. (4) Search your deck for a Machina card not named Technolord, reveal it, add it to your hand, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-U07EN.png"
+  }
+]

@@ -1,0 +1,2871 @@
+[
+  {
+    "cardNo": "BP10-001EN",
+    "name": "XII. Wolfraud, The Hanged Man",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Arcana / Fae-Touched",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. This card can't be destroyed by abilities or take ability damage. [fanfare] [cost05]: Search your deck for a Treacherous Reversal, put it into your EX area, then shuffle. It costs 8 less to play this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-001EN.png"
+  },
+  {
+    "cardNo": "BP10-002EN",
+    "name": "XII. Wolfraud, The Hanged Man Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arcana / Fae-Touched",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "This card can't be destroyed by abilities or take ability damage. On Evolve, Combo (3) - Give this follower [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-002EN.png"
+  },
+  {
+    "cardNo": "BP10-003EN",
+    "name": "Lucille, Keeper of Relics",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Supreme",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "6",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Summon an Ancient Artifact or Mystic Artifact token. Put the other into your EX area. [act] [engage], banish 5 cards with different base costs from your EX area: You may summon a Spinaria & Lucille, Keepers from your evolve deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-003EN.png"
+  },
+  {
+    "cardNo": "BP10-004EN",
+    "name": "Spinaria & Lucille, Keepers ADVANCED",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Advanced",
+      "trait": "Supreme",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "10",
+      "attack": "6",
+      "defense": "6",
+      "effect": "[fanfare] Deal 6 damage to each enemy leader and enemy follower on the field. Look at the top 2 cards of your deck. You may put up to 2 of them into your EX area. Bury the rest. Whenever an enemy follower is put onto the field, [engage]: Deal it 6 damage. At the start of your end phase, refresh this card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-004EN.png"
+  },
+  {
+    "cardNo": "BP10-005EN",
+    "name": "Chipper Skipper",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Arcana / Elf",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this follower. Whenever a Mercenary follower is put onto your field, give it [attack]+1/[defense]+1 and Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-005EN.png"
+  },
+  {
+    "cardNo": "BP10-006EN",
+    "name": "Chipper Skipper Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arcana / Elf",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - Look at the top 4 cards of your deck. You may put a follower that costs 2 or less from among them into your EX area. It costs 2 less to play this turn. Put the rest on the bottom of your deck in any order. Whenever a Mercenary follower is put onto your field, give it [attack]+1/[defense]+1 and Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-006EN.png"
+  },
+  {
+    "cardNo": "BP10-007EN",
+    "name": "Windflower Tiger",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Verdant / Beast",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Ward. [fanfare] Return a Beast follower not named Windflower Tiger on your field to its owner's hand: Search your deck for a Salvia Panther, reveal it, add it to your hand, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-007EN.png"
+  },
+  {
+    "cardNo": "BP10-008EN",
+    "name": "Treacherous Reversal",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Arcana / Fae-Touched",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "8",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Destroy each card on the field. Each player buries each card in their EX area. Discard your hand. Look at the top 5 cards of your deck. You may put any number of them into your EX area. Bury the rest."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-008EN.png"
+  },
+  {
+    "cardNo": "BP10-009EN",
+    "name": "Salvia Panther",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Verdant / Beast",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "2",
+      "effect": "This card costs 2 less to play if a Beast follower not named Salvia Panther was returned to hand from your field this turn. ---------- [evolve] [cost02]: Evolve this follower. Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-009EN.png"
+  },
+  {
+    "cardNo": "BP10-010EN",
+    "name": "Salvia Panther Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Verdant / Beast",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "3",
+      "effect": "Storm. On Evolve - Select an enemy follower that costs 3 or less on the field and return it to its owner's hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-010EN.png"
+  },
+  {
+    "cardNo": "BP10-011EN",
+    "name": "Optimistic Beastmaster",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Arcana / Elf",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Look at the top 3 cards of your deck. You may put one of them into your EX area. Put the rest on the bottom of your deck in any order. [act] [engage]: Select an enemy follower on the field and deal it damage equal to the number of cards with different base costs in your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-011EN.png"
+  },
+  {
+    "cardNo": "BP10-012EN",
+    "name": "Lumbering Carapace",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Insect",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "1",
+      "effect": "Rush. [fanfare] Combo (3) - Search your deck for a Lumbering Carapace, reveal it, add it to your hand, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-012EN.png"
+  },
+  {
+    "cardNo": "BP10-013EN",
+    "name": "Reclusive Ponderer",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Arcana / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Search your deck for an Arcana card, put it into your EX area, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-013EN.png"
+  },
+  {
+    "cardNo": "BP10-014EN",
+    "name": "Reclusive Ponderer Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arcana / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "On Evolve - Search your deck for an Arcana card, put it into your EX area, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-014EN.png"
+  },
+  {
+    "cardNo": "BP10-015EN",
+    "name": "Crocus Rat",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Verdant / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] [cost05]: Select an enemy follower on the field. Put it on the bottom of its owner's deck and draw a card. When this card is returned to hand from your field, give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-015EN.png"
+  },
+  {
+    "cardNo": "BP10-016EN",
+    "name": "Blossoming Archer",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf / Hunter / Verdant",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Select an enemy follower on the field and, if there are at least 3 cards with different base costs in your EX area, deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-016EN.png"
+  },
+  {
+    "cardNo": "BP10-017EN",
+    "name": "Deepwood Wolf",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "7",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Storm. Whenever another Beast follower is put onto your field, give this follower [attack]+2/[defense]+2. [act] [cost01], put this card from your hand into your EX area: Select a card on your field and put it into its owner's EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-017EN.png"
+  },
+  {
+    "cardNo": "BP10-018EN",
+    "name": "Fairy Assault",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Pixie",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Summon 2 Fairy tokens. Deal each enemy leader damage equal to the number of Pixie tokens on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-018EN.png"
+  },
+  {
+    "cardNo": "BP10-019EN",
+    "name": "VII. Oluon, The Chariot",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Arcana / Commander",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Choose one. (1) Summon a Knight token. (2) Give this follower [attack]+1, Rush, and Ward. (3) Deal 2 damage to each enemy leader. (4) [cost04], bury this card: You may summon a VII. Oluon, Runaway Chariot from your evolve deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-019EN.png"
+  },
+  {
+    "cardNo": "BP10-020EN",
+    "name": "VII. Oluon, Runaway Chariot ADVANCED",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Advanced",
+      "trait": "Arcana / Commander",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "7",
+      "attack": "7",
+      "defense": "7",
+      "effect": "This follower can't attack enemies. At the start of your end phase, do the following 2 times. Roll a 6-sided die. If you roll a 1 or 2, destroy each enemy follower on the field. If you roll a 3 or 4, deal 7 damage to each enemy leader. If you roll a 5 or 6, deal 7 damage to your leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-020EN.png"
+  },
+  {
+    "cardNo": "BP10-021EN",
+    "name": "Alyaska, War Hawker",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Merchant",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost02]: Evolve this follower. [fanfare] Search your deck for an Ilmisuna, Discord Hawker, summon it, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-021EN.png"
+  },
+  {
+    "cardNo": "BP10-022EN",
+    "name": "Alyaska, War Hawker Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Commander / Merchant",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "On Evolve - Search your deck for an Ernesta, Weapons Hawker, summon it, then shuffle. Put an Exterminus Weapon token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-022EN.png"
+  },
+  {
+    "cardNo": "BP10-023EN",
+    "name": "Prudent General",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Arcana / Commander",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. Each [swordcraft] token on your field has Rush. [fanfare] Summon a Steelclad Knight token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-023EN.png"
+  },
+  {
+    "cardNo": "BP10-024EN",
+    "name": "Prudent General Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arcana / Commander",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Each [swordcraft] token on your field has Rush. On Evolve - Summon a Steelclad Knight token. Give each Steelclad Knight on your field [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-024EN.png"
+  },
+  {
+    "cardNo": "BP10-025EN",
+    "name": "Ilmisuna, Discord Hawker",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Merchant",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[act] [engage]: Select an enemy follower on the field and deal it 3 damage. If there's a Merchant follower not named Ilmisuna, Discord Hawker on your field, deal 5 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-025EN.png"
+  },
+  {
+    "cardNo": "BP10-026EN",
+    "name": "Aerial Slash",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Officer / Heroic",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] [cost01], banish this card from your cemetery: Deal 3 damage to each enemy leader. Activate only if there are at least 5 other Heroic cards in your cemetery. ---------- Select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-026EN.png"
+  },
+  {
+    "cardNo": "BP10-027EN",
+    "name": "Lightning Kicker",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Heroic",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "6",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost02]: Evolve this follower. Rush. [fanfare] Discard 2 Heroic cards: Search your deck for up to 2 Heroic followers with different names that cost 3 or less, summon them, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-027EN.png"
+  },
+  {
+    "cardNo": "BP10-028EN",
+    "name": "Lightning Kicker Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Officer / Heroic",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Storm. On Evolve - Select an enemy follower on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-028EN.png"
+  },
+  {
+    "cardNo": "BP10-029EN",
+    "name": "Empress of Serenity",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Arcana / Noble",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "3",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[fanfare] Summon 2 Shield Guardian tokens. [fanfare] [cost03]: Give each follower with Ward on your field [attack]+1/[defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-029EN.png"
+  },
+  {
+    "cardNo": "BP10-030EN",
+    "name": "Knight Neilan the Lazy",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Fable",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Ward. Each follower with 1 attack on your field has Aura. [fanfare] Choose one. (1) Select an enemy follower on the field and deal it 3 damage. (2) Search your deck for a Fable follower that costs 2 or less, summon it, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-030EN.png"
+  },
+  {
+    "cardNo": "BP10-031EN",
+    "name": "Honorable Thief",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Thief",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost02]: Evolve this follower. [fanfare] Each opponent buries the top 2 cards of their deck. Then, if there are at least 10 cards in opponents' cemeteries, evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-031EN.png"
+  },
+  {
+    "cardNo": "BP10-032EN",
+    "name": "Honorable Thief Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Thief",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[lastwords] Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-032EN.png"
+  },
+  {
+    "cardNo": "BP10-033EN",
+    "name": "Windslasher",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Heroic",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Rush. [fanfare] Look at the top 2 cards of your deck. You may put a Heroic card from among them into your EX area. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-033EN.png"
+  },
+  {
+    "cardNo": "BP10-034EN",
+    "name": "Selfless Noble",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Arcana / Noble",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "7",
+      "attack": "7",
+      "defense": "6",
+      "effect": "[fanfare] Select an enemy follower on the field. Destroy it, discard your hand, then draw 3 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-034EN.png"
+  },
+  {
+    "cardNo": "BP10-035EN",
+    "name": "Ernesta, Weapons Hawker",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Merchant",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[fanfare] Select another [swordcraft] follower on your field. Give it [attack]+1 and Assail. At the start of your end phase, if there's a Merchant follower not named Ernesta, Weapons Hawker on your field, deal 2 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-035EN.png"
+  },
+  {
+    "cardNo": "BP10-036EN",
+    "name": "Pompous Summons",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Commander / Princess",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose one. (1) Draw a card. (2) If there's a Princess follower on your field, search your deck for a [swordcraft] follower, reveal it, add it to your hand, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-036EN.png"
+  },
+  {
+    "cardNo": "BP10-037EN",
+    "name": "0. Lhynkal, The Fool",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Arcana / Mage",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Look at the top 5 cards of your deck. From among them, you may reveal up to 2 Arcana spells and add them to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-037EN.png"
+  },
+  {
+    "cardNo": "BP10-038EN",
+    "name": "0. Lhynkal, The Fool Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arcana / Mage",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Whenever you play an Arcana spell, select an enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-038EN.png"
+  },
+  {
+    "cardNo": "BP10-039EN",
+    "name": "Runie, Resolute Diviner",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[fanfare] Select up to 1 enemy follower on the field. Spellchain (5) - Deal it 3 damage. SC (10) - Deal 2 damage to each enemy leader. Give your leader [defense]+2. SC (15) - Put each Runie, Resolute Diviner from your cemetery into your EX area. SC (20) - Give each Runie, Resolute Diviner on your field and in your EX area [attack]+2/[defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-039EN.png"
+  },
+  {
+    "cardNo": "BP10-040EN",
+    "name": "Imperator of Magic",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Arcana / Mage",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "5",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Search your deck for a Golem follower that costs 6 or less, summon it, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-040EN.png"
+  },
+  {
+    "cardNo": "BP10-041EN",
+    "name": "Imperator of Magic Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arcana / Mage",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - Select a Golem follower on your field. Give it Rush and Assail."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-041EN.png"
+  },
+  {
+    "cardNo": "BP10-042EN",
+    "name": "Checkmate",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Chess",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] Banish this card from your cemetery: Select a Mystic King on your field and give it Storm. ---------- Deal each enemy follower on the field damage equal to the number of Chess cards in your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-042EN.png"
+  },
+  {
+    "cardNo": "BP10-043EN",
+    "name": "Scourge of the Omniscient",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Arcana / Mage / Cutthroat",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "This card can't be played from the EX area. At the start of your end phase, if this card is in your EX area, deal 1 damage to each enemy leader. ---------- Deal 2 damage to each enemy leader. If there's a 0. Lhynkal, The Fool on your field, put this card into its owner's EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-043EN.png"
+  },
+  {
+    "cardNo": "BP10-044EN",
+    "name": "Juggling Moggy",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Arcana / Mage / Beast",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] [cost04], Earth Rite: Select an enemy follower that costs 4 or less on the field and banish it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-044EN.png"
+  },
+  {
+    "cardNo": "BP10-045EN",
+    "name": "Juggling Moggy Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arcana / Mage / Beast",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[lastwords] Summon a Magic Sediment token. Add 1 to a Stack on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-045EN.png"
+  },
+  {
+    "cardNo": "BP10-046EN",
+    "name": "Gambit",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Chess",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Summon a Magical Pawn token. Give it [attack]+1 and Rush. If there are at least 5 Chess cards in your cemetery, search your deck for a Chess follower that costs 4 or less, summon it, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-046EN.png"
+  },
+  {
+    "cardNo": "BP10-047EN",
+    "name": "Rite of the Ignorant",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Arcana / Mage / Lightborne",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "This card can't be played from the EX area. At the start of your end phase, if this card is in your EX area, draw a card, then discard a card. ---------- Give your leader [defense]+2. If there's a 0. Lhynkal, The Fool on your field, put this card into its owner's EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-047EN.png"
+  },
+  {
+    "cardNo": "BP10-048EN",
+    "name": "Piquant Potioneer",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Alchemist",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-048EN.png"
+  },
+  {
+    "cardNo": "BP10-049EN",
+    "name": "Piquant Potioneer Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Alchemist",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "On Evolve - Choose one. (1) Discard a [runecraft] card: Give your leader [defense]+5. (2) Discard a non-[runecraft] card: Select an enemy follower on the field and deal it 5 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-049EN.png"
+  },
+  {
+    "cardNo": "BP10-050EN",
+    "name": "Creative Conjurer",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Arcana / Mage",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Choose one. (1) Add 1 to a Stack on your field. (2) Earth Rite: Deal 2 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-050EN.png"
+  },
+  {
+    "cardNo": "BP10-051EN",
+    "name": "Arcane Auteur",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Choose one. (1) Draw a card. (2) Select a spell in your cemetery and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-051EN.png"
+  },
+  {
+    "cardNo": "BP10-052EN",
+    "name": "Skewer",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Chess",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose one. If there are at least 5 Chess cards in your cemetery, choose up to 2 instead. (1) Each opponent buries a follower. (2) Give your leader [defense]+3. (3) Draw 2 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-052EN.png"
+  },
+  {
+    "cardNo": "BP10-053EN",
+    "name": "Magical Augmentation",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field and deal it 2 damage. Earth Rite (2): Deal 4 damage instead and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-053EN.png"
+  },
+  {
+    "cardNo": "BP10-054EN",
+    "name": "XI. Erntz, Justice",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Arcana / Wyrmkin",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "8",
+      "attack": "8",
+      "defense": "8",
+      "effect": "Ward. [fanfare] Put the top card of your deck into your EX area. If you put a card that costs 5 or more into your EX area, evolve this follower or return it to its owner's hand. When this card leaves the field, give your leader [defense]+8."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-054EN.png"
+  },
+  {
+    "cardNo": "BP10-055EN",
+    "name": "XI. Erntz, Justice Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arcana / Wyrmkin",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "11",
+      "defense": "11",
+      "effect": "Storm. This follower ignores Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-055EN.png"
+  },
+  {
+    "cardNo": "BP10-056EN",
+    "name": "Aiela, Devoted Knight",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "5",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Choose one. (1) Increase your max play points by 1. Recover 2 play points. (2) If Overflow is active for you, summon a Devoted Dragon token and give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-056EN.png"
+  },
+  {
+    "cardNo": "BP10-057EN",
+    "name": "Lævateinn Dragon, Dual Form α ADVANCED",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Advanced",
+      "trait": "Wyrmkin / Armed",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "6",
+      "attack": "6",
+      "defense": "6",
+      "effect": "Rush. Strike - Select an enemy follower on the field. Deal it 4 damage and give your leader [defense]+2. [lastwords] Select a Lævateinn Dragon in your cemetery and put it onto your field engaged."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-057EN.png"
+  },
+  {
+    "cardNo": "BP10-058EN",
+    "name": "Lævateinn Dragon, Dual Form β ADVANCED",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Advanced",
+      "trait": "Wyrmkin / Armed",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "6",
+      "attack": "6",
+      "defense": "6",
+      "effect": "Ward. [fanfare] Deal 2 damage to each enemy follower on the field. Give your leader [defense]+4. [act] [cost01], bury a Draconic Weapon: Draw a card. You may summon an Armed follower that costs 3 or less from your hand. Activate only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-058EN.png"
+  },
+  {
+    "cardNo": "BP10-059EN",
+    "name": "Lævateinn Dragon, Dual Form γ ADVANCED",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Advanced",
+      "trait": "Wyrmkin / Armed",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "6",
+      "attack": "6",
+      "defense": "6",
+      "effect": "While there are at least 5 Armed cards in your cemetery, this follower has Storm. [act] [cost01], bury a Draconic Weapon: Deal 2 damage to each enemy follower on the field. Give this follower [attack]+2/[defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-059EN.png"
+  },
+  {
+    "cardNo": "BP10-060EN",
+    "name": "Slaughtering Dragonewt",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Arcana / Dragonewt",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "5",
+      "effect": "[evolve] [cost03]: Evolve this follower. [fanfare] Banish the top 5 cards of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-060EN.png"
+  },
+  {
+    "cardNo": "BP10-061EN",
+    "name": "Slaughtering Dragonewt Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arcana / Dragonewt",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "6",
+      "effect": "On Evolve - Deal 2 damage to each enemy leader and enemy follower on the field for every 5 cards in your banished zone."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-061EN.png"
+  },
+  {
+    "cardNo": "BP10-062EN",
+    "name": "Eternal Whale",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Marine",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "5",
+      "attack": "5",
+      "defense": "6",
+      "effect": "Ward. [fanfare] If this card was played from the EX area, recover 4 play points. [lastwords] Deal 2 damage to each enemy leader. Put this card into its owner's deck 2nd from the top or on the bottom."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-062EN.png"
+  },
+  {
+    "cardNo": "BP10-063EN",
+    "name": "Dual Rage",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Wyrmkin / Armed",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "6",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] Banish this card from your cemetery: Select a Lævateinn Dragon and 2 cards named Draconic Weapon on your field. Destroy them, then you may summon an advanced follower with \"Dual Form\" in its name from your evolve deck. ---------- Search your deck for an Armed follower, reveal it, add it to your hand, then shuffle. You may summon an Armed follower from your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-063EN.png"
+  },
+  {
+    "cardNo": "BP10-064EN",
+    "name": "Swiftblade Dragonewt",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt / Wyrmkin / Armed",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] If there are at least 3 Armed cards in your cemetery, summon a Draconic Weapon token and deal 3 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-064EN.png"
+  },
+  {
+    "cardNo": "BP10-065EN",
+    "name": "Swiftblade Dragonewt Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonewt / Wyrmkin / Armed",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Search your deck for an Armed follower that costs 2 or less, summon it, then shuffle. Summon a Draconic Weapon token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-065EN.png"
+  },
+  {
+    "cardNo": "BP10-066EN",
+    "name": "Heliodragon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Arcana / Wyrmkin",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "When this card is discarded, you may put it into your EX area. ---------- Once on each of your turns, when you discard a card, give your leader [defense]+3."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-066EN.png"
+  },
+  {
+    "cardNo": "BP10-067EN",
+    "name": "Dragon Impact",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Wyrmkin",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "6",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Put the top card of your deck into your EX area. Deal 4 damage to each enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-067EN.png"
+  },
+  {
+    "cardNo": "BP10-068EN",
+    "name": "Springwell Dragon Keeper",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Arcana / Dragonheart",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-068EN.png"
+  },
+  {
+    "cardNo": "BP10-069EN",
+    "name": "Springwell Dragon Keeper Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arcana / Dragonheart",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Discard a card: Select an enemy follower on the field. Deal it 4 damage and, if you discarded an Arcana card, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-069EN.png"
+  },
+  {
+    "cardNo": "BP10-070EN",
+    "name": "Gallant Dragonewt",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt / Wyrmkin / Armed",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Look at the top 2 cards of your deck. You may reveal an Armed card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. If there are at least 3 Armed cards in your cemetery, summon a Draconic Weapon token and recover 1 play point."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-070EN.png"
+  },
+  {
+    "cardNo": "BP10-071EN",
+    "name": "Dragonclad Lancer",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart / Cutthroat",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Select another follower on your field. Deal it 2 damage and give this follower [attack]+1/[defense]+1 and Rush. [act] [cost03]: Give this follower [attack]+1/[defense]+1 and Assail."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-071EN.png"
+  },
+  {
+    "cardNo": "BP10-072EN",
+    "name": "Tropical Grouper",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Marine",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Ward. At the start of your end phase, if there's an evolved follower on your field, search your deck for a Tropical Grouper, reveal it, add it to your hand, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-072EN.png"
+  },
+  {
+    "cardNo": "BP10-073EN",
+    "name": "Dragon Spawning",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Look at the top 3 cards of your deck. You may put a [dragoncraft] follower from among them into your EX area. If Overflow is active for you, it costs 2 less to play this turn. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-073EN.png"
+  },
+  {
+    "cardNo": "BP10-074EN",
+    "name": "VI. Milteo, The Lovers",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Arcana / Demon",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Discard a card: Reveal cards from the top of your deck until you reveal 2 followers that cost 3 or less. Summon them. Shuffle the rest and put them on the bottom of your deck. At the start of your end phase, Necrocharge (20) - Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-074EN.png"
+  },
+  {
+    "cardNo": "BP10-075EN",
+    "name": "VI. Milteo, The Lovers Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arcana / Demon",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "On Evolve - [cost02]: Destroy each enemy follower on the field. Change each enemy leader's defense to 6."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-075EN.png"
+  },
+  {
+    "cardNo": "BP10-076EN",
+    "name": "XIV. Luzen, Temperance",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Arcana / Demon",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "7",
+      "attack": "5",
+      "defense": "5",
+      "effect": "If your leader would take damage, it takes that much minus 1 instead. Opponents can't draw cards outside of their start phase. [fanfare] Each player discards down to 2 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-076EN.png"
+  },
+  {
+    "cardNo": "BP10-077EN",
+    "name": "Sincere Masquerade Ghost ADVANCED",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Advanced",
+      "trait": "Departed",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Storm. [fanfare] Summon 2 Gargantuan Ghost tokens. Whenever another follower with \"Ghost\" in its name is put onto your field, give it [attack]+1 and Rush. [lastwords] Select a Masquerade Ghost in your EX area and put it onto your field engaged."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-077EN.png"
+  },
+  {
+    "cardNo": "BP10-078EN",
+    "name": "Deathbringer",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Arcana / Departed",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "8",
+      "attack": "7",
+      "defense": "7",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Select an enemy follower on the field. Destroy it, deal 2 damage to its leader, and give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-078EN.png"
+  },
+  {
+    "cardNo": "BP10-079EN",
+    "name": "Deathbringer Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arcana / Departed",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "8",
+      "defense": "8",
+      "effect": "On Evolve - Select an enemy follower on the field. Destroy it, deal 2 damage to its leader, and give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-079EN.png"
+  },
+  {
+    "cardNo": "BP10-080EN",
+    "name": "Demonium, Clash Devil",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon / Musical",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Bane. Drain. [fanfare] If Sanguine is active for you, give this follower [attack]+1/[defense]+1, Rush, and Assail. Strike - Deal each enemy leader damage equal to this follower's attack."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-080EN.png"
+  },
+  {
+    "cardNo": "BP10-081EN",
+    "name": "Sincere Soul",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Departed",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] [cost04], banish this card from your cemetery: If there's a Masquerade Ghost in your EX area, you may summon a Sincere Masquerade Ghost from your evolve deck. ---------- Search your deck for a Masquerade Ghost, summon it, then shuffle. Give it Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-081EN.png"
+  },
+  {
+    "cardNo": "BP10-082EN",
+    "name": "Ghost Maid",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed / Maid",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Summon a Ghost token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-082EN.png"
+  },
+  {
+    "cardNo": "BP10-083EN",
+    "name": "Ghost Maid Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Departed / Maid",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Put a Ghost token into your EX area. Bury the top card of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-083EN.png"
+  },
+  {
+    "cardNo": "BP10-084EN",
+    "name": "Insatiable Desire",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Arcana / Demon / Cutthroat",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] Banish this card from your cemetery: Select an enemy follower on the field. Deal it 4 damage and draw a card. Activate only if there's a XIV. Luzen, Temperance on your field. ---------- Deal 2 damage to your leader. Draw 2 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-084EN.png"
+  },
+  {
+    "cardNo": "BP10-085EN",
+    "name": "Unselfish Grace",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Amulet",
+      "trait": "Arcana / Demon / Lightborne",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Place X grace counters on this card. X equals the number of cards in your hand. [act] [engage], remove 2 grace counters from this card: Give your leader [defense]+1. [act] [cost01], [engage], bury this card: Search your deck for a 7-cost Arcana card, reveal it, add it to your hand, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-085EN.png"
+  },
+  {
+    "cardNo": "BP10-086EN",
+    "name": "Moonrise Werewolf",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Arcana / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-086EN.png"
+  },
+  {
+    "cardNo": "BP10-087EN",
+    "name": "Moonrise Werewolf Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arcana / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - Select an enemy follower on the field and, if Sanguine is active for you, deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-087EN.png"
+  },
+  {
+    "cardNo": "BP10-088EN",
+    "name": "Spirit Curator",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Necromancer",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Choose one. (1) Put a Ghost token into your EX area. (2) If there's a follower with \"Ghost\" in its name in your EX area, look at the top 3 cards of your deck. You may reveal an [abysscraft] card from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-088EN.png"
+  },
+  {
+    "cardNo": "BP10-089EN",
+    "name": "Silverbolt Hunter",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vampire / Cutthroat",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Deal 1 damage to your leader. [lastwords] Select a follower on your field and give it [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-089EN.png"
+  },
+  {
+    "cardNo": "BP10-090EN",
+    "name": "Soul Box",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "7",
+      "attack": "5",
+      "defense": "4",
+      "effect": "Rush. [fanfare] Select an enemy follower on the field and, if there's a spell in your cemetery, destroy it. [fanfare] If there's an amulet on your field, deal 5 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-090EN.png"
+  },
+  {
+    "cardNo": "BP10-091EN",
+    "name": "Colossal Grudge",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Departed",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "This card costs 3 less to play if there's a follower with \"Ghost\" in its name in your EX area. ---------- Select an enemy follower on the field. Deal 4 damage to it and 2 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-091EN.png"
+  },
+  {
+    "cardNo": "BP10-092EN",
+    "name": "VIII. Sofina, Strength",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Arcana / Luminary",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "4",
+      "attack": "2",
+      "defense": "5",
+      "effect": "[evolve] [cost01]: Evolve this follower. Ward. If a follower on your field would take more than 3 damage, it takes 3 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-092EN.png"
+  },
+  {
+    "cardNo": "BP10-093EN",
+    "name": "VIII. Sofina, Strength Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arcana / Luminary",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "6",
+      "effect": "Ward. If a follower on your field would take more than 3 damage, it takes 3 instead. On Evolve - Search your deck for a Somnolent Strength, summon it, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-093EN.png"
+  },
+  {
+    "cardNo": "BP10-094EN",
+    "name": "X. Slaus, Wheel of Fortune",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Arcana / Faith",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] [cost02]: Search your deck for a Wheel of Misfortune, put it into your EX area, then shuffle. Whenever a card is put into your EX area, [engage]: Select an enemy follower on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-094EN.png"
+  },
+  {
+    "cardNo": "BP10-095EN",
+    "name": "Reverend Adjudicator",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Arcana / Faith",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-095EN.png"
+  },
+  {
+    "cardNo": "BP10-096EN",
+    "name": "Reverend Adjudicator Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arcana / Faith",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Look at the top 4 cards of your deck. You may put a follower with Ward from among them into your EX area. It costs 1 less to play this turn. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-096EN.png"
+  },
+  {
+    "cardNo": "BP10-097EN",
+    "name": "Tanzanite Convictor",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "4",
+      "effect": "Storm. [fanfare] If there's a follower with at least 7 defense on your field, deal 4 damage to each enemy follower on the field. At the start of your end phase, if this follower has at least 3 attack, refresh it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-097EN.png"
+  },
+  {
+    "cardNo": "BP10-098EN",
+    "name": "Somnolent Strength",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Arcana / Luminary",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Select up to 2 followers on your field and give them [attack]+1/[defense]+1. [act] [cost01], [engage], bury this card: Select an enemy follower on the field and give it [attack]-2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-098EN.png"
+  },
+  {
+    "cardNo": "BP10-099EN",
+    "name": "Topaz Swordian",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. Ward. [fanfare] Search your deck for a Bejeweled Shrine, summon it, then shuffle. [fanfare] [cost02]: Give this follower [attack]+1/[defense]+3."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-099EN.png"
+  },
+  {
+    "cardNo": "BP10-100EN",
+    "name": "Topaz Swordian Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "4",
+      "effect": "Ward. On Evolve - Select an enemy follower with 3 defense or less on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-100EN.png"
+  },
+  {
+    "cardNo": "BP10-101EN",
+    "name": "Puresong Priest",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "7",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Select a follower on your field. Give it and your leader [defense]+4. [q][act] [cost01], discard this card: Give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-101EN.png"
+  },
+  {
+    "cardNo": "BP10-102EN",
+    "name": "Wheel of Misfortune",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Arcana / Faith",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] If there's a X. Slaus, Wheel of Fortune on your field, place up to 2 calamity counters on this card. [act] [engage]: Place a calamity counter on this card. [act] [engage], bury this card: Destroy each X-cost enemy follower on the field. X equals the number of calamity counters this card had."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-102EN.png"
+  },
+  {
+    "cardNo": "BP10-103EN",
+    "name": "Priestess of Foresight",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Arcana / Faith",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "7",
+      "attack": "3",
+      "defense": "6",
+      "effect": "[evolve] [cost01]: Evolve this follower. Ward. [fanfare] Search your deck for an Arcana follower that costs 4 or less, summon it, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-103EN.png"
+  },
+  {
+    "cardNo": "BP10-104EN",
+    "name": "Priestess of Foresight Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arcana / Faith",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "7",
+      "effect": "Ward. On Evolve - Select up to 2 enemy followers on the field and destroy them."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-104EN.png"
+  },
+  {
+    "cardNo": "BP10-105EN",
+    "name": "Azurite Maiden",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Ward. [fanfare] [cost01]: Select a Faith follower in your cemetery. Put it into your EX area and give it [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-105EN.png"
+  },
+  {
+    "cardNo": "BP10-106EN",
+    "name": "Prismaplume Bird",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Avian",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "4",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Choose one. (1) Summon a Holy Falcon token. (2) Select an amulet in your cemetery and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-106EN.png"
+  },
+  {
+    "cardNo": "BP10-107EN",
+    "name": "Stalwart Featherfolk",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Avian",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Ward. [fanfare] [cost02]: Give this follower [attack]+1/[defense]+1 and Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-107EN.png"
+  },
+  {
+    "cardNo": "BP10-108EN",
+    "name": "Holybright Altar",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith / Eidolon",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Summon a Holy Tiger token. Give it \"At the start of your end phase, destroy this card.\" [act] [cost03], [engage], bury this card: Select a follower on your field and give your leader [defense] equal to its cost."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-108EN.png"
+  },
+  {
+    "cardNo": "BP10-109EN",
+    "name": "XXI. Zelgenea, The World",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Arcana / Deity",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Select an enemy follower on the field. If there are no other followers on your field, destroy it and draw a card. [fanfare] If your leader's defense is 10 or less, give it [defense]+5. [act] [cost10], banish this card from your cemetery: You may put a XXI. Zelgenea, O Great World from your evolve deck into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-109EN.png"
+  },
+  {
+    "cardNo": "BP10-110EN",
+    "name": "XXI. Zelgenea, O Great World ADVANCED",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Advanced",
+      "trait": "Arcana / Deity",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "10",
+      "attack": "10",
+      "defense": "10",
+      "effect": "At the start of your end phase, if this card is in your EX area, deal 4 damage to each enemy leader and enemy follower on the field. ---------- [fanfare] Deal 10 damage to each enemy leader and enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-110EN.png"
+  },
+  {
+    "cardNo": "BP10-111EN",
+    "name": "Starbright Deity",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Arcana / Lightborne",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost03]: Evolve this follower. Ward. [fanfare] Reveal a follower from your hand: Search your deck for a follower with the revealed follower's name, put it into your EX area, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-111EN.png"
+  },
+  {
+    "cardNo": "BP10-112EN",
+    "name": "Starbright Deity Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Arcana / Lightborne",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Ward. On Evolve - Banish a follower from your cemetery: Search your deck for up to 2 followers with the banished follower's name, put them into your EX area, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-112EN.png"
+  },
+  {
+    "cardNo": "BP10-113EN",
+    "name": "Fieran, Havensent Wind God",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Deity",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "4",
+      "attack": "2",
+      "defense": "2",
+      "effect": "This card costs 3 less to play from the EX area. ---------- [fanfare] Select an enemy follower on the field and deal it 4 damage. At the start of your end phase, give each other follower on your field [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-113EN.png"
+  },
+  {
+    "cardNo": "BP10-114EN",
+    "name": "Fallen Shot",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Fallen Angel",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an Angel follower in your cemetery and enemy follower on the field. Put them into their owners' EX areas."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-114EN.png"
+  },
+  {
+    "cardNo": "BP10-115EN",
+    "name": "One-Winged Traitor",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Fallen Angel",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Look at the top card of your deck. If it's an Angel or Fallen Angel card, you may reveal it and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-115EN.png"
+  },
+  {
+    "cardNo": "BP10-116EN",
+    "name": "One-Winged Traitor Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Fallen Angel",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select another Fallen Angel or Angel follower on your field and give it [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-116EN.png"
+  },
+  {
+    "cardNo": "BP10-117EN",
+    "name": "Mind Splitter",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Arcana / Supreme",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] If there are at least 4 followers on your field, put the top card of your deck into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-117EN.png"
+  },
+  {
+    "cardNo": "BP10-118EN",
+    "name": "Angelic Strike",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Angel",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "6",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select up to 2 enemy followers on the field. Destroy them and, if there's a Fallen Angel card in your cemetery, give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-118EN.png"
+  },
+  {
+    "cardNo": "BP10-119EN",
+    "name": "Pureshot Angel",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Angel",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Select an enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-119EN.png"
+  },
+  {
+    "cardNo": "BP10-120EN",
+    "name": "Pureshot Angel Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Angel",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "On Evolve - Select an enemy follower on the field. Deal 3 damage to it and its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-120EN.png"
+  },
+  {
+    "cardNo": "BP10-121EN",
+    "name": "Corruption Guardian",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Fallen Angel",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "5",
+      "attack": "3",
+      "defense": "6",
+      "effect": "Ward. [fanfare] Discard an Angel or Fallen Angel card: Give your leader [defense]+3. Draw a card. Recover 2 play points."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-121EN.png"
+  },
+  {
+    "cardNo": "BP10-122EN",
+    "name": "Winged Courier",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Mercenary",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "Strike - Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-122EN.png"
+  },
+  {
+    "cardNo": "BP10-LD01EN",
+    "name": "Orchis, Heartful Puppet",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-LD01EN.png"
+  },
+  {
+    "cardNo": "BP10-LD02EN",
+    "name": "Izudia, the Sixth Omen",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-LD02EN.png"
+  },
+  {
+    "cardNo": "BP10-LD03EN",
+    "name": "Melna, Princess of Munmarath",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-LD03EN.png"
+  },
+  {
+    "cardNo": "BP10-LD04EN",
+    "name": "Momo, A New Adventure",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-LD04EN.png"
+  },
+  {
+    "cardNo": "BP10-LD05EN",
+    "name": "Octrice, the Eighth Omen",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-LD05EN.png"
+  },
+  {
+    "cardNo": "BP10-LD06EN",
+    "name": "Raio, the Ninth Omen",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-LD06EN.png"
+  },
+  {
+    "cardNo": "BP10-LD07EN",
+    "name": "Lishenna, the Second Omen",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-LD07EN.png"
+  },
+  {
+    "cardNo": "BP10-LD08EN",
+    "name": "Fennie, Resplendent Phoenix",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-LD08EN.png"
+  },
+  {
+    "cardNo": "BP10-LD09EN",
+    "name": "Galmieux, the Fifth Omen",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-LD09EN.png"
+  },
+  {
+    "cardNo": "BP10-LD10EN",
+    "name": "Aenea, Gentle Amethyst",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-LD10EN.png"
+  },
+  {
+    "cardNo": "BP10-LD11EN",
+    "name": "Valnareik, the Seventh Omen",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-LD11EN.png"
+  },
+  {
+    "cardNo": "BP10-LD12EN",
+    "name": "Rulenye, the Third Omen",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-LD12EN.png"
+  },
+  {
+    "cardNo": "BP10-LD13EN",
+    "name": "Marcotte, Heretical Celebrant",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-LD13EN.png"
+  },
+  {
+    "cardNo": "BP10-LD14EN",
+    "name": "Marwynn, the Fourth Omen",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-LD14EN.png"
+  },
+  {
+    "cardNo": "BP10-T01EN",
+    "name": "Exterminus Weapon TOKEN",
+    "type": "token",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Token",
+      "trait": "Machina / Officer",
+      "rarity": "-",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "2",
+      "attack": "6",
+      "defense": "6",
+      "effect": "Ward. [fanfare] Select an enemy card on the field and destroy it. [lastwords] Deal 4 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-T01EN.png"
+  },
+  {
+    "cardNo": "BP10-T02EN",
+    "name": "Devoted Dragon TOKEN",
+    "type": "token",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Token",
+      "trait": "Wyrmkin",
+      "rarity": "-",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "5",
+      "attack": "6",
+      "defense": "6",
+      "effect": "Ward. While there's an Aiela, Devoted Knight on your field, this follower doesn't take ability damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-T02EN.png"
+  },
+  {
+    "cardNo": "BP10-T03EN",
+    "name": "Fairy TOKEN",
+    "type": "token",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Token",
+      "trait": "Pixie",
+      "rarity": "-",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-T03EN.png"
+  },
+  {
+    "cardNo": "BP10-T04EN",
+    "name": "Knight TOKEN",
+    "type": "token",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Token",
+      "trait": "Officer",
+      "rarity": "-",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-T04EN.png"
+  },
+  {
+    "cardNo": "BP10-T05EN",
+    "name": "Steelclad Knight TOKEN",
+    "type": "token",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Token",
+      "trait": "Officer",
+      "rarity": "-",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-T05EN.png"
+  },
+  {
+    "cardNo": "BP10-T06EN",
+    "name": "Shield Guardian TOKEN",
+    "type": "token",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Token",
+      "trait": "Officer",
+      "rarity": "-",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-T06EN.png"
+  },
+  {
+    "cardNo": "BP10-T07EN",
+    "name": "Magic Sediment TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet / Token",
+      "trait": "Earth Sigil",
+      "rarity": "-",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Stack."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-T07EN.png"
+  },
+  {
+    "cardNo": "BP10-T08EN",
+    "name": "Magical Pawn TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Token",
+      "trait": "Chess",
+      "rarity": "-",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-T08EN.png"
+  },
+  {
+    "cardNo": "BP10-T09EN",
+    "name": "Draconic Weapon TOKEN",
+    "type": "token",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Amulet / Token",
+      "trait": "Armed",
+      "rarity": "-",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] [engage], bury this card: Select a [dragoncraft] follower on your field. Give it [defense]+1 and the Armed trait."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-T09EN.png"
+  },
+  {
+    "cardNo": "BP10-T10EN",
+    "name": "Ghost TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Token",
+      "trait": "Departed",
+      "rarity": "-",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Storm. At the start of your end phase, banish this card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-T10EN.png"
+  },
+  {
+    "cardNo": "BP10-T11EN",
+    "name": "Gargantuan Ghost TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Token",
+      "trait": "Departed",
+      "rarity": "-",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "1",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Ward. At the start of your main phase, banish this card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-T11EN.png"
+  },
+  {
+    "cardNo": "BP10-T12EN",
+    "name": "Holy Falcon TOKEN",
+    "type": "token",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Token",
+      "trait": "Avian",
+      "rarity": "-",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-T12EN.png"
+  },
+  {
+    "cardNo": "BP10-T13EN",
+    "name": "Holy Tiger TOKEN",
+    "type": "token",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Token",
+      "trait": "Beast",
+      "rarity": "-",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-T13EN.png"
+  },
+  {
+    "cardNo": "BP10-T14EN",
+    "name": "Ancient Artifact TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Token",
+      "trait": "Supreme",
+      "rarity": "-",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "1",
+      "attack": "3",
+      "defense": "1",
+      "effect": "Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-T14EN.png"
+  },
+  {
+    "cardNo": "BP10-T15EN",
+    "name": "Mystic Artifact TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Token",
+      "trait": "Supreme",
+      "rarity": "-",
+      "cardSet": "Booster Set #10 \"Gods of the Arcana\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Ward. [fanfare] Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-T15EN.png"
+  }
+]

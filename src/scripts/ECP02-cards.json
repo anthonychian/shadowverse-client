@@ -3,2550 +3,1596 @@
     "cardNo": "ECP02-001EN",
     "name": "Anastasia [Seize the Light]",
     "type": "base",
-    "cardType": "follower",
     "class": "forest",
-    "traits": [
-      "iM@S CG",
-      "Cool"
-    ],
-    "cost": 2,
-    "attack": 1,
-    "defense": 1,
-    "cardText": "[evolve]  [cost01] : Evolve this.\n[fanfare]  [cost01] , Lesson (1): You may put an iM@S CG follower that costs 2 or less from your hand into your EX area. It costs 2 less to play this turn.",
-    "keywords": [
-      "fanfare",
-      "evolve"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-002EN",
-      "CP02-T04EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-001EN.png",
-    "evolvesTo": "ECP02-002EN"
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] [cost01], Lesson (1): You may put an iM@S CG follower that costs 2 or less from your hand into your EX area. It costs 2 less to play this turn."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-002EN",
     "name": "Anastasia [Seize the Light] Evolved",
     "type": "evolved",
-    "cardType": "follower",
-    "specialType": "evolved",
     "class": "forest",
-    "traits": [
-      "iM@S CG",
-      "Cool"
-    ],
-    "cost": null,
-    "attack": 2,
-    "defense": 2,
-    "cardText": "On Evolve - Select up to 2 other iM@S CG followers on your field and give them [attack] +1/[defense] +1.\nOn Super-Evolve - Give each other iM@S CG follower on your field [attack] +1/[defense] +1.",
-    "keywords": [],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-001EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-002EN.png",
-    "evolvesFrom": "ECP02-001EN"
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - Select up to 2 other iM@S CG followers on your field and give them [attack]+1/[defense]+1. On Super-Evolve - Give each other iM@S CG follower on your field [attack]+1/[defense]+1."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-003EN",
     "name": "Hajime Fujiwara [Pink Blossom Dream]",
     "type": "base",
-    "cardType": "follower",
     "class": "forest",
-    "traits": [
-      "iM@S CG",
-      "Cool"
-    ],
-    "cost": 2,
-    "attack": 2,
-    "defense": 2,
-    "cardText": "[fanfare]  Look at the top card of your deck. If it's a Cool card, you may reveal it and add it to your hand.\n[act]  [cost00] : Select an enemy follower on the field and deal it 1 damage. Activate only if there are at least 3 Cool followers on your field, and only once per turn.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-003EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Look at the top card of your deck. If it's a Cool card, you may reveal it and add it to your hand. [act] [cost00]: Select an enemy follower on the field and deal it 1 damage. Activate only if there are at least 3 Cool followers on your field, and only once per turn."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-004EN",
     "name": "Minami Nitta [Water's Edge Bride]",
     "type": "base",
-    "cardType": "follower",
     "class": "forest",
-    "traits": [
-      "iM@S CG",
-      "Cool"
-    ],
-    "cost": 3,
-    "attack": 3,
-    "defense": 3,
-    "cardText": "[fanfare]  Search your deck for a follower with \"Anastasia\" in its name, put it into your EX area, then shuffle. It costs 3 less to play this turn.\n[act]  Lesson (1), [engage] : Select an enemy follower on the field and engage it. It doesn't refresh during its controller's next start phase.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-001EN",
-      "CP02-006EN",
-      "CP02-T04EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-004EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Search your deck for a follower with \"Anastasia\" in its name, put it into your EX area, then shuffle. It costs 3 less to play this turn. [act] Lesson (1), [engage]: Select an enemy follower on the field and engage it. It doesn't refresh during its controller's next start phase."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-005EN",
     "name": "Yuki Himekawa [Full Swing☆Cheer]",
     "type": "base",
-    "cardType": "follower",
     "class": "forest",
-    "traits": [
-      "iM@S CG",
-      "Passion"
-    ],
-    "cost": 7,
-    "attack": 4,
-    "defense": 4,
-    "cardText": "Storm.\n[fanfare]  Deal 4 damage to each enemy follower on the field. If the total cost of Passion cards on your field is 10 or more, deal 8 damage instead. If 20 or more, deal 4 damage to each enemy leader.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-005EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Passion",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "7",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Storm. [fanfare] Deal 4 damage to each enemy follower on the field. If the total cost of Passion cards on your field is 10 or more, deal 8 damage instead. If 20 or more, deal 4 damage to each enemy leader."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-006EN",
     "name": "Riina Tada [Wannabe Legend]",
     "type": "base",
-    "cardType": "follower",
     "class": "forest",
-    "traits": [
-      "iM@S CG",
-      "Cool"
-    ],
-    "cost": 5,
-    "attack": 4,
-    "defense": 4,
-    "cardText": "[evolve]  [cost01] : Evolve this.\n[fanfare]  Search your deck for a 1-cost iM@S CG amulet, summon it, then shuffle.\n[act]  Lesson (1): You may summon an iM@S CG follower that costs 1 or less or iM@S CG amulet that costs 1 or less from your hand.",
-    "keywords": [
-      "fanfare",
-      "evolve"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-007EN",
-      "CP02-T04EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-006EN.png",
-    "evolvesTo": "ECP02-007EN"
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Search your deck for a 1-cost iM@S CG amulet, summon it, then shuffle. [act] Lesson (1): You may summon an iM@S CG follower that costs 1 or less or iM@S CG amulet that costs 1 or less from your hand."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-007EN",
     "name": "Riina Tada [Wannabe Legend] Evolved",
     "type": "evolved",
-    "cardType": "follower",
-    "specialType": "evolved",
     "class": "forest",
-    "traits": [
-      "iM@S CG",
-      "Cool"
-    ],
-    "cost": null,
-    "attack": 5,
-    "defense": 5,
-    "cardText": "On Evolve - Return an iM@S CG card on your field to its owner's hand: Select an enemy follower on the field and put it on the bottom of its owner's deck.\n[act]  Lesson (1): You may summon an iM@S CG follower that costs 1 or less or iM@S CG amulet that costs 1 or less from your hand.",
-    "keywords": [],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-006EN",
-      "CP02-T04EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-007EN.png",
-    "evolvesFrom": "ECP02-006EN"
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "On Evolve - Return an iM@S CG card on your field to its owner's hand: Select an enemy follower on the field and put it on the bottom of its owner's deck. [act] Lesson (1): You may summon an iM@S CG follower that costs 1 or less or iM@S CG amulet that costs 1 or less from your hand."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-008EN",
     "name": "Hinako Kita [True Dream]",
     "type": "base",
-    "cardType": "follower",
     "class": "forest",
-    "traits": [
-      "iM@S CG",
-      "Passion"
-    ],
-    "cost": 1,
-    "attack": 1,
-    "defense": 1,
-    "cardText": "[evolve]  [cost02] : Evolve this.\n[fanfare]  Lesson (1): Give your leader [defense] +1.",
-    "keywords": [
-      "fanfare",
-      "evolve"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-009EN",
-      "CP02-T07EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-008EN.png",
-    "evolvesTo": "ECP02-009EN"
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Passion",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost02]: Evolve this. [fanfare] Lesson (1): Give your leader [defense]+1."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-009EN",
     "name": "Hinako Kita [True Dream] Evolved",
     "type": "evolved",
-    "cardType": "follower",
-    "specialType": "evolved",
     "class": "forest",
-    "traits": [
-      "iM@S CG",
-      "Passion"
-    ],
-    "cost": null,
-    "attack": 2,
-    "defense": 2,
-    "cardText": "On Evolve - Draw a card. Give your leader [defense] +2.",
-    "keywords": [],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-008EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-009EN.png",
-    "evolvesFrom": "ECP02-008EN"
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "iM@S CG / Passion",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - Draw a card. Give your leader [defense]+2."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-010EN",
     "name": "Miku Maekawa [Meownderful World]",
     "type": "base",
-    "cardType": "follower",
     "class": "forest",
-    "traits": [
-      "iM@S CG",
-      "Cute"
-    ],
-    "cost": 1,
-    "attack": 1,
-    "defense": 1,
-    "cardText": "Storm.\n[lastwords]  Lesson (1): Search your deck for a follower with \"Miku Maekawa\" in its name, reveal it, add it to your hand, then shuffle.",
-    "keywords": [],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "CP02-003EN",
-      "CP02-T01EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-010EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cute",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Storm. [lastwords] Lesson (1): Search your deck for a follower with \"Miku Maekawa\" in its name, reveal it, add it to your hand, then shuffle."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-011EN",
     "name": "Blossoms' Advance",
     "type": "base",
-    "cardType": "spell",
     "class": "forest",
-    "traits": [
-      "iM@S CG",
-      "Passion"
-    ],
-    "cost": 5,
-    "attack": null,
-    "defense": null,
-    "cardText": "You may summon a Passion follower that costs 6 or less from your hand. Put a Magical Item token into your EX area.",
-    "keywords": [],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "CP02-T07EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-011EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "iM@S CG / Passion",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "You may summon a Passion follower that costs 6 or less from your hand. Put a Magical Item token into your EX area."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-012EN",
     "name": "Rin Shibuya [Cinderella Girl]",
     "type": "base",
-    "cardType": "follower",
     "class": "sword",
-    "traits": [
-      "iM@S CG",
-      "Cool"
-    ],
-    "cost": 2,
-    "attack": 2,
-    "defense": 1,
-    "cardText": "Storm.\n[fanfare]  Lesson (2): Select an enemy follower on the field and deal it damage equal to the number of Cool followers on your field.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "CP02-T04EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-012EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "1",
+      "effect": "Storm. [fanfare] Lesson (2): Select an enemy follower on the field and deal it damage equal to the number of Cool followers on your field."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-013EN",
     "name": "Mio Honda [Cinderella Girl]",
     "type": "base",
-    "cardType": "follower",
     "class": "sword",
-    "traits": [
-      "iM@S CG",
-      "Passion"
-    ],
-    "cost": 2,
-    "attack": 2,
-    "defense": 2,
-    "cardText": "[evolve]  [cost01] : Evolve this.\n[fanfare]  Lesson (1): Draw a card. Discard a card.",
-    "keywords": [
-      "fanfare",
-      "evolve"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-014EN",
-      "CP02-T07EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-013EN.png",
-    "evolvesTo": "ECP02-014EN"
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Passion",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Lesson (1): Draw a card. Discard a card."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-014EN",
     "name": "Mio Honda [Cinderella Girl] Evolved",
     "type": "evolved",
-    "cardType": "follower",
-    "specialType": "evolved",
     "class": "sword",
-    "traits": [
-      "iM@S CG",
-      "Passion"
-    ],
-    "cost": null,
-    "attack": 3,
-    "defense": 3,
-    "cardText": "On Evolve - Look at the top 2 cards of your deck. You may reveal an iM@S CG card from among them and add it to your hand. Put the rest on the bottom of your deck in any order.\nOn Super-Evolve - You may summon a Passion follower that costs 6 or less from your hand.",
-    "keywords": [],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-013EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-014EN.png",
-    "evolvesFrom": "ECP02-013EN"
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "iM@S CG / Passion",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Look at the top 2 cards of your deck. You may reveal an iM@S CG card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. On Super-Evolve - You may summon a Passion follower that costs 6 or less from your hand."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-015EN",
     "name": "Uzuki Shimamura [Cinderella Girl]",
     "type": "base",
-    "cardType": "follower",
     "class": "sword",
-    "traits": [
-      "iM@S CG",
-      "Cute"
-    ],
-    "cost": 6,
-    "attack": 4,
-    "defense": 4,
-    "cardText": "[fanfare]  Search your deck for an iM@S CG card not named Uzuki Shimamura [Cinderella Girl], put it into your EX area, then shuffle. If there are at least 5 Cute cards in your cemetery, search for up to 2 instead.\n[act]  Lesson (1): Select an iM@S CG card in your EX area and give it \"This costs 5 less to play.\" Activate only once per turn.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "CP02-T01EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-015EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cute",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "6",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Search your deck for an iM@S CG card not named Uzuki Shimamura [Cinderella Girl], put it into your EX area, then shuffle. If there are at least 5 Cute cards in your cemetery, search for up to 2 instead. [act] Lesson (1): Select an iM@S CG card in your EX area and give it \"This costs 5 less to play.\" Activate only once per turn."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-016EN",
     "name": "Karen Hojo [Cinderella Girl]",
     "type": "base",
-    "cardType": "follower",
     "class": "sword",
-    "traits": [
-      "iM@S CG",
-      "Cool"
-    ],
-    "cost": 1,
-    "attack": 1,
-    "defense": 1,
-    "cardText": "[fanfare]  Look at the top card of your deck. If it's a Cool card, you may reveal it and add it to your hand.\n[lastwords]  Put a Magical Item token into your EX area.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "CP02-T04EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-016EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[fanfare] Look at the top card of your deck. If it's a Cool card, you may reveal it and add it to your hand. [lastwords] Put a Magical Item token into your EX area."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-017EN",
     "name": "Airi Totoki [Cinderella Girl]",
     "type": "base",
-    "cardType": "follower",
     "class": "sword",
-    "traits": [
-      "iM@S CG",
-      "Passion"
-    ],
-    "cost": 2,
-    "attack": 2,
-    "defense": 2,
-    "cardText": "[evolve]  [cost01] : Evolve this.\n[fanfare]  [cost01] , Lesson (1), discard a Passion card: Select an enemy follower on the field and deal it 3 damage.",
-    "keywords": [
-      "fanfare",
-      "evolve"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-018EN",
-      "CP02-T07EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-017EN.png",
-    "evolvesTo": "ECP02-018EN"
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Passion",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] [cost01], Lesson (1), discard a Passion card: Select an enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-018EN",
     "name": "Airi Totoki [Cinderella Girl] Evolved",
     "type": "evolved",
-    "cardType": "follower",
-    "specialType": "evolved",
     "class": "sword",
-    "traits": [
-      "iM@S CG",
-      "Passion"
-    ],
-    "cost": null,
-    "attack": 3,
-    "defense": 3,
-    "cardText": "On Evolve - Select an enemy follower on the field. Deal it 2 damage and, if there are at least 5 Passion cards in your cemetery, put a Magical Item token into your EX area.",
-    "keywords": [],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-017EN",
-      "CP02-T07EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-018EN.png",
-    "evolvesFrom": "ECP02-017EN"
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "iM@S CG / Passion",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field. Deal it 2 damage and, if there are at least 5 Passion cards in your cemetery, put a Magical Item token into your EX area."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-019EN",
     "name": "Mayu Sakuma [Love-Laden Gift]",
     "type": "base",
-    "cardType": "follower",
     "class": "sword",
-    "traits": [
-      "iM@S CG",
-      "Cute"
-    ],
-    "cost": 3,
-    "attack": 3,
-    "defense": 3,
-    "cardText": "[evolve]  [cost01] : Evolve this.\n[fanfare]  Each player draws a card.",
-    "keywords": [
-      "fanfare",
-      "evolve"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-020EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-019EN.png",
-    "evolvesTo": "ECP02-020EN"
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cute",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Each player draws a card."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-020EN",
     "name": "Mayu Sakuma [Love-Laden Gift] Evolved",
     "type": "evolved",
-    "cardType": "follower",
-    "specialType": "evolved",
     "class": "sword",
-    "traits": [
-      "iM@S CG",
-      "Cute"
-    ],
-    "cost": null,
-    "attack": 4,
-    "defense": 4,
-    "cardText": "On Evolve - Select an enemy follower on the field and deal it damage equal to the number of cards in its controller's hand.",
-    "keywords": [],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-019EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-020EN.png",
-    "evolvesFrom": "ECP02-019EN"
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "iM@S CG / Cute",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it damage equal to the number of cards in its controller's hand."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-021EN",
     "name": "Chieri Ogata [Happiness Tune]",
     "type": "base",
-    "cardType": "follower",
     "class": "sword",
-    "traits": [
-      "iM@S CG",
-      "Cute"
-    ],
-    "cost": 2,
-    "attack": 2,
-    "defense": 2,
-    "cardText": "[evolve]  [cost01] : Evolve this.\n[fanfare]  If this wasn't put onto the field from hand, evolve it.",
-    "keywords": [
-      "fanfare",
-      "evolve"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-022EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-021EN.png",
-    "evolvesTo": "ECP02-022EN"
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cute",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] If this wasn't put onto the field from hand, evolve it."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-022EN",
     "name": "Chieri Ogata [Happiness Tune] Evolved",
     "type": "evolved",
-    "cardType": "follower",
-    "specialType": "evolved",
     "class": "sword",
-    "traits": [
-      "iM@S CG",
-      "Cute"
-    ],
-    "cost": null,
-    "attack": 3,
-    "defense": 3,
-    "cardText": "On Evolve - Search your deck for an iM@S CG spell, reveal it, add it to your hand, then shuffle.\n[act]  [cost01] , Lesson (1): The next iM@S CG spell that costs 2 or less you play this turn costs 2 less. Activate only if there are at least 5 Cute cards in your cemetery, and only once per turn.",
-    "keywords": [],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-021EN",
-      "CP02-T01EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-022EN.png",
-    "evolvesFrom": "ECP02-021EN"
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "iM@S CG / Cute",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Search your deck for an iM@S CG spell, reveal it, add it to your hand, then shuffle. [act] [cost01], Lesson (1): The next iM@S CG spell that costs 2 or less you play this turn costs 2 less. Activate only if there are at least 5 Cute cards in your cemetery, and only once per turn."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-023EN",
     "name": "Nagi Hisakawa [Everyday Fairy Tale]",
     "type": "base",
-    "cardType": "follower",
     "class": "sword",
-    "traits": [
-      "iM@S CG",
-      "Passion"
-    ],
-    "cost": 1,
-    "attack": 2,
-    "defense": 2,
-    "cardText": "[fanfare]  If there are at least 5 iM@S CG cards in your cemetery, search your deck for a Sparkling☆Days, put it into your EX area, then shuffle. It costs 1 less to play this turn.\n[act]  [cost02] , [engage] , bury this: Search your deck for a follower with \"Nagi Hisakawa\" in its name, summon it, then shuffle. Activate only if there are at least 10 iM@S CG cards in your cemetery.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "CP02-020EN",
-      "CP02-028EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-023EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Passion",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] If there are at least 5 iM@S CG cards in your cemetery, search your deck for a Sparkling☆Days, put it into your EX area, then shuffle. It costs 1 less to play this turn. [act] [cost02], [engage], bury this: Search your deck for a follower with \"Nagi Hisakawa\" in its name, summon it, then shuffle. Activate only if there are at least 10 iM@S CG cards in your cemetery."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-024EN",
     "name": "Miho Kohinata [Youthful Romance]",
     "type": "base",
-    "cardType": "follower",
     "class": "sword",
-    "traits": [
-      "iM@S CG",
-      "Cute"
-    ],
-    "cost": 4,
-    "attack": 4,
-    "defense": 4,
-    "cardText": "Ward.\n[fanfare]  Discard 2 Cute cards: Give your leader [defense] +2. Draw 2 cards.\n[act]  Lesson (1), [engage] : Select up to 2 enemy followers on the field and deal them 2 damage. If there are at least 5 Cute cards in your cemetery, deal 3 damage instead.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "CP02-T01EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-024EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cute",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Ward. [fanfare] Discard 2 Cute cards: Give your leader [defense]+2. Draw 2 cards. [act] Lesson (1), [engage]: Select up to 2 enemy followers on the field and deal them 2 damage. If there are at least 5 Cute cards in your cemetery, deal 3 damage instead."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-025EN",
     "name": "Dancing in the Rain",
     "type": "base",
-    "cardType": "amulet",
     "class": "sword",
-    "traits": [
-      "iM@S CG",
-      "Cool"
-    ],
-    "cost": 1,
-    "attack": null,
-    "defense": null,
-    "cardText": "[fanfare]  Search your deck for a follower with \"Nao Kamiya\" in its name, reveal it, add it to your hand, then shuffle.\n[act]  [engage] , bury this: Select a Cool follower on your field and give it Rush and Assail.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "CSD02b-002EN",
-      "CP02-029EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-025EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Amulet",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Search your deck for a follower with \"Nao Kamiya\" in its name, reveal it, add it to your hand, then shuffle. [act] [engage], bury this: Select a Cool follower on your field and give it Rush and Assail."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-026EN",
     "name": "Syuko Shiomi [Cinderella Girl]",
     "type": "base",
-    "cardType": "follower",
     "class": "rune",
-    "traits": [
-      "iM@S CG",
-      "Cool"
-    ],
-    "cost": 1,
-    "attack": 2,
-    "defense": 2,
-    "cardText": "[fanfare]  Discard an iM@S CG card: Draw a card.\n[act]  [cost02] , [engage] , bury this: Search your deck for a follower with \"Syuko Shiomi\" in its name, summon it, then shuffle. Activate only if there are at least 10 iM@S CG cards in your cemetery.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "CP02-038EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-026EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Discard an iM@S CG card: Draw a card. [act] [cost02], [engage], bury this: Search your deck for a follower with \"Syuko Shiomi\" in its name, summon it, then shuffle. Activate only if there are at least 10 iM@S CG cards in your cemetery."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-027EN",
     "name": "Mika Jougasaki [My★Style]",
     "type": "base",
-    "cardType": "follower",
     "class": "rune",
-    "traits": [
-      "iM@S CG",
-      "Passion"
-    ],
-    "cost": 4,
-    "attack": 3,
-    "defense": 3,
-    "cardText": "[fanfare]  Search your deck for an iM@S CG spell, put it into your EX area, then shuffle. It costs 3 less to play this turn.\n[act]  Lesson (1): Select an iM@S CG spell in your cemetery and put it into your EX area. It costs 3 less to play this turn. Activate only if there are at least 10 Passion cards in your cemetery, and only once per turn.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "CP02-T07EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-027EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Passion",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Search your deck for an iM@S CG spell, put it into your EX area, then shuffle. It costs 3 less to play this turn. [act] Lesson (1): Select an iM@S CG spell in your cemetery and put it into your EX area. It costs 3 less to play this turn. Activate only if there are at least 10 Passion cards in your cemetery, and only once per turn."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-028EN",
     "name": "Yuuki Otokura [Together with Me]",
     "type": "base",
-    "cardType": "follower",
     "class": "rune",
-    "traits": [
-      "iM@S CG",
-      "Cute"
-    ],
-    "cost": 3,
-    "attack": 3,
-    "defense": 3,
-    "cardText": "[fanfare]  Select an enemy follower on the field and give it [attack] -3/[defense] -3. If there's another Cute follower on your field, give [attack] -5/[defense] -5 instead.\n[act]  [cost00] : Give this Storm. Put a Magical Item token into your EX area. Activate only if there are at least 10 Cute cards in your cemetery, and only once per turn.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "CP02-T01EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-028EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cute",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Select an enemy follower on the field and give it [attack]-3/[defense]-3. If there's another Cute follower on your field, give [attack]-5/[defense]-5 instead. [act] [cost00]: Give this Storm. Put a Magical Item token into your EX area. Activate only if there are at least 10 Cute cards in your cemetery, and only once per turn."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-029EN",
     "name": "Glitz & Glam☆Parade",
     "type": "base",
-    "cardType": "spell",
     "class": "rune",
-    "traits": [
-      "iM@S CG",
-      "Passion"
-    ],
-    "cost": 3,
-    "attack": null,
-    "defense": null,
-    "cardText": "Select up to one 2-cost Passion follower and up to one 1-cost Passion follower in your cemetery and summon them. Give your leader [defense] +2.",
-    "keywords": [],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-029EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "iM@S CG / Passion",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select up to one 2-cost Passion follower and up to one 1-cost Passion follower in your cemetery and summon them. Give your leader [defense]+2."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-030EN",
     "name": "Sae Kobayakawa [Dancing Flowers]",
     "type": "base",
-    "cardType": "follower",
     "class": "rune",
-    "traits": [
-      "iM@S CG",
-      "Cute"
-    ],
-    "cost": 2,
-    "attack": 2,
-    "defense": 2,
-    "cardText": "[evolve]  [cost01] : Evolve this.",
-    "keywords": [
-      "evolve"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-031EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-030EN.png",
-    "evolvesTo": "ECP02-031EN"
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cute",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-031EN",
     "name": "Sae Kobayakawa [Dancing Flowers] Evolved",
     "type": "evolved",
-    "cardType": "follower",
-    "specialType": "evolved",
     "class": "rune",
-    "traits": [
-      "iM@S CG",
-      "Cute"
-    ],
-    "cost": null,
-    "attack": 3,
-    "defense": 3,
-    "cardText": "On Evolve - Select an enemy follower on the field and deal it 2 damage. If there's a Cute card, Cool card, and Passion card in your cemetery, deal 4 damage instead.",
-    "keywords": [],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-030EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-031EN.png",
-    "evolvesFrom": "ECP02-030EN"
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "iM@S CG / Cute",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage. If there's a Cute card, Cool card, and Passion card in your cemetery, deal 4 damage instead."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-032EN",
     "name": "Hiromi Seki [Twinkle in My Eye]",
     "type": "base",
-    "cardType": "follower",
     "class": "rune",
-    "traits": [
-      "iM@S CG",
-      "Cute"
-    ],
-    "cost": 1,
-    "attack": 1,
-    "defense": 1,
-    "cardText": "[evolve]  [cost01] : Evolve this.\n[fanfare]  If there are at least 5 Cute cards in your cemetery, give your leader [defense] +2.",
-    "keywords": [
-      "fanfare",
-      "evolve"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-033EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-032EN.png",
-    "evolvesTo": "ECP02-033EN"
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cute",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] If there are at least 5 Cute cards in your cemetery, give your leader [defense]+2."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-033EN",
     "name": "Hiromi Seki [Twinkle in My Eye] Evolved",
     "type": "evolved",
-    "cardType": "follower",
-    "specialType": "evolved",
     "class": "rune",
-    "traits": [
-      "iM@S CG",
-      "Cute"
-    ],
-    "cost": null,
-    "attack": 2,
-    "defense": 2,
-    "cardText": "On Evolve - Select a Cute card in your cemetery and add it to your hand.",
-    "keywords": [],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-032EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-033EN.png",
-    "evolvesFrom": "ECP02-032EN"
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "iM@S CG / Cute",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - Select a Cute card in your cemetery and add it to your hand."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-034EN",
     "name": "Shiki Ichinose [Mystic Elixir]",
     "type": "base",
-    "cardType": "follower",
     "class": "rune",
-    "traits": [
-      "iM@S CG",
-      "Cute"
-    ],
-    "cost": 4,
-    "attack": 4,
-    "defense": 4,
-    "cardText": "[fanfare]  Look at the top 3 cards of your deck. From among them, you may reveal up to 1 Cute card, up to 1 Cool card, and up to 1 Passion card and add them to your hand. Put the rest on the bottom of your deck in any order.\n[act]  Lesson (2), [engage] : Select an enemy follower on the field and deal it 4 damage.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "CSD02a-T01EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-034EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cute",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Look at the top 3 cards of your deck. From among them, you may reveal up to 1 Cute card, up to 1 Cool card, and up to 1 Passion card and add them to your hand. Put the rest on the bottom of your deck in any order. [act] Lesson (2), [engage]: Select an enemy follower on the field and deal it 4 damage."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-035EN",
     "name": "Kanade Hayami [Faraway Reflection]",
     "type": "base",
-    "cardType": "follower",
     "class": "rune",
-    "traits": [
-      "iM@S CG",
-      "Cool"
-    ],
-    "cost": 2,
-    "attack": 2,
-    "defense": 3,
-    "cardText": "[fanfare]  Lesson (1): Search your deck for a follower with \"Shiki Ichinose,\" \"Syuko Shiomi,\" \"Frederica Miyamoto,\" or \"Mika Jougasaki\" in its name, reveal it, add it to your hand, then shuffle.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-026EN",
-      "ECP02-027EN",
-      "ECP02-034EN",
-      "CP02-036EN",
-      "CP02-038EN",
-      "CP02-044EN",
-      "CP02-T04EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-035EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Lesson (1): Search your deck for a follower with \"Shiki Ichinose,\" \"Syuko Shiomi,\" \"Frederica Miyamoto,\" or \"Mika Jougasaki\" in its name, reveal it, add it to your hand, then shuffle."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-036EN",
     "name": "Tomoe Murakami [Crimson Fighter]",
     "type": "base",
-    "cardType": "follower",
     "class": "rune",
-    "traits": [
-      "iM@S CG",
-      "Passion"
-    ],
-    "cost": 3,
-    "attack": 3,
-    "defense": 4,
-    "cardText": "[fanfare]  The next Passion spell that costs 3 or less you play this turn costs 3 less.\nOnce per turn, when you play a Passion spell, deal 2 damage to each enemy leader.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-036EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Passion",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[fanfare] The next Passion spell that costs 3 or less you play this turn costs 3 less. Once per turn, when you play a Passion spell, deal 2 damage to each enemy leader."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-037EN",
     "name": "Fumika Sagisawa [Cinderella Girl]",
     "type": "base",
-    "cardType": "follower",
     "class": "dragon",
-    "traits": [
-      "iM@S CG",
-      "Cool"
-    ],
-    "cost": 2,
-    "attack": 2,
-    "defense": 2,
-    "cardText": "[evolve]  [cost01] : Evolve this.\n[fanfare]  If there are at least 3 Cool followers on your field, deal 1 damage to each enemy leader.",
-    "keywords": [
-      "fanfare",
-      "evolve"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-038EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-037EN.png",
-    "evolvesTo": "ECP02-038EN"
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] If there are at least 3 Cool followers on your field, deal 1 damage to each enemy leader."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-038EN",
     "name": "Fumika Sagisawa [Cinderella Girl] Evolved",
     "type": "evolved",
-    "cardType": "follower",
-    "specialType": "evolved",
     "class": "dragon",
-    "traits": [
-      "iM@S CG",
-      "Cool"
-    ],
-    "cost": null,
-    "attack": 3,
-    "defense": 3,
-    "cardText": "On Evolve - Choose 1. (1) Select an enemy follower on the field and deal it 2 damage. (2) [cost04] , bury this: Search your deck for a follower with \"Fumika Sagisawa\" in its name, summon it, then shuffle.",
-    "keywords": [],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-037EN",
-      "CP02-055EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-038EN.png",
-    "evolvesFrom": "ECP02-037EN"
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Choose 1. (1) Select an enemy follower on the field and deal it 2 damage. (2) [cost04], bury this: Search your deck for a follower with \"Fumika Sagisawa\" in its name, summon it, then shuffle."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-039EN",
     "name": "Akira Sunazuka [Online Life]",
     "type": "base",
-    "cardType": "follower",
     "class": "dragon",
-    "traits": [
-      "iM@S CG",
-      "Cool"
-    ],
-    "cost": 5,
-    "attack": 3,
-    "defense": 3,
-    "cardText": "[fanfare]  Lesson (1): Look at the top 3 cards of your deck. You may reveal an iM@S CG card from among them and add it to your hand. Put the rest on the bottom of your deck in any order.\n[act]  [engage] , discard a Cute card, Cool card, and Passion card: Give your leader [defense] +3. Draw 3 cards. Recover 3 play points.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "CP02-T04EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-039EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "5",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Lesson (1): Look at the top 3 cards of your deck. You may reveal an iM@S CG card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. [act] [engage], discard a Cute card, Cool card, and Passion card: Give your leader [defense]+3. Draw 3 cards. Recover 3 play points."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-040EN",
     "name": "Akari Tsujino [Twice as Lovely]",
     "type": "base",
-    "cardType": "follower",
     "class": "dragon",
-    "traits": [
-      "iM@S CG",
-      "Cute"
-    ],
-    "cost": 3,
-    "attack": 3,
-    "defense": 3,
-    "cardText": "Rush.\n[fanfare]  Bury the top 3 cards of your deck. If you buried a Cute card, give your leader [defense] +2. If you buried a Cool card, give this Assail. If you buried a Passion card, give this [attack] +2.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-040EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cute",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Rush. [fanfare] Bury the top 3 cards of your deck. If you buried a Cute card, give your leader [defense]+2. If you buried a Cool card, give this Assail. If you buried a Passion card, give this [attack]+2."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-041EN",
     "name": "Riamu Yumemi [Party Night]",
     "type": "base",
-    "cardType": "follower",
     "class": "dragon",
-    "traits": [
-      "iM@S CG",
-      "Passion"
-    ],
-    "cost": 8,
-    "attack": 7,
-    "defense": 7,
-    "cardText": "[fanfare]  Deal 7 damage to each enemy follower on the field. If there are at least 3 Cute cards, at least 3 Cool cards, and at least 3 Passion cards in your cemetery, give this Storm and recover 1 play point.\n[q] [act]  [cost01] , Lesson (1), discard this: Select an enemy follower on the field and deal it 2 damage.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "CP02-T07EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-041EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Passion",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "8",
+      "attack": "7",
+      "defense": "7",
+      "effect": "[fanfare] Deal 7 damage to each enemy follower on the field. If there are at least 3 Cute cards, at least 3 Cool cards, and at least 3 Passion cards in your cemetery, give this Storm and recover 1 play point. [q][act] [cost01], Lesson (1), discard this: Select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-042EN",
     "name": "Yui Ohtsuki [Lollipop Darling]",
     "type": "base",
-    "cardType": "follower",
     "class": "dragon",
-    "traits": [
-      "iM@S CG",
-      "Passion"
-    ],
-    "cost": 1,
-    "attack": 1,
-    "defense": 1,
-    "cardText": "[evolve]  [cost01] : Evolve this.",
-    "keywords": [
-      "evolve"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-043EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-042EN.png",
-    "evolvesTo": "ECP02-043EN"
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Passion",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-043EN",
     "name": "Yui Ohtsuki [Lollipop Darling] Evolved",
     "type": "evolved",
-    "cardType": "follower",
-    "specialType": "evolved",
     "class": "dragon",
-    "traits": [
-      "iM@S CG",
-      "Passion"
-    ],
-    "cost": null,
-    "attack": 2,
-    "defense": 2,
-    "cardText": "On Evolve - Choose 1. (1) Look at the top 2 cards of your deck. You may reveal a Passion card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. (2) [cost03] , bury this: Search your deck for a follower with \"Yui Ohtsuki\" in its name, summon it, then shuffle. Evolve it.",
-    "keywords": [],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-042EN",
-      "CP02-053EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-043EN.png",
-    "evolvesFrom": "ECP02-042EN"
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "iM@S CG / Passion",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - Choose 1. (1) Look at the top 2 cards of your deck. You may reveal a Passion card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. (2) [cost03], bury this: Search your deck for a follower with \"Yui Ohtsuki\" in its name, summon it, then shuffle. Evolve it."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-044EN",
     "name": "Hotaru Shiragiku [Unbreakable]",
     "type": "base",
-    "cardType": "follower",
     "class": "dragon",
-    "traits": [
-      "iM@S CG",
-      "Cute"
-    ],
-    "cost": 2,
-    "attack": 2,
-    "defense": 2,
-    "cardText": "[evolve]  [cost01] : Evolve this.\nAt the start of your end phase, select a follower on your field and, if there are at least 5 Cute cards in your cemetery, give it [defense] +2.",
-    "keywords": [
-      "evolve"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-045EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-044EN.png",
-    "evolvesTo": "ECP02-045EN"
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cute",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. At the start of your end phase, select a follower on your field and, if there are at least 5 Cute cards in your cemetery, give it [defense]+2."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-045EN",
     "name": "Hotaru Shiragiku [Unbreakable] Evolved",
     "type": "evolved",
-    "cardType": "follower",
-    "specialType": "evolved",
     "class": "dragon",
-    "traits": [
-      "iM@S CG",
-      "Cute"
-    ],
-    "cost": null,
-    "attack": 3,
-    "defense": 3,
-    "cardText": "On Evolve - Search your deck for an iM@S CG follower with 1 attack, reveal it, add it to your hand, then shuffle.\nAt the start of your end phase, select a follower on your field and, if there are at least 5 Cute cards in your cemetery, give it [defense] +2.",
-    "keywords": [],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-044EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-045EN.png",
-    "evolvesFrom": "ECP02-044EN"
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "iM@S CG / Cute",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Search your deck for an iM@S CG follower with 1 attack, reveal it, add it to your hand, then shuffle. At the start of your end phase, select a follower on your field and, if there are at least 5 Cute cards in your cemetery, give it [defense]+2."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-046EN",
     "name": "Star of the Show",
     "type": "base",
-    "cardType": "spell",
     "class": "dragon",
-    "traits": [
-      "iM@S CG",
-      "Cool"
-    ],
-    "cost": 3,
-    "attack": null,
-    "defense": null,
-    "cardText": "You may play this for 3 more play points.\n----------\nSelect an enemy follower on the field. Destroy it and, if you played this for 3 more play points, search your deck for a follower with \"Tsukasa Kiryu\" in its name, summon it, then shuffle.",
-    "keywords": [],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "CP02-057EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-046EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "You may play this for 3 more play points. ---------- Select an enemy follower on the field. Destroy it and, if you played this for 3 more play points, search your deck for a follower with \"Tsukasa Kiryu\" in its name, summon it, then shuffle."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-047EN",
     "name": "Ranko Kanzaki [Cinderella Girl]",
     "type": "base",
-    "cardType": "follower",
     "class": "abyss",
-    "traits": [
-      "iM@S CG",
-      "Cool"
-    ],
-    "cost": 5,
-    "attack": 5,
-    "defense": 5,
-    "cardText": "Ward.\n[fanfare]  Select an enemy follower on the field and destroy it. Necrocharge (5) - Give your leader [defense] +3. NC (10) - Deal 3 damage to each enemy leader.\n[act]  Lesson (1): Draw a card. Activate only once per turn.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "CP02-T04EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-047EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Ward. [fanfare] Select an enemy follower on the field and destroy it. Necrocharge (5) - Give your leader [defense]+3. NC (10) - Deal 3 damage to each enemy leader. [act] Lesson (1): Draw a card. Activate only once per turn."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-048EN",
     "name": "Syoko Hoshi [individuals]",
     "type": "base",
-    "cardType": "follower",
     "class": "abyss",
-    "traits": [
-      "iM@S CG",
-      "Passion"
-    ],
-    "cost": 2,
-    "attack": 3,
-    "defense": 2,
-    "cardText": "[fanfare]  Bury the top 2 cards of your deck.\n[act]  [cost01] , Lesson (2), [engage] : Select an iM@S CG follower in your cemetery that costs 2 or less and put it into your EX area. It costs 2 less to play this turn. Activate only once per turn.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "CP02-T07EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-048EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Passion",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[fanfare] Bury the top 2 cards of your deck. [act] [cost01], Lesson (2), [engage]: Select an iM@S CG follower in your cemetery that costs 2 or less and put it into your EX area. It costs 2 less to play this turn. Activate only once per turn."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-049EN",
     "name": "Mirei Hayasaka [individuals]",
     "type": "base",
-    "cardType": "follower",
     "class": "abyss",
-    "traits": [
-      "iM@S CG",
-      "Cute"
-    ],
-    "cost": 2,
-    "attack": 2,
-    "defense": 3,
-    "cardText": "While there are at least 10 iM@S CG cards in your cemetery, this has Storm.\n[fanfare]  Bury the top 2 cards of your deck.\nStrike - Select an enemy follower on the field and, if there are at least 10 iM@S CG cards in your cemetery, deal it 2 damage.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-049EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cute",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "While there are at least 10 iM@S CG cards in your cemetery, this has Storm. [fanfare] Bury the top 2 cards of your deck. Strike - Select an enemy follower on the field and, if there are at least 10 iM@S CG cards in your cemetery, deal it 2 damage."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-050EN",
     "name": "Nono Morikubo [individuals]",
     "type": "base",
-    "cardType": "follower",
     "class": "abyss",
-    "traits": [
-      "iM@S CG",
-      "Cool"
-    ],
-    "cost": 2,
-    "attack": 1,
-    "defense": 1,
-    "cardText": "[evolve]  [cost01] : Evolve this.\nWhenever a follower with \"Mirei Hayasaka\" or \"Syoko Hoshi\" in its name is put onto your field, give it [attack] +1/[defense] +1.",
-    "keywords": [
-      "evolve"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-048EN",
-      "ECP02-049EN",
-      "ECP02-051EN",
-      "CP02-081EN",
-      "CP02-083EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-050EN.png",
-    "evolvesTo": "ECP02-051EN"
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this. Whenever a follower with \"Mirei Hayasaka\" or \"Syoko Hoshi\" in its name is put onto your field, give it [attack]+1/[defense]+1."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-051EN",
     "name": "Nono Morikubo [individuals] Evolved",
     "type": "evolved",
-    "cardType": "follower",
-    "specialType": "evolved",
     "class": "abyss",
-    "traits": [
-      "iM@S CG",
-      "Cool"
-    ],
-    "cost": null,
-    "attack": 2,
-    "defense": 2,
-    "cardText": "On Evolve - Look at the top 4 cards of your deck. You may summon an iM@S CG follower that costs 2 or less from among them. Put the rest on the bottom of your deck in any order.\nWhenever a follower with \"Mirei Hayasaka\" or \"Syoko Hoshi\" in its name is put onto your field, give it [attack] +1/[defense] +1.",
-    "keywords": [],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-048EN",
-      "ECP02-049EN",
-      "ECP02-050EN",
-      "CP02-081EN",
-      "CP02-083EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-051EN.png",
-    "evolvesFrom": "ECP02-050EN"
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - Look at the top 4 cards of your deck. You may summon an iM@S CG follower that costs 2 or less from among them. Put the rest on the bottom of your deck in any order. Whenever a follower with \"Mirei Hayasaka\" or \"Syoko Hoshi\" in its name is put onto your field, give it [attack]+1/[defense]+1."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-052EN",
     "name": "Asuka Ninomiya [Sweet & Charming]",
     "type": "base",
-    "cardType": "follower",
     "class": "abyss",
-    "traits": [
-      "iM@S CG",
-      "Cool"
-    ],
-    "cost": 2,
-    "attack": 3,
-    "defense": 2,
-    "cardText": "While there are at least 3 Cool followers on your field, this has Storm.\n[fanfare]  [cost02] , Lesson (1): Search your deck for a follower with \"Ranko Kanzaki\" in its name, put it into your EX area, then shuffle. It costs 4 less to play this turn.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-047EN",
-      "CP02-069EN",
-      "CP02-T04EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-052EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "While there are at least 3 Cool followers on your field, this has Storm. [fanfare] [cost02], Lesson (1): Search your deck for a follower with \"Ranko Kanzaki\" in its name, put it into your EX area, then shuffle. It costs 4 less to play this turn."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-053EN",
     "name": "Chitose Kurosaki [Memento Mori]",
     "type": "base",
-    "cardType": "follower",
     "class": "abyss",
-    "traits": [
-      "iM@S CG",
-      "Cute"
-    ],
-    "cost": 3,
-    "attack": 3,
-    "defense": 3,
-    "cardText": "[evolve]  [cost01] : Evolve this.\n[fanfare]  Lesson (1): Select an enemy follower on the field. Deal it 1 damage and give your leader [defense] +1.",
-    "keywords": [
-      "fanfare",
-      "evolve"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-054EN",
-      "CP02-T01EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-053EN.png",
-    "evolvesTo": "ECP02-054EN"
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cute",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Lesson (1): Select an enemy follower on the field. Deal it 1 damage and give your leader [defense]+1."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-054EN",
     "name": "Chitose Kurosaki [Memento Mori] Evolved",
     "type": "evolved",
-    "cardType": "follower",
-    "specialType": "evolved",
     "class": "abyss",
-    "traits": [
-      "iM@S CG",
-      "Cute"
-    ],
-    "cost": null,
-    "attack": 4,
-    "defense": 4,
-    "cardText": "On Evolve - Select an enemy follower on the field. Deal it 3 damage and bury the top 2 cards of your deck.",
-    "keywords": [],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-053EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-054EN.png",
-    "evolvesFrom": "ECP02-053EN"
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "iM@S CG / Cute",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Select an enemy follower on the field. Deal it 3 damage and bury the top 2 cards of your deck."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-055EN",
     "name": "Natsuki Kimura [Scarlet Love Song]",
     "type": "base",
-    "cardType": "follower",
     "class": "abyss",
-    "traits": [
-      "iM@S CG",
-      "Passion"
-    ],
-    "cost": 3,
-    "attack": 3,
-    "defense": 3,
-    "cardText": "[evolve]  [cost01] : Evolve this.\nWhile there are at least 10 Passion cards in your cemetery, this has Storm.\n[fanfare]  If there's an iM@S CG follower on your field that costs 5 or more, evolve this.",
-    "keywords": [
-      "fanfare",
-      "evolve"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-056EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-055EN.png",
-    "evolvesTo": "ECP02-056EN"
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Passion",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. While there are at least 10 Passion cards in your cemetery, this has Storm. [fanfare] If there's an iM@S CG follower on your field that costs 5 or more, evolve this."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-056EN",
     "name": "Natsuki Kimura [Scarlet Love Song] Evolved",
     "type": "evolved",
-    "cardType": "follower",
-    "specialType": "evolved",
     "class": "abyss",
-    "traits": [
-      "iM@S CG",
-      "Passion"
-    ],
-    "cost": null,
-    "attack": 4,
-    "defense": 4,
-    "cardText": "While there are at least 10 Passion cards in your cemetery, this has Storm.\nOn Evolve - Select an enemy follower on the field and deal it damage equal to 2 times the number of Passion followers on your field.",
-    "keywords": [],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-055EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-056EN.png",
-    "evolvesFrom": "ECP02-055EN"
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "iM@S CG / Passion",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "While there are at least 10 Passion cards in your cemetery, this has Storm. On Evolve - Select an enemy follower on the field and deal it damage equal to 2 times the number of Passion followers on your field."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-057EN",
     "name": "Takumi Mukai [No One Can Stop Me]",
     "type": "base",
-    "cardType": "follower",
     "class": "abyss",
-    "traits": [
-      "iM@S CG",
-      "Passion"
-    ],
-    "cost": 6,
-    "attack": 5,
-    "defense": 5,
-    "cardText": "Rush. Assail.\n[fanfare]  Select a Passion follower in your cemetery that costs 3 or less and summon it.\nDuring your turn, whenever an iM@S CG card on your field deals damage to 1 or more enemy followers on the field, deal 1 damage to each enemy leader.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-057EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Passion",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Rush. Assail. [fanfare] Select a Passion follower in your cemetery that costs 3 or less and summon it. During your turn, whenever an iM@S CG card on your field deals damage to 1 or more enemy followers on the field, deal 1 damage to each enemy leader."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-058EN",
     "name": "Koume Shirasaka [Haunted Gown]",
     "type": "base",
-    "cardType": "follower",
     "class": "abyss",
-    "traits": [
-      "iM@S CG",
-      "Cool"
-    ],
-    "cost": 3,
-    "attack": 2,
-    "defense": 2,
-    "cardText": "[fanfare]  Select a Cool follower in your cemetery not named Koume Shirasaka [Haunted Gown] that costs 3 or less and, if there are at least 3 Cool followers on your field, summon it.\n[act]  [cost01] , Lesson (1), [engage] : Search your deck for a Last Daylight, put it into your EX area, then shuffle. It costs 2 less to play this turn.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "CP02-085EN",
-      "CP02-T04EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-058EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Select a Cool follower in your cemetery not named Koume Shirasaka [Haunted Gown] that costs 3 or less and, if there are at least 3 Cool followers on your field, summon it. [act] [cost01], Lesson (1), [engage]: Search your deck for a Last Daylight, put it into your EX area, then shuffle. It costs 2 less to play this turn."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-059EN",
     "name": "Self-Proclaimed Fan Favorite",
     "type": "base",
-    "cardType": "spell",
     "class": "abyss",
-    "traits": [
-      "iM@S CG",
-      "Cute"
-    ],
-    "cost": 2,
-    "attack": null,
-    "defense": null,
-    "cardText": "Choose 1. If there are at least 5 Cute cards in your cemetery, choose up to 2 instead. (1) Select an enemy follower on the field and deal it 4 damage. (2) Search your deck for a follower with \"Sachiko Koshimizu\" in its name, summon it, then shuffle. Give it Drain. (3) Put a Magical Item token into your EX area.",
-    "keywords": [],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "CP02-071EN",
-      "CP02-T01EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-059EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "iM@S CG / Cute",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose 1. If there are at least 5 Cute cards in your cemetery, choose up to 2 instead. (1) Select an enemy follower on the field and deal it 4 damage. (2) Search your deck for a follower with \"Sachiko Koshimizu\" in its name, summon it, then shuffle. Give it Drain. (3) Put a Magical Item token into your EX area."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-060EN",
     "name": "Nana Abe [Cinderella Girl]",
     "type": "base",
-    "cardType": "follower",
     "class": "haven",
-    "traits": [
-      "iM@S CG",
-      "Cute"
-    ],
-    "cost": 2,
-    "attack": 2,
-    "defense": 2,
-    "cardText": "[evolve]  [cost01] : Evolve this.\n[fanfare]  Lesson (1): Select an enemy follower on the field and give it [attack] -1/[defense] -1.",
-    "keywords": [
-      "fanfare",
-      "evolve"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-061EN",
-      "CP02-T01EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-060EN.png",
-    "evolvesTo": "ECP02-061EN"
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cute",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Lesson (1): Select an enemy follower on the field and give it [attack]-1/[defense]-1."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-061EN",
     "name": "Nana Abe [Cinderella Girl] Evolved",
     "type": "evolved",
-    "cardType": "follower",
-    "specialType": "evolved",
     "class": "haven",
-    "traits": [
-      "iM@S CG",
-      "Cute"
-    ],
-    "cost": null,
-    "attack": 3,
-    "defense": 3,
-    "cardText": "On Evolve - Discard an iM@S CG card: Give your leader [defense] +2. Draw a card.\nOn Super-Evolve - Select an enemy follower on the field. Change it into an amulet and give it \"At the start of your main phase, deal 2 damage to your leader\" and \"[act]  [cost01] , discard 2 cards: Bury this.\"",
-    "keywords": [],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-060EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-061EN.png",
-    "evolvesFrom": "ECP02-060EN"
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "iM@S CG / Cute",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Discard an iM@S CG card: Give your leader [defense]+2. Draw a card. On Super-Evolve - Select an enemy follower on the field. Change it into an amulet and give it \"At the start of your main phase, deal 2 damage to your leader\" and \"[act] [cost01], discard 2 cards: Bury this.\""
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-062EN",
     "name": "Kaede Takagaki [Cinderella Girl]",
     "type": "base",
-    "cardType": "follower",
     "class": "haven",
-    "traits": [
-      "iM@S CG",
-      "Cool"
-    ],
-    "cost": 3,
-    "attack": 2,
-    "defense": 4,
-    "cardText": "Ward.\n[fanfare]  Select an enemy follower on the field and, if there are at least 10 iM@S CG cards in your cemetery, destroy it.\n[act]  Lesson (1), [engage] , discard a card: Select an enemy follower on the field and destroy it.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "CP02-T04EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-062EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "4",
+      "effect": "Ward. [fanfare] Select an enemy follower on the field and, if there are at least 10 iM@S CG cards in your cemetery, destroy it. [act] Lesson (1), [engage], discard a card: Select an enemy follower on the field and destroy it."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-063EN",
     "name": "Eve Santaclaus [Cinderella Girl]",
     "type": "base",
-    "cardType": "follower",
     "class": "haven",
-    "traits": [
-      "iM@S CG",
-      "Passion"
-    ],
-    "cost": 1,
-    "attack": 1,
-    "defense": 2,
-    "cardText": "[fanfare]  Look at the top 2 cards of your deck. You may put any number of them on the top of your deck in any order. Put the rest on the bottom of your deck in any order.\n[act]  Lesson (2): Look at the top card of your deck. If it's an iM@S CG card, you may reveal it and add it to your hand. Activate only once per turn.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "CP02-T07EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-063EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Passion",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[fanfare] Look at the top 2 cards of your deck. You may put any number of them on the top of your deck in any order. Put the rest on the bottom of your deck in any order. [act] Lesson (2): Look at the top card of your deck. If it's an iM@S CG card, you may reveal it and add it to your hand. Activate only once per turn."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-064EN",
     "name": "Miyu Mifune [Rouge Couture]",
     "type": "base",
-    "cardType": "follower",
     "class": "haven",
-    "traits": [
-      "iM@S CG",
-      "Cool"
-    ],
-    "cost": 3,
-    "attack": 3,
-    "defense": 3,
-    "cardText": "[fanfare]  Search your deck for a 1-cost iM@S CG follower, summon it, then shuffle.\n[act]  [cost01] , Lesson (1), [engage] : Search your deck for a 1-cost iM@S CG follower, summon it, then shuffle.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "CP02-T04EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-064EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Search your deck for a 1-cost iM@S CG follower, summon it, then shuffle. [act] [cost01], Lesson (1), [engage]: Search your deck for a 1-cost iM@S CG follower, summon it, then shuffle."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-065EN",
     "name": "Kako Takafuji [Lady Luck]",
     "type": "base",
-    "cardType": "follower",
     "class": "haven",
-    "traits": [
-      "iM@S CG",
-      "Cool"
-    ],
-    "cost": 3,
-    "attack": 3,
-    "defense": 3,
-    "cardText": "[evolve]  [cost01] : Evolve this.\nYou may reroll each die or dice roll you make once.",
-    "keywords": [
-      "evolve"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-066EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-065EN.png",
-    "evolvesTo": "ECP02-066EN"
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. You may reroll each die or dice roll you make once."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-066EN",
     "name": "Kako Takafuji [Lady Luck] Evolved",
     "type": "evolved",
-    "cardType": "follower",
-    "specialType": "evolved",
     "class": "haven",
-    "traits": [
-      "iM@S CG",
-      "Cool"
-    ],
-    "cost": null,
-    "attack": 4,
-    "defense": 4,
-    "cardText": "You may reroll each die or dice roll you make once.\nOn Evolve - Roll a 6-sided die. If you roll a 1, draw 2 cards. If you roll a 2, deal 3 damage to each enemy leader and give your leader [defense] +3. If you roll a 3, each opponent buries a follower with the highest attack among followers on their field.",
-    "keywords": [],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-065EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-066EN.png",
-    "evolvesFrom": "ECP02-065EN"
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "You may reroll each die or dice roll you make once. On Evolve - Roll a 6-sided die. If you roll a 1, draw 2 cards. If you roll a 2, deal 3 damage to each enemy leader and give your leader [defense]+3. If you roll a 3, each opponent buries a follower with the highest attack among followers on their field."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-067EN",
     "name": "Kotoka Saionji [Pure Euphoria]",
     "type": "base",
-    "cardType": "follower",
     "class": "haven",
-    "traits": [
-      "iM@S CG",
-      "Cute"
-    ],
-    "cost": 5,
-    "attack": 4,
-    "defense": 4,
-    "cardText": "[evolve]  [cost01] : Evolve this.\n[fanfare]  Lesson (2): Select an enemy follower on the field and banish it.",
-    "keywords": [
-      "fanfare",
-      "evolve"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-068EN",
-      "CP02-T01EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-067EN.png",
-    "evolvesTo": "ECP02-068EN"
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cute",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Lesson (2): Select an enemy follower on the field and banish it."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-068EN",
     "name": "Kotoka Saionji [Pure Euphoria] Evolved",
     "type": "evolved",
-    "cardType": "follower",
-    "specialType": "evolved",
     "class": "haven",
-    "traits": [
-      "iM@S CG",
-      "Cute"
-    ],
-    "cost": null,
-    "attack": 5,
-    "defense": 5,
-    "cardText": "On Evolve - Select an enemy follower on the field and banish it.",
-    "keywords": [],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-067EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-068EN.png",
-    "evolvesFrom": "ECP02-067EN"
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "iM@S CG / Cute",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "On Evolve - Select an enemy follower on the field and banish it."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-069EN",
     "name": "Haru Yuuki [Secret Blue Rose]",
     "type": "base",
-    "cardType": "follower",
     "class": "haven",
-    "traits": [
-      "iM@S CG",
-      "Cool"
-    ],
-    "cost": 1,
-    "attack": 2,
-    "defense": 1,
-    "cardText": "While there are at least 3 Cool followers or a follower with \"Risa Matoba\" in its name on your field, this has Rush and Assail.\n[fanfare]  If there's a follower on your field with \"Risa Matoba\" in its name, put a Magical Item token into your EX area.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "CP02-093EN",
-      "CP02-T04EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-069EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "1",
+      "effect": "While there are at least 3 Cool followers or a follower with \"Risa Matoba\" in its name on your field, this has Rush and Assail. [fanfare] If there's a follower on your field with \"Risa Matoba\" in its name, put a Magical Item token into your EX area."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-070EN",
     "name": "Natalia [One Thousand and One Nights]",
     "type": "base",
-    "cardType": "follower",
     "class": "haven",
-    "traits": [
-      "iM@S CG",
-      "Passion"
-    ],
-    "cost": 2,
-    "attack": 2,
-    "defense": 2,
-    "cardText": "Rush.\nWhile there are at least 5 Passion cards in your cemetery, this has Assail and Bane.\n[fanfare]  Discard a Passion card: Draw a card.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-070EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Passion",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Rush. While there are at least 5 Passion cards in your cemetery, this has Assail and Bane. [fanfare] Discard a Passion card: Draw a card."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-071EN",
     "name": "A Sweet Romantic Summer",
     "type": "base",
-    "cardType": "amulet",
     "class": "haven",
-    "traits": [
-      "iM@S CG",
-      "Passion"
-    ],
-    "cost": 3,
-    "attack": null,
-    "defense": null,
-    "cardText": "[fanfare]  Select an enemy follower on the field. If there's an iM@S CG follower on your field, deal 4 damage to the selected follower and give your leader [defense] +2.\n[act]  [cost01] , [engage] , bury this: Search your deck for a follower with \"Shin Sato\" in its name, summon it, then shuffle. Activate only if there are at least 10 Passion cards in your cemetery.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "CP02-087EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-071EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "iM@S CG / Passion",
+      "rarity": "Gold",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Select an enemy follower on the field. If there's an iM@S CG follower on your field, deal 4 damage to the selected follower and give your leader [defense]+2. [act] [cost01], [engage], bury this: Search your deck for a follower with \"Shin Sato\" in its name, summon it, then shuffle. Activate only if there are at least 10 Passion cards in your cemetery."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-072EN",
     "name": "Curtain Call of Smiles",
     "type": "base",
-    "cardType": "spell",
     "class": "neutral",
-    "traits": [
-      "iM@S CG",
-      "Cute",
-      "Cool",
-      "Passion"
-    ],
-    "cost": 12,
-    "attack": null,
-    "defense": null,
-    "cardText": "This costs 5 less to play if there are at least 10 iM@S CG cards in your cemetery.\n----------\nDestroy each non-iM@S CG follower on the field. Put 2 Magical Item tokens into your EX area. Give your leader [defense] +4. Draw 2 cards.",
-    "keywords": [],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "CP02-T01EN",
-      "CP02-T04EN",
-      "CP02-T07EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-072EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "iM@S CG / Cute / Cool / Passion",
+      "rarity": "Legendary",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "12",
+      "attack": "-",
+      "defense": "-",
+      "effect": "This costs 5 less to play if there are at least 10 iM@S CG cards in your cemetery. ---------- Destroy each non-iM@S CG follower on the field. Put 2 Magical Item tokens into your EX area. Give your leader [defense]+4. Draw 2 cards."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-SP01EN",
     "name": "Minami Nitta [Goddess by the Sunlit Sea]",
     "type": "base",
-    "cardType": "follower",
     "class": "forest",
-    "traits": [
-      "iM@S CG",
-      "Cool"
-    ],
-    "cost": 3,
-    "attack": 3,
-    "defense": 3,
-    "cardText": "[fanfare]  Search your deck for a follower with \"Anastasia\" in its name, put it into your EX area, then shuffle. It costs 3 less to play this turn.\n[act]  Lesson (1), [engage] : Select an enemy follower on the field and engage it. It doesn't refresh during its controller's next start phase.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-001EN",
-      "ECP02-004EN",
-      "CP02-006EN",
-      "CP02-T04EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-SP01EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Special",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Search your deck for a follower with \"Anastasia\" in its name, put it into your EX area, then shuffle. It costs 3 less to play this turn. [act] Lesson (1), [engage]: Select an enemy follower on the field and engage it. It doesn't refresh during its controller's next start phase."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-SP02EN",
     "name": "Yuki Himekawa [Challengers' Cheer]",
     "type": "base",
-    "cardType": "follower",
     "class": "forest",
-    "traits": [
-      "iM@S CG",
-      "Passion"
-    ],
-    "cost": 7,
-    "attack": 4,
-    "defense": 4,
-    "cardText": "Storm.\n[fanfare]  Deal 4 damage to each enemy follower on the field. If the total cost of Passion cards on your field is 10 or more, deal 8 damage instead. If 20 or more, deal 4 damage to each enemy leader.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-005EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-SP02EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Passion",
+      "rarity": "Special",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "7",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Storm. [fanfare] Deal 4 damage to each enemy follower on the field. If the total cost of Passion cards on your field is 10 or more, deal 8 damage instead. If 20 or more, deal 4 damage to each enemy leader."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-SP03aEN",
     "name": "Rin & Mio",
     "type": "base",
-    "cardType": "follower",
     "class": "sword",
-    "traits": [
-      "iM@S CG",
-      "Cool"
-    ],
-    "cost": 2,
-    "attack": 2,
-    "defense": 1,
-    "cardText": "Storm.\n[fanfare]  Lesson (2): Select an enemy follower on the field and deal it damage equal to the number of Cool followers on your field.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-012EN",
-      "CP02-T04EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-SP03aEN.png"
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Special",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "1",
+      "effect": "Storm. [fanfare] Lesson (2): Select an enemy follower on the field and deal it damage equal to the number of Cool followers on your field."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-SP04EN",
     "name": "Uzuki Shimamura [Magical New Me]",
     "type": "base",
-    "cardType": "follower",
     "class": "sword",
-    "traits": [
-      "iM@S CG",
-      "Cute"
-    ],
-    "cost": 6,
-    "attack": 4,
-    "defense": 4,
-    "cardText": "[fanfare]  Search your deck for an iM@S CG card not named Uzuki Shimamura [Cinderella Girl], put it into your EX area, then shuffle. If there are at least 5 Cute cards in your cemetery, search for up to 2 instead.\n[act]  Lesson (1): Select an iM@S CG card in your EX area and give it \"This costs 5 less to play.\" Activate only once per turn.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-015EN",
-      "CP02-T01EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-SP04EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cute",
+      "rarity": "Special",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "6",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Search your deck for an iM@S CG card not named Uzuki Shimamura [Cinderella Girl], put it into your EX area, then shuffle. If there are at least 5 Cute cards in your cemetery, search for up to 2 instead. [act] Lesson (1): Select an iM@S CG card in your EX area and give it \"This costs 5 less to play.\" Activate only once per turn."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-SP05aEN",
     "name": "Mika & Rika",
     "type": "base",
-    "cardType": "follower",
     "class": "rune",
-    "traits": [
-      "iM@S CG",
-      "Passion"
-    ],
-    "cost": 4,
-    "attack": 3,
-    "defense": 3,
-    "cardText": "[fanfare]  Search your deck for an iM@S CG spell, put it into your EX area, then shuffle. It costs 3 less to play this turn.\n[act]  Lesson (1): Select an iM@S CG spell in your cemetery and put it into your EX area. It costs 3 less to play this turn. Activate only if there are at least 10 Passion cards in your cemetery, and only once per turn.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-027EN",
-      "CP02-T07EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-SP05aEN.png"
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Passion",
+      "rarity": "Special",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Search your deck for an iM@S CG spell, put it into your EX area, then shuffle. It costs 3 less to play this turn. [act] Lesson (1): Select an iM@S CG spell in your cemetery and put it into your EX area. It costs 3 less to play this turn. Activate only if there are at least 10 Passion cards in your cemetery, and only once per turn."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-SP06EN",
     "name": "Yuuki Otokura [Ripples of My Heart]",
     "type": "base",
-    "cardType": "follower",
     "class": "rune",
-    "traits": [
-      "iM@S CG",
-      "Cute"
-    ],
-    "cost": 3,
-    "attack": 3,
-    "defense": 3,
-    "cardText": "[fanfare]  Select an enemy follower on the field and give it [attack] -3/[defense] -3. If there's another Cute follower on your field, give [attack] -5/[defense] -5 instead.\n[act]  [cost00] : Give this Storm. Put a Magical Item token into your EX area. Activate only if there are at least 10 Cute cards in your cemetery, and only once per turn.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-028EN",
-      "CP02-T01EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-SP06EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cute",
+      "rarity": "Special",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Select an enemy follower on the field and give it [attack]-3/[defense]-3. If there's another Cute follower on your field, give [attack]-5/[defense]-5 instead. [act] [cost00]: Give this Storm. Put a Magical Item token into your EX area. Activate only if there are at least 10 Cute cards in your cemetery, and only once per turn."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-SP07aEN",
     "name": "Akari & Akira",
     "type": "base",
-    "cardType": "follower",
     "class": "dragon",
-    "traits": [
-      "iM@S CG",
-      "Cute"
-    ],
-    "cost": 3,
-    "attack": 3,
-    "defense": 3,
-    "cardText": "Rush.\n[fanfare]  Bury the top 3 cards of your deck. If you buried a Cute card, give your leader [defense] +2. If you buried a Cool card, give this Assail. If you buried a Passion card, give this [attack] +2.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-040EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-SP07aEN.png"
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cute",
+      "rarity": "Special",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Rush. [fanfare] Bury the top 3 cards of your deck. If you buried a Cute card, give your leader [defense]+2. If you buried a Cool card, give this Assail. If you buried a Passion card, give this [attack]+2."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-SP08EN",
     "name": "Riamu Yumemi [Shout It to the World]",
     "type": "base",
-    "cardType": "follower",
     "class": "dragon",
-    "traits": [
-      "iM@S CG",
-      "Passion"
-    ],
-    "cost": 8,
-    "attack": 7,
-    "defense": 7,
-    "cardText": "[fanfare]  Deal 7 damage to each enemy follower on the field. If there are at least 3 Cute cards, at least 3 Cool cards, and at least 3 Passion cards in your cemetery, give this Storm and recover 1 play point.\n[q] [act]  [cost01] , Lesson (1), discard this: Select an enemy follower on the field and deal it 2 damage.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-041EN",
-      "CP02-T07EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-SP08EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Passion",
+      "rarity": "Special",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "8",
+      "attack": "7",
+      "defense": "7",
+      "effect": "[fanfare] Deal 7 damage to each enemy follower on the field. If there are at least 3 Cute cards, at least 3 Cool cards, and at least 3 Passion cards in your cemetery, give this Storm and recover 1 play point. [q][act] [cost01], Lesson (1), discard this: Select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-SP09EN",
     "name": "Ranko Kanzaki [Princess in White]",
     "type": "base",
-    "cardType": "follower",
     "class": "abyss",
-    "traits": [
-      "iM@S CG",
-      "Cool"
-    ],
-    "cost": 5,
-    "attack": 5,
-    "defense": 5,
-    "cardText": "Ward.\n[fanfare]  Select an enemy follower on the field and destroy it. Necrocharge (5) - Give your leader [defense] +3. NC (10) - Deal 3 damage to each enemy leader.\n[act]  Lesson (1): Draw a card. Activate only once per turn.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-047EN",
-      "CP02-T04EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-SP09EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Special",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Ward. [fanfare] Select an enemy follower on the field and destroy it. Necrocharge (5) - Give your leader [defense]+3. NC (10) - Deal 3 damage to each enemy leader. [act] Lesson (1): Draw a card. Activate only once per turn."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-SP10EN",
     "name": "Asuka Ninomiya [Gentle Evening]",
     "type": "base",
-    "cardType": "follower",
     "class": "abyss",
-    "traits": [
-      "iM@S CG",
-      "Cool"
-    ],
-    "cost": 2,
-    "attack": 3,
-    "defense": 2,
-    "cardText": "While there are at least 3 Cool followers on your field, this has Storm.\n[fanfare]  [cost02] , Lesson (1): Search your deck for a follower with \"Ranko Kanzaki\" in its name, put it into your EX area, then shuffle. It costs 4 less to play this turn.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-047EN",
-      "ECP02-052EN",
-      "CP02-069EN",
-      "CP02-T04EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-SP10EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Special",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "While there are at least 3 Cool followers on your field, this has Storm. [fanfare] [cost02], Lesson (1): Search your deck for a follower with \"Ranko Kanzaki\" in its name, put it into your EX area, then shuffle. It costs 4 less to play this turn."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-SP11EN",
     "name": "Eve Santaclaus [Holy Night Miracle]",
     "type": "base",
-    "cardType": "follower",
     "class": "haven",
-    "traits": [
-      "iM@S CG",
-      "Passion"
-    ],
-    "cost": 1,
-    "attack": 1,
-    "defense": 2,
-    "cardText": "[fanfare]  Look at the top 2 cards of your deck. You may put any number of them on the top of your deck in any order. Put the rest on the bottom of your deck in any order.\n[act]  Lesson (2): Look at the top card of your deck. If it's an iM@S CG card, you may reveal it and add it to your hand. Activate only once per turn.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-063EN",
-      "CP02-T07EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-SP11EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Passion",
+      "rarity": "Special",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[fanfare] Look at the top 2 cards of your deck. You may put any number of them on the top of your deck in any order. Put the rest on the bottom of your deck in any order. [act] Lesson (2): Look at the top card of your deck. If it's an iM@S CG card, you may reveal it and add it to your hand. Activate only once per turn."
+    },
+    "imgSrc": ""
   },
   {
     "cardNo": "ECP02-SP12EN",
     "name": "Miyu Mifune [Parfum Géranium]",
     "type": "base",
-    "cardType": "follower",
     "class": "haven",
-    "traits": [
-      "iM@S CG",
-      "Cool"
-    ],
-    "cost": 3,
-    "attack": 3,
-    "defense": 3,
-    "cardText": "[fanfare]  Search your deck for a 1-cost iM@S CG follower, summon it, then shuffle.\n[act]  [cost01] , Lesson (1), [engage] : Search your deck for a 1-cost iM@S CG follower, summon it, then shuffle.",
-    "keywords": [
-      "fanfare"
-    ],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-064EN",
-      "CP02-T04EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-SP12EN.png"
-  },
-  {
-    "cardNo": "ECP02-T01EN",
-    "name": "Kyoko Igarashi [Love Letter] TOKEN",
-    "type": "token",
-    "cardType": "spell",
-    "specialType": "token",
-    "class": "neutral",
-    "traits": [
-      "iM@S CG"
-    ],
-    "cost": 4,
-    "attack": null,
-    "defense": null,
-    "cardText": "Give your leader [defense] +1. Draw a card.",
-    "keywords": [],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-T02EN",
-      "ECP02-T03EN",
-      "ECP02-T04EN",
-      "ECP02-T05EN",
-      "ECP02-T06EN",
-      "ECP02-T07EN",
-      "ECP02-T08EN",
-      "ECP02-T09EN",
-      "ECP02-T10EN",
-      "ECP02-T11EN",
-      "ECP02-T12EN",
-      "ECP02-T13EN",
-      "ECP02-T14EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-T01EN.png"
-  },
-  {
-    "cardNo": "ECP02-T02EN",
-    "name": "Shiki Ichinose [Budding Flower] TOKEN",
-    "type": "token",
-    "cardType": "spell",
-    "specialType": "token",
-    "class": "neutral",
-    "traits": [
-      "iM@S CG"
-    ],
-    "cost": 4,
-    "attack": null,
-    "defense": null,
-    "cardText": "Give your leader [defense] +1. Draw a card.",
-    "keywords": [],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-T01EN",
-      "ECP02-T03EN",
-      "ECP02-T04EN",
-      "ECP02-T05EN",
-      "ECP02-T06EN",
-      "ECP02-T07EN",
-      "ECP02-T08EN",
-      "ECP02-T09EN",
-      "ECP02-T10EN",
-      "ECP02-T11EN",
-      "ECP02-T12EN",
-      "ECP02-T13EN",
-      "ECP02-T14EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-T02EN.png"
-  },
-  {
-    "cardNo": "ECP02-T03EN",
-    "name": "Sachiko Koshimizu [Lunatic Show] TOKEN",
-    "type": "token",
-    "cardType": "spell",
-    "specialType": "token",
-    "class": "neutral",
-    "traits": [
-      "iM@S CG"
-    ],
-    "cost": 4,
-    "attack": null,
-    "defense": null,
-    "cardText": "Give your leader [defense] +1. Draw a card.",
-    "keywords": [],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-T01EN",
-      "ECP02-T02EN",
-      "ECP02-T04EN",
-      "ECP02-T05EN",
-      "ECP02-T06EN",
-      "ECP02-T07EN",
-      "ECP02-T08EN",
-      "ECP02-T09EN",
-      "ECP02-T10EN",
-      "ECP02-T11EN",
-      "ECP02-T12EN",
-      "ECP02-T13EN",
-      "ECP02-T14EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-T03EN.png"
-  },
-  {
-    "cardNo": "ECP02-T04EN",
-    "name": "Kaede Takagaki [Nation Blue] TOKEN",
-    "type": "token",
-    "cardType": "spell",
-    "specialType": "token",
-    "class": "neutral",
-    "traits": [
-      "iM@S CG"
-    ],
-    "cost": 4,
-    "attack": null,
-    "defense": null,
-    "cardText": "Give your leader [defense] +1. Draw a card.",
-    "keywords": [],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-T01EN",
-      "ECP02-T02EN",
-      "ECP02-T03EN",
-      "ECP02-T05EN",
-      "ECP02-T06EN",
-      "ECP02-T07EN",
-      "ECP02-T08EN",
-      "ECP02-T09EN",
-      "ECP02-T10EN",
-      "ECP02-T11EN",
-      "ECP02-T12EN",
-      "ECP02-T13EN",
-      "ECP02-T14EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-T04EN.png"
-  },
-  {
-    "cardNo": "ECP02-T05EN",
-    "name": "Riina Tada [Eight Beat Rocker] TOKEN",
-    "type": "token",
-    "cardType": "spell",
-    "specialType": "token",
-    "class": "neutral",
-    "traits": [
-      "iM@S CG"
-    ],
-    "cost": 4,
-    "attack": null,
-    "defense": null,
-    "cardText": "Give your leader [defense] +1. Draw a card.",
-    "keywords": [],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-T01EN",
-      "ECP02-T02EN",
-      "ECP02-T03EN",
-      "ECP02-T04EN",
-      "ECP02-T06EN",
-      "ECP02-T07EN",
-      "ECP02-T08EN",
-      "ECP02-T09EN",
-      "ECP02-T10EN",
-      "ECP02-T11EN",
-      "ECP02-T12EN",
-      "ECP02-T13EN",
-      "ECP02-T14EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-T05EN.png"
-  },
-  {
-    "cardNo": "ECP02-T06EN",
-    "name": "Sae Kobayakawa [Pastel-Pink Love] TOKEN",
-    "type": "token",
-    "cardType": "spell",
-    "specialType": "token",
-    "class": "neutral",
-    "traits": [
-      "iM@S CG"
-    ],
-    "cost": 4,
-    "attack": null,
-    "defense": null,
-    "cardText": "Give your leader [defense] +1. Draw a card.",
-    "keywords": [],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-T01EN",
-      "ECP02-T02EN",
-      "ECP02-T03EN",
-      "ECP02-T04EN",
-      "ECP02-T05EN",
-      "ECP02-T07EN",
-      "ECP02-T08EN",
-      "ECP02-T09EN",
-      "ECP02-T10EN",
-      "ECP02-T11EN",
-      "ECP02-T12EN",
-      "ECP02-T13EN",
-      "ECP02-T14EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-T06EN.png"
-  },
-  {
-    "cardNo": "ECP02-T07EN",
-    "name": "Ranko Kanzaki [Nation Blue] TOKEN",
-    "type": "token",
-    "cardType": "spell",
-    "specialType": "token",
-    "class": "neutral",
-    "traits": [
-      "iM@S CG"
-    ],
-    "cost": 4,
-    "attack": null,
-    "defense": null,
-    "cardText": "Give your leader [defense] +1. Draw a card.",
-    "keywords": [],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-T01EN",
-      "ECP02-T02EN",
-      "ECP02-T03EN",
-      "ECP02-T04EN",
-      "ECP02-T05EN",
-      "ECP02-T06EN",
-      "ECP02-T08EN",
-      "ECP02-T09EN",
-      "ECP02-T10EN",
-      "ECP02-T11EN",
-      "ECP02-T12EN",
-      "ECP02-T13EN",
-      "ECP02-T14EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-T07EN.png"
-  },
-  {
-    "cardNo": "ECP02-T08EN",
-    "name": "Shin Sato [Gutsy☆Reporter] TOKEN",
-    "type": "token",
-    "cardType": "spell",
-    "specialType": "token",
-    "class": "neutral",
-    "traits": [
-      "iM@S CG"
-    ],
-    "cost": 4,
-    "attack": null,
-    "defense": null,
-    "cardText": "Give your leader [defense] +1. Draw a card.",
-    "keywords": [],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-T01EN",
-      "ECP02-T02EN",
-      "ECP02-T03EN",
-      "ECP02-T04EN",
-      "ECP02-T05EN",
-      "ECP02-T06EN",
-      "ECP02-T07EN",
-      "ECP02-T09EN",
-      "ECP02-T10EN",
-      "ECP02-T11EN",
-      "ECP02-T12EN",
-      "ECP02-T13EN",
-      "ECP02-T14EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-T08EN.png"
-  },
-  {
-    "cardNo": "ECP02-T09EN",
-    "name": "Akari Tsujino [Brand New!] TOKEN",
-    "type": "token",
-    "cardType": "spell",
-    "specialType": "token",
-    "class": "neutral",
-    "traits": [
-      "iM@S CG"
-    ],
-    "cost": 4,
-    "attack": null,
-    "defense": null,
-    "cardText": "Give your leader [defense] +1. Draw a card.",
-    "keywords": [],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-T01EN",
-      "ECP02-T02EN",
-      "ECP02-T03EN",
-      "ECP02-T04EN",
-      "ECP02-T05EN",
-      "ECP02-T06EN",
-      "ECP02-T07EN",
-      "ECP02-T08EN",
-      "ECP02-T10EN",
-      "ECP02-T11EN",
-      "ECP02-T12EN",
-      "ECP02-T13EN",
-      "ECP02-T14EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-T09EN.png"
-  },
-  {
-    "cardNo": "ECP02-T10EN",
-    "name": "Asuka Ninomiya [Blossoming Jewel] TOKEN",
-    "type": "token",
-    "cardType": "spell",
-    "specialType": "token",
-    "class": "neutral",
-    "traits": [
-      "iM@S CG"
-    ],
-    "cost": 4,
-    "attack": null,
-    "defense": null,
-    "cardText": "Give your leader [defense] +1. Draw a card.",
-    "keywords": [],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-T01EN",
-      "ECP02-T02EN",
-      "ECP02-T03EN",
-      "ECP02-T04EN",
-      "ECP02-T05EN",
-      "ECP02-T06EN",
-      "ECP02-T07EN",
-      "ECP02-T08EN",
-      "ECP02-T09EN",
-      "ECP02-T11EN",
-      "ECP02-T12EN",
-      "ECP02-T13EN",
-      "ECP02-T14EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-T10EN.png"
-  },
-  {
-    "cardNo": "ECP02-T11EN",
-    "name": "Yoshino Yorita [Way of the Warrior] TOKEN",
-    "type": "token",
-    "cardType": "spell",
-    "specialType": "token",
-    "class": "neutral",
-    "traits": [
-      "iM@S CG"
-    ],
-    "cost": 4,
-    "attack": null,
-    "defense": null,
-    "cardText": "Give your leader [defense] +1. Draw a card.",
-    "keywords": [],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-T01EN",
-      "ECP02-T02EN",
-      "ECP02-T03EN",
-      "ECP02-T04EN",
-      "ECP02-T05EN",
-      "ECP02-T06EN",
-      "ECP02-T07EN",
-      "ECP02-T08EN",
-      "ECP02-T09EN",
-      "ECP02-T10EN",
-      "ECP02-T12EN",
-      "ECP02-T13EN",
-      "ECP02-T14EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-T11EN.png"
-  },
-  {
-    "cardNo": "ECP02-T12EN",
-    "name": "Chie Sasaki [Step to the Future] TOKEN",
-    "type": "token",
-    "cardType": "spell",
-    "specialType": "token",
-    "class": "neutral",
-    "traits": [
-      "iM@S CG"
-    ],
-    "cost": 4,
-    "attack": null,
-    "defense": null,
-    "cardText": "Give your leader [defense] +1. Draw a card.",
-    "keywords": [],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-T01EN",
-      "ECP02-T02EN",
-      "ECP02-T03EN",
-      "ECP02-T04EN",
-      "ECP02-T05EN",
-      "ECP02-T06EN",
-      "ECP02-T07EN",
-      "ECP02-T08EN",
-      "ECP02-T09EN",
-      "ECP02-T10EN",
-      "ECP02-T11EN",
-      "ECP02-T13EN",
-      "ECP02-T14EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-T12EN.png"
-  },
-  {
-    "cardNo": "ECP02-T13EN",
-    "name": "Arisu Tachibana [Ikenai GO AHEAD] TOKEN",
-    "type": "token",
-    "cardType": "spell",
-    "specialType": "token",
-    "class": "neutral",
-    "traits": [
-      "iM@S CG"
-    ],
-    "cost": 4,
-    "attack": null,
-    "defense": null,
-    "cardText": "Give your leader [defense] +1. Draw a card.",
-    "keywords": [],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-T01EN",
-      "ECP02-T02EN",
-      "ECP02-T03EN",
-      "ECP02-T04EN",
-      "ECP02-T05EN",
-      "ECP02-T06EN",
-      "ECP02-T07EN",
-      "ECP02-T08EN",
-      "ECP02-T09EN",
-      "ECP02-T10EN",
-      "ECP02-T11EN",
-      "ECP02-T12EN",
-      "ECP02-T14EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-T13EN.png"
-  },
-  {
-    "cardNo": "ECP02-T14EN",
-    "name": "Yukimi Sajo [Day by Day, Hand in Hand] TOKEN",
-    "type": "token",
-    "cardType": "spell",
-    "specialType": "token",
-    "class": "neutral",
-    "traits": [
-      "iM@S CG"
-    ],
-    "cost": 4,
-    "attack": null,
-    "defense": null,
-    "cardText": "Give your leader [defense] +1. Draw a card.",
-    "keywords": [],
-    "rarity": "",
-    "format": "Any",
-    "relatedCardNos": [
-      "ECP02-T01EN",
-      "ECP02-T02EN",
-      "ECP02-T03EN",
-      "ECP02-T04EN",
-      "ECP02-T05EN",
-      "ECP02-T06EN",
-      "ECP02-T07EN",
-      "ECP02-T08EN",
-      "ECP02-T09EN",
-      "ECP02-T10EN",
-      "ECP02-T11EN",
-      "ECP02-T12EN",
-      "ECP02-T13EN"
-    ],
-    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ECP02-T14EN.png"
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Cool",
+      "rarity": "Special",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Search your deck for a 1-cost iM@S CG follower, summon it, then shuffle. [act] [cost01], Lesson (1), [engage]: Search your deck for a 1-cost iM@S CG follower, summon it, then shuffle."
+    },
+    "imgSrc": ""
   }
 ]

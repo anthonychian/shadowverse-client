@@ -32,9 +32,6 @@ import {
   hideAtk,
   hideDef,
   modifyCounter,
-  addAura,
-  addBane,
-  addWard,
   showStatus,
   hideStatus,
   duplicateCardOnField,
@@ -59,6 +56,8 @@ import {
   setEnemyAura,
   setEnemyBane,
   setEnemyWard,
+  toggleKeyword,
+  setEnemyKeyword,
   setEnemyBanish,
   setEnemyViewingDeck,
   setEnemyViewingHand,
@@ -85,7 +84,7 @@ import {
   setSelfOnlineStatus,
   restoreOwnState,
 } from "../../redux/CardSlice";
-import { cardImage } from "../../decks/getCards";
+import { artImage } from "../../decks/getCards";
 import { motion } from "framer-motion";
 import CardMUI from "@mui/material/Card";
 import { useDispatch, useSelector } from "react-redux";
@@ -114,6 +113,26 @@ import { getNameByCardNoClient } from "../../engine/cardLookup";
 
 import Token from "./Token";
 import ShowDice from "./ShowDice";
+import { playGameAnimation, triggerGameAnimation } from "./animationBus";
+import { DeckFx, EvoLayer } from "./GameFx";
+import {
+  registerFieldGrid,
+  registerEnemyFieldGrid,
+  registerEnemyHand,
+  fieldSlotCenter,
+  enemyFieldSlotCenter,
+  enemyHandCenter,
+} from "./handDrag";
+import FieldDropHints from "./FieldDropHints";
+import DiceRoll from "./DiceRoll";
+import PlayReveal from "./PlayReveal";
+import {
+  triggerCardReveal,
+  triggerHandReveal,
+  playCardReveal,
+  onHideChange,
+  isHidden,
+} from "./cardRevealBus";
 
 import defaultCardBack from "../../assets/cardbacks/default.png";
 import aeneaCardBack from "../../assets/cardbacks/aenea.png";
@@ -155,6 +174,9 @@ const BOTTOM_RESERVE = 210; // vertical space kept below the field for the playe
 const MIN_SCALE = 0.4;
 const MAX_SCALE = 1.3;
 
+// Keyword statuses offered by "Add Status", shown as black boxes on the card.
+const KEYWORDS = ["Aura", "Ward", "Bane", "Storm", "Rush", "Intimidate"];
+
 export default function Field({
   ready,
   setReady,
@@ -192,6 +214,7 @@ export default function Field({
   const reduxShowEnemyHand = useSelector((state) => state.card.showEnemyHand);
   const reduxShowEnemyCard = useSelector((state) => state.card.showEnemyCard);
   const reduxEnemyCard = useSelector((state) => state.card.enemyCard);
+  const reduxEnemyArt = useSelector((state) => state.card.enemyArt);
   const reduxCounterField = useSelector((state) => state.card.counterField);
   const reduxExPlayCostField = useSelector((state) => state.card.exPlayCostField);
   const reduxEnemyExPlayCostField = useSelector(
@@ -206,6 +229,10 @@ export default function Field({
   const reduxEnemyBaneField = useSelector((state) => state.card.enemyBaneField);
   const reduxWardField = useSelector((state) => state.card.wardField);
   const reduxEnemyWardField = useSelector((state) => state.card.enemyWardField);
+  const reduxKeywordField = useSelector((state) => state.card.keywordField);
+  const reduxEnemyKeywordField = useSelector(
+    (state) => state.card.enemyKeywordField,
+  );
   const reduxEnemyCardBack = useSelector((state) => state.card.enemyCardback);
   const reduxCardSelectedInHand = useSelector(
     (state) => state.card.cardSelectedInHand,
@@ -258,6 +285,11 @@ export default function Field({
   const boardWrapperRef = useRef(null);
   const boardRef = useRef(null);
   const [boardScale, setBoardScale] = useState(1);
+
+  // Re-render when the set of mid-reveal (hidden) field slots changes, so a
+  // played card pops into view exactly when its reveal animation lands.
+  const [, bumpHidden] = useState(0);
+  useEffect(() => onHideChange(() => bumpHidden((n) => n + 1)), []);
 
   useEffect(() => {
     const wrapper = boardWrapperRef.current;
@@ -394,6 +426,9 @@ export default function Field({
         case "ward":
           dispatch(setEnemyWard(update.data));
           break;
+        case "keyword":
+          dispatch(setEnemyKeyword(update.data));
+          break;
         case "banish":
           dispatch(setEnemyBanish(update.data));
           break;
@@ -446,6 +481,37 @@ export default function Field({
           dispatch(setEnemyChat(update.data));
           dispatch(setLastChatMessage(update.data));
           break;
+        case "animate":
+          // Cosmetic-only effect the opponent played (draw / shuffle / evolve).
+          // Replay it on their half of our board so both players see it.
+          playGameAnimation({ kind: update.data, side: "enemy" });
+          break;
+        case "cardToHand":
+          // Opponent added a card to hand — reveal it centre-screen and fly it
+          // up to their hand (the top hand on our screen).
+          playCardReveal({
+            name: (update.data || {}).name,
+            side: "enemy",
+            kind: "hand",
+            target: enemyHandCenter(),
+          });
+          break;
+        case "cardPlayed": {
+          // Opponent played a card to the field — reveal it centre-screen and
+          // fly it onto its slot on their (top) board; the card stays hidden
+          // there until the reveal lands. Their field index maps to our enemy
+          // grid cell via cardPos.
+          const { name: playedName, index: playedIndex } = update.data || {};
+          // Map their field index to our enemy-grid cell (same as cardPos).
+          const cell = playedIndex < 5 ? playedIndex + 5 : playedIndex - 5;
+          playCardReveal({
+            name: playedName,
+            side: "enemy",
+            index: playedIndex,
+            target: enemyFieldSlotCenter(cell),
+          });
+          break;
+        }
         case "full_state_sync":
           // Handle full state synchronization (used on reconnection)
           // This bypasses the queue and directly updates all state
@@ -480,6 +546,8 @@ export default function Field({
                 dispatch(setEnemyBane(fullState.enemyBane));
               if (fullState.enemyWard !== undefined)
                 dispatch(setEnemyWard(fullState.enemyWard));
+              if (fullState.enemyKeyword !== undefined)
+                dispatch(setEnemyKeyword(fullState.enemyKeyword));
               if (fullState.enemyBanish !== undefined)
                 dispatch(setEnemyBanish(fullState.enemyBanish));
               if (fullState.enemyCustomValues !== undefined)
@@ -654,6 +722,10 @@ export default function Field({
   };
 
   const handleClick = (name, indexClicked) => {
+    // The card placed onto an empty slot this click (any source), so the
+    // "played" reveal fires once at the end — but only for the field itself
+    // (top row, indices 0-4), never the EX area (bottom row, 5-9).
+    let playedCard = null;
     if (reduxField[indexClicked] === 0 && !readyToEvo && !readyToFeed) {
       if (readyToPlaceOnFieldFromHand) {
         setReadyToPlaceOnFieldFromHand(false);
@@ -664,6 +736,7 @@ export default function Field({
             index: indexClicked,
           }),
         );
+        playedCard = reduxCurrentCard;
       }
       if (tokenReady) {
         setTokenReady(false);
@@ -673,6 +746,7 @@ export default function Field({
             index: indexClicked,
           }),
         );
+        playedCard = name;
         // dispatch(clearValuesAtIndex(index));
         // dispatch(clearEngagedAtIndex(index));
         // dispatch(clearCountersAtIndex(index));
@@ -686,6 +760,7 @@ export default function Field({
             index: indexClicked,
           }),
         );
+        playedCard = name;
       }
       if (readyToMoveOnField) {
         setReadyToMoveOnField(false);
@@ -724,6 +799,8 @@ export default function Field({
         dispatch(clearEngagedAtIndex(index));
         dispatch(clearCountersAtIndex(index));
         dispatch(clearStatusAtIndex(index));
+        // Reveal when promoting a card from the EX area (5-9) up to the field.
+        if (index >= 5) playedCard = name;
       }
       if (readyToMoveEvoOnField) {
         setReadyToMoveEvoOnField(false);
@@ -763,6 +840,8 @@ export default function Field({
         dispatch(clearEngagedAtIndex(index));
         dispatch(clearCountersAtIndex(index));
         dispatch(clearStatusAtIndex(index));
+        // Reveal when promoting an evolved card from the EX area up to the field.
+        if (index >= 5) playedCard = name;
       }
       if (readyToDuplicateOnField) {
         setReadyToDuplicateOnField(false);
@@ -793,6 +872,7 @@ export default function Field({
             deckIndex: deckIndex,
           }),
         );
+        playedCard = name;
       }
       if (readyFromCemetery) {
         setReadyFromCemetery(false);
@@ -803,6 +883,7 @@ export default function Field({
             index: indexClicked,
           }),
         );
+        playedCard = name;
       }
       if (readyFromBanish) {
         setReadyFromBanish(false);
@@ -813,7 +894,16 @@ export default function Field({
             index: indexClicked,
           }),
         );
+        playedCard = name;
       }
+      // Reveal a card played to the field (top row only; EX area 5-9 is silent).
+      if (playedCard !== null && indexClicked < 5)
+        triggerCardReveal(
+          playedCard,
+          reduxCurrentRoom,
+          indexClicked,
+          fieldSlotCenter(indexClicked),
+        );
     } else if (
       (readyToFeed || readyToEvo || readyToRide) &&
       reduxField[indexClicked] !== 0 &&
@@ -828,6 +918,7 @@ export default function Field({
             index: indexClicked,
           }),
         );
+        triggerGameAnimation("evolve", reduxCurrentRoom);
       }
       if (readyToRide) {
         setReadyToRide(false);
@@ -936,6 +1027,7 @@ export default function Field({
     dispatch(clearEngagedAtIndex(index));
     dispatch(clearCountersAtIndex(index));
     dispatch(clearStatusAtIndex(index));
+    triggerHandReveal(name, reduxCurrentRoom);
   };
   const handleCardToTopDeck = () => {
     handleClose();
@@ -1035,6 +1127,14 @@ export default function Field({
     dispatch(hideStatus(index));
   };
 
+  // Toggle a keyword status (Aura/Ward/Bane/Storm/Rush/Intimidate) on the card,
+  // shown as a black box. The context menu is deliberately left OPEN here so
+  // several keywords can be checked in one go; other menu items still close it.
+  const handleToggleKeyword = (keyword) => {
+    dispatch(showStatus(index));
+    dispatch(toggleKeyword({ index, keyword }));
+  };
+
   const handleAddCounter = () => {
     handleClose();
     handleEvoClose();
@@ -1046,68 +1146,80 @@ export default function Field({
     );
   };
 
-  const handleAddAura = () => {
-    handleClose();
-    handleEvoClose();
-    dispatch(
-      addAura({
-        value: 1,
-        index: index,
-      }),
-    );
+  // Shared move logic (base or evo) used by drag-to-move. Mirrors the
+  // readyToMove* click flow: move the card plus its values/counters/engaged/
+  // status to the new slot, then clear the old slot.
+  const moveFieldCard = (cardName, fromIndex, toIndex, isEvo) => {
+    if (isEvo) {
+      dispatch(
+        moveEvoAndBaseOnField({
+          card: cardName,
+          evoCard: cardName,
+          prevIndex: fromIndex,
+          index: toIndex,
+        }),
+      );
+    } else {
+      dispatch(
+        moveCardOnField({ card: cardName, prevIndex: fromIndex, index: toIndex }),
+      );
+    }
+    dispatch(moveValuesAtIndex({ prevIndex: fromIndex, index: toIndex }));
+    dispatch(moveCountersAtIndex({ prevIndex: fromIndex, index: toIndex }));
+    dispatch(moveEngagedAtIndex({ prevIndex: fromIndex, index: toIndex }));
+    dispatch(moveStatusAtIndex({ prevIndex: fromIndex, index: toIndex }));
+    dispatch(clearValuesAtIndex(fromIndex));
+    dispatch(clearEngagedAtIndex(fromIndex));
+    dispatch(clearCountersAtIndex(fromIndex));
+    dispatch(clearStatusAtIndex(fromIndex));
   };
-  const handleRemoveAura = () => {
-    handleClose();
-    handleEvoClose();
-    dispatch(
-      addAura({
-        value: 0,
-        index: index,
-      }),
-    );
-    dispatch(hideStatus(index));
+
+  const clearFieldSlot = (i) => {
+    dispatch(clearValuesAtIndex(i));
+    dispatch(clearEngagedAtIndex(i));
+    dispatch(clearCountersAtIndex(i));
+    dispatch(clearStatusAtIndex(i));
   };
-  const handleAddBane = () => {
-    handleClose();
-    handleEvoClose();
-    dispatch(
-      addBane({
-        value: 1,
-        index: index,
-      }),
-    );
-  };
-  const handleRemoveBane = () => {
-    handleClose();
-    handleEvoClose();
-    dispatch(
-      addBane({
-        value: 0,
-        index: index,
-      }),
-    );
-    dispatch(hideStatus(index));
-  };
-  const handleAddWard = () => {
-    handleClose();
-    handleEvoClose();
-    dispatch(
-      addWard({
-        value: 1,
-        index: index,
-      }),
-    );
-  };
-  const handleRemoveWard = () => {
-    handleClose();
-    handleEvoClose();
-    dispatch(
-      addWard({
-        value: 0,
-        index: index,
-      }),
-    );
-    dispatch(hideStatus(index));
+
+  // Drop handler for dragging the player's own field cards. `dest` is one of:
+  //   { type: "field", index } -> move to an empty slot
+  //   { type: "cemetery" }     -> send to cemetery
+  //   { type: "hand" }         -> return to hand
+  // Anything invalid is a no-op (the card snaps back). Cemetery/Hand mirror the
+  // right-click menu, which only offers them for plain base cards: tokens and
+  // advanced cards can't be returned, and the reducers don't unwind an evolved
+  // stack — so those are skipped for cemetery/hand (they can still be moved).
+  const handleFieldDrop = (fromIndex, dest) => {
+    const isEvo = reduxEvoField[fromIndex] !== 0;
+    const baseCard = reduxField[fromIndex];
+    const canReturn =
+      !isEvo &&
+      typeof baseCard === "string" &&
+      !isToken(baseCard) &&
+      !isAdvanced(baseCard);
+    if (dest.type === "cemetery") {
+      if (!canReturn) return;
+      dispatch(placeToCemeteryFromField({ card: baseCard, index: fromIndex }));
+      clearFieldSlot(fromIndex);
+      return;
+    }
+    if (dest.type === "hand") {
+      if (!canReturn) return;
+      dispatch(addToHandFromField({ card: baseCard, index: fromIndex }));
+      clearFieldSlot(fromIndex);
+      triggerHandReveal(baseCard, reduxCurrentRoom);
+      return;
+    }
+    // field move
+    const toIndex = dest.index;
+    if (toIndex < 0 || toIndex === fromIndex) return;
+    if (reduxField[toIndex] !== 0) return;
+    const cardName = isEvo ? reduxEvoField[fromIndex] : reduxField[fromIndex];
+    if (!cardName || cardName === 0) return;
+    moveFieldCard(cardName, fromIndex, toIndex, isEvo);
+    // Promoting from the EX area (5-9) up to the field (0-4) plays the reveal.
+    if (fromIndex >= 5 && toIndex < 5)
+      triggerCardReveal(cardName, reduxCurrentRoom, toIndex, fieldSlotCenter(toIndex));
   };
 
   const handleMoveOnField = () => {
@@ -1510,33 +1622,13 @@ export default function Field({
         {reduxCustomStatus[index] && (
           <MenuItem onClick={handleHideStatus}>Hide Status</MenuItem>
         )}
-        {reduxAuraField[index] === 0 &&
-          reduxBaneField[index] === 0 &&
-          reduxWardField[index] === 0 &&
-          reduxCustomStatus[index] && (
-            <MenuItem onClick={handleAddAura}>Add Aura</MenuItem>
-          )}
-        {reduxAuraField[index] === 0 &&
-          reduxBaneField[index] === 0 &&
-          reduxWardField[index] === 0 &&
-          reduxCustomStatus[index] && (
-            <MenuItem onClick={handleAddBane}>Add Bane</MenuItem>
-          )}
-        {reduxAuraField[index] === 0 &&
-          reduxBaneField[index] === 0 &&
-          reduxWardField[index] === 0 &&
-          reduxCustomStatus[index] && (
-            <MenuItem onClick={handleAddWard}>Add Ward</MenuItem>
-          )}
-        {reduxAuraField[index] === 1 && reduxCustomStatus[index] && (
-          <MenuItem onClick={handleRemoveAura}>Remove Aura</MenuItem>
-        )}
-        {reduxBaneField[index] === 1 && reduxCustomStatus[index] && (
-          <MenuItem onClick={handleRemoveBane}>Remove Bane</MenuItem>
-        )}
-        {reduxWardField[index] === 1 && reduxCustomStatus[index] && (
-          <MenuItem onClick={handleRemoveWard}>Remove Ward</MenuItem>
-        )}
+        {reduxCustomStatus[index] &&
+          KEYWORDS.map((kw) => (
+            <MenuItem key={kw} onClick={() => handleToggleKeyword(kw)}>
+              {(reduxKeywordField[index] || []).includes(kw) ? "✓ " : ""}
+              {kw}
+            </MenuItem>
+          ))}
       </Menu>
       <Menu
         open={chromeVisible && contextEvoMenu !== null}
@@ -1565,33 +1657,13 @@ export default function Field({
         {reduxCounterField[index] < 1 && reduxCustomStatus[index] && (
           <MenuItem onClick={handleAddCounter}>Add Counter</MenuItem>
         )}
-        {reduxAuraField[index] === 0 &&
-          reduxBaneField[index] === 0 &&
-          reduxWardField[index] === 0 &&
-          reduxCustomStatus[index] && (
-            <MenuItem onClick={handleAddAura}>Add Aura</MenuItem>
-          )}
-        {reduxAuraField[index] === 0 &&
-          reduxBaneField[index] === 0 &&
-          reduxWardField[index] === 0 &&
-          reduxCustomStatus[index] && (
-            <MenuItem onClick={handleAddBane}>Add Bane</MenuItem>
-          )}
-        {reduxAuraField[index] === 0 &&
-          reduxBaneField[index] === 0 &&
-          reduxWardField[index] === 0 &&
-          reduxCustomStatus[index] && (
-            <MenuItem onClick={handleAddWard}>Add Ward</MenuItem>
-          )}
-        {reduxAuraField[index] === 1 && reduxCustomStatus[index] && (
-          <MenuItem onClick={handleRemoveAura}>Remove Aura</MenuItem>
-        )}
-        {reduxBaneField[index] === 1 && reduxCustomStatus[index] && (
-          <MenuItem onClick={handleRemoveBane}>Remove Bane</MenuItem>
-        )}
-        {reduxWardField[index] === 1 && reduxCustomStatus[index] && (
-          <MenuItem onClick={handleRemoveWard}>Remove Ward</MenuItem>
-        )}
+        {reduxCustomStatus[index] &&
+          KEYWORDS.map((kw) => (
+            <MenuItem key={kw} onClick={() => handleToggleKeyword(kw)}>
+              {(reduxKeywordField[index] || []).includes(kw) ? "✓ " : ""}
+              {kw}
+            </MenuItem>
+          ))}
       </Menu>
 
       {/* Show Enemy Hand Modal */}
@@ -1707,7 +1779,7 @@ export default function Field({
             >
               <img
                 className={"cardStyle"}
-                src={cardImage(reduxEnemyCard)}
+                src={artImage(reduxEnemyCard, reduxEnemyArt)}
                 alt={reduxEnemyCard}
               />
             </motion.div>
@@ -1739,34 +1811,57 @@ export default function Field({
           }}
         >
           <div
+            ref={(el) => registerEnemyHand(el)}
             style={{
               width: `${BASE_WIDTH}px`,
               display: "flex",
               flexDirection: "row",
-              minHeight: "130px",
+              // Reserve one card's height at all times (cardbacks are 161px tall,
+              // see .cardStyle). The old 130px minHeight was shorter than a card,
+              // so the opponent drawing their first card (or playing their last)
+              // grew this row ~31px and shoved the whole board down for the
+              // viewer. A constant height keeps the board fixed, matching the
+              // player-side hand fix.
+              height: "161px",
               justifyContent: "center",
               alignItems: "center",
               paddingBottom: "2em",
             }}
           >
-            {reduxEnemyHand.map((_, idx) => (
-              <img
-                style={
-                  reduxCardSelectedInHand === idx
-                    ? {
-                        filter:
-                          "sepia() saturate(4) hue-rotate(315deg) brightness(100%) opacity(5)",
-                        cursor: `url(${img}) 55 55, auto`,
-                      }
-                    : { cursor: `url(${img}) 55 55, auto` }
-                }
-                key={idx}
-                className={"cardStyle"}
-                src={cardback}
-                alt={"cardback"}
-                onClick={() => handleSelectEnemyCardInHand(idx)}
-              />
-            ))}
+            {reduxEnemyHand.map((_, idx) => {
+              // Keep the opponent's hand within the board width: while the cards
+              // fit they sit side by side, but once they'd overflow (cardbacks
+              // are 115px wide, so ~10 cards for the 1100px board) a shared
+              // negative margin overlaps them so the hand stays within BASE_WIDTH.
+              const n = reduxEnemyHand.length;
+              const ENEMY_CARD_W = 115;
+              const overlap =
+                n > 1
+                  ? Math.max(0, (n * ENEMY_CARD_W - BASE_WIDTH) / (n - 1))
+                  : 0;
+              const baseStyle = {
+                cursor: `url(${img}) 55 55, auto`,
+                marginLeft: idx === 0 ? 0 : -overlap,
+              };
+              return (
+                <img
+                  style={
+                    reduxCardSelectedInHand === idx
+                      ? {
+                          ...baseStyle,
+                          filter:
+                            "sepia() saturate(4) hue-rotate(315deg) brightness(100%) opacity(5)",
+                        }
+                      : baseStyle
+                  }
+                  key={idx}
+                  className={"cardStyle"}
+                  src={cardback}
+                  alt={"cardback"}
+                  onClick={() => handleSelectEnemyCardInHand(idx)}
+                />
+              );
+            })}
           </div>
         </div>
 
@@ -1825,6 +1920,7 @@ export default function Field({
             >
               <img className={"cardStyle"} src={cardback} alt={"cardback"} />
             </div>
+            <DeckFx side="enemy" />
             {/* {showOpponentDeckSize && ( */}
             <div
               style={{
@@ -1848,6 +1944,7 @@ export default function Field({
 
         {/* Enemy Field (1-5) & Ex Area (6-10) */}
         <div
+          ref={(el) => registerEnemyFieldGrid(el)}
           style={{
             height: "35vh",
             minHeight: "330px",
@@ -1901,6 +1998,7 @@ export default function Field({
                 zIndex: 2,
                 ...fieldCombatStyle(cardPos(idx), true),
               }}
+              className={"cardStyle fieldSlot"}
               onClick={() => {
                 const enemyIdx = cardPos(idx);
                 if (automated && selectedAttackerId) {
@@ -1923,6 +2021,7 @@ export default function Field({
                     aura={reduxEnemyAuraField[cardPos(idx)]}
                     bane={reduxEnemyBaneField[cardPos(idx)]}
                     ward={reduxEnemyWardField[cardPos(idx)]}
+                    keywords={reduxEnemyKeywordField[cardPos(idx)]}
                     opponentField={true}
                     onField={true}
                     idx={idx}
@@ -1930,6 +2029,7 @@ export default function Field({
                     name={reduxEnemyField[cardPos(idx)]}
                     setHovering={setHovering}
                     ready={ready}
+                    hidden={isHidden("enemy", cardPos(idx))}
                   />
                 )}
               {reduxEnemyEvoField[cardPos(idx)] !== 0 && (
@@ -1943,6 +2043,7 @@ export default function Field({
                   aura={reduxEnemyAuraField[cardPos(idx)]}
                   bane={reduxEnemyBaneField[cardPos(idx)]}
                   ward={reduxEnemyWardField[cardPos(idx)]}
+                  keywords={reduxEnemyKeywordField[cardPos(idx)]}
                   opponentField={true}
                   onField={true}
                   idx={idx}
@@ -1951,6 +2052,7 @@ export default function Field({
                   setHovering={setHovering}
                   ready={ready}
                   cardBeneath={reduxEnemyField[cardPos(idx)]}
+                  hidden={isHidden("enemy", cardPos(idx))}
                 />
               )}
             </motion.div>
@@ -2032,6 +2134,7 @@ export default function Field({
         </div>
         {/* Player Field (1-5) & Ex Area (6-10) */}
         <div
+          ref={(el) => registerFieldGrid(el)}
           style={{
             height: "35vh",
             minHeight: "330px",
@@ -2080,7 +2183,7 @@ export default function Field({
             EX Area
           </span>
           {reduxField.map((card, idx) => (
-            <div style={{ zIndex: 2 }} key={`card-${idx}`}>
+            <div className="fieldSlot" key={`card-${idx}`}>
               {ready && (
                 <motion.div
                   onClick={() => {
@@ -2124,6 +2227,7 @@ export default function Field({
                       aura={reduxAuraField[idx]}
                       bane={reduxBaneField[idx]}
                       ward={reduxWardField[idx]}
+                      keywords={reduxKeywordField[idx]}
                       idx={idx}
                       onField={true}
                       key={`card1-${idx}`}
@@ -2182,12 +2286,15 @@ export default function Field({
                       aura={reduxAuraField[idx]}
                       bane={reduxBaneField[idx]}
                       ward={reduxWardField[idx]}
+                      keywords={reduxKeywordField[idx]}
                       idx={idx}
                       onField={true}
                       key={`card2-${idx}`}
                       name={reduxField[idx]}
                       setHovering={setHovering}
                       ready={ready}
+                      onFieldDrop={handleFieldDrop}
+                      hidden={isHidden("mine", idx)}
                     />
                   )}
                   {reduxEvoField[idx] !== 0 && (
@@ -2202,6 +2309,7 @@ export default function Field({
                       aura={reduxAuraField[idx]}
                       bane={reduxBaneField[idx]}
                       ward={reduxWardField[idx]}
+                      keywords={reduxKeywordField[idx]}
                       idx={idx}
                       onField={true}
                       key={`evo2-${idx}`}
@@ -2209,6 +2317,8 @@ export default function Field({
                       setHovering={setHovering}
                       ready={ready}
                       cardBeneath={reduxField[idx]}
+                      onFieldDrop={handleFieldDrop}
+                      hidden={isHidden("mine", idx)}
                     />
                   )}
                 </div>
@@ -2270,6 +2380,14 @@ export default function Field({
           </div>
         </div>
       </div>
+      {/* Board-wide overlay for the evolve burst (positioned per side). */}
+      <EvoLayer />
+      {/* Drop-zone hints shown while dragging a card from the hand. */}
+      <FieldDropHints />
+      {/* Dice toss animation (shown to both players). */}
+      <DiceRoll />
+      {/* "Card played" reveal: shows the card centre-screen, then onto the field. */}
+      <PlayReveal />
         </div>
       </div>
       </div>

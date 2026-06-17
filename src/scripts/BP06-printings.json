@@ -1,0 +1,3612 @@
+[
+  {
+    "cardNo": "BP06-001EN",
+    "name": "Lymaga, Forest Champion",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Arena / Hunter",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "6",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost02]: Evolve this follower. Storm. Bane. [fanfare] Look at the top 4 cards of your deck. You may summon a Hunter follower that costs 4 or less from among them. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-001EN.png"
+  },
+  {
+    "cardNo": "BP06-002EN",
+    "name": "Lymaga, Forest Champion Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arena / Hunter",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Storm. Bane. On Evolve - Look at the top 4 cards of your deck. You may summon a Hunter follower that costs 4 or less from among them. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-002EN.png"
+  },
+  {
+    "cardNo": "BP06-003EN",
+    "name": "Amataz, Fairy Blader",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf / Fae-Touched",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Put a Fairy token into your EX area. Give each Pixie follower in your EX area [attack]+1/[defense]+1. [act] [engage]: Select up to 2 Pixie followers that cost 1 or less on your field and give them Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-003EN.png"
+  },
+  {
+    "cardNo": "BP06-004EN",
+    "name": "Greenbrier Elf",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Banish a Pixie token from your EX area: Look at the top 4 cards of your deck. You may reveal a [forestcraft] card from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-004EN.png"
+  },
+  {
+    "cardNo": "BP06-005EN",
+    "name": "Wildwood Matriarch",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Hunter",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost02]: Evolve this follower. [fanfare] If this card was put onto the field by an ability, evolve it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-005EN.png"
+  },
+  {
+    "cardNo": "BP06-006EN",
+    "name": "Wildwood Matriarch Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Hunter",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Select up to 2 Hunter followers that cost 2 or less in your cemetery and summon them."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-006EN.png"
+  },
+  {
+    "cardNo": "BP06-007EN",
+    "name": "Fairy Dragon",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Pixie / Fae-Touched",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "0",
+      "defense": "4",
+      "effect": "Ward. [fanfare] Give this follower [attack]+1 for every Pixie token on your field and in your EX area. [lastwords] Put a Fairy Wisp and Fairy token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-007EN.png"
+  },
+  {
+    "cardNo": "BP06-008EN",
+    "name": "Woodland Cleaver",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Hunter",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] If this card was put onto the field by an ability, give it Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-008EN.png"
+  },
+  {
+    "cardNo": "BP06-009EN",
+    "name": "Woodland Cleaver Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Hunter",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-009EN.png"
+  },
+  {
+    "cardNo": "BP06-010EN",
+    "name": "Assault Jaguar",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Hunter",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "3",
+      "attack": "4",
+      "defense": "1",
+      "effect": "Rush. [lastwords] Look at the top 2 cards of your deck. You may reveal a Hunter card from among them and add it to your hand. Bury the rest."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-010EN.png"
+  },
+  {
+    "cardNo": "BP06-011EN",
+    "name": "Spiritshine",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Fae-Touched",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose one of the following. (1) Select a Pixie token on your field or in your EX area and give it [attack]+2/[defense]+2. (2) Put 2 Fairy tokens into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-011EN.png"
+  },
+  {
+    "cardNo": "BP06-012EN",
+    "name": "Greenwood Guardian",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Hunter",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "Ward. [fanfare] Bury the top card of your deck. Then, if there are at least 3 Hunter cards in your cemetery, give this follower [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-012EN.png"
+  },
+  {
+    "cardNo": "BP06-013EN",
+    "name": "Crossbow Sniper",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Hunter",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[fanfare] Discard a Hunter card: Select an enemy leader or enemy follower on the field. Deal it 1 damage and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-013EN.png"
+  },
+  {
+    "cardNo": "BP06-014EN",
+    "name": "Mallet Monkey",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Fae-Touched / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "3",
+      "attack": "2",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this follower. Storm. [fanfare] [cost02]: Search your deck for a Mallet Monkey, summon it, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-014EN.png"
+  },
+  {
+    "cardNo": "BP06-015EN",
+    "name": "Mallet Monkey Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Fae-Touched / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "3",
+      "effect": "Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-015EN.png"
+  },
+  {
+    "cardNo": "BP06-016EN",
+    "name": "Elven Sentry",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "This card costs 1 less to play for every Fairy on your field. ---------- Rush. Assail."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-016EN.png"
+  },
+  {
+    "cardNo": "BP06-017EN",
+    "name": "Synchronized Slash",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Hunter",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[engage] 2 Hunter followers on your field: Select an enemy follower on the field and deal it 4 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-017EN.png"
+  },
+  {
+    "cardNo": "BP06-018EN",
+    "name": "Kagemitsu, Matchless Blade",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Arena / Officer",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Rush. [fanfare] Give this follower [attack]+X/[defense]+X, where X equals the number of faceup evolved followers in your evolve deck. If X is at least 3, give it Assail. If X is at least 7, give it \"Strike - Refresh this follower. Perform only once per turn.\""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-018EN.png"
+  },
+  {
+    "cardNo": "BP06-019EN",
+    "name": "Ralmia, Sonic Racer",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Supreme",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[evolve] [cost03]: Evolve this follower. This card's [evolve] costs 1 less for every other follower on your field. Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-019EN.png"
+  },
+  {
+    "cardNo": "BP06-020EN",
+    "name": "Ralmia, Sonic Racer Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Officer / Supreme",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "3",
+      "effect": "Storm. On Evolve - [cost03]: Give this follower [attack]+1/[defense]+1 for every other follower on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-020EN.png"
+  },
+  {
+    "cardNo": "BP06-021EN",
+    "name": "Steadfast Samurai",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "This follower doesn't take combat damage. [act] [cost02]: Give this follower [attack]+1/[defense]+1 and Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-021EN.png"
+  },
+  {
+    "cardNo": "BP06-022EN",
+    "name": "Hero of Antiquity",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "7",
+      "attack": "6",
+      "defense": "10",
+      "effect": "[evolve] [cost01]: Evolve this follower. Rush. Aura. This card can't be destroyed or banished by abilities. (It can still be destroyed by ability damage.)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-022EN.png"
+  },
+  {
+    "cardNo": "BP06-023EN",
+    "name": "Hero of Antiquity Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Officer",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "7",
+      "defense": "11",
+      "effect": "Aura. This card can't be destroyed or banished by abilities. On Evolve - Select an enemy follower on the field and destroy it. If it costs 6 or more, banish it instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-023EN.png"
+  },
+  {
+    "cardNo": "BP06-024EN",
+    "name": "Courtly Dance",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Noble / Dancer",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "6",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Look at the top 5 cards of your deck. From among them, you may summon any number of [swordcraft] followers that cost 3 or less each, up to a total cost of 7. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-024EN.png"
+  },
+  {
+    "cardNo": "BP06-025EN",
+    "name": "Quickdraw Maven",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-025EN.png"
+  },
+  {
+    "cardNo": "BP06-026EN",
+    "name": "Quickdraw Maven Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Officer",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Discard a card: Select an enemy follower on the field and deal it 5 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-026EN.png"
+  },
+  {
+    "cardNo": "BP06-027EN",
+    "name": "Twinsword Master",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "1",
+      "defense": "3",
+      "effect": "Strike - Refresh this follower. Perform only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-027EN.png"
+  },
+  {
+    "cardNo": "BP06-028EN",
+    "name": "Grand Acquisition",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Thief",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Each opponent buries the top 3 cards of their deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-028EN.png"
+  },
+  {
+    "cardNo": "BP06-029EN",
+    "name": "Samurai Outlaw",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[evolve] [cost04]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-029EN.png"
+  },
+  {
+    "cardNo": "BP06-030EN",
+    "name": "Samurai Outlaw Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "6",
+      "defense": "5",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-030EN.png"
+  },
+  {
+    "cardNo": "BP06-031EN",
+    "name": "Adept Thief",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Thief",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[fanfare] Choose one of the following. (1) Each opponent buries the top card of their deck. (2) Draw a card. Discard a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-031EN.png"
+  },
+  {
+    "cardNo": "BP06-032EN",
+    "name": "Petalwink Paladin",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Noble",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Select an enemy follower on the field. Destroy it and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-032EN.png"
+  },
+  {
+    "cardNo": "BP06-033EN",
+    "name": "Levin Scholar",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Levin",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Search your deck for a Levin follower, reveal it, add it to your hand, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-033EN.png"
+  },
+  {
+    "cardNo": "BP06-034EN",
+    "name": "Breakneck Draw",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[engage] a [swordcraft] follower on your field: Select an enemy follower on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-034EN.png"
+  },
+  {
+    "cardNo": "BP06-035EN",
+    "name": "Kuon, Founder of Onmyodo",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Arena / Onmyoji",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "15",
+      "attack": "5",
+      "defense": "5",
+      "effect": "This card costs 1 less to play for every spell and Onmyoji card in your cemetery. ---------- [fanfare] If there's no Celestial Shikigami on your field, summon one. [act] [engage]: Select up to 2 Shikigami followers on your field and give them Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-035EN.png"
+  },
+  {
+    "cardNo": "BP06-036EN",
+    "name": "Mysteria, Magic Founder",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "3",
+      "attack": "2",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Reveal an Academic follower from your hand: Select an enemy follower on the field and deal it 2 damage. While this card is on your field, any Academic follower you play costs 1 less."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-036EN.png"
+  },
+  {
+    "cardNo": "BP06-037EN",
+    "name": "Mysteria, Magic Founder Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Academic",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "5",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 3 damage. While this card is on your field, any Academic follower you play costs 1 less."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-037EN.png"
+  },
+  {
+    "cardNo": "BP06-038EN",
+    "name": "Curse Crafter",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Onmyoji",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "4",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Summon a Paper Shikigami token. [act] Bury a Shikigami follower: Select an enemy follower on the field and deal it 4 damage. For the rest of this turn, this card's [act] abilities except [evolve] can't be activated."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-038EN.png"
+  },
+  {
+    "cardNo": "BP06-039EN",
+    "name": "Curse Crafter Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Onmyoji",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage. If there are at least 7 spells and Onmyoji cards in your cemetery, deal 4 damage instead. [act] Bury a Shikigami follower: Select an enemy follower on the field and deal it 4 damage. For the rest of this turn, this card's [act] abilities can't be activated."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-039EN.png"
+  },
+  {
+    "cardNo": "BP06-040EN",
+    "name": "Hulking Giant",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Golem / Forbidden",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Earth Rite: Select an enemy follower on the field and deal it 5 damage. [lastwords] Earth Rite: Deal 3 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-040EN.png"
+  },
+  {
+    "cardNo": "BP06-041EN",
+    "name": "Shikigami Summons",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Onmyoji",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Summon a Paper Shikigami token. If there are at least 7 spells and Onmyoji cards in your cemetery, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-041EN.png"
+  },
+  {
+    "cardNo": "BP06-042EN",
+    "name": "Demoncaller",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Onmyoji",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. Whenever a Shikigami follower is put onto your field, give it [attack]+1 and Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-042EN.png"
+  },
+  {
+    "cardNo": "BP06-043EN",
+    "name": "Demoncaller Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Onmyoji",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Summon a Paper Shikigami token. Whenever a Shikigami follower is put onto your field, give it [attack]+1 and Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-043EN.png"
+  },
+  {
+    "cardNo": "BP06-044EN",
+    "name": "Traditional Sorcerer",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Onmyoji",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "1",
+      "defense": "4",
+      "effect": "Whenever a Shikigami follower is put onto your field, give it Ward. [fanfare] If there are at least 7 spells and Onmyoji cards in your cemetery, summon a Paper Shikigami token and give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-044EN.png"
+  },
+  {
+    "cardNo": "BP06-045EN",
+    "name": "Crimson Meteor Storm",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "7",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Spellchain (10) - This card costs 2 less to play. ---------- Deal 6 damage to each enemy follower on the field. Deal 3 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-045EN.png"
+  },
+  {
+    "cardNo": "BP06-046EN",
+    "name": "Talisman Disciple",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Onmyoji",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[lastwords] Search your deck for a Shikigami Summons, reveal it, add it to your hand, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-046EN.png"
+  },
+  {
+    "cardNo": "BP06-047EN",
+    "name": "Charming Gentlemouse",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Arcanaform",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] [cost02]: Search your deck for a Charming Gentlemouse, summon it, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-047EN.png"
+  },
+  {
+    "cardNo": "BP06-048EN",
+    "name": "Charming Gentlemouse Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arcanaform",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it damage equal to 2 times the number of cards named Charming Gentlemouse on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-048EN.png"
+  },
+  {
+    "cardNo": "BP06-049EN",
+    "name": "Passionate Potioneer",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Alchemist",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare][lastwords] Summon a Magic Sediment token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-049EN.png"
+  },
+  {
+    "cardNo": "BP06-050EN",
+    "name": "Golem's Rampage",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Golem / Forbidden",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Bury a Golem follower: Deal 3 damage to each enemy leader and enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-050EN.png"
+  },
+  {
+    "cardNo": "BP06-051EN",
+    "name": "Mirror of Truth",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet",
+      "trait": "Mage / Earth Sigil",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Stack. [fanfare] Select an Alchemist follower that costs 3 or less in your cemetery and summon it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-051EN.png"
+  },
+  {
+    "cardNo": "BP06-052EN",
+    "name": "Garyu, Supreme Dragonkin",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Arena / Dragonewt",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "5",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Draw a card. While this card is on your field, each other [dragoncraft] follower on your field has Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-052EN.png"
+  },
+  {
+    "cardNo": "BP06-053EN",
+    "name": "Garyu, Supreme Dragonkin Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arena / Dragonewt",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "5",
+      "effect": "On Evolve - You may summon a [dragoncraft] follower that costs 5 or less from your hand. While this card is on your field, each other [dragoncraft] follower on your field has Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-053EN.png"
+  },
+  {
+    "cardNo": "BP06-054EN",
+    "name": "Filene, Whitefrost Dragonewt",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "3",
+      "effect": "[fanfare] Select an enemy follower on the field and engage it. It doesn't refresh during its controller's next start phase. [fanfare] If Overflow is active for you, search your deck for a Whitefrost Whisper, put it into your EX area, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-054EN.png"
+  },
+  {
+    "cardNo": "BP06-055EN",
+    "name": "Phoenix Empress",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Phoenix",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "5",
+      "attack": "5",
+      "defense": "3",
+      "effect": "Rush. [lastwords] Decrease your max play points by 1: Put this card onto its owner's field engaged."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-055EN.png"
+  },
+  {
+    "cardNo": "BP06-056EN",
+    "name": "Wyrm God of the Skies",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt / Wyrmkin",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "This card can only be played from hand. ---------- [evolve] [cost01]: Evolve this follower. [act] [cost02], bury this card from your EX area: Select a follower on your field and give it [attack]+4/[defense]+4. For the rest of this turn, it can't attack enemies."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-056EN.png"
+  },
+  {
+    "cardNo": "BP06-057EN",
+    "name": "Wyrm God of the Skies Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonewt / Wyrmkin",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "On Evolve - Give your leader [defense]+3. [lastwords] Put this card into its owner's EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-057EN.png"
+  },
+  {
+    "cardNo": "BP06-058EN",
+    "name": "Whitefrost Whisper",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Dragonewt",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "This card costs 1 less to play if Overflow is active for you. ---------- Select an engaged enemy follower on the field and destroy it. If there's a Filene, Whitefrost Dragonewt on your field, deal 2 damage to the selected follower's leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-058EN.png"
+  },
+  {
+    "cardNo": "BP06-059EN",
+    "name": "Ice Dancing Dragonewt",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt / Wyrmkin",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] If Overflow is active for you, give this follower [attack]+1 and Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-059EN.png"
+  },
+  {
+    "cardNo": "BP06-060EN",
+    "name": "Ice Dancing Dragonewt Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonewt / Wyrmkin",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "This follower ignores Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-060EN.png"
+  },
+  {
+    "cardNo": "BP06-061EN",
+    "name": "Jadelong Tactician",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "5",
+      "attack": "3",
+      "defense": "5",
+      "effect": "Storm. Strike - Select another follower on your field and give it [attack]+1/[defense]+1. If it's a Garyu, Supreme Dragonkin, give [attack]+2/[defense]+2 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-061EN.png"
+  },
+  {
+    "cardNo": "BP06-062EN",
+    "name": "Aquascale Stalwart",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "1",
+      "defense": "4",
+      "effect": "Ward. [fanfare] If Overflow is active for you, look at the top 5 cards of your deck. You may reveal a [dragoncraft] follower that costs 5 or more from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-062EN.png"
+  },
+  {
+    "cardNo": "BP06-063EN",
+    "name": "Swordwhip Dragoon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[fanfare] Select up to 2 enemy followers on the field and deal 2 damage divided between them. If Overflow is active for you, deal 4 damage divided between them instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-063EN.png"
+  },
+  {
+    "cardNo": "BP06-064EN",
+    "name": "Dragonblader",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "4",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Each player puts a Dragon token into their EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-064EN.png"
+  },
+  {
+    "cardNo": "BP06-065EN",
+    "name": "Dragonblader Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonheart",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "On Evolve - Select a card in an EX area and banish it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-065EN.png"
+  },
+  {
+    "cardNo": "BP06-066EN",
+    "name": "Trident Merman",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Marine",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Summon 2 Megalorca tokens."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-066EN.png"
+  },
+  {
+    "cardNo": "BP06-067EN",
+    "name": "Dragon Chef",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin / Chef",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[fanfare] Give your leader [defense]+2. If there's an amulet on your field, give [defense]+4 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-067EN.png"
+  },
+  {
+    "cardNo": "BP06-068EN",
+    "name": "Flamewinged Might",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Phoenix",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a follower on your field and give it [attack]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-068EN.png"
+  },
+  {
+    "cardNo": "BP06-069EN",
+    "name": "Ginsetsu, Great Fox",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Arena / Yokai",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "6",
+      "attack": "1",
+      "defense": "5",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Put 5 One-Tailed Fox tokens into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-069EN.png"
+  },
+  {
+    "cardNo": "BP06-070EN",
+    "name": "Ginsetsu, Great Fox Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arena / Yokai",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "1",
+      "defense": "9",
+      "effect": "While this card is on your field, any Yokai follower you play costs 2 less. Also, if a Yokai follower on your field would deal damage, it deals that much plus 1 instead. Whenever a Yokai follower you control leaves the field, give this follower [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-070EN.png"
+  },
+  {
+    "cardNo": "BP06-071EN",
+    "name": "Aragavy the Berserker",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Arena / Beast",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "3",
+      "attack": "4",
+      "defense": "3",
+      "effect": "[fanfare] [cost05]: Deal 5 damage to each other follower on the field. Give this follower [attack]+2/[defense]+2 and Storm. At the start of your end phase, if Sanguine is active for you, select an enemy leader or enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-071EN.png"
+  },
+  {
+    "cardNo": "BP06-072EN",
+    "name": "Shuten-Doji",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Yokai",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "3",
+      "attack": "1",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. Bane. [fanfare] Banish 2 Yokai cards from your cemetery: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-072EN.png"
+  },
+  {
+    "cardNo": "BP06-073EN",
+    "name": "Shuten-Doji Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Yokai",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "2",
+      "defense": "5",
+      "effect": "Storm. Bane. On Evolve - Select another Yokai follower on your field and give it Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-073EN.png"
+  },
+  {
+    "cardNo": "BP06-074EN",
+    "name": "Bear Pelt Warrior",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Beast",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "4",
+      "attack": "5",
+      "defense": "4",
+      "effect": "Rush. Strike - Deal 1 damage to each leader. [lastwords] Give your leader [defense]+4."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-074EN.png"
+  },
+  {
+    "cardNo": "BP06-075EN",
+    "name": "Yuzuki, Righteous Demon",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Bane. [fanfare] Each opponent buries a follower. Necrocharge (10) - They bury 2 instead. [act] [cost03], discard this card: Select an enemy follower on the field. Deal it 5 damage and bury the top card of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-075EN.png"
+  },
+  {
+    "cardNo": "BP06-076EN",
+    "name": "Kasha",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Yokai",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "3",
+      "defense": "1",
+      "effect": "[fanfare] Choose one of the following. (1) Select an enemy follower on the field. Deal it 1 damage and bury the top card of your deck. (2) Select a Yokai follower not named Kasha in your cemetery and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-076EN.png"
+  },
+  {
+    "cardNo": "BP06-077EN",
+    "name": "Cougar Pelt Warrior",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Beast",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-077EN.png"
+  },
+  {
+    "cardNo": "BP06-078EN",
+    "name": "Cougar Pelt Warrior Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Beast",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "3",
+      "effect": "On Evolve - Search your deck for a Cougar Pelt Warrior, put it onto your field engaged, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-078EN.png"
+  },
+  {
+    "cardNo": "BP06-079EN",
+    "name": "Unleash the Nightmare",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Vampire",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "This card costs 1 less to play if there's a Vampire card on your field. ---------- Summon 3 Forest Bat tokens. Draw 2 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-079EN.png"
+  },
+  {
+    "cardNo": "BP06-080EN",
+    "name": "Zashiki-Warashi",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Yokai",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-080EN.png"
+  },
+  {
+    "cardNo": "BP06-081EN",
+    "name": "Zashiki-Warashi Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Yokai",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Discard a Yokai card: Give your leader [defense]+1. Draw 2 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-081EN.png"
+  },
+  {
+    "cardNo": "BP06-082EN",
+    "name": "Antelope Pelt Warrior",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "3",
+      "defense": "3",
+      "effect": "At the start of your main phase, deal 1 damage to your leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-082EN.png"
+  },
+  {
+    "cardNo": "BP06-083EN",
+    "name": "Rookie Succubus",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon / Vampire",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[fanfare][lastwords] Summon a Forest Bat token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-083EN.png"
+  },
+  {
+    "cardNo": "BP06-084EN",
+    "name": "Demonic Procession",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Yokai",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Look at the top 5 cards of your deck. You may reveal a Yokai follower from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-084EN.png"
+  },
+  {
+    "cardNo": "BP06-085EN",
+    "name": "Berserker's Pelt",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Amulet",
+      "trait": "Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Once on each of your turns, when your leader loses defense, select a follower on your field and give it [attack]+1/[defense]+1. [act] [engage], bury this card: Give your leader [defense]+2. Activate only if your leader's defense is 10 or less."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-085EN.png"
+  },
+  {
+    "cardNo": "BP06-086EN",
+    "name": "Wilbert, Grand Knight",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Arena / Luminary",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "5",
+      "attack": "4",
+      "defense": "5",
+      "effect": "Ward. [fanfare] Look at the top 5 cards of your deck. From among them, you may summon a follower with Ward not named Wilbert, Grand Knight that costs 5 or less. Put the rest on the bottom of your deck in any order. Whenever a follower with Ward is put from your field into the cemetery, deal 1 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-086EN.png"
+  },
+  {
+    "cardNo": "BP06-087EN",
+    "name": "Karula, Arts Master",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Arena / Faith",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. At the start of your end phase, if you have at least 2 play points, deal 2 damage to each enemy leader. If you have at least 4, draw a card. If you have at least 6, select up to 1 enemy follower on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-087EN.png"
+  },
+  {
+    "cardNo": "BP06-088EN",
+    "name": "Karula, Arts Master Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arena / Faith",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "At the start of your end phase, recover 2 play points. Then, if you have at least 2 play points, deal 2 damage to each enemy leader. If you have at least 4, draw a card. If you have at least 6, select up to 1 enemy follower on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-088EN.png"
+  },
+  {
+    "cardNo": "BP06-089EN",
+    "name": "Saintly Leader",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Luminary",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "3",
+      "attack": "2",
+      "defense": "4",
+      "effect": "Ward. [act] [engage], banish 3 followers with Ward from your cemetery: Select an enemy follower on the field and banish it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-089EN.png"
+  },
+  {
+    "cardNo": "BP06-090EN",
+    "name": "Phantom Blade Wielder",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. At the start of your end phase, if you have at least 2 play points, select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-090EN.png"
+  },
+  {
+    "cardNo": "BP06-091EN",
+    "name": "Phantom Blade Wielder Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage. At the start of your end phase, if you have at least 2 play points, select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-091EN.png"
+  },
+  {
+    "cardNo": "BP06-092EN",
+    "name": "Manifest Devotion",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Faith",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Look at the top 7 cards of your deck. You may summon up to 1 amulet that costs 5 or less and up to 1 amulet that costs 3 or less from among them. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-092EN.png"
+  },
+  {
+    "cardNo": "BP06-093EN",
+    "name": "Holy Lancer",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Luminary",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "5",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. Ward. [fanfare] If there's another follower with Ward on your field, select an enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-093EN.png"
+  },
+  {
+    "cardNo": "BP06-094EN",
+    "name": "Holy Lancer Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Luminary",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "5",
+      "effect": "Ward. On Evolve - Select an enemy follower on the field and deal it 4 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-094EN.png"
+  },
+  {
+    "cardNo": "BP06-095EN",
+    "name": "Boost Kicker",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] [costX]: Deal X damage to each enemy follower on the field. X equals a number of your choice. At the start of your end phase, recover 1 play point."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-095EN.png"
+  },
+  {
+    "cardNo": "BP06-096EN",
+    "name": "Feather Sanctuary",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith / Avian",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Summon a Holy Falcon token. [act] [engage], bury an amulet: Summon a Holy Falcon token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-096EN.png"
+  },
+  {
+    "cardNo": "BP06-097EN",
+    "name": "Winged Staff Priestess",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Luminary",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Ward. [lastwords] Search your deck for a Winged Staff Priestess, reveal it, add it to your hand, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-097EN.png"
+  },
+  {
+    "cardNo": "BP06-098EN",
+    "name": "Gravity Grappler",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "At the start of your end phase, if you have at least 2 play points, summon a Mystic Artifact token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-098EN.png"
+  },
+  {
+    "cardNo": "BP06-099EN",
+    "name": "Barrage Brawler",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "1",
+      "attack": "0",
+      "defense": "1",
+      "effect": "[evolve] Discard a card: Evolve this follower. At the start of your end phase, if you have at least 2 play points, select an enemy leader and deal it 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-099EN.png"
+  },
+  {
+    "cardNo": "BP06-100EN",
+    "name": "Barrage Brawler Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "1",
+      "defense": "2",
+      "effect": "On Evolve - Recover 2 play points. At the start of your end phase, if you have at least 2 play points, select an enemy leader and deal it 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-100EN.png"
+  },
+  {
+    "cardNo": "BP06-101EN",
+    "name": "Holy Counterattack",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Luminary",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] This card can't be played during your turn. ---------- Select an engaged enemy follower on the field and deal it 2 damage. If there's a follower with Ward on your field, deal 4 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-101EN.png"
+  },
+  {
+    "cardNo": "BP06-102EN",
+    "name": "Focus",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Faith",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "0",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] This card can't be played during your turn. ---------- If you have at least 2 play points, give your leader [defense]+1 and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-102EN.png"
+  },
+  {
+    "cardNo": "BP06-103EN",
+    "name": "Mammoth God's Colosseum",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Deity / Beast",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "7",
+      "attack": "7",
+      "defense": "8",
+      "effect": "[fanfare] Each player buries each follower on their field except for one of their choice. [lastwords] Search your deck for a Colosseum on High, summon it, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-103EN.png"
+  },
+  {
+    "cardNo": "BP06-104EN",
+    "name": "Badb Catha",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Deity / Lightborne",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "3",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[evolve] [cost02]: Evolve this follower. [fanfare] Choose one of the following. (1) Select another follower on your field and give it [attack]+1/[defense]+1. (2) Give your leader [defense]+2. (3) Look at the top 3 cards of your deck. Put any number of them on the top of your deck in any order. Put the rest on the bottom in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-104EN.png"
+  },
+  {
+    "cardNo": "BP06-105EN",
+    "name": "Badb Catha Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Deity / Lightborne",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "5",
+      "effect": "On Evolve - Choose one of the following. (1) Engage each enemy follower on the field. (2) Deal 2 damage to each enemy leader. (3) Put the top card of your deck into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-105EN.png"
+  },
+  {
+    "cardNo": "BP06-106EN",
+    "name": "Mithra, Daybreak Deity",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Lightborne",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Each player rolls a 6-sided die. If they roll a 1, 2, or 3, they draw 2 cards. If they roll a 4, 5, or 6, they discard 2 random cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-106EN.png"
+  },
+  {
+    "cardNo": "BP06-107EN",
+    "name": "Mithra, Daybreak Deity Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Lightborne",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "On Evolve - Declare any number from 1 to 6, then roll a 6-sided die. If you roll the declared number, give your leader [defense]+5, search your deck for any card, put it into your EX area, shuffle your deck, then recover all your play points."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-107EN.png"
+  },
+  {
+    "cardNo": "BP06-108EN",
+    "name": "Fall from Grace",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Fallen Angel",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select a follower on the field. Banish it and give its leader [defense]+2. Its controller draws a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-108EN.png"
+  },
+  {
+    "cardNo": "BP06-109EN",
+    "name": "Colosseum on High",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Amulet",
+      "trait": "Arena",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "6",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Each player looks at the top 3 cards of their deck. They may summon a follower from among them. They bury the rest. While this card is on the field, if a follower on the field can attack a follower, it can't attack leaders."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-109EN.png"
+  },
+  {
+    "cardNo": "BP06-110EN",
+    "name": "Chaht, Ringside Announcer",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Arena",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "This card costs 3 less to play if there's a Colosseum on High on your field. ---------- [evolve] [cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-110EN.png"
+  },
+  {
+    "cardNo": "BP06-111EN",
+    "name": "Chaht, Ringside Announcer Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Arena",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Search your deck for an Arena card, reveal it, add it to your hand, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-111EN.png"
+  },
+  {
+    "cardNo": "BP06-112EN",
+    "name": "Clash of Heroes",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Arena",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a follower on your field and an enemy follower on the field. Deal the first follower damage equal to the second's attack. Deal the second follower damage equal to the first's attack."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-112EN.png"
+  },
+  {
+    "cardNo": "BP06-113EN",
+    "name": "Biofabrication",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Supreme",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a faceup evolved follower in your evolve deck. Turn it facedown and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-113EN.png"
+  },
+  {
+    "cardNo": "BP06-114EN",
+    "name": "Sweet-Tooth Sleuth",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Detective",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[fanfare] Select an opponent. They reveal their hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-114EN.png"
+  },
+  {
+    "cardNo": "BP06-115EN",
+    "name": "Bazooka Goblins",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Goblinoid",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost02]: Evolve this follower. [fanfare] Select an enemy card that costs 2 or less on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-115EN.png"
+  },
+  {
+    "cardNo": "BP06-116EN",
+    "name": "Bazooka Goblins Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Goblinoid",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "On Evolve - Select an enemy card that costs 2 or less on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-116EN.png"
+  },
+  {
+    "cardNo": "BP06-117EN",
+    "name": "Sentry Gate",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Amulet",
+      "trait": "Mercenary",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Whenever an enemy follower on the field attacks, its controller may pay [cost02] to destroy this amulet. If they don't pay, deal 2 damage to the follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-117EN.png"
+  },
+  {
+    "cardNo": "BP06-LD01EN",
+    "name": "Lycoris, Soothing Venom",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-LD01EN.png"
+  },
+  {
+    "cardNo": "BP06-LD02EN",
+    "name": "Oracle of the Waterwyrm",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-LD02EN.png"
+  },
+  {
+    "cardNo": "BP06-P01EN",
+    "name": "Wildwood Matriarch",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Hunter",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost02]: Evolve this follower. [fanfare] If this card was put onto the field by an ability, evolve it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-P01EN.png"
+  },
+  {
+    "cardNo": "BP06-P02EN",
+    "name": "Wildwood Matriarch Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Hunter",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Select up to 2 Hunter followers that cost 2 or less in your cemetery and summon them."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-P02EN.png"
+  },
+  {
+    "cardNo": "BP06-P03EN",
+    "name": "Spiritshine",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Fae-Touched",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose one of the following. (1) Select a Pixie token on your field or in your EX area and give it [attack]+2/[defense]+2. (2) Put 2 Fairy tokens into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-P03EN.png"
+  },
+  {
+    "cardNo": "BP06-P04EN",
+    "name": "Crossbow Sniper",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Hunter",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[fanfare] Discard a Hunter card: Select an enemy leader or enemy follower on the field. Deal it 1 damage and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-P04EN.png"
+  },
+  {
+    "cardNo": "BP06-P05EN",
+    "name": "Synchronized Slash",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Hunter",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[engage] 2 Hunter followers on your field: Select an enemy follower on the field and deal it 4 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-P05EN.png"
+  },
+  {
+    "cardNo": "BP06-P06EN",
+    "name": "Steadfast Samurai",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "This follower doesn't take combat damage. [act] [cost02]: Give this follower [attack]+1/[defense]+1 and Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-P06EN.png"
+  },
+  {
+    "cardNo": "BP06-P07EN",
+    "name": "Courtly Dance",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Noble / Dancer",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "6",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Look at the top 5 cards of your deck. From among them, you may summon any number of [swordcraft] followers that cost 3 or less each, up to a total cost of 7. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-P07EN.png"
+  },
+  {
+    "cardNo": "BP06-P08EN",
+    "name": "Quickdraw Maven",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-P08EN.png"
+  },
+  {
+    "cardNo": "BP06-P09EN",
+    "name": "Quickdraw Maven Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Officer",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Discard a card: Select an enemy follower on the field and deal it 5 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-P09EN.png"
+  },
+  {
+    "cardNo": "BP06-P10EN",
+    "name": "Breakneck Draw",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Officer",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[engage] a [swordcraft] follower on your field: Select an enemy follower on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-P10EN.png"
+  },
+  {
+    "cardNo": "BP06-P11EN",
+    "name": "Demoncaller",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Onmyoji",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. Whenever a Shikigami follower is put onto your field, give it [attack]+1 and Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-P11EN.png"
+  },
+  {
+    "cardNo": "BP06-P12EN",
+    "name": "Demoncaller Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Onmyoji",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Summon a Paper Shikigami token. Whenever a Shikigami follower is put onto your field, give it [attack]+1 and Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-P12EN.png"
+  },
+  {
+    "cardNo": "BP06-P13EN",
+    "name": "Traditional Sorcerer",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Onmyoji",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "1",
+      "defense": "4",
+      "effect": "Whenever a Shikigami follower is put onto your field, give it Ward. [fanfare] If there are at least 7 spells and Onmyoji cards in your cemetery, summon a Paper Shikigami token and give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-P13EN.png"
+  },
+  {
+    "cardNo": "BP06-P14EN",
+    "name": "Crimson Meteor Storm",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "7",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Spellchain (10) - This card costs 2 less to play. ---------- Deal 6 damage to each enemy follower on the field. Deal 3 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-P14EN.png"
+  },
+  {
+    "cardNo": "BP06-P15EN",
+    "name": "Talisman Disciple",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Onmyoji",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[lastwords] Search your deck for a Shikigami Summons, reveal it, add it to your hand, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-P15EN.png"
+  },
+  {
+    "cardNo": "BP06-P16EN",
+    "name": "Phoenix Empress",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Phoenix",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "5",
+      "attack": "5",
+      "defense": "3",
+      "effect": "Rush. [lastwords] Decrease your max play points by 1: Put this card onto its owner's field engaged."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-P16EN.png"
+  },
+  {
+    "cardNo": "BP06-P17EN",
+    "name": "Ice Dancing Dragonewt",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt / Wyrmkin",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] If Overflow is active for you, give this follower [attack]+1 and Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-P17EN.png"
+  },
+  {
+    "cardNo": "BP06-P18EN",
+    "name": "Ice Dancing Dragonewt Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonewt / Wyrmkin",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "This follower ignores Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-P18EN.png"
+  },
+  {
+    "cardNo": "BP06-P19EN",
+    "name": "Aquascale Stalwart",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "1",
+      "defense": "4",
+      "effect": "Ward. [fanfare] If Overflow is active for you, look at the top 5 cards of your deck. You may reveal a [dragoncraft] follower that costs 5 or more from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-P19EN.png"
+  },
+  {
+    "cardNo": "BP06-P20EN",
+    "name": "Swordwhip Dragoon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[fanfare] Select up to 2 enemy followers on the field and deal 2 damage divided between them. If Overflow is active for you, deal 4 damage divided between them instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-P20EN.png"
+  },
+  {
+    "cardNo": "BP06-P21EN",
+    "name": "Shuten-Doji",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Yokai",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "3",
+      "attack": "1",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. Bane. [fanfare] Banish 2 Yokai cards from your cemetery: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-P21EN.png"
+  },
+  {
+    "cardNo": "BP06-P22EN",
+    "name": "Shuten-Doji Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Yokai",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "2",
+      "defense": "5",
+      "effect": "Storm. Bane. On Evolve - Select another Yokai follower on your field and give it Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-P22EN.png"
+  },
+  {
+    "cardNo": "BP06-P23EN",
+    "name": "Bear Pelt Warrior",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Beast",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "4",
+      "attack": "5",
+      "defense": "4",
+      "effect": "Rush. Strike - Deal 1 damage to each leader. [lastwords] Give your leader [defense]+4."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-P23EN.png"
+  },
+  {
+    "cardNo": "BP06-P24EN",
+    "name": "Rookie Succubus",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon / Vampire",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[fanfare][lastwords] Summon a Forest Bat token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-P24EN.png"
+  },
+  {
+    "cardNo": "BP06-P25EN",
+    "name": "Demonic Procession",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Yokai",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Look at the top 5 cards of your deck. You may reveal a Yokai follower from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-P25EN.png"
+  },
+  {
+    "cardNo": "BP06-P26EN",
+    "name": "Saintly Leader",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Luminary",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "3",
+      "attack": "2",
+      "defense": "4",
+      "effect": "Ward. [act] [engage], banish 3 followers with Ward from your cemetery: Select an enemy follower on the field and banish it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-P26EN.png"
+  },
+  {
+    "cardNo": "BP06-P27EN",
+    "name": "Holy Lancer",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Luminary",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "5",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. Ward. [fanfare] If there's another follower with Ward on your field, select an enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-P27EN.png"
+  },
+  {
+    "cardNo": "BP06-P28EN",
+    "name": "Holy Lancer Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Luminary",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "5",
+      "effect": "Ward. On Evolve - Select an enemy follower on the field and deal it 4 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-P28EN.png"
+  },
+  {
+    "cardNo": "BP06-P29EN",
+    "name": "Winged Staff Priestess",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Luminary",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Ward. [lastwords] Search your deck for a Winged Staff Priestess, reveal it, add it to your hand, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-P29EN.png"
+  },
+  {
+    "cardNo": "BP06-P30EN",
+    "name": "Focus",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Faith",
+      "rarity": "Bronze / Premium",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "0",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] This card can't be played during your turn. ---------- If you have at least 2 play points, give your leader [defense]+1 and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-P30EN.png"
+  },
+  {
+    "cardNo": "BP06-P31EN",
+    "name": "Colosseum on High",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Amulet",
+      "trait": "Arena",
+      "rarity": "Gold / Premium",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "6",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Each player looks at the top 3 cards of their deck. They may summon a follower from among them. They bury the rest. While this card is on the field, if a follower on the field can attack a follower, it can't attack leaders."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-P31EN.png"
+  },
+  {
+    "cardNo": "BP06-P32EN",
+    "name": "Clash of Heroes",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Arena",
+      "rarity": "Silver / Premium",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a follower on your field and an enemy follower on the field. Deal the first follower damage equal to the second's attack. Deal the second follower damage equal to the first's attack."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-P32EN.png"
+  },
+  {
+    "cardNo": "BP06-SL01EN",
+    "name": "Lymaga, Forest Champion",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Arena / Hunter",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "6",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost02]: Evolve this follower. Storm. Bane. [fanfare] Look at the top 4 cards of your deck. You may summon a Hunter follower that costs 4 or less from among them. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-SL01EN.png"
+  },
+  {
+    "cardNo": "BP06-SL02EN",
+    "name": "Lymaga, Forest Champion Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arena / Hunter",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Storm. Bane. On Evolve - Look at the top 4 cards of your deck. You may summon a Hunter follower that costs 4 or less from among them. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-SL02EN.png"
+  },
+  {
+    "cardNo": "BP06-SL03EN",
+    "name": "Amataz, Fairy Blader",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf / Fae-Touched",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Put a Fairy token into your EX area. Give each Pixie follower in your EX area [attack]+1/[defense]+1. [act] [engage]: Select up to 2 Pixie followers that cost 1 or less on your field and give them Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-SL03EN.png"
+  },
+  {
+    "cardNo": "BP06-SL04EN",
+    "name": "Kagemitsu, Matchless Blade",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Arena / Officer",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Rush. [fanfare] Give this follower [attack]+X/[defense]+X, where X equals the number of faceup evolved followers in your evolve deck. If X is at least 3, give it Assail. If X is at least 7, give it \"Strike - Refresh this follower. Perform only once per turn.\""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-SL04EN.png"
+  },
+  {
+    "cardNo": "BP06-SL05EN",
+    "name": "Ralmia, Sonic Racer",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Supreme",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[evolve] [cost03]: Evolve this follower. This card's [evolve] costs 1 less for every other follower on your field. Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-SL05EN.png"
+  },
+  {
+    "cardNo": "BP06-SL06EN",
+    "name": "Ralmia, Sonic Racer Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Officer / Supreme",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "3",
+      "effect": "Storm. On Evolve - [cost03]: Give this follower [attack]+1/[defense]+1 for every other follower on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-SL06EN.png"
+  },
+  {
+    "cardNo": "BP06-SL07EN",
+    "name": "Kuon, Founder of Onmyodo",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Arena / Onmyoji",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "15",
+      "attack": "5",
+      "defense": "5",
+      "effect": "This card costs 1 less to play for every spell and Onmyoji card in your cemetery. ---------- [fanfare] If there's no Celestial Shikigami on your field, summon one. [act] [engage]: Select up to 2 Shikigami followers on your field and give them Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-SL07EN.png"
+  },
+  {
+    "cardNo": "BP06-SL08EN",
+    "name": "Mysteria, Magic Founder",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "3",
+      "attack": "2",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Reveal an Academic follower from your hand: Select an enemy follower on the field and deal it 2 damage. While this card is on your field, any Academic follower you play costs 1 less."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-SL08EN.png"
+  },
+  {
+    "cardNo": "BP06-SL09EN",
+    "name": "Mysteria, Magic Founder Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Academic",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "5",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 3 damage. While this card is on your field, any Academic follower you play costs 1 less."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-SL09EN.png"
+  },
+  {
+    "cardNo": "BP06-SL10EN",
+    "name": "Garyu, Supreme Dragonkin",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Arena / Dragonewt",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "5",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Draw a card. While this card is on your field, each other [dragoncraft] follower on your field has Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-SL10EN.png"
+  },
+  {
+    "cardNo": "BP06-SL11EN",
+    "name": "Garyu, Supreme Dragonkin Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arena / Dragonewt",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "5",
+      "effect": "On Evolve - You may summon a [dragoncraft] follower that costs 5 or less from your hand. While this card is on your field, each other [dragoncraft] follower on your field has Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-SL11EN.png"
+  },
+  {
+    "cardNo": "BP06-SL12EN",
+    "name": "Filene, Whitefrost Dragonewt",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "3",
+      "effect": "[fanfare] Select an enemy follower on the field and engage it. It doesn't refresh during its controller's next start phase. [fanfare] If Overflow is active for you, search your deck for a Whitefrost Whisper, put it into your EX area, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-SL12EN.png"
+  },
+  {
+    "cardNo": "BP06-SL13EN",
+    "name": "Ginsetsu, Great Fox",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Arena / Yokai",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "6",
+      "attack": "1",
+      "defense": "5",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Put 5 One-Tailed Fox tokens into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-SL13EN.png"
+  },
+  {
+    "cardNo": "BP06-SL14EN",
+    "name": "Ginsetsu, Great Fox Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arena / Yokai",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "1",
+      "defense": "9",
+      "effect": "While this card is on your field, any Yokai follower you play costs 2 less. Also, if a Yokai follower on your field would deal damage, it deals that much plus 1 instead. Whenever a Yokai follower you control leaves the field, give this follower [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-SL14EN.png"
+  },
+  {
+    "cardNo": "BP06-SL15EN",
+    "name": "Aragavy the Berserker",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Arena / Beast",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "3",
+      "attack": "4",
+      "defense": "3",
+      "effect": "[fanfare] [cost05]: Deal 5 damage to each other follower on the field. Give this follower [attack]+2/[defense]+2 and Storm. At the start of your end phase, if Sanguine is active for you, select an enemy leader or enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-SL15EN.png"
+  },
+  {
+    "cardNo": "BP06-SL16EN",
+    "name": "Wilbert, Grand Knight",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Arena / Luminary",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "5",
+      "attack": "4",
+      "defense": "5",
+      "effect": "Ward. [fanfare] Look at the top 5 cards of your deck. From among them, you may summon a follower with Ward not named Wilbert, Grand Knight that costs 5 or less. Put the rest on the bottom of your deck in any order. Whenever a follower with Ward is put from your field into the cemetery, deal 1 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-SL16EN.png"
+  },
+  {
+    "cardNo": "BP06-SL17EN",
+    "name": "Karula, Arts Master",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Arena / Faith",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. At the start of your end phase, if you have at least 2 play points, deal 2 damage to each enemy leader. If you have at least 4, draw a card. If you have at least 6, select up to 1 enemy follower on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-SL17EN.png"
+  },
+  {
+    "cardNo": "BP06-SL18EN",
+    "name": "Karula, Arts Master Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arena / Faith",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "At the start of your end phase, recover 2 play points. Then, if you have at least 2 play points, deal 2 damage to each enemy leader. If you have at least 4, draw a card. If you have at least 6, select up to 1 enemy follower on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-SL18EN.png"
+  },
+  {
+    "cardNo": "BP06-SL19EN",
+    "name": "Mammoth God's Colosseum",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Deity / Beast",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "7",
+      "attack": "7",
+      "defense": "8",
+      "effect": "[fanfare] Each player buries each follower on their field except for one of their choice. [lastwords] Search your deck for a Colosseum on High, summon it, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-SL19EN.png"
+  },
+  {
+    "cardNo": "BP06-SL20EN",
+    "name": "Badb Catha",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Deity / Lightborne",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "3",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[evolve] [cost02]: Evolve this follower. [fanfare] Choose one of the following. (1) Select another follower on your field and give it [attack]+1/[defense]+1. (2) Give your leader [defense]+2. (3) Look at the top 3 cards of your deck. Put any number of them on the top of your deck in any order. Put the rest on the bottom in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-SL20EN.png"
+  },
+  {
+    "cardNo": "BP06-SL21EN",
+    "name": "Badb Catha Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Deity / Lightborne",
+      "rarity": "Super Legendary",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "5",
+      "effect": "On Evolve - Choose one of the following. (1) Engage each enemy follower on the field. (2) Deal 2 damage to each enemy leader. (3) Put the top card of your deck into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-SL21EN.png"
+  },
+  {
+    "cardNo": "BP06-T01EN",
+    "name": "Celestial Shikigami TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Token",
+      "trait": "Shikigami",
+      "rarity": "-",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "4",
+      "attack": "4",
+      "defense": "5",
+      "effect": "Aura."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-T01EN.png"
+  },
+  {
+    "cardNo": "BP06-T02EN",
+    "name": "Paper Shikigami TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Token",
+      "trait": "Shikigami",
+      "rarity": "-",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[lastwords] Draw a card. Discard a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-T02EN.png"
+  },
+  {
+    "cardNo": "BP06-T03EN",
+    "name": "One-Tailed Fox TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Token",
+      "trait": "Yokai",
+      "rarity": "-",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "1",
+      "defense": "3",
+      "effect": "Rush. Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-T03EN.png"
+  },
+  {
+    "cardNo": "BP06-T04EN",
+    "name": "Fairy Wisp TOKEN",
+    "type": "token",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Token",
+      "trait": "Pixie",
+      "rarity": "-",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "0",
+      "attack": "1",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-T04EN.png"
+  },
+  {
+    "cardNo": "BP06-T05EN",
+    "name": "Fairy TOKEN",
+    "type": "token",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Token",
+      "trait": "Pixie",
+      "rarity": "-",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-T05EN.png"
+  },
+  {
+    "cardNo": "BP06-T06EN",
+    "name": "Magic Sediment TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet / Token",
+      "trait": "Earth Sigil",
+      "rarity": "-",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Stack."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-T06EN.png"
+  },
+  {
+    "cardNo": "BP06-T07EN",
+    "name": "Dragon TOKEN",
+    "type": "token",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Token",
+      "trait": "Wyrmkin",
+      "rarity": "-",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "4",
+      "attack": "5",
+      "defense": "5",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-T07EN.png"
+  },
+  {
+    "cardNo": "BP06-T08EN",
+    "name": "Megalorca TOKEN",
+    "type": "token",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Token",
+      "trait": "Marine",
+      "rarity": "-",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-T08EN.png"
+  },
+  {
+    "cardNo": "BP06-T09EN",
+    "name": "Forest Bat TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Token",
+      "trait": "Vampire",
+      "rarity": "-",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-T09EN.png"
+  },
+  {
+    "cardNo": "BP06-T10EN",
+    "name": "Holy Falcon TOKEN",
+    "type": "token",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Token",
+      "trait": "Avian",
+      "rarity": "-",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-T10EN.png"
+  },
+  {
+    "cardNo": "BP06-T11EN",
+    "name": "Mystic Artifact TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Token",
+      "trait": "Supreme",
+      "rarity": "-",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "3",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Ward. [fanfare] Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-T11EN.png"
+  },
+  {
+    "cardNo": "BP06-U01EN",
+    "name": "Lymaga, Forest Champion Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arena / Hunter",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Storm. Bane. On Evolve - Look at the top 4 cards of your deck. You may summon a Hunter follower that costs 4 or less from among them. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-U01EN.png"
+  },
+  {
+    "cardNo": "BP06-U02EN",
+    "name": "Ralmia, Sonic Racer Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Officer / Supreme",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "3",
+      "effect": "Storm. On Evolve - [cost03]: Give this follower [attack]+1/[defense]+1 for every other follower on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-U02EN.png"
+  },
+  {
+    "cardNo": "BP06-U03EN",
+    "name": "Kuon, Founder of Onmyodo",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Arena / Onmyoji",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "15",
+      "attack": "5",
+      "defense": "5",
+      "effect": "This card costs 1 less to play for every spell and Onmyoji card in your cemetery. ---------- [fanfare] If there's no Celestial Shikigami on your field, summon one. [act] [engage]: Select up to 2 Shikigami followers on your field and give them Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-U03EN.png"
+  },
+  {
+    "cardNo": "BP06-U04EN",
+    "name": "Filene, Whitefrost Dragonewt",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "3",
+      "effect": "[fanfare] Select an enemy follower on the field and engage it. It doesn't refresh during its controller's next start phase. [fanfare] If Overflow is active for you, search your deck for a Whitefrost Whisper, put it into your EX area, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-U04EN.png"
+  },
+  {
+    "cardNo": "BP06-U05EN",
+    "name": "Ginsetsu, Great Fox Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arena / Yokai",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "1",
+      "defense": "9",
+      "effect": "While this card is on your field, any Yokai follower you play costs 2 less. Also, if a Yokai follower on your field would deal damage, it deals that much plus 1 instead. Whenever a Yokai follower you control leaves the field, give this follower [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-U05EN.png"
+  },
+  {
+    "cardNo": "BP06-U06EN",
+    "name": "Karula, Arts Master Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arena / Faith",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "At the start of your end phase, recover 2 play points. Then, if you have at least 2 play points, deal 2 damage to each enemy leader. If you have at least 4, draw a card. If you have at least 6, select up to 1 enemy follower on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-U06EN.png"
+  },
+  {
+    "cardNo": "BP06-U07EN",
+    "name": "Badb Catha Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Deity / Lightborne",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set #6 “Paragons of the Colosseum”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "5",
+      "effect": "On Evolve - Choose one of the following. (1) Engage each enemy follower on the field. (2) Deal 2 damage to each enemy leader. (3) Put the top card of your deck into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-U07EN.png"
+  }
+]

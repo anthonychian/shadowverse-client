@@ -1,0 +1,420 @@
+[
+  {
+    "cardNo": "SD01-001EN",
+    "name": "Aria, Fairy Princess",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Pixie / Princess",
+      "rarity": "Legendary",
+      "cardSet": "Starter Deck #1 “Regal Fairy Princess”",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Ward. [fanfare] Put up to 9 Fairy tokens onto your field or into your EX area. While this card is on your field, your other Pixie followers have Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD01/SD01-001EN.png"
+  },
+  {
+    "cardNo": "SD01-002EN",
+    "name": "Titania's Sanctuary",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Amulet",
+      "trait": "Pixie / Princess",
+      "rarity": "Gold",
+      "cardSet": "Starter Deck #1 “Regal Fairy Princess”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Give each Pixie token on your field [attack]+1/[defense]+1. While this card is on your field, your Pixie tokens have Assail. Whenever a Pixie token is put onto your field, give it [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD01/SD01-002EN.png"
+  },
+  {
+    "cardNo": "SD01-003EN",
+    "name": "Rose Gardener",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Verdant",
+      "rarity": "Silver",
+      "cardSet": "Starter Deck #1 “Regal Fairy Princess”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve][cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD01/SD01-003EN.png"
+  },
+  {
+    "cardNo": "SD01-004EN",
+    "name": "Rose Gardener Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Verdant",
+      "rarity": "Silver",
+      "cardSet": "Starter Deck #1 “Regal Fairy Princess”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve: Select an enemy follower on the field and return it to its owner's hand. Combo (3): Draw a card. (Tokens returned to a player's hand are removed from the game.)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD01/SD01-004EN.png"
+  },
+  {
+    "cardNo": "SD01-005EN",
+    "name": "Waltzing Fairy",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Pixie",
+      "rarity": "Silver",
+      "cardSet": "Starter Deck #1 “Regal Fairy Princess”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare][lastwords] Put a Fairy token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD01/SD01-005EN.png"
+  },
+  {
+    "cardNo": "SD01-006EN",
+    "name": "Fairy Caster",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf",
+      "rarity": "Silver",
+      "cardSet": "Starter Deck #1 “Regal Fairy Princess”",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Summon 3 Fairy tokens. If your field becomes full from this effect, put any remaining tokens into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD01/SD01-006EN.png"
+  },
+  {
+    "cardNo": "SD01-007EN",
+    "name": "Elf Metallurgist",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #1 “Regal Fairy Princess”",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[fanfare] Select an enemy follower on the field and deal it 1 damage. Combo (3): Deal 3 damage instead. (If you've played at least 3 cards this turn, including this one, perform Combo (3).)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD01/SD01-007EN.png"
+  },
+  {
+    "cardNo": "SD01-008EN",
+    "name": "Okami",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Beast",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #1 “Regal Fairy Princess”",
+      "cost": "4",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Whenever another follower is put onto your field, give this follower [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD01/SD01-008EN.png"
+  },
+  {
+    "cardNo": "SD01-009EN",
+    "name": "Treant",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Fae-Touched",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #1 “Regal Fairy Princess”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve][cost02]: Evolve this follower. [fanfare] Combo (3): Change this card's [evolve] cost to 0. (If you've played at least 3 cards this turn, including this one, perform Combo (3).)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD01/SD01-009EN.png"
+  },
+  {
+    "cardNo": "SD01-010EN",
+    "name": "Treant Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Fae-Touched",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #1 “Regal Fairy Princess”",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD01/SD01-010EN.png"
+  },
+  {
+    "cardNo": "SD01-011EN",
+    "name": "Water Fairy",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Pixie",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #1 “Regal Fairy Princess”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve][cost02]: Evolve this follower. [lastwords] Put a Fairy token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD01/SD01-011EN.png"
+  },
+  {
+    "cardNo": "SD01-012EN",
+    "name": "Water Fairy Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Pixie",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #1 “Regal Fairy Princess”",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve: Summon a Fairy token. [lastwords] Put a Fairy token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD01/SD01-012EN.png"
+  },
+  {
+    "cardNo": "SD01-013EN",
+    "name": "Elf Wanderer",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #1 “Regal Fairy Princess”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Assail. (Followers with Assail can attack reserved followers.) This follower ignores Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD01/SD01-013EN.png"
+  },
+  {
+    "cardNo": "SD01-014EN",
+    "name": "Fairy Circle",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Pixie",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #1 “Regal Fairy Princess”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Put 3 Fairy tokens into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD01/SD01-014EN.png"
+  },
+  {
+    "cardNo": "SD01-015EN",
+    "name": "Woodland Refuge",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Amulet",
+      "trait": "Fae-Touched",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #1 “Regal Fairy Princess”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Select a Pixie follower on your field and give it [attack]+1. [act][cost01], [engage]: Return this card to its owner's hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD01/SD01-015EN.png"
+  },
+  {
+    "cardNo": "SD01-016EN",
+    "name": "Sylvan Justice",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Elf",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #1 “Regal Fairy Princess”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field. Deal it 3 damage and put a Fairy token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD01/SD01-016EN.png"
+  },
+  {
+    "cardNo": "SD01-017EN",
+    "name": "Goblin",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Goblinoid",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #1 “Regal Fairy Princess”",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost04]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD01/SD01-017EN.png"
+  },
+  {
+    "cardNo": "SD01-018EN",
+    "name": "Goblin Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Goblinoid",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #1 “Regal Fairy Princess”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD01/SD01-018EN.png"
+  },
+  {
+    "cardNo": "SD01-019EN",
+    "name": "Angelic Snipe",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Angel",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #1 “Regal Fairy Princess”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD01/SD01-019EN.png"
+  },
+  {
+    "cardNo": "SD01-020EN",
+    "name": "Angelic Barrage",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Angel",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #1 “Regal Fairy Princess”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Deal 1 damage to each enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD01/SD01-020EN.png"
+  },
+  {
+    "cardNo": "SD01-LD01EN",
+    "name": "Arisa",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Starter Deck #1 “Regal Fairy Princess”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD01/SD01-LD01EN.png"
+  },
+  {
+    "cardNo": "SD01-T01EN",
+    "name": "Fairy TOKEN",
+    "type": "token",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Token",
+      "trait": "Pixie",
+      "rarity": "-",
+      "cardSet": "Starter Deck #1 “Regal Fairy Princess”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD01/SD01-T01EN.png"
+  }
+]

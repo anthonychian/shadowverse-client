@@ -8,6 +8,12 @@ export const CardSlice = createSlice({
     evoDeck: [],
     initialDeck: [],
     initialEvoDeck: [],
+    // Per-card rarity/art choice (name -> printing cardNo). `myArt` is set from
+    // the selected deck's `art` field at game start; `enemyArt` is filled from
+    // the opponent's synced `myArt`. The Game still identifies cards by name —
+    // these only pick which texture to render, so gameplay/logic are unaffected.
+    myArt: {},
+    enemyArt: {},
     cardback: "",
     enemyCardback: "",
     hand: [],
@@ -38,6 +44,9 @@ export const CardSlice = createSlice({
     rematchStatus: false,
     enemyRematchStatus: false,
     leader: "",
+    // The selected deck's class, stashed on game entry so the game can auto-pick
+    // a matching leader. Not synced to the opponent (purely local).
+    deckClass: "",
     evoPoints: 0,
     enemyEvoPoints: 0,
     playPoints: { available: 0, max: 0 },
@@ -58,6 +67,12 @@ export const CardSlice = createSlice({
     enemyBaneField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     wardField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     enemyWardField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    // Per-slot keyword status labels (e.g. ["Storm","Ward"]) shown as black
+    // boxes on the card. Replaces the old aura/bane/ward glow as the status
+    // display. Moves/clears with the card via move/clearStatusAtIndex and syncs
+    // to the opponent (their keywordField -> our enemyKeywordField).
+    keywordField: [[], [], [], [], [], [], [], [], [], []],
+    enemyKeywordField: [[], [], [], [], [], [], [], [], [], []],
     currentCard: "",
     currentCardIndex: -1,
     currentEvo: "",
@@ -185,6 +200,9 @@ export const CardSlice = createSlice({
     },
     setLeaderSilent: (state, action) => {
       state.leader = action.payload;
+    },
+    setDeckClass: (state, action) => {
+      state.deckClass = action.payload;
     },
     setHealth: (state, action) => {
       state.playerHealth = action.payload;
@@ -642,6 +660,26 @@ export const CardSlice = createSlice({
         });
       }
     },
+    toggleKeyword: (state, action) => {
+      const { index, keyword } = action.payload;
+      const cur = state.keywordField[index] || [];
+      const next = cur.includes(keyword)
+        ? cur.filter((k) => k !== keyword)
+        : [...cur, keyword];
+      state.keywordField = [
+        ...state.keywordField.slice(0, index),
+        next,
+        ...state.keywordField.slice(index + 1),
+      ];
+      socket.emit("send msg", {
+        type: "keyword",
+        data: state.keywordField,
+        room: state.room,
+      });
+    },
+    setEnemyKeyword: (state, action) => {
+      state.enemyKeywordField = action.payload;
+    },
     clearStatusAtIndex: (state, action) => {
       let index = action.payload;
       const newCustomStatus = [
@@ -650,6 +688,12 @@ export const CardSlice = createSlice({
         ...state.customStatus.slice(index + 1),
       ];
       state.customStatus = newCustomStatus;
+      const newKeywordField = [
+        ...state.keywordField.slice(0, index),
+        [],
+        ...state.keywordField.slice(index + 1),
+      ];
+      state.keywordField = newKeywordField;
       const newAuraField = [
         ...state.auraField.slice(0, index),
         0,
@@ -672,6 +716,7 @@ export const CardSlice = createSlice({
       socket.emit("send msg", {
         type: "clearStatus",
         updates: [
+          { type: "keyword", data: state.keywordField },
           { type: "aura", data: state.auraField },
           { type: "bane", data: state.baneField },
           { type: "ward", data: state.wardField },
@@ -700,6 +745,7 @@ export const CardSlice = createSlice({
       const prevAura = state.auraField[prevIndex];
       const prevBane = state.baneField[prevIndex];
       const prevWard = state.wardField[prevIndex];
+      const prevKeywords = state.keywordField[prevIndex];
 
       const newCustomStatus = [
         ...state.customStatus.slice(0, index),
@@ -707,6 +753,13 @@ export const CardSlice = createSlice({
         ...state.customStatus.slice(index + 1),
       ];
       state.customStatus = newCustomStatus;
+
+      const newKeywordField = [
+        ...state.keywordField.slice(0, index),
+        prevKeywords,
+        ...state.keywordField.slice(index + 1),
+      ];
+      state.keywordField = newKeywordField;
 
       const newAuraField = [
         ...state.auraField.slice(0, index),
@@ -2500,8 +2553,16 @@ export const CardSlice = createSlice({
       if (s.enemyHealth !== undefined) state.enemyHealth = s.enemyHealth;
       if (s.enemyLeaderActive !== undefined) state.enemyLeaderActive = s.enemyLeaderActive;
     },
+    setMyArt: (state, action) => {
+      state.myArt = action.payload || {};
+    },
+    setEnemyArt: (state, action) => {
+      state.enemyArt = action.payload || {};
+    },
     restoreOwnState: (state, action) => {
       const s = action.payload;
+      if (s.myArt !== undefined) state.myArt = s.myArt;
+      if (s.enemyArt !== undefined) state.enemyArt = s.enemyArt;
       if (s.field !== undefined) state.field = s.field;
       if (s.evoField !== undefined) state.evoField = s.evoField;
       if (s.hand !== undefined) state.hand = s.hand;
@@ -2522,6 +2583,9 @@ export const CardSlice = createSlice({
       if (s.auraField !== undefined) state.auraField = s.auraField;
       if (s.baneField !== undefined) state.baneField = s.baneField;
       if (s.wardField !== undefined) state.wardField = s.wardField;
+      if (s.keywordField !== undefined) state.keywordField = s.keywordField;
+      if (s.enemyKeywordField !== undefined)
+        state.enemyKeywordField = s.enemyKeywordField;
       if (s.customValues !== undefined) state.customValues = s.customValues;
       if (s.customStatus !== undefined) state.customStatus = s.customStatus;
       state.cardSelectedInHand = -1;
@@ -2860,6 +2924,10 @@ export const {
   duplicateCardOnField,
   createLessonTokens,
   shuffleCards,
+  setMyArt,
+  setEnemyArt,
+  toggleKeyword,
+  setEnemyKeyword,
   restoreOwnState,
   syncFromEngine,
   reset,
@@ -2903,6 +2971,7 @@ export const {
   setHealth,
   setLeader,
   setLeaderSilent,
+  setDeckClass,
   setCardBack,
   setEnemyCardBack,
   setEnemyLeader,

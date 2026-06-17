@@ -116,4 +116,17 @@ export const allTokens = [
   "Luna's Doll TOKEN",
   "Eschamali Adviser TOKEN",
   "Eschamali Constable TOKEN",
+
+
+  "Mimi, Infernal Right Paw TOKEN",
+  "Coco, Infernal Left Paw TOKEN",
+
+  "Enchanted Slippers TOKEN",
+  "Enchanted Dress TOKEN",
+  "Cute Pendant TOKEN",
+  "Cute Tiara TOKEN",
+  "Cool Pendant TOKEN",
+  "Cool Tiara TOKEN",
+  "Passion Pendant TOKEN",
+  "Passion Tiara TOKEN",
 ];

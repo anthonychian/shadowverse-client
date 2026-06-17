@@ -1,3 +1,17 @@
+/* Hide scrollbars everywhere on the Home page (content stays scrollable by
+   touch/drag where needed — e.g. the deck carousel). Covers both axes. */
+.home-root,
+.home-root * {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* old IE/Edge */
+}
+.home-root::-webkit-scrollbar,
+.home-root *::-webkit-scrollbar {
+  display: none; /* WebKit (Chrome/Safari) */
+  width: 0;
+  height: 0;
+}
+
 /* default styles */
 .LeaderContainerHome {
   height: 100vh;
@@ -38,6 +52,19 @@
   }
 }
 
+/* mobile leader character (centered, contained — no 1000px min-width) */
+.LeaderImageMobile {
+  height: 240px;
+  max-width: 92%;
+  width: auto;
+  object-fit: contain;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .LeaderImageMobile {
+    animation: floatbob infinite 1.6s ease-in-out alternate;
+  }
+}
+
 /* animations */
 @keyframes slidein {
   from {
@@ -46,5 +73,15 @@
 
   to {
     margin-top: 10vh;
+  }
+}
+
+/* transform-based bob: floats the mobile leader without shifting layout below */
+@keyframes floatbob {
+  from {
+    transform: translateY(-6px);
+  }
+  to {
+    transform: translateY(6px);
   }
 }

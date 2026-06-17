@@ -1,0 +1,154 @@
+[
+  {
+    "cardNo": "SP01-SP02EN",
+    "name": "Spinaria, Wavering Will",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Supreme",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "3",
+      "attack": "1",
+      "defense": "3",
+      "effect": "Whenever a follower on your field evolves, give your leader [defense]+2. [fanfare] Select a [forestcraft] follower that costs 2 or less in your cemetery and put it into your EX area. It costs 2 less to play this turn."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "SP01-SP05EN",
+    "name": "Amelia, Sunny Paladin",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Whenever an Officer follower is put onto your field, select an enemy follower on the field and deal it 3 damage. [act] [cost00]: You may summon an Officer follower that costs 2 or less from your hand or EX area. Activate only once per turn."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "SP01-SP12EN",
+    "name": "Falise, Innocent Sea Spray",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "6",
+      "attack": "4",
+      "defense": "5",
+      "effect": "[fanfare] Look at the top 5 cards of your deck. From among them, you may put up to 1 Mage follower that costs 3 or less and up to 1 Mage spell that costs 3 or less into your EX area. They cost 3 less to play this turn. Put the rest on the bottom of your deck in any order. Whenever you play a Mage card, select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "SP01-SP16EN",
+    "name": "Sharon, Seaside Nymph",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Marine",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "7",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Recover 5 play points. [act] [engage]: Choose up to 2. (1) Select an enemy follower on the field. It can't attack enemies during its controller's next turn. (2) The next time 1 or more followers are put onto your field this turn, give one [attack]+1/[defense]+1. (3) Give your leader [defense]+2. (4) Draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "SP01-SP20EN",
+    "name": "Queen Vampire, Sultry Evening",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vampire",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Select an enemy follower on the field and deal it 4 damage. At the start of your end phase, if there are at least 3 other Vampire cards on your field, deal 3 damage to each enemy leader and give your leader [defense]+3."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "SP01-SP25EN",
+    "name": "Zoe, Shore's Melody",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Princess",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "1",
+      "attack": "0",
+      "defense": "1",
+      "effect": "[fanfare] Select an enemy follower on the field. If your leader has gained at least 4 defense this turn, destroy it and draw a card."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "SP01-SP31EN",
+    "name": "Alice, Golden Afternoon",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Fable",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Draw a card. [fanfare] Select an enemy follower that costs 4 or less on the field. If this card wasn't put onto the field from hand, put the selected follower into its owner's EX area."
+    },
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "SP01-U16EN",
+    "name": "Galmieux, Omen of Disdain",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Omen / Wyrmkin",
+      "rarity": "Ultimate",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[evolve] [cost02]: Evolve this follower. During your turn, whenever this follower takes ability damage, change its [evolve] cost to 0 for the rest of the turn."
+    },
+    "imgSrc": ""
+  }
+]

@@ -1,39 +1,32 @@
-/* default styles — one fixed size at every resolution; the side-panel scale
-   transform handles responsiveness (previously this jumped 350→300→350px
-   across width breakpoints). */
-.LeaderImageActive {
-  min-width: 300px;
-  width: 50%;
-  position: absolute;
-  z-index: 1;
-}
-.LeaderImageInactive {
-  min-width: 300px;
-  margin-top: 5vh;
-  width: 50%;
-  position: absolute;
-  z-index: 1;
-  filter: brightness(30%);
-}
-.LeaderContainer {
-  bottom: 30%;
-  right: 20%;
+/* The leader now renders inside a fixed "stage" box (sized by the parent panel)
+   instead of a floating, oversized portrait. The animated Spine canvas and the
+   still PNG fallback are layered on top of each other and both fit the box. */
+.LeaderStage {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* No clipping — the Spine canvas is rendered larger than this framing box and
+     is allowed to bleed past it so the animation has no hard rectangular edge. */
+  overflow: visible;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .LeaderImageActive {
-    animation: slidein infinite 1.5s linear alternate;
-  }
+.leaderArt {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 0.4s ease;
+}
+.leaderArtInactive {
+  filter: brightness(35%);
 }
 
-/* animations */
-@keyframes slidein {
-  from {
-    margin-top: 10vh;
-  }
-
-  to {
-    margin-top: 15vh;
-  }
+.leaderSpineLayer {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

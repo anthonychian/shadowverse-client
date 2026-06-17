@@ -1,0 +1,184 @@
+/* Right-panel leader card, shared by PlayerUI (interactive) and EnemyUI
+   (read-only). Primary focus: the animated leader + its class logo. Secondary:
+   a compact stat ribbon (HP, play points, EP, super-evo). The wifi indicator
+   lives as a small corner badge on the leader stage. */
+.leaderPanel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 300px;
+  user-select: none;
+}
+
+/* --- Leader + class logo (the hero) --- */
+.leaderStageWrap {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.classBadge {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  z-index: 4;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(
+    circle at 50% 35%,
+    rgba(45, 45, 62, 0.82),
+    rgba(0, 0, 0, 0.8)
+  );
+  box-shadow:
+    0 0 0 2px rgba(255, 255, 255, 0.16),
+    0 3px 10px rgba(0, 0, 0, 0.55);
+}
+.classBadge img {
+  width: 32px;
+  height: 32px;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.6));
+}
+
+.wifiBadge {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  z-index: 4;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+.wifiBadge.wifiOn {
+  color: greenyellow;
+  opacity: 0.7;
+}
+/* reuses the `blink` keyframes defined in EnemyUI.css (imported by both UIs) */
+.wifiBadge.wifiOff {
+  color: red;
+  animation: blink 2s ease-in infinite;
+}
+
+/* --- Stat ribbon (secondary focus) --- */
+.statRibbon {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  /* Generous, even separation from the leader so it reads as balanced padding. */
+  margin-top: 52px;
+}
+
+/* Modern surfaces: soft rounded panels with a subtle top highlight + drop
+   shadow instead of the old ridge bevels. */
+.hpBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-width: 124px;
+  height: 66px;
+  padding: 0 6px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow:
+    0 6px 16px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.28);
+  color: white;
+  font-family: "Noto Serif JP", serif;
+}
+.hpValue {
+  font-size: 42px;
+  line-height: 1;
+  min-width: 44px;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Modern round glass buttons for the HP +/- controls. */
+.hpBlock .hpAdjust {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  color: white;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(2px);
+  transition:
+    background 0.15s ease,
+    transform 0.08s ease;
+}
+.hpBlock .hpAdjust:hover {
+  background: rgba(255, 255, 255, 0.32);
+}
+.hpBlock .hpAdjust:active {
+  transform: scale(0.88);
+}
+
+.ppEpStack {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  justify-content: center;
+}
+.ppPill {
+  height: 34px;
+  min-width: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgb(56, 134, 230), rgb(2, 27, 121));
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  color: white;
+  font-family: "Noto Serif JP", serif;
+  font-size: 22px;
+}
+.epRow {
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgb(56, 134, 230), rgb(2, 27, 121));
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  color: white;
+  font-family: "Noto Serif JP", serif;
+}
+.epLabel {
+  font-size: 15px;
+}
+
+.evoBlock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.12s ease;
+}
+.evoBlock:not(.evoStatic):hover {
+  transform: scale(1.06);
+}
+.evoBlock.evoStatic {
+  cursor: default;
+}
+.evoBlock img {
+  width: 92px;
+  height: 46px;
+}

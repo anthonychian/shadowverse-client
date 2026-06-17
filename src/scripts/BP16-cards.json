@@ -1,0 +1,2757 @@
+[
+  {
+    "cardNo": "BP16-001EN",
+    "name": "Aria, Lady of the Woods",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Pixie / Princess",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Put 2 Fairy tokens into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-001EN.png"
+  },
+  {
+    "cardNo": "BP16-002EN",
+    "name": "Aria, Lady of the Woods Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Pixie / Princess",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "-",
+      "attack": "1",
+      "defense": "1",
+      "effect": "On Evolve - Summon a Fairy token. On Super-Evolve - Give each Pixie token follower on your field and in your EX area [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-002EN.png"
+  },
+  {
+    "cardNo": "BP16-003EN",
+    "name": "Orchis, Newfound Heart",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Puppetry",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[fanfare] Banish 2 cards named Puppet from your EX area: Put a Lloyd token into your EX area. [act] [engage]: Select a Puppet on your field and give it [attack]+1/[defense]+1, Storm, and Bane. Activate only if there are at least 3 Puppetry cards in your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-003EN.png"
+  },
+  {
+    "cardNo": "BP16-004EN",
+    "name": "Nazuri, Bestial Innkeeper",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Festive / Beast",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] If there are at least 3 Festive cards on your field and/or in your EX area, search your deck for a Festive follower not named Nazuri, Bestial Innkeeper that costs 3 or less, summon it, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-004EN.png"
+  },
+  {
+    "cardNo": "BP16-005EN",
+    "name": "Glade, Fragrantwood Ward",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf / Hunter",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-005EN.png"
+  },
+  {
+    "cardNo": "BP16-006EN",
+    "name": "Glade, Fragrantwood Ward Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Elf / Hunter",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Draw a card. Summon 2 Fairy tokens. On Super-Evolve - Select any number of enemy followers on the field and deal X damage divided between them. X equals the total number of cards on your field and in your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-006EN.png"
+  },
+  {
+    "cardNo": "BP16-007EN",
+    "name": "Lily, Crystalian Innocence",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Crystalian",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[fanfare] Select an enemy follower on the field and change its attack and defense to 1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-007EN.png"
+  },
+  {
+    "cardNo": "BP16-008EN",
+    "name": "Liam, Crazed Creator",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Puppetry / Cutthroat",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Summon 2 Puppet tokens. [act] [engage]: Look at the top 5 cards of your deck. You may put a Puppetry card that costs 3 or less from among them into your EX area. It costs 3 less to play this turn. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-008EN.png"
+  },
+  {
+    "cardNo": "BP16-009EN",
+    "name": "Aerin, Crystalian Frostward",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Crystalian",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. Ward. [fanfare] Select an enemy follower on the field. It can't attack enemies during its controller's next turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-009EN.png"
+  },
+  {
+    "cardNo": "BP16-010EN",
+    "name": "Aerin, Crystalian Frostward Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Crystalian",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Ward. On Evolve - Search your deck for a Crystalian follower that costs 2 or less, put it into your EX area, then shuffle. It costs 2 less to play this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-010EN.png"
+  },
+  {
+    "cardNo": "BP16-011EN",
+    "name": "Bayle, Luxglaive Warrior",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Hunter / Beast",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "3",
+      "attack": "4",
+      "defense": "4",
+      "effect": "This can't be played unless a follower you control has left the field this turn. ---------- [fanfare] Select an enemy follower on the field and deal it 4 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-011EN.png"
+  },
+  {
+    "cardNo": "BP16-012EN",
+    "name": "Godwood Staff",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Amulet",
+      "trait": "Elf",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "When this leaves the field, give your leader [defense]+1 and recover 1 play point."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-012EN.png"
+  },
+  {
+    "cardNo": "BP16-013EN",
+    "name": "Fairy Tamer",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Pixie / Elf",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Summon a Fairy token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-013EN.png"
+  },
+  {
+    "cardNo": "BP16-014EN",
+    "name": "Fairy Tamer Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Pixie / Elf",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - Select up to 2 other Pixie followers on your field and/or in your EX area and give them [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-014EN.png"
+  },
+  {
+    "cardNo": "BP16-015EN",
+    "name": "Good Fairy of the Pond",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Pixie",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "1",
+      "effect": "[fanfare][lastwords] Put a Fairy token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-015EN.png"
+  },
+  {
+    "cardNo": "BP16-016EN",
+    "name": "Fay Twinkletoes",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Pixie",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Give each other [forestcraft] follower on your field [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-016EN.png"
+  },
+  {
+    "cardNo": "BP16-017EN",
+    "name": "Baby Carbuncle",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Fae-Touched / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "1",
+      "attack": "0",
+      "defense": "1",
+      "effect": "[fanfare] Return a Beast card on your field not named Baby Carbuncle to its owner's hand: Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-017EN.png"
+  },
+  {
+    "cardNo": "BP16-018EN",
+    "name": "Fragrantwood Whispers",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Elf / Hunter",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose 1. If a follower on your field evolved this turn, choose up to 2 instead. (1) Give your leader [defense]+2. (2) Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-018EN.png"
+  },
+  {
+    "cardNo": "BP16-019EN",
+    "name": "Amelia, Silver Captain",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. At the start of your end phase, you may put a Steelclad Knight, Shield Guardian, or Knight token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-019EN.png"
+  },
+  {
+    "cardNo": "BP16-020EN",
+    "name": "Amelia, Silver Captain Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Commander",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Put the top card of your deck into your EX area. On Super-Evolve - Select an Officer follower on your field and give it [attack]+4/[defense]+4. At the start of your end phase, you may put a Steelclad Knight, Shield Guardian, or Knight token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-020EN.png"
+  },
+  {
+    "cardNo": "BP16-021EN",
+    "name": "Albert, Levin Stormsaber",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Levin",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "5",
+      "effect": "Storm. [fanfare] Select another Levin follower on your field and give it [attack]+1. [act] [cost03]: Refresh this. Activate only if there are at least 10 [swordcraft] followers in your cemetery, and only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-021EN.png"
+  },
+  {
+    "cardNo": "BP16-022EN",
+    "name": "Ginne, Bewitching Courtesan",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Festive",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[fanfare] Choose up to 2. If there's a Jiemon, Thief Lord on your field, choose up to 3 instead. (1) Select an enemy follower on the field and engage it. It doesn't refresh during its controller's next start phase. (2) Draw a card. Put a card from your hand on the top or bottom of your deck. (3) Put 2 Glittering Gold tokens into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-022EN.png"
+  },
+  {
+    "cardNo": "BP16-023EN",
+    "name": "Zirconia, Ironcrown Ward",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Noble",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-023EN.png"
+  },
+  {
+    "cardNo": "BP16-024EN",
+    "name": "Zirconia, Ironcrown Ward Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Commander / Noble",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Summon a Steelclad Knight and Shield Guardian token. On Super-Evolve - Select up to 2 Officer token followers on your field and give them [attack]+1/[defense]+1 and Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-024EN.png"
+  },
+  {
+    "cardNo": "BP16-025EN",
+    "name": "Amalia, Luxsteel Paladin",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Select an enemy follower on the field. Deal it 4 damage and summon an Officer token follower from your EX area. [act] [cost00]: Deal 4 damage to each enemy leader. Draw a card. Activate only if there are at least 3 Officer token followers on your field with different names, and only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-025EN.png"
+  },
+  {
+    "cardNo": "BP16-026EN",
+    "name": "Ravening Tentacles",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Officer / Beast / Levin",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "As an additional cost to play this, engage a Levin follower on your field. ---------- Select an enemy follower on the field. Deal it 4 damage, give your leader [defense]+2, and, if there's a follower on your field with \"Yurius\" in its name, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-026EN.png"
+  },
+  {
+    "cardNo": "BP16-027EN",
+    "name": "Luminous Commander",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Luminous",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-027EN.png"
+  },
+  {
+    "cardNo": "BP16-028EN",
+    "name": "Luminous Commander Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Commander / Luminous",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - Summon a Knight token. Put a Steelclad Knight or Shield Guardian token into your EX area. [act] [cost00]: Select an enemy follower on the field. Deal 3 damage to it and its leader. Activate only if there are at least 3 Officer token followers on your field with different names, and only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-028EN.png"
+  },
+  {
+    "cardNo": "BP16-029EN",
+    "name": "Luminous Magus",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Luminous",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[fanfare] Summon a Shield Guardian or Knight token. [act] [cost00]: Select an enemy follower on the field. Deal it 5 damage and draw a card. Activate only if there are at least 3 Officer token followers on your field with different names, and only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-029EN.png"
+  },
+  {
+    "cardNo": "BP16-030EN",
+    "name": "Rusty, Luxcard Trickster",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Thief",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Storm. [lastwords] Search your deck for a Rusty, Luxcard Trickster, reveal it, add it to your hand, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-030EN.png"
+  },
+  {
+    "cardNo": "BP16-031EN",
+    "name": "Jeno, Levin Axeraider",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Beast / Levin",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "When this is discarded, look at the top card of your deck. If it's a Levin card, you may reveal it and add it to your hand. ---------- While there are at least 5 Levin cards in your cemetery, this has Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-031EN.png"
+  },
+  {
+    "cardNo": "BP16-032EN",
+    "name": "Flashstep Quickblader",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this. Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-032EN.png"
+  },
+  {
+    "cardNo": "BP16-033EN",
+    "name": "Flashstep Quickblader Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Storm. On Evolve - Select an enemy leader or enemy follower on the field and deal it 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-033EN.png"
+  },
+  {
+    "cardNo": "BP16-034EN",
+    "name": "Luminous Lancetrooper",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Luminous",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[fanfare] Summon a Steelclad Knight token. [act] [cost00]: Select an Officer token follower on your field and give it [attack]+2 and Storm. Activate only if there are at least 3 Officer token followers on your field with different names, and only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-034EN.png"
+  },
+  {
+    "cardNo": "BP16-035EN",
+    "name": "Lyrala, Luminous Potionwright",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Luminous",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Ward. [fanfare] Put a Steelclad Knight and Shield Guardian token into your EX area. [act] [cost00]: Give your leader [defense]+2. Activate only if there are at least 3 Officer token followers on your field with different names, and only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-035EN.png"
+  },
+  {
+    "cardNo": "BP16-036EN",
+    "name": "Ignominious Samurai",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Assail. Strike - Select an enemy follower on the field and deal it 4 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-036EN.png"
+  },
+  {
+    "cardNo": "BP16-037EN",
+    "name": "Ironcrown Majesty",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Commander / Noble",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose 1. If a follower on your field evolved this turn, choose up to 2 instead. (1) Summon a Steelclad Knight, Shield Guardian, and Knight token. (2) Give each Officer token follower on your field [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-037EN.png"
+  },
+  {
+    "cardNo": "BP16-038EN",
+    "name": "Anne & Grea, Mysterian Duo",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "While there are at least 10 Academic cards in your cemetery, this has Storm. [fanfare] Discard 2 Academic cards: Select an enemy follower on the field. Deal it 5 damage and draw 2 cards. At the start of your end phase, if there are at least 5 Academic cards in your cemetery, summon an Anne's Summoning token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-038EN.png"
+  },
+  {
+    "cardNo": "BP16-039EN",
+    "name": "Lilanthim, Anathema of Edacity",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Anathema / Mage",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Select an enemy follower on the field and deal it 2 damage. [act] Earth Rite: Give this Assail."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-039EN.png"
+  },
+  {
+    "cardNo": "BP16-040EN",
+    "name": "Lilanthim, Anathema of Edacity Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Anathema / Mage",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "On Super-Evolve - Select up to 2 enemy followers on the field and destroy them. Add 2 to a Stack on your field. [act] Earth Rite: Give this Assail. [lastwords] Earth Rite: Put this onto its owner's field engaged."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-040EN.png"
+  },
+  {
+    "cardNo": "BP16-041EN",
+    "name": "Zizdvend, Fate's Arbiter",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Festive / Forbidden",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Draw X cards. X equals the number of other Festive followers on your field. At the start of your end phase, deal each enemy leader damage equal to the number of other Festive followers on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-041EN.png"
+  },
+  {
+    "cardNo": "BP16-042EN",
+    "name": "Zizdvend, Fate's Arbiter Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Festive / Forbidden",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it damage equal to 2 times the number of Festive followers on your field. At the start of your end phase, deal each enemy leader damage equal to the number of other Festive followers on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-042EN.png"
+  },
+  {
+    "cardNo": "BP16-043EN",
+    "name": "Edelweiss, Sagelight Ward",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Golem",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-043EN.png"
+  },
+  {
+    "cardNo": "BP16-044EN",
+    "name": "Edelweiss, Sagelight Ward Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Golem",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Summon a Strikeform Golem token. Put a Guardform Golem token into your EX area. On Super-Evolve - Draw 2 cards. Whenever a Golem follower is put onto your field, add 1 to a Stack on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-044EN.png"
+  },
+  {
+    "cardNo": "BP16-045EN",
+    "name": "Juno, Visionary Alchemist",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Alchemist",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "6",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[act] [engage], Earth Rite: Summon 2 Guardian Golem tokens. [act] [cost02], discard this: Add 2 to a Stack on your field. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-045EN.png"
+  },
+  {
+    "cardNo": "BP16-046EN",
+    "name": "Homework Time!",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage / Academic",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Draw a card. If there are at least 5 Academic cards in your cemetery, put a Looking Smart! token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-046EN.png"
+  },
+  {
+    "cardNo": "BP16-047EN",
+    "name": "Penelope, Potions Prodigy",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Alchemist",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Summon a Magic Sediment token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-047EN.png"
+  },
+  {
+    "cardNo": "BP16-048EN",
+    "name": "Penelope, Potions Prodigy Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Alchemist",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Give your leader [defense]+2. Add 1 to a Stack on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-048EN.png"
+  },
+  {
+    "cardNo": "BP16-049EN",
+    "name": "Ms. Miranda, Adored Academic",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Discard an Academic card: Draw 2 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-049EN.png"
+  },
+  {
+    "cardNo": "BP16-050EN",
+    "name": "Snowman Army",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage / Arcanaform",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field and change its attack and defense to 1. Spellchain (10) - It loses all abilities."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-050EN.png"
+  },
+  {
+    "cardNo": "BP16-051EN",
+    "name": "Starry-Eyed Penguin Wizard",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Beast / Arcanaform",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-051EN.png"
+  },
+  {
+    "cardNo": "BP16-052EN",
+    "name": "Starry-Eyed Penguin Wizard Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Beast / Arcanaform",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Draw 2 cards. Discard 2 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-052EN.png"
+  },
+  {
+    "cardNo": "BP16-053EN",
+    "name": "Emmylou, Witch of Wonder",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Choose 1. (1) Summon a Magic Sediment token. (2) Earth Rite: Select an enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-053EN.png"
+  },
+  {
+    "cardNo": "BP16-054EN",
+    "name": "William, Mysterian Student",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "5",
+      "effect": "[fanfare] Select an enemy follower on the field and deal it 4 damage. [act] [cost02], [engage]: Select an enemy follower on the field and deal it 4 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-054EN.png"
+  },
+  {
+    "cardNo": "BP16-055EN",
+    "name": "Sagelight Teachings",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage / Golem",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose 1. If a follower on your field evolved this turn, choose up to 2 instead. (1) Summon a Magic Sediment token. Give your leader [defense]+1. (2) Put a Guardian Golem token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-055EN.png"
+  },
+  {
+    "cardNo": "BP16-056EN",
+    "name": "Truth Summons",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Alchemist / Golem",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Earth Rite: Summon a Guardian Golem token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-056EN.png"
+  },
+  {
+    "cardNo": "BP16-057EN",
+    "name": "Forte, Blackwing Dragoon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "5",
+      "attack": "6",
+      "defense": "5",
+      "effect": "Storm. Intimidate. [fanfare] If you have 10 max play points, give this [attack]+1 and Aura."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-057EN.png"
+  },
+  {
+    "cardNo": "BP16-058EN",
+    "name": "Burnite, Anathema of Flame",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Anathema / Dragonewt",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "7",
+      "attack": "5",
+      "defense": "5",
+      "effect": "This costs 2 less to play if there are at least 4 [dragoncraft] cards in your cemetery that cost 7 or more. ---------- [evolve] [cost01]: Evolve this. [fanfare] Discard a card: Select an enemy follower on the field. Deal it damage equal to the discarded card's cost and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-058EN.png"
+  },
+  {
+    "cardNo": "BP16-059EN",
+    "name": "Burnite, Anathema of Flame Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Anathema / Dragonewt",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "On Evolve - Discard a card: Select an enemy follower on the field. Deal it damage equal to the discarded card's cost and draw a card. On Super-Evolve - Give your leader [defense]+5. At the start of your end phase, if there are at least 7 [dragoncraft] cards in your cemetery that cost 7 or more, deal 7 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-059EN.png"
+  },
+  {
+    "cardNo": "BP16-060EN",
+    "name": "Nirle, Draconic Prodigy",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Wyrmkin",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this. Activate only if Overflow is active for you. [fanfare] If there's a Mount card on your field, increase your max play points by 1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-060EN.png"
+  },
+  {
+    "cardNo": "BP16-061EN",
+    "name": "Nirle, Draconic Prodigy Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wasteland / Wyrmkin",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "On Evolve - Select a Wasteland follower on your field with [evolve] not named Nirle, Draconic Prodigy and evolve it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-061EN.png"
+  },
+  {
+    "cardNo": "BP16-062EN",
+    "name": "Liu Feng, Goldennote Ward",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart / Dragonewt",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-062EN.png"
+  },
+  {
+    "cardNo": "BP16-063EN",
+    "name": "Liu Feng, Goldennote Ward Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonheart / Dragonewt",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 3 damage. On Super-Evolve - Increase your max play points by 1. Give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-063EN.png"
+  },
+  {
+    "cardNo": "BP16-064EN",
+    "name": "Genesis Dragon Reborn",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "7",
+      "attack": "7",
+      "defense": "9",
+      "effect": "Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-064EN.png"
+  },
+  {
+    "cardNo": "BP16-065EN",
+    "name": "Fan of Otohime",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Amulet",
+      "trait": "Marine",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] [engage], bury this: Summon a Megalorca token. [act] [cost01], [engage], bury this: Select an enemy follower on the field and deal it 4 damage. Activate only if there's a Marine follower on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-065EN.png"
+  },
+  {
+    "cardNo": "BP16-066EN",
+    "name": "Eyfa, Windrider",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. Storm. Intimidate."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-066EN.png"
+  },
+  {
+    "cardNo": "BP16-067EN",
+    "name": "Eyfa, Windrider Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonheart",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Storm. Intimidate."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-067EN.png"
+  },
+  {
+    "cardNo": "BP16-068EN",
+    "name": "Marion, Ravishing Dragonewt",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Draw a card. Discard a card. [act] [engage]: Select an enemy follower on the field and deal it 4 damage. Activate only if there are at least 4 [dragoncraft] cards in your cemetery that cost 7 or more."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-068EN.png"
+  },
+  {
+    "cardNo": "BP16-069EN",
+    "name": "Kit, Luxfang Champion",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "1",
+      "effect": "When this is discarded, you may put it into your EX area. ---------- Rush. [fanfare] If Overflow is active for you, give this [attack]+1 and Assail."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-069EN.png"
+  },
+  {
+    "cardNo": "BP16-070EN",
+    "name": "Zahar, Stormwave Dragoon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart / Marine",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "8",
+      "attack": "4",
+      "defense": "4",
+      "effect": "When this is discarded, look at the top 2 cards of your deck. You may reveal a [dragoncraft] card that costs 7 or more from among them and add it to your hand. Put the rest on the bottom of your deck in any order. ---------- [fanfare] Look at the top 3 cards of your deck. You may summon a [dragoncraft] follower not named Zahar, Stormwave Dragoon from among them. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-070EN.png"
+  },
+  {
+    "cardNo": "BP16-071EN",
+    "name": "Little Dragon Nanny",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-071EN.png"
+  },
+  {
+    "cardNo": "BP16-072EN",
+    "name": "Little Dragon Nanny Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonheart",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Search your deck for a Dragon's Nest, summon it, then shuffle. Once per turn, when a Dragon's Nest is put from your field into the cemetery, summon a Fire Drake Whelp token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-072EN.png"
+  },
+  {
+    "cardNo": "BP16-073EN",
+    "name": "Zell, Windreader",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Select a [dragoncraft] follower on your field and, if you have 10 max play points, give it Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-073EN.png"
+  },
+  {
+    "cardNo": "BP16-074EN",
+    "name": "Silvercloud Dragonrider",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "7",
+      "attack": "5",
+      "defense": "6",
+      "effect": "When this is discarded, [cost02]: Summon a Dragon token. ---------- Ward. [fanfare] Summon a Dragon token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-074EN.png"
+  },
+  {
+    "cardNo": "BP16-075EN",
+    "name": "Swordsnout Trencher",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin / Marine",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "4",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Rush. While Overflow is active for you, this has Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-075EN.png"
+  },
+  {
+    "cardNo": "BP16-076EN",
+    "name": "Goldennote Melody",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Dragonheart / Dragonewt",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose 1. If a follower on your field evolved this turn, choose up to 2 instead. (1) Give your leader [defense]+3. (2) Draw 2 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-076EN.png"
+  },
+  {
+    "cardNo": "BP16-077EN",
+    "name": "Cerberus, Hellfire Unleashed",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Summon a Mimi, Right Paw Hellhound and Coco, Left Paw Hellhound token. Necrocharge (10) - Give them Storm. [act] [engage], bury another follower: Select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-077EN.png"
+  },
+  {
+    "cardNo": "BP16-078EN",
+    "name": "Aragavy, Eternal Hunter",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Arena / Beast",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Give your leader [defense]-2: Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-078EN.png"
+  },
+  {
+    "cardNo": "BP16-079EN",
+    "name": "Aragavy, Eternal Hunter Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arena / Beast",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "On Evolve - Select up to 3 enemy followers on the field and deal 5 damage divided between them. If your leader's defense is 10 or less, deal 10 damage divided between them instead. On Super-Evolve - Give this Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-079EN.png"
+  },
+  {
+    "cardNo": "BP16-080EN",
+    "name": "Gold Rush Ghost",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Departed",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Storm. [fanfare] Choose 1. If this was put onto the field from the cemetery, choose up to 2 instead. (1) Summon an Arcane Personnel Carrier token. Give your leader [defense]+1. (2) Bury the top 2 cards of your deck. At the start of each opponent's end phase, bury this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-080EN.png"
+  },
+  {
+    "cardNo": "BP16-081EN",
+    "name": "Mukan, Shadowcrypt Ward",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Necromancer / Demon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-081EN.png"
+  },
+  {
+    "cardNo": "BP16-082EN",
+    "name": "Mukan, Shadowcrypt Ward Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Necromancer / Demon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Whenever a Departed follower is put onto your field, give your leader [defense]+1. On Evolve - Select a Departed follower in your cemetery that costs 3 or less and summon it. On Super-Evolve - Select a Departed follower in your cemetery that costs 3 or less. Summon it and give it Assail."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-082EN.png"
+  },
+  {
+    "cardNo": "BP16-083EN",
+    "name": "Balto, Dusk Bounty Hunter",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Choose up to 3. (1) [cost01]: Select an enemy follower on the field and destroy it. (2) [cost01]: Give this [attack]+2/[defense]+2 and Ward. (3) [cost01]: Give this [attack]+1/[defense]+1. Draw 2 cards. Discard a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-083EN.png"
+  },
+  {
+    "cardNo": "BP16-084EN",
+    "name": "Ceres, Blue Rose Maiden",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "3",
+      "effect": "Bane. Necrocharge (5) - This has Storm. During your turn, whenever this deals damage to an enemy leader, each opponent discards a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-084EN.png"
+  },
+  {
+    "cardNo": "BP16-085EN",
+    "name": "Orthrus, Hellhound Blader",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-085EN.png"
+  },
+  {
+    "cardNo": "BP16-086EN",
+    "name": "Orthrus, Hellhound Blader Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Demon",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Choose 1. (1) Select an enemy follower on the field. Necrocharge (10) - Deal it 5 damage. (2) Bury the top 2 cards of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-086EN.png"
+  },
+  {
+    "cardNo": "BP16-087EN",
+    "name": "Yuna, Occult Hunter",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vampire / Cutthroat",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Put 2 Ghost or Forest Bat tokens into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-087EN.png"
+  },
+  {
+    "cardNo": "BP16-088EN",
+    "name": "Soul Predation",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Demon",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field and a follower on your field. Destroy them and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-088EN.png"
+  },
+  {
+    "cardNo": "BP16-089EN",
+    "name": "Vlad, Impaler",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vampire / Cutthroat",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "7",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this. Storm. [fanfare] Deal 3 damage to each enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-089EN.png"
+  },
+  {
+    "cardNo": "BP16-090EN",
+    "name": "Vlad, Impaler Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Vampire / Cutthroat",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Storm. Drain."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-090EN.png"
+  },
+  {
+    "cardNo": "BP16-091EN",
+    "name": "Aryll, Moonstruck Vampire",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vampire",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Summon 2 Forest Bat tokens. [act] [engage]: Select a Vampire token follower on your field and give it [attack]+1/[defense]+1, Rush, and Drain."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-091EN.png"
+  },
+  {
+    "cardNo": "BP16-092EN",
+    "name": "Mino, Shrewd Reaper",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon / Departed",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[act] [engage]: Select an enemy follower on the field and deal it 3 damage. Activate only if there are at least 10 cards in your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-092EN.png"
+  },
+  {
+    "cardNo": "BP16-093EN",
+    "name": "Beryl, Nightmare Incarnate",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "4",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Deal 3 damage to your leader. Strike - Give your leader [defense]+5."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-093EN.png"
+  },
+  {
+    "cardNo": "BP16-094EN",
+    "name": "Shadowcrypt Memorial",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Amulet",
+      "trait": "Necromancer / Demon",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Bury the top card of your deck. [act] [engage], bury this: Summon a Ghost token. Activate only if a follower on your field evolved this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-094EN.png"
+  },
+  {
+    "cardNo": "BP16-095EN",
+    "name": "Lapis, Shining Seraph",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith / Luminary / Lightborne",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "3",
+      "attack": "5",
+      "defense": "5",
+      "effect": "While this has at least 4 prayer counters, it's a follower. Strike - Search your deck for an Enstatued Seraph, summon it, then shuffle. At the start of your main phase, select any number of other cards on your field and place a prayer counter on them and this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-095EN.png"
+  },
+  {
+    "cardNo": "BP16-096EN",
+    "name": "Rodeo, Anathema of Judgment",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Anathema / Luminary",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this. At the start of your end phase, if there are at least 2 amulets on your field, give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-096EN.png"
+  },
+  {
+    "cardNo": "BP16-097EN",
+    "name": "Rodeo, Anathema of Judgment Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Anathema / Luminary",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "5",
+      "effect": "On Evolve - Search your deck for an amulet that costs 3 or less, summon it, then shuffle. On Super-Evolve - Search your deck for an amulet that costs 5 or less, summon it, then shuffle. At the start of your end phase, if there are at least 2 amulets on your field, give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-097EN.png"
+  },
+  {
+    "cardNo": "BP16-098EN",
+    "name": "Rana, Dual Cannon Abbess",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Faith",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "6",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Search your deck for up to 2 Wasteland cards not named Rana, Dual Cannon Abbess that cost a total of 6 or less, put them into your EX area, then shuffle. They cost 0 to play this turn. Summon a Bullet Bike token. [act] [cost00]: Deal 1 damage to each enemy follower on the field. Activate only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-098EN.png"
+  },
+  {
+    "cardNo": "BP16-099EN",
+    "name": "Ronavero, Darkhaven Ward",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Luminary",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-099EN.png"
+  },
+  {
+    "cardNo": "BP16-100EN",
+    "name": "Ronavero, Darkhaven Ward Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith / Luminary",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Select an enemy follower on the field. Change its attack to 0 and its defense to 1, and engage it. On Super-Evolve - Select a Faith spell or Faith amulet in your cemetery that costs 4 or less and put it into your EX area. It costs 4 less to play this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-100EN.png"
+  },
+  {
+    "cardNo": "BP16-101EN",
+    "name": "Salefa, Guardian of Water",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Luminary / Lightborne",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] [engage] an amulet on your field: Select an enemy follower on the field. It can't attack enemies during its controller's next turn. [act] [engage] an amulet on your field: Select an enemy follower on the field. It can't attack enemies during its controller's next turn. Activate only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-101EN.png"
+  },
+  {
+    "cardNo": "BP16-102EN",
+    "name": "Pact of the Beast Princess",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Whenever a Holy Tiger is put onto your field, select an enemy follower on the field and engage it. [act] [cost02], [engage], bury another amulet: Summon a Holy Tiger token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-102EN.png"
+  },
+  {
+    "cardNo": "BP16-103EN",
+    "name": "Angelic Prism Priestess",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Luminary / Avian",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve][cost01]: Evolve this. [fanfare] Look at the top 3 cards of your deck. You may reveal an amulet from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-103EN.png"
+  },
+  {
+    "cardNo": "BP16-104EN",
+    "name": "Angelic Prism Priestess Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Luminary / Avian",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - You may summon an amulet that costs 2 or less from your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-104EN.png"
+  },
+  {
+    "cardNo": "BP16-105EN",
+    "name": "Reno, Luxwing Featherfolk",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Luminary / Avian",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "Rush. Strike - Deal 1 damage to each enemy leader. [fanfare] If this was put onto the field by an ability, give it Assail and, for the rest of this turn, \"This doesn't take damage.\""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-105EN.png"
+  },
+  {
+    "cardNo": "BP16-106EN",
+    "name": "Serene Sanctuary",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Search your deck for a Luminary amulet, reveal it, add it to your hand, then shuffle. [act] [engage]: Bury this. Activate only if this has a prayer counter. [lastwords] Give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-106EN.png"
+  },
+  {
+    "cardNo": "BP16-107EN",
+    "name": "Ironfist Priest",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this. Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-107EN.png"
+  },
+  {
+    "cardNo": "BP16-108EN",
+    "name": "Ironfist Priest Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Ward. On Evolve - Deal 4 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-108EN.png"
+  },
+  {
+    "cardNo": "BP16-109EN",
+    "name": "Maeve, Guardian of Earth",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Zealot / Luminary / Lightborne",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "Ward. [fanfare] Bury an amulet: Give this [attack]+1/[defense]+1. Give your leader [defense]+3."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-109EN.png"
+  },
+  {
+    "cardNo": "BP16-110EN",
+    "name": "Holy Shieldmaiden",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "6",
+      "effect": "Ward. During your turn, this doesn't take damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-110EN.png"
+  },
+  {
+    "cardNo": "BP16-111EN",
+    "name": "Mainyu, Darkdweller",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Zealot",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Aura. Whenever an amulet is put onto your field, give this [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-111EN.png"
+  },
+  {
+    "cardNo": "BP16-112EN",
+    "name": "Darkhaven Grace",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith / Luminary",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Select an enemy follower on the field and destroy it. [act] [engage], bury this: Deal 2 damage to each enemy leader. Draw a card. Activate only if a follower on your field evolved this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-112EN.png"
+  },
+  {
+    "cardNo": "BP16-113EN",
+    "name": "Olivia, Heroic Dark Angel",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Fallen Angel",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this. Ward. [fanfare] Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-113EN.png"
+  },
+  {
+    "cardNo": "BP16-114EN",
+    "name": "Olivia, Heroic Dark Angel Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Fallen Angel",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Ward. On Evolve - Select an enemy follower on the field and deal it 5 damage. On Super-Evolve - Give your leader [defense]+3. Recover 3 play points."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-114EN.png"
+  },
+  {
+    "cardNo": "BP16-115EN",
+    "name": "Ruler of Cocytus",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Archfiend",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "6",
+      "attack": "6",
+      "defense": "6",
+      "effect": "[fanfare] Deal 6 damage to your leader. Put a Silent Rider, Servant of Cocytus, Demon of Purgatory, and Astaroth's Reckoning token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-115EN.png"
+  },
+  {
+    "cardNo": "BP16-116EN",
+    "name": "Phildau, Lionheart Ward",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Musical / Lightborne",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-116EN.png"
+  },
+  {
+    "cardNo": "BP16-117EN",
+    "name": "Phildau, Lionheart Ward Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Musical / Lightborne",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Ward. On Evolve - Select an enemy follower on the field and deal it 3 damage. On Super-Evolve - Select an enemy card on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-117EN.png"
+  },
+  {
+    "cardNo": "BP16-118EN",
+    "name": "Alouette, Doomwright Ward",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Supreme / Lightborne",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Summon a Keenedge Artifact token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-118EN.png"
+  },
+  {
+    "cardNo": "BP16-119EN",
+    "name": "Leah, Bellringer Angel",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Angel",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "1",
+      "attack": "0",
+      "defense": "3",
+      "effect": "Ward. [lastwords] Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-119EN.png"
+  },
+  {
+    "cardNo": "BP16-120EN",
+    "name": "Apollo, Heaven's Envoy",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Deity",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Deal 1 damage to each enemy leader and enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-120EN.png"
+  },
+  {
+    "cardNo": "BP16-121EN",
+    "name": "Apollo, Heaven's Envoy Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Deity",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Deal 1 damage to each enemy leader and enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-121EN.png"
+  },
+  {
+    "cardNo": "BP16-122EN",
+    "name": "Divine Thunder",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Deity",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field. Deal 7 damage to it and 3 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-122EN.png"
+  },
+  {
+    "cardNo": "BP16-123EN",
+    "name": "Doomwright Resurgence",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Supreme / Lightborne",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a Supreme token follower on your field that costs 5 or less and summon a token of the same name."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-123EN.png"
+  },
+  {
+    "cardNo": "BP16-T01EN",
+    "name": "Guardian Golem TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Token",
+      "trait": "Golem",
+      "rarity": "-",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "5",
+      "effect": "Ward. [lastwords] Give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-T01EN.png"
+  },
+  {
+    "cardNo": "BP16-T02EN",
+    "name": "Looking Smart! TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell / Token",
+      "trait": "Mage / Academic",
+      "rarity": "-",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "0",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field. Deal it 2 damage, draw a card, then discard a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-T02EN.png"
+  },
+  {
+    "cardNo": "BP16-T03EN",
+    "name": "Fire Drake Whelp TOKEN",
+    "type": "token",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Token",
+      "trait": "Wyrmkin",
+      "rarity": "-",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Intimidate."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-T03EN.png"
+  },
+  {
+    "cardNo": "BP16-T04EN",
+    "name": "Mimi, Right Paw Hellhound TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Token",
+      "trait": "Demon",
+      "rarity": "-",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[lastwords] Select an enemy follower on the field. Deal it 2 damage and bury the top card of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-T04EN.png"
+  },
+  {
+    "cardNo": "BP16-T05EN",
+    "name": "Coco, Left Paw Hellhound TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Token",
+      "trait": "Demon",
+      "rarity": "-",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[lastwords] Give your leader [defense]+2. Bury the top card of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-T05EN.png"
+  },
+  {
+    "cardNo": "BP16-T06EN",
+    "name": "Silent Rider TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Token",
+      "trait": "Archfiend",
+      "rarity": "-",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "1",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-T06EN.png"
+  },
+  {
+    "cardNo": "BP16-T07EN",
+    "name": "Servant of Cocytus TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Token",
+      "trait": "Archfiend",
+      "rarity": "-",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "1",
+      "attack": "8",
+      "defense": "8",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-T07EN.png"
+  },
+  {
+    "cardNo": "BP16-T08EN",
+    "name": "Demon of Purgatory TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Token",
+      "trait": "Archfiend",
+      "rarity": "-",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "1",
+      "attack": "6",
+      "defense": "4",
+      "effect": "Ward. [fanfare] Select an enemy follower on the field and deal it 6 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-T08EN.png"
+  },
+  {
+    "cardNo": "BP16-T09EN",
+    "name": "Astaroth's Reckoning TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Token",
+      "trait": "Archfiend",
+      "rarity": "-",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "10",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Change each enemy leader's defense to 1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-T09EN.png"
+  },
+  {
+    "cardNo": "BP16-T10EN",
+    "name": "Fairy TOKEN",
+    "type": "token",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Token",
+      "trait": "Pixie",
+      "rarity": "-",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-T10EN.png"
+  },
+  {
+    "cardNo": "BP16-T11EN",
+    "name": "Lloyd TOKEN",
+    "type": "token",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Token",
+      "trait": "Puppetry",
+      "rarity": "-",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "0",
+      "attack": "2",
+      "defense": "4",
+      "effect": "Ward. While this is on the field, its name is also Puppet. [fanfare] Give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-T11EN.png"
+  },
+  {
+    "cardNo": "BP16-T12EN",
+    "name": "Knight TOKEN",
+    "type": "token",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Token",
+      "trait": "Officer",
+      "rarity": "-",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-T12EN.png"
+  },
+  {
+    "cardNo": "BP16-T13EN",
+    "name": "Steelclad Knight TOKEN",
+    "type": "token",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Token",
+      "trait": "Officer",
+      "rarity": "-",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-T13EN.png"
+  },
+  {
+    "cardNo": "BP16-T14EN",
+    "name": "Shield Guardian TOKEN",
+    "type": "token",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Token",
+      "trait": "Officer",
+      "rarity": "-",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-T14EN.png"
+  },
+  {
+    "cardNo": "BP16-T15EN",
+    "name": "Glittering Gold TOKEN",
+    "type": "token",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell / Token",
+      "trait": "Festive / Thief / Loot",
+      "rarity": "-",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "0",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] [cost01], banish this and 2 other cards named Glittering Gold from your EX area: Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-T15EN.png"
+  },
+  {
+    "cardNo": "BP16-T16EN",
+    "name": "Anne's Summoning TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Token",
+      "trait": "Golem / Arcanaform / Academic",
+      "rarity": "-",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "2",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Rush. Ward. [fanfare] Give your leader [defense]+2. At the start of your main phase, banish this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-T16EN.png"
+  },
+  {
+    "cardNo": "BP16-T17EN",
+    "name": "Dragon TOKEN",
+    "type": "token",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Token",
+      "trait": "Wyrmkin",
+      "rarity": "-",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "4",
+      "attack": "5",
+      "defense": "5",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-T17EN.png"
+  },
+  {
+    "cardNo": "BP16-T18EN",
+    "name": "Ghost TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Token",
+      "trait": "Departed",
+      "rarity": "-",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Storm. At the start of your end phase, banish this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-T18EN.png"
+  },
+  {
+    "cardNo": "BP16-T19EN",
+    "name": "Forest Bat TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Token",
+      "trait": "Vampire",
+      "rarity": "-",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-T19EN.png"
+  },
+  {
+    "cardNo": "BP16-T20EN",
+    "name": "Holy Tiger TOKEN",
+    "type": "token",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Token",
+      "trait": "Beast",
+      "rarity": "-",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-T20EN.png"
+  },
+  {
+    "cardNo": "BP16-T21EN",
+    "name": "Bullet Bike TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Amulet / Token",
+      "trait": "Wasteland / Mount",
+      "rarity": "-",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] Bury this: Select a follower on your field. Give it Rush and, if it's a Wasteland follower, [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-T21EN.png"
+  },
+  {
+    "cardNo": "BP16-T22EN",
+    "name": "Arcane Personnel Carrier TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Amulet / Token",
+      "trait": "Wasteland / Mount",
+      "rarity": "-",
+      "cardSet": "Booster Set \"New World Genesis\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] Bury this: Select a follower on your field. Give it Ward and, if it's a Wasteland follower, [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-T22EN.png"
+  }
+]

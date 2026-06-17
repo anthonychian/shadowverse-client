@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
+import LeaderSpine from "./LeaderSpine";
+import { LEADER_SPINE_IDS, SVGDB_LEADER_PORTRAIT } from "./leaderIds";
 import imageSiLong from "../../assets/leaders/SiLong.png";
 import imageForte from "../../assets/leaders/Forte.png";
 import imageGalmieux from "../../assets/leaders/Galmieux.png";
@@ -25,10 +27,17 @@ import imageMaru from "../../assets/leaders/Maru.png";
 import imageRin from "../../assets/leaders/Rin.png";
 import imageUzuki from "../../assets/leaders/Uzuki.png";
 import imageMio from "../../assets/leaders/Mio.png";
+import imageVanguard from "../../assets/leaders/Vanguard.png";
 
 import "../../css/Leader.css";
 
-export default function Leader({ name, active }) {
+export default function Leader({
+  name,
+  active,
+  width = 300,
+  height = 240,
+  side = "mine",
+}) {
   let image;
   switch (name) {
     case "Galmieux":
@@ -106,15 +115,50 @@ export default function Leader({ name, active }) {
     case "Mio":
       image = imageMio;
       break;
+    case "Vanguard":
+      image = imageVanguard;
+      break;
+    case "Piercye":
+      image = SVGDB_LEADER_PORTRAIT.Piercye;
+      break;
+    case "Amy":
+      image = SVGDB_LEADER_PORTRAIT.Amy;
+      break;
     default:
       image = imageGalmieux;
   }
+
+  // When this leader has a Spine animation on svgdb, loop it on top of the
+  // static portrait and hide the PNG once it's actually on screen. If loading
+  // fails (or the leader has no animation), the PNG simply stays.
+  const hasSpine = !!LEADER_SPINE_IDS[name];
+  const [spineReady, setSpineReady] = useState(false);
+  const [spineFailed, setSpineFailed] = useState(false);
+  useEffect(() => {
+    setSpineReady(false);
+    setSpineFailed(false);
+  }, [name]);
+
   return (
-    <div className="LeaderContainer">
-      {active ? (
-        <img src={image} className="LeaderImageActive" alt="Leader" />
-      ) : (
-        <img src={image} className="LeaderImageInactive" alt="Leader" />
+    <div className="LeaderStage" style={{ width, height }}>
+      <img
+        src={image}
+        className={`leaderArt ${active ? "" : "leaderArtInactive"}`}
+        alt="Leader"
+        style={{ opacity: spineReady ? 0 : 1 }}
+      />
+      {hasSpine && !spineFailed && (
+        <div className="leaderSpineLayer">
+          <LeaderSpine
+            name={name}
+            active={active}
+            width={width}
+            height={height}
+            side={side}
+            onReady={() => setSpineReady(true)}
+            onError={() => setSpineFailed(true)}
+          />
+        </div>
       )}
     </div>
   );

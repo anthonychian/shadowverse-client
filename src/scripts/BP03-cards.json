@@ -1,0 +1,2529 @@
+[
+  {
+    "cardNo": "BP03-001EN",
+    "name": "Beauty and the Beast",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Beast / Fable / Princess",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "6",
+      "attack": "5",
+      "defense": "7",
+      "effect": "Rush. Aura. [fanfare] Put a Fable counter on this card. If this card was put onto the field from anywhere other than your hand, give it Storm. [act][cost01], remove any number of Fable counters from this card: Give this follower [attack]+X/[defense]+X. X equals the number of counters removed."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-001EN.png"
+  },
+  {
+    "cardNo": "BP03-002EN",
+    "name": "Cosmos Fang",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Fae-Touched / Verdant / Beast",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve][cost01], return another follower on your field to its owner's hand: Evolve this follower. [fanfare] Search your deck for a Beast follower, reveal it, and add it to your hand. If it costs 2 play points or less, you may put it onto your field instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-002EN.png"
+  },
+  {
+    "cardNo": "BP03-003EN",
+    "name": "Cosmos Fang Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Fae-Touched / Verdant / Beast",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "On Evolve: Select an enemy follower on the field and return it to its owner's hand. If it's an evolved follower, destroy it instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-003EN.png"
+  },
+  {
+    "cardNo": "BP03-004EN",
+    "name": "Magical Fairy, Lilac",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Pixie / Fable",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "3",
+      "attack": "1",
+      "defense": "4",
+      "effect": "[act][engage]: Put a Fable counter on this card. [act][cost01], remove a Fable counter from this card: Select an enemy follower on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-004EN.png"
+  },
+  {
+    "cardNo": "BP03-005EN",
+    "name": "Slade, Blossoming Wolf",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Verdant / Beast",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost00]: Evolve this follower. This ability can be activated if a card on your field was returned to hand this turn. When this card is returned to hand from your field, you may put a [forestcraft] follower that costs 2 play points or less from your hand onto your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-005EN.png"
+  },
+  {
+    "cardNo": "BP03-006EN",
+    "name": "Slade, Blossoming Wolf Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Verdant / Beast",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve: Draw a card. When this card is returned to hand from your field, you may put a [forestcraft] follower that costs 2 play points or less from your hand onto your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-006EN.png"
+  },
+  {
+    "cardNo": "BP03-007EN",
+    "name": "Elf Twins' Assault",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Elf",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select up to 2 enemy followers on the field and deal X damage divided between them. X equals the number of cards in your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-007EN.png"
+  },
+  {
+    "cardNo": "BP03-008EN",
+    "name": "Abby the Axe Girl",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Hunter",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "Strike: Give this follower [attack]+1. Then, if this follower has at least 5 attack, deal 2 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-008EN.png"
+  },
+  {
+    "cardNo": "BP03-009EN",
+    "name": "Gerbera Bear",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Verdant / Beast",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost01]: Evolve this follower. Whenever a card on your field is returned to hand, give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-009EN.png"
+  },
+  {
+    "cardNo": "BP03-010EN",
+    "name": "Gerbera Bear Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Verdant / Beast",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve: Search your deck for a Floral Breeze, reveal it, and add it to your hand. Whenever a card on your field is returned to hand, give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-010EN.png"
+  },
+  {
+    "cardNo": "BP03-011EN",
+    "name": "Wood of Brambles",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Amulet",
+      "trait": "Pixie",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Summon a Fairy token. Combo (3): Give it Rush. At the start of your main phase, destroy this card. While this card is on your field, your followers have \"Follower Strike: Deal 2 damage to the enemy follower.\""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-011EN.png"
+  },
+  {
+    "cardNo": "BP03-012EN",
+    "name": "Flower Princess",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Princess / Fable",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Put a Fairy token into your EX area. Combo (3): Put a Fable counter on this card. [act][engage], remove a Fable counter from this card: Select an enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-012EN.png"
+  },
+  {
+    "cardNo": "BP03-013EN",
+    "name": "Fen Sprite",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Fae-Touched",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "3",
+      "attack": "4",
+      "defense": "3",
+      "effect": "[fanfare] Select an enemy follower on the field. During its controller's next turn, it can't attack enemies."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-013EN.png"
+  },
+  {
+    "cardNo": "BP03-014EN",
+    "name": "Tweedle Dum, Tweedle Dee",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Fable",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-014EN.png"
+  },
+  {
+    "cardNo": "BP03-015EN",
+    "name": "Tweedle Dum, Tweedle Dee Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Fable",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve: Look at the top 4 cards of your deck. You may reveal a card that costs 1 play point from among them and add it to your hand. Put the remaining cards on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-015EN.png"
+  },
+  {
+    "cardNo": "BP03-016EN",
+    "name": "Floral Breeze",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Verdant / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a card on your field. Return it to its owner's hand and give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-016EN.png"
+  },
+  {
+    "cardNo": "BP03-017EN",
+    "name": "Woodland Band",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Amulet",
+      "trait": "Beast / Fable",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Look at the top 4 cards of your deck. You may put a Fable follower from among them into your EX area. Put the remaining cards on the bottom of your deck in any order. [act][engage], put this card into its owner's cemetery: Select a Fable follower on your field and put a Fable counter on it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-017EN.png"
+  },
+  {
+    "cardNo": "BP03-018EN",
+    "name": "Cinderella",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Princess / Fable",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "7",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Storm. [fanfare] If there is another Fable follower on your field, put a Fable counter on this card. Strike, remove a Fable counter from this card: Look at the top 4 cards of your deck. You may put a follower that costs 5 play points or less from among them onto your field. Put the remaining cards into your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-018EN.png"
+  },
+  {
+    "cardNo": "BP03-019EN",
+    "name": "Valiant Fencer",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Heroic",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost01]: Evolve this follower. This ability can be activated if there are 2 cards or less in your hand. [fanfare] Search your deck for a Heroic card with a different name from this card, reveal it, and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-019EN.png"
+  },
+  {
+    "cardNo": "BP03-020EN",
+    "name": "Valiant Fencer Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Commander / Heroic",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "On Evolve: Select a Heroic follower with [evolve] on your field and evolve it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-020EN.png"
+  },
+  {
+    "cardNo": "BP03-021EN",
+    "name": "Maisy, Red Riding Hood",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Assassin / Fable",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "2",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[fanfare] If there is another Fable follower on your field, put a Fable counter on this card. [act][cost01], [engage], remove a Fable counter from this card: Select an enemy follower on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-021EN.png"
+  },
+  {
+    "cardNo": "BP03-022EN",
+    "name": "Amerro, Spear Knight",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Heroic",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost03]: Evolve this follower. Strike: If there is another Heroic follower on your field, give this follower [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-022EN.png"
+  },
+  {
+    "cardNo": "BP03-023EN",
+    "name": "Amerro, Spear Knight Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Officer / Heroic",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve: Select a Heroic card in your cemetery and play it for 0 play points. Strike: If there is another Heroic follower on your field, give this follower [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-023EN.png"
+  },
+  {
+    "cardNo": "BP03-024EN",
+    "name": "Castle in the Sky",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Amulet",
+      "trait": "Commander",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Search your deck for a follower with Storm, reveal it, and add it to your hand. [act][engage], put this card into its owner's cemetery: Select a follower with Storm on your field and give it [attack]+1. [act][cost10], [engage], put this card into its owner's cemetery: You may put any number of followers with Storm from your hand onto your field. Give them [attack]+2/[defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-024EN.png"
+  },
+  {
+    "cardNo": "BP03-025EN",
+    "name": "Young Ogrehunter Momo",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Fable",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "4",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Assail. [fanfare] If there is another Fable follower on your field, give this follower Rush. Follower Strike: If the enemy follower has 5 defense or less, draw a card, then discard a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-025EN.png"
+  },
+  {
+    "cardNo": "BP03-026EN",
+    "name": "Mach Knight",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Heroic",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] If this card was put onto the field from anywhere other than your hand, give it Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-026EN.png"
+  },
+  {
+    "cardNo": "BP03-027EN",
+    "name": "Mach Knight Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Officer / Heroic",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve: Select an enemy follower on the field and deal it 2 damage. If there are at least 2 Heroic cards in your cemetery, deal 4 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-027EN.png"
+  },
+  {
+    "cardNo": "BP03-028EN",
+    "name": "Kiss of the Princess",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Princess / Fable",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "If there is a Princess follower on your field, this card costs 1 less to play. Choose one of the following. (1) Select a follower on your field and give it [attack]+1. You may put a Fable counter on it. (2) Select up to 3 [swordcraft] followers in your cemetery. Return them to your deck, shuffle it, and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-028EN.png"
+  },
+  {
+    "cardNo": "BP03-029EN",
+    "name": "Rabbit Ear Attendant",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Fable",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[fanfare] If there is another Fable follower on your field, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-029EN.png"
+  },
+  {
+    "cardNo": "BP03-030EN",
+    "name": "Old Man and Old Woman",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Fable",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "2",
+      "effect": "Bane."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-030EN.png"
+  },
+  {
+    "cardNo": "BP03-031EN",
+    "name": "Bladed Hedgehog",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Beast / Fable",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "2",
+      "attack": "1",
+      "defense": "3",
+      "effect": "[evolve][cost02]: Evolve this follower. During your turn, whenever an enemy follower is destroyed, give this follower [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-031EN.png"
+  },
+  {
+    "cardNo": "BP03-032EN",
+    "name": "Bladed Hedgehog Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Beast / Fable",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "-",
+      "attack": "2",
+      "defense": "4",
+      "effect": "On Evolve: Select an enemy follower on the field and deal it 2 damage. During your turn, whenever an enemy follower is destroyed, give this follower [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-032EN.png"
+  },
+  {
+    "cardNo": "BP03-033EN",
+    "name": "Ironwrought Defender",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Heroic",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] If there are at least 2 Heroic cards in your cemetery, give this follower [defense]+1 and Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-033EN.png"
+  },
+  {
+    "cardNo": "BP03-034EN",
+    "name": "Heroic Entry",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Officer / Heroic",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Look at the top 4 cards of your deck. You may put a [swordcraft] follower that costs 3 play points or less from among them onto your field. If it's a Heroic follower, give it [attack]+1/[defense]+1. Put the remaining cards on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-034EN.png"
+  },
+  {
+    "cardNo": "BP03-035EN",
+    "name": "Wizardess of Oz",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Fable",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "6",
+      "attack": "4",
+      "defense": "6",
+      "effect": "[fanfare] Summon a Magic Sediment token. Add 1 to a Stack on your field. Draw a card. [q][act] Earth Rite: The next spell you play this turn costs 4 less. This ability can be activated once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-035EN.png"
+  },
+  {
+    "cardNo": "BP03-036EN",
+    "name": "Witch of Calamity, Millie Parfait",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Fable",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "6",
+      "attack": "4",
+      "defense": "6",
+      "effect": "[fanfare] Summon a Magic Sediment token. Add 1 to a Stack on your field. Draw a card. [q][act] Earth Rite: The next spell you play this turn costs 4 less. This ability can be activated once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-036EN.png"
+  },
+  {
+    "cardNo": "BP03-037EN",
+    "name": "Mystic King",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Chess",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[evolve][cost02]: Evolve this follower. [act] Put another Chess follower from your field into its owner's cemetery: Select an enemy follower on the field and deal it 5 damage. For the rest of this turn, this card's [act] abilities except [evolve] can't be activated."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-037EN.png"
+  },
+  {
+    "cardNo": "BP03-038EN",
+    "name": "Mystic King Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Chess",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "On Evolve: Select up to 4 Chess followers with different names that cost 4 play points or less in your cemetery and put them onto your field. [act] Put another Chess follower from your field into its owner's cemetery: Select an enemy follower on the field and deal it 5 damage. For the rest of this turn, this card's [act] abilities can't be activated."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-038EN.png"
+  },
+  {
+    "cardNo": "BP03-039EN",
+    "name": "Falise, Leonardian Mage",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "4",
+      "attack": "4",
+      "defense": "5",
+      "effect": "[fanfare] Earth Rite: Give this follower Storm. [fanfare] Spellchain (7): Deal 4 damage to each enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-039EN.png"
+  },
+  {
+    "cardNo": "BP03-040EN",
+    "name": "Milady, Mystic Queen",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Chess",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "4",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Summon a Magical Pawn token. Put a Magical Pawn token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-040EN.png"
+  },
+  {
+    "cardNo": "BP03-041EN",
+    "name": "Milady, Mystic Queen Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Chess",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve: Select an enemy follower on the field and deal it X damage. X equals the number of Chess followers on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-041EN.png"
+  },
+  {
+    "cardNo": "BP03-042EN",
+    "name": "Check",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Chess",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field. Deal it 4 damage and look at the top 3 cards of your deck. You may reveal a Chess card with a different name from this card from among them and add it to your hand. Put the remaining cards on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-042EN.png"
+  },
+  {
+    "cardNo": "BP03-043EN",
+    "name": "Mr. Heinlein, Shadow Mage",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Put the top 4 cards of your deck into your cemetery. Recover X play points. X equals the number of spells put into your cemetery by this ability. [act][engage], discard a spell: Select an enemy follower on the field and deal it 4 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-043EN.png"
+  },
+  {
+    "cardNo": "BP03-044EN",
+    "name": "Magical Knight",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Chess",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve][cost01]: Evolve this follower. Whenever another Chess follower is put onto your field, give it [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-044EN.png"
+  },
+  {
+    "cardNo": "BP03-045EN",
+    "name": "Magical Knight Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Chess",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve: Summon a Magical Pawn token. Whenever another Chess follower is put onto your field, give it [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-045EN.png"
+  },
+  {
+    "cardNo": "BP03-046EN",
+    "name": "Gingerbread House",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet",
+      "trait": "Earth Sigil / Fable",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Stack. [fanfare] Give your leader [defense]+3."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-046EN.png"
+  },
+  {
+    "cardNo": "BP03-047EN",
+    "name": "It's a Sweets Buffet!",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet",
+      "trait": "Earth Sigil / Fable",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Stack. [fanfare] Give your leader [defense]+3."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-047EN.png"
+  },
+  {
+    "cardNo": "BP03-048EN",
+    "name": "Witch of Sweets",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Fable",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost00]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-048EN.png"
+  },
+  {
+    "cardNo": "BP03-049EN",
+    "name": "Witch of Sweets Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Fable",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve: Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-049EN.png"
+  },
+  {
+    "cardNo": "BP03-050EN",
+    "name": "Magical Rook",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Chess",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] If there is a Magical Pawn in your EX area, give this follower [defense]+1 and Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-050EN.png"
+  },
+  {
+    "cardNo": "BP03-051EN",
+    "name": "Magical Bishop",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Chess",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "2",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[fanfare] Put a Magical Pawn token into your EX area. At the start of your end phase, if there is another Chess follower on your field, deal 1 damage to each enemy leader and give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-051EN.png"
+  },
+  {
+    "cardNo": "BP03-052EN",
+    "name": "Blitz",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Chess",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field and deal it X damage. X equals the number of cards named Magical Pawn on your field plus 2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-052EN.png"
+  },
+  {
+    "cardNo": "BP03-053EN",
+    "name": "Witch's Cauldron",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet",
+      "trait": "Mage / Earth Sigil",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Stack. [fanfare] Look at the top 4 cards of your deck. You may reveal a card with Earth Rite from among them and add it to your hand. Put the remaining cards on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-053EN.png"
+  },
+  {
+    "cardNo": "BP03-054EN",
+    "name": "The Cauldron of Calamity",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet",
+      "trait": "Mage / Earth Sigil",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Stack. [fanfare] Look at the top 4 cards of your deck. You may reveal a card with Earth Rite from among them and add it to your hand. Put the remaining cards on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-054EN.png"
+  },
+  {
+    "cardNo": "BP03-055EN",
+    "name": "Jabberwock",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin / Fable",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "7",
+      "attack": "7",
+      "defense": "7",
+      "effect": "[fanfare] Put another follower from your field into its owner's cemetery: Reveal the top card of your deck. Repeat until you reveal a follower that costs more than the follower you put into the cemetery and put it onto your field. Shuffle the remaining cards and put them on the bottom of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-055EN.png"
+  },
+  {
+    "cardNo": "BP03-056EN",
+    "name": "Lævateinn Dragon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin / Armed",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[evolve][cost01]: Evolve this follower into an evolved follower with \"Lævateinn Dragon\" in its name."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-056EN.png"
+  },
+  {
+    "cardNo": "BP03-057EN",
+    "name": "Lævateinn Dragon Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wyrmkin / Armed",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "Assail. On Evolve: Summon a Draconic Weapon token. Recover 2 play points."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-057EN.png"
+  },
+  {
+    "cardNo": "BP03-058EN",
+    "name": "Lævateinn Dragon, Attack Form Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wyrmkin / Armed",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "-",
+      "attack": "7",
+      "defense": "5",
+      "effect": "Strike: Select an enemy follower on the field. Deal 4 damage to it and 3 damage to its leader. This follower's name is also Lævateinn Dragon."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-058EN.png"
+  },
+  {
+    "cardNo": "BP03-059EN",
+    "name": "Red Ragewyrm",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin / Fable",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "3",
+      "attack": "0",
+      "defense": "5",
+      "effect": "[act][engage]: Give this follower [attack]+5. If Overflow is active for you, give [attack]+10 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-059EN.png"
+  },
+  {
+    "cardNo": "BP03-060EN",
+    "name": "Draconir, Knuckle Dragon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin / Armed",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Summon a Draconic Weapon token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-060EN.png"
+  },
+  {
+    "cardNo": "BP03-061EN",
+    "name": "Draconir, Knuckle Dragon Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wyrmkin / Armed",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve: Select an enemy follower on the field and deal it 2 damage. If there is another Armed follower on your field, deal 4 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-061EN.png"
+  },
+  {
+    "cardNo": "BP03-062EN",
+    "name": "Tilting at Windmills",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Amulet",
+      "trait": "Fable",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "6",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act][cost03], [engage]: You may put a follower from your hand onto your field and give it \"At the start of your end phase, destroy this card.\""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-062EN.png"
+  },
+  {
+    "cardNo": "BP03-063EN",
+    "name": "Master of Draconic Arts",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "3",
+      "attack": "2",
+      "defense": "4",
+      "effect": "Assail. Ward. [fanfare] If Overflow is active for you, give this follower [attack]+4 and Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-063EN.png"
+  },
+  {
+    "cardNo": "BP03-064EN",
+    "name": "Hammer Dragonewt",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt / Wyrmkin / Armed",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Look at the top 4 cards of your deck. You may reveal an Armed spell from among them and add it to your hand. Put the remaining cards on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-064EN.png"
+  },
+  {
+    "cardNo": "BP03-065EN",
+    "name": "Hammer Dragonewt Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonewt / Wyrmkin / Armed",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve: Deal 2 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-065EN.png"
+  },
+  {
+    "cardNo": "BP03-066EN",
+    "name": "Draconic Smash",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Dragonewt / Wyrmkin / Armed",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field. Deal it 3 damage and summon a Draconic Weapon token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-066EN.png"
+  },
+  {
+    "cardNo": "BP03-067EN",
+    "name": "Elder Tortoise",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Marine",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "4",
+      "attack": "3",
+      "defense": "5",
+      "effect": "[fanfare] Gain 1 Evolution Point. If Overflow is active for you, give this follower [attack]+2/[defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-067EN.png"
+  },
+  {
+    "cardNo": "BP03-068EN",
+    "name": "Trinity Dragon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "Intimidate."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-068EN.png"
+  },
+  {
+    "cardNo": "BP03-069EN",
+    "name": "Dragon Summoner",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart / Dragonewt",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "2",
+      "attack": "1",
+      "defense": "3",
+      "effect": "[evolve][cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-069EN.png"
+  },
+  {
+    "cardNo": "BP03-070EN",
+    "name": "Dragon Summoner Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonheart / Dragonewt",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "-",
+      "attack": "2",
+      "defense": "4",
+      "effect": "On Evolve: Look at the top 3 cards of your deck. You may reveal a [dragoncraft] follower from among them and add it to your hand. Put the remaining cards on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-070EN.png"
+  },
+  {
+    "cardNo": "BP03-071EN",
+    "name": "Lance Lizard",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin / Armed",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[fanfare] If Overflow is active for you, summon a Draconic Weapon token. Once on each of your turns, when this follower is selected for an ability, give it [attack]+1 and deal 1 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-071EN.png"
+  },
+  {
+    "cardNo": "BP03-072EN",
+    "name": "Armor Burst",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Wyrmkin / Armed",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an Armed follower on your field and an enemy follower on the field. Put the first follower into its owner's EX area, deal 3 damage to the second, and summon a Draconic Weapon token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-072EN.png"
+  },
+  {
+    "cardNo": "BP03-073EN",
+    "name": "Dark Alice",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon / Fable",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "6",
+      "attack": "6",
+      "defense": "6",
+      "effect": "Rush. Strike: Each opponent discards a card. [lastwords] Banish the top 10 cards of your deck: Put this follower onto its owner's field. Discard a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-073EN.png"
+  },
+  {
+    "cardNo": "BP03-074EN",
+    "name": "Masquerade Ghost",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve][cost01]: Evolve this follower. Whenever a Ghost is put onto your field, give it [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-074EN.png"
+  },
+  {
+    "cardNo": "BP03-075EN",
+    "name": "Masquerade Ghost Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Departed",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Whenever a Ghost is put onto your field, give it [attack]+1. Whenever a Ghost you control leaves the field, summon a Gargantuan Ghost token. [lastwords] Put this card into its owner's EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-075EN.png"
+  },
+  {
+    "cardNo": "BP03-076EN",
+    "name": "Odile, Black Swan",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Fable",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "5",
+      "attack": "6",
+      "defense": "4",
+      "effect": "[fanfare] Deal 2 damage to each enemy leader and enemy follower on the field. Necrocharge (20): Give this follower Storm. Strike: Deal 2 damage to each enemy leader and enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-076EN.png"
+  },
+  {
+    "cardNo": "BP03-077EN",
+    "name": "Demonium, Punk Devil",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Ward. [act] Give your leader [defense]-2: Give this follower Bane. This ability can be activated once per turn. [lastwords] Give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-077EN.png"
+  },
+  {
+    "cardNo": "BP03-078EN",
+    "name": "Baccherus, Peppy Ghostie",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] If there is a Gargantuan Ghost on your field, draw a card. This follower's name is also Ghost."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-078EN.png"
+  },
+  {
+    "cardNo": "BP03-079EN",
+    "name": "Baccherus, Peppy Ghostie Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Departed",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "This follower's name is also Ghost. [lastwords] Put this card into its owner's EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-079EN.png"
+  },
+  {
+    "cardNo": "BP03-080EN",
+    "name": "Demon Maestro",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "2",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[act] Give your leader [defense]-2: Draw a card. This ability can be activated once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-080EN.png"
+  },
+  {
+    "cardNo": "BP03-081EN",
+    "name": "Trombone Devil",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve][cost01]: Evolve this follower. At the start of your end phase, if Sanguine is active for you, select an enemy leader or enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-081EN.png"
+  },
+  {
+    "cardNo": "BP03-082EN",
+    "name": "Trombone Devil Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Demon",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "On Evolve: Deal 1 damage to each leader. At the start of your end phase, if Sanguine is active for you, select an enemy leader or enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-082EN.png"
+  },
+  {
+    "cardNo": "BP03-083EN",
+    "name": "Furtive Fangs",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Beast / Fable",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a follower on your field. For the rest of this turn, it has \"Strike: Select an enemy follower on the field and deal it X damage. X equals this follower's attack.\""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-083EN.png"
+  },
+  {
+    "cardNo": "BP03-084EN",
+    "name": "Pumpkin Necromancer",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Put a Gargantuan Ghost token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-084EN.png"
+  },
+  {
+    "cardNo": "BP03-085EN",
+    "name": "Parade Raven",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "7",
+      "attack": "6",
+      "defense": "6",
+      "effect": "[fanfare] Put another follower from your field into its owner's cemetery: Select a follower that costs 5 play points or less in your cemetery and put it onto your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-085EN.png"
+  },
+  {
+    "cardNo": "BP03-086EN",
+    "name": "Mischievous Zombie",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost02]: Evolve this follower. [fanfare] Discard a card: Summon a Ghost token. If you discarded a Departed card, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-086EN.png"
+  },
+  {
+    "cardNo": "BP03-087EN",
+    "name": "Mischievous Zombie Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Departed",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve: Select a Ghost on your field and give it Bane."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-087EN.png"
+  },
+  {
+    "cardNo": "BP03-088EN",
+    "name": "Devilish Flautist",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Rush. [fanfare] Discard a random card: Give this follower [attack]+1 and Drain."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-088EN.png"
+  },
+  {
+    "cardNo": "BP03-089EN",
+    "name": "Infernal Orchestration",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Demon",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Deal 1 damage to your leader. The next time you put a follower onto your field this turn by playing it, give it [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-089EN.png"
+  },
+  {
+    "cardNo": "BP03-090EN",
+    "name": "Princess Snow White",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Fable / Princess",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Ward. [fanfare] If this card was put onto the field from your hand, put a Fable counter on it. If not, give it [attack]+1/[defense]+1. [lastwords] If this card had a Fable counter, put this card into its owner's EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-090EN.png"
+  },
+  {
+    "cardNo": "BP03-091EN",
+    "name": "Diamond Master",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "4",
+      "attack": "2",
+      "defense": "5",
+      "effect": "[evolve][cost03]: Evolve this follower. [fanfare] Choose one of the following. (1) Give this follower Storm. (2) Give this follower Ward. Whenever an opponent is selecting cards for an ability, if they can select this card, they must select it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-091EN.png"
+  },
+  {
+    "cardNo": "BP03-092EN",
+    "name": "Diamond Master Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "7",
+      "effect": "On Evolve: Select a follower with Storm or Ward that costs 3 play points or less in your cemetery and put it onto your field. Whenever an opponent is selecting cards for an ability, if they can select this card, they must select it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-092EN.png"
+  },
+  {
+    "cardNo": "BP03-093EN",
+    "name": "Odette, White Swan",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Fable",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "5",
+      "attack": "4",
+      "defense": "6",
+      "effect": "[fanfare] Give [defense]+2 to your leader and each other follower on your field. [lastwords] Give [defense]+2 to your leader and each follower on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-093EN.png"
+  },
+  {
+    "cardNo": "BP03-094EN",
+    "name": "Wingy, Chirpy Gemstone",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Avian",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve][cost02]: Evolve this follower. Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-094EN.png"
+  },
+  {
+    "cardNo": "BP03-095EN",
+    "name": "Wingy, Chirpy Gemstone Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith / Avian",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Ward. On Evolve: Search your deck for a follower with 2 attack or less, reveal it, and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-095EN.png"
+  },
+  {
+    "cardNo": "BP03-096EN",
+    "name": "Alice's Adventure",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Fable",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Search your deck for a Fable card, reveal it, and add it to your hand. [act][cost01], [engage], put this card into its owner's cemetery: Select a Fable follower on your field and give it Rush and Assail."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-096EN.png"
+  },
+  {
+    "cardNo": "BP03-097EN",
+    "name": "White Knight",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "6",
+      "attack": "6",
+      "defense": "6",
+      "effect": "If your leader's [defense] is 5 or less, this card costs 5 less to play. Rush. Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-097EN.png"
+  },
+  {
+    "cardNo": "BP03-098EN",
+    "name": "Ruby Falcon",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Avian",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve][cost01]: Evolve this follower. Ward. [act][cost02]: Give this follower Storm. Whenever another follower you control with Storm or Ward attacks, deal 1 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-098EN.png"
+  },
+  {
+    "cardNo": "BP03-099EN",
+    "name": "Ruby Falcon Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith / Avian",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Ward. On Evolve: Select an enemy follower on the field and deal it 2 damage. [act][cost02]: Give this follower Storm. Whenever another follower you control with Storm or Ward attacks, deal 1 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-099EN.png"
+  },
+  {
+    "cardNo": "BP03-100EN",
+    "name": "March Hare's Teatime",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith / Fable",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Look at the top 5 cards of your deck. You may put a Fable follower that costs 5 play points or less from among them onto your field. Put the remaining cards on the bottom of your deck in any order. [act][cost02], [engage], put this card into its owner's cemetery: Select a Fable follower that costs 3 play points or less in your cemetery and put it onto your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-100EN.png"
+  },
+  {
+    "cardNo": "BP03-101EN",
+    "name": "Tin Soldier",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Eidolon / Fable",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[fanfare] If this card was put onto the field from anywhere other than your hand, put a Fable counter on it. [act] Remove a Fable counter from this card: Select an enemy leader or enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-101EN.png"
+  },
+  {
+    "cardNo": "BP03-102EN",
+    "name": "Pinion Prince",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Avian / Fable",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "5",
+      "attack": "4",
+      "defense": "5",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Select a Fable card in your cemetery and put it into your EX area. You may put a Fable counter on it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-102EN.png"
+  },
+  {
+    "cardNo": "BP03-103EN",
+    "name": "Pinion Prince Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Avian / Fable",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "-",
+      "attack": "5",
+      "defense": "6",
+      "effect": "Assail."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-103EN.png"
+  },
+  {
+    "cardNo": "BP03-104EN",
+    "name": "Birdkeeping Disciple",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Avian",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "4",
+      "attack": "5",
+      "defense": "4",
+      "effect": "Ward. [fanfare][engage] an amulet on your field: Summon a Holy Falcon token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-104EN.png"
+  },
+  {
+    "cardNo": "BP03-105EN",
+    "name": "Amethyst Lion",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "1",
+      "effect": "Storm. [fanfare] Select another follower with Storm or Ward on your field and give it [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-105EN.png"
+  },
+  {
+    "cardNo": "BP03-106EN",
+    "name": "Bejeweled Shrine",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act][cost01], [engage]: Select a follower with Storm or Ward on your field and give it [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-106EN.png"
+  },
+  {
+    "cardNo": "BP03-107EN",
+    "name": "Alice, Wonderland Explorer",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Fable",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Put a Fable counter on this card. [act] Remove a Fable counter from this card: Select a Fable follower on your field or in your EX area and put a Fable counter on it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-107EN.png"
+  },
+  {
+    "cardNo": "BP03-108EN",
+    "name": "Alice, Wonderland Explorer Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Fable",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve: Look at the top 4 cards of your deck. You may put up to 2 Fable cards from among them into your EX area. Put the remaining cards on the bottom of your deck in any order. [act] Remove a Fable counter from this card: Select a Fable follower on your field or in your EX area and put a Fable counter on it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-108EN.png"
+  },
+  {
+    "cardNo": "BP03-109EN",
+    "name": "Angel of Chaos",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Angel / Fallen Angel",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "7",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Ward. [act] Banish 3 Fallen Angel cards in your cemetery: Select an enemy follower on the field. Steal it and refresh it. This ability can be activated once per turn. (Stolen followers are moved to your field. When they leave the field, they are put into their owner's corresponding zone.)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-109EN.png"
+  },
+  {
+    "cardNo": "BP03-110EN",
+    "name": "Rapunzel",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Princess / Fable",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "3",
+      "attack": "4",
+      "defense": "5",
+      "effect": "Ward. If this follower has no Fable counters, it can't attack enemies."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-110EN.png"
+  },
+  {
+    "cardNo": "BP03-111EN",
+    "name": "Seraph of Sin",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Fallen Angel",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Select an enemy leader or enemy follower on the field and deal it 2 damage. [lastwords] Select a Fallen Angel card that costs 3 play points or less in your cemetery and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-111EN.png"
+  },
+  {
+    "cardNo": "BP03-112EN",
+    "name": "Garuel, Seraphic Leo",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Angel / Beast",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "4",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] You may put a [neutral] follower that costs X play points or less from your hand onto your field and give it \"At the start of your end phase, put this card on the bottom of its owner's deck.\" X equals your maximum play points."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-112EN.png"
+  },
+  {
+    "cardNo": "BP03-113EN",
+    "name": "Garuel, Seraphic Leo Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Angel / Beast",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "4",
+      "effect": "On Evolve: Select another [neutral] follower on your field and return it to its owner's hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-113EN.png"
+  },
+  {
+    "cardNo": "BP03-114EN",
+    "name": "Actress Feria",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Musical / Fable / Princess",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[act][engage]: Select another Fable follower on your field and put a Fable counter on it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-114EN.png"
+  },
+  {
+    "cardNo": "BP03-115EN",
+    "name": "Humpty Dumpty",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Fable",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve][cost00]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-115EN.png"
+  },
+  {
+    "cardNo": "BP03-116EN",
+    "name": "Humpty Dumpty Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Fable",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve: Deal 5 damage to each follower on the field. Deal 3 damage to each enemy leader. Discard your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-116EN.png"
+  },
+  {
+    "cardNo": "BP03-117EN",
+    "name": "Winged Inversion",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Angel / Fallen Angel",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose one of the following. (1) Discard an Angel follower: Select an enemy follower on the field and destroy it. (2) Discard a Fallen Angel follower: Give your leader [defense]+3. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-117EN.png"
+  },
+  {
+    "cardNo": "BP03-118EN",
+    "name": "Angel of Darkness",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Fallen Angel",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[act][engage], put a Fallen Angel follower from your field into its owner's cemetery: Select an enemy follower on the field and deal it 4 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-118EN.png"
+  },
+  {
+    "cardNo": "BP03-119EN",
+    "name": "Harbinger of the Night",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Fallen Angel",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Select an enemy follower on the field and deal it 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-119EN.png"
+  },
+  {
+    "cardNo": "BP03-120EN",
+    "name": "Harbinger of the Night Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Fallen Angel",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve: Deal 1 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-120EN.png"
+  },
+  {
+    "cardNo": "BP03-121EN",
+    "name": "Eggsplosion",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Fable",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Deal X damage to each follower on the field and each enemy leader. X equals the number of cards named Eggsplosion or Humpty Dumpty in your cemetery plus 1. (This card doesn't count.)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-121EN.png"
+  },
+  {
+    "cardNo": "BP03-LD01EN",
+    "name": "Itsuki Mitsutagawa",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-LD01EN.png"
+  },
+  {
+    "cardNo": "BP03-LD02EN",
+    "name": "Daria, Dimension Drifter",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-LD02EN.png"
+  },
+  {
+    "cardNo": "BP03-LD03EN",
+    "name": "Light Tenryu",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-LD03EN.png"
+  },
+  {
+    "cardNo": "BP03-LD04EN",
+    "name": "Subaru Makabe",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-LD04EN.png"
+  },
+  {
+    "cardNo": "BP03-LD05EN",
+    "name": "Yuti, Meus Princess",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-LD05EN.png"
+  },
+  {
+    "cardNo": "BP03-T01EN",
+    "name": "Gargantuan Ghost TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Token",
+      "trait": "Departed",
+      "rarity": "-",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "1",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Ward. At the start of your main phase, banish this card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-T01EN.png"
+  },
+  {
+    "cardNo": "BP03-T02EN",
+    "name": "Fairy TOKEN",
+    "type": "token",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Token",
+      "trait": "Pixie",
+      "rarity": "-",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-T02EN.png"
+  },
+  {
+    "cardNo": "BP03-T03EN",
+    "name": "Magic Sediment TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet / Token",
+      "trait": "Earth Sigil",
+      "rarity": "-",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Stack."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-T03EN.png"
+  },
+  {
+    "cardNo": "BP03-T04EN",
+    "name": "Magical Pawn TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Token",
+      "trait": "Chess",
+      "rarity": "-",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "1",
+      "attack": "2",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-T04EN.png"
+  },
+  {
+    "cardNo": "BP03-T05EN",
+    "name": "Draconic Weapon TOKEN",
+    "type": "token",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Amulet / Token",
+      "trait": "Armed",
+      "rarity": "-",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act][engage], put this card into its owner's cemetery: Select a [dragoncraft] follower on your field. Give it [defense]+1 and the Armed trait."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-T05EN.png"
+  },
+  {
+    "cardNo": "BP03-T06EN",
+    "name": "Ghost TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Token",
+      "trait": "Departed",
+      "rarity": "-",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Storm. At the start of your end phase, banish this card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-T06EN.png"
+  },
+  {
+    "cardNo": "BP03-T07EN",
+    "name": "Holy Falcon TOKEN",
+    "type": "token",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Token",
+      "trait": "Avian",
+      "rarity": "-",
+      "cardSet": "Booster Set #3 “Flame of Lævateinn”",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-T07EN.png"
+  }
+]

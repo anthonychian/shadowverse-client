@@ -8,12 +8,15 @@ import PlayPoints from "../components/ui/PlayPoints";
 import Hand from "../components/hand/Hand";
 import Field from "../components/field/Field";
 import { motion } from "framer-motion";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { useLocation } from "react-router-dom";
 import ZoomedCard from "../components/ui/ZoomedCard";
 import ChoiceModal from "../components/automated/ChoiceModal";
 import AutomatedControls from "../components/automated/AutomatedControls";
 import UiChromeRestore from "../components/ui/UiChromeRestore";
 import { useEngineSync } from "../components/hooks/useEngineSync";
+import { setLeader } from "../redux/CardSlice";
+import { randomLeaderForClass } from "../decks/classLeaders";
 import initialWallpaper from "../../src/assets/wallpapers/3.png";
 
 export default function Game(callback) {
@@ -21,10 +24,41 @@ export default function Game(callback) {
   const [wallpaper, setWallpaper] = useState(initialWallpaper);
   const reduxLeader = useSelector((state) => state.card.leader);
   const [selectedOption, setSelectedOption] = useState(reduxLeader || "Galmieux");
+  const reduxDeckClass = useSelector((state) => state.card.deckClass);
+  const dispatch = useDispatch();
+  const location = useLocation();
 
   useEffect(() => {
     if (reduxLeader) setSelectedOption(reduxLeader);
   }, [reduxLeader]);
+
+  // Track the live leader so the delayed re-emit below sends whatever is current
+  // (respecting a manual change), not a stale captured value.
+  const leaderRef = useRef("");
+  useEffect(() => {
+    leaderRef.current = reduxLeader;
+  }, [reduxLeader]);
+
+  // On a fresh game load (both players entering a new game — not a reconnect),
+  // auto-pick a random leader from the deck's class pool. Runs once on mount;
+  // the deck class was stashed in Redux on game entry. The player can still
+  // change leaders from the usual grid.
+  useEffect(() => {
+    if (!location.state?.fresh) return;
+    const leader = randomLeaderForClass(reduxDeckClass);
+    if (!leader) return;
+    // Commit immediately so the player sees their leader right away (no flash of
+    // the default). Both clients mount at game start, so the opponent's listener
+    // may not have caught this first emit — re-emit the current leader shortly
+    // after to guarantee delivery. setEnemyLeader is idempotent, so a duplicate
+    // is harmless, and reading the live value respects a manual change made in
+    // the meantime.
+    dispatch(setLeader(leader));
+    const t = setTimeout(() => {
+      if (leaderRef.current) dispatch(setLeader(leaderRef.current));
+    }, 1500);
+    return () => clearTimeout(t);
+  }, []);
   const constraintsRef = useRef(null);
   const [ready, setReady] = useState(false);
   // const [dragging, setDragging] = useState(false);
@@ -33,6 +67,10 @@ export default function Game(callback) {
     useState(false);
   const reduxCurrentCard = useSelector((state) => state.card.currentCard);
   const uiChromeHidden = useSelector((state) => state.gameState.uiChromeHidden);
+  const reduxMyArt = useSelector((state) => state.card.myArt);
+  const reduxEnemyArt = useSelector((state) => state.card.enemyArt);
+  // The zoomed card can be either player's; my own choices take precedence.
+  const zoomArt = { ...reduxEnemyArt, ...reduxMyArt };
 
   // The board reports the scale it computed; the side panels (HP, leader, play
   // points, chat) shrink by the same factor so everything matches. Capped at 1
@@ -61,14 +99,6 @@ export default function Game(callback) {
       }}
     >
       <UiChromeRestore />
-      {/* ZoomedCard is position:absolute against the viewport, so it must NOT
-          be wrapped in a transform (that would reparent its containing block
-          and collapse it). It scales itself via the scale prop instead. */}
-      <ZoomedCard
-        name={reduxCurrentCard}
-        hovering={hovering}
-        scale={sideScale}
-      />
       {!uiChromeHidden && (
         <Selection
           setSelectedOption={setSelectedOption}
@@ -76,13 +106,22 @@ export default function Game(callback) {
         />
       )}
       {/* Left side  */}
-      {!uiChromeHidden && (
       <div className={"leftSideCanvas"}>
-        <div style={leftScaleStyle}>
-          <PlayPoints name={selectedOption} />
-        </div>
+        {/* ZoomedCard is position:absolute against the viewport, so it must NOT
+            be wrapped in a transform (that would reparent its containing block
+            and collapse it). It scales itself via the scale prop instead. */}
+        <ZoomedCard
+          name={reduxCurrentCard}
+          hovering={hovering}
+          scale={sideScale}
+          art={zoomArt}
+        />
+        {!uiChromeHidden && (
+          <div style={leftScaleStyle}>
+            <PlayPoints name={selectedOption} />
+          </div>
+        )}
       </div>
-      )}
 
       {/* Center Field */}
       <motion.div
@@ -145,18 +184,18 @@ export default function Game(callback) {
       {!uiChromeHidden && <AutomatedControls />}
 
       {!uiChromeHidden && (
-      <div className={"rightSideCanvas"}>
-        <div style={rightScaleStyle}>
-          <EnemyUI />
-        </div>
+        <div className={"rightSideCanvas"}>
+          <div style={rightScaleStyle}>
+            <EnemyUI />
+          </div>
 
-        <div style={rightScaleStyle}>
-          <PlayerUI name={selectedOption} />
+          <div style={rightScaleStyle}>
+            <PlayerUI name={selectedOption} />
+          </div>
+          <div style={rightScaleStyle}>
+            <ChatUI scale={sideScale} />
+          </div>
         </div>
-        <div style={rightScaleStyle}>
-          <ChatUI scale={sideScale} />
-        </div>
-      </div>
       )}
     </div>
   );

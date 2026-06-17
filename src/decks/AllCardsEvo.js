@@ -1,4 +1,41 @@
 export const allCardsEvo = [
+  "Grand Archer Selwyn Evolved",
+  "Navalgazer Dragon Evolved",
+  "Orchis, Resolute Puppet Evolved",
+  "Paula, Gentle Warmth Evolved",
+  "Fortuna Regina Evolved",
+  "Silvernail Markswoman Evolved",
+  "Vania, Kind Queen Evolved",
+  "Ceryneian Lighthind Evolved",
+  "SugarSugar☆Mi〜n Evolved",
+  "Celia, Hope's Strategist Evolved",
+  "King of Knights, Alfred Evolved",
+  "Soul Saver Dragon Evolved",
+  "Blazing Flare Dragon Evolved",
+  "Embodiment of Victory, Aleph Evolved",
+  "Garyu, Supreme Dragonkin Evolved",
+  "Lævateinn Dragon, Attack Form Evolved",
+  "Slaughtering Dragonewt Evolved",
+  "Virtuous Lindworm Evolved",
+  "Barking Manticore Evolved",
+  "Daria, Dimensional Witch Evolved",
+  "Mysterian Whitewyrm Evolved",
+  "A Super Successful Event! Evolved",
+  "At the End of the Day Evolved",
+  "Forth! Into the Great Age of Agriculture! Evolved",
+  "Harbinger of the Night Evolved",
+  "Hungry for a Miracle Evolved",
+  "Workshop! Farmers for a Day! Evolved",
+  "Marlone, Light of Balance Evolved",
+  "Blue Storm Supreme Dragon, Glory Maelstrom Evolved",
+  "Albert, Levin Saber Evolved",
+  "Wingy, Chirpy Gemstone Evolved",
+  "Unicorn Dancer Unica Evolved",
+  "Spawn of the Abyss Evolved",
+  "Mithra, Daybreak Deity Evolved",
+  "Colette, Holy Gunner Evolved",
+  "Slade, Blossoming Wolf Evolved",
+  "Sammy, Wizard's Apprentice Evolved",
   "Ladica, Verdant Claw Evolved",
   "Lococo, Little Puppeteer Evolved",
   "Beastfolk Harvester Evolved",
@@ -1407,6 +1444,10 @@ export const set1Evo = [
 ];
 
 export const forestEvo = [
+  "Grand Archer Selwyn Evolved",
+  "Navalgazer Dragon Evolved",
+  "Orchis, Resolute Puppet Evolved",
+  "Paula, Gentle Warmth Evolved",
   "Aria, Lady of the Woods Evolved",
   "Glade, Fragrantwood Ward Evolved",
   "Aerin, Crystalian Frostward Evolved",
@@ -1509,9 +1550,16 @@ export const forestEvo = [
   "Anastasia [Seize the Light] Evolved",
   "Riina Tada [Wannabe Legend] Evolved",
   "Hinako Kita [True Dream] Evolved",
+
+  "Slade, Blossoming Wolf Evolved",
+
+  "Blue Storm Supreme Dragon, Glory Maelstrom Evolved",
 ];
 
 export const swordEvo = [
+  "Celia, Hope's Strategist Evolved",
+  "King of Knights, Alfred Evolved",
+  "Soul Saver Dragon Evolved",
   "Amelia, Silver Captain Evolved",
   "Zirconia, Ironcrown Ward Evolved",
   "Luminous Commander Evolved",
@@ -1616,9 +1664,14 @@ export const swordEvo = [
   "Airi Totoki [Cinderella Girl] Evolved",
   "Mayu Sakuma [Love-Laden Gift] Evolved",
   "Chieri Ogata [Happiness Tune] Evolved",
+
+  "Albert, Levin Saber Evolved",
 ];
 
 export const runeEvo = [
+  "Barking Manticore Evolved",
+  "Daria, Dimensional Witch Evolved",
+  "Mysterian Whitewyrm Evolved",
   "Lilanthim, Anathema of Edacity Evolved",
   "Zizdvend, Fate's Arbiter Evolved",
   "Edelweiss, Sagelight Ward Evolved",
@@ -1722,9 +1775,18 @@ export const runeEvo = [
 
   "Sae Kobayakawa [Dancing Flowers] Evolved",
   "Hiromi Seki [Twinkle in My Eye] Evolved",
+
+  "Sammy, Wizard's Apprentice Evolved",
+
 ];
 
 export const dragonEvo = [
+  "Blazing Flare Dragon Evolved",
+  "Embodiment of Victory, Aleph Evolved",
+  "Garyu, Supreme Dragonkin Evolved",
+  "Lævateinn Dragon, Attack Form Evolved",
+  "Slaughtering Dragonewt Evolved",
+  "Virtuous Lindworm Evolved",
   "Burnite, Anathema of Flame Evolved",
   "Nirle, Draconic Prodigy Evolved",
   "Liu Feng, Goldennote Ward Evolved",
@@ -1835,9 +1897,13 @@ export const dragonEvo = [
   "Fumika Sagisawa [Cinderella Girl] Evolved",
   "Yui Ohtsuki [Lollipop Darling] Evolved",
   "Hotaru Shiragiku [Unbreakable] Evolved",
+
 ];
 
 export const abyssEvo = [
+  "Fortuna Regina Evolved",
+  "Silvernail Markswoman Evolved",
+  "Vania, Kind Queen Evolved",
   "Aragavy, Eternal Hunter Evolved",
   "Mukan, Shadowcrypt Ward Evolved",
   "Orthrus, Hellhound Blader Evolved",
@@ -1938,9 +2004,13 @@ export const abyssEvo = [
   "Nono Morikubo [individuals] Evolved",
   "Chitose Kurosaki [Memento Mori] Evolved",
   "Natsuki Kimura [Scarlet Love Song] Evolved",
+
+  "Spawn of the Abyss Evolved",
 ];
 
 export const havenEvo = [
+  "Ceryneian Lighthind Evolved",
+  "SugarSugar☆Mi〜n Evolved",
   "Rodeo, Anathema of Judgment Evolved",
   "Ronavero, Darkhaven Ward Evolved",
   "Angelic Prism Priestess Evolved",
@@ -2039,9 +2109,22 @@ export const havenEvo = [
   "Nana Abe [Cinderella Girl] Evolved",
   "Kako Takafuji [Lady Luck] Evolved",
   "Kotoka Saionji [Pure Euphoria] Evolved",
+
+
+  "Colette, Holy Gunner Evolved",
+
+  "Wingy, Chirpy Gemstone Evolved",
+
+  "Marlone, Light of Balance Evolved",
 ];
 
 export const neutralEvo = [
+  "A Super Successful Event! Evolved",
+  "At the End of the Day Evolved",
+  "Forth! Into the Great Age of Agriculture! Evolved",
+  "Harbinger of the Night Evolved",
+  "Hungry for a Miracle Evolved",
+  "Workshop! Farmers for a Day! Evolved",
   "Olivia, Heroic Dark Angel Evolved",
   "Phildau, Lionheart Ward Evolved",
   "Apollo, Heaven's Envoy Evolved",
@@ -2129,6 +2212,12 @@ export const neutralEvo = [
 
   "Maisha, Purgation's Vessel Evolved",
   "Hoverboard Mercenary Evolved",
+
+
+  "Mithra, Daybreak Deity Evolved",
+
+  "Unicorn Dancer Unica Evolved",
+
 ];
 
 export const set17Evo = [
@@ -2179,4 +2268,243 @@ export const setIDOL2Evo = [
   "Nana Abe [Cinderella Girl] Evolved",
   "Kako Takafuji [Lady Luck] Evolved",
   "Kotoka Saionji [Pure Euphoria] Evolved",
+];
+
+export const setSD01Evo = [
+  "Rose Gardener Evolved",
+  "Treant Evolved",
+  "Water Fairy Evolved",
+  "Goblin Evolved",
+];
+
+export const setPREvo = [
+  "Elven Princess Mage Evolved",
+  "Floral Fencer Evolved",
+  "Dragon Warrior Evolved",
+  "Lilith Evolved",
+  "Priest of the Cudgel Evolved",
+  "Crystalia Tia Evolved",
+  "Carrot",
+  "Oathless Knight Evolved",
+  "Dragon Summoner Evolved",
+  "Dragontamer Evolved",
+  "Penguin Wizard Evolved",
+  "Tweedle Dum, Tweedle Dee Evolved",
+  "Wingy, Chirpy Gemstone Evolved",
+  "Star Phoenix Evolved",
+  "Zoe, Princess of Goldenia Evolved",
+  "Draconir, Knuckle Dragon Evolved",
+  "King Elephant Evolved",
+  "Avant Blader Evolved",
+  "Azazel Evolved",
+  "Sahaquiel Evolved",
+  "Setus, the Beastblade Evolved",
+  "Leod, the Crescent Blade Evolved",
+  "Eleanor, Cosmic Flower Evolved",
+  "Marion, Elegant Dragonewt Evolved",
+  "Doublame, Duke and Dame Evolved",
+  "Marlone, Light of Balance Evolved",
+  "Maisha, Hero of Purgation Evolved",
+  "Spawn of the Abyss Evolved",
+  "Valkyrie of Chaos Evolved",
+  "Rabbit Mage Evolved",
+  "Paradise Vanguard Evolved",
+  "Blue Storm Supreme Dragon, Glory Maelstrom Evolved",
+  "Colette, Holy Gunner Evolved",
+  "Crystalia Lily Evolved",
+  "XXI. Zelgenea, O Great World ADVANCED",
+  "Hazhan, Demonblade Knight Evolved",
+  "Quixotic Adventurer Evolved",
+  "Dragonic Overlord Evolved",
+  "Oldblood King Evolved",
+  "Reinhardt, the Deathless Evolved",
+  "Prudent General Evolved",
+  "Deathbringer Evolved",
+  "Merlin Evolved",
+  "Fairy Slugger Evolved",
+  "Changewing Cherub Evolved",
+  "Piercye, Queen of Frost Evolved",
+  "Hozumi, Enchanting Hostess Evolved",
+  "Phildau, Lionheart Ward Evolved",
+  "Lunerian Paladin Evolved",
+  "Acid Golem Evolved",
+  "Aerin, Crystalian Frostward Evolved",
+  "Amy, Psychopomp Guide Evolved",
+  "Blaster Blade Evolved",
+];
+
+export const setSS02Evo = [
+  "Dragon Warrior Evolved",
+  "Roc Evolved",
+  "Dragonrider Evolved",
+  "Goliath Evolved",
+];
+
+export const setSS01Evo = [
+  "Floral Fencer Evolved",
+  "Oathless Knight Evolved",
+  "Quickblader Evolved",
+  "Goblin Evolved",
+];
+
+export const setGFB01Evo = [
+  "Albert, Levin Saber Evolved",
+  "Leonidas Evolved",
+  "Wingy, Chirpy Gemstone Evolved",
+  "Archangel Reina Evolved",
+  "Floral Fencer Evolved",
+  "Maid Leader Evolved",
+  "Unicorn Dancer Unica Evolved",
+  "Rosa, Mech Wing Maiden Evolved",
+  "Archer Evolved",
+  "Fita the Gentle Elf Evolved",
+  "Quickblader Evolved",
+  "Bladed Hedgehog Evolved",
+  "Tristan of the Round Table Evolved",
+  "Craig, Wizard of Mysteria Evolved",
+  "Demon's Epitaph Evolved",
+  "Deepwood Anomaly Evolved",
+  "Wordwielder Ginger Evolved",
+  "Bahamut Evolved",
+  "Barbarossa Evolved",
+  "Geno, Machine Artisan Evolved",
+  "Demonflame Mage Evolved",
+  "Cetus Evolved",
+  "Prism Priestess Evolved",
+  "Goblinmount Demon Evolved",
+  "Hippocampus Evolved",
+  "Mist Shaman Evolved",
+  "Spawn of the Abyss Evolved",
+  "Merlin Evolved",
+  "Cerberus Evolved",
+  "Israfil Evolved",
+  "Azazel Evolved",
+  "Zoe, Princess of Goldenia Evolved",
+  "Bellringer Angel Evolved",
+  "Shenlong Evolved",
+  "Penguin Wizard Evolved",
+  "Imperial Dragoon Evolved",
+  "Jeanne d'Arc Evolved",
+  "Heavenly Aegis Evolved",
+  "Lucifer Evolved",
+  "Apostle of Repose Evolved",
+  "Iron Staff Mechanic Evolved",
+  "Priest of the Cudgel Evolved",
+  "Radiance Angel Evolved",
+];
+
+export const setGFD02Evo = [
+  "Sweet-Tooth Medusa Evolved",
+  "Azi Dahaka Evolved",
+  "Karula, Arts Master Evolved",
+  "Badb Catha Evolved",
+  "Bellringer Angel Evolved",
+  "Mithra, Daybreak Deity Evolved",
+  "Maid Leader Evolved",
+  "Roy, Dragoncleaver Evolved",
+  "Shenlong Evolved",
+  "Colette, Holy Gunner Evolved",
+  "Fita the Gentle Elf Evolved",
+  "Witch of Sweets Evolved",
+  "Geovore Evolved",
+  "Frogbat Evolved",
+];
+
+export const setGFD01Evo = [
+  "Ancient Elf Evolved",
+  "Cosmos Fang Evolved",
+  "Lucifer Evolved",
+  "Rhinoceroach Evolved",
+  "Slade, Blossoming Wolf Evolved",
+  "Setus, the Beastblade Evolved",
+  "Elven Princess Mage Evolved",
+  "Gerbera Bear Evolved",
+  "Michelle, the Mind Reader Evolved",
+  "Maid Leader Evolved",
+  "Prism Priestess Evolved",
+  "Rosa, Mech Wing Maiden Evolved",
+  "Tweedle Dum, Tweedle Dee Evolved",
+  "Craig, Wizard of Mysteria Evolved",
+];
+
+export const setSDD06Evo = [
+  "Godsworn Alexiel Evolved",
+  "Prism Priestess Evolved",
+  "XXI. Zelgenea, O Great World ADVANCED",
+  "Paradise Vanguard Evolved",
+];
+
+export const setSDD05Evo = [
+  "VI. Milteo, The Lovers Evolved",
+  "Iceschillendrig, Gilded Autocrat Evolved",
+  "Doublame, Duke and Dame Evolved",
+  "Wretch Evolved",
+  "Wandering Chef Evolved",
+];
+
+export const setSDD04Evo = [
+  "XI. Erntz, Justice Evolved",
+  "Frostbite Dragon Evolved",
+  "Roy, Dragoncleaver Evolved",
+  "Azureflame Dragonewt Evolved",
+];
+
+export const setSDD03Evo = [
+  "Sweet-Tooth Medusa Evolved",
+  "Ceridwen, Eternity Hunter Evolved",
+  "Ancient Alchemist Evolved",
+  "Acid Golem Evolved",
+  "Artistic Arcanist Evolved",
+  "Rabbit Mage Evolved",
+];
+
+export const setSDD02Evo = [
+  "Ralmia, Sonic Racer Evolved",
+  "Bunny & Baron, Specter Duo Evolved",
+  "Leod, the Crescent Blade Evolved",
+  "Prudent General Evolved",
+  "Quixotic Adventurer Evolved",
+  "Rivaylian Bandit Evolved",
+];
+
+export const setSDD01Evo = [
+  "Aria, Miasma Fairy Evolved",
+  "Sukuna, Brave and Small Evolved",
+  "Sunbright Elf Evolved",
+  "Fairy Slugger Evolved",
+];
+
+export const setSD06Evo = [
+  "Priest of the Cudgel Evolved",
+  "Ardent Nun Evolved",
+  "Guardian Nun Evolved",
+  "Healing Angel Evolved",
+];
+
+export const setSD05Evo = [
+  "Playful Necromancer Evolved",
+  "Lesser Mummy Evolved",
+  "Lilith Evolved",
+  "Goliath Evolved",
+];
+
+export const setSD04Evo = [
+  "Dragon Warrior Evolved",
+  "Roc Evolved",
+  "Dragonrider Evolved",
+  "Goliath Evolved",
+];
+
+export const setSD03Evo = [
+  "Demonflame Mage Evolved",
+  "Penguin Wizard Evolved",
+  "Sammy, Wizard's Apprentice Evolved",
+  "Healing Angel Evolved",
+];
+
+export const setSD02Evo = [
+  "Floral Fencer Evolved",
+  "Oathless Knight Evolved",
+  "Quickblader Evolved",
+  "Goblin Evolved",
 ];

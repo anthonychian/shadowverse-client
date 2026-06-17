@@ -25,6 +25,8 @@
     "html2canvas": "^1.4.1",
     "object-hash": "^3.0.0",
     "perfect-arrows": "^0.3.7",
+    "pixi-spine": "^4.0.6",
+    "pixi.js": "^7.4.3",
     "r3f-form": "^3.0.2",
     "react": "^18.2.0",
     "react-dice-roll": "^1.2.2",

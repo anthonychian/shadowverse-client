@@ -1,0 +1,2643 @@
+[
+  {
+    "cardNo": "BP02-001EN",
+    "name": "Crystalia Tia",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Crystalian / Princess",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "2",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Combo (3): Summon a Crystalia Eve token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-001EN.png"
+  },
+  {
+    "cardNo": "BP02-002EN",
+    "name": "Crystalia Tia Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Crystalian / Princess",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve: Select a Crystalia Eve token on your field. Give it [attack]+1/[defense]+1 and Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-002EN.png"
+  },
+  {
+    "cardNo": "BP02-003EN",
+    "name": "White Wolf of Eldwood",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Fae-Touched / Beast",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "7",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Storm. [lastwords] Look at the top 4 cards of your deck. You may put a [forestcraft] follower from among them onto your field. Put the remaining cards on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-003EN.png"
+  },
+  {
+    "cardNo": "BP02-004EN",
+    "name": "Elf Girl Liza",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "While this card is on your field, your followers take 1 less damage from enemy abilities."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-004EN.png"
+  },
+  {
+    "cardNo": "BP02-005EN",
+    "name": "Elf Knight Cynthia",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Rush. Strike, banish a card in your EX area: Select an enemy leader or enemy follower on the field. Deal it 2 damage and summon 2 Fairy tokens."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-005EN.png"
+  },
+  {
+    "cardNo": "BP02-006EN",
+    "name": "Grand Archer Selwyn",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Hunter",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Combo (4): Select an enemy follower on the field and deal it 5 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-006EN.png"
+  },
+  {
+    "cardNo": "BP02-007EN",
+    "name": "Grand Archer Selwyn Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Hunter",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve: Select an enemy card that costs 3 play points or less on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-007EN.png"
+  },
+  {
+    "cardNo": "BP02-008EN",
+    "name": "Crystalia Lily",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Crystalian",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "2",
+      "attack": "1",
+      "defense": "3",
+      "effect": "[evolve][cost02]: Evolve this follower. [fanfare] Look at the top 2 cards of your deck. You may reveal a Crystalian or Pixie follower from among them and add it to your hand. Put the remaining cards on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-008EN.png"
+  },
+  {
+    "cardNo": "BP02-009EN",
+    "name": "Crystalia Lily Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Crystalian",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "-",
+      "attack": "2",
+      "defense": "4",
+      "effect": "On Evolve: Select an enemy follower on the field and put it on the bottom of its owner's deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-009EN.png"
+  },
+  {
+    "cardNo": "BP02-010EN",
+    "name": "Baalt, King of the Elves",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Choose one of the following. (1) Select a Pixie follower on your field and give it [attack]+2/[defense]+2. (2) Search your deck for a Pixie follower, reveal it, and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-010EN.png"
+  },
+  {
+    "cardNo": "BP02-011EN",
+    "name": "Elven Archery",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Elf",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select up to 2 enemy followers on the field and deal them 1 damage. Combo (3): Deal 2 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-011EN.png"
+  },
+  {
+    "cardNo": "BP02-012EN",
+    "name": "Dwarf Perfumer",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Fae-Touched",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Whenever one of your followers evolves, select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-012EN.png"
+  },
+  {
+    "cardNo": "BP02-013EN",
+    "name": "Elf Healer",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "3",
+      "attack": "1",
+      "defense": "5",
+      "effect": "[fanfare] Give your leader [defense]+3."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-013EN.png"
+  },
+  {
+    "cardNo": "BP02-014EN",
+    "name": "Forest Gigas",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Fae-Touched / Gigant",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "6",
+      "attack": "1",
+      "defense": "7",
+      "effect": "[evolve][cost01]: Evolve this follower. Ward. [fanfare] Give this follower [attack]+X. X equals the number of cards in your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-014EN.png"
+  },
+  {
+    "cardNo": "BP02-015EN",
+    "name": "Forest Gigas Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Fae-Touched / Gigant",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "7",
+      "effect": "Ward. On Evolve: Select an enemy follower on the field and deal it X damage. X equals this follower's attack."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-015EN.png"
+  },
+  {
+    "cardNo": "BP02-016EN",
+    "name": "Elf Bard",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Whenever one of your followers evolves, put a Fairy Wisp token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-016EN.png"
+  },
+  {
+    "cardNo": "BP02-017EN",
+    "name": "Rose Deer",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Fae-Touched / Verdant",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "4",
+      "attack": "4",
+      "defense": "3",
+      "effect": "Rush. [fanfare] Put a Thorn Burst token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-017EN.png"
+  },
+  {
+    "cardNo": "BP02-018EN",
+    "name": "Albert, Levin Saber",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Levin",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "4",
+      "attack": "3",
+      "defense": "5",
+      "effect": "[evolve][cost03]: Evolve this follower. Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-018EN.png"
+  },
+  {
+    "cardNo": "BP02-019EN",
+    "name": "Albert, Levin Saber Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Commander / Levin",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "5",
+      "effect": "Storm. On Evolve: For the rest of this turn, this follower doesn't take combat damage. Strike: Refresh this follower. Perform this ability only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-019EN.png"
+  },
+  {
+    "cardNo": "BP02-020EN",
+    "name": "Alexander",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "6",
+      "attack": "5",
+      "defense": "9",
+      "effect": "Rush. Assail. During your turn, whenever this follower deals combat damage, refresh it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-020EN.png"
+  },
+  {
+    "cardNo": "BP02-021EN",
+    "name": "Amelia, Silver Paladin",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Choose one of the following. (1) Select a follower that costs 3 play points or less in your hand and put it onto your field. (2) Select an enemy follower on the field and deal it 4 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-021EN.png"
+  },
+  {
+    "cardNo": "BP02-022EN",
+    "name": "Leonidas",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "6",
+      "attack": "5",
+      "defense": "6",
+      "effect": "[evolve][cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-022EN.png"
+  },
+  {
+    "cardNo": "BP02-023EN",
+    "name": "Leonidas Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Commander",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "-",
+      "attack": "6",
+      "defense": "7",
+      "effect": "On Evolve: Select an enemy follower on the field. Deal 5 damage to it and this follower. [lastwords] Summon a Leonidas's Resolve token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-023EN.png"
+  },
+  {
+    "cardNo": "BP02-024EN",
+    "name": "White Paladin",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "Ward. [act][cost02], [engage]: Summon 2 Shield Guardian tokens."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-024EN.png"
+  },
+  {
+    "cardNo": "BP02-025EN",
+    "name": "Jeno, Levin Vanguard",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Levin",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve][cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-025EN.png"
+  },
+  {
+    "cardNo": "BP02-026EN",
+    "name": "Jeno, Levin Vanguard Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Officer / Levin",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Assail. On Evolve: Look at the top 4 cards of your deck. From among them, you may reveal a Levin follower with a different name from this card and add it to your hand. Put the remaining cards on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-026EN.png"
+  },
+  {
+    "cardNo": "BP02-027EN",
+    "name": "Yurius, Levin Duke",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Noble / Levin",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "2",
+      "attack": "0",
+      "defense": "4",
+      "effect": "[q][act][engage]: Select an enemy follower on the field and deal it 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-027EN.png"
+  },
+  {
+    "cardNo": "BP02-028EN",
+    "name": "Whole-Souled Swing",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Officer",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field. Deal it 3 damage and put a Knight token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-028EN.png"
+  },
+  {
+    "cardNo": "BP02-029EN",
+    "name": "Swift Infiltrator",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Whenever one of your followers evolves, give this follower [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-029EN.png"
+  },
+  {
+    "cardNo": "BP02-030EN",
+    "name": "Samurai",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[act][cost03]: Give this follower Storm and Bane."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-030EN.png"
+  },
+  {
+    "cardNo": "BP02-031EN",
+    "name": "Avant Blader",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve][cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-031EN.png"
+  },
+  {
+    "cardNo": "BP02-032EN",
+    "name": "Avant Blader Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Commander",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "On Evolve: Search your deck for up to 2 Officer followers, reveal them, and add them to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-032EN.png"
+  },
+  {
+    "cardNo": "BP02-033EN",
+    "name": "Flame Soldier",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Heroic",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Select an enemy follower on the field and deal it 1 damage. If any of your followers have been destroyed this turn, deal 4 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-033EN.png"
+  },
+  {
+    "cardNo": "BP02-034EN",
+    "name": "Gunner Maid Seria",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Maid",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "2",
+      "attack": "1",
+      "defense": "3",
+      "effect": "[fanfare] Search your deck for a Princess follower, reveal it, and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-034EN.png"
+  },
+  {
+    "cardNo": "BP02-035EN",
+    "name": "Daria, Dimensional Witch",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Discard your hand. Put the top card of your deck into your EX area. Repeat this until your EX area is full. While this card is on your field, include both spells and [runecraft] followers in your cemetery when counting your Spellchain."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-035EN.png"
+  },
+  {
+    "cardNo": "BP02-036EN",
+    "name": "Daria, Dimensional Witch Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "On Evolve: Select a follower in your EX area. For the rest of this turn, it costs 5 less to play. On Evolve: Select a spell in your EX area. For the rest of this turn, it costs 5 less to play. While this card is on your field, include both spells and [runecraft] followers in your cemetery when counting your Spellchain."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-036EN.png"
+  },
+  {
+    "cardNo": "BP02-037EN",
+    "name": "Sun Oracle Pascale",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Dancer",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "4",
+      "attack": "3",
+      "defense": "5",
+      "effect": "[fanfare] Summon a Magic Sediment token. [q][act][engage], Earth Rite: Select an enemy follower on the field and give it [attack]-2/[defense]-2. [q][act][engage], Earth Rite: Select another follower on your field and give it [attack]+2/[defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-037EN.png"
+  },
+  {
+    "cardNo": "BP02-038EN",
+    "name": "Anne, Belle of Mysteria",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "4",
+      "attack": "4",
+      "defense": "5",
+      "effect": "If there is a Grea the Dragonborn on your field, this card costs 2 less to play. [evolve][cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-038EN.png"
+  },
+  {
+    "cardNo": "BP02-039EN",
+    "name": "Anne, Belle of Mysteria Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "5",
+      "effect": "On Evolve: Search your deck for an Academic follower with a different name from this card, reveal it, and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-039EN.png"
+  },
+  {
+    "cardNo": "BP02-040EN",
+    "name": "Grea the Dragonborn",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt / Academic",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "4",
+      "attack": "5",
+      "defense": "4",
+      "effect": "If there is an Anne, Belle of Mysteria on your field, this card costs 2 less to play. [act][engage]: Select an enemy follower on the field and deal it 3 damage. If there is an Anne, Belle of Mysteria on your field, deal 6 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-040EN.png"
+  },
+  {
+    "cardNo": "BP02-041EN",
+    "name": "Rimewind",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an unevolved enemy follower on the field and return it to its owner's hand. Spellchain (10): Put it on top of its owner's deck instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-041EN.png"
+  },
+  {
+    "cardNo": "BP02-042EN",
+    "name": "Remi & Rami, Witchy Duo",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Alchemist",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve][cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-042EN.png"
+  },
+  {
+    "cardNo": "BP02-043EN",
+    "name": "Remi & Rami, Witchy Duo Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Alchemist",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve: Summon a Strikeform Golem token. Earth Rite: Give it [attack]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-043EN.png"
+  },
+  {
+    "cardNo": "BP02-044EN",
+    "name": "Shadow Witch",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Alchemist",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Earth Rite: Select an enemy follower on the field and banish it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-044EN.png"
+  },
+  {
+    "cardNo": "BP02-045EN",
+    "name": "Multipart Experiment",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Golem",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose up to 2 of the following. Spellchain (10): Choose up to 3 instead. (1) Select an enemy follower on the field and deal it 3 damage. (2) Summon a Guardform Golem token. (3) Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-045EN.png"
+  },
+  {
+    "cardNo": "BP02-046EN",
+    "name": "Craig, Wizard of Mysteria",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "1",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Draw a card, then discard a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-046EN.png"
+  },
+  {
+    "cardNo": "BP02-047EN",
+    "name": "Craig, Wizard of Mysteria Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Academic",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "2",
+      "effect": "On Evolve: Draw a card, then discard a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-047EN.png"
+  },
+  {
+    "cardNo": "BP02-048EN",
+    "name": "Grand Gargoyle",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Golem",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "Ward. [lastwords] Add 2 to a Stack on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-048EN.png"
+  },
+  {
+    "cardNo": "BP02-049EN",
+    "name": "Witchbolt",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field. Deal it 5 damage and, if there is an evolved follower on your field, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-049EN.png"
+  },
+  {
+    "cardNo": "BP02-050EN",
+    "name": "Magical Strategy",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage / Chess",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Summon a Magical Pawn token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-050EN.png"
+  },
+  {
+    "cardNo": "BP02-051EN",
+    "name": "Red-Hot Ritual",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet",
+      "trait": "Earth Sigil",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Stack. [fanfare] Select an enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-051EN.png"
+  },
+  {
+    "cardNo": "BP02-052EN",
+    "name": "Imperial Dragoon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "8",
+      "attack": "6",
+      "defense": "6",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Deal X damage to each enemy leader and enemy follower on the field. X equals the number of cards in your hand. Discard your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-052EN.png"
+  },
+  {
+    "cardNo": "BP02-053EN",
+    "name": "Imperial Dragoon Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonheart",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "-",
+      "attack": "7",
+      "defense": "7",
+      "effect": "On Evolve: Draw 3 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-053EN.png"
+  },
+  {
+    "cardNo": "BP02-054EN",
+    "name": "Dragonsong Flute",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Amulet",
+      "trait": "Dragonheart",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "When this card is discarded, put a Hellflame Dragon token into your EX area. ---------- [fanfare][cost03]: Summon a Hellflame Dragon token. Draw a card. [act][engage], discard a card: Put a Hellflame Dragon token into your EX area. This ability can be activated if Overflow is active for you."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-054EN.png"
+  },
+  {
+    "cardNo": "BP02-055EN",
+    "name": "Neptune",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart / Marine",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve][cost02]: Evolve this follower. Ward. [fanfare] Summon a Megalorca token. While this card is on your field, your Megalorca tokens have Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-055EN.png"
+  },
+  {
+    "cardNo": "BP02-056EN",
+    "name": "Neptune Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonheart / Marine",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Ward. On Evolve: Summon a Megalorca token. While this card is on your field, your Megalorca tokens have Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-056EN.png"
+  },
+  {
+    "cardNo": "BP02-057EN",
+    "name": "Draconic Fervor",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Dragonewt",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Increase your maximum play points by 1. Give your leader [defense]+3. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-057EN.png"
+  },
+  {
+    "cardNo": "BP02-058EN",
+    "name": "Polyphonic Roar",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Amulet",
+      "trait": "Wyrmkin",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Once on each of your turns, when a Dragon token is put onto your field, select an enemy leader or enemy follower on the field and deal it 5 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-058EN.png"
+  },
+  {
+    "cardNo": "BP02-059EN",
+    "name": "Siegfried",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin / Cutthroat",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-059EN.png"
+  },
+  {
+    "cardNo": "BP02-060EN",
+    "name": "Siegfried Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wyrmkin / Cutthroat",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve: Select an enemy follower with 3 defense or less on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-060EN.png"
+  },
+  {
+    "cardNo": "BP02-061EN",
+    "name": "Transmogrified Wyrm",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "4",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Select a card in an EX area and transform it into a Dragon token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-061EN.png"
+  },
+  {
+    "cardNo": "BP02-062EN",
+    "name": "Dracomancer's Rites",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Amulet",
+      "trait": "Dragonheart",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Discard a card: Give your leader [defense]+1. At the start of your end phase, if you discarded a card this turn, select an enemy leader or enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-062EN.png"
+  },
+  {
+    "cardNo": "BP02-063EN",
+    "name": "Wildfang Dragonewt",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "3",
+      "attack": "4",
+      "defense": "3",
+      "effect": "If you've discarded a card this turn, this card costs 2 less to play."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-063EN.png"
+  },
+  {
+    "cardNo": "BP02-064EN",
+    "name": "Mushussu",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Whenever one of your followers evolves, give this follower [attack]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-064EN.png"
+  },
+  {
+    "cardNo": "BP02-065EN",
+    "name": "Dragontamer",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Draw a card, then discard a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-065EN.png"
+  },
+  {
+    "cardNo": "BP02-066EN",
+    "name": "Dragontamer Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonheart",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve, discard a card: Select a Wyrmkin follower in your cemetery and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-066EN.png"
+  },
+  {
+    "cardNo": "BP02-067EN",
+    "name": "Twin-Headed Dragon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "4",
+      "attack": "2",
+      "defense": "5",
+      "effect": "[fanfare][cost03]: Summon a Dragon token. This follower deals double attack damage to leaders and double combat damage to followers."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-067EN.png"
+  },
+  {
+    "cardNo": "BP02-068EN",
+    "name": "Draconic Armor",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Wyrmkin / Armed",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Summon a Draconic Weapon token. If Overflow is active for you, summon 2 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-068EN.png"
+  },
+  {
+    "cardNo": "BP02-069EN",
+    "name": "Vania, Vampire Princess",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vampire / Princess",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Give this follower [attack]+X/[defense]+X. X equals the number of Forest Bat tokens on your field. [act][cost01], put a Forest Bat token from your field into its owner's cemetery: Select an enemy follower on the field. Deal 3 damage to it and 1 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-069EN.png"
+  },
+  {
+    "cardNo": "BP02-070EN",
+    "name": "Soul Dealer",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "4",
+      "attack": "6",
+      "defense": "5",
+      "effect": "[evolve][cost02]: Evolve this follower. Ward. [fanfare] Deal 3 damage to your leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-070EN.png"
+  },
+  {
+    "cardNo": "BP02-071EN",
+    "name": "Soul Dealer Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Demon",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "-",
+      "attack": "7",
+      "defense": "6",
+      "effect": "Ward. On Evolve: Select an enemy follower on the field. Destroy it and give your leader [defense]+X. X equals the selected follower's attack."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-071EN.png"
+  },
+  {
+    "cardNo": "BP02-072EN",
+    "name": "Underworld Watchman Khawy",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Necromancer",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Ward. [lastwords] Select an enemy follower on the field. Destroy it and give your leader [defense]+X. X equals the selected follower's attack."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-072EN.png"
+  },
+  {
+    "cardNo": "BP02-073EN",
+    "name": "Azazel",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "7",
+      "attack": "6",
+      "defense": "6",
+      "effect": "Necrocharge (10): This card costs 3 less to play. [evolve][cost01]: Evolve this follower. Bane. [fanfare] Each opponent discards a random card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-073EN.png"
+  },
+  {
+    "cardNo": "BP02-074EN",
+    "name": "Azazel Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Demon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "-",
+      "attack": "7",
+      "defense": "7",
+      "effect": "Bane. On Evolve: Change each enemy leader's [defense] to 10."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-074EN.png"
+  },
+  {
+    "cardNo": "BP02-075EN",
+    "name": "Vampiric Fortress",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Amulet",
+      "trait": "Vampire",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Look at the top 3 cards of your deck. You may reveal a Vampire card from among them and add it to your hand. Put the remaining cards on the bottom of your deck in any order. [act][cost01], [engage], put this card into its owner's cemetery: Summon a Forest Bat token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-075EN.png"
+  },
+  {
+    "cardNo": "BP02-076EN",
+    "name": "Veight, Vampire Noble",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vampire",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost01]: Evolve this follower. Strike: Summon a Forest Bat token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-076EN.png"
+  },
+  {
+    "cardNo": "BP02-077EN",
+    "name": "Veight, Vampire Noble Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Vampire",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve: Put a Forest Bat token into your EX area. Strike: Summon a Forest Bat token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-077EN.png"
+  },
+  {
+    "cardNo": "BP02-078EN",
+    "name": "Trick Dullahan",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[fanfare] Put a Ghost token into your EX area. Necrocharge (10): Put 3 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-078EN.png"
+  },
+  {
+    "cardNo": "BP02-079EN",
+    "name": "Precious Bloodfangs",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Vampire",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose one of the following. (1) Summon X Forest Bat tokens. X equals the number of enemy cards on the field. (2) Give each Forest Bat token on your field [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-079EN.png"
+  },
+  {
+    "cardNo": "BP02-080EN",
+    "name": "Mini Soul Devil",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "Whenever one of your followers evolves, deal 2 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-080EN.png"
+  },
+  {
+    "cardNo": "BP02-081EN",
+    "name": "Moriana the Bejeweled",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[fanfare] If Sanguine is active for you, give your leader [defense]+3 and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-081EN.png"
+  },
+  {
+    "cardNo": "BP02-082EN",
+    "name": "Demonic Hedonist",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost01]: Evolve this follower. At the start of your end phase, if Sanguine is active for you, draw a card, then discard a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-082EN.png"
+  },
+  {
+    "cardNo": "BP02-083EN",
+    "name": "Demonic Hedonist Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Demon",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Strike: Deal 1 damage to each leader. At the start of your end phase, if Sanguine is active for you, draw a card, then discard a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-083EN.png"
+  },
+  {
+    "cardNo": "BP02-084EN",
+    "name": "Bone Chimera",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "3",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Necrocharge (7): This follower has Rush and Bane. [fanfare] Put the top 3 cards of your deck into your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-084EN.png"
+  },
+  {
+    "cardNo": "BP02-085EN",
+    "name": "Necrocarnival",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Departed",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose one of the following. Necrocharge (10): Choose up to 2 instead. (1) Select a follower that costs 2 play points or less in your cemetery and put it onto your field. (2) Summon 2 Ghost tokens."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-085EN.png"
+  },
+  {
+    "cardNo": "BP02-086EN",
+    "name": "Heavenly Aegis",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Eidolon",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "8",
+      "attack": "8",
+      "defense": "8",
+      "effect": "[evolve][cost02]: Evolve this follower. [evolve] Discard 3 cards: Evolve this follower. Aura. This card can't be destroyed by abilities. (It can still be destroyed by ability damage.)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-086EN.png"
+  },
+  {
+    "cardNo": "BP02-087EN",
+    "name": "Heavenly Aegis Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith / Eidolon",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "-",
+      "attack": "10",
+      "defense": "10",
+      "effect": "Aura. On Evolve: For the rest of this turn and during each opponent's next turn, this follower doesn't take damage. This card can't be destroyed by abilities."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-087EN.png"
+  },
+  {
+    "cardNo": "BP02-088EN",
+    "name": "Enstatued Seraph",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith / Eidolon",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "6",
+      "attack": "-",
+      "defense": "-",
+      "effect": "This card can't be destroyed by abilities. At the start of your end phase, put a prayer counter on this card. Then, if this card has at least 4 prayer counters, put it into its owner's cemetery, give your leader [defense]+10, and search your deck for up to 2 cards and put them into your EX area. Those cards cost 0 play points to play."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-088EN.png"
+  },
+  {
+    "cardNo": "BP02-089EN",
+    "name": "Kaguya",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve][cost02]: Evolve this follower. [fanfare] Select an amulet that costs 3 play points or less in your hand and put it onto your field. Whenever an amulet is put onto your field, select an enemy follower on the field and deal it X damage. X equals the amulet's cost."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-089EN.png"
+  },
+  {
+    "cardNo": "BP02-090EN",
+    "name": "Kaguya Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "On Evolve: Summon an Ephemeral Moon token. Give your leader [defense]+3. Whenever an amulet is put onto your field, select an enemy follower on the field and deal it X damage. X equals the amulet's cost."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-090EN.png"
+  },
+  {
+    "cardNo": "BP02-091EN",
+    "name": "Tribunal of Good and Evil",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Select an enemy follower on the field and destroy it. [act][engage], put this card into its owner's cemetery: Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-091EN.png"
+  },
+  {
+    "cardNo": "BP02-092EN",
+    "name": "Elana's Prayer",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Once per turn, when your leader gains [defense], give each follower on your field [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-092EN.png"
+  },
+  {
+    "cardNo": "BP02-093EN",
+    "name": "Radiance Angel",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "4",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[evolve][cost01]: Evolve this follower. Ward. [fanfare] Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-093EN.png"
+  },
+  {
+    "cardNo": "BP02-094EN",
+    "name": "Radiance Angel Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "5",
+      "effect": "Ward. On Evolve: Give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-094EN.png"
+  },
+  {
+    "cardNo": "BP02-095EN",
+    "name": "Sapphire Priestess",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "4",
+      "attack": "4",
+      "defense": "5",
+      "effect": "At the start of your end phase, if your followers attacked at least 3 times this turn, draw 3 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-095EN.png"
+  },
+  {
+    "cardNo": "BP02-096EN",
+    "name": "Beastcall Aria",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Summon a Holy Falcon token. [act][cost02], [engage], put this card into its owner's cemetery: Summon a Holy Tiger token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-096EN.png"
+  },
+  {
+    "cardNo": "BP02-097EN",
+    "name": "Frog Cleric",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Give your leader [defense]+2. [act][cost02]: Give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-097EN.png"
+  },
+  {
+    "cardNo": "BP02-098EN",
+    "name": "Sky Sprite",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Select another follower on your field that was put onto the field this turn and give it [attack]+2/[defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-098EN.png"
+  },
+  {
+    "cardNo": "BP02-099EN",
+    "name": "Soul Collector",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Zealot",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "6",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Select an enemy follower that costs 4 play points or less on the field and banish it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-099EN.png"
+  },
+  {
+    "cardNo": "BP02-100EN",
+    "name": "Soul Collector Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Zealot",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "On Evolve: Select a [havencraft] follower in your cemetery and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-100EN.png"
+  },
+  {
+    "cardNo": "BP02-101EN",
+    "name": "Sledgehammer Exorcist",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "3",
+      "attack": "4",
+      "defense": "3",
+      "effect": "[fanfare][cost02]: Select an enemy follower on the field and deal it 4 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-101EN.png"
+  },
+  {
+    "cardNo": "BP02-102EN",
+    "name": "Emerald Maiden",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "Ward. [fanfare] Give this follower [defense]+X. X equals the number of other followers with Ward on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-102EN.png"
+  },
+  {
+    "cardNo": "BP02-103EN",
+    "name": "Dark Angel Olivia",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Fallen Angel",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Choose up to 2 of the following. (1) Gain 1 Evolution Point. (2) Give your leader [defense]+3. (3) Draw a card. (4) Each opponent discards a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-103EN.png"
+  },
+  {
+    "cardNo": "BP02-104EN",
+    "name": "Bahamut",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Deity / Supreme",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "9",
+      "attack": "9",
+      "defense": "9",
+      "effect": "[evolve][cost00]: Evolve this follower. [fanfare] Destroy each other follower on the field. If there are at least 2 enemy followers on the field, this follower can't attack enemy leaders."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-104EN.png"
+  },
+  {
+    "cardNo": "BP02-105EN",
+    "name": "Bahamut Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Deity / Supreme",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "-",
+      "attack": "11",
+      "defense": "11",
+      "effect": "On Evolve: Destroy each amulet on the field. If there are at least 2 enemy followers on the field, this follower can't attack enemy leaders."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-105EN.png"
+  },
+  {
+    "cardNo": "BP02-106EN",
+    "name": "Demonic Simulacrum",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Fiend",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "3",
+      "attack": "6",
+      "defense": "5",
+      "effect": "[fanfare] Deal 3 damage to your leader. Discard a random card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-106EN.png"
+  },
+  {
+    "cardNo": "BP02-107EN",
+    "name": "Archangel Reina",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Angel",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "4",
+      "attack": "4",
+      "defense": "5",
+      "effect": "[evolve][cost01]: Evolve this follower. Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-107EN.png"
+  },
+  {
+    "cardNo": "BP02-108EN",
+    "name": "Archangel Reina Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Angel",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "-",
+      "attack": "5",
+      "defense": "6",
+      "effect": "Ward. On Evolve: Recover X play points. X equals the number of faceup followers in your evolve deck. Turn them facedown."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-108EN.png"
+  },
+  {
+    "cardNo": "BP02-109EN",
+    "name": "Surefire Bullet",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Mercenary",
+      "rarity": "Gold",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field and deal it 3 damage. If it's an evolved follower, deal 4 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-109EN.png"
+  },
+  {
+    "cardNo": "BP02-110EN",
+    "name": "Unicorn Dancer Unica",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Lightborne",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost01]: Evolve this follower. Strike: Give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-110EN.png"
+  },
+  {
+    "cardNo": "BP02-111EN",
+    "name": "Unicorn Dancer Unica Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Lightborne",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Strike: Give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-111EN.png"
+  },
+  {
+    "cardNo": "BP02-112EN",
+    "name": "Gourmet Emperor Khaiza",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Fiend / Chef",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Select an enemy follower that costs 2 play points or less on the field. Destroy it and give its leader [defense]+3."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-112EN.png"
+  },
+  {
+    "cardNo": "BP02-113EN",
+    "name": "Call of Cocytus",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Archfiend",
+      "rarity": "Silver",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "6",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field. Destroy it, then search your deck for a [neutral] follower, reveal it, and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-113EN.png"
+  },
+  {
+    "cardNo": "BP02-114EN",
+    "name": "Hamsa",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Lightborne",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "3",
+      "attack": "0",
+      "defense": "3",
+      "effect": "[fanfare] Reveal the top card of your deck. Give this follower [attack]+X. X equals the revealed card's cost."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-114EN.png"
+  },
+  {
+    "cardNo": "BP02-115EN",
+    "name": "Sektor",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Mercenary",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost03]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-115EN.png"
+  },
+  {
+    "cardNo": "BP02-116EN",
+    "name": "Sektor Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Mercenary",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-116EN.png"
+  },
+  {
+    "cardNo": "BP02-117EN",
+    "name": "Dance of Death",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Dancer",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field. Deal 5 damage to it and 2 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-117EN.png"
+  },
+  {
+    "cardNo": "BP02-LD01EN",
+    "name": "Michelle, Purehearted Mindreader",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-LD01EN.png"
+  },
+  {
+    "cardNo": "BP02-LD02EN",
+    "name": "Prim, Adventuring Princess",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Leader",
+      "trait": "-",
+      "rarity": "-",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-LD02EN.png"
+  },
+  {
+    "cardNo": "BP02-T01EN",
+    "name": "Crystalia Eve TOKEN",
+    "type": "token",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Token",
+      "trait": "Crystalian",
+      "rarity": "-",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-T01EN.png"
+  },
+  {
+    "cardNo": "BP02-T02EN",
+    "name": "Shield Guardian TOKEN",
+    "type": "token",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Token",
+      "trait": "Officer",
+      "rarity": "-",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-T02EN.png"
+  },
+  {
+    "cardNo": "BP02-T03EN",
+    "name": "Leonidas's Resolve TOKEN",
+    "type": "token",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Amulet / Token",
+      "trait": "Commander",
+      "rarity": "-",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "8",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Whenever a [swordcraft] follower is put onto your field, give it [attack]+3/[defense]+3 and Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-T03EN.png"
+  },
+  {
+    "cardNo": "BP02-T04EN",
+    "name": "Magical Pawn TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Token",
+      "trait": "Chess",
+      "rarity": "-",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "1",
+      "attack": "2",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-T04EN.png"
+  },
+  {
+    "cardNo": "BP02-T05EN",
+    "name": "Megalorca TOKEN",
+    "type": "token",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Token",
+      "trait": "Marine",
+      "rarity": "-",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-T05EN.png"
+  },
+  {
+    "cardNo": "BP02-T06EN",
+    "name": "Hellflame Dragon TOKEN",
+    "type": "token",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Token",
+      "trait": "Wyrmkin",
+      "rarity": "-",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "2",
+      "attack": "4",
+      "defense": "3",
+      "effect": "Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-T06EN.png"
+  },
+  {
+    "cardNo": "BP02-T07EN",
+    "name": "Draconic Weapon TOKEN",
+    "type": "token",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Amulet / Token",
+      "trait": "Armed",
+      "rarity": "-",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act][engage], put this card into its owner's cemetery: Select a [dragoncraft] follower on your field. Give it [defense]+1 and the Armed trait."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-T07EN.png"
+  },
+  {
+    "cardNo": "BP02-T08EN",
+    "name": "Ephemeral Moon TOKEN",
+    "type": "token",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet / Token",
+      "trait": "Faith",
+      "rarity": "-",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "While this card is on your field, during your turn, your followers named Kaguya don't take damage. At the start of your main phase, banish this card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-T08EN.png"
+  },
+  {
+    "cardNo": "BP02-T09EN",
+    "name": "Thorn Burst TOKEN",
+    "type": "token",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell / Token",
+      "trait": "Verdant",
+      "rarity": "-",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy leader or enemy follower on the field. Deal it 3 damage and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-T09EN.png"
+  },
+  {
+    "cardNo": "BP02-T10EN",
+    "name": "Fairy Wisp TOKEN",
+    "type": "token",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Token",
+      "trait": "Pixie",
+      "rarity": "-",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "0",
+      "attack": "1",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-T10EN.png"
+  },
+  {
+    "cardNo": "BP02-T11EN",
+    "name": "Fairy TOKEN",
+    "type": "token",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Token",
+      "trait": "Pixie",
+      "rarity": "-",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-T11EN.png"
+  },
+  {
+    "cardNo": "BP02-T12EN",
+    "name": "Knight TOKEN",
+    "type": "token",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Token",
+      "trait": "Officer",
+      "rarity": "-",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-T12EN.png"
+  },
+  {
+    "cardNo": "BP02-T13EN",
+    "name": "Strikeform Golem TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Token",
+      "trait": "Golem",
+      "rarity": "-",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-T13EN.png"
+  },
+  {
+    "cardNo": "BP02-T14EN",
+    "name": "Guardform Golem TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Token",
+      "trait": "Golem",
+      "rarity": "-",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-T14EN.png"
+  },
+  {
+    "cardNo": "BP02-T15EN",
+    "name": "Magic Sediment TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet / Token",
+      "trait": "Earth Sigil",
+      "rarity": "-",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Stack."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-T15EN.png"
+  },
+  {
+    "cardNo": "BP02-T16EN",
+    "name": "Dragon TOKEN",
+    "type": "token",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Token",
+      "trait": "Wyrmkin",
+      "rarity": "-",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "4",
+      "attack": "5",
+      "defense": "5",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-T16EN.png"
+  },
+  {
+    "cardNo": "BP02-T17EN",
+    "name": "Ghost TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Token",
+      "trait": "Departed",
+      "rarity": "-",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Storm. At the start of your end phase, banish this card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-T17EN.png"
+  },
+  {
+    "cardNo": "BP02-T18EN",
+    "name": "Forest Bat TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Token",
+      "trait": "Vampire",
+      "rarity": "-",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-T18EN.png"
+  },
+  {
+    "cardNo": "BP02-T19EN",
+    "name": "Holy Falcon TOKEN",
+    "type": "token",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Token",
+      "trait": "Avian",
+      "rarity": "-",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-T19EN.png"
+  },
+  {
+    "cardNo": "BP02-T20EN",
+    "name": "Holy Tiger TOKEN",
+    "type": "token",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Token",
+      "trait": "Beast",
+      "rarity": "-",
+      "cardSet": "Booster Set #2 “Reign of Bahamut”",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP02/BP02-T20EN.png"
+  }
+]
