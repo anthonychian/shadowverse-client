@@ -1,0 +1,1048 @@
+[
+  {
+    "cardNo": "BP05-025EN",
+    "name": "Disciple of Usurpation",
+    "type": "base",
+    "cardType": "follower",
+    "class": "sword",
+    "traits": [
+      "Omen",
+      "Thief"
+    ],
+    "cost": 3,
+    "attack": 3,
+    "defense": 2,
+    "cardText": "Storm.\nStrike: Each opponent puts the top card of their deck into their cemetery. Then, if there are at least 10 cards in opponents' cemeteries, give this follower [attack] +2.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP05/BP05-025EN.png"
+  },
+  {
+    "cardNo": "BP11-018EN",
+    "name": "Nahtnaught, Cursed Queen",
+    "type": "base",
+    "cardType": "follower",
+    "class": "sword",
+    "traits": [
+      "Wasteland",
+      "Commander"
+    ],
+    "cost": 4,
+    "attack": 3,
+    "defense": 5,
+    "cardText": "[fanfare]  Search your deck for a 1-cost [swordcraft]  card, put it into your EX area, then shuffle.\n[act]  [cost00] : Select an enemy follower on the field and engage it. It becomes Boxed until the end of its controller's next turn. Activate only once per turn. (Boxed followers lose all abilities and don't refresh during the start phase.)",
+    "keywords": [
+      "fanfare"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-018EN.png"
+  },
+  {
+    "cardNo": "BP11-P07EN",
+    "name": "Naht's Henchman",
+    "type": "base",
+    "cardType": "follower",
+    "class": "sword",
+    "traits": [
+      "Wasteland",
+      "Officer"
+    ],
+    "cost": 1,
+    "attack": 2,
+    "defense": 2,
+    "cardText": "This card costs 1 less to play from the EX area if there's a Nahtnaught, Cursed Queen on your field.\n----------\n[fanfare]  If there's a Nahtnaught, Cursed Queen on your field, draw a card.",
+    "keywords": [
+      "fanfare"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP11-SL04EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-P07EN.png"
+  },
+  {
+    "cardNo": "BP14-018EN",
+    "name": "Taketsumi, Aconite Paladin",
+    "type": "base",
+    "cardType": "follower",
+    "class": "sword",
+    "traits": [
+      "Festive",
+      "Commander"
+    ],
+    "cost": 2,
+    "attack": 2,
+    "defense": 3,
+    "cardText": "[adv]  [cost04] , banish this: You may summon a Taketsumi, Creator of Paradise from your evolve deck. Activate only if there are at least 5 Festive cards or at least 10 [swordcraft]  cards in your cemetery.\n[fanfare]  Draw a card. Discard a card. Put a Glittering Gold token into your EX area.",
+    "keywords": [
+      "fanfare"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP14-019EN",
+      "BP14-T02EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP14/BP14-018EN.png"
+  },
+  {
+    "cardNo": "BP14-022EN",
+    "name": "Jiemon, Thief Lord",
+    "type": "base",
+    "cardType": "follower",
+    "class": "sword",
+    "traits": [
+      "Festive",
+      "Commander",
+      "Thief"
+    ],
+    "cost": 4,
+    "attack": 3,
+    "defense": 4,
+    "cardText": "[evolve]  [cost01] : Evolve this.\nEach other Festive follower on your field has Storm.\n[fanfare]  Put a Glittering Gold token into your EX area.",
+    "keywords": [
+      "fanfare",
+      "evolve"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP14-023EN",
+      "BP14-T02EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP14/BP14-022EN.png",
+    "evolvesTo": "BP14-023EN"
+  },
+  {
+    "cardNo": "BP14-025EN",
+    "name": "Hero of the Hunt",
+    "type": "base",
+    "cardType": "spell",
+    "class": "sword",
+    "traits": [
+      "Festive",
+      "Commander"
+    ],
+    "cost": 3,
+    "attack": null,
+    "defense": null,
+    "cardText": "Select an enemy follower on the field. Deal it 5 damage, put a Glittering Gold token into your EX area, and, if there are at least 5 Festive cards or at least 10 [swordcraft]  cards in your cemetery, search your deck for a Taketsumi, Aconite Paladin, summon it, then shuffle.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP14-018EN",
+      "BP14-T02EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP14/BP14-025EN.png"
+  },
+  {
+    "cardNo": "BP14-026EN",
+    "name": "Masterful Musician",
+    "type": "base",
+    "cardType": "follower",
+    "class": "sword",
+    "traits": [
+      "Festive",
+      "Thief"
+    ],
+    "cost": 3,
+    "attack": 3,
+    "defense": 3,
+    "cardText": "[evolve]  [cost01] : Evolve this.\n[fanfare]  Put a Glittering Gold token into your EX area. If there's a Jiemon, Thief Lord on your field, give your leader [defense] +3.",
+    "keywords": [
+      "fanfare",
+      "evolve"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP14-022EN",
+      "BP14-023EN",
+      "BP14-027EN",
+      "BP14-T02EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP14/BP14-026EN.png",
+    "evolvesTo": "BP14-027EN"
+  },
+  {
+    "cardNo": "BP14-030EN",
+    "name": "Front Desk Frog",
+    "type": "base",
+    "cardType": "follower",
+    "class": "sword",
+    "traits": [
+      "Festive",
+      "Thief",
+      "Beast"
+    ],
+    "cost": 2,
+    "attack": 2,
+    "defense": 2,
+    "cardText": "[evolve]  [cost01] : Evolve this.\n[fanfare]  Put a Glittering Gold token into your EX area. If there's a Jiemon, Thief Lord on your field, evolve this.",
+    "keywords": [
+      "fanfare",
+      "evolve"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP14-022EN",
+      "BP14-023EN",
+      "BP14-031EN",
+      "BP14-T02EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP14/BP14-030EN.png",
+    "evolvesTo": "BP14-031EN"
+  },
+  {
+    "cardNo": "BP14-034EN",
+    "name": "Night on the Town",
+    "type": "base",
+    "cardType": "spell",
+    "class": "sword",
+    "traits": [
+      "Festive",
+      "Commander",
+      "Thief"
+    ],
+    "cost": 1,
+    "attack": null,
+    "defense": null,
+    "cardText": "Choose 1. (1) Select an enemy follower on the field. Deal it 2 damage and put a Glittering Gold token into your EX area. (2) Select an enemy follower on the field and, if there are at least 3 Festive cards in your EX area, deal it 4 damage.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP14-T02EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP14/BP14-034EN.png"
+  },
+  {
+    "cardNo": "BP14-035EN",
+    "name": "Haggler's Gambit",
+    "type": "base",
+    "cardType": "spell",
+    "class": "sword",
+    "traits": [
+      "Merchant"
+    ],
+    "cost": 1,
+    "attack": null,
+    "defense": null,
+    "cardText": "This costs 1 less to play if there are at least 3 cards in your EX area named Glittering Gold.\n----------\nDraw a card. Put a Glittering Gold token into your EX area.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP14-T02EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP14/BP14-035EN.png"
+  },
+  {
+    "cardNo": "BP14-115EN",
+    "name": "Stay in Paradise",
+    "type": "base",
+    "cardType": "spell",
+    "class": "neutral",
+    "traits": [
+      "Festive"
+    ],
+    "cost": 1,
+    "attack": null,
+    "defense": null,
+    "cardText": "Look at the top 4 cards of your deck. You may put a Festive card from among them into your EX area. Put the rest on the bottom of your deck in any order.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP14/BP14-115EN.png"
+  },
+  {
+    "cardNo": "BP14-118EN",
+    "name": "Torchbearing Guide",
+    "type": "base",
+    "cardType": "follower",
+    "class": "neutral",
+    "traits": [
+      "Festive",
+      "Mercenary"
+    ],
+    "cost": 2,
+    "attack": 2,
+    "defense": 3,
+    "cardText": "[fanfare]  Put a Festive card from your hand into your EX area: Draw a card. If there are at least 3 Festive cards in your EX area, give this [attack] +1/[defense] +1.",
+    "keywords": [
+      "fanfare"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP14/BP14-118EN.png"
+  },
+  {
+    "cardNo": "BP16-022EN",
+    "name": "Ginne, Bewitching Courtesan",
+    "type": "base",
+    "cardType": "follower",
+    "class": "sword",
+    "traits": [
+      "Festive"
+    ],
+    "cost": 2,
+    "attack": 3,
+    "defense": 2,
+    "cardText": "[fanfare]  Choose up to 2. If there's a Jiemon, Thief Lord on your field, choose up to 3 instead. (1) Select an enemy follower on the field and engage it. It doesn't refresh during its controller's next start phase. (2) Draw a card. Put a card from your hand on the top or bottom of your deck. (3) Put 2 Glittering Gold tokens into your EX area.",
+    "keywords": [
+      "fanfare"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP14-022EN",
+      "BP14-023EN",
+      "BP16-T15EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-022EN.png"
+  },
+  {
+    "cardNo": "SDD02-006EN",
+    "name": "Leod, the Crescent Blade",
+    "type": "base",
+    "cardType": "follower",
+    "class": "sword",
+    "traits": [
+      "Assassin"
+    ],
+    "cost": 2,
+    "attack": 1,
+    "defense": 3,
+    "cardText": "[evolve]  [cost02] : Evolve this.\nWhile this is reserved on your field, it has Intimidate and Aura. (Followers with Intimidate can't be attacked.)\nAt the start of your end phase, select an enemy follower on the field and deal it 1 damage.",
+    "keywords": [
+      "evolve"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "SDD02-007EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD02/SDD02-006EN.png",
+    "evolvesTo": "SDD02-007EN"
+  },
+  {
+    "cardNo": "BP14-019EN",
+    "name": "Taketsumi, Creator of Paradise",
+    "type": "base",
+    "cardType": "follower",
+    "specialType": "advanced",
+    "class": "sword",
+    "traits": [
+      "Festive",
+      "Commander"
+    ],
+    "cost": 4,
+    "attack": 5,
+    "defense": 6,
+    "cardText": "[fanfare]  Summon 2 Sootspawn tokens.\n[act]  [engage] : Select an enemy follower on the field. Deal 5 damage to it and 3 damage to its leader.",
+    "keywords": [
+      "fanfare"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP14-018EN",
+      "BP14-T01EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP14/BP14-019EN.png"
+  },
+  {
+    "cardNo": "BP14-023EN",
+    "name": "Jiemon, Thief Lord Evolved",
+    "type": "evolved",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "class": "sword",
+    "traits": [
+      "Festive",
+      "Commander",
+      "Thief"
+    ],
+    "cost": null,
+    "attack": 4,
+    "defense": 5,
+    "cardText": "Each other Festive follower on your field has Storm.\nOn Evolve - Banish 2 cards named Glittering Gold from your EX area: Look at the top 5 cards of your deck. You may put a Festive card that costs 3 or less from among them into your EX area. It costs 3 less to play this turn. Put the rest on the bottom of your deck in any order.\n[act]  [cost01] : Play this follower's On Evolve ability.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP14-022EN",
+      "BP14-T02EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP14/BP14-023EN.png",
+    "evolvesFrom": "BP14-022EN"
+  },
+  {
+    "cardNo": "BP14-027EN",
+    "name": "Masterful Musician Evolved",
+    "type": "evolved",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "class": "sword",
+    "traits": [
+      "Festive",
+      "Thief"
+    ],
+    "cost": null,
+    "attack": 4,
+    "defense": 4,
+    "cardText": "Whenever a Glittering Gold token is put into your EX area, select an enemy follower on the field. Deal 3 damage to it and 1 damage to its leader.\nOn Evolve - Put a Glittering Gold token into your EX area.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP14-026EN",
+      "BP14-T02EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP14/BP14-027EN.png",
+    "evolvesFrom": "BP14-026EN"
+  },
+  {
+    "cardNo": "BP14-031EN",
+    "name": "Front Desk Frog Evolved",
+    "type": "evolved",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "class": "sword",
+    "traits": [
+      "Festive",
+      "Thief",
+      "Beast"
+    ],
+    "cost": null,
+    "attack": 3,
+    "defense": 3,
+    "cardText": "On Evolve - Select an enemy follower on the field. Deal it 2 damage and, if there are at least 3 Festive cards in your EX area, draw a card.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP14-030EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP14/BP14-031EN.png",
+    "evolvesFrom": "BP14-030EN"
+  },
+  {
+    "cardNo": "SDD02-007EN",
+    "name": "Leod, the Crescent Blade Evolved",
+    "type": "evolved",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "class": "sword",
+    "traits": [
+      "Assassin"
+    ],
+    "cost": null,
+    "attack": 2,
+    "defense": 4,
+    "cardText": "While this is reserved on your field, it has Intimidate and Aura. (Cards with Aura can't be selected for enemy spells or abilities.)\nOn Evolve - Select an enemy leader or enemy follower on the field and deal it 2 damage.\nAt the start of your end phase, select an enemy follower on the field and deal it 1 damage.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "SDD02-006EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD02/SDD02-007EN.png",
+    "evolvesFrom": "SDD02-006EN"
+  },
+  {
+    "cardNo": "PR-173EN",
+    "name": "Aenea, Amethyst Rebel",
+    "type": "base",
+    "cardType": "follower",
+    "class": "abyss",
+    "traits": [
+      "Machina",
+      "Demon"
+    ],
+    "cost": 4,
+    "attack": 2,
+    "defense": 2,
+    "cardText": "[fanfare]  Search your deck for a Machina follower that costs 3 or less, summon it, then shuffle your deck.\n[lastwords]  Give your leader [defense] +2.",
+    "keywords": [
+      "fanfare"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/PR/PR-173EN.png"
+  },
+  {
+    "cardNo": "PR-358EN",
+    "name": "Mechagun Wielder",
+    "type": "base",
+    "cardType": "follower",
+    "class": "neutral",
+    "traits": [
+      "Machina",
+      "Mercenary"
+    ],
+    "cost": 1,
+    "attack": 1,
+    "defense": 2,
+    "cardText": "[fanfare]  Put an Assembly Droid or Repair Mode token into your EX area.\n[lastwords]  Discard a Machina card: Draw a card.",
+    "keywords": [
+      "fanfare"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "PR-170EN",
+      "PR-171EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/PR/PR-358EN.png"
+  },
+  {
+    "cardNo": "BP07-075EN",
+    "name": "Alpha Drive",
+    "type": "base",
+    "cardType": "spell",
+    "class": "abyss",
+    "traits": [
+      "Machina",
+      "Demon"
+    ],
+    "cost": 1,
+    "attack": null,
+    "defense": null,
+    "cardText": "Choose one of the following. (1) Select a Machina follower in your cemetery and add it to your hand. (2) Select a Mono, Garnet Rebel in your cemetery and summon it.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP07-069EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-075EN.png"
+  },
+  {
+    "cardNo": "BP07-P22EN",
+    "name": "Nicola, Forbidden Strength",
+    "type": "base",
+    "cardType": "follower",
+    "class": "abyss",
+    "traits": [
+      "Machina",
+      "Departed"
+    ],
+    "cost": 3,
+    "attack": 3,
+    "defense": 3,
+    "cardText": "[evolve]  [cost01] : Evolve this follower.\n[fanfare]  Bury the top 2 cards of your deck.",
+    "keywords": [
+      "fanfare",
+      "evolve"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP07-P23EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-P22EN.png",
+    "evolvesTo": "BP07-077EN"
+  },
+  {
+    "cardNo": "BP11-075EN",
+    "name": "Dead to Rights",
+    "type": "base",
+    "cardType": "spell",
+    "class": "abyss",
+    "traits": [
+      "Wasteland",
+      "Departed",
+      "Demon"
+    ],
+    "cost": 1,
+    "attack": null,
+    "defense": null,
+    "cardText": "[act]  Banish this card and an Iceschillendrig, Gilded Autocrat from your cemetery: Select an enemy follower on the field and engage it.\n----------\n[quick]\nSelect an enemy follower on the field and give it [attack] -2/[defense] -2.",
+    "keywords": [
+      "quick"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP11-069EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-075EN.png"
+  },
+  {
+    "cardNo": "BP12-075EN",
+    "name": "Friends Forever",
+    "type": "base",
+    "cardType": "spell",
+    "class": "abyss",
+    "traits": [
+      "Machina",
+      "Necromancer",
+      "Demon"
+    ],
+    "cost": 5,
+    "attack": null,
+    "defense": null,
+    "cardText": "Select up to 2 Machina followers that cost a total of 5 or less in your cemetery and summon them.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP12/BP12-075EN.png"
+  },
+  {
+    "cardNo": "BP12-082EN",
+    "name": "Roly-Poly Mk I",
+    "type": "base",
+    "cardType": "follower",
+    "class": "abyss",
+    "traits": [
+      "Machina",
+      "Demon"
+    ],
+    "cost": 1,
+    "attack": 1,
+    "defense": 3,
+    "cardText": "Ward.\nWhile there's an Aenea, Amethyst Rebel on your field, if this follower would take more than 1 damage, it takes 1 instead.\n[act]  [cost01] : Summon this card from your cemetery. Give it [attack] +1 and \"[lastwords]  Banish this card.\" Activate only if there's an Aenea, Amethyst Rebel on your field.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP07-072EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP12/BP12-082EN.png"
+  },
+  {
+    "cardNo": "BP17-077EN",
+    "name": "Aenea, Creative Amethyst",
+    "type": "base",
+    "cardType": "follower",
+    "class": "abyss",
+    "traits": [
+      "Machina",
+      "Demon"
+    ],
+    "cost": 2,
+    "attack": 1,
+    "defense": 1,
+    "cardText": "[evolve]  [cost01] : Evolve this.",
+    "keywords": [
+      "evolve"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP17-078EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-077EN.png",
+    "evolvesTo": "BP17-078EN"
+  },
+  {
+    "cardNo": "BP17-079EN",
+    "name": "Nicola, Enduring Steward",
+    "type": "base",
+    "cardType": "follower",
+    "class": "abyss",
+    "traits": [
+      "Machina",
+      "Departed"
+    ],
+    "cost": 2,
+    "attack": 1,
+    "defense": 2,
+    "cardText": "While there's another Machina follower on your field, this has Rush and Bane.\n[fanfare]  If this wasn't put onto the field from hand, give it Assail.\n[lastwords]  Discard 2 Machina cards: Put this into its owner's EX area and give it \"This costs 1 less to play.\"",
+    "keywords": [
+      "fanfare"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-079EN.png"
+  },
+  {
+    "cardNo": "BP17-080EN",
+    "name": "Steeled Hopes",
+    "type": "base",
+    "cardType": "spell",
+    "class": "abyss",
+    "traits": [
+      "Machina",
+      "Demon"
+    ],
+    "cost": 1,
+    "attack": null,
+    "defense": null,
+    "cardText": "Choose 1. (1) Search your deck for a Machina follower, reveal it, add it to your hand, then shuffle. (2) [cost06] : Search your deck for a Machina follower that costs 4 or less, a Machina follower that costs 3 or less, and a Machina follower that costs 2 or less, summon them, then shuffle.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-080EN.png"
+  },
+  {
+    "cardNo": "BP17-083EN",
+    "name": "Roly-Poly Mk II",
+    "type": "base",
+    "cardType": "follower",
+    "class": "abyss",
+    "traits": [
+      "Machina",
+      "Demon"
+    ],
+    "cost": 2,
+    "attack": 1,
+    "defense": 3,
+    "cardText": "Ward.\n[fanfare]  Look at the top 2 cards of your deck. You may reveal a Machina card from among them and add it to your hand. Bury the rest.",
+    "keywords": [
+      "fanfare"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-083EN.png"
+  },
+  {
+    "cardNo": "BP17-113EN",
+    "name": "Hoverboard Mercenary",
+    "type": "base",
+    "cardType": "follower",
+    "class": "neutral",
+    "traits": [
+      "Machina",
+      "Mercenary"
+    ],
+    "cost": 2,
+    "attack": 1,
+    "defense": 1,
+    "cardText": "[evolve]  [cost01] : Evolve this.\n[fanfare]  Summon an Assembly Droid token. Put a Repair Mode token into your EX area.",
+    "keywords": [
+      "fanfare",
+      "evolve"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP17-114EN",
+      "BP17-T17EN",
+      "BP17-T18EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-113EN.png",
+    "evolvesTo": "BP17-114EN"
+  },
+  {
+    "cardNo": "BP07-SL13EN",
+    "name": "Mono, Garnet Rebel",
+    "type": "base",
+    "cardType": "follower",
+    "class": "abyss",
+    "traits": [
+      "Machina",
+      "Demon"
+    ],
+    "cost": 2,
+    "attack": 3,
+    "defense": 2,
+    "cardText": "[evolve]  [cost01] : Evolve this follower. Activate only if there are 5 Machina followers on your field.\n[act]  Banish 2 Machina cards from your cemetery: Summon an Assembly Droid token. Activate only once per turn.",
+    "keywords": [
+      "evolve"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP07-SL14EN",
+      "BP07-T01EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-SL13EN.png",
+    "evolvesTo": "BP07-U05EN"
+  },
+  {
+    "cardNo": "BP12-SL22EN",
+    "name": "Garnet Waltz",
+    "type": "base",
+    "cardType": "spell",
+    "class": "abyss",
+    "traits": [
+      "Machina",
+      "Demon",
+      "Vampire"
+    ],
+    "cost": 1,
+    "attack": null,
+    "defense": null,
+    "cardText": "Choose one. (1) Deal 2 damage to each enemy leader and 1 damage to your own. (2) Summon an Assembly Droid token. Put an Assembly Droid token into your EX area. If there's a Mono, Garnet Rebel on your field, summon the second token instead.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP07-SL13EN",
+      "BP07-SL14EN",
+      "BP12-T10EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP12/BP12-SL22EN.png"
+  },
+  {
+    "cardNo": "BP17-SL20EN",
+    "name": "Mono, Immortal Garnet",
+    "type": "base",
+    "cardType": "follower",
+    "class": "abyss",
+    "traits": [
+      "Machina",
+      "Demon"
+    ],
+    "cost": 3,
+    "attack": 2,
+    "defense": 2,
+    "cardText": "[fanfare]  Summon an Assembly Droid token.\nStrike - Select an enemy follower on the field and deal it damage equal to the number of other Machina followers on your field.\n[act]  [cost00] : Give this [attack] +1/[defense] +1 and Storm. Activate only if there are 5 Machina followers on your field, and only once per turn.",
+    "keywords": [
+      "fanfare"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP17-T17EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-SL20EN.png"
+  },
+  {
+    "cardNo": "SDD05-012EN",
+    "name": "Dead to Rights",
+    "type": "base",
+    "cardType": "spell",
+    "class": "abyss",
+    "traits": [
+      "Wasteland",
+      "Departed",
+      "Demon"
+    ],
+    "cost": 1,
+    "attack": null,
+    "defense": null,
+    "cardText": "[act]  Banish this and an Iceschillendrig, Gilded Autocrat from your cemetery: Select an enemy follower on the field and engage it.\n----------\n[quick]\nSelect an enemy follower on the field and give it [attack] -2/[defense] -2.",
+    "keywords": [
+      "quick"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "SDD05-003EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SDD05/SDD05-012EN.png",
+    "reprintOf": "BP11-075EN"
+  },
+  {
+    "cardNo": "BP07-077EN",
+    "name": "Nicola, Forbidden Strength Evolved",
+    "type": "evolved",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "class": "abyss",
+    "traits": [
+      "Machina",
+      "Departed"
+    ],
+    "cost": null,
+    "attack": 4,
+    "defense": 4,
+    "cardText": "On Evolve - Select a Machina card that costs 2 or less in your cemetery and put it into your EX area. It costs 2 less to play this turn.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP07-076EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-077EN.png",
+    "evolvesFrom": "BP07-P22EN"
+  },
+  {
+    "cardNo": "BP07-U05EN",
+    "name": "Mono, Garnet Rebel Evolved",
+    "type": "evolved",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "class": "abyss",
+    "traits": [
+      "Machina",
+      "Demon"
+    ],
+    "cost": null,
+    "attack": 5,
+    "defense": 4,
+    "cardText": "Storm.\n[act]  [cost02] , banish an Alpha Drive from your cemetery: Give each Machina follower on your field [attack] +2/[defense] +2 and Rush. Activate only once per turn.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP07-069EN",
+      "BP07-075EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP07/BP07-U05EN.png",
+    "evolvesFrom": "BP07-SL13EN"
+  },
+  {
+    "cardNo": "BP17-078EN",
+    "name": "Aenea, Creative Amethyst Evolved",
+    "type": "evolved",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "class": "abyss",
+    "traits": [
+      "Machina",
+      "Demon"
+    ],
+    "cost": null,
+    "attack": 2,
+    "defense": 2,
+    "cardText": "On Evolve - Search your deck for a Roly-Poly Mk II, summon it, then shuffle.\nOn Super-Evolve - Select a Machina card in your cemetery and put it into your EX area. It costs 3 less to play this turn.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP17-077EN",
+      "BP17-083EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-078EN.png",
+    "evolvesFrom": "BP17-077EN"
+  },
+  {
+    "cardNo": "BP17-114EN",
+    "name": "Hoverboard Mercenary Evolved",
+    "type": "evolved",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "class": "neutral",
+    "traits": [
+      "Machina",
+      "Mercenary"
+    ],
+    "cost": null,
+    "attack": 2,
+    "defense": 2,
+    "cardText": "On Evolve - Summon an Assembly Droid token. Put a Repair Mode token into your EX area.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [
+      "BP17-113EN",
+      "BP17-T17EN",
+      "BP17-T18EN"
+    ],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-114EN.png",
+    "evolvesFrom": "BP17-113EN"
+  },
+  {
+    "cardNo": "BP14-T01EN",
+    "name": "Sootspawn TOKEN",
+    "type": "token",
+    "cardType": "follower",
+    "specialType": "token",
+    "class": "sword",
+    "traits": [
+      "Festive"
+    ],
+    "cost": 2,
+    "attack": 2,
+    "defense": 2,
+    "cardText": "Ward.\n[lastwords]  Select an enemy follower on the field and deal it 2 damage.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP14/BP14-T01EN.png"
+  },
+  {
+    "cardNo": "BP14-T02EN",
+    "name": "Glittering Gold TOKEN",
+    "type": "token",
+    "cardType": "spell",
+    "specialType": "token",
+    "class": "sword",
+    "traits": [
+      "Festive",
+      "Thief",
+      "Loot"
+    ],
+    "cost": 0,
+    "attack": null,
+    "defense": null,
+    "cardText": "[act]  [cost01] , banish this and 2 other cards named Glittering Gold from your EX area: Give your leader [defense] +1. Draw a card.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP14/BP14-T02EN.png"
+  },
+  {
+    "cardNo": "BP12-T10EN",
+    "name": "Assembly Droid TOKEN",
+    "type": "token",
+    "cardType": "follower",
+    "specialType": "token",
+    "class": "neutral",
+    "traits": [
+      "Machina"
+    ],
+    "cost": 1,
+    "attack": 1,
+    "defense": 1,
+    "cardText": "[act]  [engage] , bury 3 Machina followers: Select an enemy follower on the field and deal it 5 damage.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP12/BP12-T10EN.png"
+  },
+  {
+    "cardNo": "BP17-T17EN",
+    "name": "Assembly Droid TOKEN",
+    "type": "token",
+    "cardType": "follower",
+    "specialType": "token",
+    "class": "neutral",
+    "traits": [
+      "Machina"
+    ],
+    "cost": 1,
+    "attack": 1,
+    "defense": 1,
+    "cardText": "[act]  [engage] , bury 3 Machina followers: Select an enemy follower on the field and deal it 5 damage.",
+    "keywords": [],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T17EN.png",
+    "reprintOf": "BP12-T10EN"
+  },
+  {
+    "cardNo": "BP17-T18EN",
+    "name": "Repair Mode TOKEN",
+    "type": "token",
+    "cardType": "spell",
+    "specialType": "token",
+    "class": "neutral",
+    "traits": [
+      "Machina"
+    ],
+    "cost": 1,
+    "attack": null,
+    "defense": null,
+    "cardText": "[quick]\nGive your leader [defense] +1.",
+    "keywords": [
+      "quick"
+    ],
+    "rarity": "",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T18EN.png"
+  }
+]

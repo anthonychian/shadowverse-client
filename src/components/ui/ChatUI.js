@@ -15,6 +15,7 @@ import {
 } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { setChat } from "../../redux/CardSlice";
+import HideUiButton from "./HideUiButton";
 
 export default function ChatUI({ scale = 1 }) {
   const dispatch = useDispatch();
@@ -104,9 +105,12 @@ export default function ChatUI({ scale = 1 }) {
           />
         </Snackbar>
       )}
-      <Button variant="outlined" onClick={handleClick}>
-        <ChatIcon sx={{ color: "white" }} />
-      </Button>
+      <div style={{ display: "flex", alignItems: "center", gap: "0.35em" }}>
+        <HideUiButton />
+        <Button variant="outlined" onClick={handleClick}>
+          <ChatIcon sx={{ color: "white" }} />
+        </Button>
+      </div>
       <Dialog
         PaperProps={{ style: { pointerEvents: "auto", zoom: scale } }}
         disableEnforceFocus
@@ -119,8 +123,17 @@ export default function ChatUI({ scale = 1 }) {
         PaperComponent={PaperComponent}
         aria-labelledby="draggable-dialog-title"
       >
-        <DialogTitle style={{ cursor: "move" }} id="draggable-dialog-title">
+        <DialogTitle
+          style={{
+            cursor: "move",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+          id="draggable-dialog-title"
+        >
           Chat
+          <HideUiButton sx={{ backgroundColor: "transparent", color: "inherit" }} />
         </DialogTitle>
         <DialogContent
           style={{

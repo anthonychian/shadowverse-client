@@ -5186,8 +5186,10 @@ export const cardImage = (cardName) => {
       return "../textures/BP12-T01EN.png";
     case "Twilight Blade TOKEN":
       return "../textures/BP12-T02EN.png";
+    case "Armored Tentacle":
     case "Armored Tentacle TOKEN":
       return "../textures/BP12-T03EN.png";
+    case "Assault Tentacle":
     case "Assault Tentacle TOKEN":
       return "../textures/BP12-T04EN.png";
     case "Medusiana TOKEN":
@@ -5983,3 +5985,12 @@ export const cardImage = (cardName) => {
       return "";
   }
 };
+
+/** Resolve official card number from a deck-builder card name via texture path. */
+export function getCardNoFromName(cardName) {
+  if (!cardName) return null;
+  const path = cardImage(cardName);
+  if (!path || path.includes("default.png")) return null;
+  const match = path.match(/\/([^/]+)\.png$/);
+  return match ? match[1] : null;
+}

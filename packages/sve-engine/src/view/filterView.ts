@@ -1,0 +1,189 @@
+import { applyAction } from "../actions/applyAction";
+import { getCardDef } from "../cards/registry";
+import { canPlayCardFromZones } from "../effects/resolver";
+import { GameState, PlayerId, PlayerView } from "../types";
+import { isAdvanceAbility } from "../rules/effect-utils";
+import {
+  canEvolveFollower,
+  canSuperEvolveNow,
+  computeEvolvePayment,
+  findMatchingEvolveCard,
+  getActivatedAbilities,
+  getEffectivePlayCost,
+  getEvolveCost,
+  isBoxed,
+  getLegalAttackTargets,
+  hasKeyword,
+  opponentOf,
+  resolveCardNo,
+} from "../state/queries";
+
+export function createPlayerView(state: GameState, self: PlayerId): PlayerView {
+  const opponent = opponentOf(self);
+  const view = structuredClone(state);
+
+  view.players[opponent].zones.hand = view.players[opponent].zones.hand.map((c) => ({
+    ...c,
+    cardNo: "HIDDEN",
+  }));
+  view.players[self].zones.evolveDeck = view.players[self].zones.evolveDeck;
+  view.players[opponent].zones.evolveDeck = view.players[opponent].zones.evolveDeck.map((c) => ({
+    ...c,
+    cardNo: "HIDDEN",
+  }));
+  view.players[opponent].zones.deck = view.players[opponent].zones.deck.map((c) => ({
+    ...c,
+    cardNo: "HIDDEN",
+  }));
+
+  const legalActions: string[] = [];
+  if (state.phase === "main" && state.activePlayer === self && !state.pendingChoices) {
+    legalActions.push("END_MAIN");
+    const pp = state.players[self].pp;
+    const p = state.players[self];
+    for (const card of p.zones.hand) {
+      const cost = getEffectivePlayCost(card, card.cardNo, state, self, "hand");
+      if (pp >= cost && canPlayCardFromZones(state, self, card.cardNo)) {
+        legalActions.push(`PLAY:${card.instanceId}`);
+      }
+      const handActivated = getActivatedAbilities(state, card, self, "hand");
+      if (handActivated.length > 0) {
+        const activateCost = handActivated[0].ability.cost?.pp ?? 0;
+        const ppPay = computeEvolvePayment(activateCost, pp, p.evoPoints, false);
+        if (ppPay.ok) legalActions.push(`ACTIVATE_HAND:${card.instanceId}`);
+      }
+    }
+    for (const card of p.zones.exArea) {
+      const cost = getEffectivePlayCost(card, card.cardNo, state, self, "exArea");
+      if (pp >= cost && canPlayCardFromZones(state, self, card.cardNo)) {
+        legalActions.push(`PLAY:${card.instanceId}`);
+      }
+    }
+    for (const card of p.zones.field) {
+      if (!card.engaged && !isBoxed(card, state)) {
+        const canAttack =
+          card.onFieldSinceTurnStart ||
+          card.evolvedThisTurn ||
+          hasKeyword(card, "storm", state) ||
+          hasKeyword(card, "rush", state);
+        if (canAttack) {
+          legalActions.push(`ATTACK:${card.instanceId}`);
+          for (const target of getLegalAttackTargets(state, card, self)) {
+            if (target.type === "leader") {
+              legalActions.push(`ATTACK_LEADER:${card.instanceId}`);
+            } else {
+              legalActions.push(`ATTACK_TARGET:${card.instanceId}:${target.instanceId}`);
+            }
+          }
+        }
+      }
+
+      const activated = getActivatedAbilities(state, card, self, "field");
+      if (activated.length > 0) {
+        const def = getCardDef(resolveCardNo(state, card));
+        const { ability } = activated[0];
+        const cost = ability.cost?.pp ?? 0;
+        const advance = isAdvanceAbility(def, ability);
+        const ppPay = computeEvolvePayment(cost, pp, p.evoPoints, false);
+        const epPay = computeEvolvePayment(cost, pp, p.evoPoints, true);
+        if (ppPay.ok) legalActions.push(`ACTIVATE:${card.instanceId}`);
+        if (advance && epPay.ok && epPay.epCost > 0) {
+          legalActions.push(`ACTIVATE_EP:${card.instanceId}`);
+        }
+      }
+
+      // Evolve is allowed even while engaged (e.g. after activating).
+      if (
+        !isBoxed(card, state) &&
+        !card.linkedEvoInstanceId &&
+        canEvolveFollower(state, self, card.instanceId)
+      ) {
+        const evoMatch = findMatchingEvolveCard(state, self, card.instanceId);
+        if (evoMatch) {
+          const cost = getEvolveCost(evoMatch.cardNo, card.cardNo);
+          const canSuper = canSuperEvolveNow(state, self);
+          const ppPay = computeEvolvePayment(cost, pp, p.evoPoints, false);
+          const epPay = computeEvolvePayment(cost, pp, p.evoPoints, true);
+          if (ppPay.ok) {
+            legalActions.push(`EVOLVE:${card.instanceId}`);
+            if (canSuper) legalActions.push(`SUPER_EVOLVE:${card.instanceId}`);
+          }
+          if (epPay.ok && epPay.epCost > 0) {
+            legalActions.push(`EVOLVE_EP:${card.instanceId}`);
+            if (canSuper) legalActions.push(`SUPER_EVOLVE_EP:${card.instanceId}`);
+          }
+        }
+      }
+    }
+    for (const card of p.zones.cemetery) {
+      if (getActivatedAbilities(state, card, self, "cemetery").length > 0) {
+        legalActions.push(`ACTIVATE_CEMETERY:${card.instanceId}`);
+      }
+    }
+    for (const card of p.zones.exArea) {
+      if (getActivatedAbilities(state, card, self, "exArea").length > 0) {
+        legalActions.push(`ACTIVATE_EXAREA:${card.instanceId}`);
+      }
+    }
+  }
+  if (
+    state.quickWindow &&
+    state.quickWindowPlayer === self &&
+    !state.pendingChoices &&
+    state.pendingTriggers.length === 0
+  ) {
+    const pp = state.players[self].pp;
+    const quickZones: Array<{ card: (typeof state.players)[0]["zones"]["hand"][0]; fromZone: "hand" | "exArea" }> = [
+      ...state.players[self].zones.hand.map((card) => ({ card, fromZone: "hand" as const })),
+      ...state.players[self].zones.exArea.map((card) => ({ card, fromZone: "exArea" as const })),
+    ];
+    for (const { card, fromZone } of quickZones) {
+      const def = getCardDef(card.cardNo);
+      if (!def?.abilities?.some((a) => a.quick)) continue;
+      const cost = getEffectivePlayCost(card, card.cardNo, state, self, fromZone);
+      if (pp >= cost && canPlayCardFromZones(state, self, card.cardNo)) {
+        legalActions.push(`QUICK_PLAY:${card.instanceId}`);
+      }
+    }
+    legalActions.push("PASS_QUICK_WINDOW");
+  }
+  if (state.pendingChoices?.player === self) {
+    legalActions.push("CHOICE_REQUIRED");
+  }
+
+  const exPlayCosts: Record<string, number> = {};
+  for (const card of state.players[self].zones.exArea) {
+    exPlayCosts[card.instanceId] = getEffectivePlayCost(
+      card,
+      card.cardNo,
+      state,
+      self,
+      "exArea",
+    );
+  }
+  const opponentExPlayCosts: Record<string, number> = {};
+  for (const card of state.players[opponent].zones.exArea) {
+    opponentExPlayCosts[card.instanceId] = getEffectivePlayCost(
+      card,
+      card.cardNo,
+      state,
+      opponent,
+      "exArea",
+    );
+  }
+
+  return {
+    self,
+    state: view,
+    opponentHandCount: state.players[opponent].zones.hand.length,
+    opponentDeckCount: state.players[opponent].zones.deck.length,
+    opponentEvoDeckCount: state.players[opponent].zones.evolveDeck.length,
+    legalActions,
+    exPlayCosts,
+    opponentExPlayCosts,
+  };
+}
+
+export function tryAction(state: GameState, player: PlayerId, action: Parameters<typeof applyAction>[2]) {
+  return applyAction(state, player, action);
+}

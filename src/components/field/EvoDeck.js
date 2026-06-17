@@ -11,6 +11,8 @@ import {
   setCurrentCardIndex,
 } from "../../redux/CardSlice";
 import img from "../../assets/pin_bellringer_angel.png";
+import { useUiModalOpen } from "../hooks/useUiChromeVisible";
+import { ModalHideUiRow } from "../ui/HideUiButton";
 
 import defaultCardBack from "../../assets/cardbacks/default.png";
 import aeneaCardBack from "../../assets/cardbacks/aenea.png";
@@ -60,6 +62,7 @@ export default function EvoDeck({
 }) {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
+  const modalOpen = useUiModalOpen(open, { persistWhenChromeHidden: true });
   const [showEvo, setShowEvo] = useState(false);
   const [showFeed, setShowFeed] = useState(false);
   const [showRide, setShowRide] = useState(false);
@@ -72,6 +75,8 @@ export default function EvoDeck({
   const [cardback, setCardback] = useState();
   const reduxEvoDeck = useSelector((state) => state.card.evoDeck);
   const reduxCardBack = useSelector((state) => state.card.cardback);
+  const gameMode = useSelector((state) => state.gameState.gameMode);
+  const automated = gameMode === "automated";
   const handleModalOpen = () => {
     setOpen(true);
     dispatch(setViewingEvoDeck(true));
@@ -254,7 +259,7 @@ export default function EvoDeck({
       </div>
 
       <Modal
-        open={open}
+        open={modalOpen}
         onClose={handleModalClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
@@ -265,6 +270,7 @@ export default function EvoDeck({
         }}
       >
         <Box sx={style}>
+          <ModalHideUiRow />
           <CardMUI
             sx={{
               //   backgroundColor: "rgba(255, 255, 255, 0.1)",
@@ -285,9 +291,13 @@ export default function EvoDeck({
               <div
                 style={{ width: "115px" }}
                 key={`card-${idx}`}
-                onContextMenu={(e) => {
-                  handleContextMenu(e, card, idx);
-                }}
+                onContextMenu={
+                  automated
+                    ? undefined
+                    : (e) => {
+                        handleContextMenu(e, card, idx);
+                      }
+                }
               >
                 <Card
                   name={card.card}
@@ -301,41 +311,43 @@ export default function EvoDeck({
         </Box>
       </Modal>
 
-      <Menu
-        open={contextMenu !== null}
-        onClose={handleClose}
-        anchorReference="anchorPosition"
-        anchorPosition={
-          contextMenu !== null
-            ? { top: contextMenu.mouseY - 100, left: contextMenu.mouseX - 40 }
-            : undefined
-        }
-        anchorOrigin={{
-          vertical: "top",
-          horizontal: "left",
-        }}
-        transformOrigin={{
-          vertical: "top",
-          horizontal: "left",
-        }}
-      >
-        {showFeed && !evoStatus && (
-          <MenuItem onClick={handleFeed}>Feed</MenuItem>
-        )}
-        {showRide && !evoStatus && (
-          <MenuItem onClick={handleRide}>Ride</MenuItem>
-        )}
-        {showEvo && !evoStatus && !advanced && (
-          <MenuItem onClick={handleEvolve}>Evolve</MenuItem>
-        )}
-        {advanced && !evoStatus && (
-          <MenuItem onClick={handleAdvanced}>Field</MenuItem>
-        )}
-        {<MenuItem onClick={handleFlipEvo}>Flip</MenuItem>}
-        {doubleSided && !evoStatus && (
-          <MenuItem onClick={handleSwitchSide}>Switch Side</MenuItem>
-        )}
-      </Menu>
+      {!automated && (
+        <Menu
+          open={contextMenu !== null}
+          onClose={handleClose}
+          anchorReference="anchorPosition"
+          anchorPosition={
+            contextMenu !== null
+              ? { top: contextMenu.mouseY - 100, left: contextMenu.mouseX - 40 }
+              : undefined
+          }
+          anchorOrigin={{
+            vertical: "top",
+            horizontal: "left",
+          }}
+          transformOrigin={{
+            vertical: "top",
+            horizontal: "left",
+          }}
+        >
+          {showFeed && !evoStatus && (
+            <MenuItem onClick={handleFeed}>Feed</MenuItem>
+          )}
+          {showRide && !evoStatus && (
+            <MenuItem onClick={handleRide}>Ride</MenuItem>
+          )}
+          {showEvo && !evoStatus && !advanced && (
+            <MenuItem onClick={handleEvolve}>Evolve</MenuItem>
+          )}
+          {advanced && !evoStatus && (
+            <MenuItem onClick={handleAdvanced}>Field</MenuItem>
+          )}
+          {<MenuItem onClick={handleFlipEvo}>Flip</MenuItem>}
+          {doubleSided && !evoStatus && (
+            <MenuItem onClick={handleSwitchSide}>Switch Side</MenuItem>
+          )}
+        </Menu>
+      )}
     </>
   );
 }

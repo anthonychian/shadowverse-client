@@ -105,6 +105,11 @@ import useSocketStateSync from "../hooks/useSocketStateSync";
 import useReceiveFullState from "../hooks/useReceiveFullState";
 import useStoreState from "../hooks/useStoreState";
 import useHeartbeat from "../hooks/useHeartbeat";
+import { useEngineSync } from "../hooks/useEngineSync";
+import { useUiChromeVisible, useUiModalOpen } from "../hooks/useUiChromeVisible";
+import HideUiButton, { ModalHideUiRow } from "../ui/HideUiButton";
+import { setSelectedAttackerId } from "../../redux/GameStateSlice";
+import { getNameByCardNoClient } from "../../engine/cardLookup";
 
 import Token from "./Token";
 import ShowDice from "./ShowDice";
@@ -211,6 +216,10 @@ export default function Field({
   const reduxEnemyCard = useSelector((state) => state.card.enemyCard);
   const reduxEnemyArt = useSelector((state) => state.card.enemyArt);
   const reduxCounterField = useSelector((state) => state.card.counterField);
+  const reduxExPlayCostField = useSelector((state) => state.card.exPlayCostField);
+  const reduxEnemyExPlayCostField = useSelector(
+    (state) => state.card.enemyExPlayCostField,
+  );
   const reduxEnemyCounterField = useSelector(
     (state) => state.card.enemyCounterField,
   );
@@ -231,6 +240,20 @@ export default function Field({
   const reduxCardSelectedOnField = useSelector(
     (state) => state.card.cardSelectedOnField,
   );
+  const gameMode = useSelector((state) => state.gameState.gameMode);
+  const automated = gameMode === "automated";
+  const fieldInstanceIds = useSelector((state) => state.card.fieldInstanceIds);
+  const enemyFieldInstanceIds = useSelector((state) => state.card.enemyFieldInstanceIds);
+  const legalActions = useSelector((state) => state.gameState.legalActions);
+  const selectedAttackerId = useSelector((state) => state.gameState.selectedAttackerId);
+  const leaderActive = useSelector((state) => state.card.leaderActive);
+  const pendingChoices = useSelector((state) => state.gameState.pendingChoices);
+  const engineView = useSelector((state) => state.gameState.engineView);
+  const playerSlot = useSelector((state) => state.gameState.playerSlot);
+  const { sendAction } = useEngineSync();
+  const chromeVisible = useUiChromeVisible();
+  const enemyHandModalOpen = useUiModalOpen(reduxShowEnemyHand);
+  const enemyCardModalOpen = useUiModalOpen(reduxShowEnemyCard);
 
   // useState
   const [cardback, setCardback] = useState();
@@ -250,6 +273,7 @@ export default function Field({
   const [readyToFeed, setReadyToFeed] = useState(false);
   const [readyToRide, setReadyToRide] = useState(false);
   const [tokenReady, setTokenReady] = useState(false);
+  const [automatedFieldMenu, setAutomatedFieldMenu] = useState(null);
 
   // --- Responsive board scaling -------------------------------------------
   // The board is authored at a fixed "design size" (BASE_WIDTH x its natural
@@ -305,6 +329,10 @@ export default function Field({
     const handleReconnect = () => {
       if (!reduxRoom) return;
       console.log("Reconnected with socket id:", socket.id);
+      if (automated) {
+        socket.emit("request_engine_state");
+        return;
+      }
       socket.emit("rejoin_room", reduxRoom);
       socket.emit("request_stored_state", { room: reduxRoom, playerId });
     };
@@ -318,7 +346,7 @@ export default function Field({
     return () => {
       socket.off("connect", handleReconnect);
     };
-  }, [reduxRoom]);
+  }, [reduxRoom, automated]);
 
   // Per-sender sequence tracking for gap detection: { [senderId]: lastSeq }
   const lastSeqBySenderRef = useRef({});
@@ -1234,6 +1262,168 @@ export default function Field({
     );
   };
 
+  const canPlayCard = (instanceId) =>
+    automated &&
+    leaderActive &&
+    !pendingChoices &&
+    instanceId &&
+    legalActions.includes(`PLAY:${instanceId}`);
+
+  const canQuickPlayCard = (instanceId) =>
+    automated &&
+    !pendingChoices &&
+    instanceId &&
+    legalActions.includes(`QUICK_PLAY:${instanceId}`);
+
+  const canPlayFromExArea = (instanceId) =>
+    canPlayCard(instanceId) || canQuickPlayCard(instanceId);
+
+  const canAttackWith = (instanceId) =>
+    automated &&
+    leaderActive &&
+    !pendingChoices &&
+    instanceId &&
+    legalActions.includes(`ATTACK:${instanceId}`);
+
+  const isValidAttackTarget = (targetId) =>
+    selectedAttackerId &&
+    legalActions.includes(`ATTACK_TARGET:${selectedAttackerId}:${targetId}`);
+
+  const fieldCombatStyle = (idx, isEnemy) => {
+    if (!automated) return {};
+    const instanceId = isEnemy
+      ? enemyFieldInstanceIds[idx]
+      : fieldInstanceIds[idx];
+    if (!isEnemy && instanceId && selectedAttackerId === instanceId) {
+      return { outline: "3px solid #ff9800", borderRadius: "8px", cursor: "pointer" };
+    }
+    if (!isEnemy && idx >= 5 && canPlayFromExArea(instanceId)) {
+      return {
+        outline: canQuickPlayCard(instanceId) ? "2px solid #9c27b0" : "2px solid #2196f3",
+        borderRadius: "8px",
+        cursor: "pointer",
+      };
+    }
+    if (!isEnemy && idx < 5 && canAttackWith(instanceId)) {
+      return { outline: "2px solid #4caf50", borderRadius: "8px", cursor: "pointer" };
+    }
+    if (isEnemy && selectedAttackerId && isValidAttackTarget(instanceId)) {
+      return { outline: "3px solid #f44336", borderRadius: "8px", cursor: "pointer" };
+    }
+    return {};
+  };
+
+  const handleAutomatedPlayerFieldClick = (idx) => {
+    const instanceId = fieldInstanceIds[idx];
+    if (!instanceId || reduxField[idx] === 0) return;
+    if (idx >= 5) {
+      if (canQuickPlayCard(instanceId)) {
+        sendAction({ type: "QUICK_PLAY", handInstanceId: instanceId });
+        return;
+      }
+      if (canPlayCard(instanceId)) {
+        sendAction({ type: "PLAY_CARD", handInstanceId: instanceId });
+        return;
+      }
+      if (legalActions.includes(`ACTIVATE_EXAREA:${instanceId}`)) {
+        sendAction({ type: "ACTIVATE_EXAREA", exAreaInstanceId: instanceId });
+        return;
+      }
+      return;
+    }
+    if (idx < 5 && canAttackWith(instanceId)) {
+      dispatch(
+        setSelectedAttackerId(selectedAttackerId === instanceId ? null : instanceId),
+      );
+    }
+  };
+
+  const handleAutomatedEnemyFieldClick = (enemyIdx) => {
+    if (!automated || !selectedAttackerId || pendingChoices) return;
+    const targetId = enemyFieldInstanceIds[enemyIdx];
+    if (!targetId || reduxEnemyField[enemyIdx] === 0) return;
+    if (!isValidAttackTarget(targetId)) return;
+    sendAction({
+      type: "ATTACK",
+      attackerId: selectedAttackerId,
+      targetId,
+    });
+    dispatch(setSelectedAttackerId(null));
+  };
+
+  const getEvolveOptionsForFieldCard = (fieldInstanceId) => {
+    const opts = [];
+    if (legalActions.includes(`EVOLVE:${fieldInstanceId}`)) {
+      opts.push({ useEvoPoint: false, useSuperEvo: false, label: "Evolve" });
+    }
+    if (legalActions.includes(`SUPER_EVOLVE:${fieldInstanceId}`)) {
+      opts.push({ useEvoPoint: false, useSuperEvo: true, label: "Super Evolve" });
+    }
+    if (legalActions.includes(`EVOLVE_EP:${fieldInstanceId}`)) {
+      opts.push({ useEvoPoint: true, useSuperEvo: false, label: "Evolve (use EP)" });
+    }
+    if (legalActions.includes(`SUPER_EVOLVE_EP:${fieldInstanceId}`)) {
+      opts.push({ useEvoPoint: true, useSuperEvo: true, label: "Super Evolve (use EP)" });
+    }
+    return opts;
+  };
+
+  const handleAutomatedFieldContextMenu = (event, idx) => {
+    if (!automated || !leaderActive || pendingChoices) return;
+    const instanceId = fieldInstanceIds[idx];
+    if (!instanceId || reduxField[idx] === 0) return;
+    event.preventDefault();
+    setAutomatedFieldMenu({
+      mouseX: event.clientX + 2,
+      mouseY: event.clientY - 6,
+      idx,
+      instanceId,
+    });
+  };
+
+  const closeAutomatedFieldMenu = () => setAutomatedFieldMenu(null);
+
+  const handleAutomatedEvolve = (useEvoPoint = false, useSuperEvo = false) => {
+    if (!automatedFieldMenu) return;
+    sendAction({
+      type: "EVOLVE",
+      fieldInstanceId: automatedFieldMenu.instanceId,
+      useEvoPoint: Boolean(useEvoPoint),
+      useSuperEvo: Boolean(useSuperEvo),
+    });
+    closeAutomatedFieldMenu();
+  };
+
+  const getActivateOptionsForFieldCard = (fieldInstanceId) => {
+    const opts = [];
+    if (legalActions.includes(`ACTIVATE:${fieldInstanceId}`)) {
+      opts.push({ useEvoPoint: false, label: "Activate" });
+    }
+    if (legalActions.includes(`ACTIVATE_EP:${fieldInstanceId}`)) {
+      opts.push({ useEvoPoint: true, label: "Activate (use EP)" });
+    }
+    return opts;
+  };
+
+  const handleAutomatedActivate = (useEvoPoint = false) => {
+    if (!automatedFieldMenu) return;
+    sendAction({
+      type: "ACTIVATE",
+      fieldInstanceId: automatedFieldMenu.instanceId,
+      useEvoPoint: Boolean(useEvoPoint),
+    });
+    closeAutomatedFieldMenu();
+  };
+
+  const handleAutomatedActivateExArea = () => {
+    if (!automatedFieldMenu) return;
+    sendAction({
+      type: "ACTIVATE_EXAREA",
+      exAreaInstanceId: automatedFieldMenu.instanceId,
+    });
+    closeAutomatedFieldMenu();
+  };
+
   const handleSelectEnemyCardInHand = (idx) => {
     if (idx === reduxCardSelectedInHand) dispatch(setCardSelectedInHand(-1));
     else dispatch(setCardSelectedInHand(idx));
@@ -1342,7 +1532,42 @@ export default function Field({
         </div>
       </Tooltip>
       <Menu
-        open={contextMenu !== null}
+        open={chromeVisible && automatedFieldMenu !== null}
+        onClose={closeAutomatedFieldMenu}
+        anchorReference="anchorPosition"
+        anchorPosition={
+          automatedFieldMenu !== null
+            ? { top: automatedFieldMenu.mouseY, left: automatedFieldMenu.mouseX }
+            : undefined
+        }
+      >
+        {automatedFieldMenu &&
+          automatedFieldMenu.idx < 5 &&
+          getActivateOptionsForFieldCard(automatedFieldMenu.instanceId).map((opt) => (
+            <MenuItem
+              key={`activate-${opt.useEvoPoint ? "ep" : "pp"}`}
+              onClick={() => handleAutomatedActivate(opt.useEvoPoint)}
+            >
+              {opt.label}
+            </MenuItem>
+          ))}
+        {automatedFieldMenu &&
+          automatedFieldMenu.idx >= 5 &&
+          legalActions.includes(`ACTIVATE_EXAREA:${automatedFieldMenu.instanceId}`) && (
+            <MenuItem onClick={handleAutomatedActivateExArea}>Activate</MenuItem>
+          )}
+        {automatedFieldMenu &&
+          getEvolveOptionsForFieldCard(automatedFieldMenu.instanceId).map((opt) => (
+            <MenuItem
+              key={`${opt.useSuperEvo ? "super" : "evo"}-${opt.useEvoPoint ? "ep" : "pp"}`}
+              onClick={() => handleAutomatedEvolve(opt.useEvoPoint, opt.useSuperEvo)}
+            >
+              {opt.label}
+            </MenuItem>
+          ))}
+      </Menu>
+      <Menu
+        open={chromeVisible && contextMenu !== null}
         onClose={handleClose}
         anchorReference="anchorPosition"
         anchorPosition={
@@ -1406,7 +1631,7 @@ export default function Field({
           ))}
       </Menu>
       <Menu
-        open={contextEvoMenu !== null}
+        open={chromeVisible && contextEvoMenu !== null}
         onClose={handleEvoClose}
         anchorReference="anchorPosition"
         anchorPosition={
@@ -1444,7 +1669,7 @@ export default function Field({
       {/* Show Enemy Hand Modal */}
 
       <Modal
-        open={reduxShowEnemyHand}
+        open={enemyHandModalOpen}
         onClose={handleModalClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
@@ -1455,6 +1680,7 @@ export default function Field({
         }}
       >
         <Box sx={style}>
+          <ModalHideUiRow />
           <Typography
             sx={{
               color: "white",
@@ -1496,7 +1722,7 @@ export default function Field({
       {/* Show Enemy Card Modal */}
 
       <Modal
-        open={reduxShowEnemyCard}
+        open={enemyCardModalOpen}
         onClose={handleShowCardModalClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
@@ -1519,6 +1745,9 @@ export default function Field({
             border: "none",
           }}
         >
+          <HideUiButton
+            sx={{ position: "fixed", top: 16, left: 16, zIndex: 1400 }}
+          />
           <CardMUI
             sx={{
               backgroundColor: "transparent",
@@ -1764,14 +1993,20 @@ export default function Field({
           {reduxField.map((x, idx) => (
             <motion.div
               key={`enemy1-${idx}`}
+              className={"cardStyle"}
               style={{
-                // position: "absolute",
-                // backgroundColor: "#131219",
-                // borderRadius: "10px",
-                // border: "4px solid #555559",
+                zIndex: 2,
+                ...fieldCombatStyle(cardPos(idx), true),
               }}
               className={"cardStyle fieldSlot"}
-              onClick={() => handleSelectEnemyCardOnField(cardPos(idx))}
+              onClick={() => {
+                const enemyIdx = cardPos(idx);
+                if (automated && selectedAttackerId) {
+                  handleAutomatedEnemyFieldClick(enemyIdx);
+                  return;
+                }
+                handleSelectEnemyCardOnField(enemyIdx);
+              }}
             >
               {reduxEnemyField[cardPos(idx)] !== 0 &&
                 reduxEnemyEvoField[cardPos(idx)] === 0 && (
@@ -1782,6 +2017,7 @@ export default function Field({
                     showDef={reduxEnemyCustomValues[cardPos(idx)].showDef}
                     engaged={reduxEnemyEngaged[cardPos(idx)]}
                     counterVal={reduxEnemyCounterField[cardPos(idx)]}
+                    discountedPlayCost={reduxEnemyExPlayCostField[cardPos(idx)]}
                     aura={reduxEnemyAuraField[cardPos(idx)]}
                     bane={reduxEnemyBaneField[cardPos(idx)]}
                     ward={reduxEnemyWardField[cardPos(idx)]}
@@ -1987,6 +2223,7 @@ export default function Field({
                       defVal={reduxCustomValues[idx].def}
                       engaged={reduxEngaged[idx]}
                       counterVal={reduxCounterField[idx]}
+                      discountedPlayCost={reduxExPlayCostField[idx]}
                       aura={reduxAuraField[idx]}
                       bane={reduxBaneField[idx]}
                       ward={reduxWardField[idx]}
@@ -2020,19 +2257,21 @@ export default function Field({
               )}
               {!ready && (
                 <div
+                  onClick={() => {
+                    if (automated) handleAutomatedPlayerFieldClick(idx);
+                  }}
                   onContextMenu={(e) => {
+                    if (automated) {
+                      handleAutomatedFieldContextMenu(e, idx);
+                      return;
+                    }
                     if (reduxField[idx] !== 0 && reduxEvoField[idx] === 0)
                       handleContextMenu(e, idx, reduxField[idx]);
                     else if (reduxField[idx] !== 0)
                       handleEvoContextMenu(e, idx, reduxEvoField[idx]);
                   }}
                   key={`player2-${idx}`}
-                  style={
-                    {
-                      // height: "160px",
-                      // width: "115px",
-                    }
-                  }
+                  style={fieldCombatStyle(idx, false)}
                   className={"cardStyle"}
                 >
                   {reduxField[idx] !== 0 && reduxEvoField[idx] === 0 && (
@@ -2043,6 +2282,7 @@ export default function Field({
                       defVal={reduxCustomValues[idx].def}
                       engaged={reduxEngaged[idx]}
                       counterVal={reduxCounterField[idx]}
+                      discountedPlayCost={reduxExPlayCostField[idx]}
                       aura={reduxAuraField[idx]}
                       bane={reduxBaneField[idx]}
                       ward={reduxWardField[idx]}
@@ -2065,6 +2305,7 @@ export default function Field({
                       defVal={reduxCustomValues[idx].def}
                       engaged={reduxEngaged[idx]}
                       counterVal={reduxCounterField[idx]}
+                      discountedPlayCost={reduxExPlayCostField[idx]}
                       aura={reduxAuraField[idx]}
                       bane={reduxBaneField[idx]}
                       ward={reduxWardField[idx]}

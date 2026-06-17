@@ -1,0 +1,8 @@
+{
+  "MVP-006": {
+    "abilities": [{ "timing": "fanfare", "effect": { "op": "draw", "count": 1 } }]
+  },
+  "MVP-007": {
+    "abilities": [{ "timing": "lastWords", "effect": { "op": "draw", "count": 1 } }]
+  }
+}

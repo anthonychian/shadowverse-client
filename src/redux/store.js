@@ -1,6 +1,7 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { CardSlice } from "./CardSlice";
 import { DeckSlice } from "./DeckSlice";
+import { GameStateSlice } from "./GameStateSlice";
 
 import storage from "redux-persist/lib/storage";
 
@@ -18,11 +19,12 @@ import {
 const persistConfig = {
   key: "root",
   storage: storage,
-  blacklist: ["card"],
+  blacklist: ["card", "gameState"],
 };
 const rootReducer = combineReducers({
   card: CardSlice.reducer,
   deck: DeckSlice.reducer,
+  gameState: GameStateSlice.reducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

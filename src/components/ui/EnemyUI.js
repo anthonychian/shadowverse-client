@@ -22,6 +22,7 @@ import sepOn from "../../assets/logo/sep_on.png";
 import sepOff from "../../assets/logo/sep_off.png";
 import "../../css/EnemyUI.css";
 import "../../css/LeaderPanel.css";
+import HideUiButton from "./HideUiButton";
 
 const StyledRating = styled(Rating)({
   "& .MuiRating-iconFilled": {
@@ -196,7 +197,8 @@ export default function EnemyUI() {
   };
 
   return (
-    <div className="leaderPanel">
+    <div className="leaderPanel" style={{ position: "relative" }}>
+      <HideUiButton sx={{ position: "absolute", top: 0, right: 0, zIndex: 2 }} />
       <Snackbar
         anchorOrigin={{ vertical: "top", horizontal: "center" }}
         open={reduxEnemyViewingDeck}

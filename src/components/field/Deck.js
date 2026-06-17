@@ -20,6 +20,8 @@ import {
   setViewingDeckLog,
 } from "../../redux/CardSlice";
 import { Menu, MenuItem, Modal, Box, Popover } from "@mui/material";
+import { useUiModalOpen } from "../hooks/useUiChromeVisible";
+import { ModalHideUiRow } from "../ui/HideUiButton";
 import { triggerGameAnimation } from "./animationBus";
 import { triggerHandReveal } from "./cardRevealBus";
 import { DeckFx } from "./GameFx";
@@ -74,6 +76,7 @@ export default function Deck({
 }) {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
+  const modalOpen = useUiModalOpen(open);
   const [name, setName] = useState("");
   const [index, setIndex] = useState(0);
   const [contextMenu, setContextMenu] = React.useState(null);
@@ -87,6 +90,8 @@ export default function Deck({
 
   const reduxDeck = useSelector((state) => state.card.deck);
   const reduxRoom = useSelector((state) => state.card.room);
+  const gameMode = useSelector((state) => state.gameState.gameMode);
+  const automated = gameMode === "automated";
 
   // popover
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -100,17 +105,15 @@ export default function Deck({
   };
 
   const handleModalOpen = () => {
-    if (reduxDeck.length > 0 && !ready) {
-      setOpen(true);
-      dispatch(setViewingDeck(true));
-    }
+    if (automated || reduxDeck.length === 0 || ready) return;
+    setOpen(true);
+    dispatch(setViewingDeck(true));
   };
 
   const handleModalRevealOpen = () => {
-    if (reduxDeck.length > 0 && !ready) {
-      setOpen(true);
-      dispatch(setViewingTopCards(true));
-    }
+    if (automated || reduxDeck.length === 0 || ready) return;
+    setOpen(true);
+    dispatch(setViewingTopCards(true));
   };
 
   const handleModalClose = () => {
@@ -378,12 +381,16 @@ export default function Deck({
   return (
     <>
       <div
-        onMouseEnter={(event) => handlePopoverOpen(event)}
-        onClick={() => {
-          if (!ready) doDraw();
-        }}
+        onMouseEnter={automated ? undefined : (event) => handlePopoverOpen(event)}
+        onClick={
+          automated
+            ? undefined
+            : () => {
+                if (!ready) doDraw();
+              }
+        }
         style={{
-          cursor: `url(${img}) 55 55, auto`,
+          cursor: automated ? "default" : `url(${img}) 55 55, auto`,
           position: "relative",
         }}
       >
@@ -391,6 +398,7 @@ export default function Deck({
         <DeckFx side="player" />
       </div>
 
+      {!automated && (
       <Popover
         id="mouse-over-popover"
         sx={{
@@ -430,6 +438,8 @@ export default function Deck({
           </div>
         </Menu>
       </Popover>
+      )}
+      {!automated && (
       <Menu
         open={cardContextMenu !== null}
         onClose={handleCardClose}
@@ -473,9 +483,11 @@ export default function Deck({
           </MenuItem>
         )}
       </Menu>
+      )}
 
+      {!automated && (
       <Modal
-        open={open}
+        open={modalOpen}
         onClose={handleModalClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
@@ -486,6 +498,7 @@ export default function Deck({
         }}
       >
         <Box sx={style}>
+          <ModalHideUiRow />
           {reveal && (
             <div
               style={{
@@ -600,6 +613,7 @@ export default function Deck({
           </CardMUI>
         </Box>
       </Modal>
+      )}
     </>
   );
 }

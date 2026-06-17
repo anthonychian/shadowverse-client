@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+﻿import React, { useState, useEffect, useRef } from "react";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import wallpaper from "../../src/assets/wallpapers/3.png";
@@ -38,7 +38,12 @@ import {
   clearSavedState,
   getDisplayName,
   saveDisplayName,
+  playerId,
 } from "../sockets";
+import { setGameMode, setPlayerSlot, resetEngine } from "../redux/GameStateSlice";
+import { deckToEnginePayload, defaultMvpDeck } from "../engine/adapter";
+import { applyEnginePayload } from "../engine/sync";
+import { store } from "../redux/store";
 import ActiveGamesBoard from "../components/ui/ActiveGamesBoard";
 import DeckPanel from "../components/deckbuilder/DeckPanel";
 import CardInspector from "../components/deckbuilder/CardInspector";
@@ -132,6 +137,7 @@ export default function Home() {
   const [leaderNum, setLeaderNum] = useState(0);
   const [openSnack, setOpenSnack] = useState(false);
   const [deckIdx, setDeckIdx] = useState(0);
+  const [rulesEnforced, setRulesEnforced] = useState(false);
 
   // Lobby board state. `rooms` is the live list of joinable public games pushed
   // by the server; `myRoom` is the room this tab is currently hosting (shown in
@@ -139,7 +145,7 @@ export default function Home() {
   const [rooms, setRooms] = useState([]);
   const [myRoom, setMyRoom] = useState(null);
   const [displayName, setDisplayName] = useState(getDisplayName());
-  // A room this player was in and can rejoin (private to them — see the lobby
+  // A room this player was in and can rejoin (private to them ΓÇö see the lobby
   // effect). null when there's nothing to reconnect to.
   const [reconnectRoom, setReconnectRoom] = useState(null);
 
@@ -149,7 +155,7 @@ export default function Home() {
   const isMobile = useMediaQuery("(max-width: 768px)");
   const [showAnnounce, setShowAnnounce] = useState(false);
   // Mobile deck carousel (infinite/looping). carouselActiveK = global slot index
-  // (across the 3 rendered copies) nearest the centre — that slot scales up.
+  // (across the 3 rendered copies) nearest the centre ΓÇö that slot scales up.
   const carouselRef = useRef(null);
   const carouselSettleRef = useRef(null);
   const [carouselActiveK, setCarouselActiveK] = useState(0);
@@ -162,7 +168,7 @@ export default function Home() {
   const reduxActiveUsers = useSelector((state) => state.card.activeUsers);
   const numLeaders = 7;
 
-  // Announcements board — add new entries to the top of this list.
+  // Announcements board ΓÇö add new entries to the top of this list.
   // Each entry: { date, title, body }
   const announcements = [
     {
@@ -193,18 +199,43 @@ export default function Home() {
   ];
 
   useEffect(() => {
+    const savedMode = sessionStorage.getItem("sve_game_mode");
+    if (savedMode === "automated" || savedMode === "manual") {
+      dispatch(setGameMode(savedMode));
+      if (savedMode === "automated") setRulesEnforced(true);
+    }
+
     const onStartGame = () => handleNavigateToGame();
+
+    const onEngineState = (views) => {
+      const slot = store.getState().gameState.playerSlot;
+      applyEnginePayload(dispatch, views, slot);
+      handleNavigateToGame();
+    };
+
+    const onJoined = ({ slot, automated }) => {
+      if (automated) {
+        dispatch(setPlayerSlot(slot));
+        dispatch(setGameMode("automated"));
+        socket.emit("request_engine_state");
+      }
+    };
+
     const onActiveUsers = (data) => dispatch(setActiveUsers(data));
     socket.on("start_game", onStartGame);
+    socket.on("engine_state", onEngineState);
+    socket.on("joined", onJoined);
     socket.on("active_users", onActiveUsers);
     // Remove these on unmount; otherwise each return trip to Home stacks another
     // start_game handler (firing navigate multiple times) and leaves a stale one
     // alive that could yank the host into a game while they're off another page.
     return () => {
       socket.off("start_game", onStartGame);
+      socket.off("engine_state", onEngineState);
+      socket.off("joined", onJoined);
       socket.off("active_users", onActiveUsers);
     };
-  }, [socket]);
+  }, [dispatch, socket]);
 
   // Subscribe to the lobby so the active-games board updates live. Request the
   // current snapshot on mount (also covers reconnects, since the listener stays
@@ -223,7 +254,7 @@ export default function Home() {
     // Reconnect probe: if this tab remembers a room, ask the server (privately)
     // whether it's still rejoinable. Offer a Reconnect card only when the room
     // is alive (an opponent is there) and this socket isn't already a member of
-    // it — i.e. a game we dropped out of, not our own open lobby room. A dead
+    // it ΓÇö i.e. a game we dropped out of, not our own open lobby room. A dead
     // room (0 connected) is forgotten so the stale entry doesn't linger.
     socket.on("room_status", ({ room, connected, isMember }) => {
       if (room !== getSavedRoom()) return;
@@ -307,6 +338,30 @@ export default function Home() {
   const deckClassOf = (d) =>
     (d && (d.class || computeDeckClass(d.deck))) || "";
 
+  const buildEngineDeck = () => {
+    if (!selectedDeck.deck?.length) return defaultMvpDeck();
+    return deckToEnginePayload(selectedDeck.deck, selectedDeck.evoDeck || []);
+  };
+
+  const joinRoomWithMode = (roomId) => {
+    dispatch(setRoom(roomId));
+    saveRoom(roomId);
+    dispatch(setDeckClass(deckClassOf(selectedDeck)));
+    if (rulesEnforced) {
+      dispatch(resetEngine());
+      dispatch(setGameMode("automated"));
+      socket.emit("join_room", {
+        room: roomId,
+        playerId,
+        automated: true,
+        deck: buildEngineDeck(),
+      });
+    } else {
+      dispatch(setGameMode("manual"));
+      socket.emit("join_room", roomId);
+    }
+  };
+
   const handleCreateRoom = () => {
     if (Object.keys(selectedDeck).length !== 0) {
       if (socket.id) {
@@ -316,10 +371,6 @@ export default function Home() {
         if (prev && prev !== roomId) clearSavedState(prev);
         setReconnectRoom(null);
         setRoomNumber(roomId);
-        dispatch(setRoom(roomId));
-        saveRoom(roomId);
-        // New rooms default to public so they appear on everyone's board; the
-        // host can flip to private from the board afterwards.
         const room = {
           roomId,
           hostName: displayName || LEADER_NAMES[leaderNum] || "Challenger",
@@ -328,10 +379,9 @@ export default function Home() {
           deckClass: deckClassOf(selectedDeck),
           isPrivate: false,
         };
-        // Stash the class so the game can auto-pick a matching leader on load.
-        dispatch(setDeckClass(room.deckClass));
         setMyRoom(room);
         socket.emit("create_room", room);
+        joinRoomWithMode(roomId);
       }
     }
   };
@@ -339,10 +389,7 @@ export default function Home() {
     if (Object.keys(selectedDeck).length !== 0) {
       if (roomNumber !== "") {
         setRoomNumber(roomNumber.toString());
-        dispatch(setRoom(roomNumber.toString()));
-        dispatch(setDeckClass(deckClassOf(selectedDeck)));
-        saveRoom(roomNumber.toString());
-        socket.emit("join_room", roomNumber.toString());
+        joinRoomWithMode(roomNumber.toString());
       }
     }
   };
@@ -353,10 +400,7 @@ export default function Home() {
   const handleJoinPublicRoom = (roomId) => {
     if (Object.keys(selectedDeck).length === 0) return;
     setRoomNumber(roomId);
-    dispatch(setRoom(roomId));
-    dispatch(setDeckClass(deckClassOf(selectedDeck)));
-    saveRoom(roomId);
-    socket.emit("join_room", roomId);
+    joinRoomWithMode(roomId);
   };
 
   // Rejoin a game we previously dropped out of. The room/state are still in
@@ -421,7 +465,7 @@ export default function Home() {
   };
 
   const handleNavigateToDeck = () => {
-    // Leaving matchmaking for the builder — close any room we're hosting so it
+    // Leaving matchmaking for the builder ΓÇö close any room we're hosting so it
     // doesn't linger on everyone's board as an unjoinable ghost.
     handleCloseRoom();
     navigate("/deck");
@@ -557,8 +601,8 @@ export default function Home() {
   // ---- mobile deck carousel (infinite, swipeable both directions) ----
   // The list is rendered as 3 identical copies. As the user swipes, the slot
   // nearest the centre is marked active (scaled up). When scrolling settles we
-  // jump by one copy-width — instantly, and invisibly since the copies are
-  // identical — to keep the view in the middle copy, so it never runs out of
+  // jump by one copy-width ΓÇö instantly, and invisibly since the copies are
+  // identical ΓÇö to keep the view in the middle copy, so it never runs out of
   // room to swipe in either direction.
   const recenterCarousel = () => {
     const el = carouselRef.current;
@@ -587,7 +631,7 @@ export default function Home() {
     else el.scrollBy({ left: delta, behavior: "smooth" });
   };
 
-  // Shared deck carousel — used by both the desktop and mobile Home layouts.
+  // Shared deck carousel ΓÇö used by both the desktop and mobile Home layouts.
   // An infinite/looping strip of deck tiles plus a New Deck tile: scroll/swipe
   // to bring an item to the centre (it scales up), then tap the centred item, or
   // tap a side item to bring it to the centre.
@@ -877,6 +921,17 @@ export default function Home() {
                 PLAY
               </div>
             </Button>
+            <Chip
+              label={rulesEnforced ? "Rules Enforced" : "Manual Mode"}
+              color={rulesEnforced ? "success" : "default"}
+              title={
+                rulesEnforced
+                  ? "Requires npm run server in a separate terminal (localhost:5000)"
+                  : "Free-form manual play (no rules engine)"
+              }
+              onClick={() => setRulesEnforced((v) => !v)}
+              sx={{ alignSelf: "center", cursor: "pointer" }}
+            />
             <Button
               onClick={handleJoinRoom}
               sx={{
@@ -1134,7 +1189,7 @@ export default function Home() {
 
       {isMobile && (
         <>
-        {/* animated leader character — large, fixed behind the UI, rising from
+        {/* animated leader character ΓÇö large, fixed behind the UI, rising from
             the bottom to about the middle of the screen */}
         {leaderImage && (
           <div
@@ -1207,13 +1262,13 @@ export default function Home() {
             />
           </div>
 
-          {/* announcements (collapsible) — directly under Active Games. The
+          {/* announcements (collapsible) ΓÇö directly under Active Games. The
               expanded panel is an overlay so it never reflows / moves anything. */}
           <div style={{ width: "100%", position: "relative", zIndex: 5, flexShrink: 0 }}>
             <Button
               fullWidth
               onClick={() => setShowAnnounce((s) => !s)}
-              endIcon={<span style={{ fontSize: 13 }}>{showAnnounce ? "▲" : "▼"}</span>}
+              endIcon={<span style={{ fontSize: 13 }}>{showAnnounce ? "Γû▓" : "Γû╝"}</span>}
               sx={{
                 fontFamily: "Share Tech Mono, monospace",
                 textTransform: "none",
@@ -1275,9 +1330,9 @@ export default function Home() {
             )}
           </div>
 
-          {/* decks carousel (mobile): infinite/looping — swipe either direction
+          {/* decks carousel (mobile): infinite/looping ΓÇö swipe either direction
               to bring New Deck or a deck to the centre (it scales up). Tap the
-              centred item to use it (New Deck → builder; a deck → options), or
+              centred item to use it (New Deck ΓåÆ builder; a deck ΓåÆ options), or
               tap a side item to bring it to the centre. Pinned to the bottom of
               the column via marginTop: auto. */}
           {renderDeckCarousel({ extraStyle: { marginTop: "auto" } })}
@@ -1547,7 +1602,7 @@ export default function Home() {
         </Box>
       </Modal>
 
-      {/* Mobile deck Preview — the deck-view layout, read-only (no add/remove,
+      {/* Mobile deck Preview ΓÇö the deck-view layout, read-only (no add/remove,
           no trash, name/class shown but not editable; inspect via magnifier). */}
       {isMobile && (
         <Dialog

@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useEngineSync } from "../hooks/useEngineSync";
+import { useUiModalOpen } from "../hooks/useUiChromeVisible";
+import { ModalHideUiRow } from "../ui/HideUiButton";
 import { artImage, artThumb } from "../../decks/getCards";
 import {
   Menu,
@@ -39,6 +42,7 @@ export default function Cemetery({
 }) {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
+  const modalOpen = useUiModalOpen(open, { persistWhenChromeHidden: true });
   const [name, setName] = useState("");
   const [contextMenu, setContextMenu] = React.useState(null);
   const [cemeterySelected, setCemeterySelected] = useState(true);
@@ -46,9 +50,16 @@ export default function Cemetery({
   const [cardIndex, setCardIndex] = useState(-1);
 
   const reduxCemetery = useSelector((state) => state.card.cemetery);
+  const cemeteryInstanceIds = useSelector((state) => state.card.cemeteryInstanceIds);
   const reduxMyArt = useSelector((state) => state.card.myArt);
   const reduxBanish = useSelector((state) => state.card.banish);
   const reduxRoom = useSelector((state) => state.card.room);
+  const gameMode = useSelector((state) => state.gameState.gameMode);
+  const legalActions = useSelector((state) => state.gameState.legalActions);
+  const leaderActive = useSelector((state) => state.card.leaderActive);
+  const pendingChoices = useSelector((state) => state.gameState.pendingChoices);
+  const automated = gameMode === "automated";
+  const { sendAction } = useEngineSync();
 
   const handleModalOpen = () => {
     if ((reduxCemetery.length > 0 || reduxBanish.length > 0) && !ready) {
@@ -101,6 +112,23 @@ export default function Cemetery({
     handleClose();
     dispatch(addToBanishFromCemetery({ name: name, index: cardIndex }));
   };
+
+  const handleAutomatedActivateFromCemetery = () => {
+    if (!automated || cardIndex < 0) return;
+    const instanceId = cemeteryInstanceIds[cardIndex];
+    if (!instanceId || !legalActions.includes(`ACTIVATE_CEMETERY:${instanceId}`)) return;
+    sendAction({ type: "ACTIVATE_CEMETERY", cemeteryInstanceId: instanceId });
+    handleClose();
+    handleModalClose();
+  };
+
+  const canActivateFromCemetery =
+    automated &&
+    leaderActive &&
+    !pendingChoices &&
+    cardIndex >= 0 &&
+    cemeteryInstanceIds[cardIndex] &&
+    legalActions.includes(`ACTIVATE_CEMETERY:${cemeteryInstanceIds[cardIndex]}`);
 
   const handleCardToHandFromCemetery = () => {
     handleModalClose();
@@ -177,7 +205,7 @@ export default function Cemetery({
       </div>
 
       <Modal
-        open={open}
+        open={modalOpen}
         onClose={handleModalClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
@@ -203,6 +231,7 @@ export default function Cemetery({
             alignItems: "center",
           }}
         >
+          <ModalHideUiRow />
           <FormControl>
             <RadioGroup
               row
@@ -300,29 +329,32 @@ export default function Cemetery({
             horizontal: "left",
           }}
         >
-          {cemeterySelected && (
+          {cemeterySelected && canActivateFromCemetery && (
+            <MenuItem onClick={handleAutomatedActivateFromCemetery}>Activate</MenuItem>
+          )}
+          {cemeterySelected && !automated && (
             <MenuItem onClick={handleCardToHandFromCemetery}>Hand</MenuItem>
           )}
-          {cemeterySelected && (
+          {cemeterySelected && !automated && (
             <MenuItem onClick={handleCardToFieldFromCemetery}>Field</MenuItem>
           )}
-          {cemeterySelected && (
+          {cemeterySelected && !automated && (
             <MenuItem onClick={handleToTopOfDeckFromCemetery}>
               Top of Deck
             </MenuItem>
           )}
-          {cemeterySelected && (
+          {cemeterySelected && !automated && (
             <MenuItem onClick={handleToBotOfDeckFromCemetery}>
               Bot of Deck
             </MenuItem>
           )}
-          {cemeterySelected && (
+          {cemeterySelected && !automated && (
             <MenuItem onClick={handleCardToBanishFromCemetery}>Banish</MenuItem>
           )}
-          {banishSelected && (
+          {banishSelected && !automated && (
             <MenuItem onClick={handleCardToHandFromBanish}>Hand</MenuItem>
           )}
-          {banishSelected && (
+          {banishSelected && !automated && (
             <MenuItem onClick={handleCardToFieldFromBanish}>Field</MenuItem>
           )}
         </Menu>

@@ -11,14 +11,19 @@ import { motion } from "framer-motion";
 import { useSelector, useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
 import ZoomedCard from "../components/ui/ZoomedCard";
+import ChoiceModal from "../components/automated/ChoiceModal";
+import AutomatedControls from "../components/automated/AutomatedControls";
+import UiChromeRestore from "../components/ui/UiChromeRestore";
+import { useEngineSync } from "../components/hooks/useEngineSync";
 import { setLeader } from "../redux/CardSlice";
 import { randomLeaderForClass } from "../decks/classLeaders";
 import initialWallpaper from "../../src/assets/wallpapers/3.png";
 
 export default function Game(callback) {
+  useEngineSync();
   const [wallpaper, setWallpaper] = useState(initialWallpaper);
-  const [selectedOption, setSelectedOption] = useState("Galmieux");
   const reduxLeader = useSelector((state) => state.card.leader);
+  const [selectedOption, setSelectedOption] = useState(reduxLeader || "Galmieux");
   const reduxDeckClass = useSelector((state) => state.card.deckClass);
   const dispatch = useDispatch();
   const location = useLocation();
@@ -61,6 +66,7 @@ export default function Game(callback) {
   const [readyToPlaceOnFieldFromHand, setReadyToPlaceOnFieldFromHand] =
     useState(false);
   const reduxCurrentCard = useSelector((state) => state.card.currentCard);
+  const uiChromeHidden = useSelector((state) => state.gameState.uiChromeHidden);
   const reduxMyArt = useSelector((state) => state.card.myArt);
   const reduxEnemyArt = useSelector((state) => state.card.enemyArt);
   // The zoomed card can be either player's; my own choices take precedence.
@@ -92,10 +98,13 @@ export default function Game(callback) {
         backgroundSize: "cover",
       }}
     >
-      <Selection
-        setSelectedOption={setSelectedOption}
-        // setWallpaper={setWallpaper}
-      />
+      <UiChromeRestore />
+      {!uiChromeHidden && (
+        <Selection
+          setSelectedOption={setSelectedOption}
+          // setWallpaper={setWallpaper}
+        />
+      )}
       {/* Left side  */}
       <div className={"leftSideCanvas"}>
         {/* ZoomedCard is position:absolute against the viewport, so it must NOT
@@ -107,9 +116,11 @@ export default function Game(callback) {
           scale={sideScale}
           art={zoomArt}
         />
-        <div style={leftScaleStyle}>
-          <PlayPoints name={selectedOption} />
-        </div>
+        {!uiChromeHidden && (
+          <div style={leftScaleStyle}>
+            <PlayPoints name={selectedOption} />
+          </div>
+        )}
       </div>
 
       {/* Center Field */}
@@ -169,18 +180,23 @@ export default function Game(callback) {
       </motion.div>
 
       {/* Right side */}
-      <div className={"rightSideCanvas"}>
-        <div style={rightScaleStyle}>
-          <EnemyUI />
-        </div>
+      {!uiChromeHidden && <ChoiceModal setHovering={setHovering} />}
+      {!uiChromeHidden && <AutomatedControls />}
 
-        <div style={rightScaleStyle}>
-          <PlayerUI name={selectedOption} />
+      {!uiChromeHidden && (
+        <div className={"rightSideCanvas"}>
+          <div style={rightScaleStyle}>
+            <EnemyUI />
+          </div>
+
+          <div style={rightScaleStyle}>
+            <PlayerUI name={selectedOption} />
+          </div>
+          <div style={rightScaleStyle}>
+            <ChatUI scale={sideScale} />
+          </div>
         </div>
-        <div style={rightScaleStyle}>
-          <ChatUI scale={sideScale} />
-        </div>
-      </div>
+      )}
     </div>
   );
 }

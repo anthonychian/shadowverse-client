@@ -13,6 +13,8 @@ import CardMUI from "@mui/material/Card";
 import Card from "../hand/Card";
 import { setViewingCemeteryOpponent } from "../../redux/CardSlice";
 import "../../css/Card.css";
+import { useUiModalOpen } from "../hooks/useUiChromeVisible";
+import { ModalHideUiRow } from "../ui/HideUiButton";
 
 const img = require("../../assets/pin_bellringer_angel.png");
 
@@ -34,6 +36,7 @@ const style = {
 export default function EnemyCemetery({ setHovering, ready }) {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
+  const modalOpen = useUiModalOpen(open);
   const [cemeterySelected, setCemeterySelected] = useState(true);
   const [banishSelected, setBanishSelected] = useState(false);
 
@@ -106,7 +109,7 @@ export default function EnemyCemetery({ setHovering, ready }) {
       </div>
 
       <Modal
-        open={open}
+        open={modalOpen}
         onClose={handleModalClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
@@ -117,6 +120,7 @@ export default function EnemyCemetery({ setHovering, ready }) {
         }}
       >
         <Box sx={style}>
+          <ModalHideUiRow />
           <FormControl>
             <RadioGroup
               row

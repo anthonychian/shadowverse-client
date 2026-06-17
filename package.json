@@ -41,12 +41,28 @@
     "redux-persist": "^6.0.0",
     "socket.io-client": "^4.8.1",
     "three": "^0.159.0",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "sve-engine": "file:packages/sve-engine"
   },
+  "workspaces": [
+    "packages/sve-engine",
+    "server"
+  ],
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "npm run build:engine && react-scripts build",
+    "build:engine": "npm run build -w sve-engine && node src/scripts/sync-card-stats.js",
+    "sync:cards": "node src/scripts/backfill-reprints.js",
     "test": "react-scripts test",
+    "test:engine": "npm run test -w sve-engine",
+    "server": "npm run start -w shadowverse-server",
+    "build:server": "npm run build -w sve-engine",
+    "merge:cards": "node src/scripts/mergecards.js",
+    "scrape:decks": "node src/scripts/scrapecardnos.js --file src/scripts/deck-lists/festive-sword.json src/scripts/deck-lists/abyss-machina.json",
+    "regenerate:deck-cards": "node src/scripts/regenerate-deck-cards.js",
+    "resync:decks": "npm run scrape:decks && npm run regenerate:deck-cards && npm run sync:cards",
+    "parse:dsl": "node src/scripts/parse-effects-to-dsl.js",
+    "coverage:cards": "node src/scripts/card-coverage.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

@@ -8,9 +8,12 @@ import "../../css/PlayPoints.css";
 import { setLeaderActive } from "../../redux/CardSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { setPlayPoints } from "../../redux/CardSlice";
+import HideUiButton from "./HideUiButton";
 
 export default function Scoreboard({ name }) {
   const dispatch = useDispatch();
+  const gameMode = useSelector((state) => state.gameState.gameMode);
+  const automated = gameMode === "automated";
 
   const reduxMaxPlayPoints = useSelector((state) => state.card.playPoints.max);
   const reduxCurrentPlayPoints = useSelector(
@@ -136,7 +139,8 @@ export default function Scoreboard({ name }) {
   };
 
   return (
-    <div className="PlayPointsContainer">
+    <div className="PlayPointsContainer" style={{ position: "relative" }}>
+      <HideUiButton sx={{ position: "absolute", top: 4, right: 4, zIndex: 2 }} />
       <div className="CircleContainer">
         <div className="circles">
           {[...Array(10)].map((x, idx) =>
@@ -166,7 +170,7 @@ export default function Scoreboard({ name }) {
           )}
         </div>
       </div>
-      <div className="IncDecContainer">
+      {!automated && <div className="IncDecContainer">
         <div className="inc">
           {reduxMaxPlayPoints < 10 ? (
             <IconButton
@@ -207,9 +211,9 @@ export default function Scoreboard({ name }) {
             </IconButton>
           )}
         </div>
-      </div>
+      </div>}
       {/* </div> */}
-      <div className="buttonsContainer">
+      {!automated && <div className="buttonsContainer">
         <div className="pointsContainer">
           <div className="upArrowContainer">
             {reduxCurrentPlayPoints < 10 && reduxMaxPlayPoints > 0 ? (
@@ -253,10 +257,9 @@ export default function Scoreboard({ name }) {
             )}
           </div>
         </div>
-      </div>
+      </div>}
+      {!automated && (
       <div className="turnContainer">
-        {/* onClick lives on the whole pill (not just the text) so the padded
-            clickable area matches the visible button. */}
         <div className="nextTurnContainer" onClick={() => nextTurn()}>
           <div className="buttonText">Next Turn</div>
         </div>
@@ -264,6 +267,14 @@ export default function Scoreboard({ name }) {
           <div className="buttonText">End Turn</div>
         </div>
       </div>
+      )}
+      {automated && (
+        <div className="turnContainer">
+          <div className="points" style={{ color: "white", marginTop: 8 }}>
+            PP automated
+          </div>
+        </div>
+      )}
     </div>
   );
 }

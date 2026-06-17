@@ -49,6 +49,7 @@ export default function Card({
   atkVal,
   defVal,
   counterVal,
+  discountedPlayCost,
   aura,
   bane,
   ward,
@@ -89,6 +90,7 @@ export default function Card({
   const reduxEnemyCardSelectedOnField = useSelector(
     (state) => state.card.enemyCardSelectedOnField
   );
+  const gameMode = useSelector((state) => state.gameState.gameMode);
   // Live field state, so a drag-drop only fills an empty zone (mirrors the
   // click-to-place flow, which also rejects occupied slots).
   const reduxField = useSelector((state) => state.card.field);
@@ -121,6 +123,7 @@ export default function Card({
     (name.slice(-5) === "TOKEN" || name.slice(-8) === "ADVANCED");
 
   const handleTap = () => {
+    if (gameMode === "automated") return;
     if (suppressTapRef.current) {
       suppressTapRef.current = false;
       return;
@@ -396,6 +399,28 @@ export default function Card({
             : "none"
         }
       >
+        {discountedPlayCost != null && (
+          <div
+            style={{
+              position: "absolute",
+              top: "25%",
+              left: "30%",
+              borderRadius: "50px",
+              color: "white",
+              fontSize: "30px",
+              fontFamily: "Noto Serif JP, serif",
+              backgroundColor: "rgba(0, 0, 0, 0.5)",
+              height: "50px",
+              width: "50px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              pointerEvents: "none",
+            }}
+          >
+            {discountedPlayCost}
+          </div>
+        )}
         {keywords && keywords.length > 0 && kwHover && (
           // Hover: larger badge. Not engaged -> sits above the card's top edge,
           // spanning the card width. Engaged -> the card is rotated -90°, so we

@@ -30,6 +30,7 @@ import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import FiberManualRecordOutlinedIcon from "@mui/icons-material/FiberManualRecordOutlined";
 import sepOn from "../../assets/logo/sep_on.png";
 import sepOff from "../../assets/logo/sep_off.png";
+import HideUiButton from "./HideUiButton";
 
 const StyledRating = styled(Rating)({
   "& .MuiRating-iconFilled": {
@@ -64,6 +65,13 @@ export default function PlayerUI({ name }) {
   const reduxSelfOnlineStatus = useSelector(
     (state) => state.card.selfOnlineStatus,
   );
+  const gameMode = useSelector((state) => state.gameState.gameMode);
+  const automated = gameMode === "automated";
+  const sepLit = automated ? reduxCurrentSuperEvo : superEvo;
+
+  useEffect(() => {
+    if (automated) setSEP(reduxCurrentSuperEvo);
+  }, [automated, reduxCurrentSuperEvo]);
 
   useEffect(() => {
     if (!healthDidMount.current) {
@@ -235,7 +243,8 @@ export default function PlayerUI({ name }) {
   };
 
   return (
-    <div className="leaderPanel">
+    <div className="leaderPanel" style={{ position: "relative" }}>
+      <HideUiButton sx={{ position: "absolute", top: 0, right: 0, zIndex: 2 }} />
       {/* Hero: the animated leader with its class logo (and the wifi badge). */}
       <div className="leaderStageWrap">
         <Leader
@@ -301,10 +310,11 @@ export default function PlayerUI({ name }) {
 
         <div
           className="evoBlock"
-          onClick={() => handleSuperEvo()}
+          onClick={automated ? undefined : () => handleSuperEvo()}
           title="Super Evolve"
+          style={automated ? { cursor: "default" } : undefined}
         >
-          <img src={superEvo ? sepOn : sepOff} alt="super evo" />
+          <img src={sepLit ? sepOn : sepOff} alt="super evo" />
         </div>
       </div>
     </div>
