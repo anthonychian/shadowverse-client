@@ -1993,12 +1993,11 @@ export default function Field({
           {reduxField.map((x, idx) => (
             <motion.div
               key={`enemy1-${idx}`}
-              className={"cardStyle"}
+              className={"cardStyle fieldSlot"}
               style={{
                 zIndex: 2,
                 ...fieldCombatStyle(cardPos(idx), true),
               }}
-              className={"cardStyle fieldSlot"}
               onClick={() => {
                 const enemyIdx = cardPos(idx);
                 if (automated && selectedAttackerId) {
