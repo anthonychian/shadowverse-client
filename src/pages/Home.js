@@ -381,7 +381,21 @@ export default function Home() {
         };
         setMyRoom(room);
         socket.emit("create_room", room);
-        joinRoomWithMode(roomId);
+        // In manual mode the host stays on Home and waits for an opponent:
+        // emitting join_room here would trip the server's start_game (it starts
+        // the game as soon as anyone joins a room with <2 players), yanking the
+        // host into an empty game the moment they press PLAY. The opponent's
+        // later join_room is what starts the game for both. In automated mode the
+        // engine join registers the host as a player without starting the game,
+        // so it's still done up front.
+        if (rulesEnforced) {
+          joinRoomWithMode(roomId);
+        } else {
+          dispatch(setRoom(roomId));
+          saveRoom(roomId);
+          dispatch(setDeckClass(deckClassOf(selectedDeck)));
+          dispatch(setGameMode("manual"));
+        }
       }
     }
   };
