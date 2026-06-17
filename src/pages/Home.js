@@ -259,9 +259,10 @@ export default function Home() {
   }, [reduxDecks]);
 
   // Centre the carousel on New Deck (middle copy) on mount / when the deck count
-  // changes, so there's a full copy to swipe to on each side.
+  // changes, so there's a full copy to swipe to on each side. Runs for both the
+  // desktop and mobile layouts (only one carousel is mounted at a time, so the
+  // single carouselRef always points at the visible one).
   useEffect(() => {
-    if (!isMobile) return;
     const el = carouselRef.current;
     if (!el) return;
     const n = reduxDecks.length + 1;
@@ -586,6 +587,92 @@ export default function Home() {
     else el.scrollBy({ left: delta, behavior: "smooth" });
   };
 
+  // Shared deck carousel — used by both the desktop and mobile Home layouts.
+  // An infinite/looping strip of deck tiles plus a New Deck tile: scroll/swipe
+  // to bring an item to the centre (it scales up), then tap the centred item to
+  // use it (New Deck → builder; a deck → options menu) or tap a side item to
+  // bring it to the centre. `extraStyle` lets a caller tweak placement (e.g. the
+  // mobile column pins it to the bottom with marginTop: auto).
+  const renderDeckCarousel = (extraStyle = {}) => (
+    <div
+      ref={carouselRef}
+      onScroll={handleCarouselScroll}
+      style={{
+        width: "100%",
+        flexShrink: 0,
+        display: "flex",
+        overflowX: "auto",
+        scrollSnapType: "x mandatory",
+        paddingLeft: "calc(50% - 75px)",
+        paddingRight: "calc(50% - 75px)",
+        boxSizing: "border-box",
+        WebkitOverflowScrolling: "touch",
+        ...extraStyle,
+      }}
+    >
+      {[0, 1, 2].map((copy) => {
+        const items = [
+          { type: "new" },
+          ...reduxDecks.map((deck, idx) => ({ type: "deck", deck, idx })),
+        ];
+        const n = items.length;
+        return items.map((it, logical) => {
+          const gk = copy * n + logical;
+          const active = carouselActiveK === gk;
+          const tileStyle = {
+            cursor: "pointer",
+            transform: active ? "scale(1)" : "scale(0.78)",
+            opacity: active ? 1 : 0.5,
+            transition: "transform .2s ease, opacity .2s ease",
+          };
+          return (
+            <div key={`${copy}-${logical}`} data-k={gk} style={carouselSlot}>
+              {it.type === "new" ? (
+                <div
+                  onClick={(e) => onCarouselItemClick(e, handleNavigateToDeck)}
+                  style={{ ...tileStyle, display: "flex", flexDirection: "column", alignItems: "center" }}
+                >
+                  <img height={150} src={cardback} alt="cardback" style={{ display: "block" }} />
+                  <div style={{ color: "white", fontSize: 14, fontFamily: "Noto Serif JP,serif", marginTop: 4 }}>NEW DECK</div>
+                </div>
+              ) : (
+                <div
+                  onClick={(e) => onCarouselItemClick(e, () => handleContextMenu(e, it.deck, it.idx))}
+                  onContextMenu={(e) => e.preventDefault()}
+                  style={{ ...tileStyle, width: 110 }}
+                >
+                  <img
+                    src={artThumb(it.deck.deck[Math.floor(it.deck.deck.length / 2)], it.deck.art)}
+                    alt={it.deck.name}
+                    loading="lazy"
+                    style={{ width: "100%", borderRadius: 8, display: "block" }}
+                  />
+                  <div
+                    style={{
+                      marginTop: 4,
+                      color: "white",
+                      fontSize: 13,
+                      fontFamily: "Noto Serif JP,serif",
+                      textAlign: "center",
+                      whiteSpace: "nowrap",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
+                      background: "#131219",
+                      borderRadius: 4,
+                      padding: "2px 4px",
+                    }}
+                  >
+                    {it.deck.name}
+                  </div>
+                </div>
+              )}
+            </div>
+          );
+        });
+      })}
+    </div>
+  );
+
   // const deckToImage = () => {
   //   var element = document.getElementById("deckPreview");
   //   html2canvas(element).then(function (canvas) {
@@ -799,165 +886,13 @@ export default function Home() {
         <div
           style={{
             display: "flex",
-            // backgroundColor: "red",
-            flexDirection: "row",
             alignItems: "center",
             justifyContent: "center",
             height: "50%",
             width: "100%",
           }}
         >
-          <div
-            style={{
-              // backgroundColor: "yellow",
-              display: "flex",
-              flexDirection: "row",
-              overflowX: "auto",
-              alignItems: "center",
-              paddingLeft: "1em",
-              paddingRight: "3em",
-              // height: "50%",
-              width: "80%",
-              gap: "1em",
-              justifyContent: reduxDecks.length > 2 ? "start" : "center",
-            }}
-          >
-            {reduxDecks.length > 0 &&
-              reduxDecks.map((deck, idx) => (
-                <div
-                  key={idx}
-                  onContextMenu={(e) => {
-                    handleContextMenu(e, deck, idx);
-                  }}
-                  onClick={() => handleSelectDeck(deck, idx)}
-                  style={{
-                    cursor: "pointer",
-                    height: "160px",
-                    width: "115px",
-                    borderRadius: "10px",
-                    border: "50px solid #0000",
-                    backgroundColor: showSelected[idx]
-                      ? "rgba(170, 170, 170, 0.50)"
-                      : "transparent",
-                  }}
-                >
-                  <div
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      position: "relative",
-                    }}
-                  >
-                    <div
-                      style={{
-                        transform: "rotate(-25deg)",
-                        position: "absolute",
-                        right: "20%",
-                        zIndex: 1,
-                      }}
-                    >
-                      <img
-                        height={"160px"}
-                        src={artImage(deck.deck[0], deck.art)}
-                        alt={"cardback"}
-                      />
-                    </div>
-                    <div style={{ zIndex: 2 }}>
-                      <img
-                        height={"160px"}
-                        src={artImage(
-                          deck.deck[Math.floor(deck.deck.length / 2)],
-                          deck.art,
-                        )}
-                        alt={"cardback"}
-                      />
-                    </div>
-                    <div
-                      style={{
-                        transform: "rotate(25deg)",
-                        position: "absolute",
-                        left: "20%",
-                        zIndex: 3,
-                      }}
-                    >
-                      <img
-                        height={"160px"}
-                        src={artImage(deck.deck[deck.deck.length - 1], deck.art)}
-                        alt={"cardback"}
-                      />
-                    </div>
-                  </div>
-
-                  <div
-                    style={{
-                      position: "relative",
-                      bottom: 35,
-                      zIndex: 10,
-                      height: "35px",
-                      width: "120px",
-                      backgroundColor: "#131219",
-                      // color: "black",
-                      color: "white",
-                      fontSize: "17px",
-                      // borderRadius: "10px",
-                      // border: "4px solid #0000",
-                      fontFamily: "Noto Serif JP,serif",
-                      display: "inline-block",
-                      textOverflow: "ellipsis",
-                      overflow: "hidden",
-                      whiteSpace: "nowrap",
-                      textAlign: "center",
-                      verticalAlign: "bottom",
-                    }}
-                  >
-                    {deck.name}
-                  </div>
-                </div>
-              ))}
-          </div>
-          <div
-            style={{
-              // backgroundColor: "red",
-              height: "300px",
-              width: "200px",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Button
-              onClick={handleNavigateToDeck}
-              sx={{
-                // backgroundColor: "green",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-                zIndex: 2,
-                height: "90px",
-                width: "80px",
-                "&:hover": { boxShadow: "0 0 40px 17px #48abe0" },
-              }}
-            >
-              <img height={"130px"} src={cardback} alt={"cardback"} />
-              <div
-                style={{
-                  height: "35px",
-                  width: "100px",
-                  color: "white",
-                  fontSize: "17px",
-                  border: "4px solid #0000",
-                  // backgroundColor: "#131219",
-                  fontFamily: "Noto Serif JP,serif",
-                  display: "inline-block",
-                  textAlign: "center",
-                }}
-              >
-                NEW DECK
-              </div>
-            </Button>
-          </div>
+          {renderDeckCarousel()}
         </div>
       </div>
       <div
@@ -1313,84 +1248,9 @@ export default function Home() {
           {/* decks carousel (mobile): infinite/looping — swipe either direction
               to bring New Deck or a deck to the centre (it scales up). Tap the
               centred item to use it (New Deck → builder; a deck → options), or
-              tap a side item to bring it to the centre. */}
-          <div
-            ref={carouselRef}
-            onScroll={handleCarouselScroll}
-            style={{
-              width: "100%",
-              marginTop: "auto",
-              flexShrink: 0,
-              display: "flex",
-              overflowX: "auto",
-              scrollSnapType: "x mandatory",
-              paddingLeft: "calc(50% - 75px)",
-              paddingRight: "calc(50% - 75px)",
-              boxSizing: "border-box",
-              WebkitOverflowScrolling: "touch",
-            }}
-          >
-            {[0, 1, 2].map((copy) => {
-              const items = [
-                { type: "new" },
-                ...reduxDecks.map((deck, idx) => ({ type: "deck", deck, idx })),
-              ];
-              const n = items.length;
-              return items.map((it, logical) => {
-                const gk = copy * n + logical;
-                const active = carouselActiveK === gk;
-                const tileStyle = {
-                  cursor: "pointer",
-                  transform: active ? "scale(1)" : "scale(0.78)",
-                  opacity: active ? 1 : 0.5,
-                  transition: "transform .2s ease, opacity .2s ease",
-                };
-                return (
-                  <div key={`${copy}-${logical}`} data-k={gk} style={carouselSlot}>
-                    {it.type === "new" ? (
-                      <div
-                        onClick={(e) => onCarouselItemClick(e, handleNavigateToDeck)}
-                        style={{ ...tileStyle, display: "flex", flexDirection: "column", alignItems: "center" }}
-                      >
-                        <img height={150} src={cardback} alt="cardback" style={{ display: "block" }} />
-                        <div style={{ color: "white", fontSize: 14, fontFamily: "Noto Serif JP,serif", marginTop: 4 }}>NEW DECK</div>
-                      </div>
-                    ) : (
-                      <div
-                        onClick={(e) => onCarouselItemClick(e, () => handleContextMenu(e, it.deck, it.idx))}
-                        onContextMenu={(e) => e.preventDefault()}
-                        style={{ ...tileStyle, width: 110 }}
-                      >
-                        <img
-                          src={artThumb(it.deck.deck[Math.floor(it.deck.deck.length / 2)], it.deck.art)}
-                          alt={it.deck.name}
-                          loading="lazy"
-                          style={{ width: "100%", borderRadius: 8, display: "block" }}
-                        />
-                        <div
-                          style={{
-                            marginTop: 4,
-                            color: "white",
-                            fontSize: 13,
-                            fontFamily: "Noto Serif JP,serif",
-                            textAlign: "center",
-                            whiteSpace: "nowrap",
-                            overflow: "hidden",
-                            textOverflow: "ellipsis",
-                            background: "#131219",
-                            borderRadius: 4,
-                            padding: "2px 4px",
-                          }}
-                        >
-                          {it.deck.name}
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                );
-              });
-            })}
-          </div>
+              tap a side item to bring it to the centre. Pinned to the bottom of
+              the column via marginTop: auto. */}
+          {renderDeckCarousel({ marginTop: "auto" })}
         </div>
         </>
       )}
