@@ -14,6 +14,7 @@ import {
   addToCemeteryFromDeck,
   addToCemeteryFromTopOfDeck,
   addToBanishFromDeck,
+  placeToFieldFromDeck,
   setViewingDeck,
   setViewingTopCards,
   setViewingCardsLog,
@@ -23,7 +24,9 @@ import { Menu, MenuItem, Modal, Box, Popover } from "@mui/material";
 import { useUiModalOpen } from "../hooks/useUiChromeVisible";
 import { ModalHideUiRow } from "../ui/HideUiButton";
 import { triggerGameAnimation } from "./animationBus";
-import { triggerHandReveal } from "./cardRevealBus";
+import { triggerHandReveal, triggerCardReveal } from "./cardRevealBus";
+import { fieldSlotCenter, registerDeck } from "./handDrag";
+import { useModalCardDrag, ModalDragGhost } from "./modalCardDrag";
 import { DeckFx } from "./GameFx";
 
 import CardMUI from "@mui/material/Card";
@@ -89,6 +92,7 @@ export default function Deck({
   const reduxCardBack = useSelector((state) => state.card.cardback);
 
   const reduxDeck = useSelector((state) => state.card.deck);
+  const reduxField = useSelector((state) => state.card.field);
   const reduxRoom = useSelector((state) => state.card.room);
   const gameMode = useSelector((state) => state.gameState.gameMode);
   const automated = gameMode === "automated";
@@ -300,6 +304,32 @@ export default function Deck({
     dispatch(addToBotOfDeckFromDeck({ card: name, index: index }));
   };
 
+  // ---- drag a card out of the deck modal (Look At Top or View Deck) ----
+  // Works for both the revealed top cards (partialDeck) and the full View Deck
+  // list (reduxDeck) — in both the card's index is its deck index, so the same
+  // drops apply. The modal hides while dragging and reappears on release with the
+  // dropped card removed. For revealed cards we also drop it from partialDeck.
+  const deckDrag = useModalCardDrag({
+    targets: { field: true, hand: true, cemetery: true },
+    field: reduxField,
+    onDrop: (card, index, dest) => {
+      if (reveal) setPartialDeck((prev) => prev.filter((_, i) => i !== index));
+      if (dest.type === "hand") {
+        dispatch(addToHandFromDeck({ card, index }));
+        triggerHandReveal(card, reduxRoom);
+      } else if (dest.type === "cemetery") {
+        dispatch(addToCemeteryFromDeck({ card, index }));
+      } else {
+        dispatch(
+          placeToFieldFromDeck({ card, deckIndex: index, index: dest.index }),
+        );
+        // Reveal only when played to the field row (0-4), not the EX area.
+        if (dest.index < 5)
+          triggerCardReveal(card, reduxRoom, dest.index, fieldSlotCenter(dest.index));
+      }
+    },
+  });
+
   const handleSubmit = () => {
     const num = Number(textInput);
     dispatch(setViewingCardsLog({ number: num }));
@@ -381,6 +411,7 @@ export default function Deck({
   return (
     <>
       <div
+        ref={(el) => registerDeck(el)}
         onMouseEnter={automated ? undefined : (event) => handlePopoverOpen(event)}
         onClick={
           automated
@@ -497,7 +528,15 @@ export default function Deck({
           },
         }}
       >
-        <Box sx={style}>
+        <Box
+          sx={{
+            ...style,
+            // Hidden with opacity (not visibility/display) while dragging so the
+            // dragged card's wrapper stays rendered and keeps its pointer
+            // capture — otherwise the browser would release it and drop tracking.
+            opacity: deckDrag.isDragging ? 0 : 1,
+          }}
+        >
           <ModalHideUiRow />
           {reveal && (
             <div
@@ -595,6 +634,7 @@ export default function Deck({
                   onContextMenu={(e) => {
                     handleCardContextMenu(e, card, idx);
                   }}
+                  {...deckDrag.dragProps(card, idx)}
                 >
                   <Card ready={ready} name={card} setHovering={setHovering} />
                 </div>
@@ -606,6 +646,7 @@ export default function Deck({
                   onContextMenu={(e) => {
                     handleCardContextMenu(e, card, idx);
                   }}
+                  {...deckDrag.dragProps(card, idx)}
                 >
                   <Card ready={ready} name={card} setHovering={setHovering} />
                 </div>
@@ -614,6 +655,8 @@ export default function Deck({
         </Box>
       </Modal>
       )}
+
+      <ModalDragGhost drag={deckDrag} ready={ready} setHovering={setHovering} />
     </>
   );
 }

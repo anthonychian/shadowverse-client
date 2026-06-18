@@ -89,6 +89,22 @@ export const isOverHand = (x, y) => {
   return !!r && x >= r.left && x <= r.right && y >= r.top && y <= r.bottom;
 };
 
+// The player's deck pile, registered by Deck via a ref callback. A drop target
+// for sending a field/hand/cemetery card to the top or bottom of the deck. The
+// pile is split horizontally: the top half is "top of deck", the bottom half is
+// "bottom of deck".
+let deckEl = null;
+export const registerDeck = (el) => {
+  deckEl = el || null;
+};
+export const getDeckRect = () => (deckEl ? deckEl.getBoundingClientRect() : null);
+// Returns "top" | "bottom" when (x, y) is over the deck pile, else null.
+export const deckHalfAt = (x, y) => {
+  const r = getDeckRect();
+  if (!r || x < r.left || x > r.right || y < r.top || y > r.bottom) return null;
+  return y - r.top < r.height / 2 ? "top" : "bottom";
+};
+
 // The opponent's hand row (top of the screen), registered by Field. Lets the
 // "added to hand" reveal fly toward the right hand on each screen.
 let enemyHandEl = null;
@@ -101,7 +117,8 @@ export const enemyHandCenter = () =>
   rectCenter(enemyHandEl ? enemyHandEl.getBoundingClientRect() : null);
 
 // Hover bus: the dragged card publishes its live state ({ active, index,
-// cemetery, hand, showCemetery, showHand }); the drop-hint overlay subscribes.
+// cemetery, hand, showCemetery, showHand, showDeck, deck }); the drop-hint
+// overlay subscribes. `deck` is "top" | "bottom" | null (the hovered deck half).
 const hoverListeners = new Set();
 export const onDragHover = (cb) => {
   hoverListeners.add(cb);

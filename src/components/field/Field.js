@@ -169,7 +169,10 @@ const style = {
 };
 
 // Responsive board-scaling constants (see the scaling effect in Field).
-const BASE_WIDTH = 1100; // design width of the board in px (kept compact so cards render large; field still wide enough for engaged-card spacing)
+const BASE_WIDTH = 1200; // design width of the board in px. Wide enough that the 5 field cards clear the side piles (deck/cemetery/evolve-deck) on both edges; the whole board scales down to fit narrow screens, so this only trades a little card size for edge spacing when width-limited.
+// Horizontal inset applied inside each field grid so the outermost cards don't
+// touch the side piles. Scales with the board like everything else.
+const FIELD_GRID_PADDING_X = 40;
 const TOP_RESERVE = 200; // vertical space kept above the field for the opponent's hand
 const BOTTOM_RESERVE = 210; // vertical space kept below the field for the player's hand
 const MIN_SCALE = 0.4;
@@ -1238,6 +1241,14 @@ export default function Field({
       triggerHandReveal(baseCard, reduxCurrentRoom);
       return;
     }
+    if (dest.type === "deck") {
+      if (!canReturn) return;
+      if (dest.half === "top")
+        dispatch(placeToTopOfDeckFromField({ card: baseCard, index: fromIndex }));
+      else dispatch(placeToBotOfDeckFromField({ card: baseCard, index: fromIndex }));
+      clearFieldSlot(fromIndex);
+      return;
+    }
     // field move
     const toIndex = dest.index;
     if (toIndex < 0 || toIndex === fromIndex) return;
@@ -1859,7 +1870,7 @@ export default function Field({
             {reduxEnemyHand.map((_, idx) => {
               // Keep the opponent's hand within the board width: while the cards
               // fit they sit side by side, but once they'd overflow (cardbacks
-              // are 115px wide, so ~10 cards for the 1100px board) a shared
+              // are 115px wide, so ~10 cards for the BASE_WIDTH board) a shared
               // negative margin overlaps them so the hand stays within BASE_WIDTH.
               const n = reduxEnemyHand.length;
               const ENEMY_CARD_W = 115;
@@ -1985,6 +1996,7 @@ export default function Field({
             display: "grid",
             gridTemplateColumns: "repeat(5, 1fr)",
             columnGap: "60px",
+            paddingInline: `${FIELD_GRID_PADDING_X}px`,
             alignItems: "center",
             justifyItems: "center",
             // zIndex: 0,
@@ -2179,6 +2191,7 @@ export default function Field({
             display: "grid",
             gridTemplateColumns: "repeat(5, 1fr)",
             columnGap: "60px",
+            paddingInline: `${FIELD_GRID_PADDING_X}px`,
             alignItems: "center",
             justifyItems: "center",
             // zIndex: 0,

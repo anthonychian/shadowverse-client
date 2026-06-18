@@ -9,12 +9,15 @@ import {
   setEngaged,
   placeToFieldFromHand,
   placeToCemeteryFromHand,
+  placeToTopOfDeckFromHand,
+  placeToBotOfDeckFromHand,
 } from "../../redux/CardSlice";
 import { useDispatch, useSelector } from "react-redux";
 import {
   fieldIndexAt,
   isOverCemetery,
   isOverHand,
+  deckHalfAt,
   fieldSlotCenter,
   setDragHover,
   getBoardScale,
@@ -166,14 +169,16 @@ export default function Card({
       index: -1,
       cemetery: false,
       hand: false,
+      deck: null,
       showCemetery: fieldExtraTargets,
       showHand: fieldExtraTargets,
+      showDeck: fieldExtraTargets,
     });
   };
   const handleFieldDrag = (_event, info) => {
     // info.point is in the board's local (scaled) space because of the
     // MotionConfig transformPagePoint around the field grid — scale it back up
-    // to viewport coords so it matches the field/cemetery/hand rects.
+    // to viewport coords so it matches the field/cemetery/hand/deck rects.
     const s = getBoardScale();
     const x = info.point.x * s;
     const y = info.point.y * s;
@@ -182,8 +187,10 @@ export default function Card({
       index: fieldIndexAt(x, y),
       cemetery: fieldExtraTargets && isOverCemetery(x, y),
       hand: fieldExtraTargets && isOverHand(x, y),
+      deck: fieldExtraTargets ? deckHalfAt(x, y) : null,
       showCemetery: fieldExtraTargets,
       showHand: fieldExtraTargets,
+      showDeck: fieldExtraTargets,
     });
   };
   const handleFieldDragEnd = (_event, info) => {
@@ -192,17 +199,21 @@ export default function Card({
       index: -1,
       cemetery: false,
       hand: false,
+      deck: null,
       showCemetery: false,
       showHand: false,
+      showDeck: false,
     });
     if (!onFieldDrop) return;
     // See handleFieldDrag: convert board-local point back to viewport coords.
     const s = getBoardScale();
     const x = info.point.x * s;
     const y = info.point.y * s;
+    const deckHalf = fieldExtraTargets ? deckHalfAt(x, y) : null;
     let dest;
     if (fieldExtraTargets && isOverCemetery(x, y)) dest = { type: "cemetery" };
     else if (fieldExtraTargets && isOverHand(x, y)) dest = { type: "hand" };
+    else if (deckHalf) dest = { type: "deck", half: deckHalf };
     else dest = { type: "field", index: fieldIndexAt(x, y) };
     onFieldDrop(idx, dest);
   };
@@ -219,14 +230,16 @@ export default function Card({
       index: -1,
       cemetery: false,
       hand: false,
+      deck: null,
       showCemetery: true,
       showHand: false,
+      showDeck: true,
     });
   };
   const handleCardDrag = (_event, info) => {
     // The hand is scaled by boardScale (see Game.js MotionConfig), so info.point
     // is in hand-local space — scale it back to viewport coords to match the
-    // field/cemetery rects.
+    // field/cemetery/deck rects.
     const s = getBoardScale();
     const x = info.point.x * s;
     const y = info.point.y * s;
@@ -235,8 +248,10 @@ export default function Card({
       index: fieldIndexAt(x, y),
       cemetery: isOverCemetery(x, y),
       hand: false,
+      deck: deckHalfAt(x, y),
       showCemetery: true,
       showHand: false,
+      showDeck: true,
     });
   };
   const handleCardDragEnd = (_event, info) => {
@@ -245,14 +260,25 @@ export default function Card({
       index: -1,
       cemetery: false,
       hand: false,
+      deck: null,
       showCemetery: false,
       showHand: false,
+      showDeck: false,
     });
     if (onCardDragEnd) onCardDragEnd();
     // See handleCardDrag: convert hand-local point back to viewport coords.
     const s = getBoardScale();
     const x = info.point.x * s;
     const y = info.point.y * s;
+    const deckHalf = deckHalfAt(x, y);
+    if (deckHalf === "top") {
+      dispatch(placeToTopOfDeckFromHand({ name: name, index: inHandIndex }));
+      return;
+    }
+    if (deckHalf === "bottom") {
+      dispatch(placeToBotOfDeckFromHand({ name: name, index: inHandIndex }));
+      return;
+    }
     if (isOverCemetery(x, y)) {
       dispatch(placeToCemeteryFromHand({ name: name, index: inHandIndex }));
       return;

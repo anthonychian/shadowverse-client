@@ -20,15 +20,18 @@ import {
   addToHandFromCemetery,
   addToHandFromBanish,
   addToBanishFromCemetery,
+  placeToFieldFromCemetery,
+  placeToFieldFromBanish,
   placeToTopOfDeckFromCemetery,
   placeToBotOfDeckFromCemetery,
   setCurrentCard,
   setCurrentCardIndex,
   setViewingCemetery,
 } from "../../redux/CardSlice";
-import { registerCemetery } from "./handDrag";
+import { registerCemetery, fieldSlotCenter } from "./handDrag";
+import { useModalCardDrag, ModalDragGhost } from "./modalCardDrag";
 // import cardback from "../../assets/cardbacks/default.png";
-import { triggerHandReveal } from "./cardRevealBus";
+import { triggerHandReveal, triggerCardReveal } from "./cardRevealBus";
 import "../../css/Card.css";
 
 const img = require("../../assets/pin_bellringer_angel.png");
@@ -53,6 +56,7 @@ export default function Cemetery({
   const cemeteryInstanceIds = useSelector((state) => state.card.cemeteryInstanceIds);
   const reduxMyArt = useSelector((state) => state.card.myArt);
   const reduxBanish = useSelector((state) => state.card.banish);
+  const reduxField = useSelector((state) => state.card.field);
   const reduxRoom = useSelector((state) => state.card.room);
   const gameMode = useSelector((state) => state.gameState.gameMode);
   const legalActions = useSelector((state) => state.gameState.legalActions);
@@ -160,6 +164,50 @@ export default function Cemetery({
     setBanishSelected(true);
   };
 
+  // ---- drag a cemetery/banish card onto the field or back to hand ----
+  // The modal hides while dragging and reappears on release. Which source pile a
+  // card came from depends on the active radio (cemetery vs banish).
+  const cemeteryDrag = useModalCardDrag({
+    // Deck (top/bottom) is only a valid target for cemetery cards — there's no
+    // banish→deck action — so it's gated on the active radio.
+    targets: { field: true, hand: true, deck: cemeterySelected },
+    field: reduxField,
+    onDrop: (card, index, dest) => {
+      if (automated) return;
+      if (dest.type === "deck") {
+        if (!cemeterySelected) return;
+        if (dest.half === "top")
+          dispatch(placeToTopOfDeckFromCemetery({ name: card, index }));
+        else dispatch(placeToBotOfDeckFromCemetery({ name: card, index }));
+      } else if (dest.type === "hand") {
+        if (cemeterySelected)
+          dispatch(addToHandFromCemetery({ name: card, index }));
+        else dispatch(addToHandFromBanish({ name: card, index }));
+        triggerHandReveal(card, reduxRoom);
+      } else {
+        if (cemeterySelected)
+          dispatch(
+            placeToFieldFromCemetery({
+              card,
+              indexInHand: index,
+              index: dest.index,
+            }),
+          );
+        else
+          dispatch(
+            placeToFieldFromBanish({
+              card,
+              indexInHand: index,
+              index: dest.index,
+            }),
+          );
+        // Reveal only when summoned to the field row (0-4), not the EX area.
+        if (dest.index < 5)
+          triggerCardReveal(card, reduxRoom, dest.index, fieldSlotCenter(dest.index));
+      }
+    },
+  });
+
   return (
     <>
       <div
@@ -229,6 +277,9 @@ export default function Cemetery({
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
+            // Hidden with opacity (not visibility/display) while dragging so the
+            // dragged card's wrapper keeps its pointer capture.
+            opacity: cemeteryDrag.isDragging ? 0 : 1,
           }}
         >
           <ModalHideUiRow />
@@ -279,6 +330,7 @@ export default function Cemetery({
                   onContextMenu={(e) => {
                     handleContextMenu(e, card, index);
                   }}
+                  {...(automated ? {} : cemeteryDrag.dragProps(card, index))}
                 >
                   <Card
                     //   key={`card-${idx}`}
@@ -293,9 +345,13 @@ export default function Cemetery({
                 //<div key={`card-${idx}`} style={{ width: "115px" }}>
                 <div
                   key={`card-${index}`}
-                  style={{ width: "115px" }}
                   onContextMenu={(e) => {
                     handleContextMenu(e, card, index);
+                  }}
+                  {...(automated ? {} : cemeteryDrag.dragProps(card, index))}
+                  style={{
+                    width: "115px",
+                    ...(automated ? {} : cemeteryDrag.dragStyle),
                   }}
                 >
                   <Card
@@ -359,6 +415,8 @@ export default function Cemetery({
           )}
         </Menu>
       )}
+
+      <ModalDragGhost drag={cemeteryDrag} ready={ready} setHovering={setHovering} />
     </>
   );
 }
