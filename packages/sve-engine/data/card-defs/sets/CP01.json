@@ -1,0 +1,2156 @@
+{
+  "CP01-004EN": {
+    "name": "Gold City",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "recoverPp",
+          "amount": 3
+        }
+      }
+    ]
+  },
+  "CP01-005EN": {
+    "name": "Eat Fast! Yum Fast!",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "storm"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "choose",
+          "min": 1,
+          "max": 1,
+          "options": [
+            {
+              "label": "(1) Search your deck for a follower with Storm, reveal it, and a",
+              "effect": {
+                "op": "tutorFromDeck",
+                "filter": {
+                  "cardType": "follower"
+                },
+                "to": "hand",
+                "reveal": true
+              }
+            },
+            {
+              "label": "(2) Select a follower with Storm on your field and give it [atk]",
+              "effect": {
+                "op": "buff",
+                "atk": 3,
+                "def": 3,
+                "targets": {
+                  "type": "selfFollower",
+                  "count": 1,
+                  "filter": {
+                    "trait": "follower with Storm"
+                  },
+                  "includeExArea": false
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP01-006EN": {
+    "name": "Shinko Windy",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "peekDeck",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "CP01-007EN": {
+    "name": "Eishin Flash",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buffFieldTrait",
+          "trait": "this",
+          "atk": 1,
+          "def": 1,
+          "excludeSelf": false
+        }
+      }
+    ]
+  },
+  "CP01-008EN": {
+    "name": "Systematic Squats",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "CP01-009EN": {
+    "name": "Marvelous Sunday",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "returnToHand",
+              "targets": {
+                "type": "selfFollower",
+                "count": 1,
+                "excludeSelf": true
+              }
+            },
+            {
+              "op": "healLeader",
+              "amount": 2
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP01-010EN": {
+    "name": "Yukino Bijin",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "returnToHand",
+              "targets": {
+                "type": "selfFollower",
+                "count": 1,
+                "excludeSelf": true
+              }
+            },
+            {
+              "op": "buffFieldTrait",
+              "trait": "this",
+              "atk": 1,
+              "def": 1,
+              "excludeSelf": false
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP01-011EN": {
+    "name": "Ines Fujin",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "assail",
+      "fanfare"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Select another card on your field and return it to its owner's hand"
+        }
+      }
+    ]
+  },
+  "CP01-012EN": {
+    "name": "Taiki Shuttle",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "When this card is returned to hand from your field, select an enemy follower on the field and deal it 2 damage"
+        }
+      }
+    ]
+  },
+  "CP01-013EN": {
+    "name": "Haru Urara",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "buffFieldTrait",
+              "trait": "this",
+              "atk": 1,
+              "def": 1,
+              "excludeSelf": false
+            },
+            {
+              "op": "damageImmunity",
+              "amount": 0,
+              "targets": {
+                "type": "self"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP01-017EN": {
+    "name": "Winning Ticket",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "fanfare"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "If there is a Trial Initiation and Narita Taishin in your cemetery, give this follower +3/+1"
+        }
+      }
+    ]
+  },
+  "CP01-018EN": {
+    "name": "Outrunning the Encroaching Heat",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "grantKeyword",
+          "keyword": "storm",
+          "targets": {
+            "type": "self"
+          }
+        }
+      }
+    ]
+  },
+  "CP01-019EN": {
+    "name": "Air Groove",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buffFieldTrait",
+          "trait": "this",
+          "atk": 1,
+          "def": 1,
+          "excludeSelf": false
+        }
+      }
+    ]
+  },
+  "CP01-020EN": {
+    "name": "Hishi Amazon",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "fanfare"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "[cost03]: Search your deck for an Umamusume follower that costs 3 play points and put it onto your field"
+        }
+      }
+    ]
+  },
+  "CP01-021EN": {
+    "name": "Trial Initiation",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "choose",
+          "min": 1,
+          "max": 1,
+          "options": [
+            {
+              "label": "(1) Look at the top 2 cards of your deck. You may reveal an Umam",
+              "effect": {
+                "op": "searchDeckChoose",
+                "filter": {
+                  "identityName": "Umamusume"
+                },
+                "lookAt": 2,
+                "to": "hand",
+                "optional": true,
+                "remainderTo": "deckBottom",
+                "reveal": true
+              }
+            },
+            {
+              "label": "(2) Select a BNW follower in your cemetery and add it to your ha",
+              "effect": {
+                "op": "tutorFromCemetery",
+                "filter": {
+                  "cardType": "follower"
+                },
+                "to": "hand",
+                "reveal": true
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP01-022EN": {
+    "name": "Sirius Symboli",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "bane",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "passiveKeywords",
+          "keywords": []
+        }
+      }
+    ]
+  },
+  "CP01-023EN": {
+    "name": "Narita Taishin",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "passiveKeywords",
+          "keywords": []
+        }
+      }
+    ]
+  },
+  "CP01-024EN": {
+    "name": "Symboli Rudolf",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "lastWords",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "tutorFromDeck",
+          "filter": {},
+          "to": "hand",
+          "reveal": true
+        }
+      }
+    ]
+  },
+  "CP01-025EN": {
+    "name": "Biko Pegasus",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "engage",
+          "targets": {
+            "type": "selfFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "CP01-026EN": {
+    "name": "Fuji Kiseki",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 3,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        },
+        "cost": {
+          "pp": 3,
+          "engage": true
+        }
+      }
+    ]
+  },
+  "CP01-030EN": {
+    "name": "Vodka",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "rush"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "buffFieldTrait",
+          "trait": "Umamusume",
+          "atk": 1,
+          "def": 1,
+          "excludeSelf": false
+        }
+      }
+    ]
+  },
+  "CP01-031EN": {
+    "name": "Make! Some! NOISE!",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 3,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        },
+        "quick": true
+      }
+    ]
+  },
+  "CP01-032EN": {
+    "name": "Zenno Rob Roy",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Whenever another one of your followers races, look at the top 4 cards of your deck"
+            },
+            {
+              "op": "noop",
+              "label": "You may reveal a spell or amulet from among them and add it to your hand"
+            },
+            {
+              "op": "noop",
+              "label": "Put the remaining cards on the bottom of your deck in any order"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP01-033EN": {
+    "name": "Agnes Digital",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "draw",
+              "count": 1
+            },
+            {
+              "op": "discard",
+              "count": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP01-034EN": {
+    "name": "Lamplit Training of a Witch-to-Be",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        },
+        "quick": true
+      }
+    ]
+  },
+  "CP01-035EN": {
+    "name": "Admire Vega",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Select a spell that costs 2 play points or less in your hand and put it into your EX area"
+            },
+            {
+              "op": "noop",
+              "label": "For the rest of this turn, it costs 0 play points to play"
+            }
+          ]
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "CP01-036EN": {
+    "name": "Kawakami Princess",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 4,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "CP01-037EN": {
+    "name": "Nakayama Festa",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "dealDamageAllEnemies",
+              "amount": 5,
+              "followersOnly": false
+            },
+            {
+              "op": "discardHand"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP01-038EN": {
+    "name": "Tosen Jordan",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "lastWords",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "tutorFromCemetery",
+          "filter": {
+            "cardType": "spell"
+          },
+          "to": "hand",
+          "reveal": true
+        }
+      }
+    ]
+  },
+  "CP01-039EN": {
+    "name": "Narita Top Road",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "buffFieldTrait",
+              "trait": "this",
+              "atk": 1,
+              "def": 1,
+              "excludeSelf": false
+            },
+            {
+              "op": "draw",
+              "count": 2
+            },
+            {
+              "op": "discard",
+              "count": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP01-043EN": {
+    "name": "Seiun Sky",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "strike",
+      "intimidate",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "buffFieldTrait",
+          "trait": "this",
+          "atk": 1,
+          "def": 1,
+          "excludeSelf": false
+        }
+      }
+    ]
+  },
+  "CP01-044EN": {
+    "name": "Champion's Passion",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "If there is another Umamusume card on your field, select an enemy follower on the field and deal it 4 damage"
+        }
+      },
+      {
+        "timing": "startOfMain",
+        "effect": {
+          "op": "noop",
+          "label": "At the start of your main phase, select an enemy leader or enemy follower on the field and deal it 4 damage"
+        }
+      }
+    ]
+  },
+  "CP01-045EN": {
+    "name": "King Halo",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "choose",
+          "min": 1,
+          "max": 1,
+          "options": [
+            {
+              "label": "(1) Put the top card of your deck into your EX area",
+              "effect": {
+                "op": "moveToExArea",
+                "targets": {
+                  "type": "self"
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP01-046EN": {
+    "name": "Tamamo Cross",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buffFieldTrait",
+          "trait": "this",
+          "atk": 1,
+          "def": 1,
+          "excludeSelf": false
+        }
+      }
+    ]
+  },
+  "CP01-047EN": {
+    "name": "Flowers for You",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Select an Umamusume follower on your field"
+            },
+            {
+              "op": "noop",
+              "label": "Give it [atk]+1 and draw a card"
+            },
+            {
+              "op": "noop",
+              "label": "If the selected follower is a Seiun Sky, give it +1/+1 more"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP01-048EN": {
+    "name": "Bamboo Memory",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamageAllEnemies",
+          "amount": 2,
+          "followersOnly": false
+        }
+      }
+    ]
+  },
+  "CP01-049EN": {
+    "name": "Yaeno Muteki",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buffFieldTrait",
+          "trait": "this",
+          "atk": 1,
+          "def": 1,
+          "excludeSelf": false
+        }
+      }
+    ]
+  },
+  "CP01-050EN": {
+    "name": "Grass Wonder",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamageAllEnemies",
+          "amount": 2,
+          "followersOnly": true
+        }
+      }
+    ]
+  },
+  "CP01-051EN": {
+    "name": "Super Creek",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "healLeader",
+          "amount": 5
+        }
+      }
+    ]
+  },
+  "CP01-052EN": {
+    "name": "Hishi Akebono",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "healLeader",
+          "amount": 10
+        }
+      }
+    ]
+  },
+  "CP01-056EN": {
+    "name": "Nice Nature",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "lastWords",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buff",
+          "atk": -1,
+          "def": -1,
+          "targets": {
+            "type": "selfFollower",
+            "count": 1,
+            "excludeSelf": false
+          }
+        }
+      },
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "opponentDiscardEach",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "CP01-057EN": {
+    "name": "7 More Centimeters",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "draw",
+          "count": 3
+        }
+      }
+    ]
+  },
+  "CP01-058EN": {
+    "name": "Fine Motion",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "buffFieldTrait",
+              "trait": "this",
+              "atk": 1,
+              "def": 1,
+              "excludeSelf": false
+            },
+            {
+              "op": "healLeader",
+              "amount": 2
+            },
+            {
+              "op": "mill",
+              "count": 2
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP01-059EN": {
+    "name": "Mayano Top Gun",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "fanfare"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "If there are 4 other Umamusume cards on your field, give this follower Storm"
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "ownCemeteryTraitMin",
+            "trait": "Umamusume",
+            "count": 5
+          },
+          "then": {
+            "op": "noop",
+            "label": "this follower [atk]+2"
+          }
+        }
+      }
+    ]
+  },
+  "CP01-060EN": {
+    "name": "My Solo Drawn to Raindrop Drums",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "destroy",
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        },
+        "quick": true
+      }
+    ]
+  },
+  "CP01-061EN": {
+    "name": "Curren Chan",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "Deal it 1 damage and put the top card of your deck into your cemetery"
+        },
+        "cost": {
+          "pp": 1,
+          "engage": true
+        }
+      }
+    ]
+  },
+  "CP01-062EN": {
+    "name": "Twin Turbo",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "assail",
+      "fanfare"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "ownCemeteryTraitMin",
+            "trait": "Umamusume",
+            "count": 10
+          },
+          "then": {
+            "op": "noop",
+            "label": "this follower Storm"
+          }
+        }
+      }
+    ]
+  },
+  "CP01-063EN": {
+    "name": "Sakura Chiyono O",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "buffFieldTrait",
+              "trait": "this",
+              "atk": 1,
+              "def": 1,
+              "excludeSelf": false
+            },
+            {
+              "op": "tutorFromCemetery",
+              "filter": {
+                "identityName": "up to 1 Umamusume"
+              },
+              "to": "hand",
+              "reveal": true
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP01-064EN": {
+    "name": "Seeking the Pearl",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "lastWords",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "mill",
+          "count": 2
+        }
+      }
+    ]
+  },
+  "CP01-065EN": {
+    "name": "Matikanetannhauser",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "destroy",
+          "targets": {
+            "type": "enemyFieldCard",
+            "count": 1,
+            "filter": {
+              "cardType": "amulet"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "CP01-069EN": {
+    "name": "Ikuno Dictus",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {
+            "identityName": "amulet or Umamusume"
+          },
+          "lookAt": 3,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        }
+      }
+    ]
+  },
+  "CP01-070EN": {
+    "name": "The Will to Overtake",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {},
+          "lookAt": 3,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        },
+        "cost": {
+          "pp": 2,
+          "engage": true,
+          "burySelf": true
+        }
+      }
+    ]
+  },
+  "CP01-071EN": {
+    "name": "Meisho Doto",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buffFieldTrait",
+          "trait": "this",
+          "atk": 1,
+          "def": 1,
+          "excludeSelf": false
+        }
+      }
+    ]
+  },
+  "CP01-072EN": {
+    "name": "Mejiro Ryan",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "When an amulet or Mejiro Family follower you control leaves the field, give this follower Storm"
+        }
+      }
+    ]
+  },
+  "CP01-073EN": {
+    "name": "Fate's Forecast",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "peekDeck",
+          "count": 1
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "CP01-074EN": {
+    "name": "Inari One",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buffFieldTrait",
+          "trait": "this",
+          "atk": 2,
+          "def": 2,
+          "excludeSelf": false
+        }
+      }
+    ]
+  },
+  "CP01-075EN": {
+    "name": "Mejiro Dober",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "buffFieldTrait",
+              "trait": "this",
+              "atk": 1,
+              "def": 1,
+              "excludeSelf": false
+            },
+            {
+              "op": "healLeader",
+              "amount": 2
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP01-076EN": {
+    "name": "Mejiro Ardan",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "ward"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "startOfMain",
+        "effect": {
+          "op": "noop",
+          "label": "At the start of your main phase, if there are no Mejiro Family followers with a different name from this card on your fi"
+        }
+      }
+    ]
+  },
+  "CP01-077EN": {
+    "name": "Mejiro Palmer",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "fanfare"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Search your deck for a Mejiro Family follower and add it to your hand"
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "If there is a Make! Some! NOISE! in your cemetery, give this follower +1/+1 and Rush"
+        }
+      }
+    ]
+  },
+  "CP01-078EN": {
+    "name": "T. M. Opera O",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Banish it and draw a card"
+        }
+      }
+    ]
+  },
+  "CP01-080EN": {
+    "name": "Close-Knit Ambitions",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": ", then reveal the top 6 cards"
+            },
+            {
+              "op": "noop",
+              "label": "You may put any number of Umamusume followers or Umamusume amulets from among them onto your field"
+            },
+            {
+              "op": "noop",
+              "label": "Add the remaining cards to your hand"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP01-081EN": {
+    "name": "Take a Jab!",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "startOfMain",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "At the start of your main phase, roll a 6-sided die"
+            },
+            {
+              "op": "noop",
+              "label": "If you roll a 1, deal 5 damage to your leader"
+            },
+            {
+              "op": "noop",
+              "label": "If you roll a 2, 3, 4, or 5, draw a card"
+            },
+            {
+              "op": "noop",
+              "label": "If you roll a 6, give your leader [def]+3 and destroy this card"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP01-082EN": {
+    "name": "Aoi Kiryuin [Trainers' Teamwork]",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "selectEvolveDeckCard",
+          "filter": {
+            "identityName": "Carrot"
+          },
+          "face": "faceup",
+          "turnTo": "facedown"
+        }
+      },
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "buff",
+          "atk": 1,
+          "def": 1,
+          "targets": {
+            "type": "selfFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "CP01-083EN": {
+    "name": "Sasami Anshinzawa",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "searchDeckChoose",
+          "lookAt": 1,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        }
+      }
+    ]
+  },
+  "CP01-084EN": {
+    "name": "Tazuna Hayakawa",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Select an Umamusume follower on your field and give it +1/+2"
+        }
+      }
+    ]
+  },
+  "CP01-085EN": {
+    "name": "Carrot",
+    "class": "neutral",
+    "printingType": "evolved",
+    "keywords": [
+      "rush"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "You can serve a Carrot to an Umamusume follower to race it"
+            },
+            {
+              "op": "noop",
+              "label": "(Racing followers have Rush.) ---------- You can put up to 10 of this card into your evolve deck"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP01-SP01EN": {
+    "name": "Silence Suzuka",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "evolve",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "passiveKeywords",
+          "keywords": []
+        }
+      }
+    ]
+  },
+  "CP01-SP02EN": {
+    "name": "Silence Suzuka Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [
+      "storm"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "putOnTopOfDeck",
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "CP01-SP03EN": {
+    "name": "Smart Falcon",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Deal X damage to each enemy follower on the field"
+            },
+            {
+              "op": "noop",
+              "label": "X equals 2 times the number of cards returned"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP01-SP04EN": {
+    "name": "Tokai Teio",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "CP01-SP05EN": {
+    "name": "Tokai Teio Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [
+      "storm"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "CP01-SP06EN": {
+    "name": "Narita Brian",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "aura",
+      "bane",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 5,
+          "targets": {
+            "type": "enemyFieldCard",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "CP01-SP07EN": {
+    "name": "Agnes Tachyon",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "grantOnCardPlayed",
+          "filter": {
+            "cardType": "spell"
+          },
+          "effect": {
+            "op": "buff",
+            "atk": -1,
+            "def": -1,
+            "targets": {
+              "type": "selfFollower",
+              "count": 1,
+              "excludeSelf": false
+            }
+          },
+          "untilEndOfTurn": false,
+          "label": "Whenever you play a spell, select an enemy follower on the field and give it [at"
+        }
+      }
+    ]
+  },
+  "CP01-SP08EN": {
+    "name": "Agnes Tachyon Evolved",
+    "class": "rune",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "review",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "tutorFromCemetery",
+          "filter": {
+            "cardType": "spell"
+          },
+          "to": "hand",
+          "reveal": true
+        }
+      },
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "grantOnCardPlayed",
+          "filter": {
+            "cardType": "spell"
+          },
+          "effect": {
+            "op": "buff",
+            "atk": -1,
+            "def": -1,
+            "targets": {
+              "type": "selfFollower",
+              "count": 1,
+              "excludeSelf": false
+            }
+          },
+          "untilEndOfTurn": false,
+          "label": "Whenever you play a spell, select an enemy follower on the field and give it [at"
+        }
+      }
+    ]
+  },
+  "CP01-SP09EN": {
+    "name": "Daiwa Scarlet",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "tutorFromDeck",
+          "filter": {
+            "cardType": "spell"
+          },
+          "to": "hand",
+          "reveal": true
+        }
+      }
+    ]
+  },
+  "CP01-SP10EN": {
+    "name": "Special Week",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "CP01-SP11EN": {
+    "name": "Special Week Evolved",
+    "class": "dragon",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "overflow"
+          },
+          "then": {
+            "op": "buffFieldTrait",
+            "trait": "Umamusume",
+            "atk": 1,
+            "def": 1,
+            "excludeSelf": true
+          }
+        },
+        "condition": {
+          "type": "overflow"
+        }
+      }
+    ]
+  },
+  "CP01-SP12EN": {
+    "name": "Oguri Cap",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "strike",
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buffFieldTrait",
+          "trait": "this",
+          "atk": 2,
+          "def": 1,
+          "excludeSelf": false
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "grantKeyword",
+          "keyword": "storm",
+          "targets": {
+            "type": "self"
+          }
+        }
+      },
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "dealDamageAllEnemies",
+          "amount": 3,
+          "followersOnly": true
+        }
+      }
+    ]
+  },
+  "CP01-SP13EN": {
+    "name": "Maruzensky",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "necrocharge",
+            "count": 10
+          },
+          "then": {
+            "op": "buff",
+            "atk": -4,
+            "def": -4,
+            "targets": {
+              "type": "enemyFollower",
+              "count": 1
+            }
+          }
+        },
+        "condition": {
+          "type": "necrocharge",
+          "count": 10
+        }
+      }
+    ]
+  },
+  "CP01-SP14EN": {
+    "name": "Maruzensky Evolved",
+    "class": "abyss",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "buff",
+          "atk": -2,
+          "def": -2,
+          "targets": {
+            "type": "selfFollower",
+            "count": 1,
+            "excludeSelf": false
+          }
+        }
+      }
+    ]
+  },
+  "CP01-SP15EN": {
+    "name": "Rice Shower",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Deal it 3 damage and put the top 2 cards of your deck into your cemetery"
+        }
+      },
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "tutorFromCemetery",
+          "filter": {
+            "cardType": "follower"
+          },
+          "to": "hand",
+          "reveal": true
+        }
+      }
+    ]
+  },
+  "CP01-SP16EN": {
+    "name": "Mejiro McQueen",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "evolve",
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 3,
+          "targets": {
+            "type": "enemyFieldCard",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "CP01-SP17EN": {
+    "name": "Mejiro McQueen Evolved",
+    "class": "haven",
+    "printingType": "evolved",
+    "keywords": [
+      "ward"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "tutorFromCemetery",
+          "filter": {},
+          "to": "hand",
+          "reveal": true
+        }
+      }
+    ]
+  },
+  "CP01-SP18EN": {
+    "name": "Gold Ship",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "searchDeckChoose",
+          "lookAt": 1,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "buffFieldTrait",
+          "trait": "this",
+          "atk": 10,
+          "def": 10,
+          "excludeSelf": false
+        },
+        "cost": {
+          "pp": 10
+        }
+      }
+    ]
+  },
+  "CP01-SP19EN": {
+    "name": "Riko Kashimoto [Planned Perfection]",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "strike"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "destroy",
+          "targets": {
+            "type": "anyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  }
+}

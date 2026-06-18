@@ -4,6 +4,7 @@ import { canPlayCardFromZones } from "../effects/resolver";
 import { GameState, PlayerId, PlayerView } from "../types";
 import { isAdvanceAbility } from "../rules/effect-utils";
 import {
+  canDeclareAttack,
   canEvolveFollower,
   canSuperEvolveNow,
   computeEvolvePayment,
@@ -12,6 +13,7 @@ import {
   getEffectivePlayCost,
   getEvolveCost,
   isBoxed,
+  isFieldFollower,
   getLegalAttackTargets,
   hasKeyword,
   opponentOf,
@@ -37,7 +39,15 @@ export function createPlayerView(state: GameState, self: PlayerId): PlayerView {
   }));
 
   const legalActions: string[] = [];
-  if (state.phase === "main" && state.activePlayer === self && !state.pendingChoices) {
+  const blockedByOpponentQuick =
+    state.quickWindow != null && state.quickWindowPlayer !== self;
+
+  if (
+    state.phase === "main" &&
+    state.activePlayer === self &&
+    !state.pendingChoices &&
+    !blockedByOpponentQuick
+  ) {
     legalActions.push("END_MAIN");
     const pp = state.players[self].pp;
     const p = state.players[self];
@@ -60,12 +70,13 @@ export function createPlayerView(state: GameState, self: PlayerId): PlayerView {
       }
     }
     for (const card of p.zones.field) {
-      if (!card.engaged && !isBoxed(card, state)) {
+      if (isFieldFollower(state, card) && !card.engaged && !isBoxed(card, state)) {
         const canAttack =
-          card.onFieldSinceTurnStart ||
+          canDeclareAttack(state, card) &&
+          (card.onFieldSinceTurnStart ||
           card.evolvedThisTurn ||
           hasKeyword(card, "storm", state) ||
-          hasKeyword(card, "rush", state);
+          hasKeyword(card, "rush", state));
         if (canAttack) {
           legalActions.push(`ATTACK:${card.instanceId}`);
           for (const target of getLegalAttackTargets(state, card, self)) {
@@ -91,6 +102,8 @@ export function createPlayerView(state: GameState, self: PlayerId): PlayerView {
           legalActions.push(`ACTIVATE_EP:${card.instanceId}`);
         }
       }
+
+      if (!isFieldFollower(state, card)) continue;
 
       // Evolve is allowed even while engaged (e.g. after activating).
       if (

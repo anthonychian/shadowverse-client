@@ -1,6 +1,41 @@
 "use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || (function () {
+    var ownKeys = function(o) {
+        ownKeys = Object.getOwnPropertyNames || function (o) {
+            var ar = [];
+            for (var k in o) if (Object.prototype.hasOwnProperty.call(o, k)) ar[ar.length] = k;
+            return ar;
+        };
+        return ownKeys(o);
+    };
+    return function (mod) {
+        if (mod && mod.__esModule) return mod;
+        var result = {};
+        if (mod != null) for (var k = ownKeys(mod), i = 0; i < k.length; i++) if (k[i] !== "default") __createBinding(result, mod, k[i]);
+        __setModuleDefault(result, mod);
+        return result;
+    };
+})();
 Object.defineProperty(exports, "__esModule", { value: true });
 const vitest_1 = require("vitest");
+const child_process_1 = require("child_process");
+const path = __importStar(require("path"));
 const applyAction_1 = require("./actions/applyAction");
 const registry_1 = require("./cards/registry");
 const factory_1 = require("./state/factory");
@@ -48,6 +83,11 @@ const DECK_CARDS = [
     "BP12-T03EN",
     "BP12-T04EN",
 ];
+const ROOT = path.join(__dirname, "..", "..", "..");
+function runFullAudit() {
+    const out = (0, child_process_1.execSync)(`node -e "console.log(JSON.stringify(require('./src/scripts/dsl-audit-utils').runFullAudit()))"`, { cwd: ROOT, encoding: "utf8" });
+    return JSON.parse(out.trim());
+}
 (0, vitest_1.describe)("deck card DSL", () => {
     (0, vitest_1.beforeEach)(() => (0, factory_1.resetIdCounter)());
     for (const cardNo of DECK_CARDS) {
@@ -170,5 +210,48 @@ const DECK_CARDS = [
         state.players[0].zones.hand.push((0, factory_1.createCardInstance)("BP14-025EN", 0));
         const after = playHeroOfTheHunt(state);
         (0, vitest_1.expect)(after.players[0].zones.field.some((c) => c.cardNo === "BP14-018EN")).toBe(true);
+    });
+    (0, vitest_1.it)("Spartacus offers variable discard at start of end phase", () => {
+        let state = (0, factory_1.createInitialGameState)(0);
+        state.phase = "main";
+        state.activePlayer = 0;
+        state.pendingChoices = null;
+        state.players[0].flags.mulliganDone = true;
+        state.players[1].flags.mulliganDone = true;
+        const spartacus = (0, factory_1.createCardInstance)("BP09-020EN", 0);
+        spartacus.engaged = true;
+        state.players[0].zones.field.push(spartacus);
+        const handA = (0, factory_1.createCardInstance)("MVP-012", 0);
+        const handB = (0, factory_1.createCardInstance)("MVP-013", 0);
+        state.players[0].zones.hand.push(handA, handB);
+        for (let i = 0; i < 5; i++) {
+            state.players[0].zones.deck.push((0, factory_1.createCardInstance)("MVP-014", 0));
+        }
+        let ended = (0, applyAction_1.applyAction)(state, 0, { type: "END_MAIN" });
+        (0, vitest_1.expect)(ended.ok).toBe(true);
+        (0, vitest_1.expect)(ended.state.pendingChoices?.type).toBe("discardVariable");
+        const deckBefore = ended.state.players[0].zones.deck.length;
+        const confirmed = (0, applyAction_1.applyAction)(ended.state, 0, {
+            type: "CHOICE_RESPONSE",
+            payload: { instanceIds: [handA.instanceId] },
+        });
+        (0, vitest_1.expect)(confirmed.ok).toBe(true);
+        (0, vitest_1.expect)(confirmed.state.players[0].zones.hand.some((c) => c.instanceId === handA.instanceId)).toBe(false);
+        (0, vitest_1.expect)(confirmed.state.players[0].zones.cemetery.some((c) => c.instanceId === handA.instanceId)).toBe(true);
+        (0, vitest_1.expect)(confirmed.state.players[0].zones.hand.length).toBe(3);
+        (0, vitest_1.expect)(confirmed.state.players[0].zones.deck.length).toBe(deckBefore - 2);
+    });
+    (0, vitest_1.it)("deck cards pass static DSL correctness audit (structure)", () => {
+        const audit = runFullAudit();
+        const byCanon = new Map(audit.results.map((r) => [r.canonNo, r]));
+        const hardClasses = new Set(["missing_abilities", "timing_mismatch", "unimplemented_op"]);
+        const failures = [];
+        for (const cardNo of DECK_CARDS) {
+            const r = byCanon.get(cardNo);
+            const hard = (r?.failures || []).filter((f) => hardClasses.has(f.class));
+            if (hard.length)
+                failures.push(`${cardNo}: ${hard.map((f) => f.class).join(",")}`);
+        }
+        (0, vitest_1.expect)(failures).toEqual([]);
     });
 });

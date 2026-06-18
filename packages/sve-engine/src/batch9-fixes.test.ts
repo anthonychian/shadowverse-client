@@ -315,4 +315,28 @@ describe("batch 9 regression fixes", () => {
     expect(ended.ok).toBe(true);
     expect(ended.state.quickWindow).toBeNull();
   });
+
+  it("blocks the active player while the opponent resolves a quick window", () => {
+    let state = createInitialGameState(0);
+    state.phase = "main";
+    state.activePlayer = 0;
+    state.quickWindow = "endPhase";
+    state.quickWindowPlayer = 1;
+    state.pendingChoices = null;
+    const base = createCardInstance("MVP-013", 0);
+    base.onFieldSinceTurnStart = true;
+    state.players[0].zones.field.push(base);
+
+    const view = createPlayerView(state, 0);
+    expect(view.legalActions).not.toContain("END_MAIN");
+    expect(view.legalActions.some((a) => a.startsWith("ATTACK:"))).toBe(false);
+
+    const attack = applyAction(state, 0, {
+      type: "ATTACK",
+      attackerId: base.instanceId,
+      targetId: "leader",
+    });
+    expect(attack.ok).toBe(false);
+    expect(attack.error).toMatch(/quick window/i);
+  });
 });

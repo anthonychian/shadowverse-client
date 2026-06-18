@@ -5,6 +5,7 @@ exports.getPassiveKeywords = getPassiveKeywords;
 exports.getAuraKeywords = getAuraKeywords;
 exports.getMaxDamagePerHit = getMaxDamagePerHit;
 exports.hasNamedFollowerOnFieldByIdentity = hasNamedFollowerOnFieldByIdentity;
+exports.opponentsAbilitiesSilencedFor = opponentsAbilitiesSilencedFor;
 exports.matchesExAreaEntryFilter = matchesExAreaEntryFilter;
 const registry_1 = require("../cards/registry");
 const reprints_1 = require("../cards/reprints");
@@ -80,6 +81,18 @@ function hasNamedFollowerOnFieldByIdentity(state, player, identityName) {
         const def = (0, registry_1.getCardDef)((0, queries_1.resolveCardNo)(state, c));
         return def && (0, reprints_1.normalizeIdentityName)(def.name) === target;
     });
+}
+function opponentsAbilitiesSilencedFor(state, player) {
+    const opp = player === 0 ? 1 : 0;
+    for (const source of (0, queries_1.getPlayer)(state, opp).zones.field) {
+        for (const ability of abilitiesFor(state, source)) {
+            if (ability.timing !== "passive")
+                continue;
+            if (ability.effect.op === "silenceOpponents")
+                return true;
+        }
+    }
+    return false;
 }
 function matchesExAreaEntryFilter(ability, enteredCardNo) {
     if (ability.timing !== "onExAreaEntry" || !ability.filter)

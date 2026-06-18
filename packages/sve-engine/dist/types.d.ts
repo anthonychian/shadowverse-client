@@ -24,7 +24,7 @@ export interface CardDefinition {
     evolveCost?: number;
     abilities?: AbilityDefinition[];
 }
-export type TriggerTiming = "fanfare" | "lastWords" | "onEvolve" | "onSuperEvolve" | "onCardPlayed" | "strike" | "startOfMain" | "startOfEnd" | "passive" | "aura" | "onExAreaEntry" | "onAllyFollowerEnter" | "evolve";
+export type TriggerTiming = "fanfare" | "lastWords" | "onEvolve" | "onSuperEvolve" | "onCardPlayed" | "strike" | "startOfMain" | "startOfEnd" | "startOfOpponentEnd" | "onBecomeEngaged" | "onDiscard" | "onLeaveField" | "onAllyEvolve" | "onDamaged" | "onEnemyFollowerLeaveField" | "onAbilityDamaged" | "onTokenLeaveField" | "passive" | "aura" | "onExAreaEntry" | "onAllyFollowerEnter" | "evolve";
 export interface AbilityDefinition {
     timing: TriggerTiming | "activated" | "spell";
     cost?: {
@@ -35,6 +35,18 @@ export interface AbilityDefinition {
         banishCount?: number;
         buryFromField?: DeckFilter;
         buryFieldCount?: number;
+        /** When activating from cemetery, banish the activating card as part of the cost. */
+        banishSelf?: boolean;
+        /** Engage allies whose total cost meets this minimum (Magitrain maneuver cost). */
+        engageFollowersMinTotalCost?: number;
+        /** Exclude the activating card from bury-from-field cost candidates. */
+        excludeSelfFromBury?: boolean;
+        /** Bury the activating card as part of the cost (amulet act). */
+        burySelf?: boolean;
+        /** Consume stack counters from an Earth Sigil on field (default 1). */
+        earthRite?: {
+            count?: number;
+        };
     };
     quick?: boolean;
     condition?: Condition;
@@ -55,6 +67,11 @@ export interface GrantedOnCardPlayed {
     maxPerTurn?: number;
     label?: string;
 }
+export interface GrantedOnDamaged {
+    effect: Effect;
+    oncePerTurn?: boolean;
+    label?: string;
+}
 export type TargetSelector = {
     type: "self";
 } | {
@@ -64,18 +81,38 @@ export type TargetSelector = {
 } | {
     type: "enemyFollower";
     count?: number;
+    maxCost?: number;
+    maxDef?: number;
+    engaged?: boolean;
+    filter?: DeckFilter;
+} | {
+    type: "enemyFieldCard";
+    count?: number;
+    maxCost?: number;
+    maxDef?: number;
+    engaged?: boolean;
+    filter?: DeckFilter;
 } | {
     type: "anyFollower";
     count?: number;
+    engaged?: boolean;
 } | {
     type: "selfFollower";
     count?: number;
+    filter?: DeckFilter;
+    excludeSelf?: boolean;
+    engaged?: boolean;
+    includeExArea?: boolean;
+} | {
+    type: "lastSummoned";
 };
 export type DeckFilter = {
     cardNo?: string;
     /** Match cards whose normalized identity name equals this value (all printings). */
     identityName?: string;
     trait?: string;
+    /** Match if the card has any of these traits. */
+    traitsAny?: string[];
     cardClass?: string;
     maxCost?: number;
     minCost?: number;
@@ -90,6 +127,10 @@ export type Condition = {
 } | {
     type: "overflow";
 } | {
+    type: "sanguine";
+} | {
+    type: "inExArea";
+} | {
     type: "combo";
     count: number;
 } | {
@@ -100,6 +141,11 @@ export type Condition = {
     identityName: string;
 } | {
     type: "notEnteredFromHand";
+} | {
+    type: "enteredFromCemetery";
+} | {
+    type: "namedCardNotOnFieldByName";
+    identityName: string;
 } | {
     type: "opponentCemeteryMin";
     count: number;
@@ -124,8 +170,15 @@ export type Condition = {
     trait: string;
     count: number;
 } | {
+    type: "fieldFollowerTraitAnyMin";
+    traits: string[];
+    count: number;
+} | {
     type: "handTraitMin";
     trait: string;
+    count: number;
+} | {
+    type: "ownDeckMax";
     count: number;
 } | {
     type: "ownCemeteryClassMin";
@@ -164,8 +217,56 @@ export type Condition = {
     type: "ownCemeteryMin";
     count: number;
 } | {
+    type: "necrocharge";
+    count: number;
+} | {
     type: "fieldTraitMax";
     trait: string;
+    count: number;
+} | {
+    type: "earthRite";
+    count?: number;
+} | {
+    type: "ppMin";
+    count: number;
+} | {
+    type: "sourceInExArea";
+} | {
+    type: "leaderDefenseMax";
+    max: number;
+} | {
+    type: "cardsPlayedMin";
+    count: number;
+} | {
+    type: "leaderDefLostMin";
+    count: number;
+} | {
+    type: "enteredByAbility";
+} | {
+    type: "amuletOnField";
+} | {
+    type: "spellchain";
+    count: number;
+} | {
+    type: "totalFieldFollowerCount";
+    min?: number;
+} | {
+    type: "hasCounter";
+    name: string;
+    min?: number;
+} | {
+    type: "evolveDeckFaceupMin";
+    count: number;
+    filter?: DeckFilter;
+} | {
+    type: "cemeteryClassSpellNamesMin";
+    cardClass: string;
+    count: number;
+} | {
+    type: "identityNameOnField";
+    identityNameContains: string;
+} | {
+    type: "enemyFieldMin";
     count: number;
 };
 export type DamageAmount = number | {
@@ -174,10 +275,62 @@ export type DamageAmount = number | {
 } | {
     op: "fieldTraitCount";
     trait: string;
+} | {
+    op: "selfAttack";
+} | {
+    op: "traitFieldCount";
+    trait: string;
+    multiplier?: number;
+} | {
+    op: "namedIdentityFieldCount";
+    identityName: string;
+    multiplier?: number;
+} | {
+    op: "targetAttack";
+} | {
+    op: "handCount";
+} | {
+    op: "targetControllerHandCount";
+} | {
+    op: "exAreaCount";
+} | {
+    op: "leaderDefLostCount";
+} | {
+    op: "handExAreaTotal";
+} | {
+    op: "selfDefense";
+} | {
+    op: "maxPp";
+} | {
+    op: "cemeteryFilterCount";
+    filter: DeckFilter;
+} | {
+    op: "chosenNumber";
+    min: number;
+    max: number;
+} | {
+    op: "cardsPlayedThisTurn";
+    excludeSelf?: boolean;
+} | {
+    op: "exAreaNamedCount";
+    identityName: string;
+} | {
+    op: "engagedNamedIdentityCount";
+    identityName: string;
+} | {
+    op: "wardFieldCount";
+} | {
+    op: "secondTargetAttack";
+} | {
+    op: "evolveDeckFaceupCount";
+    filter?: DeckFilter;
 };
 export type Effect = {
     op: "draw";
     count: number;
+} | {
+    op: "drawDynamic";
+    amount: DamageAmount;
 } | {
     op: "dealDamage";
     amount: DamageAmount;
@@ -188,12 +341,20 @@ export type Effect = {
     def?: number;
     targets: TargetSelector;
 } | {
+    op: "buffDynamic";
+    atk?: DamageAmount;
+    def?: DamageAmount;
+    targets: TargetSelector;
+} | {
     op: "buffFieldTrait";
-    trait: string;
+    trait?: string;
+    cardClass?: string;
     atk?: number;
     def?: number;
     keyword?: Keyword;
     excludeSelf?: boolean;
+    includeExArea?: boolean;
+    otherOnly?: boolean;
 } | {
     op: "grantKeyword";
     keyword: Keyword;
@@ -202,6 +363,24 @@ export type Effect = {
     op: "destroy";
     targets: TargetSelector;
 } | {
+    op: "banish";
+    targets: TargetSelector;
+} | {
+    op: "moveToExArea";
+    targets: TargetSelector;
+} | {
+    op: "clash";
+} | {
+    op: "banishAllFieldAndEx";
+} | {
+    op: "millToBanish";
+    count: number;
+} | {
+    op: "discardOptionalDraw";
+    drawBonus: number;
+} | {
+    op: "winGame";
+} | {
     op: "summon";
     tokenCardNo?: string;
     tokenName?: string;
@@ -209,7 +388,7 @@ export type Effect = {
     zone: "field" | "exArea";
 } | {
     op: "recoverPp";
-    amount: number;
+    amount: DamageAmount;
 } | {
     op: "spendPp";
     amount: number;
@@ -262,8 +441,8 @@ export type Effect = {
     count: number;
 } | {
     op: "damageFollowerAndLeader";
-    followerAmount: number;
-    leaderAmount: number;
+    followerAmount: DamageAmount;
+    leaderAmount: DamageAmount;
 } | {
     op: "tutorFromDeck";
     filter: DeckFilter;
@@ -311,7 +490,7 @@ export type Effect = {
     op: "searchDeckChoose";
     filter: DeckFilter;
     lookAt: number;
-    to: "hand" | "exArea" | "field";
+    to: "hand" | "exArea" | "field" | "banish";
     optional?: boolean;
     playCostReduction?: number;
     /** Where unchosen cards from the search go (default cemetery). */
@@ -324,6 +503,9 @@ export type Effect = {
 } | {
     op: "playCostReduction";
     amount: number;
+} | {
+    op: "playCostIncrease";
+    amountPerFollower: number;
 } | {
     op: "auraGrantKeyword";
     keyword: Keyword;
@@ -382,8 +564,31 @@ export type Effect = {
     sourceOnly?: boolean;
 } | {
     op: "dealDamageAllEnemies";
-    amount: number;
+    amount: DamageAmount;
     followersOnly?: boolean;
+} | {
+    op: "dealDamageSplit";
+    primaryAmount: DamageAmount;
+    secondaryAmount?: DamageAmount;
+    maxTargets: number;
+    targets: TargetSelector;
+} | {
+    op: "maneuver";
+} | {
+    op: "opponentDiscardEach";
+    count: number;
+} | {
+    op: "burySelf";
+} | {
+    op: "buryFromFieldSelect";
+    excludeSelf?: boolean;
+    optional?: boolean;
+} | {
+    op: "summonSameNameToken";
+} | {
+    op: "summonLastTutoredFromHand";
+} | {
+    op: "cannotAttack";
 } | {
     op: "grantOnCardPlayed";
     filter?: DeckFilter;
@@ -392,6 +597,139 @@ export type Effect = {
     oncePerTurn?: boolean;
     maxPerTurn?: number;
     label?: string;
+} | {
+    op: "transform";
+    tokenCardNo?: string;
+    tokenName?: string;
+    targets: TargetSelector;
+    count?: number;
+} | {
+    op: "returnToHand";
+    targets: TargetSelector;
+} | {
+    op: "addStack";
+    amount: number;
+} | {
+    op: "reviveToField";
+    engaged?: boolean;
+} | {
+    op: "refresh";
+    targets: TargetSelector;
+} | {
+    op: "increaseMaxPp";
+    amount: number;
+} | {
+    op: "putOnBottomOfDeck";
+    targets: TargetSelector;
+} | {
+    op: "putOnTopOfDeck";
+    targets: TargetSelector;
+} | {
+    op: "destroyAllEnemyField";
+} | {
+    op: "discardHand";
+} | {
+    op: "grantIndestructible";
+    targets: TargetSelector;
+} | {
+    op: "withChosenNumber";
+    min: number;
+    max: number;
+    then: Effect;
+} | {
+    op: "banishFromDeck";
+    maxCount: number;
+    filter?: DeckFilter;
+} | {
+    op: "grantIgnoresWard";
+    targets: TargetSelector;
+} | {
+    op: "damageImmunity";
+    amount: number;
+    targets: TargetSelector;
+} | {
+    op: "swapAtkDef";
+    targets: TargetSelector;
+} | {
+    op: "defAsAttackAura";
+} | {
+    op: "buryEachOpponentDeck";
+    count: number;
+} | {
+    op: "grantOnDamaged";
+    effect: Effect;
+    oncePerTurn?: boolean;
+    label?: string;
+} | {
+    op: "tutorFromDeckAny";
+    to: "hand" | "exArea" | "field";
+    optional?: boolean;
+    reveal?: boolean;
+} | {
+    op: "peekDeck";
+    count: number;
+    optionalBury?: boolean;
+    then?: Effect;
+} | {
+    op: "dealDamageOtherFollowers";
+    amount: DamageAmount;
+    includeLeaders?: boolean;
+} | {
+    op: "setStats";
+    atk: number;
+    def: number;
+    targets: TargetSelector;
+} | {
+    op: "silence";
+    targets: TargetSelector;
+} | {
+    op: "silenceOpponents";
+} | {
+    op: "dealDamageCompare";
+    targets: TargetSelector;
+    damageTargetFirst?: boolean;
+} | {
+    op: "playFromOpponentCemetery";
+    filter?: DeckFilter;
+    maxCost?: number;
+} | {
+    op: "addCounter";
+    counter: string;
+    amount?: number;
+    targets: TargetSelector;
+} | {
+    op: "removeCounter";
+    counter: string;
+    amount?: number;
+    targets?: TargetSelector;
+    then?: Effect;
+} | {
+    op: "grantLeaderDamageShield";
+    charges: number;
+} | {
+    op: "destroyAllFollowers";
+} | {
+    op: "grantNextPlayCostReduction";
+    filter?: DeckFilter;
+    amount: number;
+} | {
+    op: "turnEvolveDeck";
+    orientation: "faceup" | "facedown";
+    count: number;
+    filter?: DeckFilter;
+    allMatching?: boolean;
+} | {
+    op: "selectEvolveDeckCard";
+    filter?: DeckFilter;
+    face?: "faceup" | "facedown";
+    turnTo?: "faceup" | "facedown";
+    then?: Effect;
+    optional?: boolean;
+} | {
+    op: "takeExtraTurn";
+} | {
+    op: "gainEvolutionPoint";
+    amount?: number;
 };
 export interface Modifier {
     atk?: number;
@@ -412,12 +750,22 @@ export interface CardInstance {
     evolvedThisTurn: boolean;
     superEvolved: boolean;
     linkedEvoInstanceId?: string;
+    /** Evolve card was used and returned to evolve deck; cannot evolve again. */
+    evoSpent?: boolean;
     onFieldSinceTurnStart: boolean;
     foughtWithBane: boolean;
     foughtWithInstanceId?: string;
     grantedKeywords: Keyword[];
     /** Set when the follower enters the field; cleared at end of turn resolution. */
     enteredFromHand?: boolean;
+    /** Set when the card enters the field from the cemetery. */
+    enteredFromCemetery?: boolean;
+    /** Amulet maneuvering as a follower until this turn ends. */
+    maneuveringUntilTurn?: number;
+    /** Cannot be destroyed by abilities (still takes ability damage). */
+    indestructibleByAbilities?: boolean;
+    /** Follower cannot declare attacks (Arcus). */
+    cannotAttack?: boolean;
     /** Follower is boxed until this turn number (exclusive end at start phase). */
     boxedUntilTurn?: number;
     /** Skip refresh on this controller start phase turn, then clear. */
@@ -432,6 +780,19 @@ export interface CardInstance {
     grantedLastWords?: Effect[];
     /** Granted "when you play a card" triggers (e.g. Tetra Serene super-evolve). */
     grantedOnCardPlayed?: GrantedOnCardPlayed[];
+    /** Granted "when this follower takes damage" triggers. */
+    grantedOnDamaged?: GrantedOnDamaged[];
+    /** Follower ignores Ward when attacking (can hit leader through wards). */
+    ignoresWard?: boolean;
+    /** Max ability damage this follower can take per hit this turn. */
+    damageImmunityThisTurn?: number;
+    /** Override printed stats (setStats effect). */
+    statOverride?: {
+        atk?: number;
+        def?: number;
+    };
+    /** This card's abilities cannot be activated or trigger. */
+    abilitiesSilenced?: boolean;
 }
 export interface EvolveLink {
     fieldInstanceId: string;
@@ -456,10 +817,23 @@ export interface PlayerFlags {
     cardsPlayedThisTurn: number;
     mulliganDone: boolean;
     leaderLostDefThisTurn: boolean;
+    /** Times leader defense was reduced by damage this turn. */
+    leaderDefLostCountThisTurn: number;
     /** Unfulfilled draw obligations (checked for deck-out loss after rules handling). */
     owedDraws: number;
     /** Start-of-end abilities queued for the current end phase. */
     endStartAbilitiesQueued?: boolean;
+    /** Leader ignores the next N instances of damage. */
+    leaderDamageShields?: number;
+    /** Discounts applied to the next matching card played this turn. */
+    nextPlayDiscounts?: {
+        filter?: DeckFilter;
+        amount: number;
+    }[];
+    /** Opponent players cannot activate abilities while true (aura). */
+    opponentsAbilitiesSilenced?: boolean;
+    /** Grant an extra turn after the current turn ends. */
+    extraTurnPending?: boolean;
 }
 export interface PlayerState {
     leaderDef: number;
@@ -485,6 +859,8 @@ export interface PendingTrigger {
     abilityKey?: string;
     /** For onAllyFollowerEnter: the follower that just entered the field. */
     forcedTargetId?: string;
+    /** For onTokenLeaveField: the token that left the field (Greatpick Corpse). */
+    leftTokenCardNo?: string;
 }
 export interface ChoiceSourceContext {
     sourceCardNo?: string;
@@ -524,6 +900,17 @@ export type ChoicePrompt = ChoiceSourceContext & ({
     playCostReduction?: number;
     reveal?: boolean;
 } | {
+    type: "selectEvolveDeckCard";
+    player: PlayerId;
+    options: {
+        instanceId: string;
+        label: string;
+        cardNo: string;
+    }[];
+    turnTo?: "faceup" | "facedown";
+    pendingEffect?: Effect;
+    optional?: boolean;
+} | {
     type: "choose";
     player: PlayerId;
     options: {
@@ -554,6 +941,19 @@ export type ChoicePrompt = ChoiceSourceContext & ({
         label: string;
         cardNo: string;
     }[];
+    /** When true, resume effect resolution instead of advancing end phase. */
+    duringEffect?: boolean;
+} | {
+    type: "discardVariable";
+    player: PlayerId;
+    min: number;
+    max: number;
+    candidates: {
+        instanceId: string;
+        label: string;
+        cardNo: string;
+    }[];
+    drawBonus: number;
 } | {
     type: "wardEngage";
     player: PlayerId;
@@ -565,7 +965,7 @@ export type ChoicePrompt = ChoiceSourceContext & ({
 } | {
     type: "searchDeckTop";
     player: PlayerId;
-    to: "hand" | "exArea" | "field";
+    to: "hand" | "exArea" | "field" | "banish";
     filter: DeckFilter;
     topInstanceIds: string[];
     optional?: boolean;
@@ -581,9 +981,11 @@ export type ChoicePrompt = ChoiceSourceContext & ({
 } | {
     type: "selectZoneCards";
     player: PlayerId;
-    fromZone: "cemetery" | "hand" | "exArea" | "field";
-    count: number;
-    action: "banish" | "discard" | "bury";
+    fromZone: "cemetery" | "hand" | "exArea" | "field" | "deck" | "opponentCemetery";
+    count?: number;
+    minCount?: number;
+    maxCount?: number;
+    action: "banish" | "discard" | "bury" | "play";
     options: {
         instanceId: string;
         label: string;
@@ -616,6 +1018,45 @@ export type ChoicePrompt = ChoiceSourceContext & ({
         label: string;
         cardNo: string;
         cost: number;
+        eligible?: boolean;
+    }[];
+} | {
+    type: "engageFollowersForCost";
+    player: PlayerId;
+    minTotalCost: number;
+    options: {
+        instanceId: string;
+        label: string;
+        cardNo: string;
+        cost: number;
+    }[];
+    resumeActivate: {
+        sourceInstanceId: string;
+        zone: "field" | "cemetery" | "exArea" | "hand";
+        abilityKey: string;
+    };
+} | {
+    type: "dealDamageCompare";
+    player: PlayerId;
+    phase: "selectTargets" | "selectPrimary";
+    selectedIds: string[];
+    options: {
+        instanceId: string;
+        label: string;
+        cardNo: string;
+    }[];
+    pendingEffect?: Effect;
+} | {
+    type: "dealDamageSplit";
+    player: PlayerId;
+    primaryAmount: number;
+    secondaryAmount: number;
+    selectedIds: string[];
+    phase: "selectTargets" | "selectPrimary";
+    options: {
+        instanceId: string;
+        label: string;
+        cardNo: string;
     }[];
 } | {
     type: "selectDeckSummon";
@@ -631,6 +1072,13 @@ export type ChoicePrompt = ChoiceSourceContext & ({
         cost: number;
         eligible: boolean;
     }[];
+} | {
+    type: "chooseNumber";
+    player: PlayerId;
+    min: number;
+    max: number;
+    pendingEffect: Effect;
+    reasonLabel?: string;
 });
 export interface CombatState {
     attackerId: string;
@@ -656,6 +1104,25 @@ export interface ResolutionContext {
     buriedCosts?: number[];
     /** Card no. of the most recently discarded card this effect sequence. */
     lastDiscardedCardNo?: string;
+    /** Clash: first follower selected (ally). */
+    clashSelfId?: string;
+    clashStep?: "pickSelf" | "pickEnemy";
+    /** Discard-and-draw: number of cards discarded this step. */
+    lastDiscardCount?: number;
+    /** Most recently summoned/moved to field instance id. */
+    lastSummonedInstanceId?: string;
+    /** Most recently moved from cemetery/deck to hand during this effect sequence. */
+    lastTutoredInstanceId?: string;
+    /** Token card no. when a token leaves the field (Greatpick Corpse). */
+    leftTokenCardNo?: string;
+    /** Player-chosen X for variable effects this sequence. */
+    chosenNumber?: number;
+    /** dealDamageCompare: [damageTargetId, attackSourceId]. */
+    compareTargetIds?: [string, string];
+    /** peekDeck: cards revealed from deck top this sequence. */
+    peekedInstanceIds?: string[];
+    /** selectEvolveDeckCard: chosen evolve deck instance id. */
+    selectedEvolveDeckId?: string;
 }
 export interface RevealedCardInfo {
     owner: PlayerId;

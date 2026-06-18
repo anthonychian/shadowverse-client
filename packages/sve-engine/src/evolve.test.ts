@@ -1,7 +1,8 @@
 import { describe, expect, it, beforeEach } from "vitest";
 import { applyAction } from "./actions/applyAction";
 import { createCardInstance, createInitialGameState, resetIdCounter } from "./state/factory";
-import { getEffectiveStats, hasKeyword } from "./state/queries";
+import { destroyFollower } from "./state/zones";
+import { getEffectiveStats, hasKeyword, findMatchingEvolveCard } from "./state/queries";
 
 describe("evolve", () => {
   beforeEach(() => resetIdCounter());
@@ -205,5 +206,37 @@ describe("evolve", () => {
       targetId: "leader",
     });
     expect(attack.ok).toBe(false);
+  });
+
+  it("returns spent evolve card face-up to evolve deck when evolved follower leaves field", () => {
+    const { state, base, evo } = boardReadyToEvolve();
+    const evolved = applyAction(state, 0, {
+      type: "EVOLVE",
+      fieldInstanceId: base.instanceId,
+      evolveDeckInstanceId: evo.instanceId,
+      useEvoPoint: false,
+    });
+    expect(evolved.ok).toBe(true);
+
+    const after = destroyFollower(evolved.state, base.instanceId);
+    expect(after.players[0].zones.field).toHaveLength(0);
+    expect(after.players[0].zones.cemetery).toHaveLength(1);
+    expect(after.players[0].zones.cemetery[0].cardNo).toBe("MVP-013");
+    expect(after.players[0].zones.evolveDeck).toHaveLength(1);
+    expect(after.players[0].zones.evolveDeck[0].cardNo).toBe("MVP-014");
+    expect(after.players[0].zones.evolveDeck[0].evoSpent).toBe(true);
+    expect(after.players[0].zones.resolutionZone).toHaveLength(0);
+
+    const base2 = createCardInstance("MVP-013", 0);
+    base2.onFieldSinceTurnStart = true;
+    after.players[0].zones.field.push(base2);
+    const retry = applyAction(after, 0, {
+      type: "EVOLVE",
+      fieldInstanceId: base2.instanceId,
+      evolveDeckInstanceId: evo.instanceId,
+      useEvoPoint: false,
+    });
+    expect(retry.ok).toBe(false);
+    expect(findMatchingEvolveCard(after, 0, base2.instanceId)).toBeNull();
   });
 });

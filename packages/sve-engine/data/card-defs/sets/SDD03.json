@@ -1,0 +1,344 @@
+{
+  "SDD03-001EN": {
+    "name": "Sweet-Tooth Medusa",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD03-002EN": {
+    "name": "Sweet-Tooth Medusa Evolved",
+    "class": "rune",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 5,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "SDD03-003EN": {
+    "name": "Ceridwen, Eternity Hunter",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD03-004EN": {
+    "name": "Ceridwen, Eternity Hunter Evolved",
+    "class": "rune",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD03-005EN": {
+    "name": "Faust, Truthseeker",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "SDD03-006EN": {
+    "name": "Ancient Alchemist",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "review",
+    "abilities": []
+  },
+  "SDD03-007EN": {
+    "name": "Ancient Alchemist Evolved",
+    "class": "rune",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD03-008EN": {
+    "name": "Riley, Hydroshaman",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD03-009EN": {
+    "name": "Acid Golem",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD03-010EN": {
+    "name": "Acid Golem Evolved",
+    "class": "rune",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "review",
+    "abilities": []
+  },
+  "SDD03-011EN": {
+    "name": "Artistic Arcanist",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "bane",
+      "drain",
+      "evolve"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD03-012EN": {
+    "name": "Artistic Arcanist Evolved",
+    "class": "rune",
+    "printingType": "evolved",
+    "keywords": [
+      "bane",
+      "drain"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD03-013EN": {
+    "name": "Price of Magic",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "stack",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD03-014EN": {
+    "name": "Gingerbread House",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "stack",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "SDD03-015EN": {
+    "name": "Summoning Drills",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "stack",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD03-016EN": {
+    "name": "Rabbit Mage",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "SDD03-017EN": {
+    "name": "Rabbit Mage Evolved",
+    "class": "rune",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD03-018EN": {
+    "name": "Beastfaced Mage",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD03-019EN": {
+    "name": "Teachings of Creation",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "stack",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "SDD03-020EN": {
+    "name": "Red-Hot Ritual",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "stack",
+      "fanfare"
+    ],
+    "parseConfidence": "review",
+    "abilities": []
+  },
+  "SDD03-021EN": {
+    "name": "Witch's Cauldron",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "stack",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD03-022EN": {
+    "name": "Mirror of Truth",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "stack",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD03-023EN": {
+    "name": "Grand Spire",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "stack",
+      "fanfare"
+    ],
+    "parseConfidence": "review",
+    "abilities": []
+  },
+  "SDD03-LD01EN": {
+    "name": "Kaori Yuihara",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "SDD03-T01EN": {
+    "name": "Strikeform Golem",
+    "class": "rune",
+    "printingType": "token",
+    "keywords": [
+      "rush"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD03-T02EN": {
+    "name": "Guardform Golem",
+    "class": "rune",
+    "printingType": "token",
+    "keywords": [
+      "ward"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD03-T03EN": {
+    "name": "Magic Sediment",
+    "class": "rune",
+    "printingType": "token",
+    "keywords": [
+      "stack"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD03-T04EN": {
+    "name": "Instant Poison",
+    "class": "rune",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "review",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "damageFollowerAndLeader",
+          "followerAmount": 4,
+          "leaderAmount": 2
+        }
+      }
+    ]
+  },
+  "SDD03-T05EN": {
+    "name": "Eternal Potion",
+    "class": "rune",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD03-T06EN": {
+    "name": "Serpent",
+    "class": "abyss",
+    "printingType": "token",
+    "keywords": [
+      "bane"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  }
+}

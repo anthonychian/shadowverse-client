@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const vitest_1 = require("vitest");
 const applyAction_1 = require("./actions/applyAction");
 const factory_1 = require("./state/factory");
+const zones_1 = require("./state/zones");
 const queries_1 = require("./state/queries");
 (0, vitest_1.describe)("evolve", () => {
     (0, vitest_1.beforeEach)(() => (0, factory_1.resetIdCounter)());
@@ -186,5 +187,34 @@ const queries_1 = require("./state/queries");
             targetId: "leader",
         });
         (0, vitest_1.expect)(attack.ok).toBe(false);
+    });
+    (0, vitest_1.it)("returns spent evolve card face-up to evolve deck when evolved follower leaves field", () => {
+        const { state, base, evo } = boardReadyToEvolve();
+        const evolved = (0, applyAction_1.applyAction)(state, 0, {
+            type: "EVOLVE",
+            fieldInstanceId: base.instanceId,
+            evolveDeckInstanceId: evo.instanceId,
+            useEvoPoint: false,
+        });
+        (0, vitest_1.expect)(evolved.ok).toBe(true);
+        const after = (0, zones_1.destroyFollower)(evolved.state, base.instanceId);
+        (0, vitest_1.expect)(after.players[0].zones.field).toHaveLength(0);
+        (0, vitest_1.expect)(after.players[0].zones.cemetery).toHaveLength(1);
+        (0, vitest_1.expect)(after.players[0].zones.cemetery[0].cardNo).toBe("MVP-013");
+        (0, vitest_1.expect)(after.players[0].zones.evolveDeck).toHaveLength(1);
+        (0, vitest_1.expect)(after.players[0].zones.evolveDeck[0].cardNo).toBe("MVP-014");
+        (0, vitest_1.expect)(after.players[0].zones.evolveDeck[0].evoSpent).toBe(true);
+        (0, vitest_1.expect)(after.players[0].zones.resolutionZone).toHaveLength(0);
+        const base2 = (0, factory_1.createCardInstance)("MVP-013", 0);
+        base2.onFieldSinceTurnStart = true;
+        after.players[0].zones.field.push(base2);
+        const retry = (0, applyAction_1.applyAction)(after, 0, {
+            type: "EVOLVE",
+            fieldInstanceId: base2.instanceId,
+            evolveDeckInstanceId: evo.instanceId,
+            useEvoPoint: false,
+        });
+        (0, vitest_1.expect)(retry.ok).toBe(false);
+        (0, vitest_1.expect)((0, queries_1.findMatchingEvolveCard)(after, 0, base2.instanceId)).toBeNull();
     });
 });

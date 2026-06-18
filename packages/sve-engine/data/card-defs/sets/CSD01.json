@@ -1,0 +1,89 @@
+{
+  "CSD01-007EN": {
+    "name": "Tazuna Hayakawa [Tracen Reception]",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "tutorFromCemetery",
+          "filter": {
+            "cardType": "follower"
+          },
+          "to": "field",
+          "reveal": true
+        }
+      }
+    ]
+  },
+  "CSD01-030EN": {
+    "name": "Riko Kashimoto",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Select an Umamusume follower on your field and give it [atk]+1"
+            },
+            {
+              "op": "noop",
+              "label": "If it's a racing follower, give it [atk]+2 instead"
+            }
+          ]
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "CSD01-031EN": {
+    "name": "Aoi Kiryuin",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Select an Umamusume follower on your field and give it [def]+1"
+            },
+            {
+              "op": "noop",
+              "label": "If it's a racing follower, give it [def]+2 instead"
+            }
+          ]
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  }
+}

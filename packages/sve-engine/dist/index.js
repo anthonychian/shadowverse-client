@@ -14,7 +14,7 @@ var __exportStar = (this && this.__exportStar) || function(m, exports) {
     for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.resolveCardDefCost = exports.getEvolveCost = exports.getEffectivePlayCost = exports.getEffectiveStats = exports.hasKeyword = exports.getLegalAttackTargets = exports.findInstance = exports.tryAction = exports.createPlayerView = exports.resolveSpell = exports.resolveEffect = exports.runConfirmationTiming = exports.advanceCombatIfNeeded = exports.applyAction = exports.COOL_EARRINGS_CARD_NO = exports.CRAFT_LEADERS = exports.getCardUniverseFromCardNo = exports.detectDeckIdentity = exports.beginStartPhase = exports.applyMulligan = exports.loadDecks = exports.resetIdCounter = exports.createCardInstance = exports.createInitialGameState = exports.MVP_CARD_DEFS = exports.getCardByName = exports.registerCard = exports.getAllCardDefs = exports.getCardDef = void 0;
+exports.isFieldFollower = exports.resolveCardDefCost = exports.getEvolveCost = exports.getEffectivePlayCost = exports.getEffectiveStats = exports.hasKeyword = exports.getLegalAttackTargets = exports.findInstance = exports.tryAction = exports.createPlayerView = exports.resolveSpell = exports.resolveEffect = exports.runConfirmationTiming = exports.advanceCombatIfNeeded = exports.applyAction = exports.COOL_EARRINGS_CARD_NO = exports.CRAFT_LEADERS = exports.getCardUniverseFromCardNo = exports.detectDeckIdentity = exports.beginStartPhase = exports.applyMulligan = exports.loadDecks = exports.resetIdCounter = exports.createCardInstance = exports.createInitialGameState = exports.MVP_CARD_DEFS = exports.getCardByName = exports.registerCard = exports.getAllCardDefs = exports.getCardDef = void 0;
 __exportStar(require("./types"), exports);
 var registry_1 = require("./cards/registry");
 Object.defineProperty(exports, "getCardDef", { enumerable: true, get: function () { return registry_1.getCardDef; } });
@@ -55,3 +55,5 @@ Object.defineProperty(exports, "getEffectiveStats", { enumerable: true, get: fun
 Object.defineProperty(exports, "getEffectivePlayCost", { enumerable: true, get: function () { return queries_1.getEffectivePlayCost; } });
 Object.defineProperty(exports, "getEvolveCost", { enumerable: true, get: function () { return queries_1.getEvolveCost; } });
 Object.defineProperty(exports, "resolveCardDefCost", { enumerable: true, get: function () { return queries_1.resolveCardDefCost; } });
+Object.defineProperty(exports, "isFieldFollower", { enumerable: true, get: function () { return queries_1.isFieldFollower; } });
+__exportStar(require("./testing"), exports);

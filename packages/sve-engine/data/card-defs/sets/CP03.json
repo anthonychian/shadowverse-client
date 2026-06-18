@@ -1,0 +1,3247 @@
+{
+  "CP03-002EN": {
+    "name": "Blue Storm Supreme Dragon, Glory Maelstrom Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [
+      "storm"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "destroy",
+          "targets": {
+            "type": "anyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "CP03-003EN": {
+    "name": "Storm Rider, Diamantes",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "engage",
+          "targets": {
+            "type": "selfFollower",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing lastWords timing"
+        }
+      }
+    ]
+  },
+  "CP03-004EN": {
+    "name": "Storm Rider, Basil",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "You may summon an Aqua Force follower that costs 3 or less from your hand"
+        }
+      }
+    ]
+  },
+  "CP03-005EN": {
+    "name": "Marine General of the Restless Tides, Algos",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "into a Navalgazer Dragon"
+        }
+      },
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "noop",
+          "label": "Whenever an Aqua Force follower on your field attacks, if it's the 3rd time an Aqua Force follower on your field has att"
+        }
+      }
+    ]
+  },
+  "CP03-006EN": {
+    "name": "Navalgazer Dragon Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "noop",
+          "label": "You may summon a 1-cost Aqua Force follower from your hand"
+        }
+      },
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "noop",
+          "label": "Whenever an Aqua Force follower on your field attacks, if it's the 3rd time an Aqua Force follower on your field has att"
+        }
+      }
+    ]
+  },
+  "CP03-007EN": {
+    "name": "Hydro Hurricane Dragon",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "dealDamage",
+              "amount": 1,
+              "targets": {
+                "type": "enemyFollower",
+                "count": 2
+              }
+            },
+            {
+              "op": "destroy",
+              "targets": {
+                "type": "anyFollower",
+                "count": 1
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP03-008EN": {
+    "name": "Water General of Wave-Like Spirals, Benedict",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buff",
+          "atk": 1,
+          "def": 1,
+          "targets": {
+            "type": "self"
+          }
+        }
+      }
+    ]
+  },
+  "CP03-009EN": {
+    "name": "Tear Knight, Valeria",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "strike",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buff",
+          "atk": 1,
+          "def": 1,
+          "targets": {
+            "type": "self"
+          }
+        }
+      }
+    ]
+  },
+  "CP03-010EN": {
+    "name": "Tear Knight, Lazarus",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "This follower doesn't take damage from enemy abilities"
+        }
+      }
+    ]
+  },
+  "CP03-011EN": {
+    "name": "Tear Knight, Theo",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "assail",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "If there's another Aqua Force follower on your field, give this follower Rush and Assail"
+        }
+      }
+    ]
+  },
+  "CP03-012EN": {
+    "name": "Light Signals Penguin Soldier",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "buff",
+              "atk": 1,
+              "def": 1,
+              "targets": {
+                "type": "self"
+              }
+            },
+            {
+              "op": "peekDeck",
+              "count": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP03-013EN": {
+    "name": "Tear Knight, Cyprus",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "noop",
+          "label": "Search your deck for a Tear Knight, Cyprus, reveal it, add it to your hand, then shuffle"
+        }
+      }
+    ]
+  },
+  "CP03-014EN": {
+    "name": "Emerald Shield, Paschal",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 1,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        },
+        "quick": true
+      }
+    ]
+  },
+  "CP03-015EN": {
+    "name": "Battleship Intelligence",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "storm"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "---------- (If this card is revealed by a drive check, give a follower on your field [atk]+2.)"
+        }
+      }
+    ]
+  },
+  "CP03-016EN": {
+    "name": "Pyroxene Communications Sea Otter Soldier",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "CP03-017EN": {
+    "name": "Dolphin Soldier of High Speed Raids",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "cannotAttack",
+          "label": "cannot attack enemy leaders"
+        }
+      }
+    ]
+  },
+  "CP03-018EN": {
+    "name": "Medical Officer of the Rainbow Elixir",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "ward"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "startOfEnd",
+        "effect": {
+          "op": "noop",
+          "label": "At the start of your end phase, if Aqua Force followers on your field have attacked at least 3 times this turn, give you"
+        }
+      }
+    ]
+  },
+  "CP03-019EN": {
+    "name": "Coral Assault",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "dealDamage",
+              "amount": 1,
+              "targets": {
+                "type": "enemyFollower",
+                "count": 1
+              }
+            },
+            {
+              "op": "sequence",
+              "steps": [
+                {
+                  "op": "dealDamage",
+                  "amount": 2,
+                  "targets": {
+                    "type": "enemyFollower",
+                    "count": 1
+                  }
+                },
+                {
+                  "op": "buff",
+                  "atk": 1,
+                  "def": 1,
+                  "targets": {
+                    "type": "selfFollower",
+                    "count": 1,
+                    "excludeSelf": false
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP03-020EN": {
+    "name": "Battle Siren, Cynthia",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "noop",
+          "label": "Select a 1-cost Aqua Force follower in your cemetery and summon it"
+        }
+      }
+    ]
+  },
+  "CP03-021EN": {
+    "name": "Officer Cadet, Erikk",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buff",
+          "atk": 1,
+          "def": 1,
+          "targets": {
+            "type": "selfFollower",
+            "count": 1,
+            "excludeSelf": false
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "CP03-023EN": {
+    "name": "Swordsman of the Explosive Flames, Palamedes",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "strike",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "ownCemeteryTraitMin",
+            "trait": "Royal Paladin",
+            "count": 15
+          },
+          "then": {
+            "op": "passiveKeywords",
+            "keywords": [
+              "storm"
+            ]
+          }
+        }
+      },
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "buffFieldTrait",
+          "trait": "this",
+          "atk": 1,
+          "def": 1,
+          "excludeSelf": false
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "and deal it 5 damage"
+        }
+      }
+    ]
+  },
+  "CP03-024EN": {
+    "name": "Star Call Trumpeter",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "dealDamage",
+              "amount": 1,
+              "targets": {
+                "type": "enemyFollower",
+                "count": 1
+              }
+            },
+            {
+              "op": "sequence",
+              "steps": [
+                {
+                  "op": "dealDamage",
+                  "amount": 4,
+                  "targets": {
+                    "type": "enemyFollower",
+                    "count": 1
+                  }
+                },
+                {
+                  "op": "buff",
+                  "atk": 1,
+                  "def": 1,
+                  "targets": {
+                    "type": "selfFollower",
+                    "count": 1,
+                    "excludeSelf": false
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP03-025EN": {
+    "name": "High Dog Breeder, Akane",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {},
+          "lookAt": 5,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        }
+      }
+    ]
+  },
+  "CP03-026EN": {
+    "name": "Soul Saver Dragon Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "noop",
+          "label": "Select up to 2 other Royal Paladin followers on your field and give them +2/+2"
+        }
+      }
+    ]
+  },
+  "CP03-027EN": {
+    "name": "Knight of Loyalty, Bedivere",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "If there's a follower with \"Blaster\" in its name on your field, give this follower [atk]+1 and Storm"
+        }
+      }
+    ]
+  },
+  "CP03-028EN": {
+    "name": "Solitary Knight, Gancelot",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "assail",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "damageImmunity",
+          "amount": 0,
+          "targets": {
+            "type": "self"
+          }
+        }
+      }
+    ]
+  },
+  "CP03-029EN": {
+    "name": "Knight of Friendship, Kay",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "rush"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "When playing this card, turn a faceup evolved follower with \"Blaster\" in its name in your evolve deck facedown: This car"
+        }
+      }
+    ]
+  },
+  "CP03-030EN": {
+    "name": "Barcgal",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "CP03-031EN": {
+    "name": "Miru Biru",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Reveal a Royal Paladin card from your hand: Draw a card"
+        }
+      }
+    ]
+  },
+  "CP03-032EN": {
+    "name": "Young Pegasus Knight",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {},
+          "lookAt": 3,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        }
+      }
+    ]
+  },
+  "CP03-033EN": {
+    "name": "Toypugal",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "assail",
+      "fanfare"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Select a Vanguard follower that costs 4 or more on your field and give it +2/+2, Rush, and Assail"
+        }
+      }
+    ]
+  },
+  "CP03-034EN": {
+    "name": "Pongal",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "buff",
+              "atk": 1,
+              "def": 1,
+              "targets": {
+                "type": "self"
+              }
+            },
+            {
+              "op": "peekDeck",
+              "count": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP03-035EN": {
+    "name": "Future Knight, Llew",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Search your deck for a Blaster Blade, reveal it, add it to your hand, then shuffle. ---------- (If this card is revealed"
+        }
+      }
+    ]
+  },
+  "CP03-036EN": {
+    "name": "Margal",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "CP03-037EN": {
+    "name": "Flogal",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "startOfEnd",
+        "effect": {
+          "op": "cannotAttack",
+          "label": "cannot attack enemy leaders"
+        }
+      }
+    ]
+  },
+  "CP03-038EN": {
+    "name": "Yggdrasil Maiden, Elaine",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "healLeader",
+          "amount": 2
+        }
+      }
+    ]
+  },
+  "CP03-039EN": {
+    "name": "Starlight Unicorn",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "noop",
+          "label": "Whenever a follower on your field performs a drive check, give it [atk]+1"
+        }
+      }
+    ]
+  },
+  "CP03-040EN": {
+    "name": "Knight of Truth, Gordon",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "choose",
+          "min": 1,
+          "max": 1,
+          "options": [
+            {
+              "label": "(1) Select an enemy follower on the field and deal it 3 damage",
+              "effect": {
+                "op": "dealDamage",
+                "amount": 3,
+                "targets": {
+                  "type": "enemyFollower",
+                  "count": 1
+                }
+              }
+            }
+          ]
+        },
+        "quick": true
+      }
+    ]
+  },
+  "CP03-041EN": {
+    "name": "Wingal Brave",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "draw",
+              "count": 1
+            },
+            {
+              "op": "discard",
+              "count": 1
+            }
+          ]
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "CP03-043EN": {
+    "name": "Nightmare Doll, Alice",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "millToBanish",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "CP03-044EN": {
+    "name": "Nightmare Doll, Alice Evolved",
+    "class": "rune",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "noop",
+          "label": "Select a Pale Moon follower in your banished zone and summon it"
+        }
+      }
+    ]
+  },
+  "CP03-045EN": {
+    "name": "Purple Trapezist",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "CP03-046EN": {
+    "name": "Crimson Beast Tamer",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 2
+        }
+      }
+    ]
+  },
+  "CP03-047EN": {
+    "name": "Barking Manticore Evolved",
+    "class": "rune",
+    "printingType": "evolved",
+    "keywords": [
+      "ward"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "noop",
+          "label": "and deal it 4 damage"
+        }
+      }
+    ]
+  },
+  "CP03-048EN": {
+    "name": "Mistress Hurricane",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 3,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "CP03-049EN": {
+    "name": "Golden Beast Tamer",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": {
+            "op": "traitFieldCount",
+            "trait": "Pale Moon",
+            "multiplier": 1
+          },
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "CP03-050EN": {
+    "name": "Starlight Melody Tamer, Farah",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "dealDamage",
+              "amount": 1,
+              "targets": {
+                "type": "enemyFollower",
+                "count": 1
+              }
+            },
+            {
+              "op": "buffFieldTrait",
+              "trait": "this",
+              "atk": 1,
+              "def": 1,
+              "excludeSelf": false
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP03-051EN": {
+    "name": "Turquoise Beast Tamer",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 1,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "CP03-052EN": {
+    "name": "Dark Metal Bicorn",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "CP03-053EN": {
+    "name": "Nitro Juggler",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "bane",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {},
+          "lookAt": 5,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        }
+      }
+    ]
+  },
+  "CP03-054EN": {
+    "name": "Midnight Bunny",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "buff",
+              "atk": 1,
+              "def": 1,
+              "targets": {
+                "type": "self"
+              }
+            },
+            {
+              "op": "searchDeckChoose",
+              "filter": {},
+              "lookAt": 2,
+              "to": "hand",
+              "optional": true,
+              "remainderTo": "deckBottom",
+              "reveal": true
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP03-055EN": {
+    "name": "Hades Hypnotist",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 1,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        },
+        "quick": true
+      }
+    ]
+  },
+  "CP03-056EN": {
+    "name": "Dynamite Juggler",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "millToBanish",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "CP03-057EN": {
+    "name": "Rainbow Magician",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Select a Pale Moon card in your banished zone"
+            },
+            {
+              "op": "noop",
+              "label": "Add it to your hand, then banish a card from your hand. ---------- (If this card is revealed by a drive check, draw a ca"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP03-058EN": {
+    "name": "Skyhigh Walker",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "cannotAttack",
+              "label": "cannot attack enemy leaders"
+            },
+            {
+              "op": "cannotAttack",
+              "label": "cannot attack enemy leaders"
+            }
+          ]
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "CP03-059EN": {
+    "name": "Candy Clown",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "healLeader",
+              "amount": 2
+            },
+            {
+              "op": "millToBanish",
+              "count": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP03-060EN": {
+    "name": "Jumping Jill",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Select up to 1 Pale Moon card in your banished zone"
+            },
+            {
+              "op": "noop",
+              "label": "Add it to your hand and give this follower +1/+1"
+            }
+          ]
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Banish the top 2 cards of your deck"
+        }
+      }
+    ]
+  },
+  "CP03-061EN": {
+    "name": "Skull Juggler",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Select 2 Pale Moon cards in your cemetery"
+            },
+            {
+              "op": "noop",
+              "label": "Banish them and draw a card"
+            },
+            {
+              "op": "noop",
+              "label": "(Play only if you can select 2.)"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP03-062EN": {
+    "name": "Girl Who Crossed the Gap",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "CP03-064EN": {
+    "name": "Seal Dragon, Blockade",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "whenever an opponent plays a spell, deal 2 damage to their leader"
+            },
+            {
+              "op": "noop",
+              "label": "Once on each of your turns, when a Kagero card you control deals ability damage to an enemy follower on the field, draw "
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP03-065EN": {
+    "name": "Burning Horn Dragon",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "If there's a follower with \"Overlord\" in its name on your field, give this follower +2/+2"
+        }
+      },
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 1,
+          "targets": {
+            "type": "enemyFieldCard",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "CP03-066EN": {
+    "name": "Blazing Core Dragon",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "into a Blazing Flare Dragon"
+        }
+      }
+    ]
+  },
+  "CP03-067EN": {
+    "name": "Blazing Flare Dragon Evolved",
+    "class": "dragon",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "damageFollowerAndLeader",
+          "followerAmount": 5,
+          "leaderAmount": 3
+        }
+      }
+    ]
+  },
+  "CP03-068EN": {
+    "name": "Dragonic Executioner",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 2
+        }
+      }
+    ]
+  },
+  "CP03-069EN": {
+    "name": "Vortex Dragon",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "destroy",
+          "targets": {
+            "type": "enemyFollower",
+            "count": 2
+          }
+        }
+      }
+    ]
+  },
+  "CP03-070EN": {
+    "name": "Flame of Promise, Aermo",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Reveal a follower with \"Overlord\" in its name from your hand: Draw a card"
+        }
+      }
+    ]
+  },
+  "CP03-071EN": {
+    "name": "Bellicosity Dragon",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 1,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 2
+          }
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "healLeader",
+              "amount": 2
+            },
+            {
+              "op": "draw",
+              "count": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP03-072EN": {
+    "name": "Prowling Dragon, Striken",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "noop",
+          "label": "Whenever you drive check a Trigger, this card loses all abilities for the rest of the turn"
+        }
+      }
+    ]
+  },
+  "CP03-073EN": {
+    "name": "Dragon Monk, Gojo",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "buff",
+              "atk": 1,
+              "def": 1,
+              "targets": {
+                "type": "self"
+              }
+            },
+            {
+              "op": "searchDeckChoose",
+              "filter": {
+                "cardType": "follower"
+              },
+              "lookAt": 2,
+              "to": "hand",
+              "optional": true,
+              "remainderTo": "deckBottom",
+              "reveal": true
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP03-074EN": {
+    "name": "Demonic Dragon Berserker, Yaksha",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "choose",
+          "min": 1,
+          "max": 1,
+          "options": [
+            {
+              "label": "(1) Select an enemy amulet on the field and destroy it",
+              "effect": {
+                "op": "destroy",
+                "targets": {
+                  "type": "enemyFieldCard",
+                  "count": 1,
+                  "filter": {
+                    "cardType": "amulet"
+                  }
+                }
+              }
+            },
+            {
+              "label": "(2) Deal 2 damage to each enemy leader",
+              "effect": {
+                "op": "dealDamageAllEnemies",
+                "amount": 2,
+                "followersOnly": false
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP03-075EN": {
+    "name": "Demonic Dragon Mage, Kimnara",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 6,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        },
+        "quick": true
+      }
+    ]
+  },
+  "CP03-076EN": {
+    "name": "Embodiment of Spear, Tahr",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "assail",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "overflow"
+          },
+          "then": {
+            "op": "dealDamageAllEnemies",
+            "amount": 2,
+            "followersOnly": false
+          }
+        },
+        "condition": {
+          "type": "overflow"
+        }
+      }
+    ]
+  },
+  "CP03-077EN": {
+    "name": "Gattling Claw Dragon",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "CP03-078EN": {
+    "name": "Lizard Soldier, Ganlu",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "dealDamage",
+              "amount": 1,
+              "targets": {
+                "type": "enemyFollower",
+                "count": 1
+              }
+            },
+            {
+              "op": "cannotAttack",
+              "label": "cannot attack enemy leaders"
+            }
+          ]
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "CP03-079EN": {
+    "name": "Dragon Monk, Genjo",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "healLeader",
+          "amount": 1
+        }
+      }
+    ]
+  },
+  "CP03-080EN": {
+    "name": "Iron Tail Dragon",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buffFieldTrait",
+          "trait": "this",
+          "atk": 1,
+          "def": 1,
+          "excludeSelf": false
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "CP03-081EN": {
+    "name": "Flame of Hope, Aermo",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "and, if Overflow is active for you, deal it 2 damage"
+            },
+            {
+              "op": "noop",
+              "label": "(Overflow is active if you have at least 7 max play points.) Once on each of your turns, when an enemy follower is put f"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP03-082EN": {
+    "name": "Lizard Soldier, Conroe",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 1,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "CP03-084EN": {
+    "name": "Phantom Blaster Dragon",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "As an additional cost to play this card, bury a Shadow Paladin follower. ---------- Storm"
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "If you buried a Blaster Dark as the additional cost to play this card,"
+        }
+      }
+    ]
+  },
+  "CP03-085EN": {
+    "name": "Phantom Blaster Dragon Evolved",
+    "class": "abyss",
+    "printingType": "evolved",
+    "keywords": [
+      "storm"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "ownCemeteryTraitMin",
+            "trait": "Shadow Paladin",
+            "count": 10
+          },
+          "then": {
+            "op": "destroy",
+            "targets": {
+              "type": "anyFollower",
+              "count": 1
+            }
+          }
+        }
+      }
+    ]
+  },
+  "CP03-086EN": {
+    "name": "Blaster Dark",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "CP03-087EN": {
+    "name": "Blaster Dark Evolved",
+    "class": "abyss",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "noop",
+          "label": "Deal it 3 damage, then deal it 1 more damage for every 5 Shadow Paladin cards in your cemetery"
+        }
+      }
+    ]
+  },
+  "CP03-088EN": {
+    "name": "Skull Witch, Nemain",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "buff",
+              "atk": 1,
+              "def": 1,
+              "targets": {
+                "type": "self"
+              }
+            },
+            {
+              "op": "searchDeckChoose",
+              "filter": {
+                "identityName": "Shadow Paladin"
+              },
+              "lookAt": 3,
+              "to": "hand",
+              "optional": true,
+              "remainderTo": "deckBottom",
+              "reveal": true
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP03-089EN": {
+    "name": "Knight of Nullity, Masquerade",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "bane",
+      "strike",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "ownCemeteryTraitMin",
+            "trait": "Shadow Paladin",
+            "count": 10
+          },
+          "then": {
+            "op": "passiveKeywords",
+            "keywords": [
+              "rush"
+            ]
+          }
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "mill",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "CP03-090EN": {
+    "name": "Darkness Maiden, Macha",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "buff",
+              "atk": 1,
+              "def": 1,
+              "targets": {
+                "type": "self"
+              }
+            },
+            {
+              "op": "searchDeckChoose",
+              "filter": {
+                "trait": "Shadow Paladin",
+                "cardType": "follower",
+                "maxCost": 2
+              },
+              "lookAt": 40,
+              "to": "field",
+              "remainderTo": "deckBottom"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP03-091EN": {
+    "name": "Cursed Lancer",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "healLeader",
+              "amount": 3
+            },
+            {
+              "op": "mill",
+              "count": 2
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP03-092EN": {
+    "name": "Knight of Darkness, Rugos",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 1,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "CP03-093EN": {
+    "name": "Black Sage, Charon",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "mill",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "CP03-094EN": {
+    "name": "Doranbau",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "bane"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "ownCemeteryTraitMin",
+            "trait": "Shadow Paladin",
+            "count": 10
+          },
+          "then": {
+            "op": "passiveKeywords",
+            "keywords": [
+              "bane"
+            ]
+          }
+        }
+      },
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "mill",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "CP03-095EN": {
+    "name": "Blaster Javelin",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "fanfare"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Search your deck for a Phantom Blaster Dragon or Blaster Dark, reveal it, add it to your hand, then shuffle"
+        }
+      }
+    ]
+  },
+  "CP03-096EN": {
+    "name": "Dark Shield, Mac Lir",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 1,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        },
+        "quick": true
+      }
+    ]
+  },
+  "CP03-097EN": {
+    "name": "Grim Reaper",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "storm"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "ownCemeteryTraitMin",
+            "trait": "Shadow Paladin",
+            "count": 10
+          },
+          "then": {
+            "op": "passiveKeywords",
+            "keywords": [
+              "storm"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "CP03-098EN": {
+    "name": "Abyss Freezer",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "tutorFromCemetery",
+          "filter": {
+            "cardType": "follower"
+          },
+          "to": "hand",
+          "reveal": true
+        }
+      }
+    ]
+  },
+  "CP03-099EN": {
+    "name": "Darkside Trumpeter",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "startOfEnd",
+        "effect": {
+          "op": "cannotAttack",
+          "label": "cannot attack enemy leaders"
+        }
+      }
+    ]
+  },
+  "CP03-100EN": {
+    "name": "Abyss Healer",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "ownCemeteryTraitMin",
+            "trait": "Shadow Paladin",
+            "count": 10
+          },
+          "then": {
+            "op": "healLeader",
+            "amount": 3
+          }
+        }
+      }
+    ]
+  },
+  "CP03-101EN": {
+    "name": "Witch of Nostrum, Arianrhod",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buff",
+          "atk": 1,
+          "def": 1,
+          "targets": {
+            "type": "self"
+          }
+        }
+      }
+    ]
+  },
+  "CP03-102EN": {
+    "name": "Gururubau",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "and up to 1 Shadow Paladin follower in your cemetery"
+            },
+            {
+              "op": "noop",
+              "label": "Destroy the first follower and add the second to your hand"
+            }
+          ]
+        },
+        "quick": true
+      }
+    ]
+  },
+  "CP03-103EN": {
+    "name": "Fullbau",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "mill",
+          "count": 2
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "CP03-105EN": {
+    "name": "Goddess of the Half Moon, Tsukuyomi",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 1,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "CP03-106EN": {
+    "name": "CEO Amaterasu",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "assail",
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {},
+          "lookAt": 2,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        }
+      }
+    ]
+  },
+  "CP03-107EN": {
+    "name": "CEO Amaterasu Evolved",
+    "class": "haven",
+    "printingType": "evolved",
+    "keywords": [
+      "assail"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "choose",
+          "min": 1,
+          "max": 1,
+          "options": [
+            {
+              "label": "(2) Draw a card",
+              "effect": {
+                "op": "draw",
+                "count": 1
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP03-108EN": {
+    "name": "Silent Tom",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "tutorFromCemetery",
+          "filter": {},
+          "to": "hand"
+        }
+      }
+    ]
+  },
+  "CP03-109EN": {
+    "name": "Silent Tom Evolved",
+    "class": "haven",
+    "printingType": "evolved",
+    "keywords": [
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "banish",
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1,
+            "maxDef": 5
+          }
+        }
+      }
+    ]
+  },
+  "CP03-110EN": {
+    "name": "Evil-Eye Princess, Euryale",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "rush"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "CP03-111EN": {
+    "name": "Maiden of Libra",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "CP03-112EN": {
+    "name": "Battle Sister, Cocoa",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "buff",
+              "atk": 1,
+              "def": 1,
+              "targets": {
+                "type": "self"
+              }
+            },
+            {
+              "op": "searchDeckChoose",
+              "filter": {},
+              "lookAt": 5,
+              "to": "hand",
+              "optional": true,
+              "remainderTo": "deckBottom",
+              "reveal": true
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP03-113EN": {
+    "name": "Oracle Guardian, Wiseman",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "tutorFromCemetery",
+          "filter": {},
+          "to": "hand"
+        }
+      },
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "dealDamageAllEnemies",
+          "amount": 2,
+          "followersOnly": false
+        }
+      }
+    ]
+  },
+  "CP03-114EN": {
+    "name": "White Hare of Inaba",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "buff",
+              "atk": 1,
+              "def": 1,
+              "targets": {
+                "type": "self"
+              }
+            },
+            {
+              "op": "healLeader",
+              "amount": 1
+            }
+          ]
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "tutorFromCemetery",
+          "filter": {},
+          "to": "hand"
+        }
+      }
+    ]
+  },
+  "CP03-115EN": {
+    "name": "Goddess of the Crescent Moon, Tsukuyomi",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "searchDeckChoose",
+          "lookAt": 1,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "CP03-116EN": {
+    "name": "Dark Cat",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "buff",
+              "atk": 1,
+              "def": 1,
+              "targets": {
+                "type": "self"
+              }
+            },
+            {
+              "op": "searchDeckChoose",
+              "filter": {
+                "cardType": "follower"
+              },
+              "lookAt": 3,
+              "to": "hand",
+              "optional": true,
+              "remainderTo": "deckBottom",
+              "reveal": true
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP03-117EN": {
+    "name": "Battle Sister, Chocolat",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 1,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        },
+        "quick": true
+      }
+    ]
+  },
+  "CP03-118EN": {
+    "name": "Oracle Guardian, Nike",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "assail"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "grantKeyword",
+          "keyword": "storm",
+          "targets": {
+            "type": "self"
+          }
+        }
+      }
+    ]
+  },
+  "CP03-119EN": {
+    "name": "Dream Eater",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "CP03-120EN": {
+    "name": "Emergency Alarmer",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "cannotAttack",
+              "label": "cannot attack enemy leaders"
+            },
+            {
+              "op": "cannotAttack",
+              "label": "cannot attack enemy leaders"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP03-121EN": {
+    "name": "Lozenge Magus",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {},
+          "lookAt": 2,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        }
+      },
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "healLeader",
+          "amount": 1
+        }
+      }
+    ]
+  },
+  "CP03-122EN": {
+    "name": "Battle Maiden, Tagitsuhime",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "dealDamage",
+              "amount": 1,
+              "targets": {
+                "type": "enemyFollower",
+                "count": 1
+              }
+            },
+            {
+              "op": "sequence",
+              "steps": [
+                {
+                  "op": "dealDamage",
+                  "amount": 2,
+                  "targets": {
+                    "type": "enemyFollower",
+                    "count": 1
+                  }
+                },
+                {
+                  "op": "buff",
+                  "atk": 1,
+                  "def": 1,
+                  "targets": {
+                    "type": "selfFollower",
+                    "count": 1,
+                    "excludeSelf": false
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {},
+          "lookAt": 2,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        }
+      }
+    ]
+  },
+  "CP03-123EN": {
+    "name": "Luck Bird",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "choose",
+          "min": 1,
+          "max": 1,
+          "options": [
+            {
+              "label": "(1) Look at the top 3 cards of your deck",
+              "effect": {
+                "op": "searchDeckChoose",
+                "filter": {},
+                "lookAt": 3,
+                "to": "hand",
+                "optional": true,
+                "remainderTo": "deckBottom",
+                "reveal": true
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP03-124EN": {
+    "name": "Godhawk, Ichibyoshi",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {},
+          "lookAt": 3,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "CP03-126EN": {
+    "name": "Powers Converged",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "choose",
+          "min": 1,
+          "max": 1,
+          "options": [
+            {
+              "label": "(1) Select an enemy follower on the field and deal it 4 damage",
+              "effect": {
+                "op": "dealDamage",
+                "amount": 4,
+                "targets": {
+                  "type": "enemyFollower",
+                  "count": 1
+                }
+              }
+            },
+            {
+              "label": "(2) Select a follower in your cemetery and add it to your hand",
+              "effect": {
+                "op": "tutorFromCemetery",
+                "filter": {
+                  "cardType": "follower"
+                },
+                "to": "hand",
+                "reveal": true
+              }
+            },
+            {
+              "label": "(3) Give your leader [def]+4",
+              "effect": {
+                "op": "healLeader",
+                "amount": 4
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CP03-127EN": {
+    "name": "Drive Point",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "rush"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "noop",
+          "label": "evolve deck limit"
+        }
+      }
+    ]
+  },
+  "CP03-U01EN": {
+    "name": "Blue Storm Dragon, Maelstrom",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "evolve",
+      "strike"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "into a Blue Storm Supreme Dragon, Glory Maelstrom"
+        }
+      },
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "noop",
+          "label": "If it's the 4th time an Aqua Force follower on your field has attacked this turn, into a Blue Storm Supreme Dragon, Glor"
+        }
+      }
+    ]
+  },
+  "CP03-U02EN": {
+    "name": "Majesty Lord Blaster",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "strike",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Select up to 1 enemy follower on the field for every pair of Blaster Blade and Blaster Dark in your cemetery and destroy"
+        }
+      },
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "noop",
+          "label": "If there's a Blaster Blade and Blaster Dark in your cemetery, give this follower +2/+2"
+        }
+      }
+    ]
+  },
+  "CP03-U03EN": {
+    "name": "Silver Thorn Dragon Tamer, Luquier",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Select up to 1 Pale Moon follower that costs 4 or less, up to 1 that costs 3 or less, and up to 1 that costs 2 or less i"
+        }
+      }
+    ]
+  },
+  "CP03-U04EN": {
+    "name": "Dragonic Overlord the End",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "ward",
+      "strike",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "refresh",
+          "targets": {
+            "type": "self"
+          }
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing fanfare timing"
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "CP03-U05EN": {
+    "name": "Phantom Blaster Overlord",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buffFieldTrait",
+          "trait": "this",
+          "atk": 6,
+          "def": 6,
+          "excludeSelf": false
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "CP03-U06EN": {
+    "name": "Goddess of the Full Moon, Tsukuyomi",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "noop",
+          "label": "While there's a Goddess of the Half Moon, Tsukuyomi and Goddess of the Crescent Moon, Tsukuyomi in your cemetery, this f"
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "You may summon an Oracle Think Tank follower that costs 4 or less from your hand"
+        }
+      }
+    ]
+  }
+}

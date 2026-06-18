@@ -1,0 +1,366 @@
+[
+  {
+    "cardNo": "BP14-018EN",
+    "name": "Taketsumi, Aconite Paladin",
+    "status": "play_blocked",
+    "timing": "fanfare",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP14-018EN",
+    "name": "Taketsumi, Aconite Paladin",
+    "status": "play_blocked",
+    "timing": "activated",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP14-025EN",
+    "name": "Hero of the Hunt",
+    "status": "play_blocked",
+    "timing": "spell",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "PR-173EN",
+    "name": "Aenea, Amethyst Rebel",
+    "status": "play_blocked",
+    "timing": "fanfare",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP07-075EN",
+    "name": "Alpha Drive",
+    "status": "play_blocked",
+    "timing": "spell",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP12-SL22EN",
+    "name": "Garnet Waltz",
+    "status": "play_blocked",
+    "timing": "spell",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP17-113EN",
+    "name": "Hoverboard Mercenary",
+    "status": "play_blocked",
+    "timing": "fanfare",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP12-082EN",
+    "name": "Roly-Poly Mk I",
+    "status": "play_blocked",
+    "timing": "activated",
+    "error": "Must resolve pending choice first",
+    "hasCondition": true
+  },
+  {
+    "cardNo": "BP17-079EN",
+    "name": "Nicola, Enduring Steward",
+    "status": "play_blocked",
+    "timing": "fanfare",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP07-SL13EN",
+    "name": "Mono, Garnet Rebel",
+    "status": "play_blocked",
+    "timing": "activated",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP07-U05EN",
+    "name": "Mono, Garnet Rebel Evolved",
+    "status": "play_blocked",
+    "timing": "activated",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP14-118EN",
+    "name": "Torchbearing Guide",
+    "status": "play_blocked",
+    "timing": "fanfare",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP11-018EN",
+    "name": "Nahtnaught, Cursed Queen",
+    "status": "play_blocked",
+    "timing": "fanfare",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP11-018EN",
+    "name": "Nahtnaught, Cursed Queen",
+    "status": "play_blocked",
+    "timing": "activated",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP14-023EN",
+    "name": "Jiemon, Thief Lord Evolved",
+    "status": "play_blocked",
+    "timing": "onEvolve",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP14-023EN",
+    "name": "Jiemon, Thief Lord Evolved",
+    "status": "play_blocked",
+    "timing": "activated",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP14-019EN",
+    "name": "Taketsumi, Creator of Paradise",
+    "status": "play_blocked",
+    "timing": "fanfare",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP14-019EN",
+    "name": "Taketsumi, Creator of Paradise",
+    "status": "play_blocked",
+    "timing": "activated",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP14-027EN",
+    "name": "Masterful Musician Evolved",
+    "status": "play_blocked",
+    "timing": "onEvolve",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP14-026EN",
+    "name": "Masterful Musician",
+    "status": "play_blocked",
+    "timing": "fanfare",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP07-047EN",
+    "name": "Prototype Warrior",
+    "status": "play_blocked",
+    "timing": "fanfare",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP07-103EN",
+    "name": "Technolord",
+    "status": "play_blocked",
+    "timing": "fanfare",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP12-048EN",
+    "name": "Device Diviner",
+    "status": "play_blocked",
+    "timing": "fanfare",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP12-049EN",
+    "name": "Mechabook Sorcerer",
+    "status": "play_blocked",
+    "timing": "fanfare",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP17-049EN",
+    "name": "Awakened Robot",
+    "status": "skipped"
+  },
+  {
+    "cardNo": "BP17-033EN",
+    "name": "Stone Merchant",
+    "status": "play_blocked",
+    "timing": "fanfare",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP17-041EN",
+    "name": "Tetra, Serene Sapphire",
+    "status": "play_blocked",
+    "timing": "fanfare",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP07-035EN",
+    "name": "Tetra, Sapphire Rebel",
+    "status": "play_blocked",
+    "timing": "fanfare",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP07-037EN",
+    "name": "Belphomet, Lord of Aiolon",
+    "status": "play_blocked",
+    "timing": "fanfare",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP12-035EN",
+    "name": "Belphomet, Worldreaver",
+    "status": "play_blocked",
+    "timing": "fanfare",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP12-035EN",
+    "name": "Belphomet, Worldreaver",
+    "status": "play_blocked",
+    "timing": "activated",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP17-040EN",
+    "name": "Belphomet, Ultimate Creator",
+    "status": "play_blocked",
+    "timing": "fanfare",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP17-048EN",
+    "name": "Fruits of Wisdom",
+    "status": "play_blocked",
+    "timing": "spell",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP07-041EN",
+    "name": "Delta Cannon",
+    "status": "play_blocked",
+    "timing": "spell",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP17-044EN",
+    "name": "Nefarious Invasion",
+    "status": "play_blocked",
+    "timing": "spell",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP12-041EN",
+    "name": "Sorcery in Solidarity",
+    "status": "play_blocked",
+    "timing": "spell",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP17-119EN",
+    "name": "Aiolon's Remains",
+    "status": "play_blocked",
+    "timing": "fanfare",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP17-119EN",
+    "name": "Aiolon's Remains",
+    "status": "play_blocked",
+    "timing": "activated",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP17-050EN",
+    "name": "Awakened Robot Evolved",
+    "status": "play_blocked",
+    "timing": "onEvolve",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP17-042EN",
+    "name": "Tetra, Serene Sapphire Evolved",
+    "status": "play_blocked",
+    "timing": "onEvolve",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP07-036EN",
+    "name": "Tetra, Sapphire Rebel Evolved",
+    "status": "skipped"
+  },
+  {
+    "cardNo": "BP12-036EN",
+    "name": "Belphomet, Worldreaver Evolved",
+    "status": "play_blocked",
+    "timing": "onEvolve",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP12-036EN",
+    "name": "Belphomet, Worldreaver Evolved",
+    "status": "play_blocked",
+    "timing": "activated",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP07-069EN",
+    "name": "Mono, Garnet Rebel",
+    "status": "play_blocked",
+    "timing": "activated",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP07-070EN",
+    "name": "Mono, Garnet Rebel Evolved",
+    "status": "play_blocked",
+    "timing": "activated",
+    "error": "Must resolve pending choice first",
+    "hasCondition": false
+  },
+  {
+    "cardNo": "BP12-T03EN",
+    "name": "Armored Tentacle",
+    "status": "skipped"
+  },
+  {
+    "cardNo": "BP12-T04EN",
+    "name": "Assault Tentacle",
+    "status": "skipped"
+  }
+]

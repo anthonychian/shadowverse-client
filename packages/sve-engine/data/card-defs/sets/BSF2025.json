@@ -1,0 +1,14 @@
+{
+  "BSF2025-001EN": {
+    "name": "Kagemitsu, Matchless Blade",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "strike",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  }
+}

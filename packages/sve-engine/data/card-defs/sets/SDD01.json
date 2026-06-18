@@ -1,0 +1,256 @@
+{
+  "SDD01-001EN": {
+    "name": "Amataz, Fairy Blader",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD01-002EN": {
+    "name": "Cynthia, the Queen's Blade",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "assail",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD01-003EN": {
+    "name": "Spinaria, Wavering Will",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "playCostReduction",
+          "amount": 2
+        }
+      }
+    ]
+  },
+  "SDD01-004EN": {
+    "name": "Aria, Miasma Fairy",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "evolve",
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD01-005EN": {
+    "name": "Aria, Miasma Fairy Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [
+      "rush",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD01-006EN": {
+    "name": "Fashionista Nelcha",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD01-007EN": {
+    "name": "Titania's Sanctuary",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "assail",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD01-008EN": {
+    "name": "Blessed Fairy Dancer",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD01-009EN": {
+    "name": "Sukuna, Brave and Small",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "SDD01-010EN": {
+    "name": "Sukuna, Brave and Small Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [
+      "storm"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD01-011EN": {
+    "name": "Sunbright Elf",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD01-012EN": {
+    "name": "Sunbright Elf Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD01-013EN": {
+    "name": "Nature's Guidance",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "SDD01-014EN": {
+    "name": "Elf Song",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD01-015EN": {
+    "name": "Spiritshine",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD01-016EN": {
+    "name": "Tree of Wonders",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD01-017EN": {
+    "name": "Fairy Slugger",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "SDD01-018EN": {
+    "name": "Fairy Slugger Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP11-T06EN",
+          "count": 1,
+          "zone": "exArea"
+        }
+      }
+    ]
+  },
+  "SDD01-019EN": {
+    "name": "Feybolt Archer",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP11-T06EN",
+          "count": 1,
+          "zone": "field"
+        }
+      }
+    ]
+  },
+  "SDD01-020EN": {
+    "name": "Fairy Circle",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD01-LD01EN": {
+    "name": "Lovesign",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "SDD01-T01EN": {
+    "name": "Fairy Wisp",
+    "class": "forest",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "SDD01-T02EN": {
+    "name": "Fairy",
+    "class": "forest",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  }
+}

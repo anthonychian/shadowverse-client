@@ -29,6 +29,14 @@ function pickSharedHandOverlay(overlay) {
         shared.traits = overlay.traits;
     if (overlay.printingType)
         shared.printingType = overlay.printingType;
+    if (overlay.name)
+        shared.name = overlay.name;
+    if (overlay.class)
+        shared.class = overlay.class;
+    if (overlay.evolvesFrom)
+        shared.evolvesFrom = overlay.evolvesFrom;
+    if (overlay.evolvesTo)
+        shared.evolvesTo = overlay.evolvesTo;
     return shared;
 }
 function mergeSharedHandOverlays(...overlays) {

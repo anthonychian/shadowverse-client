@@ -7,11 +7,14 @@ const detectIdentity_1 = require("../deck/detectIdentity");
 const factory_1 = require("../state/factory");
 const passives_1 = require("../state/passives");
 const zones_1 = require("../state/zones");
+const confirmation_1 = require("../rules/confirmation");
+const trigger_queue_1 = require("../rules/trigger-queue");
 function clearTurnScopedCardState(card) {
     card.abilitiesActivatedThisTurn = [];
     card.counters = {};
     card.modifiers = card.modifiers.filter((m) => !m.untilEndOfTurn);
     card.playCostReduction = 0;
+    card.maneuveringUntilTurn = undefined;
     if (card.grantedOnCardPlayed?.length) {
         card.grantedOnCardPlayed = card.grantedOnCardPlayed.filter((g) => !g.untilEndOfTurn);
     }
@@ -94,6 +97,9 @@ function beginStartPhase(state) {
     p.flags.evolvedThisTurn = false;
     p.flags.cardsPlayedThisTurn = 0;
     p.flags.leaderLostDefThisTurn = false;
+    p.flags.leaderDefLostCountThisTurn = 0;
+    p.flags.leaderDamageShields = 0;
+    p.flags.nextPlayDiscounts = [];
     for (const card of p.zones.field) {
         refreshFieldCard(card, next);
     }
@@ -108,5 +114,7 @@ function beginStartPhase(state) {
     }
     next.phase = "main";
     next.eventLog.push({ type: "startPhase", player });
+    (0, trigger_queue_1.queueStartOfMainAbilities)(next, player);
+    next = (0, confirmation_1.runConfirmationTiming)(next);
     return next;
 }

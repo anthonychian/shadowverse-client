@@ -1,0 +1,317 @@
+{
+  "CSD02a-001EN": {
+    "name": "Uzuki Shimamura [P.C.S.]",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Select up to 1 Cute follower that costs 4 or less and up to 1 Cute follower that costs 2 or less in your cemetery"
+            },
+            {
+              "op": "noop",
+              "label": "Summon them and give them +1/+1"
+            },
+            {
+              "op": "noop",
+              "label": "[act] Lesson (1): Give your leader [def]+3"
+            }
+          ]
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "CSD02a-002EN": {
+    "name": "Kyoko Igarashi [P.C.S.]",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buff",
+          "atk": -1,
+          "def": -1,
+          "targets": {
+            "type": "selfFollower",
+            "count": 1,
+            "excludeSelf": false
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "CSD02a-003EN": {
+    "name": "Miho Kohinata [P.C.S.]",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "peekDeck",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "CSD02a-004EN": {
+    "name": "Chika Yokoyama",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "ownCemeteryTraitMin",
+            "trait": "Cute",
+            "count": 5
+          },
+          "then": {
+            "op": "noop",
+            "label": "this follower +1/+2 and Ward"
+          }
+        }
+      }
+    ]
+  },
+  "CSD02a-005EN": {
+    "name": "Momoka Sakurai",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "optionalCost",
+          "label": "[cost02], Lesson (1)",
+          "cost": {
+            "op": "sequence",
+            "steps": [
+              {
+                "op": "spendPp",
+                "amount": 2
+              },
+              {
+                "op": "banishFromExArea",
+                "filter": {
+                  "trait": "Magical Item"
+                },
+                "count": 1
+              }
+            ]
+          },
+          "then": {
+            "op": "buffFieldTrait",
+            "trait": "this",
+            "atk": 1,
+            "def": 1,
+            "excludeSelf": false
+          }
+        }
+      }
+    ]
+  },
+  "CSD02a-006EN": {
+    "name": "Momoka Sakurai Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {
+            "identityName": "Cute"
+          },
+          "lookAt": 3,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        }
+      }
+    ]
+  },
+  "CSD02a-007EN": {
+    "name": "Akiha Ikebukuro",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Select another Cute follower on your field and give it [def]+1"
+        }
+      }
+    ]
+  },
+  "CSD02a-008EN": {
+    "name": "Akiha Ikebukuro Evolved",
+    "class": "rune",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "dealDamage",
+              "amount": 1,
+              "targets": {
+                "type": "enemyFollower",
+                "count": 1
+              }
+            },
+            {
+              "op": "sequence",
+              "steps": [
+                {
+                  "op": "dealDamage",
+                  "amount": 3,
+                  "targets": {
+                    "type": "enemyFollower",
+                    "count": 1
+                  }
+                },
+                {
+                  "op": "draw",
+                  "count": 1
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CSD02a-009EN": {
+    "name": "Nene Kurihara",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 3,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "CSD02a-010EN": {
+    "name": "Nene Kurihara Evolved",
+    "class": "dragon",
+    "printingType": "evolved",
+    "keywords": [
+      "ward"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "noop",
+          "label": "[cost03]: Select a Cute follower in your cemetery and summon it"
+        }
+      }
+    ]
+  },
+  "CSD02a-011EN": {
+    "name": "Karin Domyoji",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "buff",
+              "def": 2,
+              "targets": {
+                "type": "self"
+              }
+            },
+            {
+              "op": "draw",
+              "count": 1
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

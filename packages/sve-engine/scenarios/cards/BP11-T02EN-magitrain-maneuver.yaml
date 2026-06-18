@@ -1,0 +1,20 @@
+id: magitrain-maneuver
+cardNo: BP11-T02EN
+name: Magitrain maneuver makes amulet act as follower
+setup:
+  activePlayer: 0
+  phase: main
+  pp: [5, 0]
+  mulliganDone: true
+  field:
+    - [BP11-T02EN, BP11-076EN, BP16-080EN]
+    - []
+actions:
+  - activate: BP11-T02EN
+  - engageFollowers: [BP11-076EN, BP16-080EN]
+assertions:
+  - type: zoneContains
+    zone: field
+    player: 0
+    cardNo: BP11-T02EN
+  - type: noPendingChoices

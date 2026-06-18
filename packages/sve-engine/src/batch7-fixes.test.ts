@@ -3,6 +3,7 @@ import { applyAction } from "./actions/applyAction";
 import { createPlayerView } from "./view/filterView";
 import { createCardInstance, createInitialGameState, resetIdCounter } from "./state/factory";
 import { getEffectiveStats } from "./state/queries";
+import { moveCard } from "./state/zones";
 
 function passQuick(state: ReturnType<typeof applyAction>["state"], player: 0 | 1) {
   return applyAction(state, player, { type: "PASS_QUICK_WINDOW" }).state;
@@ -174,5 +175,27 @@ describe("batch 7 regression fixes", () => {
     );
     expect(moved.state.players[0].zones.hand.length).toBe(2);
     expect(moved.state.players[0].zones.deck.length).toBe(0);
+  });
+
+  it("clears engaged and field modifiers when a follower moves from field to EX area", () => {
+    let state = createInitialGameState(0);
+    const follower = createCardInstance("BP11-069EN", 0);
+    const evo = createCardInstance("BP11-070EN", 0);
+    follower.engaged = true;
+    follower.modifiers.push({ atk: 1, def: 1, sourceId: "test" });
+    follower.linkedEvoInstanceId = evo.instanceId;
+    state.players[0].zones.field.push(follower);
+    state.players[0].zones.resolutionZone.push(evo);
+
+    state = moveCard(state, follower.instanceId, "exArea", 0);
+
+    const inEx = state.players[0].zones.exArea.find((c) => c.instanceId === follower.instanceId)!;
+    expect(inEx.engaged).toBe(false);
+    expect(inEx.modifiers).toEqual([]);
+    expect(inEx.linkedEvoInstanceId).toBeUndefined();
+    expect(state.players[0].zones.evolveDeck.some((c) => c.instanceId === evo.instanceId)).toBe(true);
+    const stats = getEffectiveStats(inEx, state);
+    expect(stats.atk).toBe(5);
+    expect(stats.def).toBe(5);
   });
 });

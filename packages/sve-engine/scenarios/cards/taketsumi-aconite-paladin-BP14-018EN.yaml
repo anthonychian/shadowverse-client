@@ -1,0 +1,22 @@
+id: taketsumi-aconite-paladin-bp14-018en
+cardNo: BP14-018EN
+name: "Taketsumi, Aconite Paladin — smoke stub"
+setup:
+  activePlayer: 0
+  pp: [10, 10]
+  leaderDef: [20, 20]
+  hand:
+    - ["BP14-018EN"]
+    - []
+  field:
+    - ["BP07-001EN"]
+    - ["BP07-001EN"]
+  deck:
+    - ["BP07-002EN","BP07-002EN","BP07-002EN","BP07-002EN","BP07-002EN"]
+    - ["BP07-002EN","BP07-002EN","BP07-002EN","BP07-002EN","BP07-002EN"]
+actions:
+  - { play: BP14-018EN }
+  - { autoResolve: true }
+assertions:
+  - { type: noPendingChoices }
+# TODO: refine assertions for zones: hand, field

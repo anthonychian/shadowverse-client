@@ -1,0 +1,382 @@
+{
+  "SD01-001EN": {
+    "name": "Aria, Fairy Princess",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "rush",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SD01-002EN": {
+    "name": "Titania's Sanctuary",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "assail",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "aura",
+        "effect": {
+          "op": "auraGrantKeyword",
+          "keyword": "assail",
+          "trait": "Pixie",
+          "excludeSelf": false
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing fanfare timing"
+        }
+      }
+    ]
+  },
+  "SD01-003EN": {
+    "name": "Rose Gardener",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "SD01-004EN": {
+    "name": "Rose Gardener Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "SD01-005EN": {
+    "name": "Waltzing Fairy",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP01-T03EN",
+          "tokenName": "Fairy",
+          "count": 1,
+          "zone": "exArea"
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing fanfare timing"
+        }
+      }
+    ]
+  },
+  "SD01-006EN": {
+    "name": "Fairy Caster",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP01-T03EN",
+          "tokenName": "Fairy",
+          "count": 3,
+          "zone": "exArea"
+        }
+      }
+    ]
+  },
+  "SD01-007EN": {
+    "name": "Elf Metallurgist",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 3,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "SD01-008EN": {
+    "name": "Okami",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SD01-009EN": {
+    "name": "Treant",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "combo",
+            "count": 3
+          },
+          "then": {
+            "op": "sequence",
+            "steps": [
+              {
+                "op": "noop",
+                "label": "Change this card's [evolve] cost to 0"
+              },
+              {
+                "op": "noop",
+                "label": "(If you've played at least 3 cards this turn, including this one, perform Combo (3).)"
+              }
+            ]
+          }
+        },
+        "condition": {
+          "type": "combo",
+          "count": 3
+        }
+      }
+    ]
+  },
+  "SD01-010EN": {
+    "name": "Treant Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "SD01-011EN": {
+    "name": "Water Fairy",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "lastWords"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP01-T03EN",
+          "tokenName": "Fairy",
+          "count": 1,
+          "zone": "exArea"
+        }
+      }
+    ]
+  },
+  "SD01-012EN": {
+    "name": "Water Fairy Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [
+      "lastWords"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP01-T03EN",
+          "tokenName": "Fairy",
+          "count": 1,
+          "zone": "field"
+        }
+      },
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP01-T03EN",
+          "tokenName": "Fairy",
+          "count": 1,
+          "zone": "exArea"
+        }
+      }
+    ]
+  },
+  "SD01-013EN": {
+    "name": "Elf Wanderer",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "assail"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "(Followers with Assail can attack reserved followers.) This follower ignores Ward"
+        }
+      }
+    ]
+  },
+  "SD01-014EN": {
+    "name": "Fairy Circle",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SD01-015EN": {
+    "name": "Woodland Refuge",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "review",
+    "abilities": []
+  },
+  "SD01-016EN": {
+    "name": "Sylvan Justice",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "dealDamage",
+              "amount": 3,
+              "targets": {
+                "type": "enemyFollower",
+                "count": 1
+              }
+            },
+            {
+              "op": "summon",
+              "count": 1,
+              "zone": "exArea"
+            }
+          ]
+        },
+        "quick": true
+      }
+    ]
+  },
+  "SD01-017EN": {
+    "name": "Goblin",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "SD01-018EN": {
+    "name": "Goblin Evolved",
+    "class": "neutral",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "SD01-019EN": {
+    "name": "Angelic Snipe",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "review",
+    "abilities": []
+  },
+  "SD01-020EN": {
+    "name": "Angelic Barrage",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamageAllEnemies",
+          "amount": 1,
+          "followersOnly": true
+        },
+        "quick": true
+      }
+    ]
+  },
+  "SD01-LD01EN": {
+    "name": "Arisa",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "SD01-T01EN": {
+    "name": "Fairy",
+    "class": "forest",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  }
+}

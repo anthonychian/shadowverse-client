@@ -1,0 +1,3192 @@
+{
+  "BP04-001EN": {
+    "name": "Cassiopeia",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Select any number of enemy followers on the field and deal X damage divided between them"
+            },
+            {
+              "op": "noop",
+              "label": "variable: hand+ex count"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP04-002EN": {
+    "name": "C.C., Woodland Witch",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Select any number of enemy followers on the field and deal X damage divided between them"
+            },
+            {
+              "op": "noop",
+              "label": "variable: hand+ex count"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP04-003EN": {
+    "name": "Deepwood Anomaly",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "winGame"
+        }
+      }
+    ]
+  },
+  "BP04-004EN": {
+    "name": "Deepwood Anomaly Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "winGame"
+        }
+      }
+    ]
+  },
+  "BP04-005EN": {
+    "name": "King Elephant",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Select any number of cards on your field"
+            },
+            {
+              "op": "noop",
+              "label": "Return them to their owners' hands and give this follower [attack]+X/[defense]+X"
+            },
+            {
+              "op": "noop",
+              "label": "X equals the number of cards in your hand"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP04-006EN": {
+    "name": "King Elephant Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [
+      "storm",
+      "ward"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "buff",
+              "targets": {
+                "type": "self"
+              },
+              "label": "variable atk buff"
+            },
+            {
+              "op": "grantIgnoresWard",
+              "targets": {
+                "type": "self"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP04-007EN": {
+    "name": "Fashionista Nelcha",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "choose",
+          "min": 1,
+          "max": 1,
+          "options": [
+            {
+              "label": "(1) Select another follower on your field and give it +2/+2",
+              "effect": {
+                "op": "buff",
+                "atk": 2,
+                "def": 2,
+                "targets": {
+                  "type": "selfFollower",
+                  "count": 1,
+                  "excludeSelf": true
+                }
+              }
+            },
+            {
+              "label": "(2) Select an enemy follower on the field and give it [attack]-2",
+              "effect": {
+                "op": "buff",
+                "atk": -2,
+                "def": -2,
+                "targets": {
+                  "type": "selfFollower",
+                  "count": 1,
+                  "excludeSelf": false
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP04-008EN": {
+    "name": "Spring-Green Protection",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "buff",
+          "atk": 1,
+          "def": 1,
+          "targets": {
+            "type": "selfFollower",
+            "count": 1,
+            "includeExArea": false
+          }
+        },
+        "cost": {
+          "pp": 1,
+          "engage": true,
+          "burySelf": true
+        }
+      },
+      {
+        "timing": "onLeaveField",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP01-T02EN",
+          "tokenName": "Fairy Wisp",
+          "count": 1,
+          "zone": "exArea"
+        }
+      }
+    ]
+  },
+  "BP04-009EN": {
+    "name": "Inviolable Verdancy",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "buff",
+          "atk": 1,
+          "def": 1,
+          "targets": {
+            "type": "selfFollower",
+            "count": 1,
+            "includeExArea": false
+          }
+        },
+        "cost": {
+          "pp": 1,
+          "engage": true,
+          "burySelf": true
+        }
+      },
+      {
+        "timing": "onLeaveField",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP01-T02EN",
+          "tokenName": "Fairy Wisp",
+          "count": 1,
+          "zone": "exArea"
+        }
+      }
+    ]
+  },
+  "BP04-010EN": {
+    "name": "Sukuna, Brave and Small",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "BP04-011EN": {
+    "name": "Sukuna, Brave and Small Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [
+      "storm"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Combo (3) - Give this follower +1/+1"
+            },
+            {
+              "op": "noop",
+              "label": "Combo (5) - Give +3/+3 instead"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP04-012EN": {
+    "name": "Dolorblade Demon",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "dealDamageAllEnemies",
+          "amount": 1,
+          "followersOnly": false
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing fanfare timing"
+        }
+      }
+    ]
+  },
+  "BP04-013EN": {
+    "name": "Elf Song",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "summon",
+              "tokenCardNo": "BP01-T03EN",
+              "tokenName": "Fairy",
+              "count": 1,
+              "zone": "field"
+            },
+            {
+              "op": "if",
+              "condition": {
+                "type": "combo",
+                "count": 3
+              },
+              "then": {
+                "op": "buffFieldTrait",
+                "cardClass": "forest",
+                "atk": 1,
+                "def": 1,
+                "excludeSelf": false
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP04-014EN": {
+    "name": "Starry Elf",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "tutorFromDeck",
+          "filter": {},
+          "to": "hand",
+          "reveal": true
+        }
+      }
+    ]
+  },
+  "BP04-015EN": {
+    "name": "Fita the Gentle Elf",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "BP04-016EN": {
+    "name": "Fita the Gentle Elf Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "healLeader",
+              "amount": 1
+            },
+            {
+              "op": "draw",
+              "count": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP04-017EN": {
+    "name": "Dryad",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "strike"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "buff",
+          "atk": -1,
+          "def": -1,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP04-018EN": {
+    "name": "Beetle Warrior",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "combo",
+            "count": 3
+          },
+          "then": {
+            "op": "buffFieldTrait",
+            "trait": "this",
+            "atk": 1,
+            "def": 1,
+            "excludeSelf": false
+          }
+        },
+        "condition": {
+          "type": "combo",
+          "count": 3
+        }
+      }
+    ]
+  },
+  "BP04-019EN": {
+    "name": "Ivy Spellbomb",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 5,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP04-020EN": {
+    "name": "Mars, Silent Flame General",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onAllyFollowerEnter",
+        "effect": {
+          "op": "grantOnCardPlayed",
+          "filter": {
+            "trait": "Officer",
+            "cardType": "follower"
+          },
+          "effect": {
+            "op": "buff",
+            "atk": 1,
+            "def": 0,
+            "targets": {
+              "type": "lastSummoned"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "BP04-021EN": {
+    "name": "Mars, Silent Flame General Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onAllyFollowerEnter",
+        "effect": {
+          "op": "grantOnCardPlayed",
+          "filter": {
+            "trait": "Officer",
+            "cardType": "follower"
+          },
+          "effect": {
+            "op": "buff",
+            "atk": 1,
+            "def": 0,
+            "targets": {
+              "type": "lastSummoned"
+            }
+          }
+        }
+      },
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing onEvolve timing"
+        }
+      }
+    ]
+  },
+  "BP04-022EN": {
+    "name": "Gawain of the Round Table",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Reveal 2 Commander or Arthurian cards in your hand: Recover 2 play points"
+        }
+      },
+      {
+        "timing": "aura",
+        "effect": {
+          "op": "noop",
+          "label": "While this card is on your field, the 1st Commander card you play each turn costs 1 less"
+        }
+      }
+    ]
+  },
+  "BP04-023EN": {
+    "name": "Barbarossa",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "assail",
+      "evolve"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "If there are at least 3 enemy cards on the field, this card costs 2 less to play"
+        }
+      }
+    ]
+  },
+  "BP04-024EN": {
+    "name": "Barbarossa Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [
+      "assail",
+      "lastWords"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "moveSourceToExArea"
+        }
+      }
+    ]
+  },
+  "BP04-025EN": {
+    "name": "Perseus",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "If there are at least 4 followers on your field (including this one), give this follower +1/+1"
+        }
+      }
+    ]
+  },
+  "BP04-026EN": {
+    "name": "Cyclone Blade",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": {
+            "op": "selfAttack"
+          },
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP04-027EN": {
+    "name": "Chivalrous Charge",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": {
+            "op": "selfAttack"
+          },
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP04-028EN": {
+    "name": "Shrouded Assassin",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "bane",
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "BP04-029EN": {
+    "name": "Shrouded Assassin Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [
+      "assail",
+      "bane"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "BP04-030EN": {
+    "name": "Lord General Romeo",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "ward"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "If there is a Princess Juliet on your field, this card costs 2 less to play"
+        }
+      },
+      {
+        "timing": "startOfEnd",
+        "effect": {
+          "op": "noop",
+          "label": "At the start of your end phase, if there is a Princess Juliet on your field, give your leader [def]+2"
+        }
+      }
+    ]
+  },
+  "BP04-031EN": {
+    "name": "Round Table Assembly",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "choose",
+          "min": 1,
+          "max": 1,
+          "options": [
+            {
+              "label": "(1) Search your deck for an Arthurian follower, reveal it, and a",
+              "effect": {
+                "op": "tutorFromDeck",
+                "filter": {
+                  "cardType": "follower"
+                },
+                "to": "hand",
+                "reveal": true
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP04-032EN": {
+    "name": "Princess Juliet",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "storm"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "If there is a Lord General Romeo on your field, this card costs 2 less to play"
+        }
+      },
+      {
+        "timing": "startOfEnd",
+        "effect": {
+          "op": "noop",
+          "label": "At the start of your end phase, if there is a Lord General Romeo on your field, select an enemy follower on the field an"
+        }
+      }
+    ]
+  },
+  "BP04-033EN": {
+    "name": "Flail Knight",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "strike"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "damageFollowerAndLeader",
+          "followerAmount": 1,
+          "leaderAmount": 1
+        }
+      }
+    ]
+  },
+  "BP04-034EN": {
+    "name": "Pollux",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "If there is a non-Swordcraft follower on your field, give this follower +1/+1 and Rush"
+        }
+      }
+    ]
+  },
+  "BP04-035EN": {
+    "name": "Tristan of the Round Table",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "BP04-036EN": {
+    "name": "Tristan of the Round Table Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [
+      "ward"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "tutorFromCemetery",
+          "filter": {
+            "identityName": "Arthurian"
+          },
+          "to": "hand",
+          "reveal": true
+        }
+      }
+    ]
+  },
+  "BP04-037EN": {
+    "name": "Armor of the Stars",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "aura"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "buff",
+          "atk": 1,
+          "def": 2,
+          "targets": {
+            "type": "selfFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP04-038EN": {
+    "name": "Wordwielder Ginger",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "silenceOpponents"
+        }
+      }
+    ]
+  },
+  "BP04-039EN": {
+    "name": "Wordwielder Ginger Evolved",
+    "class": "rune",
+    "printingType": "evolved",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "noop",
+          "label": "You may put any number of followers from your hand onto your field"
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "silenceOpponents"
+        }
+      }
+    ]
+  },
+  "BP04-040EN": {
+    "name": "Giant Chimera",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "spellchain",
+            "count": 10
+          },
+          "then": {
+            "op": "dealDamageAllEnemies",
+            "amount": 5,
+            "followersOnly": false
+          }
+        },
+        "condition": {
+          "type": "spellchain",
+          "count": 10
+        }
+      }
+    ]
+  },
+  "BP04-041EN": {
+    "name": "Star Reader Stella",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "strike",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {},
+          "lookAt": 4,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        }
+      },
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "peekDeck",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "BP04-042EN": {
+    "name": "Europa",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "selectEvolveDeckCard",
+          "filter": {
+            "identityName": "Europa"
+          },
+          "face": "faceup",
+          "turnTo": "facedown"
+        }
+      }
+    ]
+  },
+  "BP04-043EN": {
+    "name": "Europa Evolved",
+    "class": "rune",
+    "printingType": "evolved",
+    "keywords": [
+      "storm",
+      "ward",
+      "bane"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "BP04-044EN": {
+    "name": "Chain of Calling",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "recoverPp",
+          "amount": 1
+        },
+        "quick": true
+      }
+    ]
+  },
+  "BP04-045EN": {
+    "name": "Noble Instruction",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "recoverPp",
+          "amount": 1
+        },
+        "quick": true
+      }
+    ]
+  },
+  "BP04-046EN": {
+    "name": "Freshman Lou",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "tutorFromDeck",
+          "filter": {
+            "cardType": "spell"
+          },
+          "to": "hand",
+          "reveal": true
+        }
+      }
+    ]
+  },
+  "BP04-047EN": {
+    "name": "Magic Illusionist",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "optionalCost",
+          "label": "Earth Rite",
+          "cost": {
+            "op": "noop"
+          },
+          "then": {
+            "op": "noop",
+            "label": "Put this follower onto its owner's field"
+          }
+        }
+      }
+    ]
+  },
+  "BP04-048EN": {
+    "name": "Magic Illusionist Evolved",
+    "class": "rune",
+    "printingType": "evolved",
+    "keywords": [
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "optionalCost",
+          "label": "Earth Rite",
+          "cost": {
+            "op": "noop"
+          },
+          "then": {
+            "op": "noop",
+            "label": "Put this follower onto its owner's field"
+          }
+        }
+      }
+    ]
+  },
+  "BP04-049EN": {
+    "name": "Concentration",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "healLeader",
+              "amount": 3
+            },
+            {
+              "op": "draw",
+              "count": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP04-050EN": {
+    "name": "Show of Loyalty",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "healLeader",
+              "amount": 3
+            },
+            {
+              "op": "draw",
+              "count": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP04-051EN": {
+    "name": "Dazzling Healer",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "If there is a spell in your cemetery, give your leader [def]+2"
+        }
+      }
+    ]
+  },
+  "BP04-052EN": {
+    "name": "Dazzling Healer Evolved",
+    "class": "rune",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "noop",
+          "label": "Spellchain (5) - Give your leader [def]+2"
+        }
+      }
+    ]
+  },
+  "BP04-053EN": {
+    "name": "Mage of Nightfall",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "intimidate",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "optionalCost",
+          "label": "Earth Rite",
+          "cost": {
+            "op": "noop"
+          },
+          "then": {
+            "op": "buffFieldTrait",
+            "trait": "this",
+            "atk": 2,
+            "def": 1,
+            "excludeSelf": false
+          }
+        }
+      }
+    ]
+  },
+  "BP04-054EN": {
+    "name": "Astrologist of the Mist",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "optionalCost",
+          "label": "Earth Rite",
+          "cost": {
+            "op": "noop"
+          },
+          "then": {
+            "op": "buffFieldTrait",
+            "trait": "each",
+            "atk": 1,
+            "def": 1,
+            "excludeSelf": false
+          }
+        }
+      }
+    ]
+  },
+  "BP04-055EN": {
+    "name": "Magic Owl",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "optionalCost",
+          "label": "Discard a spell",
+          "cost": {
+            "op": "discard",
+            "count": 1
+          },
+          "then": {
+            "op": "draw",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing fanfare timing"
+        }
+      }
+    ]
+  },
+  "BP04-056EN": {
+    "name": "Starseer's Telescope",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "stack",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "searchDeckChoose",
+          "lookAt": 1,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": false
+        }
+      }
+    ]
+  },
+  "BP04-057EN": {
+    "name": "Sibyl of the Waterwyrm",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "overflow"
+          },
+          "then": {
+            "op": "buffFieldTrait",
+            "trait": "this",
+            "atk": 1,
+            "def": 1,
+            "excludeSelf": false
+          }
+        },
+        "condition": {
+          "type": "overflow"
+        }
+      },
+      {
+        "timing": "startOfEnd",
+        "effect": {
+          "op": "healLeader",
+          "amount": 1
+        }
+      }
+    ]
+  },
+  "BP04-058EN": {
+    "name": "Kallen, Crimson Yaksha",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "overflow"
+          },
+          "then": {
+            "op": "buffFieldTrait",
+            "trait": "this",
+            "atk": 1,
+            "def": 1,
+            "excludeSelf": false
+          }
+        },
+        "condition": {
+          "type": "overflow"
+        }
+      },
+      {
+        "timing": "startOfEnd",
+        "effect": {
+          "op": "healLeader",
+          "amount": 1
+        }
+      }
+    ]
+  },
+  "BP04-059EN": {
+    "name": "Python",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "banishFromDeck",
+          "maxCount": 10
+        }
+      }
+    ]
+  },
+  "BP04-060EN": {
+    "name": "Python Evolved",
+    "class": "dragon",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "banishFromDeck",
+          "maxCount": 10
+        }
+      }
+    ]
+  },
+  "BP04-061EN": {
+    "name": "Lævateinn Dragon, Defense Form Evolved",
+    "class": "dragon",
+    "printingType": "evolved",
+    "keywords": [
+      "ward"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "damageCap",
+          "maxPerHit": 1
+        }
+      },
+      {
+        "timing": "startOfEnd",
+        "effect": {
+          "op": "healLeader",
+          "amount": 3
+        }
+      }
+    ]
+  },
+  "BP04-062EN": {
+    "name": "Lævateinn Dragon, Blast Form Evolved",
+    "class": "dragon",
+    "printingType": "evolved",
+    "keywords": [
+      "intimidate"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "dealDamageAllEnemies",
+          "amount": {
+            "op": "traitFieldCount",
+            "trait": "Armed",
+            "multiplier": 2
+          },
+          "followersOnly": true
+        }
+      }
+    ]
+  },
+  "BP04-063EN": {
+    "name": "Prime Dragon Keeper",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "intimidate",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "overflow"
+          },
+          "then": {
+            "op": "buffFieldTrait",
+            "trait": "this",
+            "atk": 1,
+            "def": 1,
+            "excludeSelf": false
+          }
+        },
+        "condition": {
+          "type": "overflow"
+        }
+      },
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "damageFollowerAndLeader",
+          "followerAmount": 2,
+          "leaderAmount": 1
+        }
+      }
+    ]
+  },
+  "BP04-064EN": {
+    "name": "Star Phoenix",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "noop",
+          "label": "when you play a [dragoncraft] spell, [cost01]: Put this card from your cemetery onto your field"
+        }
+      }
+    ]
+  },
+  "BP04-065EN": {
+    "name": "Star Phoenix Evolved",
+    "class": "dragon",
+    "printingType": "evolved",
+    "keywords": [
+      "strike"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP04-066EN": {
+    "name": "Lightning Blast",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "banish",
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        },
+        "quick": true
+      }
+    ]
+  },
+  "BP04-067EN": {
+    "name": "Guren Revolt",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "banish",
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        },
+        "quick": true
+      }
+    ]
+  },
+  "BP04-068EN": {
+    "name": "Venomous Pucewyrm",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "discard",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "BP04-069EN": {
+    "name": "Cetus",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "BP04-070EN": {
+    "name": "Cetus Evolved",
+    "class": "dragon",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "noop",
+          "label": "Destroy each of the lowest-cost enemy followers on the field"
+        }
+      }
+    ]
+  },
+  "BP04-071EN": {
+    "name": "Dragonewt Fist",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onDiscard",
+        "effect": {
+          "op": "moveSourceToExArea"
+        }
+      }
+    ]
+  },
+  "BP04-072EN": {
+    "name": "Divine Tiger",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onDiscard",
+        "effect": {
+          "op": "moveSourceToExArea"
+        }
+      }
+    ]
+  },
+  "BP04-073EN": {
+    "name": "Dragonrearer Matilda",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {
+            "cardClass": "dragon"
+          },
+          "lookAt": 3,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        },
+        "cost": {
+          "pp": 1,
+          "engage": true,
+          "burySelf": true
+        }
+      }
+    ]
+  },
+  "BP04-074EN": {
+    "name": "Aqua Nereid",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "summon",
+              "tokenCardNo": "BP02-T05EN",
+              "tokenName": "Megalorca",
+              "count": 1,
+              "zone": "field"
+            },
+            {
+              "op": "if",
+              "condition": {
+                "type": "overflow"
+              },
+              "then": {
+                "op": "grantKeyword",
+                "keyword": "storm",
+                "targets": {
+                  "type": "self"
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP04-075EN": {
+    "name": "Hippocampus",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "BP04-076EN": {
+    "name": "Hippocampus Evolved",
+    "class": "dragon",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "BP04-077EN": {
+    "name": "Scaled Berserker",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "rush"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onDamaged",
+        "effect": {
+          "op": "noop",
+          "label": "Whenever this follower takes damage, give it +2/+2"
+        }
+      }
+    ]
+  },
+  "BP04-078EN": {
+    "name": "Dragon's Nest",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "healLeader",
+              "amount": 2
+            },
+            {
+              "op": "if",
+              "condition": {
+                "type": "overflow"
+              },
+              "then": {
+                "op": "draw",
+                "count": 1
+              }
+            }
+          ]
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP04-079EN": {
+    "name": "Venomfang Medusa",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "destroy",
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        },
+        "cost": {
+          "pp": 0
+        }
+      }
+    ]
+  },
+  "BP04-080EN": {
+    "name": "Howling Demon",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "sanguine"
+          },
+          "then": {
+            "op": "dealDamage",
+            "amount": 8,
+            "targets": {
+              "type": "enemyFollower",
+              "count": 1
+            }
+          }
+        }
+      }
+    ]
+  },
+  "BP04-081EN": {
+    "name": "Howling Demon Evolved",
+    "class": "abyss",
+    "printingType": "evolved",
+    "keywords": [
+      "storm"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "sanguine"
+          },
+          "then": {
+            "op": "healLeader",
+            "amount": 5
+          }
+        },
+        "condition": {
+          "type": "sanguine"
+        }
+      }
+    ]
+  },
+  "BP04-082EN": {
+    "name": "Demonlord Eachtar",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "necrocharge",
+            "count": 10
+          },
+          "then": {
+            "op": "buffFieldTrait",
+            "trait": "other",
+            "atk": 1,
+            "def": 1,
+            "excludeSelf": true
+          }
+        },
+        "condition": {
+          "type": "necrocharge",
+          "count": 10
+        }
+      }
+    ]
+  },
+  "BP04-083EN": {
+    "name": "Lelouch, Leader of the Black Knights",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "necrocharge",
+            "count": 10
+          },
+          "then": {
+            "op": "buffFieldTrait",
+            "trait": "other",
+            "atk": 1,
+            "def": 1,
+            "excludeSelf": true
+          }
+        },
+        "condition": {
+          "type": "necrocharge",
+          "count": 10
+        }
+      }
+    ]
+  },
+  "BP04-084EN": {
+    "name": "Stheno",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP04-T01EN",
+          "tokenName": "Serpent",
+          "count": 1,
+          "zone": "field"
+        }
+      }
+    ]
+  },
+  "BP04-085EN": {
+    "name": "Stheno Evolved",
+    "class": "abyss",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP04-T01EN",
+          "tokenName": "Serpent",
+          "count": 1,
+          "zone": "field"
+        }
+      }
+    ]
+  },
+  "BP04-086EN": {
+    "name": "Trial of the Gorgons",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "noop",
+          "label": "Search your deck for a Venomfang Medusa, Stheno, and Euryale and put them onto your field"
+        }
+      }
+    ]
+  },
+  "BP04-087EN": {
+    "name": "Fenrir",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onDamaged",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 3,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP04-088EN": {
+    "name": "Fenrir Evolved",
+    "class": "abyss",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onDamaged",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 3,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP04-089EN": {
+    "name": "Euryale",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "aura",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP04-T01EN",
+          "tokenName": "Serpent",
+          "count": 1,
+          "zone": "exArea"
+        }
+      }
+    ]
+  },
+  "BP04-090EN": {
+    "name": "Grave Desecration",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "BP04-091EN": {
+    "name": "Emperor's Command",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "mill",
+          "count": 2
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "tutorFromCemetery",
+          "filter": {
+            "cardType": "follower"
+          },
+          "to": "hand",
+          "reveal": true
+        },
+        "cost": {
+          "pp": 2,
+          "engage": true,
+          "burySelf": true
+        }
+      }
+    ]
+  },
+  "BP04-092EN": {
+    "name": "Demonic Drummer",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "[cost02]: Search your deck for a Demonic Drummer and put it onto your field"
+        }
+      },
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "healLeader",
+          "amount": 1
+        }
+      }
+    ]
+  },
+  "BP04-093EN": {
+    "name": "Castor",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "noop",
+          "label": "[cost02]: Put this follower onto its owner's field"
+        }
+      }
+    ]
+  },
+  "BP04-094EN": {
+    "name": "Frogbat",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "[evolve] Banish 2 cards in your cemetery:"
+        }
+      }
+    ]
+  },
+  "BP04-095EN": {
+    "name": "Frogbat Evolved",
+    "class": "abyss",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "startOfEnd",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "buff",
+              "atk": 0,
+              "def": 1,
+              "targets": {
+                "type": "selfFollower",
+                "count": 1,
+                "excludeSelf": false
+              }
+            },
+            {
+              "op": "healLeader",
+              "amount": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP04-096EN": {
+    "name": "Scorpius",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "bane",
+      "strike"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "dealDamage",
+              "amount": 1,
+              "targets": {
+                "type": "enemyLeader"
+              }
+            },
+            {
+              "op": "dealDamage",
+              "amount": 1,
+              "targets": {
+                "type": "selfLeader"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP04-097EN": {
+    "name": "Venomous Bite",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "assail"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP04-T01EN",
+          "tokenName": "Serpent",
+          "count": 1,
+          "zone": "field"
+        }
+      }
+    ]
+  },
+  "BP04-098EN": {
+    "name": "Aether of the White Wing",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Search your deck for a [havencraft] follower with a different name from this card that costs less than your maximum play"
+        }
+      }
+    ]
+  },
+  "BP04-099EN": {
+    "name": "Dark Jeanne",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamageOtherFollowers",
+          "amount": 2
+        }
+      }
+    ]
+  },
+  "BP04-100EN": {
+    "name": "Dark Jeanne Evolved",
+    "class": "haven",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "If your leader's [defense] is at least 5, select an enemy follower on the field"
+            },
+            {
+              "op": "noop",
+              "label": "Deal 4 damage to it and each leader"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP04-101EN": {
+    "name": "Zoe, Princess of Goldenia",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "dealDamage",
+              "amount": 2,
+              "targets": {
+                "type": "selfLeader"
+              }
+            },
+            {
+              "op": "mill",
+              "count": 2
+            },
+            {
+              "op": "draw",
+              "count": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP04-102EN": {
+    "name": "Zoe, Princess of Goldenia Evolved",
+    "class": "haven",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "banish",
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP04-103EN": {
+    "name": "Andromeda",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "For the rest of this turn, your leader and each follower currently on your field (including this one) have \"This doesn't"
+        }
+      }
+    ]
+  },
+  "BP04-104EN": {
+    "name": "Globe of the Starways",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "healLeader",
+              "amount": 1
+            },
+            {
+              "op": "draw",
+              "count": 1
+            }
+          ]
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP04-105EN": {
+    "name": "Dark Charisma",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "healLeader",
+              "amount": 1
+            },
+            {
+              "op": "draw",
+              "count": 1
+            }
+          ]
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP04-106EN": {
+    "name": "Star Priestess",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 1,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP04-107EN": {
+    "name": "Star Priestess Evolved",
+    "class": "haven",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "tutorFromCemetery",
+          "filter": {},
+          "to": "field",
+          "reveal": true
+        }
+      }
+    ]
+  },
+  "BP04-108EN": {
+    "name": "Calydonian Boar",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "assail"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "when an amulet you control leaves the field, give this follower +2/+2 and Assail"
+        }
+      }
+    ]
+  },
+  "BP04-109EN": {
+    "name": "Star Torrent",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "amuletOnField"
+          },
+          "then": {
+            "op": "healLeader",
+            "amount": 2
+          }
+        },
+        "quick": true
+      }
+    ]
+  },
+  "BP04-110EN": {
+    "name": "Starchaser Sprite",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "draw",
+              "count": 2
+            },
+            {
+              "op": "discard",
+              "count": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP04-111EN": {
+    "name": "Sister of Punishment",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "when an amulet you control leaves the field, select an enemy follower on the field and deal it 2 damage"
+        }
+      }
+    ]
+  },
+  "BP04-112EN": {
+    "name": "Mist Shaman",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "BP04-113EN": {
+    "name": "Mist Shaman Evolved",
+    "class": "haven",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "grantKeyword",
+          "keyword": "aura",
+          "targets": {
+            "type": "selfFollower",
+            "count": 1,
+            "excludeSelf": true
+          }
+        }
+      }
+    ]
+  },
+  "BP04-114EN": {
+    "name": "Octobishop",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "ward"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "startOfEnd",
+        "effect": {
+          "op": "buff",
+          "atk": 0,
+          "def": 2,
+          "targets": {
+            "type": "selfFollower",
+            "count": 1,
+            "excludeSelf": false
+          }
+        }
+      }
+    ]
+  },
+  "BP04-115EN": {
+    "name": "Candelabra of Prayers",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onAllyFollowerEnter",
+        "effect": {
+          "op": "noop",
+          "label": "when another amulet is put onto your field, give your leader [def]+1"
+        }
+      }
+    ]
+  },
+  "BP04-116EN": {
+    "name": "Zodiac Demon",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 1,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP04-117EN": {
+    "name": "Israfil",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "strike",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "healLeader",
+          "amount": 4
+        }
+      },
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "dealDamageAllEnemies",
+          "amount": 3,
+          "followersOnly": true
+        }
+      }
+    ]
+  },
+  "BP04-118EN": {
+    "name": "Israfil Evolved",
+    "class": "neutral",
+    "printingType": "evolved",
+    "keywords": [
+      "strike"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "dealDamageAllEnemies",
+          "amount": 5,
+          "followersOnly": true
+        }
+      }
+    ]
+  },
+  "BP04-119EN": {
+    "name": "Grimnir, War Cyclone",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "BP04-120EN": {
+    "name": "Grimnir, War Cyclone Evolved",
+    "class": "neutral",
+    "printingType": "evolved",
+    "keywords": [
+      "ward"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "noop",
+          "label": "[cost04]: Deal 4 damage to each enemy leader and enemy follower on the field"
+        }
+      }
+    ]
+  },
+  "BP04-121EN": {
+    "name": "Arriet, Soothing Harpist",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buff",
+          "atk": 2,
+          "def": 2,
+          "targets": {
+            "type": "selfFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP04-122EN": {
+    "name": "Staircase to Paradise",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {},
+          "lookAt": 5,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP04-123EN": {
+    "name": "Purehearted Singer",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing fanfare timing"
+        }
+      }
+    ]
+  },
+  "BP04-124EN": {
+    "name": "Goblin Princess",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Search your deck for a [neutral] follower that costs 1 play point and put it onto your field"
+        }
+      }
+    ]
+  },
+  "BP04-125EN": {
+    "name": "Goblin Princess Evolved",
+    "class": "neutral",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP04-T02EN",
+          "tokenName": "Goblin King",
+          "count": 1,
+          "zone": "exArea"
+        }
+      }
+    ]
+  },
+  "BP04-126EN": {
+    "name": "Mystic Ring",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "putHandCardOnDeck",
+          "position": "bottom"
+        },
+        "quick": true
+      }
+    ]
+  },
+  "BP04-127EN": {
+    "name": "Owlcat",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "BP04-128EN": {
+    "name": "Owlcat Evolved",
+    "class": "neutral",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "noop",
+          "label": "Select an enemy follower with 1 attack or less or 1 defense on the field and banish it"
+        }
+      }
+    ]
+  },
+  "BP04-129EN": {
+    "name": "Mr. Full Moon",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "buff",
+          "atk": -3,
+          "def": -3,
+          "targets": {
+            "type": "selfFollower",
+            "count": 1,
+            "excludeSelf": false
+          }
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing fanfare timing"
+        }
+      }
+    ]
+  },
+  "BP04-130EN": {
+    "name": "Night's Way",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "If there are no cards in your EX area, put the top card of your deck into your EX area"
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP04-LD01EN": {
+    "name": "C.C.",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "BP04-LD02EN": {
+    "name": "Suzaku Kururugi",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "BP04-LD03EN": {
+    "name": "Cornelia li Britannia",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "BP04-LD04EN": {
+    "name": "Jeremiah Gottwald",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "BP04-LD05EN": {
+    "name": "Kallen Kozuki",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "BP04-LD06EN": {
+    "name": "Li Xingke",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "BP04-LD07EN": {
+    "name": "Lelouch Lamperouge",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "BP04-LD08EN": {
+    "name": "Khawy, Underworld Arbiter",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "BP04-LD09EN": {
+    "name": "Charles zi Britannia",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "BP04-LD10EN": {
+    "name": "Lorena, Gentle Piety",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "BP04-SP01EN": {
+    "name": "Lelouch, Righteous Emperor",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "necrocharge",
+            "count": 10
+          },
+          "then": {
+            "op": "buffFieldTrait",
+            "trait": "other",
+            "atk": 1,
+            "def": 1,
+            "excludeSelf": true
+          }
+        },
+        "condition": {
+          "type": "necrocharge",
+          "count": 10
+        }
+      }
+    ]
+  },
+  "BP04-T01EN": {
+    "name": "Serpent",
+    "class": "abyss",
+    "printingType": "token",
+    "keywords": [
+      "bane"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "BP04-T02EN": {
+    "name": "Goblin King",
+    "class": "neutral",
+    "printingType": "token",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buffFieldTrait",
+          "trait": "Goblinoid",
+          "atk": 1,
+          "def": 1,
+          "excludeSelf": true
+        }
+      }
+    ]
+  },
+  "BP04-T03EN": {
+    "name": "Fairy Wisp",
+    "class": "forest",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "BP04-T04EN": {
+    "name": "Fairy",
+    "class": "forest",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "BP04-T05EN": {
+    "name": "Megalorca",
+    "class": "dragon",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  }
+}

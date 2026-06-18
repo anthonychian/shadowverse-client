@@ -21,20 +21,125 @@ const EXISTING = path.join(
   "deck-cards.json",
 );
 const OUTPUT = EXISTING;
+const SETS_DIR = path.join(
+  __dirname,
+  "..",
+  "..",
+  "packages",
+  "sve-engine",
+  "data",
+  "card-defs",
+  "sets",
+);
+const OVERRIDES_PATH = path.join(
+  __dirname,
+  "..",
+  "..",
+  "packages",
+  "sve-engine",
+  "data",
+  "card-defs",
+  "hand-authored-overrides.json",
+);
+
+function loadHandAuthoredOverrides() {
+  if (!fs.existsSync(OVERRIDES_PATH)) return {};
+  return JSON.parse(fs.readFileSync(OVERRIDES_PATH, "utf8"));
+}
+
+function setPrefix(cardNo) {
+  return String(cardNo).replace(/-.*$/, "");
+}
+
+function loadExistingDefs() {
+  const merged = {};
+  if (fs.existsSync(EXISTING)) {
+    Object.assign(merged, JSON.parse(fs.readFileSync(EXISTING, "utf8")));
+  }
+  if (fs.existsSync(SETS_DIR)) {
+    for (const file of fs.readdirSync(SETS_DIR).filter((f) => f.endsWith(".json"))) {
+      const chunk = JSON.parse(fs.readFileSync(path.join(SETS_DIR, file), "utf8"));
+      Object.assign(merged, chunk);
+    }
+  }
+  return merged;
+}
+
+function writeSetFiles(allDefs) {
+  fs.mkdirSync(SETS_DIR, { recursive: true });
+  const bySet = {};
+  for (const [cardNo, def] of Object.entries(allDefs)) {
+    const set = setPrefix(cardNo);
+    if (!bySet[set]) bySet[set] = {};
+    bySet[set][cardNo] = def;
+  }
+  for (const [set, defs] of Object.entries(bySet).sort()) {
+    fs.writeFileSync(
+      path.join(SETS_DIR, `${set}.json`),
+      JSON.stringify(defs, null, 2) + "\n",
+    );
+  }
+  return Object.keys(bySet).length;
+}
 
 const GOLD = "BP14-T02EN";
 const SOOT = "BP14-T01EN";
 const ASSEMBLY = "BP17-T17EN";
 const REPAIR = "BP17-T18EN";
 const DROID = "BP12-T10EN";
+const ANGEL_OR_FALLEN = { traitsAny: ["Angel", "Fallen Angel"] };
+const ANGEL_FOLLOWER = { trait: "Angel", cardType: "follower" };
+const FALLEN_FOLLOWER = { trait: "Fallen Angel", cardType: "follower" };
+const ABYSS_FOLLOWER = { cardClass: "abyss", cardType: "follower" };
+const WASTELAND_FOLLOWER = { traitsAny: ["Wasteland"], cardType: "follower" };
+const DEPARTED_FOLLOWER = { trait: "Departed", cardType: "follower" };
 
 function parseEvolveCost(text) {
   const m = (text || "").match(/\[evolve\]\s*\[cost(\d+)\]/i);
   return m ? Number(m[1]) : undefined;
 }
 
+function normalizeEvolveIdentity(name) {
+  return String(name || "")
+    .replace(/\s+TOKEN$/i, "")
+    .replace(/\s+Evolved$/i, "")
+    .replace(/\s+ADVANCED$/i, "")
+    .trim();
+}
+
+function linkEvolvePairs(scraped, out) {
+  const groups = new Map();
+  for (const card of scraped) {
+    const key = normalizeEvolveIdentity(card.name);
+    if (!key) continue;
+    if (!groups.has(key)) groups.set(key, {});
+    groups.get(key)[card.type] = card.cardNo;
+  }
+  for (const card of scraped) {
+    const key = normalizeEvolveIdentity(card.name);
+    const group = groups.get(key);
+    if (!group) continue;
+    const entry = out[card.cardNo];
+    if (!entry) continue;
+    if (card.type === "base" && group.evolved) {
+      entry.evolvesTo = group.evolved;
+      if (parseEvolveCost(card.cardText) != null) {
+        const kw = new Set(entry.keywords || []);
+        kw.add("evolve");
+        entry.keywords = [...kw];
+      }
+    }
+    if (card.type === "evolved" && group.base) {
+      entry.evolvesFrom = group.base;
+      entry.specialType = "evolved";
+    }
+  }
+}
+
 function statsFromScrape(card) {
   const entry = {};
+  if (card.name) entry.name = card.name;
+  if (card.class) entry.class = card.class;
   if (card.type === "base" || card.type === "token") entry.printingType = card.type;
   if (card.type === "evolved") entry.printingType = "evolved";
   if (card.cost != null) entry.cost = card.cost;
@@ -438,7 +543,11 @@ function buildAbilities(cardNo, card, text) {
               options: [
                 {
                   label: "Engage enemy follower (no refresh next turn)",
-                  effect: { op: "box", targets: { type: "enemyFollower", count: 1 } },
+                  effect: {
+                    op: "engage",
+                    targets: { type: "enemyFollower", count: 1 },
+                    skipRefreshNextStart: true,
+                  },
                 },
                 {
                   label: "Draw a card and put a hand card on deck",
@@ -460,7 +569,11 @@ function buildAbilities(cardNo, card, text) {
               options: [
                 {
                   label: "Engage enemy follower (no refresh next turn)",
-                  effect: { op: "box", targets: { type: "enemyFollower", count: 1 } },
+                  effect: {
+                    op: "engage",
+                    targets: { type: "enemyFollower", count: 1 },
+                    skipRefreshNextStart: true,
+                  },
                 },
                 {
                   label: "Draw a card and put a hand card on deck",
@@ -641,6 +754,19 @@ function buildAbilities(cardNo, card, text) {
     case "SDD05-012EN":
       return [
         {
+          timing: "activated",
+          activateFrom: "cemetery",
+          effect: {
+            op: "engage",
+            targets: { type: "enemyFollower", count: 1 },
+          },
+          cost: {
+            banishSelf: true,
+            banishFromCemetery: { identityName: "Iceschillendrig, Gilded Autocrat" },
+            banishCount: 1,
+          },
+        },
+        {
           timing: "spell",
           quick: true,
           effect: {
@@ -648,6 +774,302 @@ function buildAbilities(cardNo, card, text) {
             atk: -2,
             def: -2,
             targets: { type: "enemyFollower", count: 1 },
+          },
+        },
+      ];
+
+    case "BP01-116EN":
+      return [
+        {
+          timing: "spell",
+          quick: true,
+          effect: {
+            op: "sequence",
+            steps: [
+              {
+                op: "destroy",
+                targets: { type: "selfFollower", count: 1, excludeSelf: false },
+              },
+              { op: "draw", count: 2 },
+            ],
+          },
+        },
+      ];
+
+    case "BP03-076EN":
+      return [
+        {
+          timing: "fanfare",
+          effect: { op: "dealDamageAllEnemies", amount: 2 },
+        },
+        {
+          timing: "fanfare",
+          condition: { type: "ownCemeteryMin", count: 20 },
+          effect: { op: "grantKeyword", keyword: "storm", targets: { type: "self" } },
+        },
+        {
+          timing: "strike",
+          effect: { op: "dealDamageAllEnemies", amount: 2 },
+        },
+      ];
+
+    case "BP09-091EN":
+      return [
+        {
+          timing: "passive",
+          effect: { op: "cannotAttack" },
+        },
+        {
+          timing: "startOfMain",
+          condition: { type: "ownCemeteryMin", count: 10 },
+          effect: { op: "summon", tokenCardNo: "BP16-T18EN", count: 1, zone: "field" },
+        },
+        {
+          timing: "activated",
+          oncePerTurn: true,
+          cost: {
+            buryFromField: { cardType: "follower" },
+            buryFieldCount: 1,
+            excludeSelfFromBury: true,
+          },
+          effect: {
+            op: "choose",
+            min: 1,
+            max: 1,
+            options: [
+              { label: "Draw a card", effect: { op: "draw", count: 1 } },
+              {
+                label: "Summon 2 Ghost tokens",
+                effect: { op: "summon", tokenCardNo: "BP16-T18EN", count: 2, zone: "field" },
+              },
+              { label: "Bury the top 2 cards of your deck", effect: { op: "mill", count: 2 } },
+            ],
+          },
+        },
+      ];
+
+    case "BP11-069EN":
+      return [
+        {
+          timing: "fanfare",
+          condition: { type: "namedCardNotOnFieldByName", identityName: "Magitrain" },
+          effect: { op: "summon", tokenCardNo: "BP11-T02EN", count: 1, zone: "field" },
+        },
+        {
+          timing: "onBecomeEngaged",
+          effect: { op: "opponentDiscardEach", count: 1 },
+        },
+      ];
+
+    case "BP11-070EN":
+      return [
+        {
+          timing: "onEvolve",
+          effect: {
+            op: "optionalCost",
+            label: "Discard a card",
+            cost: { op: "discard", count: 1 },
+            then: {
+              op: "sequence",
+              steps: [
+                {
+                  op: "tutorFromCemetery",
+                  filter: { cardType: "follower" },
+                  to: "hand",
+                },
+                {
+                  op: "tutorFromCemetery",
+                  filter: { cardType: "follower" },
+                  to: "hand",
+                },
+              ],
+            },
+          },
+        },
+        {
+          timing: "onBecomeEngaged",
+          effect: { op: "opponentDiscardEach", count: 1 },
+        },
+        {
+          timing: "onDiscard",
+          effect: {
+            op: "engage",
+            targets: { type: "enemyFollower", count: 1 },
+          },
+        },
+      ];
+
+    case "BP11-071EN":
+      return [
+        {
+          timing: "fanfare",
+          effect: {
+            op: "if",
+            condition: { type: "ownCemeteryMin", count: 10 },
+            then: {
+              op: "optionalCost",
+              label: "Summon from cemetery (banish this card)",
+              cost: { op: "noop" },
+              then: {
+                op: "sequence",
+                steps: [
+                  {
+                    op: "tutorFromCemetery",
+                    filter: { ...WASTELAND_FOLLOWER, maxCost: 3 },
+                    to: "field",
+                  },
+                  { op: "banishSelf" },
+                ],
+              },
+            },
+          },
+        },
+        {
+          timing: "lastWords",
+          effect: {
+            op: "sequence",
+            steps: [{ op: "moveSourceToExArea" }, { op: "mill", count: 1 }],
+          },
+        },
+      ];
+
+    case "BP11-074EN":
+      return [
+        {
+          timing: "fanfare",
+          effect: {
+            op: "optionalCost",
+            label: "Bury another card",
+            cost: { op: "buryFromFieldSelect", excludeSelf: true },
+            then: {
+              op: "dealDamage",
+              amount: 4,
+              targets: { type: "enemyFollower", count: 1 },
+            },
+          },
+        },
+        {
+          timing: "onTokenLeaveField",
+          oncePerTurn: true,
+          effect: { op: "summonSameNameToken" },
+        },
+      ];
+
+    case "BP11-076EN":
+      return [
+        {
+          timing: "evolve",
+          condition: { type: "enteredFromCemetery" },
+          effect: { op: "noop" },
+        },
+        {
+          timing: "lastWords",
+          effect: {
+            op: "sequence",
+            steps: [
+              { op: "summon", tokenCardNo: "BP11-T04EN", count: 1, zone: "field" },
+              { op: "mill", count: 2 },
+            ],
+          },
+        },
+      ];
+
+    case "BP11-077EN":
+      return [
+        {
+          timing: "onEvolve",
+          effect: {
+            op: "dealDamage",
+            amount: 5,
+            targets: { type: "enemyFollower", count: 1 },
+          },
+        },
+        {
+          timing: "lastWords",
+          effect: {
+            op: "sequence",
+            steps: [
+              { op: "summon", tokenCardNo: "BP11-T04EN", count: 1, zone: "field" },
+              { op: "mill", count: 2 },
+            ],
+          },
+        },
+      ];
+
+    case "BP11-T02EN":
+      return [
+        {
+          timing: "activated",
+          cost: { pp: 1, engageFollowersMinTotalCost: 5 },
+          effect: { op: "maneuver" },
+        },
+        {
+          timing: "strike",
+          effect: {
+            op: "sequence",
+            steps: [
+              {
+                op: "destroy",
+                targets: { type: "enemyFollower", count: 1, engaged: true },
+              },
+              { op: "healLeader", amount: 2 },
+            ],
+          },
+        },
+      ];
+
+    case "BP11-T04EN":
+      return [
+        {
+          timing: "activated",
+          cost: { pp: 0, burySelf: true },
+          effect: {
+            op: "sequence",
+            steps: [
+              {
+                op: "grantKeyword",
+                keyword: "rush",
+                targets: { type: "selfFollower", count: 1 },
+              },
+              {
+                op: "buff",
+                atk: 1,
+                def: 0,
+                targets: {
+                  type: "selfFollower",
+                  count: 1,
+                  filter: WASTELAND_FOLLOWER,
+                },
+              },
+            ],
+          },
+        },
+      ];
+
+    case "BP11-T05EN":
+      return [
+        {
+          timing: "activated",
+          cost: { pp: 0, burySelf: true },
+          effect: {
+            op: "sequence",
+            steps: [
+              {
+                op: "grantKeyword",
+                keyword: "ward",
+                targets: { type: "selfFollower", count: 1 },
+              },
+              {
+                op: "buff",
+                atk: 0,
+                def: 1,
+                targets: {
+                  type: "selfFollower",
+                  count: 1,
+                  filter: WASTELAND_FOLLOWER,
+                },
+              },
+            ],
           },
         },
       ];
@@ -1030,6 +1452,673 @@ function buildAbilities(cardNo, card, text) {
         },
       ];
 
+    case "BP16-119EN":
+      return [
+        {
+          timing: "lastWords",
+          effect: {
+            op: "sequence",
+            steps: [{ op: "healLeader", amount: 1 }, { op: "draw", count: 1 }],
+          },
+        },
+      ];
+
+    case "BP09-137EN":
+      return [
+        {
+          timing: "fanfare",
+          effect: {
+            op: "searchDeckChoose",
+            filter: ANGEL_OR_FALLEN,
+            lookAt: 3,
+            to: "hand",
+            optional: true,
+            remainderTo: "deckBottom",
+            reveal: true,
+          },
+        },
+        {
+          timing: "activated",
+          cost: { pp: 0, engage: true },
+          condition: { type: "fieldFollowerTraitAnyMin", traits: ["Angel", "Fallen Angel"], count: 2 },
+          effect: {
+            op: "sequence",
+            steps: [
+              { op: "buryFieldFollowers", sourceOnly: true },
+              { op: "healLeader", amount: 1 },
+            ],
+          },
+        },
+      ];
+
+    case "BP01-159EN":
+      return [
+        {
+          timing: "lastWords",
+          effect: { op: "draw", count: 1 },
+        },
+      ];
+
+    case "BP01-160EN":
+      return [
+        {
+          timing: "onEvolve",
+          effect: {
+            op: "dealDamage",
+            amount: 2,
+            targets: { type: "enemyFollower", count: 1 },
+          },
+        },
+        {
+          timing: "lastWords",
+          effect: { op: "draw", count: 1 },
+        },
+      ];
+
+    case "BP03-117EN":
+      return [
+        {
+          timing: "spell",
+          effect: {
+            op: "choose",
+            min: 1,
+            max: 1,
+            options: [
+              {
+                label: "Discard Angel follower — destroy enemy follower",
+                effect: {
+                  op: "sequence",
+                  steps: [
+                    { op: "discardFromHand", filter: ANGEL_FOLLOWER, count: 1 },
+                    { op: "destroy", targets: { type: "enemyFollower", count: 1 } },
+                  ],
+                },
+              },
+              {
+                label: "Discard Fallen Angel follower — leader +3 DEF, draw 1",
+                effect: {
+                  op: "sequence",
+                  steps: [
+                    { op: "discardFromHand", filter: FALLEN_FOLLOWER, count: 1 },
+                    { op: "healLeader", amount: 3 },
+                    { op: "draw", count: 1 },
+                  ],
+                },
+              },
+            ],
+          },
+        },
+      ];
+
+    case "BP10-114EN":
+      return [
+        {
+          timing: "spell",
+          effect: {
+            op: "sequence",
+            steps: [
+              {
+                op: "tutorFromCemetery",
+                filter: ANGEL_FOLLOWER,
+                to: "exArea",
+              },
+              { op: "moveToExArea", targets: { type: "enemyFollower", count: 1 } },
+            ],
+          },
+        },
+      ];
+
+    case "BP10-115EN":
+      return [
+        {
+          timing: "fanfare",
+          effect: {
+            op: "searchDeckChoose",
+            filter: ANGEL_OR_FALLEN,
+            lookAt: 1,
+            to: "hand",
+            optional: true,
+            reveal: true,
+          },
+        },
+      ];
+
+    case "BP10-116EN":
+      return [
+        {
+          timing: "onEvolve",
+          effect: {
+            op: "buff",
+            atk: 1,
+            def: 1,
+            targets: {
+              type: "selfFollower",
+              count: 1,
+              filter: ANGEL_OR_FALLEN,
+              excludeSelf: true,
+            },
+          },
+        },
+      ];
+
+    case "BP14-108EN":
+      return [
+        {
+          timing: "fanfare",
+          effect: {
+            op: "if",
+            condition: { type: "ownCemeteryTraitMin", trait: "Angel", count: 5 },
+            then: { op: "healLeader", amount: 2 },
+          },
+        },
+      ];
+
+    case "BP14-109EN":
+      return [
+        {
+          timing: "onEvolve",
+          effect: {
+            op: "searchDeckChoose",
+            filter: ANGEL_OR_FALLEN,
+            lookAt: 4,
+            to: "hand",
+            optional: true,
+            remainderTo: "deckBottom",
+            reveal: true,
+          },
+        },
+      ];
+
+    case "BP12-106EN":
+      return [
+        {
+          timing: "spell",
+          effect: {
+            op: "choose",
+            min: 1,
+            max: 1,
+            options: [
+              {
+                label: "Destroy enemy card (cost 2 or less)",
+                effect: {
+                  op: "destroy",
+                  targets: { type: "enemyFieldCard", maxCost: 2 },
+                },
+              },
+              {
+                label: "Pay 2 PP — destroy enemy card (cost 6 or less)",
+                additionalPpCost: 2,
+                effect: {
+                  op: "destroy",
+                  targets: { type: "enemyFieldCard", maxCost: 6 },
+                },
+              },
+            ],
+          },
+        },
+      ];
+
+    case "BP09-126EN":
+      return [
+        {
+          timing: "fanfare",
+          effect: {
+            op: "if",
+            condition: { type: "ownCemeteryTraitMin", trait: "Angel", count: 5 },
+            then: { op: "banish", targets: { type: "enemyFollower", count: 1 } },
+          },
+        },
+      ];
+
+    case "BP09-127EN":
+      return [
+        {
+          timing: "onEvolve",
+          effect: { op: "banish", targets: { type: "enemyFollower", maxCost: 4 } },
+        },
+      ];
+
+    case "BP06-112EN":
+      return [{ timing: "spell", effect: { op: "clash" } }];
+
+    case "BP14-110EN":
+      return [
+        {
+          timing: "spell",
+          quick: true,
+          effect: {
+            op: "sequence",
+            steps: [{ op: "healLeader", amount: 2 }, { op: "draw", count: 2 }],
+          },
+        },
+      ];
+
+    case "BP10-121EN":
+      return [
+        {
+          timing: "fanfare",
+          effect: {
+            op: "optionalCost",
+            label: "Discard an Angel or Fallen Angel card",
+            cost: { op: "discardFromHand", filter: ANGEL_OR_FALLEN, count: 1 },
+            then: {
+              op: "sequence",
+              steps: [
+                { op: "healLeader", amount: 3 },
+                { op: "draw", count: 1 },
+                { op: "recoverPp", amount: 2 },
+              ],
+            },
+          },
+        },
+      ];
+
+    case "BP09-020EN":
+      return [
+        {
+          timing: "startOfEnd",
+          effect: {
+            op: "sequence",
+            steps: [
+              { op: "discardOptionalDraw", drawBonus: 1 },
+              {
+                op: "if",
+                condition: { type: "ownDeckMax", count: 1 },
+                then: { op: "winGame" },
+              },
+            ],
+          },
+        },
+      ];
+
+    case "BP16-113EN":
+      return [
+        {
+          timing: "fanfare",
+          effect: { op: "draw", count: 1 },
+        },
+      ];
+
+    case "BP16-114EN":
+      return [
+        {
+          timing: "onEvolve",
+          effect: {
+            op: "dealDamage",
+            amount: 5,
+            targets: { type: "enemyFollower", count: 1 },
+          },
+        },
+        {
+          timing: "onSuperEvolve",
+          effect: {
+            op: "sequence",
+            steps: [{ op: "healLeader", amount: 3 }, { op: "recoverPp", amount: 3 }],
+          },
+        },
+      ];
+
+    case "BP12-U05EN":
+      return [
+        {
+          timing: "fanfare",
+          effect: { op: "mill", count: 2 },
+        },
+        {
+          timing: "activated",
+          activateFrom: "cemetery",
+          cost: { pp: 1 },
+          condition: { type: "ownCemeteryMin", count: 10 },
+          effect: {
+            op: "if",
+            condition: {
+              type: "namedCardNotOnFieldByName",
+              identityName: "Gremory, Death Teller",
+            },
+            then: {
+              op: "sequence",
+              steps: [
+                { op: "reviveSelfFromCemetery" },
+                {
+                  op: "grantLastWords",
+                  effect: { op: "banishSelf" },
+                },
+              ],
+            },
+          },
+        },
+      ];
+
+    case "BP13-077EN":
+      return [
+        {
+          timing: "fanfare",
+          effect: {
+            op: "if",
+            condition: { type: "necrocharge", count: 10 },
+            then: {
+              op: "sequence",
+              steps: [
+                {
+                  op: "tutorFromCemetery",
+                  filter: {
+                    ...ABYSS_FOLLOWER,
+                    maxCost: 5,
+                    excludeIdentityName: "Chris, Beyond the Patch",
+                  },
+                  to: "field",
+                },
+                {
+                  op: "grantKeyword",
+                  keyword: "ward",
+                  targets: { type: "lastSummoned" },
+                },
+              ],
+            },
+            else: {
+              op: "tutorFromCemetery",
+              filter: {
+                ...ABYSS_FOLLOWER,
+                maxCost: 5,
+                excludeIdentityName: "Chris, Beyond the Patch",
+              },
+              to: "hand",
+            },
+          },
+        },
+      ];
+
+    case "BP14-070EN":
+      return [
+        {
+          timing: "fanfare",
+          effect: { op: "summon", tokenCardNo: "BP14-T05EN", count: 1, zone: "exArea" },
+        },
+        {
+          timing: "activated",
+          cost: { pp: 4 },
+          effect: {
+            op: "if",
+            condition: {
+              type: "ownCemeteryTraitMin",
+              trait: "Festive",
+              count: 5,
+            },
+            then: {
+              op: "sequence",
+              steps: [
+                { op: "banishSelf" },
+                {
+                  op: "summonFromEvolveDeck",
+                  filter: { identityName: "Itsurugi, End of Paradise" },
+                },
+              ],
+            },
+            else: {
+              op: "if",
+              condition: { type: "ownCemeteryClassMin", cardClass: "abyss", count: 10 },
+              then: {
+                op: "sequence",
+                steps: [
+                  { op: "banishSelf" },
+                  {
+                    op: "summonFromEvolveDeck",
+                    filter: { identityName: "Itsurugi, End of Paradise" },
+                  },
+                ],
+              },
+            },
+          },
+        },
+      ];
+
+    case "BP14-071EN":
+      return [
+        {
+          timing: "fanfare",
+          effect: {
+            op: "dealDamageSplit",
+            primaryAmount: 5,
+            secondaryAmount: 2,
+            maxTargets: 3,
+            targets: { type: "enemyFollower" },
+          },
+        },
+        {
+          timing: "onEnemyFollowerLeaveField",
+          effect: {
+            op: "sequence",
+            steps: [
+              {
+                op: "dealDamage",
+                amount: 1,
+                targets: { type: "enemyLeader" },
+              },
+              { op: "healLeader", amount: 1 },
+            ],
+          },
+        },
+      ];
+
+    case "BP14-T05EN":
+      return [
+        {
+          timing: "spell",
+          effect: {
+            op: "sequence",
+            steps: [
+              {
+                op: "dealDamage",
+                amount: 1,
+                targets: { type: "enemyFollower", count: 1 },
+              },
+              {
+                op: "optionalCost",
+                label: "Discard a card",
+                cost: { op: "discardFromHand", filter: {}, count: 1 },
+                then: { op: "mill", count: 1 },
+              },
+            ],
+          },
+        },
+      ];
+
+    case "BP16-077EN":
+      return [
+        {
+          timing: "fanfare",
+          effect: {
+            op: "sequence",
+            steps: [
+              { op: "summon", tokenCardNo: "BP16-T04EN", count: 1, zone: "field" },
+              { op: "summon", tokenCardNo: "BP16-T05EN", count: 1, zone: "field" },
+            ],
+          },
+        },
+        {
+          timing: "fanfare",
+          condition: { type: "ownCemeteryMin", count: 10 },
+          effect: {
+            op: "sequence",
+            steps: [
+              {
+                op: "grantKeyword",
+                keyword: "storm",
+                targets: { type: "selfFollower", filter: { cardNo: "BP16-T04EN" } },
+              },
+              {
+                op: "grantKeyword",
+                keyword: "storm",
+                targets: { type: "selfFollower", filter: { cardNo: "BP16-T05EN" } },
+              },
+            ],
+          },
+        },
+        {
+          timing: "activated",
+          cost: {
+            engage: true,
+            buryFromField: { cardType: "follower" },
+            buryFieldCount: 1,
+            excludeSelfFromBury: true,
+          },
+          effect: {
+            op: "dealDamage",
+            amount: 2,
+            targets: { type: "enemyFollower", count: 1 },
+          },
+        },
+      ];
+
+    case "BP16-080EN":
+      return [
+        {
+          timing: "fanfare",
+          effect: {
+            op: "if",
+            condition: { type: "enteredFromCemetery" },
+            then: {
+              op: "chooseMultiple",
+              min: 1,
+              max: 2,
+              options: [
+                {
+                  label: "Summon Arcane Personnel Carrier; heal leader 1",
+                  effect: {
+                    op: "sequence",
+                    steps: [
+                      {
+                        op: "summon",
+                        tokenCardNo: "BP11-T05EN",
+                        count: 1,
+                        zone: "field",
+                      },
+                      { op: "healLeader", amount: 1 },
+                    ],
+                  },
+                },
+                { label: "Bury the top 2 cards of your deck", effect: { op: "mill", count: 2 } },
+              ],
+            },
+            else: {
+              op: "choose",
+              min: 1,
+              max: 1,
+              options: [
+                {
+                  label: "Summon Arcane Personnel Carrier; heal leader 1",
+                  effect: {
+                    op: "sequence",
+                    steps: [
+                      {
+                        op: "summon",
+                        tokenCardNo: "BP11-T05EN",
+                        count: 1,
+                        zone: "field",
+                      },
+                      { op: "healLeader", amount: 1 },
+                    ],
+                  },
+                },
+                { label: "Bury the top 2 cards of your deck", effect: { op: "mill", count: 2 } },
+              ],
+            },
+          },
+        },
+        {
+          timing: "startOfOpponentEnd",
+          effect: { op: "burySelf" },
+        },
+      ];
+
+    case "BP16-081EN":
+      return [];
+
+    case "BP16-082EN":
+      return [
+        {
+          timing: "onAllyFollowerEnter",
+          filter: DEPARTED_FOLLOWER,
+          effect: { op: "healLeader", amount: 1 },
+        },
+        {
+          timing: "onEvolve",
+          effect: {
+            op: "summonFromCemetery",
+            filter: { ...DEPARTED_FOLLOWER, maxCost: 3 },
+            count: 1,
+            maxTotalCost: 3,
+          },
+        },
+        {
+          timing: "onSuperEvolve",
+          effect: {
+            op: "sequence",
+            steps: [
+              {
+                op: "summonFromCemetery",
+                filter: { ...DEPARTED_FOLLOWER, maxCost: 3 },
+                count: 1,
+                maxTotalCost: 3,
+              },
+              {
+                op: "grantKeyword",
+                keyword: "assail",
+                targets: { type: "selfFollower", count: 1, excludeSelf: true },
+              },
+            ],
+          },
+        },
+      ];
+
+    case "BP16-T04EN":
+      return [
+        {
+          timing: "lastWords",
+          effect: {
+            op: "sequence",
+            steps: [
+              {
+                op: "dealDamage",
+                amount: 2,
+                targets: { type: "enemyFollower", count: 1 },
+              },
+              { op: "mill", count: 1 },
+            ],
+          },
+        },
+      ];
+
+    case "BP16-T05EN":
+      return [
+        {
+          timing: "lastWords",
+          effect: {
+            op: "sequence",
+            steps: [{ op: "healLeader", amount: 2 }, { op: "mill", count: 1 }],
+          },
+        },
+      ];
+
+    case "BP16-T18EN":
+      return [
+        {
+          timing: "startOfEnd",
+          effect: { op: "banishSelf" },
+        },
+      ];
+
+    case "BP13-107EN":
+      return [
+        {
+          timing: "spell",
+          effect: {
+            op: "sequence",
+            steps: [{ op: "banishAllFieldAndEx" }, { op: "millToBanish", count: 10 }],
+          },
+        },
+      ];
+
     default:
       return null;
   }
@@ -1037,10 +2126,14 @@ function buildAbilities(cardNo, card, text) {
 
 function extraKeywords(cardNo, card, text) {
   const kw = new Set(card.keywords || []);
+  if (parseEvolveCost(text) != null) kw.add("evolve");
   if ((card.type === "evolved" || /^Storm\b/i.test(text.trim())) && /\bStorm\b/i.test(text)) {
     kw.add("storm");
   }
-  if (/\bWard\b/i.test(text)) kw.add("ward");
+  if (/\bWard\b/i.test(text) && !/\bGive it Ward\b/i.test(text)) kw.add("ward");
+  if (/\bRush\b/i.test(text) && !/\bGive it Rush\b/i.test(text) && card.cardType === "follower") {
+    kw.add("rush");
+  }
   if (/\bStrike\b/i.test(text) || /Strike\s*-/i.test(text)) kw.add("strike");
   if (cardNo === "BP07-U05EN") kw.add("storm");
   if (cardNo === "BP12-082EN") kw.add("ward");
@@ -1050,7 +2143,24 @@ function extraKeywords(cardNo, card, text) {
   if (cardNo === "BP12-T04EN") kw.add("storm");
   if (cardNo === "BP14-018EN") kw.add("advanced");
   if (cardNo === "BP14-019EN") kw.add("advanced");
+  if (cardNo === "BP11-076EN") kw.add("rush");
+  if (cardNo === "BP11-077EN") kw.add("storm");
+  if (cardNo === "BP11-T02EN") kw.add("rush");
+  if (cardNo === "BP16-080EN") kw.add("storm");
+  if (cardNo === "BP12-U05EN") kw.add("ward");
+  if (cardNo === "BP16-T18EN") kw.add("storm");
+  if (cardNo === "BP14-070EN") kw.add("advanced");
   return [...kw];
+}
+
+function loadExpansionByCardNo() {
+  const byNo = {};
+  for (const file of fs.readdirSync(__dirname).filter((f) => f.endsWith("-cards.json"))) {
+    for (const c of JSON.parse(fs.readFileSync(path.join(__dirname, file), "utf8"))) {
+      byNo[c.cardNo] = c;
+    }
+  }
+  return byNo;
 }
 
 function main() {
@@ -1059,9 +2169,8 @@ function main() {
     process.exit(1);
   }
   const scraped = JSON.parse(fs.readFileSync(SCRAPED, "utf8"));
-  const existing = fs.existsSync(EXISTING)
-    ? JSON.parse(fs.readFileSync(EXISTING, "utf8"))
-    : {};
+  const existing = loadExistingDefs();
+  const expansionByNo = loadExpansionByCardNo();
 
   const out = {};
   for (const card of scraped) {
@@ -1069,22 +2178,37 @@ function main() {
     const entry = statsFromScrape(card);
     entry.keywords = extraKeywords(card.cardNo, card, text);
     const abilities = buildAbilities(card.cardNo, card, text);
-    if (abilities) entry.abilities = abilities;
-    else if (existing[card.cardNo]?.abilities) {
+    if (abilities != null) {
+      entry.abilities = abilities;
+    } else if (existing[card.cardNo]?.abilities != null) {
       entry.abilities = existing[card.cardNo].abilities;
     }
     out[card.cardNo] = entry;
   }
 
-  // Preserve token defs not in latest scrape batch.
+  linkEvolvePairs(scraped, out);
+
   for (const [cardNo, def] of Object.entries(existing)) {
-    if (!out[cardNo] && (cardNo.includes("-T") || cardNo.startsWith("PR-"))) {
+    if (!out[cardNo]) {
       out[cardNo] = def;
+    }
+    const exp = expansionByNo[cardNo];
+    const text = exp?.cardText || exp?.details?.effect || "";
+    const hand = buildAbilities(cardNo, exp || { name: def.name, cardNo }, text);
+    if (hand != null) {
+      out[cardNo] = { ...out[cardNo], abilities: hand };
     }
   }
 
+  const overrides = loadHandAuthoredOverrides();
+  for (const [cardNo, def] of Object.entries(overrides)) {
+    out[cardNo] = { ...out[cardNo], ...def };
+  }
+
+  const setCount = writeSetFiles(out);
   fs.writeFileSync(OUTPUT, JSON.stringify(out, null, 2) + "\n");
   console.log(`Wrote ${Object.keys(out).length} card defs to ${OUTPUT}`);
+  console.log(`Wrote ${setCount} set files under ${SETS_DIR}`);
 }
 
 main();

@@ -1,0 +1,3492 @@
+{
+  "BP11-018EN": {
+    "name": "Nahtnaught, Cursed Queen",
+    "class": "sword",
+    "printingType": "base",
+    "cost": 4,
+    "attack": 3,
+    "defense": 5,
+    "keywords": [
+      "fanfare"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "Wasteland",
+      "Commander"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "tutorFromDeck",
+          "filter": {
+            "cardClass": "sword",
+            "maxCost": 1
+          },
+          "to": "exArea"
+        }
+      },
+      {
+        "timing": "activated",
+        "cost": {
+          "pp": 0
+        },
+        "oncePerTurn": true,
+        "effect": {
+          "op": "box",
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP11-P07EN": {
+    "name": "Naht's Henchman",
+    "class": "sword",
+    "printingType": "base",
+    "cost": 1,
+    "attack": 2,
+    "defense": 2,
+    "keywords": [
+      "fanfare"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "Wasteland",
+      "Officer"
+    ],
+    "abilities": [
+      {
+        "timing": "passive",
+        "condition": {
+          "type": "namedFollowerOnField",
+          "cardNo": "BP11-018EN"
+        },
+        "effect": {
+          "op": "exAreaPlayCostReduction",
+          "amount": 1
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "namedFollowerOnField",
+            "cardNo": "BP11-018EN"
+          },
+          "then": {
+            "op": "draw",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP11-075EN": {
+    "name": "Dead to Rights",
+    "class": "abyss",
+    "printingType": "base",
+    "cost": 1,
+    "keywords": [
+      "quick"
+    ],
+    "cardType": "spell",
+    "traits": [
+      "Wasteland",
+      "Departed",
+      "Demon"
+    ],
+    "abilities": [
+      {
+        "timing": "activated",
+        "activateFrom": "cemetery",
+        "effect": {
+          "op": "engage",
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        },
+        "cost": {
+          "banishSelf": true,
+          "banishFromCemetery": {
+            "identityName": "Iceschillendrig, Gilded Autocrat"
+          },
+          "banishCount": 1
+        }
+      },
+      {
+        "timing": "spell",
+        "quick": true,
+        "effect": {
+          "op": "buff",
+          "atk": -2,
+          "def": -2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP11-069EN": {
+    "name": "Iceschillendrig, Gilded Autocrat",
+    "class": "abyss",
+    "printingType": "base",
+    "cost": 5,
+    "attack": 5,
+    "defense": 5,
+    "evolveCost": 1,
+    "cardType": "follower",
+    "traits": [
+      "Wasteland",
+      "Departed",
+      "Demon"
+    ],
+    "keywords": [
+      "evolve"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "condition": {
+          "type": "namedCardNotOnFieldByName",
+          "identityName": "Magitrain"
+        },
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP11-T02EN",
+          "count": 1,
+          "zone": "field"
+        }
+      },
+      {
+        "timing": "onBecomeEngaged",
+        "effect": {
+          "op": "opponentDiscardEach",
+          "count": 1
+        }
+      }
+    ],
+    "evolvesTo": "BP11-070EN"
+  },
+  "BP11-070EN": {
+    "name": "Iceschillendrig, Gilded Autocrat Evolved",
+    "class": "abyss",
+    "printingType": "evolved",
+    "attack": 6,
+    "defense": 6,
+    "cardType": "follower",
+    "traits": [
+      "Wasteland",
+      "Departed",
+      "Demon"
+    ],
+    "keywords": [],
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "optionalCost",
+          "label": "Discard a card",
+          "cost": {
+            "op": "discard",
+            "count": 1
+          },
+          "then": {
+            "op": "sequence",
+            "steps": [
+              {
+                "op": "tutorFromCemetery",
+                "filter": {
+                  "cardType": "follower"
+                },
+                "to": "hand"
+              },
+              {
+                "op": "tutorFromCemetery",
+                "filter": {
+                  "cardType": "follower"
+                },
+                "to": "hand"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "timing": "onBecomeEngaged",
+        "effect": {
+          "op": "opponentDiscardEach",
+          "count": 1
+        }
+      },
+      {
+        "timing": "onDiscard",
+        "effect": {
+          "op": "engage",
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ],
+    "evolvesFrom": "BP11-069EN",
+    "specialType": "evolved"
+  },
+  "BP11-071EN": {
+    "name": "Illganeau, Horror Astray",
+    "class": "abyss",
+    "printingType": "base",
+    "cost": 1,
+    "attack": 1,
+    "defense": 1,
+    "cardType": "follower",
+    "traits": [
+      "Wasteland",
+      "Departed",
+      "Demon"
+    ],
+    "keywords": [],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "ownCemeteryMin",
+            "count": 10
+          },
+          "then": {
+            "op": "optionalCost",
+            "label": "Summon from cemetery (banish this card)",
+            "cost": {
+              "op": "noop"
+            },
+            "then": {
+              "op": "sequence",
+              "steps": [
+                {
+                  "op": "tutorFromCemetery",
+                  "filter": {
+                    "traitsAny": [
+                      "Wasteland"
+                    ],
+                    "cardType": "follower",
+                    "maxCost": 3
+                  },
+                  "to": "field"
+                },
+                {
+                  "op": "banishSelf"
+                }
+              ]
+            }
+          }
+        }
+      },
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "moveSourceToExArea"
+            },
+            {
+              "op": "mill",
+              "count": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP11-074EN": {
+    "name": "Greatpick Corpse",
+    "class": "abyss",
+    "printingType": "base",
+    "cost": 3,
+    "attack": 3,
+    "defense": 3,
+    "cardType": "follower",
+    "traits": [
+      "Wasteland",
+      "Departed"
+    ],
+    "keywords": [],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "optionalCost",
+          "label": "Bury another card",
+          "cost": {
+            "op": "buryFromFieldSelect",
+            "excludeSelf": true
+          },
+          "then": {
+            "op": "dealDamage",
+            "amount": 4,
+            "targets": {
+              "type": "enemyFollower",
+              "count": 1
+            }
+          }
+        }
+      },
+      {
+        "timing": "onTokenLeaveField",
+        "oncePerTurn": true,
+        "effect": {
+          "op": "summonSameNameToken"
+        }
+      }
+    ]
+  },
+  "BP11-076EN": {
+    "name": "Wretch",
+    "class": "abyss",
+    "printingType": "base",
+    "cost": 3,
+    "attack": 3,
+    "defense": 2,
+    "evolveCost": 1,
+    "cardType": "follower",
+    "traits": [
+      "Wasteland",
+      "Departed",
+      "Demon"
+    ],
+    "keywords": [
+      "rush",
+      "evolve",
+      "lastWords"
+    ],
+    "abilities": [
+      {
+        "timing": "evolve",
+        "condition": {
+          "type": "enteredFromCemetery"
+        },
+        "effect": {
+          "op": "passiveKeywords",
+          "keywords": []
+        }
+      },
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "summon",
+              "tokenCardNo": "BP11-T04EN",
+              "count": 1,
+              "zone": "field"
+            },
+            {
+              "op": "mill",
+              "count": 2
+            }
+          ]
+        }
+      }
+    ],
+    "evolvesTo": "BP11-077EN",
+    "parseConfidence": "manual"
+  },
+  "BP11-077EN": {
+    "name": "Wretch Evolved",
+    "class": "abyss",
+    "printingType": "evolved",
+    "attack": 4,
+    "defense": 3,
+    "cardType": "follower",
+    "traits": [
+      "Wasteland",
+      "Departed",
+      "Demon"
+    ],
+    "keywords": [
+      "storm"
+    ],
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 5,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "summon",
+              "tokenCardNo": "BP11-T04EN",
+              "count": 1,
+              "zone": "field"
+            },
+            {
+              "op": "mill",
+              "count": 2
+            }
+          ]
+        }
+      }
+    ],
+    "evolvesFrom": "BP11-076EN",
+    "specialType": "evolved"
+  },
+  "BP11-T02EN": {
+    "name": "Magitrain",
+    "class": "abyss",
+    "printingType": "token",
+    "cost": 5,
+    "attack": 4,
+    "defense": 5,
+    "cardType": "amulet",
+    "traits": [
+      "Wasteland",
+      "Mount"
+    ],
+    "keywords": [
+      "strike",
+      "rush"
+    ],
+    "abilities": [
+      {
+        "timing": "activated",
+        "cost": {
+          "pp": 1,
+          "engageFollowersMinTotalCost": 5
+        },
+        "effect": {
+          "op": "maneuver"
+        }
+      },
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "destroy",
+              "targets": {
+                "type": "enemyFollower",
+                "count": 1,
+                "engaged": true
+              }
+            },
+            {
+              "op": "healLeader",
+              "amount": 2
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP11-T04EN": {
+    "name": "Bullet Bike",
+    "class": "neutral",
+    "printingType": "token",
+    "cost": 1,
+    "cardType": "amulet",
+    "traits": [
+      "Wasteland",
+      "Mount"
+    ],
+    "keywords": [],
+    "abilities": [
+      {
+        "timing": "activated",
+        "cost": {
+          "pp": 0,
+          "burySelf": true
+        },
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "grantKeyword",
+              "keyword": "rush",
+              "targets": {
+                "type": "selfFollower",
+                "count": 1
+              }
+            },
+            {
+              "op": "buff",
+              "atk": 1,
+              "def": 0,
+              "targets": {
+                "type": "selfFollower",
+                "count": 1,
+                "filter": {
+                  "trait": "Wasteland",
+                  "cardType": "follower"
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "parseConfidence": "manual"
+  },
+  "BP11-T05EN": {
+    "name": "Arcane Personnel Carrier",
+    "class": "neutral",
+    "printingType": "token",
+    "cost": 1,
+    "cardType": "amulet",
+    "traits": [
+      "Wasteland",
+      "Mount"
+    ],
+    "keywords": [],
+    "abilities": [
+      {
+        "timing": "activated",
+        "cost": {
+          "pp": 0,
+          "burySelf": true
+        },
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "grantKeyword",
+              "keyword": "ward",
+              "targets": {
+                "type": "selfFollower",
+                "count": 1
+              }
+            },
+            {
+              "op": "buff",
+              "atk": 0,
+              "def": 1,
+              "targets": {
+                "type": "selfFollower",
+                "count": 1,
+                "filter": {
+                  "trait": "Wasteland",
+                  "cardType": "follower"
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "parseConfidence": "manual"
+  },
+  "BP11-001EN": {
+    "name": "Loxis, Homestead Pioneer",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "BP11-002EN": {
+    "name": "Loxis, Homestead Pioneer Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "choose",
+          "min": 1,
+          "max": 1,
+          "options": [
+            {
+              "label": "(1) Select an enemy follower on the field and destroy it",
+              "effect": {
+                "op": "destroy",
+                "targets": {
+                  "type": "enemyFollower",
+                  "count": 1
+                }
+              }
+            },
+            {
+              "label": "(2) Select another follower on your field and give it +3/+3",
+              "effect": {
+                "op": "buff",
+                "atk": 3,
+                "def": 3,
+                "targets": {
+                  "type": "selfFollower",
+                  "count": 1,
+                  "excludeSelf": true
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP11-003EN": {
+    "name": "Shamu & Shama, Posh Felines",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "strike",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Combo (5) - Deal it 3 damage"
+            },
+            {
+              "op": "noop",
+              "label": "Strike, Combo (3) - Give this follower +1/+1"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP11-004EN": {
+    "name": "Terrorformer",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "moveToExArea",
+              "targets": {
+                "type": "self"
+              }
+            },
+            {
+              "op": "draw",
+              "count": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP11-005EN": {
+    "name": "Terrorformer Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [
+      "storm"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "dealDamage",
+          "amount": {
+            "op": "selfAttack"
+          },
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP11-006EN": {
+    "name": "Giant Pastures",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenName": "Bullet Bike and Arcane Personnel Carrier",
+          "count": 1,
+          "zone": "exArea"
+        }
+      }
+    ]
+  },
+  "BP11-007EN": {
+    "name": "Fairy Flowering",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "noop",
+          "label": "As an additional cost to play this card, bury 4 Pixie tokens. ---------- Search your deck for an Aria, Fairy Princess, s"
+        }
+      }
+    ]
+  },
+  "BP11-008EN": {
+    "name": "Varmint Hunter",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "noop",
+          "label": "whenever a Mount card is put into your EX area, select an enemy follower on the field and deal it 3 damage"
+        }
+      }
+    ]
+  },
+  "BP11-009EN": {
+    "name": "Varmint Hunter Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP11-T03EN",
+          "tokenName": "Dutiful Steed",
+          "count": 1,
+          "zone": "exArea"
+        }
+      }
+    ]
+  },
+  "BP11-010EN": {
+    "name": "Stringmaster",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "buffFieldTrait",
+              "trait": "this",
+              "atk": 2,
+              "def": 2,
+              "excludeSelf": false
+            },
+            {
+              "op": "summon",
+              "tokenCardNo": "BP05-T03EN",
+              "tokenName": "Puppet",
+              "count": 1,
+              "zone": "field"
+            }
+          ]
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP11-011EN": {
+    "name": "Corrosive Thorns",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "dealDamage",
+              "amount": 1,
+              "targets": {
+                "type": "enemyFollower",
+                "count": 1
+              }
+            },
+            {
+              "op": "damageFollowerAndLeader",
+              "followerAmount": 3,
+              "leaderAmount": 1
+            }
+          ]
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP11-012EN": {
+    "name": "Lookout Elf",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "peekDeck",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "BP11-013EN": {
+    "name": "Lookout Elf Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP01-T03EN",
+          "tokenName": "Fairy",
+          "count": 2,
+          "zone": "field"
+        }
+      }
+    ]
+  },
+  "BP11-014EN": {
+    "name": "Cactus Cowboy",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP11-T03EN",
+          "tokenName": "Dutiful Steed",
+          "count": 1,
+          "zone": "exArea"
+        }
+      },
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "noop",
+          "label": "and, if there are at least 3 Mount cards on your field and/or in your EX area, deal it 3 damage"
+        }
+      }
+    ]
+  },
+  "BP11-015EN": {
+    "name": "Nature's Warden",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Search your deck for a follower with Ward, reveal it, add it to your hand, then shuffle"
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "[cost05]: You may summon a follower with Ward from your hand"
+        }
+      }
+    ]
+  },
+  "BP11-016EN": {
+    "name": "Hornet Strike",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 3,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP11-017EN": {
+    "name": "Scavenge",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Select a Puppetry card in your cemetery"
+            },
+            {
+              "op": "noop",
+              "label": "Add it to your hand and put a Puppet token into your EX area"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP11-019EN": {
+    "name": "Bunny & Baron, Specter Duo",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "BP11-020EN": {
+    "name": "Bunny & Baron, Specter Duo Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "choose",
+          "min": 1,
+          "max": 1,
+          "options": [
+            {
+              "label": "(1) Summon a Val, Trusty Getaway Car token",
+              "effect": {
+                "op": "sequence",
+                "steps": [
+                  {
+                    "op": "summon",
+                    "tokenName": "Val",
+                    "count": 1,
+                    "zone": "field"
+                  },
+                  {
+                    "op": "summon",
+                    "tokenName": "Trusty Getaway Car",
+                    "count": 1,
+                    "zone": "field"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP11-021EN": {
+    "name": "Reinhardt, the Deathless",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "If there are at least 3 faceup evolved followers in your evolve deck,"
+        }
+      }
+    ]
+  },
+  "BP11-022EN": {
+    "name": "Reinhardt, the Deathless Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [
+      "assail"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "startOfEnd",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "buff",
+              "atk": 0,
+              "def": 2,
+              "targets": {
+                "type": "selfFollower",
+                "count": 1,
+                "excludeSelf": false
+              }
+            },
+            {
+              "op": "healLeader",
+              "amount": 2
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP11-023EN": {
+    "name": "Radical Gunslinger",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 2,
+          "targets": {
+            "type": "enemyFieldCard",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP11-024EN": {
+    "name": "Tyrant's Order",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "destroy",
+          "targets": {
+            "type": "anyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP11-025EN": {
+    "name": "Stalwart Slinger",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "destroy",
+          "targets": {
+            "type": "enemyFieldCard",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP11-026EN": {
+    "name": "Stalwart Slinger Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [
+      "assail"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "dealDamageAllEnemies",
+          "amount": 3,
+          "followersOnly": false
+        }
+      }
+    ]
+  },
+  "BP11-027EN": {
+    "name": "Outlaw Gunner",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP11-T04EN",
+          "tokenName": "Bullet Bike",
+          "count": 1,
+          "zone": "field"
+        }
+      },
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "dealDamageAllEnemies",
+          "amount": 2,
+          "followersOnly": false
+        }
+      }
+    ]
+  },
+  "BP11-028EN": {
+    "name": "Desperados' Shot",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 4,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP11-029EN": {
+    "name": "Shinobi Tanuki",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "BP11-030EN": {
+    "name": "Shinobi Tanuki Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [
+      "intimidate"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "BP11-031EN": {
+    "name": "Naht's Henchman",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "BP11-032EN": {
+    "name": "Frontline Instructor",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "assail",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "[costX]: Summon X Steelclad Knight tokens"
+            },
+            {
+              "op": "noop",
+              "label": "X equals a number of your choice"
+            },
+            {
+              "op": "noop",
+              "label": "[act] [engage]: For the rest of this turn, each [swordcraft] follower currently on your field has Rush and Assail"
+            }
+          ]
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP11-033EN": {
+    "name": "Bandit Raid",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "rush"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {},
+          "lookAt": 4,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        }
+      }
+    ]
+  },
+  "BP11-034EN": {
+    "name": "Dramatic Retreat",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "noop",
+          "label": "This card can't be played . ---------- Select a follower on your field and put it into its owner's EX area"
+        },
+        "quick": true
+      }
+    ]
+  },
+  "BP11-035EN": {
+    "name": "Vincent, the Peacekeeper",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Activate only if this follower has gained attack or defense this turn"
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Search your deck for a Wasteland card, bury it, then shuffle"
+        }
+      }
+    ]
+  },
+  "BP11-036EN": {
+    "name": "Vincent, the Peacekeeper Evolved",
+    "class": "rune",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "If there are at least 3 cards with different base costs in your cemetery, give your leader [def]+3"
+            },
+            {
+              "op": "noop",
+              "label": "If there are at least 6, draw a card"
+            },
+            {
+              "op": "noop",
+              "label": "If there are at least 9, deal 9 damage to each enemy follower on the field"
+            },
+            {
+              "op": "noop",
+              "label": "If there are at least 12, deal 12 damage to each enemy leader"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP11-037EN": {
+    "name": "Maiser, Neighborhood Hero",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP11-T03EN",
+          "tokenName": "Dutiful Steed",
+          "count": 1,
+          "zone": "exArea"
+        }
+      },
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "draw",
+              "count": 1
+            },
+            {
+              "op": "discard",
+              "count": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP11-038EN": {
+    "name": "Magical Gunslinger",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP11-T04EN",
+          "tokenName": "Bullet Bike",
+          "count": 1,
+          "zone": "field"
+        }
+      },
+      {
+        "timing": "onAllyFollowerEnter",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "dealDamage",
+              "amount": 2,
+              "targets": {
+                "type": "enemyFollower",
+                "count": 1
+              }
+            },
+            {
+              "op": "draw",
+              "count": 1
+            },
+            {
+              "op": "discard",
+              "count": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP11-039EN": {
+    "name": "Magical Gunslinger Evolved",
+    "class": "rune",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onAllyFollowerEnter",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "dealDamage",
+              "amount": 2,
+              "targets": {
+                "type": "enemyFollower",
+                "count": 1
+              }
+            },
+            {
+              "op": "draw",
+              "count": 1
+            },
+            {
+              "op": "discard",
+              "count": 1
+            }
+          ]
+        }
+      },
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing onEvolve timing"
+        }
+      }
+    ]
+  },
+  "BP11-040EN": {
+    "name": "Transcendent Simulacrum",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buff",
+          "atk": null,
+          "def": 1,
+          "targets": {
+            "type": "selfFollower",
+            "count": 1,
+            "excludeSelf": false
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP11-041EN": {
+    "name": "Words of Judgment",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "noop",
+          "label": "It loses all abilities for the rest of this turn and, if there are at least 6 cards with different base costs in your ce"
+        }
+      }
+    ]
+  },
+  "BP11-042EN": {
+    "name": "Artistic Arcanist",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "bane",
+      "drain",
+      "evolve"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "[act] Earth Rite: Select another follower on your field and give it Rush, Bane, or Drain"
+        }
+      }
+    ]
+  },
+  "BP11-043EN": {
+    "name": "Artistic Arcanist Evolved",
+    "class": "rune",
+    "printingType": "evolved",
+    "keywords": [
+      "bane",
+      "drain"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "grantKeyword",
+          "keyword": "rush",
+          "targets": {
+            "type": "selfFollower",
+            "count": 1,
+            "excludeSelf": true
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP11-044EN": {
+    "name": "Golem Marshal",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "summon",
+              "tokenName": "it",
+              "count": 1,
+              "zone": "field"
+            },
+            {
+              "op": "summon",
+              "tokenName": "then summon an Arcane Personnel Carrier",
+              "count": 1,
+              "zone": "field"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP11-045EN": {
+    "name": "Rapid Fire",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        },
+        "quick": true
+      }
+    ]
+  },
+  "BP11-046EN": {
+    "name": "Crystal Fencer",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "draw",
+              "count": 1
+            },
+            {
+              "op": "discard",
+              "count": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP11-047EN": {
+    "name": "Crystal Fencer Evolved",
+    "class": "rune",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "playCostReduction",
+          "amount": 3
+        }
+      }
+    ]
+  },
+  "BP11-048EN": {
+    "name": "Rivaylian Deputy",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP11-T03EN",
+          "tokenName": "Dutiful Steed",
+          "count": 1,
+          "zone": "field"
+        }
+      }
+    ]
+  },
+  "BP11-049EN": {
+    "name": "Mirror Witch",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "storm"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "During each opponent's turn,"
+        }
+      },
+      {
+        "timing": "onDamaged",
+        "effect": {
+          "op": "noop",
+          "label": "whenever this follower takes damage, deal 2 damage to each enemy leader"
+        }
+      }
+    ]
+  },
+  "BP11-050EN": {
+    "name": "Terra Nova",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "summon",
+              "tokenCardNo": "BP01-T10EN",
+              "tokenName": "Magic Sediment",
+              "count": 1,
+              "zone": "field"
+            },
+            {
+              "op": "addStack",
+              "amount": 2
+            }
+          ]
+        },
+        "quick": true
+      }
+    ]
+  },
+  "BP11-051EN": {
+    "name": "Scorching Blast",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 5,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        },
+        "quick": true
+      }
+    ]
+  },
+  "BP11-052EN": {
+    "name": "Reggie, Peerless Artisan",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "noop",
+          "label": "While Overflow is active for you, this follower has Storm"
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Select a Wasteland follower that costs 2 or less in your cemetery and summon it"
+        }
+      }
+    ]
+  },
+  "BP11-053EN": {
+    "name": "Reggie, Peerless Artisan Evolved",
+    "class": "dragon",
+    "printingType": "evolved",
+    "keywords": [
+      "storm"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "buffFieldTrait",
+          "trait": "Wasteland",
+          "atk": 1,
+          "def": 1,
+          "excludeSelf": true
+        }
+      }
+    ]
+  },
+  "BP11-054EN": {
+    "name": "Resplendent Phoenix",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "healLeader",
+          "amount": 2
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing fanfare timing"
+        }
+      }
+    ]
+  },
+  "BP11-055EN": {
+    "name": "Georgius",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "and, if Overflow is active for you, deal 2 damage to it and its leader"
+        }
+      }
+    ]
+  },
+  "BP11-056EN": {
+    "name": "Georgius Evolved",
+    "class": "dragon",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "noop",
+          "label": "Destroy each enemy follower with 3 defense or less on the field"
+        }
+      }
+    ]
+  },
+  "BP11-057EN": {
+    "name": "Balefire Wrenchsmith",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP11-T03EN",
+          "tokenName": "Dutiful Steed",
+          "count": 1,
+          "zone": "field"
+        }
+      }
+    ]
+  },
+  "BP11-058EN": {
+    "name": "Dragon-Devouring Dread",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "increaseMaxPp",
+              "amount": 1
+            },
+            {
+              "op": "draw",
+              "count": 1
+            }
+          ]
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP11-059EN": {
+    "name": "Azureflame Dragonewt",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 4,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP11-060EN": {
+    "name": "Azureflame Dragonewt Evolved",
+    "class": "dragon",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 6,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP11-061EN": {
+    "name": "Dragonfolk Artificer",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {
+            "identityName": "Wasteland"
+          },
+          "lookAt": 3,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        }
+      }
+    ]
+  },
+  "BP11-062EN": {
+    "name": "Draconic Call",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {},
+          "lookAt": 5,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        },
+        "quick": true
+      }
+    ]
+  },
+  "BP11-063EN": {
+    "name": "Mermaid Guide",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "evolve"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "ownCemeteryTraitMin",
+            "trait": "Marine",
+            "count": 5
+          },
+          "then": {
+            "op": "passiveKeywords",
+            "keywords": [
+              "storm"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "BP11-064EN": {
+    "name": "Mermaid Guide Evolved",
+    "class": "dragon",
+    "printingType": "evolved",
+    "keywords": [
+      "storm"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "ownCemeteryTraitMin",
+            "trait": "Marine",
+            "count": 5
+          },
+          "then": {
+            "op": "passiveKeywords",
+            "keywords": [
+              "storm"
+            ]
+          }
+        }
+      },
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "draw",
+          "count": 2
+        }
+      }
+    ]
+  },
+  "BP11-065EN": {
+    "name": "Wyrmfire Engineer",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "lastWords"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP11-T04EN",
+          "tokenName": "Bullet Bike",
+          "count": 1,
+          "zone": "field"
+        }
+      }
+    ]
+  },
+  "BP11-066EN": {
+    "name": "Pumpkin Dragon",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "healLeader",
+          "amount": 5
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP11-067EN": {
+    "name": "Wavecrest Angler",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {},
+          "lookAt": 3,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        }
+      }
+    ]
+  },
+  "BP11-068EN": {
+    "name": "Thunderous Roar",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "BP11-072EN": {
+    "name": "Hazhan, Demonblade Knight",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "assail",
+      "bane",
+      "drain",
+      "evolve"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Activate only if Sanguine is active for you"
+        }
+      }
+    ]
+  },
+  "BP11-073EN": {
+    "name": "Hazhan, Demonblade Knight Evolved",
+    "class": "abyss",
+    "printingType": "evolved",
+    "keywords": [
+      "assail",
+      "bane",
+      "drain",
+      "strike"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "dealDamageAllEnemies",
+              "amount": 2,
+              "followersOnly": false
+            },
+            {
+              "op": "refresh",
+              "targets": {
+                "type": "self"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP11-078EN": {
+    "name": "Gold Mine Necromancer",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "and a Wasteland follower that costs 3 or less in your cemetery"
+            },
+            {
+              "op": "noop",
+              "label": "Necrocharge (10) - Deal 4 damage to the first follower and summon the second"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP11-079EN": {
+    "name": "Wretched Tryst",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Select 2 Wasteland followers that cost 3 or less in your cemetery"
+            },
+            {
+              "op": "noop",
+              "label": "Necrocharge (10) - Summon them"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP11-080EN": {
+    "name": "Redcap",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "assail",
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "If there's an amulet on your field, give this follower Rush and Assail"
+        }
+      }
+    ]
+  },
+  "BP11-081EN": {
+    "name": "Redcap Evolved",
+    "class": "abyss",
+    "printingType": "evolved",
+    "keywords": [
+      "strike"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "damageImmunity",
+          "amount": 0,
+          "targets": {
+            "type": "self"
+          }
+        }
+      }
+    ]
+  },
+  "BP11-082EN": {
+    "name": "Skeleton Dreamer",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "lastWords"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "grantKeyword",
+          "keyword": "storm",
+          "targets": {
+            "type": "self"
+          }
+        }
+      },
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "summon",
+              "tokenCardNo": "BP11-T04EN",
+              "tokenName": "Bullet Bike",
+              "count": 1,
+              "zone": "field"
+            },
+            {
+              "op": "mill",
+              "count": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP11-083EN": {
+    "name": "Fulminating Berserker",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "strike"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 5,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP11-084EN": {
+    "name": "Grudge Teller",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "dealDamageAllEnemies",
+              "amount": 1,
+              "followersOnly": false
+            },
+            {
+              "op": "if",
+              "condition": {
+                "type": "sanguine"
+              },
+              "then": {
+                "op": "dealDamage",
+                "amount": 3,
+                "targets": {
+                  "type": "enemyFollower",
+                  "count": 1
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP11-085EN": {
+    "name": "Spiderweb Array",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "engage",
+              "targets": {
+                "type": "selfFollower",
+                "count": 1
+              }
+            },
+            {
+              "op": "draw",
+              "count": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP11-086EN": {
+    "name": "Selena, Sugarkiss Assassin",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "strike",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {},
+          "lookAt": 4,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        }
+      },
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "recoverPp",
+          "amount": 2
+        }
+      }
+    ]
+  },
+  "BP11-087EN": {
+    "name": "Anvelt, Judgment's Cannon",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 3,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 2
+          }
+        }
+      }
+    ]
+  },
+  "BP11-088EN": {
+    "name": "Anvelt, Judgment's Cannon Evolved",
+    "class": "haven",
+    "printingType": "evolved",
+    "keywords": [
+      "ward"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 3,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 2
+          }
+        }
+      }
+    ]
+  },
+  "BP11-089EN": {
+    "name": "Vengeful Sniper",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "If there are at least 2 amulets on your field and/or in your EX area, deal 2 damage to each enemy leader"
+        }
+      }
+    ]
+  },
+  "BP11-090EN": {
+    "name": "Vengeful Sniper Evolved",
+    "class": "haven",
+    "printingType": "evolved",
+    "keywords": [
+      "ward"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "banish",
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1,
+            "maxDef": 3
+          }
+        }
+      }
+    ]
+  },
+  "BP11-091EN": {
+    "name": "Paladin of Clemency",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 1,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP11-092EN": {
+    "name": "Holy Sanctuary",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "choose",
+          "min": 1,
+          "max": 1,
+          "options": [
+            {
+              "label": "(1) Select an enemy follower on the field and deal it 3 damage",
+              "effect": {
+                "op": "dealDamage",
+                "amount": 3,
+                "targets": {
+                  "type": "enemyFollower",
+                  "count": 1
+                }
+              }
+            },
+            {
+              "label": "(2) Select a follower on your field and give it +1/+1",
+              "effect": {
+                "op": "buff",
+                "atk": 1,
+                "def": 1,
+                "targets": {
+                  "type": "selfFollower",
+                  "count": 1,
+                  "excludeSelf": false
+                }
+              }
+            },
+            {
+              "label": "(3) Summon a Holy Tiger token",
+              "effect": {
+                "op": "summon",
+                "tokenCardNo": "BP01-T17EN",
+                "tokenName": "Holy Tiger",
+                "count": 1,
+                "zone": "field"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP11-093EN": {
+    "name": "Set",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "aura",
+      "bane",
+      "evolve"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "healLeader",
+          "amount": 2
+        }
+      }
+    ]
+  },
+  "BP11-094EN": {
+    "name": "Set Evolved",
+    "class": "haven",
+    "printingType": "evolved",
+    "keywords": [
+      "ward",
+      "aura",
+      "bane"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "healLeader",
+          "amount": 4
+        }
+      }
+    ]
+  },
+  "BP11-095EN": {
+    "name": "Shady Priest",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP11-T03EN",
+          "tokenName": "Dutiful Steed",
+          "count": 1,
+          "zone": "exArea"
+        }
+      }
+    ]
+  },
+  "BP11-096EN": {
+    "name": "Haven Fire",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "This card costs 1 less to play if there's a Selena, Sugarkiss Assassin on your field. ---------- Select an enemy followe"
+            },
+            {
+              "op": "noop",
+              "label": "If there's a Wasteland card in your EX area, deal 1 damage to its leader"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP11-097EN": {
+    "name": "Enchanted Knight",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "BP11-098EN": {
+    "name": "Enchanted Knight Evolved",
+    "class": "haven",
+    "printingType": "evolved",
+    "keywords": [
+      "ward"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "noop",
+          "label": "If there are at least 4 followers with Ward on your field, draw 2 cards"
+        }
+      }
+    ]
+  },
+  "BP11-099EN": {
+    "name": "Revolver Eagle",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buffFieldTrait",
+          "trait": "this",
+          "atk": 4,
+          "def": 4,
+          "excludeSelf": false
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP11-100EN": {
+    "name": "Sacred Stone Apostle",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "strike",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "If there's an amulet on your field, give this follower +1/+1"
+        }
+      },
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "draw",
+              "count": 1
+            },
+            {
+              "op": "discard",
+              "count": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP11-101EN": {
+    "name": "Benevolent Blight",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "dealDamageAllEnemies",
+              "amount": 2,
+              "followersOnly": true
+            },
+            {
+              "op": "healLeader",
+              "amount": 2
+            },
+            {
+              "op": "draw",
+              "count": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP11-102EN": {
+    "name": "Pure Metamorphosis",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP01-T16EN",
+          "tokenName": "Holy Falcon",
+          "count": 1,
+          "zone": "field"
+        }
+      }
+    ]
+  },
+  "BP11-103EN": {
+    "name": "Sylvia, Grand Arbiter",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "[fanfare]"
+        }
+      }
+    ]
+  },
+  "BP11-104EN": {
+    "name": "Sylvia, Grand Arbiter Evolved",
+    "class": "neutral",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 5,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP11-105EN": {
+    "name": "Quixotic Adventurer",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP11-T03EN",
+          "tokenName": "Dutiful Steed",
+          "count": 1,
+          "zone": "exArea"
+        }
+      }
+    ]
+  },
+  "BP11-106EN": {
+    "name": "Quixotic Adventurer Evolved",
+    "class": "neutral",
+    "printingType": "evolved",
+    "keywords": [
+      "lastWords"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "choose",
+          "min": 0,
+          "max": 1,
+          "options": [
+            {
+              "label": "field",
+              "effect": {
+                "op": "summon",
+                "tokenName": "Dutiful Steed, Bullet Bike, and Arcane Personnel Carrier",
+                "count": 1,
+                "zone": "field"
+              }
+            },
+            {
+              "label": "EX area",
+              "effect": {
+                "op": "summon",
+                "tokenName": "Dutiful Steed, Bullet Bike, and Arcane Personnel Carrier",
+                "count": 1,
+                "zone": "exArea"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP11-107EN": {
+    "name": "Goblin Queen",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "dealDamage",
+              "amount": 1,
+              "targets": {
+                "type": "enemyFollower",
+                "count": 1
+              }
+            },
+            {
+              "op": "destroy",
+              "targets": {
+                "type": "anyFollower",
+                "count": 1
+              }
+            }
+          ]
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP11-108EN": {
+    "name": "Embodiment of Cocytus",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "choose",
+          "min": 1,
+          "max": 1,
+          "options": [
+            {
+              "label": "(2) Select an enemy follower on the field. Destroy it and deal 3",
+              "effect": {
+                "op": "destroy",
+                "targets": {
+                  "type": "anyFollower",
+                  "count": 1
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP11-109EN": {
+    "name": "Wandering Chef",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "If there's a Mount card on your field or in your EX area, give your leader [def]+2"
+        }
+      }
+    ]
+  },
+  "BP11-110EN": {
+    "name": "Wandering Chef Evolved",
+    "class": "neutral",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {
+            "identityName": "Wasteland"
+          },
+          "lookAt": 4,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        }
+      }
+    ]
+  },
+  "BP11-111EN": {
+    "name": "Supercharged Guitarist",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "assail",
+      "strike",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      },
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "recoverPp",
+          "amount": 3
+        }
+      }
+    ]
+  },
+  "BP11-112EN": {
+    "name": "Titanic Showdown",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "This card is put onto the field engaged"
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Reveal 2 random cards from your hand"
+            },
+            {
+              "op": "noop",
+              "label": "Summon each follower from among them"
+            }
+          ]
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP11-113EN": {
+    "name": "Rivaylian Bandit",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "grantKeyword",
+          "keyword": "storm",
+          "targets": {
+            "type": "self"
+          }
+        }
+      }
+    ]
+  },
+  "BP11-114EN": {
+    "name": "Rivaylian Bandit Evolved",
+    "class": "neutral",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "noop",
+          "label": "and, if there are at least 2 Mount cards on your field and/or in your EX area, deal it 2 damage"
+        }
+      },
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "grantKeyword",
+          "keyword": "storm",
+          "targets": {
+            "type": "self"
+          }
+        }
+      }
+    ]
+  },
+  "BP11-115EN": {
+    "name": "Vagabond Lizard",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "choose",
+          "min": 0,
+          "max": 1,
+          "options": [
+            {
+              "label": "field",
+              "effect": {
+                "op": "summon",
+                "tokenCardNo": "BP11-T04EN",
+                "tokenName": "Bullet Bike",
+                "count": 1,
+                "zone": "field"
+              }
+            },
+            {
+              "label": "EX area",
+              "effect": {
+                "op": "summon",
+                "tokenCardNo": "BP11-T04EN",
+                "tokenName": "Bullet Bike",
+                "count": 1,
+                "zone": "exArea"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP11-T03EN",
+          "tokenName": "Dutiful Steed",
+          "count": 1,
+          "zone": "exArea"
+        }
+      }
+    ]
+  },
+  "BP11-116EN": {
+    "name": "Spice Shower",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "dealDamageAllEnemies",
+              "amount": 1,
+              "followersOnly": false
+            },
+            {
+              "op": "healLeader",
+              "amount": 1
+            },
+            {
+              "op": "draw",
+              "count": 1
+            }
+          ]
+        },
+        "quick": true
+      }
+    ]
+  },
+  "BP11-SP02EN": {
+    "name": "Dark Dragoon Forte",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "BP11-T01EN": {
+    "name": "Val, Trusty Getaway Car",
+    "class": "sword",
+    "printingType": "token",
+    "keywords": [
+      "storm",
+      "strike"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "BP11-T03EN": {
+    "name": "Dutiful Steed",
+    "class": "neutral",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Select a follower on your field and, if it's a Wasteland follower, give it +1/+1"
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP11-T06EN": {
+    "name": "Fairy",
+    "class": "forest",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "BP11-T07EN": {
+    "name": "Steelclad Knight",
+    "class": "sword",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "BP11-T08EN": {
+    "name": "Magic Sediment",
+    "class": "rune",
+    "printingType": "token",
+    "keywords": [
+      "stack"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "BP11-T09EN": {
+    "name": "Holy Falcon",
+    "class": "haven",
+    "printingType": "token",
+    "keywords": [
+      "storm"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "BP11-T10EN": {
+    "name": "Holy Tiger",
+    "class": "haven",
+    "printingType": "token",
+    "keywords": [
+      "rush"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "BP11-T11EN": {
+    "name": "Puppet",
+    "class": "neutral",
+    "printingType": "token",
+    "keywords": [
+      "rush"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  }
+}

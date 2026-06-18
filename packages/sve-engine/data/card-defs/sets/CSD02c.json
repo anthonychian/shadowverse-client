@@ -1,0 +1,252 @@
+{
+  "CSD02c-001EN": {
+    "name": "Mio Honda [Positive Passion]",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {},
+          "lookAt": 2,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "CSD02c-002EN": {
+    "name": "Aiko Takamori [Handmade Happiness]",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "startOfEnd",
+        "effect": {
+          "op": "returnToHand",
+          "targets": {
+            "type": "self"
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "CSD02c-003EN": {
+    "name": "Akane Hino [Positive Passion]",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "dealDamageAllEnemies",
+              "amount": 6,
+              "followersOnly": true
+            },
+            {
+              "op": "draw",
+              "count": 2
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CSD02c-004EN": {
+    "name": "Kaoru Ryuzaki",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "[act] [cost02]: If there are at least 5 Passion cards in your cemetery, select a follower in your cemetery and add it to"
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "CSD02c-005EN": {
+    "name": "Suzuho Ueda",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "searchDeckChoose",
+          "lookAt": 1,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": false
+        }
+      }
+    ]
+  },
+  "CSD02c-006EN": {
+    "name": "Suzuho Ueda Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "noop",
+          "label": "Reveal the top card of your deck and deal damage equal to its cost to the selected follower"
+        }
+      }
+    ]
+  },
+  "CSD02c-007EN": {
+    "name": "Miria Akagi",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "optionalCost",
+          "label": "[cost02], Lesson (1)",
+          "cost": {
+            "op": "sequence",
+            "steps": [
+              {
+                "op": "spendPp",
+                "amount": 2
+              },
+              {
+                "op": "banishFromExArea",
+                "filter": {
+                  "trait": "Magical Item"
+                },
+                "count": 1
+              }
+            ]
+          },
+          "then": {
+            "op": "buffFieldTrait",
+            "trait": "this",
+            "atk": 1,
+            "def": 1,
+            "excludeSelf": false
+          }
+        }
+      }
+    ]
+  },
+  "CSD02c-008EN": {
+    "name": "Miria Akagi Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "draw",
+          "count": 2
+        }
+      }
+    ]
+  },
+  "CSD02c-009EN": {
+    "name": "Miu Yaguchi",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "mill",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "CSD02c-010EN": {
+    "name": "Kumiko Matsuyama",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "CSD02c-011EN": {
+    "name": "Kumiko Matsuyama Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "noop",
+          "label": "Select a Passion follower that costs 3 or less in your cemetery and summon it"
+        }
+      }
+    ]
+  }
+}

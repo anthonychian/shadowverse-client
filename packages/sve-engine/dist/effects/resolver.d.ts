@@ -1,7 +1,7 @@
 import { Effect, GameState, PlayerId } from "../types";
 export declare function appendResumeEffects(state: GameState, effects: Effect[]): GameState;
 export declare function buryDeckCards(state: GameState, player: PlayerId, instanceIds: string[]): GameState;
-export declare function moveZoneCardTo(state: GameState, player: PlayerId, instanceId: string, fromZone: "deck" | "cemetery" | "hand" | "evolveDeck", to: "hand" | "exArea" | "field"): GameState;
+export declare function moveZoneCardTo(state: GameState, player: PlayerId, instanceId: string, fromZone: "deck" | "cemetery" | "hand" | "evolveDeck", to: "hand" | "exArea" | "field" | "banish"): GameState;
 export type ResolveEffectOptions = {
     deferConfirmation?: boolean;
 };

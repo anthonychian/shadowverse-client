@@ -1,0 +1,5806 @@
+{
+  "PR-173EN": {
+    "name": "Aenea, Amethyst Rebel",
+    "class": "abyss",
+    "printingType": "base",
+    "cost": 4,
+    "attack": 2,
+    "defense": 2,
+    "keywords": [
+      "fanfare",
+      "lastWords"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "Machina",
+      "Demon"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "tutorFromDeck",
+          "filter": {
+            "trait": "Machina",
+            "cardType": "follower",
+            "maxCost": 3
+          },
+          "to": "field"
+        }
+      },
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "healLeader",
+          "amount": 2
+        }
+      }
+    ],
+    "parseConfidence": "manual"
+  },
+  "PR-358EN": {
+    "name": "Mechagun Wielder",
+    "class": "neutral",
+    "printingType": "base",
+    "cost": 1,
+    "attack": 1,
+    "defense": 2,
+    "keywords": [
+      "fanfare",
+      "lastWords"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "Machina",
+      "Mercenary"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenName": "Assembly Droid or Repair Mode",
+          "count": 1,
+          "zone": "exArea"
+        }
+      },
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ],
+    "parseConfidence": "review"
+  },
+  "PR-170EN": {
+    "keywords": [],
+    "cardType": "follower",
+    "specialType": "token",
+    "cost": 1,
+    "attack": 1,
+    "defense": 1,
+    "traits": [
+      "Machina"
+    ],
+    "abilities": [
+      {
+        "timing": "activated",
+        "cost": {
+          "pp": 0,
+          "engage": true,
+          "buryFromField": {
+            "trait": "Machina"
+          },
+          "buryFieldCount": 3
+        },
+        "effect": {
+          "op": "dealDamage",
+          "amount": 5,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ],
+    "name": "Assembly Droid",
+    "class": "neutral",
+    "printingType": "token",
+    "parseConfidence": "manual"
+  },
+  "PR-171EN": {
+    "keywords": [
+      "quick"
+    ],
+    "cardType": "spell",
+    "specialType": "token",
+    "cost": 1,
+    "traits": [
+      "Machina"
+    ],
+    "abilities": [
+      {
+        "timing": "spell",
+        "quick": true,
+        "effect": {
+          "op": "healLeader",
+          "amount": 1
+        }
+      }
+    ],
+    "name": "Repair Mode",
+    "class": "neutral",
+    "printingType": "token",
+    "parseConfidence": "auto"
+  },
+  "PR-000EN": {
+    "name": "Fighter",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "PR-001EN": {
+    "name": "Harvest Festival",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-002EN": {
+    "name": "Floral Fencer",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "PR-003EN": {
+    "name": "Fate's Hand",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "review",
+    "abilities": []
+  },
+  "PR-004EN": {
+    "name": "Conflagration",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamageAllEnemies",
+          "amount": 5,
+          "followersOnly": true
+        }
+      }
+    ]
+  },
+  "PR-005EN": {
+    "name": "Phantom Howl",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-006EN": {
+    "name": "Dark Offering",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-007EN": {
+    "name": "Elven Princess Mage Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP11-T06EN",
+          "count": 2,
+          "zone": "exArea"
+        }
+      }
+    ]
+  },
+  "PR-008EN": {
+    "name": "Floral Fencer Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "summon",
+              "tokenCardNo": "BP01-T07EN",
+              "tokenName": "Steelclad Knight",
+              "count": 1,
+              "zone": "field"
+            },
+            {
+              "op": "summon",
+              "tokenCardNo": "BP01-T05EN",
+              "tokenName": "Knight",
+              "count": 1,
+              "zone": "field"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "PR-009EN": {
+    "name": "Alchemist's Workshop",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "stack",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "PR-010EN": {
+    "name": "Dragon Warrior Evolved",
+    "class": "dragon",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 3,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-011EN": {
+    "name": "Lilith Evolved",
+    "class": "abyss",
+    "printingType": "evolved",
+    "keywords": [
+      "strike"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "healLeader",
+          "amount": 2
+        }
+      }
+    ]
+  },
+  "PR-012EN": {
+    "name": "Priest of the Cudgel Evolved",
+    "class": "haven",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "banish",
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1,
+            "maxDef": 3
+          }
+        }
+      }
+    ]
+  },
+  "PR-013EN": {
+    "name": "Quickblader",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "PR-014EN": {
+    "name": "Shapeshifting Mage",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "review",
+    "abilities": []
+  },
+  "PR-015EN": {
+    "name": "Path to Purgatory",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 3,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-016EN": {
+    "name": "Aria, Fairy Princess",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "rush",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Put up to 9 Fairy tokens onto your field or into your EX area"
+        }
+      },
+      {
+        "timing": "aura",
+        "effect": {
+          "op": "auraGrantKeyword",
+          "keyword": "rush",
+          "trait": "other Pixie",
+          "excludeSelf": false
+        }
+      }
+    ]
+  },
+  "PR-017EN": {
+    "name": "Angelic Snipe",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "review",
+    "abilities": []
+  },
+  "PR-018EN": {
+    "name": "Angelic Barrage",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamageAllEnemies",
+          "amount": 1,
+          "followersOnly": true
+        },
+        "quick": true
+      }
+    ]
+  },
+  "PR-019EN": {
+    "name": "Demonic Strike",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-020EN": {
+    "name": "Trail of Light",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-021EN": {
+    "name": "Eishin Flash",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-022EN": {
+    "name": "Trial Initiation",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-023EN": {
+    "name": "Lamplit Training of a Witch-to-Be",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 3,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-024EN": {
+    "name": "Tamamo Cross",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-025EN": {
+    "name": "My Solo Drawn to Raindrop Drums",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-026EN": {
+    "name": "Fate's Forecast",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-027EN": {
+    "name": "Baalt, King of the Elves",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-028EN": {
+    "name": "Gunner Maid Seria",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "review",
+    "abilities": []
+  },
+  "PR-029EN": {
+    "name": "Witchbolt",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-030EN": {
+    "name": "Wildfang Dragonewt",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-031EN": {
+    "name": "Precious Bloodfangs",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-032EN": {
+    "name": "Beastcall Aria",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "PR-033EN": {
+    "name": "Archangel Reina",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "PR-035EN": {
+    "name": "Vampiric Fortress",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-036EN": {
+    "name": "Leonidas",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "PR-037EN": {
+    "name": "Bellringer Angel",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "evolve",
+      "lastWords"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-038EN": {
+    "name": "Crystalia Tia",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "review",
+    "abilities": []
+  },
+  "PR-039EN": {
+    "name": "Crystalia Tia Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [
+      "rush"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-040EN": {
+    "name": "Humpty Dumpty",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "PR-041EN": {
+    "name": "Witch of Calamity, Millie Parfait",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "PR-042EN": {
+    "name": "Carrot",
+    "class": "neutral",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-043EN": {
+    "name": "Surefire Bullet",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 4,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-044EN": {
+    "name": "Silver Bolt",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-045EN": {
+    "name": "Elf Bard",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-046EN": {
+    "name": "Oathless Knight Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [
+      "assail"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "PR-047EN": {
+    "name": "Fiery Embrace",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 3,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-048EN": {
+    "name": "Mini Soul Devil",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-049EN": {
+    "name": "Guardian Sun",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-050EN": {
+    "name": "Nature's Guidance",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-051EN": {
+    "name": "Insight",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        },
+        "quick": true
+      }
+    ]
+  },
+  "PR-052EN": {
+    "name": "Transmogrified Wyrm",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-053EN": {
+    "name": "Death's Breath",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-054EN": {
+    "name": "Execution",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-055EN": {
+    "name": "Demonium, Punk Devil",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "bane",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "healLeader",
+          "amount": 2
+        }
+      }
+    ]
+  },
+  "PR-057EN": {
+    "name": "Flower Princess",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-058EN": {
+    "name": "Heroic Entry",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-059EN": {
+    "name": "Magical Bishop",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 1,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-060EN": {
+    "name": "Dragon Summoner Evolved",
+    "class": "dragon",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-061EN": {
+    "name": "Skeleton Fighter",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-062EN": {
+    "name": "Tin Soldier",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-063EN": {
+    "name": "Eggsplosion",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-064EN": {
+    "name": "Woodland Band",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-065EN": {
+    "name": "Unbridled Fury",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": null,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        },
+        "quick": true
+      }
+    ]
+  },
+  "PR-066EN": {
+    "name": "Red-Hot Ritual",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "stack",
+      "fanfare"
+    ],
+    "parseConfidence": "review",
+    "abilities": []
+  },
+  "PR-067EN": {
+    "name": "Dragontamer Evolved",
+    "class": "dragon",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-068EN": {
+    "name": "Ambling Wraith",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "review",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "dealDamage",
+              "amount": 1,
+              "targets": {
+                "type": "enemyLeader"
+              }
+            },
+            {
+              "op": "dealDamage",
+              "amount": 1,
+              "targets": {
+                "type": "selfLeader"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "PR-069EN": {
+    "name": "Birdkeeping Disciple",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "PR-070EN": {
+    "name": "Soul Conversion",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-071EN": {
+    "name": "Winged Inversion",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-072EN": {
+    "name": "Falise, Leonardian Mage",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "review",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 4,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-073EN": {
+    "name": "Maisy, Red Riding Hood",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-074EN": {
+    "name": "Penguin Wizard Evolved",
+    "class": "rune",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "optionalCost",
+          "label": "Discard a spell",
+          "cost": {
+            "op": "discard",
+            "count": 1
+          },
+          "then": {
+            "op": "draw",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "PR-075EN": {
+    "name": "Sacred Plea",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-076EN": {
+    "name": "Lucifer",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "evolve"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-077EN": {
+    "name": "Tweedle Dum, Tweedle Dee Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-078EN": {
+    "name": "Bladed Hedgehog",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-079EN": {
+    "name": "Magical Rook",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-080EN": {
+    "name": "Trinity Dragon",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "intimidate"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "PR-081EN": {
+    "name": "Moriana the Bejeweled",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-082EN": {
+    "name": "Sledgehammer Exorcist",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-083EN": {
+    "name": "Fairy",
+    "class": "forest",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "PR-084EN": {
+    "name": "Fairy Wisp",
+    "class": "forest",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "PR-085EN": {
+    "name": "Knight",
+    "class": "sword",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "PR-086EN": {
+    "name": "Steelclad Knight",
+    "class": "sword",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "PR-087EN": {
+    "name": "Strikeform Golem",
+    "class": "rune",
+    "printingType": "token",
+    "keywords": [
+      "rush"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "PR-088EN": {
+    "name": "Guardform Golem",
+    "class": "rune",
+    "printingType": "token",
+    "keywords": [
+      "ward"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "PR-089EN": {
+    "name": "Dragon",
+    "class": "dragon",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "PR-090EN": {
+    "name": "Hellflame Dragon",
+    "class": "dragon",
+    "printingType": "token",
+    "keywords": [
+      "rush"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "PR-091EN": {
+    "name": "Ghost",
+    "class": "abyss",
+    "printingType": "token",
+    "keywords": [
+      "storm"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-092EN": {
+    "name": "Forest Bat",
+    "class": "abyss",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "PR-093EN": {
+    "name": "Holy Falcon",
+    "class": "haven",
+    "printingType": "token",
+    "keywords": [
+      "storm"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "PR-094EN": {
+    "name": "Holy Tiger",
+    "class": "haven",
+    "printingType": "token",
+    "keywords": [
+      "rush"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "PR-095EN": {
+    "name": "Elf Song",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-096EN": {
+    "name": "Gemstaff Commander",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "review",
+    "abilities": []
+  },
+  "PR-097EN": {
+    "name": "Flame Destroyer",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "rush"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-098EN": {
+    "name": "Serpent Wrath",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-099EN": {
+    "name": "Spartoi Sergeant",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "PR-100EN": {
+    "name": "Wingy, Chirpy Gemstone Evolved",
+    "class": "haven",
+    "printingType": "evolved",
+    "keywords": [
+      "ward"
+    ],
+    "parseConfidence": "review",
+    "abilities": []
+  },
+  "PR-101EN": {
+    "name": "Frog Cleric",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "PR-102EN": {
+    "name": "Purehearted Singer",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-103EN": {
+    "name": "Star Phoenix",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-104EN": {
+    "name": "Star Phoenix Evolved",
+    "class": "dragon",
+    "printingType": "evolved",
+    "keywords": [
+      "strike"
+    ],
+    "parseConfidence": "review",
+    "abilities": []
+  },
+  "PR-105EN": {
+    "name": "Zoe, Princess of Goldenia",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-106EN": {
+    "name": "Zoe, Princess of Goldenia Evolved",
+    "class": "haven",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-107EN": {
+    "name": "Draconir, Knuckle Dragon Evolved",
+    "class": "dragon",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 4,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-108EN": {
+    "name": "King Elephant Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [
+      "storm",
+      "ward"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-109EN": {
+    "name": "Dark Alice",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "strike",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-110EN": {
+    "name": "Blessed Fairy Dancer",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-111EN": {
+    "name": "Fairy Torrent",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-112EN": {
+    "name": "Avant Blader Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-113EN": {
+    "name": "Round Table Assembly",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-114EN": {
+    "name": "Magic Owl",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "review",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-115EN": {
+    "name": "Dragon's Nest",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-116EN": {
+    "name": "Razory Claw",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-117EN": {
+    "name": "Andromeda",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-118EN": {
+    "name": "Steel Demolitionist",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-119EN": {
+    "name": "Safira, Synthetic Beast",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-120EN": {
+    "name": "Feena, Dynamite Daredevil",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-121EN": {
+    "name": "Ginsetsu, Great Fox",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "PR-122EN": {
+    "name": "Fashionista Nelcha",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-123EN": {
+    "name": "Blazing Breath",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 4,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-126EN": {
+    "name": "Gilnelise, Omen of Craving",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "drain",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 1,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-129EN": {
+    "name": "Greenwood Guardian",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-130EN": {
+    "name": "Adept Thief",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "draw",
+              "count": 1
+            },
+            {
+              "op": "discard",
+              "count": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "PR-131EN": {
+    "name": "Shikigami Summons",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-132EN": {
+    "name": "Whitefrost Whisper",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-133EN": {
+    "name": "Kasha",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-134EN": {
+    "name": "Boost Kicker",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-135EN": {
+    "name": "Acolyte's Light",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "noop",
+          "label": "Banish it and give your leader [def]+2"
+        },
+        "quick": true
+      }
+    ]
+  },
+  "PR-136EN": {
+    "name": "Kuon, Founder of Onmyodo",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-137EN": {
+    "name": "Genesis of Legend",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "destroy",
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "PR-138EN": {
+    "name": "Dragonrend Quake",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamageCompare",
+          "targets": {
+            "type": "anyFollower",
+            "count": 2
+          }
+        },
+        "quick": true
+      }
+    ]
+  },
+  "PR-139EN": {
+    "name": "Heavenly Aegis",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "aura",
+      "evolve"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-140EN": {
+    "name": "Cerberus",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-141EN": {
+    "name": "Shinobu Kudo",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-142EN": {
+    "name": "Anzu Futaba",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-143EN": {
+    "name": "Sparkling☆Days",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-144EN": {
+    "name": "Sae Kobayakawa",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-145EN": {
+    "name": "Precocious Little Devil",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 3,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-146EN": {
+    "name": "Riamu's Reverie",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "playCostIncrease",
+          "amountPerFollower": 1
+        }
+      }
+    ]
+  },
+  "PR-147EN": {
+    "name": "Sweet Sentiments",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "noop",
+          "label": "Deal it 3 damage and give [atk]+1 to each follower that costs 1 or less on your field"
+        }
+      }
+    ]
+  },
+  "PR-148EN": {
+    "name": "Risa Matoba",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-149EN": {
+    "name": "Natalia",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-150EN": {
+    "name": "Miku Maekawa",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "strike"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "PR-151EN": {
+    "name": "Nagi Hisakawa",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "draw",
+              "count": 1
+            },
+            {
+              "op": "discard",
+              "count": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "PR-152EN": {
+    "name": "Fumika Sagisawa",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "searchDeckChoose",
+              "filter": {
+                "cardType": "follower",
+                "minCost": 3,
+                "maxCost": 3
+              },
+              "lookAt": 40,
+              "to": "field",
+              "remainderTo": "deckBottom"
+            },
+            {
+              "op": "searchDeckChoose",
+              "filter": {
+                "cardType": "follower",
+                "minCost": 1,
+                "maxCost": 1
+              },
+              "lookAt": 40,
+              "to": "field",
+              "remainderTo": "deckBottom"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "PR-153EN": {
+    "name": "Enchanted Slippers",
+    "class": "neutral",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "healLeader",
+              "amount": 1
+            },
+            {
+              "op": "draw",
+              "count": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "PR-154EN": {
+    "name": "Enchanted Dress",
+    "class": "neutral",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "healLeader",
+              "amount": 1
+            },
+            {
+              "op": "draw",
+              "count": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "PR-155EN": {
+    "name": "Assault Jaguar",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-156EN": {
+    "name": "Grand Acquisition",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-157EN": {
+    "name": "Golem's Rampage",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 3,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-158EN": {
+    "name": "Mirror of Truth",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "stack",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-159EN": {
+    "name": "Seabrand Dragon",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "overflow"
+          },
+          "then": {
+            "op": "grantKeyword",
+            "keyword": "storm",
+            "targets": {
+              "type": "self"
+            }
+          }
+        },
+        "condition": {
+          "type": "overflow"
+        }
+      }
+    ]
+  },
+  "PR-160EN": {
+    "name": "Antelope Pelt Warrior",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 1,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-161EN": {
+    "name": "Berserker's Pelt",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-162EN": {
+    "name": "Gravity Grappler",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-163EN": {
+    "name": "Fall from Grace",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-164EN": {
+    "name": "Hulking Giant",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 3,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-165EN": {
+    "name": "Yuzuki, Righteous Demon",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "bane",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-166EN": {
+    "name": "Genesis Dragon",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "storm"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "PR-167EN": {
+    "name": "Swordsman",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "review",
+    "abilities": []
+  },
+  "PR-168EN": {
+    "name": "Spinaria, Keeper of Enigmas",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-169EN": {
+    "name": "Dimension Shift",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-172EN": {
+    "name": "Naterran Great Tree",
+    "class": "neutral",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-174EN": {
+    "name": "Azazel Evolved",
+    "class": "abyss",
+    "printingType": "evolved",
+    "keywords": [
+      "bane"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-175EN": {
+    "name": "Fairy Dragon",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-176EN": {
+    "name": "Themis's Decree",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-177EN": {
+    "name": "Badb Catha",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-178EN": {
+    "name": "Ghastly Treant",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-179EN": {
+    "name": "Swift Tigress",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "PR-180EN": {
+    "name": "Mechanized Lifeform",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "draw",
+              "count": 1
+            },
+            {
+              "op": "summon",
+              "tokenCardNo": "BP17-T18EN",
+              "count": 1,
+              "zone": "exArea"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "PR-181EN": {
+    "name": "Whirlwind Pteranodon",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-182EN": {
+    "name": "Bone Drone",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "lastWords"
+    ],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "PR-183EN": {
+    "name": "Ironknuckle Nun",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "PR-184EN": {
+    "name": "Colorful Cook",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-185EN": {
+    "name": "Mechagun Wielder",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "draw",
+              "count": 1
+            },
+            {
+              "op": "summon",
+              "tokenCardNo": "BP17-T17EN",
+              "count": 1,
+              "zone": "exArea"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "PR-186EN": {
+    "name": "Desert Pathfinder",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-187EN": {
+    "name": "Mechawing Angel",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-188EN": {
+    "name": "Sekhmet",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 4,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-189EN": {
+    "name": "Sahaquiel Evolved",
+    "class": "neutral",
+    "printingType": "evolved",
+    "keywords": [
+      "rush",
+      "assail"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-191EN": {
+    "name": "Lloyd",
+    "class": "forest",
+    "printingType": "token",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-192EN": {
+    "name": "Victoria",
+    "class": "forest",
+    "printingType": "token",
+    "keywords": [
+      "rush",
+      "assail",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-193EN": {
+    "name": "Thorn Burst",
+    "class": "forest",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-194EN": {
+    "name": "Magic Sediment",
+    "class": "rune",
+    "printingType": "token",
+    "keywords": [
+      "stack"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "PR-195EN": {
+    "name": "Otohime's Vanguard",
+    "class": "dragon",
+    "printingType": "token",
+    "keywords": [
+      "rush"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "PR-196EN": {
+    "name": "Serpent",
+    "class": "abyss",
+    "printingType": "token",
+    "keywords": [
+      "bane"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "PR-198EN": {
+    "name": "Puppet",
+    "class": "neutral",
+    "printingType": "token",
+    "keywords": [
+      "rush"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "PR-199EN": {
+    "name": "Ancient Artifact",
+    "class": "neutral",
+    "printingType": "token",
+    "keywords": [
+      "rush"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "PR-200EN": {
+    "name": "Mystic Artifact",
+    "class": "neutral",
+    "printingType": "token",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-202EN": {
+    "name": "Ephemera, Sword Angel",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "assail",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-205EN": {
+    "name": "Heartless Battle",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-206EN": {
+    "name": "Swordflash Panther",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-207EN": {
+    "name": "Summoning Drills",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "stack",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-208EN": {
+    "name": "Zealot of Disdain",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 1,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-209EN": {
+    "name": "Gift for Bloodkin",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-210EN": {
+    "name": "Vengeful Radiance",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 4,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-211EN": {
+    "name": "Summon Bloodkin",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "summon",
+              "tokenCardNo": "BP01-T15EN",
+              "tokenName": "Forest Bat",
+              "count": 1,
+              "zone": "exArea"
+            },
+            {
+              "op": "summon",
+              "tokenCardNo": "BP01-T15EN",
+              "tokenName": "Forest Bat",
+              "count": 1,
+              "zone": "exArea"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "PR-212EN": {
+    "name": "Setus, the Beastblade Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [
+      "ward"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-213EN": {
+    "name": "Leod, the Crescent Blade Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [
+      "aura",
+      "intimidate"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-214EN": {
+    "name": "Eleanor, Cosmic Flower Evolved",
+    "class": "rune",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-215EN": {
+    "name": "Marion, Elegant Dragonewt Evolved",
+    "class": "dragon",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-216EN": {
+    "name": "Doublame, Duke and Dame Evolved",
+    "class": "abyss",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 4,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-217EN": {
+    "name": "Marlone, Light of Balance Evolved",
+    "class": "haven",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-218EN": {
+    "name": "Maisha, Hero of Purgation Evolved",
+    "class": "neutral",
+    "printingType": "evolved",
+    "keywords": [
+      "strike"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-219EN": {
+    "name": "Grand Summoning",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Search your deck for a follower that costs 3 or less and a follower that costs 5 or less and summon them"
+            },
+            {
+              "op": "noop",
+              "label": "If your leader is [runecraft], also search your deck for a follower that costs 7 or less, summon it, and recover 2 play "
+            },
+            {
+              "op": "noop",
+              "label": "Shuffle your deck"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "PR-220EN": {
+    "name": "Spawn of the Abyss Evolved",
+    "class": "abyss",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "startOfEnd",
+        "effect": {
+          "op": "noop",
+          "label": "At the start of your end phase, if your leader is [abysscraft], give your leader [def]+4, draw 2 cards, then each oppone"
+        }
+      }
+    ]
+  },
+  "PR-221EN": {
+    "name": "Colosseum on High",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-222EN": {
+    "name": "Beastfaced Mage",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-223EN": {
+    "name": "Monochrome Duel",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "storm"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-224EN": {
+    "name": "Happy Pig",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "healLeader",
+          "amount": 1
+        }
+      }
+    ]
+  },
+  "PR-225EN": {
+    "name": "Valkyrie of Chaos",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "PR-226EN": {
+    "name": "Valkyrie of Chaos Evolved",
+    "class": "neutral",
+    "printingType": "evolved",
+    "keywords": [
+      "ward"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "PR-227EN": {
+    "name": "Junk",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "PR-228EN": {
+    "name": "Lupine Axeman",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-229EN": {
+    "name": "Veridic Discovery",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "PR-230EN": {
+    "name": "Ouroboros",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-231EN": {
+    "name": "Unleash the Nightmare",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-232EN": {
+    "name": "Zealot of Repose",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-233EN": {
+    "name": "Rabbit Mage Evolved",
+    "class": "rune",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-235EN": {
+    "name": "Dragon Oracle",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "choose",
+          "min": 1,
+          "max": 1,
+          "options": [
+            {
+              "label": "(1) Increase your max play points by 1",
+              "effect": {
+                "op": "increaseMaxPp",
+                "amount": 1
+              }
+            },
+            {
+              "label": "(2) Draw a card",
+              "effect": {
+                "op": "draw",
+                "count": 1
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "PR-236EN": {
+    "name": "Substitution",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-237EN": {
+    "name": "Savage Swordsman",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-238EN": {
+    "name": "Absolute Zeroblade",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 1,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-239EN": {
+    "name": "Dragonclad Blademaster",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-240EN": {
+    "name": "Salome",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "healLeader",
+          "amount": 1
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing fanfare timing"
+        }
+      }
+    ]
+  },
+  "PR-241EN": {
+    "name": "Moriae Encomium",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-242EN": {
+    "name": "Paradise Vanguard",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-243EN": {
+    "name": "Paradise Vanguard Evolved",
+    "class": "neutral",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-244EN": {
+    "name": "Nonja, Silent Maid",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-247EN": {
+    "name": "Windflower Tiger",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-248EN": {
+    "name": "Pompous Summons",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-249EN": {
+    "name": "Creative Conjurer",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-250EN": {
+    "name": "Tico, Mysterian Spellnerd",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-251EN": {
+    "name": "Gallant Dragonewt",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-252EN": {
+    "name": "Armor Burst",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 3,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-253EN": {
+    "name": "Spirit Curator",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-254EN": {
+    "name": "Azurite Maiden",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-255EN": {
+    "name": "Fallen Shot",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-256EN": {
+    "name": "Runie, Resolute Diviner",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-257EN": {
+    "name": "Prim, Innocent Princess",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "PR-258EN": {
+    "name": "Demonium, Clash Devil",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "assail",
+      "bane",
+      "drain",
+      "strike",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-259EN": {
+    "name": "Blue Storm Supreme Dragon, Glory Maelstrom Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [
+      "storm"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-260EN": {
+    "name": "Colette, Holy Gunner Evolved",
+    "class": "haven",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-261EN": {
+    "name": "Vuella, One-Winged Demon",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-262EN": {
+    "name": "Tenko's Shrine",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-263EN": {
+    "name": "Tempered Aether",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-264EN": {
+    "name": "Crystalia Lily Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-265EN": {
+    "name": "Dual Rage",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "advanced"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-268EN": {
+    "name": "Celia, Sky Commander",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-269EN": {
+    "name": "XXI. Zelgenea, O Great World ADVANCED",
+    "class": "neutral",
+    "printingType": "evolved",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 4,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-270EN": {
+    "name": "Magical Augmentation",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 4,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-271EN": {
+    "name": "Stringmaster",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-272EN": {
+    "name": "Outlaw Gunner",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-273EN": {
+    "name": "Rivaylian Deputy",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "draw",
+              "count": 1
+            },
+            {
+              "op": "discard",
+              "count": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "PR-274EN": {
+    "name": "Balefire Wrenchsmith",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-275EN": {
+    "name": "Hazhan, Demonblade Knight",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "assail",
+      "bane",
+      "drain",
+      "evolve"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-276EN": {
+    "name": "Hazhan, Demonblade Knight Evolved",
+    "class": "abyss",
+    "printingType": "evolved",
+    "keywords": [
+      "assail",
+      "bane",
+      "drain",
+      "strike"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-277EN": {
+    "name": "Revolver Eagle",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "fanfare"
+    ],
+    "parseConfidence": "review",
+    "abilities": []
+  },
+  "PR-278EN": {
+    "name": "Goblin Queen",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 3,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-279EN": {
+    "name": "Quixotic Adventurer",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "PR-280EN": {
+    "name": "Quixotic Adventurer Evolved",
+    "class": "neutral",
+    "printingType": "evolved",
+    "keywords": [
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-281EN": {
+    "name": "Greatpick Corpse",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-282EN": {
+    "name": "Radical Gunslinger",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-283EN": {
+    "name": "Dragonic Overlord Evolved",
+    "class": "dragon",
+    "printingType": "evolved",
+    "keywords": [
+      "storm"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-284EN": {
+    "name": "Oldblood King",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "assail",
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-285EN": {
+    "name": "Oldblood King Evolved",
+    "class": "abyss",
+    "printingType": "evolved",
+    "keywords": [
+      "rush",
+      "assail"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-286EN": {
+    "name": "Michelle, the Mind Reader",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "PR-287EN": {
+    "name": "Reinhardt, the Deathless Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [
+      "assail"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-289EN": {
+    "name": "Wildfire Tyrannosaur",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 3,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-290EN": {
+    "name": "Dire Bond",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-298EN": {
+    "name": "Teachings of Creation",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "stack",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-300EN": {
+    "name": "Bunny & Baron, Specter Duo",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "PR-301EN": {
+    "name": "Lucille, Keeper of Relics",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-302EN": {
+    "name": "Giant Pastures",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-303EN": {
+    "name": "Prudent General Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [
+      "rush"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-304EN": {
+    "name": "Chain of Calling",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "PR-305EN": {
+    "name": "Galua of Two Breaths",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-306EN": {
+    "name": "Deathbringer Evolved",
+    "class": "abyss",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-307EN": {
+    "name": "Paladin of Clemency",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "draw",
+              "count": 1
+            },
+            {
+              "op": "discard",
+              "count": 1
+            }
+          ]
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "PR-308EN": {
+    "name": "Vagabond Lizard",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-317EN": {
+    "name": "Primal Giant",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-318EN": {
+    "name": "Tear Knight, Theo",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "assail",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-319EN": {
+    "name": "Tear Knight, Cyprus",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-320EN": {
+    "name": "Solitary Knight, Gancelot",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "assail",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-321EN": {
+    "name": "Barcgal",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-322EN": {
+    "name": "Jumping Jill",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-323EN": {
+    "name": "Flame of Promise, Aermo",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-324EN": {
+    "name": "Flame of Hope, Aermo",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-325EN": {
+    "name": "Darkness Maiden, Macha",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-326EN": {
+    "name": "Dark Cat",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-336EN": {
+    "name": "Purple Trapezist",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "choose",
+          "min": 1,
+          "max": 1,
+          "options": [
+            {
+              "label": "(1) Draw a card",
+              "effect": {
+                "op": "draw",
+                "count": 1
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "PR-337EN": {
+    "name": "Blaster Dark",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "mill",
+          "count": 2
+        }
+      }
+    ]
+  },
+  "PR-338EN": {
+    "name": "Battle Sister, Cocoa",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-339EN": {
+    "name": "Leod, the Crescent Blade",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "aura",
+      "evolve",
+      "intimidate"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-341EN": {
+    "name": "Wings of Lust",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-342EN": {
+    "name": "Mistolina, Forest Princess",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "strike",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-343EN": {
+    "name": "Merlin Evolved",
+    "class": "rune",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-344EN": {
+    "name": "Augmentation Bestowal",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-345EN": {
+    "name": "Oceanus",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-346EN": {
+    "name": "Dutiful Steed",
+    "class": "neutral",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-347EN": {
+    "name": "Fairy Slugger",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "PR-348EN": {
+    "name": "Fairy Slugger Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP11-T06EN",
+          "count": 1,
+          "zone": "exArea"
+        }
+      }
+    ]
+  },
+  "PR-349EN": {
+    "name": "Resolve of the Nine-Tailed Fox",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "storm"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-350EN": {
+    "name": "King's Welcome",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-351EN": {
+    "name": "Jeno, Fanged Tyrant",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-352EN": {
+    "name": "Riven Earth",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 4,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-353EN": {
+    "name": "Rockback Ankylosaurus",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "review",
+    "abilities": []
+  },
+  "PR-354EN": {
+    "name": "Howling Conflagration",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-355EN": {
+    "name": "Mechasaw Deathbringer",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-356EN": {
+    "name": "Sealed Tome",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-359EN": {
+    "name": "Lyrial, Archer Throne",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamageAllEnemies",
+          "amount": 2,
+          "followersOnly": false
+        }
+      }
+    ]
+  },
+  "PR-360EN": {
+    "name": "Seraphic Blade",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-361EN": {
+    "name": "Changewing Cherub",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "review",
+    "abilities": []
+  },
+  "PR-362EN": {
+    "name": "Changewing Cherub Evolved",
+    "class": "neutral",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-363EN": {
+    "name": "Kagero, Swordbound Soul",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "bane",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "mill",
+          "count": 2
+        }
+      }
+    ]
+  },
+  "PR-365EN": {
+    "name": "Send 'Em Packing",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-366EN": {
+    "name": "Lina & Lena, Twin Souls",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "strike"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-367EN": {
+    "name": "Outrunning the Encroaching Heat",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-368EN": {
+    "name": "Special Week",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "peekDeck",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-369EN": {
+    "name": "Fluffy Angel",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "healLeader",
+          "amount": 1
+        }
+      }
+    ]
+  },
+  "PR-370EN": {
+    "name": "Piercye, Queen of Frost",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 1,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-371EN": {
+    "name": "Piercye, Queen of Frost Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 1,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-372EN": {
+    "name": "Fairy Healer",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "PR-373EN": {
+    "name": "Hero of the Hunt",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-374EN": {
+    "name": "Night on the Town",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-375EN": {
+    "name": "Hermit of Truth",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-376EN": {
+    "name": "March of the Dragonspring",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-377EN": {
+    "name": "Undying Resolve",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "bane"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-378EN": {
+    "name": "Full Moon Leap",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-379EN": {
+    "name": "Chamber of Cleansing",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-380EN": {
+    "name": "Glittering Gold",
+    "class": "sword",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-381EN": {
+    "name": "Fox of Invitation",
+    "class": "haven",
+    "printingType": "token",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "PR-382EN": {
+    "name": "Angel's Blessing",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-383EN": {
+    "name": "Hozumi, Enchanting Hostess",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-384EN": {
+    "name": "Hozumi, Enchanting Hostess Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-385EN": {
+    "name": "Melvie, Princess Witch",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-386EN": {
+    "name": "Stay in Paradise",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-387EN": {
+    "name": "Ardent Torch",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "noop",
+          "label": "Deal 1 damage to it and each enemy leader, and draw a card"
+        }
+      }
+    ]
+  },
+  "PR-388EN": {
+    "name": "Evolution Point",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "At the start of the game, the player going second gets 3 Evolution Points"
+            },
+            {
+              "op": "noop",
+              "label": "When paying an [evolve] cost, you may use an Evolution Point in lieu of 1 play point by turning it facedown"
+            },
+            {
+              "op": "noop",
+              "label": "(Only one can be used per evolution.)"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "PR-389EN": {
+    "name": "Super-Evolution Point",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "At the start of the game, each player gets 1 Super-Evolution Point"
+            },
+            {
+              "op": "noop",
+              "label": "When paying an [evolve] cost, you may additionally use a Super-Evolution Point by turning it facedown to give the follow"
+            }
+          ]
+        }
+      },
+      {
+        "timing": "onSuperEvolve",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "abilities it has"
+            },
+            {
+              "op": "noop",
+              "label": "Use only on turn 7 or later when going first and turn 6 or later when going second"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "PR-390EN": {
+    "name": "Leah, Bellringer Angel",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-392EN": {
+    "name": "Phildau, Lionheart Ward",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "PR-393EN": {
+    "name": "Phildau, Lionheart Ward Evolved",
+    "class": "neutral",
+    "printingType": "evolved",
+    "keywords": [
+      "ward"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-394EN": {
+    "name": "Apollo, Heaven's Envoy",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 1,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-396EN": {
+    "name": "Lily, Crystalian Innocence",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-397EN": {
+    "name": "Luminous Lancetrooper",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-398EN": {
+    "name": "Ms. Miranda, Adored Academic",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "PR-399EN": {
+    "name": "Marion, Ravishing Dragonewt",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "draw",
+              "count": 1
+            },
+            {
+              "op": "discard",
+              "count": 1
+            }
+          ]
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "PR-400EN": {
+    "name": "Soul Predation",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-401EN": {
+    "name": "Pact of the Beast Princess",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-402EN": {
+    "name": "Ceres, Blue Rose Maiden",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "bane"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-403EN": {
+    "name": "Serene Sanctuary",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "healLeader",
+          "amount": 1
+        }
+      }
+    ]
+  },
+  "PR-404EN": {
+    "name": "Amalia, Luxsteel Paladin",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-405EN": {
+    "name": "Feybolt Archer",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP11-T06EN",
+          "count": 1,
+          "zone": "field"
+        }
+      }
+    ]
+  },
+  "PR-406EN": {
+    "name": "Bumpkin Recruit",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-407EN": {
+    "name": "Chain Lightning",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 4,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-408EN": {
+    "name": "Whitefrost Blizzard",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-409EN": {
+    "name": "Sanguine Necklace",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 1,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-410EN": {
+    "name": "Lunerian Paladin",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "PR-411EN": {
+    "name": "Lunerian Paladin Evolved",
+    "class": "haven",
+    "printingType": "evolved",
+    "keywords": [
+      "ward"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-419EN": {
+    "name": "Vodka",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "rush"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-420EN": {
+    "name": "Mayano Top Gun",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "rush",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-421EN": {
+    "name": "Acid Golem Evolved",
+    "class": "rune",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "review",
+    "abilities": []
+  },
+  "PR-422EN": {
+    "name": "Aiela, Devoted Knight",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-423EN": {
+    "name": "Devoted Dragon",
+    "class": "dragon",
+    "printingType": "token",
+    "keywords": [
+      "ward"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-424EN": {
+    "name": "Lishenna, Melodious Destruction",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-425EN": {
+    "name": "Aerin, Crystalian Frostward",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-426EN": {
+    "name": "Aerin, Crystalian Frostward Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [
+      "ward"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-428EN": {
+    "name": "Juno, Visionary Alchemist",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-429EN": {
+    "name": "Fan of Otohime",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-431EN": {
+    "name": "Salefa, Guardian of Water",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-439EN": {
+    "name": "Acid Golem",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-440EN": {
+    "name": "Regal Wildcat",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buff",
+          "atk": 2,
+          "def": 2,
+          "targets": {
+            "type": "selfFollower",
+            "count": 1,
+            "excludeSelf": true
+          }
+        }
+      }
+    ]
+  },
+  "PR-443EN": {
+    "name": "Baby Carbuncle",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-444EN": {
+    "name": "Crystalia Lily",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-445EN": {
+    "name": "Resolve of the Fallen",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 4,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-446EN": {
+    "name": "Fieran, Havensent Wind God",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-447EN": {
+    "name": "Total Domination",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-448EN": {
+    "name": "Aenea, Creative Amethyst",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "PR-449EN": {
+    "name": "Forte, Blackwing Dragoon",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "aura",
+      "intimidate",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-451EN": {
+    "name": "Airi Totoki [Anniversary Princess]",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 3,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-452EN": {
+    "name": "Cute Earrings",
+    "class": "neutral",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-453EN": {
+    "name": "Cute Pendant",
+    "class": "neutral",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "healLeader",
+              "amount": 1
+            },
+            {
+              "op": "draw",
+              "count": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "PR-454EN": {
+    "name": "Cute Tiara",
+    "class": "neutral",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "healLeader",
+              "amount": 1
+            },
+            {
+              "op": "draw",
+              "count": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "PR-455EN": {
+    "name": "Cool Earrings",
+    "class": "neutral",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-456EN": {
+    "name": "Cool Pendant",
+    "class": "neutral",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "healLeader",
+              "amount": 1
+            },
+            {
+              "op": "draw",
+              "count": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "PR-457EN": {
+    "name": "Cool Tiara",
+    "class": "neutral",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "healLeader",
+              "amount": 1
+            },
+            {
+              "op": "draw",
+              "count": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "PR-458EN": {
+    "name": "Passion Earrings",
+    "class": "neutral",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-459EN": {
+    "name": "Passion Pendant",
+    "class": "neutral",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "healLeader",
+              "amount": 1
+            },
+            {
+              "op": "draw",
+              "count": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "PR-460EN": {
+    "name": "Passion Tiara",
+    "class": "neutral",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "healLeader",
+              "amount": 1
+            },
+            {
+              "op": "draw",
+              "count": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "PR-461EN": {
+    "name": "Anastasia [All-Out Vacation]",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "recoverPp",
+          "amount": 2
+        }
+      }
+    ]
+  },
+  "PR-462EN": {
+    "name": "Miku Maekawa [Summer Cat Rendezvous]",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "strike"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "PR-463EN": {
+    "name": "Summer Sea Breeze",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-464EN": {
+    "name": "Miho Kohinata [Summer Firsts]",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "peekDeck",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-465EN": {
+    "name": "Mio Honda [Mermaid Star]",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {},
+          "lookAt": 2,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "PR-466EN": {
+    "name": "Beachside Memories",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "noop",
+          "label": "Deal it 5 damage and, if there's a Passion follower on your field, draw a card"
+        },
+        "quick": true
+      }
+    ]
+  },
+  "PR-467EN": {
+    "name": "Summer Encounter",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "destroy",
+          "targets": {
+            "type": "anyFollower",
+            "count": 1
+          }
+        },
+        "quick": true
+      }
+    ]
+  },
+  "PR-468EN": {
+    "name": "Heroic Resolve",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 4,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "PR-469EN": {
+    "name": "Sunny Day Encounter",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-470EN": {
+    "name": "Fruits of Wisdom",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-471EN": {
+    "name": "Newfound Allies",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-472EN": {
+    "name": "Steeled Hopes",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-473EN": {
+    "name": "Unlikely Fellowship",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-474EN": {
+    "name": "Amy, Psychopomp Guide",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "PR-475EN": {
+    "name": "Amy, Psychopomp Guide Evolved",
+    "class": "abyss",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "PR-476EN": {
+    "name": "Friendly Embrace",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "PR-477EN": {
+    "name": "Blaster Blade Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-479EN": {
+    "name": "Bladerights Lieutenant",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "PR-480EN": {
+    "name": "Roly-Poly Mk II",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  }
+}

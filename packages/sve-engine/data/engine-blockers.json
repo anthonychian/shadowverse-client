@@ -1,0 +1,370 @@
+{
+  "primitives": [
+    {
+      "id": "necrocharge",
+      "status": "implemented",
+      "notes": "Condition type necrocharge with count N — cemetery size >= N"
+    },
+    {
+      "id": "earthRite",
+      "status": "implemented",
+      "notes": "Condition earthRite; activate cost earthRite; addStack effect; stack counters on field"
+    },
+    {
+      "id": "transform",
+      "status": "implemented",
+      "notes": "In-place follower transformation to token printing"
+    },
+    {
+      "id": "returnToHand",
+      "status": "implemented",
+      "notes": "Return field followers to hand"
+    },
+    {
+      "id": "reviveToField",
+      "status": "implemented",
+      "notes": "Revive activating card from cemetery to field"
+    },
+    {
+      "id": "countdown",
+      "status": "planned",
+      "notes": "Amulet countdown timers and end-of-turn tick — not present in current EN card text scrape"
+    },
+    {
+      "id": "enhance",
+      "status": "planned",
+      "notes": "Optional PP cost when playing spells from hand — not present in current EN card text scrape"
+    },
+    {
+      "id": "spellboost",
+      "status": "planned",
+      "notes": "Runecraft spellboost counter — not present in current EN card text scrape"
+    },
+    {
+      "id": "accelerate",
+      "status": "planned",
+      "notes": "Play follower as cheap spell — not present in current EN card text scrape"
+    },
+    {
+      "id": "fuse",
+      "status": "planned",
+      "notes": "Fuse hand cards into other cards — not present in current EN card text scrape"
+    },
+    {
+      "id": "crest",
+      "status": "planned",
+      "notes": "Leader crest zone and effects — not present in current EN card text scrape"
+    },
+    {
+      "id": "lesson",
+      "status": "implemented",
+      "notes": "Lesson (X) optionalCost / activate banishFromExArea Magical Item trait"
+    },
+    {
+      "id": "increaseMaxPp",
+      "status": "implemented",
+      "notes": "increaseMaxPp effect increases max PP and current PP"
+    },
+    {
+      "id": "variableDamage",
+      "status": "implemented",
+      "notes": "traitFieldCount, namedIdentityFieldCount, targetAttack, chosenNumber, cemeteryFilterCount, selfDefense, maxPp, handExAreaTotal damage amounts"
+    },
+    {
+      "id": "putOnBottomOfDeck",
+      "status": "implemented",
+      "notes": "putOnBottomOfDeck moves selected field follower to deck bottom"
+    },
+    {
+      "id": "putOnTopOfDeck",
+      "status": "implemented",
+      "notes": "putOnTopOfDeck moves selected field follower to deck top"
+    },
+    {
+      "id": "indestructible",
+      "status": "implemented",
+      "notes": "grantIndestructible blocks destroy-by-ability"
+    },
+    {
+      "id": "sanguine",
+      "status": "implemented",
+      "notes": "Condition sanguine — leader defense <= 7"
+    },
+    {
+      "id": "inExArea",
+      "status": "implemented",
+      "notes": "Condition inExArea / sourceInExArea for EX-area triggers"
+    },
+    {
+      "id": "handExAreaTotal",
+      "status": "implemented",
+      "notes": "DamageAmount handExAreaTotal — hand + EX area card count"
+    },
+    {
+      "id": "maxDefTarget",
+      "status": "implemented",
+      "notes": "TargetSelector maxDef on enemy followers"
+    },
+    {
+      "id": "banishFromDeck",
+      "status": "implemented",
+      "notes": "banishFromDeck — search deck and banish up to N cards"
+    },
+    {
+      "id": "onLeaveField",
+      "status": "implemented",
+      "notes": "onLeaveField timing fires when card leaves field (any destination)"
+    },
+    {
+      "id": "onDamaged",
+      "status": "implemented",
+      "notes": "onDamaged timing and grantOnDamaged for damage triggers"
+    },
+    {
+      "id": "onAllyEvolve",
+      "status": "implemented",
+      "notes": "onAllyEvolve timing when ally follower evolves"
+    },
+    {
+      "id": "ignoreWard",
+      "status": "implemented",
+      "notes": "grantIgnoresWard / ignoresWard bypasses ward targeting"
+    },
+    {
+      "id": "defAsAttackAura",
+      "status": "implemented",
+      "notes": "defAsAttackAura — followers strike using defense as damage"
+    },
+    {
+      "id": "drawDynamic",
+      "status": "implemented",
+      "notes": "drawDynamic draws cards equal to a DamageAmount"
+    },
+    {
+      "id": "tutorFromDeckAny",
+      "status": "implemented",
+      "notes": "tutorFromDeckAny searches entire deck for any card"
+    },
+    {
+      "id": "buryEachOpponentDeck",
+      "status": "implemented",
+      "notes": "buryEachOpponentDeck mills top of each opponent deck"
+    },
+    {
+      "id": "targetControllerHandCount",
+      "status": "implemented",
+      "notes": "DamageAmount targetControllerHandCount — selected target's controller hand size"
+    },
+    {
+      "id": "playOpponentCemetery",
+      "status": "implemented",
+      "notes": "playFromOpponentCemetery — select and play card from opponent cemetery for 0 PP"
+    },
+    {
+      "id": "spellchain",
+      "status": "implemented",
+      "notes": "Condition spellchain — distinct spell names in cemetery"
+    },
+    {
+      "id": "buffDynamic",
+      "status": "implemented",
+      "notes": "buffDynamic with DamageAmount atk/def"
+    },
+    {
+      "id": "peekDeck",
+      "status": "implemented",
+      "notes": "peekDeck reveals top N deck cards"
+    },
+    {
+      "id": "dealDamageOtherFollowers",
+      "status": "implemented",
+      "notes": "dealDamageOtherFollowers hits all field followers except source"
+    },
+    {
+      "id": "setStats",
+      "status": "implemented",
+      "notes": "setStats sets follower atk/def override"
+    },
+    {
+      "id": "silence",
+      "status": "implemented",
+      "notes": "silence / silenceOpponents block abilities"
+    },
+    {
+      "id": "dealDamageCompare",
+      "status": "implemented",
+      "notes": "dealDamageCompare — damage first selected = second's attack"
+    },
+    {
+      "id": "fableCounter",
+      "status": "implemented",
+      "notes": "addCounter/removeCounter for named counters like fable"
+    },
+    {
+      "id": "onAbilityDamaged",
+      "status": "implemented",
+      "notes": "onAbilityDamaged timing — non-combat damage only"
+    },
+    {
+      "id": "dynamicPlayCost",
+      "status": "implemented",
+      "notes": "playCostIncrease passive per field follower"
+    },
+    {
+      "id": "grantNextPlayCostReduction",
+      "status": "implemented",
+      "notes": "grantNextPlayCostReduction on next matching card play"
+    }
+  ],
+  "vanguard": {
+    "reason": "Vanguard ride/feed/drive/race zones deferred",
+    "pattern": "\\[ride\\]|\\[feed\\]|on drive|on race|single drive|drive point|vanguard",
+    "cardNos": [
+      "BP05-001EN",
+      "BP08-052EN",
+      "CP01-004EN",
+      "CP01-006EN",
+      "CP01-007EN",
+      "CP01-009EN",
+      "CP01-010EN",
+      "CP01-011EN",
+      "CP01-012EN",
+      "CP01-013EN",
+      "CP01-017EN",
+      "CP01-019EN",
+      "CP01-020EN",
+      "CP01-022EN",
+      "CP01-023EN",
+      "CP01-024EN",
+      "CP01-025EN",
+      "CP01-026EN",
+      "CP01-030EN",
+      "CP01-032EN",
+      "CP01-033EN",
+      "CP01-035EN",
+      "CP01-036EN",
+      "CP01-037EN",
+      "CP01-038EN",
+      "CP01-039EN",
+      "CP01-043EN",
+      "CP01-045EN",
+      "CP01-046EN",
+      "CP01-048EN",
+      "CP01-049EN",
+      "CP01-050EN",
+      "CP01-051EN",
+      "CP01-052EN",
+      "CP01-056EN",
+      "CP01-058EN",
+      "CP01-059EN",
+      "CP01-061EN",
+      "CP01-062EN",
+      "CP01-063EN",
+      "CP01-064EN",
+      "CP01-065EN",
+      "CP01-069EN",
+      "CP01-071EN",
+      "CP01-072EN",
+      "CP01-074EN",
+      "CP01-075EN",
+      "CP01-076EN",
+      "CP01-077EN",
+      "CP01-078EN",
+      "CP01-SP01EN",
+      "CP01-SP03EN",
+      "CP01-SP04EN",
+      "CP01-SP06EN",
+      "CP01-SP07EN",
+      "CP01-SP09EN",
+      "CP01-SP12EN",
+      "CP01-SP13EN",
+      "CP01-SP15EN",
+      "CP01-SP16EN",
+      "CP01-SP18EN",
+      "CP03-008EN",
+      "CP03-009EN",
+      "CP03-012EN",
+      "CP03-019EN",
+      "CP03-024EN",
+      "CP03-033EN",
+      "CP03-034EN",
+      "CP03-035EN",
+      "CP03-050EN",
+      "CP03-051EN",
+      "CP03-054EN",
+      "CP03-060EN",
+      "CP03-071EN",
+      "CP03-073EN",
+      "CP03-087EN",
+      "CP03-088EN",
+      "CP03-090EN",
+      "CP03-092EN",
+      "CP03-095EN",
+      "CP03-101EN",
+      "CP03-108EN",
+      "CP03-109EN",
+      "CP03-112EN",
+      "CP03-114EN",
+      "CP03-116EN",
+      "CP03-120EN",
+      "CP03-122EN",
+      "CP03-126EN",
+      "CP03-127EN",
+      "CSD03a-003EN",
+      "CSD03a-004EN",
+      "CSD03a-006EN",
+      "CSD03a-008EN",
+      "CSD03a-011EN",
+      "CSD03a-016EN",
+      "CSD03b-006EN",
+      "CSD03b-008EN",
+      "CSD03b-010EN",
+      "CSD03b-011EN",
+      "CSD03b-016EN",
+      "ECP01-005EN",
+      "ECP01-006EN",
+      "ECP01-007EN",
+      "ECP01-008EN",
+      "ECP01-014EN",
+      "ECP01-015EN",
+      "ECP01-016EN",
+      "ECP01-017EN",
+      "ECP01-023EN",
+      "ECP01-024EN",
+      "ECP01-025EN",
+      "ECP01-026EN",
+      "ECP01-032EN",
+      "ECP01-033EN",
+      "ECP01-034EN",
+      "ECP01-035EN",
+      "ECP01-041EN",
+      "ECP01-042EN",
+      "ECP01-043EN",
+      "ECP01-044EN",
+      "ECP01-050EN",
+      "ECP01-051EN",
+      "ECP01-052EN",
+      "ECP01-053EN",
+      "ECP01-SP01EN",
+      "ECP01-SP03EN",
+      "ECP01-SP04EN",
+      "ECP01-SP05EN",
+      "ECP01-SP07EN",
+      "ECP01-SP08EN",
+      "ECP01-SP09EN",
+      "ECP01-SP11EN",
+      "ECP01-SP12EN",
+      "ECP01-SP13EN",
+      "ECP01-SP15EN",
+      "ECP01-SP16EN",
+      "ECP01-SP17EN",
+      "ECP01-SP19EN",
+      "ECP01-SP20EN",
+      "ECP01-SP21EN",
+      "ECP01-SP23EN",
+      "ECP01-SP24EN",
+      "PR-337EN",
+      "PR-368EN"
+    ]
+  }
+}

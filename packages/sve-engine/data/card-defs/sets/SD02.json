@@ -1,0 +1,308 @@
+{
+  "SD02-001EN": {
+    "name": "Tsubaki",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "choose",
+          "min": 1,
+          "max": 1,
+          "options": [
+            {
+              "label": "(1) Select an enemy follower on the field and destroy it",
+              "effect": {
+                "op": "destroy",
+                "targets": {
+                  "type": "enemyFollower",
+                  "count": 1
+                }
+              }
+            },
+            {
+              "label": "(2) Give this follower Storm. (Followers with Storm can attack e",
+              "effect": {
+                "op": "grantKeyword",
+                "keyword": "storm",
+                "targets": {
+                  "type": "self"
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "SD02-002EN": {
+    "name": "Latham, Vanguard Captain",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "SD02-003EN": {
+    "name": "Floral Fencer",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "SD02-004EN": {
+    "name": "Floral Fencer Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "review",
+    "abilities": []
+  },
+  "SD02-005EN": {
+    "name": "Moonlight Assassin",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "bane"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "grantKeyword",
+          "keyword": "bane",
+          "targets": {
+            "type": "self"
+          }
+        },
+        "cost": {
+          "pp": 1
+        }
+      }
+    ]
+  },
+  "SD02-006EN": {
+    "name": "White General",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "strike"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "buff",
+          "atk": null,
+          "targets": {
+            "type": "selfFollower",
+            "count": 1,
+            "excludeSelf": true
+          }
+        }
+      }
+    ]
+  },
+  "SD02-007EN": {
+    "name": "Ninja Trainee",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "SD02-008EN": {
+    "name": "Veteran Lancer",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "ward"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SD02-009EN": {
+    "name": "Fencer",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buff",
+          "atk": 1,
+          "def": 1,
+          "targets": {
+            "type": "selfFollower",
+            "count": 1,
+            "excludeSelf": true
+          }
+        }
+      }
+    ]
+  },
+  "SD02-010EN": {
+    "name": "Oathless Knight",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP01-T05EN",
+          "tokenName": "Knight",
+          "count": 1,
+          "zone": "field"
+        }
+      }
+    ]
+  },
+  "SD02-011EN": {
+    "name": "Oathless Knight Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [
+      "assail"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SD02-012EN": {
+    "name": "Quickblader",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "evolve"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SD02-013EN": {
+    "name": "Quickblader Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [
+      "storm"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "SD02-014EN": {
+    "name": "Forge Weaponry",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "SD02-015EN": {
+    "name": "Onslaught",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SD02-016EN": {
+    "name": "Unbridled Fury",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SD02-017EN": {
+    "name": "Goblin",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "SD02-018EN": {
+    "name": "Goblin Evolved",
+    "class": "neutral",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "SD02-019EN": {
+    "name": "Fighter",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "SD02-020EN": {
+    "name": "Angelic Sword Maiden",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "ward"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SD02-LD01EN": {
+    "name": "Erika",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "SD02-T01EN": {
+    "name": "Knight",
+    "class": "sword",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "SD02-T02EN": {
+    "name": "Steelclad Knight",
+    "class": "sword",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  }
+}

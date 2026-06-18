@@ -1,0 +1,368 @@
+{
+  "SD06-001EN": {
+    "name": "Skullfane",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {},
+          "lookAt": 4,
+          "to": "field",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": false
+        }
+      },
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "dealDamageAllEnemies",
+          "amount": 2,
+          "followersOnly": false
+        }
+      }
+    ]
+  },
+  "SD06-002EN": {
+    "name": "Hare of Illusions",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "engage",
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "Banish each follower on the field"
+        },
+        "cost": {
+          "pp": 10,
+          "engage": true,
+          "burySelf": true
+        }
+      }
+    ]
+  },
+  "SD06-003EN": {
+    "name": "Priest of the Cudgel",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "SD06-004EN": {
+    "name": "Priest of the Cudgel Evolved",
+    "class": "haven",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "review",
+    "abilities": []
+  },
+  "SD06-005EN": {
+    "name": "Acolyte's Light",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SD06-006EN": {
+    "name": "Dual Flames",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP01-T17EN",
+          "tokenName": "Holy Tiger",
+          "count": 1,
+          "zone": "field"
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP01-T17EN",
+          "tokenName": "Holy Tiger",
+          "count": 1,
+          "zone": "field"
+        },
+        "cost": {
+          "pp": 2,
+          "engage": true,
+          "burySelf": true
+        }
+      }
+    ]
+  },
+  "SD06-007EN": {
+    "name": "Cruel Priestess",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SD06-008EN": {
+    "name": "Snake Priestess",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "ward"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SD06-009EN": {
+    "name": "Ardent Nun",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "evolve"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "During each opponent's turn, this follower deals 1 more damage"
+        }
+      }
+    ]
+  },
+  "SD06-010EN": {
+    "name": "Ardent Nun Evolved",
+    "class": "haven",
+    "printingType": "evolved",
+    "keywords": [
+      "ward"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "During each opponent's turn, this follower deals 2 more damage"
+        }
+      }
+    ]
+  },
+  "SD06-011EN": {
+    "name": "Guardian Nun",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "amuletOnField"
+          },
+          "then": {
+            "op": "buff",
+            "def": 1,
+            "targets": {
+              "type": "self"
+            }
+          }
+        },
+        "condition": {
+          "type": "amuletOnField"
+        }
+      }
+    ]
+  },
+  "SD06-012EN": {
+    "name": "Guardian Nun Evolved",
+    "class": "haven",
+    "printingType": "evolved",
+    "keywords": [
+      "ward"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "healLeader",
+          "amount": 2
+        }
+      }
+    ]
+  },
+  "SD06-013EN": {
+    "name": "Hallowed Dogma",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SD06-014EN": {
+    "name": "Death Sentence",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SD06-015EN": {
+    "name": "Pinion Prayer",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP01-T16EN",
+          "tokenName": "Holy Falcon",
+          "count": 1,
+          "zone": "field"
+        },
+        "cost": {
+          "pp": 1,
+          "engage": true,
+          "burySelf": true
+        }
+      }
+    ]
+  },
+  "SD06-016EN": {
+    "name": "Beastly Vow",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP01-T17EN",
+          "tokenName": "Holy Tiger",
+          "count": 1,
+          "zone": "field"
+        },
+        "cost": {
+          "pp": 1,
+          "engage": true,
+          "burySelf": true
+        }
+      }
+    ]
+  },
+  "SD06-017EN": {
+    "name": "Angelic Sword Maiden",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "ward"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SD06-018EN": {
+    "name": "Healing Angel",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "SD06-019EN": {
+    "name": "Healing Angel Evolved",
+    "class": "neutral",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "SD06-020EN": {
+    "name": "Angelic Snipe",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "review",
+    "abilities": []
+  },
+  "SD06-LD01EN": {
+    "name": "Eris",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "SD06-T01EN": {
+    "name": "Holy Falcon",
+    "class": "haven",
+    "printingType": "token",
+    "keywords": [
+      "storm"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SD06-T02EN": {
+    "name": "Holy Tiger",
+    "class": "haven",
+    "printingType": "token",
+    "keywords": [
+      "rush"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  }
+}

@@ -24,7 +24,11 @@ function createPlayerView(state, self) {
         cardNo: "HIDDEN",
     }));
     const legalActions = [];
-    if (state.phase === "main" && state.activePlayer === self && !state.pendingChoices) {
+    const blockedByOpponentQuick = state.quickWindow != null && state.quickWindowPlayer !== self;
+    if (state.phase === "main" &&
+        state.activePlayer === self &&
+        !state.pendingChoices &&
+        !blockedByOpponentQuick) {
         legalActions.push("END_MAIN");
         const pp = state.players[self].pp;
         const p = state.players[self];
@@ -48,11 +52,12 @@ function createPlayerView(state, self) {
             }
         }
         for (const card of p.zones.field) {
-            if (!card.engaged && !(0, queries_1.isBoxed)(card, state)) {
-                const canAttack = card.onFieldSinceTurnStart ||
-                    card.evolvedThisTurn ||
-                    (0, queries_1.hasKeyword)(card, "storm", state) ||
-                    (0, queries_1.hasKeyword)(card, "rush", state);
+            if ((0, queries_1.isFieldFollower)(state, card) && !card.engaged && !(0, queries_1.isBoxed)(card, state)) {
+                const canAttack = (0, queries_1.canDeclareAttack)(state, card) &&
+                    (card.onFieldSinceTurnStart ||
+                        card.evolvedThisTurn ||
+                        (0, queries_1.hasKeyword)(card, "storm", state) ||
+                        (0, queries_1.hasKeyword)(card, "rush", state));
                 if (canAttack) {
                     legalActions.push(`ATTACK:${card.instanceId}`);
                     for (const target of (0, queries_1.getLegalAttackTargets)(state, card, self)) {
@@ -79,6 +84,8 @@ function createPlayerView(state, self) {
                     legalActions.push(`ACTIVATE_EP:${card.instanceId}`);
                 }
             }
+            if (!(0, queries_1.isFieldFollower)(state, card))
+                continue;
             // Evolve is allowed even while engaged (e.g. after activating).
             if (!(0, queries_1.isBoxed)(card, state) &&
                 !card.linkedEvoInstanceId &&

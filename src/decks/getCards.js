@@ -1,3 +1,16 @@
+import cardStats from "../engine/card-stats.json";
+
+let statsNameToCardNo = null;
+function cardNoFromStatsName(cardName) {
+  if (!statsNameToCardNo) {
+    statsNameToCardNo = new Map();
+    for (const [cardNo, stats] of Object.entries(cardStats)) {
+      if (stats?.name) statsNameToCardNo.set(stats.name, cardNo);
+    }
+  }
+  return statsNameToCardNo.get(cardName) ?? null;
+}
+
 // Resolve a deck card's image honoring a per-deck rarity/art choice. `art` is the
 // deck's optional { name: cardNo } map saved by the builder; when a card has a
 // chosen printing, use that printing's texture, else fall back to the default
@@ -5981,8 +5994,10 @@ export const cardImage = (cardName) => {
 
 
 
-    default:
-      return "";
+    default: {
+      const cardNo = cardNoFromStatsName(cardName);
+      return cardNo ? `../textures/${cardNo}.png` : "";
+    }
   }
 };
 

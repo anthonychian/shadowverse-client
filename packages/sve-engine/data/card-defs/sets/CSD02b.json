@@ -1,0 +1,339 @@
+{
+  "CSD02b-001EN": {
+    "printingType": "base",
+    "cost": 3,
+    "attack": 3,
+    "defense": 3,
+    "keywords": [
+      "fanfare"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "If there are at least 3 Cool followers on your field, select another follower with 3 attack or less on your field and gi"
+            },
+            {
+              "op": "noop",
+              "label": "[act] [cost01], Lesson (1): Give this follower [atk]+1"
+            }
+          ]
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ],
+    "name": "Rin Shibuya [Triad Primus]",
+    "class": "sword",
+    "parseConfidence": "manual"
+  },
+  "CSD02b-002EN": {
+    "printingType": "base",
+    "cost": 5,
+    "attack": 3,
+    "defense": 3,
+    "keywords": [
+      "fanfare"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {},
+          "lookAt": 5,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        }
+      }
+    ],
+    "name": "Nao Kamiya [Over the Rainbow]",
+    "class": "sword",
+    "parseConfidence": "manual"
+  },
+  "CSD02b-003EN": {
+    "printingType": "base",
+    "cost": 1,
+    "attack": 3,
+    "defense": 2,
+    "cardType": "follower",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "keywords": [],
+    "abilities": [
+      {
+        "timing": "startOfEnd",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "At the start of your end phase, if there are no other Cool followers on your field, deal 1 damage to this follower"
+            },
+            {
+              "op": "noop",
+              "label": "[act] [cost03], Lesson (1): Give each follower on your field [atk]+1"
+            }
+          ]
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ],
+    "name": "Karen Hojo [Song for Life]",
+    "class": "sword",
+    "parseConfidence": "manual"
+  },
+  "CSD02b-004EN": {
+    "printingType": "base",
+    "cost": 4,
+    "attack": 4,
+    "defense": 4,
+    "keywords": [
+      "fanfare"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {
+            "trait": "Cool",
+            "cardType": "follower",
+            "maxCost": 2
+          },
+          "lookAt": 40,
+          "to": "field",
+          "remainderTo": "deckBottom"
+        }
+      }
+    ],
+    "name": "Yasuha Okazaki",
+    "class": "rune",
+    "parseConfidence": "auto"
+  },
+  "CSD02b-007EN": {
+    "printingType": "base",
+    "cost": 1,
+    "attack": 2,
+    "defense": 2,
+    "evolvesTo": "CSD02b-008EN",
+    "evolveCost": 2,
+    "keywords": [
+      "evolve"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "abilities": [],
+    "name": "Kako Takafuji",
+    "class": "haven",
+    "parseConfidence": "keyword-only"
+  },
+  "CSD02b-008EN": {
+    "printingType": "evolved",
+    "attack": 3,
+    "defense": 3,
+    "evolvesFrom": "CSD02b-007EN",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "keywords": [],
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "noop",
+          "label": "[cost03]: Select an enemy leader and deal it 3 damage"
+        }
+      }
+    ],
+    "name": "Kako Takafuji Evolved",
+    "class": "haven",
+    "parseConfidence": "manual"
+  },
+  "CSD02b-005EN": {
+    "name": "Yukimi Sajo",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "optionalCost",
+          "label": "[cost02], Lesson (1)",
+          "cost": {
+            "op": "sequence",
+            "steps": [
+              {
+                "op": "spendPp",
+                "amount": 2
+              },
+              {
+                "op": "banishFromExArea",
+                "filter": {
+                  "trait": "Magical Item"
+                },
+                "count": 1
+              }
+            ]
+          },
+          "then": {
+            "op": "buffFieldTrait",
+            "trait": "this",
+            "atk": 1,
+            "def": 1,
+            "excludeSelf": false
+          }
+        }
+      }
+    ]
+  },
+  "CSD02b-006EN": {
+    "name": "Yukimi Sajo Evolved",
+    "class": "abyss",
+    "printingType": "evolved",
+    "keywords": [
+      "rush",
+      "assail"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Select another Cool follower on your field"
+            },
+            {
+              "op": "noop",
+              "label": "Give it [atk]+1, Rush, and Assail"
+            },
+            {
+              "op": "noop",
+              "label": "(Followers with Assail can attack reserved followers.)"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CSD02b-009EN": {
+    "name": "Chizuru Matsuo",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Select another Cool follower on your field and give it [atk]+1"
+        }
+      },
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "buff",
+          "atk": null,
+          "targets": {
+            "type": "selfFollower",
+            "count": 1,
+            "excludeSelf": false
+          }
+        }
+      }
+    ]
+  },
+  "CSD02b-010EN": {
+    "name": "Seira Mizuki",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "evolve"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "(Followers with Storm can attack enemy followers and leaders on the turn they're"
+        }
+      }
+    ]
+  },
+  "CSD02b-011EN": {
+    "name": "Seira Mizuki Evolved",
+    "class": "rune",
+    "printingType": "evolved",
+    "keywords": [
+      "storm"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 5,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  }
+}

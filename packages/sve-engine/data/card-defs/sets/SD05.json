@@ -1,0 +1,386 @@
+{
+  "SD05-001EN": {
+    "name": "Queen Vampire",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP01-T15EN",
+          "tokenName": "Forest Bat",
+          "count": 2,
+          "zone": "field"
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "SD05-002EN": {
+    "name": "Alucard",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "strike",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "necrocharge",
+            "count": 10
+          },
+          "then": {
+            "op": "buffFieldTrait",
+            "trait": "this",
+            "atk": 2,
+            "def": 2,
+            "excludeSelf": false
+          }
+        },
+        "condition": {
+          "type": "necrocharge",
+          "count": 10
+        }
+      }
+    ]
+  },
+  "SD05-003EN": {
+    "name": "Playful Necromancer",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "SD05-004EN": {
+    "name": "Playful Necromancer Evolved",
+    "class": "abyss",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP01-T14EN",
+          "tokenName": "Ghost",
+          "count": 3,
+          "zone": "field"
+        }
+      }
+    ]
+  },
+  "SD05-005EN": {
+    "name": "Midnight Vampire",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "drain",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP01-T15EN",
+          "tokenName": "Forest Bat",
+          "count": 1,
+          "zone": "field"
+        }
+      },
+      {
+        "timing": "aura",
+        "effect": {
+          "op": "auraGrantKeyword",
+          "keyword": "drain",
+          "trait": "Forest Bat",
+          "excludeSelf": false
+        }
+      }
+    ]
+  },
+  "SD05-006EN": {
+    "name": "Night Horde",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "summon",
+              "tokenCardNo": "BP01-T15EN",
+              "tokenName": "Forest Bat",
+              "count": 2,
+              "zone": "field"
+            },
+            {
+              "op": "dealDamage",
+              "amount": null,
+              "targets": {
+                "type": "enemyFollower",
+                "count": 1
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "SD05-007EN": {
+    "name": "Spectre",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "bane",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SD05-008EN": {
+    "name": "Spartoi Sergeant",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "SD05-009EN": {
+    "name": "Undead King",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SD05-010EN": {
+    "name": "Lesser Mummy",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "necrocharge",
+            "count": 10
+          },
+          "then": {
+            "op": "grantKeyword",
+            "keyword": "storm",
+            "targets": {
+              "type": "self"
+            }
+          }
+        },
+        "condition": {
+          "type": "necrocharge",
+          "count": 10
+        }
+      }
+    ]
+  },
+  "SD05-011EN": {
+    "name": "Lesser Mummy Evolved",
+    "class": "abyss",
+    "printingType": "evolved",
+    "keywords": [
+      "strike"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP01-T14EN",
+          "tokenName": "Ghost",
+          "count": 1,
+          "zone": "field"
+        }
+      }
+    ]
+  },
+  "SD05-012EN": {
+    "name": "Lilith",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP01-T15EN",
+          "tokenName": "Forest Bat",
+          "count": 1,
+          "zone": "exArea"
+        }
+      }
+    ]
+  },
+  "SD05-013EN": {
+    "name": "Lilith Evolved",
+    "class": "abyss",
+    "printingType": "evolved",
+    "keywords": [
+      "strike"
+    ],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "SD05-014EN": {
+    "name": "Razory Claw",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "SD05-015EN": {
+    "name": "Undying Resentment",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "noop",
+          "label": "Deal it 3 damage and put the top card of your deck into your cemetery"
+        },
+        "quick": true
+      }
+    ]
+  },
+  "SD05-016EN": {
+    "name": "Summon Bloodkin",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SD05-017EN": {
+    "name": "Fighter",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "SD05-018EN": {
+    "name": "Goliath",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "SD05-019EN": {
+    "name": "Goliath Evolved",
+    "class": "neutral",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "SD05-020EN": {
+    "name": "Angelic Sword Maiden",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "ward"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SD05-LD01EN": {
+    "name": "Luna",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "SD05-T01EN": {
+    "name": "Ghost",
+    "class": "abyss",
+    "printingType": "token",
+    "keywords": [
+      "storm"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SD05-T02EN": {
+    "name": "Forest Bat",
+    "class": "abyss",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  }
+}

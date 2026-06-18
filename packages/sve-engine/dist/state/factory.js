@@ -65,6 +65,7 @@ function emptyPlayer(player) {
             cardsPlayedThisTurn: 0,
             mulliganDone: false,
             leaderLostDefThisTurn: false,
+            leaderDefLostCountThisTurn: 0,
             owedDraws: 0,
         },
     };

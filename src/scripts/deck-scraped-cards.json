@@ -1044,5 +1044,879 @@
     "format": "Any",
     "relatedCardNos": [],
     "imgSrc": "/wordpress/wp-content/images/cardlist/BP17/BP17-T18EN.png"
+  },
+  {
+    "cardNo": "BP16-119EN",
+    "name": "Leah, Bellringer Angel",
+    "type": "base",
+    "cardType": "follower",
+    "class": "neutral",
+    "traits": [
+      "Angel"
+    ],
+    "cost": 1,
+    "attack": 0,
+    "defense": 3,
+    "cardText": "Ward. [lastwords] Give your leader [defense]+1. Draw a card.",
+    "keywords": [],
+    "rarity": "Gold",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-119EN.png"
+  },
+  {
+    "cardNo": "BP09-137EN",
+    "name": "Fount of Angels",
+    "type": "base",
+    "cardType": "amulet",
+    "class": "neutral",
+    "traits": [
+      "Angel"
+    ],
+    "cost": 1,
+    "attack": null,
+    "defense": null,
+    "cardText": "[fanfare] Look at the top 3 cards of your deck. You may reveal an Angel or Fallen Angel card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. [act] [engage], bury this card: Give your leader [defense]+1. Activate only if there are at least 2 Angel and/or Fallen Angel followers on your field.",
+    "keywords": [],
+    "rarity": "Bronze",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-137EN.png"
+  },
+  {
+    "cardNo": "BP01-159EN",
+    "name": "Bellringer Angel",
+    "type": "base",
+    "cardType": "follower",
+    "class": "neutral",
+    "traits": [
+      "Angel"
+    ],
+    "cost": 1,
+    "attack": 0,
+    "defense": 2,
+    "cardText": "[evolve][cost02]: Evolve this follower. Ward. [lastwords] Draw a card.",
+    "keywords": [],
+    "rarity": "Gold",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-159EN.png",
+    "evolvesTo": "BP01-160EN"
+  },
+  {
+    "cardNo": "BP01-160EN",
+    "name": "Bellringer Angel Evolved",
+    "type": "evolved",
+    "cardType": "follower",
+    "class": "neutral",
+    "traits": [
+      "Angel"
+    ],
+    "cost": null,
+    "attack": 0,
+    "defense": 2,
+    "cardText": "Ward. On Evolve: Select an enemy follower on the field and deal it 2 damage. [lastwords] Draw a card.",
+    "keywords": [],
+    "rarity": "Gold",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-160EN.png",
+    "evolvesFrom": "BP01-159EN"
+  },
+  {
+    "cardNo": "BP03-117EN",
+    "name": "Winged Inversion",
+    "type": "base",
+    "cardType": "spell",
+    "class": "neutral",
+    "traits": [
+      "Angel",
+      "Fallen Angel"
+    ],
+    "cost": 1,
+    "attack": null,
+    "defense": null,
+    "cardText": "Choose one of the following. (1) Discard an Angel follower: Select an enemy follower on the field and destroy it. (2) Discard a Fallen Angel follower: Give your leader [defense]+3. Draw a card.",
+    "keywords": [],
+    "rarity": "Silver",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-117EN.png"
+  },
+  {
+    "cardNo": "BP10-114EN",
+    "name": "Fallen Shot",
+    "type": "base",
+    "cardType": "spell",
+    "class": "neutral",
+    "traits": [
+      "Fallen Angel"
+    ],
+    "cost": 1,
+    "attack": null,
+    "defense": null,
+    "cardText": "Select an Angel follower in your cemetery and enemy follower on the field. Put them into their owners' EX areas.",
+    "keywords": [],
+    "rarity": "Gold",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-114EN.png"
+  },
+  {
+    "cardNo": "BP10-115EN",
+    "name": "One-Winged Traitor",
+    "type": "base",
+    "cardType": "follower",
+    "class": "neutral",
+    "traits": [
+      "Fallen Angel"
+    ],
+    "cost": 2,
+    "attack": 2,
+    "defense": 2,
+    "cardText": "[evolve] [cost01]: Evolve this follower. [fanfare] Look at the top card of your deck. If it's an Angel or Fallen Angel card, you may reveal it and add it to your hand.",
+    "keywords": [],
+    "rarity": "Silver",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-115EN.png",
+    "evolvesTo": "BP10-116EN"
+  },
+  {
+    "cardNo": "BP10-116EN",
+    "name": "One-Winged Traitor Evolved",
+    "type": "evolved",
+    "cardType": "follower",
+    "class": "neutral",
+    "traits": [
+      "Fallen Angel"
+    ],
+    "cost": null,
+    "attack": 3,
+    "defense": 3,
+    "cardText": "On Evolve - Select another Fallen Angel or Angel follower on your field and give it [attack]+1/[defense]+1.",
+    "keywords": [],
+    "rarity": "Silver",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-116EN.png",
+    "evolvesFrom": "BP10-115EN"
+  },
+  {
+    "cardNo": "BP14-108EN",
+    "name": "Glistering Angel",
+    "type": "base",
+    "cardType": "follower",
+    "class": "neutral",
+    "traits": [
+      "Angel"
+    ],
+    "cost": 2,
+    "attack": 2,
+    "defense": 2,
+    "cardText": "[evolve] [cost01]: Evolve this. Ward. [fanfare] If there are at least 5 Angel cards in your cemetery, give your leader [defense]+2.",
+    "keywords": [],
+    "rarity": "Gold",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "",
+    "evolvesTo": "BP14-109EN"
+  },
+  {
+    "cardNo": "BP14-109EN",
+    "name": "Glistering Angel Evolved",
+    "type": "evolved",
+    "cardType": "follower",
+    "class": "neutral",
+    "traits": [
+      "Angel"
+    ],
+    "cost": null,
+    "attack": 3,
+    "defense": 3,
+    "cardText": "Ward. On Evolve - Look at the top 4 cards of your deck. You may reveal an Angel or Fallen Angel card from among them and add it to your hand. Put the rest on the bottom of your deck in any order.",
+    "keywords": [],
+    "rarity": "Gold",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "",
+    "evolvesFrom": "BP14-108EN"
+  },
+  {
+    "cardNo": "BP12-106EN",
+    "name": "Seraphic Blade",
+    "type": "base",
+    "cardType": "spell",
+    "class": "neutral",
+    "traits": [
+      "Angel"
+    ],
+    "cost": 2,
+    "attack": null,
+    "defense": null,
+    "cardText": "Choose one. (1) Select an enemy card that costs 2 or less on the field and destroy it. (2) [cost02]: Select an enemy card that costs 6 or less on the field and destroy it.",
+    "keywords": [],
+    "rarity": "Gold",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP09-126EN",
+    "name": "Paradise Vanguard",
+    "type": "base",
+    "cardType": "follower",
+    "class": "neutral",
+    "traits": [
+      "Angel"
+    ],
+    "cost": 3,
+    "attack": 2,
+    "defense": 2,
+    "cardText": "[evolve] [cost01]: Evolve this follower. [fanfare] If there are at least 5 Angel cards in your cemetery, select an enemy follower on the field and banish it.",
+    "keywords": [],
+    "rarity": "Gold",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-126EN.png",
+    "evolvesTo": "BP09-127EN"
+  },
+  {
+    "cardNo": "BP09-127EN",
+    "name": "Paradise Vanguard Evolved",
+    "type": "evolved",
+    "cardType": "follower",
+    "class": "neutral",
+    "traits": [
+      "Angel"
+    ],
+    "cost": null,
+    "attack": 3,
+    "defense": 3,
+    "cardText": "On Evolve - Select an enemy follower that costs 4 or less on the field and banish it.",
+    "keywords": [],
+    "rarity": "Gold",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-127EN.png",
+    "evolvesFrom": "BP09-126EN"
+  },
+  {
+    "cardNo": "BP06-112EN",
+    "name": "Clash of Heroes",
+    "type": "base",
+    "cardType": "spell",
+    "class": "neutral",
+    "traits": [
+      "Arena"
+    ],
+    "cost": 1,
+    "attack": null,
+    "defense": null,
+    "cardText": "Select a follower on your field and an enemy follower on the field. Deal the first follower damage equal to the second's attack. Deal the second follower damage equal to the first's attack.",
+    "keywords": [],
+    "rarity": "Silver",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP06/BP06-112EN.png"
+  },
+  {
+    "cardNo": "BP14-110EN",
+    "name": "Angel's Blessing",
+    "type": "base",
+    "cardType": "spell",
+    "class": "neutral",
+    "traits": [
+      "Angel"
+    ],
+    "cost": 3,
+    "attack": null,
+    "defense": null,
+    "cardText": "[quick] Give your leader [defense]+2. Draw 2 cards.",
+    "keywords": [],
+    "rarity": "Gold",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP10-121EN",
+    "name": "Corruption Guardian",
+    "type": "base",
+    "cardType": "follower",
+    "class": "neutral",
+    "traits": [
+      "Fallen Angel"
+    ],
+    "cost": 5,
+    "attack": 3,
+    "defense": 6,
+    "cardText": "Ward. [fanfare] Discard an Angel or Fallen Angel card: Give your leader [defense]+3. Draw a card. Recover 2 play points.",
+    "keywords": [],
+    "rarity": "Bronze",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP10/BP10-121EN.png"
+  },
+  {
+    "cardNo": "BP09-020EN",
+    "name": "Spartacus",
+    "type": "base",
+    "cardType": "follower",
+    "class": "sword",
+    "traits": [
+      "Commander"
+    ],
+    "cost": 5,
+    "attack": 4,
+    "defense": 6,
+    "cardText": "Ward. At the start of your end phase, discard any number of cards and draw that many cards plus 1. Then, if there's 1 card or less in your deck, you win the game.",
+    "keywords": [],
+    "rarity": "Legendary",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-020EN.png"
+  },
+  {
+    "cardNo": "BP16-113EN",
+    "name": "Olivia, Heroic Dark Angel",
+    "type": "base",
+    "cardType": "follower",
+    "class": "neutral",
+    "traits": [
+      "Fallen Angel"
+    ],
+    "cost": 5,
+    "attack": 4,
+    "defense": 4,
+    "cardText": "[evolve] [cost01]: Evolve this. Ward. [fanfare] Draw a card.",
+    "keywords": [],
+    "rarity": "Legendary",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-113EN.png",
+    "evolvesTo": "BP16-114EN"
+  },
+  {
+    "cardNo": "BP16-114EN",
+    "name": "Olivia, Heroic Dark Angel Evolved",
+    "type": "evolved",
+    "cardType": "follower",
+    "class": "neutral",
+    "traits": [
+      "Fallen Angel"
+    ],
+    "cost": null,
+    "attack": 5,
+    "defense": 5,
+    "cardText": "Ward. On Evolve - Select an enemy follower on the field and deal it 5 damage. On Super-Evolve - Give your leader [defense]+3. Recover 3 play points.",
+    "keywords": [],
+    "rarity": "Legendary",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-114EN.png",
+    "evolvesFrom": "BP16-113EN"
+  },
+  {
+    "cardNo": "BP13-107EN",
+    "name": "Planetary Fracture",
+    "type": "base",
+    "cardType": "spell",
+    "class": "neutral",
+    "traits": [
+      "Deity",
+      "Archfiend",
+      "Cutthroat"
+    ],
+    "cost": 8,
+    "attack": null,
+    "defense": null,
+    "cardText": "Banish each card on the field and in the EX area. Each player banishes the top 10 cards of their deck.",
+    "keywords": [],
+    "rarity": "Legendary",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP01-116EN",
+    "name": "Soul Conversion",
+    "type": "base",
+    "cardType": "spell",
+    "class": "abyss",
+    "traits": [
+      "Departed"
+    ],
+    "cost": 1,
+    "attack": null,
+    "defense": null,
+    "cardText": "[quick] Select a follower on your field. Destroy it and draw 2 cards.",
+    "keywords": [],
+    "rarity": "Silver",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP01/BP01-116EN.png"
+  },
+  {
+    "cardNo": "BP03-076EN",
+    "name": "Odile, Black Swan",
+    "type": "base",
+    "cardType": "follower",
+    "class": "abyss",
+    "traits": [
+      "Fable"
+    ],
+    "cost": 5,
+    "attack": 6,
+    "defense": 4,
+    "cardText": "[fanfare] Deal 2 damage to each enemy leader and enemy follower on the field. Necrocharge (20): Give this follower Storm. Strike: Deal 2 damage to each enemy leader and enemy follower on the field.",
+    "keywords": [],
+    "rarity": "Gold",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP03/BP03-076EN.png"
+  },
+  {
+    "cardNo": "BP09-091EN",
+    "name": "Arcus, Spirited Manager",
+    "type": "base",
+    "cardType": "follower",
+    "class": "abyss",
+    "traits": [
+      "Departed",
+      "Necromancer"
+    ],
+    "cost": 2,
+    "attack": 5,
+    "defense": 5,
+    "cardText": "This follower can't attack enemies. At the start of your main phase, Necrocharge (10) - Summon a Ghost token. [act] Bury another follower: Choose one of the following. Activate only once per turn. (1) Draw a card. (2) Summon 2 Ghost tokens. (3) Bury the top 2 cards of your deck.",
+    "keywords": [],
+    "rarity": "Legendary",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP09/BP09-091EN.png"
+  },
+  {
+    "cardNo": "BP11-069EN",
+    "name": "Iceschillendrig, Gilded Autocrat",
+    "type": "base",
+    "cardType": "follower",
+    "class": "abyss",
+    "traits": [
+      "Wasteland",
+      "Departed",
+      "Demon"
+    ],
+    "cost": 5,
+    "attack": 5,
+    "defense": 5,
+    "cardText": "[evolve] [cost01]: Evolve this follower. [fanfare] If there's no Magitrain on your field, summon one. Whenever this card becomes engaged, each opponent discards a card.",
+    "keywords": [],
+    "rarity": "Legendary",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-069EN.png"
+  },
+  {
+    "cardNo": "BP11-070EN",
+    "name": "Iceschillendrig, Gilded Autocrat Evolved",
+    "type": "evolved",
+    "cardType": "follower",
+    "class": "abyss",
+    "traits": [
+      "Wasteland",
+      "Departed",
+      "Demon"
+    ],
+    "cost": null,
+    "attack": 6,
+    "defense": 6,
+    "cardText": "On Evolve - Discard a card: Select 2 followers in your cemetery and add them to your hand. Whenever this card becomes engaged, each opponent discards a card. During your turn, whenever a player discards a card, select an enemy follower on the field and engage it.",
+    "keywords": [],
+    "rarity": "Legendary",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-070EN.png"
+  },
+  {
+    "cardNo": "BP11-071EN",
+    "name": "Illganeau, Horror Astray",
+    "type": "base",
+    "cardType": "follower",
+    "class": "abyss",
+    "traits": [
+      "Wasteland",
+      "Departed",
+      "Demon"
+    ],
+    "cost": 1,
+    "attack": 1,
+    "defense": 1,
+    "cardText": "[fanfare] Select a Wasteland follower that costs 3 or less in your cemetery. Necrocharge (10) - You may summon it. If you do, banish this card. [lastwords] Put this card into its owner's EX area. Bury the top card of your deck.",
+    "keywords": [],
+    "rarity": "Legendary",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-071EN.png"
+  },
+  {
+    "cardNo": "BP11-074EN",
+    "name": "Greatpick Corpse",
+    "type": "base",
+    "cardType": "follower",
+    "class": "abyss",
+    "traits": [
+      "Wasteland",
+      "Departed"
+    ],
+    "cost": 3,
+    "attack": 3,
+    "defense": 3,
+    "cardText": "[fanfare] Bury another card: Select an enemy follower on the field and deal it 4 damage. Once per turn, when a 1-cost token card you control leaves the field, summon a token of the same name.",
+    "keywords": [],
+    "rarity": "Gold",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-074EN.png"
+  },
+  {
+    "cardNo": "BP11-076EN",
+    "name": "Wretch",
+    "type": "base",
+    "cardType": "follower",
+    "class": "abyss",
+    "traits": [
+      "Wasteland",
+      "Departed",
+      "Demon"
+    ],
+    "cost": 3,
+    "attack": 3,
+    "defense": 2,
+    "cardText": "[evolve] [cost01]: Evolve this follower. Activate only if this follower was put onto the field from the cemetery. Rush. [lastwords] Summon a Bullet Bike token. Bury the top 2 cards of your deck.",
+    "keywords": [],
+    "rarity": "Silver",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-076EN.png"
+  },
+  {
+    "cardNo": "BP11-077EN",
+    "name": "Wretch Evolved",
+    "type": "evolved",
+    "cardType": "follower",
+    "class": "abyss",
+    "traits": [
+      "Wasteland",
+      "Departed",
+      "Demon"
+    ],
+    "cost": null,
+    "attack": 4,
+    "defense": 3,
+    "cardText": "Storm. On Evolve - Select an enemy follower on the field and deal it 5 damage. [lastwords] Summon a Bullet Bike token. Bury the top 2 cards of your deck.",
+    "keywords": [],
+    "rarity": "Silver",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-077EN.png"
+  },
+  {
+    "cardNo": "BP11-T02EN",
+    "name": "Magitrain",
+    "type": "token",
+    "cardType": "amulet",
+    "class": "abyss",
+    "traits": [
+      "Wasteland",
+      "Mount"
+    ],
+    "cost": 5,
+    "attack": 4,
+    "defense": 5,
+    "cardText": "[act] [cost01], [engage] any number of followers that cost a total of 5 or more on your field: Maneuver this card. (For the rest of this turn, it becomes a follower with [attack]4/[defense]5.) Rush. Strike - Select an engaged enemy follower on the field. Destroy it and give your leader [defense]+2.",
+    "keywords": [],
+    "rarity": "-",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-T02EN.png"
+  },
+  {
+    "cardNo": "BP11-T04EN",
+    "name": "Bullet Bike",
+    "type": "token",
+    "cardType": "amulet",
+    "class": "neutral",
+    "traits": [
+      "Wasteland",
+      "Mount"
+    ],
+    "cost": 1,
+    "attack": null,
+    "defense": null,
+    "cardText": "[act] Bury this card: Select a follower on your field. Give it Rush and, if it's a Wasteland follower, [attack]+1.",
+    "keywords": [],
+    "rarity": "-",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-T04EN.png"
+  },
+  {
+    "cardNo": "BP11-T05EN",
+    "name": "Arcane Personnel Carrier",
+    "type": "token",
+    "cardType": "amulet",
+    "class": "neutral",
+    "traits": [
+      "Wasteland",
+      "Mount"
+    ],
+    "cost": 1,
+    "attack": null,
+    "defense": null,
+    "cardText": "[act] Bury this card: Select a follower on your field. Give it Ward and, if it's a Wasteland follower, [defense]+1.",
+    "keywords": [],
+    "rarity": "-",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP11/BP11-T05EN.png"
+  },
+  {
+    "cardNo": "BP12-U05EN",
+    "name": "Gremory, Death Teller",
+    "type": "base",
+    "cardType": "follower",
+    "class": "abyss",
+    "traits": [
+      "Demon"
+    ],
+    "cost": 2,
+    "attack": 2,
+    "defense": 3,
+    "cardText": "Ward. [fanfare] Bury the top 2 cards of your deck. [act] [cost01]: Summon this card from your cemetery. Give it \"[lastwords] Banish this card.\" Activate only if there are at least 10 cards in your cemetery and no cards named Gremory, Death Teller on your field.",
+    "keywords": [],
+    "rarity": "Ultimate",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP13-077EN",
+    "name": "Chris, Beyond the Patch",
+    "type": "base",
+    "cardType": "follower",
+    "class": "abyss",
+    "traits": [
+      "Departed",
+      "Cutthroat"
+    ],
+    "cost": 4,
+    "attack": 4,
+    "defense": 4,
+    "cardText": "[fanfare] Select an [abysscraft] follower not named Chris, Beyond the Patch that costs 5 or less in your cemetery. Necrocharge (10) - Summon it and give it Ward.",
+    "keywords": [],
+    "rarity": "Gold",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-070EN",
+    "name": "Itsurugi, Eager Admirer",
+    "type": "base",
+    "cardType": "follower",
+    "class": "abyss",
+    "traits": [
+      "Festive",
+      "Demon",
+      "Beast"
+    ],
+    "cost": 2,
+    "attack": 3,
+    "defense": 2,
+    "cardText": "[adv] [cost04], banish this: You may summon an Itsurugi, Paradise's End from your evolve deck. Activate only if there are at least 5 Festive cards or at least 10 [abysscraft] cards in your cemetery. [fanfare] Put a Wolfling's Struggle token into your EX area.",
+    "keywords": [],
+    "rarity": "Legendary",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-071EN",
+    "name": "Itsurugi, End of Paradise ADVANCED",
+    "type": "evolved",
+    "cardType": "follower",
+    "class": "abyss",
+    "traits": [
+      "Festive",
+      "Demon",
+      "Beast"
+    ],
+    "cost": 4,
+    "attack": 6,
+    "defense": 5,
+    "cardText": "[fanfare] Select up to 3 enemy followers on the field. Deal 5 damage to one and 2 damage to the others. During your turn, whenever an enemy follower is put from the field into the cemetery, deal 1 damage to its leader and give your leader [defense]+1.",
+    "keywords": [],
+    "rarity": "Legendary",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP14-T05EN",
+    "name": "Wolfling's Struggle",
+    "type": "token",
+    "cardType": "spell",
+    "class": "abyss",
+    "traits": [
+      "Festive",
+      "Demon",
+      "Beast"
+    ],
+    "cost": 0,
+    "attack": null,
+    "defense": null,
+    "cardText": "Select an enemy follower on the field. Deal it 1 damage, and you may discard a card. If you do, bury the top card of your deck.",
+    "keywords": [],
+    "rarity": "-",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": ""
+  },
+  {
+    "cardNo": "BP16-077EN",
+    "name": "Cerberus, Hellfire Unleashed",
+    "type": "base",
+    "cardType": "follower",
+    "class": "abyss",
+    "traits": [
+      "Demon"
+    ],
+    "cost": 4,
+    "attack": 3,
+    "defense": 3,
+    "cardText": "[fanfare] Summon a Mimi, Right Paw Hellhound and Coco, Left Paw Hellhound token. Necrocharge (10) - Give them Storm. [act] [engage], bury another follower: Select an enemy follower on the field and deal it 2 damage.",
+    "keywords": [],
+    "rarity": "Legendary",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-077EN.png"
+  },
+  {
+    "cardNo": "BP16-080EN",
+    "name": "Gold Rush Ghost",
+    "type": "base",
+    "cardType": "follower",
+    "class": "abyss",
+    "traits": [
+      "Wasteland",
+      "Departed"
+    ],
+    "cost": 2,
+    "attack": 2,
+    "defense": 2,
+    "cardText": "Storm. [fanfare] Choose 1. If this was put onto the field from the cemetery, choose up to 2 instead. (1) Summon an Arcane Personnel Carrier token. Give your leader [defense]+1. (2) Bury the top 2 cards of your deck. At the start of each opponent's end phase, bury this.",
+    "keywords": [],
+    "rarity": "Legendary",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-080EN.png"
+  },
+  {
+    "cardNo": "BP16-081EN",
+    "name": "Mukan, Shadowcrypt Ward",
+    "type": "base",
+    "cardType": "follower",
+    "class": "abyss",
+    "traits": [
+      "Necromancer",
+      "Demon"
+    ],
+    "cost": 3,
+    "attack": 3,
+    "defense": 3,
+    "cardText": "[evolve] [cost01]: Evolve this.",
+    "keywords": [],
+    "rarity": "Gold",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-081EN.png"
+  },
+  {
+    "cardNo": "BP16-082EN",
+    "name": "Mukan, Shadowcrypt Ward Evolved",
+    "type": "evolved",
+    "cardType": "follower",
+    "class": "abyss",
+    "traits": [
+      "Necromancer",
+      "Demon"
+    ],
+    "cost": null,
+    "attack": 4,
+    "defense": 4,
+    "cardText": "Whenever a Departed follower is put onto your field, give your leader [defense]+1. On Evolve - Select a Departed follower in your cemetery that costs 3 or less and summon it. On Super-Evolve - Select a Departed follower in your cemetery that costs 3 or less. Summon it and give it Assail.",
+    "keywords": [],
+    "rarity": "Gold",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-082EN.png"
+  },
+  {
+    "cardNo": "BP16-T04EN",
+    "name": "Mimi, Right Paw Hellhound",
+    "type": "token",
+    "cardType": "follower",
+    "class": "abyss",
+    "traits": [
+      "Demon"
+    ],
+    "cost": 1,
+    "attack": 2,
+    "defense": 2,
+    "cardText": "[lastwords] Select an enemy follower on the field. Deal it 2 damage and bury the top card of your deck.",
+    "keywords": [],
+    "rarity": "-",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-T04EN.png"
+  },
+  {
+    "cardNo": "BP16-T05EN",
+    "name": "Coco, Left Paw Hellhound",
+    "type": "token",
+    "cardType": "follower",
+    "class": "abyss",
+    "traits": [
+      "Demon"
+    ],
+    "cost": 1,
+    "attack": 2,
+    "defense": 2,
+    "cardText": "[lastwords] Give your leader [defense]+2. Bury the top card of your deck.",
+    "keywords": [],
+    "rarity": "-",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-T05EN.png"
+  },
+  {
+    "cardNo": "BP16-T18EN",
+    "name": "Ghost",
+    "type": "token",
+    "cardType": "follower",
+    "class": "abyss",
+    "traits": [
+      "Departed"
+    ],
+    "cost": 1,
+    "attack": 1,
+    "defense": 1,
+    "cardText": "Storm. At the start of your end phase, banish this.",
+    "keywords": [],
+    "rarity": "-",
+    "format": "Any",
+    "relatedCardNos": [],
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP16/BP16-T18EN.png"
   }
 ]

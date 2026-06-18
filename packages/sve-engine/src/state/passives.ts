@@ -80,6 +80,17 @@ export function hasNamedFollowerOnFieldByIdentity(
   });
 }
 
+export function opponentsAbilitiesSilencedFor(state: GameState, player: PlayerId): boolean {
+  const opp = player === 0 ? 1 : 0;
+  for (const source of getPlayer(state, opp).zones.field) {
+    for (const ability of abilitiesFor(state, source)) {
+      if (ability.timing !== "passive") continue;
+      if (ability.effect.op === "silenceOpponents") return true;
+    }
+  }
+  return false;
+}
+
 export function matchesExAreaEntryFilter(
   ability: AbilityDefinition,
   enteredCardNo: string,

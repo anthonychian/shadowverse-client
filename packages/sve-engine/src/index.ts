@@ -22,4 +22,6 @@ export {
   getEffectivePlayCost,
   getEvolveCost,
   resolveCardDefCost,
+  isFieldFollower,
 } from "./state/queries";
+export * from "./testing";

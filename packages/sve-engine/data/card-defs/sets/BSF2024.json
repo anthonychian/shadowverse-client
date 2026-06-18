@@ -1,0 +1,13 @@
+{
+  "BSF2024-001EN": {
+    "name": "Bahamut",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  }
+}

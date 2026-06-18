@@ -30,13 +30,23 @@ function loadExpansionFiles() {
 
 function loadHandAuthoredDefs() {
   const defs = {};
-  if (!fs.existsSync(CARD_DEFS_DIR)) return defs;
-  for (const file of fs.readdirSync(CARD_DEFS_DIR).filter((f) => f.endsWith(".json"))) {
-    const data = JSON.parse(fs.readFileSync(path.join(CARD_DEFS_DIR, file), "utf8"));
-    for (const [cardNo, def] of Object.entries(data)) {
-      defs[cardNo] = def;
+  const walk = (dir) => {
+    if (!fs.existsSync(dir)) return;
+    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+      const full = path.join(dir, entry.name);
+      if (entry.isDirectory()) walk(full);
+      else if (entry.name.endsWith(".json") && entry.name !== "parsed-stubs.json") {
+        const data = JSON.parse(fs.readFileSync(full, "utf8"));
+        const firstKey = Object.keys(data)[0];
+        if (firstKey && /^[A-Z]/.test(firstKey)) {
+          for (const [cardNo, def] of Object.entries(data)) {
+            defs[cardNo] = def;
+          }
+        }
+      }
     }
-  }
+  };
+  walk(CARD_DEFS_DIR);
   return defs;
 }
 

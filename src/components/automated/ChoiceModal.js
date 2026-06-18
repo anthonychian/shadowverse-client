@@ -153,13 +153,20 @@ export default function ChoiceModal({ setHovering }) {
     onPreviewEnd: handleChoicePreviewEnd,
   };
 
+  const pendingSelectionKey =
+    pending == null
+      ? ""
+      : `${pending.type}:${pending.count ?? ""}:${pending.player ?? ""}:${
+          pending.options?.map((o) => o.instanceId ?? o.index).join("|") ?? ""
+        }`;
+
   useEffect(() => {
 
     setSelectedDiscardIds([]);
     choicePreviewRef.current = { hover: null, pinned: null };
     setHovering?.(false);
 
-  }, [pending?.type, pending?.count, pending?.player, pending?.action, setHovering]);
+  }, [pendingSelectionKey, setHovering]);
 
   useEffect(() => {
     if (!pending || !selectedDiscardIds.length) {
@@ -171,7 +178,7 @@ export default function ChoiceModal({ setHovering }) {
     const nameFromCardNo = (cardNo, label) =>
       cardNo ? getNameByCardNoClient(cardNo) || label : label;
     let pinnedName = null;
-    if (pending.type === "discard") {
+    if (pending.type === "discard" || pending.type === "discardVariable") {
       const candidates = pending.candidates?.length
         ? pending.candidates
         : hand.map((cardName, i) => ({
@@ -184,7 +191,8 @@ export default function ChoiceModal({ setHovering }) {
     } else if (
       pending.type === "selectDeckSummon" ||
       pending.type === "selectCemeterySummon" ||
-      pending.type === "wardEngage"
+      pending.type === "wardEngage" ||
+      pending.type === "engageFollowersForCost"
     ) {
       const o = pending.options?.find((x) => x.instanceId === lastId);
       if (o) pinnedName = nameFromCardNo(o.cardNo, o.label);
@@ -248,7 +256,7 @@ export default function ChoiceModal({ setHovering }) {
 
   const discardCandidates =
 
-    pending.type === "discard"
+    pending.type === "discard" || pending.type === "discardVariable"
 
       ? pending.candidates?.length
 
@@ -280,18 +288,41 @@ export default function ChoiceModal({ setHovering }) {
 
       }
 
-      if (pending.type === "selectDeckSummon") {
+      if (pending.type === "selectDeckSummon" || pending.type === "selectCemeterySummon") {
         const option = pending.options.find((o) => o.instanceId === instanceId);
-        if (!option?.eligible) return prev;
+        if (!option || option.eligible === false) return prev;
+        if (prev.includes(instanceId)) {
+          return prev.filter((id) => id !== instanceId);
+        }
         const currentCost = prev.reduce((sum, id) => {
           const o = pending.options.find((x) => x.instanceId === id);
           return sum + (o?.cost ?? 0);
         }, 0);
         if (currentCost + option.cost > pending.maxTotalCost) return prev;
+        if (pending.count === 1) {
+          return [instanceId];
+        }
+        if (prev.length >= pending.count) return prev;
         return [...prev, instanceId];
       }
 
-      if (prev.length >= pending.count) return prev;
+      if (pending.type === "discardVariable") {
+        if (prev.includes(instanceId)) {
+          return prev.filter((id) => id !== instanceId);
+        }
+        const max = pending.max ?? discardCandidates.length;
+        if (prev.length >= max) return prev;
+        return [...prev, instanceId];
+      }
+
+      if (pending.type === "wardEngage" || pending.type === "engageFollowersForCost") {
+        if (prev.includes(instanceId)) {
+          return prev.filter((id) => id !== instanceId);
+        }
+        return [...prev, instanceId];
+      }
+
+      if (pending.count > 0 && prev.length >= pending.count) return prev;
 
       return [...prev, instanceId];
 
@@ -301,6 +332,22 @@ export default function ChoiceModal({ setHovering }) {
 
   const selectedDeckSummonCost =
     pending?.type === "selectDeckSummon"
+      ? selectedDiscardIds.reduce((sum, id) => {
+          const o = pending.options.find((x) => x.instanceId === id);
+          return sum + (o?.cost ?? 0);
+        }, 0)
+      : 0;
+
+  const selectedCemeterySummonCost =
+    pending?.type === "selectCemeterySummon"
+      ? selectedDiscardIds.reduce((sum, id) => {
+          const o = pending.options.find((x) => x.instanceId === id);
+          return sum + (o?.cost ?? 0);
+        }, 0)
+      : 0;
+
+  const selectedEngageCost =
+    pending?.type === "engageFollowersForCost"
       ? selectedDiscardIds.reduce((sum, id) => {
           const o = pending.options.find((x) => x.instanceId === id);
           return sum + (o?.cost ?? 0);
@@ -323,7 +370,7 @@ export default function ChoiceModal({ setHovering }) {
 
   return (
 
-    <Dialog open maxWidth="md" fullWidth>
+    <Dialog open maxWidth="md" fullWidth sx={{ zIndex: 1400 }}>
 
       <DialogTitle
         sx={{
@@ -482,11 +529,71 @@ export default function ChoiceModal({ setHovering }) {
 
         )}
 
+        {pending.type === "discardVariable" && (
+
+          <>
+
+            <Typography sx={{ mb: 1 }}>
+
+              Discard any number of cards from your hand, then draw that many plus{" "}
+
+              {pending.drawBonus}. ({selectedDiscardIds.length} selected → draw{" "}
+
+              {selectedDiscardIds.length + pending.drawBonus})
+
+            </Typography>
+
+            <Stack
+
+              direction="row"
+
+              spacing={1}
+
+              sx={{ flexWrap: "wrap", justifyContent: "center", mt: 1 }}
+
+            >
+
+              {discardCandidates.map((c) => (
+
+                <CardChoiceButton {...choicePreviewProps}
+
+                  key={c.instanceId}
+
+                  cardNo={c.cardNo}
+
+                  label={c.label}
+
+                  selected={selectedDiscardIds.includes(c.instanceId)}
+
+                  onClick={() => toggleDiscard(c.instanceId)}
+
+                />
+
+              ))}
+
+            </Stack>
+
+          </>
+
+        )}
+
         {pending.type === "wardEngage" && (
 
           <Typography sx={{ mb: 1 }}>
 
             Engage Ward followers (optional). Engaged followers are placed horizontally.
+
+          </Typography>
+
+        )}
+
+        {pending.type === "engageFollowersForCost" && (
+
+          <Typography sx={{ mb: 1 }}>
+
+            Engage followers with total cost {selectedEngageCost}/{pending.minTotalCost} or more.
+
+            Engaged followers are placed horizontally.
 
           </Typography>
 
@@ -526,9 +633,11 @@ export default function ChoiceModal({ setHovering }) {
 
           <Typography sx={{ mb: 1 }}>
 
-            Select up to {pending.count} follower(s) with total cost {pending.maxTotalCost} or less (
+            Select up to {pending.count} Departed follower(s) to summon (total cost{" "}
 
-            {selectedDiscardIds.length}/{pending.count}).
+            {selectedCemeterySummonCost}/{pending.maxTotalCost} or less;{" "}
+
+            {selectedDiscardIds.length}/{pending.count} selected).
 
           </Typography>
 
@@ -757,7 +866,11 @@ export default function ChoiceModal({ setHovering }) {
           <Stack direction="row" spacing={1} sx={{ flexWrap: "wrap", justifyContent: "center", mt: 1 }}>
 
             {pending.options
-              .filter((o) => pending.type !== "selectDeckSummon" || o.eligible !== false)
+              .filter(
+                (o) =>
+                  (pending.type !== "selectDeckSummon" && pending.type !== "selectCemeterySummon") ||
+                  o.eligible !== false,
+              )
               .map((o) => {
 
               const key = pending.type === "chooseMultiple" ? o.index : o.instanceId;
@@ -770,10 +883,17 @@ export default function ChoiceModal({ setHovering }) {
 
                   : selectedDiscardIds.includes(o.instanceId);
 
-              const deckSummonDisabled =
-                pending.type === "selectDeckSummon" &&
+              const summonCost =
+                pending.type === "selectDeckSummon"
+                  ? selectedDeckSummonCost
+                  : pending.type === "selectCemeterySummon"
+                    ? selectedCemeterySummonCost
+                    : 0;
+
+              const summonDisabled =
+                (pending.type === "selectDeckSummon" || pending.type === "selectCemeterySummon") &&
                 !selected &&
-                selectedDeckSummonCost + (o.cost ?? 0) > pending.maxTotalCost;
+                summonCost + (o.cost ?? 0) > pending.maxTotalCost;
 
               return (
 
@@ -793,7 +913,7 @@ export default function ChoiceModal({ setHovering }) {
 
                   selected={selected}
 
-                  disabled={deckSummonDisabled}
+                  disabled={summonDisabled}
 
                   onClick={() => {
 
@@ -826,6 +946,47 @@ export default function ChoiceModal({ setHovering }) {
             })}
 
           </Stack>
+
+        )}
+
+        {pending.type === "selectCemeterySummon" &&
+          pending.options.some((o) => o.eligible === false) && (
+
+          <>
+
+            <Typography variant="subtitle2" sx={{ mt: 2, mb: 0.5, color: "text.secondary" }}>
+
+              Other cards (cannot summon)
+
+            </Typography>
+
+            <Stack direction="row" spacing={1} sx={{ flexWrap: "wrap", justifyContent: "center" }}>
+
+              {pending.options
+
+                .filter((o) => o.eligible === false)
+
+                .map((o) => (
+
+                  <CardChoiceButton {...choicePreviewProps}
+
+                    key={o.instanceId}
+
+                    cardNo={o.cardNo}
+
+                    label={`${o.label} (${o.cost} PP)`}
+
+                    disabled
+
+                    onClick={() => {}}
+
+                  />
+
+                ))}
+
+            </Stack>
+
+          </>
 
         )}
 
@@ -898,6 +1059,32 @@ export default function ChoiceModal({ setHovering }) {
 
         )}
 
+        {pending.type === "engageFollowersForCost" && (
+
+          <Stack direction="row" spacing={1} sx={{ flexWrap: "wrap", justifyContent: "center", mt: 1 }}>
+
+            {pending.options.map((o) => (
+
+              <CardChoiceButton {...choicePreviewProps}
+
+                key={o.instanceId}
+
+                cardNo={o.cardNo}
+
+                label={`${o.label} (${o.cost} PP)`}
+
+                selected={selectedDiscardIds.includes(o.instanceId)}
+
+                onClick={() => toggleDiscard(o.instanceId)}
+
+              />
+
+            ))}
+
+          </Stack>
+
+        )}
+
       </DialogContent>
 
       <DialogActions sx={{ flexWrap: "wrap", gap: 1 }}>
@@ -933,6 +1120,18 @@ export default function ChoiceModal({ setHovering }) {
           >
 
             Discard selected
+
+          </Button>
+
+        )}
+
+        {pending.type === "discardVariable" && (
+
+          <Button variant="contained" color="error" onClick={confirmDiscard}>
+
+            Confirm discard ({selectedDiscardIds.length} → draw{" "}
+
+            {selectedDiscardIds.length + pending.drawBonus})
 
           </Button>
 
@@ -1047,6 +1246,34 @@ export default function ChoiceModal({ setHovering }) {
             </Button>
 
           </>
+
+        )}
+
+        {pending.type === "engageFollowersForCost" && (
+
+          <Button
+
+            variant="contained"
+
+            disabled={selectedEngageCost < pending.minTotalCost}
+
+            onClick={() =>
+
+              sendAction({
+
+                type: "CHOICE_RESPONSE",
+
+                payload: { instanceIds: selectedDiscardIds },
+
+              })
+
+            }
+
+          >
+
+            Engage selected ({selectedEngageCost} PP)
+
+          </Button>
 
         )}
 

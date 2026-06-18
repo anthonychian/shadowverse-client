@@ -1,0 +1,3677 @@
+{
+  "BP17-077EN": {
+    "name": "Aenea, Creative Amethyst",
+    "class": "abyss",
+    "printingType": "base",
+    "cost": 2,
+    "attack": 1,
+    "defense": 1,
+    "evolvesTo": "BP17-078EN",
+    "evolveCost": 1,
+    "keywords": [
+      "evolve"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "Machina",
+      "Demon"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "[evolve] [cost01] : Evolve this"
+        }
+      }
+    ],
+    "parseConfidence": "manual"
+  },
+  "BP17-079EN": {
+    "name": "Nicola, Enduring Steward",
+    "class": "abyss",
+    "printingType": "base",
+    "cost": 2,
+    "attack": 1,
+    "defense": 2,
+    "keywords": [
+      "fanfare",
+      "rush"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "Machina",
+      "Departed"
+    ],
+    "abilities": [
+      {
+        "timing": "passive",
+        "condition": {
+          "type": "fieldTraitMin",
+          "trait": "Machina",
+          "count": 2
+        },
+        "effect": {
+          "op": "passiveKeywords",
+          "keywords": [
+            "rush",
+            "bane"
+          ]
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "notEnteredFromHand"
+          },
+          "then": {
+            "op": "grantKeyword",
+            "keyword": "assail",
+            "targets": {
+              "type": "self"
+            }
+          }
+        }
+      },
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "handTraitMin",
+            "trait": "Machina",
+            "count": 2
+          },
+          "then": {
+            "op": "optionalCost",
+            "label": "Discard 2 Machina cards",
+            "cost": {
+              "op": "discardFromHand",
+              "filter": {
+                "trait": "Machina"
+              },
+              "count": 2
+            },
+            "then": {
+              "op": "sequence",
+              "steps": [
+                {
+                  "op": "moveSourceToExArea"
+                },
+                {
+                  "op": "grantPlayCostReduction",
+                  "amount": 1,
+                  "targets": {
+                    "type": "self"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      }
+    ],
+    "parseConfidence": "manual"
+  },
+  "BP17-080EN": {
+    "name": "Steeled Hopes",
+    "class": "abyss",
+    "printingType": "base",
+    "cost": 1,
+    "cardType": "spell",
+    "traits": [
+      "Machina",
+      "Demon"
+    ],
+    "keywords": [],
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "choose",
+          "min": 1,
+          "max": 1,
+          "options": [
+            {
+              "label": "Search Machina to hand",
+              "effect": {
+                "op": "tutorFromDeck",
+                "filter": {
+                  "trait": "Machina",
+                  "cardType": "follower"
+                },
+                "to": "hand"
+              }
+            },
+            {
+              "label": "Summon three Machina from deck",
+              "additionalPpCost": 6,
+              "effect": {
+                "op": "sequence",
+                "steps": [
+                  {
+                    "op": "tutorFromDeck",
+                    "filter": {
+                      "trait": "Machina",
+                      "cardType": "follower",
+                      "maxCost": 4
+                    },
+                    "to": "field"
+                  },
+                  {
+                    "op": "tutorFromDeck",
+                    "filter": {
+                      "trait": "Machina",
+                      "cardType": "follower",
+                      "maxCost": 3
+                    },
+                    "to": "field"
+                  },
+                  {
+                    "op": "tutorFromDeck",
+                    "filter": {
+                      "trait": "Machina",
+                      "cardType": "follower",
+                      "maxCost": 2
+                    },
+                    "to": "field"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "parseConfidence": "manual"
+  },
+  "BP17-083EN": {
+    "name": "Roly-Poly Mk II",
+    "class": "abyss",
+    "printingType": "base",
+    "cost": 2,
+    "attack": 1,
+    "defense": 3,
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "Machina",
+      "Demon"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {
+            "identityName": "Machina"
+          },
+          "lookAt": 2,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        }
+      }
+    ],
+    "parseConfidence": "review"
+  },
+  "BP17-113EN": {
+    "name": "Hoverboard Mercenary",
+    "class": "neutral",
+    "printingType": "base",
+    "cost": 2,
+    "attack": 1,
+    "defense": 1,
+    "evolvesTo": "BP17-114EN",
+    "evolveCost": 1,
+    "keywords": [
+      "fanfare",
+      "evolve"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "Machina",
+      "Mercenary"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "summon",
+              "tokenCardNo": "BP17-T17EN",
+              "count": 1,
+              "zone": "field"
+            },
+            {
+              "op": "summon",
+              "tokenCardNo": "BP17-T18EN",
+              "count": 1,
+              "zone": "exArea"
+            }
+          ]
+        }
+      },
+      {
+        "timing": "evolve",
+        "effect": {
+          "op": "passiveKeywords",
+          "keywords": []
+        }
+      }
+    ]
+  },
+  "BP17-SL20EN": {
+    "name": "Mono, Immortal Garnet",
+    "class": "abyss",
+    "printingType": "base",
+    "cost": 3,
+    "attack": 2,
+    "defense": 2,
+    "keywords": [
+      "fanfare",
+      "strike"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "Machina",
+      "Demon"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP17-T17EN",
+          "count": 1,
+          "zone": "field"
+        }
+      },
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "dealDamage",
+          "amount": {
+            "op": "otherFieldTraitCount",
+            "trait": "Machina"
+          },
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "oncePerTurn": true,
+        "cost": {
+          "pp": 0
+        },
+        "condition": {
+          "type": "fieldTraitMin",
+          "trait": "Machina",
+          "count": 5
+        },
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "buff",
+              "atk": 1,
+              "def": 1,
+              "targets": {
+                "type": "self"
+              }
+            },
+            {
+              "op": "grantKeyword",
+              "keyword": "storm",
+              "targets": {
+                "type": "self"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP17-078EN": {
+    "name": "Aenea, Creative Amethyst Evolved",
+    "class": "abyss",
+    "printingType": "evolved",
+    "attack": 2,
+    "defense": 2,
+    "evolvesFrom": "BP17-077EN",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "traits": [
+      "Machina",
+      "Demon"
+    ],
+    "keywords": [],
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "tutorFromDeck",
+          "filter": {
+            "cardNo": "BP17-083EN"
+          },
+          "to": "field"
+        }
+      },
+      {
+        "timing": "onSuperEvolve",
+        "effect": {
+          "op": "tutorFromCemetery",
+          "filter": {
+            "trait": "Machina"
+          },
+          "to": "exArea",
+          "playCostReduction": 3
+        }
+      }
+    ]
+  },
+  "BP17-114EN": {
+    "name": "Hoverboard Mercenary Evolved",
+    "class": "neutral",
+    "printingType": "evolved",
+    "attack": 2,
+    "defense": 2,
+    "evolvesFrom": "BP17-113EN",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "traits": [
+      "Machina",
+      "Mercenary"
+    ],
+    "keywords": [],
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "summon",
+              "tokenCardNo": "BP07-T01EN",
+              "tokenName": "Assembly Droid",
+              "count": 1,
+              "zone": "exArea"
+            },
+            {
+              "op": "summon",
+              "tokenCardNo": "BP07-T02EN",
+              "tokenName": "Repair Mode",
+              "count": 1,
+              "zone": "exArea"
+            }
+          ]
+        }
+      }
+    ],
+    "parseConfidence": "auto"
+  },
+  "BP17-T17EN": {
+    "name": "Assembly Droid TOKEN",
+    "class": "neutral",
+    "printingType": "token",
+    "cost": 1,
+    "attack": 1,
+    "defense": 1,
+    "cardType": "follower",
+    "specialType": "token",
+    "traits": [
+      "Machina"
+    ],
+    "keywords": [],
+    "abilities": []
+  },
+  "BP17-T18EN": {
+    "name": "Repair Mode",
+    "class": "neutral",
+    "printingType": "token",
+    "cost": 1,
+    "keywords": [
+      "quick"
+    ],
+    "cardType": "spell",
+    "specialType": "token",
+    "traits": [
+      "Machina"
+    ],
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "healLeader",
+          "amount": 1
+        },
+        "quick": true
+      }
+    ],
+    "parseConfidence": "auto"
+  },
+  "BP17-049EN": {
+    "printingType": "base",
+    "cost": 2,
+    "attack": 2,
+    "defense": 2,
+    "evolvesTo": "BP17-050EN",
+    "evolveCost": 1,
+    "keywords": [
+      "evolve",
+      "lastWords"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "Machina",
+      "Natura",
+      "Golem"
+    ],
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP07-T02EN",
+          "tokenName": "Repair Mode",
+          "count": 1,
+          "zone": "exArea"
+        }
+      }
+    ],
+    "name": "Awakened Robot",
+    "class": "rune",
+    "parseConfidence": "auto"
+  },
+  "BP17-050EN": {
+    "printingType": "evolved",
+    "attack": 3,
+    "defense": 3,
+    "evolvesFrom": "BP17-049EN",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "traits": [
+      "Machina",
+      "Natura",
+      "Golem"
+    ],
+    "keywords": [
+      "lastWords"
+    ],
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP07-T02EN",
+          "tokenName": "Repair Mode",
+          "count": 1,
+          "zone": "exArea"
+        }
+      }
+    ],
+    "name": "Awakened Robot Evolved",
+    "class": "rune",
+    "parseConfidence": "auto"
+  },
+  "BP17-033EN": {
+    "printingType": "base",
+    "cost": 2,
+    "attack": 2,
+    "defense": 2,
+    "cardType": "follower",
+    "traits": [
+      "Merchant"
+    ],
+    "keywords": [
+      "fanfare"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "optionalCost",
+          "label": "Discard a Swordcraft card",
+          "cost": {
+            "op": "discardFromHand",
+            "filter": {
+              "cardClass": "sword"
+            },
+            "count": 1
+          },
+          "then": {
+            "op": "if",
+            "condition": {
+              "type": "discardedCardType",
+              "cardType": "spell"
+            },
+            "then": {
+              "op": "draw",
+              "count": 2
+            },
+            "else": {
+              "op": "draw",
+              "count": 1
+            }
+          }
+        }
+      }
+    ],
+    "name": "Stone Merchant",
+    "class": "sword",
+    "parseConfidence": "manual"
+  },
+  "BP17-041EN": {
+    "printingType": "base",
+    "cost": 2,
+    "attack": 2,
+    "defense": 2,
+    "evolvesTo": "BP17-042EN",
+    "evolveCost": 1,
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "Machina",
+      "Golem"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP07-T02EN",
+          "tokenName": "Repair Mode",
+          "count": 1,
+          "zone": "exArea"
+        }
+      }
+    ],
+    "name": "Tetra, Serene Sapphire",
+    "class": "rune",
+    "parseConfidence": "auto"
+  },
+  "BP17-042EN": {
+    "printingType": "evolved",
+    "attack": 3,
+    "defense": 3,
+    "evolvesFrom": "BP17-041EN",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "traits": [
+      "Machina",
+      "Golem"
+    ],
+    "keywords": [],
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {},
+          "lookAt": 4,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        }
+      },
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "grantOnCardPlayed",
+          "filter": {},
+          "effect": {
+            "op": "noop",
+            "label": "Whenever you play a Machina card, deal 1 damage to each enemy leader and enemy follower on the field\" for the rest of th"
+          },
+          "untilEndOfTurn": true,
+          "label": "Whenever you play a Machina card, deal 1 damage to each enemy leader and enemy f"
+        }
+      },
+      {
+        "timing": "onSuperEvolve",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing onSuperEvolve timing"
+        }
+      }
+    ],
+    "name": "Tetra, Serene Sapphire Evolved",
+    "class": "rune",
+    "parseConfidence": "manual"
+  },
+  "BP17-040EN": {
+    "printingType": "base",
+    "cost": 5,
+    "attack": 5,
+    "defense": 5,
+    "keywords": [
+      "fanfare"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "Machina",
+      "Supreme"
+    ],
+    "abilities": [
+      {
+        "timing": "passive",
+        "condition": {
+          "type": "fieldFollowerMinCost",
+          "trait": "Machina",
+          "minCost": 6,
+          "count": 1
+        },
+        "effect": {
+          "op": "playCostReduction",
+          "amount": 5
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "buryFieldFollowers",
+              "filter": {
+                "trait": "Machina"
+              },
+              "minCost": 6
+            },
+            {
+              "op": "if",
+              "condition": {
+                "type": "buriedExactCost",
+                "cost": 6
+              },
+              "then": {
+                "op": "summon",
+                "tokenCardNo": "BP12-T04EN",
+                "tokenName": "Assault Tentacle",
+                "count": 1,
+                "zone": "field"
+              }
+            },
+            {
+              "op": "if",
+              "condition": {
+                "type": "buriedAtLeastCost",
+                "cost": 7
+              },
+              "then": {
+                "op": "sequence",
+                "steps": [
+                  {
+                    "op": "dealDamageAllEnemies",
+                    "amount": 4,
+                    "followersOnly": true
+                  },
+                  {
+                    "op": "buffFieldTrait",
+                    "trait": "Machina",
+                    "atk": 2,
+                    "def": 2,
+                    "excludeSelf": true
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "name": "Belphomet, Ultimate Creator",
+    "class": "rune",
+    "parseConfidence": "manual"
+  },
+  "BP17-048EN": {
+    "printingType": "base",
+    "cost": 1,
+    "cardType": "spell",
+    "traits": [
+      "Machina",
+      "Natura",
+      "Golem"
+    ],
+    "keywords": [],
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "peekDeck",
+          "count": 1
+        }
+      }
+    ],
+    "name": "Fruits of Wisdom",
+    "class": "rune",
+    "parseConfidence": "auto"
+  },
+  "BP17-044EN": {
+    "printingType": "base",
+    "cost": 3,
+    "cardType": "spell",
+    "traits": [
+      "Machina",
+      "Supreme"
+    ],
+    "keywords": [],
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP12-T03EN",
+          "tokenName": "Armored Tentacle",
+          "count": 1,
+          "zone": "field"
+        }
+      }
+    ],
+    "name": "Nefarious Invasion",
+    "class": "rune",
+    "parseConfidence": "manual"
+  },
+  "BP17-119EN": {
+    "printingType": "base",
+    "cost": 2,
+    "cardType": "amulet",
+    "traits": [
+      "Machina"
+    ],
+    "keywords": [
+      "fanfare"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 2
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ],
+    "name": "Aiolon's Remains",
+    "class": "neutral",
+    "parseConfidence": "manual"
+  },
+  "BP17-001EN": {
+    "name": "Arisa, Evergreen Arrow",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Search your deck for a Forest Guardian's Bow, summon it, then shuffle"
+            },
+            {
+              "op": "noop",
+              "label": "activate cardsPlayedMin"
+            }
+          ]
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP17-002EN": {
+    "name": "Ladica, Verdant Claw",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {
+            "identityName": "Natura"
+          },
+          "lookAt": 5,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        }
+      }
+    ]
+  },
+  "BP17-003EN": {
+    "name": "Ladica, Verdant Claw Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP07-T03EN",
+          "tokenName": "Naterran Great Tree",
+          "count": 1,
+          "zone": "exArea"
+        }
+      },
+      {
+        "timing": "onSuperEvolve",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP07-T03EN",
+          "tokenName": "Naterran Great Tree",
+          "count": 1,
+          "zone": "exArea"
+        }
+      }
+    ]
+  },
+  "BP17-004EN": {
+    "name": "Setus, Sunlit Hero",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "recoverPp",
+          "amount": 1
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing fanfare timing"
+        }
+      }
+    ]
+  },
+  "BP17-005EN": {
+    "name": "Lococo, Little Puppeteer",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "BP17-006EN": {
+    "name": "Lococo, Little Puppeteer Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "destroy",
+          "targets": {
+            "type": "anyFollower",
+            "count": 99
+          }
+        }
+      }
+    ]
+  },
+  "BP17-007EN": {
+    "name": "Friendly Embrace",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "BP17-008EN": {
+    "name": "Forest Guardian's Bow",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": null,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP17-009EN": {
+    "name": "Beastfolk Harvester",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP07-T03EN",
+          "tokenName": "Naterran Great Tree",
+          "count": 1,
+          "zone": "exArea"
+        }
+      }
+    ]
+  },
+  "BP17-010EN": {
+    "name": "Beastfolk Harvester Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP17-011EN": {
+    "name": "Heroic Resolve",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "BP17-012EN": {
+    "name": "Inverted Manipulation",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "(1) Select a Puppetry token follower on your field and give it +2/+2"
+            },
+            {
+              "op": "noop",
+              "label": "(2) Put 2 Puppet tokens into your EX area"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP17-013EN": {
+    "name": "Blossom Treant",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "evolve",
+      "lastWords"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "BP17-014EN": {
+    "name": "Blossom Treant Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [
+      "ward",
+      "lastWords"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "healLeader",
+          "amount": 4
+        }
+      },
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "BP17-015EN": {
+    "name": "Sköll Lookout",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP17-016EN": {
+    "name": "Elf Sorcerer",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "buff",
+          "atk": -5,
+          "def": -5,
+          "targets": {
+            "type": "selfFollower",
+            "count": 1,
+            "excludeSelf": false
+          }
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing fanfare timing"
+        }
+      }
+    ]
+  },
+  "BP17-017EN": {
+    "name": "Threadsnipper Puppet",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP05-T03EN",
+          "tokenName": "Puppet",
+          "count": 1,
+          "zone": "exArea"
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP17-018EN": {
+    "name": "Heroic Fairy Champion",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "strike",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "[cost02]: Give this +2/+2"
+        }
+      },
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "noop",
+          "label": "For the rest of this turn, this doesn't take damage"
+        }
+      }
+    ]
+  },
+  "BP17-019EN": {
+    "name": "Erika, Loyal Swordsavant",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "strike",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "summon",
+              "tokenCardNo": "BP01-T07EN",
+              "tokenName": "Steelclad Knight",
+              "count": 1,
+              "zone": "field"
+            },
+            {
+              "op": "summon",
+              "tokenCardNo": "BP02-T02EN",
+              "tokenName": "Shield Guardian",
+              "count": 1,
+              "zone": "field"
+            },
+            {
+              "op": "summon",
+              "tokenName": "or Knight",
+              "count": 1,
+              "zone": "field"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP17-020EN": {
+    "name": "Mistolina & Bayleon",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "choose",
+          "min": 0,
+          "max": 1,
+          "options": [
+            {
+              "label": "field",
+              "effect": {
+                "op": "summon",
+                "tokenCardNo": "BP07-T03EN",
+                "tokenName": "Naterran Great Tree",
+                "count": 1,
+                "zone": "field"
+              }
+            },
+            {
+              "label": "EX area",
+              "effect": {
+                "op": "summon",
+                "tokenCardNo": "BP07-T03EN",
+                "tokenName": "Naterran Great Tree",
+                "count": 1,
+                "zone": "exArea"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP17-021EN": {
+    "name": "Mistolina & Bayleon Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [
+      "storm"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {},
+          "lookAt": 40,
+          "to": "exArea",
+          "optional": false,
+          "remainderTo": "deckBottom"
+        }
+      },
+      {
+        "timing": "onSuperEvolve",
+        "effect": {
+          "op": "grantKeyword",
+          "keyword": "storm",
+          "targets": {
+            "type": "self"
+          }
+        }
+      }
+    ]
+  },
+  "BP17-022EN": {
+    "name": "Leod, Moonlit Executioner",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "intimidate",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 1,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP17-023EN": {
+    "name": "Frenzied Corpsmaster",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "evolve"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "summon",
+              "tokenCardNo": "BP01-T07EN",
+              "tokenName": "Steelclad Knight",
+              "count": 1,
+              "zone": "field"
+            },
+            {
+              "op": "summon",
+              "tokenCardNo": "BP02-T02EN",
+              "tokenName": "Shield Guardian",
+              "count": 1,
+              "zone": "field"
+            },
+            {
+              "op": "summon",
+              "tokenName": "or Knight",
+              "count": 1,
+              "zone": "field"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP17-024EN": {
+    "name": "Frenzied Corpsmaster Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [
+      "ward"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "destroy",
+          "targets": {
+            "type": "enemyFollower",
+            "count": 2
+          }
+        }
+      }
+    ]
+  },
+  "BP17-025EN": {
+    "name": "Sunny Day Encounter",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "(1) Search your deck for a Natura follower that costs 3 or less, summon it, then shuffle"
+            },
+            {
+              "op": "noop",
+              "label": "(2) [cost03]: Search your deck for a Natura follower that costs 6 or less, summon it, then shuffle"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP17-026EN": {
+    "name": "Killer Instincts",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Search your deck for an Erika, Loyal Swordsavant, summon it, then shuffle"
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP17-027EN": {
+    "name": "Valhorean Dealer",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "BP17-028EN": {
+    "name": "Valhorean Dealer Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 5,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP17-029EN": {
+    "name": "Bladerights Lieutenant",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "summon",
+              "tokenName": "Shield Guardian and Knight",
+              "count": 1,
+              "zone": "exArea"
+            },
+            {
+              "op": "summon",
+              "tokenCardNo": "BP01-T07EN",
+              "tokenName": "Steelclad Knight",
+              "count": 1,
+              "zone": "exArea"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP17-030EN": {
+    "name": "Shadowed Memories",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "noop",
+          "label": "This costs 2 less to play if you selected a follower on your field with \"Leod\" in its name. ---------- Select an Assassi"
+        }
+      }
+    ]
+  },
+  "BP17-031EN": {
+    "name": "Fox Lancer",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "choose",
+          "min": 0,
+          "max": 1,
+          "options": [
+            {
+              "label": "field",
+              "effect": {
+                "op": "summon",
+                "tokenCardNo": "BP07-T03EN",
+                "tokenName": "Naterran Great Tree",
+                "count": 1,
+                "zone": "field"
+              }
+            },
+            {
+              "label": "EX area",
+              "effect": {
+                "op": "summon",
+                "tokenCardNo": "BP07-T03EN",
+                "tokenName": "Naterran Great Tree",
+                "count": 1,
+                "zone": "exArea"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP17-032EN": {
+    "name": "Fox Lancer Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP17-034EN": {
+    "name": "Victorious Grappler",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "strike"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "damageFollowerAndLeader",
+          "followerAmount": 3,
+          "leaderAmount": 3
+        }
+      }
+    ]
+  },
+  "BP17-035EN": {
+    "name": "Countersolari Survivor",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "intimidate",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Select an Assassin card in your cemetery not named Countersolari Survivor and put it into your EX area"
+        }
+      }
+    ]
+  },
+  "BP17-036EN": {
+    "name": "Brothers United",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "with \"Bayleon\" in its name"
+            },
+            {
+              "op": "noop",
+              "label": "Give it +1/+1, then you may put a Naterran Great Tree token onto your field or into your EX area"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP17-037EN": {
+    "name": "Isabelle, Intrepid Mage",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "BP17-038EN": {
+    "name": "Isabelle, Intrepid Mage Evolved",
+    "class": "rune",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP17-T04EN",
+          "tokenName": "Quadra Magic",
+          "count": 1,
+          "zone": "exArea"
+        }
+      }
+    ]
+  },
+  "BP17-039EN": {
+    "name": "Eleanor, Glorious Flower",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP17-043EN": {
+    "name": "Mega Enforcer",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP07-T01EN",
+          "tokenName": "Assembly Droid",
+          "count": 1,
+          "zone": "exArea"
+        }
+      }
+    ]
+  },
+  "BP17-045EN": {
+    "name": "Marie, Flowery Magician",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "mill",
+          "count": 2
+        }
+      }
+    ]
+  },
+  "BP17-046EN": {
+    "name": "Marie, Flowery Magician Evolved",
+    "class": "rune",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 5,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP17-047EN": {
+    "name": "Enforcer",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "assail",
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "If there are at least 3 Machina cards in your EX area, give this [atk]+3 and Assail"
+        }
+      },
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP07-T01EN",
+          "tokenName": "Assembly Droid",
+          "count": 1,
+          "zone": "exArea"
+        }
+      }
+    ]
+  },
+  "BP17-051EN": {
+    "name": "Covenant Mage",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "BP17-052EN": {
+    "name": "Jetbroom Witch",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP07-T02EN",
+          "tokenName": "Repair Mode",
+          "count": 1,
+          "zone": "exArea"
+        }
+      }
+    ]
+  },
+  "BP17-053EN": {
+    "name": "Panacea Alchemist",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "(1) Give your leader [def]+5"
+            },
+            {
+              "op": "noop",
+              "label": "(2) [cost02]: Deal 5 damage to each enemy follower on the field"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP17-054EN": {
+    "name": "Mysterian Wisdom",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "noop",
+          "label": "As an additional cost to play this, reveal an Academic card from your hand and put it on the bottom of your deck. ------"
+        }
+      }
+    ]
+  },
+  "BP17-055EN": {
+    "name": "Rowen, Dragon Lance",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "assail",
+      "strike",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP17-T06EN",
+          "tokenName": "Curse of the Black Dragon",
+          "count": 1,
+          "zone": "exArea"
+        }
+      },
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "damageFollowerAndLeader",
+          "followerAmount": 3,
+          "leaderAmount": 1
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP17-056EN": {
+    "name": "Valdain, Forest Shadow",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Choose up to X"
+            },
+            {
+              "op": "noop",
+              "label": "(1) Select an enemy follower on the field and destroy it"
+            },
+            {
+              "op": "noop",
+              "label": "(2) Search your deck for up to 2 Natura spells with different names, put them into your EX area, then shuffle"
+            },
+            {
+              "op": "noop",
+              "label": "(3) Give your leader [def]+2"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP17-057EN": {
+    "name": "Disrestan, Ocean Harbinger",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Do the following 3 times. \"Put the top card of your deck into your EX area.\""
+        }
+      }
+    ]
+  },
+  "BP17-058EN": {
+    "name": "Disrestan, Ocean Harbinger Evolved",
+    "class": "dragon",
+    "printingType": "evolved",
+    "keywords": [
+      "storm"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "noop",
+          "label": "Give this +2/+2 and Storm"
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP17-059EN": {
+    "name": "Djeana, the Stouthearted",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP07-T03EN",
+          "tokenName": "Naterran Great Tree",
+          "count": 1,
+          "zone": "field"
+        }
+      }
+    ]
+  },
+  "BP17-060EN": {
+    "name": "Djeana, the Stouthearted Evolved",
+    "class": "dragon",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "increaseMaxPp",
+          "amount": 1
+        }
+      },
+      {
+        "timing": "onSuperEvolve",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {},
+          "lookAt": 4,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        }
+      }
+    ]
+  },
+  "BP17-061EN": {
+    "name": "Verdant Rebirth",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "This costs X less to play"
+            },
+            {
+              "op": "noop",
+              "label": "X equals the number of cards named Naterran Great Tree that left your field this turn. ---------- Select an enemy follow"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP17-062EN": {
+    "name": "Dragonslayer Spear",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Select a Rowen, Dragon Lance on your field"
+            },
+            {
+              "op": "noop",
+              "label": "The next time it would take damage this turn, it doesn't"
+            }
+          ]
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP17-063EN": {
+    "name": "Forestclaw Sentinel",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP07-T03EN",
+          "tokenName": "Naterran Great Tree",
+          "count": 1,
+          "zone": "field"
+        }
+      }
+    ]
+  },
+  "BP17-064EN": {
+    "name": "Forestclaw Sentinel Evolved",
+    "class": "dragon",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 3,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP17-065EN": {
+    "name": "Rock Whale",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 2
+        }
+      }
+    ]
+  },
+  "BP17-066EN": {
+    "name": "Newfound Allies",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": ", then look at the top 2 cards"
+            },
+            {
+              "op": "noop",
+              "label": "You may summon up to 2 followers from among them"
+            },
+            {
+              "op": "noop",
+              "label": "Bury the rest"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP17-067EN": {
+    "name": "Shark Warrior",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP17-068EN": {
+    "name": "Shark Warrior Evolved",
+    "class": "dragon",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP17-069EN": {
+    "name": "Poisonous Dilophosaurus",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "bane",
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "destroy",
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP07-T03EN",
+          "tokenName": "Naterran Great Tree",
+          "count": 1,
+          "zone": "field"
+        }
+      }
+    ]
+  },
+  "BP17-070EN": {
+    "name": "Mánagarmr Scout",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP17-071EN": {
+    "name": "Mermaid Archer",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": {
+            "op": "traitFieldCount",
+            "trait": "Marine",
+            "multiplier": 1
+          },
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP17-072EN": {
+    "name": "Touching Thoughts",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "When this is discarded, you may put it into your EX area. ---------- Summon a Naterran Great Tree token"
+            },
+            {
+              "op": "noop",
+              "label": "If Overflow is active for you, give your leader [def]+1 and recover 1 play point"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP17-073EN": {
+    "name": "Luna, Soul Keeper",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Select an [abysscraft] follower in your cemetery not named Luna, Soul Keeper that costs 2 or less and add it to your han"
+            },
+            {
+              "op": "noop",
+              "label": "Activate only if there are at least 10 cards in your cemetery"
+            }
+          ]
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP17-074EN": {
+    "name": "Urias, Final Vampire",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenName": "Horrible Night",
+          "count": 1,
+          "zone": "exArea"
+        }
+      }
+    ]
+  },
+  "BP17-075EN": {
+    "name": "Urias, Final Vampire Evolved",
+    "class": "abyss",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "choose",
+          "min": 1,
+          "max": 1,
+          "options": [
+            {
+              "label": "(1) Select an enemy follower on the field. Deal 3 damage to it a",
+              "effect": {
+                "op": "sequence",
+                "steps": [
+                  {
+                    "op": "dealDamage",
+                    "amount": 3,
+                    "targets": {
+                      "type": "enemyFollower",
+                      "count": 1
+                    }
+                  },
+                  {
+                    "op": "dealDamage",
+                    "amount": 1,
+                    "targets": {
+                      "type": "selfLeader"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "label": "(2) Deal 1 damage to your leader and each enemy follower on the ",
+              "effect": {
+                "op": "dealDamage",
+                "amount": 1,
+                "targets": {
+                  "type": "selfLeader"
+                }
+              }
+            },
+            {
+              "label": "(3) Deal 1 damage to your leader. Draw a card",
+              "effect": {
+                "op": "sequence",
+                "steps": [
+                  {
+                    "op": "dealDamage",
+                    "amount": 1,
+                    "targets": {
+                      "type": "selfLeader"
+                    }
+                  },
+                  {
+                    "op": "draw",
+                    "count": 1
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP17-076EN": {
+    "name": "Mono, Immortal Garnet",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "strike",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP17-T17EN",
+          "count": 1,
+          "zone": "field"
+        }
+      }
+    ]
+  },
+  "BP17-081EN": {
+    "name": "Amy, Psychopomp Guide",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 2
+        }
+      }
+    ]
+  },
+  "BP17-082EN": {
+    "name": "Amy, Psychopomp Guide Evolved",
+    "class": "abyss",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "healLeader",
+          "amount": 2
+        }
+      }
+    ]
+  },
+  "BP17-084EN": {
+    "name": "Allure of Shadows",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 4,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP17-085EN": {
+    "name": "Rouge Vampire",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 1,
+          "targets": {
+            "type": "selfLeader"
+          }
+        }
+      }
+    ]
+  },
+  "BP17-086EN": {
+    "name": "Rouge Vampire Evolved",
+    "class": "abyss",
+    "printingType": "evolved",
+    "keywords": [
+      "drain"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "sanguine"
+          },
+          "then": {
+            "op": "grantKeyword",
+            "keyword": "drain",
+            "targets": {
+              "type": "self"
+            }
+          }
+        },
+        "condition": {
+          "type": "sanguine"
+        }
+      }
+    ]
+  },
+  "BP17-087EN": {
+    "name": "Vampiric Bloodbinder",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "dealDamage",
+              "amount": 1,
+              "targets": {
+                "type": "selfLeader"
+              }
+            },
+            {
+              "op": "draw",
+              "count": 1
+            }
+          ]
+        }
+      },
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP01-T15EN",
+          "tokenName": "Forest Bat",
+          "count": 1,
+          "zone": "exArea"
+        }
+      }
+    ]
+  },
+  "BP17-088EN": {
+    "name": "Trampling Terror",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "destroy",
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "dealDamageAllEnemies",
+          "amount": 3,
+          "followersOnly": false
+        }
+      }
+    ]
+  },
+  "BP17-089EN": {
+    "name": "Soul Commander",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "grantOnCardPlayed",
+          "filter": {
+            "trait": "non-[abysscraft]"
+          },
+          "effect": {
+            "op": "noop",
+            "label": "Whenever a non-[abysscraft] follower is put onto your field, select an enemy follower on the field and deal it 3 damage"
+          },
+          "untilEndOfTurn": false,
+          "label": "Whenever a non-[abysscraft] follower is put onto your field, select an enemy fol"
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing fanfare timing"
+        }
+      }
+    ]
+  },
+  "BP17-090EN": {
+    "name": "Midnight Gossip",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "buffFieldTrait",
+          "trait": "first",
+          "atk": 1,
+          "def": 1,
+          "excludeSelf": false
+        }
+      }
+    ]
+  },
+  "BP17-091EN": {
+    "name": "Eris, Atoned Priestess",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "advanced",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "You may summon a Relic Goddess from your evolve deck"
+            },
+            {
+              "op": "noop",
+              "label": "Activate only if there are at least 4 amulets on your field"
+            }
+          ]
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Select up to 1 enemy follower on the field for every 2 amulets on your field and banish them"
+        }
+      }
+    ]
+  },
+  "BP17-092EN": {
+    "name": "Relic Goddess",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "startOfEnd",
+        "effect": {
+          "op": "healLeader",
+          "amount": 1
+        }
+      }
+    ]
+  },
+  "BP17-093EN": {
+    "name": "Yuwan, Dimensional Avenger",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {},
+          "lookAt": 2,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        }
+      }
+    ]
+  },
+  "BP17-094EN": {
+    "name": "Yuwan, Dimensional Avenger Evolved",
+    "class": "haven",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP05-T04EN",
+          "tokenName": "Ancient Artifact",
+          "count": 1,
+          "zone": "exArea"
+        }
+      },
+      {
+        "timing": "onSuperEvolve",
+        "effect": {
+          "op": "damageFollowerAndLeader",
+          "followerAmount": 4,
+          "leaderAmount": 2
+        }
+      }
+    ]
+  },
+  "BP17-095EN": {
+    "name": "Meowskers, Fluffy Consul",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "strike",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "If this was put onto the field by an ability, draw a card"
+        }
+      },
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "noop",
+          "label": "[cost01]: Select an enemy follower on the field and deal it 2 damage"
+        }
+      }
+    ]
+  },
+  "BP17-096EN": {
+    "name": "Marlone, Peace Advocate",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP17-T09EN",
+          "tokenName": "Eschamali Adviser",
+          "count": 1,
+          "zone": "field"
+        }
+      }
+    ]
+  },
+  "BP17-097EN": {
+    "name": "Marlone, Peace Advocate Evolved",
+    "class": "haven",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP17-T10EN",
+          "tokenName": "Eschamali Constable",
+          "count": 1,
+          "zone": "field"
+        }
+      }
+    ]
+  },
+  "BP17-098EN": {
+    "name": "Vice, Death Grip",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {},
+          "lookAt": 5,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        }
+      }
+    ]
+  },
+  "BP17-099EN": {
+    "name": "Automachina Maiden",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "ward"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "[act] [cost00]: Summon this from your EX area engaged"
+            },
+            {
+              "op": "noop",
+              "label": "Activate only if there are 5 Machina cards in your EX area"
+            },
+            {
+              "op": "noop",
+              "label": "[act] [cost01], put this from your hand into your EX area: Look at the top card of your deck"
+            },
+            {
+              "op": "noop",
+              "label": "If it's a Machina card, you may reveal it and add it to your hand"
+            }
+          ]
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP17-100EN": {
+    "name": "Aerial Craft",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP07-T02EN",
+          "tokenName": "Repair Mode",
+          "count": 1,
+          "zone": "exArea"
+        }
+      }
+    ]
+  },
+  "BP17-101EN": {
+    "name": "Aerial Craft Evolved",
+    "class": "haven",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "noop",
+          "label": "You may summon a Machina follower that costs 2 or less from your hand"
+        }
+      }
+    ]
+  },
+  "BP17-102EN": {
+    "name": "Balance and Obliteration",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "healLeader",
+          "amount": 2
+        }
+      }
+    ]
+  },
+  "BP17-103EN": {
+    "name": "Unlikely Fellowship",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "(1) Select an enemy follower on the field and deal it 2 damage"
+            },
+            {
+              "op": "noop",
+              "label": "(2) Select a follower in your cemetery with \"Meowskers\" in its name and summon it"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP17-104EN": {
+    "name": "Steelwing",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP07-T01EN",
+          "tokenName": "Assembly Droid",
+          "count": 2,
+          "zone": "field"
+        }
+      }
+    ]
+  },
+  "BP17-105EN": {
+    "name": "Steelwing Evolved",
+    "class": "haven",
+    "printingType": "evolved",
+    "keywords": [
+      "storm"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP07-T01EN",
+          "tokenName": "Assembly Droid",
+          "count": 2,
+          "zone": "field"
+        }
+      }
+    ]
+  },
+  "BP17-106EN": {
+    "name": "Technomancer",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP07-T02EN",
+          "tokenName": "Repair Mode",
+          "count": 1,
+          "zone": "exArea"
+        }
+      }
+    ]
+  },
+  "BP17-107EN": {
+    "name": "Android Artisan",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP07-T02EN",
+          "tokenName": "Repair Mode",
+          "count": 1,
+          "zone": "exArea"
+        }
+      }
+    ]
+  },
+  "BP17-108EN": {
+    "name": "Mark Unleashed",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "noop",
+          "label": "play cost reduction condition"
+        }
+      }
+    ]
+  },
+  "BP17-109EN": {
+    "name": "Unicorn Altar",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "healLeader",
+          "amount": 1
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP17-110EN": {
+    "name": "Maisha, Purgation's Vessel",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "BP17-111EN": {
+    "name": "Maisha, Purgation's Vessel Evolved",
+    "class": "neutral",
+    "printingType": "evolved",
+    "keywords": [
+      "storm"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP17-112EN": {
+    "name": "Great Mother's Embrace",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "chooseMultiple",
+          "min": 1,
+          "max": 2,
+          "options": [
+            {
+              "label": "(1) Select an enemy follower on the field and destroy it",
+              "effect": {
+                "op": "destroy",
+                "targets": {
+                  "type": "enemyFollower",
+                  "count": 1
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP17-115EN": {
+    "name": "Cosmic Angel",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "ownCemeteryTraitMin",
+            "trait": "Angel",
+            "count": 5
+          },
+          "then": {
+            "op": "healLeader",
+            "amount": 2
+          }
+        }
+      }
+    ]
+  },
+  "BP17-116EN": {
+    "name": "Guild Assembly",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "noop",
+          "label": "As an additional cost to play this, turn a facedown evolved follower in your evolve deck faceup. ---------- Select an en"
+        },
+        "quick": true
+      }
+    ]
+  },
+  "BP17-117EN": {
+    "name": "Naterra's Future",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "peekDeck",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "BP17-118EN": {
+    "name": "Unnamed Determination",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Search your deck for a follower with \"Maisha\" in its name, put it into your EX area, then shuffle"
+            },
+            {
+              "op": "noop",
+              "label": "If there are at least 5 followers in your cemetery, it costs 1 less to play this turn"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP17-T01EN": {
+    "name": "Lococo's Teddy Bear",
+    "class": "forest",
+    "printingType": "token",
+    "keywords": [
+      "lastWords"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 1,
+          "targets": {
+            "type": "selfLeader"
+          }
+        }
+      }
+    ]
+  },
+  "BP17-T02EN": {
+    "name": "Gale Arrow",
+    "class": "forest",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "noop",
+          "label": "Combo (3) - Deal it 2 damage"
+        }
+      }
+    ]
+  },
+  "BP17-T03EN": {
+    "name": "Storm Arrow",
+    "class": "forest",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "noop",
+          "label": "Combo (5) - Deal 2 damage to each enemy leader"
+        }
+      }
+    ]
+  },
+  "BP17-T04EN": {
+    "name": "Quadra Magic",
+    "class": "rune",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "spellchain",
+            "count": 5
+          },
+          "then": {
+            "op": "playCostReduction",
+            "amount": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP17-T05EN": {
+    "name": "Elements of Creation",
+    "class": "rune",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "healLeader",
+          "amount": 7
+        }
+      }
+    ]
+  },
+  "BP17-T06EN": {
+    "name": "Curse of the Black Dragon",
+    "class": "dragon",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "noop",
+          "label": "This can't be played unless Overflow is active for you"
+        }
+      },
+      {
+        "timing": "startOfEnd",
+        "effect": {
+          "op": "noop",
+          "label": "At the start of your end phase, if this is in your EX area and Overflow isn't active for you, deal 1 damage to your lead"
+        }
+      }
+    ]
+  },
+  "BP17-T07EN": {
+    "name": "A Horrible Night",
+    "class": "abyss",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "dealDamageAllEnemies",
+          "amount": 1,
+          "followersOnly": false
+        }
+      }
+    ]
+  },
+  "BP17-T08EN": {
+    "name": "Luna's Doll",
+    "class": "abyss",
+    "printingType": "token",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP17-T09EN": {
+    "name": "Eschamali Adviser",
+    "class": "haven",
+    "printingType": "token",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "BP17-T10EN": {
+    "name": "Eschamali Constable",
+    "class": "haven",
+    "printingType": "token",
+    "keywords": [
+      "rush",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "healLeader",
+          "amount": 2
+        }
+      }
+    ]
+  },
+  "BP17-T11EN": {
+    "name": "Knight",
+    "class": "sword",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "BP17-T12EN": {
+    "name": "Steelclad Knight",
+    "class": "sword",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "BP17-T13EN": {
+    "name": "Shield Guardian",
+    "class": "sword",
+    "printingType": "token",
+    "keywords": [
+      "ward"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "BP17-T14EN": {
+    "name": "Armored Tentacle",
+    "class": "rune",
+    "printingType": "token",
+    "keywords": [
+      "ward",
+      "lastWords"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "healLeader",
+          "amount": 4
+        }
+      }
+    ]
+  },
+  "BP17-T15EN": {
+    "name": "Assault Tentacle",
+    "class": "rune",
+    "printingType": "token",
+    "keywords": [
+      "storm",
+      "lastWords"
+    ],
+    "parseConfidence": "review",
+    "abilities": []
+  },
+  "BP17-T16EN": {
+    "name": "Ancient Artifact",
+    "class": "neutral",
+    "printingType": "token",
+    "keywords": [
+      "rush"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "BP17-T19EN": {
+    "name": "Naterran Great Tree",
+    "class": "neutral",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  }
+}

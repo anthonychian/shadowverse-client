@@ -1,0 +1,332 @@
+{
+  "CSD03a-001EN": {
+    "name": "Alfred Early",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "evolve"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "into a King of Knights, Alfred"
+            },
+            {
+              "op": "noop",
+              "label": "(Followers with Storm can attack enemy followers and leaders on the turn they're"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CSD03a-002EN": {
+    "name": "King of Knights, Alfred Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [
+      "storm"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {
+            "trait": "Royal Paladin",
+            "cardType": "follower",
+            "maxCost": 3
+          },
+          "lookAt": 40,
+          "to": "field",
+          "remainderTo": "deckBottom"
+        }
+      }
+    ]
+  },
+  "CSD03a-003EN": {
+    "name": "Blaster Blade",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "autoEvolveIf",
+          "condition": {
+            "type": "enteredByAbility"
+          },
+          "triggerOnEvolve": true
+        }
+      }
+    ]
+  },
+  "CSD03a-004EN": {
+    "name": "Blaster Blade Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "noop",
+          "label": "and deal it damage equal to 2 times the number of Royal Paladin followers on your field"
+        }
+      }
+    ]
+  },
+  "CSD03a-005EN": {
+    "name": "Wingal",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Select a Blaster Blade in your cemetery and summon it"
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "CSD03a-006EN": {
+    "name": "Knight of Conviction, Bors",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "assail"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "(Followers with Assail can attack reserved followers.) On Drive - Give this follower +2/+2"
+        }
+      }
+    ]
+  },
+  "CSD03a-007EN": {
+    "name": "Flash Shield, Iseult",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 1,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        },
+        "quick": true
+      }
+    ]
+  },
+  "CSD03a-008EN": {
+    "name": "Knight of Silence, Gallatin",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "buff",
+              "atk": 1,
+              "def": 1,
+              "targets": {
+                "type": "self"
+              }
+            },
+            {
+              "op": "dealDamageAllEnemies",
+              "amount": 3,
+              "followersOnly": false
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CSD03a-009EN": {
+    "name": "Little Sage, Marron",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {
+            "identityName": "Royal Paladin"
+          },
+          "lookAt": 5,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        }
+      }
+    ]
+  },
+  "CSD03a-010EN": {
+    "name": "Lake Maiden, Lien",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "tutorFromCemetery",
+          "filter": {
+            "cardType": "follower"
+          },
+          "to": "hand",
+          "reveal": true
+        }
+      }
+    ]
+  },
+  "CSD03a-011EN": {
+    "name": "Knight of Rose, Morgana",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "strike",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "dealDamage",
+              "amount": 1,
+              "targets": {
+                "type": "enemyFollower",
+                "count": 1
+              }
+            },
+            {
+              "op": "sequence",
+              "steps": [
+                {
+                  "op": "dealDamage",
+                  "amount": 2,
+                  "targets": {
+                    "type": "enemyFollower",
+                    "count": 1
+                  }
+                },
+                {
+                  "op": "buff",
+                  "atk": 1,
+                  "def": 1,
+                  "targets": {
+                    "type": "selfFollower",
+                    "count": 1,
+                    "excludeSelf": false
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "buffFieldTrait",
+          "trait": "this",
+          "atk": 1,
+          "def": 1,
+          "excludeSelf": false
+        }
+      }
+    ]
+  },
+  "CSD03a-016EN": {
+    "name": "Stardust Trumpeter",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buff",
+          "atk": null,
+          "def": 1,
+          "targets": {
+            "type": "selfFollower",
+            "count": 1,
+            "excludeSelf": false
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  }
+}

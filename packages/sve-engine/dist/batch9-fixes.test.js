@@ -265,4 +265,25 @@ function passQuick(state, player) {
         (0, vitest_1.expect)(ended.ok).toBe(true);
         (0, vitest_1.expect)(ended.state.quickWindow).toBeNull();
     });
+    (0, vitest_1.it)("blocks the active player while the opponent resolves a quick window", () => {
+        let state = (0, factory_1.createInitialGameState)(0);
+        state.phase = "main";
+        state.activePlayer = 0;
+        state.quickWindow = "endPhase";
+        state.quickWindowPlayer = 1;
+        state.pendingChoices = null;
+        const base = (0, factory_1.createCardInstance)("MVP-013", 0);
+        base.onFieldSinceTurnStart = true;
+        state.players[0].zones.field.push(base);
+        const view = (0, filterView_1.createPlayerView)(state, 0);
+        (0, vitest_1.expect)(view.legalActions).not.toContain("END_MAIN");
+        (0, vitest_1.expect)(view.legalActions.some((a) => a.startsWith("ATTACK:"))).toBe(false);
+        const attack = (0, applyAction_1.applyAction)(state, 0, {
+            type: "ATTACK",
+            attackerId: base.instanceId,
+            targetId: "leader",
+        });
+        (0, vitest_1.expect)(attack.ok).toBe(false);
+        (0, vitest_1.expect)(attack.error).toMatch(/quick window/i);
+    });
 });

@@ -12,6 +12,10 @@ export function pickSharedHandOverlay(overlay: Partial<CardDefinition>): Partial
   if (overlay.cardType) shared.cardType = overlay.cardType;
   if (overlay.traits?.length) shared.traits = overlay.traits;
   if (overlay.printingType) shared.printingType = overlay.printingType;
+  if (overlay.name) shared.name = overlay.name;
+  if (overlay.class) shared.class = overlay.class;
+  if (overlay.evolvesFrom) shared.evolvesFrom = overlay.evolvesFrom;
+  if (overlay.evolvesTo) shared.evolvesTo = overlay.evolvesTo;
   return shared;
 }
 

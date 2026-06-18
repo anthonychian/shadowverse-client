@@ -1,0 +1,3032 @@
+{
+  "BP05-025EN": {
+    "name": "Disciple of Usurpation",
+    "class": "sword",
+    "printingType": "base",
+    "cost": 3,
+    "attack": 3,
+    "defense": 2,
+    "cardType": "follower",
+    "traits": [
+      "Omen",
+      "Thief"
+    ],
+    "keywords": [
+      "storm",
+      "strike"
+    ],
+    "abilities": [
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "millOpponent",
+              "count": 1
+            },
+            {
+              "op": "if",
+              "condition": {
+                "type": "opponentCemeteryMin",
+                "count": 10
+              },
+              "then": {
+                "op": "buff",
+                "atk": 2,
+                "def": 0,
+                "targets": {
+                  "type": "self"
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP05-001EN": {
+    "name": "Izudia, Omen of Unkilling",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "If there are at least 3 Hunter cards in your cemetery, select an enemy follower on the field"
+            },
+            {
+              "op": "noop",
+              "label": "Change it into an amulet and give it \"[act] [cost02]: Put this card into its owner's cemetery.\" (It keeps all existing a"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP05-002EN": {
+    "name": "Izudia, Omen of Unkilling Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamageAllEnemies",
+          "amount": 6,
+          "followersOnly": false
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP05-003EN": {
+    "name": "Spinaria, Keeper of Enigmas",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "recoverPp",
+          "amount": 3
+        }
+      }
+    ]
+  },
+  "BP05-004EN": {
+    "name": "Apostle of Unkilling",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "BP05-005EN": {
+    "name": "Apostle of Unkilling Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "noop",
+          "label": "Search your deck for a Hunter follower that costs 2 play points or less, put it onto your field, then shuffle your deck"
+        }
+      }
+    ]
+  },
+  "BP05-006EN": {
+    "name": "Morton the Manipulator",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "startOfEnd",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "At the start of your end phase, an opponent chooses one of the following"
+            },
+            {
+              "op": "noop",
+              "label": "(1) They can't draw a card during their next start phase"
+            },
+            {
+              "op": "noop",
+              "label": "(2) They can't increase their maximum play points by 1 during their next start phase"
+            },
+            {
+              "op": "noop",
+              "label": "(3) They can't play followers during their next main phase"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP05-007EN": {
+    "name": "Fairy Torrent",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Select up to 2 Pixie followers on your field and put them into their owners' EX areas"
+            },
+            {
+              "op": "noop",
+              "label": "If at least 1 Pixie follower was put into an EX area by this ability, give your leader [def]+2"
+            }
+          ]
+        },
+        "quick": true
+      }
+    ]
+  },
+  "BP05-008EN": {
+    "name": "Disciple of Unkilling",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "peekDeck",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "BP05-009EN": {
+    "name": "Noah, Vengeful Puppeteer",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP05-T03EN",
+          "tokenName": "Puppet",
+          "count": 2,
+          "zone": "exArea"
+        }
+      }
+    ]
+  },
+  "BP05-010EN": {
+    "name": "Noah, Vengeful Puppeteer Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [
+      "storm"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "noop",
+          "label": "While this card is on your field, any Puppet you play costs 1 less"
+        }
+      },
+      {
+        "timing": "onAllyFollowerEnter",
+        "effect": {
+          "op": "noop",
+          "label": "Whenever a Puppet is put onto your field, give it [atk]+1 and Storm"
+        }
+      }
+    ]
+  },
+  "BP05-011EN": {
+    "name": "Mark of the Unkilling",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": null,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP05-012EN": {
+    "name": "Servant of Unkilling",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "ownCemeteryTraitMin",
+            "trait": "Hunter",
+            "count": 3
+          },
+          "then": {
+            "op": "healLeader",
+            "amount": 2
+          }
+        }
+      }
+    ]
+  },
+  "BP05-013EN": {
+    "name": "Mechanical Bowman",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 5,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP05-014EN": {
+    "name": "Flower Doll",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP05-T03EN",
+          "tokenName": "Puppet",
+          "count": 1,
+          "zone": "exArea"
+        }
+      }
+    ]
+  },
+  "BP05-015EN": {
+    "name": "Flower Doll Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "noop",
+          "label": "Select up to 1 Puppetry follower in your cemetery (including this one) and add it to your hand"
+        }
+      }
+    ]
+  },
+  "BP05-016EN": {
+    "name": "Automaton Soldier",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP05-T03EN",
+          "tokenName": "Puppet",
+          "count": 2,
+          "zone": "exArea"
+        }
+      }
+    ]
+  },
+  "BP05-017EN": {
+    "name": "Mark of the Six",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "grantLeaderDamageShield",
+          "charges": 1
+        },
+        "quick": true
+      }
+    ]
+  },
+  "BP05-018EN": {
+    "name": "Octrice, Omen of Usurpation",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "evolve"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "condition": {
+          "type": "opponentCemeteryMin",
+          "count": 10
+        },
+        "effect": {
+          "op": "playFromOpponentCemetery",
+          "filter": {}
+        }
+      }
+    ]
+  },
+  "BP05-019EN": {
+    "name": "Octrice, Omen of Usurpation Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "playFromOpponentCemetery",
+          "filter": {}
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP05-020EN": {
+    "name": "Magna Legacy",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamageAllEnemies",
+          "amount": 4,
+          "followersOnly": false
+        }
+      }
+    ]
+  },
+  "BP05-021EN": {
+    "name": "Apostle of Usurpation",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Each opponent puts the top 2 cards of their deck into their cemetery"
+            },
+            {
+              "op": "noop",
+              "label": "Then, if there are at least 10 cards in opponents' cemeteries, draw a card"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP05-022EN": {
+    "name": "Apostle of Usurpation Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 4,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP05-023EN": {
+    "name": "Empyreal Swordsman",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "startOfEnd",
+        "effect": {
+          "op": "damageFollowerAndLeader",
+          "followerAmount": 4,
+          "leaderAmount": 2
+        }
+      }
+    ]
+  },
+  "BP05-024EN": {
+    "name": "Confront Adversity",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "summon",
+          "tokenName": "Shield Guardian and Knight",
+          "count": 1,
+          "zone": "field"
+        }
+      }
+    ]
+  },
+  "BP05-026EN": {
+    "name": "Fervent Machine Soldier",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Search your deck for a Commander card, reveal it, add it to your hand, then shuffle your deck"
+        }
+      }
+    ]
+  },
+  "BP05-027EN": {
+    "name": "Geno, Machine Artisan",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "grantOnCardPlayed",
+          "filter": {
+            "cardType": "amulet"
+          },
+          "effect": {
+            "op": "noop",
+            "label": "give it [def]+1"
+          },
+          "oncePerTurn": true
+        }
+      }
+    ]
+  },
+  "BP05-028EN": {
+    "name": "Geno, Machine Artisan Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "noop",
+          "label": "Search your deck for an amulet, reveal it, add it to your hand, then shuffle your deck"
+        }
+      },
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "grantOnCardPlayed",
+          "filter": {
+            "cardType": "amulet"
+          },
+          "effect": {
+            "op": "noop",
+            "label": "give it [def]+1"
+          },
+          "oncePerTurn": true
+        }
+      }
+    ]
+  },
+  "BP05-029EN": {
+    "name": "Servant of Usurpation",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Each opponent puts the top card of their deck into their cemetery"
+        }
+      },
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "buffFieldTrait",
+          "trait": "this",
+          "atk": 1,
+          "def": 1,
+          "excludeSelf": false
+        }
+      }
+    ]
+  },
+  "BP05-030EN": {
+    "name": "Captain Meteo",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 4,
+          "targets": {
+            "type": "enemyLeader"
+          }
+        }
+      }
+    ]
+  },
+  "BP05-031EN": {
+    "name": "Captain Meteo Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "destroy",
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP05-032EN": {
+    "name": "Gravikinetic Warrior",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buff",
+          "atk": null,
+          "def": 2,
+          "targets": {
+            "type": "selfFollower",
+            "count": 1,
+            "excludeSelf": false
+          }
+        }
+      }
+    ]
+  },
+  "BP05-033EN": {
+    "name": "Usurping Spineblade",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Deal it 3 damage, and each opponent puts the top card of their deck into their cemetery"
+            },
+            {
+              "op": "noop",
+              "label": "Then, if there are at least 10 cards in opponents' cemeteries, deal 2 more damage to the selected follower"
+            }
+          ]
+        },
+        "quick": true
+      }
+    ]
+  },
+  "BP05-034EN": {
+    "name": "Avaritia",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {
+            "identityName": "Thief"
+          },
+          "lookAt": 4,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        }
+      }
+    ]
+  },
+  "BP05-035EN": {
+    "name": "Raio, Omen of Truth",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 9,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP05-036EN": {
+    "name": "Raio, Omen of Truth Evolved",
+    "class": "rune",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {},
+          "lookAt": 9,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        }
+      }
+    ]
+  },
+  "BP05-037EN": {
+    "name": "Lishenna, Omen of Destruction",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenName": "Destruction in White and Destruction in Black",
+          "count": 1,
+          "zone": "exArea"
+        }
+      }
+    ]
+  },
+  "BP05-038EN": {
+    "name": "Apostle of Truth",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "If there are at least 3 Mage followers on your field, give this follower +2/+2 and Ward"
+        }
+      }
+    ]
+  },
+  "BP05-039EN": {
+    "name": "Apostle of Truth Evolved",
+    "class": "rune",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP05-040EN": {
+    "name": "Safira, Synthetic Beast",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buff",
+          "targets": {
+            "type": "self"
+          },
+          "label": "variable atk buff"
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP05-041EN": {
+    "name": "Destructive Refrain",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "choose",
+          "min": 1,
+          "max": 1,
+          "options": [
+            {
+              "label": "(1) Search your deck for a Lishenna, Omen of Destruction, reveal",
+              "effect": {
+                "op": "noop",
+                "label": "Search your deck for a Lishenna, Omen of Destruction, reveal it, add it to your hand, then shuffle your deck"
+              }
+            },
+            {
+              "label": "(2) [cost02]: Deal X damage to each enemy follower on the field.",
+              "effect": {
+                "op": "sequence",
+                "steps": [
+                  {
+                    "op": "noop",
+                    "label": "[cost02]: Deal X damage to each enemy follower on the field"
+                  },
+                  {
+                    "op": "noop",
+                    "label": "X equals the number of Idolatry cards on your field"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP05-042EN": {
+    "name": "Iron Staff Mechanic",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "playCostReduction",
+          "amount": 1
+        }
+      }
+    ]
+  },
+  "BP05-043EN": {
+    "name": "Iron Staff Mechanic Evolved",
+    "class": "rune",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "playCostReduction",
+          "amount": 1
+        }
+      }
+    ]
+  },
+  "BP05-044EN": {
+    "name": "Truth's Adjudication",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "choose",
+          "min": 1,
+          "max": 1,
+          "options": [
+            {
+              "label": "(1) Draw 2 cards",
+              "effect": {
+                "op": "draw",
+                "count": 2
+              }
+            },
+            {
+              "label": "(2) Deal 3 damage to each enemy leader",
+              "effect": {
+                "op": "dealDamageAllEnemies",
+                "amount": 3,
+                "followersOnly": false
+              }
+            },
+            {
+              "label": "(3) Select an enemy follower on the field and deal it 3 damage",
+              "effect": {
+                "op": "dealDamage",
+                "amount": 3,
+                "targets": {
+                  "type": "enemyFollower",
+                  "count": 1
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP05-045EN": {
+    "name": "Monochromatic Destruction",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "noop",
+          "label": "Deal it 2 damage and, if there are at least 2 Idolatry cards on your field, deal 2 damage to its leader and give your le"
+        },
+        "quick": true
+      }
+    ]
+  },
+  "BP05-046EN": {
+    "name": "Disciple of Truth",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "review",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "grantOnCardPlayed",
+          "filter": {},
+          "effect": {
+            "op": "healLeader",
+            "amount": 1
+          },
+          "untilEndOfTurn": false,
+          "label": "Whenever you play a Mage card, give your leader [def]+1"
+        }
+      }
+    ]
+  },
+  "BP05-047EN": {
+    "name": "Disciple of Destruction",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "fieldTraitMin",
+            "trait": "Idolatry",
+            "count": 3
+          },
+          "then": {
+            "op": "draw",
+            "count": 2
+          }
+        },
+        "condition": {
+          "type": "fieldTraitMin",
+          "trait": "Idolatry",
+          "count": 3
+        }
+      }
+    ]
+  },
+  "BP05-048EN": {
+    "name": "Servant of Destruction",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "fieldTraitMin",
+            "trait": "Idolatry",
+            "count": 3
+          },
+          "then": {
+            "op": "noop",
+            "label": "change this card's [evolve] cost to 0 for the rest of this turn"
+          }
+        },
+        "condition": {
+          "type": "fieldTraitMin",
+          "trait": "Idolatry",
+          "count": 3
+        }
+      }
+    ]
+  },
+  "BP05-049EN": {
+    "name": "Servant of Destruction Evolved",
+    "class": "rune",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "damageFollowerAndLeader",
+          "followerAmount": 2,
+          "leaderAmount": 2
+        }
+      }
+    ]
+  },
+  "BP05-050EN": {
+    "name": "Honest Cohort",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 3,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        },
+        "quick": true
+      }
+    ]
+  },
+  "BP05-051EN": {
+    "name": "Metaproduction",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {
+            "cardType": "spell"
+          },
+          "lookAt": 2,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        },
+        "quick": true
+      }
+    ]
+  },
+  "BP05-052EN": {
+    "name": "Galmieux, Omen of Disdain",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "noop",
+          "label": "whenever this follower takes ability damage, change its [evolve] cost to 0 for the rest of the turn"
+        }
+      }
+    ]
+  },
+  "BP05-053EN": {
+    "name": "Galmieux, Omen of Disdain Evolved",
+    "class": "dragon",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "tutorFromCemetery",
+          "filter": {
+            "identityName": "Omen"
+          },
+          "to": "field",
+          "reveal": true
+        }
+      },
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 3,
+          "targets": {
+            "type": "enemyFieldCard",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP05-054EN": {
+    "name": "Electromagical Rhino",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "buffFieldTrait",
+              "trait": "this",
+              "atk": 3,
+              "def": 3,
+              "excludeSelf": false
+            },
+            {
+              "op": "mill",
+              "count": 4
+            }
+          ]
+        }
+      },
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing lastWords timing"
+        }
+      }
+    ]
+  },
+  "BP05-055EN": {
+    "name": "Apostle of Disdain",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "evolve"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "noop",
+          "label": "whenever this follower takes ability damage, give it [atk]+1 and Storm"
+        }
+      }
+    ]
+  },
+  "BP05-056EN": {
+    "name": "Apostle of Disdain Evolved",
+    "class": "dragon",
+    "printingType": "evolved",
+    "keywords": [
+      "storm"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {},
+          "lookAt": 5,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        }
+      }
+    ]
+  },
+  "BP05-057EN": {
+    "name": "God Bullet Golem",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Select an enemy leader or enemy follower on the field and deal it X damage"
+            },
+            {
+              "op": "noop",
+              "label": "X equals the attack of the follower you put into the cemetery"
+            }
+          ]
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP05-058EN": {
+    "name": "Disdainful Rending",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "and an enemy follower on the field"
+            },
+            {
+              "op": "noop",
+              "label": "Deal 1 damage to the first follower and 3 damage to the second"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP05-059EN": {
+    "name": "Disciple of Disdain",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "[act] [cost00]: Select a follower on your field and deal it 1 damage"
+            },
+            {
+              "op": "noop",
+              "label": "This ability can be activated"
+            }
+          ]
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP05-060EN": {
+    "name": "Cursed Stone",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "BP05-061EN": {
+    "name": "Cursed Stone Evolved",
+    "class": "dragon",
+    "printingType": "evolved",
+    "keywords": [
+      "ward"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "noop",
+          "label": "For the rest of this turn and during each opponent's next turn, it loses all abilities and can't attack enemies"
+        }
+      }
+    ]
+  },
+  "BP05-062EN": {
+    "name": "Amethyst Giant",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "aura",
+      "strike",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "grantKeyword",
+          "keyword": "rush",
+          "targets": {
+            "type": "self"
+          }
+        }
+      },
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "refresh",
+          "targets": {
+            "type": "self"
+          }
+        }
+      }
+    ]
+  },
+  "BP05-063EN": {
+    "name": "Servant of Disdain",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing fanfare timing"
+        }
+      }
+    ]
+  },
+  "BP05-064EN": {
+    "name": "Silver Automaton",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "lastWords"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP05-T03EN",
+          "tokenName": "Puppet",
+          "count": 2,
+          "zone": "exArea"
+        }
+      }
+    ]
+  },
+  "BP05-065EN": {
+    "name": "Airship Whale",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "BP05-066EN": {
+    "name": "Airship Whale Evolved",
+    "class": "dragon",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {
+            "cardType": "follower"
+          },
+          "lookAt": 5,
+          "to": "field",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": false
+        }
+      }
+    ]
+  },
+  "BP05-067EN": {
+    "name": "Colossal Construct",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 5,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP05-068EN": {
+    "name": "Total Domination",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "BP05-069EN": {
+    "name": "Valnareik, Omen of Lust",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "strike"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "sanguine"
+          },
+          "then": {
+            "op": "noop",
+            "label": "this follower has Storm"
+          }
+        },
+        "condition": {
+          "type": "sanguine"
+        }
+      },
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Deal X damage to each enemy leader"
+            },
+            {
+              "op": "noop",
+              "label": "X equals the number of times your leader has lost defense this turn"
+            },
+            {
+              "op": "noop",
+              "label": "If your leader's defense is 7, give this follower +2/+2"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP05-070EN": {
+    "name": "Rulenye, Omen of Silence",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "necrocharge",
+            "count": 10
+          },
+          "then": {
+            "op": "noop",
+            "label": "Select an enemy follower that costs 3 play points or less on the field and destroy it"
+          }
+        },
+        "condition": {
+          "type": "necrocharge",
+          "count": 10
+        }
+      },
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "noop",
+          "label": "While this card is on your field, any spell an opponent plays costs 1 more"
+        }
+      }
+    ]
+  },
+  "BP05-071EN": {
+    "name": "Rulenye, Omen of Silence Evolved",
+    "class": "abyss",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "opponentDiscardEach",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "BP05-072EN": {
+    "name": "Apostle of Lust",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "tutorFromCemetery",
+          "filter": {
+            "cardType": "follower",
+            "maxCost": 2
+          },
+          "to": "field",
+          "reveal": true
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP05-073EN": {
+    "name": "Apostle of Silence",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "startOfEnd",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "At the start of your end phase, select an enemy leader"
+            },
+            {
+              "op": "noop",
+              "label": "If there are 3 cards or less in its controller's hand, deal it 3 damage"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP05-074EN": {
+    "name": "Apostle of Silence Evolved",
+    "class": "abyss",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 3,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP05-075EN": {
+    "name": "Disciple of Lust",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "strike",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "dealDamage",
+              "amount": 1,
+              "targets": {
+                "type": "enemyLeader"
+              }
+            },
+            {
+              "op": "dealDamage",
+              "amount": 1,
+              "targets": {
+                "type": "selfLeader"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "dealDamage",
+              "amount": 1,
+              "targets": {
+                "type": "enemyLeader"
+              }
+            },
+            {
+              "op": "dealDamage",
+              "amount": 1,
+              "targets": {
+                "type": "selfLeader"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP05-076EN": {
+    "name": "Masked Puppet",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP05-T03EN",
+          "tokenName": "Puppet",
+          "count": 1,
+          "zone": "exArea"
+        }
+      },
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "buffFieldTrait",
+          "trait": "this",
+          "atk": 1,
+          "def": 1,
+          "excludeSelf": false
+        }
+      }
+    ]
+  },
+  "BP05-077EN": {
+    "name": "Masked Puppet Evolved",
+    "class": "abyss",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP05-T03EN",
+          "tokenName": "Puppet",
+          "count": 2,
+          "zone": "field"
+        }
+      },
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "buffFieldTrait",
+          "trait": "this",
+          "atk": 1,
+          "def": 1,
+          "excludeSelf": false
+        }
+      }
+    ]
+  },
+  "BP05-078EN": {
+    "name": "Wings of Lust",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "choose",
+          "min": 1,
+          "max": 1,
+          "options": [
+            {
+              "label": "(1) Select a follower on your field. Give it Rush and deal 1 dam",
+              "effect": {
+                "op": "grantKeyword",
+                "keyword": "rush",
+                "targets": {
+                  "type": "self"
+                }
+              }
+            },
+            {
+              "label": "(2) Select an enemy follower on the field. Deal 2 damage to it a",
+              "effect": {
+                "op": "sequence",
+                "steps": [
+                  {
+                    "op": "dealDamage",
+                    "amount": 2,
+                    "targets": {
+                      "type": "enemyFollower",
+                      "count": 1
+                    }
+                  },
+                  {
+                    "op": "dealDamage",
+                    "amount": 1,
+                    "targets": {
+                      "type": "selfLeader"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "label": "(3) Deal 1 damage to your leader. Draw a card. Discard a card",
+              "effect": {
+                "op": "sequence",
+                "steps": [
+                  {
+                    "op": "dealDamage",
+                    "amount": 1,
+                    "targets": {
+                      "type": "selfLeader"
+                    }
+                  },
+                  {
+                    "op": "draw",
+                    "count": 1
+                  },
+                  {
+                    "op": "discard",
+                    "count": 1
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP05-079EN": {
+    "name": "Silent Purge",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "destroy",
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP05-080EN": {
+    "name": "Servant of Lust",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 1,
+          "targets": {
+            "type": "selfLeader"
+          }
+        }
+      }
+    ]
+  },
+  "BP05-081EN": {
+    "name": "Servant of Lust Evolved",
+    "class": "abyss",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "give your leader [defense]-1: Select an enemy follower on the field and deal it X damage"
+            },
+            {
+              "op": "noop",
+              "label": "X equals the number of times your leader has lost defense this turn"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP05-082EN": {
+    "name": "Servant of Silence",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "noop",
+          "label": "Whenever an opponent discards a card, deal 2 damage to their leader and put the top 2 cards of your deck into your cemet"
+        }
+      }
+    ]
+  },
+  "BP05-083EN": {
+    "name": "Hamelin",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Select a token card in your EX area"
+            },
+            {
+              "op": "noop",
+              "label": "Put a token of the same name into your EX area"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP05-084EN": {
+    "name": "Embracing Wings",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "destroy",
+          "targets": {
+            "type": "anyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP05-085EN": {
+    "name": "Thundering Roar",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "necrocharge",
+            "count": 10
+          },
+          "then": {
+            "op": "chooseMultiple",
+            "min": 1,
+            "max": 2,
+            "options": [
+              {
+                "label": "(1) Each opponent discards a random card",
+                "effect": {
+                  "op": "opponentDiscardEach",
+                  "count": 1
+                }
+              }
+            ]
+          },
+          "else": {
+            "op": "choose",
+            "min": 1,
+            "max": 1,
+            "options": [
+              {
+                "label": "(1) Each opponent discards a random card",
+                "effect": {
+                  "op": "opponentDiscardEach",
+                  "count": 1
+                }
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "BP05-086EN": {
+    "name": "Marwynn, Omen of Repose",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "[evolve] Skip your next turn:"
+        }
+      }
+    ]
+  },
+  "BP05-087EN": {
+    "name": "Marwynn, Omen of Repose Evolved",
+    "class": "haven",
+    "printingType": "evolved",
+    "keywords": [
+      "ward",
+      "aura"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "increaseMaxPp",
+              "amount": 1
+            },
+            {
+              "op": "healLeader",
+              "amount": 3
+            },
+            {
+              "op": "draw",
+              "count": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP05-088EN": {
+    "name": "Deus Ex Machina",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "startOfEnd",
+        "effect": {
+          "op": "choose",
+          "min": 1,
+          "max": 1,
+          "options": [
+            {
+              "label": "(1) Discard your hand. Draw 4 cards",
+              "effect": {
+                "op": "discardHand"
+              }
+            },
+            {
+              "label": "(2) Recover 4 play points",
+              "effect": {
+                "op": "recoverPp",
+                "amount": 4
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP05-089EN": {
+    "name": "Apostle of Repose",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "startOfOpponentEnd",
+        "effect": {
+          "op": "noop",
+          "label": "At the start of each opponent's main phase, recover 1 play point"
+        }
+      }
+    ]
+  },
+  "BP05-090EN": {
+    "name": "Apostle of Repose Evolved",
+    "class": "haven",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "noop",
+          "label": "Select a reserved enemy follower on the field and banish it"
+        }
+      },
+      {
+        "timing": "startOfOpponentEnd",
+        "effect": {
+          "op": "noop",
+          "label": "At the start of each opponent's main phase, recover 2 play points"
+        }
+      }
+    ]
+  },
+  "BP05-091EN": {
+    "name": "Hakrabi",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Search your deck for an amulet that costs 1 play point, put it onto your field, then shuffle your deck"
+        }
+      }
+    ]
+  },
+  "BP05-092EN": {
+    "name": "Ancient Protector",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "aura",
+        "effect": {
+          "op": "noop",
+          "label": "While this card is on your field, you can't lose the game, and opponents can't win"
+        }
+      },
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "noop",
+          "label": "When your leader's defense becomes 0 or less, put this card into its owner's cemetery and change your leader's defense t"
+        }
+      }
+    ]
+  },
+  "BP05-093EN": {
+    "name": "Disciple of Repose",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "startOfOpponentEnd",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 1,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP05-094EN": {
+    "name": "Unidentified Subject",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "buffFieldTrait",
+          "trait": "this",
+          "atk": 1,
+          "def": 1,
+          "excludeSelf": false
+        }
+      }
+    ]
+  },
+  "BP05-095EN": {
+    "name": "Unidentified Subject Evolved",
+    "class": "haven",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "draw",
+          "count": 2
+        }
+      },
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "buffFieldTrait",
+          "trait": "this",
+          "atk": 1,
+          "def": 1,
+          "excludeSelf": false
+        }
+      }
+    ]
+  },
+  "BP05-096EN": {
+    "name": "Silver Cog Spinner",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "If there are at least 5 cards in your hand, recover 2 play points"
+            },
+            {
+              "op": "noop",
+              "label": "If there are 5 or less cards, draw a card"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP05-097EN": {
+    "name": "Servant of Repose",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "startOfOpponentEnd",
+        "effect": {
+          "op": "healLeader",
+          "amount": 1
+        }
+      }
+    ]
+  },
+  "BP05-098EN": {
+    "name": "Demon's Epitaph",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "[evolve] Discard a card:"
+        }
+      }
+    ]
+  },
+  "BP05-099EN": {
+    "name": "Demon's Epitaph Evolved",
+    "class": "haven",
+    "printingType": "evolved",
+    "keywords": [
+      "bane",
+      "lastWords"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "dealDamageAllEnemies",
+          "amount": 2,
+          "followersOnly": false
+        }
+      }
+    ]
+  },
+  "BP05-100EN": {
+    "name": "The Saviors",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "choose",
+          "min": 1,
+          "max": 1,
+          "options": [
+            {
+              "label": "(2) Select an enemy follower with 2 defense or less on the field",
+              "effect": {
+                "op": "banish",
+                "targets": {
+                  "type": "enemyFollower",
+                  "count": 1,
+                  "maxDef": 2
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP05-101EN": {
+    "name": "Realm of Repose",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "For the rest of this turn, if your leader would take more than 4 damage, it takes 4 instead"
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP05-102EN": {
+    "name": "Ancient Amplifier",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buff",
+          "atk": null,
+          "def": 2,
+          "targets": {
+            "type": "selfFollower",
+            "count": 1,
+            "excludeSelf": false
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP05-103EN": {
+    "name": "Mjerrabaine, Omen of One",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "evolve"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "startOfEnd",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "At the start of your end phase, if there are 2 cards or less in your hand, deal 3 damage to each enemy leader"
+            },
+            {
+              "op": "noop",
+              "label": "If there are 0 cards in your hand, deal 3 damage to each enemy follower on the field"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP05-104EN": {
+    "name": "Mjerrabaine, Omen of One Evolved",
+    "class": "neutral",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "startOfEnd",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "At the start of your end phase, refresh this card and, if there are 2 cards or less in your hand, deal 5 damage to each "
+            },
+            {
+              "op": "noop",
+              "label": "If there are 0 cards in your hand, deal 5 damage to each enemy follower on the field"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP05-105EN": {
+    "name": "Gilnelise, Omen of Craving",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "drain",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "grantOnCardPlayed",
+          "filter": {
+            "cardClass": "neutral"
+          },
+          "effect": {
+            "op": "dealDamageAllEnemies",
+            "amount": 1,
+            "followersOnly": false
+          },
+          "untilEndOfTurn": false,
+          "label": "Whenever you play a [neutral] card, deal 1 damage to each enemy leader"
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing fanfare timing"
+        }
+      }
+    ]
+  },
+  "BP05-106EN": {
+    "name": "Apostle of Craving",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "grantKeyword",
+          "keyword": "rush",
+          "targets": {
+            "type": "selfFollower",
+            "count": 1,
+            "excludeSelf": true
+          }
+        }
+      }
+    ]
+  },
+  "BP05-107EN": {
+    "name": "Apostle of Craving Evolved",
+    "class": "neutral",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Select another follower on the field"
+            },
+            {
+              "op": "noop",
+              "label": "Deal it 3 damage and give it [atk]+3"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP05-108EN": {
+    "name": "Lyrial, Archer Throne",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamageAllEnemies",
+          "amount": 2,
+          "followersOnly": false
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "BP05-109EN": {
+    "name": "Feena, Dynamite Daredevil",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "choose",
+          "min": 1,
+          "max": 1,
+          "options": [
+            {
+              "label": "(1) Look at the top 5 cards of your deck. You may reveal a follo",
+              "effect": {
+                "op": "searchDeckChoose",
+                "filter": {
+                  "cardType": "follower"
+                },
+                "lookAt": 5,
+                "to": "hand",
+                "optional": true,
+                "remainderTo": "deckBottom",
+                "reveal": true
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "BP05-110EN": {
+    "name": "Rosa, Mech Wing Maiden",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "BP05-111EN": {
+    "name": "Rosa, Mech Wing Maiden Evolved",
+    "class": "neutral",
+    "printingType": "evolved",
+    "keywords": [
+      "ward"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "BP05-112EN": {
+    "name": "Enlightenment",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "assail"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "buff",
+          "atk": 1,
+          "def": 1,
+          "targets": {
+            "type": "selfFollower",
+            "count": 1,
+            "excludeSelf": false
+          }
+        }
+      }
+    ]
+  },
+  "BP05-113EN": {
+    "name": "Craving's Splendor",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 1,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        },
+        "quick": true
+      }
+    ]
+  },
+  "BP05-114EN": {
+    "name": "Cat Cannoneer",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "BP05-115EN": {
+    "name": "Cat Cannoneer Evolved",
+    "class": "neutral",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "BP05-T04EN",
+          "tokenName": "Ancient Artifact",
+          "count": 1,
+          "zone": "field"
+        }
+      }
+    ]
+  },
+  "BP05-116EN": {
+    "name": "Steel Demolitionist",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 2,
+          "targets": {
+            "type": "enemyFieldCard",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP05-117EN": {
+    "name": "Gliesaray",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "BP05-LD01EN": {
+    "name": "Liza, Greenwood Queen",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "BP05-LD02EN": {
+    "name": "Albert, Tempestuous Doom",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "BP05-LD03EN": {
+    "name": "Anne & Grea, Bonds Everlasting",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "BP05-LD04EN": {
+    "name": "Ian & Adelle, Transcendent Love",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "BP05-LD05EN": {
+    "name": "Cerberus, Festive Hound",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "BP05-LD06EN": {
+    "name": "Zoe, Golden Princess",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "BP05-T01EN": {
+    "name": "Destruction in White",
+    "class": "rune",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "startOfMain",
+        "effect": {
+          "op": "noop",
+          "label": "At the start of your main phase, give your leader [def]+2"
+        }
+      }
+    ]
+  },
+  "BP05-T02EN": {
+    "name": "Destruction in Black",
+    "class": "rune",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "startOfMain",
+        "effect": {
+          "op": "noop",
+          "label": "At the start of your main phase, deal 2 damage to each enemy leader"
+        }
+      }
+    ]
+  },
+  "BP05-T03EN": {
+    "name": "Puppet",
+    "class": "neutral",
+    "printingType": "token",
+    "keywords": [
+      "rush"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "BP05-T04EN": {
+    "name": "Ancient Artifact",
+    "class": "neutral",
+    "printingType": "token",
+    "keywords": [
+      "rush"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "BP05-T05EN": {
+    "name": "Mystic Artifact",
+    "class": "neutral",
+    "printingType": "token",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "BP05-T06EN": {
+    "name": "Knight",
+    "class": "sword",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "BP05-T07EN": {
+    "name": "Shield Guardian",
+    "class": "sword",
+    "printingType": "token",
+    "keywords": [
+      "ward"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "BP05-UT01EN": {
+    "name": "Fairy",
+    "class": "forest",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  }
+}

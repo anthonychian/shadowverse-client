@@ -1,0 +1,461 @@
+{
+  "SD03-001EN": {
+    "name": "Mythril Golem",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "dealDamageAllEnemies",
+              "amount": 3,
+              "followersOnly": true
+            },
+            {
+              "op": "if",
+              "condition": {
+                "type": "spellchain",
+                "count": 7
+              },
+              "then": {
+                "op": "sequence",
+                "steps": [
+                  {
+                    "op": "dealDamage",
+                    "amount": 5,
+                    "targets": {
+                      "type": "enemyFollower",
+                      "count": 1
+                    }
+                  },
+                  {
+                    "op": "if",
+                    "condition": {
+                      "type": "spellchain",
+                      "count": 15
+                    },
+                    "then": {
+                      "op": "dealDamageAllEnemies",
+                      "amount": 5,
+                      "followersOnly": false
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "SD03-002EN": {
+    "name": "Rune Blade Summoner",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "spellchain",
+            "count": 5
+          },
+          "then": {
+            "op": "sequence",
+            "steps": [
+              {
+                "op": "buffFieldTrait",
+                "trait": "this",
+                "atk": 4,
+                "def": 4,
+                "excludeSelf": false
+              },
+              {
+                "op": "if",
+                "condition": {
+                  "type": "spellchain",
+                  "count": 10
+                },
+                "then": {
+                  "op": "grantKeyword",
+                  "keyword": "storm",
+                  "targets": {
+                    "type": "self"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "condition": {
+          "type": "spellchain",
+          "count": 5
+        }
+      }
+    ]
+  },
+  "SD03-003EN": {
+    "name": "Demonflame Mage",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "SD03-004EN": {
+    "name": "Demonflame Mage Evolved",
+    "class": "rune",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "dealDamageAllEnemies",
+          "amount": 2,
+          "followersOnly": true
+        }
+      }
+    ]
+  },
+  "SD03-005EN": {
+    "name": "Insight",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "SD03-006EN": {
+    "name": "Fire Chain",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamageSplit",
+          "primaryAmount": 3,
+          "secondaryAmount": 0,
+          "maxTargets": 2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 2
+          }
+        },
+        "quick": true
+      }
+    ]
+  },
+  "SD03-007EN": {
+    "name": "Lightning Shooter",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 4,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "SD03-008EN": {
+    "name": "Penguin Wizard",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "optionalCost",
+          "label": "Discard a spell",
+          "cost": {
+            "op": "discard",
+            "count": 1
+          },
+          "then": {
+            "op": "draw",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "SD03-009EN": {
+    "name": "Penguin Wizard Evolved",
+    "class": "rune",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "review",
+    "abilities": []
+  },
+  "SD03-010EN": {
+    "name": "Sammy, Wizard's Apprentice",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "peekDeck",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "SD03-011EN": {
+    "name": "Sammy, Wizard's Apprentice Evolved",
+    "class": "rune",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "draw",
+              "count": 1
+            },
+            {
+              "op": "draw",
+              "count": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "SD03-012EN": {
+    "name": "Wind Blast",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 4,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "SD03-013EN": {
+    "name": "Sorcery Cache",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SD03-014EN": {
+    "name": "Fiery Embrace",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 3,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "SD03-015EN": {
+    "name": "Magic Missile",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "dealDamage",
+              "amount": 2,
+              "targets": {
+                "type": "enemyFollower",
+                "count": 1
+              }
+            },
+            {
+              "op": "draw",
+              "count": 1
+            }
+          ]
+        },
+        "quick": true
+      }
+    ]
+  },
+  "SD03-016EN": {
+    "name": "Conjure Golem",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "summon",
+          "tokenName": "Guardform Golem or Strikeform Golem",
+          "count": 1,
+          "zone": "exArea"
+        },
+        "quick": true
+      }
+    ]
+  },
+  "SD03-017EN": {
+    "name": "Healing Angel",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "SD03-018EN": {
+    "name": "Healing Angel Evolved",
+    "class": "neutral",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "SD03-019EN": {
+    "name": "Angelic Snipe",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "review",
+    "abilities": []
+  },
+  "SD03-020EN": {
+    "name": "Angelic Barrage",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamageAllEnemies",
+          "amount": 1,
+          "followersOnly": true
+        },
+        "quick": true
+      }
+    ]
+  },
+  "SD03-LD01EN": {
+    "name": "Isabelle",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "SD03-T01EN": {
+    "name": "Strikeform Golem",
+    "class": "rune",
+    "printingType": "token",
+    "keywords": [
+      "rush"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SD03-T02EN": {
+    "name": "Guardform Golem",
+    "class": "rune",
+    "printingType": "token",
+    "keywords": [
+      "ward"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  }
+}

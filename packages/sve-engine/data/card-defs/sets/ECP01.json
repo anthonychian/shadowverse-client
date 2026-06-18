@@ -1,0 +1,1594 @@
+{
+  "ECP01-005EN": {
+    "name": "Haru Urara [Sunny Passion ♪]",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "buffFieldTrait",
+              "trait": "this",
+              "atk": 1,
+              "def": 1,
+              "excludeSelf": false
+            },
+            {
+              "op": "searchDeckChoose",
+              "filter": {},
+              "lookAt": 5,
+              "to": "hand",
+              "optional": true,
+              "remainderTo": "deckBottom",
+              "reveal": true
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "ECP01-006EN": {
+    "name": "Yamanin Zephyr",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "choose",
+          "min": 1,
+          "max": 1,
+          "options": [
+            {
+              "label": "(1) Select an enemy follower on the field and return it to its o",
+              "effect": {
+                "op": "noop",
+                "label": "and return it to its owner's hand"
+              }
+            },
+            {
+              "label": "(2) Search your deck for an Umamusume follower that costs 2 or l",
+              "effect": {
+                "op": "noop",
+                "label": "Search your deck for an Umamusume follower that costs 2 or less, summon it, then shuffle"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "ECP01-007EN": {
+    "name": "Sakura Bakushin O",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "strike"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "If there are 3 or 4 Umamusume cards on your field, draw a card, then discard a card"
+            },
+            {
+              "op": "noop",
+              "label": "If there are 5, draw a card"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "ECP01-008EN": {
+    "name": "Mihono Bourbon",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buffFieldTrait",
+          "trait": "this",
+          "atk": 1,
+          "def": 1,
+          "excludeSelf": false
+        }
+      }
+    ]
+  },
+  "ECP01-009EN": {
+    "name": "A MORE MARVELOUS WORLD! ☆",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "healLeader",
+          "amount": 2
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "ECP01-014EN": {
+    "name": "Aston Machan",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buffFieldTrait",
+          "trait": "this",
+          "atk": 1,
+          "def": 1,
+          "excludeSelf": false
+        }
+      }
+    ]
+  },
+  "ECP01-015EN": {
+    "name": "Symboli Kris S",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buffFieldTrait",
+          "trait": "this",
+          "atk": 5,
+          "def": 5,
+          "excludeSelf": false
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "ECP01-016EN": {
+    "name": "Tap Dance City",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Search your deck for a 1-cost Umamusume follower, summon it, then shuffle"
+        }
+      }
+    ]
+  },
+  "ECP01-017EN": {
+    "name": "Biwa Hayahide",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "buffFieldTrait",
+              "trait": "this",
+              "atk": 1,
+              "def": 1,
+              "excludeSelf": false
+            },
+            {
+              "op": "searchDeckChoose",
+              "filter": {
+                "identityName": "BNW"
+              },
+              "lookAt": 40,
+              "to": "exArea",
+              "optional": false,
+              "remainderTo": "deckBottom"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "ECP01-018EN": {
+    "name": "Teio-Oo-Oo!!!",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {},
+          "lookAt": 7,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        }
+      }
+    ]
+  },
+  "ECP01-023EN": {
+    "name": "Verxina",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "dealDamageAllEnemies",
+              "amount": 2,
+              "followersOnly": false
+            },
+            {
+              "op": "healLeader",
+              "amount": 2
+            },
+            {
+              "op": "draw",
+              "count": 2
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "ECP01-024EN": {
+    "name": "Vivlos",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "assail"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "This card costs 2 less to play if there's a Cheval Grand or Verxina on your field. ---------- Rush"
+        }
+      }
+    ]
+  },
+  "ECP01-025EN": {
+    "name": "Daitaku Helios",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "and deal it 1 damage"
+            },
+            {
+              "op": "noop",
+              "label": "If there's an Umamusume card that costs 4 or more on your field, deal 3 damage instead"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "ECP01-026EN": {
+    "name": "Sweep Tosho",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "playCostReduction",
+          "amount": 1
+        }
+      }
+    ]
+  },
+  "ECP01-027EN": {
+    "name": "Lucky Star in the Sky",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "peekDeck",
+          "count": 1
+        },
+        "quick": true
+      }
+    ]
+  },
+  "ECP01-032EN": {
+    "name": "Super Creek [Piece of Mind]",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "tutorFromCemetery",
+          "filter": {
+            "identityName": "Umamusume"
+          },
+          "to": "hand",
+          "reveal": true
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "ECP01-033EN": {
+    "name": "Tsurumaru Tsuyoshi",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": {
+            "op": "traitFieldCount",
+            "trait": "faceup",
+            "multiplier": 1
+          },
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "ECP01-034EN": {
+    "name": "El Condor Pasa",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "fanfare"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Search your deck for a Champion's Passion, summon it, then shuffle"
+        }
+      }
+    ]
+  },
+  "ECP01-035EN": {
+    "name": "Nishino Flower",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buffFieldTrait",
+          "trait": "this",
+          "atk": 1,
+          "def": 1,
+          "excludeSelf": false
+        }
+      }
+    ]
+  },
+  "ECP01-036EN": {
+    "name": "Pious Flame, Heavens Scorcher",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "This card costs 2 less to play. ---------- Select an enemy follower on the field"
+            },
+            {
+              "op": "noop",
+              "label": "Deal it 5 damage and, if you discarded an Umamusume card that costs 7 or more when playing this card, draw a card"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "ECP01-041EN": {
+    "name": "Matikanetannhauser [Machitan☆Adventure]",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buffFieldTrait",
+          "trait": "this",
+          "atk": 1,
+          "def": 1,
+          "excludeSelf": false
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "mill",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "ECP01-042EN": {
+    "name": "K.S.Miracle",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "lastWords",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "ECP01-043EN": {
+    "name": "Air Shakur",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "strike"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "ownCemeteryTraitMin",
+            "trait": "Umamusume",
+            "count": 20
+          },
+          "then": {
+            "op": "passiveKeywords",
+            "keywords": [
+              "storm"
+            ]
+          }
+        }
+      },
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "buffFieldTrait",
+              "trait": "this",
+              "atk": 3,
+              "def": 3,
+              "excludeSelf": false
+            },
+            {
+              "op": "buffFieldTrait",
+              "trait": "this",
+              "atk": 1,
+              "def": 1,
+              "excludeSelf": false
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "ECP01-044EN": {
+    "name": "Manhattan Cafe",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Select a 2-cost Umamusume follower in your cemetery and summon it"
+            },
+            {
+              "op": "noop",
+              "label": "Activate only if there are at least 10 Umamusume cards in your cemetery"
+            }
+          ]
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "ECP01-045EN": {
+    "name": "TT Ignition!",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "mill",
+          "count": 4
+        }
+      }
+    ]
+  },
+  "ECP01-050EN": {
+    "name": "Wonder Acute",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buffFieldTrait",
+          "trait": "this",
+          "atk": 1,
+          "def": 1,
+          "excludeSelf": false
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "ECP01-051EN": {
+    "name": "Mejiro Ardan [Hopeful Petals Dancing in the Night]",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buffFieldTrait",
+          "trait": "this",
+          "atk": 1,
+          "def": 1,
+          "excludeSelf": false
+        }
+      }
+    ]
+  },
+  "ECP01-052EN": {
+    "name": "Matikanefukukitaru",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "onAllyFollowerEnter",
+        "effect": {
+          "op": "noop",
+          "label": "Whenever a Fate's Forecast is put onto your field, give your leader [def]+7"
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Shuffle your cemetery into your deck, then look at the top 7 cards"
+            },
+            {
+              "op": "noop",
+              "label": "You may summon any number of cards named Fate's Forecast from among them"
+            },
+            {
+              "op": "noop",
+              "label": "put rest on deck bottom"
+            }
+          ]
+        }
+      },
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "noop",
+          "label": "Shuffle this card into its owner's deck"
+        }
+      }
+    ]
+  },
+  "ECP01-053EN": {
+    "name": "Mejiro Palmer [Moonlit Devil ♪]",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "storm"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "This card doesn't refresh during your start phase"
+        }
+      },
+      {
+        "timing": "startOfMain",
+        "effect": {
+          "op": "noop",
+          "label": "At the start of your main phase, [cost01]: Refresh this card"
+        }
+      }
+    ]
+  },
+  "ECP01-054EN": {
+    "name": "Bring 'Em Home, Please!",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": {
+            "op": "traitFieldCount",
+            "trait": "Mejiro Family",
+            "multiplier": 2
+          },
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing lastWords timing"
+        }
+      }
+    ]
+  },
+  "ECP01-055EN": {
+    "name": "Progenitors and Guides",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "choose",
+          "min": 1,
+          "max": 1,
+          "options": [
+            {
+              "label": "(1) Select an Umamusume follower that costs 5 or less in your ce",
+              "effect": {
+                "op": "tutorFromCemetery",
+                "filter": {
+                  "cardType": "follower"
+                },
+                "to": "hand",
+                "reveal": true
+              }
+            },
+            {
+              "label": "(2) Select up to 2 faceup cards named Carrot in your evolve deck",
+              "effect": {
+                "op": "gainEvolutionPoint",
+                "amount": 1
+              }
+            },
+            {
+              "label": "(3) Give each other Umamusume follower on your field +1/+1",
+              "effect": {
+                "op": "buffFieldTrait",
+                "trait": "Umamusume",
+                "atk": 1,
+                "def": 1,
+                "excludeSelf": true
+              }
+            }
+          ]
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "ECP01-056EN": {
+    "name": "Balliamo?",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "noop",
+          "label": "Search your deck for an Umamusume follower, reveal it, add it to your hand, then shuffle"
+        }
+      }
+    ]
+  },
+  "ECP01-057EN": {
+    "name": "Ryoka Tsurugi",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "startOfEnd",
+        "effect": {
+          "op": "returnToHand",
+          "targets": {
+            "type": "self"
+          }
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing fanfare timing"
+        }
+      }
+    ]
+  },
+  "ECP01-058EN": {
+    "name": "A Super Successful Event! Evolved",
+    "class": "neutral",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "ECP01-059EN": {
+    "name": "Hungry for a Miracle Evolved",
+    "class": "neutral",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "ECP01-060EN": {
+    "name": "At the End of the Day Evolved",
+    "class": "neutral",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "ECP01-061EN": {
+    "name": "Forth! Into the Great Age of Agriculture! Evolved",
+    "class": "neutral",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "ECP01-062EN": {
+    "name": "Workshop! Farmers for a Day! Evolved",
+    "class": "neutral",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "ECP01-SP01EN": {
+    "name": "Hokko Tarumae",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "This card costs X less to play"
+            },
+            {
+              "op": "noop",
+              "label": "X equals the number of Umamusume cards on your field. ----------"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "ECP01-SP02EN": {
+    "name": "Hokko Tarumae Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "ECP01-SP03EN": {
+    "name": "Sakura Laurel",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "buffFieldTrait",
+              "trait": "this",
+              "atk": 2,
+              "def": 2,
+              "excludeSelf": false
+            },
+            {
+              "op": "healLeader",
+              "amount": 2
+            }
+          ]
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "ECP01-SP04EN": {
+    "name": "Sounds of Earth",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 5,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "ECP01-SP05EN": {
+    "name": "Gentildonna",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Your opponents'"
+        }
+      },
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "noop",
+          "label": "abilities don't trigger"
+        }
+      }
+    ]
+  },
+  "ECP01-SP06EN": {
+    "name": "Gentildonna Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "dealDamageOtherFollowers",
+          "amount": 7
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing fanfare timing"
+        }
+      }
+    ]
+  },
+  "ECP01-SP07EN": {
+    "name": "Symboli Rudolf [Enchaînement]",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "buffFieldTrait",
+              "trait": "this",
+              "atk": 1,
+              "def": 1,
+              "excludeSelf": false
+            },
+            {
+              "op": "searchDeckChoose",
+              "filter": {},
+              "lookAt": 3,
+              "to": "hand",
+              "optional": true,
+              "remainderTo": "deckBottom",
+              "reveal": true
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "ECP01-SP08EN": {
+    "name": "Sirius Symboli [Escorte Étoile]",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "strike",
+      "intimidate",
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "fieldTraitMin",
+            "trait": "Umamusume",
+            "count": 3
+          },
+          "then": {
+            "op": "buff",
+            "def": 1,
+            "targets": {
+              "type": "self"
+            }
+          }
+        },
+        "condition": {
+          "type": "fieldTraitMin",
+          "trait": "Umamusume",
+          "count": 3
+        }
+      },
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "draw",
+              "count": 1
+            },
+            {
+              "op": "discard",
+              "count": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "ECP01-SP09EN": {
+    "name": "Cheval Grand",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "selectEvolveDeckCard",
+          "filter": {
+            "identityName": "Carrot"
+          },
+          "face": "faceup",
+          "turnTo": "facedown"
+        }
+      }
+    ]
+  },
+  "ECP01-SP10EN": {
+    "name": "Cheval Grand Evolved",
+    "class": "rune",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "ECP01-SP11EN": {
+    "name": "Tanino Gimlet",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buffFieldTrait",
+          "trait": "this",
+          "atk": 1,
+          "def": 1,
+          "excludeSelf": false
+        }
+      }
+    ]
+  },
+  "ECP01-SP12EN": {
+    "name": "Narita Top Road [Peachy Silhouette]",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "strike",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buffFieldTrait",
+          "trait": "this",
+          "atk": 1,
+          "def": 1,
+          "excludeSelf": false
+        }
+      }
+    ]
+  },
+  "ECP01-SP13EN": {
+    "name": "Neo Universe",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "overflow"
+          },
+          "then": {
+            "op": "sequence",
+            "steps": [
+              {
+                "op": "dealDamage",
+                "amount": 4,
+                "targets": {
+                  "type": "enemyFollower",
+                  "count": 1
+                }
+              },
+              {
+                "op": "draw",
+                "count": 1
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "ECP01-SP14EN": {
+    "name": "Neo Universe Evolved",
+    "class": "dragon",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "increaseMaxPp",
+          "amount": 1
+        }
+      },
+      {
+        "timing": "startOfEnd",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "ECP01-SP15EN": {
+    "name": "Mr. C.B.",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 1,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "ECP01-SP16EN": {
+    "name": "Katsuragi Ace",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "destroy",
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "ECP01-SP17EN": {
+    "name": "Hishi Miracle",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "mill",
+          "count": 2
+        }
+      }
+    ]
+  },
+  "ECP01-SP18EN": {
+    "name": "Hishi Miracle Evolved",
+    "class": "abyss",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "draw",
+          "count": 2
+        }
+      }
+    ]
+  },
+  "ECP01-SP19EN": {
+    "name": "Daiichi Ruby",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "dealDamageAllEnemies",
+          "amount": 1,
+          "followersOnly": false
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing fanfare timing"
+        }
+      }
+    ]
+  },
+  "ECP01-SP20EN": {
+    "name": "Duramente",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buffFieldTrait",
+          "trait": "this",
+          "atk": 1,
+          "def": 1,
+          "excludeSelf": false
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "destroy",
+          "targets": {
+            "type": "anyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "ECP01-SP21EN": {
+    "name": "Satono Crown",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Select an enemy leader"
+            },
+            {
+              "op": "noop",
+              "label": "If your leader has less defense than it, give your leader [def]+2"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "ECP01-SP22EN": {
+    "name": "Satono Crown Evolved",
+    "class": "haven",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {},
+          "lookAt": 4,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        }
+      }
+    ]
+  },
+  "ECP01-SP23EN": {
+    "name": "Mejiro Ramonu",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "ECP01-SP24EN": {
+    "name": "Jungle Pocket",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  }
+}

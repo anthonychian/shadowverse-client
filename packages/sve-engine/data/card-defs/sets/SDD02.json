@@ -1,0 +1,386 @@
+{
+  "SDD02-006EN": {
+    "name": "Leod, the Crescent Blade",
+    "class": "sword",
+    "printingType": "base",
+    "cost": 2,
+    "attack": 1,
+    "defense": 3,
+    "evolvesTo": "SDD02-007EN",
+    "evolveCost": 2,
+    "keywords": [
+      "evolve"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "Assassin"
+    ],
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "passiveKeywords",
+          "keywords": [
+            "aura",
+            "intimidate"
+          ]
+        }
+      },
+      {
+        "timing": "startOfEnd",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 1,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "SDD02-007EN": {
+    "name": "Leod, the Crescent Blade Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "attack": 2,
+    "defense": 4,
+    "evolvesFrom": "SDD02-006EN",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "traits": [
+      "Assassin"
+    ],
+    "keywords": [],
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "passiveKeywords",
+          "keywords": [
+            "aura",
+            "intimidate"
+          ]
+        }
+      },
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "choose",
+          "min": 1,
+          "max": 1,
+          "options": [
+            {
+              "label": "Deal 2 to enemy leader",
+              "effect": {
+                "op": "dealDamage",
+                "amount": 2,
+                "targets": {
+                  "type": "enemyLeader"
+                }
+              }
+            },
+            {
+              "label": "Deal 2 to enemy follower",
+              "effect": {
+                "op": "dealDamage",
+                "amount": 2,
+                "targets": {
+                  "type": "enemyFollower",
+                  "count": 1
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "timing": "startOfEnd",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 1,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "SDD02-001EN": {
+    "name": "Ralmia, Sonic Racer",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "evolve"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD02-002EN": {
+    "name": "Ralmia, Sonic Racer Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [
+      "storm"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD02-003EN": {
+    "name": "Nahtnaught, Cursed Queen",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD02-004EN": {
+    "name": "Bunny & Baron, Specter Duo",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "SDD02-005EN": {
+    "name": "Bunny & Baron, Specter Duo Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD02-008EN": {
+    "name": "Prudent General",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD02-009EN": {
+    "name": "Prudent General Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [
+      "rush"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD02-010EN": {
+    "name": "Radical Gunslinger",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD02-011EN": {
+    "name": "Tyrant's Order",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD02-012EN": {
+    "name": "Outlaw Gunner",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "SDD02-013EN": {
+    "name": "Desperados' Shot",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 6,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "SDD02-014EN": {
+    "name": "Naht's Henchman",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "SDD02-015EN": {
+    "name": "Godsent Stride",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "rush"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD02-016EN": {
+    "name": "Quixotic Adventurer",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "SDD02-017EN": {
+    "name": "Quixotic Adventurer Evolved",
+    "class": "neutral",
+    "printingType": "evolved",
+    "keywords": [
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD02-018EN": {
+    "name": "Rivaylian Bandit",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD02-019EN": {
+    "name": "Rivaylian Bandit Evolved",
+    "class": "neutral",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD02-020EN": {
+    "name": "Vagabond Lizard",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD02-LD01EN": {
+    "name": "Marie Malisse",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "SDD02-T01EN": {
+    "name": "Steelclad Knight",
+    "class": "sword",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "SDD02-T02EN": {
+    "name": "Val, Trusty Getaway Car",
+    "class": "sword",
+    "printingType": "token",
+    "keywords": [
+      "storm",
+      "strike"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "SDD02-T03EN": {
+    "name": "Dutiful Steed",
+    "class": "neutral",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD02-T04EN": {
+    "name": "Bullet Bike",
+    "class": "neutral",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD02-T05EN": {
+    "name": "Arcane Personnel Carrier",
+    "class": "neutral",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  }
+}

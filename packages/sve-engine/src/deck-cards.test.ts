@@ -1,4 +1,6 @@
 import { describe, it, expect, beforeEach } from "vitest";
+import { execSync } from "child_process";
+import * as path from "path";
 import { applyAction } from "./actions/applyAction";
 import { getCardDef } from "./cards/registry";
 import { createCardInstance, createInitialGameState, resetIdCounter } from "./state/factory";
@@ -47,6 +49,16 @@ const DECK_CARDS = [
   "BP12-T03EN",
   "BP12-T04EN",
 ];
+
+const ROOT = path.join(__dirname, "..", "..", "..");
+
+function runFullAudit() {
+  const out = execSync(
+    `node -e "console.log(JSON.stringify(require('./src/scripts/dsl-audit-utils').runFullAudit()))"`,
+    { cwd: ROOT, encoding: "utf8" },
+  );
+  return JSON.parse(out.trim());
+}
 
 describe("deck card DSL", () => {
   beforeEach(() => resetIdCounter());
@@ -182,5 +194,56 @@ describe("deck card DSL", () => {
 
     const after = playHeroOfTheHunt(state);
     expect(after.players[0].zones.field.some((c) => c.cardNo === "BP14-018EN")).toBe(true);
+  });
+
+  it("Spartacus offers variable discard at start of end phase", () => {
+    let state = createInitialGameState(0);
+    state.phase = "main";
+    state.activePlayer = 0;
+    state.pendingChoices = null;
+    state.players[0].flags.mulliganDone = true;
+    state.players[1].flags.mulliganDone = true;
+
+    const spartacus = createCardInstance("BP09-020EN", 0);
+    spartacus.engaged = true;
+    state.players[0].zones.field.push(spartacus);
+    const handA = createCardInstance("MVP-012", 0);
+    const handB = createCardInstance("MVP-013", 0);
+    state.players[0].zones.hand.push(handA, handB);
+    for (let i = 0; i < 5; i++) {
+      state.players[0].zones.deck.push(createCardInstance("MVP-014", 0));
+    }
+
+    let ended = applyAction(state, 0, { type: "END_MAIN" });
+    expect(ended.ok).toBe(true);
+    expect(ended.state.pendingChoices?.type).toBe("discardVariable");
+
+    const deckBefore = ended.state.players[0].zones.deck.length;
+    const confirmed = applyAction(ended.state, 0, {
+      type: "CHOICE_RESPONSE",
+      payload: { instanceIds: [handA.instanceId] },
+    });
+    expect(confirmed.ok).toBe(true);
+    expect(confirmed.state.players[0].zones.hand.some((c) => c.instanceId === handA.instanceId)).toBe(
+      false,
+    );
+    expect(confirmed.state.players[0].zones.cemetery.some((c) => c.instanceId === handA.instanceId)).toBe(
+      true,
+    );
+    expect(confirmed.state.players[0].zones.hand.length).toBe(3);
+    expect(confirmed.state.players[0].zones.deck.length).toBe(deckBefore - 2);
+  });
+
+  it("deck cards pass static DSL correctness audit (structure)", () => {
+    const audit = runFullAudit();
+    const byCanon = new Map(audit.results.map((r: { canonNo: string }) => [r.canonNo, r]));
+    const hardClasses = new Set(["missing_abilities", "timing_mismatch", "unimplemented_op"]);
+    const failures: string[] = [];
+    for (const cardNo of DECK_CARDS) {
+      const r = byCanon.get(cardNo) as { failures?: { class: string }[] } | undefined;
+      const hard = (r?.failures || []).filter((f: { class: string }) => hardClasses.has(f.class));
+      if (hard.length) failures.push(`${cardNo}: ${hard.map((f: { class: string }) => f.class).join(",")}`);
+    }
+    expect(failures).toEqual([]);
   });
 });

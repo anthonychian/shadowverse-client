@@ -1,0 +1,260 @@
+{
+  "BP01": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 166,
+    "total": 209
+  },
+  "BP02": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 139,
+    "total": 139
+  },
+  "BP03": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 131,
+    "total": 133
+  },
+  "BP04": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 146,
+    "total": 146
+  },
+  "BP05": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 130,
+    "total": 131
+  },
+  "BP06": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 129,
+    "total": 130
+  },
+  "BP07": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 119,
+    "total": 130
+  },
+  "BP08": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 131,
+    "total": 131
+  },
+  "BP09": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 150,
+    "total": 155
+  },
+  "BP10": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 147,
+    "total": 151
+  },
+  "BP11": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 117,
+    "total": 129
+  },
+  "BP12": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 109,
+    "total": 122
+  },
+  "BP13": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 123,
+    "total": 125
+  },
+  "BP14": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 106,
+    "total": 127
+  },
+  "BP15": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 139,
+    "total": 139
+  },
+  "BP16": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 135,
+    "total": 145
+  },
+  "BP17": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 122,
+    "total": 139
+  },
+  "CP01": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 85,
+    "total": 85
+  },
+  "CP02": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 108,
+    "total": 113
+  },
+  "CSD01": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 3,
+    "total": 3
+  },
+  "CSD02a": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 11,
+    "total": 11
+  },
+  "CSD02b": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 6,
+    "total": 11
+  },
+  "CSD02c": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 11,
+    "total": 11
+  },
+  "ECP01": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 62,
+    "total": 62
+  },
+  "ECP02": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 70,
+    "total": 84
+  },
+  "PR": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 410,
+    "total": 414
+  },
+  "SD01": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 22,
+    "total": 22
+  },
+  "SD02": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 23,
+    "total": 23
+  },
+  "SD03": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 23,
+    "total": 23
+  },
+  "SD04": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 22,
+    "total": 22
+  },
+  "SD05": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 23,
+    "total": 23
+  },
+  "SD06": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 23,
+    "total": 23
+  },
+  "SDD01": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 23,
+    "total": 23
+  },
+  "SDD02": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 24,
+    "total": 26
+  },
+  "SDD03": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 30,
+    "total": 30
+  },
+  "SDD04": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 19,
+    "total": 19
+  },
+  "SDD05": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 22,
+    "total": 23
+  },
+  "SDD06": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 19,
+    "total": 19
+  },
+  "SP01": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 8,
+    "total": 8
+  },
+  "SS01": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 7,
+    "total": 7
+  },
+  "SS02": {
+    "status": "parsed",
+    "parsedAt": "2026-06-17",
+    "updated": 7,
+    "total": 7
+  },
+  "CP03": {
+    "status": "skipped",
+    "reason": "Vanguard crossover expansion"
+  },
+  "CSD03a": {
+    "status": "skipped",
+    "reason": "Vanguard crossover expansion"
+  },
+  "CSD03b": {
+    "status": "skipped",
+    "reason": "Vanguard crossover expansion"
+  }
+}

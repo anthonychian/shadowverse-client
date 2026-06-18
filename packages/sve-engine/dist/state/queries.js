@@ -2,6 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.isBoxed = void 0;
 exports.getPlayer = getPlayer;
+exports.isFollowerCard = isFollowerCard;
+exports.isFieldFollower = isFieldFollower;
+exports.canDeclareAttack = canDeclareAttack;
 exports.findInstance = findInstance;
 exports.getBaseCardNoForInstance = getBaseCardNoForInstance;
 exports.computeEvolvePayment = computeEvolvePayment;
@@ -10,11 +13,15 @@ exports.resolveCardNo = resolveCardNo;
 exports.resolveCardDefCost = resolveCardDefCost;
 exports.getExAreaPlayCostReduction = getExAreaPlayCostReduction;
 exports.getPassivePlayCostReduction = getPassivePlayCostReduction;
+exports.getPassivePlayCostIncrease = getPassivePlayCostIncrease;
 exports.getEffectivePlayCost = getEffectivePlayCost;
 exports.getEffectiveStats = getEffectiveStats;
 exports.getEvolveCost = getEvolveCost;
 exports.hasKeyword = hasKeyword;
 exports.clampDamageToFollower = clampDamageToFollower;
+exports.followerIgnoresWard = followerIgnoresWard;
+exports.controllerHasDefAsAttackAura = controllerHasDefAsAttackAura;
+exports.getAttackerStrikeDamage = getAttackerStrikeDamage;
 exports.canEvolveFollower = canEvolveFollower;
 exports.getActivatedAbilities = getActivatedAbilities;
 exports.evolveCardsMatch = evolveCardsMatch;
@@ -22,6 +29,7 @@ exports.findMatchingEvolveCard = findMatchingEvolveCard;
 exports.getStrikeAbilities = getStrikeAbilities;
 exports.opponentOf = opponentOf;
 exports.isOverflowActive = isOverflowActive;
+exports.isSanguineActive = isSanguineActive;
 exports.canAttackLeader = canAttackLeader;
 exports.getWardTargets = getWardTargets;
 exports.getLegalAttackTargets = getLegalAttackTargets;
@@ -40,12 +48,62 @@ function canActivateEffectResolve(state, player, effect) {
             const need = effect.count ?? 1;
             return getPlayer(state, player).zones.hand.filter((c) => (0, conditions_1.cardMatchesFilter)(c.cardNo, effect.filter)).length >= need;
         }
+        case "grantKeyword": {
+            const targets = effect.targets;
+            if (!targets || targets.type !== "selfFollower")
+                return true;
+            return getPlayer(state, player).zones.field.some((c) => {
+                if (!isFieldFollower(state, c))
+                    return false;
+                if (targets.filter && !(0, conditions_1.cardMatchesFilter)(c.cardNo, targets.filter))
+                    return false;
+                return true;
+            });
+        }
+        case "buff": {
+            const targets = effect.targets;
+            if (!targets || targets.type !== "selfFollower" || targets.filter)
+                return true;
+            return getPlayer(state, player).zones.field.some((c) => isFieldFollower(state, c));
+        }
         default:
             return true;
     }
 }
 function getPlayer(state, player) {
     return state.players[player];
+}
+function isFollowerCard(cardNo) {
+    return (0, registry_1.getCardDef)(cardNo)?.cardType === "follower";
+}
+function isFieldFollower(state, card) {
+    const cardNo = resolveCardNo(state, card);
+    const def = (0, registry_1.getCardDef)(cardNo);
+    if (!def)
+        return false;
+    if (def.cardType === "amulet" &&
+        card.maneuveringUntilTurn === state.turnNumber &&
+        def.attack != null &&
+        def.defense != null) {
+        return true;
+    }
+    return def.cardType === "follower";
+}
+function canDeclareAttack(state, card) {
+    if (card.cannotAttack)
+        return false;
+    const cardNo = resolveCardNo(state, card);
+    const def = (0, registry_1.getCardDef)(cardNo);
+    if (!def)
+        return false;
+    for (const ability of def.abilities ?? []) {
+        if (ability.timing === "passive" && ability.effect.op === "cannotAttack") {
+            if (!ability.condition || (0, conditions_1.evalCondition)(state, card.controller, ability.condition)) {
+                return false;
+            }
+        }
+    }
+    return true;
 }
 function findInstance(state, instanceId) {
     for (const pid of [0, 1]) {
@@ -115,11 +173,16 @@ function resolveCardNo(state, card) {
 }
 var passives_2 = require("./passives");
 Object.defineProperty(exports, "isBoxed", { enumerable: true, get: function () { return passives_2.isBoxed; } });
-/** Printed play cost; evolved promos with cost 0 inherit from their base form. */
+/** Printed play cost; evolved printings count as their base form's cost. */
 function resolveCardDefCost(cardNo) {
     const def = (0, registry_1.getCardDef)(cardNo);
     if (!def)
         return 0;
+    if (def.evolvesFrom && !def.evolvesTo) {
+        const from = (0, registry_1.getCardDef)(def.evolvesFrom);
+        if (from && from.cost > 0)
+            return from.cost;
+    }
     if (def.cost > 0)
         return def.cost;
     if (def.evolvesFrom) {
@@ -166,13 +229,40 @@ function getPassivePlayCostReduction(state, player, cardNo) {
             reduction += ability.effect.amount;
         }
     }
+    for (const discount of state.players[player].flags.nextPlayDiscounts ?? []) {
+        if (!discount.filter || (0, conditions_1.cardMatchesFilter)(cardNo, discount.filter)) {
+            reduction += discount.amount;
+        }
+    }
     return reduction;
+}
+function getPassivePlayCostIncrease(state, player, cardNo) {
+    const def = (0, registry_1.getCardDef)(cardNo);
+    let increase = 0;
+    for (const ability of def?.abilities ?? []) {
+        if (ability.timing !== "passive")
+            continue;
+        if (ability.condition && !(0, conditions_1.evalCondition)(state, player, ability.condition))
+            continue;
+        if (ability.effect.op === "playCostIncrease") {
+            let followers = 0;
+            for (const pid of [0, 1]) {
+                followers += getPlayer(state, pid).zones.field.filter((c) => {
+                    const d = (0, registry_1.getCardDef)(resolveCardNo(state, c));
+                    return d?.cardType === "follower";
+                }).length;
+            }
+            increase += ability.effect.amountPerFollower * followers;
+        }
+    }
+    return increase;
 }
 function getEffectivePlayCost(card, cardNo, state, player, fromZone) {
     const playNo = getBaseCardNoForInstance(cardNo, card.linkedEvoInstanceId);
     let base = resolveCardDefCost(playNo);
     if (state && player != null) {
         base = Math.max(0, base - getPassivePlayCostReduction(state, player, playNo));
+        base += getPassivePlayCostIncrease(state, player, playNo);
         if (fromZone === "exArea") {
             base = Math.max(0, base - getExAreaPlayCostReduction(state, player, cardNo));
         }
@@ -183,8 +273,8 @@ function getEffectivePlayCost(card, cardNo, state, player, fromZone) {
 function getEffectiveStats(card, state) {
     const statsNo = state ? resolveCardNo(state, card) : getBaseCardNoForInstance(card.cardNo);
     const cardDef = (0, registry_1.getCardDef)(statsNo);
-    let atk = cardDef?.attack ?? 0;
-    let def = cardDef?.defense ?? 0;
+    let atk = card.statOverride?.atk ?? cardDef?.attack ?? 0;
+    let def = card.statOverride?.def ?? cardDef?.defense ?? 0;
     for (const m of card.modifiers) {
         atk += m.atk ?? 0;
         def += m.def ?? 0;
@@ -227,10 +317,45 @@ function hasKeyword(card, keyword, state, player) {
     return false;
 }
 function clampDamageToFollower(state, card, player, amount) {
+    if (card.damageImmunityThisTurn != null && amount > card.damageImmunityThisTurn) {
+        amount = card.damageImmunityThisTurn;
+    }
     const cap = state ? (0, passives_1.getMaxDamagePerHit)(state, card, player) : null;
     if (cap != null && amount > cap)
         return cap;
     return amount;
+}
+function followerIgnoresWard(state, card, player) {
+    if (card.ignoresWard)
+        return true;
+    const def = (0, registry_1.getCardDef)(resolveCardNo(state, card));
+    for (const ability of def?.abilities ?? []) {
+        if (ability.timing !== "passive")
+            continue;
+        if (ability.condition && !(0, conditions_1.evalCondition)(state, player, ability.condition))
+            continue;
+        if (ability.effect.op === "grantIgnoresWard")
+            return true;
+    }
+    return false;
+}
+function controllerHasDefAsAttackAura(state, player) {
+    for (const card of getPlayer(state, player).zones.field) {
+        const def = (0, registry_1.getCardDef)(resolveCardNo(state, card));
+        for (const ability of def?.abilities ?? []) {
+            if (ability.timing !== "aura" && ability.timing !== "passive")
+                continue;
+            if (ability.effect.op === "defAsAttackAura")
+                return true;
+        }
+    }
+    return false;
+}
+function getAttackerStrikeDamage(state, attacker, player) {
+    const { atk, def } = getEffectiveStats(attacker, state);
+    if (controllerHasDefAsAttackAura(state, player))
+        return def;
+    return atk;
 }
 function canEvolveFollower(state, player, fieldInstanceId) {
     const fieldFound = findInstance(state, fieldInstanceId);
@@ -278,7 +403,18 @@ function getActivatedAbilities(state, card, player, zone) {
         if (a.cost?.banishFromCemetery) {
             const need = a.cost.banishCount ?? 1;
             const have = getPlayer(state, player).zones.cemetery.filter((c) => (0, conditions_1.cardMatchesFilter)(c.cardNo, a.cost.banishFromCemetery)).length;
-            if (have < need)
+            const selfInCemetery = zone === "cemetery" &&
+                a.cost.banishSelf &&
+                getPlayer(state, player).zones.cemetery.some((c) => c.instanceId === card.instanceId);
+            const otherHave = selfInCemetery ? have - 1 : have;
+            if (otherHave < need)
+                continue;
+        }
+        if (a.cost?.engageFollowersMinTotalCost) {
+            const total = getPlayer(state, player).zones.field
+                .filter((c) => isFieldFollower(state, c))
+                .reduce((sum, c) => sum + resolveCardDefCost(resolveCardNo(state, c)), 0);
+            if (total < a.cost.engageFollowersMinTotalCost)
                 continue;
         }
         if (a.cost?.banishFromExArea) {
@@ -289,7 +425,11 @@ function getActivatedAbilities(state, card, player, zone) {
         }
         if (a.cost?.buryFromField) {
             const need = a.cost.buryFieldCount ?? 1;
-            const have = getPlayer(state, player).zones.field.filter((c) => (0, conditions_1.cardMatchesFilter)(c.cardNo, a.cost.buryFromField)).length;
+            const have = getPlayer(state, player).zones.field.filter((c) => {
+                if (a.cost?.excludeSelfFromBury && c.instanceId === card.instanceId)
+                    return false;
+                return (0, conditions_1.cardMatchesFilter)(c.cardNo, a.cost.buryFromField);
+            }).length;
             if (have < need)
                 continue;
         }
@@ -331,7 +471,7 @@ function findMatchingEvolveCard(state, player, fieldInstanceId) {
         return null;
     if (fieldFound.card.linkedEvoInstanceId)
         return null;
-    return (state.players[player].zones.evolveDeck.find((evo) => evolveCardsMatch(fieldFound.card.cardNo, evo.cardNo)) ?? null);
+    return (state.players[player].zones.evolveDeck.find((evo) => !evo.evoSpent && evolveCardsMatch(fieldFound.card.cardNo, evo.cardNo)) ?? null);
 }
 function getStrikeAbilities(state, card) {
     if ((0, passives_1.isBoxed)(card, state))
@@ -345,6 +485,9 @@ function opponentOf(player) {
 function isOverflowActive(state, player) {
     return state.players[player].maxPp >= 7;
 }
+function isSanguineActive(state, player) {
+    return getPlayer(state, player).leaderDef <= 7;
+}
 function canAttackLeader(state, attacker, player) {
     if (attacker.onFieldSinceTurnStart)
         return true;
@@ -356,18 +499,23 @@ function getWardTargets(state, defender) {
     return state.players[defender].zones.field.filter((c) => hasKeyword(c, "ward", state) && c.engaged);
 }
 function getLegalAttackTargets(state, attacker, player) {
+    if (!canDeclareAttack(state, attacker))
+        return [];
     const enemy = opponentOf(player);
     const targets = [];
+    const ignoreWard = followerIgnoresWard(state, attacker, player);
     const wards = getWardTargets(state, enemy);
-    if (wards.length > 0) {
+    if (wards.length > 0 && !ignoreWard) {
         for (const w of wards) {
-            if (!hasKeyword(w, "intimidate", state)) {
+            if (!hasKeyword(w, "intimidate", state) && isFieldFollower(state, w)) {
                 targets.push({ type: "follower", instanceId: w.instanceId });
             }
         }
         return targets;
     }
     for (const f of state.players[enemy].zones.field) {
+        if (!isFieldFollower(state, f))
+            continue;
         if (hasKeyword(f, "intimidate", state))
             continue;
         // Reserved (not engaged) followers require Assail to be attacked.

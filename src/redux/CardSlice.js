@@ -2533,6 +2533,7 @@ export const CardSlice = createSlice({
       }
       if (s.cemetery !== undefined) state.cemetery = s.cemetery;
       if (s.cemeteryInstanceIds !== undefined) state.cemeteryInstanceIds = s.cemeteryInstanceIds;
+      if (s.evoDeck !== undefined) state.evoDeck = s.evoDeck;
       if (s.deck !== undefined) state.deck = s.deck;
       if (s.playPoints !== undefined) state.playPoints = s.playPoints;
       if (s.evoPoints !== undefined) state.evoPoints = s.evoPoints;

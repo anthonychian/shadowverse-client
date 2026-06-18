@@ -1,0 +1,19 @@
+{
+  "iteration": 3,
+  "noopInner": 993,
+  "parseFailNodes": 1122,
+  "timingStubNodes": 378,
+  "topBuckets": {
+    "damage": 191,
+    "unknown": 180,
+    "search_tutor": 114,
+    "passive_trigger": 110,
+    "buff": 98,
+    "summon": 96,
+    "select_target": 86,
+    "heal_buff_leader": 55,
+    "draw": 50,
+    "destroy_banish": 48
+  },
+  "at": "2026-06-18T05:22:42.489Z"
+}

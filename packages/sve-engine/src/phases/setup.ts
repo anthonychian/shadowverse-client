@@ -2,6 +2,8 @@ import { COOL_EARRINGS_CARD_NO } from "../deck/detectIdentity";
 import { createCardInstance } from "../state/factory";
 import { isBoxed } from "../state/passives";
 import { drawCard, shuffleDeck } from "../state/zones";
+import { runConfirmationTiming } from "../rules/confirmation";
+import { queueStartOfMainAbilities } from "../rules/trigger-queue";
 import { CardInstance, GameState, PlayerId, UniverseId } from "../types";
 
 function clearTurnScopedCardState(card: CardInstance): void {
@@ -9,6 +11,7 @@ function clearTurnScopedCardState(card: CardInstance): void {
   card.counters = {};
   card.modifiers = card.modifiers.filter((m) => !m.untilEndOfTurn);
   card.playCostReduction = 0;
+  card.maneuveringUntilTurn = undefined;
   if (card.grantedOnCardPlayed?.length) {
     card.grantedOnCardPlayed = card.grantedOnCardPlayed.filter((g) => !g.untilEndOfTurn);
   }
@@ -115,6 +118,9 @@ export function beginStartPhase(state: GameState): GameState {
   p.flags.evolvedThisTurn = false;
   p.flags.cardsPlayedThisTurn = 0;
   p.flags.leaderLostDefThisTurn = false;
+  p.flags.leaderDefLostCountThisTurn = 0;
+  p.flags.leaderDamageShields = 0;
+  p.flags.nextPlayDiscounts = [];
 
   for (const card of p.zones.field) {
     refreshFieldCard(card, next);
@@ -133,5 +139,7 @@ export function beginStartPhase(state: GameState): GameState {
 
   next.phase = "main";
   next.eventLog.push({ type: "startPhase", player });
+  queueStartOfMainAbilities(next, player);
+  next = runConfirmationTiming(next);
   return next;
 }

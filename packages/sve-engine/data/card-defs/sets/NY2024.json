@@ -1,0 +1,20 @@
+{
+  "NY2024-001EN": {
+    "name": "New Year's Soul Devil",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "The coming year will be filled with happiness. ---------- This card can't be used in official events"
+        }
+      }
+    ]
+  }
+}

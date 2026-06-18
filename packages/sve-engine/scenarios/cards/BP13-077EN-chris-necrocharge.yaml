@@ -1,0 +1,38 @@
+id: chris-necrocharge-ward
+cardNo: BP13-077EN
+name: Chris necrocharge gives ward to summoned follower
+setup:
+  activePlayer: 0
+  phase: main
+  pp: [4, 0]
+  mulliganDone: true
+  field:
+    - [BP11-076EN]
+    - []
+  hand:
+    - [BP13-077EN]
+    - []
+  cemetery:
+    - [MVP-014, MVP-014, MVP-014, MVP-014, MVP-014, MVP-014, MVP-014, MVP-014, MVP-014, MVP-014, BP16-T04EN]
+    - []
+actions:
+  - play: BP13-077EN
+  - resolveTrigger: fanfare
+  - selectZone:
+      zone: cemetery
+      cardNo: BP16-T04EN
+assertions:
+  - type: zoneContains
+    zone: field
+    player: 0
+    cardNo: BP16-T04EN
+    grantedKeywords: [ward]
+  - type: notGranted
+    player: 0
+    cardNo: BP13-077EN
+    keyword: ward
+  - type: notGranted
+    player: 0
+    cardNo: BP11-076EN
+    keyword: ward
+  - type: noPendingChoices

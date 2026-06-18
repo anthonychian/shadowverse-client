@@ -1,0 +1,320 @@
+{
+  "SDD05-012EN": {
+    "name": "Dead to Rights",
+    "class": "abyss",
+    "printingType": "base",
+    "cost": 1,
+    "keywords": [
+      "quick"
+    ],
+    "cardType": "spell",
+    "traits": [
+      "Wasteland",
+      "Departed",
+      "Demon"
+    ],
+    "abilities": [
+      {
+        "timing": "activated",
+        "activateFrom": "cemetery",
+        "effect": {
+          "op": "engage",
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        },
+        "cost": {
+          "banishSelf": true,
+          "banishFromCemetery": {
+            "identityName": "Iceschillendrig, Gilded Autocrat"
+          },
+          "banishCount": 1
+        }
+      },
+      {
+        "timing": "spell",
+        "quick": true,
+        "effect": {
+          "op": "buff",
+          "atk": -2,
+          "def": -2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "SDD05-001EN": {
+    "name": "VI. Milteo, The Lovers",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD05-002EN": {
+    "name": "VI. Milteo, The Lovers Evolved",
+    "class": "abyss",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD05-003EN": {
+    "name": "Iceschillendrig, Gilded Autocrat",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD05-004EN": {
+    "name": "Iceschillendrig, Gilded Autocrat Evolved",
+    "class": "abyss",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD05-005EN": {
+    "name": "Illganeau, Horror Astray",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD05-006EN": {
+    "name": "Demonlord Eachtar",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD05-007EN": {
+    "name": "Doublame, Duke and Dame",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD05-008EN": {
+    "name": "Doublame, Duke and Dame Evolved",
+    "class": "abyss",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 4,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "SDD05-009EN": {
+    "name": "Greatpick Corpse",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD05-010EN": {
+    "name": "Kagero, Swordbound Soul",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "bane",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "mill",
+          "count": 2
+        }
+      }
+    ]
+  },
+  "SDD05-011EN": {
+    "name": "Chris, Beyond the Patch",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD05-013EN": {
+    "name": "Wretch",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "evolve",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "mill",
+          "count": 2
+        }
+      }
+    ]
+  },
+  "SDD05-014EN": {
+    "name": "Wretch Evolved",
+    "class": "abyss",
+    "printingType": "evolved",
+    "keywords": [
+      "storm",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "mill",
+          "count": 2
+        }
+      }
+    ]
+  },
+  "SDD05-015EN": {
+    "name": "Wretched Tryst",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD05-016EN": {
+    "name": "Soulstrike",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD05-017EN": {
+    "name": "Grave Desecration",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "tutorFromCemetery",
+          "filter": {
+            "cardType": "follower"
+          },
+          "to": "hand",
+          "reveal": true
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "SDD05-018EN": {
+    "name": "Skeleton Dreamer",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD05-019EN": {
+    "name": "Wandering Chef",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD05-020EN": {
+    "name": "Wandering Chef Evolved",
+    "class": "neutral",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD05-LD01EN": {
+    "name": "Diawl",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": []
+  },
+  "SDD05-T01EN": {
+    "name": "Magitrain",
+    "class": "abyss",
+    "printingType": "token",
+    "keywords": [
+      "rush",
+      "strike"
+    ],
+    "parseConfidence": "manual",
+    "abilities": []
+  },
+  "SDD05-T02EN": {
+    "name": "Bullet Bike",
+    "class": "neutral",
+    "printingType": "token",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": []
+  }
+}

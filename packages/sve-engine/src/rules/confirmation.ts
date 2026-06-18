@@ -16,6 +16,7 @@ import {
   queueLastWords,
 } from "./trigger-queue";
 import { findInstance, getPlayer, getEffectiveStats, hasKeyword, resolveCardNo } from "../state/queries";
+import { evalCondition } from "../state/conditions";
 import { destroyFollower, drawCard, removeFromField } from "../state/zones";
 import { GameState, PendingTrigger, PlayerId } from "../types";
 
@@ -120,7 +121,40 @@ function capPlayPoints(state: GameState): GameState {
   return next;
 }
 
-export { queueLastWords, queueFanfare } from "./trigger-queue";
+export { queueLastWords, queueFanfare, queueOnLeaveField } from "./trigger-queue";
+
+function installPassiveGrants(state: GameState, instanceId: string, player: PlayerId): void {
+  const found = findInstance(state, instanceId);
+  if (!found || found.zone !== "field") return;
+  const def = getCardDef(resolveCardNo(state, found.card));
+  for (const ability of def?.abilities ?? []) {
+    if (ability.timing !== "passive") continue;
+    if (ability.condition && !evalCondition(state, player, ability.condition)) continue;
+    const effect = ability.effect;
+    if (effect.op === "grantOnCardPlayed") {
+      if (!found.card.grantedOnCardPlayed) found.card.grantedOnCardPlayed = [];
+      found.card.grantedOnCardPlayed.push({
+        filter: effect.filter,
+        effect: effect.effect,
+        untilEndOfTurn: effect.untilEndOfTurn,
+        oncePerTurn: effect.oncePerTurn,
+        maxPerTurn: effect.maxPerTurn,
+        label: effect.label,
+      });
+    }
+    if (effect.op === "grantOnDamaged") {
+      if (!found.card.grantedOnDamaged) found.card.grantedOnDamaged = [];
+      found.card.grantedOnDamaged.push({
+        effect: effect.effect,
+        oncePerTurn: effect.oncePerTurn,
+        label: effect.label,
+      });
+    }
+    if (effect.op === "grantIgnoresWard") {
+      found.card.ignoresWard = true;
+    }
+  }
+}
 
 /** Fanfare and field-entry setup when a follower/amulet enters the field. */
 export function onFollowerEntersField(
@@ -135,6 +169,7 @@ export function onFollowerEntersField(
   }
   found.card.enteredFieldTurn = state.turnNumber;
   found.card.onFieldSinceTurnStart = false;
+  installPassiveGrants(state, instanceId, player);
   queueFanfare(state, instanceId, player);
   queueAllyFollowerEnterTriggers(state, instanceId, player);
   queueCemeteryOnAllyFollowerEnter(state, instanceId, player);
@@ -149,11 +184,14 @@ export function onCardEntersExArea(
 }
 
 function markOnCardPlayedTriggerUsed(state: GameState, trigger: PendingTrigger): void {
-  if (trigger.timing !== "onCardPlayed" || !trigger.abilityKey) return;
+  if (!trigger.abilityKey) return;
   const found = findInstance(state, trigger.sourceInstanceId);
   if (!found) return;
   const { ability, abilityKey } = trigger;
-  if (ability.oncePerTurn && !found.card.abilitiesActivatedThisTurn.includes(abilityKey)) {
+  const trackOnce =
+    trigger.timing === "onCardPlayed" ||
+    trigger.timing === "onTokenLeaveField";
+  if (ability.oncePerTurn && trackOnce && !found.card.abilitiesActivatedThisTurn.includes(abilityKey)) {
     found.card.abilitiesActivatedThisTurn.push(abilityKey);
   }
   if (ability.maxPerTurn != null) {
@@ -163,10 +201,24 @@ function markOnCardPlayedTriggerUsed(state: GameState, trigger: PendingTrigger):
 
 function resolveOneTrigger(state: GameState, trigger: PendingTrigger): GameState {
   let next = structuredClone(state);
+  if (trigger.ability.condition && !evalCondition(next, trigger.controller, trigger.ability.condition)) {
+    next.pendingTriggers = next.pendingTriggers.filter((t) => t.id !== trigger.id);
+    return next;
+  }
+  const ppCost = trigger.ability.cost?.pp ?? 0;
+  if (ppCost > 0) {
+    const p = next.players[trigger.controller];
+    if (p.pp < ppCost) {
+      next.pendingTriggers = next.pendingTriggers.filter((t) => t.id !== trigger.id);
+      return next;
+    }
+    p.pp -= ppCost;
+  }
   next.pendingTriggers = next.pendingTriggers.filter((t) => t.id !== trigger.id);
   next.resolutionContext = {
     ...contextForTriggerResolution(next, trigger.sourceInstanceId, trigger.ability.effect),
     forcedTargetId: trigger.forcedTargetId,
+    leftTokenCardNo: trigger.leftTokenCardNo,
   };
   next = resolveEffect(next, trigger.ability.effect, trigger.controller);
   markOnCardPlayedTriggerUsed(next, trigger);
@@ -174,6 +226,11 @@ function resolveOneTrigger(state: GameState, trigger: PendingTrigger): GameState
     next.resolutionContext = null;
   }
   return next;
+}
+
+/** Resolve a trigger chosen via selectTrigger (shared with applyAction). */
+export function resolveChosenTrigger(state: GameState, trigger: PendingTrigger): GameState {
+  return resolveOneTrigger(state, trigger);
 }
 
 export function runConfirmationTiming(state: GameState): GameState {

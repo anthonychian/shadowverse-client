@@ -92,7 +92,8 @@ export function engineViewToRedux(view, playerSlot) {
     const idx = 5 + i;
     field[idx] = cardName(inst);
     fieldInstanceIds[idx] = inst.instanceId;
-    applyStats(inst, idx);
+    applyStats(inst, idx, inst.cardNo);
+    engagedField[idx] = false;
     const printed = getCardStatsClient(inst.cardNo).cost ?? 0;
     const effective = view.exPlayCosts?.[inst.instanceId];
     if (effective != null && effective < printed) {
@@ -134,6 +135,7 @@ export function engineViewToRedux(view, playerSlot) {
     const idx = 5 + i;
     enemyField[idx] = cardName(inst);
     enemyFieldInstanceIds[idx] = inst.instanceId;
+    enemyEngaged[idx] = false;
     const est = getCardStatsClient(inst.cardNo);
     let atk = est.attack;
     let defVal = est.defense;
@@ -171,6 +173,10 @@ export function engineViewToRedux(view, playerSlot) {
     enemyCustomValues: enemyCustom,
     cemetery: ps.zones.cemetery.map((c) => cardName(c)),
     cemeteryInstanceIds: ps.zones.cemetery.map((c) => c.instanceId),
+    evoDeck: ps.zones.evolveDeck.map((c) => ({
+      card: cardName(c),
+      status: Boolean(c.evoSpent),
+    })),
     enemyCemetery: es.zones.cemetery.map((c) => cardName(c)),
     playPoints: { available: ps.pp, max: ps.maxPp },
     enemyPlayPoints: { available: es.pp, max: es.maxPp },

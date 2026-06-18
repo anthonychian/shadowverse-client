@@ -1,0 +1,22 @@
+id: aenea-amethyst-rebel-pr-173en
+cardNo: PR-173EN
+name: "Aenea, Amethyst Rebel — smoke stub"
+setup:
+  activePlayer: 0
+  pp: [10, 10]
+  leaderDef: [20, 20]
+  hand:
+    - ["PR-173EN"]
+    - []
+  field:
+    - ["BP07-001EN"]
+    - ["BP07-001EN"]
+  deck:
+    - ["BP07-002EN","BP07-002EN","BP07-002EN","BP07-002EN","BP07-002EN"]
+    - ["BP07-002EN","BP07-002EN","BP07-002EN","BP07-002EN","BP07-002EN"]
+actions:
+  - { play: PR-173EN }
+  - { autoResolve: true }
+assertions:
+  - { type: noPendingChoices }
+# TODO: refine assertions for zones: 

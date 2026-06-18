@@ -1,0 +1,395 @@
+{
+  "CSD03b-001EN": {
+    "name": "Dragonic Overlord",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "evolve"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "While Overflow is active for you, and there's another Kagero follower on your field, this follower has Storm"
+            },
+            {
+              "op": "noop",
+              "label": "(Followers with Storm can attack enemy followers and leaders on the turn they're"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CSD03b-002EN": {
+    "name": "Dragonic Overlord Evolved",
+    "class": "dragon",
+    "printingType": "evolved",
+    "keywords": [
+      "storm"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "noop",
+          "label": "While Overflow is active for you, and there's another Kagero follower on your field, this follower has Storm"
+        }
+      },
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "noop",
+          "label": "Deal it 5 damage and, if Overflow is active for you, for the rest of this turn, this follower has \"when this follower de"
+        }
+      }
+    ]
+  },
+  "CSD03b-003EN": {
+    "name": "Dragon Monk, Goku",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "ward"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamageAllEnemies",
+          "amount": 4,
+          "followersOnly": false
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "CSD03b-004EN": {
+    "name": "Dragon Knight, Aleph",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "into an Embodiment of Victory, Aleph"
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "If there's an Embodiment of Armor, Bahr and Embodiment of Spear, Tahr in your cemetery, into an Embodiment of Victory, A"
+        }
+      }
+    ]
+  },
+  "CSD03b-005EN": {
+    "name": "Embodiment of Victory, Aleph Evolved",
+    "class": "dragon",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "searchDeckChoose",
+              "filter": {},
+              "lookAt": 3,
+              "to": "hand",
+              "optional": true,
+              "remainderTo": "deckBottom",
+              "reveal": true
+            },
+            {
+              "op": "playCostReduction",
+              "amount": 3
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "CSD03b-006EN": {
+    "name": "Berserk Dragon",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "dealDamage",
+              "amount": 1,
+              "targets": {
+                "type": "enemyFollower",
+                "count": 1
+              }
+            },
+            {
+              "op": "sequence",
+              "steps": [
+                {
+                  "op": "dealDamage",
+                  "amount": 3,
+                  "targets": {
+                    "type": "enemyFollower",
+                    "count": 1
+                  }
+                },
+                {
+                  "op": "buff",
+                  "atk": 1,
+                  "def": 1,
+                  "targets": {
+                    "type": "selfFollower",
+                    "count": 1,
+                    "excludeSelf": false
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "CSD03b-007EN": {
+    "name": "Wyvern Guard, Barri",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "quick"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "dealDamage",
+              "amount": 1,
+              "targets": {
+                "type": "enemyFollower",
+                "count": 1
+              }
+            },
+            {
+              "op": "damageFollowerAndLeader",
+              "followerAmount": 3,
+              "leaderAmount": 1
+            }
+          ]
+        },
+        "quick": true
+      }
+    ]
+  },
+  "CSD03b-008EN": {
+    "name": "Dragon Knight, Nehalem",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "strike",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "dealDamage",
+              "amount": 1,
+              "targets": {
+                "type": "enemyFollower",
+                "count": 1
+              }
+            },
+            {
+              "op": "sequence",
+              "steps": [
+                {
+                  "op": "dealDamage",
+                  "amount": 2,
+                  "targets": {
+                    "type": "enemyFollower",
+                    "count": 1
+                  }
+                },
+                {
+                  "op": "buff",
+                  "atk": 1,
+                  "def": 1,
+                  "targets": {
+                    "type": "selfFollower",
+                    "count": 1,
+                    "excludeSelf": false
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "timing": "strike",
+        "effect": {
+          "op": "dealDamageAllEnemies",
+          "amount": 1,
+          "followersOnly": false
+        }
+      }
+    ]
+  },
+  "CSD03b-009EN": {
+    "name": "Embodiment of Armor, Bahr",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "CSD03b-010EN": {
+    "name": "Chain-Attack Sutherland",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "fanfare",
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": {
+            "op": "selfAttack"
+          },
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "CSD03b-011EN": {
+    "name": "Follower, Reas",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buff",
+          "atk": 1,
+          "def": 1,
+          "targets": {
+            "type": "self"
+          }
+        }
+      }
+    ]
+  },
+  "CSD03b-016EN": {
+    "name": "Lizard Runner, Undeux",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "vanguard-deferred"
+    ],
+    "parseConfidence": "vanguard-deferred",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buff",
+          "atk": null,
+          "def": 1,
+          "targets": {
+            "type": "selfFollower",
+            "count": 1,
+            "excludeSelf": false
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  }
+}

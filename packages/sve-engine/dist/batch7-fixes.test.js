@@ -5,6 +5,7 @@ const applyAction_1 = require("./actions/applyAction");
 const filterView_1 = require("./view/filterView");
 const factory_1 = require("./state/factory");
 const queries_1 = require("./state/queries");
+const zones_1 = require("./state/zones");
 function passQuick(state, player) {
     return (0, applyAction_1.applyAction)(state, player, { type: "PASS_QUICK_WINDOW" }).state;
 }
@@ -152,5 +153,24 @@ function passQuick(state, player) {
         (0, vitest_1.expect)(moved.state.players[0].zones.exArea.some((c) => c.instanceId === festive.instanceId)).toBe(true);
         (0, vitest_1.expect)(moved.state.players[0].zones.hand.length).toBe(2);
         (0, vitest_1.expect)(moved.state.players[0].zones.deck.length).toBe(0);
+    });
+    (0, vitest_1.it)("clears engaged and field modifiers when a follower moves from field to EX area", () => {
+        let state = (0, factory_1.createInitialGameState)(0);
+        const follower = (0, factory_1.createCardInstance)("BP11-069EN", 0);
+        const evo = (0, factory_1.createCardInstance)("BP11-070EN", 0);
+        follower.engaged = true;
+        follower.modifiers.push({ atk: 1, def: 1, sourceId: "test" });
+        follower.linkedEvoInstanceId = evo.instanceId;
+        state.players[0].zones.field.push(follower);
+        state.players[0].zones.resolutionZone.push(evo);
+        state = (0, zones_1.moveCard)(state, follower.instanceId, "exArea", 0);
+        const inEx = state.players[0].zones.exArea.find((c) => c.instanceId === follower.instanceId);
+        (0, vitest_1.expect)(inEx.engaged).toBe(false);
+        (0, vitest_1.expect)(inEx.modifiers).toEqual([]);
+        (0, vitest_1.expect)(inEx.linkedEvoInstanceId).toBeUndefined();
+        (0, vitest_1.expect)(state.players[0].zones.evolveDeck.some((c) => c.instanceId === evo.instanceId)).toBe(true);
+        const stats = (0, queries_1.getEffectiveStats)(inEx, state);
+        (0, vitest_1.expect)(stats.atk).toBe(5);
+        (0, vitest_1.expect)(stats.def).toBe(5);
     });
 });

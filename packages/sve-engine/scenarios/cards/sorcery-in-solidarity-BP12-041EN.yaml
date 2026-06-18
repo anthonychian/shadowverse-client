@@ -1,0 +1,22 @@
+id: sorcery-in-solidarity-bp12-041en
+cardNo: BP12-041EN
+name: "Sorcery in Solidarity — smoke stub"
+setup:
+  activePlayer: 0
+  pp: [10, 10]
+  leaderDef: [20, 20]
+  hand:
+    - ["BP12-041EN"]
+    - []
+  field:
+    - ["BP07-001EN"]
+    - ["BP07-001EN"]
+  deck:
+    - ["BP07-002EN","BP07-002EN","BP07-002EN","BP07-002EN","BP07-002EN"]
+    - ["BP07-002EN","BP07-002EN","BP07-002EN","BP07-002EN","BP07-002EN"]
+actions:
+  - { play: BP12-041EN }
+  - { autoResolve: true }
+assertions:
+  - { type: noPendingChoices }
+# TODO: refine assertions for zones: 

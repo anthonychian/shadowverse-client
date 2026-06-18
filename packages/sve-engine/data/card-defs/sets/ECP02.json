@@ -1,0 +1,2452 @@
+{
+  "ECP02-001EN": {
+    "printingType": "base",
+    "cost": 2,
+    "attack": 1,
+    "defense": 1,
+    "evolvesTo": "ECP02-002EN",
+    "evolveCost": 1,
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "optionalCost",
+          "label": "[cost01], Lesson (1)",
+          "cost": {
+            "op": "sequence",
+            "steps": [
+              {
+                "op": "spendPp",
+                "amount": 1
+              },
+              {
+                "op": "banishFromExArea",
+                "filter": {
+                  "trait": "Magical Item"
+                },
+                "count": 1
+              }
+            ]
+          },
+          "then": {
+            "op": "selectFromHand",
+            "filter": {
+              "trait": "iM@S CG",
+              "cardType": "follower",
+              "maxCost": 2
+            },
+            "to": "exArea",
+            "optional": true,
+            "playCostReduction": 2
+          }
+        }
+      }
+    ],
+    "name": "Anastasia [Seize the Light]",
+    "class": "forest",
+    "parseConfidence": "manual"
+  },
+  "ECP02-002EN": {
+    "printingType": "evolved",
+    "attack": 2,
+    "defense": 2,
+    "evolvesFrom": "ECP02-001EN",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "keywords": [],
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "noop",
+          "label": "Select up to 2 other iM@S CG followers on your field and give them +1/+1"
+        }
+      },
+      {
+        "timing": "onSuperEvolve",
+        "effect": {
+          "op": "noop",
+          "label": "Give each other iM@S CG follower on your field +1/+1"
+        }
+      }
+    ],
+    "name": "Anastasia [Seize the Light] Evolved",
+    "class": "forest",
+    "parseConfidence": "manual"
+  },
+  "ECP02-003EN": {
+    "printingType": "base",
+    "cost": 2,
+    "attack": 2,
+    "defense": 2,
+    "keywords": [
+      "fanfare"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "peekDeck",
+          "count": 1
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ],
+    "name": "Hajime Fujiwara [Pink Blossom Dream]",
+    "class": "forest",
+    "parseConfidence": "auto"
+  },
+  "ECP02-012EN": {
+    "printingType": "base",
+    "cost": 2,
+    "attack": 2,
+    "defense": 1,
+    "keywords": [
+      "storm",
+      "fanfare"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "optionalCost",
+          "label": "Lesson (2)",
+          "cost": {
+            "op": "banishFromExArea",
+            "filter": {
+              "trait": "Magical Item"
+            },
+            "count": 2
+          },
+          "then": {
+            "op": "dealDamage",
+            "amount": {
+              "op": "traitFieldCount",
+              "trait": "Cool",
+              "multiplier": 1
+            },
+            "targets": {
+              "type": "enemyFollower",
+              "count": 1
+            }
+          }
+        }
+      }
+    ],
+    "name": "Rin Shibuya [Cinderella Girl]",
+    "class": "sword",
+    "parseConfidence": "auto"
+  },
+  "ECP02-016EN": {
+    "printingType": "base",
+    "cost": 1,
+    "attack": 1,
+    "defense": 1,
+    "keywords": [
+      "fanfare",
+      "lastWords"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      },
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "CP02-T04EN",
+          "tokenName": "Cool Earrings",
+          "count": 1,
+          "zone": "exArea"
+        }
+      }
+    ],
+    "name": "Karen Hojo [Cinderella Girl]",
+    "class": "sword",
+    "parseConfidence": "manual"
+  },
+  "ECP02-026EN": {
+    "printingType": "base",
+    "cost": 1,
+    "attack": 2,
+    "defense": 2,
+    "keywords": [
+      "fanfare"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ],
+    "name": "Syuko Shiomi [Cinderella Girl]",
+    "class": "rune",
+    "parseConfidence": "manual"
+  },
+  "ECP02-037EN": {
+    "printingType": "base",
+    "cost": 2,
+    "attack": 2,
+    "defense": 2,
+    "evolvesTo": "ECP02-038EN",
+    "evolveCost": 1,
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "If there are at least 3 Cool followers on your field, deal 1 damage to each enemy leader"
+        }
+      }
+    ],
+    "name": "Fumika Sagisawa [Cinderella Girl]",
+    "class": "dragon",
+    "parseConfidence": "manual"
+  },
+  "ECP02-038EN": {
+    "printingType": "evolved",
+    "attack": 3,
+    "defense": 3,
+    "evolvesFrom": "ECP02-037EN",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "keywords": [],
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "choose",
+          "min": 1,
+          "max": 1,
+          "options": [
+            {
+              "label": "(1) Select an enemy follower on the field and deal it 2 damage",
+              "effect": {
+                "op": "dealDamage",
+                "amount": 2,
+                "targets": {
+                  "type": "enemyFollower",
+                  "count": 1
+                }
+              }
+            },
+            {
+              "label": "(2) bury and tutor Fumika",
+              "effect": {
+                "op": "optionalCost",
+                "cost": {
+                  "op": "sequence",
+                  "steps": [
+                    {
+                      "op": "spendPp",
+                      "amount": 4
+                    },
+                    {
+                      "op": "burySelf"
+                    }
+                  ]
+                },
+                "then": {
+                  "op": "tutorFromDeck",
+                  "filter": {
+                    "identityNameContains": "Fumika Sagisawa"
+                  },
+                  "to": "field"
+                }
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "name": "Fumika Sagisawa [Cinderella Girl] Evolved",
+    "class": "dragon",
+    "parseConfidence": "manual"
+  },
+  "ECP02-047EN": {
+    "printingType": "base",
+    "cost": 5,
+    "attack": 5,
+    "defense": 5,
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "destroy",
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ],
+    "name": "Ranko Kanzaki [Cinderella Girl]",
+    "class": "abyss",
+    "parseConfidence": "manual"
+  },
+  "ECP02-050EN": {
+    "printingType": "base",
+    "cost": 2,
+    "attack": 1,
+    "defense": 1,
+    "evolvesTo": "ECP02-051EN",
+    "evolveCost": 1,
+    "keywords": [
+      "evolve"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "buff",
+          "atk": 1,
+          "def": 1,
+          "targets": {
+            "type": "selfFollower",
+            "count": 1
+          }
+        }
+      }
+    ],
+    "name": "Nono Morikubo [individuals]",
+    "class": "abyss",
+    "parseConfidence": "auto"
+  },
+  "ECP02-051EN": {
+    "printingType": "evolved",
+    "attack": 2,
+    "defense": 2,
+    "evolvesFrom": "ECP02-050EN",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "keywords": [],
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {},
+          "lookAt": 4,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        }
+      },
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "buff",
+          "atk": 1,
+          "def": 1,
+          "targets": {
+            "type": "selfFollower",
+            "count": 1
+          }
+        }
+      }
+    ],
+    "name": "Nono Morikubo [individuals] Evolved",
+    "class": "abyss",
+    "parseConfidence": "manual"
+  },
+  "ECP02-052EN": {
+    "printingType": "base",
+    "cost": 2,
+    "attack": 3,
+    "defense": 2,
+    "keywords": [
+      "storm",
+      "fanfare"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "optionalCost",
+          "label": "[cost02], Lesson (1)",
+          "cost": {
+            "op": "sequence",
+            "steps": [
+              {
+                "op": "spendPp",
+                "amount": 2
+              },
+              {
+                "op": "banishFromExArea",
+                "filter": {
+                  "trait": "Magical Item"
+                },
+                "count": 1
+              }
+            ]
+          },
+          "then": {
+            "op": "playCostReduction",
+            "amount": 4
+          }
+        }
+      }
+    ],
+    "name": "Asuka Ninomiya [Sweet & Charming]",
+    "class": "abyss",
+    "parseConfidence": "manual"
+  },
+  "ECP02-058EN": {
+    "printingType": "base",
+    "cost": 3,
+    "attack": 2,
+    "defense": 2,
+    "keywords": [
+      "fanfare"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "playCostReduction",
+          "amount": 2
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ],
+    "name": "Koume Shirasaka [Haunted Gown]",
+    "class": "abyss",
+    "parseConfidence": "manual"
+  },
+  "ECP02-065EN": {
+    "printingType": "base",
+    "cost": 3,
+    "attack": 3,
+    "defense": 3,
+    "evolvesTo": "ECP02-066EN",
+    "evolveCost": 1,
+    "keywords": [
+      "evolve"
+    ],
+    "cardType": "follower",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "You may reroll each die or dice roll you make once"
+        }
+      }
+    ],
+    "name": "Kako Takafuji [Lady Luck]",
+    "class": "haven",
+    "parseConfidence": "manual"
+  },
+  "ECP02-066EN": {
+    "printingType": "evolved",
+    "attack": 4,
+    "defense": 4,
+    "evolvesFrom": "ECP02-065EN",
+    "cardType": "follower",
+    "specialType": "evolved",
+    "traits": [
+      "iM@S CG",
+      "Cool"
+    ],
+    "keywords": [],
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "rollDie",
+          "sides": 6,
+          "outcomes": [
+            {
+              "on": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6
+              ],
+              "effect": {
+                "op": "noop"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "name": "Kako Takafuji [Lady Luck] Evolved",
+    "class": "haven",
+    "parseConfidence": "manual"
+  },
+  "ECP02-004EN": {
+    "name": "Minami Nitta [Water's Edge Bride]",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "engage",
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "ECP02-005EN": {
+    "name": "Yuki Himekawa [Full Swing☆Cheer]",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamageAllEnemies",
+          "amount": 4,
+          "followersOnly": true
+        }
+      }
+    ]
+  },
+  "ECP02-006EN": {
+    "name": "Riina Tada [Wannabe Legend]",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Search your deck for a 1-cost iM@S CG amulet, summon it, then shuffle"
+            },
+            {
+              "op": "noop",
+              "label": "[act] Lesson (1): You may summon an iM@S CG follower that costs 1 or less or iM@S CG amulet that costs 1 or less from yo"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "ECP02-007EN": {
+    "name": "Riina Tada [Wannabe Legend] Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "putOnBottomOfDeck",
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "ECP02-008EN": {
+    "name": "Hinako Kita [True Dream]",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "optionalCost",
+          "label": "Lesson (1)",
+          "cost": {
+            "op": "banishFromExArea",
+            "filter": {
+              "trait": "Magical Item"
+            },
+            "count": 1
+          },
+          "then": {
+            "op": "healLeader",
+            "amount": 1
+          }
+        }
+      }
+    ]
+  },
+  "ECP02-009EN": {
+    "name": "Hinako Kita [True Dream] Evolved",
+    "class": "forest",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "draw",
+              "count": 1
+            },
+            {
+              "op": "healLeader",
+              "amount": 2
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "ECP02-010EN": {
+    "name": "Miku Maekawa [Meownderful World]",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "lastWords"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "lastWords",
+        "effect": {
+          "op": "optionalCost",
+          "label": "Lesson (1)",
+          "cost": {
+            "op": "banishFromExArea",
+            "filter": {
+              "trait": "Magical Item"
+            },
+            "count": 1
+          },
+          "then": {
+            "op": "noop",
+            "label": "Search your deck for a follower with \"Miku Maekawa\" in its name, reveal it, add it to your hand, then shuffle"
+          }
+        }
+      }
+    ]
+  },
+  "ECP02-011EN": {
+    "name": "Blossoms' Advance",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "summon",
+          "tokenCardNo": "CP02-T04EN",
+          "tokenName": "Cool Earrings",
+          "count": 1,
+          "zone": "exArea"
+        }
+      }
+    ]
+  },
+  "ECP02-013EN": {
+    "name": "Mio Honda [Cinderella Girl]",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "optionalCost",
+          "label": "Lesson (1)",
+          "cost": {
+            "op": "banishFromExArea",
+            "filter": {
+              "trait": "Magical Item"
+            },
+            "count": 1
+          },
+          "then": {
+            "op": "sequence",
+            "steps": [
+              {
+                "op": "draw",
+                "count": 1
+              },
+              {
+                "op": "discard",
+                "count": 1
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "ECP02-014EN": {
+    "name": "Mio Honda [Cinderella Girl] Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "searchDeckChoose",
+          "filter": {
+            "identityName": "iM@S CG"
+          },
+          "lookAt": 2,
+          "to": "hand",
+          "optional": true,
+          "remainderTo": "deckBottom",
+          "reveal": true
+        }
+      },
+      {
+        "timing": "onSuperEvolve",
+        "effect": {
+          "op": "noop",
+          "label": "You may summon a Passion follower that costs 6 or less from your hand"
+        }
+      }
+    ]
+  },
+  "ECP02-015EN": {
+    "name": "Uzuki Shimamura [Cinderella Girl]",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "grantPlayCostReduction",
+          "amount": 5,
+          "targets": {
+            "type": "selfFollower",
+            "count": 1,
+            "filter": {
+              "trait": "iM@S CG"
+            },
+            "includeExArea": true
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "ECP02-017EN": {
+    "name": "Airi Totoki [Cinderella Girl]",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 3,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "ECP02-018EN": {
+    "name": "Airi Totoki [Cinderella Girl] Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "noop",
+          "label": "Deal it 2 damage and, if there are at least 5 Passion cards in your cemetery, put a Magical Item token into your EX area"
+        }
+      }
+    ]
+  },
+  "ECP02-019EN": {
+    "name": "Mayu Sakuma [Love-Laden Gift]",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "draw",
+              "count": 1
+            },
+            {
+              "op": "draw",
+              "count": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "ECP02-020EN": {
+    "name": "Mayu Sakuma [Love-Laden Gift] Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "dealDamage",
+          "amount": {
+            "op": "targetControllerHandCount"
+          },
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "ECP02-021EN": {
+    "name": "Chieri Ogata [Happiness Tune]",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "autoEvolveIf",
+          "condition": {
+            "type": "enteredByAbility"
+          },
+          "triggerOnEvolve": true
+        }
+      }
+    ]
+  },
+  "ECP02-022EN": {
+    "name": "Chieri Ogata [Happiness Tune] Evolved",
+    "class": "sword",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Search your deck for an iM@S CG spell, reveal it, add it to your hand, then shuffle"
+            },
+            {
+              "op": "noop",
+              "label": "[act] [cost01], Lesson (1): The next iM@S CG spell that costs 2 or less you play this turn costs 2 less"
+            },
+            {
+              "op": "noop",
+              "label": "Activate only if there are at least 5 Cute cards in your cemetery, and"
+            }
+          ]
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "ECP02-023EN": {
+    "name": "Nagi Hisakawa [Everyday Fairy Tale]",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Search your deck for a follower with \"Nagi Hisakawa\" in its name, summon it, then shuffle"
+            },
+            {
+              "op": "noop",
+              "label": "Activate only if there are at least 10 iM@S CG cards in your cemetery"
+            }
+          ]
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "ECP02-024EN": {
+    "name": "Miho Kohinata [Youthful Romance]",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "healLeader",
+              "amount": 2
+            },
+            {
+              "op": "draw",
+              "count": 2
+            }
+          ]
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "ECP02-025EN": {
+    "name": "Dancing in the Rain",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "assail",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buff",
+          "atk": null,
+          "targets": {
+            "type": "selfFollower",
+            "count": 1,
+            "excludeSelf": false
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "ECP02-027EN": {
+    "name": "Mika Jougasaki [My★Style]",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "playCostReduction",
+          "amount": 3
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "ECP02-028EN": {
+    "name": "Yuuki Otokura [Together with Me]",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buff",
+          "atk": -3,
+          "def": -3,
+          "targets": {
+            "type": "selfFollower",
+            "count": 1,
+            "excludeSelf": false
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "ECP02-029EN": {
+    "name": "Glitz & Glam☆Parade",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "healLeader",
+          "amount": 2
+        }
+      }
+    ]
+  },
+  "ECP02-030EN": {
+    "name": "Sae Kobayakawa [Dancing Flowers]",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "ECP02-031EN": {
+    "name": "Sae Kobayakawa [Dancing Flowers] Evolved",
+    "class": "rune",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "ECP02-032EN": {
+    "name": "Hiromi Seki [Twinkle in My Eye]",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "if",
+          "condition": {
+            "type": "ownCemeteryTraitMin",
+            "trait": "Cute",
+            "count": 5
+          },
+          "then": {
+            "op": "healLeader",
+            "amount": 2
+          }
+        }
+      }
+    ]
+  },
+  "ECP02-033EN": {
+    "name": "Hiromi Seki [Twinkle in My Eye] Evolved",
+    "class": "rune",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "tutorFromCemetery",
+          "filter": {
+            "identityName": "Cute"
+          },
+          "to": "hand",
+          "reveal": true
+        }
+      }
+    ]
+  },
+  "ECP02-034EN": {
+    "name": "Shiki Ichinose [Mystic Elixir]",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 4,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "ECP02-035EN": {
+    "name": "Kanade Hayami [Faraway Reflection]",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "optionalCost",
+          "label": "Lesson (1)",
+          "cost": {
+            "op": "banishFromExArea",
+            "filter": {
+              "trait": "Magical Item"
+            },
+            "count": 1
+          },
+          "then": {
+            "op": "noop",
+            "label": "Search your deck for a follower with \"Shiki Ichinose,\" \"Syuko Shiomi,\" \"Frederica Miyamoto,\" or \"Mika Jougasaki\" in its "
+          }
+        }
+      }
+    ]
+  },
+  "ECP02-036EN": {
+    "name": "Tomoe Murakami [Crimson Fighter]",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "The next Passion spell that costs 3 or less you play this turn costs 3 less"
+        }
+      },
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "dealDamageAllEnemies",
+          "amount": 2,
+          "followersOnly": false
+        }
+      }
+    ]
+  },
+  "ECP02-039EN": {
+    "name": "Akira Sunazuka [Online Life]",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "optionalCost",
+          "label": "Lesson (1)",
+          "cost": {
+            "op": "banishFromExArea",
+            "filter": {
+              "trait": "Magical Item"
+            },
+            "count": 1
+          },
+          "then": {
+            "op": "sequence",
+            "steps": [
+              {
+                "op": "healLeader",
+                "amount": 3
+              },
+              {
+                "op": "draw",
+                "count": 3
+              },
+              {
+                "op": "recoverPp",
+                "amount": 3
+              }
+            ]
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "ECP02-040EN": {
+    "name": "Akari Tsujino [Twice as Lovely]",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "assail",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "mill",
+          "count": 3
+        }
+      }
+    ]
+  },
+  "ECP02-041EN": {
+    "name": "Riamu Yumemi [Party Night]",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "ECP02-042EN": {
+    "name": "Yui Ohtsuki [Lollipop Darling]",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "keyword-only",
+    "abilities": []
+  },
+  "ECP02-043EN": {
+    "name": "Yui Ohtsuki [Lollipop Darling] Evolved",
+    "class": "dragon",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Search your deck for a follower with \"Yui Ohtsuki\" in its name, summon it, then shuffle"
+            },
+            {
+              "op": "noop",
+              "label": "Evolve it"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "ECP02-044EN": {
+    "name": "Hotaru Shiragiku [Unbreakable]",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "evolve"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "startOfEnd",
+        "effect": {
+          "op": "noop",
+          "label": "At the start of your end phase, select a follower on your field and, if there are at least 5 Cute cards in your cemetery"
+        }
+      }
+    ]
+  },
+  "ECP02-045EN": {
+    "name": "Hotaru Shiragiku [Unbreakable] Evolved",
+    "class": "dragon",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "noop",
+          "label": "Search your deck for an iM@S CG follower with 1 attack, reveal it, add it to your hand, then shuffle"
+        }
+      },
+      {
+        "timing": "startOfEnd",
+        "effect": {
+          "op": "noop",
+          "label": "At the start of your end phase, select a follower on your field and, if there are at least 5 Cute cards in your cemetery"
+        }
+      }
+    ]
+  },
+  "ECP02-046EN": {
+    "name": "Star of the Show",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "destroy",
+          "targets": {
+            "type": "anyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "ECP02-048EN": {
+    "name": "Syoko Hoshi [individuals]",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "playCostReduction",
+          "amount": 2
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "ECP02-049EN": {
+    "name": "Mirei Hayasaka [individuals]",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "strike",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "mill",
+          "count": 2
+        }
+      }
+    ]
+  },
+  "ECP02-053EN": {
+    "name": "Chitose Kurosaki [Memento Mori]",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "optionalCost",
+          "label": "Lesson (1)",
+          "cost": {
+            "op": "banishFromExArea",
+            "filter": {
+              "trait": "Magical Item"
+            },
+            "count": 1
+          },
+          "then": {
+            "op": "noop",
+            "label": "Deal it 1 damage and give your leader [def]+1"
+          }
+        }
+      }
+    ]
+  },
+  "ECP02-054EN": {
+    "name": "Chitose Kurosaki [Memento Mori] Evolved",
+    "class": "abyss",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "noop",
+          "label": "Deal it 3 damage and bury the top 2 cards of your deck"
+        }
+      }
+    ]
+  },
+  "ECP02-055EN": {
+    "name": "Natsuki Kimura [Scarlet Love Song]",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "noop",
+          "label": "While there are at least 10 Passion cards in your cemetery, this has Storm"
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "If there's an iM@S CG follower on your field that costs 5 or more, evolve this"
+        }
+      }
+    ]
+  },
+  "ECP02-056EN": {
+    "name": "Natsuki Kimura [Scarlet Love Song] Evolved",
+    "class": "abyss",
+    "printingType": "evolved",
+    "keywords": [
+      "storm"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "dealDamage",
+          "amount": {
+            "op": "traitFieldCount",
+            "trait": "Passion",
+            "multiplier": 2
+          },
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "ECP02-057EN": {
+    "name": "Takumi Mukai [No One Can Stop Me]",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "assail",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Select a Passion follower in your cemetery that costs 3 or less and summon it"
+        }
+      },
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "dealDamageAllEnemies",
+          "amount": 1,
+          "followersOnly": false
+        }
+      }
+    ]
+  },
+  "ECP02-059EN": {
+    "name": "Self-Proclaimed Fan Favorite",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "drain"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "choose",
+          "min": 1,
+          "max": 1,
+          "options": [
+            {
+              "label": "(2) Search your deck for a follower with \"Sachiko Koshimizu\" in ",
+              "effect": {
+                "op": "grantKeyword",
+                "keyword": "drain",
+                "targets": {
+                  "type": "self"
+                }
+              }
+            },
+            {
+              "label": "(3) Put a Magical Item token into your EX area",
+              "effect": {
+                "op": "summon",
+                "tokenCardNo": "CP02-T04EN",
+                "tokenName": "Cool Earrings",
+                "count": 1,
+                "zone": "exArea"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "ECP02-060EN": {
+    "name": "Nana Abe [Cinderella Girl]",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "optionalCost",
+          "label": "Lesson (1)",
+          "cost": {
+            "op": "banishFromExArea",
+            "filter": {
+              "trait": "Magical Item"
+            },
+            "count": 1
+          },
+          "then": {
+            "op": "buff",
+            "atk": -1,
+            "def": -1,
+            "targets": {
+              "type": "selfFollower",
+              "count": 1,
+              "excludeSelf": false
+            }
+          }
+        }
+      }
+    ]
+  },
+  "ECP02-061EN": {
+    "name": "Nana Abe [Cinderella Girl] Evolved",
+    "class": "haven",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "healLeader",
+              "amount": 2
+            },
+            {
+              "op": "draw",
+              "count": 1
+            }
+          ]
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      },
+      {
+        "timing": "onSuperEvolve",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing onSuperEvolve timing"
+        }
+      }
+    ]
+  },
+  "ECP02-062EN": {
+    "name": "Kaede Takagaki [Cinderella Girl]",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "destroy",
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "ECP02-063EN": {
+    "name": "Eve Santaclaus [Cinderella Girl]",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "peekDeck",
+          "count": 1
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "ECP02-064EN": {
+    "name": "Miyu Mifune [Rouge Couture]",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Search your deck for a 1-cost iM@S CG follower, summon it, then shuffle"
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "ECP02-067EN": {
+    "name": "Kotoka Saionji [Pure Euphoria]",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "evolve",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "optionalCost",
+          "label": "Lesson (2)",
+          "cost": {
+            "op": "banishFromExArea",
+            "filter": {
+              "trait": "Magical Item"
+            },
+            "count": 2
+          },
+          "then": {
+            "op": "banish",
+            "targets": {
+              "type": "enemyFollower",
+              "count": 1
+            }
+          }
+        }
+      }
+    ]
+  },
+  "ECP02-068EN": {
+    "name": "Kotoka Saionji [Pure Euphoria] Evolved",
+    "class": "haven",
+    "printingType": "evolved",
+    "keywords": [],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "onEvolve",
+        "effect": {
+          "op": "banish",
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      }
+    ]
+  },
+  "ECP02-069EN": {
+    "name": "Haru Yuuki [Secret Blue Rose]",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "assail",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "passive",
+        "effect": {
+          "op": "noop",
+          "label": "While there are at least 3 Cool followers or a follower with \"Risa Matoba\" in its name on your field, this has Rush and "
+        }
+      },
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "If there's a follower on your field with \"Risa Matoba\" in its name, put a Magical Item token into your EX area"
+        }
+      }
+    ]
+  },
+  "ECP02-070EN": {
+    "name": "Natalia [One Thousand and One Nights]",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "assail",
+      "bane",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "draw",
+          "count": 1
+        }
+      }
+    ]
+  },
+  "ECP02-071EN": {
+    "name": "A Sweet Romantic Summer",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "noop",
+              "label": "Search your deck for a follower with \"Shin Sato\" in its name, summon it, then shuffle"
+            },
+            {
+              "op": "noop",
+              "label": "Activate only if there are at least 10 Passion cards in your cemetery"
+            }
+          ]
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "ECP02-072EN": {
+    "name": "Curtain Call of Smiles",
+    "class": "neutral",
+    "printingType": "base",
+    "keywords": [],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "spell",
+        "effect": {
+          "op": "sequence",
+          "steps": [
+            {
+              "op": "summon",
+              "tokenCardNo": "CP02-T04EN",
+              "tokenName": "Cool Earrings",
+              "count": 2,
+              "zone": "exArea"
+            },
+            {
+              "op": "healLeader",
+              "amount": 4
+            },
+            {
+              "op": "draw",
+              "count": 2
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "ECP02-SP01EN": {
+    "name": "Minami Nitta [Goddess by the Sunlit Sea]",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "engage",
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "ECP02-SP02EN": {
+    "name": "Yuki Himekawa [Challengers' Cheer]",
+    "class": "forest",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamageAllEnemies",
+          "amount": 4,
+          "followersOnly": true
+        }
+      }
+    ]
+  },
+  "ECP02-SP03aEN": {
+    "name": "Rin & Mio",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "optionalCost",
+          "label": "Lesson (2)",
+          "cost": {
+            "op": "banishFromExArea",
+            "filter": {
+              "trait": "Magical Item"
+            },
+            "count": 2
+          },
+          "then": {
+            "op": "dealDamage",
+            "amount": {
+              "op": "traitFieldCount",
+              "trait": "Cool",
+              "multiplier": 1
+            },
+            "targets": {
+              "type": "enemyFollower",
+              "count": 1
+            }
+          }
+        }
+      }
+    ]
+  },
+  "ECP02-SP04EN": {
+    "name": "Uzuki Shimamura [Magical New Me]",
+    "class": "sword",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "grantPlayCostReduction",
+          "amount": 5,
+          "targets": {
+            "type": "selfFollower",
+            "count": 1,
+            "filter": {
+              "trait": "iM@S CG"
+            },
+            "includeExArea": true
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "ECP02-SP05aEN": {
+    "name": "Mika & Rika",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "playCostReduction",
+          "amount": 3
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "ECP02-SP06EN": {
+    "name": "Yuuki Otokura [Ripples of My Heart]",
+    "class": "rune",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "buff",
+          "atk": -3,
+          "def": -3,
+          "targets": {
+            "type": "selfFollower",
+            "count": 1,
+            "excludeSelf": false
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "ECP02-SP07aEN": {
+    "name": "Akari & Akira",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "rush",
+      "assail",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "mill",
+          "count": 3
+        }
+      }
+    ]
+  },
+  "ECP02-SP08EN": {
+    "name": "Riamu Yumemi [Shout It to the World]",
+    "class": "dragon",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "dealDamage",
+          "amount": 2,
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "ECP02-SP09EN": {
+    "name": "Ranko Kanzaki [Princess in White]",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "ward",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "destroy",
+          "targets": {
+            "type": "enemyFollower",
+            "count": 1
+          }
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "ECP02-SP10EN": {
+    "name": "Asuka Ninomiya [Gentle Evening]",
+    "class": "abyss",
+    "printingType": "base",
+    "keywords": [
+      "storm",
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "optionalCost",
+          "label": "[cost02], Lesson (1)",
+          "cost": {
+            "op": "sequence",
+            "steps": [
+              {
+                "op": "spendPp",
+                "amount": 2
+              },
+              {
+                "op": "banishFromExArea",
+                "filter": {
+                  "trait": "Magical Item"
+                },
+                "count": 1
+              }
+            ]
+          },
+          "then": {
+            "op": "playCostReduction",
+            "amount": 4
+          }
+        }
+      }
+    ]
+  },
+  "ECP02-SP11EN": {
+    "name": "Eve Santaclaus [Holy Night Miracle]",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "auto",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "peekDeck",
+          "count": 1
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  },
+  "ECP02-SP12EN": {
+    "name": "Miyu Mifune [Parfum Géranium]",
+    "class": "haven",
+    "printingType": "base",
+    "keywords": [
+      "fanfare"
+    ],
+    "parseConfidence": "manual",
+    "abilities": [
+      {
+        "timing": "fanfare",
+        "effect": {
+          "op": "noop",
+          "label": "Search your deck for a 1-cost iM@S CG follower, summon it, then shuffle"
+        }
+      },
+      {
+        "timing": "activated",
+        "effect": {
+          "op": "noop",
+          "label": "stub missing activated timing"
+        }
+      }
+    ]
+  }
+}

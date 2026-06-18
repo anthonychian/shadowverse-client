@@ -1,15 +1,18 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.queueFanfare = exports.queueLastWords = void 0;
+exports.queueOnLeaveField = exports.queueFanfare = exports.queueLastWords = void 0;
 exports.onFollowerEntersField = onFollowerEntersField;
 exports.onCardEntersExArea = onCardEntersExArea;
+exports.resolveChosenTrigger = resolveChosenTrigger;
 exports.runConfirmationTiming = runConfirmationTiming;
+const registry_1 = require("../cards/registry");
 const tokens_1 = require("../cards/tokens");
 const card_reset_1 = require("../state/card-reset");
 const resolver_1 = require("../effects/resolver");
 const effect_utils_1 = require("./effect-utils");
 const trigger_queue_1 = require("./trigger-queue");
 const queries_1 = require("../state/queries");
+const conditions_1 = require("../state/conditions");
 const zones_1 = require("../state/zones");
 function checkLosses(state) {
     let next = structuredClone(state);
@@ -113,6 +116,44 @@ function capPlayPoints(state) {
 var trigger_queue_2 = require("./trigger-queue");
 Object.defineProperty(exports, "queueLastWords", { enumerable: true, get: function () { return trigger_queue_2.queueLastWords; } });
 Object.defineProperty(exports, "queueFanfare", { enumerable: true, get: function () { return trigger_queue_2.queueFanfare; } });
+Object.defineProperty(exports, "queueOnLeaveField", { enumerable: true, get: function () { return trigger_queue_2.queueOnLeaveField; } });
+function installPassiveGrants(state, instanceId, player) {
+    const found = (0, queries_1.findInstance)(state, instanceId);
+    if (!found || found.zone !== "field")
+        return;
+    const def = (0, registry_1.getCardDef)((0, queries_1.resolveCardNo)(state, found.card));
+    for (const ability of def?.abilities ?? []) {
+        if (ability.timing !== "passive")
+            continue;
+        if (ability.condition && !(0, conditions_1.evalCondition)(state, player, ability.condition))
+            continue;
+        const effect = ability.effect;
+        if (effect.op === "grantOnCardPlayed") {
+            if (!found.card.grantedOnCardPlayed)
+                found.card.grantedOnCardPlayed = [];
+            found.card.grantedOnCardPlayed.push({
+                filter: effect.filter,
+                effect: effect.effect,
+                untilEndOfTurn: effect.untilEndOfTurn,
+                oncePerTurn: effect.oncePerTurn,
+                maxPerTurn: effect.maxPerTurn,
+                label: effect.label,
+            });
+        }
+        if (effect.op === "grantOnDamaged") {
+            if (!found.card.grantedOnDamaged)
+                found.card.grantedOnDamaged = [];
+            found.card.grantedOnDamaged.push({
+                effect: effect.effect,
+                oncePerTurn: effect.oncePerTurn,
+                label: effect.label,
+            });
+        }
+        if (effect.op === "grantIgnoresWard") {
+            found.card.ignoresWard = true;
+        }
+    }
+}
 /** Fanfare and field-entry setup when a follower/amulet enters the field. */
 function onFollowerEntersField(state, instanceId, player) {
     const found = (0, queries_1.findInstance)(state, instanceId);
@@ -123,6 +164,7 @@ function onFollowerEntersField(state, instanceId, player) {
     }
     found.card.enteredFieldTurn = state.turnNumber;
     found.card.onFieldSinceTurnStart = false;
+    installPassiveGrants(state, instanceId, player);
     (0, trigger_queue_1.queueFanfare)(state, instanceId, player);
     (0, trigger_queue_1.queueAllyFollowerEnterTriggers)(state, instanceId, player);
     (0, trigger_queue_1.queueCemeteryOnAllyFollowerEnter)(state, instanceId, player);
@@ -131,13 +173,15 @@ function onCardEntersExArea(state, instanceId, player) {
     (0, trigger_queue_1.onCardEntersExAreaTriggers)(state, instanceId, player);
 }
 function markOnCardPlayedTriggerUsed(state, trigger) {
-    if (trigger.timing !== "onCardPlayed" || !trigger.abilityKey)
+    if (!trigger.abilityKey)
         return;
     const found = (0, queries_1.findInstance)(state, trigger.sourceInstanceId);
     if (!found)
         return;
     const { ability, abilityKey } = trigger;
-    if (ability.oncePerTurn && !found.card.abilitiesActivatedThisTurn.includes(abilityKey)) {
+    const trackOnce = trigger.timing === "onCardPlayed" ||
+        trigger.timing === "onTokenLeaveField";
+    if (ability.oncePerTurn && trackOnce && !found.card.abilitiesActivatedThisTurn.includes(abilityKey)) {
         found.card.abilitiesActivatedThisTurn.push(abilityKey);
     }
     if (ability.maxPerTurn != null) {
@@ -146,10 +190,24 @@ function markOnCardPlayedTriggerUsed(state, trigger) {
 }
 function resolveOneTrigger(state, trigger) {
     let next = structuredClone(state);
+    if (trigger.ability.condition && !(0, conditions_1.evalCondition)(next, trigger.controller, trigger.ability.condition)) {
+        next.pendingTriggers = next.pendingTriggers.filter((t) => t.id !== trigger.id);
+        return next;
+    }
+    const ppCost = trigger.ability.cost?.pp ?? 0;
+    if (ppCost > 0) {
+        const p = next.players[trigger.controller];
+        if (p.pp < ppCost) {
+            next.pendingTriggers = next.pendingTriggers.filter((t) => t.id !== trigger.id);
+            return next;
+        }
+        p.pp -= ppCost;
+    }
     next.pendingTriggers = next.pendingTriggers.filter((t) => t.id !== trigger.id);
     next.resolutionContext = {
         ...(0, effect_utils_1.contextForTriggerResolution)(next, trigger.sourceInstanceId, trigger.ability.effect),
         forcedTargetId: trigger.forcedTargetId,
+        leftTokenCardNo: trigger.leftTokenCardNo,
     };
     next = (0, resolver_1.resolveEffect)(next, trigger.ability.effect, trigger.controller);
     markOnCardPlayedTriggerUsed(next, trigger);
@@ -157,6 +215,10 @@ function resolveOneTrigger(state, trigger) {
         next.resolutionContext = null;
     }
     return next;
+}
+/** Resolve a trigger chosen via selectTrigger (shared with applyAction). */
+function resolveChosenTrigger(state, trigger) {
+    return resolveOneTrigger(state, trigger);
 }
 function runConfirmationTiming(state) {
     if (state.phase === "gameOver")
