@@ -3,6 +3,22 @@
 // drag is in progress. It's a tiny shared module because the draggable card and
 // the field overlay live in sibling component subtrees.
 
+// Current uniform board scale (Field applies `transform: scale(boardScale)` to
+// the whole board so it fits narrow screens). The player's field cards live
+// inside that scaled board, so framer-motion's drag — which translates the card
+// in the board's *local* space — needs this factor for two things:
+//   1. Tracking: a MotionConfig `transformPagePoint` divides pointer coords by
+//      this scale so the card moves 1:1 with the cursor instead of lagging by
+//      `boardScale` when the board is shrunk.
+//   2. Drop hit-testing: because of (1), a dragged field card's `info.point` is
+//      reported in board-local space; multiply it by this scale to get viewport
+//      coordinates that match the field/cemetery/hand rects below.
+let boardScale = 1;
+export const registerBoardScale = (s) => {
+  boardScale = s || 1;
+};
+export const getBoardScale = () => boardScale;
+
 // The player's field grid container (10 zones: 5 front row + 5 EX area, laid out
 // 5 columns x 2 rows, row-major). Registered by Field via a ref callback.
 let fieldGridEl = null;

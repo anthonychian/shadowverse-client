@@ -9,7 +9,7 @@ const CARD_H = 161;
 
 // How long each effect stays mounted (ms) — a touch longer than the motion
 // itself so the final, faded-out frame is never cut off before unmount.
-const LIFETIME = { draw: 900, shuffle: 1100, evolve: 1200 };
+const LIFETIME = { draw: 900, shuffle: 1100 };
 
 // A stylized face-down card used by the draw and shuffle effects. Kept generic
 // (not a specific cardback) so it reads the same on both sides without having to
@@ -108,79 +108,6 @@ function ShuffleStack() {
   );
 }
 
-// Evolve: the signature golden burst — a flash, an expanding ring, and a spray
-// of rising sparks — centered on the evolving player's field.
-const SPARK_ANGLES = [10, 70, 130, 190, 250, 310];
-function EvoBurst() {
-  return (
-    <>
-      <motion.div
-        style={{
-          position: "absolute",
-          left: "50%",
-          top: "50%",
-          width: 240,
-          height: 240,
-          marginLeft: -120,
-          marginTop: -120,
-          borderRadius: "50%",
-          background:
-            "radial-gradient(circle, rgba(255,236,170,0.95) 0%, rgba(255,153,51,0.6) 40%, rgba(255,120,30,0) 72%)",
-        }}
-        initial={{ scale: 0.2, opacity: 0 }}
-        animate={{ scale: [0.2, 1.3, 1.7], opacity: [0, 0.95, 0] }}
-        transition={{ duration: 1.0, ease: "easeOut" }}
-      />
-      <motion.div
-        style={{
-          position: "absolute",
-          left: "50%",
-          top: "50%",
-          width: 150,
-          height: 150,
-          marginLeft: -75,
-          marginTop: -75,
-          borderRadius: "50%",
-          border: "5px solid rgba(255, 213, 128, 0.9)",
-          boxShadow: "0 0 22px rgba(255, 180, 80, 0.85)",
-        }}
-        initial={{ scale: 0.2, opacity: 0.9 }}
-        animate={{ scale: [0.2, 2.4], opacity: [0.9, 0] }}
-        transition={{ duration: 0.85, ease: "easeOut" }}
-      />
-      {SPARK_ANGLES.map((deg, i) => {
-        const rad = (deg * Math.PI) / 180;
-        const dist = 95;
-        return (
-          <motion.div
-            key={i}
-            style={{
-              position: "absolute",
-              left: "50%",
-              top: "50%",
-              width: 9,
-              height: 9,
-              marginLeft: -4.5,
-              marginTop: -4.5,
-              borderRadius: "50%",
-              background:
-                "radial-gradient(circle, #fff3c4 0%, #ffb347 70%, rgba(255,140,40,0) 100%)",
-            }}
-            initial={{ opacity: 0, x: 0, y: 0, scale: 0.6 }}
-            animate={{
-              opacity: [0, 1, 0],
-              x: [0, Math.cos(rad) * dist],
-              y: [0, Math.sin(rad) * dist - 30],
-              scale: [0.6, 1.2, 0.4],
-            }}
-            transition={{ duration: 0.9, ease: "easeOut" }}
-          />
-        );
-      })}
-    </>
-  );
-}
-
 // Draw / shuffle overlay — mounted inside a deck pile (player or enemy), it
 // centers its effects on that pile.
 export function DeckFx({ side }) {
@@ -196,31 +123,6 @@ export function DeckFx({ side }) {
           <ShuffleStack key={it.id} />
         ),
       )}
-    </div>
-  );
-}
-
-// Evolve overlay — mounted once over the whole board. The burst is centered on
-// the acting player's field (top for the opponent, bottom for you), using the
-// same board-relative coordinates the field labels are tuned against.
-export function EvoLayer() {
-  const items = useGameAnimations((e) => e.kind === "evolve");
-  return (
-    <div style={{ ...overlayBase, zIndex: 70 }}>
-      {items.map((it) => (
-        <div
-          key={it.id}
-          style={{
-            position: "absolute",
-            left: "50%",
-            top: it.side === "player" ? "74%" : "26%",
-            width: 0,
-            height: 0,
-          }}
-        >
-          <EvoBurst />
-        </div>
-      ))}
     </div>
   );
 }

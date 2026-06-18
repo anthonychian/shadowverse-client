@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState, useEffect, useCallback } from "react";
 import "../css/Game.css";
 import Selection from "../components/ui/Selection";
 import PlayerUI from "../components/ui/PlayerUI";
@@ -7,7 +7,7 @@ import ChatUI from "../components/ui/ChatUI";
 import PlayPoints from "../components/ui/PlayPoints";
 import Hand from "../components/hand/Hand";
 import Field from "../components/field/Field";
-import { motion } from "framer-motion";
+import { motion, MotionConfig } from "framer-motion";
 import { useSelector, useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
 import ZoomedCard from "../components/ui/ZoomedCard";
@@ -77,6 +77,15 @@ export default function Game(callback) {
   // so they only ever scale down, never grow past their designed size.
   const [boardScale, setBoardScale] = useState(1);
   const sideScale = Math.min(boardScale, 1);
+
+  // The hand is scaled by boardScale (below), so a dragged hand card would lag
+  // the cursor by that factor. Map pointer coords into the hand's local space so
+  // framer-motion's drag tracks the cursor 1:1. Matches the field-grid fix in
+  // Field.js; the hand's drop handlers convert info.point back via getBoardScale().
+  const handTransformPagePoint = useCallback(
+    (point) => ({ x: point.x / (boardScale || 1), y: point.y / (boardScale || 1) }),
+    [boardScale]
+  );
   const leftScaleStyle = {
     transform: `scale(${sideScale})`,
     transformOrigin: "center left",
@@ -168,14 +177,16 @@ export default function Game(callback) {
             transformOrigin: "bottom center",
           }}
         >
-          <Hand
-            // setDragging={setDragging}
-            setHovering={setHovering}
-            constraintsRef={constraintsRef}
-            ready={ready}
-            setReady={setReady}
-            setReadyToPlaceOnFieldFromHand={setReadyToPlaceOnFieldFromHand}
-          />
+          <MotionConfig transformPagePoint={handTransformPagePoint}>
+            <Hand
+              // setDragging={setDragging}
+              setHovering={setHovering}
+              constraintsRef={constraintsRef}
+              ready={ready}
+              setReady={setReady}
+              setReadyToPlaceOnFieldFromHand={setReadyToPlaceOnFieldFromHand}
+            />
+          </MotionConfig>
         </div>
       </motion.div>
 

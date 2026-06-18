@@ -17,6 +17,7 @@ import {
   isOverHand,
   fieldSlotCenter,
   setDragHover,
+  getBoardScale,
 } from "../field/handDrag";
 import { triggerCardReveal } from "../field/cardRevealBus";
 import cancel from "../../assets/logo/cancel.png";
@@ -170,7 +171,12 @@ export default function Card({
     });
   };
   const handleFieldDrag = (_event, info) => {
-    const { x, y } = info.point;
+    // info.point is in the board's local (scaled) space because of the
+    // MotionConfig transformPagePoint around the field grid — scale it back up
+    // to viewport coords so it matches the field/cemetery/hand rects.
+    const s = getBoardScale();
+    const x = info.point.x * s;
+    const y = info.point.y * s;
     setDragHover({
       active: true,
       index: fieldIndexAt(x, y),
@@ -190,7 +196,10 @@ export default function Card({
       showHand: false,
     });
     if (!onFieldDrop) return;
-    const { x, y } = info.point;
+    // See handleFieldDrag: convert board-local point back to viewport coords.
+    const s = getBoardScale();
+    const x = info.point.x * s;
+    const y = info.point.y * s;
     let dest;
     if (fieldExtraTargets && isOverCemetery(x, y)) dest = { type: "cemetery" };
     else if (fieldExtraTargets && isOverHand(x, y)) dest = { type: "hand" };
@@ -215,10 +224,16 @@ export default function Card({
     });
   };
   const handleCardDrag = (_event, info) => {
+    // The hand is scaled by boardScale (see Game.js MotionConfig), so info.point
+    // is in hand-local space — scale it back to viewport coords to match the
+    // field/cemetery rects.
+    const s = getBoardScale();
+    const x = info.point.x * s;
+    const y = info.point.y * s;
     setDragHover({
       active: true,
-      index: fieldIndexAt(info.point.x, info.point.y),
-      cemetery: isOverCemetery(info.point.x, info.point.y),
+      index: fieldIndexAt(x, y),
+      cemetery: isOverCemetery(x, y),
       hand: false,
       showCemetery: true,
       showHand: false,
@@ -234,7 +249,10 @@ export default function Card({
       showHand: false,
     });
     if (onCardDragEnd) onCardDragEnd();
-    const { x, y } = info.point;
+    // See handleCardDrag: convert hand-local point back to viewport coords.
+    const s = getBoardScale();
+    const x = info.point.x * s;
+    const y = info.point.y * s;
     if (isOverCemetery(x, y)) {
       dispatch(placeToCemeteryFromHand({ name: name, index: inHandIndex }));
       return;
@@ -370,6 +388,15 @@ export default function Card({
     <>
       <motion.div
         onTap={handleTap}
+        // Firefox starts a native HTML image-drag on mousedown+move over an
+        // <img>, which preempts framer-motion's pointer-based drag (Chrome
+        // suppresses it via the WebKit-only `-webkit-user-drag` in index.css,
+        // but Firefox ignores that). draggable={false} here and on each <img>
+        // disables the native drag source so click-and-drag works cross-browser.
+        // (Note: onDragStart is framer-motion's pan callback, not the DOM event,
+        // so it can't be used to preventDefault the native drag — hence the
+        // attribute approach.)
+        draggable={false}
         {...dragProps}
         // Lift the whole card (and its overflowing keyword labels) above
         // neighbouring cards while hovered so the black boxes aren't clipped.
@@ -558,6 +585,7 @@ export default function Card({
         {(numOfCarrots > 0 && name !== "Carrot") ||
         (name === "Drive Point" && onField) ? (
           <img
+            draggable={false}
             style={{ opacity: 1 }}
             height={"100%"}
             src={artThumb(cardBeneath, artMap)}
@@ -569,6 +597,7 @@ export default function Card({
           />
         ) : (
           <img
+            draggable={false}
             height={"100%"}
             src={artThumb(name, artMap)}
             onError={(e) => {
@@ -601,7 +630,7 @@ export default function Card({
                 alignItems: "center",
               }}
             >
-              <img height={"40px"} src={atkImg} alt="atk" />
+              <img draggable={false} height={"40px"} src={atkImg} alt="atk" />
               <span
                 style={{
                   color: "white",
@@ -638,7 +667,7 @@ export default function Card({
                 alignItems: "center",
               }}
             >
-              <img height={"40px"} src={defImg} alt="atk" />
+              <img draggable={false} height={"40px"} src={defImg} alt="atk" />
               <span
                 style={{
                   color: "white",
@@ -656,6 +685,7 @@ export default function Card({
         )}
         {evolvedUsed && (
           <img
+            draggable={false}
             src={cancel}
             alt={"cancel"}
             style={{
@@ -687,6 +717,7 @@ export default function Card({
             }}
           >
             <img
+              draggable={false}
               src={carrot}
               alt={"carrot"}
               style={{
@@ -716,6 +747,7 @@ export default function Card({
             }}
           >
             <img
+              draggable={false}
               src={drive}
               alt={"drive"}
               style={{

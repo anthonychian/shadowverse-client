@@ -43,6 +43,9 @@ const style = {
   // p: 3,
   width: "55%",
   display: "flex",
+  // Stack the hide-UI row above the card grid (column) so the grid stays
+  // horizontally centred (matches EvoDeck; default row layout shoves it right).
+  flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
 };

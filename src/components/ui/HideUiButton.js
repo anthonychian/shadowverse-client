@@ -7,7 +7,11 @@ import { setUiChromeHidden } from "../../redux/GameStateSlice";
 export default function HideUiButton({ sx = {}, size = "small" }) {
   const dispatch = useDispatch();
   const hidden = useSelector((s) => s.gameState.uiChromeHidden);
+  const gameMode = useSelector((s) => s.gameState.gameMode);
 
+  // The Hide UI control is hidden in the manual (sandbox) game; it's only
+  // offered in the rules-enforced automated game.
+  if (gameMode === "manual") return null;
   if (hidden) return null;
 
   return (
@@ -30,6 +34,12 @@ export default function HideUiButton({ sx = {}, size = "small" }) {
 }
 
 export function ModalHideUiRow() {
+  const gameMode = useSelector((s) => s.gameState.gameMode);
+
+  // No Hide UI button in the manual (sandbox) game, so skip the row entirely
+  // (avoids an empty padded strip at the top of modals).
+  if (gameMode === "manual") return null;
+
   return (
     <div
       style={{

@@ -85,7 +85,7 @@ import {
   restoreOwnState,
 } from "../../redux/CardSlice";
 import { artImage } from "../../decks/getCards";
-import { motion } from "framer-motion";
+import { motion, MotionConfig } from "framer-motion";
 import CardMUI from "@mui/material/Card";
 import { useDispatch, useSelector } from "react-redux";
 import { Menu, MenuItem, Modal, Box, Typography, Tooltip } from "@mui/material";
@@ -114,9 +114,10 @@ import { getNameByCardNoClient } from "../../engine/cardLookup";
 import Token from "./Token";
 import ShowDice from "./ShowDice";
 import { playGameAnimation, triggerGameAnimation } from "./animationBus";
-import { DeckFx, EvoLayer } from "./GameFx";
+import { DeckFx } from "./GameFx";
 import {
   registerFieldGrid,
+  registerBoardScale,
   registerEnemyFieldGrid,
   registerEnemyHand,
   fieldSlotCenter,
@@ -285,6 +286,21 @@ export default function Field({
   const boardWrapperRef = useRef(null);
   const boardRef = useRef(null);
   const [boardScale, setBoardScale] = useState(1);
+
+  // Share the live board scale with the drag layer so dragged field cards track
+  // the cursor 1:1 and their drop points map back to viewport coords (see
+  // handDrag.js / the MotionConfig wrapping the player field grid below).
+  useEffect(() => {
+    registerBoardScale(boardScale);
+  }, [boardScale]);
+
+  // Map pointer coords into the board's local (scaled) space for framer-motion's
+  // drag, so a dragged field card follows the cursor exactly. Stable per scale so
+  // MotionConfig doesn't recreate its context (and re-render the cards) each render.
+  const transformPagePoint = useCallback(
+    (point) => ({ x: point.x / (boardScale || 1), y: point.y / (boardScale || 1) }),
+    [boardScale]
+  );
 
   // Re-render when the set of mid-reveal (hidden) field slots changes, so a
   // played card pops into view exactly when its reveal animation lands.
@@ -918,6 +934,18 @@ export default function Field({
             index: indexClicked,
           }),
         );
+        // Use the same reveal as playing a card to the field: the evolved card
+        // shows large in the centre, dissolves into particles that fly to its
+        // slot, and materialises there (the slot stays hidden until it lands).
+        triggerCardReveal(
+          name,
+          reduxCurrentRoom,
+          indexClicked,
+          fieldSlotCenter(indexClicked),
+        );
+        // Play the leader's evolve reaction (LeaderSpine listens for "evolve" on
+        // the animation bus). This no longer draws the golden burst — the
+        // EvoLayer was removed — so only the leader animates.
         triggerGameAnimation("evolve", reduxCurrentRoom);
       }
       if (readyToRide) {
@@ -2132,6 +2160,10 @@ export default function Field({
           </div>
         </div>
         {/* Player Field (1-5) & Ex Area (6-10) */}
+        {/* Divide pointer coords by boardScale so a dragged field card tracks
+            the cursor 1:1 — without this the card lags by `boardScale` because
+            framer-motion's translate is multiplied by the board's CSS scale. */}
+        <MotionConfig transformPagePoint={transformPagePoint}>
         <div
           ref={(el) => registerFieldGrid(el)}
           style={{
@@ -2325,6 +2357,7 @@ export default function Field({
             </div>
           ))}
         </div>
+        </MotionConfig>
 
         {/* Player Deck and Cementery */}
         <div
@@ -2379,8 +2412,6 @@ export default function Field({
           </div>
         </div>
       </div>
-      {/* Board-wide overlay for the evolve burst (positioned per side). */}
-      <EvoLayer />
       {/* Drop-zone hints shown while dragging a card from the hand. */}
       <FieldDropHints />
       {/* Dice toss animation (shown to both players). */}

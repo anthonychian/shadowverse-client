@@ -47,6 +47,10 @@ const style = {
   // p: 3,
   width: "55%",
   display: "flex",
+  // Stack the hide-UI row above the card grid (column), so the grid stays
+  // horizontally centred. Without this the default row layout places the
+  // hide-UI row beside the grid and shoves the grid right of centre.
+  flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
 };
