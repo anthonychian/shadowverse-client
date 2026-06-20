@@ -59,16 +59,21 @@ export default function CardInspector({
   onNext,
   onSwap,
   large = false,
+  // `fill` (roomy desktop preview dialog): make the card art the dominant,
+  // largest element and let the description take only the leftover space.
+  fill = false,
   readOnly = false,
 }) {
   // In the fullscreen mobile preview there's plenty of room, so scale the image,
-  // text and stepper up; the desktop column keeps the compact sizes.
+  // text and stepper up; the desktop column keeps the compact sizes. In `fill`
+  // mode (roomy desktop preview dialog) the text/icons are scaled DOWN so the
+  // card art stays the largest, screen-scaled element.
   const imgMax = large ? 380 : 360;
-  const gap = large ? 10 : 12;
-  const nameSize = large ? 22 : 19;
-  const metaSize = large ? 14 : 13;
-  const effectSize = large ? 13 : 14;
-  const statValSize = large ? 20 : 23;
+  const gap = fill ? 8 : large ? 10 : 12;
+  const nameSize = fill ? 18 : large ? 22 : 19;
+  const metaSize = fill ? 12 : large ? 14 : 13;
+  const effectSize = fill ? 12.5 : large ? 13 : 14;
+  const statValSize = fill ? 18 : large ? 20 : 23;
   const stepSize = large ? 52 : 44;
   const countSize = large ? 26 : 22;
   if (!name) {
@@ -101,7 +106,7 @@ export default function CardInspector({
   const showPicker = printings.length > 1 && typeof onSelectPrinting === "function";
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", height: "100%", gap }}>
+    <div style={{ display: "flex", flexDirection: "column", height: fill ? "auto" : "100%", gap }}>
       {/* Card image with navigation. In large mode a side gutter keeps the
           arrows off the card art. */}
       <div style={{ position: "relative", display: "flex", justifyContent: "center", padding: 0 }}>
@@ -111,7 +116,12 @@ export default function CardInspector({
           src={cardNo ? `../textures/${cardNo}.png` : cardImage(name)}
           alt={name}
           style={
-            large
+            fill
+              ? // Card art is the hero: scale it with the viewport height so it
+                // stays large relative to the screen, capped so it never
+                // overflows the (height-capped) dialog.
+                { maxWidth: "100%", maxHeight: "min(58vh, 620px)", width: "auto", height: "auto", borderRadius: 10, boxShadow: "0 6px 24px rgba(0,0,0,0.6)" }
+              : large
               ? // Cap the height so the rest (name, stats, full description) fits
                 // on one screen and the description box stays large.
                 { maxWidth: imgMax, maxHeight: "32vh", width: "auto", height: "auto", borderRadius: 10, boxShadow: "0 6px 24px rgba(0,0,0,0.6)" }
@@ -140,7 +150,7 @@ export default function CardInspector({
       <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 8 }}>
         {d.class && (
           <span style={{ display: "inline-flex", alignItems: "center", gap: 6, color: COLORS.text, fontFamily: FONT, fontSize: metaSize }}>
-            {classIcon(d.class) && <img src={classIcon(d.class)} alt={d.class} style={{ height: large ? 22 : 22 }} />}
+            {classIcon(d.class) && <img src={classIcon(d.class)} alt={d.class} style={{ height: fill ? 18 : 22 }} />}
             {CLASS_LABELS[d.class] || d.class}
           </span>
         )}
@@ -182,28 +192,28 @@ export default function CardInspector({
 
       {/* cost / attack / defense banner */}
       {(hasCost || hasAtk || hasDef) && (
-        <div style={{ ...statBanner, minHeight: large ? 44 : 52, padding: large ? "6px 16px" : "8px 18px" }}>
+        <div style={{ ...statBanner, minHeight: fill ? 40 : large ? 44 : 52, padding: fill ? "4px 14px" : large ? "6px 16px" : "8px 18px" }}>
           {hasCost && (
             <span style={statItem}>
               {costIcon(costNum) ? (
-                <img src={costIcon(costNum)} alt="cost" style={{ height: large ? 28 : 36 }} />
+                <img src={costIcon(costNum)} alt="cost" style={{ height: fill ? 24 : large ? 28 : 36 }} />
               ) : (
-                <span style={{ ...costFallback, width: large ? 28 : 34, height: large ? 28 : 34, fontSize: large ? 16 : 18 }}>{d.cost}</span>
+                <span style={{ ...costFallback, width: fill ? 26 : large ? 28 : 34, height: fill ? 26 : large ? 28 : 34, fontSize: fill ? 15 : large ? 16 : 18 }}>{d.cost}</span>
               )}
-              <span style={{ ...statLabel, fontSize: large ? 12 : 12 }}>Cost</span>
+              <span style={{ ...statLabel, fontSize: 12 }}>Cost</span>
             </span>
           )}
           {(hasAtk || hasDef) && (
             <span style={{ display: "inline-flex", alignItems: "center", gap: 18 }}>
               {hasAtk && (
                 <span style={statItem}>
-                  <img src={ATTACK_ICON} alt="attack" style={{ height: large ? 22 : 27 }} />
+                  <img src={ATTACK_ICON} alt="attack" style={{ height: fill ? 20 : large ? 22 : 27 }} />
                   <span style={{ ...statVal, fontSize: statValSize }}>{d.attack}</span>
                 </span>
               )}
               {hasDef && (
                 <span style={statItem}>
-                  <img src={DEFENSE_ICON} alt="defense" style={{ height: large ? 22 : 27 }} />
+                  <img src={DEFENSE_ICON} alt="defense" style={{ height: fill ? 20 : large ? 22 : 27 }} />
                   <span style={{ ...statVal, fontSize: statValSize }}>{d.defense}</span>
                 </span>
               )}
@@ -223,10 +233,14 @@ export default function CardInspector({
         <div
           style={{
             fontFamily: FONT, color: COLORS.text, fontSize: effectSize, lineHeight: 1.45,
-            background: COLORS.inset, borderRadius: 8, padding: large ? "10px 12px" : "10px 12px",
-            overflowY: "auto", flex: "1 1 auto",
+            background: COLORS.inset, borderRadius: 8, padding: "10px 12px",
+            // In `fill` mode the box grows to its natural height (no inner
+            // scrollbar) so any overflow falls to the dialog, which scrolls only
+            // when it's too small to fit everything. Elsewhere it scrolls itself.
+            overflowY: fill ? "visible" : "auto",
+            flex: fill ? "0 0 auto" : "1 1 auto",
             // Description box stays large in the mobile preview — never small.
-            minHeight: large ? "30vh" : 0,
+            minHeight: fill ? 0 : large ? "30vh" : 0,
           }}
         >
           <EffectText text={d.effect} />

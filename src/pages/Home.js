@@ -1508,11 +1508,13 @@ export default function Home() {
               return (
                 <div
                   key={idx}
+                  onClick={() => openPreviewInspect(key)}
                   // onMouseEnter={() => handleStartHover(key)}
                   // onMouseLeave={() => handleEndHover()}
                   style={{
                     position: "relative",
                     display: "flex",
+                    cursor: "pointer",
                     // justifyContent: "end",
                   }}
                 >
@@ -1574,11 +1576,13 @@ export default function Home() {
               return (
                 <div
                   key={idx * 2}
+                  onClick={() => openPreviewInspect(key)}
                   // onMouseEnter={() => handleStartHover(key)}
                   // onMouseLeave={() => handleEndHover()}
                   style={{
                     position: "relative",
                     display: "flex",
+                    cursor: "pointer",
                     justifyContent: "end",
                   }}
                 >
@@ -1615,6 +1619,53 @@ export default function Home() {
           </CardMUI>
         </Box>
       </Modal>
+
+      {/* Desktop Preview card inspector ΓÇö opened by clicking a card (or its
+          magnifier) in the desktop deck Preview. Same read-only CardInspector as
+          mobile, sized for a centered desktop dialog instead of fullscreen. */}
+      {!isMobile && (
+        <Dialog
+          open={previewInspectOpen}
+          onClose={() => setPreviewInspectOpen(false)}
+          disableScrollLock
+          maxWidth={false}
+          PaperProps={{
+            sx: {
+              background: "rgba(28, 31, 38, 0.98)",
+              backgroundImage: "none",
+              borderRadius: 2,
+              position: "relative",
+              display: "flex",
+              flexDirection: "column",
+              // Portrait box that scales with viewport height (width derived from
+              // the height keeps it taller than wide); caps avoid extremes.
+              width: "min(66vh, 92vw, 640px)",
+              height: "min(95vh, 1040px)",
+              maxWidth: "92vw",
+              m: 1,
+              boxShadow: "0 12px 40px rgba(0,0,0,0.65), 0 0 0 1px rgba(255,255,255,0.06)",
+            },
+          }}
+        >
+          <IconButton
+            onClick={() => setPreviewInspectOpen(false)}
+            sx={{
+              position: "absolute", top: 10, right: 10, zIndex: 3, color: "#fff",
+              background: "rgba(0,0,0,0.35)", "&:hover": { background: "rgba(0,0,0,0.6)" },
+            }}
+          >
+            <CloseIcon />
+          </IconButton>
+          {/* Scroll container: the dialog itself scrolls (not the description box)
+              only when it's too small to fit the card + text. `margin: auto`
+              keeps the content vertically centred while it fits — scroll-safe. */}
+          <div style={{ flex: "1 1 auto", minHeight: 0, overflowY: "auto", padding: 24, boxSizing: "border-box", display: "flex", flexDirection: "column" }}>
+            <div style={{ margin: "auto 0" }}>
+              <CardInspector name={previewInspectName} cardNo={previewInspectCardNo} fill readOnly />
+            </div>
+          </div>
+        </Dialog>
+      )}
 
       {/* Mobile deck Preview ΓÇö the deck-view layout, read-only (no add/remove,
           no trash, name/class shown but not editable; inspect via magnifier). */}
