@@ -172,6 +172,21 @@ export default function Home() {
   // Each entry: { date, title, body }
   const announcements = [
     {
+      date: "2026-06-21",
+      title: "Card list updated to BP20",
+      body: "The deck builder now includes all cards up to and including BP20.",
+    },
+    {
+      date: "2026-06-21",
+      title: "Click and drag added in Game",
+      body: "Drag cards from your hand and from the deck, cemetery, and token modals straight onto the field.",
+    },
+    {
+      date: "2026-06-21",
+      title: "Import from Decklog EN/JP",
+      body: "Build a deck instantly by importing from a Decklog EN/JP URL or share code.",
+    },
+    {
       date: "2026-06-11",
       title: "Lobby Board added",
       body: "Join, host, or reconnect to games from the new active games board.",
