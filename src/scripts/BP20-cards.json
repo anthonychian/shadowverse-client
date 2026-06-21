@@ -1,0 +1,2662 @@
+[
+  {
+    "cardNo": "BP20-001EN",
+    "name": "Izudia, Annihilation Manifest",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Omen / Hunter",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "5",
+      "effect": "[fanfare] Search your deck for a 2-cost or less spell with Omen and Hunter traits, reveal it, add it to your hand, then shuffle. If there are at least 6 Hunter cards in your cemetery, put an Annihilating Onslaught token into your EX area. [act] [cost00]: The next card with Omen and Hunter traits you play this turn costs 2 less to play. Activate only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-001EN.png"
+  },
+  {
+    "cardNo": "BP20-002EN",
+    "name": "Krulle, Heir to Unkilling",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Omen / Heir / Hunter",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] If there are at least 6 Hunter cards in your cemetery, put a Crest: Krulle, Heir to Unkilling token into your EX area. Give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-002EN.png"
+  },
+  {
+    "cardNo": "BP20-003EN",
+    "name": "Krulle, Heir to Unkilling Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Heir / Hunter",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Select an enemy follower on the field and give it 🗡️-3/🛡️-3. On Super Evolve - Give each enemy follower on the field 🗡️-3/🛡️-3."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-003EN.png"
+  },
+  {
+    "cardNo": "BP20-004EN",
+    "name": "Plumeria, Serene Goddess",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Verdant",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Once per turn, when a 5-cost or less Verdant follower on your field evolves, give it Storm. [fanfare] If there are at least 3 Verdant cards in your cemetery, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-004EN.png"
+  },
+  {
+    "cardNo": "BP20-005EN",
+    "name": "Windbloom Sylph",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Fae-Touched",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. Whenever you play a Fae-Touched card, give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-005EN.png"
+  },
+  {
+    "cardNo": "BP20-006EN",
+    "name": "Windbloom Sylph Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Fae-Touched",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Whenever you play a Fae-Touched card, give your leader [defense]+1. On Evolve - Search your deck for a Fae-Touched card not named Windbloom Sylph, reveal it, add it to your hand, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-006EN.png"
+  },
+  {
+    "cardNo": "BP20-007EN",
+    "name": "Congregrant of Unkilling",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Omen / Hunter",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Ward. [fanfare] Search your deck for up 1 follower with Omen and Hunter traits that costs 3 or less, summon it, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-007EN.png"
+  },
+  {
+    "cardNo": "BP20-008EN",
+    "name": "Eradicating Arrow",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Omen / Hunter",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select up to 2 enemy followers on the field and deal them 2 damage. If there are at least 6 Hunter cards in your cemetery, deal 3 damage instead and deal 2 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-008EN.png"
+  },
+  {
+    "cardNo": "BP20-009EN",
+    "name": "Supplicant of Unkilling",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Omen / Hunter",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] If there's an enemy follower on the field with 1 defense, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-009EN.png"
+  },
+  {
+    "cardNo": "BP20-010EN",
+    "name": "Supplicant of Unkilling Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Hunter",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - If there's an enemy follower on the field with 1 defense, give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-010EN.png"
+  },
+  {
+    "cardNo": "BP20-011EN",
+    "name": "Greatwood Warrior",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Hunter",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Search your deck for up to 2 [forestcraft] spells with different names, reveal them, add them to your hand, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-011EN.png"
+  },
+  {
+    "cardNo": "BP20-012EN",
+    "name": "Hamlet of Unkilling",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Amulet",
+      "trait": "Omen / Hunter",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Look at the top 2 cards of your deck. You may reveal a card with Omen and Hunter traits and add it to your hand. Put the rest on the bottom of your deck in any order. [act] Bury this: Give your leader [defense]+1. Activate only if there are at least 3 Hunter cards in your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-012EN.png"
+  },
+  {
+    "cardNo": "BP20-013EN",
+    "name": "Bearer of the Fairy Blade",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf / Fae-Touched",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. Whenever you summon a Pixie token follower, give it [attack]+1. [fanfare] Put a Fairy token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-013EN.png"
+  },
+  {
+    "cardNo": "BP20-014EN",
+    "name": "Bearer of the Fairy Blade Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Elf / Fae-Touched",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Whenever you summon a Pixie token follower, give it [attack]+1. On Evolve - Select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-014EN.png"
+  },
+  {
+    "cardNo": "BP20-015EN",
+    "name": "Devotee of Unkilling",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Omen / Hunter",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Discard a card with Omen and Hunter traits: Draw 2 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-015EN.png"
+  },
+  {
+    "cardNo": "BP20-016EN",
+    "name": "Ageless Bystander",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Put a Fairy Wisp token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-016EN.png"
+  },
+  {
+    "cardNo": "BP20-017EN",
+    "name": "Cutie Cat",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Storm. Strike - Select an enemy follower on the field and deal it 4 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-017EN.png"
+  },
+  {
+    "cardNo": "BP20-018EN",
+    "name": "Bestial Swipe",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "As an additional cost to play this, you may discard a Beast card. ------- Select an enemy follower on the field and deal it 3 damage. If you paid the additional cost, deal 5 damage instead and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-018EN.png"
+  },
+  {
+    "cardNo": "BP20-019EN",
+    "name": "Octrice, Hollowness Manifest",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Omen / Thief",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Whenever you play or fuse a Loot card, give this Storm. [fanfare] Choose one. (1) Put a Crest: Octrice, Hollowness Manifest token into your EX area. (2) Search your deck for a Returning Slash, reveal it, add it to your hand, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-019EN.png"
+  },
+  {
+    "cardNo": "BP20-020EN",
+    "name": "Sinciro, Heir to Usurpation",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Omen / Heir / Thief",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] If there's at least 1 fusion counter on this, draw a card. If there are no fusion counters on this, put a Gilded Blade token into your EX area. Activate, Fuse 2 or less Loot cards that cost at least 1: Put X fusion counters on this. X equals the number of cards fused."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-020EN.png"
+  },
+  {
+    "cardNo": "BP20-021EN",
+    "name": "Sinciro, Heir to Usurpation Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Heir / Thief",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "This deals 2 additional ability damage for each fusion counter on it. On Evolve - Select an enemy follower on the field and deal it 3 damage. On Super Evolve - Deal each enemy leader and enemy follower on the field 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-021EN.png"
+  },
+  {
+    "cardNo": "BP20-022EN",
+    "name": "Aurelia, Glorious Saber",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Princess",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "5",
+      "attack": "3",
+      "defense": "4",
+      "effect": "This costs X less to play. X equals the number of [swordcraft] cards on your field. Rush. Assail. Ward. Strike - Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-022EN.png"
+  },
+  {
+    "cardNo": "BP20-023EN",
+    "name": "Congregant of Usurpation",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Omen / Thief",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-023EN.png"
+  },
+  {
+    "cardNo": "BP20-024EN",
+    "name": "Congregant of Usurpation",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Thief",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Whenever an enemy follower on the field is put into the cemetery, put a Gilded Blade, Gilded Goblet or Gilded Boots token into your EX area. On Evolve - Select an enemy follower on the field and deal it 5 damage. The next Loot card you play this turn costs 2 less."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-024EN.png"
+  },
+  {
+    "cardNo": "BP20-025EN",
+    "name": "Fearful Fighter",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Intimidate. Whenever an enemy follower that took damage from this is put from the field into the cemetery during your turn, put the top card of your deck into your EX area. [fanfare] Select up to 2 enemy followers on the field and deal 6 damage divided between them."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-025EN.png"
+  },
+  {
+    "cardNo": "BP20-026EN",
+    "name": "Returning Slash",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Omen / Thief / Loot",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field and deal it 4 damage. If there's a follower with \"Octrice\" in its name on your field, put a Gilded Blade token into your EX area. Activate, Fuse 1 Loot card that costs at least 1: Give this \"This costs 1 less to play.\""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-026EN.png"
+  },
+  {
+    "cardNo": "BP20-027EN",
+    "name": "Peppy Scout",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-027EN.png"
+  },
+  {
+    "cardNo": "BP20-028EN",
+    "name": "Peppy Scout Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Officer",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Once per turn, when an Officer follower is put onto your field, draw a card. On Evolve - Search your deck for a 3-cost or less Officer follower, summon it, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-028EN.png"
+  },
+  {
+    "cardNo": "BP20-029EN",
+    "name": "Supplicant of Usurpation",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Omen / Thief",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Once per turn, when you play or fuse a Loot card, give your leader [defense]+1. [fanfare] Put a Gilded Goblet token in your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-029EN.png"
+  },
+  {
+    "cardNo": "BP20-030EN",
+    "name": "Lair of Usurpation",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Amulet",
+      "trait": "Omen / Thief",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "8",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] Remove a fusion counter from this, [engage], bury this: Search your deck for up to 3 followers with Omen and Thief traits each with different names and total cost 8 or less, summon them, then shuffle. Activate, Fuse 3 Loot cards that cost at least 1: Put a fusion counter on this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-030EN.png"
+  },
+  {
+    "cardNo": "BP20-031EN",
+    "name": "Comrade of the Swordmaster",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Search your deck for a 2-cost or less Officer follower, put it into your EX area, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-031EN.png"
+  },
+  {
+    "cardNo": "BP20-032EN",
+    "name": "Comrade of the Swordmaster Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 4 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-032EN.png"
+  },
+  {
+    "cardNo": "BP20-033EN",
+    "name": "Devotee of Usurpation",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Omen / Thief",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "2",
+      "effect": "Rush. Whenever you play or fuse a Loot card, give this Assail. [lastwords] Put a Gilded Goblet and Gilded Boots token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-033EN.png"
+  },
+  {
+    "cardNo": "BP20-034EN",
+    "name": "Mercurial Mercenary",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] [cost02]: Search your deck for a Mercurial Mercenary, summon it, then shuffle. Give each Mercurial Mercenary on your field [attack]+1/[defense]+1. [act] [engage]: Select an enemy follower on the field and deal damage to it equal to the number of cards named Mercurial Mercenary on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-034EN.png"
+  },
+  {
+    "cardNo": "BP20-035EN",
+    "name": "Palace Knight",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Put a Steelclad Knight token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-035EN.png"
+  },
+  {
+    "cardNo": "BP20-036EN",
+    "name": "Shield Bash",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a follower on your field. Give it Assail and, for the rest of this turn, \"This doesn't take damage.\""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-036EN.png"
+  },
+  {
+    "cardNo": "BP20-037EN",
+    "name": "Lishenna, Melody Manifest",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Omen / Idolatry",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[fanfare] Choose one. (1) Select another Idolatry card on your field. Destroy it and put a Melodious Monody token into your EX area. (2) Summon a White Psalm, New Revelation token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-037EN.png"
+  },
+  {
+    "cardNo": "BP20-038EN",
+    "name": "Velharia, Heir to Truth",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Omen / Heir / Mage",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "2",
+      "attack": "0",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-038EN.png"
+  },
+  {
+    "cardNo": "BP20-039EN",
+    "name": "Velharia, Heir to Truth Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Heir / Mage",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "1",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field and destroy it. On Super Evolve - Select a 9-cost or less [runecraft] spell from your cemetery and put it into your EX area. It costs 3 less to play this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-039EN.png"
+  },
+  {
+    "cardNo": "BP20-040EN",
+    "name": "Axia, Heir to Destruction",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Omen / Heir / Idolatry",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-040EN.png"
+  },
+  {
+    "cardNo": "BP20-041EN",
+    "name": "Axia, Heir to Destruction Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Heir / Idolatry",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Once per turn, whenever an Idolatry amulet is put onto your field, select an enemy follower on the field and deal it 2 damage. On Evolve - Bury another Idolatry card on your field: Search your deck for a follower with \"Lishenna\" in its name, reveal, add it to your hand, then shuffle. On Super Evolve - Deal each enemy leader damage equal to the number of Idolatry cards on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-041EN.png"
+  },
+  {
+    "cardNo": "BP20-042EN",
+    "name": "Raio, Elimination Manifest",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Omen / Mage",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "9",
+      "attack": "8",
+      "defense": "8",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] If this wasn't put onto the field from hand, evolve this. [act] Discard this and a spell with Omen and Mage traits: Put an Ersatz Elimination token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-042EN.png"
+  },
+  {
+    "cardNo": "BP20-043EN",
+    "name": "Raio, Elimination Manifest Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Mage",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "9",
+      "defense": "9",
+      "effect": "On Evolve - Deal each enemy follower on the field 9 damage. Put 2 Ersatz Elimination tokens into your EX area. They cost 1 less to play this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-043EN.png"
+  },
+  {
+    "cardNo": "BP20-044EN",
+    "name": "Congregant of Destruction",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Omen / Idolatry",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Bury another Idolatry card on your field: Select an enemy follower on the field. Destroy it and deal its leader 2 damage. [act] Bury another Idolatry card on your field: Select an enemy follower on the field. Destroy it and deal its leader 2 damage. Activate only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-044EN.png"
+  },
+  {
+    "cardNo": "BP20-045EN",
+    "name": "Devastating Soprano",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Omen / Idolatry",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose one. (1) Select an Idolatry card on your field. Destroy it and draw a card. (2) Summon a White Psalm, New Revelation token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-045EN.png"
+  },
+  {
+    "cardNo": "BP20-046EN",
+    "name": "Congregant of Truth",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Omen / Mage",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] If this wasn't put onto the field from hand, evolve this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-046EN.png"
+  },
+  {
+    "cardNo": "BP20-047EN",
+    "name": "Congregant of Truth Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Mage",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 3 damage. Draw a card, then discard a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-047EN.png"
+  },
+  {
+    "cardNo": "BP20-048EN",
+    "name": "Supplicant of Destruction",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Omen / Idolatry",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[act] [engage] and bury another Idolatry card on your field: Select an enemy leader or enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-048EN.png"
+  },
+  {
+    "cardNo": "BP20-049EN",
+    "name": "Illusory Conjuration",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Omen / Mage",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Look at the top 3 cards of your deck. You may reveal a card with Omen and Mage traits from among them and add it to your hand or put it into your EX area. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-049EN.png"
+  },
+  {
+    "cardNo": "BP20-050EN",
+    "name": "Devotee of Destruction",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Omen / Idolatry",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this. Assail."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-050EN.png"
+  },
+  {
+    "cardNo": "BP20-051EN",
+    "name": "Devotee of Destruction Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Idolatry",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Assail. On Evolve - Bury another Idolatry card on your field: Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-051EN.png"
+  },
+  {
+    "cardNo": "BP20-052EN",
+    "name": "Supplicant of Truth",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Omen / Mage",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Ward. [fanfare] Draw 2 cards, then discard a card. If this wasn't put onto the field from hand, give this [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-052EN.png"
+  },
+  {
+    "cardNo": "BP20-053EN",
+    "name": "Devotee of Truth",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Omen / Mage",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Draw a card, then discard a card. If this wasn't put onto the field from hand, give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-053EN.png"
+  },
+  {
+    "cardNo": "BP20-054EN",
+    "name": "Ascetic of Wuxing",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Onmyoji",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Discard a card: Look at the top 3 cards of your deck. From among them, you may reveal an Onmyoji follower or a spell and add it to your hand. Put the rest on the bottom of your deck in any order. [act] [engage]: Summon a Paper Shikigami token. Activate only if there are at least 7 Onmyoji cards and/or spells in your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-054EN.png"
+  },
+  {
+    "cardNo": "BP20-055EN",
+    "name": "Wasteland of Destruction",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet",
+      "trait": "Omen / Idolatry",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Look at the top 2 cards of your deck. You may reveal a card with Omen and Idolatry traits from among them and add it to your hand. Put the rest on the bottom of your deck in any order. [act] Bury this: Bury another Idolatry card on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-055EN.png"
+  },
+  {
+    "cardNo": "BP20-056EN",
+    "name": "Galmieux, Ardor Manifest",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Omen / Wyrmkin",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "This has Storm while Overflow is active for you. Once during each of your turns, whenever this takes ability damage, select an enemy follower on the field and deal it 2 damage. [fanfare] Put a Crest: Galmieux, Ardor Manifest token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-056EN.png"
+  },
+  {
+    "cardNo": "BP20-057EN",
+    "name": "Azurifrit, Heir to Disdain",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Omen / Heir / Wyrmkin",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "5",
+      "effect": "[evolve] [cost01]: Evolve this. Ward. During your turn, whenever this takes ability damage, deal 1 damage to each enemy follower on the field. [fanfare] If there's another Omen card on your field or in your EX area, deal 1 damage to each follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-057EN.png"
+  },
+  {
+    "cardNo": "BP20-058EN",
+    "name": "Azurifrit, Heir to Disdain Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Heir / Wyrmkin",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "6",
+      "effect": "Ward. During your turn, whenever this takes ability damage, deal 1 damage to each enemy follower on the field. On Evolve - Deal 1 damage to each follower on the field. On Super Evolve - Deal 1 damage to each follower on the field and 4 damage to each enemy leader. Change this follower's defense to 7."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-058EN.png"
+  },
+  {
+    "cardNo": "BP20-059EN",
+    "name": "Dagon, Lord of the Seas",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Marine",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "10",
+      "attack": "10",
+      "defense": "10",
+      "effect": "This costs 3 less to play from the EX area. Rush. Assail. If this would take more than 3 damage, it takes 3 instead. Strike - Refresh this. Activate only twice per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-059EN.png"
+  },
+  {
+    "cardNo": "BP20-060EN",
+    "name": "Spoiled Mermanager",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Marine",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Discard a Marine card: Look at the top 2 cards of your deck. You may put a Marine card from among them into your EX area. Put the rest on the bottom of your deck in any order. Give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-060EN.png"
+  },
+  {
+    "cardNo": "BP20-061EN",
+    "name": "Spoiled Mermanager Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Marine",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Discard a Marine card: Look at the top 2 cards of your deck. You may put a Marine card from among them into your EX area. Put the rest on the bottom of your deck in any order. Give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-061EN.png"
+  },
+  {
+    "cardNo": "BP20-062EN",
+    "name": "Congregant of Disdain",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Omen / Wyrmkin",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "Once on each of your turns, when this takes ability damage, increase your max play points by 1. [fanfare] If Overflow is active for you, deal each follower on the field 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-062EN.png"
+  },
+  {
+    "cardNo": "BP20-063EN",
+    "name": "Ferocious Flame",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Omen / Wyrmkin",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a follower on your field and an enemy follower on the field. Deal 1 damage to the first follower and 4 damage to the second. Draw a card. If you have a follower on your field with \"Galmieux\" in its name, increase your max play points by 1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-063EN.png"
+  },
+  {
+    "cardNo": "BP20-064EN",
+    "name": "Supplicant of Disdain",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Omen / Wyrmkin",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. Ward. [fanfare] Select a follower on your field. If Overflow is active for you, deal it 1 damage and give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-064EN.png"
+  },
+  {
+    "cardNo": "BP20-065EN",
+    "name": "Supplicant of Disdain Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Wyrmkin",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Ward. On Evolve - Select an an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-065EN.png"
+  },
+  {
+    "cardNo": "BP20-066EN",
+    "name": "Encounter from the Deep",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Marine",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "7",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Look at the top 5 cards of your deck. You may reveal a Marine follower from among them and summon it. Put the rest on the bottom of your deck in any order. Deal each enemy follower on the field damage equal to the defense of the Marine follower summoned by this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-066EN.png"
+  },
+  {
+    "cardNo": "BP20-067EN",
+    "name": "Nation of Disdain",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Amulet",
+      "trait": "Omen / Wyrmkin",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Look at the top 2 cards of your deck. You may reveal a card with Omen and Wyrmkin traits from among them and add it to your hand. Put the rest on the bottom of your deck in any order. [act] [engage], bury this: Select a follower on your field and deal it 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-067EN.png"
+  },
+  {
+    "cardNo": "BP20-068EN",
+    "name": "Snowstorm Dragonewt",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Select an enemy follower on the field and deal it 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-068EN.png"
+  },
+  {
+    "cardNo": "BP20-069EN",
+    "name": "Snowstorm Dragonewt Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonewt",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "On Evolve - Destroy each enemy follower on the field that took damage this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-069EN.png"
+  },
+  {
+    "cardNo": "BP20-070EN",
+    "name": "Devotee of Disdain",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Omen / Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[act] [cost00]: Select a follower on your field and deal it 1 damage. Activate only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-070EN.png"
+  },
+  {
+    "cardNo": "BP20-071EN",
+    "name": "Militant Mermaid",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Marine",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "5",
+      "attack": "1",
+      "defense": "5",
+      "effect": "Ward. [fanfare] Put a Marine card from your hand into your EX area: Recover 3 play points."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-071EN.png"
+  },
+  {
+    "cardNo": "BP20-072EN",
+    "name": "Ocean Rider",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Marine",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Each Megalorca on your field has Ward. [fanfare] Summon a Megalorca token. If Overflow is active for you, summon 3 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-072EN.png"
+  },
+  {
+    "cardNo": "BP20-073EN",
+    "name": "Raging Lightning",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick]. Select an enemy follower on the field. Deal it 6 damage and, if you selected a follower with 3 or less defense, deal 3 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-073EN.png"
+  },
+  {
+    "cardNo": "BP20-074EN",
+    "name": "Rulenye & Valnareik",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Omen / Necromancer / Demon",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-074EN.png"
+  },
+  {
+    "cardNo": "BP20-075EN",
+    "name": "Rulenye & Valnareik Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Necromancer / Demon",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Choose one. (1) Summon 2 Rulenye, Echoing Scream tokens. (2) Give this Storm and each [abysscraft] Omen follower on your field [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-075EN.png"
+  },
+  {
+    "cardNo": "BP20-076EN",
+    "name": "Sham-Nacha, Heir to Entwining",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Omen / Heir / Encroacher",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-076EN.png"
+  },
+  {
+    "cardNo": "BP20-077EN",
+    "name": "Sham-Nacha, Heir to Entwining Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Heir / Encroacher",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Put a Crest: Sham-Nacha, Heir to Entwining token into your EX area. On Super Evolve - Select an [abysscraft] Omen follower from your cemetery with Evolve, summon it and evolve it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-077EN.png"
+  },
+  {
+    "cardNo": "BP20-078EN",
+    "name": "Diabolus Hedone",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "3",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Select up to 2 enemy followers on the field and, if Sanguine is active for you, destroy them."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-078EN.png"
+  },
+  {
+    "cardNo": "BP20-079EN",
+    "name": "Congregant of Entwining",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Omen / Necromancer / Demon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-079EN.png"
+  },
+  {
+    "cardNo": "BP20-080EN",
+    "name": "Congregant of Entwining Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Necromancer / Demon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Choose one. (1) Select an enemy follower on the field and deal it 5 damage. (2) Select a 3-cost or less [abysscraft] Omen follower from your cemetery and summon it. (3) Give each [abysscraft] Omen follower on your field [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-080EN.png"
+  },
+  {
+    "cardNo": "BP20-081EN",
+    "name": "Hervör",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "6",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Choose one. (1) Deal 4 damage to each enemy follower on the field. (2) Give your leader [defense]+4. Draw 2 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-081EN.png"
+  },
+  {
+    "cardNo": "BP20-082EN",
+    "name": "Screaming and Loathing",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Omen / Necromancer / Demon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose one. (1) Select an enemy follower on the field and deal it 3 damage. (2) Deal 2 damage to each enemy leader. (3) Draw a card, then discard a card. (4) Recover 1 play point."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-082EN.png"
+  },
+  {
+    "cardNo": "BP20-083EN",
+    "name": "Spirited Gravekeeper",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Necromancer",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[evolve] [cost05]: Evolve this. [fanfare] Bury the top 2 cards of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-083EN.png"
+  },
+  {
+    "cardNo": "BP20-084EN",
+    "name": "Spirited Gravekeeper Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Necromancer",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "5",
+      "effect": "On Evolve - Select a 5-cost or less non-[abysscraft] follower and a 3-cost or less non-[abysscraft] follower in your cemetery and summon them."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-084EN.png"
+  },
+  {
+    "cardNo": "BP20-085EN",
+    "name": "Supplicant of Entwining",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Omen / Necromancer / Demon",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Choose one. (1) Select an enemy follower on the field and deal it 1 damage. (2) Deal 2 damage to each enemy leader. (3) Give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-085EN.png"
+  },
+  {
+    "cardNo": "BP20-086EN",
+    "name": "Castle of Entwining",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Amulet",
+      "trait": "Omen / Necromancer / Demon",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Look at the top 3 cards of your deck. You may reveal an [abysscraft] Omen card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. [act] [cost01], [engage], bury this: Choose one. (1) Select a follower on your field, and give it Rush. (2) Select a follower on your field and give it Assail."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-086EN.png"
+  },
+  {
+    "cardNo": "BP20-087EN",
+    "name": "Ephemeral Demon Princess",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Yokai / Demon",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Bury the top 3 cards of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-087EN.png"
+  },
+  {
+    "cardNo": "BP20-088EN",
+    "name": "Ephemeral Demon Princess Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Yokai / Demon",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Select up to 2 Yokai cards that cost a total of 4 or less in your cemetery and put them into your EX area. They cost 0 to play this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-088EN.png"
+  },
+  {
+    "cardNo": "BP20-089EN",
+    "name": "Devotee of Entwining",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Omen / Necromancer / Demon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Choose one. (1) Select an enemy follower on the field and deal it 3 damage. (2) Deal 1 damage to each enemy leader and enemy follower on the field. (3) Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-089EN.png"
+  },
+  {
+    "cardNo": "BP20-090EN",
+    "name": "Wicked Collector",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "3",
+      "effect": "[fanfare] Put the top card of your deck into your EX area. If it's a follower, give it [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-090EN.png"
+  },
+  {
+    "cardNo": "BP20-091EN",
+    "name": "Nemean Lion",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "Strike - Select an [abysscraft] follower in your cemetery and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-091EN.png"
+  },
+  {
+    "cardNo": "BP20-092EN",
+    "name": "March of the Brutes",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Demon",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "6",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select up to 2 enemy followers on the field. Deal 5 damage to them and 3 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-092EN.png"
+  },
+  {
+    "cardNo": "BP20-093EN",
+    "name": "Marwynn, Despair Manifest",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Omen / Zealot",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Choose one. (1) Select an enemy follower on the field and, if there are at least 3 crests in your EX area, banish it and give your leader [defense]+2. (2) Put a Crest: Marwynn, Despair Manifest token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-093EN.png"
+  },
+  {
+    "cardNo": "BP20-094EN",
+    "name": "Himeka, Heir to Repose",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Omen / Heir / Zealot",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Put a Crest: Himeka, Heir to Repose token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-094EN.png"
+  },
+  {
+    "cardNo": "BP20-095EN",
+    "name": "Himeka, Heir to Repose Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Heir / Zealot",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Search your deck for a card with Omen and Zealot traits not named Himeka, Heir to Repose, reveal it, add it to your hand, then shuffle. On Super Evolve - [cost02]: Search your deck for a 4-cost or less follower with Omen and Zealot traits not named Himeka, Heir to Repose, summon it, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-095EN.png"
+  },
+  {
+    "cardNo": "BP20-096EN",
+    "name": "Holy Serpent's Blessing",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Select an enemy follower on the field and deal it 4 damage. [lastwords] Choose one. (1) Give your leader [defense]+2. (2) [cost01]: Search your deck for a Holy Serpent's Blessing, summon it, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-096EN.png"
+  },
+  {
+    "cardNo": "BP20-097EN",
+    "name": "Congregant of Repose",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Omen / Zealot",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Put a Crest: Congregant of Repose token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-097EN.png"
+  },
+  {
+    "cardNo": "BP20-098EN",
+    "name": "Congregant of Repose Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Zealot",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Select an enemy follower on the field and deal damage to it equal to 2 times the number of crests in your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-098EN.png"
+  },
+  {
+    "cardNo": "BP20-099EN",
+    "name": "Sacred Sheep",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Luminary",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "At the start of each opponent's main phase, the next time your leader would take damage this turn, it doesn't take damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-099EN.png"
+  },
+  {
+    "cardNo": "BP20-100EN",
+    "name": "Shining Disenchantment",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Omen / Zealot",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Draw a card. [act] [engage], bury this: Select an enemy follower on the field and deal it 4 damage. Activate only if there are at least 3 crests in your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-100EN.png"
+  },
+  {
+    "cardNo": "BP20-101EN",
+    "name": "Supplicant of Repose",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Omen / Zealot",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] If there are at least 3 crests in your EX area, give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-101EN.png"
+  },
+  {
+    "cardNo": "BP20-102EN",
+    "name": "Supplicant of Repose Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Zealot",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Put a Crest: Supplicant of Repose token in your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-102EN.png"
+  },
+  {
+    "cardNo": "BP20-103EN",
+    "name": "Temple of Repose",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Omen / Zealot",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Look at the top 3 cards of your deck. You may reveal a card with Omen and Zealot traits from among them and add it to your hand. Put the rest on the bottom of your deck in any order. Quick/[act] [cost01], [engage], bury this: Reduce the next damage your leader takes this turn by 2. Activate only if you have at least 3 Crests in your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-103EN.png"
+  },
+  {
+    "cardNo": "BP20-104EN",
+    "name": "Winged Lion Statue",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith / Beast",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] [cost01], [engage], bury this and another amulet: Summon a Holy Falcon and Holy Tiger token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-104EN.png"
+  },
+  {
+    "cardNo": "BP20-105EN",
+    "name": "Knight of the Holy Order",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Luminary",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. Ward. [fanfare] If this was summoned by an ability, evolve it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-105EN.png"
+  },
+  {
+    "cardNo": "BP20-106EN",
+    "name": "Knight of the Holy Order Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Luminary",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Ward. On Evolve - Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-106EN.png"
+  },
+  {
+    "cardNo": "BP20-107EN",
+    "name": "Devotee of Repose",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Omen / Zealot",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "1",
+      "attack": "0",
+      "defense": "2",
+      "effect": "Ward. [fanfare] Select an enemy follower on the field and deal it damage equal to the number of crests in your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-107EN.png"
+  },
+  {
+    "cardNo": "BP20-108EN",
+    "name": "Featherfolk Courier",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Avian",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "5",
+      "attack": "3",
+      "defense": "4",
+      "effect": "Storm. Strike - Draw a card. [fanfare] [cost02]: Search your deck for a follower with Storm and 3 or less attack, summon it, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-108EN.png"
+  },
+  {
+    "cardNo": "BP20-109EN",
+    "name": "Peckish Al-mi'raj",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Look at the top 3 cards of your deck. You may put a Beast follower from among them into your EX area. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-109EN.png"
+  },
+  {
+    "cardNo": "BP20-110EN",
+    "name": "Blinding Faith",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Faith",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "6",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Deal 4 damage to each enemy follower on the field, give your leader [defense]+2 and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-110EN.png"
+  },
+  {
+    "cardNo": "BP20-111EN",
+    "name": "Mjerrabaine, Great Manifest",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Omen",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Discard your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-111EN.png"
+  },
+  {
+    "cardNo": "BP20-112EN",
+    "name": "Mjerrabaine, Great Manifest Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "At the start of your end phase, select an enemy follower on the field and, if there are 1 or less cards in your hand, destroy it. On Evolve - Put a Crest: Mjerrabaine, Great Manifest token into your EX area. On Super-Evolve - Select an enemy follower on the field. Destroy it and deal 2 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-112EN.png"
+  },
+  {
+    "cardNo": "BP20-113EN",
+    "name": "Gilnelise, Voracity Manifest",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Omen",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Drain. Whenever you play a card named Ravenous Sweetness, select an enemy follower on the field and deal it 5 damage. [fanfare] Select another follower on the field and give it [attack]+3/🛡️-3. If you don't have a Super Evolution Point, put a Ravenous Sweetness token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-113EN.png"
+  },
+  {
+    "cardNo": "BP20-114EN",
+    "name": "Dogged One",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Lightborne",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] If you don't have a Super Evolution Point, give this [attack]+1/[defense]+1 and Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-114EN.png"
+  },
+  {
+    "cardNo": "BP20-115EN",
+    "name": "Dogged One Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Lightborne",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select a follower on your field and give it Rush and Assail."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-115EN.png"
+  },
+  {
+    "cardNo": "BP20-116EN",
+    "name": "Inspirational One",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Lightborne",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Ward. [fanfare] Select an enemy follower on the field. If you don't have a Super Evolution Point, deal it 5 damage and give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-116EN.png"
+  },
+  {
+    "cardNo": "BP20-117EN",
+    "name": "Tablet of Tribulations",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Amulet",
+      "trait": "Omen",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] [cost09], [engage], bury this: Search your deck for up to 10 Omen followers with \"Mjerrabaine,\" \"Lishenna,\" \"Rulenye,\" \"Marwynn,\" \"Galmieux,\" \"Izudia,\" \"Valnareik,\" \"Octrice,\" \"Raio,\" or \"Gilnelise\" in their different card names. You may summon any number of them and put any number of them into your EX area, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-117EN.png"
+  },
+  {
+    "cardNo": "BP20-118EN",
+    "name": "Apostle of Voracity",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Omen / Beast",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Select another follower on the field and give it [attack]+2/🛡️-2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-118EN.png"
+  },
+  {
+    "cardNo": "BP20-119EN",
+    "name": "Apostle of Voracity Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Beast",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Select another follower on the field and give it [attack]+2/🛡️-2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-119EN.png"
+  },
+  {
+    "cardNo": "BP20-120EN",
+    "name": "Greatness Ascended",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Omen",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "When this is discarded, if there's a follower on your field with \"Mjerrabaine\" in its name, you may put it into your EX area. -------- This costs 2 less to play from the EX area. Draw 2 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-120EN.png"
+  },
+  {
+    "cardNo": "BP20-T01EN",
+    "name": "Crest: Krulle, Heir to Unkilling TOKEN",
+    "type": "token",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Crest / Token",
+      "trait": "Omen / Heir / Hunter",
+      "rarity": "-",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] [cost00]: Select an enemy follower on the field and change its defense to 1. Activate only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-T01EN.png"
+  },
+  {
+    "cardNo": "BP20-T02EN",
+    "name": "Crest: Octrice, Hollowness Manifest TOKEN",
+    "type": "token",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Crest / Token",
+      "trait": "Omen / Thief",
+      "rarity": "-",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": "At the start of your main phase or whenever you play or fuse a Loot card, put a reversal counter on this. If this has at least 8 reversal counters, banish this, search your deck for a Thief card, reveal it, add it to your hand, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-T02EN.png"
+  },
+  {
+    "cardNo": "BP20-T03EN",
+    "name": "White Psalm, New Revelation TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet / Token",
+      "trait": "Omen / Idolatry",
+      "rarity": "-",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[lastwords] Summon a Black Psalm, New Revelation token and give your leader [defense]+1. [act] Engage 3 Idolatry cards on your field: Bury this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-T03EN.png"
+  },
+  {
+    "cardNo": "BP20-T04EN",
+    "name": "Black Psalm, New Revelation TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Amulet / Token",
+      "trait": "Omen / Idolatry",
+      "rarity": "-",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[lastwords] Summon a White Psalm, New Revelation token and deal 1 damage to each enemy leader. [act] Engage 3 Idolatry cards on your field: Bury this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-T04EN.png"
+  },
+  {
+    "cardNo": "BP20-T05EN",
+    "name": "Crest: Galmieux, Ardor Manifest TOKEN",
+    "type": "token",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Crest / Token",
+      "trait": "Omen / Wyrmkin",
+      "rarity": "-",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] [cost00]: Select an Omen follower on your field and deal it 1 damage. Activate only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-T05EN.png"
+  },
+  {
+    "cardNo": "BP20-T06EN",
+    "name": "Crest: Sham-Nacha, Heir to Entwining TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Crest / Token",
+      "trait": "Omen / Heir / Encroacher",
+      "rarity": "-",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": "When you would choose 1 or more effects, you may choose any number of effects instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-T06EN.png"
+  },
+  {
+    "cardNo": "BP20-T07EN",
+    "name": "Crest: Marwynn, Despair Manifest TOKEN",
+    "type": "token",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Crest / Token",
+      "trait": "Omen / Zealot",
+      "rarity": "-",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": "At the start of your end phase, select an enemy leader or enemy follower on the field and deal it 1 damage. If there are at least 3 crests in your EX area, deal it 2 damage. If there are at least 5 crests, deal it 4 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-T07EN.png"
+  },
+  {
+    "cardNo": "BP20-T08EN",
+    "name": "Crest: Himeka, Heir to Repose TOKEN",
+    "type": "token",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Crest / Token",
+      "trait": "Omen / Heir / Zealot",
+      "rarity": "-",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": "At the start of your end phase, select an enemy follower on the field. If there are at least 3 crests in your EX area, give it 🗡️-2/🛡️-2. If there are at least 5 crests, give it 🗡️-4/🛡️-4 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-T08EN.png"
+  },
+  {
+    "cardNo": "BP20-T09EN",
+    "name": "Crest: Congregant of Repose TOKEN",
+    "type": "token",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Crest / Token",
+      "trait": "Omen / Zealot",
+      "rarity": "-",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": "At the start of your end phase, select an Omen follower on your field and, if there are at least 3 crests in your EX area, give it [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-T09EN.png"
+  },
+  {
+    "cardNo": "BP20-T10EN",
+    "name": "Crest: Supplicant of Repose TOKEN",
+    "type": "token",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Crest / Token",
+      "trait": "Omen / Zealot",
+      "rarity": "-",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": "At the start of your end phase, if there are at least 3 crests in your EX area, give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-T10EN.png"
+  },
+  {
+    "cardNo": "BP20-T11EN",
+    "name": "Crest: Mjerrabaine, Great Manifest TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Crest / Token",
+      "trait": "Omen",
+      "rarity": "-",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": "At the start of your end phase, if there are 1 or less cards in your hand, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-T11EN.png"
+  },
+  {
+    "cardNo": "BP20-PR01EN",
+    "name": "Lishenna, Omen of Destruction",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Omen / Idolatry",
+      "rarity": "Promo",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "4",
+      "attack": "2",
+      "defense": "4",
+      "effect": "[fanfare] Put a Destruction in White and a Destruction in Black token to your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-PR01EN.png"
+  },
+  {
+    "cardNo": "BP20-U01EN",
+    "name": "Krulle, Heir to Unkilling Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Heir / Hunter",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Select an enemy follower on the field and give it 🗡️-3/🛡️-3. On Super Evolve - Give each enemy follower on the field 🗡️-3/🛡️-3."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-U01EN.png"
+  },
+  {
+    "cardNo": "BP20-U02EN",
+    "name": "Sinciro, Heir to Usurpation Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Heir / Thief",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "This deals 2 additional ability damage for each fusion counter on it. On Evolve - Select an enemy follower on the field and deal it 3 damage. On Super Evolve - Deal each enemy leader and enemy follower on the field 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-U02EN.png"
+  },
+  {
+    "cardNo": "BP20-U03EN",
+    "name": "Velharia, Heir to Truth Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Heir / Mage",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "1",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field and destroy it. On Super Evolve - Select a 9-cost or less [runecraft] spell from your cemetery and put it into your EX area. It costs 3 less to play this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-U03EN.png"
+  },
+  {
+    "cardNo": "BP20-U04EN",
+    "name": "Axia, Heir to Destruction Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Heir / Idolatry",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Once per turn, whenever an Idolatry amulet is put onto your field, select an enemy follower on the field and deal it 2 damage. On Evolve - Bury another Idolatry card on your field: Search your deck for a follower with \"Lishenna\" in its name, reveal, add it to your hand, then shuffle. On Super Evolve - Deal each enemy leader damage equal to the number of Idolatry cards on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-U04EN.png"
+  },
+  {
+    "cardNo": "BP20-U05EN",
+    "name": "Galmieux, Ardor Manifest",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Omen / Wyrmkin",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "This has Storm while Overflow is active for you. Once during each of your turns, whenever this takes ability damage, select an enemy follower on the field and deal it 2 damage. [fanfare] Put a Crest: Galmieux, Ardor Manifest token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-U05EN.png"
+  },
+  {
+    "cardNo": "BP20-U06EN",
+    "name": "Rulenye & Valnareik Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Necromancer / Demon",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Choose one. (1) Summon 2 Rulenye, Echoing Scream tokens. (2) Give this Storm and each [abysscraft] Omen follower on your field [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-U06EN.png"
+  },
+  {
+    "cardNo": "BP20-U07EN",
+    "name": "Himeka, Heir to Repose Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Heir / Zealot",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Search your deck for a card with Omen and Zealot traits not named Himeka, Heir to Repose, reveal it, add it to your hand, then shuffle. On Super Evolve - [cost02]: Search your deck for a 4-cost or less follower with Omen and Zealot traits not named Himeka, Heir to Repose, summon it, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-U07EN.png"
+  },
+  {
+    "cardNo": "BP20-U08EN",
+    "name": "Gilnelise, Voracity Manifest",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Omen",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set \"Omens and Heirs\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Drain. Whenever you play a card named Ravenous Sweetness, select an enemy follower on the field and deal it 5 damage. [fanfare] Select another follower on the field and give it [attack]+3/🛡️-3. If you don't have a Super Evolution Point, put a Ravenous Sweetness token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-U08EN.png"
+  }
+]

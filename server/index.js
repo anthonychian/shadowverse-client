@@ -226,40 +226,47 @@ app.get("/health", (_req, res) => {
 // route (cors() is enabled app-wide above) and we relay the POST server-side,
 // passing decklog's JSON straight back. The client maps each list[].card_number
 // to a local card name to fill the deck builder.
+// Both the English (decklog-en) and Japanese (decklog) sites share the same API
+// shape. We try the host the client hints at (?site=jp|en) first, then the other,
+// so a pasted EN or JP share code/URL both resolve. The JP site returns card
+// numbers without the "EN" suffix — the client maps those too.
+const DECKLOG_HOSTS = {
+  en: "https://decklog-en.bushiroad.com",
+  jp: "https://decklog.bushiroad.com",
+};
 app.get("/api/decklog/:code", async (req, res) => {
   const code = String(req.params.code || "").trim().toUpperCase();
   if (!/^[A-Z0-9]{1,20}$/.test(code)) {
     return res.status(400).json({ error: "Invalid deck code" });
   }
-  try {
-    const upstream = await fetch(
-      `https://decklog-en.bushiroad.com/system/app/api/view/${code}`,
-      {
+  const order = req.query.site === "jp" ? ["jp", "en"] : ["en", "jp"];
+  let lastStatus = 0;
+  for (const site of order) {
+    const host = DECKLOG_HOSTS[site];
+    try {
+      const upstream = await fetch(`${host}/system/app/api/view/${code}`, {
         method: "POST",
         headers: {
           "X-Requested-With": "XMLHttpRequest",
           "Content-Type": "application/x-www-form-urlencoded",
-          Referer: `https://decklog-en.bushiroad.com/view/${code}`,
+          Referer: `${host}/view/${code}`,
           "User-Agent": "Mozilla/5.0",
         },
         body: `deck_id=${encodeURIComponent(code)}`,
         signal: AbortSignal.timeout(15000),
-      },
-    );
-    if (!upstream.ok) {
-      return res
-        .status(502)
-        .json({ error: `decklog responded ${upstream.status}` });
+      });
+      if (!upstream.ok) { lastStatus = upstream.status; continue; }
+      const data = await upstream.json();
+      if (data && Array.isArray(data.list) && data.list.length > 0) {
+        return res.json(data);
+      }
+    } catch (e) {
+      console.error(`[decklog] ${site} proxy error:`, e.message);
     }
-    const data = await upstream.json();
-    if (!data || !Array.isArray(data.list) || data.list.length === 0) {
-      return res.status(404).json({ error: "Deck not found or empty" });
-    }
-    res.json(data);
-  } catch (e) {
-    console.error("[decklog] proxy error:", e.message);
-    res.status(502).json({ error: "Failed to reach decklog" });
   }
+  return res
+    .status(lastStatus && lastStatus !== 200 ? 502 : 404)
+    .json({ error: "Deck not found on the EN or JP decklog" });
 });
 
 io.on("connection", (socket) => {

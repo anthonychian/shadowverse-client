@@ -47,10 +47,17 @@ const UNLIMITED_EVO = new Set(["Carrot", "Drive Point"]);
 // Card number (e.g. "BP05-P25EN") -> card name, for translating an external
 // decklist (bushiroad decklog) into the names the builder works with. Built
 // once from the static printings data. First printing wins for a given number.
-const NAME_BY_CARD_NO = (() => {
+// decklog reports each card by its printing's number. The EN site uses our exact
+// numbers ("BP20-067EN"); the JP site drops the "EN" suffix ("BP20-067"). Key the
+// lookup both ways, resolving to the local printing so we recover the real name
+// AND our card number (so the imported deck shows the correct art/texture).
+const PRINTING_BY_DECKLOG_NO = (() => {
   const m = {};
   for (const p of cardPrintings) {
-    if (p.cardNo && !(p.cardNo in m)) m[p.cardNo] = p.name;
+    if (!p.cardNo) continue;
+    if (!(p.cardNo in m)) m[p.cardNo] = p;
+    const jp = p.cardNo.replace(/EN$/, "");
+    if (!(jp in m)) m[jp] = p;
   }
   return m;
 })();
@@ -63,14 +70,37 @@ const CLASS_KEY_BY_LABEL = (() => {
   return m;
 })();
 
-// Pull a decklog share code out of a pasted code or full URL
-// (https://decklog-en.bushiroad.com/view/26JXU -> "26JXU").
+// Pull a decklog share code out of a pasted code or full URL. Works for both the
+// English (decklog-en.bushiroad.com) and Japanese (decklog.bushiroad.com) sites,
+// e.g. https://decklog.bushiroad.com/view/4UUZP -> "4UUZP".
 const extractDecklogCode = (raw) => {
   const s = String(raw || "").trim();
   const fromUrl = s.match(/\/view\/([A-Za-z0-9]+)/);
   if (fromUrl) return fromUrl[1].toUpperCase();
   const bare = s.match(/^[A-Za-z0-9]+$/);
   return bare ? s.toUpperCase() : "";
+};
+
+// Which decklog site a pasted URL points at, so the proxy queries it first.
+// A bare code returns null — the server then tries EN, then JP.
+const detectDecklogSite = (raw) => {
+  const s = String(raw || "");
+  if (/decklog-en\.bushiroad\.com/i.test(s)) return "en";
+  if (/decklog\.bushiroad\.com/i.test(s)) return "jp";
+  return null;
+};
+
+// decklog's JP site reports a deck's class in Japanese; map those to our keys
+// (the EN site uses the English labels handled by CLASS_KEY_BY_LABEL).
+const DECKLOG_JP_CLASS = {
+  エルフ: "forest",
+  ロイヤル: "sword",
+  ウィッチ: "rune",
+  ドラゴン: "dragon",
+  ナイトメア: "abyss",
+  ネクロマンサー: "abyss",
+  ビショップ: "haven",
+  ニュートラル: "neutral",
 };
 
 export default function CreateDeck() {
@@ -600,7 +630,8 @@ export default function CreateDeck() {
     setDecklogLoading(true); setDecklogError("");
     try {
       const base = SERVER_URL.replace(/\/$/, "");
-      const res = await fetch(`${base}/api/decklog/${code}`);
+      const site = detectDecklogSite(decklogCode);
+      const res = await fetch(`${base}/api/decklog/${code}${site ? `?site=${site}` : ""}`);
       if (!res.ok) {
         const j = await res.json().catch(() => ({}));
         throw new Error(j.error || `Request failed (${res.status})`);
@@ -618,11 +649,13 @@ export default function CreateDeck() {
       // Each entry already carries the specific printing's card_number.
       const collect = (entries, out) => {
         for (const c of entries || []) {
-          const nm = NAME_BY_CARD_NO[c.card_number];
-          if (!nm) { missing.push(c.card_number); continue; }
-          if (!(nm in art)) art[nm] = c.card_number;
+          const p = PRINTING_BY_DECKLOG_NO[c.card_number];
+          if (!p) { missing.push(c.card_number); continue; }
+          // Store our own card number (not decklog's) so the art/texture resolves
+          // even when the JP site reported it without the "EN" suffix.
+          if (!(p.name in art)) art[p.name] = p.cardNo;
           const n = Math.max(1, c.num || 1);
-          for (let i = 0; i < n; i++) out.push(nm);
+          for (let i = 0; i < n; i++) out.push(p.name);
         }
       };
       collect(data.list, mainNames);
@@ -635,7 +668,7 @@ export default function CreateDeck() {
       // likewise replaces the deck rather than merging).
       setArtByName(new Map(Object.entries(art)));
       // Adopt decklog's class + title when we can, so the deck is ready to save.
-      const cls = CLASS_KEY_BY_LABEL[data.deck_param2];
+      const cls = CLASS_KEY_BY_LABEL[data.deck_param2] || DECKLOG_JP_CLASS[data.deck_param2];
       if (cls) setDeckClass(cls);
       if (data.title && !name) setName(data.title);
       if (missing.length) {
@@ -872,7 +905,8 @@ export default function CreateDeck() {
         <DialogContent>
           <DialogContentText sx={{ fontWeight: 600 }}>From decklog</DialogContentText>
           <DialogContentText sx={{ fontSize: 13 }}>
-            Paste a bushiroad decklog code or share URL (e.g. https://decklog-en.bushiroad.com/view/26JXU).
+            Paste a bushiroad decklog code or share URL — English or Japanese (e.g.
+            https://decklog-en.bushiroad.com/view/26JXU or https://decklog.bushiroad.com/view/4UUZP).
           </DialogContentText>
           <div style={{ display: "flex", gap: 8, alignItems: "flex-start", marginTop: 6 }}>
             <TextField

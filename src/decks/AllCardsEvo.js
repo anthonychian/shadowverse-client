@@ -1,4 +1,122 @@
 export const allCardsEvo = [
+  "Krulle, Heir to Unkilling Evolved",
+  "Windbloom Sylph Evolved",
+  "Supplicant of Unkilling Evolved",
+  "Bearer of the Fairy Blade Evolved",
+  "Sinciro, Heir to Usurpation Evolved",
+  "Congregant of Usurpation",
+  "Peppy Scout Evolved",
+  "Comrade of the Swordmaster Evolved",
+  "Velharia, Heir to Truth Evolved",
+  "Axia, Heir to Destruction Evolved",
+  "Raio, Elimination Manifest Evolved",
+  "Congregant of Truth Evolved",
+  "Devotee of Destruction Evolved",
+  "Azurifrit, Heir to Disdain Evolved",
+  "Spoiled Mermanager Evolved",
+  "Supplicant of Disdain Evolved",
+  "Snowstorm Dragonewt Evolved",
+  "Rulenye & Valnareik Evolved",
+  "Sham-Nacha, Heir to Entwining Evolved",
+  "Congregant of Entwining Evolved",
+  "Spirited Gravekeeper Evolved",
+  "Ephemeral Demon Princess Evolved",
+  "Himeka, Heir to Repose Evolved",
+  "Congregant of Repose Evolved",
+  "Supplicant of Repose Evolved",
+  "Knight of the Holy Order Evolved",
+  "Mjerrabaine, Great Manifest Evolved",
+  "Dogged One Evolved",
+  "Apostle of Voracity Evolved",
+  "Magachiyo, Barbed Convict Evolved",
+  "Verdant Lieutenant",
+  "Budding Initiate Evolved",
+  "Beast Lancer Evolved",
+  "Barbaros, Briny Convict Evolved",
+  "Gildaria, Anathema of Peace Evolved",
+  "Warden of Honor Evolved",
+  "Storm-Wracked First Mate Evolved",
+  "Felpurr Maid Evolved",
+  "Sephie, Depraved Convict Evolved",
+  "Obsessive Scholar Evolved",
+  "Devoted Researcher Evolved",
+  "Electrokitty Evolved",
+  "Drazael, Ravening Enforcer Evolved",
+  "Scorched-Earth Tyrant Evolved",
+  "Hotheaded Marauder Evolved",
+  "Dancing Crab Evolved",
+  "Garodeth, Insurgent Convict Evolved",
+  "Abyssal Colonel Evolved",
+  "Underworld Lieutenant",
+  "Vicious Blitzer Evolved",
+  "Uneriel, Winged Enforcer Evolved",
+  "Warden of the Wings Evolved",
+  "Agent of the Commandments Evolved",
+  "Sacred Tiger Evolved",
+  "Cutthroat, Discord Convict Evolved",
+  "Zerael, Regent of Vicissitude ADVANCED",
+  "Smeltwork Bodyguard Evolved",
+  "Kokkoro Evolved",
+  "Shiori Evolved",
+  "Rino Evolved",
+  "Lima Evolved",
+  "Pecorine Evolved",
+  "Jun Evolved",
+  "Tomo Evolved",
+  "Tamaki Evolved",
+  "Karyl Evolved",
+  "Maho Evolved",
+  "Kyoka Evolved",
+  "Yuki Evolved",
+  "Sheffy Evolved",
+  "Kaya Evolved",
+  "Inori Evolved",
+  "Mifuyu Evolved",
+  "Illya Evolved",
+  "Shinobu Evolved",
+  "Yori Evolved",
+  "Misaki Evolved",
+  "Saren Evolved",
+  "Yui",
+  "Chika Evolved",
+  "Mimi Evolved",
+  "Omniscient Kaiser Evolved",
+  "Ameth Evolved",
+  "Kasumi Evolved",
+  "Rolo Rone, Verdant Purifier Evolved",
+  "Pruner of the Tree's Authority Evolved",
+  "Fist Fighter of the Tree's Capital Evolved",
+  "Blossoming Lunerian Evolved",
+  "Prayer Child of the Tree's Law Evolved",
+  "Shinra, All Discerning Evolved",
+  "Overhead Investigator Evolved",
+  "Bottleneck Inspector Evolved",
+  "Blind Spot Observer Evolved",
+  "Monika, Cloudhall Admiral Evolved",
+  "Plana, Sterling Luster Evolved",
+  "Jewelry Supermodel Evolved",
+  "Jewelry Advisor Evolved",
+  "Jewelry Bouncer Evolved",
+  "Carbuncle of Mysteria Evolved",
+  "El, Destructive Dragon Evolved",
+  "Dragon-Eyed Scribe Evolved",
+  "Saibi’s Disciplinary Committee Evolved",
+  "Ian, Dragon Buster Evolved",
+  "Electric Claw's Going-Home Club Member Evolved",
+  "Ilze & Ulze, Centennial Reapers Evolved",
+  "Vania, Crimson Majesty Evolved",
+  "Serpent of Greed Evolved",
+  "Piercing Crow Evolved",
+  "Gnawing Mouse Evolved",
+  "Beryl, Dreameater Evolved",
+  "Seishiro, Admonishing Faith Evolved",
+  "Oath Breaker's Giver Evolved",
+  "Bearer of Additional Penalties Evolved",
+  "Lorena, Iron-Willed Priest Evolved",
+  "Closed Eyes Supporter Evolved",
+  "Saito, Mao Ward Officer Evolved",
+  "Stunfist Assassin Evolved",
+  "Cyber Glasspunk Evolved",
   "Grand Archer Selwyn Evolved",
   "Navalgazer Dragon Evolved",
   "Orchis, Resolute Puppet Evolved",
@@ -85,267 +203,212 @@ export const allCardsEvo = [
   "Glade, Fragrantwood Ward Evolved",
   "Aerin, Crystalian Frostward Evolved",
   "Fairy Tamer Evolved",
-
   "Amelia, Silver Captain Evolved",
   "Zirconia, Ironcrown Ward Evolved",
   "Luminous Commander Evolved",
   "Flashstep Quickblader Evolved",
-
   "Lilanthim, Anathema of Edacity Evolved",
   "Zizdvend, Fate's Arbiter Evolved",
   "Edelweiss, Sagelight Ward Evolved",
   "Penelope, Potions Prodigy Evolved",
   "Starry-Eyed Penguin Wizard Evolved",
-
   "Burnite, Anathema of Flame Evolved",
   "Nirle, Draconic Prodigy Evolved",
   "Liu Feng, Goldennote Ward Evolved",
   "Eyfa, Windrider Evolved",
   "Little Dragon Nanny Evolved",
-
   "Aragavy, Eternal Hunter Evolved",
   "Mukan, Shadowcrypt Ward Evolved",
   "Orthrus, Hellhound Blader Evolved",
   "Vlad, Impaler Evolved",
-
   "Rodeo, Anathema of Judgment Evolved",
   "Ronavero, Darkhaven Ward Evolved",
   "Angelic Prism Priestess Evolved",
   "Ironfist Priest Evolved",
-
   "Olivia, Heroic Dark Angel Evolved",
   "Phildau, Lionheart Ward Evolved",
   "Apollo, Heaven's Envoy Evolved",
-
   "Amataz, Reverse Blader Evolved",
   "Piercye, Queen of Frost Evolved",
   "Inauspicious Puppeteer Evolved",
   "Cryptid Keeper Evolved",
   "Hermit of Unkilling Evolved",
-
   "Kagemitsu, Lost Samurai Evolved",
   "Arsène Lupin Evolved",
   "Adherent of Hollowness Evolved",
   "Penguin Guardian Evolved",
-
   "Lishenna, Melodious Destruction Evolved",
   "Noble Shikigami ADVANCED",
   "Acid Golem Evolved",
   "Adherent of Elimination Evolved",
   "Scroll Wizard Evolved",
-
   "Filene, Blizzardous Heart Evolved",
   "Celestial Dragoon Evolved",
   "Mermaid of Punishment Evolved",
   "Adherent of Ardor Evolved",
   "Tiniest Dragon Evolved",
-
   "Valnareik, Lustful Desire Evolved",
   "Yuzuki, Bloodlord Evolved",
   "Adherent of Desire Evolved",
   "Adherent of Screams Evolved",
-
   "Marwynn, Repose of Despair Evolved",
   "Shiro, Cursed Wings Evolved",
   "Adherent of Despair Evolved",
   "Temple Healer Evolved",
-
   "Gilnelise, Ravenous Craving Evolved",
   "Arael Evolved",
   "Mechanical Analyzer Evolved",
   "Nomadic Conductor Evolved",
-
   "Hozumi, Enchanting Hostess Evolved",
   "Bastion of Seasons Evolved",
   "Elven Waitress Evolved",
   "Karakuri Servant Evolved",
-
   "Taketsumi, Beginning of Paradise ADVANCED",
   "Mars, Belligerent Flame Evolved",
   "Jiemon, Thief Lord Evolved",
   "Masterful Musician Evolved",
   "Front Desk Frog Evolved",
-
   "Riley, Astral Shaman Evolved",
   "Bergent, Layered Sorceress Evolved",
   "Orchestral Mage Evolved",
   "Chakram Wizard Evolved",
-
   "Si Long, Draconic God-Queen Evolved",
   "Frostbite Dragon Evolved",
   "Dragonfolk Stoker Evolved",
   "Dragon Breeder Evolved",
-
   "Itsurugi, End of Paradise ADVANCED",
   "Paracelise, Demon of Greed Evolved",
   "Anisage, Lost Forsaken Evolved",
   "Briared Vampire Evolved",
   "Silvernail Blaster Evolved",
-
   "All-Feeling Divine Evolved",
   "Nekhbet Evolved",
   "Winged Gatekeeper Evolved",
   "Twinblade Featherfolk Evolved",
-
   "Magna Saber Evolved",
   "Glistering Angel Evolved",
   "Gunslinger Automaton Evolved",
   "Brave Goblin Evolved",
-
   "Hokko Tarumae Evolved",
   "Gentildonna Evolved",
   "Cheval Grand Evolved",
   "Neo Universe Evolved",
   "Hishi Miracle Evolved",
   "Satono Crown Evolved",
-
   "Sekka, Ninefold Blaze ADVANCED",
   "Aria, Miasma Fairy Evolved",
   "Nelcha, Fashion Hazard Evolved",
   "Sunbright Elf Evolved",
   "Fairy Slugger Evolved",
-
   "Albert, Thunderous Doom Evolved",
   "Sera, Maiden of the Dawn Evolved",
   "Lounes, Levin Apprentice Evolved",
   "Mina, Levin Vice Leader Evolved",
-
   "Ghios, Sparkling Prism Evolved",
   "Rending Blast ADVANCED",
   "Mileka, Celestial Seer Evolved",
   "Grimoire Sorcerer Evolved",
   "Magical Squirrel Evolved",
-
   "Drache, Fiery Dragonlord Evolved",
   "Godfire Phoenix Evolved",
   "Flame Pillar Dragonewt Evolved",
   "Margarite Mermaid Evolved",
-
   "Aluzard, Timeworn Vampire Evolved",
   "Ceres, Bride of the Night Evolved",
   "Liberté, Unchained Wolf Evolved",
   "Linkstaff Necromancer Evolved",
-
   "Jeanne, Despair's Maiden Evolved",
   "Lunerian Paladin Evolved",
   "Pyne, Twisted Justice Evolved",
   "Charitable Al-mi'raj Evolved",
-
   "Sahaquiel & Israfil Evolved",
   "Miriam, Mutinous Being Evolved",
   "Managrocer Evolved",
   "Armored Goblin Evolved",
-
   "Elf Queen of Abundant Life Evolved",
   "Carbuncle, Immortal Jewel Evolved",
   "Forest Defender Evolved",
   "Forest Hatcheteer Evolved",
-
   "Patrick, Rhiceros Knight Evolved",
   "Ironfist Beast Warrior Evolved",
   "Nano, the Dawnblade Evolved",
   "Lilje, Butler of the Mists Evolved",
-
   "Belphomet, Worldreaver Evolved",
   "Regalore, Steel Chimera Evolved",
   "Chaos Wielder Evolved",
   "Gigahand Golem Evolved",
-
   "Shipsbane Plesiosaurus Evolved",
   "Steelcap Pachycephalosaurus Evolved",
   "Assault Dragoon Evolved",
   "Dragoon Medic Evolved",
-
   "Neun, Daybreak Vampire Evolved",
   "Jackshovel Gravedigger Evolved",
   "Liberté, Werewolf Pup Evolved",
   "Bloodstained Berserker Evolved",
-
   "Rola, Inferno Dragoon Evolved",
   "Gullias, Silverbeast Lord Evolved",
   "Holylight Convert Evolved",
   "Sol Sister Evolved",
-
   "Changewing Cherub Evolved",
   "Romantic Chanteuse Evolved",
   "Plucky Treasure Hunter Evolved",
-
   "Loxis, Homestead Pioneer Evolved",
   "Terrorformer Evolved",
   "Varmint Hunter Evolved",
   "Lookout Elf Evolved",
-
   "Bunny & Baron, Specter Duo Evolved",
   "Reinhardt, the Deathless Evolved",
   "Stalwart Slinger Evolved",
   "Shinobi Tanuki Evolved",
-
   "Vincent, the Peacekeeper Evolved",
   "Magical Gunslinger Evolved",
   "Artistic Arcanist Evolved",
   "Crystal Fencer Evolved",
-
   "Reggie, Peerless Artisan Evolved",
   "Georgius Evolved",
   "Azureflame Dragonewt Evolved",
   "Mermaid Guide Evolved",
-
   "Iceschillendrig, Gilded Autocrat Evolved",
   "Hazhan, Demonblade Knight Evolved",
   "Wretch Evolved",
   "Redcap Evolved",
-
   "Anvelt, Judgment's Cannon Evolved",
   "Vengeful Sniper Evolved",
   "Set Evolved",
   "Enchanted Knight Evolved",
-
   "Sylvia, Grand Arbiter Evolved",
   "Quixotic Adventurer Evolved",
   "Wandering Chef Evolved",
   "Rivaylian Bandit Evolved",
-
   "King of Knights, Alfred",
   "Blaster Blade Evolved",
-
   "Dragonic Overlord Evolved",
   "Embodiment of Victory, Aleph",
-
   "Blue Storm Supreme Dragon, Glory Maelstrom",
   "Navalgazer Dragon",
-
   "Soul Saver Dragon",
-
   "Nightmare Doll, Alice Evolved",
   "Barking Manticore",
-
   "Blazing Flare Dragon",
-
   "Phantom Blaster Dragon Evolved",
   "Blaster Dark Evolved",
-
   "CEO Amaterasu Evolved",
   "Silent Tom Evolved",
-
   "Drive Point",
-
   "XII. Wolfraud, The Hanged Man Evolved",
   "Spinaria & Lucille, Keepers ADVANCED",
   "Chipper Skipper Evolved",
   "Salvia Panther Evolved",
   "Reclusive Ponderer Evolved",
-
   "VII. Oluon, Runaway Chariot ADVANCED",
   "Alyaska, War Hawker Evolved",
   "Prudent General Evolved",
   "Lightning Kicker Evolved",
   "Honorable Thief Evolved",
-
   "0. Lhynkal, The Fool Evolved",
   "Imperator of Magic Evolved",
   "Juggling Moggy Evolved",
   "Piquant Potioneer Evolved",
-
   "XI. Erntz, Justice Evolved",
   "Lævateinn Dragon, Dual Form α ADVANCED",
   "Lævateinn Dragon, Dual Form β ADVANCED",
@@ -353,244 +416,196 @@ export const allCardsEvo = [
   "Slaughering Dragonewt Evolved",
   "Swiftblade Dragonewt Evolved",
   "Springwell Dragon Keeper Evolved",
-
   "VI. Milteo, The Lovers Evolved",
   "Sincere Masquerade Ghost ADVANCED",
   "Deathbringer Evolved",
   "Ghost Maid Evolved",
   "Moonrise Werewolf Evolved",
-
   "VIII. Sofina, Strength Evolved",
   "Reverend Adjudicator Evolved",
   "Topaz Swordian Evolved",
   "Priestess of Foresight Evolved",
-
   "XXI. Zelgenea, O Great World ADVANCED",
   "Starbright Deity Evolved",
   "One-Winged Traitor Evolved",
   "Pureshot Angel Evolved",
-
   "White Vanara Evolved",
   "Paula, Gentle Warmth",
   "Storied Falconer Evolved",
   "Grasshopper Conductor Evolved",
-
   "Celia, Hope's Strategist",
   "Prim, Innocent Princess Evolved",
   "Dario, Demon Count Evolved",
   "Axe Princess Evolved",
-
   "Ceridwen, Eternity Hunter Evolved",
   "Grea, Mysterian Dragoness Evolved",
   "Mysterian Whitewyrm",
   "Bergent, Onion Patchmaster Evolved",
   "Vayle, Mysterian Summoner Evolved",
   "Witch of Foresight Evolved",
-
   "Jerva of Draconic Mail Evolved",
   "Romelia, Lightning Striker Evolved",
   "Virtuous Lindworm",
   "Roy, Dragoncleaver Evolved",
   "Katakura Kojuro Evolved",
   "Heroic Dragonslayer Evolved",
-
   "Vania, Kind Queen",
   "Oldblood King Evolved",
   "Big Soul Hunter Evolved",
   "Orator of the Bones Evolved",
-
   "Jeanne, Beacon of Salvation Evolved",
   "Ceryneian Lighthind",
   "Jeweled Priestess Evolved",
   "Lycaon Evolved",
-
   "Marduk Evolved",
   "Paradise Vanguard Evolved",
   "Suttungr Evolved",
   "Valkyrie of Chaos Evolved",
-
   "Orchis, Resolute Puppet",
   "Zwei, Murderous Puppet Evolved",
   "Michelle, the Mind Reader Evolved",
   "Insane Dark Elf Evolved",
-
   "Dionne, Dancing Blade Evolved",
   "Roland the Incorruptible Evolved",
   "Azord, Duke of the Mists Evolved",
   "Mana Pistol Merc Evolved",
-
   "Sweet-Tooth Medusa Evolved",
   "Unbodied Witch Evolved",
   "Elusa, Magic Wunderkind Evolved",
   "Rabbit Mage Evolved",
-
   "Azi Dahaka Evolved",
   "Annerose Evolved",
   "Elios, Loyal Dragoon Evolved",
   "Geovore Evolved",
-
   "Crimson Rose Queen Evolved",
   "Tartarus, the Tormentor Evolved",
   "Chris Pumpkinhead Evolved",
   "Marian the Mummy Evolved",
-
   "Godsworn Alexiel Evolved",
   "Eidolon of Madness Evolved",
   "Collete, Holy Gunner Evolved",
   "Temple Windbear Evolved",
-
   "Alterplane Arbiter Evolved",
   "Sahaquiel Evolved",
   "Reina, Evolution's Herald Evolved",
   "High Enchantress Evolved",
-
   "Ladica, the Stoneclaw Evolved",
   "Setus, the Beastblade Evolved",
   "Blossom Spirit Evolved",
   "Forest Hermit Evolved",
-
   "Bayleon, Sovereign Light Evolved",
   "Leod, the Crescent Blade Evolved",
   "Troya, Thunder of Hagelberg Evolved",
   "Dauntless Commander Evolved",
-
   "Tetra, Sapphire Rebel Evolved",
   "Eleanor, Cosmic Flower Evolved",
   "Displacer Bot Evolved",
   "Magiblade Witch Evolved",
-
   "Valdain, Cursed Shadow Evolved",
   "Marion, Elegant Dragonewt Evolved",
   "Hoarfrost Triceratops Evolved",
   "Doting Dragoneer Evolved",
-
   "Mono, Garnet Rebel Evolved",
   "Doublame, Duke and Dame Evolved",
   "Nicola, Forbidden Strength Evolved",
   "Berserk Demon Evolved",
-
   "Limonia, Flawed Saint Evolved",
   "Marione, Light of Balance Evolved",
   "Robofalcon Evolved",
   "Dark Bishop Evolved",
-
   "Viridia Magna Evolved",
   "Maisha, Hero of Purgation Evolved",
   "Robogoblin Evolved",
   "Aldis, Trendsetting Seraph Evolved",
-
   "Momoka Sakurai Evolved",
   "Akiha Ikebukuro Evolved",
   "Nene Kurihara Evolved",
-
   "Yukimi Sajo Evolved",
   "Kako Takafuji Evolved",
   "Seira Mizuki Evolved",
-
   "Suzuho Ueda Evolved",
   "Miria Akagi Evolved",
   "Kumiko Matsuyama Evolved",
-
   "Aiko Takamori Evolved",
   "Yuzu Kitami Evolved",
   "Yumi Aiba Evolved",
   "Kana Imai Evolved",
-
   "Kyoko Igarashi Evolved",
   "Uzuki Shimamura Evolved",
   "Karen Hojo Evolved",
   "Miho Kohinata Evolved",
-
   "Shiki Ichinose Evolved",
   "Kanade Hayami Evolved",
   "Hina Araki Evolved",
   "Rika Jougasaki Evolved",
-
   "Yui Ohtsuki Evolved",
   "Tsukasa Kiryu Evolved",
   "Yuka Nakano Evolved",
   "Noa Takamine Evolved",
-
   "Ranko Kanzaki Evolved",
   "Takumi Mukai Evolved",
   "Aki Yamato Evolved",
   "Syoko Hoshi Evolved",
-
   "Shin Sato Evolved",
   "Nana Abe Evolved",
   "Haru Yuuki Evolved",
   "Layla Evolved",
-
   "Lymaga, Forest Champion Evolved",
   "Wildwood Matriarch Evolved",
   "Woodland Cleaver Evolved",
   "Mallet Monkey Evolved",
-
   "Ralmia, Sonic Racer Evolved",
   "Hero of Antiquity Evolved",
   "Quickdraw Maven Evolved",
   "Samurai Outlaw Evolved",
-
   "Mysteria, Magic Founder Evolved",
   "Curse Crafter Evolved",
   "Demoncaller Evolved",
   "Charming Gentlemouse Evolved",
-
   "Garyu, Surpreme Dragonkin Evolved",
   "Wyrm God of the Skies Evolved",
   "Ice Dancing Dragonewt Evolved",
   "Dragonblader Evolved",
-
   "Ginsetsu, Great Fox Evolved",
   "Shuten-Doji Evolved",
   "Cougar Pelt Warrior Evolved",
   "Zashiki-Warashi Evolved",
-
   "Karula, Arts Master Evolved",
   "Phantom Blade Wielder Evolved",
   "Holy Lancer Evolved",
   "Barrage Brawler Evolved",
-
   "Badb Catha Evolved",
   "Mithra, Daybreak Diety Evolved",
   "Chaht, Ringside Announcer Evolved",
   "Bazooka Goblins Evolved",
-
   "Izudia, Omen of Unkilling Evolved",
   "Apostle of Unkilling Evolved",
   "Noah, Vengeful Puppeteer Evolved",
   "Flower Doll Evolved",
-
   "Octrice, Omen of Usurpation Evolved",
   "Apostle of Usurpation Evolved",
   "Geno, Machine Artisan Evolved",
   "Captain Meteo Evolved",
-
   "Raio, Omen of Truth Evolved",
   "Apostle of Truth Evolved",
   "Iron Staff Mechanic Evolved",
   "Servant of Destruction Evolved",
-
   "Galmieux, Omen of Disdain Evolved",
   "Apostle of Disdain Evolved",
   "Cursed Stone Evolved",
   "Airship Whale Evolved",
-
   "Rulenye, Omen of Silence Evolved",
   "Apostle of Silence Evolved",
   "Masked Puppet Evolved",
   "Servant of Lust Evolved",
-
   "Marwynn, Omen of Repose Evolved",
   "Apostle of Repose Evolved",
   "Unidentified Subject Evolved",
   "Demon's Epitaph Evolved",
-
   "Mjerrabaine, Omen of One Evolved",
   "Apostle of Craving Evolved",
   "Rosa, Mech Wing Maiden Evolved",
   "Cat Cannoneer Evolved",
-
   "Deepwood Anomaly Evolved",
   "King Elephant Evolved",
   "Sukuna, Brave and Small Evolved",
@@ -621,7 +636,6 @@ export const allCardsEvo = [
   "Grimnir, War Cyclone Evolved",
   "Goblin Princess Evolved",
   "Owlcat Evolved",
-
   "Cosmos Fang Evolved",
   "Slade Blossoming Wolf Evolved",
   "Gerbera Bear Evolved",
@@ -651,7 +665,6 @@ export const allCardsEvo = [
   "Garuel, Seraphic Leo Evolved",
   "Humpty Dumpty Evolved",
   "Harbringer of the Night Evolved",
-
   "Silence Suzuka Evolved",
   "Tokai Teio Evolved",
   "Agnes Tachyon Evolved",
@@ -659,7 +672,6 @@ export const allCardsEvo = [
   "Maruzensky Evolved",
   "Mejiro McQueen Evolved",
   "Carrot",
-
   "Crystalia Tia Evolved",
   "Grand Archer Seiwyn Evolved",
   "Crystalia Lily Evolved",
@@ -688,7 +700,6 @@ export const allCardsEvo = [
   "Archangel Reina Evolved",
   "Unicorn Dancer Unicorn Evolved",
   "Sektor Evolved",
-
   "Priest of the Cudgel Evolved",
   "Ardent Nun Evolved",
   "Guardian Nun Evolved",
@@ -738,8 +749,6 @@ export const allCardsEvo = [
   "Goblin Evolved",
   "Goliath Evolved",
   "Healing Angel Evolved",
-
-
 ];
 
 export const set16Evo = [
@@ -1453,67 +1462,54 @@ export const forestEvo = [
   "Glade, Fragrantwood Ward Evolved",
   "Aerin, Crystalian Frostward Evolved",
   "Fairy Tamer Evolved",
-
   "Amataz, Reverse Blader Evolved",
   "Piercye, Queen of Frost Evolved",
   "Inauspicious Puppeteer Evolved",
   "Cryptid Keeper Evolved",
   "Hermit of Unkilling Evolved",
-
   "Hozumi, Enchanting Hostess Evolved",
   "Bastion of Seasons Evolved",
   "Elven Waitress Evolved",
   "Karakuri Servant Evolved",
-
   "Hokko Tarumae Evolved",
-
   "Sekka, Ninefold Blaze ADVANCED",
   "Aria, Miasma Fairy Evolved",
   "Nelcha, Fashion Hazard Evolved",
   "Sunbright Elf Evolved",
   "Fairy Slugger Evolved",
-
   "Elf Queen of Abundant Life Evolved",
   "Carbuncle, Immortal Jewel Evolved",
   "Forest Defender Evolved",
   "Forest Hatcheteer Evolved",
-
   "Loxis, Homestead Pioneer Evolved",
   "Terrorformer Evolved",
   "Varmint Hunter Evolved",
   "Lookout Elf Evolved",
-
   "Blue Storm Supreme Dragon, Glory Maelstrom",
   "Navalgazer Dragon",
-
   "XII. Wolfraud, The Hanged Man Evolved",
   "Spinaria & Lucille, Keepers ADVANCED",
   "Chipper Skipper Evolved",
   "Salvia Panther Evolved",
   "Reclusive Ponderer Evolved",
-
   "White Vanara Evolved",
   "Paula, Gentle Warmth",
   "Storied Falconer Evolved",
   "Grasshopper Conductor Evolved",
-
   "Orchis, Resolute Puppet",
   "Zwei, Murderous Puppet Evolved",
   "Michelle, the Mind Reader Evolved",
   "Insane Dark Elf Evolved",
-
   "Ladica, the Stoneclaw Evolved",
   "Setus, the Beastblade Evolved",
   "Blossom Spirit Evolved",
   "Forest Hermit Evolved",
-
   "Momoka Sakurai Evolved",
   "Suzuho Ueda Evolved",
   "Aiko Takamori Evolved",
   "Yuzu Kitami Evolved",
   "Yumi Aiba Evolved",
   "Kana Imai Evolved",
-
   "Lymaga, Forest Champion Evolved",
   "Wildwood Matriarch Evolved",
   "Woodland Cleaver Evolved",
@@ -1542,19 +1538,35 @@ export const forestEvo = [
   "Rhinoceroach Evolved",
   "Elven Princess Mage Evolved",
   "Archer Evolved",
-
   "Ladica, Verdant Claw Evolved",
   "Lococo, Little Puppeteer Evolved",
   "Beastfolk Harvester Evolved",
   "Blossom Treant Evolved",
-
   "Anastasia [Seize the Light] Evolved",
   "Riina Tada [Wannabe Legend] Evolved",
   "Hinako Kita [True Dream] Evolved",
-
   "Slade, Blossoming Wolf Evolved",
-
   "Blue Storm Supreme Dragon, Glory Maelstrom Evolved",
+  "Rolo Rone, Verdant Purifier Evolved",
+  "Pruner of the Tree's Authority Evolved",
+  "Fist Fighter of the Tree's Capital Evolved",
+  "Blossoming Lunerian Evolved",
+  "Prayer Child of the Tree's Law Evolved",
+
+  "Kokkoro Evolved",
+  "Shiori Evolved",
+  "Rino Evolved",
+  "Lima Evolved",
+
+  "Magachiyo, Barbed Convict Evolved",
+  "Verdant Lieutenant",
+  "Budding Initiate Evolved",
+  "Beast Lancer Evolved",
+
+  "Krulle, Heir to Unkilling Evolved",
+  "Windbloom Sylph Evolved",
+  "Supplicant of Unkilling Evolved",
+  "Bearer of the Fairy Blade Evolved",
 ];
 
 export const swordEvo = [
@@ -1565,68 +1577,54 @@ export const swordEvo = [
   "Zirconia, Ironcrown Ward Evolved",
   "Luminous Commander Evolved",
   "Flashstep Quickblader Evolved",
-
   "Kagemitsu, Lost Samurai Evolved",
   "Arsène Lupin Evolved",
   "Adherent of Hollowness Evolved",
   "Penguin Guardian Evolved",
-
   "Taketsumi, Beginning of Paradise ADVANCED",
   "Mars, Belligerent Flame Evolved",
   "Jiemon, Thief Lord Evolved",
   "Masterful Musician Evolved",
   "Front Desk Frog Evolved",
-
   "Gentildonna Evolved",
-
   "Albert, Thunderous Doom Evolved",
   "Sera, Maiden of the Dawn Evolved",
   "Lounes, Levin Apprentice Evolved",
   "Mina, Levin Vice Leader Evolved",
-
   "Patrick, Rhiceros Knight Evolved",
   "Ironfist Beast Warrior Evolved",
   "Nano, the Dawnblade Evolved",
   "Lilje, Butler of the Mists Evolved",
-
   "Bunny & Baron, Specter Duo Evolved",
   "Reinhardt, the Deathless Evolved",
   "Stalwart Slinger Evolved",
   "Shinobi Tanuki Evolved",
-
   "King of Knights, Alfred",
   "Blaster Blade Evolved",
-
   "Soul Saver Dragon",
-
   "VII. Oluon, Runaway Chariot ADVANCED",
   "Alyaska, War Hawker Evolved",
   "Prudent General Evolved",
   "Lightning Kicker Evolved",
   "Honorable Thief Evolved",
-
   "Celia, Hope's Strategist",
   "Prim, Innocent Princess Evolved",
   "Dario, Demon Count Evolved",
   "Axe Princess Evolved",
-
   "Dionne, Dancing Blade Evolved",
   "Roland the Incorruptible Evolved",
   "Azord, Duke of the Mists Evolved",
   "Mana Pistol Merc Evolved",
-
   "Bayleon, Sovereign Light Evolved",
   "Leod, the Crescent Blade Evolved",
   "Troya, Thunder of Hagelberg Evolved",
   "Dauntless Commander Evolved",
-
   "Miria Akagi Evolved",
   "Kumiko Matsuyama Evolved",
   "Kyoko Igarashi Evolved",
   "Uzuki Shimamura Evolved",
   "Karen Hojo Evolved",
   "Miho Kohinata Evolved",
-
   "Ralmia, Sonic Racer Evolved",
   "Hero of Antiquity Evolved",
   "Quickdraw Maven Evolved",
@@ -1655,18 +1653,36 @@ export const swordEvo = [
   "Shadowed Assassin Evolved",
   "Maid Leader Evolved",
   "Fervid Soldier Evolved",
-
   "Mistolina & Bayleon Evolved",
   "Frenzied Corpsmaster Evolved",
   "Valhorean Dealer Evolved",
   "Fox Lancer Evolved",
-
   "Mio Honda [Cinderella Girl] Evolved",
   "Airi Totoki [Cinderella Girl] Evolved",
   "Mayu Sakuma [Love-Laden Gift] Evolved",
   "Chieri Ogata [Happiness Tune] Evolved",
-
   "Albert, Levin Saber Evolved",
+  "Shinra, All Discerning Evolved",
+  "Overhead Investigator Evolved",
+  "Bottleneck Inspector Evolved",
+  "Blind Spot Observer Evolved",
+  "Monika, Cloudhall Admiral Evolved",
+
+  "Pecorine Evolved",
+  "Jun Evolved",
+  "Tomo Evolved",
+  "Tamaki Evolved",
+
+  "Barbaros, Briny Convict Evolved",
+  "Gildaria, Anathema of Peace Evolved",
+  "Warden of Honor Evolved",
+  "Storm-Wracked First Mate Evolved",
+  "Felpurr Maid Evolved",
+
+  "Sinciro, Heir to Usurpation Evolved",
+  "Congregant of Usurpation",
+  "Peppy Scout Evolved",
+  "Comrade of the Swordmaster Evolved",
 ];
 
 export const runeEvo = [
@@ -1678,68 +1694,55 @@ export const runeEvo = [
   "Edelweiss, Sagelight Ward Evolved",
   "Penelope, Potions Prodigy Evolved",
   "Starry-Eyed Penguin Wizard Evolved",
-
   "Lishenna, Melodious Destruction Evolved",
   "Noble Shikigami ADVANCED",
   "Acid Golem Evolved",
   "Adherent of Elimination Evolved",
   "Scroll Wizard Evolved",
-
   "Riley, Astral Shaman Evolved",
   "Bergent, Layered Sorceress Evolved",
   "Orchestral Mage Evolved",
   "Chakram Wizard Evolved",
-
   "Cheval Grand Evolved",
-
   "Ghios, Sparkling Prism Evolved",
   "Rending Blast ADVANCED",
   "Mileka, Celestial Seer Evolved",
   "Grimoire Sorcerer Evolved",
   "Magical Squirrel Evolved",
-
   "Belphomet, Worldreaver Evolved",
   "Regalore, Steel Chimera Evolved",
   "Chaos Wielder Evolved",
   "Gigahand Golem Evolved",
-
   "Vincent, the Peacekeeper Evolved",
   "Magical Gunslinger Evolved",
   "Artistic Arcanist Evolved",
   "Crystal Fencer Evolved",
-
   "Nightmare Doll, Alice Evolved",
   "Barking Manticore",
-
   "0. Lhynkal, The Fool Evolved",
   "Imperator of Magic Evolved",
   "Juggling Moggy Evolved",
   "Piquant Potioneer Evolved",
-
   "Ceridwen, Eternity Hunter Evolved",
   "Grea, Mysterian Dragoness Evolved",
   "Mysterian Whitewyrm",
   "Bergent, Onion Patchmaster Evolved",
   "Vayle, Mysterian Summoner Evolved",
   "Witch of Foresight Evolved",
-
   "Sweet-Tooth Medusa Evolved",
   "Unbodied Witch Evolved",
   "Elusa, Magic Wunderkind Evolved",
   "Rabbit Mage Evolved",
-
   "Tetra, Sapphire Rebel Evolved",
   "Eleanor, Cosmic Flower Evolved",
   "Displacer Bot Evolved",
   "Magiblade Witch Evolved",
-
   "Akiha Ikebukuro Evolved",
   "Seira Mizuki Evolved",
   "Shiki Ichinose Evolved",
   "Kanade Hayami Evolved",
   "Hina Araki Evolved",
   "Rika Jougasaki Evolved",
-
   "Mysteria, Magic Founder Evolved",
   "Curse Crafter Evolved",
   "Demoncaller Evolved",
@@ -1768,17 +1771,34 @@ export const runeEvo = [
   "Ancient Alchemist Evolved",
   "Spectral Wizard Evolved",
   "Crafty Warlock Evolved",
-
   "Isabelle, Intrepid Mage Evolved",
   "Tetra, Serene Sapphire Evolved",
   "Marie, Flowery Magician Evolved",
   "Awakened Robot Evolved",
-
   "Sae Kobayakawa [Dancing Flowers] Evolved",
   "Hiromi Seki [Twinkle in My Eye] Evolved",
-
   "Sammy, Wizard's Apprentice Evolved",
+  "Plana, Sterling Luster Evolved",
+  "Jewelry Supermodel Evolved",
+  "Jewelry Advisor Evolved",
+  "Jewelry Bouncer Evolved",
+  "Carbuncle of Mysteria Evolved",
 
+  "Karyl Evolved",
+  "Maho Evolved",
+  "Kyoka Evolved",
+  "Yuki Evolved",
+
+  "Sephie, Depraved Convict Evolved",
+  "Obsessive Scholar Evolved",
+  "Devoted Researcher Evolved",
+  "Electrokitty Evolved",
+
+  "Velharia, Heir to Truth Evolved",
+  "Axia, Heir to Destruction Evolved",
+  "Raio, Elimination Manifest Evolved",
+  "Congregant of Truth Evolved",
+  "Devotee of Destruction Evolved",
 ];
 
 export const dragonEvo = [
@@ -1793,40 +1813,31 @@ export const dragonEvo = [
   "Liu Feng, Goldennote Ward Evolved",
   "Eyfa, Windrider Evolved",
   "Little Dragon Nanny Evolved",
-
   "Filene, Blizzardous Heart Evolved",
   "Celestial Dragoon Evolved",
   "Mermaid of Punishment Evolved",
   "Adherent of Ardor Evolved",
   "Tiniest Dragon Evolved",
-
   "Si Long, Draconic God-Queen Evolved",
   "Frostbite Dragon Evolved",
   "Dragonfolk Stoker Evolved",
   "Dragon Breeder Evolved",
-
   "Neo Universe Evolved",
-
   "Drache, Fiery Dragonlord Evolved",
   "Godfire Phoenix Evolved",
   "Flame Pillar Dragonewt Evolved",
   "Margarite Mermaid Evolved",
-
   "Shipsbane Plesiosaurus Evolved",
   "Steelcap Pachycephalosaurus Evolved",
   "Assault Dragoon Evolved",
   "Dragoon Medic Evolved",
-
   "Reggie, Peerless Artisan Evolved",
   "Georgius Evolved",
   "Azureflame Dragonewt Evolved",
   "Mermaid Guide Evolved",
-
   "Dragonic Overlord Evolved",
   "Embodiment of Victory, Aleph",
-
   "Blazing Flare Dragon",
-
   "XI. Erntz, Justice Evolved",
   "Lævateinn Dragon, Dual Form α ADVANCED",
   "Lævateinn Dragon, Dual Form β ADVANCED",
@@ -1834,30 +1845,25 @@ export const dragonEvo = [
   "Slaughering Dragonewt Evolved",
   "Swiftblade Dragonewt Evolved",
   "Springwell Dragon Keeper Evolved",
-
   "Jerva of Draconic Mail Evolved",
   "Romelia, Lightning Striker Evolved",
   "Virtuous Lindworm",
   "Roy, Dragoncleaver Evolved",
   "Katakura Kojuro Evolved",
   "Heroic Dragonslayer Evolved",
-
   "Azi Dahaka Evolved",
   "Annerose Evolved",
   "Elios, Loyal Dragoon Evolved",
   "Geovore Evolved",
-
   "Valdain, Cursed Shadow Evolved",
   "Marion, Elegant Dragonewt Evolved",
   "Hoarfrost Triceratops Evolved",
   "Doting Dragoneer Evolved",
-
   "Nene Kurihara Evolved",
   "Yui Ohtsuki Evolved",
   "Tsukasa Kiryu Evolved",
   "Yuka Nakano Evolved",
   "Noa Takamine Evolved",
-
   "Garyu, Surpreme Dragonkin Evolved",
   "Wyrm God of the Skies Evolved",
   "Ice Dancing Dragonewt Evolved",
@@ -1889,16 +1895,33 @@ export const dragonEvo = [
   "Shapeshifting Mage Evolved",
   "Shenlong Evolved",
   "Ivory Dragon Evolved",
-
   "Disrestan, Ocean Harbinger Evolved",
   "Djeana, the Stouthearted Evolved",
   "Forestclaw Sentinel Evolved",
   "Shark Warrior Evolved",
-
   "Fumika Sagisawa [Cinderella Girl] Evolved",
   "Yui Ohtsuki [Lollipop Darling] Evolved",
   "Hotaru Shiragiku [Unbreakable] Evolved",
+  "El, Destructive Dragon Evolved",
+  "Dragon-Eyed Scribe Evolved",
+  "Saibi’s Disciplinary Committee Evolved",
+  "Ian, Dragon Buster Evolved",
+  "Electric Claw's Going-Home Club Member Evolved",
 
+  "Sheffy Evolved",
+  "Kaya Evolved",
+  "Inori Evolved",
+  "Mifuyu Evolved",
+
+  "Drazael, Ravening Enforcer Evolved",
+  "Scorched-Earth Tyrant Evolved",
+  "Hotheaded Marauder Evolved",
+  "Dancing Crab Evolved",
+
+  "Azurifrit, Heir to Disdain Evolved",
+  "Spoiled Mermanager Evolved",
+  "Supplicant of Disdain Evolved",
+  "Snowstorm Dragonewt Evolved",
 ];
 
 export const abyssEvo = [
@@ -1909,65 +1932,52 @@ export const abyssEvo = [
   "Mukan, Shadowcrypt Ward Evolved",
   "Orthrus, Hellhound Blader Evolved",
   "Vlad, Impaler Evolved",
-
   "Valnareik, Lustful Desire Evolved",
   "Yuzuki, Bloodlord Evolved",
   "Adherent of Desire Evolved",
   "Adherent of Screams Evolved",
-
   "Itsurugi, End of Paradise ADVANCED",
   "Paracelise, Demon of Greed Evolved",
   "Anisage, Lost Forsaken Evolved",
   "Briared Vampire Evolved",
   "Silvernail Blaster Evolved",
-
   "Hishi Miracle Evolved",
-
   "Aluzard, Timeworn Vampire Evolved",
   "Ceres, Bride of the Night Evolved",
   "Liberté, Unchained Wolf Evolved",
   "Linkstaff Necromancer Evolved",
-
   "Neun, Daybreak Vampire Evolved",
   "Jackshovel Gravedigger Evolved",
   "Liberté, Werewolf Pup Evolved",
   "Bloodstained Berserker Evolved",
-
   "Iceschillendrig, Gilded Autocrat Evolved",
   "Hazhan, Demonblade Knight Evolved",
   "Wretch Evolved",
   "Redcap Evolved",
-
   "Phantom Blaster Dragon Evolved",
   "Blaster Dark Evolved",
-
   "VI. Milteo, The Lovers Evolved",
   "Sincere Masquerade Ghost ADVANCED",
   "Deathbringer Evolved",
   "Ghost Maid Evolved",
   "Moonrise Werewolf Evolved",
-
   "Vania, Kind Queen",
   "Oldblood King Evolved",
   "Big Soul Hunter Evolved",
   "Orator of the Bones Evolved",
-
   "Crimson Rose Queen Evolved",
   "Tartarus, the Tormentor Evolved",
   "Chris Pumpkinhead Evolved",
   "Marian the Mummy Evolved",
-
   "Mono, Garnet Rebel Evolved",
   "Doublame, Duke and Dame Evolved",
   "Nicola, Forbidden Strength Evolved",
   "Berserk Demon Evolved",
-
   "Yukimi Sajo Evolved",
   "Ranko Kanzaki Evolved",
   "Takumi Mukai Evolved",
   "Aki Yamato Evolved",
   "Syoko Hoshi Evolved",
-
   "Ginsetsu, Great Fox Evolved",
   "Shuten-Doji Evolved",
   "Cougar Pelt Warrior Evolved",
@@ -1996,17 +2006,36 @@ export const abyssEvo = [
   "Righteous Devil Evolved",
   "Crazed Executioner Evolved",
   "Wardrobe Raider Evolved",
-
   "Urias, Final Vampire Evolved",
   "Aenea, Creative Amethyst Evolved",
   "Amy, Psychopomp Guide Evolved",
   "Rouge Vampire Evolved",
-
   "Nono Morikubo [individuals] Evolved",
   "Chitose Kurosaki [Memento Mori] Evolved",
   "Natsuki Kimura [Scarlet Love Song] Evolved",
-
   "Spawn of the Abyss Evolved",
+  "Ilze & Ulze, Centennial Reapers Evolved",
+  "Vania, Crimson Majesty Evolved",
+  "Serpent of Greed Evolved",
+  "Piercing Crow Evolved",
+  "Gnawing Mouse Evolved",
+  "Beryl, Dreameater Evolved",
+
+  "Illya Evolved",
+  "Shinobu Evolved",
+  "Yori Evolved",
+  "Misaki Evolved",
+
+  "Garodeth, Insurgent Convict Evolved",
+  "Abyssal Colonel Evolved",
+  "Underworld Lieutenant",
+  "Vicious Blitzer Evolved",
+
+  "Rulenye & Valnareik Evolved",
+  "Sham-Nacha, Heir to Entwining Evolved",
+  "Congregant of Entwining Evolved",
+  "Spirited Gravekeeper Evolved",
+  "Ephemeral Demon Princess Evolved",
 ];
 
 export const havenEvo = [
@@ -2016,63 +2045,50 @@ export const havenEvo = [
   "Ronavero, Darkhaven Ward Evolved",
   "Angelic Prism Priestess Evolved",
   "Ironfist Priest Evolved",
-
   "Marwynn, Repose of Despair Evolved",
   "Shiro, Cursed Wings Evolved",
   "Adherent of Despair Evolved",
   "Temple Healer Evolved",
-
   "All-Feeling Divine Evolved",
   "Nekhbet Evolved",
   "Winged Gatekeeper Evolved",
   "Twinblade Featherfolk Evolved",
-
   "Satono Crown Evolved",
-
   "Jeanne, Despair's Maiden Evolved",
   "Lunerian Paladin Evolved",
   "Pyne, Twisted Justice Evolved",
   "Charitable Al-mi'raj Evolved",
-
   "Rola, Inferno Dragoon Evolved",
   "Gullias, Silverbeast Lord Evolved",
   "Holylight Convert Evolved",
   "Sol Sister Evolved",
-
   "Anvelt, Judgment's Cannon Evolved",
   "Vengeful Sniper Evolved",
   "Set Evolved",
   "Enchanted Knight Evolved",
-
   "CEO Amaterasu Evolved",
   "Silent Tom Evolved",
-
   "VIII. Sofina, Strength Evolved",
   "Reverend Adjudicator Evolved",
   "Topaz Swordian Evolved",
   "Priestess of Foresight Evolved",
-
   "Jeanne, Beacon of Salvation Evolved",
   "Ceryneian Lighthind",
   "Jeweled Priestess Evolved",
   "Lycaon Evolved",
-
   "Godsworn Alexiel Evolved",
   "Eidolon of Madness Evolved",
   "Collete, Holy Gunner Evolved",
   "Temple Windbear Evolved",
-
   "Limonia, Flawed Saint Evolved",
   "Marione, Light of Balance Evolved",
   "Robofalcon Evolved",
   "Dark Bishop Evolved",
-
   "Kako Takafuji Evolved",
   "Shin Sato Evolved",
   "Nana Abe Evolved",
   "Haru Yuuki Evolved",
   "Layla Evolved",
-
   "Karula, Arts Master Evolved",
   "Phantom Blade Wielder Evolved",
   "Holy Lancer Evolved",
@@ -2101,23 +2117,37 @@ export const havenEvo = [
   "Arch Priestess Laelia Evolved",
   "Prism Priestess Evolved",
   "Mainyu Evolved",
-
   "Yuwan, Dimensional Avenger Evolved",
   "Marlone, Peace Advocate Evolved",
   "Aerial Craft Evolved",
   "Steelwing Evolved",
   "Relic Goddess",
-
   "Nana Abe [Cinderella Girl] Evolved",
   "Kako Takafuji [Lady Luck] Evolved",
   "Kotoka Saionji [Pure Euphoria] Evolved",
-
-
   "Colette, Holy Gunner Evolved",
-
   "Wingy, Chirpy Gemstone Evolved",
-
   "Marlone, Light of Balance Evolved",
+  "Seishiro, Admonishing Faith Evolved",
+  "Oath Breaker's Giver Evolved",
+  "Bearer of Additional Penalties Evolved",
+  "Lorena, Iron-Willed Priest Evolved",
+  "Closed Eyes Supporter Evolved",
+
+  "Saren Evolved",
+  "Yui",
+  "Chika Evolved",
+  "Mimi Evolved",
+
+  "Uneriel, Winged Enforcer Evolved",
+  "Warden of the Wings Evolved",
+  "Agent of the Commandments Evolved",
+  "Sacred Tiger Evolved",
+
+  "Himeka, Heir to Repose Evolved",
+  "Congregant of Repose Evolved",
+  "Supplicant of Repose Evolved",
+  "Knight of the Holy Order Evolved",
 ];
 
 export const neutralEvo = [
@@ -2130,79 +2160,62 @@ export const neutralEvo = [
   "Olivia, Heroic Dark Angel Evolved",
   "Phildau, Lionheart Ward Evolved",
   "Apollo, Heaven's Envoy Evolved",
-
   "Gilnelise, Ravenous Craving Evolved",
   "Arael Evolved",
   "Mechanical Analyzer Evolved",
   "Nomadic Conductor Evolved",
-
   "Magna Saber Evolved",
   "Glistering Angel Evolved",
   "Gunslinger Automaton Evolved",
   "Brave Goblin Evolved",
-
   "Sahaquiel & Israfil Evolved",
   "Miriam, Mutinous Being Evolved",
   "Managrocer Evolved",
   "Armored Goblin Evolved",
-
   "Changewing Cherub Evolved",
   "Romantic Chanteuse Evolved",
   "Plucky Treasure Hunter Evolved",
-
   "Sylvia, Grand Arbiter Evolved",
   "Quixotic Adventurer Evolved",
   "Wandering Chef Evolved",
   "Rivaylian Bandit Evolved",
-
   "Drive Point",
-
   "XXI. Zelgenea, O Great World ADVANCED",
   "Starbright Deity Evolved",
   "One-Winged Traitor Evolved",
   "Pureshot Angel Evolved",
-
   "Marduk Evolved",
   "Paradise Vanguard Evolved",
   "Suttungr Evolved",
   "Valkyrie of Chaos Evolved",
-
   "Alterplane Arbiter Evolved",
   "Sahaquiel Evolved",
   "Reina, Evolution's Herald Evolved",
   "High Enchantress Evolved",
-
   "Viridia Magna Evolved",
   "Maisha, Hero of Purgation Evolved",
   "Robogoblin Evolved",
   "Aldis, Trendsetting Seraph Evolved",
-
   "Badb Catha Evolved",
   "Mithra, Daybreak Diety Evolved",
   "Chaht, Ringside Announcer Evolved",
   "Bazooka Goblins Evolved",
-
   "Mjerrabaine, Omen of One Evolved",
   "Apostle of Craving Evolved",
   "Rosa, Mech Wing Maiden Evolved",
   "Cat Cannoneer Evolved",
-
   "Israfil Evolved",
   "Grimnir, War Cyclone Evolved",
   "Goblin Princess Evolved",
   "Owlcat Evolved",
-
   "Alice, Wonderland Explorer Evolved",
   "Garuel, Seraphic Leo Evolved",
   "Humpty Dumpty Evolved",
   "Harbringer of the Night Evolved",
-
   "Carrot",
-
   "Bahamut Evolved",
   "Archangel Reina Evolved",
   "Unicorn Dancer Unicorn Evolved",
-
   "Sektor Evolved",
   "Lucifer Evolved",
   "Urd Evolved",
@@ -2211,15 +2224,25 @@ export const neutralEvo = [
   "Goblin Evolved",
   "Goliath Evolved",
   "Healing Angel Evolved",
-
   "Maisha, Purgation's Vessel Evolved",
   "Hoverboard Mercenary Evolved",
-
-
   "Mithra, Daybreak Deity Evolved",
-
   "Unicorn Dancer Unica Evolved",
+  "Saito, Mao Ward Officer Evolved",
+  "Stunfist Assassin Evolved",
+  "Cyber Glasspunk Evolved",
 
+  "Omniscient Kaiser Evolved",
+  "Ameth Evolved",
+  "Kasumi Evolved",
+
+  "Cutthroat, Discord Convict Evolved",
+  "Zerael, Regent of Vicissitude ADVANCED",
+  "Smeltwork Bodyguard Evolved",
+
+  "Mjerrabaine, Great Manifest Evolved",
+  "Dogged One Evolved",
+  "Apostle of Voracity Evolved",
 ];
 
 export const set17Evo = [
@@ -2510,4 +2533,134 @@ export const setSD02Evo = [
   "Oathless Knight Evolved",
   "Quickblader Evolved",
   "Goblin Evolved",
+];
+
+export const set18Evo = [
+  "Rolo Rone, Verdant Purifier Evolved",
+  "Pruner of the Tree's Authority Evolved",
+  "Fist Fighter of the Tree's Capital Evolved",
+  "Blossoming Lunerian Evolved",
+  "Prayer Child of the Tree's Law Evolved",
+  "Shinra, All Discerning Evolved",
+  "Overhead Investigator Evolved",
+  "Bottleneck Inspector Evolved",
+  "Blind Spot Observer Evolved",
+  "Monika, Cloudhall Admiral Evolved",
+  "Plana, Sterling Luster Evolved",
+  "Jewelry Supermodel Evolved",
+  "Jewelry Advisor Evolved",
+  "Jewelry Bouncer Evolved",
+  "Carbuncle of Mysteria Evolved",
+  "El, Destructive Dragon Evolved",
+  "Dragon-Eyed Scribe Evolved",
+  "Saibi’s Disciplinary Committee Evolved",
+  "Ian, Dragon Buster Evolved",
+  "Electric Claw's Going-Home Club Member Evolved",
+  "Ilze & Ulze, Centennial Reapers Evolved",
+  "Vania, Crimson Majesty Evolved",
+  "Serpent of Greed Evolved",
+  "Piercing Crow Evolved",
+  "Gnawing Mouse Evolved",
+  "Beryl, Dreameater Evolved",
+  "Seishiro, Admonishing Faith Evolved",
+  "Oath Breaker's Giver Evolved",
+  "Bearer of Additional Penalties Evolved",
+  "Lorena, Iron-Willed Priest Evolved",
+  "Closed Eyes Supporter Evolved",
+  "Saito, Mao Ward Officer Evolved",
+  "Stunfist Assassin Evolved",
+  "Cyber Glasspunk Evolved",
+];
+
+export const set20Evo = [
+  "Krulle, Heir to Unkilling Evolved",
+  "Windbloom Sylph Evolved",
+  "Supplicant of Unkilling Evolved",
+  "Bearer of the Fairy Blade Evolved",
+  "Sinciro, Heir to Usurpation Evolved",
+  "Congregant of Usurpation",
+  "Peppy Scout Evolved",
+  "Comrade of the Swordmaster Evolved",
+  "Velharia, Heir to Truth Evolved",
+  "Axia, Heir to Destruction Evolved",
+  "Raio, Elimination Manifest Evolved",
+  "Congregant of Truth Evolved",
+  "Devotee of Destruction Evolved",
+  "Azurifrit, Heir to Disdain Evolved",
+  "Spoiled Mermanager Evolved",
+  "Supplicant of Disdain Evolved",
+  "Snowstorm Dragonewt Evolved",
+  "Rulenye & Valnareik Evolved",
+  "Sham-Nacha, Heir to Entwining Evolved",
+  "Congregant of Entwining Evolved",
+  "Spirited Gravekeeper Evolved",
+  "Ephemeral Demon Princess Evolved",
+  "Himeka, Heir to Repose Evolved",
+  "Congregant of Repose Evolved",
+  "Supplicant of Repose Evolved",
+  "Knight of the Holy Order Evolved",
+  "Mjerrabaine, Great Manifest Evolved",
+  "Dogged One Evolved",
+  "Apostle of Voracity Evolved",
+];
+
+export const set19Evo = [
+  "Magachiyo, Barbed Convict Evolved",
+  "Verdant Lieutenant",
+  "Budding Initiate Evolved",
+  "Beast Lancer Evolved",
+  "Barbaros, Briny Convict Evolved",
+  "Gildaria, Anathema of Peace Evolved",
+  "Warden of Honor Evolved",
+  "Storm-Wracked First Mate Evolved",
+  "Felpurr Maid Evolved",
+  "Sephie, Depraved Convict Evolved",
+  "Obsessive Scholar Evolved",
+  "Devoted Researcher Evolved",
+  "Electrokitty Evolved",
+  "Drazael, Ravening Enforcer Evolved",
+  "Scorched-Earth Tyrant Evolved",
+  "Hotheaded Marauder Evolved",
+  "Dancing Crab Evolved",
+  "Garodeth, Insurgent Convict Evolved",
+  "Abyssal Colonel Evolved",
+  "Underworld Lieutenant",
+  "Vicious Blitzer Evolved",
+  "Uneriel, Winged Enforcer Evolved",
+  "Warden of the Wings Evolved",
+  "Agent of the Commandments Evolved",
+  "Sacred Tiger Evolved",
+  "Cutthroat, Discord Convict Evolved",
+  "Zerael, Regent of Vicissitude ADVANCED",
+  "Smeltwork Bodyguard Evolved",
+];
+
+export const set04Evo = [
+  "Kokkoro Evolved",
+  "Shiori Evolved",
+  "Rino Evolved",
+  "Lima Evolved",
+  "Pecorine Evolved",
+  "Jun Evolved",
+  "Tomo Evolved",
+  "Tamaki Evolved",
+  "Karyl Evolved",
+  "Maho Evolved",
+  "Kyoka Evolved",
+  "Yuki Evolved",
+  "Sheffy Evolved",
+  "Kaya Evolved",
+  "Inori Evolved",
+  "Mifuyu Evolved",
+  "Illya Evolved",
+  "Shinobu Evolved",
+  "Yori Evolved",
+  "Misaki Evolved",
+  "Saren Evolved",
+  "Yui",
+  "Chika Evolved",
+  "Mimi Evolved",
+  "Omniscient Kaiser Evolved",
+  "Ameth Evolved",
+  "Kasumi Evolved",
 ];

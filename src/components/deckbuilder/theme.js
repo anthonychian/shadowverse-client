@@ -46,7 +46,10 @@ export const CLASS_COLORS = {
 
 // Human-readable set names, keyed by the filter value used in CreateDeck.
 export const SET_LABELS = {
-  main: "Main Sets (BP01–17)",
+  main: "Main Sets (BP01–18)",
+  "set 20": "Omens and Heirs",
+  "set 19": "Eightfold Retribution",
+  "set 18": "Neometropolis",
   "set 17": "Convergent Destinies",
   "set 16": "New World Genesis",
   "set 15": "Trial of the Omens",
@@ -85,9 +88,9 @@ export const SET_ORDER = [
 // Order = newest boosters first, then crossovers, special, gloryfinder, worlds
 // beyond, showdown/starter decks, then promos.
 export const SET_CODE_ORDER = [
-  "BP17", "BP16", "BP15", "BP14", "BP13", "BP12", "BP11", "BP10", "BP09",
+  "BP20", "BP19", "BP18", "BP17", "BP16", "BP15", "BP14", "BP13", "BP12", "BP11", "BP10", "BP09",
   "BP08", "BP07", "BP06", "BP05", "BP04", "BP03", "BP02", "BP01",
-  "ECP02", "ECP01", "CP03", "CP02", "CP01", "SP01",
+  "ECP02", "ECP01", "CP04", "CP03", "CP02", "CP01", "SP01",
   "GFB01", "GFD02", "GFD01", "SS02", "SS01",
   "SDD06", "SDD05", "SDD04", "SDD03", "SDD02", "SDD01",
   "SD06", "SD05", "SD04", "SD03", "SD02", "SD01",
@@ -100,6 +103,9 @@ export const SET_CODE_ORDER = [
 export const displayName = (n) => (n || "").replace(/ ADVANCED$/, "");
 
 export const SET_CODE_LABELS = {
+  BP20: "Omens and Heirs",
+  BP19: "Eightfold Retribution",
+  BP18: "Neometropolis",
   BP17: "Convergent Destinies", BP16: "New World Genesis", BP15: "Trial of the Omens",
   BP14: "Banquet of Dreams", BP13: "Dominion of Darkness", BP12: "Worldreaver's Descent",
   BP11: "Bullet of Fate", BP10: "Gods of the Arcana", BP09: "Duet of Dawn and Dusk",
@@ -107,6 +113,7 @@ export const SET_CODE_LABELS = {
   BP05: "Omens Eternal", BP04: "Cosmic Mythos", BP03: "Flame of Lævateinn",
   BP02: "Reign of Bahamut", BP01: "Advent of Genesis",
   ECP02: "iDOLM@STER CG EX", ECP01: "Umamusume: Pretty Derby EX",
+  CP04: "Princess Connect! Re:Dive",
   CP03: "Cardfight!! Vanguard", CP02: "iDOLM@STER Cinderella Girls", CP01: "Umamusume: Pretty Derby",
   SP01: "Seaside Memories",
   GFB01: "Gloryfinder Bundle #1", GFD02: "Gloryfinder: Treacherous Ambitions",

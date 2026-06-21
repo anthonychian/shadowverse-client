@@ -1,0 +1,2719 @@
+[
+  {
+    "cardNo": "BP18-001EN",
+    "name": "Rolo Rone, Verdant Purifier",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Togh Keyoh / Verdant",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. You may activate any number of Evolve abilities per turn. [fanfare] Select a Togh Keyoh card in your cemetery and put it into your EX area. It costs 2 less to play this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-001EN.png"
+  },
+  {
+    "cardNo": "BP18-002EN",
+    "name": "Rolo Rone, Verdant Purifier Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Togh Keyoh / Verdant",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "You may activate any number of Evolve abilities per turn. Whenever a follower on your field evolves, select an enemy follower on the field and deal it 4 damage. On Super-Evolve - Put a Sowing the Seeds of Salvation token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-002EN.png"
+  },
+  {
+    "cardNo": "BP18-003EN",
+    "name": "Kyou, Wooden Bell of the Tree's Justice",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Togh Keyoh / Verdant",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Whenever a follower on your field evolves, deal 1 damage to each enemy leader. If it's the first time a follower on your field evolved this turn, draw a card. If it's the second, give this Storm. If it's the third, give this [attack]+2/[defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-003EN.png"
+  },
+  {
+    "cardNo": "BP18-004EN",
+    "name": "Tia, Crystalian Noble",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Crystalian / Princess",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "2",
+      "effect": "Once during each of your turns, when a Crystalian card is put into your EX area, draw a card. [fanfare] Put a Crystalia Eve token into your EX area. [act] [engage]: Select a Crystalia Eve in your EX area. It costs X less to play this turn. X equals the number of cards you've played this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-004EN.png"
+  },
+  {
+    "cardNo": "BP18-005EN",
+    "name": "Pruner of the Tree's Authority",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Togh Keyoh / Verdant",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[evolve] [cost00]: Evolve this. You may activate any number of Evolve abilities per turn. Whenever a follower on your field evolves, give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-005EN.png"
+  },
+  {
+    "cardNo": "BP18-006EN",
+    "name": "Pruner of the Tree's Authority Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Togh Keyoh / Verdant",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "3",
+      "effect": "You may activate any number of Evolve abilities per turn. Whenever a follower on your field evolves, give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-006EN.png"
+  },
+  {
+    "cardNo": "BP18-007EN",
+    "name": "May, Eager Elf",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "This may be played from your cemetery if you've played at least 3 cards this turn. During your turn, when this leaves the field, select an enemy follower on the field and deal it 1 damage. [fanfare] Select an enemy follower on the field and deal it 1 damage. If this wasn't put onto the field from hand, put it on the bottom of its owner's deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-007EN.png"
+  },
+  {
+    "cardNo": "BP18-008EN",
+    "name": "As You Sow, So Shall You Reap",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Togh Keyoh / Verdant",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "This costs X less to play. X equals the number of face up evolved Togh Keyoh followers in your evolve deck. Select an enemy follower on the field and deal it 5 damage. Deal 1 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-008EN.png"
+  },
+  {
+    "cardNo": "BP18-009EN",
+    "name": "Fist Fighter of the Tree's Capital",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Togh Keyoh / Verdant",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this. You may activate any number of Evolve abilities per turn. Whenever a follower on your field evolves, select a Togh Keyoh follower on your field and give it [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-009EN.png"
+  },
+  {
+    "cardNo": "BP18-010EN",
+    "name": "Fist Fighter of the Tree's Capital Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Togh Keyoh / Verdant",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "You may activate any number of Evolve abilities per turn. Whenever a follower on your field evolves, select a Togh Keyoh follower on your field and give it [attack]+1/[defense]+1. On Evolve - Select an enemy leader or enemy follower on the field and deal it 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-010EN.png"
+  },
+  {
+    "cardNo": "BP18-011EN",
+    "name": "Blossoming Lunerian",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Beast",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-011EN.png"
+  },
+  {
+    "cardNo": "BP18-012EN",
+    "name": "Blossoming Lunerian Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Beast",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - Look at the top 3 cards of your deck. You may put a Beast card from among them into your EX area. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-012EN.png"
+  },
+  {
+    "cardNo": "BP18-013EN",
+    "name": "Planting the Seeds in Amitabha's Pure Land",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Togh Keyoh / Verdant",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "This costs X less to play. X equals the number of face up evolved Togh Keyoh followers in your evolve deck. Select up to 2 Togh Keyoh followers in your cemetery and add them to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-013EN.png"
+  },
+  {
+    "cardNo": "BP18-014EN",
+    "name": "Prayer Child of the Tree's Law",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Togh Keyoh / Verdant",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost00]: Evolve this. Activate only if another follower on your field evolved this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-014EN.png"
+  },
+  {
+    "cardNo": "BP18-015EN",
+    "name": "Prayer Child of the Tree's Law Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Togh Keyoh / Verdant",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - Select a Togh Keyoh follower in your cemetery not named Prayer Child of the Tree's Law and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-015EN.png"
+  },
+  {
+    "cardNo": "BP18-016EN",
+    "name": "Milolo, Li'l Mountain Lass",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Hunter",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] - This turn, the next time you play a spell that costs 1 or less, it costs 1 less to play. Once during each of your turns, when you play a spell, select a follower on your field. Give it [attack]+1/[defense]+1 and Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-016EN.png"
+  },
+  {
+    "cardNo": "BP18-017EN",
+    "name": "Rayne, Elf Smith",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[fanfare] - Select another follower on your field. Give it [attack]+1, Rush and, until end of turn, \"This follower doesn't take damage.\""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-017EN.png"
+  },
+  {
+    "cardNo": "BP18-018EN",
+    "name": "Furious Mountain Deity",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "4",
+      "effect": "Strike - Give this [attack]+3/[defense]+3."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-018EN.png"
+  },
+  {
+    "cardNo": "BP18-019EN",
+    "name": "Airbound Barrage",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Elf / Hunter",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a [forestcraft] card on your field and an enemy follower on the field. Return the first card to its owner's hand and deal 3 damage to the second."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-019EN.png"
+  },
+  {
+    "cardNo": "BP18-020EN",
+    "name": "Shinra, All Discerning",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Togh Keyoh / Detective",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Search your deck for a Giga Blade, summon it, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-020EN.png"
+  },
+  {
+    "cardNo": "BP18-021EN",
+    "name": "Shinra, All Discerning Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Togh Keyoh / Detective",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 3 damage. If you have at least 3 Togh Keyoh cards on your field, deal 4 damage instead. On Super-Evolve - Put an Unlimited Search token into your EX area. [act] [engage], remove 10 Giga counters from a Giga Blade on your field: Deal 8 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-021EN.png"
+  },
+  {
+    "cardNo": "BP18-022EN",
+    "name": "Gamma, Wild Mediator",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Togh Keyoh / Detective / Beast",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Draw a card. [act] Remove 10 Giga counters from a Giga Blade on your field: Deal 5 damage to each enemy follower on the field. Give this follower [attack]+2/[defense]+2 and Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-022EN.png"
+  },
+  {
+    "cardNo": "BP18-023EN",
+    "name": "Gawain, Oath to Glory",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Arthurian",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Rush. [fanfare] If your cemetery has at least 5 [swordcraft] followers, draw a card. If it has at least 10, give this Storm and give your leader [defense]+2. If it has at least 15, give this Intimidate and Aura. If it has at least 20, give this [attack]+7/[defense]+7."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-023EN.png"
+  },
+  {
+    "cardNo": "BP18-024EN",
+    "name": "Overhead Investigator",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Togh Keyoh / Detective",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-024EN.png"
+  },
+  {
+    "cardNo": "BP18-025EN",
+    "name": "Overhead Investigator Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Togh Keyoh / Detective",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Ward. On Evolve - Search your deck for up to 2 Togh Keyoh followers that cost a total of 3 or less and summon them."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-025EN.png"
+  },
+  {
+    "cardNo": "BP18-026EN",
+    "name": "Darksaber Melissa",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Princess",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "4",
+      "attack": "6",
+      "defense": "4",
+      "effect": "Rush. Assail. [fanfare] Select an enemy follower on the field. If its controller has at least 3 cards on their field, destroy it. Give this Aura and, for the rest of this turn, this doesn't take damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-026EN.png"
+  },
+  {
+    "cardNo": "BP18-027EN",
+    "name": "Giga Blade",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Amulet",
+      "trait": "Togh Keyoh / Detective",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "This can't be destroyed or banished by abilities. Whenever a Togh Keyoh follower is put onto your field or a follower on your field evolves, put a Giga counter on each Giga Blade on your field. [fanfare] Put 2 Giga counters on each Giga Blade on your field. If you have another Giga Blade on your field, bury this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-027EN.png"
+  },
+  {
+    "cardNo": "BP18-028EN",
+    "name": "Bottleneck Inspector",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Togh Keyoh / Detective",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this. Assail. [fanfare] If you have at least 3 Togh Keyoh cards on your field, evolve this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-028EN.png"
+  },
+  {
+    "cardNo": "BP18-029EN",
+    "name": "Bottleneck Inspector Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Togh Keyoh / Detective",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "2",
+      "effect": "Assail. On Evolve - Put 2 Giga counters on each Giga Blade on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-029EN.png"
+  },
+  {
+    "cardNo": "BP18-030EN",
+    "name": "Sellsword Lucius",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Mercenary",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] [cost03]: Select an enemy follower on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-030EN.png"
+  },
+  {
+    "cardNo": "BP18-031EN",
+    "name": "Assistance with Investigating Heresy",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Togh Keyoh / Detective",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Search your deck for a Shinra, All Discerning, reveal it, add it to your hand, then shuffle. Put 2 Giga counters on each Giga Blade on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-031EN.png"
+  },
+  {
+    "cardNo": "BP18-032EN",
+    "name": "Blind Spot Observer",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Togh Keyoh / Detective",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] If you have at least 3 Togh Keyoh cards on your field, give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-032EN.png"
+  },
+  {
+    "cardNo": "BP18-033EN",
+    "name": "Blind Spot Observer Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Togh Keyoh / Detective",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - Look at the top 3 cards of your deck. You may reveal a Togh Keyoh card from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-033EN.png"
+  },
+  {
+    "cardNo": "BP18-034EN",
+    "name": "Monika, Cloudhall Admiral",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this. Strike - Select an enemy follower on the field and deal damage to it equal to the number of followers on your field. [fanfare] Summon 2 Knight tokens."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-034EN.png"
+  },
+  {
+    "cardNo": "BP18-035EN",
+    "name": "Monika, Cloudhall Admiral Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Commander",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "On Evolve/Strike - Select an enemy follower on the field and deal damage to it equal to the number of followers on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-035EN.png"
+  },
+  {
+    "cardNo": "BP18-036EN",
+    "name": "Princess Teena",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Princess",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[fanfare] Search your deck for a 1-cost follower, put it into your EX area, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-036EN.png"
+  },
+  {
+    "cardNo": "BP18-037EN",
+    "name": "Holy Bear Knight",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Ward. [fanfare] [cost02]: Give this [attack]+2/[defense]+2. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-037EN.png"
+  },
+  {
+    "cardNo": "BP18-038EN",
+    "name": "Luminous Standard",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Amulet",
+      "trait": "Commander / Luminous",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Search your deck for a Luminous Commander, Luminous Magus and Luminous Lancetrooper. Reveal them, add them to your hand, then shuffle. [act] [engage], bury this: Select a Commander follower on your field and give it [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-038EN.png"
+  },
+  {
+    "cardNo": "BP18-039EN",
+    "name": "Plana, Sterling Luster",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Togh Keyoh / Alchemist / Merchant",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Select a card in your banished zone and add it to your hand. Banish a card from your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-039EN.png"
+  },
+  {
+    "cardNo": "BP18-040EN",
+    "name": "Plana, Sterling Luster Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Togh Keyoh / Alchemist / Merchant",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Banish another follower on your field: Select an enemy follower on the field and destroy it. Draw a card. On Super-Evolve - Put a Jewel Dress Up token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-040EN.png"
+  },
+  {
+    "cardNo": "BP18-041EN",
+    "name": "Fleurage, Jewelry Manager",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Togh Keyoh / Alchemist / Merchant",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[fanfare] Draw a card. Banish a card from your hand. [lastwords] Banish this. [act] [engage]: Select an enemy leader or enemy follower on the field and deal it 2 damage. Activate only if you have at least 10 cards in your banished zone."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-041EN.png"
+  },
+  {
+    "cardNo": "BP18-042EN",
+    "name": "Ginger, Accursed Word",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "10",
+      "attack": "3",
+      "defense": "3",
+      "effect": "This costs 1 less to play for each card in your banished zone. [fanfare] Put a Ginger's Curse token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-042EN.png"
+  },
+  {
+    "cardNo": "BP18-043EN",
+    "name": "Jewelry Supermodel",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Togh Keyoh / Alchemist / Merchant",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Draw 3 cards. Banish 2 cards from your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-043EN.png"
+  },
+  {
+    "cardNo": "BP18-044EN",
+    "name": "Jewelry Supermodel Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Togh Keyoh / Alchemist / Merchant",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Select an enemy follower on the field. Deal damage to it equal to the number of cards in your banished zone."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-044EN.png"
+  },
+  {
+    "cardNo": "BP18-045EN",
+    "name": "Aleister, Argenteum Astrum",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "4",
+      "effect": "Rush. Drain. [fanfare] Banish the top two cards of your deck. Then, if your banished zone contains at least 5 cards, give this Assail. If it contains at least 10, give this [attack]+1/[defense]+1"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-045EN.png"
+  },
+  {
+    "cardNo": "BP18-046EN",
+    "name": "Brilliant Cut",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Togh Keyoh / Alchemist / Merchant",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose 1. (1) Select an enemy follower on the field and, if you have at least 10 cards in your banished zone, deal 2 damage to it and its leader. (2) Draw a card. Banish the top card of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-046EN.png"
+  },
+  {
+    "cardNo": "BP18-047EN",
+    "name": "Jewelry Advisor",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Togh Keyoh / Alchemist / Merchant",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Banish the top card of your deck. Then, if your banished zone has at least 10 cards, give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-047EN.png"
+  },
+  {
+    "cardNo": "BP18-048EN",
+    "name": "Jewelry Advisor Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Togh Keyoh / Alchemist / Merchant",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-048EN.png"
+  },
+  {
+    "cardNo": "BP18-049EN",
+    "name": "Mari, Card Conjurer",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "3",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[fanfare]/[lastwords] Draw a card. Bury the top card of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-049EN.png"
+  },
+  {
+    "cardNo": "BP18-050EN",
+    "name": "Secret Business Negotiations",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Togh Keyoh / Alchemist / Merchant",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose 1. (1) Select an enemy follower on the field and destroy it. Banish the top 2 cards of your deck. (2) [cost01]: Select up to 2 followers that cost 2 or less with different names in your banished zone and summon them."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-050EN.png"
+  },
+  {
+    "cardNo": "BP18-051EN",
+    "name": "Jewelry Bouncer",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Togh Keyoh / Alchemist / Merchant",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Banish the top card of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-051EN.png"
+  },
+  {
+    "cardNo": "BP18-052EN",
+    "name": "Jewelry Bouncer Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Togh Keyoh / Alchemist / Merchant",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Storm. On Evolve - Give this [attack]+1/[defense]+1 for every 5 cards in your banished zone."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-052EN.png"
+  },
+  {
+    "cardNo": "BP18-053EN",
+    "name": "Carbuncle of Mysteria",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Arcanaform / Academic",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. [lastwords] Bury the top card of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-053EN.png"
+  },
+  {
+    "cardNo": "BP18-054EN",
+    "name": "Carbuncle of Mysteria Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arcanaform / Academic",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Look at the top 2 cards of your deck. You may reveal an Academic card from among them and add it to your hand. Bury the rest. [lastwords] Bury the top card of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-054EN.png"
+  },
+  {
+    "cardNo": "BP18-055EN",
+    "name": "Illusionist",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "6",
+      "attack": "4",
+      "defense": "5",
+      "effect": "[fanfare] You may summon a non-[runecraft] follower from your hand that costs 6 or less. Give it Rush, Assail and \"At the start of your end phase, return this to its owner's hand.\""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-055EN.png"
+  },
+  {
+    "cardNo": "BP18-056EN",
+    "name": "Enchanted Sword",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "This costs 1 less to play for every 5 spells in your cemetery. Select a Mage follower on your field and give it [attack]+2/[defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-056EN.png"
+  },
+  {
+    "cardNo": "BP18-057EN",
+    "name": "Authoring Tomorrow",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] [cost01], bury this in your EX area: Deal 1 damage to each enemy follower on the field. ---------- [quick]. Draw a card. If this was played from the hand, put it into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-057EN.png"
+  },
+  {
+    "cardNo": "BP18-058EN",
+    "name": "El, Destructive Dragon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Togh Keyoh / Dragonewt / Draconic Duelist",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-058EN.png"
+  },
+  {
+    "cardNo": "BP18-059EN",
+    "name": "El, Destructive Dragon Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Togh Keyoh / Dragonewt / Draconic Duelist",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Look at the top 3 cards of your deck. You may put a Draconic Duelist card from among them into your EX area. Put the rest on the bottom of your deck in any order. It costs 3 less to play this turn. On Super-Evolve - Put a Youthful Blow token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-059EN.png"
+  },
+  {
+    "cardNo": "BP18-060EN",
+    "name": "Tenka, Enzui Vice President",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Togh Keyoh / Dragonewt / Draconic Duelist",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "Whenever a Draconic Duelist follower with at least 4 attack on your field attacks, select an enemy follower on the field. Deal 1 damage to it and its leader. [fanfare] Look at the top 2 cards of your deck. You may reveal a Draconic Duelist card from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-060EN.png"
+  },
+  {
+    "cardNo": "BP18-061EN",
+    "name": "Fafnir, Cunning Wyrm",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "8",
+      "attack": "7",
+      "defense": "8",
+      "effect": "Ward. [fanfare] Deal 8 damage to each enemy follower on the field and 4 damage to each enemy leader. Whenever an enemy follower would be put into the cemetery from the field, it is banished instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-061EN.png"
+  },
+  {
+    "cardNo": "BP18-062EN",
+    "name": "Dragon-Eyed Scribe",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Togh Keyoh / Dragonewt / Draconic Duelist",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. Your Draconic Duelist followers with at least 4 attack have \"Strike - Give your leader [defense]+1.\""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-062EN.png"
+  },
+  {
+    "cardNo": "BP18-063EN",
+    "name": "Dragon-Eyed Scribe Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Togh Keyoh / Dragonewt / Draconic Duelist",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage. If there's a Draconic Duelist follower with at least 4 attack on your field, deal 3 damage instead. Your Draconic Duelist followers with at least 4 attack have \"Strike - Give your leader [defense]+1.\""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-063EN.png"
+  },
+  {
+    "cardNo": "BP18-064EN",
+    "name": "Prophetic Dragon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "9",
+      "attack": "5",
+      "defense": "6",
+      "effect": "Ward. At the start of your end phase, select an enemy follower on the field and deal it 5 damage. Give your leader [defense]+1. [fanfare] Select up to 2 cards named Prophetic Dragon in your cemetery and summon them. [act] [cost02], discard this: Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-064EN.png"
+  },
+  {
+    "cardNo": "BP18-065EN",
+    "name": "A Moment After School",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Togh Keyoh / Dragonewt / Draconic Duelist",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "7",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Search your deck for up to 3 Togh Keyoh followers each with different names that cost 3 or less, summon them, then shuffle. Give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-065EN.png"
+  },
+  {
+    "cardNo": "BP18-066EN",
+    "name": "Saibi’s Disciplinary Committee",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Togh Keyoh / Dragonewt / Draconic Duelist",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. Whenever a Draconic Duelist follower with at least 4 attack on your field attacks, give it [attack]+1. [fanfare] Select another Draconic Duelist follower on your field and give it [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-066EN.png"
+  },
+  {
+    "cardNo": "BP18-067EN",
+    "name": "Saibi’s Disciplinary Committee Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Togh Keyoh / Dragonewt / Draconic Duelist",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "4",
+      "effect": "Whenever a Draconic Duelist follower with at least 4 attack on your field attacks, give it [attack]+1. On Evolve - Look at the top 2 cards of your deck. You may reveal a Draconic Duelist card from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-067EN.png"
+  },
+  {
+    "cardNo": "BP18-068EN",
+    "name": "Ian, Dragon Buster",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this. Ward. [fanfare] Select an enemy follower on the field and deal it 5 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-068EN.png"
+  },
+  {
+    "cardNo": "BP18-069EN",
+    "name": "Ian, Dragon Buster Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonheart",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Ward. On Evolve - Summon an Adelle, Jealous Dragon token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-069EN.png"
+  },
+  {
+    "cardNo": "BP18-070EN",
+    "name": "Shuyoku’s Admission Celebration",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Amulet",
+      "trait": "Togh Keyoh / Dragonewt / Draconic Duelist",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Look at the top 2 cards of your deck. You may reveal a Draconic Duelist card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. [act] [engage], bury this: Give your leader [defense]+1. Activate only if there's a Draconic Duelist follower with at least 4 attack on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-070EN.png"
+  },
+  {
+    "cardNo": "BP18-071EN",
+    "name": "Electric Claw's Going-Home Club Member",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Togh Keyoh / Dragonewt / Draconic Duelist",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "1",
+      "attack": "4",
+      "defense": "1",
+      "effect": "[evolve] [cost03]: Evolve this. While there's another Draconic Duelist follower on your field, this has Rush and Assail. At the start of your end phase, return this to its owner's hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-071EN.png"
+  },
+  {
+    "cardNo": "BP18-072EN",
+    "name": "Electric Claw's Going-Home Club Member Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Togh Keyoh / Dragonewt / Draconic Duelist",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "While there's another Draconic Duelist follower on your field, this has Assail. At the start of your end phase, return this to its owner's hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-072EN.png"
+  },
+  {
+    "cardNo": "BP18-073EN",
+    "name": "Serpent Drake",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "3",
+      "effect": "Rush. [fanfare] If Overflow is active for you, give this [attack]+2/[defense]+2. Whenever this takes damage while on your field, search your deck for a Serpent Drake, summon it, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-073EN.png"
+  },
+  {
+    "cardNo": "BP18-074EN",
+    "name": "Draconic Mercenary",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt / Dragonheart / Mercenary",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "6",
+      "attack": "4",
+      "defense": "6",
+      "effect": "Ward. [fanfare] Summon a Hellflame Dragon and Dragon token. [act] [cost02], [engage]: Summon a Hellflame Dragon and Dragon token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-074EN.png"
+  },
+  {
+    "cardNo": "BP18-075EN",
+    "name": "Estrella Beast",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "This doesn't take ability damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-075EN.png"
+  },
+  {
+    "cardNo": "BP18-076EN",
+    "name": "Orca Run",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Marine",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick]. Select an enemy follower on the field and deal it 2 damage. If there are at least 5 Marine cards in your cemetery, deal 4 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-076EN.png"
+  },
+  {
+    "cardNo": "BP18-077EN",
+    "name": "Ilze & Ulze, Centennial Reapers",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Togh Keyoh / Demon",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Bury the top 2 cards of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-077EN.png"
+  },
+  {
+    "cardNo": "BP18-078EN",
+    "name": "Ilze & Ulze, Centennial Reapers Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Togh Keyoh / Demon",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Look at the top 5 cards of your deck. You may put either 2-cost or less [abysscraft] card or a 2-cost or less Togh Keyoh card from among them into your EX area. It costs 2 less to play this turn. Put the rest on the bottom of your deck in any order. On Super-Evolve - Put a Rest Before Nightfall token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-078EN.png"
+  },
+  {
+    "cardNo": "BP18-079EN",
+    "name": "Ved, Wolf of Burials",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Togh Keyoh / Demon / Beast",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] You may discard a 2-cost card. If you did, draw a card. If you didn't, bury this. [act] [cost00]: Select an enemy leader or enemy follower on the field and deal it 3 damage. Activate only once per turn and if you have at least 10 cards that cost 2 in your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-079EN.png"
+  },
+  {
+    "cardNo": "BP18-080EN",
+    "name": "Vania, Crimson Majesty",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vampire / Princess",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Discard a Vampire card: Put a Forest Bat token into your EX area. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-080EN.png"
+  },
+  {
+    "cardNo": "BP18-081EN",
+    "name": "Vania, Crimson Majesty Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Vampire / Princess",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage. On Super-Evolve - Give this \"Each Forest Bat on your field has Storm and Bane.\""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-081EN.png"
+  },
+  {
+    "cardNo": "BP18-082EN",
+    "name": "Serpent of Greed",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Togh Keyoh / Demon / Beast",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost05]: Evolve this. [act] [engage], reveal 2 cards that cost 2 in your hand: Select an enemy follower on the field and deal it 4 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-082EN.png"
+  },
+  {
+    "cardNo": "BP18-083EN",
+    "name": "Serpent of Greed Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Togh Keyoh / Demon / Beast",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Storm. On Evolve - Refresh this follower. [act] [engage], reveal 2 cards that cost 2 in your hand: Select an enemy follower on the field and deal it 4 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-083EN.png"
+  },
+  {
+    "cardNo": "BP18-084EN",
+    "name": "Veight, Twilit Highborn",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vampire",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "1",
+      "effect": "[fanfare] Look at the top 3 cards of your deck. You may reveal a Vampire card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. If you revealed a follower with “Vania” in its name, summon a Forest Bat token. [act] [cost00]: Give each Forest Bat on your field [attack]+1/[defense]+1. Activate only once per turn and if there are at least 5 Vampire cards in your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-084EN.png"
+  },
+  {
+    "cardNo": "BP18-085EN",
+    "name": "Crescent Moon of a Hundred Deaths",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Togh Keyoh / Demon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a 2-cost Togh Keyoh follower in your cemetery and summon it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-085EN.png"
+  },
+  {
+    "cardNo": "BP18-086EN",
+    "name": "Piercing Crow",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Togh Keyoh / Demon / Beast",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Reveal 2 cards in your hand that cost 2: Give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-086EN.png"
+  },
+  {
+    "cardNo": "BP18-087EN",
+    "name": "Piercing Crow Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Togh Keyoh / Demon / Beast",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select a Demon follower in your cemetery and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-087EN.png"
+  },
+  {
+    "cardNo": "BP18-088EN",
+    "name": "Full Moon of a Hundred Passings",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Togh Keyoh / Demon",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Deal 1 damage to each enemy leader and enemy follower on the field. If you have at least 10 cards in your cemtery that cost 2, deal 2 damage instead"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-088EN.png"
+  },
+  {
+    "cardNo": "BP18-089EN",
+    "name": "Vampire Queen's Castle",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Amulet",
+      "trait": "Vampire",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Discard a Vampire card: Draw a card. [act] [engage], bury this: Summon a Forest Bat token. If you have a follower with \"Queen Vampire\" in its name on your field, summon 3 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-089EN.png"
+  },
+  {
+    "cardNo": "BP18-090EN",
+    "name": "Gnawing Mouse",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Togh Keyoh / Demon / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "When playing this, discard a 2-cost card: This costs 1 less to play. [evolve] [cost04]: Evolve this. [fanfare] Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-090EN.png"
+  },
+  {
+    "cardNo": "BP18-091EN",
+    "name": "Gnawing Mouse Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Togh Keyoh / Demon / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Select an enemy follower on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-091EN.png"
+  },
+  {
+    "cardNo": "BP18-092EN",
+    "name": "Beryl, Dreameater",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon / Vampire",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Put a Forest Bat token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-092EN.png"
+  },
+  {
+    "cardNo": "BP18-093EN",
+    "name": "Beryl, Dreameater Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Demon / Vampire",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Select an enemy follower on the field. Summon 2 Forest Bat tokens, then deal the selected follower damage equal to the number of cards named Forest Bat on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-093EN.png"
+  },
+  {
+    "cardNo": "BP18-094EN",
+    "name": "Prince Catacomb",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Necromancer",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "4",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare]/[lastwords] Select a follower that costs 1 or less in your cemetery and summon it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-094EN.png"
+  },
+  {
+    "cardNo": "BP18-095EN",
+    "name": "Bloodthirsty Hamster",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vampire / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "2",
+      "attack": "0",
+      "defense": "3",
+      "effect": "[fanfare] [cost03]: Select an enemy follower on the field and destroy it. Whenever a follower is put from the field into the cemetery, give this [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-095EN.png"
+  },
+  {
+    "cardNo": "BP18-096EN",
+    "name": "Nightscreech",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Vampire",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Look at the top card of your deck. If it's a Vampire card, you may reveal it and add it to your hand. Summon a Forest Bat token. If there are at least 5 Vampire cards in your cemetery, give it [attack]+2. Rush and Assail."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-096EN.png"
+  },
+  {
+    "cardNo": "BP18-097EN",
+    "name": "Seishiro, Admonishing Faith",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Togh Keyoh / Faith",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. Whenever your leader gains defense, select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-097EN.png"
+  },
+  {
+    "cardNo": "BP18-098EN",
+    "name": "Seishiro, Admonishing Faith Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Togh Keyoh / Faith",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Whenever your leader gains defense, select an enemy follower on the field and deal it 2 damage. On Evolve - You may summon a 3-cost or less Togh Keyoh follower or a 3-cost or less [havencraft] amulet from your hand. On Super-Evolve - Put a Conviction of Good Deeds token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-098EN.png"
+  },
+  {
+    "cardNo": "BP18-099EN",
+    "name": "Tenmei, Arbiter of Desire",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Togh Keyoh / Faith",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Whenever your leader gains defense , select an enemy follower on the field and deal it 2 damage. [act] [cost00]: Deal damage to each enemy leader equal to the number of Togh Keyoh followers on your field. Give your leader [defense]+1. Activate only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-099EN.png"
+  },
+  {
+    "cardNo": "BP18-100EN",
+    "name": "Elana, Purest Prayer",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Ward. At the start of each opponent's main phase, if there's an Elana's Prayer on your field, give your leader [defense]+2. [fanfare] Search your deck for an Elana's Prayer, reveal it, add it to your hand, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-100EN.png"
+  },
+  {
+    "cardNo": "BP18-101EN",
+    "name": "Oath Breaker's Giver",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Togh Keyoh / Faith",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] [cost02]: Select a Togh Keyoh follower not named Oath Breaker's Giver that costs 4 or less in your cemetery and summon it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-101EN.png"
+  },
+  {
+    "cardNo": "BP18-102EN",
+    "name": "Oath Breaker's Giver Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Togh Keyoh / Faith",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-102EN.png"
+  },
+  {
+    "cardNo": "BP18-103EN",
+    "name": "Imina, Mad Eidolon",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Zealot / Eidolon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "4",
+      "attack": "1",
+      "defense": "5",
+      "effect": "Bane. [fanfare] Each player summons a Totem of Madness token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-103EN.png"
+  },
+  {
+    "cardNo": "BP18-104EN",
+    "name": "Unwavering Prayer",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Togh Keyoh / Faith",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Look at the top 4 cards of your deck. You may reveal up to 1 Togh Keyoh card not named Unwavering Prayer and up to 1 Seishiro, Admonishing Faith each from among them and add them to your hand. Put the rest on the bottom of your deck in any order. The next Togh Keyoh card you play this turn costs 2 less to play. [act] [cost01], [engage], bury this: Give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-104EN.png"
+  },
+  {
+    "cardNo": "BP18-105EN",
+    "name": "Bearer of Additional Penalties",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Togh Keyoh / Faith",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost02]: Evolve this. [fanfare] Give your leader [defense]+1. If there's a Seishiro, Admonishing Faith on your field, evolve this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-105EN.png"
+  },
+  {
+    "cardNo": "BP18-106EN",
+    "name": "Bearer of Additional Penalties Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Togh Keyoh / Faith",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - Give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-106EN.png"
+  },
+  {
+    "cardNo": "BP18-107EN",
+    "name": "Lorena, Iron-Willed Priest",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Give your leader [defense]+4."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-107EN.png"
+  },
+  {
+    "cardNo": "BP18-108EN",
+    "name": "Lorena, Iron-Willed Priest Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Select an enemy follower on the field and deal damage to it equal to this follower's attack."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-108EN.png"
+  },
+  {
+    "cardNo": "BP18-109EN",
+    "name": "Pioneer's Conversation",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Togh Keyoh / Faith",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Draw a card. If there's a Togh Keyoh follower on your field, give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-109EN.png"
+  },
+  {
+    "cardNo": "BP18-110EN",
+    "name": "Closed Eyes Supporter",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Togh Keyoh / Faith",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] If there's a Seishiro, Admonishing Faith on your field, give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-110EN.png"
+  },
+  {
+    "cardNo": "BP18-111EN",
+    "name": "Closed Eyes Supporter Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Togh Keyoh / Faith",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage. If your leader gained defense this turn, deal its leader 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-111EN.png"
+  },
+  {
+    "cardNo": "BP18-112EN",
+    "name": "Mugnier, Purifying Light",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Zealot",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Select a 3-cost or less enemy follower on the field and banish it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-112EN.png"
+  },
+  {
+    "cardNo": "BP18-113EN",
+    "name": "Armed Al-mi'raj",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "6",
+      "attack": "4",
+      "defense": "6",
+      "effect": "[fanfare] Select an enemy follower on the field. Destroy it and give your leader [defense]+3."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-113EN.png"
+  },
+  {
+    "cardNo": "BP18-114EN",
+    "name": "Heavenly Hound",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "Ward. [fanfare] If there's another follower on your field with Ward, give this [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-114EN.png"
+  },
+  {
+    "cardNo": "BP18-115EN",
+    "name": "Golden Bell",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Draw a card. [lastwords] Give your leader [defense]+1. [act] [cost02], [engage]: Bury this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-115EN.png"
+  },
+  {
+    "cardNo": "BP18-116EN",
+    "name": "Bansai Suzuki, Shinobi Deacon",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Togh Keyoh / District Office",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Rush. Assail. Ward. At the start of your end phase, summon a Bansai Suzuki, Clone Technique token. [fanfare] [cost02]: Summon a Bansai Suzuki, Clone Technique token. [act] Discard a Togh Keyoh card: Each Bansai Suzuki, Shinobi Deacon and Bansai Suzuki, Clone Technique on your field don't take damage this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-116EN.png"
+  },
+  {
+    "cardNo": "BP18-117EN",
+    "name": "Saito, Mao Ward Officer",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Togh Keyoh / District Office",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Look at the top 3 cards of your deck. You may reveal a Togh Keyoh card from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-117EN.png"
+  },
+  {
+    "cardNo": "BP18-118EN",
+    "name": "Saito, Mao Ward Officer Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Togh Keyoh / District Office",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Choose 1. (1) Select a Flame Spell Proficiency Test Rank A in your cemetery and put it into your EX area. It costs 1 less to play this turn. (2) Give your leader [defense]+1. Bury the top card of your deck. (3) Banish a card in your hand: Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-118EN.png"
+  },
+  {
+    "cardNo": "BP18-119EN",
+    "name": "Warped Progress",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Togh Keyoh",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick]. When playing this, discard a Togh Keyoh card as an additional cost. (This can't be played without paying the additional cost.) Select an enemy follower on the field and deal it 4 damage. Give your leader [defense]+1. Draw a card"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-119EN.png"
+  },
+  {
+    "cardNo": "BP18-120EN",
+    "name": "Togh Keyoh, Neometropolis",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Amulet",
+      "trait": "Togh Keyoh",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Look at the top 3 cards of your deck. You may reveal a Togh Keyoh card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. [act] [cost01], [engage], banish this: Select a Togh Keyoh follower on your field and give it [attack]+1/[defense]+1. Give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-120EN.png"
+  },
+  {
+    "cardNo": "BP18-121EN",
+    "name": "Stunfist Assassin",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Togh Keyoh",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Select an enemy follower on the field and deal it 4 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-121EN.png"
+  },
+  {
+    "cardNo": "BP18-122EN",
+    "name": "Stunfist Assassin Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Togh Keyoh",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "(None.)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-122EN.png"
+  },
+  {
+    "cardNo": "BP18-123EN",
+    "name": "Flame Spell Proficiency Test Rank A",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Togh Keyoh / District Office",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick]. Select an enemy follower on the field and deal it 2 damage. If there's a Saito, Mao Ward Officer on your field, deal 1 damage to that enemy's leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-123EN.png"
+  },
+  {
+    "cardNo": "BP18-124EN",
+    "name": "Cyber Glasspunk",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Togh Keyoh",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Select an enemy follower on the field and engage it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-124EN.png"
+  },
+  {
+    "cardNo": "BP18-125EN",
+    "name": "Cyber Glasspunk Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Togh Keyoh",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "2",
+      "effect": "(None.)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-125EN.png"
+  },
+  {
+    "cardNo": "BP18-126EN",
+    "name": "District Office Worker Class C",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Togh Keyoh / District Office",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[fanfare] Discard a card: Search your deck for a District Office card not named District Office Worker Class C, reveal it, add it to your hand, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-126EN.png"
+  },
+  {
+    "cardNo": "BP18-T01EN",
+    "name": "Sowing the Seeds of Salvation TOKEN",
+    "type": "token",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell / Token",
+      "trait": "Togh Keyoh / Verdant",
+      "rarity": "-",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Draw a card. You may turn any number of face up evolved followers in your evolve deck face down. Gain 1 Evolution Point."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-T01EN.png"
+  },
+  {
+    "cardNo": "BP18-T02EN",
+    "name": "Unlimited Search TOKEN",
+    "type": "token",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell / Token",
+      "trait": "Togh Keyoh / Detective",
+      "rarity": "-",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Put 3 Giga counters on each Giga Blade on your field. Draw 2 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-T02EN.png"
+  },
+  {
+    "cardNo": "BP18-T03EN",
+    "name": "Jewel Dress Up TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell / Token",
+      "trait": "Togh Keyoh / Alchemist / Merchant",
+      "rarity": "-",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "You may play cards in your banished zone this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-T03EN.png"
+  },
+  {
+    "cardNo": "BP18-T04EN",
+    "name": "Ginger's Curse TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell / Token",
+      "trait": "Mage",
+      "rarity": "-",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field. It loses all abilities and its attack and defense become 1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-T04EN.png"
+  },
+  {
+    "cardNo": "BP18-T05EN",
+    "name": "Youthful Blow TOKEN",
+    "type": "token",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell / Token",
+      "trait": "Togh Keyoh / Dragonewt / Draconic Duelist",
+      "rarity": "-",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field and a Togh Keyoh follower on your field. Destroy the enemy follower and give the follower on your field Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-T05EN.png"
+  },
+  {
+    "cardNo": "BP18-T06EN",
+    "name": "Adelle, Jealous Dragon TOKEN",
+    "type": "token",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Token",
+      "trait": "Wyrmkin",
+      "rarity": "-",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Whenever an Ian, Dragon Buster on your field is put into the cemetery, deal 5 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-T06EN.png"
+  },
+  {
+    "cardNo": "BP18-T07EN",
+    "name": "Rest Before Nightfall TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell / Token",
+      "trait": "Togh Keyoh / Demon",
+      "rarity": "-",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select up to 3 Togh Keyoh cards in your cemetery that cost 2 or less with different names from each other and add them to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-T07EN.png"
+  },
+  {
+    "cardNo": "BP18-T08EN",
+    "name": "Conviction of Good Deeds TOKEN",
+    "type": "token",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell / Token",
+      "trait": "Togh Keyoh / Faith",
+      "rarity": "-",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Deal damage to each enemy leader equal to the number of Togh Keyoh followers on your field. Give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-T08EN.png"
+  },
+  {
+    "cardNo": "BP18-T09EN",
+    "name": "Totem of Madness TOKEN",
+    "type": "token",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet / Token",
+      "trait": "Zealot / Eidolon",
+      "rarity": "-",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "At the start of your end phase. put a curse counter on this card. Then, if this card has 1 curse counter, deal 1 damage to your leader. If it has 2, discard a card. If it has 3, discard a card, deal 3 damage to your leader and bury this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-T09EN.png"
+  },
+  {
+    "cardNo": "BP18-T10EN",
+    "name": "Bansai Suzuki, Clone Technique TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Token",
+      "trait": "Togh Keyoh / District Office",
+      "rarity": "-",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Rush. Assail. Ward. At the start of your end phase, summon a Bansai Suzuki, Clone Technique token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-T10EN.png"
+  },
+  {
+    "cardNo": "BP18-U01EN",
+    "name": "Rolo Rone, Verdant Purifier Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Togh Keyoh / Verdant",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "You may activate any number of Evolve abilities per turn. Whenever a follower on your field evolves, select an enemy follower on the field and deal it 4 damage. On Super-Evolve - Put a Sowing the Seeds of Salvation token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-U01EN.png"
+  },
+  {
+    "cardNo": "BP18-U02EN",
+    "name": "Shinra, All Discerning Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Togh Keyoh / Detective",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 3 damage. If you have at least 3 Togh Keyoh cards on your field, deal 4 damage instead. On Super-Evolve - Put an Unlimited Search token into your EX area. [act] [engage], remove 10 Giga counters from a Giga Blade on your field: Deal 8 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-U02EN.png"
+  },
+  {
+    "cardNo": "BP18-U03EN",
+    "name": "Plana, Sterling Luster Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Togh Keyoh / Alchemist / Merchant",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Banish another follower on your field: Select an enemy follower on the field and destroy it. Draw a card. On Super-Evolve - Put a Jewel Dress Up token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-U03EN.png"
+  },
+  {
+    "cardNo": "BP18-U04EN",
+    "name": "El, Destructive Dragon Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Togh Keyoh / Dragonewt / Draconic Duelist",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Look at the top 3 cards of your deck. You may put a Draconic Duelist card from among them into your EX area. Put the rest on the bottom of the deck in any order. It costs 3 less to play this turn. On Super-Evolve - Put a Youthful Blow token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-U04EN.png"
+  },
+  {
+    "cardNo": "BP18-U05EN",
+    "name": "Ilze & Ulze, Centennial Reapers Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Togh Keyoh / Demon",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Look at the top 5 cards of your deck. You may put either 2-cost or less [abysscraft] card or a 2-cost or less Togh Keyoh card from among them into your EX area. It costs 2 less to play this turn. Put the rest on the bottom of your deck in any order. On Super-Evolve - Put a Rest Before Nightfall token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-U05EN.png"
+  },
+  {
+    "cardNo": "BP18-U06EN",
+    "name": "Seishiro, Admonishing Faith Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Togh Keyoh / Faith",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Whenever your leader gains defense, select an enemy follower on the field and deal it 2 damage. On Evolve - You may summon a 3-cost or less Togh Keyoh follower or a 3-cost or less [havencraft] amulet from your hand. On Super-Evolve - Put a Conviction of Good Deeds token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-U06EN.png"
+  },
+  {
+    "cardNo": "BP18-U07EN",
+    "name": "Saito, Mao Ward Officer Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Togh Keyoh / District Office",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set \"Neometropolis\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Choose 1. (1) Select a Flame Spell Proficiency Test Rank A in your cemetery and put it into your EX area. It costs 1 less to play this turn. (2) Give your leader [defense]+1. Bury the top card of your deck. (3) Banish a card in your hand: Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP18/BP18-U07EN.png"
+  }
+]

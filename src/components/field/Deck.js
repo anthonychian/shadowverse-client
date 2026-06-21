@@ -55,8 +55,6 @@ import viridiaCardBack from "../../assets/cardbacks/viridia.png";
 import wilbertCardBack from "../../assets/cardbacks/wilbert.png";
 import "../../css/Card.css";
 
-const img = require("../../assets/pin_bellringer_angel.png");
-
 const style = {
   position: "relative",
   top: "50%",
@@ -421,7 +419,7 @@ export default function Deck({
               }
         }
         style={{
-          cursor: automated ? "default" : `url(${img}) 55 55, auto`,
+          cursor: "default",
           position: "relative",
         }}
       >

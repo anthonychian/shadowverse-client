@@ -115,21 +115,20 @@ export default function Game(callback) {
         />
       )}
       {/* Left side  */}
-      <div className={"leftSideCanvas"}>
-        {/* ZoomedCard is position:absolute against the viewport, so it must NOT
-            be wrapped in a transform (that would reparent its containing block
-            and collapse it). It scales itself via the scale prop instead. */}
-        <ZoomedCard
-          name={reduxCurrentCard}
-          hovering={hovering}
-          scale={sideScale}
-          art={zoomArt}
-        />
+      <div className={"leftSideCanvas"} style={{ position: "relative" }}>
         {!uiChromeHidden && (
           <div style={leftScaleStyle}>
             <PlayPoints name={selectedOption} />
           </div>
         )}
+        {/* Hover preview fills the whole left column (the PlayPoints space),
+            styled like the CreateDeck inspector. It overlays PlayPoints only
+            while a card is being hovered. */}
+        <ZoomedCard
+          name={reduxCurrentCard}
+          hovering={hovering}
+          art={zoomArt}
+        />
       </div>
 
       {/* Center Field */}

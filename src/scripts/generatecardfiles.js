@@ -3,8 +3,11 @@
 /**
  * Shadowverse Evolve Card Code Generator
  *
- * Reads a JSON file of card data (from the scraper or manually created)
- * and updates AllCards.js, AllCardsEvo.js, AllTokens.js, and getCards.js.
+ * Reads a JSON file of card data (from the scraper or manually created) and:
+ *   - updates AllCards.js, AllCardsEvo.js, AllTokens.js (class/main filters)
+ *   - updates getCards.js (card name -> texture mappings)
+ *   - wires the deck builder: theme.js Set labels (with --name) and rebuilds
+ *     cardPrintings.json + cardData.json (the grid, Set dropdown, and inspector).
  *
  * Usage:
  *   node scripts/generate-card-files.js BP17
@@ -26,6 +29,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const { execFileSync } = require("child_process");
 
 const EXPANSION = process.argv[2];
 const DRY_RUN = process.argv.includes("--dry-run");
@@ -99,9 +103,16 @@ function updateAllCards() {
   const filePath = path.join(SRC_DIR, "AllCards.js");
   let content = fs.readFileSync(filePath, "utf8");
 
-  // Only add names not already present (reprints/shared cards keep one entry).
+  // Only add names not already present (reprints/shared cards keep one entry),
+  // and de-dupe within this batch — alt-art printings (e.g. Ultimate cards)
+  // reuse a base/evolved name and must not be listed twice.
   const isPresent = (name) => content.includes(`"${name}"`);
-  const newBase = baseCards.filter((c) => !isPresent(c.name));
+  const seenBase = new Set();
+  const newBase = baseCards.filter((c) => {
+    if (isPresent(c.name) || seenBase.has(c.name)) return false;
+    seenBase.add(c.name);
+    return true;
+  });
 
   // 1. Add new base card names at the TOP of the allCards array, so the newest
   //    set shows first in the deck-builder "All" view (which lists newest-first).
@@ -117,7 +128,8 @@ function updateAllCards() {
   // 2. Add a new set export (the full set membership), unless it already exists
   const setExists = new RegExp(`export const set${SET_NUMBER}\\s*=`).test(content);
   if (!setExists && baseCards.length > 0) {
-    const setExport = `\nexport const set${SET_NUMBER} = [\n${baseCards.map((c) => `  "${c.name}",`).join("\n")}\n];\n`;
+    const setNames = [...new Set(baseCards.map((c) => c.name))];
+    const setExport = `\nexport const set${SET_NUMBER} = [\n${setNames.map((n) => `  "${n}",`).join("\n")}\n];\n`;
     const lastSetMatch = content.match(/export const set\d+ = \[[\s\S]*?\];\n/g);
     if (lastSetMatch) {
       const lastSet = lastSetMatch[0];
@@ -187,8 +199,16 @@ function updateAllCardsEvo() {
     return;
   }
 
+  // Skip names already present, and de-dupe within this batch: alt-art Ultimate
+  // evolved printings (the "U" super-evolve cards) reuse their evolved twin's
+  // name, which previously got listed twice and showed as a duplicate tile.
   const isPresent = (name) => content.includes(`"${name}"`);
-  const newEvo = evoCards.filter((c) => !isPresent(c.name));
+  const seenEvo = new Set();
+  const newEvo = evoCards.filter((c) => {
+    if (isPresent(c.name) || seenEvo.has(c.name)) return false;
+    seenEvo.add(c.name);
+    return true;
+  });
 
   // Add new evolved names at the TOP of the allCardsEvo array (newest-first).
   if (newEvo.length > 0) {
@@ -203,7 +223,8 @@ function updateAllCardsEvo() {
   // Add set-specific evo export (full set membership), unless it already exists
   const setEvoExists = new RegExp(`export const set${SET_NUMBER}Evo\\s*=`).test(content);
   if (!setEvoExists) {
-    const setEvoExport = `\nexport const set${SET_NUMBER}Evo = [\n${evoCards.map((c) => `  "${c.name}",`).join("\n")}\n];\n`;
+    const setEvoNames = [...new Set(evoCards.map((c) => c.name))];
+    const setEvoExport = `\nexport const set${SET_NUMBER}Evo = [\n${setEvoNames.map((n) => `  "${n}",`).join("\n")}\n];\n`;
     const lastEvoSetMatch = content.match(/export const set\d+Evo = \[[\s\S]*?\];\n/g);
     if (lastEvoSetMatch) {
       const lastSet = lastEvoSetMatch[0];
@@ -270,7 +291,12 @@ function updateAllTokens() {
   }
 
   const isPresent = (name) => content.includes(`"${name}"`);
-  const newTokens = tokenCards.filter((c) => !isPresent(c.name));
+  const seenTokens = new Set();
+  const newTokens = tokenCards.filter((c) => {
+    if (isPresent(c.name) || seenTokens.has(c.name)) return false;
+    seenTokens.add(c.name);
+    return true;
+  });
 
   if (newTokens.length === 0) {
     console.log("AllTokens.js: All tokens already present, skipping.");
@@ -295,28 +321,42 @@ function updateAllTokens() {
 function updateGetCards() {
   const filePath = path.join(SRC_DIR, "getCards.js");
   let content = fs.readFileSync(filePath, "utf8");
+  const EOL = content.includes("\r\n") ? "\r\n" : "\n";
 
-  // Skip names that already have a case (reprints/shared tokens) to avoid
-  // duplicate switch labels.
-  const newCards = cards.filter((c) => !content.includes(`case "${c.name}":`));
+  // Skip names already mapped (reprints/shared tokens), and de-dupe within this
+  // batch: alt-art printings (e.g. the "U"/super-evolve cards) reuse a base or
+  // evolved card's name, which would otherwise emit duplicate switch labels.
+  const seen = new Set();
+  const newCards = cards.filter((c) => {
+    if (seen.has(c.name)) return false;
+    if (content.includes(`case "${c.name}":`)) return false;
+    seen.add(c.name);
+    return true;
+  });
 
   if (newCards.length === 0) {
     console.log("getCards.js: All cards already mapped, skipping.");
     return;
   }
 
-  // Build new switch cases for the new cards
+  // Build new switch cases (EOL-aware so CRLF files stay CRLF).
   const newCases = newCards
-    .map((c) => {
-      return `    case "${c.name}":\n      return "../textures/${c.cardNo}.png";`;
-    })
-    .join("\n");
+    .map((c) => `    case "${c.name}":${EOL}      return "../textures/${c.cardNo}.png";`)
+    .join(EOL);
 
-  // Insert before the default case
-  content = content.replace(
-    /(\s*default:\s*\n\s*return "";)/,
-    `\n${newCases}\n$1`
-  );
+  // Insert immediately before the cardImage switch's `default:` case. Match both
+  // the block form (`default: {`, current — uses a card-stats.json fallback) and
+  // the legacy form (`default:\n return "";`), regardless of line endings.
+  const defaultRe = /^[ \t]*default:\s*(?:\{|\r?\n[ \t]*return "";)/m;
+  const m = content.match(defaultRe);
+  if (!m) {
+    console.log(
+      "getCards.js: WARNING could not find the switch `default:` anchor — " +
+        "no mappings written. Insert the cases manually before the default case."
+    );
+    return;
+  }
+  content = content.slice(0, m.index) + newCases + EOL + content.slice(m.index);
 
   if (DRY_RUN) {
     console.log("getCards.js: Would add", newCards.length, "new switch cases (", cards.length - newCards.length, "already present)");
@@ -326,9 +366,12 @@ function updateGetCards() {
   }
 }
 
-// --- Update CreateDeck.js (deck-builder UI) ---
-// Wires the set into the imports, the class-filter switch, and the set menu.
-// Requires a display name (--name); without one, prints the snippets to add.
+// --- Update CreateDeck.js (LEGACY deck-builder UI) ---
+// Wires the set into the old imports/class-filter switch/MenuItem path. The
+// modern deck builder no longer needs this: its Set dropdown is driven by
+// cardPrintings.json + theme.js (handled by updateThemeLabels +
+// rebuildDeckBuilderData). Kept as best-effort for older UI revisions; if its
+// anchors are absent, that's expected — not an error.
 function updateCreateDeck() {
   const filePath = path.join(__dirname, "..", "pages", "CreateDeck.js");
   if (!fs.existsSync(filePath)) {
@@ -393,7 +436,7 @@ function updateCreateDeck() {
   }
 
   if (missing.length > 0) {
-    console.log(`CreateDeck.js: WARNING could not place: ${missing.join(", ")} (anchor not found). No changes written - wire these manually.`);
+    console.log(`CreateDeck.js: legacy UI anchors not present (${missing.join(", ")}) — skipping. The modern builder is wired via theme.js + cardPrintings, so no action needed.`);
     return;
   }
 
@@ -405,16 +448,96 @@ function updateCreateDeck() {
   }
 }
 
+// --- Update theme.js (deck-builder Set dropdown labels) ---
+// The modern deck builder derives its Set filter from cardPrintings.json plus
+// SET_CODE_ORDER / SET_CODE_LABELS in theme.js. Register the set's code + label
+// so it appears (named) and in the right order. Needs --name for the label.
+function updateThemeLabels() {
+  const filePath = path.join(__dirname, "..", "components", "deckbuilder", "theme.js");
+  if (!fs.existsSync(filePath)) {
+    console.log("theme.js: not found, skipping deck-builder labels.");
+    return;
+  }
+  if (!DISPLAY_NAME) {
+    console.log(
+      `theme.js: no --name given, leaving labels untouched. To name the set in the ` +
+        `deck builder, add ${EXPANSION} to SET_CODE_ORDER and SET_CODE_LABELS.`
+    );
+    return;
+  }
+  let content = fs.readFileSync(filePath, "utf8");
+  const EOL = content.includes("\r\n") ? "\r\n" : "\n";
+
+  if (new RegExp(`\\b${EXPANSION}:\\s*"`).test(content)) {
+    console.log(`theme.js: ${EXPANSION} already labeled, skipping.`);
+    return;
+  }
+
+  let changed = false;
+  // SET_CODE_ORDER: prepend the new code (the builder lists newest-first).
+  content = content.replace(
+    /(export const SET_CODE_ORDER = \[\r?\n\s*)/,
+    (full) => { changed = true; return `${full}"${EXPANSION}", `; }
+  );
+  // SET_CODE_LABELS: add a label entry right after the opening brace.
+  content = content.replace(
+    /(export const SET_CODE_LABELS = \{\r?\n)/,
+    (full) => { changed = true; return `${full}  ${EXPANSION}: "${DISPLAY_NAME}",${EOL}`; }
+  );
+  // SET_LABELS (legacy "set N" keys): add one too, when the block is present.
+  content = content.replace(
+    /(export const SET_LABELS = \{\r?\n(?:\s*main:[^\r\n]*\r?\n)?)/,
+    (full) => `${full}  "set ${SET_NUMBER}": "${DISPLAY_NAME}",${EOL}`
+  );
+
+  if (!changed) {
+    console.log("theme.js: WARNING SET_CODE_ORDER/LABELS anchors not found — label not added.");
+    return;
+  }
+  if (DRY_RUN) {
+    console.log(`theme.js: Would label ${EXPANSION} as "${DISPLAY_NAME}".`);
+  } else {
+    fs.writeFileSync(filePath, content);
+    console.log(`theme.js: Labeled ${EXPANSION} as "${DISPLAY_NAME}".`);
+  }
+}
+
+// --- Rebuild deck-builder datasets ---
+// The deck builder reads cardPrintings.json (printing grid + Set dropdown) and
+// cardData.json (card inspector text). Both are full rebuilds that scan every
+// src/scripts/<SET>-cards.json, so re-running their builders folds this set in.
+function rebuildDeckBuilderData() {
+  if (DRY_RUN) {
+    console.log("Deck-builder data: would rebuild cardPrintings.json + cardData.json.");
+    return;
+  }
+  for (const script of ["buildprintings.cjs", "buildcarddata.cjs"]) {
+    const scriptPath = path.join(SCRIPTS_DIR, script);
+    if (!fs.existsSync(scriptPath)) {
+      console.log(`Deck-builder data: ${script} not found, skipping.`);
+      continue;
+    }
+    try {
+      execFileSync(process.execPath, [scriptPath], { stdio: "pipe" });
+      console.log(`Deck-builder data: rebuilt via ${script}.`);
+    } catch (e) {
+      console.log(`Deck-builder data: WARNING ${script} failed: ${e.message}`);
+    }
+  }
+}
+
 // Run all updates
 updateAllCards();
 updateAllCardsEvo();
 updateAllTokens();
 updateGetCards();
+updateThemeLabels();
 updateCreateDeck();
+rebuildDeckBuilderData();
 
 if (DRY_RUN) {
   console.log("\nDry run complete. Run without --dry-run to apply changes.");
 } else {
   console.log("\nAll files updated successfully!");
-  console.log("Verify changes with: git diff src/decks/ src/pages/CreateDeck.js");
+  console.log("Verify changes with: git diff src/decks/ src/components/deckbuilder/theme.js src/pages/CreateDeck.js");
 }

@@ -31,7 +31,6 @@ import "../../css/Card.css";
 import { useUiModalOpen } from "../hooks/useUiChromeVisible";
 import { ModalHideUiRow } from "../ui/HideUiButton";
 
-const img = require("../../assets/pin_bellringer_angel.png");
 
 const style = {
   position: "relative",
@@ -141,7 +140,7 @@ export default function EnemyEvoDeck({ setHovering, ready }) {
         style={{
           // height: "160px",
           // width: "115px",
-          cursor: `url(${img}) 55 55, auto`,
+          cursor: "default",
         }}
         className={"cardStyle"}
       >

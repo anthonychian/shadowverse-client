@@ -53,7 +53,9 @@
   /* width: 20vw; */
   /* width: 350px; */
   /* background-color: red; */
-  width: 20vw;
+  /* Sized so the hover card preview's art (capped at ~50vh) fills the column
+     width with no empty side gaps. A ~50vh portrait card is ~21vw wide. */
+  width: 21vw;
 
   height: 100vh;
   display: flex;

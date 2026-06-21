@@ -10,7 +10,6 @@ import {
   setViewingEvoDeck,
   setCurrentCardIndex,
 } from "../../redux/CardSlice";
-import img from "../../assets/pin_bellringer_angel.png";
 import { useUiModalOpen } from "../hooks/useUiChromeVisible";
 import { ModalHideUiRow } from "../ui/HideUiButton";
 
@@ -255,7 +254,7 @@ export default function EvoDeck({
           // height: "160px",
           // width: "115px",
           //   backgroundColor: "rgba(255, 255, 255, 0.1)",
-          cursor: `url(${img}) 55 55, auto`,
+          cursor: "default",
         }}
         className={"cardStyle"}
       >

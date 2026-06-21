@@ -26,7 +26,6 @@ import { triggerCardReveal } from "../field/cardRevealBus";
 import cancel from "../../assets/logo/cancel.png";
 import carrot from "../../assets/logo/carrot.png";
 import drive from "../../assets/logo/drive.png";
-import img from "../../assets/pin_bellringer_angel.png";
 import atkImg from "../../assets/logo/atk.png";
 import defImg from "../../assets/logo/def.png";
 
@@ -36,6 +35,28 @@ import "../../css/Card.css";
 // the gesture is treated as a tap (engage), so tapping stays reliable and only a
 // deliberate drag relocates the card.
 const FIELD_DRAG_THRESHOLD = 10;
+
+// Large, very transparent +/- targets that overlay each Atk/Def icon ("+" over
+// the top half, "−" over the bottom). Green tint = increment, red tint =
+// decrement, so the direction is obvious. Only rendered for the player's cards.
+const statStepBtnStyle = (kind) => ({
+  width: "100%",
+  height: "100%",
+  minWidth: 0,
+  padding: 0,
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  fontSize: 18,
+  fontWeight: 700,
+  lineHeight: 1,
+  color: "rgba(255, 255, 255, 0.95)",
+  background: kind === "inc" ? "rgba(40, 200, 90, 0.55)" : "rgba(230, 55, 55, 0.55)",
+  border: `1px solid ${kind === "inc" ? "rgba(60, 220, 110, 0.85)" : "rgba(240, 80, 80, 0.85)"}`,
+  borderRadius: 4,
+  cursor: "pointer",
+  userSelect: "none",
+});
 
 export default function Card({
   name,
@@ -74,6 +95,12 @@ export default function Card({
   const [def, setDef] = useState(0);
   const [counter, setCounter] = useState(0);
   const [hoverInput, setHoverInput] = useState(false);
+  // Reveal each +/- button only while the player hovers its own half of the
+  // stat icon (top half = increment, bottom half = decrement).
+  const [showAtkInc, setShowAtkInc] = useState(false);
+  const [showAtkDec, setShowAtkDec] = useState(false);
+  const [showDefInc, setShowDefInc] = useState(false);
+  const [showDefDec, setShowDefDec] = useState(false);
   // Keyword status badges show compact (inside the card) by default and expand
   // to large vertical labels beside the card on hover.
   const [kwHover, setKwHover] = useState(false);
@@ -333,23 +360,20 @@ export default function Card({
     };
   }
 
-  const handleAtkInput = (event) => {
-    setAtk(Number(event.target.value));
-    dispatch(
-      modifyAtk({
-        value: event.target.value,
-        index: idx,
-      })
-    );
+  // Step Atk/Def up or down by `delta` (clamped). Used by the +/- buttons shown
+  // in "Modify Atk/Def" mode — bigger, easier-to-hit controls than the old
+  // number-input spinners.
+  const changeAtk = (delta) => {
+    if (opponentField) return;
+    const v = Math.max(0, Math.min(99, Number(atk || 0) + delta));
+    setAtk(v);
+    dispatch(modifyAtk({ value: String(v), index: idx }));
   };
-  const handleDefInput = (event) => {
-    setDef(Number(event.target.value));
-    dispatch(
-      modifyDef({
-        value: event.target.value,
-        index: idx,
-      })
-    );
+  const changeDef = (delta) => {
+    if (opponentField) return;
+    const v = Math.max(0, Number(def || 0) + delta);
+    setDef(v);
+    dispatch(modifyDef({ value: String(v), index: idx }));
   };
 
   const handleCounterInput = (event) => {
@@ -429,7 +453,8 @@ export default function Card({
         style={{
           position: "relative",
           zIndex: kwHover ? 999 : "auto",
-          cursor: `url(${img}) 55 55, auto`,
+          // Cards use the normal cursor on hover (no custom cursor icon).
+          cursor: "default",
           // Kept invisible while its "card played" reveal flies to this slot;
           // it fades in once the reveal lands (see PlayReveal / cardRevealBus).
           opacity: hidden ? 0 : 1,
@@ -635,79 +660,98 @@ export default function Card({
         )}
 
         {showAtk && (
-          <>
-            <input
-              disabled={opponentField ? true : false}
-              value={atk}
-              onChange={handleAtkInput}
-              type="number"
-              min={0}
-              max={99}
-              className={"atkInputNum"}
-              onMouseEnter={handleStartHoverInput}
-              onMouseLeave={handleEndHoverInput}
-            />
-            <div
+          <div
+            style={{
+              position: "absolute",
+              bottom: 0,
+              right: atk > 9 ? "50%" : "60%",
+              display: "flex",
+              alignItems: "center",
+              zIndex: 90,
+            }}
+          >
+            <img draggable={false} height={"40px"} src={atkImg} alt="atk" />
+            <span
               style={{
-                position: "absolute",
-                top: "75%",
-                right: atk > 9 ? "50%" : "60%",
-                display: "flex",
-                alignItems: "center",
+                color: "white",
+                fontSize: "25px",
+                textShadow: "-1px 1px 0 #000",
+                position: "relative",
+                top: "50%",
+                right: "50%",
               }}
             >
-              <img draggable={false} height={"40px"} src={atkImg} alt="atk" />
-              <span
-                style={{
-                  color: "white",
-                  fontSize: "25px",
-                  textShadow: "-1px 1px 0 #000",
-                  position: "relative",
-                  top: "50%",
-                  right: "50%",
-                }}
-              >
-                {atk}
-              </span>
-            </div>
-          </>
+              {atk}
+            </span>
+            {/* Two stacked hover-zones over the icon: each reveals ONLY its own
+                button while hovered. Top = "+" (green), bottom = "−" (red). */}
+            {!opponentField && (
+              <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", zIndex: 100 }}>
+                <div
+                  onMouseEnter={() => { setHoverInput(true); setShowAtkInc(true); }}
+                  onMouseLeave={() => { setHoverInput(false); setShowAtkInc(false); }}
+                  onPointerDown={(e) => e.stopPropagation()}
+                  style={{ flex: 1, display: "flex" }}
+                >
+                  {showAtkInc && <button type="button" onClick={() => changeAtk(1)} style={statStepBtnStyle("inc")}>+</button>}
+                </div>
+                <div
+                  onMouseEnter={() => { setHoverInput(true); setShowAtkDec(true); }}
+                  onMouseLeave={() => { setHoverInput(false); setShowAtkDec(false); }}
+                  onPointerDown={(e) => e.stopPropagation()}
+                  style={{ flex: 1, display: "flex" }}
+                >
+                  {showAtkDec && <button type="button" onClick={() => changeAtk(-1)} style={statStepBtnStyle("dec")}>−</button>}
+                </div>
+              </div>
+            )}
+          </div>
         )}
         {showDef && (
-          <>
-            <input
-              disabled={opponentField ? true : false}
-              value={def}
-              onChange={handleDefInput}
-              type="number"
-              min={0}
-              className={"defInputNum"}
-              onMouseEnter={handleStartHoverInput}
-              onMouseLeave={handleEndHoverInput}
-            />
-            <div
+          <div
+            style={{
+              position: "absolute",
+              bottom: 0,
+              left: "70%",
+              display: "flex",
+              alignItems: "center",
+              zIndex: 90,
+            }}
+          >
+            <img draggable={false} height={"40px"} src={defImg} alt="def" />
+            <span
               style={{
-                position: "absolute",
-                top: "75%",
-                left: "70%",
-                display: "flex",
-                alignItems: "center",
+                color: "white",
+                fontSize: "25px",
+                textShadow: "-1px 1px 0 #000",
+                position: "relative",
+                top: "50%",
+                right: "50%",
               }}
             >
-              <img draggable={false} height={"40px"} src={defImg} alt="atk" />
-              <span
-                style={{
-                  color: "white",
-                  fontSize: "25px",
-                  textShadow: "-1px 1px 0 #000",
-                  position: "relative",
-                  top: "50%",
-                  right: "50%",
-                }}
-              >
-                {def}
-              </span>
-            </div>
-          </>
+              {def}
+            </span>
+            {!opponentField && (
+              <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", zIndex: 100 }}>
+                <div
+                  onMouseEnter={() => { setHoverInput(true); setShowDefInc(true); }}
+                  onMouseLeave={() => { setHoverInput(false); setShowDefInc(false); }}
+                  onPointerDown={(e) => e.stopPropagation()}
+                  style={{ flex: 1, display: "flex" }}
+                >
+                  {showDefInc && <button type="button" onClick={() => changeDef(1)} style={statStepBtnStyle("inc")}>+</button>}
+                </div>
+                <div
+                  onMouseEnter={() => { setHoverInput(true); setShowDefDec(true); }}
+                  onMouseLeave={() => { setHoverInput(false); setShowDefDec(false); }}
+                  onPointerDown={(e) => e.stopPropagation()}
+                  style={{ flex: 1, display: "flex" }}
+                >
+                  {showDefDec && <button type="button" onClick={() => changeDef(-1)} style={statStepBtnStyle("dec")}>−</button>}
+                </div>
+              </div>
+            )}
+          </div>
         )}
         {evolvedUsed && (
           <img

@@ -1,35 +1,39 @@
 import React from "react";
-import { artImage } from "../../decks/getCards";
+import CardInspector from "../deckbuilder/CardInspector";
+import { COLORS } from "../deckbuilder/theme";
 
-export default function ZoomedCard({ hovering, name, scale = 1, art }) {
+// In-game hover preview. Fills the whole left column (the space otherwise used
+// by PlayPoints), styled exactly like the CreateDeck inspector: English name,
+// class/type, cost & stats, traits and the translated (tokenized) effect text —
+// so Japanese card art can be read in English on hover. Rendered absolutely
+// inside the (position: relative) leftSideCanvas so it overlays PlayPoints only
+// while a card is hovered.
+export default function ZoomedCard({ hovering, name, art }) {
+  if (!hovering || !name) return null;
+  const cardNo = art ? art[name] : undefined;
   return (
-    <>
-      {hovering && (
-        <div
-          style={{
-            position: "fixed",
-            top: "10%",
-            left: 0,
-            width: "20vw",
-            height: "60%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "flex-start",
-            zIndex: 100,
-            pointerEvents: "none",
-          }}
-        >
-          <img
-            height={"100%"}
-            src={artImage(name, art)}
-            alt={name}
-            style={{
-              transform: `scale(${scale})`,
-              transformOrigin: "top center",
-            }}
-          />
-        </div>
-      )}
-    </>
+    <div
+      style={{
+        position: "absolute",
+        inset: 0,
+        zIndex: 50,
+        background: COLORS.panel,
+        borderRadius: 12,
+        padding: 14,
+        display: "flex",
+        flexDirection: "column",
+        overflow: "hidden",
+        pointerEvents: "none",
+        boxShadow: "0 8px 30px rgba(0,0,0,0.6)",
+        // The Game's .canvas container sets text-align:center, which the preview
+        // would otherwise inherit. Force left so the text matches CreateDeck.
+        textAlign: "left",
+      }}
+    >
+      {/* Cap the card art at ~half the screen height and auto-scale the effect
+          text to fit — the preview must never need a scrollbar (the viewer is
+          holding a hover and can't scroll). */}
+      <CardInspector name={name} cardNo={cardNo} readOnly imageMaxHeight="50vh" fitEffect />
+    </div>
   );
 }

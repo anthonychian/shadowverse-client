@@ -1,0 +1,2472 @@
+[
+  {
+    "cardNo": "BP19-001EN",
+    "name": "Magachiyo, Barbed Convict",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Elf",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-001EN.png"
+  },
+  {
+    "cardNo": "BP19-002EN",
+    "name": "Magachiyo, Barbed Convict Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Condemned / Elf",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Storm. On Evolve - Select an enemy follower on the field. Combo (3) - Deal it 4 damage. On Super-Evolve - Give each other Condemned follower on your field Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-002EN.png"
+  },
+  {
+    "cardNo": "BP19-003EN",
+    "name": "Wimael, Redolent Enforcer",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Verdant / Insect",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "6",
+      "attack": "4",
+      "defense": "5",
+      "effect": "[fanfare] Select an enemy follower on the field and deal it 4 damage. [lastwords] Summon this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-003EN.png"
+  },
+  {
+    "cardNo": "BP19-004EN",
+    "name": "Zwei, Symphonic Heart",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Puppetry / Cutthroat",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "1",
+      "effect": "[fanfare] Banish 2 cards named Puppet from your EX area: Put a Victoria token into your EX area. [act] [engage]: Select up to 2 cards named Puppet on your field and give them [attack]+1/[defense]+1. Activate only if there are at least 3 Puppetry cards in your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-004EN.png"
+  },
+  {
+    "cardNo": "BP19-005EN",
+    "name": "Verdant Lieutenant",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Elf",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. Whenever a Condemned follower on your field evolves, Combo (3) - Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-005EN.png"
+  },
+  {
+    "cardNo": "BP19-006EN",
+    "name": "Verdant Lieutenant",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Condemned / Elf",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Whenever a Condemned follower on your field evolves, Combo (3) - Draw a card. On Evolve - Select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-006EN.png"
+  },
+  {
+    "cardNo": "BP19-007EN",
+    "name": "Warden of Balms",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Verdant / Insect",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "6",
+      "attack": "6",
+      "defense": "6",
+      "effect": "Ward. [fanfare]/[lastwords] Deal 3 damage to each enemy leader. [act] Discard this: Select a Condemned follower on your field and destroy it. Deal 1 damage to each enemy leader. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-007EN.png"
+  },
+  {
+    "cardNo": "BP19-008EN",
+    "name": "Synchronous Hearts",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Puppetry / Cutthroat",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Search your deck for a 3-cost or less card with \"Orchis\" in its name and a 3-cost or less card with \"Zwei\" in its name, summon them, then shuffle. Put 2 Puppet tokens into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-008EN.png"
+  },
+  {
+    "cardNo": "BP19-009EN",
+    "name": "Budding Initiate",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Elf",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost02]: Evolve this. [fanfare], Combo (3) - Evolve this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-009EN.png"
+  },
+  {
+    "cardNo": "BP19-010EN",
+    "name": "Budding Initiate Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Condemned / Elf",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - Look at the top 4 cards of your deck. You may reveal a Condemned card from among them and add it to hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-010EN.png"
+  },
+  {
+    "cardNo": "BP19-011EN",
+    "name": "Leafshade Assassin",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Elf",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Whenever a Condemned follower on your field evolves, select an enemy follower on the field. Combo (3) - Deal it 3 damage. [fanfare] The next Condemned card you play this turn costs 1 less to play."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-011EN.png"
+  },
+  {
+    "cardNo": "BP19-012EN",
+    "name": "Puppet Workout",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Puppetry",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Summon 2 Puppet tokens. Give each Puppetry token follower on your field [attack]+2 and Assail."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-012EN.png"
+  },
+  {
+    "cardNo": "BP19-013EN",
+    "name": "Beast Lancer",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "5",
+      "effect": "[evolve] [cost01]: Evolve this. Ward. [fanfare] Select an enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-013EN.png"
+  },
+  {
+    "cardNo": "BP19-014EN",
+    "name": "Beast Lancer Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "6",
+      "effect": "Ward. On Evolve - Select an enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-014EN.png"
+  },
+  {
+    "cardNo": "BP19-015EN",
+    "name": "Merchant of the Wood",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Merchant / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "3",
+      "effect": "Rush. [fanfare] Draw 2 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-015EN.png"
+  },
+  {
+    "cardNo": "BP19-016EN",
+    "name": "Rogue Puppeteer",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Puppetry",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Discard a Puppetry card: Draw a card. Put 2 Puppet tokens into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-016EN.png"
+  },
+  {
+    "cardNo": "BP19-017EN",
+    "name": "Support Troop Elf",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "Rush. [fanfare] Select another card on your field not named Support Troop Elf and return it to its owner's hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-017EN.png"
+  },
+  {
+    "cardNo": "BP19-018EN",
+    "name": "Galepierce",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Elf",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Return a card on your field to its owner's hand: Select an enemy follower on the field and deal it 6 damage. Deal 2 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-018EN.png"
+  },
+  {
+    "cardNo": "BP19-019EN",
+    "name": "Barbaros, Briny Convict",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Thief",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. Loot cards in your EX area cost 1 less to play. [fanfare] Put a Dread Pirate's Flag token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-019EN.png"
+  },
+  {
+    "cardNo": "BP19-020EN",
+    "name": "Barbaros, Briny Convict Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Condemned / Thief",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Loot cards in your EX area cost 1 less to play. Whenever you play a Loot card during your turn, choose 1 that you haven't already chosen this turn. (1) Select an enemy follower on the field and destroy it. (2) Each opponent buries the top 2 cards of their deck. (3) Recover 2 play points."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-020EN.png"
+  },
+  {
+    "cardNo": "BP19-021EN",
+    "name": "Radiel, Valorous Enforcer",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Commander",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "7",
+      "attack": "6",
+      "defense": "8",
+      "effect": "Storm. Ward. Strike - If there are 10 [swordcraft] followers on your field and/or in your EX area, refresh this. Activate only twice per turn. [fanfare] If there are at least 5 [swordcraft] followers on your field and/or in your EX area, banish each enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-021EN.png"
+  },
+  {
+    "cardNo": "BP19-022EN",
+    "name": "Gildaria, Anathema of Peace",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Anathema / Beast",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost02]: Evolve this. [fanfare] Summon a Steelclad Knight and Knight token. If there are 5 [swordcraft] cards on your field, evolve this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-022EN.png"
+  },
+  {
+    "cardNo": "BP19-023EN",
+    "name": "Gildaria, Anathema of Peace Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Anathema / Beast",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "On Evolve - Deal 4 damage to each enemy follower on the field. Deal 2 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-023EN.png"
+  },
+  {
+    "cardNo": "BP19-024EN",
+    "name": "Warden of Honor",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Commander",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this. Ward. [fanfare] Put the top card of your deck into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-024EN.png"
+  },
+  {
+    "cardNo": "BP19-025EN",
+    "name": "Warden of Honor Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Condemned / Commander",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "5",
+      "effect": "Ward. On Evolve - Choose 1. (1) Search your deck for a Warden of Honor, summon it, then shuffle. (2) [cost03]: Search your deck for a Radiel, Valorous Enforcer, summon it, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-025EN.png"
+  },
+  {
+    "cardNo": "BP19-026EN",
+    "name": "Tidal Gunner",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Thief",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Whenever you play a Dread Pirate's Flag, select an enemy leader or enemy follower on the field and deal it 1 damage. [fanfare] Put a Dread Pirate's Flag token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-026EN.png"
+  },
+  {
+    "cardNo": "BP19-027EN",
+    "name": "Prim, Princess's Picnic",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Princess",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[fanfare] Search your deck for a Maid follower, reveal it, add it to your hand, then shuffle. [act] [cost01], [engage]: You may summon a Nonja, Silent Maid from your hand. If you do, give it Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-027EN.png"
+  },
+  {
+    "cardNo": "BP19-028EN",
+    "name": "Storm-Wracked First Mate",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Thief",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Put a Dread Pirate's Flag token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-028EN.png"
+  },
+  {
+    "cardNo": "BP19-029EN",
+    "name": "Storm-Wracked First Mate Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Condemned / Thief",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Search your deck for a follower with both the Condemned and Thief traits, reveal it, add it to your hand, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-029EN.png"
+  },
+  {
+    "cardNo": "BP19-030EN",
+    "name": "Deep-Sea Scout",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Thief",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] Put a Dread Pirate's Flag token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-030EN.png"
+  },
+  {
+    "cardNo": "BP19-031EN",
+    "name": "Return from the Brink",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Officer",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an Officer follower in your cemetery. Put it into your EX area and give it [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-031EN.png"
+  },
+  {
+    "cardNo": "BP19-032EN",
+    "name": "Felpurr Maid",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Maid / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. Storm. Strike - Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-032EN.png"
+  },
+  {
+    "cardNo": "BP19-033EN",
+    "name": "Felpurr Maid Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Maid / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Storm. Strike - Draw a card. On Evolve - Deal 1 damage to each enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-033EN.png"
+  },
+  {
+    "cardNo": "BP19-034EN",
+    "name": "Knightly Thief",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Thief",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "2",
+      "effect": "Rush. [lastwords] Put a Gilded Blade token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-034EN.png"
+  },
+  {
+    "cardNo": "BP19-035EN",
+    "name": "Heavy Warrior",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Ward. [fanfare] Select an enemy follower on the field and deal it and its leader 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-035EN.png"
+  },
+  {
+    "cardNo": "BP19-036EN",
+    "name": "Ninja Onslaught",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Ninja",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field. Deal it 2 damage and draw a card. If there's a Ninja follower on your field, deal 3 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-036EN.png"
+  },
+  {
+    "cardNo": "BP19-037EN",
+    "name": "Cannon Volley",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Officer",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field. Summon a Shield Guardian and a Knight token. Deal damage to the selected follower equal to the number of [swordcraft] followers on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-037EN.png"
+  },
+  {
+    "cardNo": "BP19-038EN",
+    "name": "Sephie, Depraved Convict",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Alchemist / Forbidden",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Remove a fusion counter from this: Summon a Multi-Headed Test Subject token. Activate, Fusion 1 non-token follower: Put a fusion counter on this. If you fused with a Condemned follower, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-038EN.png"
+  },
+  {
+    "cardNo": "BP19-039EN",
+    "name": "Sephie, Depraved Convict Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Condemned / Alchemist / Forbidden",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Choose 1. If there are at least 10 Condemned followers in your cemetery, choose up to 2 instead. (1) Select an enemy follower on the field and deal it 5 damage. (2) Summon a Multi-Headed Test Subject token. On Super-Evolve - Select up to 2 Volunteer Test Subject or Multi-Headed Test Subject on your field and give them Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-039EN.png"
+  },
+  {
+    "cardNo": "BP19-040EN",
+    "name": "Simael, Cleansing Enforcer",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Mage",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "10",
+      "attack": "3",
+      "defense": "5",
+      "effect": "This costs 1 less to play for every pair of a Mage follower and a Mage spell in your cemetery. Storm. Bane. Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-040EN.png"
+  },
+  {
+    "cardNo": "BP19-041EN",
+    "name": "Kyrzael, Killshot Enforcer",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Machina",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "6",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Storm. Strike - Give each other Machina follower on your field [attack]+1/[defense]+1. [fanfare] Search your deck for a Warden of the Trigger, summon it, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-041EN.png"
+  },
+  {
+    "cardNo": "BP19-042EN",
+    "name": "Obsessive Scholar",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Alchemist / Forbidden",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Remove a fusion counter from this: Summon a Multi-Headed Test Subject token. Activate, Fusion 1 non-token follower: Put a fusion counter on this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-042EN.png"
+  },
+  {
+    "cardNo": "BP19-043EN",
+    "name": "Obsessive Scholar Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Condemned / Alchemist / Forbidden",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 3 damage. [act] [engage]: Select a Volunteer Test Subject or Multi-Headed Test Subject on your field and give it Drain."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-043EN.png"
+  },
+  {
+    "cardNo": "BP19-044EN",
+    "name": "Warden of the Trigger",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Machina",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[fanfare] Look at the top card of your deck. If it's a Machina card, you may put it into your EX area. [act] [engage]: Select an enemy follower on the field and destroy it. Activate only if you have a 6-cost or greater Machina follower on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-044EN.png"
+  },
+  {
+    "cardNo": "BP19-045EN",
+    "name": "Warden of the Arcane",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Mage",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "5",
+      "attack": "2",
+      "defense": "4",
+      "effect": "[fanfare] Deal 2 damage to each enemy follower on the field. Look at the top 3 cards of your deck. You may reveal a Mage card from among them and add it to your hand. Bury the rest. The next 3-cost or less Mage card you play this turn costs 3 less to play."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-045EN.png"
+  },
+  {
+    "cardNo": "BP19-046EN",
+    "name": "Devoted Researcher",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Alchemist / Forbidden",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Remove a fusion counter from this: Summon a Multi-Headed Test Subject token. Activate, Fusion 1 non-token follower: Put a fusion counter on this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-046EN.png"
+  },
+  {
+    "cardNo": "BP19-047EN",
+    "name": "Devoted Researcher Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Condemned / Alchemist / Forbidden",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - Search your deck for a Volunteer Test Subject, put it into your EX area, then shuffle. [act] [engage] and bury a Volunteer Test Subject or Multi-Headed Test Subject on your field: Select an enemy follower on the field and deal it damage equal to the attack of the buried follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-047EN.png"
+  },
+  {
+    "cardNo": "BP19-048EN",
+    "name": "Volunteer Test Subject",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Arcanaform / Forbidden",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "When this card is fused by your Condemned follower's ability, draw a card, then discard a card. [fanfare] If there are at least 5 Condemned followers in your cemetery, give this[attack]+2/[defense]+2 and Rush. If there are at least 10, give this Assail and Bane. [lastwords] Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-048EN.png"
+  },
+  {
+    "cardNo": "BP19-049EN",
+    "name": "Astral Dancer",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Dancer",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Ward. [fanfare] Select a follower on your field. Reveal the top card of your deck and give the selected follower 🛡️+X. X equals the revealed card's cost. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-049EN.png"
+  },
+  {
+    "cardNo": "BP19-050EN",
+    "name": "Electrokitty",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Arcanaform",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-050EN.png"
+  },
+  {
+    "cardNo": "BP19-051EN",
+    "name": "Electrokitty Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arcanaform",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy leader or enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-051EN.png"
+  },
+  {
+    "cardNo": "BP19-052EN",
+    "name": "Outdoorsmage",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Summon a Magic Sediment token. [act] [cost05], Earth Rite: Summon 3 Guardform Golem or Strikeform Golem tokens."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-052EN.png"
+  },
+  {
+    "cardNo": "BP19-053EN",
+    "name": "Ultramarine Witch",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "5",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Storm. [fanfare] Select an enemy follower on the field and deal it 4 damage. [act] [cost01], discard this: Search your deck for a Witch's Cauldron, summon it, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-053EN.png"
+  },
+  {
+    "cardNo": "BP19-054EN",
+    "name": "Feline Magic",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage / Arcanaform",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Search your deck for an Electrokitty, put it into your EX area, then shuffle. Spellchain (7) - It costs 1 less to play this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-054EN.png"
+  },
+  {
+    "cardNo": "BP19-055EN",
+    "name": "Meandering Bolt",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field. Draw a card. Deal damage to the selected follower equal to the number of cards in your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-055EN.png"
+  },
+  {
+    "cardNo": "BP19-056EN",
+    "name": "Antemaria, Huntress Convict",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Dragonewt",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "6",
+      "attack": "6",
+      "defense": "5",
+      "effect": "This can't be played from the EX area. [fanfare] Bury 2 Condemned cards in your EX area: Give this Storm and Drain. [lastwords] Put this into its owner's EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-056EN.png"
+  },
+  {
+    "cardNo": "BP19-057EN",
+    "name": "Drazael, Ravening Enforcer",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Wyrmkin",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "6",
+      "attack": "4",
+      "defense": "5",
+      "effect": "This can't be played from the EX area. [evolve] [cost01]: Evolve this. Ward. This can't be destroyed by abilities. [lastwords] Put this into its owner's EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-057EN.png"
+  },
+  {
+    "cardNo": "BP19-058EN",
+    "name": "Drazael, Ravening Enforcer Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Condemned / Wyrmkin",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "6",
+      "effect": "Ward. This can't be destroyed by abilities. On Evolve - Bury 2 Condemned cards in your EX area: Give each enemy follower on the field 🗡️-5/🛡️-5. Give your leader [defense]+5. [lastwords] Put this into its owner's EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-058EN.png"
+  },
+  {
+    "cardNo": "BP19-059EN",
+    "name": "Masamune, One-Eyed Dragon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart / Draconic Duelist",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Assail. Bane. [fanfare] If there are at least 3 Draconic Duelist cards on your field, give this Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-059EN.png"
+  },
+  {
+    "cardNo": "BP19-060EN",
+    "name": "Scorched-Earth Tyrant",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Dragonewt",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "This can't be played from the EX area. [evolve] [cost01]: Evolve this. [fanfare] Bury a Condemned card in your EX area: Select an enemy follower on the field and deal it 4 damage. [lastwords] Put this into its owner's EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-060EN.png"
+  },
+  {
+    "cardNo": "BP19-061EN",
+    "name": "Scorched-Earth Tyrant Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Condemned / Dragonewt",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 4 damage. [lastwords] Put this into its owner's EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-061EN.png"
+  },
+  {
+    "cardNo": "BP19-062EN",
+    "name": "Neptune, Arbiter of Tides",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart / Marine",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "Whenever a Megalorca is put onto your field, give it Storm. Give your leader [defense]+1. [fanfare] Put a Megalorca token into your EX area. If Overflow is active for you, summon a Megalorca token. [act] [cost00]: The next Marine card you play from your EX area this turn costs 1 less to play. Activate only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-062EN.png"
+  },
+  {
+    "cardNo": "BP19-063EN",
+    "name": "Warden of the Adamant Claw",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Wyrmkin",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "1",
+      "attack": "0",
+      "defense": "1",
+      "effect": "This can't be played from the EX area. Ward. [fanfare] Look at the top 4 cards of your deck. You may reveal a Condemned card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. [lastwords] Put this into its owner's EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-063EN.png"
+  },
+  {
+    "cardNo": "BP19-064EN",
+    "name": "Hotheaded Marauder",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Dragonewt",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "This can't be played from the EX area. [evolve] [cost01]: Evolve this. [lastwords] Put this into its owner's EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-064EN.png"
+  },
+  {
+    "cardNo": "BP19-065EN",
+    "name": "Hotheaded Marauder Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Condemned / Dragonewt",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Search your deck for a 1-cost Condemned follower, summon it, then shuffle. [lastwords] Put this into its owner's EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-065EN.png"
+  },
+  {
+    "cardNo": "BP19-066EN",
+    "name": "Razor-Clawed Thief",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Dragonewt",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "1",
+      "effect": "This can't be played from the EX area. Rush. Assail. [lastwords] Put this into its owner's EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-066EN.png"
+  },
+  {
+    "cardNo": "BP19-067EN",
+    "name": "Seasoned Merman",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Marine",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Each Megalorca on your field has Rush and Assail. [fanfare] Summon 2 Megalorca tokens. Put the top card of your deck into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-067EN.png"
+  },
+  {
+    "cardNo": "BP19-068EN",
+    "name": "Dancing Crab",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Marine",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. Intimidate. Strike - Select an enemy follower on the field and give it 🗡️-1/🛡️-1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-068EN.png"
+  },
+  {
+    "cardNo": "BP19-069EN",
+    "name": "Dancing Crab Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Marine",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Intimidate. Strike - Select an enemy follower on the field and give it 🗡️-1/🛡️-1. On Evolve - Select an enemy follower on the field and engage it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-069EN.png"
+  },
+  {
+    "cardNo": "BP19-070EN",
+    "name": "Mermaid Songstress",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Marine / Musical",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[fanfare] Discard a Marine card: Put the top card of your deck into your EX area. If your EX area has at least 2 cards, give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-070EN.png"
+  },
+  {
+    "cardNo": "BP19-071EN",
+    "name": "Dark Mermaid",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Marine",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "6",
+      "attack": "6",
+      "defense": "6",
+      "effect": "[fanfare] Select an enemy follower on the field and destroy it. Put the top card of your deck into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-071EN.png"
+  },
+  {
+    "cardNo": "BP19-072EN",
+    "name": "Dragonewt's Might",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Dragonewt / Draconic Duelist",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select up to 2 enemy followers on the field and deal them each 6 damage. You may discard a card. If you do and the discarded card is a Dragonewt follower, deal 2 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-072EN.png"
+  },
+  {
+    "cardNo": "BP19-073EN",
+    "name": "Call of the Megalorca",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Marine",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "This costs 1 less to play from your EX area. Summon a Megalorca token. Draw a card. If Overflow is active for you, summon a Megalorca token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-073EN.png"
+  },
+  {
+    "cardNo": "BP19-074EN",
+    "name": "Istyndet, Soul Convict",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Necromancer",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "Once on each of your turns, whenever you have at least 10 cards in your cemetery and another 3-cost or lower Condemned follower on your field is put into the cemetery, summon it. Its [fanfare] abilities don't activate. [fanfare] Bury the top 2 cards of your deck. [act] [engage] and bury a Condemned follower on your field not named Istyndet, Soul Convict: Select an enemy follower on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-074EN.png"
+  },
+  {
+    "cardNo": "BP19-075EN",
+    "name": "Garodeth, Insurgent Convict",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Demon",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost05]: Evolve this. Whenever your leader's defense decreases during your turn, if it's at least the 4th time this turn, evolve this. [fanfare] Deal 1 damage to your leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-075EN.png"
+  },
+  {
+    "cardNo": "BP19-076EN",
+    "name": "Garodeth, Insurgent Convict Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Condemned / Demon",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "Storm. On Evolve - Select an enemy follower on the field and deal it 8 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-076EN.png"
+  },
+  {
+    "cardNo": "BP19-077EN",
+    "name": "Zeronua, Demon of Domination",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Festive / Demon",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[fanfare] If you have 2 or less cards in your hand, search your deck for up to 1 Paracelise, Demon of Greed and put it into your EX area. It costs 3 less to play this turn if you have no cards in your hand. [act] [cost01]: Put this card from your hand into your EX area: Give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-077EN.png"
+  },
+  {
+    "cardNo": "BP19-078EN",
+    "name": "Abyssal Colonel",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Departed",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. Necrocharge (10) - This has Storm. [lastwords] Select an enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-078EN.png"
+  },
+  {
+    "cardNo": "BP19-079EN",
+    "name": "Abyssal Colonel Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Condemned / Departed",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Necrocharge (10) - This has Storm and Ward. On Evolve - Give your leader [defense]+2. [lastwords] Select an enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-079EN.png"
+  },
+  {
+    "cardNo": "BP19-080EN",
+    "name": "Myroel, Death Enforcer",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Demon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "7",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Whenever a follower on your field is summoned, if it was summoned from the cemetery, deal 1 damage to each enemy follower on the field. [fanfare] Discard a Condemned card: Draw a card. [act] [engage]: Select a 5-cost or lower Condemned follower and a 3-cost or lower Condemned follower from your cemetery and summon them."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-080EN.png"
+  },
+  {
+    "cardNo": "BP19-081EN",
+    "name": "Genomuel, Wyrm Enforcer",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Demon",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "At the start of your end phase, give each enemy follower on the field 🗡️-3/🛡️-3. Deal 3 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-081EN.png"
+  },
+  {
+    "cardNo": "BP19-082EN",
+    "name": "Underworld Lieutenant",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Departed",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. [evolve] [cost00]: Evolve this. Activate only if this was summoned from the cemetery. [lastwords] Bury the top card of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-082EN.png"
+  },
+  {
+    "cardNo": "BP19-083EN",
+    "name": "Underworld Lieutenant",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Condemned / Departed",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage. [lastwords] Bury the top card of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-083EN.png"
+  },
+  {
+    "cardNo": "BP19-084EN",
+    "name": "Warden of Corpses",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Demon",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "Ward. [fanfare] Draw a card. If there's a Myroel, Death Enforcer on your field, give your leader [defense]+4."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-084EN.png"
+  },
+  {
+    "cardNo": "BP19-085EN",
+    "name": "Raging Commander",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Demon",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "1",
+      "effect": "Your cards named Garodeth, Insurgent Convict cost 1 less to play. Four times on each of your turns, whenever your leader's defense decreases, select an enemy follower on the field and deal it 1 damage. [fanfare] Deal 1 damage to your leader. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-085EN.png"
+  },
+  {
+    "cardNo": "BP19-086EN",
+    "name": "Vicious Blitzer",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Demon",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Deal 1 damage to your leader. If there's a Garodeth, Insurgent Convict on your field, evolve this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-086EN.png"
+  },
+  {
+    "cardNo": "BP19-087EN",
+    "name": "Vicious Blitzer Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Condemned / Demon",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - Deal 1 damage to each leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-087EN.png"
+  },
+  {
+    "cardNo": "BP19-088EN",
+    "name": "Fallen Sergeant",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Departed",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[lastwords] Choose 1. (1) Select an enemy follower on the field. Necrocharge (10) - Deal it 2 damage. (2) Bury the top card of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-088EN.png"
+  },
+  {
+    "cardNo": "BP19-089EN",
+    "name": "Steamrolling Tank",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Demon",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "1",
+      "attack": "0",
+      "defense": "2",
+      "effect": "Ward. Four times on each of your turns, whenever your leader's defense decreases, give your leader [defense]+1. [fanfare] Deal 1 damage to your leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-089EN.png"
+  },
+  {
+    "cardNo": "BP19-090EN",
+    "name": "Howling Scream",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "0",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose up to 2. (1) [cost01]: Select an enemy follower on the field and deal it 2 damage. Deal 1 damage to your leader. (2) [cost01]: Deal 1 damage to your leader. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-090EN.png"
+  },
+  {
+    "cardNo": "BP19-091EN",
+    "name": "Prison of Pain",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Amulet",
+      "trait": "Demon",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Put 2 pain counters on this. Draw a card. [act] [engage] and remove a pain counter from this: Deal 1 damage to your leader. If this has no pain counters, bury this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-091EN.png"
+  },
+  {
+    "cardNo": "BP19-092EN",
+    "name": "Erralde, Troth Convict",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Luminary",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Your abilities that activate at the start of the end phase activate 1 additional time. At the start of your end phase. choose 1. If you have another Condemned follower on your field, choose up to 2 instead. (1) Select an enemy follower on the field and deal it 4 damage. (2) Give your leader [defense]+1 and refresh this. (3) Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-092EN.png"
+  },
+  {
+    "cardNo": "BP19-093EN",
+    "name": "Uneriel, Winged Enforcer",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Avian",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Draw 2 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-093EN.png"
+  },
+  {
+    "cardNo": "BP19-094EN",
+    "name": "Uneriel, Winged Enforcer Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Condemned / Avian",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "On Evolve - Destroy each amulet on your field. Deal each enemy leader and enemy follower on the field X damage. Give your leader 🛡️+X. Recover X play points. X equals the number of amulets destroyed this way."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-094EN.png"
+  },
+  {
+    "cardNo": "BP19-095EN",
+    "name": "Zoe, Queen of Hope",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Princess",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Ward. [fanfare] Search your deck for a 1-cost Faith follower, reveal it, add it to your hand, then shuffle. Give your leader [defense]+4."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-095EN.png"
+  },
+  {
+    "cardNo": "BP19-096EN",
+    "name": "Warden of the Wings",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Avian",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. [lastwords] You may summon a 1-cost or less amulet from your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-096EN.png"
+  },
+  {
+    "cardNo": "BP19-097EN",
+    "name": "Warden of the Wings Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Condemned / Avian",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Look at the top 4 cards of your deck. You may reveal an amulet or an Uneriel, Winged Enforcer from among them and add it to your hand. Put the rest on the bottom of your deck in any order. [lastwords] You may summon a 1-cost or less amulet from your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-097EN.png"
+  },
+  {
+    "cardNo": "BP19-098EN",
+    "name": "Executor of the Oath",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Faith",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "When playing this, engage an Erralde, Troth Convict on your field: This costs 0 to play. At the start of your end phase, select an enemy follower on the field and deal it 2 damage. [fanfare] Search your deck for an Agent of the Commandments or a Follower of the Precepts, summon it, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-098EN.png"
+  },
+  {
+    "cardNo": "BP19-099EN",
+    "name": "Meus Gourmand",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Beast / Chef",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] If this was put onto the field from anywhere other than the hand, choose 1. (1) Deal 2 damage to each enemy leader. (2) Give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-099EN.png"
+  },
+  {
+    "cardNo": "BP19-100EN",
+    "name": "Agent of the Commandments",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Faith",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "When playing this, engage an Erralde, Troth Convict on your field: This costs 0 to play. [evolve] [cost01]: Evolve this. At the start of your end phase, give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-100EN.png"
+  },
+  {
+    "cardNo": "BP19-101EN",
+    "name": "Agent of the Commandments Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Condemned / Faith",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "At the start of your end phase, give your leader [defense]+1. On Evolve - Search your deck for an Erralde, Troth Convict, reveal it, add it to your hand, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-101EN.png"
+  },
+  {
+    "cardNo": "BP19-102EN",
+    "name": "Follower of the Precepts",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Faith",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "When playing this, engage an Erralde, Troth Convict on your field: This costs 0 to play. At the start of your end phase, select an enemy follower on the field and deal it 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-102EN.png"
+  },
+  {
+    "cardNo": "BP19-103EN",
+    "name": "Sacrosanct Temple",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] [cost01], [engage] and bury an amulet: Select an enemy follower on the field and deal it 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-103EN.png"
+  },
+  {
+    "cardNo": "BP19-104EN",
+    "name": "Sacred Tiger",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Lightborne / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "6",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. Each Holy Tiger on your field has Ward. [fanfare] Summon a Holy Tiger token. [act] Bury an amulet: Give this Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-104EN.png"
+  },
+  {
+    "cardNo": "BP19-105EN",
+    "name": "Sacred Tiger Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Lightborne / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Each Holy Tiger on your field has Ward. On Evolve - Summon a Holy Tiger token. [act] Bury an amulet: Give this Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-105EN.png"
+  },
+  {
+    "cardNo": "BP19-106EN",
+    "name": "Avaricious Altruist",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Search your deck for a 1-cost Beast follower or a 1-cost Beast amulet, summon it, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-106EN.png"
+  },
+  {
+    "cardNo": "BP19-107EN",
+    "name": "Sword Al-mi'raj",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Beast",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "5",
+      "attack": "3",
+      "defense": "6",
+      "effect": "Storm. At the start of your end phase, select a follower on your field and change its defense to its original defense."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-107EN.png"
+  },
+  {
+    "cardNo": "BP19-108EN",
+    "name": "Luminescent Gem",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Lightborne",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "0",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[lastwords] Give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-108EN.png"
+  },
+  {
+    "cardNo": "BP19-109EN",
+    "name": "Holybeast Ruins",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith / Eidolon",
+      "rarity": "Bronze",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare]/[lastwords] Summon a Holy Tiger token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-109EN.png"
+  },
+  {
+    "cardNo": "BP19-110EN",
+    "name": "Cutthroat, Discord Convict",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Condemned / Supreme",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Evolve (4): Evolve this follower. [fanfare] Look at the top 8 cards of your deck. Reveal a card from among them and add it to your hand. Shuffle the rest and put them on the bottom of your deck. --------- Your main deck and evolve deck cannot contain more than 1 of any card, except those with \"Cutthroat\" in their name."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-110EN.png"
+  },
+  {
+    "cardNo": "BP19-111EN",
+    "name": "Cutthroat, Discord Convict Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Condemned / Supreme",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Select up to 2 enemy followers on the field and deal 4 damage divided between them. On Super Evolve - Select an enemy follower on the field and deal 8 damage to it and its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-111EN.png"
+  },
+  {
+    "cardNo": "BP19-112EN",
+    "name": "Eudie, Maiden Reborn",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Supreme",
+      "rarity": "Legendary",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Ward. [fanfare] Draw a card. If you don't have a Super Evolution Point, give this follower [attack]+2/[defense]+2 and give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-112EN.png"
+  },
+  {
+    "cardNo": "BP19-113EN",
+    "name": "Zerael, Regent of Rebirth",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Condemned / Deity",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "7",
+      "attack": "9",
+      "defense": "9",
+      "effect": "[fanfare] Reveal the top 9 cards of your deck, shuffle them, then put them on the bottom of your deck. If you revealed 9 cards each with different names, bury this, and you may summon a Zerael, Regent of Vicissitude from your evolve deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-113EN.png"
+  },
+  {
+    "cardNo": "BP19-114EN",
+    "name": "Zerael, Regent of Vicissitude ADVANCED",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Advanced",
+      "trait": "Condemned / Deity",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "9",
+      "attack": "9",
+      "defense": "9",
+      "effect": "Ward. Aura. [fanfare] Destroy each enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-114EN.png"
+  },
+  {
+    "cardNo": "BP19-115EN",
+    "name": "Ironforged Right Hand",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Condemned / Supreme",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[fanfare] Draw a card. If there's a follower with \"Cutthroat\" in its name on your field or in your cemetery, recover 2 play points."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-115EN.png"
+  },
+  {
+    "cardNo": "BP19-116EN",
+    "name": "Azvaldt",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Amulet",
+      "trait": "Condemned",
+      "rarity": "Gold",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Look at the top 4 cards of your deck. You may reveal a Condemned card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. [act] [engage] and bury it: If it's your 8th turn or later, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-116EN.png"
+  },
+  {
+    "cardNo": "BP19-117EN",
+    "name": "Smeltwork Bodyguard",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Condemned / Supreme",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. Ward. [fanfare] Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-117EN.png"
+  },
+  {
+    "cardNo": "BP19-118EN",
+    "name": "Smeltwork Bodyguard Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Condemned / Supreme",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Ward. On Evolve - Select an enemy follower on the field and, if there is a follower with \"Cutthroat\" in its name on your field or in your cemetery, deal it 4 damage. Give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-118EN.png"
+  },
+  {
+    "cardNo": "BP19-119EN",
+    "name": "Warden of Recurrence",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Condemned / Angel",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "8",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Ward. [fanfare] Choose 1. (1) Search your deck for a Zerael, Regent of Rebirth, summon it, then shuffle. (2) Recover 8 play points."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-119EN.png"
+  },
+  {
+    "cardNo": "BP19-120EN",
+    "name": "Blackrust Underling",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Condemned / Supreme",
+      "rarity": "Silver",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Storm. Strike - Select an enemy follower on the field and, if there's a follower with \"Cutthroat\" in its name on your field or in your cemetery, deal it 4 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-120EN.png"
+  },
+  {
+    "cardNo": "BP19-T01EN",
+    "name": "Dread Pirate's Flag TOKEN",
+    "type": "token",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell / Token",
+      "trait": "Condemned / Thief / Loot",
+      "rarity": "-",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a Thief follower on your field and give it [attack]+1. If it has both the Condemned and Thief traits, deal 1 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-T01EN.png"
+  },
+  {
+    "cardNo": "BP19-T02EN",
+    "name": "Multi-Headed Test Subject TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Token",
+      "trait": "Condemned / Arcanaform / Forbidden",
+      "rarity": "-",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[fanfare] If there are at least 5 Condemned followers in your cemetery, give this [attack]+2/[defense]+2 and Rush. If there are at least 10, give this Assail and Bane. [lastwords] Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-T02EN.png"
+  },
+  {
+    "cardNo": "BP19-SP01EN",
+    "name": "Barbaros, Briny Convict",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Thief",
+      "rarity": "Special",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. Loot cards in your EX area cost 1 less to play. [fanfare] Put a Dread Pirate's Flag token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-SP01EN.png"
+  },
+  {
+    "cardNo": "BP19-U01EN",
+    "name": "Magachiyo, Barbed Convict Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Condemned / Elf",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Storm. On Evolve - Select an enemy follower on the field. Combo (3) - Deal it 4 damage. On Super Evolve - Give each other Condemned follower on your field Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-U01EN.png"
+  },
+  {
+    "cardNo": "BP19-U02EN",
+    "name": "Barbaros, Briny Convict Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Condemned / Thief",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Loot cards in your EX area cost 1 less to play. Whenever you play a Loot card during your turn, choose one that you haven't already chosen this turn. (1) Select an enemy follower on the field and destroy it. (2) Each opponent buries the top 2 cards of their deck. (3) Recover 2 play points."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-U02EN.png"
+  },
+  {
+    "cardNo": "BP19-U03EN",
+    "name": "Sephie, Depraved Convict Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Condemned / Alchemist / Forbidden",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Choose 1. If there are at least 10 Condemned followers in your cemetery, choose up to 2 instead. (1) Select an enemy follower on the field and deal it 5 damage. (2) Summon a Multi-Headed Test Subject token. On Super-Evolve - Select up to 2 Volunteer Test Subject or Multi-Headed Test Subject on your field and give them Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-U03EN.png"
+  },
+  {
+    "cardNo": "BP19-U04EN",
+    "name": "Antemaria, Huntress Convict",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Dragonewt",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "6",
+      "attack": "6",
+      "defense": "5",
+      "effect": "This can't be played from the EX area. [fanfare] Bury 2 Condemned cards in your EX area: Give this Storm and Drain. [lastwords] Put this into its owner's EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-U04EN.png"
+  },
+  {
+    "cardNo": "BP19-U05EN",
+    "name": "Istyndet, Soul Convict",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Necromancer",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "Once on each of your turns, whenever you have at least 10 cards in your cemetery and another 3-cost or lower Condemned follower on your field is put into the cemetery, summon it. Its [fanfare] abilities don't activate. [fanfare] Bury the top 2 cards of your deck. [act] [engage] and bury a Condemned follower on your field not named Istyndet, Soul Convict: Select an enemy follower on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-U05EN.png"
+  },
+  {
+    "cardNo": "BP19-U06EN",
+    "name": "Erralde, Troth Convict",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Luminary",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Your abilities that activate at the start of the end phase activate 1 additional time. At the start of your end phase. choose 1. If you have another Condemned follower on your field, choose up to 2 instead. (1) Select an enemy follower on the field and deal it 4 damage. (2) Give your leader [defense]+1 and refresh this. (3) Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-U06EN.png"
+  },
+  {
+    "cardNo": "BP19-U07EN",
+    "name": "Cutthroat, Discord Convict Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Condemned / Supreme",
+      "rarity": "Ultimate",
+      "cardSet": "Booster Set \"Eightfold Retribution\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Select up to 2 enemy followers on the field and deal 4 damage divided between them. On Super Evolve - Select an enemy follower on the field and deal 8 damage to it and its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/BP19/BP19-U07EN.png"
+  }
+]

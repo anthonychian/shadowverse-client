@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useLayoutEffect, useState, useEffect } from "react";
 import { cardImage } from "../../decks/getCards";
 import { getDetails } from "../../decks/cardDetails";
 import EffectText from "./EffectText";
@@ -10,15 +10,48 @@ import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import SwapHorizIcon from "@mui/icons-material/SwapHoriz";
 
-const Badge = ({ children, color }) => (
+// Scales its child down (uniformly) so it always fits the parent's height —
+// never a scrollbar. Used for the in-game hover preview, where the player can't
+// scroll because they're holding a hover over a card. Re-measures on resize and
+// whenever `deps` change (i.e. a different card is hovered).
+function FitScale({ children, deps = [] }) {
+  const outerRef = useRef(null);
+  const innerRef = useRef(null);
+  useLayoutEffect(() => {
+    const outer = outerRef.current;
+    const inner = innerRef.current;
+    if (!outer || !inner) return;
+    const measure = () => {
+      inner.style.transform = "none";
+      const avail = outer.clientHeight;
+      const natural = inner.scrollHeight;
+      const s = natural > 0 ? Math.min(1, avail / natural) : 1;
+      inner.style.transform = `scale(${s})`;
+    };
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(outer);
+    return () => ro.disconnect();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, deps);
+  return (
+    <div ref={outerRef} style={{ height: "100%", width: "100%", overflow: "hidden" }}>
+      <div ref={innerRef} style={{ transformOrigin: "top left", width: "100%" }}>
+        {children}
+      </div>
+    </div>
+  );
+}
+
+const Badge = ({ children, color, scale = 1 }) => (
   <span
     style={{
       display: "inline-flex",
       alignItems: "center",
-      gap: 4,
-      padding: "2px 9px",
+      gap: 4 * scale,
+      padding: `${2 * scale}px ${9 * scale}px`,
       borderRadius: 999,
-      fontSize: 12,
+      fontSize: 12 * scale,
       fontFamily: FONT,
       background: color || "rgba(255,255,255,0.12)",
       color: COLORS.text,
@@ -62,18 +95,42 @@ export default function CardInspector({
   // `fill` (roomy desktop preview dialog): make the card art the dominant,
   // largest element and let the description take only the leftover space.
   fill = false,
+  // Optional override for the `fill`-mode card-art max height (any CSS length,
+  // e.g. "70vh"). Lets a large preview (e.g. the in-game hover) keep the art big.
+  imageMaxHeight,
+  // Optional override for the default-mode card-art max width (any CSS length,
+  // e.g. "100%"). Lets the art fill a wider column instead of the 360px cap.
+  imageMaxWidth,
+  // When true, the effect text auto-scales to fit its box height (never scrolls).
+  // For previews the viewer can't scroll (e.g. while hovering a card in-game).
+  fitEffect = false,
   readOnly = false,
 }) {
+  // In `fitEffect` previews (e.g. the in-game hover) the height is fixed, so on
+  // smaller screens shrink the chrome — name, traits, stats, icons, badges — to
+  // keep the (vh-capped) art and the description as large as possible. metaScale
+  // is 1 on tall screens and scales down with viewport height below ~900px.
+  const [vpH, setVpH] = useState(typeof window !== "undefined" ? window.innerHeight : 1080);
+  useEffect(() => {
+    if (!fitEffect) return;
+    const onResize = () => setVpH(window.innerHeight);
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, [fitEffect]);
+  const metaScale = fitEffect ? Math.max(0.6, Math.min(1, vpH / 900)) : 1;
+
   // In the fullscreen mobile preview there's plenty of room, so scale the image,
   // text and stepper up; the desktop column keeps the compact sizes. In `fill`
   // mode (roomy desktop preview dialog) the text/icons are scaled DOWN so the
   // card art stays the largest, screen-scaled element.
   const imgMax = large ? 380 : 360;
-  const gap = fill ? 8 : large ? 10 : 12;
-  const nameSize = fill ? 18 : large ? 22 : 19;
-  const metaSize = fill ? 12 : large ? 14 : 13;
+  const gap = (fill ? 8 : large ? 10 : 12) * metaScale;
+  const nameSize = (fill ? 18 : large ? 22 : 19) * metaScale;
+  const metaSize = (fill ? 12 : large ? 14 : 13) * metaScale;
+  // The description keeps its base size — FitScale shrinks it only if needed —
+  // so it stays prioritized over the chrome on small screens.
   const effectSize = fill ? 12.5 : large ? 13 : 14;
-  const statValSize = fill ? 18 : large ? 20 : 23;
+  const statValSize = (fill ? 18 : large ? 20 : 23) * metaScale;
   const stepSize = large ? 52 : 44;
   const countSize = large ? 26 : 22;
   if (!name) {
@@ -119,13 +176,18 @@ export default function CardInspector({
             fill
               ? // Card art is the hero: scale it with the viewport height so it
                 // stays large relative to the screen, capped so it never
-                // overflows the (height-capped) dialog.
-                { maxWidth: "100%", maxHeight: "min(58vh, 620px)", width: "auto", height: "auto", borderRadius: 10, boxShadow: "0 6px 24px rgba(0,0,0,0.6)" }
+                // overflows the (height-capped) dialog. `imageMaxHeight` lets a
+                // caller (e.g. the in-game hover preview) make the art bigger.
+                { maxWidth: "100%", maxHeight: imageMaxHeight || "min(58vh, 620px)", width: "auto", height: "auto", borderRadius: 10, boxShadow: "0 6px 24px rgba(0,0,0,0.6)" }
               : large
               ? // Cap the height so the rest (name, stats, full description) fits
                 // on one screen and the description box stays large.
                 { maxWidth: imgMax, maxHeight: "32vh", width: "auto", height: "auto", borderRadius: 10, boxShadow: "0 6px 24px rgba(0,0,0,0.6)" }
-              : { width: "100%", maxWidth: imgMax, borderRadius: 10, boxShadow: "0 6px 24px rgba(0,0,0,0.6)" }
+              : imageMaxHeight
+              ? // Capped, undistorted art that fills the column width up to a
+                // max height (e.g. the in-game hover preview's ~half-screen cap).
+                { maxWidth: imageMaxWidth || "100%", maxHeight: imageMaxHeight, width: "auto", height: "auto", borderRadius: 10, boxShadow: "0 6px 24px rgba(0,0,0,0.6)" }
+              : { width: "100%", height: "auto", maxWidth: imageMaxWidth || imgMax, borderRadius: 10, boxShadow: "0 6px 24px rgba(0,0,0,0.6)" }
           }
         />
         {!readOnly && !large && <ArrowForwardIos onClick={onNext} sx={arrowSx("right", large)} />}
@@ -150,14 +212,14 @@ export default function CardInspector({
       <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: 8 }}>
         {d.class && (
           <span style={{ display: "inline-flex", alignItems: "center", gap: 6, color: COLORS.text, fontFamily: FONT, fontSize: metaSize }}>
-            {classIcon(d.class) && <img src={classIcon(d.class)} alt={d.class} style={{ height: fill ? 18 : 22 }} />}
+            {classIcon(d.class) && <img src={classIcon(d.class)} alt={d.class} style={{ height: (fill ? 18 : 22) * metaScale }} />}
             {CLASS_LABELS[d.class] || d.class}
           </span>
         )}
-        {d.cardType && <Badge>{d.cardType}</Badge>}
+        {d.cardType && <Badge scale={metaScale}>{d.cardType}</Badge>}
         {/* Only show the rarity badge when the Rarity/Art picker isn't shown —
             otherwise the selected rarity would appear twice. */}
-        {!showPicker && effRarity && effRarity !== "-" && <Badge color="rgba(243,196,75,0.85)">{effRarity}</Badge>}
+        {!showPicker && effRarity && effRarity !== "-" && <Badge scale={metaScale} color="rgba(243,196,75,0.85)">{effRarity}</Badge>}
       </div>
 
       {/* rarity / art picker — choose which printing's art this card uses */}
@@ -192,28 +254,28 @@ export default function CardInspector({
 
       {/* cost / attack / defense banner */}
       {(hasCost || hasAtk || hasDef) && (
-        <div style={{ ...statBanner, minHeight: fill ? 40 : large ? 44 : 52, padding: fill ? "4px 14px" : large ? "6px 16px" : "8px 18px" }}>
+        <div style={{ ...statBanner, minHeight: (fill ? 40 : large ? 44 : 52) * metaScale, padding: fill ? "4px 14px" : large ? "6px 16px" : "8px 18px" }}>
           {hasCost && (
             <span style={statItem}>
               {costIcon(costNum) ? (
-                <img src={costIcon(costNum)} alt="cost" style={{ height: fill ? 24 : large ? 28 : 36 }} />
+                <img src={costIcon(costNum)} alt="cost" style={{ height: (fill ? 24 : large ? 28 : 36) * metaScale }} />
               ) : (
-                <span style={{ ...costFallback, width: fill ? 26 : large ? 28 : 34, height: fill ? 26 : large ? 28 : 34, fontSize: fill ? 15 : large ? 16 : 18 }}>{d.cost}</span>
+                <span style={{ ...costFallback, width: (fill ? 26 : large ? 28 : 34) * metaScale, height: (fill ? 26 : large ? 28 : 34) * metaScale, fontSize: (fill ? 15 : large ? 16 : 18) * metaScale }}>{d.cost}</span>
               )}
-              <span style={{ ...statLabel, fontSize: 12 }}>Cost</span>
+              <span style={{ ...statLabel, fontSize: 12 * metaScale }}>Cost</span>
             </span>
           )}
           {(hasAtk || hasDef) && (
-            <span style={{ display: "inline-flex", alignItems: "center", gap: 18 }}>
+            <span style={{ display: "inline-flex", alignItems: "center", gap: 18 * metaScale }}>
               {hasAtk && (
                 <span style={statItem}>
-                  <img src={ATTACK_ICON} alt="attack" style={{ height: fill ? 20 : large ? 22 : 27 }} />
+                  <img src={ATTACK_ICON} alt="attack" style={{ height: (fill ? 20 : large ? 22 : 27) * metaScale }} />
                   <span style={{ ...statVal, fontSize: statValSize }}>{d.attack}</span>
                 </span>
               )}
               {hasDef && (
                 <span style={statItem}>
-                  <img src={DEFENSE_ICON} alt="defense" style={{ height: fill ? 20 : large ? 22 : 27 }} />
+                  <img src={DEFENSE_ICON} alt="defense" style={{ height: (fill ? 20 : large ? 22 : 27) * metaScale }} />
                   <span style={{ ...statVal, fontSize: statValSize }}>{d.defense}</span>
                 </span>
               )}
@@ -236,19 +298,26 @@ export default function CardInspector({
             background: COLORS.inset, borderRadius: 8, padding: "10px 12px",
             // In `fill` mode the box grows to its natural height (no inner
             // scrollbar) so any overflow falls to the dialog, which scrolls only
-            // when it's too small to fit everything. Elsewhere it scrolls itself.
-            overflowY: fill ? "visible" : "auto",
+            // when it's too small to fit everything. `fitEffect` clips and the
+            // text auto-scales to fit. Elsewhere it scrolls itself.
+            overflowY: fitEffect ? "hidden" : fill ? "visible" : "auto",
             flex: fill ? "0 0 auto" : "1 1 auto",
             // Description box stays large in the mobile preview — never small.
-            minHeight: fill ? 0 : large ? "30vh" : 0,
+            minHeight: fitEffect ? 0 : fill ? 0 : large ? "30vh" : 0,
           }}
         >
-          <EffectText text={d.effect} />
+          {fitEffect ? (
+            <FitScale deps={[name, d.effect]}>
+              <EffectText text={d.effect} />
+            </FitScale>
+          ) : (
+            <EffectText text={d.effect} />
+          )}
         </div>
       )}
 
       {effCardSet && (
-        <div style={{ fontFamily: FONT, color: COLORS.textDim, fontSize: large ? 13 : 11 }}>{effCardSet}</div>
+        <div style={{ fontFamily: FONT, color: COLORS.textDim, fontSize: (large ? 13 : 11) * metaScale }}>{effCardSet}</div>
       )}
 
       {/* Copy stepper (hidden in read-only preview) */}
