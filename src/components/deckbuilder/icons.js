@@ -5,6 +5,7 @@ import icons from "../../decks/icons.json";
 import idolmaster from "../../assets/logo/idolmaster.png";
 import umamusume from "../../assets/logo/umamusume.png";
 import vanguard from "../../assets/logo/vanguard.png";
+import priconne from "../../assets/logo/priconne.webp";
 
 const BASE = "../textures/";
 
@@ -22,7 +23,7 @@ const CLASS_TOKEN = {
 
 // Collab classes aren't in the scraped icon manifest — use the official logos
 // bundled under assets/logo.
-const COLLAB_ICON = { idolmaster, umamusume, vanguard };
+const COLLAB_ICON = { idolmaster, umamusume, vanguard, priconne };
 
 export const classIcon = (cls) => COLLAB_ICON[cls] || iconUrl(CLASS_TOKEN[cls]);
 export const ATTACK_ICON = iconUrl("[attack]");

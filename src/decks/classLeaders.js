@@ -17,6 +17,7 @@ export const CLASS_LEADERS = {
   umamusume: ["Manhatten Cafe", "Maruzensky"],
   vanguard: ["Vanguard"],
   idolmaster: ["Rin", "Uzuki", "Mio"],
+  priconne: ["Pecorine", "Karyl"],
 };
 
 // A random leader from the class's pool, or "" if the class is unknown/empty

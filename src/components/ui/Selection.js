@@ -974,6 +974,38 @@ export default function Selection({ setSelectedOption }) {
             >
               <img width="100px" src={imageVanguard} alt="Vanguard" />
             </IconButton>
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectLeader(e);
+              }}
+            >
+              <img
+                width="100px"
+                src={SVGDB_LEADER_PORTRAIT.Pecorine}
+                alt="Pecorine"
+              />
+            </IconButton>
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectLeader(e);
+              }}
+            >
+              <img
+                width="100px"
+                src={SVGDB_LEADER_PORTRAIT.Karyl}
+                alt="Karyl"
+              />
+            </IconButton>
           </Card>
         </Box>
       </Modal>

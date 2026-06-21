@@ -28,6 +28,7 @@ export const CLASS_LABELS = {
   idolmaster: "THE IDOLM@STER CINDERELLA GIRLS",
   umamusume: "Umamusume: Pretty Derby",
   vanguard: "Cardfight!! Vanguard",
+  priconne: "Princess Connect! Re:Dive",
 };
 
 // Class accent colors for chips / borders.
@@ -42,6 +43,7 @@ export const CLASS_COLORS = {
   idolmaster: "#8f9fe8",
   umamusume: "#e8913a",
   vanguard: "#e02020",
+  priconne: "#f06ba8",
 };
 
 // Human-readable set names, keyed by the filter value used in CreateDeck.
@@ -129,5 +131,5 @@ export const SET_CODE_LABELS = {
 };
 
 export const CLASS_ORDER = [
-  "forest", "sword", "rune", "dragon", "abyss", "haven", "neutral",
+  "forest", "sword", "rune", "dragon", "abyss", "haven", "neutral", "priconne",
 ];

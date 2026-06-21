@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import token from "../../assets/logo/mimi.png";
 import { allTokens } from "../../decks/AllTokens";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Menu, MenuItem, Modal, Box, Skeleton } from "@mui/material";
-import { setCurrentCard } from "../../redux/CardSlice";
+import { setCurrentCard, placeTokenOnField } from "../../redux/CardSlice";
 import CardMUI from "@mui/material/Card";
 import Card from "../hand/Card";
 import img from "../../assets/pin_bellringer_angel.png";
 import { useUiModalOpen } from "../hooks/useUiChromeVisible";
 import { ModalHideUiRow } from "../ui/HideUiButton";
+import { useModalCardDrag, ModalDragGhost } from "./modalCardDrag";
+import { fieldSlotCenter } from "./handDrag";
+import { triggerCardReveal } from "./cardRevealBus";
 
 const style = {
   position: "relative",
@@ -30,6 +33,25 @@ export default function Token({ ready, setReady, setTokenReady, setHovering }) {
   const [contextMenu, setContextMenu] = React.useState(null);
   const [textInput, setTextInput] = useState("");
   const [filteredTokens, setFilteredTokens] = useState(allTokens);
+
+  const reduxField = useSelector((state) => state.card.field);
+  const reduxRoom = useSelector((state) => state.card.room);
+  const gameMode = useSelector((state) => state.gameState.gameMode);
+  const automated = gameMode === "automated";
+
+  // Drag a token straight out of this modal onto an empty field slot. Mirrors the
+  // deck/cemetery modal drag — the modal hides while dragging and a ghost follows
+  // the cursor; on release the token is placed (and revealed if in the front row).
+  const tokenDrag = useModalCardDrag({
+    targets: { field: true },
+    field: reduxField,
+    onDrop: (card, index, dest) => {
+      if (automated) return;
+      dispatch(placeTokenOnField({ card, index: dest.index }));
+      if (dest.index < 5)
+        triggerCardReveal(card, reduxRoom, dest.index, fieldSlotCenter(dest.index));
+    },
+  });
 
   const handleModalOpen = () => {
     if (!ready) setOpen(true);
@@ -98,7 +120,7 @@ export default function Token({ ready, setReady, setTokenReady, setHovering }) {
           },
         }}
       >
-        <Box sx={style}>
+        <Box sx={{ ...style, opacity: tokenDrag.isDragging ? 0 : 1 }}>
           <ModalHideUiRow />
           <input
             style={{
@@ -136,6 +158,7 @@ export default function Token({ ready, setReady, setTokenReady, setHovering }) {
                   onContextMenu={(e) => {
                     handleContextMenu(e, card);
                   }}
+                  {...(automated ? {} : tokenDrag.dragProps(card, idx))}
                 >
                   <Card ready={ready} name={card} setHovering={setHovering} />
                 </div>
@@ -173,6 +196,8 @@ export default function Token({ ready, setReady, setTokenReady, setHovering }) {
       >
         <MenuItem onClick={handleCardToField}>Field</MenuItem>
       </Menu>
+
+      <ModalDragGhost drag={tokenDrag} ready={ready} setHovering={setHovering} />
     </>
   );
 }

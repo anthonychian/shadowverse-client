@@ -29,6 +29,8 @@ export const LEADER_SPINE_IDS = {
   Rin: "3111", // Rin Shibuya
   Uzuki: "3102", // Uzuki Shimamura
   Mio: "3104", // Mio Honda
+  Pecorine: "1002", // Princess Connect! Re:Dive
+  Karyl: "1003", // Princess Connect! Re:Dive
 };
 
 // Per-leader size multiplier applied on top of the auto fit-to-box scaling.
@@ -90,6 +92,8 @@ export const usesSetupCenter = (name) => LEADER_SPINE_SETUP_CENTER.has(name);
 export const SVGDB_LEADER_PORTRAIT = {
   Piercye: "https://svgdb.me/assets/leader/class_3901_base.png",
   Amy: "https://svgdb.me/assets/leader/class_3305_base.png",
+  Pecorine: "https://svgdb.me/assets/leader/class_1002_base.png",
+  Karyl: "https://svgdb.me/assets/leader/class_1003_base.png",
 };
 
 export const SPINE_ANIM_BASE = "https://svgdb.me/assets/anim";
