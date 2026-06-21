@@ -241,8 +241,15 @@ app.get("/api/decklog/:code", async (req, res) => {
   }
   const order = req.query.site === "jp" ? ["jp", "en"] : ["en", "jp"];
   let lastStatus = 0;
+  // Per-host outcome trail so we can tell WHY a host failed from a given
+  // environment. The JP host appears to refuse Render's datacenter IP while
+  // accepting a local/residential one; without this, the fall-back to the
+  // other host silently masks whether JP returned 403 / timed out / was empty.
+  // Each entry: "<site> <ok|status|timeout|neterr> in <ms>ms[ list=N]".
+  const trail = [];
   for (const site of order) {
     const host = DECKLOG_HOSTS[site];
+    const startedAt = Date.now();
     try {
       const upstream = await fetch(`${host}/system/app/api/view/${code}`, {
         method: "POST",
@@ -255,18 +262,38 @@ app.get("/api/decklog/:code", async (req, res) => {
         body: `deck_id=${encodeURIComponent(code)}`,
         signal: AbortSignal.timeout(15000),
       });
-      if (!upstream.ok) { lastStatus = upstream.status; continue; }
+      const ms = Date.now() - startedAt;
+      if (!upstream.ok) {
+        lastStatus = upstream.status;
+        // Capture a snippet of the body — a 403 from a WAF/IP block often
+        // carries a tell-tale page ("Access Denied", Cloudflare, etc.).
+        const snippet = (await upstream.text().catch(() => "")).slice(0, 120).replace(/\s+/g, " ");
+        trail.push(`${site} status=${upstream.status} in ${ms}ms${snippet ? ` body="${snippet}"` : ""}`);
+        console.warn(`[decklog] ${code} ${site} non-ok: status=${upstream.status} in ${ms}ms${snippet ? ` body="${snippet}"` : ""}`);
+        continue;
+      }
       const data = await upstream.json();
-      if (data && Array.isArray(data.list) && data.list.length > 0) {
+      const listLen = Array.isArray(data?.list) ? data.list.length : 0;
+      trail.push(`${site} ok in ${ms}ms list=${listLen}`);
+      if (listLen > 0) {
+        console.log(`[decklog] ${code} resolved via ${site} in ${ms}ms (list=${listLen})`);
         return res.json(data);
       }
+      // 200 but no cards (deck not on this site) — keep trying the other host.
+      console.log(`[decklog] ${code} ${site} returned empty list in ${ms}ms`);
     } catch (e) {
-      console.error(`[decklog] ${site} proxy error:`, e.message);
+      const ms = Date.now() - startedAt;
+      // AbortSignal.timeout fires a TimeoutError; everything else (DNS, TLS,
+      // connection refused/reset) is a network-level failure.
+      const kind = e.name === "TimeoutError" ? "timeout" : "neterr";
+      trail.push(`${site} ${kind} in ${ms}ms (${e.name}: ${e.message})`);
+      console.error(`[decklog] ${code} ${site} ${kind} in ${ms}ms:`, e.name, e.message);
     }
   }
+  console.warn(`[decklog] ${code} FAILED — trail: ${trail.join(" | ")}`);
   return res
     .status(lastStatus && lastStatus !== 200 ? 502 : 404)
-    .json({ error: "Deck not found on the EN or JP decklog" });
+    .json({ error: "Deck not found on the EN or JP decklog", trail });
 });
 
 io.on("connection", (socket) => {
