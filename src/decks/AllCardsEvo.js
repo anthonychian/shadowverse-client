@@ -4,7 +4,7 @@ export const allCardsEvo = [
   "Supplicant of Unkilling Evolved",
   "Bearer of the Fairy Blade Evolved",
   "Sinciro, Heir to Usurpation Evolved",
-  "Congregant of Usurpation",
+  "Congregant of Usurpation Evolved",
   "Peppy Scout Evolved",
   "Comrade of the Swordmaster Evolved",
   "Velharia, Heir to Truth Evolved",
@@ -29,7 +29,7 @@ export const allCardsEvo = [
   "Dogged One Evolved",
   "Apostle of Voracity Evolved",
   "Magachiyo, Barbed Convict Evolved",
-  "Verdant Lieutenant",
+  "Verdant Lieutenant Evolved",
   "Budding Initiate Evolved",
   "Beast Lancer Evolved",
   "Barbaros, Briny Convict Evolved",
@@ -47,7 +47,7 @@ export const allCardsEvo = [
   "Dancing Crab Evolved",
   "Garodeth, Insurgent Convict Evolved",
   "Abyssal Colonel Evolved",
-  "Underworld Lieutenant",
+  "Underworld Lieutenant Evolved",
   "Vicious Blitzer Evolved",
   "Uneriel, Winged Enforcer Evolved",
   "Warden of the Wings Evolved",
@@ -77,7 +77,7 @@ export const allCardsEvo = [
   "Yori Evolved",
   "Misaki Evolved",
   "Saren Evolved",
-  "Yui",
+  "Yui Evolved",
   "Chika Evolved",
   "Mimi Evolved",
   "Omniscient Kaiser Evolved",
@@ -1559,7 +1559,7 @@ export const forestEvo = [
   "Lima Evolved",
 
   "Magachiyo, Barbed Convict Evolved",
-  "Verdant Lieutenant",
+  "Verdant Lieutenant Evolved",
   "Budding Initiate Evolved",
   "Beast Lancer Evolved",
 
@@ -1680,7 +1680,7 @@ export const swordEvo = [
   "Felpurr Maid Evolved",
 
   "Sinciro, Heir to Usurpation Evolved",
-  "Congregant of Usurpation",
+  "Congregant of Usurpation Evolved",
   "Peppy Scout Evolved",
   "Comrade of the Swordmaster Evolved",
 ];
@@ -2028,7 +2028,7 @@ export const abyssEvo = [
 
   "Garodeth, Insurgent Convict Evolved",
   "Abyssal Colonel Evolved",
-  "Underworld Lieutenant",
+  "Underworld Lieutenant Evolved",
   "Vicious Blitzer Evolved",
 
   "Rulenye & Valnareik Evolved",
@@ -2135,7 +2135,7 @@ export const havenEvo = [
   "Closed Eyes Supporter Evolved",
 
   "Saren Evolved",
-  "Yui",
+  "Yui Evolved",
   "Chika Evolved",
   "Mimi Evolved",
 
@@ -2578,7 +2578,7 @@ export const set20Evo = [
   "Supplicant of Unkilling Evolved",
   "Bearer of the Fairy Blade Evolved",
   "Sinciro, Heir to Usurpation Evolved",
-  "Congregant of Usurpation",
+  "Congregant of Usurpation Evolved",
   "Peppy Scout Evolved",
   "Comrade of the Swordmaster Evolved",
   "Velharia, Heir to Truth Evolved",
@@ -2606,7 +2606,7 @@ export const set20Evo = [
 
 export const set19Evo = [
   "Magachiyo, Barbed Convict Evolved",
-  "Verdant Lieutenant",
+  "Verdant Lieutenant Evolved",
   "Budding Initiate Evolved",
   "Beast Lancer Evolved",
   "Barbaros, Briny Convict Evolved",
@@ -2624,7 +2624,7 @@ export const set19Evo = [
   "Dancing Crab Evolved",
   "Garodeth, Insurgent Convict Evolved",
   "Abyssal Colonel Evolved",
-  "Underworld Lieutenant",
+  "Underworld Lieutenant Evolved",
   "Vicious Blitzer Evolved",
   "Uneriel, Winged Enforcer Evolved",
   "Warden of the Wings Evolved",
@@ -2657,7 +2657,7 @@ export const set04Evo = [
   "Yori Evolved",
   "Misaki Evolved",
   "Saren Evolved",
-  "Yui",
+  "Yui Evolved",
   "Chika Evolved",
   "Mimi Evolved",
   "Omniscient Kaiser Evolved",

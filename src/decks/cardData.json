@@ -6875,6 +6875,18 @@
     "effect": "[evolve] [cost01]: Evolve this.",
     "cardSet": "Booster Set \"Omens and Heirs\""
   },
+  "Congregant of Usurpation Evolved": {
+    "class": "sword",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Omen / Thief",
+    "rarity": "Gold",
+    "cost": "-",
+    "attack": "5",
+    "defense": "5",
+    "effect": "Whenever an enemy follower on the field is put into the cemetery, put a Gilded Blade, Gilded Goblet or Gilded Boots token into your EX area. On Evolve - Select an enemy follower on the field and deal it 5 damage. The next Loot card you play this turn costs 2 less.",
+    "cardSet": "Booster Set \"Omens and Heirs\""
+  },
   "Congregrant of Unkilling": {
     "class": "forest",
     "type": "base",
@@ -37007,6 +37019,18 @@
     "effect": "[evolve] [cost01]: Evolve this. [evolve] [cost00]: Evolve this. Activate only if this was summoned from the cemetery. [lastwords] Bury the top card of your deck.",
     "cardSet": "Booster Set \"Eightfold Retribution\""
   },
+  "Underworld Lieutenant Evolved": {
+    "class": "abyss",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Condemned / Departed",
+    "rarity": "Silver",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3",
+    "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage. [lastwords] Bury the top card of your deck.",
+    "cardSet": "Booster Set \"Eightfold Retribution\""
+  },
   "Underworld Watchman Khawy": {
     "class": "abyss",
     "type": "base",
@@ -37881,6 +37905,18 @@
     "attack": "2",
     "defense": "2",
     "effect": "[evolve] [cost01]: Evolve this. Whenever a Condemned follower on your field evolves, Combo (3) - Draw a card.",
+    "cardSet": "Booster Set \"Eightfold Retribution\""
+  },
+  "Verdant Lieutenant Evolved": {
+    "class": "forest",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Condemned / Elf",
+    "rarity": "Gold",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3",
+    "effect": "Whenever a Condemned follower on your field evolves, Combo (3) - Draw a card. On Evolve - Select an enemy follower on the field and deal it 2 damage.",
     "cardSet": "Booster Set \"Eightfold Retribution\""
   },
   "Verdant Rebirth": {
@@ -39813,6 +39849,18 @@
     "attack": "1",
     "defense": "1",
     "effect": "[evolve] [cost01]: Evolve this.",
+    "cardSet": "Crossover Set \"Princess Connect! Re:Dive\""
+  },
+  "Yui Evolved": {
+    "class": "haven",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Princess Connect / Twinkle Wish",
+    "rarity": "Gold",
+    "cost": "-",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[Union Burst] On Evolve - XPP: Select an X-cost or less Princess Connect follower in your cemetery and summon it. X equals a number of your choice. --------- Whenever the [Union Burst] ability of another follower on your field activates, give your leader [defense]+1.",
     "cardSet": "Crossover Set \"Princess Connect! Re:Dive\""
   },
   "Yui Ohtsuki": {

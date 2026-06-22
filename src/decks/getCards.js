@@ -6456,6 +6456,8 @@ export const cardImage = (cardName) => {
       return "../textures/CP04-094EN.png";
     case "Yui":
       return "../textures/CP04-095EN.png";
+    case "Yui Evolved":
+      return "../textures/CP04-096EN.png";
     case "Quria":
       return "../textures/CP04-097EN.png";
     case "Yukari":
@@ -6542,6 +6544,8 @@ export const cardImage = (cardName) => {
       return "../textures/BP19-004EN.png";
     case "Verdant Lieutenant":
       return "../textures/BP19-005EN.png";
+    case "Verdant Lieutenant Evolved":
+      return "../textures/BP19-006EN.png";
     case "Warden of Balms":
       return "../textures/BP19-007EN.png";
     case "Synchronous Hearts":
@@ -6694,6 +6698,8 @@ export const cardImage = (cardName) => {
       return "../textures/BP19-081EN.png";
     case "Underworld Lieutenant":
       return "../textures/BP19-082EN.png";
+    case "Underworld Lieutenant Evolved":
+      return "../textures/BP19-083EN.png";
     case "Warden of Corpses":
       return "../textures/BP19-084EN.png";
     case "Raging Commander":
@@ -6818,6 +6824,8 @@ export const cardImage = (cardName) => {
       return "../textures/BP20-022EN.png";
     case "Congregant of Usurpation":
       return "../textures/BP20-023EN.png";
+    case "Congregant of Usurpation Evolved":
+      return "../textures/BP20-024EN.png";
     case "Fearful Fighter":
       return "../textures/BP20-025EN.png";
     case "Returning Slash":
