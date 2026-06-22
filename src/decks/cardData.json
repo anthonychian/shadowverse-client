@@ -22376,7 +22376,7 @@
     "cost": "-",
     "attack": "4",
     "defense": "3",
-    "effect": "On Evolve, [cost0X]: Search your deck for an Officer follower that costs X play points or less and put it onto your field. X equals a number of your choice. Whenever an Officer follower is put onto your field, give it [attack]+1.",
+    "effect": "On Evolve, [costX]: Search your deck for an Officer follower that costs X play points or less and put it onto your field. X equals a number of your choice. Whenever an Officer follower is put onto your field, give it [attack]+1.",
     "cardSet": "Booster Set #4 “Cosmic Mythos”"
   },
   "Maruzensky": {

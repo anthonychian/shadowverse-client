@@ -311,7 +311,7 @@ export default function CardInspector({
               <EffectText text={d.effect} />
             </FitScale>
           ) : (
-            <EffectText text={d.effect} />
+            <EffectText text={d.effect} tooltips />
           )}
         </div>
       )}
