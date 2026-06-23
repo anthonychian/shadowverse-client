@@ -9,7 +9,7 @@ const CARD_H = 161;
 
 // How long each effect stays mounted (ms) — a touch longer than the motion
 // itself so the final, faded-out frame is never cut off before unmount.
-const LIFETIME = { draw: 900, shuffle: 1100 };
+const LIFETIME = { draw: 900, shuffle: 1100, shuffleHand: 1200 };
 
 // A stylized face-down card used by the draw and shuffle effects. Kept generic
 // (not a specific cardback) so it reads the same on both sides without having to
@@ -109,7 +109,8 @@ function ShuffleStack() {
 }
 
 // Draw / shuffle overlay — mounted inside a deck pile (player or enemy), it
-// centers its effects on that pile.
+// centers its effects on that pile. The pile hides its own cardback during a
+// shuffle via useShuffleDeckActive (see Deck.js / Field.js).
 export function DeckFx({ side }) {
   const items = useGameAnimations(
     (e) => e.side === side && (e.kind === "draw" || e.kind === "shuffle"),
@@ -123,6 +124,79 @@ export function DeckFx({ side }) {
           <ShuffleStack key={it.id} />
         ),
       )}
+    </div>
+  );
+}
+
+// Shuffle Hand: same riffle as the deck shuffle (ShuffleStack) — cards fan out
+// and riffle back together — just with a few more cards. The fractional offsets
+// keep the spread the same width as the deck shuffle despite the extra cards.
+function ShuffleHandFan() {
+  return (
+    <>
+      {[-1, -0.5, 0, 0.5, 1].map((d, i) => (
+        <motion.div
+          key={i}
+          style={cardBackStyle}
+          initial={{ x: 0, y: 0, rotate: 0, opacity: 0 }}
+          animate={{
+            opacity: [0, 1, 1, 1, 0],
+            x: [0, d * 62, d * -22, d * 40, 0],
+            y: [0, i % 2 ? -10 : 10, 6, -4, 0],
+            rotate: [0, d * 14, d * -7, d * 9, 0],
+          }}
+          transition={{
+            duration: 1.0,
+            times: [0, 0.25, 0.5, 0.75, 1],
+            ease: "easeInOut",
+          }}
+        />
+      ))}
+    </>
+  );
+}
+
+// True while an animation of `kind` is playing for `side`, for `duration` ms.
+// Zones use this to hide their real cards for the length of a riffle so the
+// cards look like they're being shuffled and then reappear when it finishes.
+// The window matches the riffle motion duration (1.0s) so they return as it
+// settles.
+function useFxActive(side, kind, duration) {
+  const [active, setActive] = useState(false);
+  useEffect(() => {
+    let timer;
+    const off = onGameAnimation((evt) => {
+      if (evt.side === side && evt.kind === kind) {
+        setActive(true);
+        clearTimeout(timer);
+        timer = setTimeout(() => setActive(false), duration);
+      }
+    });
+    return () => {
+      off();
+      clearTimeout(timer);
+    };
+  }, [side, kind, duration]);
+  return active;
+}
+
+// Hide the hand cards while the hand-shuffle riffle plays.
+export const useShuffleHandActive = (side) => useFxActive(side, "shuffleHand", 1000);
+// Hide the deck pile while the deck-shuffle riffle plays.
+export const useShuffleDeckActive = (side) => useFxActive(side, "shuffle", 1000);
+
+// Shuffle-hand overlay — mounted inside a hand row (player or enemy), it centers
+// its effect on that row. Lives on its own so the deck and hand effects don't
+// interfere.
+export function HandFx({ side }) {
+  const items = useGameAnimations(
+    (e) => e.side === side && e.kind === "shuffleHand",
+  );
+  return (
+    <div style={{ ...overlayBase, zIndex: 60 }}>
+      {items.map((it) => (
+        <ShuffleHandFan key={it.id} />
+      ))}
     </div>
   );
 }

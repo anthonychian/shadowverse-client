@@ -12,6 +12,7 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { useEngineSync } from "../hooks/useEngineSync";
 import { registerHand } from "../field/handDrag";
+import { HandFx, useShuffleHandActive } from "../field/GameFx";
 
 export default function Hand({
   constraintsRef,
@@ -29,6 +30,9 @@ export default function Hand({
   const automated = gameMode === "automated";
   const dispatch = useDispatch();
   const { sendAction } = useEngineSync();
+  // While the hand is being shuffled, hide the real cards (the riffle overlay
+  // plays in their place) and bring them back when it finishes.
+  const shuffling = useShuffleHandActive("player");
 
   // Give every hand card a fresh unique id whenever the hand changes, and key by
   // that id (not the array index). With index keys, removing a card (e.g.
@@ -229,6 +233,7 @@ export default function Hand({
         ref={(el) => registerHand(el)}
         style={{
           zIndex: 100,
+          position: "relative",
           display: "flex",
           // Reserve one card's height at all times (cards are 161px tall, see
           // .cardStyle). Without this the row collapses to 0 when the hand is
@@ -253,7 +258,10 @@ export default function Hand({
             }}
             key={card.id}
             value={card}
-            style={automated ? getAutomatedHandStyle(index) : undefined}
+            style={{
+              ...(automated ? getAutomatedHandStyle(index) : {}),
+              visibility: shuffling ? "hidden" : "visible",
+            }}
             title={automated ? getAutomatedHandTitle(index) : undefined}
           >
             <Card
@@ -270,6 +278,7 @@ export default function Hand({
             />
           </div>
         ))}
+        <HandFx side="player" />
       </div>
     </>
   );

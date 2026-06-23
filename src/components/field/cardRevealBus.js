@@ -1,5 +1,8 @@
 import { socket } from "../../sockets";
-import { handCenter } from "./handDrag";
+import { handCenter, cemeteryCenter, fieldSlotCenter, getBoardScale } from "./handDrag";
+
+// On-board card height in px (matches .cardStyle: 161px) before the board scale.
+const CARD_PX = 161;
 
 // Pub/sub for the "card played" reveal. When a card is played to the field it's
 // shown large in the centre, flies to its slot, and only *then* becomes visible
@@ -43,12 +46,15 @@ export const isHidden = (side, index) =>
   (side === "enemy" ? hiddenEnemy : hiddenMine).has(index);
 
 // Play the reveal locally. `kind` is "field" (played to a slot — particles, and
-// the slot stays hidden until the reveal lands) or "hand" (added to hand — the
-// card simply flies toward the hand, no particles, no hiding).
-export const playCardReveal = ({ name, side, index, target, kind = "field" }) => {
+// the slot stays hidden until the reveal lands), "hand" (added to hand), "mill"
+// (top of deck sinks into the cemetery) or "banish" (a field card disintegrates
+// in place at its slot `source`). `source`/`size` are used by "banish".
+export const playCardReveal = ({ name, side, index, target, source, size, kind = "field" }) => {
   if (!name || name === 0) return;
   if (kind === "field") hideSlot(side, index);
-  revealListeners.forEach((cb) => cb({ id: ++nextId, name, side, target, kind }));
+  revealListeners.forEach((cb) =>
+    cb({ id: ++nextId, name, side, target, source, size, kind }),
+  );
 };
 
 // Reveal on your own screen AND tell the opponent to reveal it on theirs. Each
@@ -66,4 +72,29 @@ export const triggerHandReveal = (name, room) => {
   if (!name || name === 0) return;
   playCardReveal({ name, side: "player", kind: "hand", target: handCenter() });
   if (room) socket.emit("send msg", { type: "cardToHand", data: { name }, room });
+};
+
+// Mill reveal: the top card flips up centre-screen, then sinks into the cemetery
+// pile while fading to a graveyard grey. Each side targets its own cemetery;
+// only the card name travels.
+export const triggerMillReveal = (name, room) => {
+  if (!name || name === 0) return;
+  playCardReveal({ name, side: "player", kind: "mill", target: cemeteryCenter() });
+  if (room) socket.emit("send msg", { type: "cardMilled", data: { name }, room });
+};
+
+// Banish reveal: a card on the field disintegrates in place — it breaks into a
+// swarm of motes that scatter and fade at its slot. `index` is the field slot
+// (0-9). Each side computes its own slot; only the card name + field index travel.
+export const triggerBanishReveal = (name, room, index) => {
+  if (!name || name === 0) return;
+  playCardReveal({
+    name,
+    side: "player",
+    kind: "banish",
+    source: fieldSlotCenter(index),
+    size: CARD_PX * getBoardScale(),
+  });
+  if (room)
+    socket.emit("send msg", { type: "cardBanished", data: { name, index }, room });
 };

@@ -15,12 +15,35 @@ import { onCardReveal, REVEAL_MS } from "./cardRevealBus";
 const DUR = REVEAL_MS / 1000;
 const PARTICLES = 22;
 
-function RevealCard({ src, side, target, kind }) {
+function RevealCard({ src, side, target, source, size, kind }) {
   const vw = typeof window !== "undefined" ? window.innerWidth : 1000;
   const vh = typeof window !== "undefined" ? window.innerHeight : 800;
   // Vector from screen centre to the destination (slot, or the hand).
   const dx = target ? target.x - vw / 2 : 0;
   const dy = target ? target.y - vh / 2 : (side === "player" ? 0.22 : -0.22) * vh;
+
+  // Banish disintegration: motes scattered over the card that drift up/outward
+  // and fade, anchored at the card's slot. Computed before any early return so
+  // the hook order stays stable; only used by the "banish" branch.
+  const bH = size || 0.18 * vh;
+  const bW = (bH * 115) / 161;
+  const ash = useMemo(
+    () =>
+      Array.from({ length: 30 }, () => {
+        const sx = (Math.random() - 0.5) * bW; // start spread over the card
+        const sy = (Math.random() - 0.5) * bH;
+        return {
+          sx,
+          sy,
+          ex: sx + (Math.random() - 0.5) * 70, // drift outward
+          ey: sy - (30 + Math.random() * 90), // and upward, like rising ash
+          size: 3 + Math.random() * 6,
+          delay: Math.random() * 0.3,
+          hue: 268 + Math.random() * 34, // violet → magenta (the "void")
+        };
+      }),
+    [bW, bH],
+  );
 
   // Fixed per-reveal particle layout (field reveals only): each starts scattered
   // over the card and converges near the slot, staggered slightly. Computed
@@ -38,6 +61,112 @@ function RevealCard({ src, side, target, kind }) {
       })),
     [dx, dy],
   );
+
+  // Banish: the card disintegrates in place at its slot — it holds a beat, then
+  // brightens and dissolves while a swarm of violet motes streams off it and
+  // rises into the void.
+  if (kind === "banish") {
+    const sx = source ? source.x - vw / 2 : 0;
+    const sy = source ? source.y - vh / 2 : 0;
+    return (
+      <div style={{ position: "fixed", left: "50%", top: "50%", width: 0, height: 0 }}>
+        <div style={{ position: "absolute", transform: `translate(${sx}px, ${sy}px)` }}>
+          {/* Centre the card on the slot; framer animates only scale/opacity. */}
+          <div style={{ position: "absolute", transform: "translate(-50%, -50%)" }}>
+            <motion.div
+              initial={{ opacity: 0, scale: 1 }}
+              animate={{
+                opacity: [0, 1, 1, 0],
+                scale: [1, 1, 1.05, 1.1],
+                filter: [
+                  "grayscale(0.2) brightness(1)",
+                  "grayscale(0.2) brightness(1)",
+                  "grayscale(0.7) brightness(1.4)",
+                  "grayscale(1) brightness(2)",
+                ],
+              }}
+              transition={{ duration: DUR, times: [0, 0.15, 0.5, 0.9], ease: "easeIn" }}
+            >
+              <img
+                src={src}
+                alt="banished card"
+                style={{
+                  height: bH,
+                  width: "auto",
+                  borderRadius: 8,
+                  boxShadow: "0 0 26px 6px hsla(285,90%,65%,0.5)",
+                }}
+              />
+            </motion.div>
+          </div>
+
+          {/* Motes streaming off the card as it disintegrates. */}
+          {ash.map((p, i) => (
+            <motion.div
+              key={i}
+              style={{ position: "absolute", left: 0, top: 0 }}
+              initial={{ x: p.sx, y: p.sy, opacity: 0, scale: 1 }}
+              animate={{ x: p.ex, y: p.ey, opacity: [0, 0.95, 0], scale: 0.3 }}
+              transition={{ duration: DUR, delay: p.delay, ease: "easeOut" }}
+            >
+              <div
+                style={{
+                  position: "absolute",
+                  left: -p.size / 2,
+                  top: -p.size / 2,
+                  width: p.size,
+                  height: p.size,
+                  borderRadius: "50%",
+                  background: `radial-gradient(circle, #ffffff 0%, hsla(${p.hue},100%,78%,0.95) 45%, hsla(${p.hue},100%,68%,0) 100%)`,
+                  boxShadow: `0 0 ${p.size * 1.6}px ${p.size * 0.6}px hsla(${p.hue},100%,70%,0.8)`,
+                }}
+              />
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  // Mill: no particles — the card flips up, holds briefly, then shrinks and
+  // sinks into the cemetery pile while desaturating to a graveyard grey.
+  if (kind === "mill") {
+    return (
+      <div style={{ position: "fixed", left: "50%", top: "50%", width: 0, height: 0 }}>
+        <div style={{ position: "absolute", transform: "translate(-50%, -50%)", perspective: 1200 }}>
+          <motion.div
+            style={{ transformStyle: "preserve-3d" }}
+            initial={{ opacity: 0, scale: 0.6, rotateY: 180, x: 0, y: 0 }}
+            animate={{
+              opacity: [0, 1, 1, 0],
+              scale: [0.6, 1, 1, 0.22],
+              rotateY: [180, 0, 0, 0],
+              x: [0, 0, 0, dx],
+              y: [0, 0, 0, dy],
+              filter: [
+                "grayscale(0) brightness(1)",
+                "grayscale(0) brightness(1)",
+                "grayscale(0.5) brightness(0.85)",
+                "grayscale(1) brightness(0.5)",
+              ],
+            }}
+            transition={{ duration: DUR, times: [0, 0.22, 0.5, 1], ease: "easeInOut" }}
+          >
+            <img
+              src={src}
+              alt="milled card"
+              style={{
+                height: "42vh",
+                width: "auto",
+                borderRadius: 12,
+                boxShadow: "0 16px 48px rgba(0,0,0,0.75)",
+              }}
+            />
+          </motion.div>
+        </div>
+      </div>
+    );
+  }
 
   // "Added to hand": no particles — the card itself flips in, then shrinks and
   // flies toward the hand (down to yours, up to the opponent's) and fades.
@@ -168,7 +297,15 @@ export default function PlayReveal() {
       const src = artImage(evt.name, art);
       setItems((cur) => [
         ...cur,
-        { id, src, side: evt.side, target: evt.target, kind: evt.kind },
+        {
+          id,
+          src,
+          side: evt.side,
+          target: evt.target,
+          source: evt.source,
+          size: evt.size,
+          kind: evt.kind,
+        },
       ]);
       timers.current.push(
         setTimeout(() => setItems((cur) => cur.filter((i) => i.id !== id)), REVEAL_MS + 250),
@@ -188,7 +325,15 @@ export default function PlayReveal() {
   return createPortal(
     <div style={{ position: "fixed", inset: 0, pointerEvents: "none", zIndex: 99998 }}>
       {items.map((it) => (
-        <RevealCard key={it.id} src={it.src} side={it.side} target={it.target} kind={it.kind} />
+        <RevealCard
+          key={it.id}
+          src={it.src}
+          side={it.side}
+          target={it.target}
+          source={it.source}
+          size={it.size}
+          kind={it.kind}
+        />
       ))}
     </div>,
     document.body,

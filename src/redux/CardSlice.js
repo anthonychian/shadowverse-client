@@ -1642,6 +1642,52 @@ export const CardSlice = createSlice({
         room: state.room,
       });
     },
+    // Place the top card of the deck into the first open EX-area slot.
+    // The EX area is field indices 5-9 (an empty slot is 0). No-op if the
+    // deck is empty or every EX slot is already occupied.
+    placeToExFromTopOfDeck: (state) => {
+      if (state.deck.length === 0) return;
+      const exOffset = 5;
+      const relativeIndex = state.field
+        .slice(exOffset)
+        .findIndex((slot) => slot === 0);
+      if (relativeIndex === -1) return;
+      const newIndex = exOffset + relativeIndex;
+
+      const card = state.deck[0];
+      state.deck = state.deck.slice(1);
+      const newField = [
+        ...state.field.slice(0, newIndex),
+        card,
+        ...state.field.slice(newIndex + 1),
+      ];
+      state.field = newField;
+
+      const date = new Date().toLocaleTimeString("it-IT", {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+      state.gameLog = [
+        ...state.gameLog,
+        {
+          text: `[${date}] (Me): Placed ${card} to EX area from deck`,
+          card,
+        },
+      ];
+
+      socket.emit("send msg", {
+        type: "placeToExFromTopOfDeck",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Placed ${card} to EX area from deck`, card },
+          },
+          { type: "field", data: state.field },
+          { type: "deckSize", data: state.deck.length },
+        ],
+        room: state.room,
+      });
+    },
     addToBanishFromDeck: (state, action) => {
       const card = action.payload.card;
       const cardIndex = action.payload.index;
@@ -2883,6 +2929,7 @@ export const {
   drawFourFromDeck,
   placeToFieldFromHand,
   placeToFieldFromDeck,
+  placeToExFromTopOfDeck,
   placeToFieldFromCemetery,
   placeToFieldFromBanish,
   addToHandFromDeck,

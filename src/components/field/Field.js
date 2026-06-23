@@ -117,7 +117,7 @@ import { getNameByCardNoClient } from "../../engine/cardLookup";
 import Token from "./Token";
 import ShowDice from "./ShowDice";
 import { playGameAnimation, triggerGameAnimation } from "./animationBus";
-import { DeckFx } from "./GameFx";
+import { DeckFx, HandFx, useShuffleHandActive, useShuffleDeckActive } from "./GameFx";
 import {
   registerFieldGrid,
   registerBoardScale,
@@ -126,6 +126,8 @@ import {
   fieldSlotCenter,
   enemyFieldSlotCenter,
   enemyHandCenter,
+  enemyCemeteryCenter,
+  getBoardScale,
 } from "./handDrag";
 import FieldDropHints from "./FieldDropHints";
 import DiceRoll from "./DiceRoll";
@@ -133,6 +135,7 @@ import PlayReveal from "./PlayReveal";
 import {
   triggerCardReveal,
   triggerHandReveal,
+  triggerBanishReveal,
   playCardReveal,
   onHideChange,
   isHidden,
@@ -217,6 +220,9 @@ export default function Field({
   const reduxCurrentDeck = useSelector((state) => state.card.deck);
   const reduxCurrentRoom = useSelector((state) => state.card.room);
   const reduxEnemyHand = useSelector((state) => state.card.enemyHand);
+  // Hide the opponent's hand cards / deck pile while their shuffle riffle plays.
+  const enemyShuffling = useShuffleHandActive("enemy");
+  const enemyDeckShuffling = useShuffleDeckActive("enemy");
   const reduxEnemyDeckSize = useSelector((state) => state.card.enemyDeckSize);
   const reduxShowEnemyHand = useSelector((state) => state.card.showEnemyHand);
   const reduxShowEnemyCard = useSelector((state) => state.card.showEnemyCard);
@@ -535,6 +541,30 @@ export default function Field({
             target: enemyHandCenter(),
           });
           break;
+        case "cardMilled":
+          // Opponent milled their top card — reveal it centre-screen and sink
+          // it into their (top) cemetery pile.
+          playCardReveal({
+            name: (update.data || {}).name,
+            side: "enemy",
+            kind: "mill",
+            target: enemyCemeteryCenter(),
+          });
+          break;
+        case "cardBanished": {
+          // Opponent banished a field card — disintegrate it in place at its
+          // slot (mapped to our enemy grid).
+          const { name: banName, index: banIndex } = update.data || {};
+          const cell = banIndex < 5 ? banIndex + 5 : banIndex - 5;
+          playCardReveal({
+            name: banName,
+            side: "enemy",
+            kind: "banish",
+            source: enemyFieldSlotCenter(cell),
+            size: 161 * getBoardScale(),
+          });
+          break;
+        }
         case "cardPlayed": {
           // Opponent played a card to the field — reveal it centre-screen and
           // fly it onto its slot on their (top) board; the card stays hidden
@@ -1167,6 +1197,7 @@ export default function Field({
   };
   const handleCardToBanish = () => {
     handleClose();
+    triggerBanishReveal(name, reduxCurrentRoom, index);
     dispatch(
       placeToBanishFromField({
         card: name,
@@ -1899,6 +1930,7 @@ export default function Field({
           <div
             ref={(el) => registerEnemyHand(el)}
             style={{
+              position: "relative",
               width: `${BASE_WIDTH}px`,
               display: "flex",
               flexDirection: "row",
@@ -1928,6 +1960,7 @@ export default function Field({
               const baseStyle = {
                 cursor: `url(${img}) 55 55, auto`,
                 marginLeft: idx === 0 ? 0 : -overlap,
+                visibility: enemyShuffling ? "hidden" : "visible",
               };
               return (
                 <img
@@ -1948,6 +1981,7 @@ export default function Field({
                 />
               );
             })}
+            <HandFx side="enemy" />
           </div>
         </div>
 
@@ -2004,7 +2038,12 @@ export default function Field({
             //   cursor: `url(${img}) 55 55, auto`,
             // }}
             >
-              <img className={"cardStyle"} src={cardback} alt={"cardback"} />
+              <img
+                className={"cardStyle"}
+                src={cardback}
+                alt={"cardback"}
+                style={{ visibility: enemyDeckShuffling ? "hidden" : "visible" }}
+              />
             </div>
             <DeckFx side="enemy" />
             {/* {showOpponentDeckSize && ( */}

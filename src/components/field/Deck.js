@@ -15,6 +15,7 @@ import {
   addToCemeteryFromTopOfDeck,
   addToBanishFromDeck,
   placeToFieldFromDeck,
+  placeToExFromTopOfDeck,
   setViewingDeck,
   setViewingTopCards,
   setViewingCardsLog,
@@ -24,10 +25,14 @@ import { Menu, MenuItem, Modal, Box, Popover } from "@mui/material";
 import { useUiModalOpen } from "../hooks/useUiChromeVisible";
 import { ModalHideUiRow } from "../ui/HideUiButton";
 import { triggerGameAnimation } from "./animationBus";
-import { triggerHandReveal, triggerCardReveal } from "./cardRevealBus";
+import {
+  triggerHandReveal,
+  triggerCardReveal,
+  triggerMillReveal,
+} from "./cardRevealBus";
 import { fieldSlotCenter, registerDeck } from "./handDrag";
 import { useModalCardDrag, ModalDragGhost } from "./modalCardDrag";
-import { DeckFx } from "./GameFx";
+import { DeckFx, useShuffleDeckActive } from "./GameFx";
 
 import CardMUI from "@mui/material/Card";
 import Card from "../hand/Card";
@@ -91,7 +96,10 @@ export default function Deck({
 
   const reduxDeck = useSelector((state) => state.card.deck);
   const reduxField = useSelector((state) => state.card.field);
+  const reduxHand = useSelector((state) => state.card.hand);
   const reduxRoom = useSelector((state) => state.card.room);
+  // Hide the deck's cardback while the deck-shuffle riffle plays.
+  const shufflingDeck = useShuffleDeckActive("player");
   const gameMode = useSelector((state) => state.gameState.gameMode);
   const automated = gameMode === "automated";
 
@@ -208,6 +216,7 @@ export default function Deck({
 
   const handleShuffleHand = () => {
     dispatch(shuffleCards());
+    if (reduxHand.length > 0) triggerGameAnimation("shuffleHand", reduxRoom);
   };
 
   const handleShowHand = () => {
@@ -283,7 +292,26 @@ export default function Deck({
   };
 
   const handleMill = () => {
+    const card = reduxDeck[0];
+    if (!card) return;
     dispatch(addToCemeteryFromTopOfDeck());
+    triggerMillReveal(card, reduxRoom);
+  };
+
+  // The EX area is the bottom field row (indices 5-9); an empty slot is 0.
+  const exAreaFull = reduxField.slice(5).every((slot) => slot !== 0);
+
+  const handleCardToEx = () => {
+    if (exAreaFull) return;
+    const card = reduxDeck[0];
+    if (!card) return;
+    // Mirror the reducer's first-open-EX-slot logic so the reveal flies to the
+    // exact slot the card lands in (EX area = field indices 5-9).
+    const relativeIndex = reduxField.slice(5).findIndex((slot) => slot === 0);
+    if (relativeIndex === -1) return;
+    const exIndex = 5 + relativeIndex;
+    dispatch(placeToExFromTopOfDeck());
+    triggerCardReveal(card, reduxRoom, exIndex, fieldSlotCenter(exIndex));
   };
 
   const handleToTopOfDeck = () => {
@@ -423,7 +451,12 @@ export default function Deck({
           position: "relative",
         }}
       >
-        <img className={"cardStyle"} src={cardback} alt={"cardback"} />
+        <img
+          className={"cardStyle"}
+          src={cardback}
+          alt={"cardback"}
+          style={{ visibility: shufflingDeck ? "hidden" : "visible" }}
+        />
         <DeckFx side="player" />
       </div>
 
@@ -454,6 +487,9 @@ export default function Deck({
           <div onMouseLeave={() => handlePopoverClose()}>
             <MenuItem onClick={() => handleDraw()}>Draw</MenuItem>
             <MenuItem onClick={() => handleMill()}>Mill</MenuItem>
+            <MenuItem onClick={() => handleCardToEx()} disabled={exAreaFull}>
+              Card to EX
+            </MenuItem>
             <MenuItem onClick={() => handleShuffle()}>Shuffle Deck</MenuItem>
             <MenuItem onClick={() => handleViewDeck()}>View Deck</MenuItem>
             <MenuItem onClick={() => handleRevealDeck()}>Look At Top</MenuItem>

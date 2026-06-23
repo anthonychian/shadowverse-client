@@ -111,10 +111,21 @@ let enemyHandEl = null;
 export const registerEnemyHand = (el) => {
   enemyHandEl = el || null;
 };
+
+// The opponent's cemetery pile (top of the screen), registered by EnemyCemetery.
+// Lets the mill reveal fly toward the right cemetery on each screen.
+let enemyCemeteryEl = null;
+export const registerEnemyCemetery = (el) => {
+  enemyCemeteryEl = el || null;
+};
+
 const rectCenter = (r) => (r ? { x: r.left + r.width / 2, y: r.top + r.height / 2 } : null);
 export const handCenter = () => rectCenter(getHandRect());
 export const enemyHandCenter = () =>
   rectCenter(enemyHandEl ? enemyHandEl.getBoundingClientRect() : null);
+export const cemeteryCenter = () => rectCenter(getCemeteryRect());
+export const enemyCemeteryCenter = () =>
+  rectCenter(enemyCemeteryEl ? enemyCemeteryEl.getBoundingClientRect() : null);
 
 // Hover bus: the dragged card publishes its live state ({ active, index,
 // cemetery, hand, showCemetery, showHand, showDeck, deck }); the drop-hint

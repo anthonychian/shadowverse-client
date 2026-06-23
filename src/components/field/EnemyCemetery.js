@@ -12,6 +12,7 @@ import {
 import CardMUI from "@mui/material/Card";
 import Card from "../hand/Card";
 import { setViewingCemeteryOpponent } from "../../redux/CardSlice";
+import { registerEnemyCemetery } from "./handDrag";
 import "../../css/Card.css";
 import { useUiModalOpen } from "../hooks/useUiChromeVisible";
 import { ModalHideUiRow } from "../ui/HideUiButton";
@@ -69,6 +70,7 @@ export default function EnemyCemetery({ setHovering, ready }) {
   return (
     <>
       <div
+        ref={(el) => registerEnemyCemetery(el)}
         onClick={handleModalOpen}
         style={{
           // height: "160px",
