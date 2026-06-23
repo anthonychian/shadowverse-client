@@ -38,12 +38,8 @@ import {
   clearSavedState,
   getDisplayName,
   saveDisplayName,
-  playerId,
 } from "../sockets";
-import { setGameMode, setPlayerSlot, resetEngine } from "../redux/GameStateSlice";
-import { deckToEnginePayload, defaultMvpDeck } from "../engine/adapter";
-import { applyEnginePayload } from "../engine/sync";
-import { store } from "../redux/store";
+import { setGameMode } from "../redux/GameStateSlice";
 import ActiveGamesBoard from "../components/ui/ActiveGamesBoard";
 import DeckPanel from "../components/deckbuilder/DeckPanel";
 import CardInspector from "../components/deckbuilder/CardInspector";
@@ -137,7 +133,6 @@ export default function Home() {
   const [leaderNum, setLeaderNum] = useState(0);
   const [openSnack, setOpenSnack] = useState(false);
   const [deckIdx, setDeckIdx] = useState(0);
-  const [rulesEnforced, setRulesEnforced] = useState(false);
 
   // Lobby board state. `rooms` is the live list of joinable public games pushed
   // by the server; `myRoom` is the room this tab is currently hosting (shown in
@@ -214,40 +209,18 @@ export default function Home() {
   ];
 
   useEffect(() => {
-    const savedMode = sessionStorage.getItem("sve_game_mode");
-    if (savedMode === "automated" || savedMode === "manual") {
-      dispatch(setGameMode(savedMode));
-      if (savedMode === "automated") setRulesEnforced(true);
-    }
+    dispatch(setGameMode("manual"));
 
     const onStartGame = () => handleNavigateToGame();
 
-    const onEngineState = (views) => {
-      const slot = store.getState().gameState.playerSlot;
-      applyEnginePayload(dispatch, views, slot);
-      handleNavigateToGame();
-    };
-
-    const onJoined = ({ slot, automated }) => {
-      if (automated) {
-        dispatch(setPlayerSlot(slot));
-        dispatch(setGameMode("automated"));
-        socket.emit("request_engine_state");
-      }
-    };
-
     const onActiveUsers = (data) => dispatch(setActiveUsers(data));
     socket.on("start_game", onStartGame);
-    socket.on("engine_state", onEngineState);
-    socket.on("joined", onJoined);
     socket.on("active_users", onActiveUsers);
     // Remove these on unmount; otherwise each return trip to Home stacks another
     // start_game handler (firing navigate multiple times) and leaves a stale one
     // alive that could yank the host into a game while they're off another page.
     return () => {
       socket.off("start_game", onStartGame);
-      socket.off("engine_state", onEngineState);
-      socket.off("joined", onJoined);
       socket.off("active_users", onActiveUsers);
     };
   }, [dispatch, socket]);
@@ -353,28 +326,12 @@ export default function Home() {
   const deckClassOf = (d) =>
     (d && (d.class || computeDeckClass(d.deck))) || "";
 
-  const buildEngineDeck = () => {
-    if (!selectedDeck.deck?.length) return defaultMvpDeck();
-    return deckToEnginePayload(selectedDeck.deck, selectedDeck.evoDeck || []);
-  };
-
   const joinRoomWithMode = (roomId) => {
     dispatch(setRoom(roomId));
     saveRoom(roomId);
     dispatch(setDeckClass(deckClassOf(selectedDeck)));
-    if (rulesEnforced) {
-      dispatch(resetEngine());
-      dispatch(setGameMode("automated"));
-      socket.emit("join_room", {
-        room: roomId,
-        playerId,
-        automated: true,
-        deck: buildEngineDeck(),
-      });
-    } else {
-      dispatch(setGameMode("manual"));
-      socket.emit("join_room", roomId);
-    }
+    dispatch(setGameMode("manual"));
+    socket.emit("join_room", roomId);
   };
 
   const handleCreateRoom = () => {
@@ -396,21 +353,15 @@ export default function Home() {
         };
         setMyRoom(room);
         socket.emit("create_room", room);
-        // In manual mode the host stays on Home and waits for an opponent:
-        // emitting join_room here would trip the server's start_game (it starts
-        // the game as soon as anyone joins a room with <2 players), yanking the
-        // host into an empty game the moment they press PLAY. The opponent's
-        // later join_room is what starts the game for both. In automated mode the
-        // engine join registers the host as a player without starting the game,
-        // so it's still done up front.
-        if (rulesEnforced) {
-          joinRoomWithMode(roomId);
-        } else {
-          dispatch(setRoom(roomId));
-          saveRoom(roomId);
-          dispatch(setDeckClass(deckClassOf(selectedDeck)));
-          dispatch(setGameMode("manual"));
-        }
+        // Host stays on Home and waits for an opponent: emitting join_room here
+        // would trip the server's start_game (it starts the game as soon as anyone
+        // joins a room with <2 players), yanking the host into an empty game the
+        // moment they press PLAY. The opponent's later join_room starts the game
+        // for both.
+        dispatch(setRoom(roomId));
+        saveRoom(roomId);
+        dispatch(setDeckClass(deckClassOf(selectedDeck)));
+        dispatch(setGameMode("manual"));
       }
     }
   };
@@ -950,17 +901,6 @@ export default function Home() {
                 PLAY
               </div>
             </Button>
-            <Chip
-              label={rulesEnforced ? "Rules Enforced" : "Manual Mode"}
-              color={rulesEnforced ? "success" : "default"}
-              title={
-                rulesEnforced
-                  ? "Requires npm run server in a separate terminal (localhost:5000)"
-                  : "Free-form manual play (no rules engine)"
-              }
-              onClick={() => setRulesEnforced((v) => !v)}
-              sx={{ alignSelf: "center", cursor: "pointer" }}
-            />
             <Button
               onClick={handleJoinRoom}
               sx={{

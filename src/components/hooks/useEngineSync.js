@@ -17,10 +17,7 @@ export function useEngineSync() {
   );
 
   useEffect(() => {
-    const savedMode = sessionStorage.getItem("sve_game_mode");
-    if (savedMode === "automated" || savedMode === "manual") {
-      dispatch(setGameMode(savedMode));
-    }
+    dispatch(setGameMode("manual"));
   }, [dispatch]);
 
   useEffect(() => {
