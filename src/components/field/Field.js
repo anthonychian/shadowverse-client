@@ -66,6 +66,7 @@ import {
   setEnemyViewingCemeteryOpponent,
   setEnemyViewingEvoDeckOpponent,
   setEnemyViewingTopCards,
+  setEnemyLeftGame,
   setEnemyRematchStatus,
   setEnemyDice,
   setEnemyLog,
@@ -82,6 +83,8 @@ import {
   setEnemyCardSelectedOnField,
   setRoom,
   setSelfOnlineStatus,
+  setSelfConnectionState,
+  setSelfResyncing,
   restoreOwnState,
 } from "../../redux/CardSlice";
 import { artImage } from "../../decks/getCards";
@@ -371,6 +374,8 @@ export default function Field({
   const lastSeqBySenderRef = useRef({});
   // Throttle full-state resync requests so a burst of gaps can't storm.
   const lastResyncRef = useRef(0);
+  // Fallback timer to clear the "Resyncing…" badge if no peer state comes back.
+  const resyncTimerRef = useRef(null);
 
   const requestResync = useCallback(() => {
     if (!reduxRoom) return;
@@ -378,8 +383,23 @@ export default function Field({
     if (now - lastResyncRef.current < 1500) return;
     lastResyncRef.current = now;
     console.log("[resync] requesting full state from opponent");
+    dispatch(setSelfResyncing(true));
+    // Safety net: the request is answered by the opponent (via receive_full_state),
+    // so it'll go unanswered if they're offline. Clear the indicator regardless
+    // after a few seconds; the normal path clears it earlier on receipt.
+    if (resyncTimerRef.current) clearTimeout(resyncTimerRef.current);
+    resyncTimerRef.current = setTimeout(() => {
+      dispatch(setSelfResyncing(false));
+    }, 4000);
     socket.emit("request_state", { room: reduxRoom });
-  }, [reduxRoom]);
+  }, [reduxRoom, dispatch]);
+
+  // Clear the fallback timer on unmount.
+  useEffect(() => {
+    return () => {
+      if (resyncTimerRef.current) clearTimeout(resyncTimerRef.current);
+    };
+  }, []);
 
   // Process a single update (batched with others)
   const handleUpdate = useCallback(
@@ -666,13 +686,20 @@ export default function Field({
     };
 
     socket.on("receive msg", handleMessage);
-    socket.on("online", () => dispatch(setEnemyOnlineStatus(true)));
+    socket.on("online", () => {
+      dispatch(setEnemyOnlineStatus(true));
+      // If they'd left and now rejoined, drop the "left game" notice.
+      dispatch(setEnemyLeftGame(false));
+    });
     socket.on("offline", () => dispatch(setEnemyOnlineStatus(false)));
+    // Explicit "Exit Game" by the opponent (no socket drop, so no `offline`).
+    socket.on("opponent_left", () => dispatch(setEnemyLeftGame(true)));
 
     return () => {
       socket.off("receive msg", handleMessage);
       socket.off("online");
       socket.off("offline");
+      socket.off("opponent_left");
     };
   }, [dispatch, applyMessage, requestResync]);
 
@@ -700,14 +727,34 @@ export default function Field({
   // Track this client's own connection so the UI can show a disconnected
   // indicator (the WifiOff icon) while we're offline / reconnecting.
   useEffect(() => {
-    const onConnect = () => dispatch(setSelfOnlineStatus(true));
-    const onDisconnect = () => dispatch(setSelfOnlineStatus(false));
+    const onConnect = () => {
+      dispatch(setSelfOnlineStatus(true));
+      dispatch(setSelfConnectionState("online"));
+    };
+    const onDisconnect = (reason) => {
+      dispatch(setSelfOnlineStatus(false));
+      // Socket.io auto-reconnects on transport-level drops, but NOT when the
+      // disconnect was explicitly initiated by either side ("io server/client
+      // disconnect") — those stay down until a manual reconnect. Label the
+      // badge accordingly: "Reconnecting" when a retry is underway, otherwise
+      // a flat "Disconnected".
+      const willRetry =
+        reason !== "io server disconnect" && reason !== "io client disconnect";
+      dispatch(setSelfConnectionState(willRetry ? "reconnecting" : "disconnected"));
+    };
+    // Manager-level event: fires on each automatic reconnection attempt, so we
+    // keep showing "Reconnecting" for the whole retry sequence.
+    const onReconnectAttempt = () =>
+      dispatch(setSelfConnectionState("reconnecting"));
     dispatch(setSelfOnlineStatus(socket.connected));
+    dispatch(setSelfConnectionState(socket.connected ? "online" : "reconnecting"));
     socket.on("connect", onConnect);
     socket.on("disconnect", onDisconnect);
+    socket.io.on("reconnect_attempt", onReconnectAttempt);
     return () => {
       socket.off("connect", onConnect);
       socket.off("disconnect", onDisconnect);
+      socket.io.off("reconnect_attempt", onReconnectAttempt);
     };
   }, [dispatch]);
 

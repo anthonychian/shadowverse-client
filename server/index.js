@@ -542,6 +542,10 @@ io.on("connection", (socket) => {
   });
 
   socket.on("leave_room", (data) => {
+    // Tell anyone still in the room that this player deliberately left (e.g.
+    // "Exit Game"). Unlike a dropped socket this never fires `disconnecting`,
+    // so without this the opponent would get no signal at all.
+    socket.to(data).emit("opponent_left", socket.id);
     socket.leave(data);
     socketRoomMap.delete(socket.id);
     console.log(`Leaving room: ${data}`);

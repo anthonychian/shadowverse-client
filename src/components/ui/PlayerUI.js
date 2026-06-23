@@ -25,6 +25,7 @@ import { styled } from "@mui/material/styles";
 import Rating from "@mui/material/Rating";
 import WifiOffIcon from "@mui/icons-material/WifiOff";
 import WifiIcon from "@mui/icons-material/Wifi";
+import SyncIcon from "@mui/icons-material/Sync";
 import "../../css/EnemyUI.css";
 import "../../css/LeaderPanel.css";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
@@ -65,6 +66,12 @@ export default function PlayerUI({ name }) {
   const reduxRoom = useSelector((state) => state.card.room);
   const reduxSelfOnlineStatus = useSelector(
     (state) => state.card.selfOnlineStatus,
+  );
+  const reduxSelfConnectionState = useSelector(
+    (state) => state.card.selfConnectionState,
+  );
+  const reduxSelfResyncing = useSelector(
+    (state) => state.card.selfResyncing,
   );
   const gameMode = useSelector((state) => state.gameState.gameMode);
   const automated = gameMode === "automated";
@@ -268,14 +275,24 @@ export default function PlayerUI({ name }) {
           <img src={getClassFromLeader(name)} alt={name} />
         </div>
 
-        {!reduxSelfOnlineStatus && (
-          <div
-            className="wifiBadge wifiOff"
-            title="Disconnected — reconnecting…"
-          >
-            <WifiOffIcon sx={{ height: 22, width: 22 }} />
+        {!reduxSelfOnlineStatus ? (
+          (() => {
+            const reconnecting = reduxSelfConnectionState === "reconnecting";
+            const label = reconnecting ? "Reconnecting" : "Disconnected";
+            return (
+              <div className="wifiBadge wifiOff" title={label}>
+                <WifiOffIcon sx={{ height: 22, width: 22 }} />
+                <span className="wifiBadgeLabel">{label}</span>
+              </div>
+            );
+          })()
+        ) : reduxSelfResyncing ? (
+          // Still connected, but repairing a detected desync (sequence gap).
+          <div className="wifiBadge wifiResync" title="Resyncing…">
+            <SyncIcon className="wifiSpin" sx={{ height: 22, width: 22 }} />
+            <span className="wifiBadgeLabel">Resyncing</span>
           </div>
-        )}
+        ) : null}
       </div>
 
       {/* Secondary: HP, play points, EP, super-evo grouped together. */}

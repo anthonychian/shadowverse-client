@@ -32,6 +32,7 @@ export const CardSlice = createSlice({
     superEvoActive: false,
     enemySuperEvoActive: false,
     enemyViewingHand: false,
+    enemyLeftGame: false,
     enemyViewingDeck: false,
     enemyViewingTopCards: false,
     enemyViewingCemetery: false,
@@ -79,6 +80,14 @@ export const CardSlice = createSlice({
     room: "",
     enemyOnlineStatus: true,
     selfOnlineStatus: true,
+    // Finer-grained connection phase for the wifi badge label:
+    // "online" | "reconnecting" | "disconnected". Distinct from the boolean
+    // selfOnlineStatus (which only drives whether the badge is shown).
+    selfConnectionState: "online",
+    // True while a full-state resync is in flight after a detected desync
+    // (sequence gap). The socket is still connected during this — it's a
+    // separate, transient "Resyncing…" indicator, not a disconnect.
+    selfResyncing: false,
     activeUsers: 0,
     gameLog: [],
     chatLog: [],
@@ -348,6 +357,9 @@ export const CardSlice = createSlice({
     setEnemyViewingTopCards: (state, action) => {
       state.enemyViewingTopCards = action.payload;
     },
+    setEnemyLeftGame: (state, action) => {
+      state.enemyLeftGame = action.payload;
+    },
     setViewingCemetery: (state, action) => {
       socket.emit("send msg", {
         type: "viewingCemetery",
@@ -458,6 +470,12 @@ export const CardSlice = createSlice({
     },
     setSelfOnlineStatus: (state, action) => {
       state.selfOnlineStatus = action.payload;
+    },
+    setSelfConnectionState: (state, action) => {
+      state.selfConnectionState = action.payload;
+    },
+    setSelfResyncing: (state, action) => {
+      state.selfResyncing = action.payload;
     },
     setLastChatMessage: (state, action) => {
       state.lastChatMessage = action.payload;
@@ -2963,6 +2981,8 @@ export const {
   setChat,
   setEnemyOnlineStatus,
   setSelfOnlineStatus,
+  setSelfConnectionState,
+  setSelfResyncing,
   setLastChatMessage,
   setEnemyChat,
   setViewingCardsLog,
@@ -2990,6 +3010,7 @@ export const {
   setEnemyViewingCemeteryOpponent,
   setEnemyViewingEvoDeckOpponent,
   setEnemyViewingTopCards,
+  setEnemyLeftGame,
   setEnemyCounter,
   setEnemyAura,
   setEnemyBane,

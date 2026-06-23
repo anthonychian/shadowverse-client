@@ -72,6 +72,9 @@ export default function EnemyUI() {
   const reduxEnemyViewingHand = useSelector(
     (state) => state.card.enemyViewingHand,
   );
+  const reduxEnemyLeftGame = useSelector(
+    (state) => state.card.enemyLeftGame,
+  );
   const reduxEnemyOnlineStatus = useSelector(
     (state) => state.card.enemyOnlineStatus,
   );
@@ -334,6 +337,24 @@ export default function EnemyUI() {
           message={"Viewing Opponent's Hand"}
         />
       </Snackbar>
+      <Snackbar
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+        open={reduxEnemyLeftGame}
+      >
+        <SnackbarContent
+          style={{
+            backgroundColor: "rgba(0, 0, 0, 0.7)",
+            color: "white",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            fontSize: "30px",
+            fontWeight: "bold",
+            fontFamily: "Noto Serif JP, serif",
+          }}
+          message={"Opponent left the game"}
+        />
+      </Snackbar>
 
       {/* Hero: the animated leader with its class logo (and the wifi badge). */}
       <div className="leaderStageWrap">
@@ -355,6 +376,7 @@ export default function EnemyUI() {
         {!reduxEnemyOnlineStatus && (
           <div className="wifiBadge wifiOff" title="Disconnected">
             <WifiOffIcon sx={{ height: 22, width: 22 }} />
+            <span className="wifiBadgeLabel">Disconnected</span>
           </div>
         )}
       </div>

@@ -26,6 +26,7 @@ import {
   setEnemyArt,
   setEnemyKeyword,
   restoreOwnState,
+  setSelfResyncing,
 } from "../../redux/CardSlice";
 
 const applyEnemyState = (dispatch, s) => {
@@ -71,6 +72,7 @@ const useReceiveFullState = () => {
       unstable_batchedUpdates(() => {
         if (ownState) dispatch(restoreOwnState(ownState));
         if (enemyState) applyEnemyState(dispatch, enemyState);
+        dispatch(setSelfResyncing(false));
       });
     });
 
@@ -87,6 +89,7 @@ const useReceiveFullState = () => {
       const fullState = message.data || message;
       unstable_batchedUpdates(() => {
         applyEnemyState(dispatch, fullState);
+        dispatch(setSelfResyncing(false));
       });
     });
 
