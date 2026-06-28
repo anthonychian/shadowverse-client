@@ -428,8 +428,16 @@ export default function CreateDeck() {
         return !!f && f.has(buttonFilterSet);
       });
     }
+    // Search matches the card name OR its effect text, so e.g. "Storm" surfaces
+    // every card whose ability text mentions it, not just cards named "Storm".
     const q = search.trim().toLowerCase();
-    if (q) names = names.filter((n) => n.toLowerCase().includes(q));
+    if (q) {
+      names = names.filter((n) => {
+        if (n.toLowerCase().includes(q)) return true;
+        const eff = (getDetails(n) || {}).effect;
+        return !!eff && eff.toLowerCase().includes(q);
+      });
+    }
     // Rarity is applied per-mode below (per-name when deduping, per-printing
     // when showing all printings), so exclude it from the shared name filter.
     const nameFilters = { types, traits, rarities: [], costs, attacks, defenses };
@@ -555,9 +563,12 @@ export default function CreateDeck() {
       });
     if (deck.length > 0) { initedRef.current = true; inspect(byCost([...deckMap.keys()])[0]); }
     else if (evoDeck.length > 0) { initedRef.current = true; inspect(byCost([...evoDeckMap.keys()])[0]); }
-    else if (!willLoadDeck && displayed.length > 0) { initedRef.current = true; inspect(displayed[0].name, displayed[0].key, displayed[0].cardNo); }
+    // Auto-inspecting the first pool card is a desktop convenience (it fills the
+    // inspector panel). On mobile that would visibly "select" a random card —
+    // showing its control bar at 0/3 — so skip it for an empty deck there.
+    else if (!willLoadDeck && displayed.length > 0 && !isMobile) { initedRef.current = true; inspect(displayed[0].name, displayed[0].key, displayed[0].cardNo); }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [deck, evoDeck, displayed, cardName, willLoadDeck]);
+  }, [deck, evoDeck, displayed, cardName, willLoadDeck, isMobile]);
 
   // ---------- inspector ----------
   const inspectedIsEvo = cardName ? isEvoCard(cardName) : false;
@@ -825,6 +836,7 @@ export default function CreateDeck() {
               scrollTargetId="poolScroll"
               inspectedKey={inspectedKey}
               onInspect={handleInspect}
+              onSelect={inspect}
               onAdd={mainSelected ? addMain : addEvo}
               onRemove={mainSelected ? handleCardRemove : handleEvoCardRemove}
               isAtLimit={mainSelected ? mainAtLimit : evoAtLimit}

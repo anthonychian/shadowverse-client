@@ -24,7 +24,7 @@ const thumbSrc = (src) =>
 
 export default function CardGrid({
   items, visibleCount, onLoadMore, hasMore, scrollTargetId,
-  onInspect, onAdd, onRemove, isAtLimit, countOf, copyMaxOf, inspectedKey, isMobile,
+  onInspect, onSelect, onAdd, onRemove, isAtLimit, countOf, copyMaxOf, inspectedKey, isMobile,
 }) {
   return (
     <InfiniteScroll
@@ -61,6 +61,7 @@ export default function CardGrid({
             maxed={isAtLimit ? isAtLimit(item.name) : false}
             selected={itemKey === inspectedKey}
             onInspect={onInspect}
+            onSelect={onSelect}
             onAdd={onAdd}
             onRemove={onRemove}
             isMobile={isMobile}
@@ -76,12 +77,15 @@ export default function CardGrid({
   );
 }
 
-function CardTile({ name, cardNo, cardKey, count, copyMax, maxed, selected, onInspect, onAdd, onRemove, isMobile }) {
+function CardTile({ name, cardNo, cardKey, count, copyMax, maxed, selected, onInspect, onSelect, onAdd, onRemove, isMobile }) {
   const [hover, setHover] = React.useState(false);
   // In the "show all printings" view a specific printing is requested by card
   // number; otherwise fall back to the name-keyed image used everywhere else.
   const fullSrc = cardNo ? `../textures/${cardNo}.png` : cardImage(name);
-  const src = thumbSrc(fullSrc);
+  // Mobile pool tiles render much larger than desktop ones, so the downscaled
+  // thumbs look soft there — load the full-size originals on mobile; desktop
+  // keeps the lighter thumbnails.
+  const src = isMobile ? fullSrc : thumbSrc(fullSrc);
   // Desktop hover buttons fade in on hover; mobile has no hover, so it uses
   // always-on icons (magnifier + trash) shown only once the card is in the deck.
   const btnBase = {
@@ -91,12 +95,16 @@ function CardTile({ name, cardNo, cardKey, count, copyMax, maxed, selected, onIn
     opacity: hover ? 1 : 0, pointerEvents: hover ? "auto" : "none",
     transition: "opacity .12s",
   };
-  // On mobile, tapping the card body adds a copy (the icons handle inspect /
-  // remove and stop propagation so they don't also add). On desktop, a tap
-  // inspects and hover reveals the add/remove buttons.
+  // On mobile, the first tap on a card just selects it — revealing the control
+  // bar at "0 / max" (magnifier enabled, trash disabled). Once selected, further
+  // taps on the body add a copy. (The icons handle inspect / remove and stop
+  // propagation so they don't also add.) On desktop, a tap inspects and hover
+  // reveals the add/remove buttons.
   const handleBodyClick = () => {
-    if (isMobile) { if (!maxed && onAdd) onAdd(name, cardNo); }
-    else onInspect(name, cardKey, cardNo);
+    if (isMobile) {
+      if (!selected) onSelect(name, cardKey, cardNo);
+      else if (!maxed && onAdd) onAdd(name, cardNo);
+    } else onInspect(name, cardKey, cardNo);
   };
   // Desktop tiles are a fixed size; mobile tiles fill their grid cell and keep
   // the card aspect ratio so the pool matches the deck view's responsive grid.
@@ -147,11 +155,12 @@ function CardTile({ name, cardNo, cardKey, count, copyMax, maxed, selected, onIn
       {count > 0 && !isMobile && <div style={countBadge}>{count}</div>}
 
       {isMobile ? (
-        // Only an in-deck card (count >= 1) shows controls: a bottom bar with a
-        // magnifier (opens the preview modal), the copy count ("n / max"), and a
-        // trash (removes a copy). The buttons stop propagation so the card-body
-        // tap (which adds) doesn't also fire.
-        count > 0 && (
+        // A selected card (first tap) or an in-deck card (count >= 1) shows the
+        // control bar: a magnifier (opens the preview modal), the copy count
+        // ("n / max"), and a trash (removes a copy). The magnifier is always
+        // enabled; the trash is disabled until there's a copy to remove. The
+        // buttons stop propagation so the card-body tap (which adds) doesn't fire.
+        (selected || count > 0) && (
           <div style={mobileBar}>
             <button
               onClick={(e) => { e.stopPropagation(); onInspect(name, cardKey, cardNo); }}
@@ -164,9 +173,10 @@ function CardTile({ name, cardNo, cardKey, count, copyMax, maxed, selected, onIn
               {copyMax == null ? count : `${count} / ${copyMax}`}
             </span>
             <button
-              onClick={(e) => { e.stopPropagation(); if (onRemove) onRemove(name); }}
+              onClick={(e) => { e.stopPropagation(); if (count > 0 && onRemove) onRemove(name); }}
+              disabled={count === 0}
               title="Remove from deck"
-              style={mobileBarBtn}
+              style={{ ...mobileBarBtn, ...(count === 0 ? mobileBarBtnDisabled : null) }}
             >
               <DeleteOutlineIcon sx={{ fontSize: 32 }} />
             </button>
@@ -222,6 +232,10 @@ const mobileBarBtn = {
   border: "none", padding: 0, cursor: "pointer",
   display: "flex", alignItems: "center", justifyContent: "center",
   boxShadow: "0 2px 6px rgba(0,0,0,0.55)",
+};
+const mobileBarBtnDisabled = {
+  background: "rgba(255,255,255,0.3)", color: "rgba(27,31,39,0.4)",
+  cursor: "default", boxShadow: "none",
 };
 const mobileBarCount = {
   color: "#fff", fontFamily: FONT, fontSize: 18, fontWeight: 700, whiteSpace: "nowrap",

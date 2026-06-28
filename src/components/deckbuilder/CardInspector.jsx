@@ -4,6 +4,7 @@ import { getDetails } from "../../decks/cardDetails";
 import EffectText from "./EffectText";
 import { COLORS, FONT, CLASS_LABELS, displayName } from "./theme";
 import { classIcon, ATTACK_ICON, DEFENSE_ICON, costIcon } from "./icons";
+import Skeleton from "@mui/material/Skeleton";
 import ArrowBackIosNew from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIos from "@mui/icons-material/ArrowForwardIos";
 import AddIcon from "@mui/icons-material/Add";
@@ -133,6 +134,21 @@ export default function CardInspector({
   const statValSize = (fill ? 18 : large ? 20 : 23) * metaScale;
   const stepSize = large ? 52 : 44;
   const countSize = large ? 26 : 22;
+
+  // Card-art box: the same size caps as before, but expressed so the box keeps
+  // the card's aspect ratio and therefore reserves its space *before* the image
+  // loads. That lets a skeleton fill it and the art cross-fade in — no blank
+  // gap / layout shift while the (full-size) image downloads. Each mode drives
+  // off whichever dimension binds: height on the portrait mobile/preview crops,
+  // width on the desktop column.
+  const artBox = fill
+    ? { height: imageMaxHeight || "min(58vh, 620px)", maxWidth: "100%" }
+    : large
+    ? { height: "32vh", maxWidth: imgMax }
+    : imageMaxHeight
+    ? { height: imageMaxHeight, maxWidth: imageMaxWidth || "100%" }
+    : { width: "100%", maxWidth: imageMaxWidth || imgMax };
+
   if (!name) {
     return (
       <div style={emptyStyle}>
@@ -169,26 +185,10 @@ export default function CardInspector({
       <div style={{ position: "relative", display: "flex", justifyContent: "center", padding: 0 }}>
         {/* Nav arrows are desktop-only — the mobile (large) preview has none. */}
         {!readOnly && !large && <ArrowBackIosNew onClick={onPrev} sx={arrowSx("left", large)} />}
-        <img
+        <CardArt
           src={cardNo ? `../textures/${cardNo}.png` : cardImage(name)}
           alt={name}
-          style={
-            fill
-              ? // Card art is the hero: scale it with the viewport height so it
-                // stays large relative to the screen, capped so it never
-                // overflows the (height-capped) dialog. `imageMaxHeight` lets a
-                // caller (e.g. the in-game hover preview) make the art bigger.
-                { maxWidth: "100%", maxHeight: imageMaxHeight || "min(58vh, 620px)", width: "auto", height: "auto", borderRadius: 10, boxShadow: "0 6px 24px rgba(0,0,0,0.6)" }
-              : large
-              ? // Cap the height so the rest (name, stats, full description) fits
-                // on one screen and the description box stays large.
-                { maxWidth: imgMax, maxHeight: "32vh", width: "auto", height: "auto", borderRadius: 10, boxShadow: "0 6px 24px rgba(0,0,0,0.6)" }
-              : imageMaxHeight
-              ? // Capped, undistorted art that fills the column width up to a
-                // max height (e.g. the in-game hover preview's ~half-screen cap).
-                { maxWidth: imageMaxWidth || "100%", maxHeight: imageMaxHeight, width: "auto", height: "auto", borderRadius: 10, boxShadow: "0 6px 24px rgba(0,0,0,0.6)" }
-              : { width: "100%", height: "auto", maxWidth: imageMaxWidth || imgMax, borderRadius: 10, boxShadow: "0 6px 24px rgba(0,0,0,0.6)" }
-          }
+          boxStyle={artBox}
         />
         {!readOnly && !large && <ArrowForwardIos onClick={onNext} sx={arrowSx("right", large)} />}
         {isDouble && !readOnly && (
@@ -330,6 +330,49 @@ export default function CardInspector({
           <StepBtn size={stepSize} onClick={onAdd} disabled={atLimit} accent><AddIcon sx={{ fontSize: large ? 30 : 24 }} /></StepBtn>
         </div>
       )}
+    </div>
+  );
+}
+
+// Card art with a skeleton placeholder. The wrapper holds the card aspect ratio
+// (459:641) and the size caps, so it reserves the art's footprint immediately;
+// a shimmering skeleton fills it and the image cross-fades in once decoded —
+// no blank gap or layout shift while the full-size texture downloads.
+const CARD_ASPECT = "459 / 641";
+function CardArt({ src, alt, boxStyle }) {
+  const [loaded, setLoaded] = useState(false);
+  // A new card (src change) starts loading again — reset so the skeleton shows.
+  useEffect(() => { setLoaded(false); }, [src]);
+  return (
+    <div
+      style={{
+        position: "relative", aspectRatio: CARD_ASPECT, overflow: "hidden",
+        borderRadius: 10, boxShadow: "0 6px 24px rgba(0,0,0,0.6)", ...boxStyle,
+      }}
+    >
+      {!loaded && (
+        <Skeleton
+          variant="rounded"
+          animation="wave"
+          sx={{
+            position: "absolute", inset: 0, width: "100%", height: "100%",
+            borderRadius: "10px", bgcolor: "rgba(255,255,255,0.07)",
+          }}
+        />
+      )}
+      <img
+        src={src}
+        alt={alt}
+        onLoad={() => setLoaded(true)}
+        // Already-cached images can fire load before React attaches onLoad; if it
+        // reports complete on mount, treat it as loaded.
+        ref={(el) => { if (el && el.complete && el.naturalWidth > 0) setLoaded(true); }}
+        decoding="async"
+        style={{
+          width: "100%", height: "100%", objectFit: "contain", display: "block",
+          opacity: loaded ? 1 : 0, transition: "opacity .25s ease",
+        }}
+      />
     </div>
   );
 }

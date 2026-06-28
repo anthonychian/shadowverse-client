@@ -108,7 +108,7 @@ export default function FilterBar({
           <ToggleButton value="evo">Evolve</ToggleButton>
         </ToggleButtonGroup>
 
-        <TextField size="small" placeholder="Search cards…" value={search}
+        <TextField size="small" placeholder="Search name or text…" value={search}
           onChange={(e) => onSearch(e.target.value)}
           sx={{ ...fieldSx, flex: m ? "1 1 40px" : "1 1 200px", minWidth: 0, "& .MuiInputBase-input": { fontSize: m ? 13 : undefined } }} />
 
