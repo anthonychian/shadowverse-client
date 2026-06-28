@@ -2322,21 +2322,21 @@ export const cardImage = (cardName) => {
     case "Force of the Dragonewt":
       return "../textures/BP09-073EN.png";
     case "Waters of the Megalorca":
-      return "../textures/BP09-074EN.png";
-    case "Roy, Dragoncleaver":
-      return "../textures/BP09-075EN.png";
-    case "Roy, Dragoncleaver Evolved":
-      return "../textures/BP09-076EN.png";
-    case "Galua of Two Breaths":
-      return "../textures/BP09-077EN.png";
-    case "Katakura Kojuro":
-      return "../textures/BP09-078EN.png";
-    case "Katakura Kojuro Evolved":
-      return "../textures/BP09-079EN.png";
-    case "Dragoon Scyther":
-      return "../textures/BP09-080EN.png";
-    case "Gargouille":
       return "../textures/BP09-081EN.png";
+    case "Roy, Dragoncleaver":
+      return "../textures/BP09-074EN.png";
+    case "Roy, Dragoncleaver Evolved":
+      return "../textures/BP09-075EN.png";
+    case "Galua of Two Breaths":
+      return "../textures/BP09-076EN.png";
+    case "Katakura Kojuro":
+      return "../textures/BP09-077EN.png";
+    case "Katakura Kojuro Evolved":
+      return "../textures/BP09-078EN.png";
+    case "Dragoon Scyther":
+      return "../textures/BP09-079EN.png";
+    case "Gargouille":
+      return "../textures/BP09-080EN.png";
     case "Heroic Dragonslayer":
       return "../textures/BP09-082EN.png";
     case "Heroic Dragonslayer Evolved":
@@ -2897,8 +2897,6 @@ export const cardImage = (cardName) => {
     case "Meowskers Ambush!":
       return "../textures/BP07-102EN.png";
     case "Technolord":
-      return "../textures/BP07-103EN.png";
-    case "Technolord (b)":
       return "../textures/BP07-103EN.png";
     case "Viridia Magna":
       return "../textures/BP07-104EN.png";

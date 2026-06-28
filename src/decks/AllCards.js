@@ -1763,7 +1763,6 @@ export const allCards = [
   "Meowskers Ambush!",
 
   "Technolord",
-  "Technolord (b)",
   "Viridia Magna",
   "Mechawing Angel",
   "Desert Pathfinder",
@@ -4024,7 +4023,6 @@ export const set7 = [
   "Meowskers Ambush!",
 
   "Technolord",
-  "Technolord (b)",
   "Viridia Magna",
   "Mechawing Angel",
   "Desert Pathfinder",
@@ -7523,7 +7521,6 @@ export const neutral = [
   "Happy Pig",
 
   "Technolord",
-  "Technolord (b)",
   "Viridia Magna",
   "Mechawing Angel",
   "Desert Pathfinder",
