@@ -1046,7 +1046,12 @@ export const CardSlice = createSlice({
     moveValuesAtIndex: (state, action) => {
       const prevIndex = action.payload.prevIndex;
       const index = action.payload.index;
-      const prevItem = state.customValues[prevIndex];
+      // Moving a follower into the EX area (bottom row, indices 5-9) hides its
+      // Atk/Def overlay — the EX area never shows stats (see seedFollowerStats).
+      const prevItem =
+        index >= 5
+          ? { atk: 0, def: 0, showAtk: false, showDef: false }
+          : state.customValues[prevIndex];
       const newCustomValues = [
         ...state.customValues.slice(0, index),
         prevItem,
@@ -1074,6 +1079,10 @@ export const CardSlice = createSlice({
         minute: "2-digit",
       });
 
+      // Followers duplicated to the top row start with their Atk/Def icons shown
+      // and pre-filled to the card's base stats (see seedFollowerStats).
+      const valuesChanged = seedFollowerStats(state, card, newIndex);
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -1086,6 +1095,9 @@ export const CardSlice = createSlice({
         updates: [
           { type: "log", data: { text: `Added ${card} to field`, card } },
           { type: "field", data: state.field },
+          ...(valuesChanged
+            ? [{ type: "values", data: state.customValues }]
+            : []),
         ],
         room: state.room,
       });
@@ -1332,6 +1344,10 @@ export const CardSlice = createSlice({
         minute: "2-digit",
       });
 
+      // Follower tokens played to the top row start with their Atk/Def icons
+      // shown and pre-filled to the card's base stats (see seedFollowerStats).
+      const valuesChanged = seedFollowerStats(state, card, newIndex);
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -1347,6 +1363,9 @@ export const CardSlice = createSlice({
             data: { text: `Added ${card} to field`, card },
           },
           { type: "field", data: state.field },
+          ...(valuesChanged
+            ? [{ type: "values", data: state.customValues }]
+            : []),
         ],
         room: state.room,
       });
@@ -1556,6 +1575,10 @@ export const CardSlice = createSlice({
       ];
       state.field = newField;
 
+      // Followers played to the top row start with their Atk/Def icons shown
+      // and pre-filled to the card's base stats (see seedFollowerStats).
+      const valuesChanged = seedFollowerStats(state, card, newIndex);
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -1573,6 +1596,9 @@ export const CardSlice = createSlice({
           },
           { type: "field", data: state.field },
           { type: "deckSize", data: state.deck.length },
+          ...(valuesChanged
+            ? [{ type: "values", data: state.customValues }]
+            : []),
         ],
         room: state.room,
       });
@@ -2138,6 +2164,10 @@ export const CardSlice = createSlice({
       ];
       state.field = newField;
 
+      // Followers played to the top row start with their Atk/Def icons shown
+      // and pre-filled to the card's base stats (see seedFollowerStats).
+      const valuesChanged = seedFollowerStats(state, card, newIndex);
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -2155,6 +2185,9 @@ export const CardSlice = createSlice({
           },
           { type: "field", data: state.field },
           { type: "deckSize", data: state.deck.length },
+          ...(valuesChanged
+            ? [{ type: "values", data: state.customValues }]
+            : []),
         ],
         room: state.room,
       });
@@ -2176,6 +2209,10 @@ export const CardSlice = createSlice({
       ];
       state.field = newField;
 
+      // Followers played to the top row start with their Atk/Def icons shown
+      // and pre-filled to the card's base stats (see seedFollowerStats).
+      const valuesChanged = seedFollowerStats(state, card, newIndex);
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -2193,6 +2230,9 @@ export const CardSlice = createSlice({
           },
           { type: "field", data: state.field },
           { type: "cemetery", data: state.cemetery },
+          ...(valuesChanged
+            ? [{ type: "values", data: state.customValues }]
+            : []),
         ],
         room: state.room,
       });
@@ -2214,6 +2254,10 @@ export const CardSlice = createSlice({
       ];
       state.field = newField;
 
+      // Followers played to the top row start with their Atk/Def icons shown
+      // and pre-filled to the card's base stats (see seedFollowerStats).
+      const valuesChanged = seedFollowerStats(state, card, newIndex);
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -2231,6 +2275,9 @@ export const CardSlice = createSlice({
           },
           { type: "field", data: state.field },
           { type: "banish", data: state.banish },
+          ...(valuesChanged
+            ? [{ type: "values", data: state.customValues }]
+            : []),
         ],
         room: state.room,
       });

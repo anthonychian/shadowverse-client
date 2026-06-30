@@ -163,20 +163,6 @@ export default function ChatUI({ scale = 1 }) {
           padding: "0.8em 0.85em",
         }}
       >
-        {reduxChatLog.length === 0 && (
-          <div
-            style={{
-              margin: "auto",
-              color: META,
-              fontFamily: SERIF,
-              fontSize: 13,
-              textAlign: "center",
-              opacity: 0.8,
-            }}
-          >
-            No messages yet. Say hello!
-          </div>
-        )}
         {reduxChatLog.map((raw, idx) => {
           const { time, text, mine } = parseMessage(raw);
           return (
