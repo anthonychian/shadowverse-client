@@ -712,6 +712,22 @@ export default function Selection({ setSelectedOption }) {
                 selectLeader(e);
               }}
             >
+              <img
+                width="100px"
+                src={SVGDB_LEADER_PORTRAIT.Lumiore}
+                alt="Lumiore"
+              />
+            </IconButton>
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectLeader(e);
+              }}
+            >
               <img width="100px" src={imageBunny} alt="Bunny" />
             </IconButton>
             <IconButton

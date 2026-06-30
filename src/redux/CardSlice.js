@@ -1,5 +1,61 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { socket } from "../sockets";
+import { getDetails, primaryType } from "../decks/cardDetails";
+
+// Seed a field slot's Atk/Def overlay from a follower's printed stats — the same
+// `customValues` the "Modify Atk/Def" menu drives, so they stay adjustable with
+// the +/- controls afterwards. Called whenever a follower reaches the top row:
+// played from hand, evolved ("<Name> Evolved"), or an Advanced card from the
+// evolve deck ("<Name> ADVANCED", typed "Follower / Advanced"). Only acts on
+// followers in the top row (0-4); spells/amulets and the EX area (5-9) are left
+// untouched. Returns true when it set values, so the caller can broadcast them.
+const seedFollowerStats = (state, card, index) => {
+  if (index >= 5 || primaryType(card) !== "Follower") return false;
+  const d = getDetails(card);
+  if (!d) return false;
+  state.customValues[index] = {
+    showAtk: true,
+    atk: d.attack,
+    showDef: true,
+    def: d.defense,
+  };
+  return true;
+};
+
+const num = (v, fallback) => {
+  const n = Number(v);
+  return Number.isNaN(n) ? fallback : n;
+};
+
+// Seed a slot's Atk/Def when a follower EVOLVES. Rather than overwriting with the
+// evolved card's printed stats, apply the base→evolved stat *delta* on top of the
+// follower's currently shown stats, so a buffed/reduced follower keeps that
+// difference. E.g. a base-2/4 follower currently at 2/1 evolving into a printed
+// 3/5 (delta +1/+1) becomes 3/2. `baseCard` is the card still underneath
+// (state.field[index]); `evolvedCard` is the evolved form going onto the field.
+// Falls back to the evolved printed stats when the base or current stats are
+// unknown. Top row (0-4) followers only; returns true when it set values.
+const seedEvolveStats = (state, baseCard, evolvedCard, index) => {
+  if (index >= 5 || primaryType(evolvedCard) !== "Follower") return false;
+  const evo = getDetails(evolvedCard);
+  if (!evo) return false;
+  const evoAtk = num(evo.attack, NaN);
+  const evoDef = num(evo.defense, NaN);
+  const base = getDetails(baseCard);
+  const baseAtk = num(base && base.attack, NaN);
+  const baseDef = num(base && base.defense, NaN);
+  const cur = state.customValues[index] || {};
+  let atk = evoAtk;
+  let def = evoDef;
+  if (![evoAtk, evoDef, baseAtk, baseDef].some(Number.isNaN)) {
+    const curAtk = cur.showAtk ? num(cur.atk, baseAtk) : baseAtk;
+    const curDef = cur.showDef ? num(cur.def, baseDef) : baseDef;
+    atk = curAtk + (evoAtk - baseAtk);
+    def = curDef + (evoDef - baseDef);
+  }
+  state.customValues[index] = { showAtk: true, atk, showDef: true, def };
+  return true;
+};
 
 export const CardSlice = createSlice({
   name: "card",
@@ -1874,6 +1930,10 @@ export const CardSlice = createSlice({
       ];
       state.field = newField;
 
+      // Followers played to the top row start with their Atk/Def icons shown
+      // and pre-filled to the card's base stats (see seedFollowerStats).
+      const valuesChanged = seedFollowerStats(state, card, newIndex);
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -1891,6 +1951,11 @@ export const CardSlice = createSlice({
           },
           { type: "field", data: state.field },
           { type: "hand", data: state.hand },
+          // Sync the auto-shown stats so the opponent sees them too (mirrors
+          // how modifyAtk/modifyDef broadcast the "values" update).
+          ...(valuesChanged
+            ? [{ type: "values", data: state.customValues }]
+            : []),
         ],
         room: state.room,
       });
@@ -2223,6 +2288,16 @@ export const CardSlice = createSlice({
       ];
       state.evoField = newField;
 
+      // An evolved follower shows its Atk/Def icons, carrying over any current
+      // buff/reduction by applying the base→evolved delta (see seedEvolveStats).
+      // The base card is still underneath at state.field[newIndex].
+      const valuesChanged = seedEvolveStats(
+        state,
+        state.field[newIndex],
+        card,
+        newIndex,
+      );
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -2237,6 +2312,9 @@ export const CardSlice = createSlice({
           { type: "log", data: { text: `Evolved to ${card}`, card } },
           { type: "evoField", data: state.evoField },
           { type: "evoDeck", data: state.evoDeck },
+          ...(valuesChanged
+            ? [{ type: "values", data: state.customValues }]
+            : []),
         ],
         room: state.room,
       });
@@ -2353,6 +2431,11 @@ export const CardSlice = createSlice({
       ];
       state.field = newField;
 
+      // Advanced followers from the evolve deck land on the top row like a play,
+      // so seed their Atk/Def icons from the card's stats too (see
+      // seedFollowerStats).
+      const valuesChanged = seedFollowerStats(state, card, newIndex);
+
       state.gameLog = [
         ...state.gameLog,
         {
@@ -2370,6 +2453,9 @@ export const CardSlice = createSlice({
           },
           { type: "field", data: state.field },
           { type: "evoDeck", data: state.evoDeck },
+          ...(valuesChanged
+            ? [{ type: "values", data: state.customValues }]
+            : []),
         ],
         room: state.room,
       });

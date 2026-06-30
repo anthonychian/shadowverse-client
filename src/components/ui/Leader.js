@@ -121,6 +121,9 @@ export default function Leader({
     case "Piercye":
       image = SVGDB_LEADER_PORTRAIT.Piercye;
       break;
+    case "Lumiore":
+      image = SVGDB_LEADER_PORTRAIT.Lumiore;
+      break;
     case "Amy":
       image = SVGDB_LEADER_PORTRAIT.Amy;
       break;

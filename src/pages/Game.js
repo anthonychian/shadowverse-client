@@ -194,7 +194,7 @@ export default function Game(callback) {
       {!uiChromeHidden && <AutomatedControls />}
 
       {!uiChromeHidden && (
-        <div className={"rightSideCanvas"}>
+        <div className={"rightSideCanvas"} style={{ position: "relative" }}>
           <div style={rightScaleStyle}>
             <EnemyUI />
           </div>
@@ -202,9 +202,10 @@ export default function Game(callback) {
           <div style={rightScaleStyle}>
             <PlayerUI name={selectedOption} />
           </div>
-          <div style={rightScaleStyle}>
-            <ChatUI scale={sideScale} />
-          </div>
+          {/* ChatUI renders its own in-flow footprint (the 3rd column slot, so
+              EnemyUI/PlayerUI keep their positions) plus the chat panel, which
+              it absolutely-positions against this (relative) container. */}
+          <ChatUI scale={sideScale} />
         </div>
       )}
     </div>

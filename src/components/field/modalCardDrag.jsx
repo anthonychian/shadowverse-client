@@ -47,10 +47,13 @@ const DRAG_STYLE = { cursor: "grab", touchAction: "none", userSelect: "none" };
  *        which drop zones this modal allows. `deck` adds the split top/bottom-of-
  *        deck pile (dest `{type: "deck", half: "top"|"bottom"}`).
  * @param {Array} [opts.field] the player's field array, so occupied slots reject
- *        a drop (mirrors the click-to-place flow).
+ *        a drop (mirrors the click-to-place flow). Omit for evolve, where the
+ *        drop must land ON a follower — the caller validates in onDrop instead.
+ * @param {boolean} [opts.evolve] marks the drag as an evolve so FieldDropHints
+ *        flips its highlight (a follower slot becomes the valid/green target).
  * @param {(card: any, index: number, dest: {type: string, index?: number}) => void} opts.onDrop
  */
-export function useModalCardDrag({ targets, field, onDrop }) {
+export function useModalCardDrag({ targets, field, evolve = false, onDrop }) {
   const [dragCard, setDragCard] = useState(null);
   const [dragPos, setDragPos] = useState({ x: 0, y: 0 });
   // The in-flight gesture (which card, where it started, whether it has crossed
@@ -106,6 +109,7 @@ export function useModalCardDrag({ targets, field, onDrop }) {
       cemetery: !!dest && dest.type === "cemetery",
       hand: !!dest && dest.type === "hand",
       deck: dest && dest.type === "deck" ? dest.half : null,
+      evolve,
       showCemetery: !!targets.cemetery,
       showHand: !!targets.hand,
       showDeck: !!targets.deck,

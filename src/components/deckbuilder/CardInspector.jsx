@@ -106,6 +106,11 @@ export default function CardInspector({
   // For previews the viewer can't scroll (e.g. while hovering a card in-game).
   fitEffect = false,
   readOnly = false,
+  // In-game hover preview: restyle the chrome into Shadowverse-like floating
+  // pieces — a blue gradient name banner and translucent dark, cut-corner stat
+  // and effect panels — instead of the deck-builder's flat opaque blocks. Font,
+  // icons and card-art size are unchanged; only panel shape and transparency are.
+  gameStyle = false,
 }) {
   // In `fitEffect` previews (e.g. the in-game hover) the height is fixed, so on
   // smaller screens shrink the chrome — name, traits, stats, icons, badges — to
@@ -134,6 +139,18 @@ export default function CardInspector({
   const statValSize = (fill ? 18 : large ? 20 : 23) * metaScale;
   const stepSize = large ? 52 : 44;
   const countSize = large ? 26 : 22;
+
+  // gameStyle chrome: solid dark inset panels for the stat/effect areas, sitting
+  // inside the single (non-transparent) preview container — the Shadowverse
+  // description-box look, not separate floating pieces. The name stays plain
+  // text (no header bar), as before.
+  const gamePanel = gameStyle
+    ? {
+        background: "rgba(0,0,0,0.4)",
+        border: "1px solid rgba(120,150,190,0.22)",
+        borderRadius: 8,
+      }
+    : null;
 
   // Card-art box: the same size caps as before, but expressed so the box keeps
   // the card's aspect ratio and therefore reserves its space *before* the image
@@ -254,7 +271,7 @@ export default function CardInspector({
 
       {/* cost / attack / defense banner */}
       {(hasCost || hasAtk || hasDef) && (
-        <div style={{ ...statBanner, minHeight: (fill ? 40 : large ? 44 : 52) * metaScale, padding: fill ? "4px 14px" : large ? "6px 16px" : "8px 18px" }}>
+        <div style={{ ...statBanner, ...gamePanel, minHeight: (fill ? 40 : large ? 44 : 52) * metaScale, padding: fill ? "4px 14px" : large ? "6px 16px" : "8px 18px" }}>
           {hasCost && (
             <span style={statItem}>
               {costIcon(costNum) ? (
@@ -295,7 +312,8 @@ export default function CardInspector({
         <div
           style={{
             fontFamily: FONT, color: COLORS.text, fontSize: effectSize, lineHeight: 1.45,
-            background: COLORS.inset, borderRadius: 8, padding: "10px 12px",
+            background: COLORS.inset, borderRadius: 8, padding: gameStyle ? "12px 14px" : "10px 12px",
+            ...gamePanel,
             // In `fill` mode the box grows to its natural height (no inner
             // scrollbar) so any overflow falls to the dialog, which scrolls only
             // when it's too small to fit everything. `fitEffect` clips and the

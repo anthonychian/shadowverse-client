@@ -11,7 +11,7 @@ export const CLASS_LEADERS = {
   forest: ["Sekka", "CC", "Piercye"],
   sword: ["Bunny", "Albert"],
   rune: ["Lishenna", "Ceridwen", "Kuon"],
-  dragon: ["SiLong", "Forte", "Galmieux"],
+  dragon: ["SiLong", "Forte", "Galmieux", "Lumiore"],
   abyss: ["Icy", "Anisage", "Vania", "Mono", "Amy"],
   haven: ["Rola", "Jeanne"],
   umamusume: ["Manhatten Cafe", "Maruzensky"],

@@ -9,9 +9,14 @@ import {
   switchEvoCard,
   setViewingEvoDeck,
   setCurrentCardIndex,
+  evolveCardOnField,
 } from "../../redux/CardSlice";
 import { useUiModalOpen } from "../hooks/useUiChromeVisible";
 import { ModalHideUiRow } from "../ui/HideUiButton";
+import { triggerCardReveal } from "./cardRevealBus";
+import { triggerGameAnimation } from "./animationBus";
+import { fieldSlotCenter } from "./handDrag";
+import { useModalCardDrag, ModalDragGhost } from "./modalCardDrag";
 
 import defaultCardBack from "../../assets/cardbacks/default.png";
 import aeneaCardBack from "../../assets/cardbacks/aenea.png";
@@ -77,9 +82,39 @@ export default function EvoDeck({
   const [idx, setIdx] = useState(0);
   const [cardback, setCardback] = useState();
   const reduxEvoDeck = useSelector((state) => state.card.evoDeck);
+  const reduxField = useSelector((state) => state.card.field);
+  const reduxEvoField = useSelector((state) => state.card.evoField);
+  const reduxRoom = useSelector((state) => state.card.room);
   const reduxCardBack = useSelector((state) => state.card.cardback);
   const gameMode = useSelector((state) => state.gameState.gameMode);
   const automated = gameMode === "automated";
+
+  // Only normal evolve cards drag-to-evolve; Advanced ("… ADVANCED"), Carrot
+  // (Feed) and Drive Point (Ride) keep their dedicated right-click actions.
+  const canDragEvo = (cardName) =>
+    !automated &&
+    typeof cardName === "string" &&
+    cardName.slice(-8) !== "ADVANCED" &&
+    cardName !== "Carrot" &&
+    cardName !== "Drive Point";
+
+  // Drag a card out of the modal onto a field follower to evolve it — mirrors
+  // the deck/cemetery modals (the panel hides while dragging, a ghost follows
+  // the cursor). No `field` is passed so the drop can land on an occupied slot;
+  // we validate the target (a follower, not already evolved) here instead.
+  const evoDrag = useModalCardDrag({
+    targets: { field: true },
+    evolve: true,
+    onDrop: (card, index, dest) => {
+      if (dest.type !== "field") return;
+      const i = dest.index;
+      if (reduxField[i] === 0 || reduxEvoField[i] !== 0) return;
+      dispatch(evolveCardOnField({ card, indexInEvolveDeck: index, index: i }));
+      triggerCardReveal(card, reduxRoom, i, fieldSlotCenter(i));
+      triggerGameAnimation("evolve", reduxRoom);
+      handleModalClose();
+    },
+  });
   const handleModalOpen = () => {
     setOpen(true);
     dispatch(setViewingEvoDeck(true));
@@ -272,7 +307,15 @@ export default function EvoDeck({
           },
         }}
       >
-        <Box sx={style}>
+        <Box
+          sx={{
+            ...style,
+            // Hidden with opacity (not display) while dragging so the dragged
+            // card's wrapper stays rendered and keeps pointer capture — the
+            // ghost (ModalDragGhost) follows the cursor over the board instead.
+            opacity: evoDrag.isDragging ? 0 : 1,
+          }}
+        >
           <ModalHideUiRow />
           <CardMUI
             sx={{
@@ -292,7 +335,6 @@ export default function EvoDeck({
           >
             {reduxEvoDeck.map((card, idx) => (
               <div
-                style={{ width: "115px" }}
                 key={`card-${idx}`}
                 onContextMenu={
                   automated
@@ -301,6 +343,13 @@ export default function EvoDeck({
                         handleContextMenu(e, card, idx);
                       }
                 }
+                {...(canDragEvo(card.card)
+                  ? evoDrag.dragProps(card.card, idx)
+                  : {})}
+                style={{
+                  width: "115px",
+                  ...(canDragEvo(card.card) ? evoDrag.dragStyle : {}),
+                }}
               >
                 <Card
                   name={card.card}
@@ -313,6 +362,8 @@ export default function EvoDeck({
           </CardMUI>
         </Box>
       </Modal>
+
+      <ModalDragGhost drag={evoDrag} ready={ready} setHovering={setHovering} />
 
       {!automated && (
         <Menu

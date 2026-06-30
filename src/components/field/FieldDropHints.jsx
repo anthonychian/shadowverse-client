@@ -18,6 +18,7 @@ import {
 export default function FieldDropHints() {
   const [drag, setDrag] = useState({ active: false, index: -1 });
   const field = useSelector((s) => s.card.field);
+  const evoField = useSelector((s) => s.card.evoField);
   useEffect(() => onDragHover(setDrag), []);
 
   if (!drag.active) return null;
@@ -92,6 +93,12 @@ export default function FieldDropHints() {
         const row = idx < 5 ? 0 : 1;
         const occupied = field[idx] !== 0;
         const isHover = idx === drag.index;
+        // For an evolve drag the valid target is the opposite of a play: a
+        // follower that's on the field and not already evolved. Otherwise (hand
+        // play / field move) an empty zone is the valid target.
+        const valid = drag.evolve
+          ? occupied && evoField && evoField[idx] === 0
+          : !occupied;
         return (
           <div
             key={idx}
@@ -104,14 +111,14 @@ export default function FieldDropHints() {
               boxSizing: "border-box",
               borderRadius: 10,
               border: isHover
-                ? occupied
-                  ? "3px solid rgba(255, 90, 90, 0.9)"
-                  : "3px solid rgba(120, 230, 140, 0.95)"
+                ? valid
+                  ? "3px solid rgba(120, 230, 140, 0.95)"
+                  : "3px solid rgba(255, 90, 90, 0.9)"
                 : "2px dashed rgba(255, 255, 255, 0.35)",
               background:
-                isHover && !occupied ? "rgba(120, 230, 140, 0.18)" : "transparent",
+                isHover && valid ? "rgba(120, 230, 140, 0.18)" : "transparent",
               boxShadow:
-                isHover && !occupied ? "0 0 18px rgba(120, 230, 140, 0.6)" : "none",
+                isHover && valid ? "0 0 18px rgba(120, 230, 140, 0.6)" : "none",
               transition: "border-color 80ms, background 80ms, box-shadow 80ms",
             }}
           />

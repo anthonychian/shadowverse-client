@@ -10,6 +10,7 @@ export const LEADER_SPINE_IDS = {
   SiLong: "3514",
   Forte: "104",
   Galmieux: "1604",
+  Lumiore: "4604",
   Lishenna: "1608",
   Ceridwen: "4605",
   Kuon: "2803",
@@ -42,6 +43,7 @@ export const LEADER_SPINE_SCALE = {
   SiLong: 1.2,
   Piercye: 1.2,
   Galmieux: 2.5,
+  Lumiore: 1.2,
   Albert: 1.15,
   Daria: 1.1,
   CC: 1.15,
@@ -91,6 +93,7 @@ export const usesSetupCenter = (name) => LEADER_SPINE_SETUP_CENTER.has(name);
 // from svgdb, same as the animation.
 export const SVGDB_LEADER_PORTRAIT = {
   Piercye: "https://svgdb.me/assets/leader/class_3901_base.png",
+  Lumiore: "https://svgdb.me/assets/leader/class_4604_base.png",
   Amy: "https://svgdb.me/assets/leader/class_3305_base.png",
   Pecorine: "https://svgdb.me/assets/leader/class_1002_base.png",
   Karyl: "https://svgdb.me/assets/leader/class_1003_base.png",
