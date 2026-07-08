@@ -15,6 +15,7 @@ import {
   setEnemyEngaged,
   setEnemyEvoDeck,
   setEnemyEvoField,
+  setEnemyEquipField,
   setEnemyEvoPoints,
   setEnemyField,
   setEnemyHand,
@@ -32,6 +33,7 @@ import {
 const applyEnemyState = (dispatch, s) => {
   if (s.field !== undefined) dispatch(setEnemyField(s.field));
   if (s.evoField !== undefined) dispatch(setEnemyEvoField(s.evoField));
+  if (s.equipField !== undefined) dispatch(setEnemyEquipField(s.equipField));
   if (s.hand !== undefined) dispatch(setEnemyHand(s.hand));
   if (s.leader !== undefined) dispatch(setEnemyLeader(s.leader));
   if (s.leaderActive !== undefined)

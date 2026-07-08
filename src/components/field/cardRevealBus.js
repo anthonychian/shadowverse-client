@@ -83,6 +83,23 @@ export const triggerMillReveal = (name, room) => {
   if (room) socket.emit("send msg", { type: "cardMilled", data: { name }, room });
 };
 
+// Equip reveal: the equipment card flips up centre-screen, then shrinks and
+// darts onto the follower it's being attached to, landing in a golden flash.
+// Unlike a play reveal the slot is NOT hidden — the follower stays visible
+// underneath the whole time. Each side computes its own slot target; only the
+// equipment name + follower field index travel.
+export const triggerEquipReveal = (name, room, index) => {
+  if (!name || name === 0) return;
+  playCardReveal({
+    name,
+    side: "player",
+    kind: "equip",
+    target: fieldSlotCenter(index),
+  });
+  if (room)
+    socket.emit("send msg", { type: "cardEquipped", data: { name, index }, room });
+};
+
 // Banish reveal: a card on the field disintegrates in place — it breaks into a
 // swarm of motes that scatter and fade at its slot. `index` is the field slot
 // (0-9). Each side computes its own slot; only the card name + field index travel.

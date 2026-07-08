@@ -7,6 +7,7 @@ import {
   setHealth,
   setEvoPoints,
   setSuperEvoActive,
+  logHealthDiff,
 } from "../../redux/CardSlice";
 import { socket } from "../../sockets";
 import Leader from "./Leader";
@@ -97,11 +98,44 @@ export default function PlayerUI({ name }) {
     setEP(reduxCurrentEP);
   }, [reduxCurrentEP]);
 
+  // Aggregated HP logging, debounced: the burst is anchored at the HP value
+  // BEFORE its first click, and every further click restarts a 2s countdown —
+  // so the net difference is logged as one game-log entry 2s after the LAST
+  // click (e.g. three "−1" clicks → "-3 HP"). A burst that nets out to zero
+  // logs nothing.
+  const hpLogWindow = useRef(null);
+  const healthRef = useRef(playerHealth);
+  healthRef.current = playerHealth;
+
+  const noteHealthChange = (healthBefore) => {
+    if (!hpLogWindow.current) {
+      hpLogWindow.current = { baseline: healthBefore, timer: null };
+    } else {
+      clearTimeout(hpLogWindow.current.timer);
+    }
+    hpLogWindow.current.timer = setTimeout(() => {
+      const diff = healthRef.current - hpLogWindow.current.baseline;
+      hpLogWindow.current = null;
+      if (diff !== 0) dispatch(logHealthDiff(diff));
+    }, 2000);
+  };
+
+  // Flush the pending window's timer on unmount (skip the log — a torn-down
+  // Game page shouldn't dispatch).
+  useEffect(
+    () => () => {
+      if (hpLogWindow.current) clearTimeout(hpLogWindow.current.timer);
+    },
+    [],
+  );
+
   const incrementPlayerPoints = () => {
+    noteHealthChange(playerHealth);
     setPlayerHealth(playerHealth + 1);
   };
 
   const decrementPlayerPoints = () => {
+    if (playerHealth > 0) noteHealthChange(playerHealth);
     playerHealth > 0 ? setPlayerHealth(playerHealth - 1) : setPlayerHealth(0);
   };
 

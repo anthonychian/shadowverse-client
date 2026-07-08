@@ -15,7 +15,9 @@ export default function ZoomedCard({ hovering, name, art }) {
       style={{
         position: "absolute",
         inset: 0,
-        zIndex: 50,
+        // Above the fixed top-left menu/hide-UI buttons (zIndex 1000), so the
+        // preview is never covered while hovering a card.
+        zIndex: 1100,
         // One solid (non-transparent) container holding the whole preview — the
         // card, the name header and the text panels all sit inside it, like the
         // in-game description box, rather than floating as separate pieces.

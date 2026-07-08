@@ -8,6 +8,7 @@ import {
   getHandRect,
   getDeckRect,
 } from "./handDrag";
+import { primaryType } from "../../decks/cardDetails";
 
 // Drop-target hints shown while a hand card is being dragged: outlines the 10
 // field zones and highlights the one under the cursor (green when free, red when
@@ -19,6 +20,7 @@ export default function FieldDropHints() {
   const [drag, setDrag] = useState({ active: false, index: -1 });
   const field = useSelector((s) => s.card.field);
   const evoField = useSelector((s) => s.card.evoField);
+  const equipField = useSelector((s) => s.card.equipField);
   useEffect(() => onDragHover(setDrag), []);
 
   if (!drag.active) return null;
@@ -94,11 +96,20 @@ export default function FieldDropHints() {
         const occupied = field[idx] !== 0;
         const isHover = idx === drag.index;
         // For an evolve drag the valid target is the opposite of a play: a
-        // follower that's on the field and not already evolved. Otherwise (hand
-        // play / field move) an empty zone is the valid target.
-        const valid = drag.evolve
-          ? occupied && evoField && evoField[idx] === 0
-          : !occupied;
+        // follower that's on the field and not already evolved. An equipment
+        // drag wants a top-row follower with no equipment yet (evolved is
+        // fine — equipment has its own slot). Otherwise (hand play / field
+        // move) an empty zone is the valid target.
+        const valid = drag.equip
+          ? idx < 5 &&
+            occupied &&
+            typeof field[idx] === "string" &&
+            primaryType(field[idx]) === "Follower" &&
+            equipField &&
+            equipField[idx] === 0
+          : drag.evolve
+            ? occupied && evoField && evoField[idx] === 0
+            : !occupied;
         return (
           <div
             key={idx}

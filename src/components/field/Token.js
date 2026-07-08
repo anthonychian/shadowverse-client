@@ -3,7 +3,12 @@ import token from "../../assets/logo/mimi.png";
 import { allTokens } from "../../decks/AllTokens";
 import { useDispatch, useSelector } from "react-redux";
 import { Menu, MenuItem, Modal, Box, Skeleton } from "@mui/material";
-import { setCurrentCard, placeTokenOnField } from "../../redux/CardSlice";
+import {
+  setCurrentCard,
+  placeTokenOnField,
+  attachEquipmentOnField,
+} from "../../redux/CardSlice";
+import { primaryType } from "../../decks/cardDetails";
 import CardMUI from "@mui/material/Card";
 import Card from "../hand/Card";
 import img from "../../assets/pin_bellringer_angel.png";
@@ -11,7 +16,7 @@ import { useUiModalOpen } from "../hooks/useUiChromeVisible";
 import { ModalHideUiRow } from "../ui/HideUiButton";
 import { useModalCardDrag, ModalDragGhost } from "./modalCardDrag";
 import { fieldSlotCenter } from "./handDrag";
-import { triggerCardReveal } from "./cardRevealBus";
+import { triggerCardReveal, triggerEquipReveal } from "./cardRevealBus";
 
 const style = {
   position: "relative",
@@ -35,18 +40,41 @@ export default function Token({ ready, setReady, setTokenReady, setHovering }) {
   const [filteredTokens, setFilteredTokens] = useState(allTokens);
 
   const reduxField = useSelector((state) => state.card.field);
+  const reduxEquipField = useSelector((state) => state.card.equipField);
   const reduxRoom = useSelector((state) => state.card.room);
   const gameMode = useSelector((state) => state.gameState.gameMode);
   const automated = gameMode === "automated";
 
-  // Drag a token straight out of this modal onto an empty field slot. Mirrors the
+  // Drag a token straight out of this modal onto the board. Mirrors the
   // deck/cemetery modal drag — the modal hides while dragging and a ghost follows
   // the cursor; on release the token is placed (and revealed if in the front row).
+  // `field` is NOT passed to the hook (which would reject every occupied slot):
+  // Equipment tokens may be dropped ON a top-row follower to attach to it, so
+  // occupancy is validated here instead.
   const tokenDrag = useModalCardDrag({
     targets: { field: true },
-    field: reduxField,
+    // Equipment tokens highlight followers green (attach) instead of red.
+    equip: (card) => primaryType(card) === "Equipment",
     onDrop: (card, index, dest) => {
       if (automated) return;
+      const occupant = reduxField[dest.index];
+      if (occupant !== 0) {
+        // Occupied slot: only an Equipment token dropped onto a top-row
+        // follower attaches (same rules as the on-board attach in Field.js —
+        // evolved followers are fine, already-equipped ones are not).
+        const canEquip =
+          primaryType(card) === "Equipment" &&
+          dest.index < 5 &&
+          typeof occupant === "string" &&
+          primaryType(occupant) === "Follower" &&
+          reduxEquipField[dest.index] === 0;
+        if (!canEquip) return;
+        dispatch(
+          attachEquipmentOnField({ card, prevIndex: -1, index: dest.index }),
+        );
+        triggerEquipReveal(card, reduxRoom, dest.index);
+        return;
+      }
       dispatch(placeTokenOnField({ card, index: dest.index }));
       if (dest.index < 5)
         triggerCardReveal(card, reduxRoom, dest.index, fieldSlotCenter(dest.index));

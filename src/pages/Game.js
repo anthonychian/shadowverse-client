@@ -1,4 +1,10 @@
-import React, { useRef, useState, useEffect, useCallback } from "react";
+import React, {
+  useRef,
+  useState,
+  useEffect,
+  useLayoutEffect,
+  useCallback,
+} from "react";
 import "../css/Game.css";
 import Selection from "../components/ui/Selection";
 import PlayerUI from "../components/ui/PlayerUI";
@@ -90,9 +96,62 @@ export default function Game(callback) {
     transform: `scale(${sideScale})`,
     transformOrigin: "center left",
   };
-  const rightScaleStyle = {
-    transform: `scale(${sideScale})`,
-    transformOrigin: "center right",
+
+  // Fit EnemyUI + PlayerUI to the right column on every screen size: measure
+  // their natural (unscaled) sizes and the column, then cap the scale so both
+  // panels fit the column's width and, stacked, its height. The wrappers below
+  // also shrink their LAYOUT footprint (width/height = natural × scale) —
+  // a bare CSS transform wouldn't, and the column would still overflow.
+  const enemyUiRef = useRef(null);
+  const playerUiRef = useRef(null);
+  const rightColRef = useRef(null);
+  const [enemySize, setEnemySize] = useState(null);
+  const [playerSize, setPlayerSize] = useState(null);
+  const [rightFitScale, setRightFitScale] = useState(1);
+
+  useLayoutEffect(() => {
+    if (uiChromeHidden) return undefined;
+    const measure = () => {
+      const eEl = enemyUiRef.current;
+      const pEl = playerUiRef.current;
+      const col = rightColRef.current;
+      if (!eEl || !pEl || !col) return;
+      // offsetWidth/offsetHeight ignore transforms → natural size.
+      const e = { w: eEl.offsetWidth, h: eEl.offsetHeight };
+      const p = { w: pEl.offsetWidth, h: pEl.offsetHeight };
+      setEnemySize(e);
+      setPlayerSize(p);
+      const colRect = col.getBoundingClientRect();
+      let fit = 1;
+      const maxW = Math.max(e.w, p.w);
+      if (maxW > 0) fit = Math.min(fit, (colRect.width - 4) / maxW);
+      // Height budget: the column also holds the chat footprint row and two
+      // flex gaps — leave ~90px for those.
+      const totalH = e.h + p.h;
+      if (totalH > 0) fit = Math.min(fit, (colRect.height - 90) / totalH);
+      // Readability floor; below this we're at near-mobile sizes anyway.
+      setRightFitScale(Math.max(fit, 0.5));
+    };
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, [uiChromeHidden, selectedOption]);
+
+  const rightUiScale = Math.min(sideScale, rightFitScale);
+
+  // Shrinks the wrapper's layout box along with the visual scale; the inner
+  // div is pinned to the top-right so the panel hugs the column edge.
+  const fitWrapStyle = (size) => ({
+    position: "relative",
+    width: size ? size.w * rightUiScale : undefined,
+    height: size ? size.h * rightUiScale : undefined,
+  });
+  const fitInnerStyle = {
+    position: "absolute",
+    top: 0,
+    right: 0,
+    transform: `scale(${rightUiScale})`,
+    transformOrigin: "top right",
   };
 
   return (
@@ -194,18 +253,26 @@ export default function Game(callback) {
       {!uiChromeHidden && <AutomatedControls />}
 
       {!uiChromeHidden && (
-        <div className={"rightSideCanvas"} style={{ position: "relative" }}>
-          <div style={rightScaleStyle}>
-            <EnemyUI />
+        <div
+          className={"rightSideCanvas"}
+          ref={rightColRef}
+          style={{ position: "relative" }}
+        >
+          <div style={fitWrapStyle(enemySize)}>
+            <div ref={enemyUiRef} style={fitInnerStyle}>
+              <EnemyUI />
+            </div>
           </div>
 
-          <div style={rightScaleStyle}>
-            <PlayerUI name={selectedOption} />
+          <div style={fitWrapStyle(playerSize)}>
+            <div ref={playerUiRef} style={fitInnerStyle}>
+              <PlayerUI name={selectedOption} />
+            </div>
           </div>
           {/* ChatUI renders its own in-flow footprint (the 3rd column slot, so
               EnemyUI/PlayerUI keep their positions) plus the chat panel, which
               it absolutely-positions against this (relative) container. */}
-          <ChatUI scale={sideScale} />
+          <ChatUI scale={sideScale} setHovering={setHovering} />
         </div>
       )}
     </div>

@@ -168,6 +168,69 @@ function RevealCard({ src, side, target, source, size, kind }) {
     );
   }
 
+  // Equip: the equipment card flips in at centre, holds a beat, then shrinks
+  // and darts onto the follower it's attaching to, landing in a golden flash
+  // (the follower stays visible underneath — nothing is hidden).
+  if (kind === "equip") {
+    return (
+      <div style={{ position: "fixed", left: "50%", top: "50%", width: 0, height: 0 }}>
+        <div style={{ position: "absolute", transform: "translate(-50%, -50%)", perspective: 1200 }}>
+          <motion.div
+            style={{ transformStyle: "preserve-3d" }}
+            initial={{ opacity: 0, scale: 0.6, rotateY: 180, x: 0, y: 0 }}
+            animate={{
+              opacity: [0, 1, 1, 0.9, 0],
+              scale: [0.6, 1, 1, 0.18, 0.12],
+              rotateY: [180, 0, 0, 0, 0],
+              x: [0, 0, 0, dx, dx],
+              y: [0, 0, 0, dy, dy],
+              filter: [
+                "brightness(1)",
+                "brightness(1)",
+                "brightness(1)",
+                "brightness(1.5)",
+                "brightness(2)",
+              ],
+            }}
+            transition={{ duration: DUR, times: [0, 0.22, 0.5, 0.9, 1], ease: "easeInOut" }}
+          >
+            <img
+              src={src}
+              alt="equipped card"
+              style={{
+                height: "36vh",
+                width: "auto",
+                borderRadius: 12,
+                boxShadow: "0 0 34px 8px rgba(255, 205, 110, 0.55), 0 16px 48px rgba(0,0,0,0.75)",
+              }}
+            />
+          </motion.div>
+        </div>
+
+        {/* Golden flash swelling at the follower as the equipment lands. */}
+        <motion.div
+          style={{ position: "absolute", left: 0, top: 0 }}
+          initial={{ x: dx, y: dy, opacity: 0, scale: 0.2 }}
+          animate={{ opacity: [0, 0, 0.9, 0], scale: [0.2, 0.35, 1.1, 1.6] }}
+          transition={{ duration: DUR, times: [0, 0.78, 0.92, 1], ease: "easeOut" }}
+        >
+          <div
+            style={{
+              position: "absolute",
+              left: -55,
+              top: -55,
+              width: 110,
+              height: 110,
+              borderRadius: "50%",
+              background:
+                "radial-gradient(circle, rgba(255,255,255,0.95) 0%, rgba(255,215,130,0.55) 45%, rgba(255,215,130,0) 75%)",
+            }}
+          />
+        </motion.div>
+      </div>
+    );
+  }
+
   // "Added to hand": no particles — the card itself flips in, then shrinks and
   // flies toward the hand (down to yours, up to the opponent's) and fades.
   if (kind === "hand") {

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { artImage, artThumb } from "../../decks/getCards";
+import { primaryType } from "../../decks/cardDetails";
 import { motion, useDragControls } from "framer-motion";
 import {
   modifyAtk,
@@ -88,6 +89,9 @@ export default function Card({
   onCardDragEnd,
   onFieldDrop,
   hidden = false,
+  // Equipment token attached to this field slot (equipField) — rendered as a
+  // small badge whose hover previews the equipment card itself.
+  equipCard = 0,
 }) {
   let numOfCarrots = 0;
   const dispatch = useDispatch();
@@ -190,6 +194,13 @@ export default function Card({
   // Base field cards can also go to the cemetery or back to hand; evolved,
   // token, and advanced cards can only be moved between slots.
   const fieldExtraTargets = !isEvoFieldCard && !isSpecialFieldCard;
+  // Dragging an Equipment token over a follower attaches it — flag the drag so
+  // FieldDropHints highlights followers green instead of red.
+  const isEquipmentDrag =
+    onField &&
+    !opponentField &&
+    typeof name === "string" &&
+    primaryType(name) === "Equipment";
   const handleFieldDragStart = () => {
     setDragHover({
       active: true,
@@ -197,6 +208,7 @@ export default function Card({
       cemetery: false,
       hand: false,
       deck: null,
+      equip: isEquipmentDrag,
       showCemetery: fieldExtraTargets,
       showHand: fieldExtraTargets,
       showDeck: fieldExtraTargets,
@@ -215,6 +227,7 @@ export default function Card({
       cemetery: fieldExtraTargets && isOverCemetery(x, y),
       hand: fieldExtraTargets && isOverHand(x, y),
       deck: fieldExtraTargets ? deckHalfAt(x, y) : null,
+      equip: isEquipmentDrag,
       showCemetery: fieldExtraTargets,
       showHand: fieldExtraTargets,
       showDeck: fieldExtraTargets,
@@ -826,6 +839,57 @@ export default function Card({
               }}
             />
             <div style={{ fontSize: 15 }}></div>
+          </div>
+        )}
+        {equipCard !== 0 && !!equipCard && onField && (
+          <div
+            // Equipment badge (same spot as the Carrot/Drive badges). Hovering
+            // it swaps the zoom preview to the equipment card; leaving swaps
+            // back to whatever this card normally previews (the pointer is
+            // still on the card).
+            onMouseEnter={() => {
+              dispatch(setCurrentCard(equipCard));
+              setHovering(true);
+            }}
+            onMouseLeave={() =>
+              dispatch(
+                setCurrentCard(
+                  (typeof name === "string" &&
+                    (name.slice(0, 6) === "Carrot" || name === "Drive Point")
+                    ? cardBeneath
+                    : name) || name,
+                ),
+              )
+            }
+            style={{
+              width: "50px",
+              position: "relative",
+              left: "45%",
+              bottom: "120%",
+              backgroundColor: "rgba(0, 0, 0, 0.5)",
+              borderRadius: "10px",
+              border: "4px solid #0000",
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <img
+              draggable={false}
+              src={artThumb(equipCard, artMap)}
+              onError={(e) => {
+                if (e.currentTarget.src.indexOf("/thumbs/") !== -1)
+                  e.currentTarget.src = artImage(equipCard, artMap);
+              }}
+              alt={equipCard}
+              style={{
+                height: "26px",
+                width: "20px",
+                objectFit: "cover",
+                borderRadius: "4px",
+              }}
+            />
           </div>
         )}
       </motion.div>

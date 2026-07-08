@@ -51,9 +51,18 @@ const DRAG_STYLE = { cursor: "grab", touchAction: "none", userSelect: "none" };
  *        drop must land ON a follower — the caller validates in onDrop instead.
  * @param {boolean} [opts.evolve] marks the drag as an evolve so FieldDropHints
  *        flips its highlight (a follower slot becomes the valid/green target).
+ * @param {boolean|((card: any) => boolean)} [opts.equip] marks the drag as an
+ *        equipment attach (green target = top-row follower with nothing
+ *        attached). Pass a function to decide per dragged card.
  * @param {(card: any, index: number, dest: {type: string, index?: number}) => void} opts.onDrop
  */
-export function useModalCardDrag({ targets, field, evolve = false, onDrop }) {
+export function useModalCardDrag({
+  targets,
+  field,
+  evolve = false,
+  equip = false,
+  onDrop,
+}) {
   const [dragCard, setDragCard] = useState(null);
   const [dragPos, setDragPos] = useState({ x: 0, y: 0 });
   // The in-flight gesture (which card, where it started, whether it has crossed
@@ -110,6 +119,7 @@ export function useModalCardDrag({ targets, field, evolve = false, onDrop }) {
       hand: !!dest && dest.type === "hand",
       deck: dest && dest.type === "deck" ? dest.half : null,
       evolve,
+      equip: typeof equip === "function" ? !!equip(g.card) : !!equip,
       showCemetery: !!targets.cemetery,
       showHand: !!targets.hand,
       showDeck: !!targets.deck,

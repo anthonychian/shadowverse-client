@@ -86,8 +86,14 @@ import {
   setSelfConnectionState,
   setSelfResyncing,
   restoreOwnState,
+  attachEquipmentOnField,
+  moveEquipmentAtIndex,
+  clearEquipmentAtIndex,
+  removeEquipmentOnField,
+  setEnemyEquipField,
 } from "../../redux/CardSlice";
 import { artImage } from "../../decks/getCards";
+import { primaryType } from "../../decks/cardDetails";
 import { motion, MotionConfig } from "framer-motion";
 import CardMUI from "@mui/material/Card";
 import { useDispatch, useSelector } from "react-redux";
@@ -136,6 +142,7 @@ import {
   triggerCardReveal,
   triggerHandReveal,
   triggerBanishReveal,
+  triggerEquipReveal,
   playCardReveal,
   onHideChange,
   isHidden,
@@ -206,6 +213,7 @@ export default function Field({
     (state) => state.card.currentCardIndex,
   );
   const reduxEvoField = useSelector((state) => state.card.evoField);
+  const reduxEquipField = useSelector((state) => state.card.equipField);
   const reduxEngaged = useSelector((state) => state.card.engagedField);
   const reduxCustomStatus = useSelector((state) => state.card.customStatus);
   const reduxCustomValues = useSelector((state) => state.card.customValues);
@@ -214,6 +222,9 @@ export default function Field({
   );
   const reduxEnemyField = useSelector((state) => state.card.enemyField);
   const reduxEnemyEvoField = useSelector((state) => state.card.enemyEvoField);
+  const reduxEnemyEquipField = useSelector(
+    (state) => state.card.enemyEquipField,
+  );
   const reduxEnemyEngaged = useSelector(
     (state) => state.card.enemyEngagedField,
   );
@@ -414,6 +425,9 @@ export default function Field({
         case "field":
           dispatch(setEnemyField(update.data));
           break;
+        case "equipField":
+          dispatch(setEnemyEquipField(update.data));
+          break;
         case "evoField":
           dispatch(setEnemyEvoField(update.data));
           break;
@@ -581,6 +595,19 @@ export default function Field({
           });
           break;
         }
+        case "cardEquipped": {
+          // Opponent attached an equipment token to a follower — fly it onto
+          // that follower's slot on their (top) board with the golden flash.
+          const { name: equipName, index: equipIndex } = update.data || {};
+          const cell = equipIndex < 5 ? equipIndex + 5 : equipIndex - 5;
+          playCardReveal({
+            name: equipName,
+            side: "enemy",
+            kind: "equip",
+            target: enemyFieldSlotCenter(cell),
+          });
+          break;
+        }
         case "full_state_sync":
           // Handle full state synchronization (used on reconnection)
           // This bypasses the queue and directly updates all state
@@ -591,6 +618,8 @@ export default function Field({
                 dispatch(setEnemyField(fullState.enemyField));
               if (fullState.enemyEvoField !== undefined)
                 dispatch(setEnemyEvoField(fullState.enemyEvoField));
+              if (fullState.enemyEquipField !== undefined)
+                dispatch(setEnemyEquipField(fullState.enemyEquipField));
               if (fullState.enemyHand !== undefined)
                 dispatch(setEnemyHand(fullState.enemyHand));
               if (fullState.enemyLeader !== undefined)
@@ -816,6 +845,9 @@ export default function Field({
   const isAdvanced = (name) => {
     return name.slice(-8) === "ADVANCED";
   };
+  // Does this slot have an equipment token attached? Equipment lives in its
+  // own equipField array, so it coexists with evolves.
+  const hasEquipAt = (i) => reduxEquipField[i] !== 0 && !!reduxEquipField[i];
 
   const handleClick = (name, indexClicked) => {
     // The card placed onto an empty slot this click (any source), so the
@@ -867,6 +899,14 @@ export default function Field({
             index: indexClicked,
           }),
         );
+        // An attached equipment marker travels with its follower (no-op when
+        // the slot has none).
+        dispatch(
+          moveEquipmentAtIndex({
+            prevIndex: index,
+            index: indexClicked,
+          }),
+        );
         dispatch(
           moveValuesAtIndex({
             prevIndex: index,
@@ -904,6 +944,14 @@ export default function Field({
           moveEvoAndBaseOnField({
             card: name,
             evoCard: name,
+            prevIndex: index,
+            index: indexClicked,
+          }),
+        );
+        // An attached equipment travels with its follower (no-op when the
+        // slot has none).
+        dispatch(
+          moveEquipmentAtIndex({
             prevIndex: index,
             index: indexClicked,
           }),
@@ -1131,6 +1179,7 @@ export default function Field({
         index: index,
       }),
     );
+    dispatch(clearEquipmentAtIndex(index));
     dispatch(clearValuesAtIndex(index));
     dispatch(clearEngagedAtIndex(index));
     dispatch(clearCountersAtIndex(index));
@@ -1145,6 +1194,7 @@ export default function Field({
         index: index,
       }),
     );
+    dispatch(clearEquipmentAtIndex(index));
     dispatch(clearValuesAtIndex(index));
     dispatch(clearEngagedAtIndex(index));
     dispatch(clearCountersAtIndex(index));
@@ -1158,6 +1208,7 @@ export default function Field({
         index: index,
       }),
     );
+    dispatch(clearEquipmentAtIndex(index));
     dispatch(clearValuesAtIndex(index));
     dispatch(clearEngagedAtIndex(index));
     dispatch(clearCountersAtIndex(index));
@@ -1190,6 +1241,7 @@ export default function Field({
         index: index,
       }),
     );
+    dispatch(clearEquipmentAtIndex(index));
     dispatch(clearValuesAtIndex(index));
     dispatch(clearEngagedAtIndex(index));
     dispatch(clearCountersAtIndex(index));
@@ -1204,10 +1256,17 @@ export default function Field({
         index: index,
       }),
     );
+    dispatch(clearEquipmentAtIndex(index));
     dispatch(clearValuesAtIndex(index));
     dispatch(clearEngagedAtIndex(index));
     dispatch(clearCountersAtIndex(index));
     dispatch(clearStatusAtIndex(index));
+  };
+
+  const handleRemoveEquipment = () => {
+    handleClose();
+    handleEvoClose();
+    dispatch(removeEquipmentOnField(index));
   };
 
   const handleShowAtkDef = () => {
@@ -1299,6 +1358,10 @@ export default function Field({
   // advanced cards can't be returned, and the reducers don't unwind an evolved
   // stack — so those are skipped for cemetery/hand (they can still be moved).
   const handleFieldDrop = (fromIndex, dest) => {
+    // Equipment (in its own equipField) never affects what the follower can
+    // do — it just tags along on moves and, being a token, disappears when the
+    // follower leaves the field.
+    const isEquipAttached = hasEquipAt(fromIndex);
     const isEvo = reduxEvoField[fromIndex] !== 0;
     const baseCard = reduxField[fromIndex];
     const canReturn =
@@ -1308,12 +1371,14 @@ export default function Field({
       !isAdvanced(baseCard);
     if (dest.type === "cemetery") {
       if (!canReturn) return;
+      if (isEquipAttached) dispatch(clearEquipmentAtIndex(fromIndex));
       dispatch(placeToCemeteryFromField({ card: baseCard, index: fromIndex }));
       clearFieldSlot(fromIndex);
       return;
     }
     if (dest.type === "hand") {
       if (!canReturn) return;
+      if (isEquipAttached) dispatch(clearEquipmentAtIndex(fromIndex));
       dispatch(addToHandFromField({ card: baseCard, index: fromIndex }));
       clearFieldSlot(fromIndex);
       triggerHandReveal(baseCard, reduxCurrentRoom);
@@ -1321,6 +1386,7 @@ export default function Field({
     }
     if (dest.type === "deck") {
       if (!canReturn) return;
+      if (isEquipAttached) dispatch(clearEquipmentAtIndex(fromIndex));
       if (dest.half === "top")
         dispatch(placeToTopOfDeckFromField({ card: baseCard, index: fromIndex }));
       else dispatch(placeToBotOfDeckFromField({ card: baseCard, index: fromIndex }));
@@ -1330,10 +1396,35 @@ export default function Field({
     // field move
     const toIndex = dest.index;
     if (toIndex < 0 || toIndex === fromIndex) return;
-    if (reduxField[toIndex] !== 0) return;
+    if (reduxField[toIndex] !== 0) {
+      // Occupied slot: normally a no-op, but an Equipment token dropped onto a
+      // top-row follower attaches to it. Evolved followers are fine targets
+      // (equipment has its own slot); already-equipped ones are not.
+      const equipping =
+        !isEvo &&
+        typeof baseCard === "string" &&
+        primaryType(baseCard) === "Equipment" &&
+        toIndex < 5 &&
+        primaryType(reduxField[toIndex]) === "Follower" &&
+        !hasEquipAt(toIndex);
+      if (!equipping) return;
+      dispatch(
+        attachEquipmentOnField({
+          card: baseCard,
+          prevIndex: fromIndex,
+          index: toIndex,
+        }),
+      );
+      clearFieldSlot(fromIndex);
+      triggerEquipReveal(baseCard, reduxCurrentRoom, toIndex);
+      return;
+    }
     const cardName = isEvo ? reduxEvoField[fromIndex] : reduxField[fromIndex];
     if (!cardName || cardName === 0) return;
     moveFieldCard(cardName, fromIndex, toIndex, isEvo);
+    // An attached equipment marker travels with its follower.
+    if (isEquipAttached)
+      dispatch(moveEquipmentAtIndex({ prevIndex: fromIndex, index: toIndex }));
     // Promoting from the EX area (5-9) up to the field (0-4) plays the reveal.
     if (fromIndex >= 5 && toIndex < 5)
       triggerCardReveal(cardName, reduxCurrentRoom, toIndex, fieldSlotCenter(toIndex));
@@ -1352,6 +1443,7 @@ export default function Field({
 
   const handleTransfer = () => {
     handleClose();
+    dispatch(clearEquipmentAtIndex(index));
     dispatch(
       transferToOpponentField({
         card: name,
@@ -1707,6 +1799,9 @@ export default function Field({
         {!isToken(name) && !isAdvanced(name) && (
           <MenuItem onClick={handleCardToCemetery}>Cemetery</MenuItem>
         )}
+        {hasEquipAt(index) && (
+          <MenuItem onClick={handleRemoveEquipment}>Remove Equipment</MenuItem>
+        )}
         {!reduxCustomValues[index].showAtk && (
           <MenuItem onClick={handleShowAtkDef}>Modify Atk/Def</MenuItem>
         )}
@@ -1758,6 +1853,9 @@ export default function Field({
         }
       >
         <MenuItem onClick={() => handleReturnToEvolveDeck()}>Return</MenuItem>
+        {hasEquipAt(index) && (
+          <MenuItem onClick={handleRemoveEquipment}>Remove Equipment</MenuItem>
+        )}
         <MenuItem onClick={handleMoveEvoOnField}>Move</MenuItem>
         {!reduxCustomValues[index].showAtk && (
           <MenuItem onClick={handleShowAtkDef}>Modify Atk/Def</MenuItem>
@@ -2152,6 +2250,7 @@ export default function Field({
                     idx={idx}
                     key={`enemy-card-${cardPos(idx)}`}
                     name={reduxEnemyField[cardPos(idx)]}
+                    equipCard={reduxEnemyEquipField[cardPos(idx)]}
                     setHovering={setHovering}
                     ready={ready}
                     hidden={isHidden("enemy", cardPos(idx))}
@@ -2174,6 +2273,7 @@ export default function Field({
                   idx={idx}
                   key={`enemy-evo-${cardPos(idx)}`}
                   name={reduxEnemyEvoField[cardPos(idx)]}
+                  equipCard={reduxEnemyEquipField[cardPos(idx)]}
                   setHovering={setHovering}
                   ready={ready}
                   cardBeneath={reduxEnemyField[cardPos(idx)]}
@@ -2362,6 +2462,7 @@ export default function Field({
                       onField={true}
                       key={`card1-${idx}`}
                       name={card}
+                      equipCard={reduxEquipField[idx]}
                       setHovering={setHovering}
                       ready={ready}
                     />
@@ -2378,6 +2479,7 @@ export default function Field({
                       onField={true}
                       key={`evo1-${idx}`}
                       name={reduxEvoField[idx]}
+                      equipCard={reduxEquipField[idx]}
                       setHovering={setHovering}
                       ready={ready}
                       cardBeneath={reduxField[idx]}
@@ -2421,6 +2523,7 @@ export default function Field({
                       onField={true}
                       key={`card2-${idx}`}
                       name={reduxField[idx]}
+                      equipCard={reduxEquipField[idx]}
                       setHovering={setHovering}
                       ready={ready}
                       onFieldDrop={handleFieldDrop}
@@ -2444,6 +2547,7 @@ export default function Field({
                       onField={true}
                       key={`evo2-${idx}`}
                       name={reduxEvoField[idx]}
+                      equipCard={reduxEquipField[idx]}
                       setHovering={setHovering}
                       ready={ready}
                       cardBeneath={reduxField[idx]}

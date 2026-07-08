@@ -22,6 +22,11 @@ const seedFollowerStats = (state, card, index) => {
   return true;
 };
 
+// Human name for a board row by slot index: 0-4 is the field (top row), 5-9 is
+// the EX area (bottom row). Used by game-log texts so placements into the EX
+// area aren't mislabelled as "field".
+const rowName = (index) => (index >= 5 ? "EX area" : "field");
+
 const num = (v, fallback) => {
   const n = Number(v);
   return Number.isNaN(n) ? fallback : n;
@@ -114,6 +119,10 @@ export const CardSlice = createSlice({
     evoField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     enemyField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     enemyEvoField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    // Equipment tokens attached to followers, by slot — separate from evoField
+    // so a follower can be evolved AND equipped at the same time.
+    equipField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    enemyEquipField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     counterField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     enemyCounterField: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     exPlayCostField: [null, null, null, null, null, null, null, null, null, null],
@@ -274,6 +283,32 @@ export const CardSlice = createSlice({
       socket.emit("send msg", {
         type: "health",
         data: state.playerHealth,
+        room: state.room,
+      });
+    },
+    // One aggregated game-log entry for a burst of HP clicks. PlayerUI batches
+    // the +/- clicks over a 5s window and dispatches the net difference here,
+    // so three quick "−1" clicks read as a single "Lost 3 HP".
+    logHealthDiff: (state, action) => {
+      const diff = action.payload;
+      if (!diff) return;
+      const text =
+        diff < 0
+          ? `-${-diff} HP (${state.playerHealth} HP left)`
+          : `+${diff} HP (${state.playerHealth} HP left)`;
+      const date = new Date().toLocaleTimeString("it-IT", {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+      state.gameLog = [
+        ...state.gameLog,
+        {
+          text: `[${date}] (Me): ${text}`,
+        },
+      ];
+      socket.emit("send msg", {
+        type: "logHealthDiff",
+        updates: [{ type: "log", data: { text } }],
         room: state.room,
       });
     },
@@ -1046,6 +1081,22 @@ export const CardSlice = createSlice({
     moveValuesAtIndex: (state, action) => {
       const prevIndex = action.payload.prevIndex;
       const index = action.payload.index;
+      // Promoting a card from the EX area (5-9) up to the field (0-4): the EX
+      // slot carried no stats, so seed the follower's printed Atk/Def exactly
+      // like a card entering the field normally. The field/evoField arrays were
+      // already updated by the move reducer dispatched before this one, so the
+      // card now at `index` is the one being promoted (evo form on top).
+      if (prevIndex >= 5 && index < 5) {
+        const movedCard = state.evoField[index] || state.field[index];
+        if (seedFollowerStats(state, movedCard, index)) {
+          socket.emit("send msg", {
+            type: "values",
+            data: state.customValues,
+            room: state.room,
+          });
+          return;
+        }
+      }
       // Moving a follower into the EX area (bottom row, indices 5-9) hides its
       // Atk/Def overlay — the EX area never shows stats (see seedFollowerStats).
       const prevItem =
@@ -1086,14 +1137,17 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Added ${card} to field`,
+          text: `[${date}] (Me): Added ${card} to ${rowName(newIndex)}`,
           card,
         },
       ];
       socket.emit("send msg", {
         type: "duplicateCardOnField",
         updates: [
-          { type: "log", data: { text: `Added ${card} to field`, card } },
+          {
+            type: "log",
+            data: { text: `Added ${card} to ${rowName(newIndex)}`, card },
+          },
           { type: "field", data: state.field },
           ...(valuesChanged
             ? [{ type: "values", data: state.customValues }]
@@ -1276,7 +1330,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Added ${card} to top of deck from field`,
+          text: `[${date}] (Me): Added ${card} to top of deck from ${rowName(cardIndex)}`,
           card,
         },
       ];
@@ -1286,7 +1340,10 @@ export const CardSlice = createSlice({
         updates: [
           {
             type: "log",
-            data: { text: `Added ${card} to top of deck from field`, card },
+            data: {
+              text: `Added ${card} to top of deck from ${rowName(cardIndex)}`,
+              card,
+            },
           },
           { type: "field", data: state.field },
           { type: "deckSize", data: state.deck.length },
@@ -1312,7 +1369,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Added ${card} to bot of deck from field`,
+          text: `[${date}] (Me): Added ${card} to bot of deck from ${rowName(cardIndex)}`,
           card,
         },
       ];
@@ -1322,7 +1379,10 @@ export const CardSlice = createSlice({
         updates: [
           {
             type: "log",
-            data: { text: `Added ${card} to bot of deck from field`, card },
+            data: {
+              text: `Added ${card} to bot of deck from ${rowName(cardIndex)}`,
+              card,
+            },
           },
           { type: "field", data: state.field },
           { type: "deckSize", data: state.deck.length },
@@ -1351,7 +1411,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Added ${card} to field`,
+          text: `[${date}] (Me): Added ${card} to ${rowName(newIndex)}`,
           card,
         },
       ];
@@ -1360,7 +1420,7 @@ export const CardSlice = createSlice({
         updates: [
           {
             type: "log",
-            data: { text: `Added ${card} to field`, card },
+            data: { text: `Added ${card} to ${rowName(newIndex)}`, card },
           },
           { type: "field", data: state.field },
           ...(valuesChanged
@@ -1387,7 +1447,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Removed ${card} from field`,
+          text: `[${date}] (Me): Removed ${card} from ${rowName(prevIndex)}`,
           card,
         },
       ];
@@ -1396,7 +1456,7 @@ export const CardSlice = createSlice({
         updates: [
           {
             type: "log",
-            data: { text: `Removed ${card} from field`, card },
+            data: { text: `Removed ${card} from ${rowName(prevIndex)}`, card },
           },
           { type: "field", data: state.field },
         ],
@@ -1424,18 +1484,28 @@ export const CardSlice = createSlice({
         minute: "2-digit",
       });
 
-      state.gameLog = [
-        ...state.gameLog,
-        {
-          text: `[${date}] (Me): Moved ${card} on field`,
-          card,
-        },
-      ];
+      // Repositioning within the same row (field→field or EX→EX) is just
+      // tidying — don't log it. Only crossing between the EX area and the
+      // field is worth an entry, and the text says which way the card went.
+      const shouldLog = (prevIndex >= 5) !== (newIndex >= 5);
+      const moveText =
+        prevIndex >= 5
+          ? `Moved ${card} from EX area to field`
+          : `Moved ${card} from field to EX area`;
+      if (shouldLog) {
+        state.gameLog = [
+          ...state.gameLog,
+          {
+            text: `[${date}] (Me): ${moveText}`,
+            card,
+          },
+        ];
+      }
 
       socket.emit("send msg", {
         type: "moveCard",
         updates: [
-          { type: "log", data: { text: `Moved ${card} on field`, card } },
+          ...(shouldLog ? [{ type: "log", data: { text: moveText, card } }] : []),
           { type: "field", data: state.field },
         ],
         room: state.room,
@@ -1479,20 +1549,28 @@ export const CardSlice = createSlice({
         minute: "2-digit",
       });
 
-      state.gameLog = [
-        ...state.gameLog,
-        {
-          text: `[${date}] (Me): Moved ${evoCard} on field`,
-          card: evoCard,
-        },
-      ];
+      // Same rule as moveCardOnField: only moves crossing between the EX area
+      // and the field get logged, with the direction spelled out.
+      const shouldLog = (prevIndex >= 5) !== (newIndex >= 5);
+      const moveText =
+        prevIndex >= 5
+          ? `Moved ${evoCard} from EX area to field`
+          : `Moved ${evoCard} from field to EX area`;
+      if (shouldLog) {
+        state.gameLog = [
+          ...state.gameLog,
+          {
+            text: `[${date}] (Me): ${moveText}`,
+            card: evoCard,
+          },
+        ];
+      }
       socket.emit("send msg", {
         type: "moveEvoAndBaseOnField",
         updates: [
-          {
-            type: "log",
-            data: { text: `Moved ${evoCard} on field`, card: evoCard },
-          },
+          ...(shouldLog
+            ? [{ type: "log", data: { text: moveText, card: evoCard } }]
+            : []),
           { type: "field", data: state.field },
           { type: "evoField", data: state.evoField },
         ],
@@ -1582,7 +1660,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Added ${card} to field from deck`,
+          text: `[${date}] (Me): Added ${card} to ${rowName(newIndex)} from deck`,
           card,
         },
       ];
@@ -1886,7 +1964,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Added ${card} to hand from field`,
+          text: `[${date}] (Me): Added ${card} to hand from ${rowName(cardIndex)}`,
           card,
         },
       ];
@@ -1896,7 +1974,10 @@ export const CardSlice = createSlice({
         updates: [
           {
             type: "log",
-            data: { text: `Added ${card} to hand from field`, card },
+            data: {
+              text: `Added ${card} to hand from ${rowName(cardIndex)}`,
+              card,
+            },
           },
           { type: "field", data: state.field },
           { type: "hand", data: state.hand },
@@ -1963,7 +2044,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Added ${card} to field from hand`,
+          text: `[${date}] (Me): Added ${card} to ${rowName(newIndex)} from hand`,
           card,
         },
       ];
@@ -1973,7 +2054,10 @@ export const CardSlice = createSlice({
         updates: [
           {
             type: "log",
-            data: { text: `Added ${card} to field from hand`, card },
+            data: {
+              text: `Added ${card} to ${rowName(newIndex)} from hand`,
+              card,
+            },
           },
           { type: "field", data: state.field },
           { type: "hand", data: state.hand },
@@ -2099,7 +2183,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Added ${card} to cemetery from field`,
+          text: `[${date}] (Me): Added ${card} to cemetery from ${rowName(cardIndex)}`,
           card,
         },
       ];
@@ -2108,7 +2192,10 @@ export const CardSlice = createSlice({
         updates: [
           {
             type: "log",
-            data: { text: `Added ${card} to cemetery from field`, card },
+            data: {
+              text: `Added ${card} to cemetery from ${rowName(cardIndex)}`,
+              card,
+            },
           },
           { type: "field", data: state.field },
           { type: "cemetery", data: state.cemetery },
@@ -2171,7 +2258,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Added ${card} to field from deck`,
+          text: `[${date}] (Me): Added ${card} to ${rowName(newIndex)} from deck`,
           card,
         },
       ];
@@ -2216,7 +2303,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Added ${card} to field from cemetery`,
+          text: `[${date}] (Me): Added ${card} to ${rowName(newIndex)} from cemetery`,
           card,
         },
       ];
@@ -2226,7 +2313,10 @@ export const CardSlice = createSlice({
         updates: [
           {
             type: "log",
-            data: { text: `Added ${card} to field from cemetery`, card },
+            data: {
+              text: `Added ${card} to ${rowName(newIndex)} from cemetery`,
+              card,
+            },
           },
           { type: "field", data: state.field },
           { type: "cemetery", data: state.cemetery },
@@ -2261,7 +2351,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Added ${card} to field from banished`,
+          text: `[${date}] (Me): Added ${card} to ${rowName(newIndex)} from banished`,
           card,
         },
       ];
@@ -2271,7 +2361,10 @@ export const CardSlice = createSlice({
         updates: [
           {
             type: "log",
-            data: { text: `Added ${card} to field from banished`, card },
+            data: {
+              text: `Added ${card} to ${rowName(newIndex)} from banished`,
+              card,
+            },
           },
           { type: "field", data: state.field },
           { type: "banish", data: state.banish },
@@ -2301,7 +2394,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Banished ${card} from field`,
+          text: `[${date}] (Me): Banished ${card} from ${rowName(cardIndex)}`,
           card,
         },
       ];
@@ -2311,7 +2404,7 @@ export const CardSlice = createSlice({
         updates: [
           {
             type: "log",
-            data: { text: `Banished ${card} from field`, card },
+            data: { text: `Banished ${card} from ${rowName(cardIndex)}`, card },
           },
           { type: "field", data: state.field },
           { type: "banish", data: state.banish },
@@ -2420,6 +2513,133 @@ export const CardSlice = createSlice({
         room: state.room,
       });
     },
+    // Attach an Equipment token to a follower on the top row. The attachment
+    // lives in its own per-slot array (equipField) — separate from evoField, so
+    // the follower can still evolve while equipped. Card.js renders it as a
+    // small badge whose hover shows the equipment as a card preview.
+    attachEquipmentOnField: (state, action) => {
+      const card = action.payload.card; // equipment token name
+      // Slot the equipment sat on; omitted/-1 when dragged straight out of the
+      // token deck (nothing on the board to lift off).
+      const prevIndex = action.payload.prevIndex;
+      const newIndex = action.payload.index; // follower's slot (top row)
+
+      // Lift the equipment token off its own slot…
+      if (prevIndex != null && prevIndex >= 0) {
+        state.field = [
+          ...state.field.slice(0, prevIndex),
+          0,
+          ...state.field.slice(prevIndex + 1),
+        ];
+      }
+      // …and pin it to the follower.
+      state.equipField = [
+        ...state.equipField.slice(0, newIndex),
+        card,
+        ...state.equipField.slice(newIndex + 1),
+      ];
+
+      const date = new Date().toLocaleTimeString("it-IT", {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+
+      state.gameLog = [
+        ...state.gameLog,
+        {
+          text: `[${date}] (Me): Equipped ${card} to ${state.field[newIndex]}`,
+          card,
+        },
+      ];
+
+      socket.emit("send msg", {
+        type: "attachEquipmentOnField",
+        updates: [
+          {
+            type: "log",
+            data: {
+              text: `Equipped ${card} to ${state.field[newIndex]}`,
+              card,
+            },
+          },
+          { type: "field", data: state.field },
+          { type: "equipField", data: state.equipField },
+        ],
+        room: state.room,
+      });
+    },
+    // Carry an attached equipment along when its follower moves slots. No-op
+    // when the source slot has none, so callers can dispatch it unconditionally
+    // alongside the card move.
+    moveEquipmentAtIndex: (state, action) => {
+      const prevIndex = action.payload.prevIndex;
+      const index = action.payload.index;
+      const equip = state.equipField[prevIndex];
+      if (!equip || equip === 0) return;
+      const newEquipField = [...state.equipField];
+      newEquipField[prevIndex] = 0;
+      newEquipField[index] = equip;
+      state.equipField = newEquipField;
+      socket.emit("send msg", {
+        type: "moveEquipmentAtIndex",
+        updates: [{ type: "equipField", data: state.equipField }],
+        room: state.room,
+      });
+    },
+    // Explicit "Remove Equipment" from the card's context menu: clears the
+    // attachment like clearEquipmentAtIndex but also logs it (the token is lost).
+    removeEquipmentOnField: (state, action) => {
+      const index = action.payload;
+      const card = state.equipField[index];
+      if (!card || card === 0) return;
+      state.equipField = [
+        ...state.equipField.slice(0, index),
+        0,
+        ...state.equipField.slice(index + 1),
+      ];
+      const date = new Date().toLocaleTimeString("it-IT", {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+      state.gameLog = [
+        ...state.gameLog,
+        {
+          text: `[${date}] (Me): Removed ${card} from ${state.field[index]}`,
+          card,
+        },
+      ];
+      socket.emit("send msg", {
+        type: "removeEquipmentOnField",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Removed ${card} from ${state.field[index]}`, card },
+          },
+          { type: "equipField", data: state.equipField },
+        ],
+        room: state.room,
+      });
+    },
+    // Drop an attached equipment (equipment is a token — it simply disappears
+    // when its follower leaves the field). No-op when the slot has none.
+    clearEquipmentAtIndex: (state, action) => {
+      const index = action.payload;
+      const equip = state.equipField[index];
+      if (!equip || equip === 0) return;
+      state.equipField = [
+        ...state.equipField.slice(0, index),
+        0,
+        ...state.equipField.slice(index + 1),
+      ];
+      socket.emit("send msg", {
+        type: "clearEquipmentAtIndex",
+        updates: [{ type: "equipField", data: state.equipField }],
+        room: state.room,
+      });
+    },
+    setEnemyEquipField: (state, action) => {
+      state.enemyEquipField = action.payload;
+    },
     rideCardOnField: (state, action) => {
       const newIndex = action.payload.index;
       const cardIndex = action.payload.indexInEvolveDeck;
@@ -2486,7 +2706,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Added ${card} to field from evolve deck`,
+          text: `[${date}] (Me): Added ${card} to ${rowName(newIndex)} from evolve deck`,
           card,
         },
       ];
@@ -2496,7 +2716,10 @@ export const CardSlice = createSlice({
         updates: [
           {
             type: "log",
-            data: { text: `Added ${card} to field from evolve deck`, card },
+            data: {
+              text: `Added ${card} to ${rowName(newIndex)} from evolve deck`,
+              card,
+            },
           },
           { type: "field", data: state.field },
           { type: "evoDeck", data: state.evoDeck },
@@ -2690,7 +2913,7 @@ export const CardSlice = createSlice({
           state.gameLog = [
             ...state.gameLog,
             {
-              text: `[${date}] (Me): Added ${card} to field`,
+              text: `[${date}] (Me): Added ${card} to EX area`,
               card,
             },
           ];
@@ -2701,7 +2924,7 @@ export const CardSlice = createSlice({
           updates: [
             {
               type: "log",
-              data: { text: `Added 5 ${card} to field`, card },
+              data: { text: `Added 5 ${card} to EX area`, card },
             },
             { type: "field", data: state.field },
           ],
@@ -2763,6 +2986,7 @@ export const CardSlice = createSlice({
       if (s.enemyArt !== undefined) state.enemyArt = s.enemyArt;
       if (s.field !== undefined) state.field = s.field;
       if (s.evoField !== undefined) state.evoField = s.evoField;
+      if (s.equipField !== undefined) state.equipField = s.equipField;
       if (s.hand !== undefined) state.hand = s.hand;
       if (s.playerHealth !== undefined) state.playerHealth = s.playerHealth;
       if (s.playPoints !== undefined) state.playPoints = s.playPoints;
@@ -2845,6 +3069,7 @@ export const CardSlice = createSlice({
     exitGame: (state) => {
       state.room = "";
       state.enemyOnlineStatus = true;
+      state.enemyLeftGame = false;
       state.gameLog = [];
       state.chatLog = [];
       state.lastChatMessage = "";
@@ -2880,6 +3105,8 @@ export const CardSlice = createSlice({
       state.evoField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
       state.enemyField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
       state.enemyEvoField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      state.equipField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      state.enemyEquipField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
       state.counterField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
       state.enemyCounterField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
       state.currentCard = "";
@@ -2953,6 +3180,8 @@ export const CardSlice = createSlice({
       ];
     },
     reset: (state) => {
+      state.enemyLeftGame = false;
+      state.gameLog = [];
       state.deck = state.initialDeck;
       state.deck = state.deck.toSorted(() => Math.random() - 0.5);
       state.evoDeck = state.initialEvoDeck;
@@ -2982,6 +3211,8 @@ export const CardSlice = createSlice({
       state.evoField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
       state.enemyField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
       state.enemyEvoField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      state.equipField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      state.enemyEquipField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
       state.counterField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
       state.enemyCounterField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
       state.currentCard = "";
@@ -3095,6 +3326,11 @@ export const {
   evolveCardOnField,
   feedCardOnField,
   rideCardOnField,
+  attachEquipmentOnField,
+  moveEquipmentAtIndex,
+  clearEquipmentAtIndex,
+  removeEquipmentOnField,
+  setEnemyEquipField,
   advancedToField,
   backToEvolveDeck,
   advancedBackToEvolveDeck,
@@ -3168,6 +3404,7 @@ export const {
   setViewingCardsLog,
   setViewingDeckLog,
   setEvoPoints,
+  logHealthDiff,
   setPlayPoints,
   setHealth,
   setLeader,

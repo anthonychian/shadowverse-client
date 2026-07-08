@@ -613,19 +613,23 @@ export default function Selection({ setSelectedOption }) {
       >
         <HideUiButton size="medium" />
         <IconButton
+          aria-label="open menu"
           onClick={handleDrawerOpen}
           sx={{
-            color: "white",
-            backgroundColor: "rgba(0, 0, 0, 1)",
+            color: "#eaf6ff",
+            width: 52,
+            height: 52,
+            borderRadius: "14px",
+            backgroundColor: "rgba(10, 14, 20, 0.92)",
+            backdropFilter: "blur(6px)",
+            transition: "background-color 120ms ease, transform 120ms ease",
+            "&:hover": {
+              backgroundColor: "rgba(72, 171, 224, 0.18)",
+              transform: "translateY(-1px)",
+            },
           }}
         >
-          <MenuIcon
-            sx={{
-              color: "white",
-              width: "50px",
-              height: "50px",
-            }}
-          />
+          <MenuIcon sx={{ width: 30, height: 30 }} />
         </IconButton>
         {gameMode === "automated" && leaderActive && legalActions.includes("END_MAIN") && (
           <Button
