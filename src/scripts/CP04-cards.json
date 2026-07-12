@@ -638,7 +638,7 @@
       "trait": "Princess Connect / NIGHTMARE",
       "rarity": "Bronze",
       "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
-      "cost": "3",
+      "cost": "2",
       "attack": "3",
       "defense": "2",
       "effect": "[Union Burst] Strike - Select an enemy follower on the field and deal it 1 damage. ------- Rush. If you have another NIGHTMARE follower on your field, this has Assail."
@@ -1170,7 +1170,7 @@
       "trait": "Princess Connect",
       "rarity": "Gold",
       "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
-      "cost": "2",
+      "cost": "3",
       "attack": "-",
       "defense": "-",
       "effect": "Choose 1. (1) Increase your max play points by 1. Give your leader [defense]+1. (2) If you have 10 max play points, search your deck for a 2-cost Princess Connect follower, summon it, then shuffle."

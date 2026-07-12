@@ -1,0 +1,173 @@
+[
+  {
+    "cardNo": "SCS01-001EN",
+    "name": "Aria, Lady of the Woods",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Pixie / Princess",
+      "rarity": "Special",
+      "cardSet": "Special Card Selection Vol.1",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Put 2 Fairy tokens into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SCS01/scs01-001.png"
+  },
+  {
+    "cardNo": "SCS01-002EN",
+    "name": "Orchis, Newfound Heart",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Puppetry",
+      "rarity": "Special",
+      "cardSet": "Special Card Selection Vol.1",
+      "cost": "2",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[fanfare] Banish 2 cards named Puppet from your EX area: Put a Lloyd token into your EX area. [act] [engage]: Select a Puppet on your field and give it [attack]+1/[defense]+1, Storm, and Bane. Activate only if there are at least 3 Puppetry cards in your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SCS01/scs01-002.png"
+  },
+  {
+    "cardNo": "SCS01-003EN",
+    "name": "Octrice, Hollow Usurpation",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Omen / Thief",
+      "rarity": "Special",
+      "cardSet": "Special Card Selection Vol.1",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Put a Remnant of Hollowness token into your EX area. [act] [cost00]: The next Loot card you play this turn costs 2 less. Activate only twice per turn. [act] Banish an Octrice, Omen of Usurpation from your cemetery: Put a Gilded Blade, Gilded Goblet, or Gilded Boots token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SCS01/scs01-003.png"
+  },
+  {
+    "cardNo": "SCS01-004EN",
+    "name": "Anne & Grea, Mysterian Duo",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Special",
+      "cardSet": "Special Card Selection Vol.1",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "While there are at least 10 Academic cards in your cemetery, this has Storm. [fanfare] Discard 2 Academic cards: Select an enemy follower on the field. Deal it 5 damage and draw 2 cards. At the start of your end phase, if there are at least 5 Academic cards in your cemetery, summon an Anne's Summoning token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SCS01/scs01-004.png"
+  },
+  {
+    "cardNo": "SCS01-005EN",
+    "name": "Resplendent Phoenix",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Phoenix",
+      "rarity": "Special",
+      "cardSet": "Special Card Selection Vol.1",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Ward. [fanfare] [cost02]: If Overflow is active for you, shuffle your deck, then put the top card into your EX area. It costs 0 to play this turn. [lastwords] Give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SCS01/scs01-005.png"
+  },
+  {
+    "cardNo": "SCS01-006EN",
+    "name": "VI. Milteo, The Lovers",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Arcana / Demon",
+      "rarity": "Special",
+      "cardSet": "Special Card Selection Vol.1",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Discard a card: Reveal cards from the top of your deck until you reveal 2 followers that cost 3 or less. Summon them. Shuffle the rest and put them on the bottom of your deck. At the start of your end phase, Necrocharge (20) - Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SCS01/scs01-006.png"
+  },
+  {
+    "cardNo": "SCS01-007EN",
+    "name": "Garodeth, Insurgent Convict",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Condemned / Demon",
+      "rarity": "Special",
+      "cardSet": "Special Card Selection Vol.1",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost05]: Evolve this. Whenever your leader's defense decreases during your turn, if it's at least the 4th time this turn, evolve this. [fanfare] Deal 1 damage to your leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SCS01/scs01-007.png"
+  },
+  {
+    "cardNo": "SCS01-008EN",
+    "name": "Wilbert, Luminous Paladin",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Arena / Luminary",
+      "rarity": "Special",
+      "cardSet": "Special Card Selection Vol.1",
+      "cost": "4",
+      "attack": "3",
+      "defense": "4",
+      "effect": "Ward. [fanfare] Look at the top 5 cards of your deck. You may summon a follower with Ward that costs 2 or less from among them. Put the rest on the bottom of your deck in any order. [act] [engage]: Select an enemy follower on the field and destroy it. Activate only if there are at least 3 followers on your field with Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SCS01/scs01-008.png"
+  },
+  {
+    "cardNo": "SCS01-009EN",
+    "name": "Gilnelise, Ravenous Craving Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen",
+      "rarity": "Special",
+      "cardSet": "Special Card Selection Vol.1",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "While your leader's defense is 10 or less, this has Drain. On Evolve - Choose 1. (1) Select another follower on the field and give it [attack]+2/[defense]-2. (2) Put a Ravenous Sweetness token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SCS01/scs01-009.png"
+  }
+]

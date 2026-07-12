@@ -2107,5 +2107,81 @@
       "effect": "When playing this card, banish 3 Cute cards, 3 Cool cards, and 3 Passion cards from your cemetery: This card costs 9 less to play. ---------- Storm. Bane. Ward."
     },
     "imgSrc": ""
+  },
+  {
+    "cardNo": "CP02-SP04aEN",
+    "name": "miroir",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Passion",
+      "rarity": "Special",
+      "cardSet": "Crossover Set “THE IDOLM@STER CINDERELLA GIRLS”",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Banish two 1-cost cards from your cemetery: Choose up to 2 of the following. (1) Select an enemy follower on the field and destroy it. (2) Deal 2 damage to each enemy leader. (3) Draw a card. Discard a card. [act] [cost01], Lesson (1): Give this follower Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CP02/cp02-sp04a.png"
+  },
+  {
+    "cardNo": "CP02-SP04bEN",
+    "name": "miroir",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Passion",
+      "rarity": "Special",
+      "cardSet": "Crossover Set “THE IDOLM@STER CINDERELLA GIRLS”",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Banish two 1-cost cards from your cemetery: Choose up to 2 of the following. (1) Select an enemy follower on the field and destroy it. (2) Deal 2 damage to each enemy leader. (3) Draw a card. Discard a card. [act] [cost01], Lesson (1): Give this follower Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CP02/cp02-sp04b.png"
+  },
+  {
+    "cardNo": "CP02-U04aEN",
+    "name": "miroir",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Passion",
+      "rarity": "Ultimate",
+      "cardSet": "Crossover Set “THE IDOLM@STER CINDERELLA GIRLS”",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Banish two 1-cost cards from your cemetery: Choose up to 2 of the following. (1) Select an enemy follower on the field and destroy it. (2) Deal 2 damage to each enemy leader. (3) Draw a card. Discard a card. [act] [cost01], Lesson (1): Give this follower Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CP02/cp02-u04a.png"
+  },
+  {
+    "cardNo": "CP02-U04bEN",
+    "name": "miroir",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "iM@S CG / Passion",
+      "rarity": "Ultimate",
+      "cardSet": "Crossover Set “THE IDOLM@STER CINDERELLA GIRLS”",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Banish two 1-cost cards from your cemetery: Choose up to 2 of the following. (1) Select an enemy follower on the field and destroy it. (2) Deal 2 damage to each enemy leader. (3) Draw a card. Discard a card. [act] [cost01], Lesson (1): Give this follower Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CP02/cp02-u04b.png"
   }
 ]

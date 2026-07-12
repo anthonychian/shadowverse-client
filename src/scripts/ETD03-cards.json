@@ -1,0 +1,401 @@
+[
+  {
+    "cardNo": "ETD03-001EN",
+    "name": "Slade, Blossoming Wolf",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Verdant / Beast",
+      "rarity": "Gold",
+      "cardSet": "Entry Deck \"Itsuki Mitsutagawa\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost00]: Evolve this follower. This ability can be activated if a card on your field was returned to hand this turn. When this card is returned to hand from your field, you may put a [forestcraft] follower that costs 2 play points or less from your hand onto your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD03/etd03-001.png"
+  },
+  {
+    "cardNo": "ETD03-002EN",
+    "name": "Slade, Blossoming Wolf Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Verdant / Beast",
+      "rarity": "Gold",
+      "cardSet": "Entry Deck \"Itsuki Mitsutagawa\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve: Draw a card. When this card is returned to hand from your field, you may put a [forestcraft] follower that costs 2 play points or less from your hand onto your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD03/etd03-002.png"
+  },
+  {
+    "cardNo": "ETD03-003EN",
+    "name": "Gerbera Bear",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Verdant / Beast",
+      "rarity": "Silver",
+      "cardSet": "Entry Deck \"Itsuki Mitsutagawa\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost01]: Evolve this follower. Whenever a card on your field is returned to hand, give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD03/etd03-003.png"
+  },
+  {
+    "cardNo": "ETD03-004EN",
+    "name": "Gerbera Bear Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Verdant / Beast",
+      "rarity": "Silver",
+      "cardSet": "Entry Deck \"Itsuki Mitsutagawa\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve: Search your deck for a Floral Breeze, reveal it, and add it to your hand. Whenever a card on your field is returned to hand, give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD03/etd03-004.png"
+  },
+  {
+    "cardNo": "ETD03-005EN",
+    "name": "Elven Princess Mage",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf / Princess",
+      "rarity": "Silver",
+      "cardSet": "Entry Deck \"Itsuki Mitsutagawa\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve][cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD03/etd03-005.png"
+  },
+  {
+    "cardNo": "ETD03-006EN",
+    "name": "Elven Princess Mage Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Elf / Princess",
+      "rarity": "Silver",
+      "cardSet": "Entry Deck \"Itsuki Mitsutagawa\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve: Put 2 Fairy Wisp tokens into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD03/etd03-006.png"
+  },
+  {
+    "cardNo": "ETD03-007EN",
+    "name": "Elf Child May",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf",
+      "rarity": "Silver",
+      "cardSet": "Entry Deck \"Itsuki Mitsutagawa\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[fanfare] Select an enemy follower on the field and deal it 1 damage. When this card is returned to hand from your field, select an enemy follower on the field and deal it 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD03/etd03-007.png"
+  },
+  {
+    "cardNo": "ETD03-008EN",
+    "name": "Nature's Guidance",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Pixie",
+      "rarity": "Silver",
+      "cardSet": "Entry Deck \"Itsuki Mitsutagawa\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a card on your field. Return it to its owner's hand and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD03/etd03-008.png"
+  },
+  {
+    "cardNo": "ETD03-009EN",
+    "name": "Harvest Festival",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Amulet",
+      "trait": "Elf",
+      "rarity": "Silver",
+      "cardSet": "Entry Deck \"Itsuki Mitsutagawa\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act][cost01], [engage], put this card into its owner's cemetery: Give your leader [defense]+1. When this card leaves the field, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD03/etd03-009.png"
+  },
+  {
+    "cardNo": "ETD03-010EN",
+    "name": "Fen Sprite",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Fae-Touched",
+      "rarity": "Bronze",
+      "cardSet": "Entry Deck \"Itsuki Mitsutagawa\"",
+      "cost": "3",
+      "attack": "4",
+      "defense": "3",
+      "effect": "[fanfare] Select an enemy follower on the field. During its controller's next turn, it can't attack enemies."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD03/etd03-010.png"
+  },
+  {
+    "cardNo": "ETD03-011EN",
+    "name": "Dwarf Perfumer",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Fae-Touched",
+      "rarity": "Bronze",
+      "cardSet": "Entry Deck \"Itsuki Mitsutagawa\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Whenever one of your followers evolves, select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD03/etd03-011.png"
+  },
+  {
+    "cardNo": "ETD03-012EN",
+    "name": "Elf Healer",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf",
+      "rarity": "Bronze",
+      "cardSet": "Entry Deck \"Itsuki Mitsutagawa\"",
+      "cost": "3",
+      "attack": "1",
+      "defense": "5",
+      "effect": "[fanfare] Give your leader [defense]+3."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD03/etd03-012.png"
+  },
+  {
+    "cardNo": "ETD03-013EN",
+    "name": "Elf Bard",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Elf",
+      "rarity": "Bronze",
+      "cardSet": "Entry Deck \"Itsuki Mitsutagawa\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Whenever one of your followers evolves, put a Fairy Wisp token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD03/etd03-013.png"
+  },
+  {
+    "cardNo": "ETD03-014EN",
+    "name": "Rose Deer",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Fae-Touched / Verdant",
+      "rarity": "Bronze",
+      "cardSet": "Entry Deck \"Itsuki Mitsutagawa\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "3",
+      "effect": "Rush. [fanfare] Put a Thorn Burst token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD03/etd03-014.png"
+  },
+  {
+    "cardNo": "ETD03-015EN",
+    "name": "Archer",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Hunter",
+      "rarity": "Bronze",
+      "cardSet": "Entry Deck \"Itsuki Mitsutagawa\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "4",
+      "effect": "[evolve][cost01]: Evolve this follower. Whenever another follower is put onto your field, select an enemy follower on the field and deal it 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD03/etd03-015.png"
+  },
+  {
+    "cardNo": "ETD03-016EN",
+    "name": "Archer Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Hunter",
+      "rarity": "Bronze",
+      "cardSet": "Entry Deck \"Itsuki Mitsutagawa\"",
+      "cost": "-",
+      "attack": "1",
+      "defense": "4",
+      "effect": "Whenever another follower is put onto your field, select up to 2 enemy followers on the field and deal them 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD03/etd03-016.png"
+  },
+  {
+    "cardNo": "ETD03-017EN",
+    "name": "Okami",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Beast",
+      "rarity": "Bronze",
+      "cardSet": "Entry Deck \"Itsuki Mitsutagawa\"",
+      "cost": "4",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Whenever another follower is put onto your field, give this follower [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD03/etd03-017.png"
+  },
+  {
+    "cardNo": "ETD03-018EN",
+    "name": "Floral Breeze",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Verdant / Beast",
+      "rarity": "Bronze",
+      "cardSet": "Entry Deck \"Itsuki Mitsutagawa\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select a card on your field. Return it to its owner's hand and give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD03/etd03-018.png"
+  },
+  {
+    "cardNo": "ETD03-019EN",
+    "name": "Angelic Snipe",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Angel",
+      "rarity": "Bronze",
+      "cardSet": "Entry Deck \"Itsuki Mitsutagawa\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD03/etd03-019.png"
+  },
+  {
+    "cardNo": "ETD03-T01EN",
+    "name": "Fairy Wisp TOKEN",
+    "type": "token",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Token",
+      "trait": "Pixie",
+      "rarity": "-",
+      "cardSet": "Entry Deck \"Itsuki Mitsutagawa\"",
+      "cost": "0",
+      "attack": "1",
+      "defense": "1",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD03/etd03-t01.png"
+  },
+  {
+    "cardNo": "ETD03-T02EN",
+    "name": "Thorn Burst TOKEN",
+    "type": "token",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell / Token",
+      "trait": "Verdant",
+      "rarity": "-",
+      "cardSet": "Entry Deck \"Itsuki Mitsutagawa\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy leader or enemy follower on the field. Deal it 3 damage and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD03/etd03-t02.png"
+  }
+]

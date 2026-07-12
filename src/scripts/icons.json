@@ -27,5 +27,8 @@
   "[cost06]": "icons/icon_cost06.png",
   "[cost07]": "icons/icon_cost07.png",
   "[adv]": "icons/icon_adv.png",
-  "[ride]": "icons/icon_ride.png"
+  "[ride]": "icons/icon_ride.png",
+  "[cost09]": "icons/icon_cost09.png",
+  "[Union Burst]": "icons/icon_UB.png",
+  "[quick]": "icons/icon_quick.png"
 }

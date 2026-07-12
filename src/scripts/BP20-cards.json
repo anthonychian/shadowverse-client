@@ -1324,7 +1324,7 @@
       "cardSet": "Booster Set \"Omens and Heirs\"",
       "cost": "2",
       "attack": "2",
-      "defense": "2",
+      "defense": "3",
       "effect": "[act] [cost00]: Select a follower on your field and deal it 1 damage. Activate only once per turn."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/BP20/BP20-070EN.png"

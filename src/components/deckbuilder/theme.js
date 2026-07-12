@@ -90,13 +90,16 @@ export const SET_ORDER = [
 // Order = newest boosters first, then crossovers, special, gloryfinder, worlds
 // beyond, showdown/starter decks, then promos.
 export const SET_CODE_ORDER = [
+  "SCS01",
   "BP20", "BP19", "BP18", "BP17", "BP16", "BP15", "BP14", "BP13", "BP12", "BP11", "BP10", "BP09",
   "BP08", "BP07", "BP06", "BP05", "BP04", "BP03", "BP02", "BP01",
-  "ECP02", "ECP01", "CP04", "CP03", "CP02", "CP01", "SP01",
+  "ECP02", "ECP01", "PCS01", "CP04", "CP03", "CP02", "CP01", "SP01",
   "GFB01", "GFD02", "GFD01", "SS02", "SS01",
   "SDD06", "SDD05", "SDD04", "SDD03", "SDD02", "SDD01",
-  "SD06", "SD05", "SD04", "SD03", "SD02", "SD01",
-  "CSD03", "CSD02", "CSD01", "PR",
+  "EBD04", "EBD03", "EBD02", "EBD01",
+  "SD08", "SD07", "SD06", "SD05", "SD04", "SD03", "SD02", "SD01",
+  "DSD01", "CSD03", "CSD02", "CSD01",
+  "ETD03", "ETD02", "ETD01", "PR",
 ];
 
 // Card names carry an " ADVANCED" suffix so the Game can register Advanced
@@ -128,8 +131,23 @@ export const SET_CODE_LABELS = {
   SD05: "Starter: Waltz of the Undying Night", SD06: "Starter: Maculate Ablution",
   CSD03: "Crossover Starter: Knight/Apocalypse", CSD02: "Crossover Starter: Cute/Cool/Passion",
   CSD01: "Crossover Starter: Umamusume", PR: "Promo Cards",
+  SCS01: "Special Card Selection Vol.1",
+  PCS01: "Premium Set: Princess Connect!",
+  EBD01: "EX Beginner: Forestcraft", EBD02: "EX Beginner: Runecraft",
+  EBD03: "EX Beginner: Abysscraft", EBD04: "EX Beginner: Havencraft",
+  SD07: "Starter: A New Battlefield", SD08: "Starter: Unquenchable Flame",
+  DSD01: "DX Starter: Mysteria / Martial Thunder",
+  ETD01: "Entry Deck: Light Tenryu", ETD02: "Entry Deck: Subaru Makabe",
+  ETD03: "Entry Deck: Itsuki Mitsutagawa",
 };
 
+// Class filter pills in the card pool: crafts only.
 export const CLASS_ORDER = [
-  "forest", "sword", "rune", "dragon", "abyss", "haven", "neutral", "priconne",
+  "forest", "sword", "rune", "dragon", "abyss", "haven", "neutral",
+];
+
+// Deck Class dropdown: crafts plus the collab classes (a whole deck can be a
+// collab class even though the pool filter doesn't need a pill for them).
+export const DECK_CLASS_ORDER = [
+  ...CLASS_ORDER, "idolmaster", "umamusume", "vanguard", "priconne",
 ];

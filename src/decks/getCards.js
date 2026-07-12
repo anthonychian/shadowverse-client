@@ -5511,7 +5511,7 @@ export const cardImage = (cardName) => {
       return "../textures/BP17-090EN.png";
     case "Eris, Atoned Priestess":
       return "../textures/BP17-091EN.png";
-    case "Relic Goddess":
+    case "Relic Goddess ADVANCED":
       return "../textures/BP17-092EN.png";
     case "Yuwan, Dimensional Avenger":
       return "../textures/BP17-093EN.png";
@@ -5996,31 +5996,31 @@ export const cardImage = (cardName) => {
       return "../textures/BP18-001EN.png";
     case "Rolo Rone, Verdant Purifier Evolved":
       return "../textures/BP18-002EN.png";
-    case "Kyou, Wooden Bell of the Tree's Justice":
+    case "Kyou, Verdant Path Shepherd":
       return "../textures/BP18-003EN.png";
     case "Tia, Crystalian Noble":
       return "../textures/BP18-004EN.png";
-    case "Pruner of the Tree's Authority":
+    case "Verdant Authority Caretaker":
       return "../textures/BP18-005EN.png";
-    case "Pruner of the Tree's Authority Evolved":
+    case "Verdant Authority Caretaker Evolved":
       return "../textures/BP18-006EN.png";
     case "May, Eager Elf":
       return "../textures/BP18-007EN.png";
-    case "As You Sow, So Shall You Reap":
+    case "Sprouting Retribution":
       return "../textures/BP18-008EN.png";
-    case "Fist Fighter of the Tree's Capital":
+    case "Verdant City Pugilist":
       return "../textures/BP18-009EN.png";
-    case "Fist Fighter of the Tree's Capital Evolved":
+    case "Verdant City Pugilist Evolved":
       return "../textures/BP18-010EN.png";
     case "Blossoming Lunerian":
       return "../textures/BP18-011EN.png";
     case "Blossoming Lunerian Evolved":
       return "../textures/BP18-012EN.png";
-    case "Planting the Seeds in Amitabha's Pure Land":
+    case "Sowing Paradise":
       return "../textures/BP18-013EN.png";
-    case "Prayer Child of the Tree's Law":
+    case "Verdant Law Supplicant":
       return "../textures/BP18-014EN.png";
-    case "Prayer Child of the Tree's Law Evolved":
+    case "Verdant Law Supplicant Evolved":
       return "../textures/BP18-015EN.png";
     case "Milolo, Li'l Mountain Lass":
       return "../textures/BP18-016EN.png";
@@ -6030,33 +6030,33 @@ export const cardImage = (cardName) => {
       return "../textures/BP18-018EN.png";
     case "Airbound Barrage":
       return "../textures/BP18-019EN.png";
-    case "Shinra, All Discerning":
+    case "Shinra, All-Discerning":
       return "../textures/BP18-020EN.png";
-    case "Shinra, All Discerning Evolved":
+    case "Shinra, All-Discerning Evolved":
       return "../textures/BP18-021EN.png";
-    case "Gamma, Wild Mediator":
+    case "Gamma, Canine Mediator":
       return "../textures/BP18-022EN.png";
     case "Gawain, Oath to Glory":
       return "../textures/BP18-023EN.png";
-    case "Overhead Investigator":
+    case "Bird's-Eye Investigator":
       return "../textures/BP18-024EN.png";
-    case "Overhead Investigator Evolved":
+    case "Bird's-Eye Investigator Evolved":
       return "../textures/BP18-025EN.png";
     case "Darksaber Melissa":
       return "../textures/BP18-026EN.png";
-    case "Giga Blade":
+    case "Gigabyte Blade":
       return "../textures/BP18-027EN.png";
-    case "Bottleneck Inspector":
+    case "Cold Case Analyst":
       return "../textures/BP18-028EN.png";
-    case "Bottleneck Inspector Evolved":
+    case "Cold Case Analyst Evolved":
       return "../textures/BP18-029EN.png";
-    case "Sellsword Lucius":
+    case "Lucius, Sellsword":
       return "../textures/BP18-030EN.png";
-    case "Assistance with Investigating Heresy":
+    case "Unorthodox Assistance":
       return "../textures/BP18-031EN.png";
-    case "Blind Spot Observer":
+    case "Blind Spot Surveyor":
       return "../textures/BP18-032EN.png";
-    case "Blind Spot Observer Evolved":
+    case "Blind Spot Surveyor Evolved":
       return "../textures/BP18-033EN.png";
     case "Monika, Cloudhall Admiral":
       return "../textures/BP18-034EN.png";
@@ -6068,33 +6068,33 @@ export const cardImage = (cardName) => {
       return "../textures/BP18-037EN.png";
     case "Luminous Standard":
       return "../textures/BP18-038EN.png";
-    case "Plana, Sterling Luster":
+    case "Mana, Sterling Luster":
       return "../textures/BP18-039EN.png";
-    case "Plana, Sterling Luster Evolved":
+    case "Mana, Sterling Luster Evolved":
       return "../textures/BP18-040EN.png";
-    case "Fleurage, Jewelry Manager":
+    case "Francoise, Bejeweled Manager":
       return "../textures/BP18-041EN.png";
     case "Ginger, Accursed Word":
       return "../textures/BP18-042EN.png";
-    case "Jewelry Supermodel":
+    case "Bejeweled Supermodel":
       return "../textures/BP18-043EN.png";
-    case "Jewelry Supermodel Evolved":
+    case "Bejeweled Supermodel Evolved":
       return "../textures/BP18-044EN.png";
     case "Aleister, Argenteum Astrum":
       return "../textures/BP18-045EN.png";
     case "Brilliant Cut":
       return "../textures/BP18-046EN.png";
-    case "Jewelry Advisor":
+    case "Bejeweled Advisor":
       return "../textures/BP18-047EN.png";
-    case "Jewelry Advisor Evolved":
+    case "Bejeweled Advisor Evolved":
       return "../textures/BP18-048EN.png";
     case "Mari, Card Conjurer":
       return "../textures/BP18-049EN.png";
-    case "Secret Business Negotiations":
+    case "Clandestine Dealings":
       return "../textures/BP18-050EN.png";
-    case "Jewelry Bouncer":
+    case "Bejeweled Bouncer":
       return "../textures/BP18-051EN.png";
-    case "Jewelry Bouncer Evolved":
+    case "Bejeweled Bouncer Evolved":
       return "../textures/BP18-052EN.png";
     case "Carbuncle of Mysteria":
       return "../textures/BP18-053EN.png";
@@ -6110,31 +6110,31 @@ export const cardImage = (cardName) => {
       return "../textures/BP18-058EN.png";
     case "El, Destructive Dragon Evolved":
       return "../textures/BP18-059EN.png";
-    case "Tenka, Enzui Vice President":
+    case "Tenka, Hot-Blooded Vice-Prez":
       return "../textures/BP18-060EN.png";
     case "Fafnir, Cunning Wyrm":
       return "../textures/BP18-061EN.png";
-    case "Dragon-Eyed Scribe":
+    case "Dragon-Eyed Secretary":
       return "../textures/BP18-062EN.png";
-    case "Dragon-Eyed Scribe Evolved":
+    case "Dragon-Eyed Secretary Evolved":
       return "../textures/BP18-063EN.png";
     case "Prophetic Dragon":
       return "../textures/BP18-064EN.png";
-    case "A Moment After School":
+    case "After-School Break":
       return "../textures/BP18-065EN.png";
-    case "Saibi’s Disciplinary Committee":
+    case "Neon-Tailed Prefect":
       return "../textures/BP18-066EN.png";
-    case "Saibi’s Disciplinary Committee Evolved":
+    case "Neon-Tailed Prefect Evolved":
       return "../textures/BP18-067EN.png";
     case "Ian, Dragon Buster":
       return "../textures/BP18-068EN.png";
     case "Ian, Dragon Buster Evolved":
       return "../textures/BP18-069EN.png";
-    case "Shuyoku’s Admission Celebration":
+    case "Red-Winged Admissions Gift":
       return "../textures/BP18-070EN.png";
-    case "Electric Claw's Going-Home Club Member":
+    case "Lightning-Clawed Loafer":
       return "../textures/BP18-071EN.png";
-    case "Electric Claw's Going-Home Club Member Evolved":
+    case "Lightning-Clawed Loafer Evolved":
       return "../textures/BP18-072EN.png";
     case "Serpent Drake":
       return "../textures/BP18-073EN.png";
@@ -6144,35 +6144,35 @@ export const cardImage = (cardName) => {
       return "../textures/BP18-075EN.png";
     case "Orca Run":
       return "../textures/BP18-076EN.png";
-    case "Ilze & Ulze, Centennial Reapers":
+    case "Ilze & Urze, Centennial Reapers":
       return "../textures/BP18-077EN.png";
-    case "Ilze & Ulze, Centennial Reapers Evolved":
+    case "Ilze & Urze, Centennial Reapers Evolved":
       return "../textures/BP18-078EN.png";
-    case "Ved, Wolf of Burials":
+    case "Vedd, Burial Wolf":
       return "../textures/BP18-079EN.png";
     case "Vania, Crimson Majesty":
       return "../textures/BP18-080EN.png";
     case "Vania, Crimson Majesty Evolved":
       return "../textures/BP18-081EN.png";
-    case "Serpent of Greed":
+    case "Covetous Serpent":
       return "../textures/BP18-082EN.png";
-    case "Serpent of Greed Evolved":
+    case "Covetous Serpent Evolved":
       return "../textures/BP18-083EN.png";
     case "Veight, Twilit Highborn":
       return "../textures/BP18-084EN.png";
-    case "Crescent Moon of a Hundred Deaths":
+    case "Crescent Moon of Centennial Death":
       return "../textures/BP18-085EN.png";
-    case "Piercing Crow":
+    case "Exhumation Crow":
       return "../textures/BP18-086EN.png";
-    case "Piercing Crow Evolved":
+    case "Exhumation Crow Evolved":
       return "../textures/BP18-087EN.png";
-    case "Full Moon of a Hundred Passings":
+    case "Full Moon of Centennial Demise":
       return "../textures/BP18-088EN.png";
     case "Vampire Queen's Castle":
       return "../textures/BP18-089EN.png";
-    case "Gnawing Mouse":
+    case "Gnawing Rat":
       return "../textures/BP18-090EN.png";
-    case "Gnawing Mouse Evolved":
+    case "Gnawing Rat Evolved":
       return "../textures/BP18-091EN.png";
     case "Beryl, Dreameater":
       return "../textures/BP18-092EN.png";
@@ -6188,31 +6188,31 @@ export const cardImage = (cardName) => {
       return "../textures/BP18-097EN.png";
     case "Seishiro, Admonishing Faith Evolved":
       return "../textures/BP18-098EN.png";
-    case "Tenmei, Arbiter of Desire":
+    case "Tenmei, Insatiable Adjudicator":
       return "../textures/BP18-099EN.png";
     case "Elana, Purest Prayer":
       return "../textures/BP18-100EN.png";
-    case "Oath Breaker's Giver":
+    case "Conferrer of Vows":
       return "../textures/BP18-101EN.png";
-    case "Oath Breaker's Giver Evolved":
+    case "Conferrer of Vows Evolved":
       return "../textures/BP18-102EN.png";
     case "Imina, Mad Eidolon":
       return "../textures/BP18-103EN.png";
-    case "Unwavering Prayer":
+    case "Unshakable Prayer":
       return "../textures/BP18-104EN.png";
-    case "Bearer of Additional Penalties":
+    case "Deliverer of Punishment":
       return "../textures/BP18-105EN.png";
-    case "Bearer of Additional Penalties Evolved":
+    case "Deliverer of Punishment Evolved":
       return "../textures/BP18-106EN.png";
     case "Lorena, Iron-Willed Priest":
       return "../textures/BP18-107EN.png";
     case "Lorena, Iron-Willed Priest Evolved":
       return "../textures/BP18-108EN.png";
-    case "Pioneer's Conversation":
+    case "Guiding Words":
       return "../textures/BP18-109EN.png";
-    case "Closed Eyes Supporter":
+    case "Votary of Contemplation":
       return "../textures/BP18-110EN.png";
-    case "Closed Eyes Supporter Evolved":
+    case "Votary of Contemplation Evolved":
       return "../textures/BP18-111EN.png";
     case "Mugnier, Purifying Light":
       return "../textures/BP18-112EN.png";
@@ -6222,7 +6222,7 @@ export const cardImage = (cardName) => {
       return "../textures/BP18-114EN.png";
     case "Golden Bell":
       return "../textures/BP18-115EN.png";
-    case "Bansai Suzuki, Shinobi Deacon":
+    case "Bansai Suzuki, Deacon Shinobi":
       return "../textures/BP18-116EN.png";
     case "Saito, Mao Ward Officer":
       return "../textures/BP18-117EN.png";
@@ -6236,29 +6236,29 @@ export const cardImage = (cardName) => {
       return "../textures/BP18-121EN.png";
     case "Stunfist Assassin Evolved":
       return "../textures/BP18-122EN.png";
-    case "Flame Spell Proficiency Test Rank A":
+    case "A-Class Pyromancy":
       return "../textures/BP18-123EN.png";
-    case "Cyber Glasspunk":
+    case "Cyberglasses Criminal":
       return "../textures/BP18-124EN.png";
-    case "Cyber Glasspunk Evolved":
+    case "Cyberglasses Criminal Evolved":
       return "../textures/BP18-125EN.png";
-    case "District Office Worker Class C":
+    case "Third-Class Officer":
       return "../textures/BP18-126EN.png";
-    case "Sowing the Seeds of Salvation TOKEN":
+    case "Seeds of Salvation TOKEN":
       return "../textures/BP18-T01EN.png";
-    case "Unlimited Search TOKEN":
+    case "All-Access Search TOKEN":
       return "../textures/BP18-T02EN.png";
-    case "Jewel Dress Up TOKEN":
+    case "Adorn with Jewels TOKEN":
       return "../textures/BP18-T03EN.png";
     case "Ginger's Curse TOKEN":
       return "../textures/BP18-T04EN.png";
-    case "Youthful Blow TOKEN":
+    case "Youthful Strike TOKEN":
       return "../textures/BP18-T05EN.png";
     case "Adelle, Jealous Dragon TOKEN":
       return "../textures/BP18-T06EN.png";
-    case "Rest Before Nightfall TOKEN":
+    case "Diurnal Slumber TOKEN":
       return "../textures/BP18-T07EN.png";
-    case "Conviction of Good Deeds TOKEN":
+    case "Righteous Conviction TOKEN":
       return "../textures/BP18-T08EN.png";
     case "Totem of Madness TOKEN":
       return "../textures/BP18-T09EN.png";
@@ -7038,6 +7038,42 @@ export const cardImage = (cardName) => {
       return "../textures/BP20-T10EN.png";
     case "Crest: Mjerrabaine, Great Manifest TOKEN":
       return "../textures/BP20-T11EN.png";
+    case "Rulenye, Echoing Scream TOKEN":
+      return "../textures/EBD03-T03EN.png";
+    case "Princess Knight":
+      return "../textures/PCS01-048EN.png";
+    case "Princess Knight Evolved":
+      return "../textures/PCS01-049EN.png";
+    case "miroir":
+      return "../textures/CP02-SP04aEN.png";
+    case "Kyoko Igarashi [Love Letter] TOKEN":
+      return "../textures/ECP02-T01EN.png";
+    case "Shiki Ichinose [Tsubomi] TOKEN":
+      return "../textures/ECP02-T02EN.png";
+    case "Sachiko Koshimizu [Lunatic Show] TOKEN":
+      return "../textures/ECP02-T03EN.png";
+    case "Kaede Takagaki [Nation Blue] TOKEN":
+      return "../textures/ECP02-T04EN.png";
+    case "Riina Tada [Eight-Beat Rocker] TOKEN":
+      return "../textures/ECP02-T05EN.png";
+    case "Sae Kobayakawa [Pastel Pink Love] TOKEN":
+      return "../textures/ECP02-T06EN.png";
+    case "Ranko Kanzaki [Nation Blue] TOKEN":
+      return "../textures/ECP02-T07EN.png";
+    case "Shin Sato [Gutsy☆Reporter] TOKEN":
+      return "../textures/ECP02-T08EN.png";
+    case "Akari Tsujino [Brand New!] TOKEN":
+      return "../textures/ECP02-T09EN.png";
+    case "Asuka Ninomiya [Saite Jewel] TOKEN":
+      return "../textures/ECP02-T10EN.png";
+    case "Yoshino Yorita [Warrior's Path] TOKEN":
+      return "../textures/ECP02-T11EN.png";
+    case "Chie Sasaki [Step to Mirai] TOKEN":
+      return "../textures/ECP02-T12EN.png";
+    case "Arisu Tachibana [Ikenai GO AHEAD] TOKEN":
+      return "../textures/ECP02-T13EN.png";
+    case "Yukimi Sajo [Hands and Days Together] TOKEN":
+      return "../textures/ECP02-T14EN.png";
     default: {
       const cardNo = cardNoFromStatsName(cardName);
       return cardNo ? `../textures/${cardNo}.png` : "";

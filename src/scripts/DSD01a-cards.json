@@ -1,0 +1,572 @@
+[
+  {
+    "cardNo": "DSD01a-001EN",
+    "name": "Anne, Mysterian Prodigy",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Legendary",
+      "cardSet": "DX Starter Deck \"Twin Blossoms of the Academy\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Choose one of the following. If there are at least 10 Academic cards in your cemetery, choose up to 2 instead. (1) Search your deck for an Anne's Sorcery, put it into your EX area, then shuffle your deck. The next Anne's Sorcery you play this turn costs 5 less. (2) Search your deck for a Grea, Mysterian Dragoness, summon it, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01a-001.png"
+  },
+  {
+    "cardNo": "DSD01a-002EN",
+    "name": "Grea, Mysterian Dragoness",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Legendary",
+      "cardSet": "DX Starter Deck \"Twin Blossoms of the Academy\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Select an enemy follower on the field. If there are at least 10 Academic cards in your cemetery, deal 4 damage to it and 1 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01a-002.png"
+  },
+  {
+    "cardNo": "DSD01a-003EN",
+    "name": "Grea, Mysterian Dragoness Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Legendary",
+      "cardSet": "DX Starter Deck \"Twin Blossoms of the Academy\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Search your deck for a Grea's Ember, put it into your EX area, then shuffle your deck. The next Grea's Ember you play this turn costs 1 less. While this card is on your field, if an Academic spell you control would deal damage, it deals that much plus 1 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01a-003.png"
+  },
+  {
+    "cardNo": "DSD01a-004EN",
+    "name": "Mysteria, Magic Founder",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic",
+      "rarity": "Legendary",
+      "cardSet": "DX Starter Deck \"Twin Blossoms of the Academy\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Reveal an Academic follower from your hand: Select an enemy follower on the field and deal it 2 damage. While this card is on your field, any Academic follower you play costs 1 less."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01a-004.png"
+  },
+  {
+    "cardNo": "DSD01a-005EN",
+    "name": "Mysteria, Magic Founder Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Academic",
+      "rarity": "Legendary",
+      "cardSet": "DX Starter Deck \"Twin Blossoms of the Academy\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "5",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 3 damage. While this card is on your field, any Academic follower you play costs 1 less."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01a-005.png"
+  },
+  {
+    "cardNo": "DSD01a-006EN",
+    "name": "Owen, Knight of Mysteria",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic",
+      "rarity": "Gold",
+      "cardSet": "DX Starter Deck \"Twin Blossoms of the Academy\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "Rush. [fanfare] If there are at least 5 Academic cards in your cemetery, give this follower [attack]+1/[defense]+1 and Assail. Strike - Put a Mysterian Missile token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01a-006.png"
+  },
+  {
+    "cardNo": "DSD01a-007EN",
+    "name": "Star Reader Stella",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Celestial",
+      "rarity": "Gold",
+      "cardSet": "DX Starter Deck \"Twin Blossoms of the Academy\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Look at the top 4 cards of your deck. Add one of them to your hand, put one into your cemetery, put one on top of your deck, and put one on the bottom of your deck. Strike: Look at the top card of your deck. You may put it into your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01a-007.png"
+  },
+  {
+    "cardNo": "DSD01a-008EN",
+    "name": "Anne's Sorcery",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Gold",
+      "cardSet": "DX Starter Deck \"Twin Blossoms of the Academy\"",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose one of the following. (1) Select an enemy leader or enemy follower on the field. Deal it 4 damage and draw a card. (2) [cost03]: Select an enemy leader or enemy follower on the field. If there are at least 10 Academic cards in your cemetery, deal it 8 damage and draw 2 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01a-008.png"
+  },
+  {
+    "cardNo": "DSD01a-009EN",
+    "name": "Grea's Ember",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Gold",
+      "cardSet": "DX Starter Deck \"Twin Blossoms of the Academy\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field and deal it 2 damage. If there are at least 5 Academic cards in your cemetery, deal 3 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01a-009.png"
+  },
+  {
+    "cardNo": "DSD01a-010EN",
+    "name": "Vayle, Mysterian Summoner",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Arcanaform / Academic",
+      "rarity": "Silver",
+      "cardSet": "DX Starter Deck \"Twin Blossoms of the Academy\"",
+      "cost": "4",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01a-010.png"
+  },
+  {
+    "cardNo": "DSD01a-011EN",
+    "name": "Vayle, Mysterian Summoner Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Arcanaform / Academic",
+      "rarity": "Silver",
+      "cardSet": "DX Starter Deck \"Twin Blossoms of the Academy\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Look at the top 5 cards of your deck. You may put up to 2 Academic cards that cost 2 or less from among them into your EX area. They cost 2 less to play this turn. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01a-011.png"
+  },
+  {
+    "cardNo": "DSD01a-012EN",
+    "name": "Palla, Student Teacher",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic",
+      "rarity": "Silver",
+      "cardSet": "DX Starter Deck \"Twin Blossoms of the Academy\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Draw a card. If there are at least 5 Academic cards in your cemetery, recover 1 play point."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01a-012.png"
+  },
+  {
+    "cardNo": "DSD01a-013EN",
+    "name": "Freshman Lou",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic",
+      "rarity": "Silver",
+      "cardSet": "DX Starter Deck \"Twin Blossoms of the Academy\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[fanfare] Search your deck for a spell that costs 1 play point, reveal it, and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01a-013.png"
+  },
+  {
+    "cardNo": "DSD01a-014EN",
+    "name": "Mysterian Knowledge",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage / Academic",
+      "rarity": "Silver",
+      "cardSet": "DX Starter Deck \"Twin Blossoms of the Academy\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "As an additional cost to play this card, reveal 2 Academic cards from your hand. ---------- Draw a card. Put a Mysterian Missile token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01a-014.png"
+  },
+  {
+    "cardNo": "DSD01a-015EN",
+    "name": "Mr. Bertrand, Magic Mentor",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic",
+      "rarity": "Bronze",
+      "cardSet": "DX Starter Deck \"Twin Blossoms of the Academy\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[fanfare] Choose one of the following. (1) Put a Mysterian Missile token into your EX area. (2) Select an Academic spell in your cemetery and, if there are at least 5 Academic cards in your cemetery, add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01a-015.png"
+  },
+  {
+    "cardNo": "DSD01a-016EN",
+    "name": "Craig, Wizard of Mysteria",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic",
+      "rarity": "Bronze",
+      "cardSet": "DX Starter Deck \"Twin Blossoms of the Academy\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "1",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Draw a card, then discard a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01a-016.png"
+  },
+  {
+    "cardNo": "DSD01a-017EN",
+    "name": "Craig, Wizard of Mysteria Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Academic",
+      "rarity": "Bronze",
+      "cardSet": "DX Starter Deck \"Twin Blossoms of the Academy\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "2",
+      "effect": "On Evolve: Draw a card, then discard a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01a-017.png"
+  },
+  {
+    "cardNo": "DSD01a-018EN",
+    "name": "Tico, Mysterian Spellnerd",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic",
+      "rarity": "Bronze",
+      "cardSet": "DX Starter Deck \"Twin Blossoms of the Academy\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Ward. [lastwords] Look at the top card of your deck. If it's an Academic card, you may reveal it and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01a-018.png"
+  },
+  {
+    "cardNo": "DSD01a-P01EN",
+    "name": "Owen, Knight of Mysteria",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic",
+      "rarity": "Promo",
+      "cardSet": "DX Starter Deck \"Twin Blossoms of the Academy\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "Rush. [fanfare] If there are at least 5 Academic cards in your cemetery, give this follower [attack]+1/[defense]+1 and Assail. Strike - Put a Mysterian Missile token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01a-p01.png"
+  },
+  {
+    "cardNo": "DSD01a-P02EN",
+    "name": "Anne's Sorcery",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Promo",
+      "cardSet": "DX Starter Deck \"Twin Blossoms of the Academy\"",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose one of the following. (1) Select an enemy leader or enemy follower on the field. Deal it 4 damage and draw a card. (2) [cost03]: Select an enemy leader or enemy follower on the field. If there are at least 10 Academic cards in your cemetery, deal it 8 damage and draw 2 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01a-p02.png"
+  },
+  {
+    "cardNo": "DSD01a-P03EN",
+    "name": "Grea's Ember",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Promo",
+      "cardSet": "DX Starter Deck \"Twin Blossoms of the Academy\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field and deal it 2 damage. If there are at least 5 Academic cards in your cemetery, deal 3 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01a-p03.png"
+  },
+  {
+    "cardNo": "DSD01a-P04EN",
+    "name": "Vayle, Mysterian Summoner",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Arcanaform / Academic",
+      "rarity": "Promo",
+      "cardSet": "DX Starter Deck \"Twin Blossoms of the Academy\"",
+      "cost": "4",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01a-p04.png"
+  },
+  {
+    "cardNo": "DSD01a-P05EN",
+    "name": "Vayle, Mysterian Summoner Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Arcanaform / Academic",
+      "rarity": "Promo",
+      "cardSet": "DX Starter Deck \"Twin Blossoms of the Academy\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Look at the top 5 cards of your deck. You may put up to 2 Academic cards that cost 2 or less from among them into your EX area. They cost 2 less to play this turn. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01a-p05.png"
+  },
+  {
+    "cardNo": "DSD01a-P06EN",
+    "name": "Mysterian Knowledge",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell",
+      "trait": "Mage / Academic",
+      "rarity": "Promo",
+      "cardSet": "DX Starter Deck \"Twin Blossoms of the Academy\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "As an additional cost to play this card, reveal 2 Academic cards from your hand. ---------- Draw a card. Put a Mysterian Missile token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01a-p06.png"
+  },
+  {
+    "cardNo": "DSD01a-P07EN",
+    "name": "Mr. Bertrand, Magic Mentor",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic",
+      "rarity": "Promo",
+      "cardSet": "DX Starter Deck \"Twin Blossoms of the Academy\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[fanfare] Choose one of the following. (1) Put a Mysterian Missile token into your EX area. (2) Select an Academic spell in your cemetery and, if there are at least 5 Academic cards in your cemetery, add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01a-p07.png"
+  },
+  {
+    "cardNo": "DSD01a-SL01EN",
+    "name": "Anne, Mysterian Prodigy",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Special",
+      "cardSet": "DX Starter Deck \"Twin Blossoms of the Academy\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Choose one of the following. If there are at least 10 Academic cards in your cemetery, choose up to 2 instead. (1) Search your deck for an Anne's Sorcery, put it into your EX area, then shuffle your deck. The next Anne's Sorcery you play this turn costs 5 less. (2) Search your deck for a Grea, Mysterian Dragoness, summon it, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01a-sl01.png"
+  },
+  {
+    "cardNo": "DSD01a-SL02EN",
+    "name": "Grea, Mysterian Dragoness",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Special",
+      "cardSet": "DX Starter Deck \"Twin Blossoms of the Academy\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Select an enemy follower on the field. If there are at least 10 Academic cards in your cemetery, deal 4 damage to it and 1 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01a-sl02.png"
+  },
+  {
+    "cardNo": "DSD01a-SL03EN",
+    "name": "Grea, Mysterian Dragoness Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Special",
+      "cardSet": "DX Starter Deck \"Twin Blossoms of the Academy\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Search your deck for a Grea's Ember, put it into your EX area, then shuffle your deck. The next Grea's Ember you play this turn costs 1 less. While this card is on your field, if an Academic spell you control would deal damage, it deals that much plus 1 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01a-sl03.png"
+  },
+  {
+    "cardNo": "DSD01a-T01EN",
+    "name": "Mysterian Missile TOKEN",
+    "type": "token",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Spell / Token",
+      "trait": "Mage / Academic",
+      "rarity": "-",
+      "cardSet": "DX Starter Deck \"Twin Blossoms of the Academy\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field and deal it 3 damage. If there are at least 10 Academic cards in your cemetery, deal 2 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01a-t01.png"
+  },
+  {
+    "cardNo": "DSD01a-U01EN",
+    "name": "Anne, Mysterian Prodigy",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Ultimate",
+      "cardSet": "DX Starter Deck \"Twin Blossoms of the Academy\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Choose one of the following. If there are at least 10 Academic cards in your cemetery, choose up to 2 instead. (1) Search your deck for an Anne's Sorcery, put it into your EX area, then shuffle your deck. The next Anne's Sorcery you play this turn costs 5 less. (2) Search your deck for a Grea, Mysterian Dragoness, summon it, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01a-u01.png"
+  }
+]

@@ -1,0 +1,515 @@
+[
+  {
+    "cardNo": "EBD03-001EN",
+    "name": "Cerberus, Hellfire Unleashed",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Legendary",
+      "cardSet": "EX Beginner Deck \"Abysscraft\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Summon a Mimi, Right Paw Hellhound and Coco, Left Paw Hellhound token. Necrocharge (10) - Give them Storm. [act] [engage], bury another follower: Select an enemy follower on the field and deal it 2 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD03/ebd03-001.png"
+  },
+  {
+    "cardNo": "EBD03-002EN",
+    "name": "Gold Rush Ghost",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Departed",
+      "rarity": "Legendary",
+      "cardSet": "EX Beginner Deck \"Abysscraft\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Storm. [fanfare] Choose 1. If this was put onto the field from the cemetery, choose up to 2 instead. (1) Summon an Arcane Personnel Carrier token. Give your leader [defense]+1. (2) Bury the top 2 cards of your deck. At the start of each opponent's end phase, bury this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD03/ebd03-002.png"
+  },
+  {
+    "cardNo": "EBD03-003EN",
+    "name": "Rulenye, Screaming Silence",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Omen / Necromancer",
+      "rarity": "Legendary",
+      "cardSet": "EX Beginner Deck \"Abysscraft\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "1",
+      "effect": "Rush. Assail. [fanfare] Select an enemy follower on the field. If there are at least 3 cards on your field named Rulenye, Echoing Scream, destroy it and deal 3 damage to its leader. [lastwords] Put a Scream Diffusion token into your EX area. Bury the top card of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD03/ebd03-003.png"
+  },
+  {
+    "cardNo": "EBD03-004EN",
+    "name": "Gremory, Death Teller",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Legendary",
+      "cardSet": "EX Beginner Deck \"Abysscraft\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Ward. [fanfare] Bury the top 2 cards of your deck. [act] [cost01]: Summon this card from your cemetery. Give it \"[lastwords] Banish this card.\" Activate only if there are at least 10 cards in your cemetery and no cards named Gremory, Death Teller on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD03/ebd03-004.png"
+  },
+  {
+    "cardNo": "EBD03-005EN",
+    "name": "Iceschillendrig, Gilded Autocrat",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Departed / Demon",
+      "rarity": "Legendary",
+      "cardSet": "EX Beginner Deck \"Abysscraft\"",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] If there's no Magitrain on your field, summon one. Whenever this card becomes engaged, each opponent discards a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD03/ebd03-005.png"
+  },
+  {
+    "cardNo": "EBD03-006EN",
+    "name": "Iceschillendrig, Gilded Autocrat Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wasteland / Departed / Demon",
+      "rarity": "Legendary",
+      "cardSet": "EX Beginner Deck \"Abysscraft\"",
+      "cost": "-",
+      "attack": "6",
+      "defense": "6",
+      "effect": "On Evolve - Discard a card: Select 2 followers in your cemetery and add them to your hand. Whenever this card becomes engaged, each opponent discards a card. During your turn, whenever a player discards a card, select an enemy follower on the field and engage it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD03/ebd03-006.png"
+  },
+  {
+    "cardNo": "EBD03-007EN",
+    "name": "Illganeau, Horror Astray",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Departed / Demon",
+      "rarity": "Legendary",
+      "cardSet": "EX Beginner Deck \"Abysscraft\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[fanfare] Select a Wasteland follower that costs 3 or less in your cemetery. Necrocharge (10) - You may summon it. If you do, banish this card. [lastwords] Put this card into its owner's EX area. Bury the top card of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD03/ebd03-007.png"
+  },
+  {
+    "cardNo": "EBD03-008EN",
+    "name": "Kagero, Swordbound Soul",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Departed",
+      "rarity": "Gold",
+      "cardSet": "EX Beginner Deck \"Abysscraft\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Necrocharge (10) - This follower has Rush and Bane. [fanfare] Choose one. (1) Select a Soulstrike in your cemetery and put it into your EX area. NC (20) - It costs 2 less to play this turn. (2) Bury the top 2 cards of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD03/ebd03-008.png"
+  },
+  {
+    "cardNo": "EBD03-009EN",
+    "name": "Chris, Beyond the Patch",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed / Cutthroat",
+      "rarity": "Gold",
+      "cardSet": "EX Beginner Deck \"Abysscraft\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[fanfare] Select an [abysscraft] follower not named Chris, Beyond the Patch that costs 5 or less in your cemetery. Necrocharge (10) - Summon it and give it Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD03/ebd03-009.png"
+  },
+  {
+    "cardNo": "EBD03-010EN",
+    "name": "Odile, Black Swan",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Fable",
+      "rarity": "Gold",
+      "cardSet": "EX Beginner Deck \"Abysscraft\"",
+      "cost": "5",
+      "attack": "6",
+      "defense": "4",
+      "effect": "[fanfare] Deal 2 damage to each enemy leader and enemy follower on the field. Necrocharge (20): Give this follower Storm. Strike: Deal 2 damage to each enemy leader and enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD03/ebd03-010.png"
+  },
+  {
+    "cardNo": "EBD03-011EN",
+    "name": "Dead to Rights",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Wasteland / Departed / Demon",
+      "rarity": "Gold",
+      "cardSet": "EX Beginner Deck \"Abysscraft\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] Banish this card and an Iceschillendrig, Gilded Autocrat from your cemetery: Select an enemy follower on the field and engage it. ---------- [quick] Select an enemy follower on the field and give it [attack]-2/[defense]-2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD03/ebd03-011.png"
+  },
+  {
+    "cardNo": "EBD03-012EN",
+    "name": "Wretch",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Departed / Demon",
+      "rarity": "Silver",
+      "cardSet": "EX Beginner Deck \"Abysscraft\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. Activate only if this follower was put onto the field from the cemetery. Rush. [lastwords] Summon a Bullet Bike token. Bury the top 2 cards of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD03/ebd03-012.png"
+  },
+  {
+    "cardNo": "EBD03-013EN",
+    "name": "Wretch Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wasteland / Departed / Demon",
+      "rarity": "Silver",
+      "cardSet": "EX Beginner Deck \"Abysscraft\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "3",
+      "effect": "Storm. On Evolve - Select an enemy follower on the field and deal it 5 damage. [lastwords] Summon a Bullet Bike token. Bury the top 2 cards of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD03/ebd03-013.png"
+  },
+  {
+    "cardNo": "EBD03-014EN",
+    "name": "Soulstrike",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Wasteland / Departed",
+      "rarity": "Silver",
+      "cardSet": "EX Beginner Deck \"Abysscraft\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field and deal it 4 damage. Necrocharge (20) - Deal 4 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD03/ebd03-014.png"
+  },
+  {
+    "cardNo": "EBD03-015EN",
+    "name": "Wretched Tryst",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Wasteland / Departed / Demon",
+      "rarity": "Silver",
+      "cardSet": "EX Beginner Deck \"Abysscraft\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select 2 Wasteland followers that cost 3 or less in your cemetery. Necrocharge (10) - Summon them."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD03/ebd03-015.png"
+  },
+  {
+    "cardNo": "EBD03-016EN",
+    "name": "Grave Desecration",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Amulet",
+      "trait": "Departed",
+      "rarity": "Silver",
+      "cardSet": "EX Beginner Deck \"Abysscraft\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Put the top 2 cards of your deck into your cemetery. [act][cost02], [engage], put this card into its owner's cemetery: Select a Departed follower in your cemetery and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD03/ebd03-016.png"
+  },
+  {
+    "cardNo": "EBD03-017EN",
+    "name": "Wandering Chef",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Wasteland / Chef",
+      "rarity": "Silver",
+      "cardSet": "EX Beginner Deck \"Abysscraft\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] If there's a Mount card on your field or in your EX area, give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD03/ebd03-017.png"
+  },
+  {
+    "cardNo": "EBD03-018EN",
+    "name": "Wandering Chef Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Wasteland / Chef",
+      "rarity": "Silver",
+      "cardSet": "EX Beginner Deck \"Abysscraft\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Look at the top 4 cards of your deck. You may reveal a Wasteland card from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD03/ebd03-018.png"
+  },
+  {
+    "cardNo": "EBD03-019EN",
+    "name": "Adherent of Screams",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Omen / Necromancer",
+      "rarity": "Bronze",
+      "cardSet": "EX Beginner Deck \"Abysscraft\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. [lastwords] Bury the top card of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD03/ebd03-019.png"
+  },
+  {
+    "cardNo": "EBD03-020EN",
+    "name": "Adherent of Screams Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Necromancer",
+      "rarity": "Bronze",
+      "cardSet": "EX Beginner Deck \"Abysscraft\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Choose 1. (1) Select a follower in your cemetery with \"Rulenye\" in its name and summon it. (2) Select an enemy follower on the field and deal it 2 damage. [lastwords] Bury the top card of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD03/ebd03-020.png"
+  },
+  {
+    "cardNo": "EBD03-T01EN",
+    "name": "Mimi, Right Paw Hellhound TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Token",
+      "trait": "Demon",
+      "rarity": "-",
+      "cardSet": "EX Beginner Deck \"Abysscraft\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[lastwords] Select an enemy follower on the field. Deal it 2 damage and bury the top card of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD03/ebd03-t01.png"
+  },
+  {
+    "cardNo": "EBD03-T02EN",
+    "name": "Coco, Left Paw Hellhound TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Token",
+      "trait": "Demon",
+      "rarity": "-",
+      "cardSet": "EX Beginner Deck \"Abysscraft\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[lastwords] Give your leader [defense]+2. Bury the top card of your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD03/ebd03-t02.png"
+  },
+  {
+    "cardNo": "EBD03-T03EN",
+    "name": "Rulenye, Echoing Scream TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Token",
+      "trait": "Omen / Necromancer",
+      "rarity": "-",
+      "cardSet": "EX Beginner Deck \"Abysscraft\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "1",
+      "effect": "Rush. Assail."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD03/ebd03-t03.png"
+  },
+  {
+    "cardNo": "EBD03-T04EN",
+    "name": "Scream Diffusion TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell / Token",
+      "trait": "Omen / Necromancer",
+      "rarity": "-",
+      "cardSet": "EX Beginner Deck \"Abysscraft\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Summon a Rulenye, Echoing Scream token for every 5 cards in your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD03/ebd03-t04.png"
+  },
+  {
+    "cardNo": "EBD03-T05EN",
+    "name": "Magitrain TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Amulet / Token",
+      "trait": "Wasteland / Mount",
+      "rarity": "-",
+      "cardSet": "EX Beginner Deck \"Abysscraft\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "5",
+      "effect": "[act] [cost01], [engage] any number of followers that cost a total of 5 or more on your field: Maneuver this card. (For the rest of this turn, it becomes a follower with [attack]4/[defense]5.) Rush. Strike - Select an engaged enemy follower on the field. Destroy it and give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD03/ebd03-t05.png"
+  },
+  {
+    "cardNo": "EBD03-T06EN",
+    "name": "Bullet Bike TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Amulet / Token",
+      "trait": "Wasteland / Mount",
+      "rarity": "-",
+      "cardSet": "EX Beginner Deck \"Abysscraft\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] Bury this card: Select a follower on your field. Give it Rush and, if it's a Wasteland follower, [attack]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD03/ebd03-t06.png"
+  },
+  {
+    "cardNo": "EBD03-T07EN",
+    "name": "Arcane Personnel Carrier TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Amulet / Token",
+      "trait": "Wasteland / Mount",
+      "rarity": "-",
+      "cardSet": "EX Beginner Deck \"Abysscraft\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act] Bury this card: Select a follower on your field. Give it Ward and, if it's a Wasteland follower, [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD03/ebd03-t07.png"
+  }
+]

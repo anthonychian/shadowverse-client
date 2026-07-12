@@ -1,0 +1,477 @@
+[
+  {
+    "cardNo": "EBD04-001EN",
+    "name": "Lapis, Shining Seraph",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith / Luminary / Lightborne",
+      "rarity": "Legendary",
+      "cardSet": "EX Beginner Deck \"Havencraft\"",
+      "cost": "3",
+      "attack": "5",
+      "defense": "5",
+      "effect": "While this has at least 4 prayer counters, it's a follower. Strike - Search your deck for an Enstatued Seraph, summon it, then shuffle. At the start of your main phase, select any number of other cards on your field and place a prayer counter on them and this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD04/ebd04-001.png"
+  },
+  {
+    "cardNo": "EBD04-002EN",
+    "name": "Rodeo, Anathema of Judgment",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Anathema / Luminary",
+      "rarity": "Legendary",
+      "cardSet": "EX Beginner Deck \"Havencraft\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this. At the start of your end phase, if there are at least 2 amulets on your field, give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD04/ebd04-002.png"
+  },
+  {
+    "cardNo": "EBD04-003EN",
+    "name": "Rodeo, Anathema of Judgment Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Anathema / Luminary",
+      "rarity": "Legendary",
+      "cardSet": "EX Beginner Deck \"Havencraft\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "5",
+      "effect": "On Evolve - Search your deck for an amulet that costs 3 or less, summon it, then shuffle. On Super-Evolve - Search your deck for an amulet that costs 5 or less, summon it, then shuffle. At the start of your end phase, if there are at least 2 amulets on your field, give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD04/ebd04-003.png"
+  },
+  {
+    "cardNo": "EBD04-004EN",
+    "name": "Marwynn, Repose of Despair",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Omen / Zealot",
+      "rarity": "Legendary",
+      "cardSet": "EX Beginner Deck \"Havencraft\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost03]: Evolve this. Ward. [fanfare] If there are at least 3 followers on an opponent's field, put a Torrent of Despair token into your EX area. At the start of each opponent's main phase, give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD04/ebd04-004.png"
+  },
+  {
+    "cardNo": "EBD04-005EN",
+    "name": "Marwynn, Repose of Despair Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Omen / Zealot",
+      "rarity": "Legendary",
+      "cardSet": "EX Beginner Deck \"Havencraft\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Ward. On Evolve - Destroy each other follower on the field. At the start of each opponent's main phase, give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD04/ebd04-005.png"
+  },
+  {
+    "cardNo": "EBD04-006EN",
+    "name": "Godsworn Alexiel",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Faith / Lightborne",
+      "rarity": "Legendary",
+      "cardSet": "EX Beginner Deck \"Havencraft\"",
+      "cost": "7",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[evolve] [cost01]: Evolve this follower. Ward. [fanfare] Give your leader [defense] equal to 2 times the number of amulets on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD04/ebd04-006.png"
+  },
+  {
+    "cardNo": "EBD04-007EN",
+    "name": "Godsworn Alexiel Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Faith / Lightborne",
+      "rarity": "Legendary",
+      "cardSet": "EX Beginner Deck \"Havencraft\"",
+      "cost": "-",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Ward. On Evolve - Select an enemy follower on the field. Deal it and its leader damage equal to 2 times the number of amulets on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD04/ebd04-007.png"
+  },
+  {
+    "cardNo": "EBD04-008EN",
+    "name": "Enstatued Seraph",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith / Eidolon",
+      "rarity": "Legendary",
+      "cardSet": "EX Beginner Deck \"Havencraft\"",
+      "cost": "6",
+      "attack": "-",
+      "defense": "-",
+      "effect": "This card can't be destroyed by abilities. At the start of your end phase, put a prayer counter on this card. Then, if this card has at least 4 prayer counters, put it into its owner's cemetery, give your leader [defense]+10, and search your deck for up to 2 cards and put them into your EX area. Those cards cost 0 play points to play."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD04/ebd04-008.png"
+  },
+  {
+    "cardNo": "EBD04-009EN",
+    "name": "Ruler of Cocytus",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Archfiend",
+      "rarity": "Legendary",
+      "cardSet": "EX Beginner Deck \"Havencraft\"",
+      "cost": "6",
+      "attack": "6",
+      "defense": "6",
+      "effect": "[fanfare] Deal 6 damage to your leader. Put a Silent Rider, Servant of Cocytus, Demon of Purgatory, and Astaroth's Reckoning token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD04/ebd04-009.png"
+  },
+  {
+    "cardNo": "EBD04-010EN",
+    "name": "Vengeful Radiance",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Zealot / Cutthroat",
+      "rarity": "Gold",
+      "cardSet": "EX Beginner Deck \"Havencraft\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] This card can't be played during your turn. ---------- Select up to 2 enemy followers on the field and deal 4 damage divided between them."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD04/ebd04-010.png"
+  },
+  {
+    "cardNo": "EBD04-011EN",
+    "name": "Themis's Decree",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Faith",
+      "rarity": "Gold",
+      "cardSet": "EX Beginner Deck \"Havencraft\"",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Destroy each follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD04/ebd04-011.png"
+  },
+  {
+    "cardNo": "EBD04-012EN",
+    "name": "Perpetual Despair",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Omen / Zealot",
+      "rarity": "Gold",
+      "cardSet": "EX Beginner Deck \"Havencraft\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Whenever a follower with \"Marwynn\" in its name is put onto your field, you may put this from your cemetery into your EX area. If you do, give your leader [defense]+1. ---------- [act] [engage], bury this: Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD04/ebd04-012.png"
+  },
+  {
+    "cardNo": "EBD04-013EN",
+    "name": "Globe of the Starways",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith / Celestial",
+      "rarity": "Gold",
+      "cardSet": "EX Beginner Deck \"Havencraft\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Search your deck for an amulet, reveal it, and add it to your hand. [q][act] [cost02], [engage], put this card into its owner's cemetery: Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD04/ebd04-013.png"
+  },
+  {
+    "cardNo": "EBD04-014EN",
+    "name": "Sacred Plea",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith",
+      "rarity": "Gold",
+      "cardSet": "EX Beginner Deck \"Havencraft\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act][engage], put this card into its owner's cemetery: Draw a card. [act][cost02], [engage], put this card into its owner's cemetery: Draw 2 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD04/ebd04-014.png"
+  },
+  {
+    "cardNo": "EBD04-015EN",
+    "name": "Angelic Prism Priestess",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "Luminary / Avian",
+      "rarity": "Silver",
+      "cardSet": "EX Beginner Deck \"Havencraft\"",
+      "cost": "2",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve][cost01]: Evolve this. [fanfare] Look at the top 3 cards of your deck. You may reveal an amulet from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD04/ebd04-015.png"
+  },
+  {
+    "cardNo": "EBD04-016EN",
+    "name": "Angelic Prism Priestess Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Luminary / Avian",
+      "rarity": "Silver",
+      "cardSet": "EX Beginner Deck \"Havencraft\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - You may summon an amulet that costs 2 or less from your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD04/ebd04-016.png"
+  },
+  {
+    "cardNo": "EBD04-017EN",
+    "name": "Dark Offering",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Zealot",
+      "rarity": "Silver",
+      "cardSet": "EX Beginner Deck \"Havencraft\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select a card on your field. Destroy it, give your leader [defense]+3, and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD04/ebd04-017.png"
+  },
+  {
+    "cardNo": "EBD04-018EN",
+    "name": "Serene Sanctuary",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith",
+      "rarity": "Silver",
+      "cardSet": "EX Beginner Deck \"Havencraft\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Search your deck for a Luminary amulet, reveal it, add it to your hand, then shuffle. [act] [engage]: Bury this. Activate only if this has a prayer counter. [lastwords] Give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD04/ebd04-018.png"
+  },
+  {
+    "cardNo": "EBD04-019EN",
+    "name": "Darkhaven Grace",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith / Luminary",
+      "rarity": "Bronze",
+      "cardSet": "EX Beginner Deck \"Havencraft\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Select an enemy follower on the field and destroy it. [act] [engage], bury this: Deal 2 damage to each enemy leader. Draw a card. Activate only if a follower on your field evolved this turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD04/ebd04-019.png"
+  },
+  {
+    "cardNo": "EBD04-020EN",
+    "name": "Sacred Gavel",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Amulet",
+      "trait": "Faith",
+      "rarity": "Bronze",
+      "cardSet": "EX Beginner Deck \"Havencraft\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Select an enemy follower on the field and deal it 3 damage. [lastwords] Give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD04/ebd04-020.png"
+  },
+  {
+    "cardNo": "EBD04-T01EN",
+    "name": "Torrent of Despair TOKEN",
+    "type": "token",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell / Token",
+      "trait": "Omen / Zealot",
+      "rarity": "-",
+      "cardSet": "EX Beginner Deck \"Havencraft\"",
+      "cost": "0",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an enemy follower on the field and banish it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD04/ebd04-t01.png"
+  },
+  {
+    "cardNo": "EBD04-T02EN",
+    "name": "Silent Rider TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Token",
+      "trait": "Archfiend",
+      "rarity": "-",
+      "cardSet": "EX Beginner Deck \"Havencraft\"",
+      "cost": "1",
+      "attack": "5",
+      "defense": "5",
+      "effect": "Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD04/ebd04-t02.png"
+  },
+  {
+    "cardNo": "EBD04-T03EN",
+    "name": "Servant of Cocytus TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Token",
+      "trait": "Archfiend",
+      "rarity": "-",
+      "cardSet": "EX Beginner Deck \"Havencraft\"",
+      "cost": "1",
+      "attack": "8",
+      "defense": "8",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD04/ebd04-t03.png"
+  },
+  {
+    "cardNo": "EBD04-T04EN",
+    "name": "Demon of Purgatory TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Token",
+      "trait": "Archfiend",
+      "rarity": "-",
+      "cardSet": "EX Beginner Deck \"Havencraft\"",
+      "cost": "1",
+      "attack": "6",
+      "defense": "4",
+      "effect": "Ward. [fanfare] Select an enemy follower on the field and deal it 6 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD04/ebd04-t04.png"
+  },
+  {
+    "cardNo": "EBD04-T05EN",
+    "name": "Astaroth's Reckoning TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Token",
+      "trait": "Archfiend",
+      "rarity": "-",
+      "cardSet": "EX Beginner Deck \"Havencraft\"",
+      "cost": "10",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Change each enemy leader's defense to 1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/EBD04/ebd04-t05.png"
+  }
+]

@@ -1594,5 +1594,537 @@
       "effect": "[fanfare] Search your deck for a 1-cost iM@S CG follower, summon it, then shuffle. [act] [cost01], Lesson (1), [engage]: Search your deck for a 1-cost iM@S CG follower, summon it, then shuffle."
     },
     "imgSrc": ""
+  },
+  {
+    "cardNo": "ECP02-T01EN",
+    "name": "Kyoko Igarashi [Love Letter] TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Token",
+      "trait": "iM@S CG",
+      "rarity": "-",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ecp02-t01.png"
+  },
+  {
+    "cardNo": "ECP02-T02EN",
+    "name": "Shiki Ichinose [Tsubomi] TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Token",
+      "trait": "iM@S CG",
+      "rarity": "-",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ecp02-t02.png"
+  },
+  {
+    "cardNo": "ECP02-T03EN",
+    "name": "Sachiko Koshimizu [Lunatic Show] TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Token",
+      "trait": "iM@S CG",
+      "rarity": "-",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ecp02-t03.png"
+  },
+  {
+    "cardNo": "ECP02-T04EN",
+    "name": "Kaede Takagaki [Nation Blue] TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Token",
+      "trait": "iM@S CG",
+      "rarity": "-",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ecp02-t04.png"
+  },
+  {
+    "cardNo": "ECP02-T05EN",
+    "name": "Riina Tada [Eight-Beat Rocker] TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Token",
+      "trait": "iM@S CG",
+      "rarity": "-",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ecp02-t05.png"
+  },
+  {
+    "cardNo": "ECP02-T06EN",
+    "name": "Sae Kobayakawa [Pastel Pink Love] TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Token",
+      "trait": "iM@S CG",
+      "rarity": "-",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ecp02-t06.png"
+  },
+  {
+    "cardNo": "ECP02-T07EN",
+    "name": "Ranko Kanzaki [Nation Blue] TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Token",
+      "trait": "iM@S CG",
+      "rarity": "-",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ecp02-t07.png"
+  },
+  {
+    "cardNo": "ECP02-T08EN",
+    "name": "Shin Sato [Gutsy☆Reporter] TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Token",
+      "trait": "iM@S CG",
+      "rarity": "-",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ecp02-t08.png"
+  },
+  {
+    "cardNo": "ECP02-T09EN",
+    "name": "Akari Tsujino [Brand New!] TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Token",
+      "trait": "iM@S CG",
+      "rarity": "-",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ecp02-t09.png"
+  },
+  {
+    "cardNo": "ECP02-T10EN",
+    "name": "Asuka Ninomiya [Saite Jewel] TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Token",
+      "trait": "iM@S CG",
+      "rarity": "-",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ecp02-t10.png"
+  },
+  {
+    "cardNo": "ECP02-T11EN",
+    "name": "Yoshino Yorita [Warrior's Path] TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Token",
+      "trait": "iM@S CG",
+      "rarity": "-",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ecp02-t11.png"
+  },
+  {
+    "cardNo": "ECP02-T12EN",
+    "name": "Chie Sasaki [Step to Mirai] TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Token",
+      "trait": "iM@S CG",
+      "rarity": "-",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ecp02-t12.png"
+  },
+  {
+    "cardNo": "ECP02-T13EN",
+    "name": "Arisu Tachibana [Ikenai GO AHEAD] TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Token",
+      "trait": "iM@S CG",
+      "rarity": "-",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ecp02-t13.png"
+  },
+  {
+    "cardNo": "ECP02-T14EN",
+    "name": "Yukimi Sajo [Hands and Days Together] TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Token",
+      "trait": "iM@S CG",
+      "rarity": "-",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ecp02-t14.png"
+  },
+  {
+    "cardNo": "ECP02-SL34EN",
+    "name": "Kyoko Igarashi [Love Letter] TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Token",
+      "trait": "iM@S CG",
+      "rarity": "-",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ecp02-sl34.png"
+  },
+  {
+    "cardNo": "ECP02-SL35EN",
+    "name": "Shiki Ichinose [Tsubomi] TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Token",
+      "trait": "iM@S CG",
+      "rarity": "-",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ecp02-sl35.png"
+  },
+  {
+    "cardNo": "ECP02-SL36EN",
+    "name": "Sachiko Koshimizu [Lunatic Show] TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Token",
+      "trait": "iM@S CG",
+      "rarity": "-",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ecp02-sl36.png"
+  },
+  {
+    "cardNo": "ECP02-SL37EN",
+    "name": "Kaede Takagaki [Nation Blue] TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Token",
+      "trait": "iM@S CG",
+      "rarity": "-",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ecp02-sl37.png"
+  },
+  {
+    "cardNo": "ECP02-SL38EN",
+    "name": "Riina Tada [Eight-Beat Rocker] TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Token",
+      "trait": "iM@S CG",
+      "rarity": "-",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ecp02-sl38.png"
+  },
+  {
+    "cardNo": "ECP02-SL39EN",
+    "name": "Sae Kobayakawa [Pastel Pink Love] TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Token",
+      "trait": "iM@S CG",
+      "rarity": "-",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ecp02-sl39.png"
+  },
+  {
+    "cardNo": "ECP02-SL40EN",
+    "name": "Ranko Kanzaki [Nation Blue] TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Token",
+      "trait": "iM@S CG",
+      "rarity": "-",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ecp02-sl40.png"
+  },
+  {
+    "cardNo": "ECP02-SL41EN",
+    "name": "Shin Sato [Gutsy☆Reporter] TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Token",
+      "trait": "iM@S CG",
+      "rarity": "-",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ecp02-sl41.png"
+  },
+  {
+    "cardNo": "ECP02-SL42EN",
+    "name": "Akari Tsujino [Brand New!] TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Token",
+      "trait": "iM@S CG",
+      "rarity": "-",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ecp02-sl42.png"
+  },
+  {
+    "cardNo": "ECP02-SL43EN",
+    "name": "Asuka Ninomiya [Saite Jewel] TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Token",
+      "trait": "iM@S CG",
+      "rarity": "-",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ecp02-sl43.png"
+  },
+  {
+    "cardNo": "ECP02-SL44EN",
+    "name": "Yoshino Yorita [Warrior's Path] TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Token",
+      "trait": "iM@S CG",
+      "rarity": "-",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ecp02-sl44.png"
+  },
+  {
+    "cardNo": "ECP02-SL45EN",
+    "name": "Chie Sasaki [Step to Mirai] TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Token",
+      "trait": "iM@S CG",
+      "rarity": "-",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ecp02-sl45.png"
+  },
+  {
+    "cardNo": "ECP02-SL46EN",
+    "name": "Arisu Tachibana [Ikenai GO AHEAD] TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Token",
+      "trait": "iM@S CG",
+      "rarity": "-",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ecp02-sl46.png"
+  },
+  {
+    "cardNo": "ECP02-SL47EN",
+    "name": "Yukimi Sajo [Hands and Days Together] TOKEN",
+    "type": "token",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell / Token",
+      "trait": "iM@S CG",
+      "rarity": "-",
+      "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\"",
+      "cost": "4",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Give your leader [defense]+1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ECP02/ecp02-sl47.png"
   }
 ]

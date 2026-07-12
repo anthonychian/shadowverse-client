@@ -150,5 +150,233 @@
       "effect": "[evolve] [cost02]: Evolve this follower. During your turn, whenever this follower takes ability damage, change its [evolve] cost to 0 for the rest of the turn."
     },
     "imgSrc": ""
+  },
+  {
+    "cardNo": "SP01-020EN",
+    "name": "Anne, Mysterian Prodigy",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Choose one of the following. If there are at least 10 Academic cards in your cemetery, choose up to 2 instead. (1) Search your deck for an Anne's Sorcery, put it into your EX area, then shuffle your deck. The next Anne's Sorcery you play this turn costs 5 less. (2) Search your deck for a Grea, Mysterian Dragoness, summon it, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/sp01-020.png"
+  },
+  {
+    "cardNo": "SP01-021EN",
+    "name": "Grea, Mysterian Dragoness",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Select an enemy follower on the field. If there are at least 10 Academic cards in your cemetery, deal 4 damage to it and 1 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/sp01-021.png"
+  },
+  {
+    "cardNo": "SP01-022EN",
+    "name": "Grea, Mysterian Dragoness Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Legendary",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Search your deck for a Grea's Ember, put it into your EX area, then shuffle your deck. The next Grea's Ember you play this turn costs 1 less. While this card is on your field, if an Academic spell you control would deal damage, it deals that much plus 1 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/sp01-022.png"
+  },
+  {
+    "cardNo": "SP01-SL20EN",
+    "name": "Anne, Mysterian Prodigy",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Choose one of the following. If there are at least 10 Academic cards in your cemetery, choose up to 2 instead. (1) Search your deck for an Anne's Sorcery, put it into your EX area, then shuffle your deck. The next Anne's Sorcery you play this turn costs 5 less. (2) Search your deck for a Grea, Mysterian Dragoness, summon it, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/sp01-sl20.png"
+  },
+  {
+    "cardNo": "SP01-SL21EN",
+    "name": "Grea, Mysterian Dragoness",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Select an enemy follower on the field. If there are at least 10 Academic cards in your cemetery, deal 4 damage to it and 1 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/sp01-sl21.png"
+  },
+  {
+    "cardNo": "SP01-SL22EN",
+    "name": "Grea, Mysterian Dragoness Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Search your deck for a Grea's Ember, put it into your EX area, then shuffle your deck. The next Grea's Ember you play this turn costs 1 less. While this card is on your field, if an Academic spell you control would deal damage, it deals that much plus 1 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/sp01-sl22.png"
+  },
+  {
+    "cardNo": "SP01-SP13EN",
+    "name": "Anne, Mysterian Prodigy",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Choose one of the following. If there are at least 10 Academic cards in your cemetery, choose up to 2 instead. (1) Search your deck for an Anne's Sorcery, put it into your EX area, then shuffle your deck. The next Anne's Sorcery you play this turn costs 5 less. (2) Search your deck for a Grea, Mysterian Dragoness, summon it, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/sp01-sp13.png"
+  },
+  {
+    "cardNo": "SP01-SP14EN",
+    "name": "Grea, Mysterian Dragoness",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Select an enemy follower on the field. If there are at least 10 Academic cards in your cemetery, deal 4 damage to it and 1 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/sp01-sp14.png"
+  },
+  {
+    "cardNo": "SP01-SP15EN",
+    "name": "Grea, Mysterian Dragoness Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Special",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Search your deck for a Grea's Ember, put it into your EX area, then shuffle your deck. The next Grea's Ember you play this turn costs 1 less. While this card is on your field, if an Academic spell you control would deal damage, it deals that much plus 1 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/sp01-sp15.png"
+  },
+  {
+    "cardNo": "SP01-U11EN",
+    "name": "Anne, Mysterian Prodigy",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Ultimate",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "6",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Choose one of the following. If there are at least 10 Academic cards in your cemetery, choose up to 2 instead. (1) Search your deck for an Anne's Sorcery, put it into your EX area, then shuffle your deck. The next Anne's Sorcery you play this turn costs 5 less. (2) Search your deck for a Grea, Mysterian Dragoness, summon it, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/sp01-u11.png"
+  },
+  {
+    "cardNo": "SP01-U12EN",
+    "name": "Grea, Mysterian Dragoness",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Ultimate",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Select an enemy follower on the field. If there are at least 10 Academic cards in your cemetery, deal 4 damage to it and 1 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/sp01-u12.png"
+  },
+  {
+    "cardNo": "SP01-U13EN",
+    "name": "Grea, Mysterian Dragoness Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Mage / Academic / Princess",
+      "rarity": "Ultimate",
+      "cardSet": "Special Set \"Seaside Memories\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Search your deck for a Grea's Ember, put it into your EX area, then shuffle your deck. The next Grea's Ember you play this turn costs 1 less. While this card is on your field, if an Academic spell you control would deal damage, it deals that much plus 1 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SP01/sp01-u13.png"
   }
 ]

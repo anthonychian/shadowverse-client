@@ -1,0 +1,401 @@
+[
+  {
+    "cardNo": "ETD02-001EN",
+    "name": "Baccherus, Peppy Ghostie",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed",
+      "rarity": "Gold",
+      "cardSet": "Entry Deck \"Subaru Makabe\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] If there is a Gargantuan Ghost on your field, draw a card. This follower's name is also Ghost."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD02/etd02-001.png"
+  },
+  {
+    "cardNo": "ETD02-002EN",
+    "name": "Baccherus, Peppy Ghostie Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Departed",
+      "rarity": "Gold",
+      "cardSet": "Entry Deck \"Subaru Makabe\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "This follower's name is also Ghost. [lastwords] Put this card into its owner's EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD02/etd02-002.png"
+  },
+  {
+    "cardNo": "ETD02-003EN",
+    "name": "Mini Soul Devil",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Demon",
+      "rarity": "Silver",
+      "cardSet": "Entry Deck \"Subaru Makabe\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "Whenever one of your followers evolves, deal 2 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD02/etd02-003.png"
+  },
+  {
+    "cardNo": "ETD02-004EN",
+    "name": "Playful Necromancer",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Necromancer",
+      "rarity": "Silver",
+      "cardSet": "Entry Deck \"Subaru Makabe\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve][cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD02/etd02-004.png"
+  },
+  {
+    "cardNo": "ETD02-005EN",
+    "name": "Playful Necromancer Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Necromancer",
+      "rarity": "Silver",
+      "cardSet": "Entry Deck \"Subaru Makabe\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve: Summon 3 Ghost tokens."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD02/etd02-005.png"
+  },
+  {
+    "cardNo": "ETD02-006EN",
+    "name": "Phantom Howl",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Departed",
+      "rarity": "Silver",
+      "cardSet": "Entry Deck \"Subaru Makabe\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Summon 4 Ghost tokens."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD02/etd02-006.png"
+  },
+  {
+    "cardNo": "ETD02-007EN",
+    "name": "Soul Conversion",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Departed",
+      "rarity": "Silver",
+      "cardSet": "Entry Deck \"Subaru Makabe\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select a follower on your field. Destroy it and draw 2 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD02/etd02-007.png"
+  },
+  {
+    "cardNo": "ETD02-008EN",
+    "name": "Pumpkin Necromancer",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed",
+      "rarity": "Bronze",
+      "cardSet": "Entry Deck \"Subaru Makabe\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[fanfare] Put a Gargantuan Ghost token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD02/etd02-008.png"
+  },
+  {
+    "cardNo": "ETD02-009EN",
+    "name": "Parade Raven",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed",
+      "rarity": "Bronze",
+      "cardSet": "Entry Deck \"Subaru Makabe\"",
+      "cost": "7",
+      "attack": "6",
+      "defense": "6",
+      "effect": "[fanfare] Put another follower from your field into its owner's cemetery: Select a follower that costs 5 play points or less in your cemetery and put it onto your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD02/etd02-009.png"
+  },
+  {
+    "cardNo": "ETD02-010EN",
+    "name": "Mischievous Zombie",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed",
+      "rarity": "Bronze",
+      "cardSet": "Entry Deck \"Subaru Makabe\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost02]: Evolve this follower. [fanfare] Discard a card: Summon a Ghost token. If you discarded a Departed card, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD02/etd02-010.png"
+  },
+  {
+    "cardNo": "ETD02-011EN",
+    "name": "Mischievous Zombie Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Departed",
+      "rarity": "Bronze",
+      "cardSet": "Entry Deck \"Subaru Makabe\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve: Select a Ghost on your field and give it Bane."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD02/etd02-011.png"
+  },
+  {
+    "cardNo": "ETD02-012EN",
+    "name": "Trick Dullahan",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed",
+      "rarity": "Bronze",
+      "cardSet": "Entry Deck \"Subaru Makabe\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[fanfare] Put a Ghost token into your EX area. Necrocharge (10): Put 3 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD02/etd02-012.png"
+  },
+  {
+    "cardNo": "ETD02-013EN",
+    "name": "Bone Chimera",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed",
+      "rarity": "Bronze",
+      "cardSet": "Entry Deck \"Subaru Makabe\"",
+      "cost": "3",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Necrocharge (7): This follower has Rush and Bane. [fanfare] Put the top 3 cards of your deck into your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD02/etd02-013.png"
+  },
+  {
+    "cardNo": "ETD02-014EN",
+    "name": "Spartoi Sergeant",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Departed",
+      "rarity": "Bronze",
+      "cardSet": "Entry Deck \"Subaru Makabe\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Put the top 2 cards of your deck into your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD02/etd02-014.png"
+  },
+  {
+    "cardNo": "ETD02-015EN",
+    "name": "Necrocarnival",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Departed",
+      "rarity": "Bronze",
+      "cardSet": "Entry Deck \"Subaru Makabe\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose one of the following. Necrocharge (10): Choose up to 2 instead. (1) Select a follower that costs 2 play points or less in your cemetery and put it onto your field. (2) Summon 2 Ghost tokens."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD02/etd02-015.png"
+  },
+  {
+    "cardNo": "ETD02-016EN",
+    "name": "Undying Resentment",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Spell",
+      "trait": "Departed",
+      "rarity": "Bronze",
+      "cardSet": "Entry Deck \"Subaru Makabe\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field. Deal it 3 damage and put the top card of your deck into your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD02/etd02-016.png"
+  },
+  {
+    "cardNo": "ETD02-017EN",
+    "name": "Goblinmount Demon",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Goblinoid",
+      "rarity": "Silver",
+      "cardSet": "Entry Deck \"Subaru Makabe\"",
+      "cost": "5",
+      "attack": "6",
+      "defense": "6",
+      "effect": "[evolve][cost00]: Evolve this follower. Ward. [fanfare] Deal 2 damage to each other follower on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD02/etd02-017.png"
+  },
+  {
+    "cardNo": "ETD02-018EN",
+    "name": "Goblinmount Demon Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "Goblinoid",
+      "rarity": "Silver",
+      "cardSet": "Entry Deck \"Subaru Makabe\"",
+      "cost": "-",
+      "attack": "7",
+      "defense": "7",
+      "effect": "Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD02/etd02-018.png"
+  },
+  {
+    "cardNo": "ETD02-019EN",
+    "name": "Angelic Barrage",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Angel",
+      "rarity": "Bronze",
+      "cardSet": "Entry Deck \"Subaru Makabe\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Deal 1 damage to each enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD02/etd02-019.png"
+  },
+  {
+    "cardNo": "ETD02-T01EN",
+    "name": "Gargantuan Ghost TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Token",
+      "trait": "Departed",
+      "rarity": "-",
+      "cardSet": "Entry Deck \"Subaru Makabe\"",
+      "cost": "1",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Ward. At the start of your main phase, banish this card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD02/etd02-t01.png"
+  },
+  {
+    "cardNo": "ETD02-T02EN",
+    "name": "Ghost TOKEN",
+    "type": "token",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Token",
+      "trait": "Departed",
+      "rarity": "-",
+      "cardSet": "Entry Deck \"Subaru Makabe\"",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Storm. At the start of your end phase, banish this card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD02/etd02-t02.png"
+  }
+]

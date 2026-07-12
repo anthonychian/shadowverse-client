@@ -1,0 +1,572 @@
+[
+  {
+    "cardNo": "DSD01b-001EN",
+    "name": "Romelia, Lightning Striker",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt / Draconic Duelist",
+      "rarity": "Legendary",
+      "cardSet": "DX Starter Deck \"Martial Thunder\"",
+      "cost": "3",
+      "attack": "1",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. Bane. [lastwords] If there's an Aftershock on your field, place a lightning counter on each Aftershock on your field. If not, summon one."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01b-001.png"
+  },
+  {
+    "cardNo": "DSD01b-002EN",
+    "name": "Romelia, Lightning Striker Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonewt / Draconic Duelist",
+      "rarity": "Legendary",
+      "cardSet": "DX Starter Deck \"Martial Thunder\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "4",
+      "effect": "Assail. Bane. On Evolve - Select an enemy follower on the field and, if there's an amulet on your field, deal it 3 damage. [lastwords] If there's an Aftershock on your field, place a lightning counter on each Aftershock on your field. If not, summon one."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01b-002.png"
+  },
+  {
+    "cardNo": "DSD01b-003EN",
+    "name": "Masamune, Raging Dragon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart / Draconic Duelist",
+      "rarity": "Legendary",
+      "cardSet": "DX Starter Deck \"Martial Thunder\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Bane. [fanfare] If there are at least 3 Draconic Duelist cards on your field, give this follower [attack]+2/[defense]+2 and Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01b-003.png"
+  },
+  {
+    "cardNo": "DSD01b-004EN",
+    "name": "Dark Dragoon Forte",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Legendary",
+      "cardSet": "DX Starter Deck \"Martial Thunder\"",
+      "cost": "4",
+      "attack": "5",
+      "defense": "1",
+      "effect": "[evolve][cost02]: Evolve this follower. Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01b-004.png"
+  },
+  {
+    "cardNo": "DSD01b-005EN",
+    "name": "Dark Dragoon Forte Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonheart",
+      "rarity": "Legendary",
+      "cardSet": "DX Starter Deck \"Martial Thunder\"",
+      "cost": "-",
+      "attack": "7",
+      "defense": "3",
+      "effect": "Storm. Aura."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01b-005.png"
+  },
+  {
+    "cardNo": "DSD01b-006EN",
+    "name": "Poseidon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Marine / Draconic Duelist",
+      "rarity": "Gold",
+      "cardSet": "DX Starter Deck \"Martial Thunder\"",
+      "cost": "8",
+      "attack": "4",
+      "defense": "7",
+      "effect": "Ward. [fanfare] Search your deck for up to 2 Draconic Duelist followers with different names that cost 2 or less, summon them, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01b-006.png"
+  },
+  {
+    "cardNo": "DSD01b-007EN",
+    "name": "Pure-Voiced Dragoon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart / Draconic Duelist",
+      "rarity": "Gold",
+      "cardSet": "DX Starter Deck \"Martial Thunder\"",
+      "cost": "5",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[fanfare] Search your deck for a Draconic Duelist follower that costs 4 or less, summon it, then shuffle your deck. If Overflow is active for you, give your leader [defense]+3."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01b-007.png"
+  },
+  {
+    "cardNo": "DSD01b-008EN",
+    "name": "Genesis Dragon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Gold",
+      "cardSet": "DX Starter Deck \"Martial Thunder\"",
+      "cost": "9",
+      "attack": "10",
+      "defense": "12",
+      "effect": "Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01b-008.png"
+  },
+  {
+    "cardNo": "DSD01b-009EN",
+    "name": "Dragon Oracle",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Wyrmkin",
+      "rarity": "Gold",
+      "cardSet": "DX Starter Deck \"Martial Thunder\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose one of the following effects. (1) Increase your maximum play points by 1. (2) Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01b-009.png"
+  },
+  {
+    "cardNo": "DSD01b-010EN",
+    "name": "Katakura Kojuro",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Draconic Duelist",
+      "rarity": "Silver",
+      "cardSet": "DX Starter Deck \"Martial Thunder\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Select another Draconic Duelist follower on your field and, if Overflow is active for you, give it [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01b-010.png"
+  },
+  {
+    "cardNo": "DSD01b-011EN",
+    "name": "Katakura Kojuro Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Draconic Duelist",
+      "rarity": "Silver",
+      "cardSet": "DX Starter Deck \"Martial Thunder\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Look at the top 4 cards of your deck. You may reveal a Draconic Duelist follower from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01b-011.png"
+  },
+  {
+    "cardNo": "DSD01b-012EN",
+    "name": "Dragoon Scyther",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart / Draconic Duelist",
+      "rarity": "Silver",
+      "cardSet": "DX Starter Deck \"Martial Thunder\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Bane. While there's another Draconic Duelist card on your field, this follower has Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01b-012.png"
+  },
+  {
+    "cardNo": "DSD01b-013EN",
+    "name": "Gargouille",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Draconic Duelist / Dragonewt / Cutthroat",
+      "rarity": "Silver",
+      "cardSet": "DX Starter Deck \"Martial Thunder\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "5",
+      "effect": "Rush. Ward. [fanfare] If there are at least 3 Draconic Duelist cards on your field, draw 2 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01b-013.png"
+  },
+  {
+    "cardNo": "DSD01b-014EN",
+    "name": "Roy, Dragoncleaver",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Draconic Duelist / Cutthroat",
+      "rarity": "Silver",
+      "cardSet": "DX Starter Deck \"Martial Thunder\"",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Search your deck for a 2-cost [dragoncraft] spell, reveal it, add it to your hand, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01b-014.png"
+  },
+  {
+    "cardNo": "DSD01b-015EN",
+    "name": "Roy, Dragoncleaver Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Draconic Duelist / Cutthroat",
+      "rarity": "Silver",
+      "cardSet": "DX Starter Deck \"Martial Thunder\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage. If it's a Wyrmkin follower, deal 5 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01b-015.png"
+  },
+  {
+    "cardNo": "DSD01b-016EN",
+    "name": "Hypersonic Dragonewt",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt / Draconic Duelist",
+      "rarity": "Bronze",
+      "cardSet": "DX Starter Deck \"Martial Thunder\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "1",
+      "effect": "While there's another Draconic Duelist card on your field, this follower has Rush and Assail. [fanfare] [cost01]: If Overflow is active for you, search your deck for a Hypersonic Dragonewt, summon it, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01b-016.png"
+  },
+  {
+    "cardNo": "DSD01b-017EN",
+    "name": "Dragonclad Blademaster",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Draconic Duelist / Cutthroat",
+      "rarity": "Bronze",
+      "cardSet": "DX Starter Deck \"Martial Thunder\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[act] [engage]: Select an enemy follower on the field and deal it 3 damage. Activate only if there are at least 3 Draconic Duelist cards on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01b-017.png"
+  },
+  {
+    "cardNo": "DSD01b-018EN",
+    "name": "Blazing Breath",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "DX Starter Deck \"Martial Thunder\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field and deal it 2 damage. If Overflow is active for you, deal 4 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01b-018.png"
+  },
+  {
+    "cardNo": "DSD01b-P01EN",
+    "name": "Poseidon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Marine / Draconic Duelist",
+      "rarity": "Promo",
+      "cardSet": "DX Starter Deck \"Martial Thunder\"",
+      "cost": "8",
+      "attack": "4",
+      "defense": "7",
+      "effect": "Ward. [fanfare] Search your deck for up to 2 Draconic Duelist followers with different names that cost 2 or less, summon them, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01b-p01.png"
+  },
+  {
+    "cardNo": "DSD01b-P02EN",
+    "name": "Pure-Voiced Dragoon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart / Draconic Duelist",
+      "rarity": "Promo",
+      "cardSet": "DX Starter Deck \"Martial Thunder\"",
+      "cost": "5",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[fanfare] Search your deck for a Draconic Duelist follower that costs 4 or less, summon it, then shuffle your deck. If Overflow is active for you, give your leader [defense]+3."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01b-p02.png"
+  },
+  {
+    "cardNo": "DSD01b-P03EN",
+    "name": "Katakura Kojuro",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Draconic Duelist",
+      "rarity": "Promo",
+      "cardSet": "DX Starter Deck \"Martial Thunder\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Select another Draconic Duelist follower on your field and, if Overflow is active for you, give it [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01b-p03.png"
+  },
+  {
+    "cardNo": "DSD01b-P04EN",
+    "name": "Katakura Kojuro Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Draconic Duelist",
+      "rarity": "Promo",
+      "cardSet": "DX Starter Deck \"Martial Thunder\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Look at the top 4 cards of your deck. You may reveal a Draconic Duelist follower from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01b-p04.png"
+  },
+  {
+    "cardNo": "DSD01b-P05EN",
+    "name": "Dragoon Scyther",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart / Draconic Duelist",
+      "rarity": "Promo",
+      "cardSet": "DX Starter Deck \"Martial Thunder\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Bane. While there's another Draconic Duelist card on your field, this follower has Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01b-p05.png"
+  },
+  {
+    "cardNo": "DSD01b-P06EN",
+    "name": "Gargouille",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Draconic Duelist / Dragonewt / Cutthroat",
+      "rarity": "Promo",
+      "cardSet": "DX Starter Deck \"Martial Thunder\"",
+      "cost": "4",
+      "attack": "4",
+      "defense": "5",
+      "effect": "Rush. Ward. [fanfare] If there are at least 3 Draconic Duelist cards on your field, draw 2 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01b-p06.png"
+  },
+  {
+    "cardNo": "DSD01b-P07EN",
+    "name": "Hypersonic Dragonewt",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt / Draconic Duelist",
+      "rarity": "Promo",
+      "cardSet": "DX Starter Deck \"Martial Thunder\"",
+      "cost": "1",
+      "attack": "2",
+      "defense": "1",
+      "effect": "While there's another Draconic Duelist card on your field, this follower has Rush and Assail. [fanfare] [cost01]: If Overflow is active for you, search your deck for a Hypersonic Dragonewt, summon it, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01b-p07.png"
+  },
+  {
+    "cardNo": "DSD01b-SL01EN",
+    "name": "Romelia, Lightning Striker",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt / Draconic Duelist",
+      "rarity": "Special",
+      "cardSet": "DX Starter Deck \"Martial Thunder\"",
+      "cost": "3",
+      "attack": "1",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this follower. Bane. [lastwords] If there's an Aftershock on your field, place a lightning counter on each Aftershock on your field. If not, summon one."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01b-sl01.png"
+  },
+  {
+    "cardNo": "DSD01b-SL02EN",
+    "name": "Romelia, Lightning Striker Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonewt / Draconic Duelist",
+      "rarity": "Special",
+      "cardSet": "DX Starter Deck \"Martial Thunder\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "4",
+      "effect": "Assail. Bane. On Evolve - Select an enemy follower on the field and, if there's an amulet on your field, deal it 3 damage. [lastwords] If there's an Aftershock on your field, place a lightning counter on each Aftershock on your field. If not, summon one."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01b-sl02.png"
+  },
+  {
+    "cardNo": "DSD01b-SL03EN",
+    "name": "Masamune, Raging Dragon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart / Draconic Duelist",
+      "rarity": "Special",
+      "cardSet": "DX Starter Deck \"Martial Thunder\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Bane. [fanfare] If there are at least 3 Draconic Duelist cards on your field, give this follower [attack]+2/[defense]+2 and Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01b-sl03.png"
+  },
+  {
+    "cardNo": "DSD01b-T01EN",
+    "name": "Aftershock TOKEN",
+    "type": "token",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Amulet / Token",
+      "trait": "Dragonewt / Draconic Duelist",
+      "rarity": "-",
+      "cardSet": "DX Starter Deck \"Martial Thunder\"",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Whenever a Draconic Duelist follower is put onto your field, place a lightning counter on this card. [act] [engage]: Select a [dragoncraft] follower on your field and give it [attack]+2. Activate only if this card has at least 5 lightning counters. [act] [engage]: Select an enemy follower on the field. Destroy it and deal 3 damage to its leader. Activate only if this card has at least 10 lightning counters."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01b-t01.png"
+  },
+  {
+    "cardNo": "DSD01b-U01EN",
+    "name": "Romelia, Lightning Striker Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonewt / Draconic Duelist",
+      "rarity": "Ultimate",
+      "cardSet": "DX Starter Deck \"Martial Thunder\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "4",
+      "effect": "Assail. Bane. On Evolve - Select an enemy follower on the field and, if there's an amulet on your field, deal it 3 damage. [lastwords] If there's an Aftershock on your field, place a lightning counter on each Aftershock on your field. If not, summon one."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/DSD01/dsd01b-u01.png"
+  }
+]

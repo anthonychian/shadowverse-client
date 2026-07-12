@@ -1,0 +1,382 @@
+[
+  {
+    "cardNo": "ETD01-001EN",
+    "name": "Draconir, Knuckle Dragon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin / Armed",
+      "rarity": "Gold",
+      "cardSet": "Entry Deck \"Light Tenryu\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Summon a Draconic Weapon token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD01/etd01-001.png"
+  },
+  {
+    "cardNo": "ETD01-002EN",
+    "name": "Draconir, Knuckle Dragon Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wyrmkin / Armed",
+      "rarity": "Gold",
+      "cardSet": "Entry Deck \"Light Tenryu\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve: Select an enemy follower on the field and deal it 2 damage. If there is another Armed follower on your field, deal 4 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD01/etd01-002 .png"
+  },
+  {
+    "cardNo": "ETD01-003EN",
+    "name": "Hammer Dragonewt",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt / Wyrmkin / Armed",
+      "rarity": "Silver",
+      "cardSet": "Entry Deck \"Light Tenryu\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Look at the top 4 cards of your deck. You may reveal an Armed spell from among them and add it to your hand. Put the remaining cards on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD01/etd01-003.png"
+  },
+  {
+    "cardNo": "ETD01-004EN",
+    "name": "Hammer Dragonewt Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonewt / Wyrmkin / Armed",
+      "rarity": "Silver",
+      "cardSet": "Entry Deck \"Light Tenryu\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve: Deal 2 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD01/etd01-004.png"
+  },
+  {
+    "cardNo": "ETD01-005EN",
+    "name": "Wyvern Cavalier",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Silver",
+      "cardSet": "Entry Deck \"Light Tenryu\"",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Put the top card of your deck into your EX area. It costs 2 less to play."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD01/etd01-005.png"
+  },
+  {
+    "cardNo": "ETD01-006EN",
+    "name": "Dragonewt Scholar",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt",
+      "rarity": "Silver",
+      "cardSet": "Entry Deck \"Light Tenryu\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Intimidate. Strike: Draw a card, then discard a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD01/etd01-006.png"
+  },
+  {
+    "cardNo": "ETD01-007EN",
+    "name": "Dragon Warrior",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Silver",
+      "cardSet": "Entry Deck \"Light Tenryu\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve][cost01]: Evolve this follower."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD01/etd01-007.png"
+  },
+  {
+    "cardNo": "ETD01-008EN",
+    "name": "Dragon Warrior Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Wyrmkin",
+      "rarity": "Silver",
+      "cardSet": "Entry Deck \"Light Tenryu\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve: Select an enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD01/etd01-008.png"
+  },
+  {
+    "cardNo": "ETD01-009EN",
+    "name": "Draconic Smash",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Dragonewt / Wyrmkin / Armed",
+      "rarity": "Silver",
+      "cardSet": "Entry Deck \"Light Tenryu\"",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field. Deal it 3 damage and summon a Draconic Weapon token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD01/etd01-009.png"
+  },
+  {
+    "cardNo": "ETD01-010EN",
+    "name": "Trinity Dragon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Entry Deck \"Light Tenryu\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "Intimidate."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD01/etd01-010.png"
+  },
+  {
+    "cardNo": "ETD01-011EN",
+    "name": "Lance Lizard",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin / Armed",
+      "rarity": "Bronze",
+      "cardSet": "Entry Deck \"Light Tenryu\"",
+      "cost": "3",
+      "attack": "3",
+      "defense": "4",
+      "effect": "[fanfare] If Overflow is active for you, summon a Draconic Weapon token. Once on each of your turns, when this follower is selected for an ability, give it [attack]+1 and deal 1 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD01/etd01-011.png"
+  },
+  {
+    "cardNo": "ETD01-012EN",
+    "name": "Mushussu",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Entry Deck \"Light Tenryu\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "Whenever one of your followers evolves, give this follower [attack]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD01/etd01-012.png"
+  },
+  {
+    "cardNo": "ETD01-013EN",
+    "name": "Dragontamer",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Bronze",
+      "cardSet": "Entry Deck \"Light Tenryu\"",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve][cost01]: Evolve this follower. [fanfare] Draw a card, then discard a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD01/etd01-013.png"
+  },
+  {
+    "cardNo": "ETD01-014EN",
+    "name": "Dragontamer Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonheart",
+      "rarity": "Bronze",
+      "cardSet": "Entry Deck \"Light Tenryu\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve, discard a card: Select a Wyrmkin follower in your cemetery and add it to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD01/etd01-014.png"
+  },
+  {
+    "cardNo": "ETD01-015EN",
+    "name": "Fire Lizard",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Entry Deck \"Light Tenryu\"",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[fanfare] Select an enemy leader or enemy follower on the field and deal it 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD01/etd01-015.png"
+  },
+  {
+    "cardNo": "ETD01-016EN",
+    "name": "Dread Dragon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Entry Deck \"Light Tenryu\"",
+      "cost": "7",
+      "attack": "7",
+      "defense": "7",
+      "effect": "[fanfare] Select an enemy follower on the field and deal it 7 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD01/etd01-016.png"
+  },
+  {
+    "cardNo": "ETD01-017EN",
+    "name": "Armor Burst",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Wyrmkin / Armed",
+      "rarity": "Bronze",
+      "cardSet": "Entry Deck \"Light Tenryu\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Select an Armed follower on your field and an enemy follower on the field. Put the first follower into its owner's EX area, deal 3 damage to the second, and summon a Draconic Weapon token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD01/etd01-017.png"
+  },
+  {
+    "cardNo": "ETD01-018EN",
+    "name": "Draconic Armor",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Wyrmkin / Armed",
+      "rarity": "Bronze",
+      "cardSet": "Entry Deck \"Light Tenryu\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Summon a Draconic Weapon token. If Overflow is active for you, summon 2 instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD01/etd01-018.png"
+  },
+  {
+    "cardNo": "ETD01-019EN",
+    "name": "Angelic Sword Maiden",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Angel",
+      "rarity": "Bronze",
+      "cardSet": "Entry Deck \"Light Tenryu\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "6",
+      "effect": "Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD01/etd01-019.png"
+  },
+  {
+    "cardNo": "ETD01-T01EN",
+    "name": "Draconic Weapon TOKEN",
+    "type": "token",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Amulet / Token",
+      "trait": "Armed",
+      "rarity": "-",
+      "cardSet": "Entry Deck \"Light Tenryu\"",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act][engage], put this card into its owner's cemetery: Select a [dragoncraft] follower on your field. Give it [defense]+1 and the Armed trait."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/ETD01/etd01-t01.png"
+  }
+]

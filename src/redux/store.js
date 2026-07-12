@@ -8,6 +8,7 @@ import storage from "redux-persist/lib/storage";
 import {
   persistReducer,
   persistStore,
+  createTransform,
   FLUSH,
   REHYDRATE,
   PAUSE,
@@ -16,10 +17,36 @@ import {
   REGISTER,
 } from "redux-persist";
 
+import renamedCards from "../decks/renamedCards.json";
+
+// Official EN releases sometimes rename cards we first imported under
+// community translations (e.g. most of BP18). Saved decks reference cards by
+// name, so rewrite any renamed card when a persisted deck is rehydrated; the
+// `art` printing map is keyed by name too. Card numbers are unaffected.
+const renameCard = (n) => renamedCards[n] || n;
+const migrateRenamedCards = createTransform(
+  null,
+  (outbound) => ({
+    ...outbound,
+    decks: (outbound.decks || []).map((d) => ({
+      ...d,
+      deck: (d.deck || []).map(renameCard),
+      evoDeck: (d.evoDeck || []).map(renameCard),
+      art: d.art
+        ? Object.fromEntries(
+            Object.entries(d.art).map(([n, no]) => [renameCard(n), no])
+          )
+        : d.art,
+    })),
+  }),
+  { whitelist: ["deck"] }
+);
+
 const persistConfig = {
   key: "root",
   storage: storage,
   blacklist: ["card", "gameState"],
+  transforms: [migrateRenamedCards],
 };
 const rootReducer = combineReducers({
   card: CardSlice.reducer,

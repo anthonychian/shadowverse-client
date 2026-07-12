@@ -25,6 +25,7 @@ import {
 } from "@mui/material";
 import { matchesFilters, hasActiveFilters, getCost, getDetails, sameNameCards } from "../decks/cardDetails";
 import cardPrintings from "../decks/cardPrintings.json";
+import jpCardMap from "../decks/jpCardMap.json";
 import FilterBar from "../components/deckbuilder/FilterBar";
 import CardGrid from "../components/deckbuilder/CardGrid";
 import CardInspector from "../components/deckbuilder/CardInspector";
@@ -48,14 +49,25 @@ const UNLIMITED_EVO = new Set(["Carrot", "Drive Point"]);
 // decklist (bushiroad decklog) into the names the builder works with. Built
 // once from the static printings data. First printing wins for a given number.
 // decklog reports each card by its printing's number. The EN site uses our exact
-// numbers ("BP20-067EN"); the JP site drops the "EN" suffix ("BP20-067"). Key the
-// lookup both ways, resolving to the local printing so we recover the real name
-// AND our card number (so the imported deck shows the correct art/texture).
+// numbers ("BP20-067EN"); the JP site drops the "EN" suffix ("BP20-067").
+//
+// JP and EN numbering DIVERGE in some sets, so stripping "EN" isn't enough:
+// the EN release inserted extra cards into BP02/03/06/09/16 (shifting every
+// later number), renumbered most PR promos, and re-skinned JP collab cards as
+// new EN cards. jpCardMap.json (generated from the official JP cardlist) maps
+// each JP number to the local printing that really is that card; the strip-EN
+// key remains only as a fallback for future sets the map doesn't know yet.
 const PRINTING_BY_DECKLOG_NO = (() => {
   const m = {};
   for (const p of cardPrintings) {
+    if (p.cardNo && !(p.cardNo in m)) m[p.cardNo] = p;
+  }
+  for (const jpNo in jpCardMap) {
+    const p = m[jpCardMap[jpNo]];
+    if (p && !(jpNo in m)) m[jpNo] = p;
+  }
+  for (const p of cardPrintings) {
     if (!p.cardNo) continue;
-    if (!(p.cardNo in m)) m[p.cardNo] = p;
     const jp = p.cardNo.replace(/EN$/, "");
     if (!(jp in m)) m[jp] = p;
   }

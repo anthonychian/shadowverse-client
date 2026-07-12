@@ -6,7 +6,7 @@ import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import { cardImage, toThumb } from "../../decks/getCards";
 import { getCost, primaryType } from "../../decks/cardDetails";
-import { COLORS, FONT, CLASS_ORDER, CLASS_LABELS, CLASS_COLORS, displayName } from "./theme";
+import { COLORS, FONT, CLASS_ORDER, DECK_CLASS_ORDER, CLASS_LABELS, CLASS_COLORS, displayName } from "./theme";
 import { classIcon } from "./icons";
 
 const sortedEntries = (map) =>
@@ -309,7 +309,7 @@ export default function DeckPanel({
                   </span>
                 )}
               >
-                {CLASS_ORDER.map((c) => (
+                {DECK_CLASS_ORDER.map((c) => (
                   <MenuItem key={c} value={c}>
                     <span style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
                       {classIcon(c) && <img src={classIcon(c)} alt="" style={{ height: 18 }} />}

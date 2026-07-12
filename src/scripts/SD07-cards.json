@@ -1,0 +1,439 @@
+[
+  {
+    "cardNo": "SD07-001EN",
+    "name": "Albert, Levin Stormsaber",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Levin",
+      "rarity": "Legendary",
+      "cardSet": "Starter Deck #7 “A New Battlefield”",
+      "cost": "4",
+      "attack": "4",
+      "defense": "5",
+      "effect": "Storm. [fanfare] Select another Levin follower on your field and give it [attack]+1. [act] [cost03]: Refresh this. Activate only if there are at least 10 [swordcraft] followers in your cemetery, and only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD07/sd07-001.png"
+  },
+  {
+    "cardNo": "SD07-002EN",
+    "name": "Albert, Thunderous Doom",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Levin / Cutthroat",
+      "rarity": "Legendary",
+      "cardSet": "Starter Deck #7 “A New Battlefield”",
+      "cost": "6",
+      "attack": "3",
+      "defense": "5",
+      "effect": "[evolve] [cost01]: Evolve this follower. Storm. [fanfare] Bury another Levin follower: Select an enemy follower on the field and destroy it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD07/sd07-002.png"
+  },
+  {
+    "cardNo": "SD07-003EN",
+    "name": "Albert, Thunderous Doom Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Commander / Levin / Cutthroat",
+      "rarity": "Legendary",
+      "cardSet": "Starter Deck #7 “A New Battlefield”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "6",
+      "effect": "Storm. Strike - Select up to 1 enemy follower on the field and destroy it. Give this follower [attack]+X/[defense]+X, where X equals the number of followers that were put from the field into the cemetery this turn. [act] [cost02]: Refresh this follower. Activate only if there are at least 10 Levin cards in your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD07/sd07-003.png"
+  },
+  {
+    "cardNo": "SD07-004EN",
+    "name": "Nahtnaught, Cursed Queen",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Wasteland / Commander",
+      "rarity": "Legendary",
+      "cardSet": "Starter Deck #7 “A New Battlefield”",
+      "cost": "4",
+      "attack": "3",
+      "defense": "5",
+      "effect": "[fanfare] Search your deck for a 1-cost [swordcraft] card, put it into your EX area, then shuffle. [act] [cost00]: Select an enemy follower on the field and engage it. It becomes Boxed until the end of its controller's next turn. Activate only once per turn. (Boxed followers lose all abilities and don't refresh during the start phase.)"
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD07/sd07-004.png"
+  },
+  {
+    "cardNo": "SD07-005EN",
+    "name": "Aether of the Warrior Wing",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Lightborne",
+      "rarity": "Legendary",
+      "cardSet": "Starter Deck #7 “A New Battlefield”",
+      "cost": "3",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[fanfare] Search your deck for a Commander or Officer card, reveal it, add it to your hand, then shuffle your deck. At the start of your end phase, if there are at least 7 [swordcraft] followers in your cemetery, give each follower on your field [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD07/sd07-005.png"
+  },
+  {
+    "cardNo": "SD07-006EN",
+    "name": "Albert, Levin Saber",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Levin",
+      "rarity": "Legendary",
+      "cardSet": "Starter Deck #7 “A New Battlefield”",
+      "cost": "4",
+      "attack": "3",
+      "defense": "5",
+      "effect": "[evolve][cost03]: Evolve this follower. Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD07/sd07-006.png"
+  },
+  {
+    "cardNo": "SD07-007EN",
+    "name": "Albert, Levin Saber Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Commander / Levin",
+      "rarity": "Legendary",
+      "cardSet": "Starter Deck #7 “A New Battlefield”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "5",
+      "effect": "Storm. On Evolve: For the rest of this turn, this follower doesn't take combat damage. Strike: Refresh this follower. Perform this ability only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD07/sd07-007.png"
+  },
+  {
+    "cardNo": "SD07-008EN",
+    "name": "Zirconia, Ironcrown Ward",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Noble",
+      "rarity": "Gold",
+      "cardSet": "Starter Deck #7 “A New Battlefield”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD07/sd07-008.png"
+  },
+  {
+    "cardNo": "SD07-009EN",
+    "name": "Zirconia, Ironcrown Ward Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Commander / Noble",
+      "rarity": "Gold",
+      "cardSet": "Starter Deck #7 “A New Battlefield”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Summon a Steelclad Knight and Shield Guardian token. On Super-Evolve - Select up to 2 Officer token followers on your field and give them [attack]+1/[defense]+1 and Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD07/sd07-009.png"
+  },
+  {
+    "cardNo": "SD07-010EN",
+    "name": "Tsubaki of the Demon Blade",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Assassin / Ninja",
+      "rarity": "Gold",
+      "cardSet": "Starter Deck #7 “A New Battlefield”",
+      "cost": "3",
+      "attack": "4",
+      "defense": "3",
+      "effect": "[fanfare] If there are at least 5 [swordcraft] followers in your cemetery, select an enemy follower on the field and destroy it. While there are at least 10 [swordcraft] followers in your cemetery, this follower has Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD07/sd07-010.png"
+  },
+  {
+    "cardNo": "SD07-011EN",
+    "name": "Levin Justice",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Commander / Levin",
+      "rarity": "Gold",
+      "cardSet": "Starter Deck #7 “A New Battlefield”",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "You may play this card for 2 more play points. ---------- Select an enemy follower on the field. Deal it 3 damage and search your deck for a Yurius, Levin Duke, summon it, then shuffle. If you played this card for 2 more play points, also search your deck for an Albert, Levin Saber, summon it, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD07/sd07-011.png"
+  },
+  {
+    "cardNo": "SD07-012EN",
+    "name": "Jeno, Levin Axeraider",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Beast / Levin",
+      "rarity": "Silver",
+      "cardSet": "Starter Deck #7 “A New Battlefield”",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "When this is discarded, look at the top card of your deck. If it's a Levin card, you may reveal it and add it to your hand. ---------- While there are at least 5 Levin cards in your cemetery, this has Storm."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD07/sd07-012.png"
+  },
+  {
+    "cardNo": "SD07-013EN",
+    "name": "Lounes, Levin Apprentice",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Levin",
+      "rarity": "Silver",
+      "cardSet": "Starter Deck #7 “A New Battlefield”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "[evolve] [cost03]: Evolve this follower. [fanfare] Discard a Levin card: Search your deck for a [swordcraft] follower with \"Albert\" in its name, reveal it, add it to your hand, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD07/sd07-013.png"
+  },
+  {
+    "cardNo": "SD07-014EN",
+    "name": "Lounes, Levin Apprentice Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Officer / Levin",
+      "rarity": "Silver",
+      "cardSet": "Starter Deck #7 “A New Battlefield”",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - You may summon a [swordcraft] follower with \"Albert\" in its name that costs X or less from your hand. X equals your max play points. During your turn, whenever a [swordcraft] follower with \"Albert\" in its name is put onto your field, [cost01]: Select an enemy follower on the field and deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD07/sd07-014.png"
+  },
+  {
+    "cardNo": "SD07-015EN",
+    "name": "Jeno, Fanged Tyrant",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Levin / Beast / Cutthroat",
+      "rarity": "Silver",
+      "cardSet": "Starter Deck #7 “A New Battlefield”",
+      "cost": "4",
+      "attack": "4",
+      "defense": "3",
+      "effect": "When playing this card, bury a Levin follower that costs 3 or less: This card costs 3 less to play. ---------- [fanfare] Select an enemy follower on the field and deal it 4 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD07/sd07-015.png"
+  },
+  {
+    "cardNo": "SD07-016EN",
+    "name": "Yurius, Levin Duke",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Noble / Levin",
+      "rarity": "Silver",
+      "cardSet": "Starter Deck #7 “A New Battlefield”",
+      "cost": "2",
+      "attack": "0",
+      "defense": "4",
+      "effect": "[q][act][engage]: Select an enemy follower on the field and deal it 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD07/sd07-016.png"
+  },
+  {
+    "cardNo": "SD07-017EN",
+    "name": "Mina, Levin Vice Leader",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Levin",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #7 “A New Battlefield”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Select an enemy follower on the field and, if there are at least 5 Levin cards in your cemetery, deal it 3 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD07/sd07-017.png"
+  },
+  {
+    "cardNo": "SD07-018EN",
+    "name": "Mina, Levin Vice Leader Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Commander / Levin",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #7 “A New Battlefield”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Look at the top 4 cards of your deck. You may reveal a Levin card from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD07/sd07-018.png"
+  },
+  {
+    "cardNo": "SD07-019EN",
+    "name": "Mona, Levin Mage",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Levin",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #7 “A New Battlefield”",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "Ward. [fanfare] Discard a Levin card: Draw a card. At the start of your end phase, if there are at least 5 Levin cards in your cemetery, give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD07/sd07-019.png"
+  },
+  {
+    "cardNo": "SD07-020EN",
+    "name": "Mena, Levin Duelist",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Officer / Levin",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #7 “A New Battlefield”",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "Rush. While there are at least 5 Levin cards in your cemetery, this follower has Assail and \"Strike - Give this follower [attack]+2/[defense]+1.\""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD07/sd07-020.png"
+  },
+  {
+    "cardNo": "SD07-021EN",
+    "name": "Meet the Levin Sisters!",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Commander / Officer / Levin",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #7 “A New Battlefield”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "You may play this card for 4 more play points. ---------- Search your deck for a Mina, Levin Vice Leader; Mona, Levin Mage; or Mena, Levin Duelist, reveal it, add it to your hand, then shuffle. If you played this card for 4 more play points, search for 1 of each instead, summon them, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD07/sd07-021.png"
+  },
+  {
+    "cardNo": "SD07-T01EN",
+    "name": "Steelclad Knight TOKEN",
+    "type": "token",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Token",
+      "trait": "Officer",
+      "rarity": "-",
+      "cardSet": "Starter Deck #7 “A New Battlefield”",
+      "cost": "2",
+      "attack": "2",
+      "defense": "2",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD07/sd07-t01.png"
+  },
+  {
+    "cardNo": "SD07-T02EN",
+    "name": "Shield Guardian TOKEN",
+    "type": "token",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Token",
+      "trait": "Officer",
+      "rarity": "-",
+      "cardSet": "Starter Deck #7 “A New Battlefield”",
+      "cost": "1",
+      "attack": "1",
+      "defense": "1",
+      "effect": "Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD07/sd07-t02.png"
+  }
+]

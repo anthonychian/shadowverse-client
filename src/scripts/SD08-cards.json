@@ -1,0 +1,401 @@
+[
+  {
+    "cardNo": "SD08-001EN",
+    "name": "Forte, Blackwing Dragoon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Legendary",
+      "cardSet": "Starter Deck #8 “Unquenchable Flame”",
+      "cost": "5",
+      "attack": "6",
+      "defense": "5",
+      "effect": "Storm. Intimidate. [fanfare] If you have 10 max play points, give this [attack]+1 and Aura."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD08/sd08-001.png"
+  },
+  {
+    "cardNo": "SD08-002EN",
+    "name": "Forte, Sovereign Supreme",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart / Cutthroat / Draconic Duelist",
+      "rarity": "Legendary",
+      "cardSet": "Starter Deck #8 “Unquenchable Flame”",
+      "cost": "10",
+      "attack": "5",
+      "defense": "9",
+      "effect": "Each Dragon on your field has Storm and Drain. At the start of your end phase, select up to 2 enemy followers on the field. During their controller's next turn, they can't attack enemies. [act] [cost00]: Summon a Dragon token. Activate only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD08/sd08-002.png"
+  },
+  {
+    "cardNo": "SD08-003EN",
+    "name": "XI. Erntz, Justice",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Arcana / Wyrmkin",
+      "rarity": "Legendary",
+      "cardSet": "Starter Deck #8 “Unquenchable Flame”",
+      "cost": "8",
+      "attack": "8",
+      "defense": "8",
+      "effect": "Ward. [fanfare] Put the top card of your deck into your EX area. If you put a card that costs 5 or more into your EX area, evolve this follower or return it to its owner's hand. When this card leaves the field, give your leader [defense]+8."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD08/sd08-003.png"
+  },
+  {
+    "cardNo": "SD08-004EN",
+    "name": "XI. Erntz, Justice Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Arcana / Wyrmkin",
+      "rarity": "Legendary",
+      "cardSet": "Starter Deck #8 “Unquenchable Flame”",
+      "cost": "-",
+      "attack": "11",
+      "defense": "11",
+      "effect": "Storm. This follower ignores Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD08/sd08-004.png"
+  },
+  {
+    "cardNo": "SD08-005EN",
+    "name": "Jerva, Wyrm Transcendent",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Legendary",
+      "cardSet": "Starter Deck #8 “Unquenchable Flame”",
+      "cost": "9",
+      "attack": "6",
+      "defense": "6",
+      "effect": "When this card is discarded, you may put it into your EX area. ---------- Ward. [fanfare] Deal 6 damage to each other follower on the field and each enemy leader. [act] [cost03], bury this card from your EX area: Select an enemy follower on the field and deal it 6 damage. Activate only if Overflow is active for you."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD08/sd08-005.png"
+  },
+  {
+    "cardNo": "SD08-006EN",
+    "name": "XXI. Zelgenea, The World",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "Arcana / Deity",
+      "rarity": "Legendary",
+      "cardSet": "Starter Deck #8 “Unquenchable Flame”",
+      "cost": "5",
+      "attack": "5",
+      "defense": "5",
+      "effect": "[fanfare] Select an enemy follower on the field. If there are no other followers on your field, destroy it and draw a card. [fanfare] If your leader's defense is 10 or less, give it [defense]+5. [act] [cost10], banish this card from your cemetery: You may put a XXI. Zelgenea, O Great World from your evolve deck into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD08/sd08-006.png"
+  },
+  {
+    "cardNo": "SD08-007EN",
+    "name": "Liu Feng, Goldennote Ward",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart / Dragonewt",
+      "rarity": "Gold",
+      "cardSet": "Starter Deck #8 “Unquenchable Flame”",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD08/sd08-007.png"
+  },
+  {
+    "cardNo": "SD08-008EN",
+    "name": "Liu Feng, Goldennote Ward Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonheart / Dragonewt",
+      "rarity": "Gold",
+      "cardSet": "Starter Deck #8 “Unquenchable Flame”",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 3 damage. On Super-Evolve - Increase your max play points by 1. Give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD08/sd08-008.png"
+  },
+  {
+    "cardNo": "SD08-009EN",
+    "name": "Dragon-Devouring Dread",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin / Cutthroat",
+      "rarity": "Gold",
+      "cardSet": "Starter Deck #8 “Unquenchable Flame”",
+      "cost": "9",
+      "attack": "8",
+      "defense": "8",
+      "effect": "[fanfare] For each [dragoncraft] card that costs 7 or more in your cemetery, select up to 1 enemy follower on the field and banish it. [act] [cost03], discard this card and a [dragoncraft] card that costs 7 or more: Increase your max play points by 1. Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD08/sd08-009.png"
+  },
+  {
+    "cardNo": "SD08-010EN",
+    "name": "Dragon Oracle",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Wyrmkin",
+      "rarity": "Gold",
+      "cardSet": "Starter Deck #8 “Unquenchable Flame”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Choose one of the following effects. (1) Increase your maximum play points by 1. (2) Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD08/sd08-010.png"
+  },
+  {
+    "cardNo": "SD08-011EN",
+    "name": "Zahar, Stormwave Dragoon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart / Marine",
+      "rarity": "Silver",
+      "cardSet": "Starter Deck #8 “Unquenchable Flame”",
+      "cost": "8",
+      "attack": "4",
+      "defense": "4",
+      "effect": "When this is discarded, look at the top 2 cards of your deck. You may reveal a [dragoncraft] card that costs 7 or more from among them and add it to your hand. Put the rest on the bottom of your deck in any order. ---------- [fanfare] Look at the top 3 cards of your deck. You may summon a [dragoncraft] follower not named Zahar, Stormwave Dragoon from among them. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD08/sd08-011.png"
+  },
+  {
+    "cardNo": "SD08-012EN",
+    "name": "Azureflame Dragonewt",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonewt",
+      "rarity": "Silver",
+      "cardSet": "Starter Deck #8 “Unquenchable Flame”",
+      "cost": "7",
+      "attack": "6",
+      "defense": "6",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Select an enemy follower on the field and deal it 6 damage. [act] [cost01], discard this card and a [dragoncraft] card that costs 7 or more: Select an enemy follower on the field and deal it 4 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD08/sd08-012.png"
+  },
+  {
+    "cardNo": "SD08-013EN",
+    "name": "Azureflame Dragonewt Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Dragonewt",
+      "rarity": "Silver",
+      "cardSet": "Starter Deck #8 “Unquenchable Flame”",
+      "cost": "-",
+      "attack": "7",
+      "defense": "7",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 6 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD08/sd08-013.png"
+  },
+  {
+    "cardNo": "SD08-014EN",
+    "name": "Roy, Dragoncleaver",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Draconic Duelist / Cutthroat",
+      "rarity": "Silver",
+      "cardSet": "Starter Deck #8 “Unquenchable Flame”",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this follower. [fanfare] Search your deck for a 2-cost [dragoncraft] spell, reveal it, add it to your hand, then shuffle your deck."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD08/sd08-014.png"
+  },
+  {
+    "cardNo": "SD08-015EN",
+    "name": "Roy, Dragoncleaver Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Draconic Duelist / Cutthroat",
+      "rarity": "Silver",
+      "cardSet": "Starter Deck #8 “Unquenchable Flame”",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage. If it's a Wyrmkin follower, deal 5 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD08/sd08-015.png"
+  },
+  {
+    "cardNo": "SD08-016EN",
+    "name": "Draconic Call",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Wyrmkin",
+      "rarity": "Silver",
+      "cardSet": "Starter Deck #8 “Unquenchable Flame”",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Look at the top 5 cards of your deck. From among them, you may reveal up to 2 [dragoncraft] cards that cost 7 or more and add them to your hand. Put the rest on the bottom of your deck in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD08/sd08-016.png"
+  },
+  {
+    "cardNo": "SD08-017EN",
+    "name": "Orbed Cancer",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Marine",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #8 “Unquenchable Flame”",
+      "cost": "7",
+      "attack": "6",
+      "defense": "7",
+      "effect": "[fanfare] Draw 3 cards. [act] [cost01], discard this and a [dragoncraft] card that costs 7 or more: Draw 2 cards."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD08/sd08-017.png"
+  },
+  {
+    "cardNo": "SD08-018EN",
+    "name": "Pumpkin Dragon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #8 “Unquenchable Flame”",
+      "cost": "8",
+      "attack": "6",
+      "defense": "6",
+      "effect": "Ward. [fanfare] Give your leader [defense]+5. Draw 2 cards. [act] [cost02], discard this card and a [dragoncraft] card that costs 7 or more: Give your leader [defense]+5."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD08/sd08-018.png"
+  },
+  {
+    "cardNo": "SD08-019EN",
+    "name": "Blazing Breath",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #8 “Unquenchable Flame”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field and deal it 2 damage. If Overflow is active for you, deal 4 damage instead."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD08/sd08-019.png"
+  },
+  {
+    "cardNo": "SD08-020EN",
+    "name": "Dragon's Nest",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Amulet",
+      "trait": "Wyrmkin",
+      "rarity": "Bronze",
+      "cardSet": "Starter Deck #8 “Unquenchable Flame”",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[act][engage], put this card into its owner's cemetery: Give your leader [defense]+2. If Overflow is active for you, draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD08/sd08-020.png"
+  },
+  {
+    "cardNo": "SD08-T01EN",
+    "name": "Dragon TOKEN",
+    "type": "token",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Token",
+      "trait": "Wyrmkin",
+      "rarity": "-",
+      "cardSet": "Starter Deck #8 “Unquenchable Flame”",
+      "cost": "4",
+      "attack": "5",
+      "defense": "5",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/SD08/sd08-t01.png"
+  }
+]
