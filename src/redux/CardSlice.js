@@ -1997,9 +1997,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Discarded ${card} (#${
-            cardIndex + 1
-          }) from hand`,
+          text: `[${date}] (Me): Discarded ${card} from hand`,
           card,
         },
       ];
@@ -2011,7 +2009,7 @@ export const CardSlice = createSlice({
           {
             type: "log",
             data: {
-              text: `Discarded ${card} (#${cardIndex + 1}) from hand`,
+              text: `Discarded ${card} from hand`,
               card,
             },
           },
