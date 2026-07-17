@@ -73,6 +73,7 @@ export default function Game(callback) {
     useState(false);
   const reduxCurrentCard = useSelector((state) => state.card.currentCard);
   const uiChromeHidden = useSelector((state) => state.gameState.uiChromeHidden);
+  const chatExpanded = useSelector((state) => state.gameState.chatExpanded);
   const reduxMyArt = useSelector((state) => state.card.myArt);
   const reduxEnemyArt = useSelector((state) => state.card.enemyArt);
   // The zoomed card can be either player's; my own choices take precedence.
@@ -110,7 +111,9 @@ export default function Game(callback) {
   const [rightFitScale, setRightFitScale] = useState(1);
 
   useLayoutEffect(() => {
-    if (uiChromeHidden) return undefined;
+    // Expanded-log view swaps the panels for compact bars laid out by flex —
+    // nothing to measure (the refs aren't rendered).
+    if (uiChromeHidden || chatExpanded) return undefined;
     const measure = () => {
       const eEl = enemyUiRef.current;
       const pEl = playerUiRef.current;
@@ -135,7 +138,7 @@ export default function Game(callback) {
     measure();
     window.addEventListener("resize", measure);
     return () => window.removeEventListener("resize", measure);
-  }, [uiChromeHidden, selectedOption]);
+  }, [uiChromeHidden, chatExpanded, selectedOption]);
 
   const rightUiScale = Math.min(sideScale, rightFitScale);
 
@@ -252,7 +255,18 @@ export default function Game(callback) {
       {!uiChromeHidden && <ChoiceModal setHovering={setHovering} />}
       {!uiChromeHidden && <AutomatedControls />}
 
-      {!uiChromeHidden && (
+      {!uiChromeHidden && chatExpanded && (
+        /* Expanded-log view: minimal stat bars — opponent pinned to the top,
+           player to the bottom — with the chat/game log filling everything in
+           between. No leader art, no fit-scaling (the bars are small). */
+        <div className={"rightSideCanvas expandedLog"}>
+          <EnemyUI compact />
+          <ChatUI expanded setHovering={setHovering} />
+          <PlayerUI compact name={selectedOption} />
+        </div>
+      )}
+
+      {!uiChromeHidden && !chatExpanded && (
         <div
           className={"rightSideCanvas"}
           ref={rightColRef}

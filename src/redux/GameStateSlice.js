@@ -14,6 +14,12 @@ export const GameStateSlice = createSlice({
     selectedAttackerId: null,
     lastSeq: 0,
     uiChromeHidden: false,
+    // Expanded game-log view: the chat/log fills the right column and the
+    // player/enemy stat panels collapse to minimal bars. Persisted per-tab so
+    // the preference survives reloads/reconnects (same pattern as gameMode).
+    chatExpanded:
+      typeof sessionStorage !== "undefined" &&
+      sessionStorage.getItem("sve_chat_expanded") === "1",
   },
   reducers: {
     setGameMode: (state, action) => {
@@ -48,6 +54,12 @@ export const GameStateSlice = createSlice({
     setUiChromeHidden: (state, action) => {
       state.uiChromeHidden = action.payload;
     },
+    setChatExpanded: (state, action) => {
+      state.chatExpanded = action.payload;
+      if (typeof sessionStorage !== "undefined") {
+        sessionStorage.setItem("sve_chat_expanded", action.payload ? "1" : "0");
+      }
+    },
     resetEngine: (state) => {
       state.engineView = null;
       state.pendingChoices = null;
@@ -69,6 +81,7 @@ export const {
   setInstanceMap,
   setSelectedAttackerId,
   setUiChromeHidden,
+  setChatExpanded,
   resetEngine,
 } =
   GameStateSlice.actions;

@@ -91,6 +91,27 @@
   }
 }
 
+/* --- Compact bars (expanded-log view): no leader art, just the stats --- */
+.leaderPanel.compact {
+  width: 100%;
+  gap: 4px;
+}
+.leaderPanel.compact .statRibbon {
+  margin-top: 0;
+  flex-wrap: wrap;
+}
+.compactLabel {
+  font-family: "Share Tech Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  color: #7da7bd;
+}
+/* Wifi/desync badge rendered inline in the compact stat bar instead of pinned
+   to the leader stage's corner. */
+.wifiBadge.wifiInline {
+  position: static;
+}
+
 /* --- Stat ribbon (secondary focus) --- */
 .statRibbon {
   display: flex;

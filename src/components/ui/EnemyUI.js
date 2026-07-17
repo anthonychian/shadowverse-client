@@ -35,7 +35,7 @@ const StyledRating = styled(Rating)({
   },
 });
 
-export default function EnemyUI() {
+export default function EnemyUI({ compact = false }) {
   const reduxCurrentEnemyPlayPoints = useSelector(
     (state) => state.card.enemyPlayPoints.available,
   );
@@ -208,9 +208,10 @@ export default function EnemyUI() {
     }
   };
 
-  return (
-    <div className="leaderPanel" style={{ position: "relative" }}>
-      <HideUiButton sx={{ position: "absolute", top: 0, right: 0, zIndex: 2 }} />
+  // Viewport-anchored status toasts ("Viewing Deck" etc.) — shown in both the
+  // full and compact layouts.
+  const snackbars = (
+    <>
       <Snackbar
         anchorOrigin={{ vertical: "top", horizontal: "center" }}
         open={reduxEnemyViewingDeck}
@@ -355,6 +356,65 @@ export default function EnemyUI() {
           message={"Opponent left the game"}
         />
       </Snackbar>
+    </>
+  );
+
+  // HP, play points, EP, super-evo grouped together (read-only) — the full
+  // panel's secondary row, and the whole of the compact (expanded-log) bar.
+  const statRibbon = (
+    <div className="statRibbon">
+      <div
+        className="hpBlock"
+        style={{ background: getColorFromLeader(reduxEnemyLeader) }}
+      >
+        <span className="hpValue">{reduxEnemyHealth}</span>
+      </div>
+
+      <div className="ppEpStack">
+        <div className="ppPill">
+          {reduxCurrentEnemyPlayPoints} / {reduxMaxEnemyPlayPoints}
+        </div>
+        <div className="epRow">
+          <span className="epLabel">EP</span>
+          <StyledRating
+            name="customized-color"
+            value={reduxEnemyEvoPoints}
+            readOnly={true}
+            max={3}
+            icon={<FiberManualRecordIcon fontSize="inherit" />}
+            emptyIcon={<FiberManualRecordOutlinedIcon fontSize="inherit" />}
+          />
+        </div>
+      </div>
+
+      <div className="evoBlock evoStatic">
+        <img src={reduxEnemySuperEvo ? sepOn : sepOff} alt="super evo" />
+      </div>
+
+      {compact && !reduxEnemyOnlineStatus && (
+        <div className="wifiBadge wifiOff wifiInline" title="Disconnected">
+          <WifiOffIcon sx={{ height: 22, width: 22 }} />
+          <span className="wifiBadgeLabel">Disconnected</span>
+        </div>
+      )}
+    </div>
+  );
+
+  // Compact bar for the expanded-log view: no leader art or class badge.
+  if (compact) {
+    return (
+      <div className="leaderPanel compact">
+        {snackbars}
+        <span className="compactLabel">OPPONENT</span>
+        {statRibbon}
+      </div>
+    );
+  }
+
+  return (
+    <div className="leaderPanel" style={{ position: "relative" }}>
+      <HideUiButton sx={{ position: "absolute", top: 0, right: 0, zIndex: 2 }} />
+      {snackbars}
 
       {/* Hero: the animated leader with its class logo (and the wifi badge). */}
       <div className="leaderStageWrap">
@@ -382,35 +442,7 @@ export default function EnemyUI() {
       </div>
 
       {/* Secondary: HP, play points, EP, super-evo grouped together (read-only). */}
-      <div className="statRibbon">
-        <div
-          className="hpBlock"
-          style={{ background: getColorFromLeader(reduxEnemyLeader) }}
-        >
-          <span className="hpValue">{reduxEnemyHealth}</span>
-        </div>
-
-        <div className="ppEpStack">
-          <div className="ppPill">
-            {reduxCurrentEnemyPlayPoints} / {reduxMaxEnemyPlayPoints}
-          </div>
-          <div className="epRow">
-            <span className="epLabel">EP</span>
-            <StyledRating
-              name="customized-color"
-              value={reduxEnemyEvoPoints}
-              readOnly={true}
-              max={3}
-              icon={<FiberManualRecordIcon fontSize="inherit" />}
-              emptyIcon={<FiberManualRecordOutlinedIcon fontSize="inherit" />}
-            />
-          </div>
-        </div>
-
-        <div className="evoBlock evoStatic">
-          <img src={reduxEnemySuperEvo ? sepOn : sepOff} alt="super evo" />
-        </div>
-      </div>
+      {statRibbon}
     </div>
   );
 }

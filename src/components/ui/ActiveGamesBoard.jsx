@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "@mui/material/Button";
 
 import forest from "../../assets/logo/forest.png";
@@ -117,6 +117,38 @@ export default function ActiveGamesBoard({
     (r) => !myRoom || r.roomId !== myRoom.roomId,
   );
 
+  // Copy-room-code feedback: the Copy button briefly reads "Copied!".
+  const [copied, setCopied] = useState(false);
+  const copyRoomCode = () => {
+    if (!myRoom) return;
+    const code = String(myRoom.roomId);
+    // Textarea fallback for contexts where the async Clipboard API is
+    // unavailable (e.g. plain-http hosts).
+    const fallbackCopy = () => {
+      const ta = document.createElement("textarea");
+      ta.value = code;
+      ta.style.position = "fixed";
+      ta.style.opacity = "0";
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand("copy");
+      document.body.removeChild(ta);
+    };
+    const done = () => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    };
+    if (navigator.clipboard?.writeText) {
+      navigator.clipboard.writeText(code).then(done, () => {
+        fallbackCopy();
+        done();
+      });
+    } else {
+      fallbackCopy();
+      done();
+    }
+  };
+
   return (
     <div
       style={{
@@ -227,6 +259,28 @@ export default function ActiveGamesBoard({
               players={1}
               right={
                 <div style={{ display: "flex", alignItems: "center", gap: "0.4em" }}>
+                  <Button
+                    size="small"
+                    onClick={copyRoomCode}
+                    sx={{
+                      minWidth: 0,
+                      fontFamily: "Share Tech Mono, monospace",
+                      fontSize: 11,
+                      textTransform: "none",
+                      color: copied ? "#7ee2a8" : "#48abe0",
+                      border: "1px solid",
+                      borderColor: copied
+                        ? "rgba(126, 226, 168, 0.6)"
+                        : "rgba(72, 171, 224, 0.6)",
+                      borderRadius: "6px",
+                      px: 1,
+                      "&:hover": {
+                        backgroundColor: "rgba(72, 171, 224, 0.15)",
+                      },
+                    }}
+                  >
+                    {copied ? "Copied!" : "Copy"}
+                  </Button>
                   <Button
                     size="small"
                     onClick={() => onTogglePrivacy?.(!myRoom.isPrivate)}

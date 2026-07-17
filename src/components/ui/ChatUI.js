@@ -50,7 +50,11 @@ const parseMessage = (raw) => {
   return { time: m[1], text: m[3], mine: m[2] === "Me" };
 };
 
-export default function ChatUI({ scale = 1, setHovering }) {
+// `expanded`: the expanded-log view. The panel renders in-flow and stretches to
+// fill the right column (Game.js places it between the compact enemy/player
+// bars) instead of the fixed-width panel anchored beside the Field. Minimize is
+// disabled there — the whole point of the mode is a large, always-open log.
+export default function ChatUI({ scale = 1, setHovering, expanded = false }) {
   const dispatch = useDispatch();
   const [chatMessage, setChatMessage] = useState("");
   const [minimized, setMinimized] = useState(false);
@@ -117,6 +121,8 @@ export default function ChatUI({ scale = 1, setHovering }) {
   // container left (negative, i.e. shifted left into the gap). Re-measured on
   // resize, on scale changes, and when the panel re-appears after being expanded.
   useLayoutEffect(() => {
+    // Expanded mode is laid out by flex — nothing to measure or anchor.
+    if (expanded) return undefined;
     const measure = () => {
       const panel = panelRef.current;
       const container = panel && panel.parentElement;
@@ -146,7 +152,7 @@ export default function ChatUI({ scale = 1, setHovering }) {
     window.addEventListener("resize", measure);
     return () => window.removeEventListener("resize", measure);
     // activeTab: the composer is hidden on the log tab, changing panel height.
-  }, [scale, minimized, activeTab]);
+  }, [scale, minimized, activeTab, expanded]);
 
   // The scale the panel actually renders at: the side-column scale, shrunk
   // only as much as needed so the panel stays clear of EnemyUI/PlayerUI and
@@ -192,7 +198,8 @@ export default function ChatUI({ scale = 1, setHovering }) {
     <div
       ref={innerRef}
       style={{
-        width: PANEL_WIDTH,
+        width: expanded ? "100%" : PANEL_WIDTH,
+        ...(expanded ? { flex: 1, minHeight: 0 } : {}),
         display: "flex",
         flexDirection: "column",
         backgroundColor: PANEL_BG,
@@ -217,14 +224,16 @@ export default function ChatUI({ scale = 1, setHovering }) {
             "linear-gradient(180deg, rgba(72,171,224,0.16) 0%, rgba(72,171,224,0) 100%)",
         }}
       >
-        <IconButton
-          size="small"
-          aria-label="minimize chat"
-          onClick={() => setMinimized(true)}
-          sx={{ color: META, "&:hover": { color: "#fff" } }}
-        >
-          <MinimizeIcon fontSize="small" />
-        </IconButton>
+        {!expanded && (
+          <IconButton
+            size="small"
+            aria-label="minimize chat"
+            onClick={() => setMinimized(true)}
+            sx={{ color: META, "&:hover": { color: "#fff" } }}
+          >
+            <MinimizeIcon fontSize="small" />
+          </IconButton>
+        )}
 
         {/* Chat / Game Log tabs */}
         {[
@@ -265,9 +274,13 @@ export default function ChatUI({ scale = 1, setHovering }) {
       <div
         ref={logRef}
         style={{
-          // The log tab has no composer below, so give the list that space
-          // back — keeps the overall panel height about the same on both tabs.
-          height: activeTab === "log" ? "660px" : "600px",
+          // Expanded mode: fill whatever height the flex column grants the
+          // panel. Normal mode: fixed heights — the log tab has no composer
+          // below, so give the list that space back (keeps the overall panel
+          // height about the same on both tabs).
+          ...(expanded
+            ? { flex: 1, minHeight: 0 }
+            : { height: activeTab === "log" ? "660px" : "600px" }),
           overflowY: "auto",
           display: "flex",
           flexDirection: "column",
@@ -313,8 +326,8 @@ export default function ChatUI({ scale = 1, setHovering }) {
                     }}
                     onMouseLeave={() => setHovering?.(false)}
                     style={{
-                      width: 26,
-                      height: 36,
+                      width: expanded ? 44 : 26,
+                      height: expanded ? 61 : 36,
                       objectFit: "cover",
                       borderRadius: 4,
                       border: "1px solid rgba(255, 255, 255, 0.2)",
@@ -335,7 +348,7 @@ export default function ChatUI({ scale = 1, setHovering }) {
                   <span
                     style={{
                       fontFamily: MONO,
-                      fontSize: 10.5,
+                      fontSize: expanded ? 12.5 : 10.5,
                       letterSpacing: 0.4,
                     }}
                   >
@@ -348,7 +361,7 @@ export default function ChatUI({ scale = 1, setHovering }) {
                     style={{
                       color: "#eaf6ff",
                       fontFamily: SERIF,
-                      fontSize: 13,
+                      fontSize: expanded ? 16 : 13,
                       lineHeight: 1.35,
                       wordBreak: "break-word",
                     }}
@@ -402,7 +415,7 @@ export default function ChatUI({ scale = 1, setHovering }) {
                     border: `1px solid ${side.border}`,
                     color: "#eaf6ff",
                     fontFamily: SERIF,
-                    fontSize: 14,
+                    fontSize: expanded ? 17 : 14,
                     lineHeight: 1.35,
                     whiteSpace: "pre-line",
                     wordBreak: "break-word",
@@ -415,7 +428,7 @@ export default function ChatUI({ scale = 1, setHovering }) {
                     marginTop: 2,
                     padding: "0 0.25em",
                     fontFamily: MONO,
-                    fontSize: 10.5,
+                    fontSize: expanded ? 12.5 : 10.5,
                     letterSpacing: 0.4,
                   }}
                 >
@@ -460,7 +473,7 @@ export default function ChatUI({ scale = 1, setHovering }) {
               border: "1px solid rgba(255, 255, 255, 0.12)",
               color: "#eaf6ff",
               fontFamily: SERIF,
-              fontSize: 14,
+              fontSize: expanded ? 16 : 14,
               transition: "border-color 120ms ease, box-shadow 120ms ease",
               "&.Mui-focused": {
                 border: `1px solid ${ACCENT}`,
@@ -492,6 +505,25 @@ export default function ChatUI({ scale = 1, setHovering }) {
       )}
     </div>
   );
+
+  // Expanded-log view: just the panel, in-flow, stretching to fill the column
+  // between the compact enemy/player bars. No anchored wrapper, no footprint
+  // row (the Hide-UI control stays available in the top-left stack).
+  if (expanded) {
+    return (
+      <div
+        style={{
+          flex: 1,
+          minHeight: 0,
+          width: "100%",
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        {panelInner}
+      </div>
+    );
+  }
 
   return (
     <React.Fragment>

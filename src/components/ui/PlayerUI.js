@@ -45,7 +45,7 @@ const StyledRating = styled(Rating)({
   },
 });
 
-export default function PlayerUI({ name }) {
+export default function PlayerUI({ name, compact = false }) {
   const dispatch = useDispatch();
   const [ep, setEP] = useState(0);
   const [superEvo, setSEP] = useState(false);
@@ -292,6 +292,97 @@ export default function PlayerUI({ name }) {
     }
   };
 
+  // Wifi/desync status; `inline` renders it in the flow of the compact stat bar
+  // instead of pinned to the leader stage's corner.
+  const wifiBadge = (inline) => {
+    const inlineClass = inline ? " wifiInline" : "";
+    if (!reduxSelfOnlineStatus) {
+      const reconnecting = reduxSelfConnectionState === "reconnecting";
+      const label = reconnecting ? "Reconnecting" : "Disconnected";
+      return (
+        <div className={`wifiBadge wifiOff${inlineClass}`} title={label}>
+          <WifiOffIcon sx={{ height: 22, width: 22 }} />
+          <span className="wifiBadgeLabel">{label}</span>
+        </div>
+      );
+    }
+    if (reduxSelfResyncing) {
+      // Still connected, but repairing a detected desync (sequence gap).
+      return (
+        <div className={`wifiBadge wifiResync${inlineClass}`} title="Resyncing…">
+          <SyncIcon className="wifiSpin" sx={{ height: 22, width: 22 }} />
+          <span className="wifiBadgeLabel">Resyncing</span>
+        </div>
+      );
+    }
+    return null;
+  };
+
+  // HP, play points, EP, super-evo grouped together — the full panel's
+  // secondary row, and the whole of the compact (expanded-log) bar.
+  const statRibbon = (
+    <div className="statRibbon">
+      <div className="hpBlock" style={{ background: getColorFromLeader(name) }}>
+        <IconButton
+          size="small"
+          className="hpAdjust decButton"
+          onClick={() => decrementPlayerPoints()}
+        >
+          <RemoveIcon sx={{ color: "white", width: "26px", height: "26px" }} />
+        </IconButton>
+        <span className="hpValue">{playerHealth}</span>
+        <IconButton
+          size="small"
+          className="hpAdjust incButton"
+          onClick={() => incrementPlayerPoints()}
+        >
+          <AddIcon sx={{ color: "white", width: "26px", height: "26px" }} />
+        </IconButton>
+      </div>
+
+      <div className="ppEpStack">
+        <div className="ppPill">
+          {reduxCurrentPlayPoints} / {reduxMaxPlayPoints}
+        </div>
+        <div className="epRow">
+          <span className="epLabel">EP</span>
+          <StyledRating
+            name="customized-color"
+            value={ep}
+            max={3}
+            onChange={(event, newValue) => {
+              handleEP(newValue);
+            }}
+            icon={<FiberManualRecordIcon fontSize="inherit" />}
+            emptyIcon={<FiberManualRecordOutlinedIcon fontSize="inherit" />}
+          />
+        </div>
+      </div>
+
+      <div
+        className="evoBlock"
+        onClick={automated ? undefined : () => handleSuperEvo()}
+        title="Super Evolve"
+        style={automated ? { cursor: "default" } : undefined}
+      >
+        <img src={sepLit ? sepOn : sepOff} alt="super evo" />
+      </div>
+
+      {compact && wifiBadge(true)}
+    </div>
+  );
+
+  // Compact bar for the expanded-log view: no leader art or class badge —
+  // just the stats (the Hide-UI control stays available in the top-left stack).
+  if (compact) {
+    return (
+      <div className="leaderPanel compact">
+        <span className="compactLabel">YOU</span>
+        {statRibbon}
+      </div>
+    );
+  }
+
   return (
     <div className="leaderPanel" style={{ position: "relative" }}>
       <HideUiButton sx={{ position: "absolute", top: 0, right: 0, zIndex: 2 }} />
@@ -309,74 +400,11 @@ export default function PlayerUI({ name }) {
           <img src={getClassFromLeader(name)} alt={name} />
         </div>
 
-        {!reduxSelfOnlineStatus ? (
-          (() => {
-            const reconnecting = reduxSelfConnectionState === "reconnecting";
-            const label = reconnecting ? "Reconnecting" : "Disconnected";
-            return (
-              <div className="wifiBadge wifiOff" title={label}>
-                <WifiOffIcon sx={{ height: 22, width: 22 }} />
-                <span className="wifiBadgeLabel">{label}</span>
-              </div>
-            );
-          })()
-        ) : reduxSelfResyncing ? (
-          // Still connected, but repairing a detected desync (sequence gap).
-          <div className="wifiBadge wifiResync" title="Resyncing…">
-            <SyncIcon className="wifiSpin" sx={{ height: 22, width: 22 }} />
-            <span className="wifiBadgeLabel">Resyncing</span>
-          </div>
-        ) : null}
+        {wifiBadge(false)}
       </div>
 
       {/* Secondary: HP, play points, EP, super-evo grouped together. */}
-      <div className="statRibbon">
-        <div className="hpBlock" style={{ background: getColorFromLeader(name) }}>
-          <IconButton
-            size="small"
-            className="hpAdjust decButton"
-            onClick={() => decrementPlayerPoints()}
-          >
-            <RemoveIcon sx={{ color: "white", width: "26px", height: "26px" }} />
-          </IconButton>
-          <span className="hpValue">{playerHealth}</span>
-          <IconButton
-            size="small"
-            className="hpAdjust incButton"
-            onClick={() => incrementPlayerPoints()}
-          >
-            <AddIcon sx={{ color: "white", width: "26px", height: "26px" }} />
-          </IconButton>
-        </div>
-
-        <div className="ppEpStack">
-          <div className="ppPill">
-            {reduxCurrentPlayPoints} / {reduxMaxPlayPoints}
-          </div>
-          <div className="epRow">
-            <span className="epLabel">EP</span>
-            <StyledRating
-              name="customized-color"
-              value={ep}
-              max={3}
-              onChange={(event, newValue) => {
-                handleEP(newValue);
-              }}
-              icon={<FiberManualRecordIcon fontSize="inherit" />}
-              emptyIcon={<FiberManualRecordOutlinedIcon fontSize="inherit" />}
-            />
-          </div>
-        </div>
-
-        <div
-          className="evoBlock"
-          onClick={automated ? undefined : () => handleSuperEvo()}
-          title="Super Evolve"
-          style={automated ? { cursor: "default" } : undefined}
-        >
-          <img src={sepLit ? sepOn : sepOff} alt="super evo" />
-        </div>
-      </div>
+      {statRibbon}
     </div>
   );
 }

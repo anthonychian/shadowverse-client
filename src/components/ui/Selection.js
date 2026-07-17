@@ -48,7 +48,6 @@ import tidalgunnerCardBack from "../../assets/cardbacks/tidalgunner.png";
 import viridiaCardBack from "../../assets/cardbacks/viridia.png";
 import wilbertCardBack from "../../assets/cardbacks/wilbert.png";
 import { SVGDB_LEADER_PORTRAIT } from "./leaderIds";
-import { artImage, artThumb } from "../../decks/getCards";
 
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
@@ -72,14 +71,14 @@ import {
   DialogContent,
   DialogContentText,
   DialogTitle,
-  Typography,
 } from "@mui/material";
 
 import MenuIcon from "@mui/icons-material/Menu";
-import ChatIcon from "@mui/icons-material/Chat";
 import ExitToAppIcon from "@mui/icons-material/ExitToApp";
 import ReplayIcon from "@mui/icons-material/Replay";
 import FlagIcon from "@mui/icons-material/Flag";
+import OpenInFullIcon from "@mui/icons-material/OpenInFull";
+import CloseFullscreenIcon from "@mui/icons-material/CloseFullscreen";
 import { Stack } from "@mui/material";
 import { useEngineSync } from "../hooks/useEngineSync";
 import { useDispatch, useSelector } from "react-redux";
@@ -91,15 +90,11 @@ import {
   exitGame,
   setRematchStatus,
 } from "../../redux/CardSlice";
+import { setChatExpanded } from "../../redux/GameStateSlice";
 import HideUiButton from "./HideUiButton";
 
 export default function Selection({ setSelectedOption }) {
   // redux state
-  const reduxChatLog = useSelector((state) => state.card.gameLog);
-  const reduxMyArt = useSelector((state) => state.card.myArt);
-  const reduxEnemyArt = useSelector((state) => state.card.enemyArt);
-  // Log entries can reference either player's cards; mine take precedence.
-  const logArt = { ...reduxEnemyArt, ...reduxMyArt };
   const reduxEnemyRematchStatus = useSelector(
     (state) => state.card.enemyRematchStatus,
   );
@@ -120,13 +115,12 @@ export default function Selection({ setSelectedOption }) {
   const handleDrawerOpen = () => setDrawerOpen(true);
   const handleDrawerClose = () => setDrawerOpen(false);
 
-  const [openDialog, setOpenDialog] = useState(false);
-
   const [rematchOpenDialog, setRematchOpenDialog] = useState(false);
 
   // const [rematchNotify, setRematchNotify] = useState(false);
   const reduxRoom = useSelector((state) => state.card.room);
   const gameMode = useSelector((state) => state.gameState.gameMode);
+  const chatExpanded = useSelector((state) => state.gameState.chatExpanded);
   const legalActions = useSelector((state) => state.gameState.legalActions) ?? [];
   const leaderActive = useSelector((state) => state.card.leaderActive);
   const { sendAction } = useEngineSync();
@@ -179,14 +173,6 @@ export default function Selection({ setSelectedOption }) {
     dispatch(setRematchStatus(false));
   };
 
-  const handleOpenDialog = () => {
-    setOpenDialog(true);
-  };
-
-  const handleCloseDialog = () => {
-    setOpenDialog(false);
-  };
-
   const handleOpenRematchDialog = () => {
     setRematchOpenDialog(true);
   };
@@ -194,16 +180,6 @@ export default function Selection({ setSelectedOption }) {
   const handleCloseRematchDialog = () => {
     setRematchOpenDialog(false);
   };
-
-  const descriptionElementRef = React.useRef(null);
-  useEffect(() => {
-    if (openDialog) {
-      const { current: descriptionElement } = descriptionElementRef;
-      if (descriptionElement !== null) {
-        descriptionElement.focus();
-      }
-    }
-  }, [openDialog]);
 
   useEffect(() => {
     if (reduxEnemyRematchStatus) setRematchOpenDialog(true);
@@ -265,11 +241,27 @@ export default function Selection({ setSelectedOption }) {
 
           <List>
             <ListItem key={"text"} disablePadding>
-              <ListItemButton onClick={handleOpenDialog}>
+              <ListItemButton
+                onClick={(e) => {
+                  // The drawer's container closes on any click; keep it open
+                  // for this toggle so the result can be seen immediately (and
+                  // toggled right back if it's not what the player wanted).
+                  e.stopPropagation();
+                  dispatch(setChatExpanded(!chatExpanded));
+                }}
+              >
                 <ListItemIcon>
-                  <ChatIcon sx={{ color: "white" }} />
+                  {chatExpanded ? (
+                    <CloseFullscreenIcon sx={{ color: "white" }} />
+                  ) : (
+                    <OpenInFullIcon sx={{ color: "white" }} />
+                  )}
                 </ListItemIcon>
-                <ListItemText primary={"Game Log"} />
+                <ListItemText
+                  primary={
+                    chatExpanded ? "Standard Log View" : "Expanded Log View"
+                  }
+                />
               </ListItemButton>
             </ListItem>
           </List>
@@ -444,159 +436,6 @@ export default function Selection({ setSelectedOption }) {
               Yes
             </Button>
           )}
-        </DialogActions>
-      </Dialog>
-
-      <Dialog
-        open={openDialog}
-        onClose={handleCloseDialog}
-        scroll={"paper"}
-        aria-labelledby="scroll-dialog-title"
-        aria-describedby="scroll-dialog-description"
-        sx={{
-          "& .MuiDialog-paper": {
-            borderRadius: "15px",
-          },
-        }}
-      >
-        <DialogTitle id="scroll-dialog-title">Game Log</DialogTitle>
-        <DialogContent
-          style={{
-            maxHeight: "80vh",
-            display: "flex",
-            flexDirection: "column-reverse",
-          }}
-        >
-          <DialogContentText
-            id="scroll-dialog-description"
-            ref={descriptionElementRef}
-            tabIndex={-1}
-          >
-            {reduxChatLog.map((x) =>
-              x.text[9] === "M" ? (
-                // Player 1 Log UI
-                <>
-                  <div
-                    style={{
-                      borderRadius: "15px",
-                      padding: "1em",
-                      margin: "1em",
-                      height: x.card ? "200px" : "50px",
-                      background: "#E5F8FE",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: x.card ? "start" : "center",
-                      gap: "1em",
-                    }}
-                  >
-                    {x.card && (
-                      <div>
-                        <img
-                          style={{
-                            height: "160px",
-                          }}
-                          src={artThumb(x.card, logArt)}
-                          onError={(e) => {
-                            if (e.currentTarget.src.indexOf("/thumbs/") !== -1)
-                              e.currentTarget.src = artImage(x.card, logArt);
-                          }}
-                          alt={x.card}
-                        />
-                      </div>
-                    )}
-                    <Typography
-                      variant="body1"
-                      style={{
-                        fontWeight: "bold",
-                        whiteSpace: "pre-line",
-                      }}
-                    >
-                      {x.text}
-                    </Typography>
-                  </div>
-                </>
-              ) : (
-                // Player 2 Game Log UI
-                <>
-                  <div
-                    style={{
-                      borderRadius: "15px",
-                      padding: "1em",
-                      margin: "1em",
-                      height: x.card ? "200px" : "50px",
-                      background: "#FFEEEF",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: x.card ? "start" : "center",
-                      gap: "1em",
-                    }}
-                  >
-                    {x.card && (
-                      <div>
-                        <img
-                          style={{
-                            height: "160px",
-                          }}
-                          src={artThumb(x.card, logArt)}
-                          onError={(e) => {
-                            if (e.currentTarget.src.indexOf("/thumbs/") !== -1)
-                              e.currentTarget.src = artImage(x.card, logArt);
-                          }}
-                          alt={x.card}
-                        />
-                      </div>
-                    )}
-                    <Typography
-                      variant="body1"
-                      style={{
-                        fontWeight: "bold",
-                        whiteSpace: "pre-line",
-                      }}
-                    >
-                      {x.text}
-                    </Typography>
-                  </div>
-                </>
-                // <>
-                //   <div
-                //     style={{
-                //       borderRadius: "15px",
-                //       padding: "1em",
-                //       margin: "1em",
-                //       height: "200px",
-                //       background: "#FFEEEF",
-                //       display: "flex",
-                //       alignItems: "center",
-                //       justifyContent: "start",
-                //       gap: "1em",
-                //     }}
-                //   >
-                //     <div>
-                //       <img
-                //         style={{
-                //           height: "160px",
-                //         }}
-                //         src={cardImage(x.card)}
-                //         alt={x.card}
-                //       />
-                //     </div>
-                //     <Typography
-                //       variant="body1"
-                //       style={{
-                //         fontWeight: "bold",
-                //         whiteSpace: "pre-line",
-                //       }}
-                //     >
-                //       {x.text}
-                //     </Typography>
-                //   </div>
-                // </>
-              ),
-            )}
-          </DialogContentText>
-        </DialogContent>
-        <DialogActions>
-          <Button onClick={handleCloseDialog}>Cancel</Button>
         </DialogActions>
       </Dialog>
 

@@ -12,6 +12,56 @@
   height: 0;
 }
 
+/* Soft fade-in on page load */
+.home-root {
+  animation: homeFadeIn 0.5s ease both;
+}
+@keyframes homeFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Vignette over the wallpaper: darkens the top and bottom edges so the glass
+   panels and buttons read cleanly against busy art. Sits above non-positioned
+   content but is pointer-transparent. */
+.home-root::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(4, 10, 18, 0.4) 0%,
+    rgba(4, 10, 18, 0) 25%,
+    rgba(4, 10, 18, 0) 65%,
+    rgba(4, 10, 18, 0.55) 100%
+  );
+  z-index: 0;
+}
+
+/* Shared dark-glass text input (room code, display name) */
+.home-input {
+  color: #daf6ff;
+  background-color: rgba(10, 14, 20, 0.75);
+  border: 1px solid rgba(72, 171, 224, 0.5);
+  border-radius: 10px;
+  outline: none;
+  backdrop-filter: blur(6px);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.home-input::placeholder {
+  color: rgba(125, 167, 189, 0.8);
+}
+.home-input:focus {
+  border-color: rgba(140, 220, 255, 0.85);
+  box-shadow: 0 0 14px rgba(72, 171, 224, 0.45);
+}
+
+
 /* default styles */
 .LeaderContainerHome {
   height: 100vh;

@@ -12,7 +12,6 @@ import korwa from "../../src/assets/wallpapers/Korwa.png";
 import tsubaki from "../../src/assets/wallpapers/Tsubaki.png";
 import grimnir from "../../src/assets/wallpapers/Grimnir.png";
 
-import buttonImage from "../../src/assets/buttons/variant1.png";
 import shadowverse from "../../src/assets/wallpapers/SVElogo.png";
 import cardback from "../assets/cardbacks/default.png";
 import discord from "../assets/buttons/discord.png";
@@ -133,6 +132,12 @@ export default function Home() {
   const [leaderNum, setLeaderNum] = useState(0);
   const [openSnack, setOpenSnack] = useState(false);
   const [deckIdx, setDeckIdx] = useState(0);
+  // Join Room modal (desktop): opened by the JOIN ROOM button, holds the
+  // room-code input.
+  const [joinOpen, setJoinOpen] = useState(false);
+  // "Select a deck to continue" hint, shown when PLAY / JOIN ROOM is pressed
+  // with no deck selected.
+  const [deckSnackOpen, setDeckSnackOpen] = useState(false);
 
   // Lobby board state. `rooms` is the live list of joinable public games pushed
   // by the server; `myRoom` is the room this tab is currently hosting (shown in
@@ -326,6 +331,10 @@ export default function Home() {
   const deckClassOf = (d) =>
     (d && (d.class || computeDeckClass(d.deck))) || "";
 
+  // No deck picked yet: PLAY / JOIN ROOM render dimmed and clicking them shows
+  // the select-a-deck hint instead of acting.
+  const noDeck = Object.keys(selectedDeck).length === 0;
+
   const joinRoomWithMode = (roomId) => {
     dispatch(setRoom(roomId));
     saveRoom(roomId);
@@ -372,6 +381,14 @@ export default function Home() {
         joinRoomWithMode(roomNumber.toString());
       }
     }
+  };
+
+  // Submit from the Join Room modal. Same guards as handleJoinRoom (needs a
+  // code and a selected deck); closes the modal once the join is sent.
+  const handleJoinSubmit = () => {
+    if (roomNumber === "" || Object.keys(selectedDeck).length === 0) return;
+    handleJoinRoom();
+    setJoinOpen(false);
   };
 
   // Join an open game straight from the board. Mirrors handleJoinRoom but takes
@@ -711,9 +728,10 @@ export default function Home() {
                       whiteSpace: "nowrap",
                       overflow: "hidden",
                       textOverflow: "ellipsis",
-                      background: "#131219",
-                      borderRadius: 4,
-                      padding: "2px 4px",
+                      background: "rgba(10, 14, 20, 0.8)",
+                      border: "1px solid rgba(72, 171, 224, 0.3)",
+                      borderRadius: 999,
+                      padding: "2px 10px",
                     }}
                   >
                     {it.deck.name}
@@ -838,12 +856,124 @@ export default function Home() {
           </Button>
         </DialogActions>
       </Dialog>
+      {/* Join Room modal — dark-glass dialog holding the room-code input.
+          Enter or JOIN submits; requires a selected deck (same guard as the
+          old inline input + button). */}
+      <Dialog
+        open={joinOpen}
+        onClose={() => setJoinOpen(false)}
+        disableScrollLock
+        PaperProps={{
+          sx: {
+            background: "rgba(10, 14, 20, 0.92)",
+            backgroundImage: "none",
+            border: "1px solid rgba(72, 171, 224, 0.5)",
+            borderRadius: "12px",
+            boxShadow: "0 0 30px rgba(10, 175, 230, 0.35)",
+            backdropFilter: "blur(10px)",
+            width: 360,
+          },
+        }}
+      >
+        <DialogTitle
+          sx={{
+            color: "#daf6ff",
+            fontFamily: "Share Tech Mono, monospace",
+            letterSpacing: "0.1em",
+            fontSize: 16,
+            pb: 1,
+          }}
+        >
+          JOIN ROOM
+        </DialogTitle>
+        <DialogContent sx={{ pb: 1 }}>
+          <input
+            className="home-input"
+            autoFocus
+            style={{
+              padding: ".6em .8em",
+              fontSize: "16px",
+              width: "100%",
+              boxSizing: "border-box",
+              textAlign: "center",
+              fontFamily: "Noto Serif JP, serif",
+            }}
+            type="text"
+            value={roomNumber}
+            onChange={handleRoomNumberInput}
+            onKeyDown={(e) => {
+              if (e.key === "Enter") handleJoinSubmit();
+            }}
+            placeholder="Room Code..."
+          />
+        </DialogContent>
+        <DialogActions sx={{ px: 3, pb: 2 }}>
+          <Button
+            onClick={() => setJoinOpen(false)}
+            sx={{
+              fontFamily: "Noto Serif JP, serif",
+              textTransform: "none",
+              color: "#7da7bd",
+            }}
+          >
+            Cancel
+          </Button>
+          <Button
+            onClick={handleJoinSubmit}
+            disabled={roomNumber === ""}
+            sx={{
+              fontFamily: "Noto Serif JP, serif",
+              textTransform: "none",
+              fontWeight: "bold",
+              color: "#eafaff",
+              px: 3,
+              borderRadius: "8px",
+              background:
+                "linear-gradient(135deg, rgba(18, 110, 178, 0.92) 0%, rgba(72, 171, 224, 0.88) 100%)",
+              border: "1px solid rgba(140, 220, 255, 0.55)",
+              "&:hover": {
+                background:
+                  "linear-gradient(135deg, rgba(28, 132, 205, 0.95) 0%, rgba(96, 192, 242, 0.92) 100%)",
+                boxShadow: "0 0 16px rgba(72, 171, 224, 0.5)",
+              },
+              "&.Mui-disabled": {
+                color: "rgba(234, 250, 255, 0.5)",
+                opacity: 0.45,
+              },
+            }}
+          >
+            Join
+          </Button>
+        </DialogActions>
+      </Dialog>
       <Snackbar
         open={openSnack}
         autoHideDuration={6000}
         onClose={handleCloseSnack}
         message="Copied link to clipboard"
         action={action}
+      />
+      <Snackbar
+        open={deckSnackOpen}
+        autoHideDuration={2500}
+        onClose={(e, reason) => {
+          if (reason === "clickaway") return;
+          setDeckSnackOpen(false);
+        }}
+        anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+        message="You must select a deck to continue"
+        ContentProps={{
+          sx: {
+            justifyContent: "center",
+            backgroundColor: "rgba(10, 14, 20, 0.92)",
+            color: "#daf6ff",
+            border: "1px solid rgba(72, 171, 224, 0.5)",
+            borderRadius: "10px",
+            boxShadow: "0 0 20px rgba(10, 175, 230, 0.3)",
+            backdropFilter: "blur(8px)",
+            fontFamily: "Noto Serif JP, serif",
+          },
+        }}
       />
       {!isMobile && (
       <>
@@ -862,7 +992,12 @@ export default function Home() {
         }}
       >
         <div>
-          <img height={250} src={shadowverse} alt={"shadowverse"} />
+          <img
+            height={250}
+            src={shadowverse}
+            alt={"shadowverse"}
+            style={{ filter: "drop-shadow(0 8px 28px rgba(10, 175, 230, 0.45))" }}
+          />
           {/* <img style={{ marginTop: "5em" }} height={150} src={ga} alt={"ga"} /> */}
         </div>
         <div
@@ -874,66 +1009,79 @@ export default function Home() {
             width: "40%",
           }}
         >
-          <Stack spacing={5} direction="column">
+          <Stack spacing={3.5} direction="column" alignItems="center">
             <Button
-              onClick={handleCreateRoom}
+              onClick={() => {
+                if (noDeck) {
+                  setDeckSnackOpen(true);
+                  return;
+                }
+                handleCreateRoom();
+              }}
               sx={{
-                position: "relative",
                 fontFamily: "Noto Serif JP,serif",
                 textTransform: "none",
                 fontWeight: "bold",
-                backgroundColor: "transparent",
-                color: "black",
-                width: "350px",
-                height: "75px",
-                borderRadius: "50px",
-                "&:hover": { boxShadow: "0 0 30px 15px #48abe0" },
+                fontSize: "30px",
+                letterSpacing: "0.22em",
+                textIndent: "0.22em",
+                color: "#eafaff",
+                textShadow: "0 2px 10px rgba(0, 40, 70, 0.6)",
+                width: "340px",
+                height: "76px",
+                borderRadius: "12px",
+                background:
+                  "linear-gradient(135deg, rgba(18, 110, 178, 0.92) 0%, rgba(72, 171, 224, 0.88) 100%)",
+                border: "1px solid rgba(140, 220, 255, 0.55)",
+                boxShadow:
+                  "0 10px 30px rgba(10, 120, 180, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.25)",
+                backdropFilter: "blur(6px)",
+                transition:
+                  "transform .2s ease, box-shadow .25s ease, background .25s ease",
+                "&:hover": {
+                  transform: "translateY(-2px)",
+                  background:
+                    "linear-gradient(135deg, rgba(28, 132, 205, 0.95) 0%, rgba(96, 192, 242, 0.92) 100%)",
+                  boxShadow:
+                    "0 0 34px 6px rgba(72, 171, 224, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.3)",
+                },
               }}
-              // variant="contained"
             >
-              <img height={90} src={buttonImage} alt={"button"} />
-              <div
-                style={{
-                  position: "absolute",
-                  fontSize: "35px",
-                }}
-              >
-                PLAY
-              </div>
+              PLAY
             </Button>
             <Button
-              onClick={handleJoinRoom}
+              onClick={() => {
+                if (noDeck) {
+                  setDeckSnackOpen(true);
+                  return;
+                }
+                setJoinOpen(true);
+              }}
               sx={{
-                position: "relative",
                 fontFamily: "Noto Serif JP,serif",
                 textTransform: "none",
                 fontWeight: "bold",
-                backgroundColor: "transparent",
-                color: "black",
-                height: "50px",
-                width: "240px",
-                borderRadius: "50px",
-                "&:hover": { boxShadow: "0 0 30px 15px #48abe0" },
+                fontSize: "17px",
+                letterSpacing: "0.16em",
+                textIndent: "0.16em",
+                color: "#daf6ff",
+                width: "260px",
+                height: "52px",
+                borderRadius: "10px",
+                background: "rgba(10, 14, 20, 0.6)",
+                border: "1px solid rgba(72, 171, 224, 0.5)",
+                backdropFilter: "blur(6px)",
+                transition:
+                  "transform .2s ease, box-shadow .25s ease, background .25s ease",
+                "&:hover": {
+                  transform: "translateY(-2px)",
+                  background: "rgba(72, 171, 224, 0.16)",
+                  boxShadow: "0 0 22px rgba(72, 171, 224, 0.45)",
+                },
               }}
             >
-              <img height={60} src={buttonImage} alt={"button"} />
-              <div style={{ position: "absolute", fontSize: "20px" }}>
-                JOIN ROOM
-              </div>
+              JOIN ROOM
             </Button>
-            <input
-              style={{
-                padding: ".3em",
-                marginLeft: "1em",
-                fontSize: "15px",
-                width: "50%",
-                fontFamily: "Noto Serif JP, serif",
-              }}
-              type="text"
-              value={roomNumber}
-              onChange={handleRoomNumberInput}
-              placeholder="Room Code..."
-            />
           </Stack>
         </div>
 
@@ -964,17 +1112,13 @@ export default function Home() {
         }}
       >
         <input
+          className="home-input"
           style={{
             padding: ".5em .8em",
             fontSize: "14px",
             width: "100%",
             boxSizing: "border-box",
             textAlign: "center",
-            color: "#daf6ff",
-            backgroundColor: "rgba(10, 14, 20, 0.75)",
-            border: "1px solid rgba(72, 171, 224, 0.5)",
-            borderRadius: "8px",
-            outline: "none",
             fontFamily: "Noto Serif JP, serif",
           }}
           type="text"
@@ -1032,11 +1176,24 @@ export default function Home() {
             backgroundColor: "rgba(10, 14, 20, 0.75)",
             border: "1px solid rgba(72, 171, 224, 0.5)",
             borderRight: "none",
-            borderRadius: "10px 0 0 10px",
+            borderRadius: "14px 0 0 14px",
             boxShadow: "0 0 20px rgba(10, 175, 230, 0.25)",
+            backdropFilter: "blur(10px)",
             overflow: "hidden",
           }}
         >
+        <div
+          style={{
+            padding: "0.6em 1em",
+            borderBottom: "1px solid rgba(72, 171, 224, 0.35)",
+            color: "#daf6ff",
+            fontFamily: "Share Tech Mono, monospace",
+            fontSize: 14,
+            letterSpacing: "0.1em",
+          }}
+        >
+          ANNOUNCEMENTS
+        </div>
         <div
           style={{
             overflowY: "auto",
@@ -1237,7 +1394,7 @@ export default function Home() {
             <Button
               fullWidth
               onClick={() => setShowAnnounce((s) => !s)}
-              endIcon={<span style={{ fontSize: 13 }}>{showAnnounce ? "Γû▓" : "Γû╝"}</span>}
+              endIcon={<span style={{ fontSize: 13 }}>{showAnnounce ? "▲" : "▼"}</span>}
               sx={{
                 fontFamily: "Share Tech Mono, monospace",
                 textTransform: "none",
