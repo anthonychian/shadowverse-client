@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useMemo, useRef } from "react";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import wallpaper from "../../src/assets/wallpapers/3.png";
@@ -12,7 +12,6 @@ import korwa from "../../src/assets/wallpapers/Korwa.png";
 import tsubaki from "../../src/assets/wallpapers/Tsubaki.png";
 import grimnir from "../../src/assets/wallpapers/Grimnir.png";
 
-import shadowverse from "../../src/assets/wallpapers/SVElogo.png";
 import cardback from "../assets/cardbacks/default.png";
 import discord from "../assets/buttons/discord.png";
 import { useNavigate } from "react-router-dom";
@@ -64,6 +63,15 @@ import {
 } from "@mui/material";
 
 import "../css/Home.css";
+
+// React Bits (reactbits.dev) flair: gradient title, star-orbit borders on the
+// PLAY / JOIN ROOM buttons, a rolling odometer on the online tally, and the
+// LogoLoop deck strip.
+import Carousel from "../components/reactbits/Carousel";
+import Counter from "../components/reactbits/Counter";
+import GradientText from "../components/reactbits/GradientText";
+import LogoLoop from "../components/reactbits/LogoLoop";
+import StarBorder from "../components/reactbits/StarBorder";
 
 // Names of the leaders shown on the Home screen, keyed by `leaderNum` (see
 // randomLeader). Used as the default lobby display name so an un-named player is
@@ -135,9 +143,10 @@ export default function Home() {
   // Join Room modal (desktop): opened by the JOIN ROOM button, holds the
   // room-code input.
   const [joinOpen, setJoinOpen] = useState(false);
-  // "Select a deck to continue" hint, shown when PLAY / JOIN ROOM is pressed
-  // with no deck selected.
-  const [deckSnackOpen, setDeckSnackOpen] = useState(false);
+  // Bottom-center hint snackbar (message string, or null when hidden). Shown
+  // when PLAY / JOIN ROOM is pressed with no deck selected, or JOIN ROOM while
+  // already hosting a room.
+  const [hintSnack, setHintSnack] = useState(null);
 
   // Lobby board state. `rooms` is the live list of joinable public games pushed
   // by the server; `myRoom` is the room this tab is currently hosting (shown in
@@ -212,6 +221,14 @@ export default function Home() {
       body: "This board will show the latest set updates, new features, and other news.",
     },
   ];
+
+  // Announcement entries mapped for the React Bits Carousel (date as `meta`).
+  const announceItems = announcements.map((a, i) => ({
+    id: i + 1,
+    title: a.title,
+    description: a.body,
+    meta: a.date,
+  }));
 
   useEffect(() => {
     dispatch(setGameMode("manual"));
@@ -628,7 +645,103 @@ export default function Home() {
     else el.scrollBy({ left: delta, behavior: "smooth" });
   };
 
-  // Shared deck carousel ΓÇö used by both the desktop and mobile Home layouts.
+  // ---- React Bits LogoLoop deck strip ----
+  // Used instead of the snap carousel only when there are enough decks for a
+  // marquee to look right; below the threshold the old carousel renders.
+  const useLoopStrip = reduxDecks.length > 3;
+
+  // New Deck tile first, then one entry per saved deck. Memoized so the loop
+  // doesn't remeasure on unrelated re-renders (rooms updates etc.).
+  const loopItems = useMemo(
+    () => [{ deck: null, idx: -1 }, ...reduxDecks.map((deck, idx) => ({ deck, idx }))],
+    [reduxDecks],
+  );
+
+  // One tile in the loop. Same visuals/behavior as the old carousel tiles:
+  // New Deck -> builder; deck click selects (desktop) or opens the options
+  // menu (mobile); right-click opens the menu. Hovering pauses the loop so
+  // tiles are clickable.
+  const renderLoopTile = (it) => {
+    if (!it.deck) {
+      return (
+        <div
+          onClick={handleNavigateToDeck}
+          onContextMenu={(e) => e.preventDefault()}
+          style={{
+            cursor: "pointer",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <img src={cardback} alt="cardback" draggable={false} />
+          <div
+            style={{
+              color: "white",
+              fontSize: 14,
+              lineHeight: 1.3,
+              fontFamily: "Noto Serif JP,serif",
+              marginTop: 4,
+            }}
+          >
+            NEW DECK
+          </div>
+        </div>
+      );
+    }
+    const selected = !isMobile && showSelected[it.idx];
+    return (
+      <div
+        onClick={(e) =>
+          isMobile
+            ? handleContextMenu(e, it.deck, it.idx)
+            : handleSelectDeck(it.deck, it.idx)
+        }
+        onContextMenu={(e) => handleContextMenu(e, it.deck, it.idx)}
+        style={{
+          cursor: "pointer",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <img
+          src={artThumb(it.deck.deck[Math.floor(it.deck.deck.length / 2)], it.deck.art)}
+          alt={it.deck.name}
+          draggable={false}
+          style={{
+            borderRadius: 8,
+            outline: selected ? "3px solid #48abe0" : "none",
+            boxShadow: selected ? "0 0 14px 2px rgba(72, 171, 224, 0.7)" : "none",
+          }}
+        />
+        <div
+          style={{
+            marginTop: 4,
+            maxWidth: 110,
+            color: "white",
+            fontSize: 13,
+            lineHeight: 1.3,
+            fontFamily: "Noto Serif JP,serif",
+            textAlign: "center",
+            whiteSpace: "nowrap",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+            background: "rgba(10, 14, 20, 0.8)",
+            border: "1px solid rgba(72, 171, 224, 0.3)",
+            borderRadius: 999,
+            padding: "2px 10px",
+          }}
+        >
+          {it.deck.name}
+        </div>
+      </div>
+    );
+  };
+
+  // Shared deck carousel — used by both the desktop and mobile Home layouts
+  // when there are few decks (the LogoLoop strip above takes over past
+  // LOOP_MIN_DECKS, where a marquee reads better than a mostly-empty strip).
   // An infinite/looping strip of deck tiles plus a New Deck tile: scroll/swipe
   // to bring an item to the centre (it scales up), then tap the centred item, or
   // tap a side item to bring it to the centre.
@@ -954,14 +1067,14 @@ export default function Home() {
         action={action}
       />
       <Snackbar
-        open={deckSnackOpen}
+        open={hintSnack !== null}
         autoHideDuration={2500}
         onClose={(e, reason) => {
           if (reason === "clickaway") return;
-          setDeckSnackOpen(false);
+          setHintSnack(null);
         }}
         anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
-        message="You must select a deck to continue"
+        message={hintSnack}
         ContentProps={{
           sx: {
             justifyContent: "center",
@@ -991,14 +1104,18 @@ export default function Home() {
           overflow: "hidden",
         }}
       >
-        <div>
-          <img
-            height={250}
-            src={shadowverse}
-            alt={"shadowverse"}
-            style={{ filter: "drop-shadow(0 8px 28px rgba(10, 175, 230, 0.45))" }}
-          />
-          {/* <img style={{ marginTop: "5em" }} height={150} src={ga} alt={"ga"} /> */}
+        {/* Title — React Bits GradientText (replaced the SVE logo image). The
+            wrapper keeps the old logo's 250px footprint so the column's
+            space-around distribution — and the title's vertical position —
+            match the logo layout. */}
+        <div style={{ minHeight: 250, display: "flex", alignItems: "center" }}>
+          <GradientText
+            className="home-title"
+            colors={["#2f8fd8", "#8cdcff", "#eafaff", "#48abe0"]}
+            animationSpeed={6}
+          >
+            SVEClient
+          </GradientText>
         </div>
         <div
           style={{
@@ -1010,78 +1127,44 @@ export default function Home() {
           }}
         >
           <Stack spacing={3.5} direction="column" alignItems="center">
-            <Button
+            <StarBorder
+              as="button"
+              className="home-star-btn home-star-btn-play"
+              color="#eafaff"
+              speed="4s"
+              thickness={1}
               onClick={() => {
                 if (noDeck) {
-                  setDeckSnackOpen(true);
+                  setHintSnack("You must select a deck to continue");
                   return;
                 }
                 handleCreateRoom();
               }}
-              sx={{
-                fontFamily: "Noto Serif JP,serif",
-                textTransform: "none",
-                fontWeight: "bold",
-                fontSize: "30px",
-                letterSpacing: "0.22em",
-                textIndent: "0.22em",
-                color: "#eafaff",
-                textShadow: "0 2px 10px rgba(0, 40, 70, 0.6)",
-                width: "340px",
-                height: "76px",
-                borderRadius: "12px",
-                background:
-                  "linear-gradient(135deg, rgba(18, 110, 178, 0.92) 0%, rgba(72, 171, 224, 0.88) 100%)",
-                border: "1px solid rgba(140, 220, 255, 0.55)",
-                boxShadow:
-                  "0 10px 30px rgba(10, 120, 180, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.25)",
-                backdropFilter: "blur(6px)",
-                transition:
-                  "transform .2s ease, box-shadow .25s ease, background .25s ease",
-                "&:hover": {
-                  transform: "translateY(-2px)",
-                  background:
-                    "linear-gradient(135deg, rgba(28, 132, 205, 0.95) 0%, rgba(96, 192, 242, 0.92) 100%)",
-                  boxShadow:
-                    "0 0 34px 6px rgba(72, 171, 224, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.3)",
-                },
-              }}
             >
               PLAY
-            </Button>
-            <Button
+            </StarBorder>
+            <StarBorder
+              as="button"
+              className="home-star-btn"
+              color="#8cdcff"
+              speed="5s"
+              thickness={1}
               onClick={() => {
+                // Already hosting: joining another game would silently abandon
+                // the open room, so block until it's closed.
+                if (myRoom) {
+                  setHintSnack("Close your current room before joining another game");
+                  return;
+                }
                 if (noDeck) {
-                  setDeckSnackOpen(true);
+                  setHintSnack("You must select a deck to continue");
                   return;
                 }
                 setJoinOpen(true);
               }}
-              sx={{
-                fontFamily: "Noto Serif JP,serif",
-                textTransform: "none",
-                fontWeight: "bold",
-                fontSize: "17px",
-                letterSpacing: "0.16em",
-                textIndent: "0.16em",
-                color: "#daf6ff",
-                width: "260px",
-                height: "52px",
-                borderRadius: "10px",
-                background: "rgba(10, 14, 20, 0.6)",
-                border: "1px solid rgba(72, 171, 224, 0.5)",
-                backdropFilter: "blur(6px)",
-                transition:
-                  "transform .2s ease, box-shadow .25s ease, background .25s ease",
-                "&:hover": {
-                  transform: "translateY(-2px)",
-                  background: "rgba(72, 171, 224, 0.16)",
-                  boxShadow: "0 0 22px rgba(72, 171, 224, 0.45)",
-                },
-              }}
             >
               JOIN ROOM
-            </Button>
+            </StarBorder>
           </Stack>
         </div>
 
@@ -1094,7 +1177,24 @@ export default function Home() {
             width: "100%",
           }}
         >
-          {renderDeckCarousel({ desktop: true })}
+          {useLoopStrip ? (
+            <LogoLoop
+              logos={loopItems}
+              renderItem={renderLoopTile}
+              speed={50}
+              logoHeight={150}
+              gap={48}
+              pauseOnHover
+              scaleOnHover
+              draggable
+              fadeOut
+              fadeOutColor="rgba(8, 16, 30, 0.9)"
+              width="100%"
+              ariaLabel="Deck selection"
+            />
+          ) : (
+            renderDeckCarousel({ desktop: true })
+          )}
         </div>
       </div>
       <div
@@ -1160,11 +1260,19 @@ export default function Home() {
               color: " #daf6ff",
               textShadow:
                 "0 0 20px rgba(10, 175, 230, 1),  0 0 20px rgba(10, 175, 230, 0)",
-              background:
-                "radial-gradient(ellipse at center,  #0a2e38  0%, #000000 70%)",
             }}
           >
-            {reduxActiveUsers} users online
+            <Counter
+              value={reduxActiveUsers}
+              fontSize={30}
+              padding={4}
+              gap={2}
+              horizontalPadding={0}
+              borderRadius={0}
+              gradientHeight={0}
+              containerStyle={{ verticalAlign: "middle" }}
+            />{" "}
+            users online
           </div>
         )}
         <div
@@ -1194,67 +1302,20 @@ export default function Home() {
         >
           ANNOUNCEMENTS
         </div>
+        {/* React Bits Carousel: one announcement per card, autoplaying (pauses
+            on hover); drag or tap the dots to browse. */}
         <div
-          style={{
-            overflowY: "auto",
-            padding: "0.5em 1em 1em",
-            maxHeight: "270px",
-          }}
+          className="home-announce-carousel"
+          style={{ display: "flex", justifyContent: "center" }}
         >
-          {announcements.map((item, idx) => (
-            <div
-              key={idx}
-              style={{
-                paddingTop: "0.75em",
-                paddingBottom: "0.75em",
-                borderBottom:
-                  idx < announcements.length - 1
-                    ? "1px solid rgba(255, 255, 255, 0.1)"
-                    : "none",
-              }}
-            >
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "baseline",
-                  gap: "0.5em",
-                }}
-              >
-                <span
-                  style={{
-                    color: "#ffffff",
-                    fontSize: "15px",
-                    fontFamily: "Noto Serif JP, serif",
-                    fontWeight: "bold",
-                  }}
-                >
-                  {item.title}
-                </span>
-                <span
-                  style={{
-                    color: "#7da7bd",
-                    fontSize: "12px",
-                    fontFamily: "Share Tech Mono, monospace",
-                    whiteSpace: "nowrap",
-                  }}
-                >
-                  {item.date}
-                </span>
-              </div>
-              <div
-                style={{
-                  color: "#c9d6dd",
-                  fontSize: "13px",
-                  fontFamily: "Noto Serif JP, serif",
-                  marginTop: "0.25em",
-                  lineHeight: "1.35",
-                }}
-              >
-                {item.body}
-              </div>
-            </div>
-          ))}
+          <Carousel
+            items={announceItems}
+            baseWidth={316}
+            autoplay
+            autoplayDelay={4000}
+            pauseOnHover
+            loop
+          />
         </div>
         </div>
       </div>
@@ -1368,7 +1429,17 @@ export default function Home() {
                 textShadow: "0 0 12px rgba(10, 175, 230, 0.8)",
               }}
             >
-              {reduxActiveUsers} users online
+              <Counter
+                value={reduxActiveUsers}
+                fontSize={14}
+                padding={2}
+                gap={1}
+                horizontalPadding={0}
+                borderRadius={0}
+                gradientHeight={0}
+                containerStyle={{ verticalAlign: "middle" }}
+              />{" "}
+              users online
             </div>
           )}
 
@@ -1421,37 +1492,24 @@ export default function Home() {
                   backgroundColor: "rgba(10, 14, 20, 0.96)",
                   border: "1px solid rgba(72, 171, 224, 0.5)",
                   borderRadius: 10,
-                  padding: "0.25em 1em 1em",
-                  maxHeight: 232,
-                  overflowY: "auto",
+                  padding: "0.5em",
                   boxShadow: "0 8px 24px rgba(0, 0, 0, 0.6)",
                 }}
               >
-                {announcements.map((item, idx) => (
-                  <div
-                    key={idx}
-                    style={{
-                      paddingTop: "0.75em",
-                      paddingBottom: "0.75em",
-                      borderBottom:
-                        idx < announcements.length - 1
-                          ? "1px solid rgba(255, 255, 255, 0.1)"
-                          : "none",
-                    }}
-                  >
-                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: "0.5em" }}>
-                      <span style={{ color: "#ffffff", fontSize: 15, fontFamily: "Noto Serif JP, serif", fontWeight: "bold" }}>
-                        {item.title}
-                      </span>
-                      <span style={{ color: "#7da7bd", fontSize: 12, fontFamily: "Share Tech Mono, monospace", whiteSpace: "nowrap" }}>
-                        {item.date}
-                      </span>
-                    </div>
-                    <div style={{ color: "#c9d6dd", fontSize: 13, fontFamily: "Noto Serif JP, serif", marginTop: "0.25em", lineHeight: 1.35 }}>
-                      {item.body}
-                    </div>
-                  </div>
-                ))}
+                {/* React Bits Carousel — same autoplaying board as desktop. */}
+                <div
+                  className="home-announce-carousel"
+                  style={{ display: "flex", justifyContent: "center" }}
+                >
+                  <Carousel
+                    items={announceItems}
+                    baseWidth={300}
+                    autoplay
+                    autoplayDelay={4000}
+                    pauseOnHover
+                    loop
+                  />
+                </div>
               </div>
             )}
           </div>
@@ -1461,7 +1519,25 @@ export default function Home() {
               centred item to use it (New Deck ΓåÆ builder; a deck ΓåÆ options), or
               tap a side item to bring it to the centre. Pinned to the bottom of
               the column via marginTop: auto. */}
-          {renderDeckCarousel({ extraStyle: { marginTop: "auto" } })}
+          {useLoopStrip ? (
+            <div style={{ width: "100%", marginTop: "auto", flexShrink: 0 }}>
+              <LogoLoop
+                logos={loopItems}
+                renderItem={renderLoopTile}
+                speed={45}
+                logoHeight={130}
+                gap={38}
+                pauseOnHover
+                draggable
+                fadeOut
+                fadeOutColor="rgba(8, 16, 30, 0.9)"
+                width="100%"
+                ariaLabel="Deck selection"
+              />
+            </div>
+          ) : (
+            renderDeckCarousel({ extraStyle: { marginTop: "auto" } })
+          )}
         </div>
         </>
       )}

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Button from "@mui/material/Button";
+import AnimatedList from "../reactbits/AnimatedList";
 
 import forest from "../../assets/logo/forest.png";
 import sword from "../../assets/logo/sword.png";
@@ -194,21 +195,46 @@ export default function ActiveGamesBoard({
         </span>
       </div>
 
-      <div style={{ overflowY: "auto", padding: "0 1em" }}>
-        {reconnectRoom && (
-          <>
-            <div
-              style={{
-                color: "#7da7bd",
-                fontFamily: "Share Tech Mono, monospace",
-                fontSize: 11,
-                letterSpacing: "0.1em",
-                paddingTop: "0.6em",
-              }}
-            >
-              RECONNECT
-            </div>
-            <GameRow
+      {/* Rows as a React Bits AnimatedList: labels and game rows each
+          scale/fade in as they scroll into view. Keyboard navigation stays off
+          (it grabs Tab/arrow keys page-wide, which the Home inputs need). */}
+      <AnimatedList
+        className="home-games-list"
+        enableArrowNavigation={false}
+        displayScrollbar={false}
+        showGradients
+        items={buildListItems()}
+      />
+    </div>
+  );
+
+  // Assembles the list rows in display order: reconnect, your room, then the
+  // public games (or the empty-state note).
+  function buildListItems() {
+    const sectionLabel = (text, key) => ({
+      key,
+      node: (
+        <div
+          style={{
+            color: "#7da7bd",
+            fontFamily: "Share Tech Mono, monospace",
+            fontSize: 11,
+            letterSpacing: "0.1em",
+            paddingTop: "0.6em",
+          }}
+        >
+          {text}
+        </div>
+      ),
+    });
+
+    const listItems = [];
+    if (reconnectRoom) {
+      listItems.push(sectionLabel("RECONNECT", "reconnect-label"));
+      listItems.push({
+        key: "reconnect",
+        node: (
+          <GameRow
               icon={null}
               name="Your game in progress"
               code={reconnectRoom}
@@ -237,22 +263,15 @@ export default function ActiveGamesBoard({
                 </Button>
               }
             />
-          </>
-        )}
-        {myRoom && (
-          <>
-            <div
-              style={{
-                color: "#7da7bd",
-                fontFamily: "Share Tech Mono, monospace",
-                fontSize: 11,
-                letterSpacing: "0.1em",
-                paddingTop: "0.6em",
-              }}
-            >
-              YOUR ROOM
-            </div>
-            <GameRow
+        ),
+      });
+    }
+    if (myRoom) {
+      listItems.push(sectionLabel("YOUR ROOM", "mine-label"));
+      listItems.push({
+        key: "mine",
+        node: (
+          <GameRow
               icon={classIcon(myRoom.deckClass)}
               name={`${myRoom.hostName || "You"} (you)`}
               code={myRoom.roomId}
@@ -324,21 +343,15 @@ export default function ActiveGamesBoard({
                 </div>
               }
             />
-            <div
-              style={{
-                color: "#7da7bd",
-                fontFamily: "Share Tech Mono, monospace",
-                fontSize: 11,
-                letterSpacing: "0.1em",
-                paddingTop: "0.8em",
-              }}
-            >
-              PUBLIC
-            </div>
-          </>
-        )}
+        ),
+      });
+      listItems.push(sectionLabel("PUBLIC", "public-label"));
+    }
 
-        {publicRooms.length === 0 ? (
+    if (publicRooms.length === 0) {
+      listItems.push({
+        key: "empty",
+        node: (
           <div
             style={{
               ...panelText,
@@ -357,10 +370,14 @@ export default function ActiveGamesBoard({
               </>
             )}
           </div>
-        ) : (
-          publicRooms.map((room) => (
+        ),
+      });
+    } else {
+      publicRooms.forEach((room) => {
+        listItems.push({
+          key: room.roomId,
+          node: (
             <GameRow
-              key={room.roomId}
               icon={classIcon(room.deckClass)}
               name={room.hostName || "Anonymous"}
               code={room.roomId}
@@ -389,9 +406,10 @@ export default function ActiveGamesBoard({
                 </Button>
               }
             />
-          ))
-        )}
-      </div>
-    </div>
-  );
+          ),
+        });
+      });
+    }
+    return listItems;
+  }
 }

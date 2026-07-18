@@ -43,6 +43,171 @@
   z-index: 0;
 }
 
+/* React Bits AnimatedList as the Active Games rows. The container flexes to
+   fill the board panel (which already caps height + hides overflow); the
+   default demo item chrome is stripped so the GameRow markup shows through,
+   and the scroll-edge gradients are recolored to the panel's glass. */
+.home-games-list.scroll-list-container {
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+.home-games-list .scroll-list {
+  max-height: none;
+  flex: 1;
+  min-height: 0;
+  padding: 0 1em 0.5em;
+}
+.home-games-list .animated-item {
+  margin-bottom: 0;
+}
+.home-games-list .item {
+  padding: 0;
+  margin-bottom: 0;
+  background: transparent;
+  border-radius: 8px;
+}
+.home-games-list .item.selected {
+  background: rgba(72, 171, 224, 0.08);
+}
+.home-games-list .top-gradient {
+  height: 28px;
+  background: linear-gradient(to bottom, rgba(10, 14, 20, 0.95), transparent);
+}
+.home-games-list .bottom-gradient {
+  height: 36px;
+  background: linear-gradient(to top, rgba(10, 14, 20, 0.95), transparent);
+}
+
+/* React Bits Carousel as the announcements board, themed to the page. The
+   outer carousel chrome is stripped (the glass panel already provides it);
+   the cards themselves get the dark-glass treatment. */
+.home-announce-carousel .carousel-container {
+  border: none;
+  background: transparent;
+  padding: 12px;
+}
+.home-announce-carousel .carousel-item {
+  background: rgba(16, 26, 40, 0.85);
+  border: 1px solid rgba(72, 171, 224, 0.3);
+}
+.home-announce-carousel .carousel-item-meta {
+  font-family: "Share Tech Mono", monospace;
+  color: #7da7bd;
+}
+.home-announce-carousel .carousel-item-title {
+  font-family: "Noto Serif JP", serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff;
+}
+.home-announce-carousel .carousel-item-description {
+  font-family: "Noto Serif JP", serif;
+  font-size: 13px;
+  line-height: 1.35;
+  color: #c9d6dd;
+  margin: 0;
+}
+.home-announce-carousel .carousel-indicators {
+  width: auto;
+  gap: 8px;
+  padding: 0;
+  margin-top: 10px;
+}
+.home-announce-carousel .carousel-indicator.active {
+  background-color: #48abe0;
+}
+.home-announce-carousel .carousel-indicator.inactive {
+  background-color: rgba(72, 171, 224, 0.3);
+}
+
+/* Home title — React Bits GradientText, sized like the old logo block. The
+   glow is a drop-shadow filter (text-shadow can't reach the gradient-clipped
+   glyphs), and the component's default pointer cursor is reset since the
+   title isn't clickable. */
+.home-title.animated-gradient-text {
+  cursor: default;
+  filter: drop-shadow(0 8px 28px rgba(10, 175, 230, 0.45));
+}
+.home-title .text-content {
+  font-family: "Noto Serif JP", serif;
+  font-size: 76px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  line-height: 1.15;
+}
+
+/* JOIN ROOM as a React Bits StarBorder button, themed to the page. */
+.home-star-btn.star-border-container {
+  border: 0;
+  background: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.home-star-btn:hover {
+  transform: translateY(-2px);
+}
+.home-star-btn .inner-content {
+  width: 260px;
+  box-sizing: border-box;
+  padding: 14px 0;
+  border-radius: 10px;
+  background: rgba(10, 14, 20, 0.85);
+  border: 1px solid rgba(72, 171, 224, 0.5);
+  color: #daf6ff;
+  font-family: "Noto Serif JP", serif;
+  font-weight: bold;
+  font-size: 17px;
+  letter-spacing: 0.16em;
+  text-indent: 0.16em;
+  transition: background 0.25s ease, box-shadow 0.25s ease;
+}
+.home-star-btn:hover .inner-content {
+  background: rgba(72, 171, 224, 0.16);
+  box-shadow: 0 0 22px rgba(72, 171, 224, 0.45);
+}
+
+/* PLAY variant: keeps the primary gradient look inside the star border. */
+.home-star-btn-play.star-border-container {
+  border-radius: 12px;
+}
+.home-star-btn-play .inner-content {
+  width: 340px;
+  height: 76px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: linear-gradient(
+    135deg,
+    rgba(18, 110, 178, 0.92) 0%,
+    rgba(72, 171, 224, 0.88) 100%
+  );
+  border: 1px solid rgba(140, 220, 255, 0.55);
+  box-shadow:
+    0 10px 30px rgba(10, 120, 180, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  color: #eafaff;
+  font-size: 30px;
+  letter-spacing: 0.22em;
+  text-indent: 0.22em;
+  text-shadow: 0 2px 10px rgba(0, 40, 70, 0.6);
+}
+.home-star-btn-play:hover .inner-content {
+  background: linear-gradient(
+    135deg,
+    rgba(28, 132, 205, 0.95) 0%,
+    rgba(96, 192, 242, 0.92) 100%
+  );
+  box-shadow:
+    0 0 34px 6px rgba(72, 171, 224, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
 /* Shared dark-glass text input (room code, display name) */
 .home-input {
   color: #daf6ff;
@@ -66,7 +231,6 @@
 .LeaderContainerHome {
   height: 100vh;
   width: 50vw;
-  left: 10%;
 }
 .LeaderImageHome {
   width: 50vw;

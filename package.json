@@ -40,9 +40,9 @@
     "react-scripts": "5.0.1",
     "redux-persist": "^6.0.0",
     "socket.io-client": "^4.8.1",
+    "sve-engine": "file:packages/sve-engine",
     "three": "^0.159.0",
-    "web-vitals": "^2.1.4",
-    "sve-engine": "file:packages/sve-engine"
+    "web-vitals": "^2.1.4"
   },
   "workspaces": [
     "packages/sve-engine",
