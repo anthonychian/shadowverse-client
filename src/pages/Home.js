@@ -187,6 +187,11 @@ export default function Home() {
   // Each entry: { date, title, body }
   const announcements = [
     {
+      date: "2026-07-18",
+      title: "Discord login & cloud decks",
+      body: "Sign in with Discord to store your decks in the cloud and use them from any device.",
+    },
+    {
       date: "2026-06-21",
       title: "Card list updated to BP20",
       body: "The deck builder now includes all cards up to and including BP20.",
@@ -203,28 +208,8 @@ export default function Home() {
     },
     {
       date: "2026-06-11",
-      title: "Lobby Board added",
-      body: "Join, host, or reconnect to games from the new active games board.",
-    },
-    {
-      date: "2026-06-11",
-      title: "New deck builder",
-      body: "The deck builder has been redesigned with a new layout and full card metadata.",
-    },
-    {
-      date: "2026-06-11",
       title: "Automatic reconnection after desync",
       body: "Games now self-heal from desyncs and automatically reconnect you to keep play in sync.",
-    },
-    {
-      date: "2026-05-30",
-      title: "Card list updated to BP17",
-      body: "The deck builder now includes all cards up to and including BP17.",
-    },
-    {
-      date: "2026-05-30",
-      title: "Announcements board added",
-      body: "This board will show the latest set updates, new features, and other news.",
     },
   ];
 
