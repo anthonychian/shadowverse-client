@@ -24,20 +24,23 @@ import renamedCards from "../decks/renamedCards.json";
 // name, so rewrite any renamed card when a persisted deck is rehydrated; the
 // `art` printing map is keyed by name too. Card numbers are unaffected.
 const renameCard = (n) => renamedCards[n] || n;
+const renameDeck = (d) => ({
+  ...d,
+  deck: (d.deck || []).map(renameCard),
+  evoDeck: (d.evoDeck || []).map(renameCard),
+  art: d.art
+    ? Object.fromEntries(
+        Object.entries(d.art).map(([n, no]) => [renameCard(n), no])
+      )
+    : d.art,
+});
 const migrateRenamedCards = createTransform(
   null,
   (outbound) => ({
     ...outbound,
-    decks: (outbound.decks || []).map((d) => ({
-      ...d,
-      deck: (d.deck || []).map(renameCard),
-      evoDeck: (d.evoDeck || []).map(renameCard),
-      art: d.art
-        ? Object.fromEntries(
-            Object.entries(d.art).map(([n, no]) => [renameCard(n), no])
-          )
-        : d.art,
-    })),
+    decks: (outbound.decks || []).map(renameDeck),
+    // Cloud decks (logged-in mode) get the same migration; null = logged out.
+    cloudDecks: outbound.cloudDecks ? outbound.cloudDecks.map(renameDeck) : null,
   }),
   { whitelist: ["deck"] }
 );

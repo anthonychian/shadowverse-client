@@ -17,7 +17,7 @@ import {
   set1Evo, forestEvo, swordEvo, runeEvo, dragonEvo, abyssEvo, havenEvo, neutralEvo,
 } from "../decks/AllCardsEvo";
 import { useDispatch, useSelector } from "react-redux";
-import { createDeck, deleteDeck } from "../redux/DeckSlice";
+import { createDeck, deleteDeck, selectDecks } from "../redux/DeckSlice";
 import { useNavigate, useLocation } from "react-router-dom";
 import {
   Button, TextField, Dialog, DialogActions, DialogContent, DialogContentText,
@@ -117,7 +117,7 @@ const DECKLOG_JP_CLASS = {
 
 export default function CreateDeck() {
   const location = useLocation();
-  const reduxDecks = useSelector((state) => state.deck.decks);
+  const reduxDecks = useSelector(selectDecks);
   const deckName = location?.state?.deckName;
   const deckEdit = reduxDecks.filter((decks) => decks.name === deckName);
   const { id } = useParams();

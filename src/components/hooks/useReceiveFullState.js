@@ -26,6 +26,7 @@ import {
   setEnemyPlayPoints,
   setEnemyArt,
   setEnemyKeyword,
+  setEnemyIdentity,
   restoreOwnState,
   setSelfResyncing,
 } from "../../redux/CardSlice";
@@ -57,6 +58,11 @@ const applyEnemyState = (dispatch, s) => {
   if (s.engagedField !== undefined) dispatch(setEnemyEngaged(s.engagedField));
   // The opponent's own art choices (their `myArt`) become our enemy art.
   if (s.myArt !== undefined) dispatch(setEnemyArt(s.myArt));
+  // Likewise their Discord identity (their `myName`/`myAvatar`).
+  if (s.myName !== undefined || s.myAvatar !== undefined)
+    dispatch(
+      setEnemyIdentity({ name: s.myName || "", avatar: s.myAvatar || "" }),
+    );
 };
 
 const useReceiveFullState = () => {

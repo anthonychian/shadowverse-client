@@ -71,6 +71,8 @@ import {
   setEnemyDice,
   setEnemyLog,
   setEnemyChat,
+  setEnemyIdentity,
+  setMyIdentity,
   setEnemyOnlineStatus,
   setLastChatMessage,
   setEnemyLeaderActive,
@@ -110,6 +112,11 @@ import img from "../../assets/pin_bellringer_angel.png";
 import "../../css/AnimatedBorder.css";
 import { useNavigate } from "react-router-dom";
 import { socket, playerId, getSavedRoom, getSavedState } from "../../sockets";
+import {
+  useAuth,
+  discordName,
+  discordAvatar,
+} from "../../auth/AuthProvider";
 import useSocketStateSync from "../hooks/useSocketStateSync";
 import useReceiveFullState from "../hooks/useReceiveFullState";
 import useStoreState from "../hooks/useStoreState";
@@ -230,6 +237,21 @@ export default function Field({
   );
   const reduxCurrentDeck = useSelector((state) => state.card.deck);
   const reduxCurrentRoom = useSelector((state) => state.card.room);
+
+  // Announce my Discord identity (name/avatar) to the room so the opponent's
+  // chat and game log can show it. Re-announced if the login state changes;
+  // the reducer also answers the opponent's first announcement, covering the
+  // race where one player joins the room after the other has already sent.
+  const { user: authUser } = useAuth();
+  useEffect(() => {
+    if (!reduxCurrentRoom) return;
+    dispatch(
+      setMyIdentity({
+        name: authUser ? discordName(authUser) : "",
+        avatar: authUser ? discordAvatar(authUser) : "",
+      }),
+    );
+  }, [authUser, reduxCurrentRoom, dispatch]);
   const reduxEnemyHand = useSelector((state) => state.card.enemyHand);
   // Hide the opponent's hand cards / deck pile while their shuffle riffle plays.
   const enemyShuffling = useShuffleHandActive("enemy");
@@ -539,6 +561,9 @@ export default function Field({
         case "chat":
           dispatch(setEnemyChat(update.data));
           dispatch(setLastChatMessage(update.data));
+          break;
+        case "identity":
+          dispatch(setEnemyIdentity(update.data));
           break;
         case "animate":
           // Cosmetic-only effect the opponent played (draw / shuffle / evolve).

@@ -145,10 +145,6 @@
   background: transparent;
   border-radius: 10px;
   cursor: pointer;
-  transition: transform 0.2s ease;
-}
-.home-star-btn:hover {
-  transform: translateY(-2px);
 }
 .home-star-btn .inner-content {
   width: 260px;

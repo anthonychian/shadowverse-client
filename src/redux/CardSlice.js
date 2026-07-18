@@ -157,6 +157,14 @@ export const CardSlice = createSlice({
     gameLog: [],
     chatLog: [],
     lastChatMessage: "",
+    // Discord identity exchange: my display name/avatar (empty when not
+    // signed in) and the opponent's, exchanged via "identity" messages and
+    // the stored-state snapshots so chat and the game log can show real names.
+    myName: "",
+    myAvatar: "",
+    enemyName: "",
+    enemyAvatar: "",
+    enemyIdentityReceived: false,
     cemetery: [],
     enemyCemetery: [],
     banish: [],
@@ -533,26 +541,82 @@ export const CardSlice = createSlice({
         ];
       }
     },
+    // Chat entries are objects { time, mine, text, name, avatar } — name and
+    // avatar are the sender's Discord identity (empty when not signed in) and
+    // travel with the message so the opponent sees them too.
     setChat: (state, action) => {
-      const date = new Date().toLocaleTimeString("it-IT", {
-        hour: "2-digit",
+      // Discord-style timestamp, time only ("10:47 PM") — chats never span days.
+      const date = new Date().toLocaleTimeString("en-US", {
+        hour: "numeric",
         minute: "2-digit",
+        hour12: true,
       });
-      state.chatLog = [...state.chatLog, `[${date}] (Me): ${action.payload}`];
+      const msg =
+        typeof action.payload === "string"
+          ? { text: action.payload }
+          : action.payload || {};
+      const entry = {
+        time: date,
+        mine: true,
+        text: msg.text || "",
+        name: msg.name || "",
+        avatar: msg.avatar || "",
+      };
+      state.chatLog = [...state.chatLog, entry];
       socket.emit("send msg", {
         type: "chat",
-        data: `${action.payload}`,
+        data: { text: entry.text, name: entry.name, avatar: entry.avatar },
         room: state.room,
       });
     },
-    setEnemyChat: (state, action) => {
-      const date = new Date().toLocaleTimeString("it-IT", {
-        hour: "2-digit",
-        minute: "2-digit",
+    // Announce my Discord identity to the room (and remember it locally, so
+    // it also rides along in stored-state snapshots for late joiners).
+    setMyIdentity: (state, action) => {
+      const { name = "", avatar = "" } = action.payload || {};
+      state.myName = name;
+      state.myAvatar = avatar;
+      socket.emit("send msg", {
+        type: "identity",
+        data: { name, avatar },
+        room: state.room,
       });
+    },
+    setEnemyIdentity: (state, action) => {
+      const { name = "", avatar = "" } = action.payload || {};
+      state.enemyName = name;
+      state.enemyAvatar = avatar;
+      // First time we hear from the opponent: answer with our own identity in
+      // case our original announcement raced their room join. The first-time
+      // guard stops the exchange from ping-ponging forever.
+      if (!state.enemyIdentityReceived && (state.myName || state.myAvatar)) {
+        socket.emit("send msg", {
+          type: "identity",
+          data: { name: state.myName, avatar: state.myAvatar },
+          room: state.room,
+        });
+      }
+      state.enemyIdentityReceived = true;
+    },
+    setEnemyChat: (state, action) => {
+      const date = new Date().toLocaleTimeString("en-US", {
+        hour: "numeric",
+        minute: "2-digit",
+        hour12: true,
+      });
+      // Old clients send the bare text string; new ones send an object.
+      const msg =
+        typeof action.payload === "string"
+          ? { text: action.payload }
+          : action.payload || {};
       state.chatLog = [
         ...state.chatLog,
-        `[${date}] (Player 2): ${action.payload}`,
+        {
+          time: date,
+          mine: false,
+          text: msg.text || "",
+          name: msg.name || "",
+          avatar: msg.avatar || "",
+        },
       ];
     },
     setEnemyOnlineStatus: (state, action) => {
@@ -569,8 +633,10 @@ export const CardSlice = createSlice({
       state.selfResyncing = action.payload;
     },
     setLastChatMessage: (state, action) => {
-      state.lastChatMessage = action.payload;
-      console.log("Enemy online status:", action.payload);
+      // Accepts the chat payload (object) or a bare string from old clients —
+      // the notification bubble only ever shows the text.
+      const p = action.payload;
+      state.lastChatMessage = typeof p === "string" ? p : p?.text || "";
     },
     setViewingCardsLog: (state, action) => {
       let number = action.payload.number;
@@ -3008,6 +3074,12 @@ export const CardSlice = createSlice({
         state.enemyKeywordField = s.enemyKeywordField;
       if (s.customValues !== undefined) state.customValues = s.customValues;
       if (s.customStatus !== undefined) state.customStatus = s.customStatus;
+      // Chat and game logs survive a reload with the rest of the saved state,
+      // along with my announced identity.
+      if (s.chatLog !== undefined) state.chatLog = s.chatLog;
+      if (s.gameLog !== undefined) state.gameLog = s.gameLog;
+      if (s.myName !== undefined) state.myName = s.myName;
+      if (s.myAvatar !== undefined) state.myAvatar = s.myAvatar;
       state.cardSelectedInHand = -1;
       state.enemyCardSelectedInHand = -1;
       state.cardSelectedOnField = -1;
@@ -3071,6 +3143,9 @@ export const CardSlice = createSlice({
       state.gameLog = [];
       state.chatLog = [];
       state.lastChatMessage = "";
+      state.enemyName = "";
+      state.enemyAvatar = "";
+      state.enemyIdentityReceived = false;
       state.deck = [];
       state.evoDeck = [];
       state.hand = [];
@@ -3399,6 +3474,8 @@ export const {
   setSelfResyncing,
   setLastChatMessage,
   setEnemyChat,
+  setMyIdentity,
+  setEnemyIdentity,
   setViewingCardsLog,
   setViewingDeckLog,
   setEvoPoints,

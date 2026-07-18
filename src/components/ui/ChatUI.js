@@ -8,6 +8,18 @@ import { useDispatch, useSelector } from "react-redux";
 import { setChat, setCurrentCard } from "../../redux/CardSlice";
 import { artImage, artThumb } from "../../decks/getCards";
 import HideUiButton from "./HideUiButton";
+import "../../css/Chat.css";
+import { useAuth, discordName, discordAvatar } from "../../auth/AuthProvider";
+import sword from "../../assets/logo/sword.png";
+import forest from "../../assets/logo/forest.png";
+import abyss from "../../assets/logo/abyss.png";
+import dragon from "../../assets/logo/dragon.png";
+import haven from "../../assets/logo/haven.png";
+import rune from "../../assets/logo/rune.png";
+import umamusume from "../../assets/logo/umamusume.png";
+import idolmaster from "../../assets/logo/idolmaster.png";
+import vanguard from "../../assets/logo/vanguard.png";
+import priconne from "../../assets/logo/priconne.webp";
 
 // Shared palette, lifted from the Home "Announcements" board so the in-game chat
 // reads as the same product surface: a dark translucent panel with a cyan-blue
@@ -41,6 +53,47 @@ const LOG_THEIRS = {
   bg: "rgba(255, 110, 120, 0.10)",
   border: "rgba(255, 140, 150, 0.55)",
 };
+
+// Discord-style chat rendering: sans-serif text, flat rows with a circular
+// avatar and a bold name + timestamp header, consecutive messages from the
+// same sender grouped under one header.
+const SANS = '"gg sans", "Noto Sans", "Segoe UI", Roboto, sans-serif';
+
+// Leader → class emblem, used as the chat avatar (same mapping as the class
+// badge in EnemyUI/PlayerUI). Falls back to the dragon crest like they do.
+const CLASS_LOGO = {
+  SiLong: dragon,
+  Drache: dragon,
+  Forte: dragon,
+  Galmieux: dragon,
+  Jeanne: haven,
+  Rola: haven,
+  Sekka: forest,
+  Hozumi: forest,
+  CC: forest,
+  Piercye: forest,
+  Orchis: forest,
+  Bunny: sword,
+  Albert: sword,
+  Icy: abyss,
+  Anisage: abyss,
+  Vania: abyss,
+  Mono: abyss,
+  Amy: abyss,
+  Lishenna: rune,
+  Ceridwen: rune,
+  Kuon: rune,
+  Daria: rune,
+  "Manhatten Cafe": umamusume,
+  Maruzensky: umamusume,
+  Rin: idolmaster,
+  Uzuki: idolmaster,
+  Mio: idolmaster,
+  Vanguard: vanguard,
+  Pecorine: priconne,
+  Karyl: priconne,
+};
+const classLogo = (leader) => CLASS_LOGO[leader] || dragon;
 
 // Chat log entries are stored as "[HH:MM] (Me): text" / "[HH:MM] (Player 2): text".
 // Pull the timestamp, sender and text apart so each can be styled on its own.
@@ -90,6 +143,31 @@ export default function ChatUI({ scale = 1, setHovering, expanded = false }) {
   const reduxLastChatMessage = useSelector(
     (state) => state.card.lastChatMessage,
   );
+  // Chat avatars/names: my Discord avatar + display name when signed in,
+  // otherwise my leader's class emblem and "You"; the opponent is always their
+  // leader's class emblem and "Opponent" (their name isn't transmitted).
+  const reduxLeader = useSelector((state) => state.card.leader);
+  const reduxEnemyLeader = useSelector((state) => state.card.enemyLeader);
+  // Opponent's Discord identity from the in-game identity exchange (empty
+  // strings when they aren't signed in).
+  const reduxEnemyName = useSelector((state) => state.card.enemyName);
+  const reduxEnemyAvatar = useSelector((state) => state.card.enemyAvatar);
+  const { user: authUser } = useAuth();
+  const myChatName = (authUser && discordName(authUser)) || "You";
+  const myChatAvatar =
+    (authUser && discordAvatar(authUser)) || classLogo(reduxLeader);
+  const theirChatAvatar = classLogo(reduxEnemyLeader);
+
+  // Group consecutive messages from the same sender (Discord style: one
+  // avatar + name header per run of messages). Entries are objects
+  // ({time, mine, text, name, avatar}); legacy string entries are parsed.
+  const chatGroups = [];
+  reduxChatLog.forEach((raw) => {
+    const msg = typeof raw === "string" ? parseMessage(raw) : raw;
+    const last = chatGroups[chatGroups.length - 1];
+    if (last && last.mine === msg.mine) last.msgs.push(msg);
+    else chatGroups.push({ mine: msg.mine, msgs: [msg] });
+  });
 
   // Read the latest `minimized` from inside the message effect without making it
   // a dependency (which would re-fire on every collapse/expand).
@@ -175,7 +253,16 @@ export default function ChatUI({ scale = 1, setHovering, expanded = false }) {
 
   const sendMessage = () => {
     if (chatMessage.trim() !== "") {
-      dispatch(setChat(chatMessage));
+      // Send the Discord identity with the message so the opponent's client
+      // can show our real name/avatar (empty when not signed in — they'll
+      // fall back to "Opponent" + class emblem).
+      dispatch(
+        setChat({
+          text: chatMessage,
+          name: authUser ? myChatName : "",
+          avatar: (authUser && discordAvatar(authUser)) || "",
+        }),
+      );
       setChatMessage("");
     }
   };
@@ -284,8 +371,11 @@ export default function ChatUI({ scale = 1, setHovering, expanded = false }) {
           overflowY: "auto",
           display: "flex",
           flexDirection: "column",
-          gap: "0.55em",
-          padding: "0.8em 0.85em",
+          // Chat tab: flat Discord-style rows (full width, no bubbles) on the
+          // panel's own glass background. Game Log keeps the glass list look.
+          ...(activeTab === "chat"
+            ? { gap: 0, padding: "10px 0 14px" }
+            : { gap: "0.55em", padding: "0.8em 0.85em" }),
         }}
       >
         {activeTab === "log" &&
@@ -353,7 +443,7 @@ export default function ChatUI({ scale = 1, setHovering, expanded = false }) {
                     }}
                   >
                     <span style={{ color: side.accent }}>
-                      {mine ? "You" : "Opponent"}
+                      {mine ? myChatName : reduxEnemyName || "Opponent"}
                     </span>
                     {time && <span style={{ color: META }}>{` · ${time}`}</span>}
                   </span>
@@ -389,54 +479,96 @@ export default function ChatUI({ scale = 1, setHovering, expanded = false }) {
             );
           })}
         {activeTab === "chat" &&
-          reduxChatLog.map((raw, idx) => {
-            const { time, text, mine } = parseMessage(raw);
-            // Same side colours as the game log: light blue = you, light red
-            // = opponent.
-            const side = mine ? LOG_MINE : LOG_THEIRS;
+          chatGroups.map((group, gi) => {
+            // Same side colours as the game log for the name, like Discord
+            // role colours: light blue = you, light red = opponent.
+            const side = group.mine ? LOG_MINE : LOG_THEIRS;
+            const avatarSize = expanded ? 40 : 32;
             return (
               <div
-                key={idx}
+                key={gi}
+                className="chatMsgRow"
                 style={{
                   display: "flex",
-                  flexDirection: "column",
-                  alignItems: mine ? "flex-end" : "flex-start",
+                  alignItems: "flex-start",
+                  gap: expanded ? 14 : 10,
+                  padding: expanded ? "2px 16px" : "2px 12px",
+                  marginTop: gi === 0 ? 0 : expanded ? 17 : 13,
                   maxWidth: "100%",
                 }}
               >
+                <img
+                  src={
+                    group.mine
+                      ? myChatAvatar
+                      : group.msgs[0].avatar ||
+                        reduxEnemyAvatar ||
+                        theirChatAvatar
+                  }
+                  alt=""
+                  width={avatarSize}
+                  height={avatarSize}
+                  style={{
+                    borderRadius: "50%",
+                    objectFit: "cover",
+                    backgroundColor: "rgba(255, 255, 255, 0.06)",
+                    flexShrink: 0,
+                    marginTop: 2,
+                  }}
+                />
                 <div
                   style={{
-                    maxWidth: "82%",
-                    padding: "0.45em 0.65em",
-                    borderRadius: mine
-                      ? "12px 12px 4px 12px"
-                      : "12px 12px 12px 4px",
-                    background: side.bg,
-                    border: `1px solid ${side.border}`,
-                    color: "#eaf6ff",
-                    fontFamily: SERIF,
-                    fontSize: expanded ? 17 : 14,
-                    lineHeight: 1.35,
-                    whiteSpace: "pre-line",
-                    wordBreak: "break-word",
+                    minWidth: 0,
+                    flex: 1,
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: 2,
                   }}
                 >
-                  {text}
-                </div>
-                <span
-                  style={{
-                    marginTop: 2,
-                    padding: "0 0.25em",
-                    fontFamily: MONO,
-                    fontSize: expanded ? 12.5 : 10.5,
-                    letterSpacing: 0.4,
-                  }}
-                >
-                  <span style={{ color: side.accent }}>
-                    {mine ? "You" : "Opponent"}
+                  <span
+                    style={{
+                      fontFamily: SANS,
+                      fontSize: expanded ? 15.5 : 13.5,
+                      lineHeight: 1.3,
+                      // Explicit left alignment so the name hugs the avatar
+                      // even where an ancestor centers text.
+                      textAlign: "left",
+                    }}
+                  >
+                    <span style={{ color: side.accent, fontWeight: 600 }}>
+                      {group.mine
+                        ? myChatName
+                        : group.msgs[0].name || reduxEnemyName || "Opponent"}
+                    </span>
+                    {group.msgs[0].time && (
+                      <span
+                        style={{
+                          color: META,
+                          fontSize: expanded ? 11.5 : 10,
+                          marginLeft: 8,
+                        }}
+                      >
+                        {group.msgs[0].time}
+                      </span>
+                    )}
                   </span>
-                  {time && <span style={{ color: META }}>{` · ${time}`}</span>}
-                </span>
+                  {group.msgs.map((m, mi) => (
+                    <div
+                      key={mi}
+                      style={{
+                        color: "#dbe4ea",
+                        fontFamily: SANS,
+                        fontSize: expanded ? 15.5 : 13.5,
+                        lineHeight: 1.4,
+                        whiteSpace: "pre-line",
+                        wordBreak: "break-word",
+                        textAlign: "left",
+                      }}
+                    >
+                      {m.text}
+                    </div>
+                  ))}
+                </div>
               </div>
             );
           })}
@@ -444,18 +576,19 @@ export default function ChatUI({ scale = 1, setHovering, expanded = false }) {
 
       {/* Composer — only on the chat tab; the game log has no input at all. */}
       {activeTab === "chat" && (
+        // Discord-style composer shape (filled rounded input, arrow inside)
+        // in the app's own palette.
         <div
           style={{
             display: "flex",
             alignItems: "center",
-            gap: "0.5em",
-            padding: "0.65em 0.85em",
-            borderTop: `1px solid ${BORDER}`,
+            gap: "0.25em",
+            padding: expanded ? "0 16px 16px" : "0 12px 12px",
           }}
         >
           <InputBase
             value={chatMessage}
-            placeholder="Type a message…"
+            placeholder="Message @Opponent"
             inputProps={{ maxLength: 50, "aria-label": "chat message" }}
             onChange={(e) => setChatMessage(e.target.value)}
             onKeyPress={(e) => {
@@ -466,14 +599,14 @@ export default function ChatUI({ scale = 1, setHovering, expanded = false }) {
             }}
             sx={{
               flex: 1,
-              px: 1.25,
-              py: 0.55,
-              borderRadius: "10px",
+              px: 1.5,
+              py: 0.8,
+              borderRadius: "8px",
               backgroundColor: "rgba(0, 0, 0, 0.45)",
               border: "1px solid rgba(255, 255, 255, 0.12)",
               color: "#eaf6ff",
-              fontFamily: SERIF,
-              fontSize: expanded ? 16 : 14,
+              fontFamily: SANS,
+              fontSize: expanded ? 15.5 : 14,
               transition: "border-color 120ms ease, box-shadow 120ms ease",
               "&.Mui-focused": {
                 border: `1px solid ${ACCENT}`,
@@ -487,16 +620,11 @@ export default function ChatUI({ scale = 1, setHovering, expanded = false }) {
             onClick={sendMessage}
             disabled={chatMessage.trim() === ""}
             sx={{
-              color: "#fff",
-              backgroundColor: ACCENT,
-              borderRadius: "10px",
+              color: META,
               width: 38,
               height: 38,
-              "&:hover": { backgroundColor: "#5cb9ec" },
-              "&.Mui-disabled": {
-                backgroundColor: "rgba(72, 171, 224, 0.25)",
-                color: "rgba(255, 255, 255, 0.4)",
-              },
+              "&:hover": { color: "#fff", backgroundColor: "transparent" },
+              "&.Mui-disabled": { color: "rgba(255, 255, 255, 0.2)" },
             }}
           >
             <SendIcon fontSize="small" />

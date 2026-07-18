@@ -405,7 +405,6 @@ export default function EnemyUI({ compact = false }) {
     return (
       <div className="leaderPanel compact">
         {snackbars}
-        <span className="compactLabel">OPPONENT</span>
         {statRibbon}
       </div>
     );

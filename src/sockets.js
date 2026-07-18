@@ -51,17 +51,6 @@ export const saveRoom = (room) => {
 export const getSavedRoom = () => sessionStorage.getItem(ROOM_KEY);
 export const clearSavedRoom = () => sessionStorage.removeItem(ROOM_KEY);
 
-// The player's chosen display name shown to others on the lobby board. Per-tab
-// (sessionStorage) to stay consistent with playerId/room above, so two players
-// testing in one browser don't share a name. Empty string until the player sets
-// one; the server falls back to "Anonymous".
-const NAME_KEY = "sve_name";
-export const getDisplayName = () => sessionStorage.getItem(NAME_KEY) || "";
-export const saveDisplayName = (name) => {
-  if (name) sessionStorage.setItem(NAME_KEY, name);
-  else sessionStorage.removeItem(NAME_KEY);
-};
-
 // Durably persist the player's OWN game state per-tab, keyed by room. The
 // server's stored snapshot lives only in memory (wiped on a server restart —
 // Render free-tier spins down), and the in-memory Redux board is lost on a page

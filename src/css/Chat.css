@@ -1,0 +1,5 @@
+/* Discord-style chat rows: subtle full-width highlight on hover, like
+   Discord's message hover state (tinted to the app's glass palette). */
+.chatMsgRow:hover {
+  background: rgba(72, 171, 224, 0.07);
+}

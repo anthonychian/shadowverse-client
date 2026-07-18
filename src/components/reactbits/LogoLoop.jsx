@@ -1,7 +1,10 @@
 // LogoLoop — from reactbits.dev (https://reactbits.dev/animations/logo-loop)
 // Continuously scrolling marquee. Items render via `renderItem` for custom
 // nodes (used by the Home deck strip), or as plain <img>/node entries.
-// Local addition: a `draggable` prop — pointer-drag scrubs the strip directly
+// Local additions: a `paused` prop — forces the marquee target speed to 0
+// regardless of hover (used while the Home deck context menu is open, since
+// the menu backdrop steals the pointer and would otherwise un-pause the strip)
+// — and a `draggable` prop — pointer-drag scrubs the strip directly
 // (auto-scroll pauses while held), releasing flings it with the throw velocity
 // before easing back to the marquee speed. Clicks that follow a real drag
 // (> 8px) are suppressed so item onClick handlers only fire on true clicks.
@@ -63,7 +66,7 @@ const useImageLoader = (seqRef, onLoad, dependencies) => {
   }, [onLoad, seqRef, dependencies]);
 };
 
-const useAnimationLoop = (trackRef, targetVelocity, seqWidth, seqHeight, isHovered, hoverSpeed, isVertical, dragStateRef) => {
+const useAnimationLoop = (trackRef, targetVelocity, seqWidth, seqHeight, isHovered, hoverSpeed, isVertical, dragStateRef, paused) => {
   const rafRef = useRef(null);
   const lastTimestampRef = useRef(null);
   const offsetRef = useRef(0);
@@ -119,7 +122,7 @@ const useAnimationLoop = (trackRef, targetVelocity, seqWidth, seqHeight, isHover
         drag.releaseVelocity = null;
       }
 
-      const target = isHovered && hoverSpeed !== undefined ? hoverSpeed : targetVelocity;
+      const target = paused ? 0 : isHovered && hoverSpeed !== undefined ? hoverSpeed : targetVelocity;
 
       const easingFactor = 1 - Math.exp(-deltaTime / ANIMATION_CONFIG.SMOOTH_TAU);
       velocityRef.current += (target - velocityRef.current) * easingFactor;
@@ -147,7 +150,7 @@ const useAnimationLoop = (trackRef, targetVelocity, seqWidth, seqHeight, isHover
       }
       lastTimestampRef.current = null;
     };
-  }, [targetVelocity, seqWidth, seqHeight, isHovered, hoverSpeed, isVertical, trackRef, dragStateRef]);
+  }, [targetVelocity, seqWidth, seqHeight, isHovered, hoverSpeed, isVertical, trackRef, dragStateRef, paused]);
 };
 
 export const LogoLoop = memo(
@@ -164,6 +167,7 @@ export const LogoLoop = memo(
     fadeOutColor,
     scaleOnHover = false,
     draggable = false,
+    paused = false,
     renderItem,
     ariaLabel = "Partner logos",
     className,
@@ -327,6 +331,7 @@ export const LogoLoop = memo(
       effectiveHoverSpeed,
       isVertical,
       dragStateRef,
+      paused,
     );
 
     const cssVariables = useMemo(

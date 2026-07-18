@@ -24,7 +24,9 @@ import {
   setDeckClass,
   setMyArt,
 } from "../redux/CardSlice";
-import { deleteDeck } from "../redux/DeckSlice";
+import { deleteDeck, selectDecks } from "../redux/DeckSlice";
+import { useAuth, discordName } from "../auth/AuthProvider";
+import AccountBadge from "../components/AccountBadge";
 import { cardImage, artImage, artThumb } from "../decks/getCards";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { computeDeckClass, getCost } from "../decks/cardDetails";
@@ -34,8 +36,6 @@ import {
   getSavedRoom,
   clearSavedRoom,
   clearSavedState,
-  getDisplayName,
-  saveDisplayName,
 } from "../sockets";
 import { setGameMode } from "../redux/GameStateSlice";
 import ActiveGamesBoard from "../components/ui/ActiveGamesBoard";
@@ -153,7 +153,6 @@ export default function Home() {
   // its own section with a public/private toggle), or null if none.
   const [rooms, setRooms] = useState([]);
   const [myRoom, setMyRoom] = useState(null);
-  const [displayName, setDisplayName] = useState(getDisplayName());
   // A room this player was in and can rejoin (private to them ΓÇö see the lobby
   // effect). null when there's nothing to reconnect to.
   const [reconnectRoom, setReconnectRoom] = useState(null);
@@ -173,9 +172,16 @@ export default function Home() {
   const [previewInspectCardNo, setPreviewInspectCardNo] = useState(null);
   const [previewInspectOpen, setPreviewInspectOpen] = useState(false);
 
-  const reduxDecks = useSelector((state) => state.deck.decks);
+  const reduxDecks = useSelector(selectDecks);
   const reduxActiveUsers = useSelector((state) => state.card.activeUsers);
   const numLeaders = 7;
+
+  // The display name is not user-editable: signed in via Discord it's the
+  // Discord display name; otherwise it defaults to the leader shown on this
+  // Home page (the only way to set a custom name is to log in with Discord).
+  const { user: authUser } = useAuth();
+  const displayName =
+    (authUser && discordName(authUser)) || LEADER_NAMES[leaderNum] || "";
 
   // Announcements board ΓÇö add new entries to the top of this list.
   // Each entry: { date, title, body }
@@ -371,7 +377,7 @@ export default function Home() {
         setRoomNumber(roomId);
         const room = {
           roomId,
-          hostName: displayName || LEADER_NAMES[leaderNum] || "Challenger",
+          hostName: displayName || "Challenger",
           // Prefer the deck's declared class (now required in the builder); fall
           // back to computing it from the card contents for legacy decks.
           deckClass: deckClassOf(selectedDeck),
@@ -442,12 +448,6 @@ export default function Home() {
     setMyRoom(null);
     setRoomNumber("");
     dispatch(setRoom(""));
-  };
-
-  const handleDisplayNameChange = (event) => {
-    const value = event.target.value;
-    setDisplayName(value);
-    saveDisplayName(value);
   };
 
   const handleDeleteDeck = () => {
@@ -1090,6 +1090,7 @@ export default function Home() {
       />
       {!isMobile && (
       <>
+      <AccountBadge style={{ position: "absolute", top: 14, left: 14, zIndex: 4 }} />
       <div
         style={{
           height: "100vh",
@@ -1185,6 +1186,7 @@ export default function Home() {
               logoHeight={150}
               gap={48}
               pauseOnHover
+              paused={contextMenu !== null}
               scaleOnHover
               draggable
               fadeOut
@@ -1211,22 +1213,6 @@ export default function Home() {
           gap: "0.5em",
         }}
       >
-        <input
-          className="home-input"
-          style={{
-            padding: ".5em .8em",
-            fontSize: "14px",
-            width: "100%",
-            boxSizing: "border-box",
-            textAlign: "center",
-            fontFamily: "Noto Serif JP, serif",
-          }}
-          type="text"
-          maxLength={20}
-          value={displayName}
-          onChange={handleDisplayNameChange}
-          placeholder={LEADER_NAMES[leaderNum] || "Display name..."}
-        />
         <ActiveGamesBoard
           rooms={rooms}
           myRoom={myRoom}
@@ -1419,6 +1405,8 @@ export default function Home() {
             boxSizing: "border-box",
           }}
         >
+          <AccountBadge style={{ flexShrink: 0 }} />
+
           {/* users online */}
           {reduxActiveUsers !== 0 && (
             <div
@@ -1528,6 +1516,7 @@ export default function Home() {
                 logoHeight={130}
                 gap={38}
                 pauseOnHover
+                paused={contextMenu !== null}
                 draggable
                 fadeOut
                 fadeOutColor="rgba(8, 16, 30, 0.9)"

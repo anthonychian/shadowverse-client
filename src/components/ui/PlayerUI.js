@@ -377,7 +377,6 @@ export default function PlayerUI({ name, compact = false }) {
   if (compact) {
     return (
       <div className="leaderPanel compact">
-        <span className="compactLabel">YOU</span>
         {statRibbon}
       </div>
     );

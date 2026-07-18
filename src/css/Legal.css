@@ -1,0 +1,66 @@
+/* Static legal pages (/terms, /privacy). Same dark palette as the Home page
+   vignette so navigating between them doesn't flash a different theme. */
+.legal-root {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #070d15 0%, #0a1220 55%, #070d15 100%);
+  color: rgba(235, 241, 248, 0.92);
+  font-family: "Asul", sans-serif;
+  animation: legalFadeIn 0.4s ease both;
+}
+@keyframes legalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.legal-content {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 3em 1.5em 4em;
+  line-height: 1.65;
+}
+
+.legal-content h1 {
+  font-size: 2em;
+  margin: 0.5em 0 0.25em;
+  color: #fff;
+}
+
+.legal-updated {
+  color: rgba(235, 241, 248, 0.55);
+  font-size: 0.9em;
+  margin-bottom: 2em;
+}
+
+.legal-content h2 {
+  font-size: 1.25em;
+  margin: 1.8em 0 0.5em;
+  color: #8fd0f4;
+}
+
+.legal-content p,
+.legal-content li {
+  color: rgba(235, 241, 248, 0.85);
+}
+
+.legal-content ul {
+  padding-left: 1.4em;
+}
+
+.legal-content a {
+  color: #48abe0;
+  text-decoration: none;
+}
+.legal-content a:hover {
+  text-decoration: underline;
+}
+
+.legal-home-link {
+  display: inline-block;
+  margin-bottom: 1em;
+  font-size: 0.95em;
+  letter-spacing: 0.04em;
+}
