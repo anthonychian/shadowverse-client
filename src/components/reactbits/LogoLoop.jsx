@@ -364,6 +364,7 @@ export const LogoLoop = memo(
       (item, key) => {
         if (renderItem) {
           return (
+            // eslint-disable-next-line jsx-a11y/no-redundant-roles -- list-style: none strips list semantics in Safari; the explicit role restores them
             <li className="logoloop__item" key={key} role="listitem">
               {renderItem(item, key)}
             </li>
@@ -403,6 +404,7 @@ export const LogoLoop = memo(
           content
         );
         return (
+          // eslint-disable-next-line jsx-a11y/no-redundant-roles -- list-style: none strips list semantics in Safari; the explicit role restores them
           <li className="logoloop__item" key={key} role="listitem">
             {itemContent}
           </li>
@@ -414,6 +416,7 @@ export const LogoLoop = memo(
     const logoLists = useMemo(
       () =>
         Array.from({ length: copyCount }, (_, copyIndex) => (
+          // eslint-disable-next-line jsx-a11y/no-redundant-roles -- list-style: none strips list semantics in Safari; the explicit role restores them
           <ul
             className="logoloop__list"
             key={`copy-${copyIndex}`}
