@@ -1,4 +1,4 @@
-import { supabase } from "./supabase";
+import { supabase, SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY } from "./supabase";
 
 // Deck sharing: a share is a frozen snapshot of one deck stored in the
 // `shared_decks` table (see supabase/shared-decks.sql) under a short slug that
@@ -33,9 +33,12 @@ const randomId = (length = ID_LENGTH) => {
 export const shareUrl = (id) => `${window.location.origin}/decks/${id}`;
 
 // Public URL of a preview object, or null when the share has no image.
+// Built by hand rather than via getPublicUrl, for the same reason the uploads
+// are (see storageRequest) — and because this URL goes into og:image, where a
+// crawler fetches it unauthenticated.
 export const previewUrl = (imagePath) =>
   imagePath
-    ? supabase.storage.from(BUCKET).getPublicUrl(imagePath).data.publicUrl
+    ? `${SUPABASE_URL}/storage/v1/object/public/${BUCKET}/${imagePath}`
     : null;
 
 // Render + upload the og:image for a share. Returns the stored object name.
@@ -46,28 +49,62 @@ export const previewUrl = (imagePath) =>
 // shared_decks — a cross-table lookup inside a storage.objects policy also has
 // to satisfy that table's own RLS, which is a second thing to get wrong. The
 // random suffix keeps a private share's image unguessable from its slug.
-const uploadPreview = async (ownerId, id, blob) => {
-  const path = `${ownerId}/${id}-${randomId(10)}.jpg`;
-  const { error } = await supabase.storage
-    .from(BUCKET)
-    .upload(path, blob, { contentType: "image/jpeg", upsert: true });
-  if (error) {
-    // Include what was attempted. An RLS refusal here is indistinguishable
-    // from a dozen other causes without knowing the bucket and the exact
-    // object name — in particular whether the leading folder really is the
-    // owner's uuid, which is the whole basis of the storage policy.
+// Storage requests are made by hand rather than through `supabase.storage`.
+//
+// supabase-js builds its storage client once, with the headers the client was
+// constructed with — `new StorageClient(url, this.headers, ...)` — and never
+// refreshes them afterwards: its `_handleTokenChanged` only re-auths realtime.
+// PostgREST, by contrast, gets a live token accessor. So once signed in, table
+// reads and writes carry the user's JWT while every storage request still goes
+// out as anon, and any RLS-protected upload fails with "new row violates
+// row-level security policy" no matter how correct the policy is.
+//
+// Talking to the storage REST API directly with the current session token
+// sidesteps that, and doesn't depend on the library's behaviour not changing.
+const storageRequest = async (method, path, { body, headers } = {}) => {
+  const {
+    data: { session },
+  } = await supabase.auth.getSession();
+  if (!session) throw new Error("Not signed in.");
+
+  const res = await fetch(
+    `${SUPABASE_URL}/storage/v1/object/${BUCKET}/${path}`,
+    {
+      method,
+      headers: {
+        apikey: SUPABASE_PUBLISHABLE_KEY,
+        Authorization: `Bearer ${session.access_token}`,
+        ...headers,
+      },
+      body,
+    },
+  );
+  if (!res.ok) {
+    const detail = await res.text().catch(() => "");
     throw new Error(
-      `${error.message} [bucket ${BUCKET}, path ${path}, size ${blob?.size ?? "?"}]`,
+      `storage ${method} ${res.status} ${detail.slice(0, 200)} [bucket ${BUCKET}, path ${path}]`,
     );
   }
+  return res;
+};
+
+const uploadPreview = async (ownerId, id, blob) => {
+  const path = `${ownerId}/${id}-${randomId(10)}.jpg`;
+  await storageRequest("POST", path, {
+    body: blob,
+    headers: { "Content-Type": "image/jpeg", "x-upsert": "true" },
+  });
   return path;
 };
 
 const removePreview = async (imagePath) => {
   if (!imagePath) return;
-  const { error } = await supabase.storage.from(BUCKET).remove([imagePath]);
-  // A missing object isn't worth failing the whole operation over.
-  if (error) console.warn("Failed to remove share preview:", error.message);
+  try {
+    await storageRequest("DELETE", imagePath);
+  } catch (e) {
+    // A missing object isn't worth failing the whole operation over.
+    console.warn("Failed to remove share preview:", e.message || e);
+  }
 };
 
 // The share (if any) this user already made for a deck of this name, newest
