@@ -51,7 +51,15 @@ const uploadPreview = async (ownerId, id, blob) => {
   const { error } = await supabase.storage
     .from(BUCKET)
     .upload(path, blob, { contentType: "image/jpeg", upsert: true });
-  if (error) throw error;
+  if (error) {
+    // Include what was attempted. An RLS refusal here is indistinguishable
+    // from a dozen other causes without knowing the bucket and the exact
+    // object name — in particular whether the leading folder really is the
+    // owner's uuid, which is the whole basis of the storage policy.
+    throw new Error(
+      `${error.message} [bucket ${BUCKET}, path ${path}, size ${blob?.size ?? "?"}]`,
+    );
+  }
   return path;
 };
 
