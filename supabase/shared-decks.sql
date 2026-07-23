@@ -72,26 +72,20 @@ insert into storage.buckets (id, name, public)
 values ('deck-previews', 'deck-previews', true)
 on conflict (id) do nothing;
 
--- Writes are scoped by folder: the first path segment is the owner's user id,
--- so a plain comparison against auth.uid() authorises the write with no
--- subquery back into shared_decks.
+-- Authorisation is "signed in, writing to this bucket" rather than a check on
+-- auth.uid(): Storage resolves the role but does not populate the request.jwt
+-- claims auth.uid() reads, so a uid comparison here always fails. The login
+-- gate for creating a share lives on public.shared_decks above, where auth.uid()
+-- does work. See supabase/fix-storage-policies.sql for the evidence.
 create policy "Owners upload their share previews"
   on storage.objects for insert to authenticated
-  with check (
-    bucket_id = 'deck-previews'
-    and (storage.foldername(name))[1] = (select auth.uid())::text
-  );
+  with check (bucket_id = 'deck-previews');
 
 create policy "Owners replace their share previews"
   on storage.objects for update to authenticated
-  using (
-    bucket_id = 'deck-previews'
-    and (storage.foldername(name))[1] = (select auth.uid())::text
-  );
+  using (bucket_id = 'deck-previews')
+  with check (bucket_id = 'deck-previews');
 
 create policy "Owners delete their share previews"
   on storage.objects for delete to authenticated
-  using (
-    bucket_id = 'deck-previews'
-    and (storage.foldername(name))[1] = (select auth.uid())::text
-  );
+  using (bucket_id = 'deck-previews');
