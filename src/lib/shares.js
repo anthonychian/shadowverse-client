@@ -102,9 +102,14 @@ const storageRequest = async (method, path, { body, headers } = {}) => {
 
 const uploadPreview = async (ownerId, id, blob) => {
   const path = `${ownerId}/${id}-${randomId(10)}.jpg`;
+  // No `x-upsert`. Storage treats an upsert as update-or-insert and evaluates
+  // the update arm against RLS, which fails however permissive the insert
+  // policy is — reproducible with curl: the identical POST succeeds without the
+  // header and returns "new row violates row-level security policy" with it.
+  // Nothing to upsert over anyway, since every upload gets a fresh random path.
   await storageRequest("POST", path, {
     body: blob,
-    headers: { "Content-Type": "image/jpeg", "x-upsert": "true" },
+    headers: { "Content-Type": "image/jpeg" },
   });
   return path;
 };
