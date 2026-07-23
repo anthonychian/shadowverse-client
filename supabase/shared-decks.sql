@@ -59,45 +59,39 @@ create policy "Owners delete their shares"
 -- ---------------------------------------------------------------------------
 -- Each share's og:image (what Discord/Twitter unfurl) is a JPEG the sharer's
 -- browser renders at share time and uploads here. The bucket is public because
--- link crawlers fetch it unauthenticated; object names are "<share id>/<random>"
--- so a private share's image isn't guessable from its slug, and the client
--- deletes the object whenever a share is switched back to private.
+-- link crawlers fetch it unauthenticated; object names are
+-- "<owner id>/<share id>-<random>.jpg" so a private share's image isn't
+-- guessable from its slug, and the client deletes the object whenever a share
+-- is switched back to private.
+--
+-- NOTE: if uploads fail with "new row violates row-level security policy", the
+-- policies below didn't get created — run supabase/fix-storage-policies.sql,
+-- which recreates them and reports whether they landed.
 
 insert into storage.buckets (id, name, public)
 values ('deck-previews', 'deck-previews', true)
 on conflict (id) do nothing;
 
--- Writes are scoped to shares the caller owns: the first path segment has to be
--- the id of one of their rows.
+-- Writes are scoped by folder: the first path segment is the owner's user id,
+-- so a plain comparison against auth.uid() authorises the write with no
+-- subquery back into shared_decks.
 create policy "Owners upload their share previews"
   on storage.objects for insert to authenticated
   with check (
     bucket_id = 'deck-previews'
-    and exists (
-      select 1 from public.shared_decks s
-      where s.id = split_part(name, '/', 1)
-        and s.owner_id = (select auth.uid())
-    )
+    and (storage.foldername(name))[1] = (select auth.uid())::text
   );
 
 create policy "Owners replace their share previews"
   on storage.objects for update to authenticated
   using (
     bucket_id = 'deck-previews'
-    and exists (
-      select 1 from public.shared_decks s
-      where s.id = split_part(name, '/', 1)
-        and s.owner_id = (select auth.uid())
-    )
+    and (storage.foldername(name))[1] = (select auth.uid())::text
   );
 
 create policy "Owners delete their share previews"
   on storage.objects for delete to authenticated
   using (
     bucket_id = 'deck-previews'
-    and exists (
-      select 1 from public.shared_decks s
-      where s.id = split_part(name, '/', 1)
-        and s.owner_id = (select auth.uid())
-    )
+    and (storage.foldername(name))[1] = (select auth.uid())::text
   );

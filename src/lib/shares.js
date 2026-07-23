@@ -39,9 +39,15 @@ export const previewUrl = (imagePath) =>
     : null;
 
 // Render + upload the og:image for a share. Returns the stored object name.
-// The random suffix keeps a private share's image unguessable from its slug.
-const uploadPreview = async (id, blob) => {
-  const path = `${id}/${randomId(12)}.jpg`;
+//
+// The path is "<owner id>/<share id>-<random>.jpg". The owner's id leads so the
+// storage policy can authorise a write with a plain folder check
+// ((storage.foldername(name))[1] = auth.uid()) instead of a subquery back into
+// shared_decks — a cross-table lookup inside a storage.objects policy also has
+// to satisfy that table's own RLS, which is a second thing to get wrong. The
+// random suffix keeps a private share's image unguessable from its slug.
+const uploadPreview = async (ownerId, id, blob) => {
+  const path = `${ownerId}/${id}-${randomId(10)}.jpg`;
   const { error } = await supabase.storage
     .from(BUCKET)
     .upload(path, blob, { contentType: "image/jpeg", upsert: true });
@@ -195,7 +201,7 @@ const attachPreview = async (row, renderImage, onPreviewError) => {
   try {
     const blob = await renderImage(row.id);
     if (!blob) return row;
-    const imagePath = await uploadPreview(row.id, blob);
+    const imagePath = await uploadPreview(row.owner_id, row.id, blob);
     const { data, error } = await supabase
       .from("shared_decks")
       .update({ image_path: imagePath })
