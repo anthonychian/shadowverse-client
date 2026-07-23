@@ -72,20 +72,25 @@ insert into storage.buckets (id, name, public)
 values ('deck-previews', 'deck-previews', true)
 on conflict (id) do nothing;
 
--- Authorisation is "signed in, writing to this bucket" rather than a check on
--- auth.uid(): Storage resolves the role but does not populate the request.jwt
--- claims auth.uid() reads, so a uid comparison here always fails. The login
--- gate for creating a share lives on public.shared_decks above, where auth.uid()
--- does work. See supabase/fix-storage-policies.sql for the evidence.
+-- Access control comes from the bucket, not the caller: Storage's database
+-- session does not run as `authenticated`, so a policy with a TO clause never
+-- applies to it and auth.uid() has no claims to read. The login gate for
+-- creating a share lives on public.shared_decks above, where auth.uid() works.
+-- See supabase/fix-storage-policies.sql for the evidence behind this.
+update storage.buckets
+set file_size_limit    = 5242880,                 -- 5 MB; previews run ~250KB
+    allowed_mime_types = array['image/jpeg']
+where id = 'deck-previews';
+
 create policy "Owners upload their share previews"
-  on storage.objects for insert to authenticated
+  on storage.objects for insert
   with check (bucket_id = 'deck-previews');
 
 create policy "Owners replace their share previews"
-  on storage.objects for update to authenticated
+  on storage.objects for update
   using (bucket_id = 'deck-previews')
   with check (bucket_id = 'deck-previews');
 
 create policy "Owners delete their share previews"
-  on storage.objects for delete to authenticated
+  on storage.objects for delete
   using (bucket_id = 'deck-previews');
