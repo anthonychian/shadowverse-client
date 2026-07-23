@@ -89,6 +89,9 @@ export default function ShareDeckDialog({
   const [busy, setBusy] = useState(null); // human-readable "what's happening"
   const [error, setError] = useState("");
   const [copied, setCopied] = useState(false);
+  // Preview rendering fails independently of the share itself, so it gets its
+  // own message rather than being swallowed or masquerading as a share error.
+  const [previewError, setPreviewError] = useState("");
 
   const deckName = deck?.name;
 
@@ -135,6 +138,7 @@ export default function ShareDeckDialog({
   const run = async (label, fn) => {
     setBusy(label);
     setError("");
+    setPreviewError("");
     try {
       await fn();
     } catch (e) {
@@ -153,7 +157,14 @@ export default function ShareDeckDialog({
         ownerName,
         deck: snapshotOf(deck),
       });
-      setShare(await setSharePublic({ share: row, isPublic: true, renderImage }));
+      setShare(
+        await setSharePublic({
+          share: row,
+          isPublic: true,
+          renderImage,
+          onPreviewError: setPreviewError,
+        }),
+      );
     });
 
   const handleUpdate = () =>
@@ -163,13 +174,19 @@ export default function ShareDeckDialog({
         ownerName,
         deck: snapshotOf(deck),
         renderImage,
+        onPreviewError: setPreviewError,
       });
       setShare(row);
     });
 
   const handleTogglePublic = (next) =>
     run(next ? "Turning the link back on…" : "Making it private…", async () => {
-      const row = await setSharePublic({ share, isPublic: next, renderImage });
+      const row = await setSharePublic({
+        share,
+        isPublic: next,
+        renderImage,
+        onPreviewError: setPreviewError,
+      });
       setShare(row);
     });
 
@@ -277,6 +294,12 @@ export default function ShareDeckDialog({
         )}
         {error && (
           <div style={{ color: COLORS.danger, fontSize: 13, marginTop: 10 }}>{error}</div>
+        )}
+        {previewError && !busy && (
+          <div style={{ color: COLORS.gold, fontSize: 13, marginTop: 10, lineHeight: 1.6 }}>
+            The link works, but its preview image couldn’t be generated, so it
+            will unfurl without one: {previewError}
+          </div>
         )}
       </DialogContent>
 

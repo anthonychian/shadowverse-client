@@ -127,7 +127,7 @@ export const ensureShare = async ({ userId, ownerName, deck, shareId }) => {
 // Replace a share's snapshot with the deck's current contents, keeping the same
 // URL. Only a public share needs its preview image redrawn — a private one has
 // none until it's shared.
-export const updateShare = async ({ share, ownerName, deck, renderImage }) => {
+export const updateShare = async ({ share, ownerName, deck, renderImage, onPreviewError }) => {
   const { data, error } = await supabase
     .from("shared_decks")
     .update({
@@ -143,12 +143,12 @@ export const updateShare = async ({ share, ownerName, deck, renderImage }) => {
   if (!data.is_public) return data;
 
   await removePreview(share.image_path);
-  return attachPreview({ ...data, image_path: null }, renderImage);
+  return attachPreview({ ...data, image_path: null }, renderImage, onPreviewError);
 };
 
 // Flip a share between public and private. Going private drops the preview
 // image so the picture isn't reachable either; going public regenerates it.
-export const setSharePublic = async ({ share, isPublic, renderImage }) => {
+export const setSharePublic = async ({ share, isPublic, renderImage, onPreviewError }) => {
   if (!isPublic) {
     await removePreview(share.image_path);
     const { data, error } = await supabase
@@ -172,7 +172,7 @@ export const setSharePublic = async ({ share, isPublic, renderImage }) => {
     .select()
     .single();
   if (error) throw error;
-  return data.image_path ? data : attachPreview(data, renderImage);
+  return data.image_path ? data : attachPreview(data, renderImage, onPreviewError);
 };
 
 export const deleteShare = async (share) => {
@@ -187,8 +187,10 @@ export const deleteShare = async (share) => {
 
 // Render the preview for an existing row and record the object name. A failure
 // here degrades the unfurl to the site's default image rather than breaking the
-// share, so it's warned about rather than thrown.
-const attachPreview = async (row, renderImage) => {
+// share, so it does not throw — but it must not be silent either, or a share
+// ends up with no image and nothing anywhere says why. Callers pass
+// `onPreviewError` to surface it.
+const attachPreview = async (row, renderImage, onPreviewError) => {
   if (!renderImage) return row;
   try {
     const blob = await renderImage(row.id);
@@ -203,7 +205,9 @@ const attachPreview = async (row, renderImage) => {
     if (error) throw error;
     return data;
   } catch (e) {
-    console.warn("Failed to generate share preview image:", e.message || e);
+    const msg = e?.message || String(e);
+    console.warn("Failed to generate share preview image:", msg);
+    if (onPreviewError) onPreviewError(msg);
     return row;
   }
 };

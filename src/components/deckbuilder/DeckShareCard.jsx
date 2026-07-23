@@ -165,8 +165,11 @@ export default function DeckShareCard({ deck, ownerName, url }) {
         padding: PAD,
         boxSizing: "border-box",
         background: "#0d1017",
-        // A wash of the class colour so different decks don't all look alike.
-        backgroundImage: `radial-gradient(1000px 340px at 0% 0%, ${accent}26, transparent 70%)`,
+        // Deliberately no gradient. html2canvas 1.4.1 parses gradients itself
+        // and throws on shapes it doesn't understand — and a throw here means
+        // the share silently ends up with no og:image at all. A flat panel plus
+        // the class-coloured rule below carries the same idea with no risk.
+        borderTop: `6px solid ${accent}`,
         fontFamily: "Arial, Helvetica, sans-serif",
       }}
     >
