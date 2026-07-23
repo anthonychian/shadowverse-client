@@ -105,6 +105,10 @@ export default function CardInspector({
   // When true, the effect text auto-scales to fit its box height (never scrolls).
   // For previews the viewer can't scroll (e.g. while hovering a card in-game).
   fitEffect = false,
+  // Multiplier on every text size, icon and gap. `fill` deliberately shrinks
+  // the type so the art stays dominant; a caller that would rather have
+  // readable text than the smallest possible chrome can scale it back up.
+  textScale = 1,
   readOnly = false,
   // In-game hover preview: restyle the chrome into Shadowverse-like floating
   // pieces — a blue gradient name banner and translucent dark, cut-corner stat
@@ -123,7 +127,11 @@ export default function CardInspector({
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
   }, [fitEffect]);
-  const metaScale = fitEffect ? Math.max(0.6, Math.min(1, vpH / 900)) : 1;
+  // Everything sized off metaScale — name, meta text, stat values, cost/atk/def
+  // icons, gaps, the stat banner — rides `textScale` too, so one knob moves the
+  // whole block together rather than leaving the icons behind the text.
+  const metaScale =
+    (fitEffect ? Math.max(0.6, Math.min(1, vpH / 900)) : 1) * textScale;
 
   // In the fullscreen mobile preview there's plenty of room, so scale the image,
   // text and stepper up; the desktop column keeps the compact sizes. In `fill`
@@ -135,7 +143,7 @@ export default function CardInspector({
   const metaSize = (fill ? 12 : large ? 14 : 13) * metaScale;
   // The description keeps its base size — FitScale shrinks it only if needed —
   // so it stays prioritized over the chrome on small screens.
-  const effectSize = fill ? 12.5 : large ? 13 : 14;
+  const effectSize = (fill ? 12.5 : large ? 13 : 14) * textScale;
   const statValSize = (fill ? 18 : large ? 20 : 23) * metaScale;
   const stepSize = large ? 52 : 44;
   const countSize = large ? 26 : 22;

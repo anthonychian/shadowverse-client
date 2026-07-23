@@ -2,7 +2,6 @@ import React, { useState, useEffect, useMemo, useRef } from "react";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import wallpaper from "../../src/assets/wallpapers/3.png";
-import html2canvas from "html2canvas";
 
 import galmieux from "../../src/assets/wallpapers/Galmieux.png";
 import viridia from "../../src/assets/wallpapers/viridia.png";
@@ -27,9 +26,9 @@ import {
 import { deleteDeck, selectDecks } from "../redux/DeckSlice";
 import { useAuth, discordName } from "../auth/AuthProvider";
 import AccountBadge from "../components/AccountBadge";
-import { cardImage, artImage, artThumb } from "../decks/getCards";
+import { cardImage, artThumb } from "../decks/getCards";
 import useMediaQuery from "@mui/material/useMediaQuery";
-import { computeDeckClass, getCost } from "../decks/cardDetails";
+import { computeDeckClass } from "../decks/cardDetails";
 import {
   socket,
   saveRoom,
@@ -39,21 +38,14 @@ import {
 } from "../sockets";
 import { setGameMode } from "../redux/GameStateSlice";
 import ActiveGamesBoard from "../components/ui/ActiveGamesBoard";
-import DeckPanel from "../components/deckbuilder/DeckPanel";
-import CardInspector from "../components/deckbuilder/CardInspector";
+import { ensureShare } from "../lib/shares";
 
-import ArrowBackIosNew from "@mui/icons-material/ArrowBackIosNew";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import CameraAltIcon from "@mui/icons-material/CameraAlt";
 import CloseIcon from "@mui/icons-material/Close";
-import CardMUI from "@mui/material/Card";
 import {
   Snackbar,
   IconButton,
   Menu,
   MenuItem,
-  Modal,
-  Box,
   Dialog,
   DialogTitle,
   DialogContent,
@@ -86,18 +78,6 @@ const LEADER_NAMES = {
   7: "Piercye",
 };
 
-// Per-card copy max for the read-only deck Preview's "n / max" counts (mirrors
-// the deck builder's limits). null = no fixed cap (show just the count).
-const mainCopyMax = (card) => {
-  if (card === "Rapid Fire") return 6;
-  if (card === "Shenlong" || card === "Curse Crafter") return 1;
-  if (card === "Onion Patch") return null;
-  return 3;
-};
-const evoCopyMax = (card) => {
-  if (card === "Carrot" || card === "Drive Point") return null;
-  return 3;
-};
 
 // One slot in the mobile deck carousel. A fixed-width centering slot so each
 // item (scaled via transform, which doesn't affect layout) snaps to the centre.
@@ -111,18 +91,6 @@ const carouselSlot = {
   alignItems: "flex-start",
 };
 
-// Order deck entries by play-point cost (then name), matching the deck builder's
-// DeckPanel so the Home preview reads the same way.
-const sortedEntries = (map) =>
-  [...map.entries()].sort((a, b) => {
-    const ca = getCost(a[0]);
-    const cb = getCost(b[0]);
-    const va = ca == null ? 99 : ca;
-    const vb = cb == null ? 99 : cb;
-    if (va !== vb) return va - vb;
-    return a[0].localeCompare(b[0]);
-  });
-
 export default function Home() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -134,7 +102,6 @@ export default function Home() {
   const [contextMenu, setContextMenu] = useState(null);
   const [roomNumber, setRoomNumber] = useState("");
   const [name, setName] = useState("");
-  const [open, setOpen] = useState(false);
   const [openDialogue, setOpenDialogue] = useState(false);
   const [leaderImage, setLeaderImage] = useState(null);
   const [leaderNum, setLeaderNum] = useState(0);
@@ -167,10 +134,6 @@ export default function Home() {
   const carouselRef = useRef(null);
   const carouselSettleRef = useRef(null);
   const [carouselActiveK, setCarouselActiveK] = useState(0);
-  // Read-only deck Preview: inspect a single card via the magnifier.
-  const [previewInspectName, setPreviewInspectName] = useState(null);
-  const [previewInspectCardNo, setPreviewInspectCardNo] = useState(null);
-  const [previewInspectOpen, setPreviewInspectOpen] = useState(false);
 
   const reduxDecks = useSelector(selectDecks);
   const reduxActiveUsers = useSelector((state) => state.card.activeUsers);
@@ -312,18 +275,34 @@ export default function Home() {
   //   setHoverCard("");
   // };
 
-  const handleModalOpen = () => {
+  // Preview opens the deck's own page — the same page its share link points at,
+  // so there's only one deck view. It requires a Discord login: the page is a
+  // `shared_decks` row, and only a signed-in user can own one. Decks saved
+  // while signed in already have a URL; older ones get one on demand here.
+  const handlePreviewDeck = async (deckArg) => {
+    const d = deckArg || selectedDeck;
     handleClose();
-    if (selectedDeck.deck.length > 0) setOpen(true);
-  };
-  const handleModalClose = () => setOpen(false);
+    if (!d || !d.deck || d.deck.length === 0) return;
 
-  // Open the read-only card inspector for a deck card in the mobile Preview,
-  // honouring the deck's chosen art (printing) for that card.
-  const openPreviewInspect = (cardName) => {
-    setPreviewInspectName(cardName);
-    setPreviewInspectCardNo((selectedDeck.art && selectedDeck.art[cardName]) || null);
-    setPreviewInspectOpen(true);
+    if (!authUser) {
+      setHintSnack("Sign in with Discord to preview a deck.");
+      return;
+    }
+    if (d.shareId) {
+      navigate(`/decks/${d.shareId}`);
+      return;
+    }
+    try {
+      const share = await ensureShare({
+        userId: authUser.id,
+        ownerName: discordName(authUser),
+        deck: d,
+      });
+      navigate(`/decks/${share.id}`);
+    } catch (e) {
+      console.warn("Couldn’t open the deck's page:", e.message || e);
+      setHintSnack("Couldn’t open this deck. Try again in a moment.");
+    }
   };
 
   const handleOpenDialogue = () => {
@@ -581,22 +560,6 @@ export default function Home() {
     setOpenSnack(false);
   };
 
-  const handleBackClick = () => {
-    if (deckIdx - 1 < 0) return;
-    else {
-      handleSelectDeck(reduxDecks[deckIdx - 1], deckIdx - 1);
-      setDeckIdx(deckIdx - 1);
-    }
-  };
-
-  const handleForwardClick = () => {
-    if (deckIdx >= reduxDecks.length - 1) return;
-    else {
-      handleSelectDeck(reduxDecks[deckIdx + 1], deckIdx + 1);
-      setDeckIdx(deckIdx + 1);
-    }
-  };
-
   // ---- mobile deck carousel (infinite, swipeable both directions) ----
   // The list is rendered as 3 identical copies. As the user swipes, the slot
   // nearest the centre is marked active (scaled up). When scrolling settles we
@@ -842,59 +805,6 @@ export default function Home() {
       })}
     </div>
   );
-
-  // const deckToImage = () => {
-  //   var element = document.getElementById("deckPreview");
-  //   html2canvas(element).then(function (canvas) {
-  //     canvas.toBlob(function (blob) {
-  //       window.saveAs(blob, "preview.png");
-  //     });
-  //   });
-  // };
-
-  const deckToImage = () => {
-    const element = document.getElementById("deckPreview");
-
-    if (!element) {
-      console.error("deckPreview element not found");
-      return;
-    }
-
-    html2canvas(element, {
-      allowTaint: true,
-      useCORS: true,
-      backgroundColor: "rgba(31, 31, 31)",
-    })
-      .then((canvas) => {
-        const image = canvas.toDataURL("image/png");
-        const newTab = window.open();
-        newTab.document.body.innerHTML = `<img src="${image}" style="width: 100%; height: 100%;" />`;
-        newTab.document.title = `deck-${Date.now()}.png`;
-      })
-      .catch((err) => console.error(err));
-  };
-
-  // const deckToImageSaved = () => {
-  //   const element = document.getElementById("deckPreview");
-
-  //   if (!element) {
-  //     console.error("deckPreview element not found");
-  //     return;
-  //   }
-
-  //   html2canvas(element, {
-  //     allowTaint: true,
-  //     useCORS: true,
-  //     backgroundColor: "#1f1f1f",
-  //   })
-  //     .then((canvas) => {
-  //       const link = document.createElement("a");
-  //       link.href = canvas.toDataURL("image/png");
-  //       link.download = `deck-${Date.now()}.png`;
-  //       link.click();
-  //     })
-  //     .catch((err) => console.error(err));
-  // };
 
   const action = (
     <React.Fragment>
@@ -1534,376 +1444,11 @@ export default function Home() {
           horizontal: "left",
         }}
       >
-        <MenuItem onClick={handleModalOpen}>Preview</MenuItem>
+        <MenuItem onClick={() => handlePreviewDeck()}>Preview</MenuItem>
         <MenuItem onClick={handleEditDeck}>Edit</MenuItem>
-        {/* <MenuItem onClick={handleShareDeck}>Share</MenuItem> */}
         <MenuItem onClick={handleOpenDialogue}>Delete</MenuItem>
       </Menu>
-      <Modal
-        sx={{ backgroundColor: "rgba(31, 31, 31)" }}
-        open={open && !isMobile}
-        onClose={handleModalClose}
-        disableScrollLock
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box
-          id="deckPreview"
-          sx={{
-            position: "relative",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            backgroundColor: "rgba(31, 31, 31)",
 
-            boxShadow: 24,
-            // p: 3,
-            height: "100%",
-            width: "100%",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            outline: "none",
-          }}
-        >
-          <CloseIcon
-            sx={{
-              position: "absolute",
-              right: "1%",
-              top: "0%",
-              zIndex: 10,
-              cursor: "pointer",
-              height: "90px",
-              width: "90px",
-              color: "white",
-              opacity: "0%",
-              "&:hover": {
-                opacity: "50%",
-              },
-            }}
-            onClick={handleModalClose}
-            fontSize="small"
-          />
-
-          <ArrowBackIosNew
-            style={{}}
-            sx={{
-              position: "absolute",
-              right: "93%",
-              bottom: "50%",
-              zIndex: 10,
-              cursor: "pointer",
-              height: "170px",
-              width: "170px",
-              color: "white",
-              opacity: "0%",
-              "&:hover": {
-                opacity: "70%",
-              },
-            }}
-            onClick={handleBackClick}
-          />
-          <ArrowForwardIosIcon
-            style={{}}
-            sx={{
-              position: "absolute",
-              right: "1%",
-              bottom: "50%",
-              zIndex: 10,
-              cursor: "pointer",
-              height: "170px",
-              width: "170px",
-              color: "white",
-              opacity: "0%",
-              "&:hover": {
-                opacity: "70%",
-              },
-            }}
-            onClick={handleForwardClick}
-          />
-
-          <CameraAltIcon
-            style={{}}
-            sx={{
-              position: "absolute",
-              right: "1%",
-              top: "90%",
-              zIndex: 10,
-              cursor: "pointer",
-              height: "90px",
-              width: "90px",
-              color: "white",
-              opacity: "0%",
-              "&:hover": {
-                opacity: "50%",
-              },
-            }}
-            onClick={deckToImage}
-          />
-
-          <CardMUI
-            sx={{
-              backgroundColor: "rgba(31, 31, 31)",
-              // backgroundColor: "transparent",
-              minHeight: "250px",
-              padding: "2em",
-
-              // height: "400px",
-              // maxHeight: "750px",
-              overflowY: "auto",
-
-              height: "90%",
-              width: "90%",
-              display: "flex",
-              flexDirection: "row",
-              flexWrap: "wrap",
-              // justifyContent: "start",
-              alignItems: "center",
-              paddingLeft: "10%",
-              gap: "3px",
-            }}
-            variant="outlined"
-          >
-            {sortedEntries(deckMap).map((entry, idx) => {
-              const [key, value] = entry;
-              return (
-                <div
-                  key={idx}
-                  onClick={() => openPreviewInspect(key)}
-                  // onMouseEnter={() => handleStartHover(key)}
-                  // onMouseLeave={() => handleEndHover()}
-                  style={{
-                    position: "relative",
-                    display: "flex",
-                    cursor: "pointer",
-                    // justifyContent: "end",
-                  }}
-                >
-                  <div
-                    style={{
-                      position: "relative",
-                      display: "flex",
-                      justifyContent: "center",
-                    }}
-                  >
-                    <img
-                      key={idx}
-                      className="cardSizeInPreview"
-                      // style={{ aspectRatio: 110 / 150, height: "30vh" }}
-                      // width={"110px"}
-                      height={"350px"}
-                      src={artImage(key, selectedDeck.art)}
-                      alt={key}
-                    />
-                  </div>
-                  <div
-                    style={{
-                      position: "relative",
-                      display: "flex",
-                      justifyContent: "end",
-                    }}
-                  >
-                    <div
-                      style={{
-                        position: "absolute",
-                        bottom: "0",
-                        backgroundColor: "rgba(0, 0, 0, 0.7)",
-                        height: "60px",
-                        width: "60px",
-                        color: "white",
-                        fontSize: "40px",
-                        fontFamily: "Noto Serif JP, serif",
-                        borderRadius: "7px",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                      }}
-                    >
-                      {value}
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-            <div
-              style={{
-                aspectRatio: 110 / 150,
-                maxHeight: "30px",
-                width: "100%",
-              }}
-            ></div>
-            {sortedEntries(evoDeckMap).map((entry, idx) => {
-              const [key, value] = entry;
-              return (
-                <div
-                  key={idx * 2}
-                  onClick={() => openPreviewInspect(key)}
-                  // onMouseEnter={() => handleStartHover(key)}
-                  // onMouseLeave={() => handleEndHover()}
-                  style={{
-                    position: "relative",
-                    display: "flex",
-                    cursor: "pointer",
-                    justifyContent: "end",
-                  }}
-                >
-                  <img
-                    key={idx * 2}
-                    className="cardSizeInPreview"
-                    // style={{ aspectRatio: 110 / 150, maxHeight: "120px" }}
-                    // width={"110px"}
-                    // height={"150px"}
-                    src={artImage(key, selectedDeck.art)}
-                    alt={key}
-                  />
-                  <div
-                    style={{
-                      position: "absolute",
-                      bottom: "0",
-                      backgroundColor: "rgba(0, 0, 0, 0.7)",
-                      height: "60px",
-                      width: "60px",
-                      color: "white",
-                      fontSize: "40px",
-                      fontFamily: "Noto Serif JP, serif",
-                      borderRadius: "7px",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    }}
-                  >
-                    {value}
-                  </div>
-                </div>
-              );
-            })}
-          </CardMUI>
-        </Box>
-      </Modal>
-
-      {/* Desktop Preview card inspector ΓÇö opened by clicking a card (or its
-          magnifier) in the desktop deck Preview. Same read-only CardInspector as
-          mobile, sized for a centered desktop dialog instead of fullscreen. */}
-      {!isMobile && (
-        <Dialog
-          open={previewInspectOpen}
-          onClose={() => setPreviewInspectOpen(false)}
-          disableScrollLock
-          maxWidth={false}
-          PaperProps={{
-            sx: {
-              background: "rgba(28, 31, 38, 0.98)",
-              backgroundImage: "none",
-              borderRadius: 2,
-              position: "relative",
-              display: "flex",
-              flexDirection: "column",
-              // Portrait box that scales with viewport height (width derived from
-              // the height keeps it taller than wide); caps avoid extremes.
-              width: "min(66vh, 92vw, 640px)",
-              height: "min(95vh, 1040px)",
-              maxWidth: "92vw",
-              m: 1,
-              boxShadow: "0 12px 40px rgba(0,0,0,0.65), 0 0 0 1px rgba(255,255,255,0.06)",
-            },
-          }}
-        >
-          <IconButton
-            onClick={() => setPreviewInspectOpen(false)}
-            sx={{
-              position: "absolute", top: 10, right: 10, zIndex: 3, color: "#fff",
-              background: "rgba(0,0,0,0.35)", "&:hover": { background: "rgba(0,0,0,0.6)" },
-            }}
-          >
-            <CloseIcon />
-          </IconButton>
-          {/* Scroll container: the dialog itself scrolls (not the description box)
-              only when it's too small to fit the card + text. `margin: auto`
-              keeps the content vertically centred while it fits — scroll-safe. */}
-          <div style={{ flex: "1 1 auto", minHeight: 0, overflowY: "auto", padding: 24, boxSizing: "border-box", display: "flex", flexDirection: "column" }}>
-            <div style={{ margin: "auto 0" }}>
-              <CardInspector name={previewInspectName} cardNo={previewInspectCardNo} fill readOnly />
-            </div>
-          </div>
-        </Dialog>
-      )}
-
-      {/* Mobile deck Preview ΓÇö the deck-view layout, read-only (no add/remove,
-          no trash, name/class shown but not editable; inspect via magnifier). */}
-      {isMobile && (
-        <Dialog
-          open={open}
-          onClose={handleModalClose}
-          fullScreen
-          disableScrollLock
-          PaperProps={{ sx: { background: "rgba(10, 14, 20, 0.96)", backgroundImage: "none" } }}
-        >
-          <div style={{ position: "relative", height: "100%", display: "flex", flexDirection: "column", padding: "10px 18px 12px", boxSizing: "border-box" }}>
-            <IconButton
-              onClick={handleModalClose}
-              sx={{ position: "absolute", top: 2, right: 14, zIndex: 4, color: "#fff" }}
-            >
-              <CloseIcon />
-            </IconButton>
-            <DeckPanel
-              readOnly
-              isMobile
-              deckMap={deckMap}
-              evoDeckMap={evoDeckMap}
-              deckLen={selectedDeck.deck ? selectedDeck.deck.length : 0}
-              evoLen={selectedDeck.evoDeck ? selectedDeck.evoDeck.length : 0}
-              artNoOf={(n) => (selectedDeck.art && selectedDeck.art[n]) || null}
-              onInspect={openPreviewInspect}
-              copyMaxOf={mainCopyMax}
-              evoCopyMaxOf={evoCopyMax}
-              name={selectedDeck.name}
-              deckClass={deckClassOf(selectedDeck)}
-            />
-          </div>
-        </Dialog>
-      )}
-
-      {/* Mobile Preview card inspector (opened by the magnifier) */}
-      {isMobile && (
-        <Dialog
-          open={previewInspectOpen}
-          onClose={() => setPreviewInspectOpen(false)}
-          fullScreen
-          disableScrollLock
-          PaperProps={{ sx: { backgroundColor: "transparent", backgroundImage: "none", boxShadow: "none" } }}
-        >
-          <div style={{ position: "relative", height: "100%", overflow: "hidden" }}>
-            <IconButton
-              onClick={() => setPreviewInspectOpen(false)}
-              sx={{
-                position: "absolute", top: 10, right: 10, zIndex: 3, color: "#fff",
-                background: "rgba(0,0,0,0.45)", "&:hover": { background: "rgba(0,0,0,0.65)" },
-              }}
-            >
-              <CloseIcon />
-            </IconButton>
-            <div style={{ height: "100%", display: "flex", padding: "18px 14px", boxSizing: "border-box" }}>
-              <div
-                style={{
-                  width: "100%",
-                  maxWidth: 640,
-                  margin: "0 auto",
-                  background: "rgba(28, 31, 38, 0.97)",
-                  borderRadius: 16,
-                  padding: 16,
-                  boxSizing: "border-box",
-                  boxShadow: "0 12px 40px rgba(0,0,0,0.65), 0 0 0 1px rgba(255,255,255,0.06)",
-                  display: "flex",
-                  flexDirection: "column",
-                }}
-              >
-                <CardInspector name={previewInspectName} cardNo={previewInspectCardNo} large readOnly />
-              </div>
-            </div>
-          </div>
-        </Dialog>
-      )}
     </div>
   );
 }

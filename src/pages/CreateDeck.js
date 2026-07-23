@@ -18,6 +18,8 @@ import {
 } from "../decks/AllCardsEvo";
 import { useDispatch, useSelector } from "react-redux";
 import { createDeck, deleteDeck, selectDecks } from "../redux/DeckSlice";
+import { useAuth, discordName } from "../auth/AuthProvider";
+import { ensureShare, updateShare } from "../lib/shares";
 import { useNavigate, useLocation } from "react-router-dom";
 import {
   Button, TextField, Dialog, DialogActions, DialogContent, DialogContentText,
@@ -123,6 +125,8 @@ export default function CreateDeck() {
   const { id } = useParams();
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  // Signed-in users get a share link minted for the deck when they save it.
+  const { user: authUser } = useAuth();
 
   const [deck, setDeck] = useState([]);
   const [evoDeck, setEvoDeck] = useState([]);
@@ -724,14 +728,47 @@ export default function CreateDeck() {
   // class, so a deck must declare one before it can be saved.
   const canCreate =
     deck.length >= 40 && name.trim().length > 0 && deckClass !== "";
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!canCreate) return;
-    dispatch(deleteDeck(deckName));
     // `art` (name -> chosen printing card number) is an additive field; the Game
     // ignores it and continues to read `deck`/`evoDeck` as name lists.
     const art = {};
     for (const [n, no] of artByName) if (deckMap.has(n) || evoDeckMap.has(n)) art[n] = no;
-    dispatch(createDeck({ name, class: deckClass, deck, evoDeck, art }));
+    const saved = { name, class: deckClass, deck, evoDeck, art };
+
+    // Every deck gets its URL at save time, so Preview always has one page to
+    // open. The share starts private — it 404s for anyone but the owner until
+    // they share it — and only exists for signed-in users, since the table's
+    // insert policy (rightly) requires a Discord login. `shareId` is additive:
+    // decks saved before this, and decks saved logged out, simply lack it.
+    let shareId = deckEdit[0]?.shareId ?? null;
+    if (authUser) {
+      try {
+        const share = await ensureShare({
+          userId: authUser.id,
+          ownerName: discordName(authUser),
+          deck: saved,
+          shareId,
+        });
+        shareId = share.id;
+        // A public share is a frozen snapshot the owner updates deliberately
+        // (there's a button for it), so only re-sync while it's still private.
+        if (!share.is_public) {
+          await updateShare({
+            share,
+            ownerName: discordName(authUser),
+            deck: saved,
+          });
+        }
+      } catch (e) {
+        // Saving the deck matters more than minting its link; Preview falls
+        // back to creating one on demand.
+        console.warn("Couldn’t mint a deck link:", e.message || e);
+      }
+    }
+
+    dispatch(deleteDeck(deckName));
+    dispatch(createDeck({ ...saved, shareId }));
     navigate("/");
   };
 

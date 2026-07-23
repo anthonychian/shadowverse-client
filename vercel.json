@@ -1,0 +1,6 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    { "source": "/decks/:id", "destination": "/api/deck-share?id=:id" }
+  ]
+}

@@ -147,7 +147,8 @@ const RowBtn = ({ children, onClick, disabled }) => (
 // pills (always shown, including 0) above salmon bars rising from a common
 // baseline, with the 0–8+ axis below.
 const CURVE_BAR = "#ed8a8a";
-const ManaCurve = ({ map }) => {
+// Exported so the shared-deck page can show the same stats beside its card grid.
+export const ManaCurve = ({ map }) => {
   const buckets = Array(9).fill(0); // 0..7, 8+
   for (const [name, count] of map.entries()) {
     const c = getCost(name);
@@ -162,21 +163,21 @@ const ManaCurve = ({ map }) => {
       </div>
       <div style={{ display: "flex", gap: 4, marginBottom: 5 }}>
         {buckets.map((v, i) => (
-          <div key={i} style={{ flex: 1, display: "flex", justifyContent: "center" }}>
+          <div key={i} style={{ flex: 1, minWidth: 0, display: "flex", justifyContent: "center" }}>
             <span style={costPill}>{v}</span>
           </div>
         ))}
       </div>
       <div style={{ display: "flex", alignItems: "flex-end", gap: 4, height: 54 }}>
         {buckets.map((v, i) => (
-          <div key={i} style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "flex-end", height: "100%" }}>
+          <div key={i} style={{ flex: 1, minWidth: 0, display: "flex", flexDirection: "column", justifyContent: "flex-end", height: "100%" }}>
             <div style={{ width: "72%", margin: "0 auto", height: `${(v / max) * 100}%`, minHeight: v ? 3 : 0, background: CURVE_BAR, borderRadius: "3px 3px 0 0" }} />
           </div>
         ))}
       </div>
       <div style={{ display: "flex", gap: 4, marginTop: 4 }}>
         {buckets.map((v, i) => (
-          <div key={i} style={{ flex: 1, textAlign: "center", color: COLORS.textDim, fontSize: 10, fontFamily: FONT }}>
+          <div key={i} style={{ flex: 1, minWidth: 0, textAlign: "center", color: COLORS.textDim, fontSize: 10, fontFamily: FONT }}>
             {i === 8 ? "8+" : i}
           </div>
         ))}
@@ -186,7 +187,7 @@ const ManaCurve = ({ map }) => {
 };
 
 const costPill = {
-  minWidth: 16, padding: "1px 6px", borderRadius: 999, fontSize: 11, fontWeight: 700,
+  minWidth: 0, maxWidth: "100%", padding: "1px 4px", borderRadius: 999, fontSize: 11, fontWeight: 700,
   fontFamily: FONT, lineHeight: 1.4, textAlign: "center", color: "#fff",
   background: "rgba(0,0,0,0.6)", border: `1px solid ${COLORS.border}`,
 };
@@ -209,7 +210,7 @@ const pcsStyle = {
 // Deck Log-style breakdown: main-deck card types (Follower/Spell/Amulet) with a
 // "n / 50 pcs" total, a divider, then the evolve deck (Evolved/Advanced) with a
 // "n / 10 pcs" total. Advanced evolve cards carry a " ADVANCED" name suffix.
-const Breakdown = ({ deckMap, evoDeckMap, deckLen, evoLen }) => {
+export const Breakdown = ({ deckMap, evoDeckMap, deckLen, evoLen }) => {
   const main = { Follower: 0, Spell: 0, Amulet: 0 };
   for (const [name, c] of deckMap.entries()) {
     const t = primaryType(name);
