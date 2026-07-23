@@ -81,8 +81,20 @@ const storageRequest = async (method, path, { body, headers } = {}) => {
   );
   if (!res.ok) {
     const detail = await res.text().catch(() => "");
+    // The policy compares the leading path folder to auth.uid(), so the two
+    // facts that identify the culprit are which user the token claims to be and
+    // what role the server resolved it to. `sub`/`role` are read straight off
+    // the JWT payload — if `sub` matches the folder and the write is still
+    // refused, the server isn't honouring the token.
+    let claims = "unreadable";
+    try {
+      const p = JSON.parse(atob(session.access_token.split(".")[1]));
+      claims = `sub ${p.sub}, role ${p.role}, exp ${new Date(p.exp * 1000).toISOString()}`;
+    } catch {
+      /* not a JWT we can read; leave as unreadable */
+    }
     throw new Error(
-      `storage ${method} ${res.status} ${detail.slice(0, 200)} [bucket ${BUCKET}, path ${path}]`,
+      `storage ${method} ${res.status} ${detail.slice(0, 160)} [path ${path}] [token: ${claims}]`,
     );
   }
   return res;
