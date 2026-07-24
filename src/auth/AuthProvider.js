@@ -76,6 +76,14 @@ export function AuthProvider({ children }) {
       if (fetchedForUserRef.current === nextUser.id) return;
       fetchedForUserRef.current = nextUser.id;
 
+      // On reload the deck list is rehydrated from localStorage, so the UI is
+      // interactive with `cloudDecks` before this fetch resolves. Treat that
+      // rehydrated list as the provisional baseline: seeding lastSyncedRef lets
+      // an edit made during the fetch (e.g. deleting a deck) schedule its push
+      // instead of being dropped by the `lastSyncedRef === null` guard.
+      const provisional = store.getState().deck.cloudDecks;
+      lastSyncedRef.current = provisional;
+
       supabase
         .from("user_decks")
         .select("decks")
@@ -89,6 +97,11 @@ export function AuthProvider({ children }) {
             return;
           }
           const decks = data?.decks ?? [];
+          // Only adopt the server copy if the user didn't edit the list while
+          // the fetch was in flight; otherwise their edit wins and its already
+          // scheduled push persists it, rather than the fetch overwriting it.
+          const current = store.getState().deck.cloudDecks;
+          if (current !== provisional) return;
           lastSyncedRef.current = decks;
           store.dispatch(setCloudDecks(decks));
         });
