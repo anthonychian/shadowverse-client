@@ -148,9 +148,9 @@ export default function Card({
   // that fires on release doesn't also engage the card. Reset on next press.
   const suppressTapRef = useRef(false);
   const fieldDraggable = onField && !opponentField && !ready;
-  // Cemetery/Hand drops are for plain base cards only. Evolved cards (have a
-  // base beneath), tokens, and advanced cards can only be moved between field
-  // slots — so they don't offer or accept cemetery/hand drops.
+  // Evolved cards (have a base beneath) can be dropped to the cemetery/hand/deck
+  // — the base returns to that zone and the evolved card flips back into the
+  // evolve deck. Tokens and advanced cards remain slot-move-only.
   const isEvoFieldCard = onField && !!cardBeneath && cardBeneath !== 0;
   const isSpecialFieldCard =
     onField &&
@@ -191,9 +191,11 @@ export default function Card({
   const handleFieldPointerUp = () => {
     fieldDragStart.current = null;
   };
-  // Base field cards can also go to the cemetery or back to hand; evolved,
-  // token, and advanced cards can only be moved between slots.
-  const fieldExtraTargets = !isEvoFieldCard && !isSpecialFieldCard;
+  // Base field cards can go to the cemetery, hand, or deck. Evolved cards can
+  // too: the base card goes to the chosen zone and the evolved card flips
+  // face-down back into the evolve deck (see handleFieldDrop). Only tokens and
+  // advanced cards are restricted to slot-to-slot moves.
+  const fieldExtraTargets = !isSpecialFieldCard;
   // Dragging an Equipment token over a follower attaches it — flag the drag so
   // FieldDropHints highlights followers green instead of red.
   const isEquipmentDrag =

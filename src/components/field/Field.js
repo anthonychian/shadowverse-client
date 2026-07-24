@@ -25,6 +25,7 @@ import {
   setEnemyEvoField,
   setEnemyEngaged,
   setEnemyCemetery,
+  setEnemyArt,
   setEnemyEvoDeck,
   setEnemyCustomValues,
   showAtk,
@@ -512,6 +513,11 @@ export default function Field({
           break;
         case "banish":
           dispatch(setEnemyBanish(update.data));
+          break;
+        case "art":
+          // Opponent swapped decks: their new per-card art choices become our
+          // enemy art so their cards render with the right printings.
+          dispatch(setEnemyArt(update.data));
           break;
         case "viewingHand":
           dispatch(setEnemyViewingHand(update.data));
@@ -1374,14 +1380,26 @@ export default function Field({
     dispatch(clearStatusAtIndex(i));
   };
 
+  // When an evolved follower leaves the field, the base card goes to the chosen
+  // zone (cemetery/hand/deck) and the evolved card flips face-down back into the
+  // evolve deck (status true) — mirroring the right-click "Return to evolve
+  // deck" action. No-op for a plain (non-evolved) base card.
+  const returnEvoToDeckIfEvolved = (fromIndex) => {
+    if (reduxEvoField[fromIndex] === 0) return;
+    dispatch(
+      backToEvolveDeck({ card: reduxEvoField[fromIndex], index: fromIndex }),
+    );
+  };
+
   // Drop handler for dragging the player's own field cards. `dest` is one of:
   //   { type: "field", index } -> move to an empty slot
   //   { type: "cemetery" }     -> send to cemetery
   //   { type: "hand" }         -> return to hand
-  // Anything invalid is a no-op (the card snaps back). Cemetery/Hand mirror the
-  // right-click menu, which only offers them for plain base cards: tokens and
-  // advanced cards can't be returned, and the reducers don't unwind an evolved
-  // stack — so those are skipped for cemetery/hand (they can still be moved).
+  //   { type: "deck", half }   -> top/bottom of deck
+  // Anything invalid is a no-op (the card snaps back). Cemetery/Hand/Deck mirror
+  // the right-click menu. Tokens and advanced cards can't be returned. Evolved
+  // followers can: the base card goes to the zone and the evolved card flips
+  // back into the evolve deck (returnEvoToDeckIfEvolved).
   const handleFieldDrop = (fromIndex, dest) => {
     // Equipment (in its own equipField) never affects what the follower can
     // do — it just tags along on moves and, being a token, disappears when the
@@ -1390,7 +1408,6 @@ export default function Field({
     const isEvo = reduxEvoField[fromIndex] !== 0;
     const baseCard = reduxField[fromIndex];
     const canReturn =
-      !isEvo &&
       typeof baseCard === "string" &&
       !isToken(baseCard) &&
       !isAdvanced(baseCard);
@@ -1398,6 +1415,7 @@ export default function Field({
       if (!canReturn) return;
       if (isEquipAttached) dispatch(clearEquipmentAtIndex(fromIndex));
       dispatch(placeToCemeteryFromField({ card: baseCard, index: fromIndex }));
+      returnEvoToDeckIfEvolved(fromIndex);
       clearFieldSlot(fromIndex);
       return;
     }
@@ -1405,6 +1423,7 @@ export default function Field({
       if (!canReturn) return;
       if (isEquipAttached) dispatch(clearEquipmentAtIndex(fromIndex));
       dispatch(addToHandFromField({ card: baseCard, index: fromIndex }));
+      returnEvoToDeckIfEvolved(fromIndex);
       clearFieldSlot(fromIndex);
       triggerHandReveal(baseCard, reduxCurrentRoom);
       return;
@@ -1415,6 +1434,7 @@ export default function Field({
       if (dest.half === "top")
         dispatch(placeToTopOfDeckFromField({ card: baseCard, index: fromIndex }));
       else dispatch(placeToBotOfDeckFromField({ card: baseCard, index: fromIndex }));
+      returnEvoToDeckIfEvolved(fromIndex);
       clearFieldSlot(fromIndex);
       return;
     }

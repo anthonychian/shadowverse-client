@@ -2085,6 +2085,40 @@ export const CardSlice = createSlice({
         room: state.room,
       });
     },
+    placeToBanishFromHand: (state, action) => {
+      const card = action.payload.name;
+      const cardIndex = action.payload.index;
+      state.hand = state.hand.filter((_, i) => i !== cardIndex);
+      const date = new Date().toLocaleTimeString("it-IT", {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+
+      state.gameLog = [
+        ...state.gameLog,
+        {
+          text: `[${date}] (Me): Banished ${card} from hand`,
+          card,
+        },
+      ];
+      state.banish = [card, ...state.banish];
+
+      socket.emit("send msg", {
+        type: "banishFromHand",
+        updates: [
+          {
+            type: "log",
+            data: {
+              text: `Banished ${card} from hand`,
+              card,
+            },
+          },
+          { type: "banish", data: state.banish },
+          { type: "hand", data: state.hand },
+        ],
+        room: state.room,
+      });
+    },
     placeToFieldFromHand: (state, action) => {
       const card = action.payload.card;
       const cardIndex = action.payload.indexInHand;
@@ -3358,6 +3392,116 @@ export const CardSlice = createSlice({
         { showAtk: false, atk: 0, showDef: false, def: 0 },
       ];
     },
+    // Swap in a different saved deck WITHOUT leaving the room. Unlike `reset`
+    // (a symmetric rematch that wipes both boards), this is one-sided: it loads
+    // a new deck as my draw pile + evolve deck and re-seeds only MY side to a
+    // fresh start, then pushes that cleared state to the opponent so their view
+    // of me matches. The opponent's own board/hand/health are left untouched —
+    // a mutual reset is what the Rematch handshake is for.
+    // payload: { deck: [names], evoDeck: [names], art: {name->cardNo}, deckClass }
+    swapDeck: (state, action) => {
+      const { deck, evoDeck, art, deckClass } = action.payload;
+      const date = new Date().toLocaleTimeString("it-IT", {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+
+      // Load the new deck as both the live pile and the reset seed (mirrors
+      // setDeck/setEvoDeck). `deck` is a flat name array; `evoDeck` becomes the
+      // {card,status} shape the evolve-deck UI expects.
+      const shuffled = [...deck].sort(() => Math.random() - 0.5);
+      state.deck = shuffled;
+      state.initialDeck = shuffled;
+      const evo = (evoDeck || []).map((card) => ({ card, status: false }));
+      state.evoDeck = evo;
+      state.initialEvoDeck = evo;
+      state.myArt = art || {};
+      if (deckClass) state.deckClass = deckClass;
+
+      // Clear MY side to a fresh start.
+      const zeros = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      const falses = [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+      ];
+      const emptyValues = zeros.map(() => ({
+        showAtk: false,
+        atk: 0,
+        showDef: false,
+        def: 0,
+      }));
+      state.hand = [];
+      state.handInstanceIds = [];
+      state.field = [...zeros];
+      state.evoField = [...zeros];
+      state.equipField = [...zeros];
+      state.counterField = [...zeros];
+      state.auraField = [...zeros];
+      state.baneField = [...zeros];
+      state.wardField = [...zeros];
+      state.keywordField = zeros.map(() => []);
+      state.engagedField = [...falses];
+      state.customStatus = [...falses];
+      state.customValues = emptyValues;
+      state.exPlayCostField = zeros.map(() => null);
+      state.fieldInstanceIds = zeros.map(() => null);
+      state.cemetery = [];
+      state.cemeteryInstanceIds = [];
+      state.banish = [];
+      state.currentCard = "";
+      state.currentEvo = "";
+      state.currentCardIndex = -1;
+      state.superEvoActive = false;
+      state.leaderActive = false;
+      state.evoPoints = 0;
+      state.playPoints = { available: 0, max: 0 };
+      state.playerHealth = 20;
+
+      state.gameLog = [
+        ...state.gameLog,
+        {
+          text: `[${date}] (Me): Swapped in a new deck`,
+          card: "",
+        },
+      ];
+
+      socket.emit("send msg", {
+        type: "swapDeck",
+        updates: [
+          { type: "log", data: { text: "Opponent swapped in a new deck", card: "" } },
+          { type: "field", data: state.field },
+          { type: "evoField", data: state.evoField },
+          { type: "equipField", data: state.equipField },
+          { type: "counter", data: state.counterField },
+          { type: "aura", data: state.auraField },
+          { type: "bane", data: state.baneField },
+          { type: "ward", data: state.wardField },
+          { type: "keyword", data: state.keywordField },
+          { type: "engaged", data: state.engagedField },
+          { type: "values", data: state.customValues },
+          { type: "hand", data: state.hand },
+          { type: "deckSize", data: state.deck.length },
+          { type: "cemetery", data: state.cemetery },
+          { type: "banish", data: state.banish },
+          { type: "evoDeck", data: state.evoDeck },
+          { type: "art", data: state.myArt },
+          { type: "health", data: state.playerHealth },
+          { type: "evoPoints", data: state.evoPoints },
+          { type: "playPoints", data: state.playPoints },
+          { type: "leaderActive", data: state.leaderActive },
+          { type: "superEvoActive", data: state.superEvoActive },
+        ],
+        room: state.room,
+      });
+    },
   },
 });
 
@@ -3383,6 +3527,7 @@ export const {
   placeToBotOfDeckFromField,
   placeToCemeteryFromField,
   placeToCemeteryFromHand,
+  placeToBanishFromHand,
   placeTokenOnField,
   placeToBanishFromField,
   addToTopOfDeckFromDeck,
@@ -3439,6 +3584,7 @@ export const {
   restoreOwnState,
   syncFromEngine,
   reset,
+  swapDeck,
   exitGame,
   setSuperEvoActive,
   setEnemySuperEvoActive,

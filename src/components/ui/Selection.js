@@ -87,10 +87,15 @@ import {
   setLeader,
   setCardBack,
   reset,
+  swapDeck,
   exitGame,
   setRematchStatus,
 } from "../../redux/CardSlice";
+import { selectDecks } from "../../redux/DeckSlice";
+import { computeDeckClass } from "../../decks/cardDetails";
+import { randomLeaderForClass } from "../../decks/classLeaders";
 import { setChatExpanded } from "../../redux/GameStateSlice";
+import StyleIcon from "@mui/icons-material/Style";
 import HideUiButton from "./HideUiButton";
 
 export default function Selection({ setSelectedOption }) {
@@ -105,9 +110,40 @@ export default function Selection({ setSelectedOption }) {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [open, setOpen] = useState(false);
   const [openCardBack, setOpenCardBack] = useState(false);
+  const [openSwapDeck, setOpenSwapDeck] = useState(false);
+
+  // The player's saved decks (cloud when logged in, local otherwise) — the pool
+  // to swap into mid-room.
+  const savedDecks = useSelector(selectDecks) ?? [];
 
   const handleModalOpen = () => setOpen(true);
   const handleModalClose = () => setOpen(false);
+
+  const handleSwapDeckOpen = () => setOpenSwapDeck(true);
+  const handleSwapDeckClose = () => setOpenSwapDeck(false);
+
+  // Load a different saved deck without leaving the room: swapDeck re-seeds my
+  // draw pile + evolve deck and resets only my side to a fresh start (the
+  // opponent keeps their board). Then match a leader to the new deck's class.
+  const handleSwapDeck = (savedDeck) => {
+    if (!savedDeck || !Array.isArray(savedDeck.deck)) return;
+    const deckClass = savedDeck.class || computeDeckClass(savedDeck.deck) || "";
+    dispatch(
+      swapDeck({
+        deck: savedDeck.deck,
+        evoDeck: savedDeck.evoDeck || [],
+        art: savedDeck.art || {},
+        deckClass,
+      }),
+    );
+    const leader = randomLeaderForClass(deckClass);
+    if (leader) {
+      setSelectedOption(leader);
+      dispatch(setLeader(leader));
+    }
+    setOpenSwapDeck(false);
+    handleDrawerClose();
+  };
 
   const handleCardBackModalOpen = () => setOpenCardBack(true);
   const handleCardBackModalClose = () => setOpenCardBack(false);
@@ -291,6 +327,22 @@ export default function Selection({ setSelectedOption }) {
           </List>
           <Divider />
 
+          {gameMode !== "automated" && (
+            <>
+              <List>
+                <ListItem key={"swapdeck"} disablePadding>
+                  <ListItemButton onClick={handleSwapDeckOpen}>
+                    <ListItemIcon>
+                      <StyleIcon sx={{ color: "white" }} />
+                    </ListItemIcon>
+                    <ListItemText primary={"Swap Deck"} />
+                  </ListItemButton>
+                </ListItem>
+              </List>
+              <Divider />
+            </>
+          )}
+
           {gameMode === "automated" && (
             <>
               <List>
@@ -438,6 +490,68 @@ export default function Selection({ setSelectedOption }) {
           )}
         </DialogActions>
       </Dialog>
+
+      <Modal
+        open={openSwapDeck}
+        onClose={handleSwapDeckClose}
+        aria-labelledby="swap-deck-title"
+        aria-describedby="swap-deck-description"
+      >
+        <Box
+          sx={{
+            position: "relative",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            backgroundColor: "rgba(0, 0, 0, 1)",
+            boxShadow: 24,
+            p: 4,
+            width: "40%",
+            maxHeight: "80vh",
+            overflowY: "auto",
+          }}
+        >
+          <DialogContentText
+            id="swap-deck-description"
+            sx={{ color: "white", mb: 2, textAlign: "center" }}
+          >
+            Swap to another deck — this resets your board, hand, and life for a
+            fresh start. Your opponent is unaffected.
+          </DialogContentText>
+          {savedDecks.length === 0 ? (
+            <DialogContentText
+              sx={{ color: "rgba(255,255,255,0.7)", textAlign: "center" }}
+            >
+              No saved decks found.
+            </DialogContentText>
+          ) : (
+            <Stack spacing={1}>
+              {savedDecks.map((d, i) => (
+                <Button
+                  key={`${d.name}-${i}`}
+                  variant="outlined"
+                  onClick={() => handleSwapDeck(d)}
+                  sx={{
+                    color: "white",
+                    borderColor: "rgba(255,255,255,0.3)",
+                    justifyContent: "space-between",
+                    textTransform: "none",
+                    "&:hover": {
+                      borderColor: "white",
+                      backgroundColor: "rgba(255,255,255,0.08)",
+                    },
+                  }}
+                >
+                  <span>{d.name || "Unnamed deck"}</span>
+                  <span style={{ opacity: 0.6, fontSize: "0.8rem" }}>
+                    {d.class || computeDeckClass(d.deck) || ""}
+                  </span>
+                </Button>
+              ))}
+            </Stack>
+          )}
+        </Box>
+      </Modal>
 
       <Stack
         direction="row"

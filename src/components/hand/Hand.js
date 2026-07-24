@@ -7,6 +7,7 @@ import {
   setCurrentCard,
   setCurrentCardIndex,
   placeToCemeteryFromHand,
+  placeToBanishFromHand,
 } from "../../redux/CardSlice";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
@@ -85,6 +86,10 @@ export default function Hand({
     handleClose();
     console.log(name);
     dispatch(placeToCemeteryFromHand({ name: name, index: cardIndex }));
+  };
+  const handleCardToBanish = () => {
+    handleClose();
+    dispatch(placeToBanishFromHand({ name: name, index: cardIndex }));
   };
   const handleCardToTopOfDeck = () => {
     handleClose();
@@ -224,6 +229,7 @@ export default function Hand({
           <>
             <MenuItem onClick={handleCardToField}>Field</MenuItem>
             <MenuItem onClick={handleCardToCemetery}>Cemetery</MenuItem>
+            <MenuItem onClick={handleCardToBanish}>Banish</MenuItem>
             <MenuItem onClick={handleCardToTopOfDeck}>Top of Deck</MenuItem>
             <MenuItem onClick={handleCardToBotOfDeck}>Bot of Deck</MenuItem>
           </>
