@@ -202,6 +202,11 @@ const MAX_SCALE = 1.3;
 // Keyword statuses offered by "Add Status", shown as black boxes on the card.
 const KEYWORDS = ["Aura", "Ward", "Bane", "Storm", "Rush", "Intimidate"];
 
+// White Psalm's [lastwords] summons a Black Psalm, so its context menu gets a
+// dedicated one-click swap (see handleSummonBlackPsalm).
+const WHITE_PSALM = "White Psalm, New Revelation TOKEN";
+const BLACK_PSALM = "Black Psalm, New Revelation TOKEN";
+
 export default function Field({
   ready,
   setReady,
@@ -1258,6 +1263,29 @@ export default function Field({
     dispatch(clearCountersAtIndex(index));
     dispatch(clearStatusAtIndex(index));
   };
+  // The Psalm tokens only: play their [lastwords] in one click — remove the
+  // Psalm on the field and put its counterpart into the same slot.
+  const handleSummonPsalm = (token) => {
+    handleClose();
+    dispatch(
+      removeTokenOnField({
+        card: name,
+        index: index,
+      }),
+    );
+    dispatch(clearValuesAtIndex(index));
+    dispatch(clearEngagedAtIndex(index));
+    dispatch(clearCountersAtIndex(index));
+    dispatch(clearStatusAtIndex(index));
+    dispatch(
+      placeTokenOnField({
+        card: token,
+        index: index,
+      }),
+    );
+    if (index < 5)
+      triggerCardReveal(token, reduxCurrentRoom, index, fieldSlotCenter(index));
+  };
   const handleDuplicateToken = () => {
     handleClose();
     setReady(true);
@@ -1833,6 +1861,16 @@ export default function Field({
         {isAdvanced(name) && (
           <MenuItem onClick={() => handleReturnAdvancedToEvolveDeck()}>
             Return
+          </MenuItem>
+        )}
+        {name === WHITE_PSALM && (
+          <MenuItem onClick={() => handleSummonPsalm(BLACK_PSALM)}>
+            Summon Black Psalm
+          </MenuItem>
+        )}
+        {name === BLACK_PSALM && (
+          <MenuItem onClick={() => handleSummonPsalm(WHITE_PSALM)}>
+            Summon White Psalm
           </MenuItem>
         )}
         {isToken(name) && (
