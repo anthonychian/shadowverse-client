@@ -19,7 +19,6 @@ import {
   previewUrl,
   setSharePublic,
   shareUrl,
-  updateShare,
 } from "../lib/shares";
 import { renderDeckShareImage } from "../lib/deckImage";
 import { computeDeckClass } from "../decks/cardDetails";
@@ -30,7 +29,9 @@ import { COLORS, FONT } from "./deckbuilder/theme";
 // still mint one on the spot for decks saved before links existed. Creating a
 // link requires a Discord login — the table's insert policy enforces that, this
 // just explains it. Switching a link off 404s the page and drops its preview
-// image; the snapshot itself is frozen until "Update snapshot" is pressed.
+// image. Re-syncing the snapshot is not a control here: saving a deck does it
+// automatically (see CreateDeck's handleSubmit), so a link is never staler than
+// the last save.
 
 const dialogPaper = {
   background: "rgba(10, 14, 20, 0.96)",
@@ -167,18 +168,6 @@ export default function ShareDeckDialog({
       );
     });
 
-  const handleUpdate = () =>
-    run("Updating snapshot…", async () => {
-      const row = await updateShare({
-        share,
-        ownerName,
-        deck: snapshotOf(deck),
-        renderImage,
-        onPreviewError: setPreviewError,
-      });
-      setShare(row);
-    });
-
   const handleTogglePublic = (next) =>
     run(next ? "Turning the link back on…" : "Making it private…", async () => {
       const row = await setSharePublic({
@@ -233,10 +222,10 @@ export default function ShareDeckDialog({
           </div>
         ) : !share ? (
           <DialogContentText sx={{ color: COLORS.textDim, fontFamily: FONT, fontSize: 14, lineHeight: 1.7 }}>
-            This creates a public link to a snapshot of this deck. Anyone with
-            the link can view it and copy it into their own decks; editing this
-            deck afterwards won’t change the link until you update it. You can
-            switch the link off at any time.
+            This creates a public link to this deck. Anyone with the link can
+            view it and copy it into their own decks; the link keeps up with
+            your edits automatically each time you save. You can switch the link
+            off at any time.
           </DialogContentText>
         ) : (
           <>
@@ -311,9 +300,6 @@ export default function ShareDeckDialog({
           <>
             <Button onClick={handleDelete} disabled={working} sx={{ ...actionSx, color: COLORS.danger }}>
               Delete link
-            </Button>
-            <Button onClick={handleUpdate} disabled={working} variant="outlined" sx={actionSx}>
-              Update snapshot
             </Button>
             <Button
               onClick={handleCopy}

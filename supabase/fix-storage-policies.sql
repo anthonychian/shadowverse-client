@@ -25,7 +25,7 @@
 -- who can create or publish a share. The exposure here is that someone using
 -- the publishable key (which ships in the client, so treat it as public) could
 -- write JPEGs to this one bucket. Worst case is a deck unfurling with the wrong
--- picture, which "Update snapshot" restores.
+-- picture, which re-saving the deck redraws.
 --
 -- Safe to run repeatedly.
 

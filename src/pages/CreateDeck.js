@@ -19,7 +19,8 @@ import {
 import { useDispatch, useSelector } from "react-redux";
 import { createDeck, deleteDeck, selectDecks } from "../redux/DeckSlice";
 import { useAuth, discordName } from "../auth/AuthProvider";
-import { ensureShare, updateShare } from "../lib/shares";
+import { ensureShare, updateShare, shareUrl } from "../lib/shares";
+import { renderDeckShareImage } from "../lib/deckImage";
 import { useNavigate, useLocation } from "react-router-dom";
 import {
   Button, TextField, Dialog, DialogActions, DialogContent, DialogContentText,
@@ -751,15 +752,22 @@ export default function CreateDeck() {
           shareId,
         });
         shareId = share.id;
-        // A public share is a frozen snapshot the owner updates deliberately
-        // (there's a button for it), so only re-sync while it's still private.
-        if (!share.is_public) {
-          await updateShare({
-            share,
-            ownerName: discordName(authUser),
-            deck: saved,
-          });
-        }
+        // Keep the share's snapshot in step with the deck on every save, so the
+        // /decks/<id> link (and its unfurl image) reflects the latest edit
+        // without the owner having to press "Update snapshot". A public share
+        // also needs its preview image redrawn, so hand updateShare a renderer;
+        // a private share ignores it, having no image until it's shared.
+        await updateShare({
+          share,
+          ownerName: discordName(authUser),
+          deck: saved,
+          renderImage: (id) =>
+            renderDeckShareImage({
+              deck: saved,
+              ownerName: discordName(authUser),
+              url: shareUrl(id),
+            }),
+        });
       } catch (e) {
         // Saving the deck matters more than minting its link; Preview falls
         // back to creating one on demand.
