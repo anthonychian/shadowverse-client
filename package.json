@@ -68,6 +68,8 @@
     "coverage:cards": "node src/scripts/card-coverage.js",
     "eval:card": "node src/scripts/eval-card.js",
     "eval:scenarios": "node src/scripts/eval-card.js --validate-scenarios",
+    "build:atlases": "node src/scripts/build-card-atlases.js",
+    "build:icons": "node src/scripts/inline-icons.js",
     "generate:manifest": "node src/scripts/generate-manifest.js",
     "fix:review-stubs": "node src/scripts/fix-review-stubs.js && node src/scripts/regenerate-deck-cards.js && node src/scripts/generate-manifest.js",
     "fix:all-noops": "node src/scripts/fix-all-noops.js && node src/scripts/generate-manifest.js",

@@ -2,6 +2,7 @@
 // src/decks/icons.json, images under public/textures/icons/). Card images are
 // referenced app-wide as "../textures/<file>", so icons share that base.
 import icons from "../../decks/icons.json";
+import iconData from "../../decks/iconData.json";
 import idolmaster from "../../assets/logo/idolmaster.png";
 import umamusume from "../../assets/logo/umamusume.png";
 import vanguard from "../../assets/logo/vanguard.png";
@@ -9,7 +10,24 @@ import priconne from "../../assets/logo/priconne.webp";
 
 const BASE = "../textures/";
 
-export const iconUrl = (token) => (icons[token] ? BASE + icons[token] : null);
+// The small icons ship as data URIs (src/scripts/inline-icons.js) so they cost
+// no requests: a single inspector view would otherwise fetch a cost gem, two
+// stat icons and a keyword or two, and the filter bar fetches all seven class
+// symbols. The handful of large ones aren't inlined and still resolve to a URL.
+//
+// Effect text tokens are matched case-insensitively (a card printing may write
+// "[Fanfare]" where the manifest key is "[fanfare]"), which is why the fallback
+// is tried against the lowercased token too. Every caller must come through
+// here — a lookup straight into icons.json would miss the inlined data URIs and
+// silently cost a request per icon.
+export const iconUrl = (token) => {
+  if (!token) return null;
+  const lower = String(token).toLowerCase();
+  if (iconData[token]) return iconData[token];
+  if (iconData[lower]) return iconData[lower];
+  const file = icons[token] || icons[lower];
+  return file ? BASE + file : null;
+};
 
 const CLASS_TOKEN = {
   forest: "[forestcraft]",

@@ -8,6 +8,7 @@ import RemoveIcon from "@mui/icons-material/Remove";
 import SearchIcon from "@mui/icons-material/Search";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import { cardImage } from "../../decks/getCards";
+import CardSprite, { hasSprite } from "./CardSprite";
 import { COLORS, FONT } from "./theme";
 
 const W = 124;
@@ -86,6 +87,11 @@ function CardTile({ name, cardNo, cardKey, count, copyMax, maxed, selected, onIn
   // thumbs look soft there — load the full-size originals on mobile; desktop
   // keeps the lighter thumbnails.
   const src = isMobile ? fullSrc : thumbSrc(fullSrc);
+  // The sprite sheets are packed at thumbnail resolution, so they're a match for
+  // desktop tiles but would look soft at mobile's larger size — mobile keeps the
+  // full-size originals. A card with no sheet entry (a set added since the last
+  // atlas build) also falls through to the individual image.
+  const useSprite = !isMobile && hasSprite(cardNo);
   // Desktop hover buttons fade in on hover; mobile has no hover, so it uses
   // always-on icons (magnifier + trash) shown only once the card is in the deck.
   const btnBase = {
@@ -127,28 +133,41 @@ function CardTile({ name, cardNo, cardKey, count, copyMax, maxed, selected, onIn
         boxShadow: selected && !isMobile ? `0 0 16px ${COLORS.glow}` : "none",
       }}
     >
-      <LazyLoadImage
-        width={W} height={H} effect="opacity" src={src} alt={name}
-        // Decode off the main thread so scrolling stays smooth, and start loading
-        // a bit before the tile scrolls into view so cards are ready in time.
-        decoding="async" loading="lazy" threshold={300}
-        wrapperProps={isMobile ? { style: { display: "block", width: "100%", height: "100%" } } : undefined}
-        onError={(e) => {
-          // Thumb missing -> fall back to the full-size image once.
-          if (e.currentTarget.src.indexOf("/textures/thumbs/") !== -1) {
-            e.currentTarget.src = fullSrc;
+      {useSprite ? (
+        // Desktop pool tiles come out of a sprite sheet: one request per ~36
+        // cards instead of one per card. Scrolling the pool walks the sheets in
+        // order, since they're packed in the same sort order the pool renders.
+        <CardSprite
+          cardNo={cardNo}
+          width={W}
+          height={H}
+          alt={name}
+          style={{ filter: maxed ? "grayscale(85%) brightness(0.7)" : "none" }}
+        />
+      ) : (
+        <LazyLoadImage
+          width={W} height={H} effect="opacity" src={src} alt={name}
+          // Decode off the main thread so scrolling stays smooth, and start loading
+          // a bit before the tile scrolls into view so cards are ready in time.
+          decoding="async" loading="lazy" threshold={300}
+          wrapperProps={isMobile ? { style: { display: "block", width: "100%", height: "100%" } } : undefined}
+          onError={(e) => {
+            // Thumb missing -> fall back to the full-size image once.
+            if (e.currentTarget.src.indexOf("/textures/thumbs/") !== -1) {
+              e.currentTarget.src = fullSrc;
+            }
+          }}
+          placeholder={
+            // Static placeholder (no animated shimmer): dozens of animated skeletons
+            // on screen at once is a real scroll-jank cost on phones.
+            <span style={{ display: "block", width: isMobile ? "100%" : W, height: isMobile ? "100%" : H, borderRadius: 8, background: "rgba(255,255,255,0.06)" }} />
           }
-        }}
-        placeholder={
-          // Static placeholder (no animated shimmer): dozens of animated skeletons
-          // on screen at once is a real scroll-jank cost on phones.
-          <span style={{ display: "block", width: isMobile ? "100%" : W, height: isMobile ? "100%" : H, borderRadius: 8, background: "rgba(255,255,255,0.06)" }} />
-        }
-        style={{
-          borderRadius: 8, filter: maxed ? "grayscale(85%) brightness(0.7)" : "none",
-          ...(isMobile ? { width: "100%", height: "100%", objectFit: "cover", display: "block" } : {}),
-        }}
-      />
+          style={{
+            borderRadius: 8, filter: maxed ? "grayscale(85%) brightness(0.7)" : "none",
+            ...(isMobile ? { width: "100%", height: "100%", objectFit: "cover", display: "block" } : {}),
+          }}
+        />
+      )}
 
       {/* The top-left count badge is desktop-only; on mobile the in-deck bar
           below shows the "count / max" instead. */}

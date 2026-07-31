@@ -1,0 +1,12 @@
+# README screenshots and GIFs (129 MB). The README links them through
+# github.com, never through the deployment, so shipping them to Vercel only
+# inflates the upload and the deployment's file count.
+public/git_images
+
+# Engine test fixtures and the checked-in dist mirror aren't served.
+packages/sve-engine/dist/**/*.test.js
+packages/sve-engine/dist/**/*.test.d.ts
+
+# Local report output.
+audit-reports
+eval-reports

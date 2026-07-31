@@ -1,13 +1,9 @@
 import React from "react";
 import Tooltip, { tooltipClasses } from "@mui/material/Tooltip";
 import { styled } from "@mui/material/styles";
-import icons from "../../decks/icons.json";
+import { iconUrl } from "./icons";
 import keywords from "../../decks/keywords.json";
 import { COLORS, FONT } from "./theme";
-
-// Card images are referenced app-wide as "../textures/<file>" (see getCards.js),
-// so keyword icons live under the same base.
-const TEXTURES_BASE = "../textures/";
 
 // A large, dark panel with a gold keyword header — matching the Shadowverse:
 // Evolve site's dark/gold look and the deck builder's own palette (theme.js).
@@ -180,13 +176,15 @@ export default function EffectText({ text, iconSize = 17, style, tooltips = fals
       {parts.map((part, i) => {
         if (part === "") return null;
         if (part === "\n") return <br key={i} />;
-        const file = icons[part] || icons[part.toLowerCase()];
-        if (file) {
+        // Via iconUrl, not icons.json directly: the small icons are inlined as
+        // data URIs, and effect text is where most of them appear.
+        const src = iconUrl(part);
+        if (src) {
           const kw = tooltips ? TOKEN_KEYWORD[part] : undefined;
           const img = (
             <img
               key={i}
-              src={TEXTURES_BASE + file}
+              src={src}
               alt={part}
               title={kw ? undefined : part}
               style={{ height: iconSize, verticalAlign: "text-bottom", margin: "0 1px" }}
