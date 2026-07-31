@@ -1512,6 +1512,48 @@
     "defense": "3"
   },
   {
+    "name": "Aggressive Advance",
+    "cardNo": "BP21-035EN",
+    "set": "BP21",
+    "class": "sword",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Officer",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "2",
+    "attack": "-",
+    "defense": "-"
+  },
+  {
+    "name": "Agile Twinblader",
+    "cardNo": "BP21-023EN",
+    "set": "BP21",
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Officer / Academic",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "1",
+    "attack": "2",
+    "defense": "2"
+  },
+  {
+    "name": "Agile Twinblader Evolved",
+    "cardNo": "BP21-024EN",
+    "set": "BP21",
+    "class": "sword",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Officer / Academic",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3"
+  },
+  {
     "name": "Agnes Digital",
     "cardNo": "CP01-033EN",
     "set": "CP01",
@@ -3374,6 +3416,20 @@
     "defense": "4"
   },
   {
+    "name": "Amaryllis, the Princess",
+    "cardNo": "BP21-037EN",
+    "set": "BP21",
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Mage / Academic / Princess",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "1",
+    "attack": "0",
+    "defense": "3"
+  },
+  {
     "name": "Amataz, Fairy Blader",
     "cardNo": "BP06-003EN",
     "set": "BP06",
@@ -4802,6 +4858,34 @@
     "defense": "5"
   },
   {
+    "name": "Anne, Brilliant Mage",
+    "cardNo": "BP21-038EN",
+    "set": "BP21",
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Mage / Academic / Princess",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3"
+  },
+  {
+    "name": "Anne, Brilliant Mage Evolved",
+    "cardNo": "BP21-039EN",
+    "set": "BP21",
+    "class": "rune",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Mage / Academic / Princess",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "-",
+    "attack": "4",
+    "defense": "4"
+  },
+  {
     "name": "Anne, Mysterian Imperatrix",
     "cardNo": "BP13-036EN",
     "set": "BP13",
@@ -5866,6 +5950,20 @@
     "defense": "1"
   },
   {
+    "name": "Aqua Priestess",
+    "cardNo": "BP21-106EN",
+    "set": "BP21",
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Faith",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "7",
+    "attack": "4",
+    "defense": "5"
+  },
+  {
     "name": "Aquascale Stalwart",
     "cardNo": "BP06-062EN",
     "set": "BP06",
@@ -5904,6 +6002,20 @@
     "rarity": "Bronze",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
     "cost": "1",
+    "attack": "-",
+    "defense": "-"
+  },
+  {
+    "name": "Aqueous Sphere",
+    "cardNo": "BP21-053EN",
+    "set": "BP21",
+    "class": "rune",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Mage",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "3",
     "attack": "-",
     "defense": "-"
   },
@@ -6086,6 +6198,20 @@
     "rarity": "Gold",
     "cardSet": "Booster Set #1 “Advent of Genesis”",
     "cost": "4",
+    "attack": "-",
+    "defense": "-"
+  },
+  {
+    "name": "Arcane Instruction",
+    "cardNo": "BP21-052EN",
+    "set": "BP21",
+    "class": "rune",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Mage / Academic",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "2",
     "attack": "-",
     "defense": "-"
   },
@@ -6424,6 +6550,20 @@
     "cost": "1",
     "attack": "-",
     "defense": "-"
+  },
+  {
+    "name": "Argente, Purest Silver",
+    "cardNo": "BP21-062EN",
+    "set": "BP21",
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Dragonewt",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "2",
+    "attack": "2",
+    "defense": "3"
   },
   {
     "name": "Aria, Fairy Princess",
@@ -6818,6 +6958,34 @@
     "defense": "1"
   },
   {
+    "name": "Arka, Sin Spinner",
+    "cardNo": "BP21-077EN",
+    "set": "BP21",
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon / Academic",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2"
+  },
+  {
+    "name": "Arka, Sin Spinner Evolved",
+    "cardNo": "BP21-078EN",
+    "set": "BP21",
+    "class": "abyss",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Demon / Academic",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3"
+  },
+  {
     "name": "Armed Al-mi'raj",
     "cardNo": "BP18-113EN",
     "set": "BP18",
@@ -6913,6 +7081,20 @@
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
     "cost": "-",
     "attack": "3",
+    "defense": "3"
+  },
+  {
+    "name": "Arriet, Luxvoice Learner",
+    "cardNo": "BP21-113EN",
+    "set": "BP21",
+    "class": "neutral",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Academic / Musical",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "2",
+    "attack": "2",
     "defense": "3"
   },
   {
@@ -7306,6 +7488,20 @@
     "cost": "-",
     "attack": "-",
     "defense": "-"
+  },
+  {
+    "name": "Augite Wyrm",
+    "cardNo": "BP21-070EN",
+    "set": "BP21",
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Wyrmkin",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "9",
+    "attack": "5",
+    "defense": "5"
   },
   {
     "name": "Augmentation Bestowal",
@@ -8174,6 +8370,20 @@
     "cost": "-",
     "attack": "2",
     "defense": "2"
+  },
+  {
+    "name": "Bad-Girl Life",
+    "cardNo": "BP21-080EN",
+    "set": "BP21",
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Demon / Academic",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "1",
+    "attack": "-",
+    "defense": "-"
   },
   {
     "name": "Badb Catha",
@@ -9534,6 +9744,20 @@
     "defense": "4"
   },
   {
+    "name": "Bell Witch",
+    "cardNo": "BP21-048EN",
+    "set": "BP21",
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Mage / Academic",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3"
+  },
+  {
     "name": "Bellicosity Dragon",
     "cardNo": "CP03-071EN",
     "set": "CP03",
@@ -10038,6 +10262,20 @@
     "defense": "1"
   },
   {
+    "name": "Binding Ritual",
+    "cardNo": "BP21-054EN",
+    "set": "BP21",
+    "class": "rune",
+    "type": "base",
+    "cardType": "Amulet",
+    "trait": "Mage / Earth Sigil",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "1",
+    "attack": "-",
+    "defense": "-"
+  },
+  {
     "name": "Biofabrication",
     "cardNo": "BP06-113EN",
     "set": "BP06",
@@ -10231,6 +10469,34 @@
     "cardSet": "Booster Set \"Eightfold Retribution\"",
     "cost": "3",
     "attack": "3",
+    "defense": "3"
+  },
+  {
+    "name": "Bladebunny",
+    "cardNo": "BP21-013EN",
+    "set": "BP21",
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Beast",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "1",
+    "attack": "1",
+    "defense": "2"
+  },
+  {
+    "name": "Bladebunny Evolved",
+    "cardNo": "BP21-014EN",
+    "set": "BP21",
+    "class": "forest",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Beast",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "-",
+    "attack": "2",
     "defense": "3"
   },
   {
@@ -11170,6 +11436,34 @@
     "cost": "2",
     "attack": "2",
     "defense": "2"
+  },
+  {
+    "name": "Bonebreaker Bladesman",
+    "cardNo": "BP21-085EN",
+    "set": "BP21",
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Departed / Cutthroat",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "2",
+    "attack": "1",
+    "defense": "3"
+  },
+  {
+    "name": "Bonebreaker Bladesman Evolved",
+    "cardNo": "BP21-086EN",
+    "set": "BP21",
+    "class": "abyss",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Departed / Cutthroat",
+    "rarity": "",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "-",
+    "attack": "4",
+    "defense": "6"
   },
   {
     "name": "Boomerang Sister",
@@ -12208,6 +12502,20 @@
     "defense": "5"
   },
   {
+    "name": "Castelle, Budding Mage",
+    "cardNo": "BP21-001EN",
+    "set": "BP21",
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Elf / Academic / Supreme",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "1",
+    "attack": "1",
+    "defense": "2"
+  },
+  {
     "name": "Castle in the Sky",
     "cardNo": "BP03-024EN",
     "set": "BP03",
@@ -12922,6 +13230,34 @@
     "defense": "5"
   },
   {
+    "name": "Ceridwen, Eternal Duality",
+    "cardNo": "BP21-040EN",
+    "set": "BP21",
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Alchemist / Forbidden",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "3",
+    "attack": "2",
+    "defense": "4"
+  },
+  {
+    "name": "Ceridwen, Eternal Duality",
+    "cardNo": "BP21-U03EN",
+    "set": "BP21",
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Alchemist / Forbidden",
+    "rarity": "Ultimate",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "3",
+    "attack": "2",
+    "defense": "4"
+  },
+  {
     "name": "Ceridwen, Eternity Hunter",
     "cardNo": "BP09-035EN",
     "set": "BP09",
@@ -13536,6 +13872,20 @@
     "cost": "-",
     "attack": "3",
     "defense": "3"
+  },
+  {
+    "name": "Charlotte, Dragonewt",
+    "cardNo": "BP21-066EN",
+    "set": "BP21",
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Dragonheart / Dragonewt",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "10",
+    "attack": "4",
+    "defense": "9"
   },
   {
     "name": "Charming Gentlemouse",
@@ -14294,6 +14644,34 @@
     "defense": "-"
   },
   {
+    "name": "Cleaver Cat",
+    "cardNo": "BP21-005EN",
+    "set": "BP21",
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Academic / Beast / Chef",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2"
+  },
+  {
+    "name": "Cleaver Cat Evolved",
+    "cardNo": "BP21-006EN",
+    "set": "BP21",
+    "class": "forest",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Academic / Beast / Chef",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3"
+  },
+  {
     "name": "Cleric Lancer",
     "cardNo": "BP01-137EN",
     "set": "BP01",
@@ -14334,6 +14712,20 @@
     "cost": "10",
     "attack": "-",
     "defense": "-"
+  },
+  {
+    "name": "Coach Joe, Fiery Counselor",
+    "cardNo": "BP21-057EN",
+    "set": "BP21",
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Dragonewt / Academic",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "5",
+    "attack": "5",
+    "defense": "5"
   },
   {
     "name": "Coda, Twilight Dragoon",
@@ -14950,6 +15342,34 @@
     "cost": "2",
     "attack": "3",
     "defense": "1"
+  },
+  {
+    "name": "Cornelius, the Corpse King",
+    "cardNo": "BP21-073EN",
+    "set": "BP21",
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Necromancer / Academic",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "4",
+    "attack": "2",
+    "defense": "2"
+  },
+  {
+    "name": "Cornelius, the Corpse King Evolved",
+    "cardNo": "BP21-074EN",
+    "set": "BP21",
+    "class": "abyss",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Necromancer / Academic",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3"
   },
   {
     "name": "Corrosive Thorns",
@@ -16366,6 +16786,20 @@
     "defense": "-"
   },
   {
+    "name": "Cynthia, Chivalrous Elf",
+    "cardNo": "BP21-007EN",
+    "set": "BP21",
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Elf",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "3",
+    "attack": "4",
+    "defense": "2"
+  },
+  {
     "name": "Cynthia, the Queen's Blade",
     "cardNo": "BP07-003EN",
     "set": "BP07",
@@ -17654,6 +18088,20 @@
     "defense": "-"
   },
   {
+    "name": "Deadeye Trainee",
+    "cardNo": "BP21-029EN",
+    "set": "BP21",
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Officer / Academic",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "2",
+    "attack": "3",
+    "defense": "2"
+  },
+  {
     "name": "Death Sentence",
     "cardNo": "BP01-150EN",
     "set": "BP01",
@@ -18002,6 +18450,20 @@
     "cost": "2",
     "attack": "1",
     "defense": "1"
+  },
+  {
+    "name": "Demon-Eyed Gangster",
+    "cardNo": "BP21-083EN",
+    "set": "BP21",
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon / Academic",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "1",
+    "attack": "2",
+    "defense": "2"
   },
   {
     "name": "Demon's Epitaph",
@@ -18394,6 +18856,20 @@
     "cost": "7",
     "attack": "5",
     "defense": "6"
+  },
+  {
+    "name": "Denan, Big Bad Boss",
+    "cardNo": "BP21-087EN",
+    "set": "BP21",
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon / Academic",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "2",
+    "attack": "2",
+    "defense": "3"
   },
   {
     "name": "Desert Pathfinder",
@@ -18842,6 +19318,20 @@
     "cost": "12",
     "attack": "-",
     "defense": "-"
+  },
+  {
+    "name": "Dion, Scarlet Scion",
+    "cardNo": "BP21-061EN",
+    "set": "BP21",
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Dragonewt / Academic",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "2",
+    "attack": "3",
+    "defense": "1"
   },
   {
     "name": "Dionne, Dancing Blade",
@@ -20104,6 +20594,20 @@
     "defense": "4"
   },
   {
+    "name": "Dragon Hunt",
+    "cardNo": "BP21-072EN",
+    "set": "BP21",
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Wyrmkin / Cutthroat",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "3",
+    "attack": "-",
+    "defense": "-"
+  },
+  {
     "name": "Dragon Impact",
     "cardNo": "BP10-067EN",
     "set": "BP10",
@@ -20690,6 +21194,34 @@
     "cost": "3",
     "attack": "3",
     "defense": "4"
+  },
+  {
+    "name": "Dragonborn Striker",
+    "cardNo": "BP21-063EN",
+    "set": "BP21",
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Dragonewt / Academic",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "1",
+    "attack": "1",
+    "defense": "1"
+  },
+  {
+    "name": "Dragonborn Striker Evolved",
+    "cardNo": "BP21-064EN",
+    "set": "BP21",
+    "class": "dragon",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Dragonewt / Academic",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3"
   },
   {
     "name": "Dragonclad Blademaster",
@@ -21712,6 +22244,20 @@
     "cost": "2",
     "attack": "2",
     "defense": "3"
+  },
+  {
+    "name": "Dwarven Lumberjack",
+    "cardNo": "BP21-008EN",
+    "set": "BP21",
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Fae-Touched / Academic",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "5",
+    "attack": "4",
+    "defense": "4"
   },
   {
     "name": "Dynamite Juggler",
@@ -22778,6 +23324,34 @@
     "defense": "6"
   },
   {
+    "name": "Elluvia, Graceful Lady",
+    "cardNo": "BP21-093EN",
+    "set": "BP21",
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Faith / Academic / Lightborne",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3"
+  },
+  {
+    "name": "Elluvia, Graceful Lady",
+    "cardNo": "BP21-U06EN",
+    "set": "BP21",
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Faith / Academic / Lightborne",
+    "rarity": "Ultimate",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3"
+  },
+  {
     "name": "Elusa, Magic Wunderkind",
     "cardNo": "BP08-042EN",
     "set": "BP08",
@@ -22930,6 +23504,34 @@
     "cost": "2",
     "attack": "-",
     "defense": "-"
+  },
+  {
+    "name": "Elven Farmhand",
+    "cardNo": "BP21-009EN",
+    "set": "BP21",
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Elf / Academic",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "3",
+    "attack": "2",
+    "defense": "3"
+  },
+  {
+    "name": "Elven Farmhand Evolved",
+    "cardNo": "BP21-010EN",
+    "set": "BP21",
+    "class": "forest",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Elf / Academic",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "-",
+    "attack": "3",
+    "defense": "4"
   },
   {
     "name": "Elven Pikeman",
@@ -24010,6 +24612,20 @@
     "defense": "2"
   },
   {
+    "name": "Evamia, Spinner of Threads",
+    "cardNo": "BP21-051EN",
+    "set": "BP21",
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Supreme",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "2",
+    "attack": "2",
+    "defense": "1"
+  },
+  {
     "name": "Eve Santaclaus [Cinderella Girl]",
     "cardNo": "ECP02-063EN",
     "set": "ECP02",
@@ -24162,6 +24778,20 @@
     "cost": "5",
     "attack": "4",
     "defense": "4"
+  },
+  {
+    "name": "Exella, Nocturnal General",
+    "cardNo": "BP21-079EN",
+    "set": "BP21",
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "2",
+    "attack": "1",
+    "defense": "3"
   },
   {
     "name": "Exhumation Crow",
@@ -24482,6 +25112,20 @@
     "rarity": "Gold",
     "cardSet": "Booster Set \"Bullet of Fate\"",
     "cost": "2",
+    "attack": "-",
+    "defense": "-"
+  },
+  {
+    "name": "Fairy Funfact",
+    "cardNo": "BP21-012EN",
+    "set": "BP21",
+    "class": "forest",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Pixie / Academic",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "1",
     "attack": "-",
     "defense": "-"
   },
@@ -25158,6 +25802,20 @@
     "defense": "4"
   },
   {
+    "name": "Fauna Handler",
+    "cardNo": "BP21-011EN",
+    "set": "BP21",
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Academic / Beast",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "1",
+    "attack": "1",
+    "defense": "1"
+  },
+  {
     "name": "Faust, Truthseeker",
     "cardNo": "BP09-037EN",
     "set": "BP09",
@@ -25506,6 +26164,20 @@
     "cost": "1",
     "attack": "-",
     "defense": "-"
+  },
+  {
+    "name": "Fervent Fist-Fighter",
+    "cardNo": "BP21-033EN",
+    "set": "BP21",
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Officer / Academic",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "1",
+    "attack": "2",
+    "defense": "1"
   },
   {
     "name": "Fervent Machine Soldier",
@@ -26738,6 +27410,20 @@
     "cost": "2",
     "attack": "2",
     "defense": "3"
+  },
+  {
+    "name": "Flying Mistletoe Squirrel",
+    "cardNo": "BP21-016EN",
+    "set": "BP21",
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Beast",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2"
   },
   {
     "name": "Focus",
@@ -28252,6 +28938,34 @@
     "defense": "3"
   },
   {
+    "name": "Galdr, Heroic Headmaster",
+    "cardNo": "BP21-020EN",
+    "set": "BP21",
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Commander / Academic / Beast",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "4",
+    "attack": "3",
+    "defense": "3"
+  },
+  {
+    "name": "Galdr, Heroic Headmaster Evolved",
+    "cardNo": "BP21-021EN",
+    "set": "BP21",
+    "class": "sword",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Commander / Academic / Beast",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "-",
+    "attack": "4",
+    "defense": "4"
+  },
+  {
     "name": "Galepierce",
     "cardNo": "BP19-018EN",
     "set": "BP19",
@@ -28544,6 +29258,34 @@
     "cost": "-",
     "attack": "6",
     "defense": "6"
+  },
+  {
+    "name": "Galom, Empress Fist",
+    "cardNo": "BP21-075EN",
+    "set": "BP21",
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon / Academic",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3"
+  },
+  {
+    "name": "Galom, Empress Fist",
+    "cardNo": "BP21-U05EN",
+    "set": "BP21",
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon / Academic",
+    "rarity": "Ultimate",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3"
   },
   {
     "name": "Galua of Two Breaths",
@@ -30716,6 +31458,20 @@
     "defense": "4"
   },
   {
+    "name": "Goblin Genius",
+    "cardNo": "BP21-115EN",
+    "set": "BP21",
+    "class": "neutral",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Academic / Goblinoid",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "1",
+    "attack": "2",
+    "defense": "2"
+  },
+  {
     "name": "Goblin Princess",
     "cardNo": "BP04-124EN",
     "set": "BP04",
@@ -30782,6 +31538,20 @@
     "rarity": "Silver",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\"",
     "cost": "2",
+    "attack": "-",
+    "defense": "-"
+  },
+  {
+    "name": "Goblin's Gratitude",
+    "cardNo": "BP21-116EN",
+    "set": "BP21",
+    "class": "neutral",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Academic / Goblinoid",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "3",
     "attack": "-",
     "defense": "-"
   },
@@ -31752,6 +32522,34 @@
     "defense": "4"
   },
   {
+    "name": "Grand Slam Tamer",
+    "cardNo": "BP21-059EN",
+    "set": "BP21",
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Dragonheart / Academic",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2"
+  },
+  {
+    "name": "Grand Slam Tamer Evolved",
+    "cardNo": "BP21-060EN",
+    "set": "BP21",
+    "class": "dragon",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Dragonheart / Academic",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3"
+  },
+  {
     "name": "Grand Spire",
     "cardNo": "BP14-052EN",
     "set": "BP14",
@@ -31946,6 +32744,34 @@
     "cost": "4",
     "attack": "5",
     "defense": "4"
+  },
+  {
+    "name": "Grea, Crimson Promise",
+    "cardNo": "BP21-041EN",
+    "set": "BP21",
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Mage / Academic / Princess",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2"
+  },
+  {
+    "name": "Grea, Crimson Promise Evolved",
+    "cardNo": "BP21-042EN",
+    "set": "BP21",
+    "class": "rune",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Mage / Academic / Princess",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3"
   },
   {
     "name": "Grea, Mysterian Dragoness",
@@ -32466,6 +33292,34 @@
     "defense": "3"
   },
   {
+    "name": "Gretina, Champion Fighter",
+    "cardNo": "BP21-112EN",
+    "set": "BP21",
+    "class": "neutral",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Machina / Academic / Supreme",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "4",
+    "attack": "4",
+    "defense": "4"
+  },
+  {
+    "name": "Gretina, Champion Fighter",
+    "cardNo": "BP21-U07EN",
+    "set": "BP21",
+    "class": "neutral",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Machina / Academic / Supreme",
+    "rarity": "Ultimate",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "4",
+    "attack": "4",
+    "defense": "4"
+  },
+  {
     "name": "Grim Reaper",
     "cardNo": "CP03-097EN",
     "set": "CP03",
@@ -32676,6 +33530,34 @@
     "defense": "2"
   },
   {
+    "name": "Gruinne, Leonardian Provost",
+    "cardNo": "BP21-045EN",
+    "set": "BP21",
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Mage / Academic",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "1",
+    "attack": "1",
+    "defense": "1"
+  },
+  {
+    "name": "Gruinne, Leonardian Provost Evolved",
+    "cardNo": "BP21-046EN",
+    "set": "BP21",
+    "class": "rune",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Mage / Academic",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "-",
+    "attack": "2",
+    "defense": "2"
+  },
+  {
     "name": "Guardian Nun",
     "cardNo": "SD06-011EN",
     "set": "SD06",
@@ -32814,6 +33696,20 @@
     "cost": "-",
     "attack": "4",
     "defense": "5"
+  },
+  {
+    "name": "Gunbein, Lofty Dragonewt",
+    "cardNo": "BP21-065EN",
+    "set": "BP21",
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Dragonewt / Academic",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3"
   },
   {
     "name": "Gunner Maid Seria",
@@ -34356,6 +35252,20 @@
     "defense": "3"
   },
   {
+    "name": "Hierophant's Implements",
+    "cardNo": "BP21-108EN",
+    "set": "BP21",
+    "class": "haven",
+    "type": "base",
+    "cardType": "Amulet",
+    "trait": "Faith",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "3",
+    "attack": "-",
+    "defense": "-"
+  },
+  {
     "name": "High Dog Breeder, Akane",
     "cardNo": "CP03-025EN",
     "set": "CP03",
@@ -35011,6 +35921,20 @@
     "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\"",
     "cost": "-",
     "attack": "3",
+    "defense": "3"
+  },
+  {
+    "name": "Holy Armored Cheetah",
+    "cardNo": "BP21-107EN",
+    "set": "BP21",
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Faith / Beast",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "2",
+    "attack": "2",
     "defense": "3"
   },
   {
@@ -37014,6 +37938,34 @@
     "cost": "5",
     "attack": "3",
     "defense": "4"
+  },
+  {
+    "name": "Ipupiara",
+    "cardNo": "BP21-067EN",
+    "set": "BP21",
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Marine",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3"
+  },
+  {
+    "name": "Ipupiara Evolved",
+    "cardNo": "BP21-068EN",
+    "set": "BP21",
+    "class": "dragon",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Marine",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "-",
+    "attack": "3",
+    "defense": "5"
   },
   {
     "name": "Irene, Harvest Defender",
@@ -40264,6 +41216,20 @@
     "defense": "-"
   },
   {
+    "name": "Kira, Resilient Maiden",
+    "cardNo": "BP21-098EN",
+    "set": "BP21",
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Faith / Academic / Lightborne",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "1",
+    "attack": "1",
+    "defense": "2"
+  },
+  {
     "name": "Kirari Moroboshi",
     "cardNo": "CP02-031EN",
     "set": "CP02",
@@ -40360,6 +41326,34 @@
     "cost": "1",
     "attack": "2",
     "defense": "1"
+  },
+  {
+    "name": "Kitty Sergeant",
+    "cardNo": "BP21-031EN",
+    "set": "BP21",
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Commander / Beast",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "4",
+    "attack": "2",
+    "defense": "2"
+  },
+  {
+    "name": "Kitty Sergeant Evolved",
+    "cardNo": "BP21-032EN",
+    "set": "BP21",
+    "class": "sword",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Commander / Beast",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3"
   },
   {
     "name": "Knight Neilan the Lazy",
@@ -41216,6 +42210,20 @@
     "defense": "2"
   },
   {
+    "name": "Kyrie, Fragment of Hope",
+    "cardNo": "BP21-102EN",
+    "set": "BP21",
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Supreme",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "4",
+    "attack": "1",
+    "defense": "1"
+  },
+  {
     "name": "Kyrzael, Killshot Enforcer",
     "cardNo": "BP19-041EN",
     "set": "BP19",
@@ -41650,6 +42658,20 @@
     "defense": "4"
   },
   {
+    "name": "Lainecrest Academy",
+    "cardNo": "BP21-114EN",
+    "set": "BP21",
+    "class": "neutral",
+    "type": "base",
+    "cardType": "Amulet",
+    "trait": "Academic",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "1",
+    "attack": "-",
+    "defense": "-"
+  },
+  {
     "name": "Lair of Usurpation",
     "cardNo": "BP20-030EN",
     "set": "BP20",
@@ -42056,6 +43078,20 @@
     "defense": "3"
   },
   {
+    "name": "Lecia & Nano, Twilight Trainees",
+    "cardNo": "BP21-019EN",
+    "set": "BP21",
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Commander / Officer / Academic / Supreme",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "3",
+    "attack": "2",
+    "defense": "3"
+  },
+  {
     "name": "Lecia, Sky Saber",
     "cardNo": "BP12-020EN",
     "set": "BP12",
@@ -42096,6 +43132,20 @@
     "cost": "3",
     "attack": "3",
     "defense": "3"
+  },
+  {
+    "name": "Leeds, Pining Witch",
+    "cardNo": "BP21-047EN",
+    "set": "BP21",
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Mage / Academic",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2"
   },
   {
     "name": "Lelouch, Leader of the Black Knights",
@@ -42336,6 +43386,20 @@
     "defense": "4"
   },
   {
+    "name": "Levin Archer",
+    "cardNo": "BP21-034EN",
+    "set": "BP21",
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Officer / Levin",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2"
+  },
+  {
     "name": "Levin Justice",
     "cardNo": "BP13-025EN",
     "set": "BP13",
@@ -42544,6 +43608,20 @@
     "cost": "-",
     "attack": "2",
     "defense": "2"
+  },
+  {
+    "name": "Lieutenant's Report",
+    "cardNo": "BP21-036EN",
+    "set": "BP21",
+    "class": "sword",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Commander",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "2",
+    "attack": "-",
+    "defense": "-"
   },
   {
     "name": "Light Signals Penguin Soldier",
@@ -42880,6 +43958,34 @@
     "cost": "-",
     "attack": "3",
     "defense": "3"
+  },
+  {
+    "name": "Lilium, the Witchwyrm Evolved",
+    "cardNo": "BP21-056EN",
+    "set": "BP21",
+    "class": "dragon",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Dragonheart / Academic",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3"
+  },
+  {
+    "name": "Lilium, the Wyrmwitch",
+    "cardNo": "BP21-055EN",
+    "set": "BP21",
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Dragonheart / Academic",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2"
   },
   {
     "name": "Lilje, Butler of the Mists",
@@ -43624,6 +44730,34 @@
     "defense": "4"
   },
   {
+    "name": "Lou, Lady-in-Training",
+    "cardNo": "BP21-096EN",
+    "set": "BP21",
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Faith / Academic / Lightborne",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "1",
+    "attack": "1",
+    "defense": "1"
+  },
+  {
+    "name": "Lou, Lady-in-Training Evolved",
+    "cardNo": "BP21-097EN",
+    "set": "BP21",
+    "class": "haven",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Faith / Academic / Lightborne",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "-",
+    "attack": "2",
+    "defense": "2"
+  },
+  {
     "name": "Lounes, Levin Apprentice",
     "cardNo": "BP13-026EN",
     "set": "BP13",
@@ -43960,6 +45094,34 @@
     "defense": "2"
   },
   {
+    "name": "Lucius, Travelled Trainer",
+    "cardNo": "BP21-110EN",
+    "set": "BP21",
+    "class": "neutral",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Academic",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "3",
+    "attack": "2",
+    "defense": "4"
+  },
+  {
+    "name": "Lucius, Travelled Trainer Evolved",
+    "cardNo": "BP21-111EN",
+    "set": "BP21",
+    "class": "neutral",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Academic",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3"
+  },
+  {
     "name": "Luck Bird",
     "cardNo": "CP03-123EN",
     "set": "CP03",
@@ -44168,6 +45330,48 @@
     "cost": "3",
     "attack": "-",
     "defense": "-"
+  },
+  {
+    "name": "Lumiore, Prestigious Gold",
+    "cardNo": "BP21-058EN",
+    "set": "BP21",
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Dragonewt",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "6",
+    "attack": "4",
+    "defense": "4"
+  },
+  {
+    "name": "Lumiore, Prestigious Gold",
+    "cardNo": "BP21-SP01EN",
+    "set": "BP21",
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Dragonewt",
+    "rarity": "Special",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "6",
+    "attack": "4",
+    "defense": "4"
+  },
+  {
+    "name": "Lumiore, Prestigious Gold",
+    "cardNo": "BP21-U04EN",
+    "set": "BP21",
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Dragonewt",
+    "rarity": "Ultimate",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "6",
+    "attack": "4",
+    "defense": "4"
   },
   {
     "name": "Luna, Soul Keeper",
@@ -44380,6 +45584,34 @@
     "defense": "3"
   },
   {
+    "name": "Lyelth, Immaculate Idol",
+    "cardNo": "BP21-002EN",
+    "set": "BP21",
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Puppetry / Academic",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "2",
+    "attack": "1",
+    "defense": "3"
+  },
+  {
+    "name": "Lyelth, Immaculate Idol Evolved",
+    "cardNo": "BP21-003EN",
+    "set": "BP21",
+    "class": "forest",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Puppetry / Academic",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "-",
+    "attack": "2",
+    "defense": "4"
+  },
+  {
     "name": "Lymaga, Forest Champion",
     "cardNo": "BP06-001EN",
     "set": "BP06",
@@ -44574,6 +45806,34 @@
     "cost": "-",
     "attack": "4",
     "defense": "4"
+  },
+  {
+    "name": "Mach-Speed Maron",
+    "cardNo": "BP21-081EN",
+    "set": "BP21",
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon / Academic",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "1",
+    "attack": "2",
+    "defense": "2"
+  },
+  {
+    "name": "Mach-Speed Maron Evolved",
+    "cardNo": "BP21-082EN",
+    "set": "BP21",
+    "class": "abyss",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Demon / Academic",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "-",
+    "attack": "4",
+    "defense": "2"
   },
   {
     "name": "Madlance Centaur",
@@ -45747,6 +47007,20 @@
     "trait": "Zealot / Beast / Cutthroat",
     "rarity": "Bronze",
     "cardSet": "Booster Set #8 \"Alterchaotica\"",
+    "cost": "2",
+    "attack": "2",
+    "defense": "3"
+  },
+  {
+    "name": "Malicious Blader",
+    "cardNo": "BP21-088EN",
+    "set": "BP21",
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Cutthroat",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Academy Royale\"",
     "cost": "2",
     "attack": "2",
     "defense": "3"
@@ -47850,6 +49124,20 @@
     "cost": "3",
     "attack": "3",
     "defense": "3"
+  },
+  {
+    "name": "Megalorca Rider",
+    "cardNo": "BP21-069EN",
+    "set": "BP21",
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Marine / Academic",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "1",
+    "attack": "1",
+    "defense": "1"
   },
   {
     "name": "Meisho Doto",
@@ -50610,6 +51898,20 @@
     "defense": "4"
   },
   {
+    "name": "Mono, Garnet Rebel Evolved",
+    "cardNo": "BP21-PR01EN",
+    "set": "BP21",
+    "class": "abyss",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Machina / Demon",
+    "rarity": "Promo",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "-",
+    "attack": "5",
+    "defense": "4"
+  },
+  {
     "name": "Mono, Immortal Garnet",
     "cardNo": "BP17-076EN",
     "set": "BP17",
@@ -51534,6 +52836,20 @@
     "defense": "5"
   },
   {
+    "name": "Mysterian Exchange Party",
+    "cardNo": "BP21-043EN",
+    "set": "BP21",
+    "class": "rune",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Mage / Academic / Princess",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "7",
+    "attack": "-",
+    "defense": "-"
+  },
+  {
     "name": "Mysterian Knowledge",
     "cardNo": "BP09-053EN",
     "set": "BP09",
@@ -51782,6 +53098,20 @@
     "rarity": "Premium",
     "cardSet": "Booster Set #4 “Cosmic Mythos”",
     "cost": "1",
+    "attack": "-",
+    "defense": "-"
+  },
+  {
+    "name": "Mystic Rune",
+    "cardNo": "BP21-044EN",
+    "set": "BP21",
+    "class": "rune",
+    "type": "base",
+    "cardType": "Amulet",
+    "trait": "Alchemist / Earth Sigil",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "2",
     "attack": "-",
     "defense": "-"
   },
@@ -54110,6 +55440,20 @@
     "defense": "7"
   },
   {
+    "name": "Noble Demoness",
+    "cardNo": "BP21-084EN",
+    "set": "BP21",
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "2",
+    "attack": "2",
+    "defense": "3"
+  },
+  {
     "name": "Noble Fairy",
     "cardNo": "BP01-014EN",
     "set": "BP01",
@@ -55466,6 +56810,20 @@
     "cost": "-",
     "attack": "4",
     "defense": "4"
+  },
+  {
+    "name": "Orchid's Examination Hall",
+    "cardNo": "BP21-099EN",
+    "set": "BP21",
+    "class": "haven",
+    "type": "base",
+    "cardType": "Amulet",
+    "trait": "Faith / Academic / Lightborne",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "2",
+    "attack": "-",
+    "defense": "-"
   },
   {
     "name": "Orchis, Newfound Heart",
@@ -58826,6 +60184,48 @@
     "cost": "5",
     "attack": "3",
     "defense": "4"
+  },
+  {
+    "name": "Pureflame Lady",
+    "cardNo": "BP21-100EN",
+    "set": "BP21",
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Faith / Academic / Lightborne",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "3",
+    "attack": "1",
+    "defense": "1"
+  },
+  {
+    "name": "Pureflame Lady Evolved",
+    "cardNo": "BP21-101EN",
+    "set": "BP21",
+    "class": "haven",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Faith / Academic / Lightborne",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "-",
+    "attack": "2",
+    "defense": "2"
+  },
+  {
+    "name": "Pureflower Maiden",
+    "cardNo": "BP21-103EN",
+    "set": "BP21",
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Faith / Academic / Lightborne / Beast",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "2",
+    "attack": "2",
+    "defense": "1"
   },
   {
     "name": "Purehearted Singer",
@@ -66458,6 +67858,20 @@
     "defense": "-"
   },
   {
+    "name": "Serenading Succubus",
+    "cardNo": "BP21-089EN",
+    "set": "BP21",
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "6",
+    "attack": "5",
+    "defense": "5"
+  },
+  {
     "name": "Serene Sanctuary",
     "cardNo": "BP16-106EN",
     "set": "BP16",
@@ -67253,6 +68667,20 @@
     "cardSet": "Special Set \"Seaside Memories\"",
     "cost": "7",
     "attack": "3",
+    "defense": "3"
+  },
+  {
+    "name": "Sharp Strategist",
+    "cardNo": "BP21-030EN",
+    "set": "BP21",
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Commander / Academic",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "2",
+    "attack": "2",
     "defense": "3"
   },
   {
@@ -70630,6 +72058,20 @@
     "defense": "3"
   },
   {
+    "name": "Spirit Invasion",
+    "cardNo": "BP21-090EN",
+    "set": "BP21",
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Departed",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "4",
+    "attack": "-",
+    "defense": "-"
+  },
+  {
     "name": "Spirit of the Spring",
     "cardNo": "BP14-006EN",
     "set": "BP14",
@@ -70670,6 +72112,20 @@
     "cost": "-",
     "attack": "4",
     "defense": "5"
+  },
+  {
+    "name": "Spiritelementalist",
+    "cardNo": "BP21-017EN",
+    "set": "BP21",
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Elf",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "6",
+    "attack": "5",
+    "defense": "3"
   },
   {
     "name": "Spiritshine",
@@ -71848,6 +73304,20 @@
     "defense": "3"
   },
   {
+    "name": "Stormscale",
+    "cardNo": "BP21-071EN",
+    "set": "BP21",
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Wyrmkin",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "6",
+    "attack": "5",
+    "defense": "5"
+  },
+  {
     "name": "Story of a Lifetime",
     "cardNo": "BP14-042EN",
     "set": "BP14",
@@ -71972,6 +73442,20 @@
     "cost": "-",
     "attack": "6",
     "defense": "6"
+  },
+  {
+    "name": "Sublime Talisman",
+    "cardNo": "BP21-109EN",
+    "set": "BP21",
+    "class": "haven",
+    "type": "base",
+    "cardType": "Amulet",
+    "trait": "Faith",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "2",
+    "attack": "-",
+    "defense": "-"
   },
   {
     "name": "Substitution",
@@ -75348,6 +76832,34 @@
     "defense": "1"
   },
   {
+    "name": "Titania, Queen of Fairies",
+    "cardNo": "BP21-004EN",
+    "set": "BP21",
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Pixie / Princess",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "3",
+    "attack": "1",
+    "defense": "1"
+  },
+  {
+    "name": "Titania, Queen of Fairies",
+    "cardNo": "BP21-U01EN",
+    "set": "BP21",
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Pixie / Princess",
+    "rarity": "Ultimate",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "3",
+    "attack": "1",
+    "defense": "1"
+  },
+  {
     "name": "Titania's Sanctuary",
     "cardNo": "EBD01-013EN",
     "set": "EBD01",
@@ -75612,6 +77124,34 @@
     "cost": "3",
     "attack": "3",
     "defense": "4"
+  },
+  {
+    "name": "Tony, Plucky Polliwog",
+    "cardNo": "BP21-027EN",
+    "set": "BP21",
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Officer / Academic",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "1",
+    "attack": "1",
+    "defense": "2"
+  },
+  {
+    "name": "Tony, Plucky Polliwog Evolved",
+    "cardNo": "BP21-028EN",
+    "set": "BP21",
+    "class": "sword",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Officer / Academic",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "-",
+    "attack": "2",
+    "defense": "3"
   },
   {
     "name": "Topaz Swordian",
@@ -76830,6 +78370,20 @@
     "cost": "-",
     "attack": "3",
     "defense": "3"
+  },
+  {
+    "name": "Twilight and Silver",
+    "cardNo": "BP21-026EN",
+    "set": "BP21",
+    "class": "sword",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Commander",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "4",
+    "attack": "-",
+    "defense": "-"
   },
   {
     "name": "Twin Turbo",
@@ -78344,6 +79898,20 @@
     "defense": "-"
   },
   {
+    "name": "Vanguard Tigress",
+    "cardNo": "BP21-015EN",
+    "set": "BP21",
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Beast",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "4",
+    "attack": "4",
+    "defense": "3"
+  },
+  {
     "name": "Vania, Crimson Majesty",
     "cardNo": "BP18-080EN",
     "set": "BP18",
@@ -79254,6 +80822,34 @@
     "defense": "-"
   },
   {
+    "name": "Verdilia, Rogue Professor",
+    "cardNo": "BP21-091EN",
+    "set": "BP21",
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Luminary / Academic",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "1",
+    "attack": "1",
+    "defense": "1"
+  },
+  {
+    "name": "Verdilia, Rogue Professor Evolved",
+    "cardNo": "BP21-092EN",
+    "set": "BP21",
+    "class": "haven",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Luminary / Academic",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "-",
+    "attack": "2",
+    "defense": "2"
+  },
+  {
     "name": "Veridic Discovery",
     "cardNo": "BP08-045EN",
     "set": "BP08",
@@ -80122,6 +81718,20 @@
     "defense": "3"
   },
   {
+    "name": "Vulgus, Infernal Headmistress",
+    "cardNo": "BP21-076EN",
+    "set": "BP21",
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon / Academic",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "3",
+    "attack": "2",
+    "defense": "2"
+  },
+  {
     "name": "Waltzing Fairy",
     "cardNo": "SD01-005EN",
     "set": "SD01",
@@ -80640,6 +82250,20 @@
     "defense": "-"
   },
   {
+    "name": "Weiss, Discerning Professor",
+    "cardNo": "BP21-025EN",
+    "set": "BP21",
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Academic / Supreme / Cutthroat",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "5",
+    "attack": "4",
+    "defense": "4"
+  },
+  {
     "name": "Westmuenster Abbey",
     "cardNo": "BP13-094EN",
     "set": "BP13",
@@ -81102,6 +82726,34 @@
     "defense": "3"
   },
   {
+    "name": "Wilbert, Desolate Paladin",
+    "cardNo": "BP21-094EN",
+    "set": "BP21",
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Arena / Luminary",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "3",
+    "attack": "2",
+    "defense": "2"
+  },
+  {
+    "name": "Wilbert, Desolate Paladin Evolved",
+    "cardNo": "BP21-095EN",
+    "set": "BP21",
+    "class": "haven",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Arena / Luminary",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3"
+  },
+  {
     "name": "Wilbert, Grand Knight",
     "cardNo": "BP06-086EN",
     "set": "BP06",
@@ -81240,6 +82892,20 @@
     "cost": "4",
     "attack": "3",
     "defense": "4"
+  },
+  {
+    "name": "Wild Profusion",
+    "cardNo": "BP21-018EN",
+    "set": "BP21",
+    "class": "forest",
+    "type": "base",
+    "cardType": "Amulet",
+    "trait": "Pixie",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "2",
+    "attack": "-",
+    "defense": "-"
   },
   {
     "name": "Wildfang Dragonewt",
@@ -82122,6 +83788,34 @@
     "cost": "2",
     "attack": "2",
     "defense": "3"
+  },
+  {
+    "name": "Wolf Whisperer",
+    "cardNo": "BP21-049EN",
+    "set": "BP21",
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Mage / Beast",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "6",
+    "attack": "3",
+    "defense": "3"
+  },
+  {
+    "name": "Wolf Whisperer Evolved",
+    "cardNo": "BP21-050EN",
+    "set": "BP21",
+    "class": "rune",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Mage / Beast",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "-",
+    "attack": "4",
+    "defense": "4"
   },
   {
     "name": "Wonder Acute",
@@ -84000,6 +85694,34 @@
     "defense": "4"
   },
   {
+    "name": "Yurius, Levin Authority",
+    "cardNo": "BP21-022EN",
+    "set": "BP21",
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Noble / Levin",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "3",
+    "attack": "3",
+    "defense": "4"
+  },
+  {
+    "name": "Yurius, Levin Authority",
+    "cardNo": "BP21-U02EN",
+    "set": "BP21",
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Noble / Levin",
+    "rarity": "Ultimate",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "3",
+    "attack": "3",
+    "defense": "4"
+  },
+  {
     "name": "Yurius, Levin Duke",
     "cardNo": "BP02-027EN",
     "set": "BP02",
@@ -84810,6 +86532,34 @@
     "cost": "-",
     "attack": "4",
     "defense": "4"
+  },
+  {
+    "name": "Zlatorog",
+    "cardNo": "BP21-104EN",
+    "set": "BP21",
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Lightborne / Beast",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "5",
+    "attack": "4",
+    "defense": "4"
+  },
+  {
+    "name": "Zlatorog Evolved",
+    "cardNo": "BP21-105EN",
+    "set": "BP21",
+    "class": "haven",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Lightborne / Beast",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Academy Royale\"",
+    "cost": "-",
+    "attack": "5",
+    "defense": "5"
   },
   {
     "name": "Zodiac Demon",

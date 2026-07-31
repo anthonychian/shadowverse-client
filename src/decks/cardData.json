@@ -683,6 +683,42 @@
     "effect": "At the start of your end phase, give your leader [defense]+1. On Evolve - Search your deck for an Erralde, Troth Convict, reveal it, add it to your hand, then shuffle.",
     "cardSet": "Booster Set \"Eightfold Retribution\""
   },
+  "Aggressive Advance": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Officer",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "-",
+    "defense": "-",
+    "effect": "When playing this, engage an Officer follower on your field: This costs 1 less. Select an enemy follower on the field. Deal it 4 damage and summon a Knight token.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
+  "Agile Twinblader": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Officer / Academic",
+    "rarity": "Gold",
+    "cost": "1",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[evolve] [cost01]: Evolve this. Activate only if this was put onto the field by an ability. [fanfare] If this was put onto the field by an ability, give it Storm.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
+  "Agile Twinblader Evolved": {
+    "class": "sword",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Officer / Academic",
+    "rarity": "Gold",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3",
+    "effect": "Strike - [cost02]: If there's another Academic follower on your field, refresh this. Activate only once per turn.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Agnes Digital": {
     "class": "rune",
     "type": "base",
@@ -1463,6 +1499,18 @@
     "effect": "[fanfare] Select an enemy follower on the field. Deal it 4 damage and summon an Officer token follower from your EX area. [act] [cost00]: Deal 4 damage to each enemy leader. Draw a card. Activate only if there are at least 3 Officer token followers on your field with different names, and only once per turn.",
     "cardSet": "Booster Set \"New World Genesis\""
   },
+  "Amaryllis, the Princess": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Mage / Academic / Princess",
+    "rarity": "Legendary",
+    "cost": "1",
+    "attack": "0",
+    "defense": "3",
+    "effect": "At the start of your end phase, you may bury the top card of your deck. Once per turn, when this takes ability damage, give this [attack]+2. [fanfare] If there are at least 10 Academic cards in your cemetery, put a Curse of Suffering token into your EX area.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Amataz, Fairy Blader": {
     "class": "forest",
     "type": "base",
@@ -2063,6 +2111,30 @@
     "effect": "On Evolve: Search your deck for an Academic follower with a different name from this card, reveal it, and add it to your hand.",
     "cardSet": "Booster Set #2 “Reign of Bahamut”"
   },
+  "Anne, Brilliant Mage": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Mage / Academic / Princess",
+    "rarity": "Legendary",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3",
+    "effect": "[evolve] [cost01]: Evolve this. [fanfare] Discard an Academic card: Draw a card.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
+  "Anne, Brilliant Mage Evolved": {
+    "class": "rune",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Mage / Academic / Princess",
+    "rarity": "Legendary",
+    "cost": "-",
+    "attack": "4",
+    "defense": "4",
+    "effect": "On Evolve - Summon an Anne's Summoning token and, if there are at least 10 Academic cards in your cemetery, give it Assail. On Super-Evolve - Search your deck for an Anne's Sorcery, reveal it, add it to your hand, then shuffle. The next Anne's Sorcery you play this turn costs 5 less.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Anne, Mysterian Imperatrix": {
     "class": "rune",
     "type": "base",
@@ -2459,6 +2531,18 @@
     "effect": "Ward. [fanfare] Summon a Megalorca token. If Overflow is active for you, give it Storm.",
     "cardSet": "Booster Set #4 “Cosmic Mythos”"
   },
+  "Aqua Priestess": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Faith",
+    "rarity": "Bronze",
+    "cost": "7",
+    "attack": "4",
+    "defense": "5",
+    "effect": "Ward. [fanfare] Search your deck for a spell that costs 5 or less, put it into your EX area, then shuffle. It costs 5 less to play this turn.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Aquascale Stalwart": {
     "class": "dragon",
     "type": "base",
@@ -2482,6 +2566,18 @@
     "defense": "-",
     "effect": "Look at the top 3 cards of your deck. You may put a Marine card from among them into your EX area. If Overflow is active for you, it costs 1 less to play this turn. Put the rest on the bottom of your deck in any order.",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
+  },
+  "Aqueous Sphere": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Mage",
+    "rarity": "Bronze",
+    "cost": "3",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[quick]. Spellchain (10) - This costs 2 less to play. Select an enemy follower on the field and deal it 4 damage.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Arael": {
     "class": "neutral",
@@ -2578,6 +2674,18 @@
     "defense": "-",
     "effect": "[quick] Put the top card of your deck into your EX area. Repeat until your EX area is full. At the start of your next end phase, banish each card in your EX area.",
     "cardSet": "Booster Set #1 “Advent of Genesis”"
+  },
+  "Arcane Instruction": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Mage / Academic",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "-",
+    "defense": "-",
+    "effect": "When playing this, engage 2 Academic followers on your field: This costs 2 less. Select a follower on your field. Give it [attack]+1/[defense]+1 and draw a card.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Arcane Item Shop": {
     "class": "rune",
@@ -2759,6 +2867,18 @@
     "effect": "Select a follower on your field. Deal 1 damage to it and each enemy leader, and draw a card.",
     "cardSet": "Promo Cards"
   },
+  "Argente, Purest Silver": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Dragonewt",
+    "rarity": "Gold",
+    "cost": "2",
+    "attack": "2",
+    "defense": "3",
+    "effect": "Ward. At the start of your end phase, if there's a Lumiore, Prestigious Gold on your field, give your leader [defense]+3. [fanfare] Draw a card.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Aria's Whirlwind": {
     "class": "forest",
     "type": "base",
@@ -2879,6 +2999,30 @@
     "effect": "Give your leader [defense]+1. Draw a card.",
     "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\""
   },
+  "Arka, Sin Spinner": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon / Academic",
+    "rarity": "Gold",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[evolve] [cost01]: Evolve this. Whenever you roll a 6-sided die, select an enemy follower on the field and deal it 1 damage. If you roll a 6, deal it 3 damage instead.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
+  "Arka, Sin Spinner Evolved": {
+    "class": "abyss",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Demon / Academic",
+    "rarity": "Gold",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3",
+    "effect": "Whenever you roll a 6-sided die, select an enemy follower on the field and deal it 1 damage. If you roll a 6, deal it 3 damage instead. On Evolve - Do the following 2 times. \"Roll a 6-sided die.\"",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Armed Al-mi'raj": {
     "class": "haven",
     "type": "base",
@@ -2950,6 +3094,18 @@
     "defense": "4",
     "effect": "Ward. [lastwords] Give your leader [defense]+4.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
+  },
+  "Arriet, Luxvoice Learner": {
+    "class": "neutral",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Academic / Musical",
+    "rarity": "Gold",
+    "cost": "2",
+    "attack": "2",
+    "defense": "3",
+    "effect": "[fanfare] Look at the top 3 cards of your deck. You may reveal an Academic card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. If there are at least 3 Academic followers on your field, give this [attack]+1.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Arriet, Soothing Harpist": {
     "class": "neutral",
@@ -3226,6 +3382,18 @@
     "defense": "-",
     "effect": "You can put up to 10 of this card into your evolve deck.",
     "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\""
+  },
+  "Augite Wyrm": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Wyrmkin",
+    "rarity": "Bronze",
+    "cost": "9",
+    "attack": "5",
+    "defense": "5",
+    "effect": "[fanfare] Deal 6 damage to each enemy follower on the field. [act] [cost01], discard this: Draw a card.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Augmentation Bestowal": {
     "class": "haven",
@@ -3694,6 +3862,18 @@
     "defense": "2",
     "effect": "This follower's name is also Ghost. [lastwords] Put this card into its owner's EX area.",
     "cardSet": "Booster Set #3 “Flame of Lævateinn”"
+  },
+  "Bad-Girl Life": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Demon / Academic",
+    "rarity": "Gold",
+    "cost": "1",
+    "attack": "-",
+    "defense": "-",
+    "effect": "Draw a card. Do the following 2 times. \"Roll a 6-sided die.\"",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Badb Catha": {
     "class": "neutral",
@@ -4379,6 +4559,18 @@
     "effect": "On Evolve - Select an enemy follower on the field and deal it damage equal to the number of cards in your banished zone.",
     "cardSet": "Booster Set \"Neometropolis\""
   },
+  "Bell Witch": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Mage / Academic",
+    "rarity": "Silver",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3",
+    "effect": "[fanfare] Look at the top 4 cards of your deck. From among them, you may put up to 1 Academic follower and up to 1 Academic spell into your EX area. Put the rest on the bottom of your deck in any order.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Bellicosity Dragon": {
     "class": "dragon",
     "type": "base",
@@ -4655,6 +4847,18 @@
     "effect": "[feed][cost01]: Race this follower. On Race: Select an enemy follower on the field and engage it.",
     "cardSet": "Crossover Set “Umamusume: Pretty Derby”"
   },
+  "Binding Ritual": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Amulet",
+    "trait": "Mage / Earth Sigil",
+    "rarity": "Bronze",
+    "cost": "1",
+    "attack": "-",
+    "defense": "-",
+    "effect": "Stack. [fanfare] Select an enemy follower on the field and engage it. It doesn't refresh during its controller's next start phase.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Biofabrication": {
     "class": "neutral",
     "type": "base",
@@ -4762,6 +4966,30 @@
     "defense": "3",
     "effect": "Storm. Strike - Select an enemy follower on the field and, if there's a follower with \"Cutthroat\" in its name on your field or in your cemetery, deal it 4 damage.",
     "cardSet": "Booster Set \"Eightfold Retribution\""
+  },
+  "Bladebunny": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Beast",
+    "rarity": "Bronze",
+    "cost": "1",
+    "attack": "1",
+    "defense": "2",
+    "effect": "[evolve] [cost00]: Evolve this. Activate only if a card was returned to hand from your field this turn. When this is returned to hand from your field, you may summon a Bladebunny from your hand.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
+  "Bladebunny Evolved": {
+    "class": "forest",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Beast",
+    "rarity": "Bronze",
+    "cost": "-",
+    "attack": "2",
+    "defense": "3",
+    "effect": "(None.)",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Bladed Hedgehog": {
     "class": "sword",
@@ -5170,6 +5398,30 @@
     "defense": "2",
     "effect": "[lastwords] Summon an Assembly Droid token.",
     "cardSet": "Booster Set #7 \"Verdant Steel\""
+  },
+  "Bonebreaker Bladesman": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Departed / Cutthroat",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "1",
+    "defense": "3",
+    "effect": "[evolve] [cost05]: Evolve this. Assail. Follower Strike - Deal each enemy leader damage equal to this follower's attack.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
+  "Bonebreaker Bladesman Evolved": {
+    "class": "abyss",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Departed / Cutthroat",
+    "rarity": "",
+    "cost": "-",
+    "attack": "4",
+    "defense": "6",
+    "effect": "Assail. Follower Strike - Deal each enemy leader damage equal to this follower's attack. On Evolve - Select an enemy follower on the field and deal it 4 damage.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Boomerang Sister": {
     "class": "haven",
@@ -5747,6 +5999,18 @@
     "effect": "[fanfare] Select any number of enemy followers on the field and deal X damage divided between them. X equals the total number of cards in your hand and EX area.",
     "cardSet": "Booster Set #4 “Cosmic Mythos”"
   },
+  "Castelle, Budding Mage": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Elf / Academic / Supreme",
+    "rarity": "Legendary",
+    "cost": "1",
+    "attack": "1",
+    "defense": "2",
+    "effect": "Each Academic and Beast follower on your field not named Castelle, Budding Mage doesn't take ability damage. [fanfare] If there are at least 3 Academic and/or Beast followers on your field, put a Verdant Prayer token into your EX area.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Castle in the Sky": {
     "class": "sword",
     "type": "base",
@@ -5974,6 +6238,18 @@
     "defense": "5",
     "effect": "Bane. On Evolve - Put a Darkest Desire token into your EX area. [lastwords] Select an enemy follower on the field and deal it 3 damage.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
+  },
+  "Ceridwen, Eternal Duality": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Alchemist / Forbidden",
+    "rarity": "Legendary",
+    "cost": "3",
+    "attack": "2",
+    "defense": "4",
+    "effect": "At the start of your end phase, select an enemy leader or enemy follower on the field and, if you've used Earth Rite to remove at least 1 Stack counters from cards on your field with Stack this turn, deal it 2 damage. [fanfare] - Earth Rite: Search your deck for a follower with Earth Rite or Earth Sigil amulet that costs 1 or less, summon it, then shuffle.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Ceridwen, Eternity Hunter": {
     "class": "rune",
@@ -6250,6 +6526,18 @@
     "defense": "3",
     "effect": "Ward. On Evolve - Look at the top 4 cards of your deck. You may reveal a Beast card from among them and add it to your hand. Put the rest on the bottom of your deck in any order.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
+  },
+  "Charlotte, Dragonewt": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Dragonheart / Dragonewt",
+    "rarity": "Silver",
+    "cost": "10",
+    "attack": "4",
+    "defense": "9",
+    "effect": "Storm. Ward. [fanfare] Reveal the top card of your deck. If it's a [dragoncraft] follower, summon it. Otherwise, draw the revealed card.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Charming Gentlemouse": {
     "class": "rune",
@@ -6659,6 +6947,30 @@
     "effect": "[fanfare] Give your leader [defense]+2. Draw a card. [q][act] [cost02], [engage], bury this card: Select an iM@S CG follower in your cemetery and add it to your hand.",
     "cardSet": "Crossover Set “THE IDOLM@STER CINDERELLA GIRLS”"
   },
+  "Cleaver Cat": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Academic / Beast / Chef",
+    "rarity": "Gold",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[evolve] [cost01]: Evolve this. [fanfare] Discard a card: Look at the top 3 cards of your deck. You may reveal an Academic or Beast card from among them and add it to your hand. Put the rest on the bottom of your deck in any order.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
+  "Cleaver Cat Evolved": {
+    "class": "forest",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Academic / Beast / Chef",
+    "rarity": "Gold",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3",
+    "effect": "On Evolve - Return another Academic or Beast follower from your field to its owner's hand: Select an enemy follower on the field and deal it 3 damage.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Cleric Lancer": {
     "class": "haven",
     "type": "base",
@@ -6682,6 +6994,18 @@
     "defense": "-",
     "effect": "Shuffle your deck, then reveal the top 6 cards. You may put any number of Umamusume followers or Umamusume amulets from among them onto your field. Add the remaining cards to your hand.",
     "cardSet": "Crossover Set “Umamusume: Pretty Derby”"
+  },
+  "Coach Joe, Fiery Counselor": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Dragonewt / Academic",
+    "rarity": "Legendary",
+    "cost": "5",
+    "attack": "5",
+    "defense": "5",
+    "effect": "Whenever an Academic follower is put onto your field, if this in your EX area, place a passion counter on it. [act] [engage]: If this or a card in your EX area has at least 10 passion counters, deal 5 damage to each enemy leader and enemy follower on the field. Give this [defense]+6. [act] [cost00]: Put this from your hand into your EX area.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Coco, Infernal Left Paw TOKEN": {
     "class": "abyss",
@@ -7103,6 +7427,30 @@
     "effect": "Rush. [fanfare] Give this follower [attack]+X, where X is the number of other Marine followers on your field.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
   },
+  "Cornelius, the Corpse King": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Necromancer / Academic",
+    "rarity": "Legendary",
+    "cost": "4",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[evolve] [cost01]: Evolve this. [fanfare] Select an Academic follower that costs 2 or less in your cemetery. Summon it and give it \"At the start of your end phase, bury this.\"",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
+  "Cornelius, the Corpse King Evolved": {
+    "class": "abyss",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Necromancer / Academic",
+    "rarity": "Legendary",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3",
+    "effect": "On Evolve - Select an Academic follower that costs 3 or less in your cemetery and summon it. On Super-Evolve - Do the following 3 times. \"Roll a 6-sided die.\"",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Corrosive Thorns": {
     "class": "forest",
     "type": "base",
@@ -7499,6 +7847,18 @@
     "effect": "At the start of your end phase, if there are at least 3 crests in your EX area, give your leader [defense]+1.",
     "cardSet": "Booster Set \"Omens and Heirs\""
   },
+  "Crest: Wilbert, Desolate Paladin TOKEN": {
+    "class": "haven",
+    "type": "token",
+    "cardType": "Crest / Token",
+    "trait": "Arena / Luminary",
+    "rarity": "-",
+    "cost": "-",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[act] [cost00]: Select a follower with Ward on your field and, if there are at least 3 followers with Ward on your field, give it [attack]+1/[defense]+1. If there are at least 5, give [attack]+2/[defense]+2 instead. Activate only once per turn",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Crimson Beast Tamer": {
     "class": "rune",
     "type": "base",
@@ -7787,6 +8147,18 @@
     "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage. If there are at least 7 spells and Onmyoji cards in your cemetery, deal 4 damage instead. [act] Bury a Shikigami follower: Select an enemy follower on the field and deal it 4 damage. For the rest of this turn, this card's [act] abilities can't be activated.",
     "cardSet": "Booster Set #6 “Paragons of the Colosseum”"
   },
+  "Curse of Suffering TOKEN": {
+    "class": "rune",
+    "type": "token",
+    "cardType": "Spell / Token",
+    "trait": "Mage / Academic / Princess",
+    "rarity": "-",
+    "cost": "1",
+    "attack": "-",
+    "defense": "-",
+    "effect": "Deal 2 damage to each enemy leader, each enemy follower, and each Amaryllis, the Princess on your field.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Curse of the Black Dragon TOKEN": {
     "class": "dragon",
     "type": "token",
@@ -7967,6 +8339,18 @@
     "effect": "Search your deck for a Deus Ex Machina, summon it, then shuffle. Summon an Ancient Artifact or Mystic Artifact token.",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
   },
+  "Cyclical Guidance TOKEN": {
+    "class": "haven",
+    "type": "token",
+    "cardType": "Spell / Token",
+    "trait": "Luminary / Academic",
+    "rarity": "-",
+    "cost": "2",
+    "attack": "-",
+    "defense": "-",
+    "effect": "Select up to X enemy followers on the field. Deal them each 5 damage and give each Academic follower on your field [attack]+1[defense]+1. X equals the number of time your leader has gained defense this turn.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Cyclone Blade": {
     "class": "sword",
     "type": "base",
@@ -7978,6 +8362,18 @@
     "defense": "-",
     "effect": "Select a Commander follower on your field and deal X damage to each enemy follower on the field. X equals the selected follower's attack.",
     "cardSet": "Booster Set #4 “Cosmic Mythos”"
+  },
+  "Cynthia, Chivalrous Elf": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Elf",
+    "rarity": "Gold",
+    "cost": "3",
+    "attack": "4",
+    "defense": "2",
+    "effect": "Rush. Assail. [fanfare] Choose 1. (1) Select up to 2 Pixie token followers in your EX area or on your field, and give them [attack]+1/[defense]+1. (2) Summon 2 Fairy tokens.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Cynthia, the Queen's Blade": {
     "class": "forest",
@@ -8507,6 +8903,18 @@
     "effect": "[act] Banish this card and an Iceschillendrig, Gilded Autocrat from your cemetery: Select an enemy follower on the field and engage it. ---------- [quick] Select an enemy follower on the field and give it [attack]-2/[defense]-2.",
     "cardSet": "Booster Set \"Bullet of Fate\""
   },
+  "Deadeye Trainee": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Officer / Academic",
+    "rarity": "Silver",
+    "cost": "2",
+    "attack": "3",
+    "defense": "2",
+    "effect": "Ward. [fanfare] Select an enemy follower on the field. If this was put onto the field by an ability, destroy it and deal 1 damage to its leader.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Death Sentence": {
     "class": "haven",
     "type": "base",
@@ -8711,6 +9119,18 @@
     "effect": "Bane. [lastwords] Deal 2 damage to each enemy leader.",
     "cardSet": "Booster Set #5 “Omens Eternal”"
   },
+  "Demon-Eyed Gangster": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon / Academic",
+    "rarity": "Silver",
+    "cost": "1",
+    "attack": "2",
+    "defense": "2",
+    "effect": "Whenever you roll a 6-sided die, if you roll a 6, deal 2 damage to each enemy leader. [act] [cost00]: Roll a 6-sided die. Activate only once per turn.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Demoncaller": {
     "class": "rune",
     "type": "base",
@@ -8890,6 +9310,18 @@
     "defense": "6",
     "effect": "[fanfare] Necrocharge (10): Select up to 2 [abysscraft] followers that cost 2 play points or less in your cemetery and put them onto your field. Give each other follower on your field [attack]+1/[defense]+1. NC (20): Give [attack]+3/[defense]+3 instead. While this card is on your field, each [abysscraft] follower on your field has Rush.",
     "cardSet": "Booster Set #4 “Cosmic Mythos”"
+  },
+  "Denan, Big Bad Boss": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon / Academic",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "2",
+    "defense": "3",
+    "effect": "Whenever you roll a 6-sided die, select a follower on your field. If you roll a 6, give it [attack]+1/[defense]+1. [act] [cost00]: Roll a 6-sided die. Activate only once per turn.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Desert Pathfinder": {
     "class": "neutral",
@@ -9178,6 +9610,18 @@
     "defense": "-",
     "effect": "When playing this card, banish 10 spells in your cemetery: This card costs 7 play points to play. Take another turn after this one.",
     "cardSet": "Booster Set #1 “Advent of Genesis”"
+  },
+  "Dion, Scarlet Scion": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Dragonewt / Academic",
+    "rarity": "Gold",
+    "cost": "2",
+    "attack": "3",
+    "defense": "1",
+    "effect": "Rush. Assail. Strike - If there's a card in your EX area with at least 4 passion counters, increase your max play points by 1. If it has at least 10, give this [defense]+6.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Dionne, Dancing Blade": {
     "class": "sword",
@@ -9803,6 +10247,18 @@
     "effect": "[fanfare] Summon an Otohime's Vanguard token. If Overflow is active for you, summon 3 instead. During your turn, whenever another [dragoncraft] follower is put from your field into the cemetery, select an enemy leader or enemy follower on the field and deal it 1 damage.",
     "cardSet": "Booster Set #8 \"Alterchaotica\""
   },
+  "Dragon Hunt": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Wyrmkin / Cutthroat",
+    "rarity": "Bronze",
+    "cost": "3",
+    "attack": "-",
+    "defense": "-",
+    "effect": "Select an enemy follower on the field and destroy it. If it costs 4 or more, draw a card.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Dragon Impact": {
     "class": "dragon",
     "type": "base",
@@ -10090,6 +10546,30 @@
     "defense": "4",
     "effect": "Whenever you play a spell, place 1 spell counter on this card. [act] Remove 3 spell counters from this card: Select an enemy follower on the field and deal it 5 damage.",
     "cardSet": "Booster Set #1 “Advent of Genesis”"
+  },
+  "Dragonborn Striker": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Dragonewt / Academic",
+    "rarity": "Silver",
+    "cost": "1",
+    "attack": "1",
+    "defense": "1",
+    "effect": "[evolve] [cost03]: Evolve this. Storm. Strike - If there's a card in your EX area with at least 4 passion counters, evolve this. If it has at least 10, give this [defense]+6.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
+  "Dragonborn Striker Evolved": {
+    "class": "dragon",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Dragonewt / Academic",
+    "rarity": "Silver",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3",
+    "effect": "Storm.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Dragonclad Blademaster": {
     "class": "dragon",
@@ -10631,6 +11111,18 @@
     "effect": "Whenever one of your followers evolves, select an enemy follower on the field and deal it 2 damage.",
     "cardSet": "Booster Set #2 “Reign of Bahamut”"
   },
+  "Dwarven Lumberjack": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Fae-Touched / Academic",
+    "rarity": "Gold",
+    "cost": "5",
+    "attack": "4",
+    "defense": "4",
+    "effect": "Whenever another Academic or Beast follower is put onto your field, select an enemy follower on the field. Deal 5 damage to it and 1 damage to its leader. [fanfare] You may summon an Academic or Beast follower that costs 4 or less from your hand.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Dynamite Juggler": {
     "class": "rune",
     "type": "base",
@@ -11135,6 +11627,18 @@
     "effect": "Storm. Ward. Whenever this follower takes damage, give it and your leader [defense]+1.",
     "cardSet": "Booster Set #8 \"Alterchaotica\""
   },
+  "Elluvia, Graceful Lady": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Faith / Academic / Lightborne",
+    "rarity": "Legendary",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3",
+    "effect": "Twice per turn, when your leader gains 🛡️, give each other follower on your field [attack]+1/[defense]+1. [fanfare] You may summon an Academic follower not named Elluvia, Graceful Lady that costs X or less from your hand. X equals your remaining play points.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Elusa, Magic Wunderkind": {
     "class": "rune",
     "type": "base",
@@ -11182,6 +11686,30 @@
     "defense": "-",
     "effect": "[quick] Select an enemy follower on the field. Deal it 3 damage, draw a card, then discard a card.",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
+  },
+  "Elven Farmhand": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Elf / Academic",
+    "rarity": "Silver",
+    "cost": "3",
+    "attack": "2",
+    "defense": "3",
+    "effect": "[evolve] [cost01]: Evolve this.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
+  "Elven Farmhand Evolved": {
+    "class": "forest",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Elf / Academic",
+    "rarity": "Silver",
+    "cost": "-",
+    "attack": "3",
+    "defense": "4",
+    "effect": "On Evolve - Look at the top 5 cards of your deck. You may summon up to two 1-cost Academic and/or Beast followers from among them. Put the rest on the bottom of your deck in any order.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Elven Pikeman": {
     "class": "forest",
@@ -11362,6 +11890,18 @@
     "defense": "1",
     "effect": "[fanfare] Select a Vanguard follower on your field and refresh it. For the rest of this turn, it can't attack enemy leaders. ---------- (If this card is revealed by a drive check, refresh a follower on your field. For the rest of this turn, it can't attack enemy leaders.)",
     "cardSet": "Crossover Set \"Cardfight!! Vanguard\""
+  },
+  "Emergency Summoning TOKEN": {
+    "class": "rune",
+    "type": "token",
+    "cardType": "Amulet / Token",
+    "trait": "Alchemist / Earth Sigil",
+    "rarity": "-",
+    "cost": "0",
+    "attack": "-",
+    "defense": "-",
+    "effect": "Stack. [fanfare] Summon a Guardform Golem token. If there's an Alchemist follower that costs at least 3 on your field, put a Guardian Golem token into your EX area.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Emmylou, Witch of Wonder": {
     "class": "rune",
@@ -11807,6 +12347,18 @@
     "effect": "[fanfare] Put a Serpent token into your EX area. While this card is on your field, each Venomfang Medusa and Stheno on your field has Aura.",
     "cardSet": "Booster Set #4 “Cosmic Mythos”"
   },
+  "Evamia, Spinner of Threads": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Supreme",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "2",
+    "defense": "1",
+    "effect": "[fanfare] Banish the top card of your deck. Then, if there are at least 5 cards in your banished zone, summon a Mystic Artifact token.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Eve Santaclaus [Cinderella Girl]": {
     "class": "haven",
     "type": "base",
@@ -11878,6 +12430,18 @@
     "defense": "4",
     "effect": "When playing this, engage an Erralde, Troth Convict on your field: This costs 0 to play. At the start of your end phase, select an enemy follower on the field and deal it 2 damage. [fanfare] Search your deck for an Agent of the Commandments or a Follower of the Precepts, summon it, then shuffle.",
     "cardSet": "Booster Set \"Eightfold Retribution\""
+  },
+  "Exella, Nocturnal General": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon",
+    "rarity": "Gold",
+    "cost": "2",
+    "attack": "1",
+    "defense": "3",
+    "effect": "Storm. Strike - Give this 🗡️+X. X equals the number of other followers on your field with Storm.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Exhumation Crow": {
     "class": "abyss",
@@ -12058,6 +12622,18 @@
     "defense": "-",
     "effect": "As an additional cost to play this card, bury 4 Pixie tokens. ---------- Search your deck for an Aria, Fairy Princess, summon it, then shuffle.",
     "cardSet": "Booster Set \"Bullet of Fate\""
+  },
+  "Fairy Funfact": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Pixie / Academic",
+    "rarity": "Silver",
+    "cost": "1",
+    "attack": "-",
+    "defense": "-",
+    "effect": "Summon a Fairy token. Give each Pixie token follower on your field Rush and Assail. Combo (3) - Draw a card.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Fairy Healer": {
     "class": "forest",
@@ -12347,6 +12923,18 @@
     "effect": "Rush. [fanfare] Put 2 Repair Mode tokens into your EX area. Recover 2 play points. Strike - Draw a card. If there are 5 cards named Repair Mode in your EX area, draw 2 instead.",
     "cardSet": "Booster Set #7 \"Verdant Steel\""
   },
+  "Fauna Handler": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Academic / Beast",
+    "rarity": "Silver",
+    "cost": "1",
+    "attack": "1",
+    "defense": "1",
+    "effect": "When this leaves the field, select an Academic or Beast follower on your field and give it [attack]+1/[defense]+1.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Faust, Truthseeker": {
     "class": "rune",
     "type": "base",
@@ -12538,6 +13126,18 @@
     "defense": "-",
     "effect": "Put a Naterran Great Tree token into your EX area. Combo (3) - Put 2 instead and give your leader [defense]+2.",
     "cardSet": "Booster Set #7 \"Verdant Steel\""
+  },
+  "Fervent Fist-Fighter": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Officer / Academic",
+    "rarity": "Bronze",
+    "cost": "1",
+    "attack": "2",
+    "defense": "1",
+    "effect": "Rush. [fanfare] If this was put onto the field by an ability, give it [attack]+2 and Assail.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Fervent Machine Soldier": {
     "class": "sword",
@@ -13042,6 +13642,18 @@
     "defense": "3",
     "effect": "[fanfare] If there's a Commander card on your field, draw a card.",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
+  },
+  "Flying Mistletoe Squirrel": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Beast",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[fanfare] Return a Beast follower not named Flying Mistletoe Squirrel from your field to its owner's hand: Give this Storm. Draw a card",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Focus": {
     "class": "haven",
@@ -13811,6 +14423,30 @@
     "effect": "Ward. [fanfare] Select another follower on your field. Give it [attack]+4/[defense]+3 and Assail.",
     "cardSet": "Booster Set #1 “Advent of Genesis”"
   },
+  "Galdr, Heroic Headmaster": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Commander / Academic / Beast",
+    "rarity": "Legendary",
+    "cost": "4",
+    "attack": "3",
+    "defense": "3",
+    "effect": "[evolve] [cost01]: Evolve this. [fanfare] [cost02]: Search your deck for an Academic follower that costs 2 or less, summon it, then shuffle.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
+  "Galdr, Heroic Headmaster Evolved": {
+    "class": "sword",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Commander / Academic / Beast",
+    "rarity": "Legendary",
+    "cost": "-",
+    "attack": "4",
+    "defense": "4",
+    "effect": "On Evolve - Search your deck for an Academic follower that costs 3 or less, summon it, then shuffle. On Super-Evolve - Give this \"If an Academic follower you control would take damage, it takes that much minus 2 instead.\"",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Gale Arrow TOKEN": {
     "class": "forest",
     "type": "token",
@@ -13894,6 +14530,18 @@
     "defense": "6",
     "effect": "On Evolve: Select an Omen card that costs 2 play points or less in your cemetery and play it for 0 play points. During your turn, whenever this follower takes ability damage, select an enemy leader or enemy follower on the field and deal it 3 damage.",
     "cardSet": "Booster Set #5 “Omens Eternal”"
+  },
+  "Galom, Empress Fist": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon / Academic",
+    "rarity": "Legendary",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3",
+    "effect": "Whenever you roll a 6-sided die, select an enemy follower on the field and deal it damage equal to the number you roll. Whenever you roll a 6-sided die, if you roll a 6, deal 4 damage to each enemy leader. [fanfare] Roll a 6-sided die.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Galua of Two Breaths": {
     "class": "dragon",
@@ -14879,6 +15527,18 @@
     "effect": "",
     "cardSet": "Booster Set #1 “Advent of Genesis”"
   },
+  "Goblin Genius": {
+    "class": "neutral",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Academic / Goblinoid",
+    "rarity": "Silver",
+    "cost": "1",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[fanfare] If there are at least 3 Academic followers on your field, give your leader [defense]+1.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Goblin King TOKEN": {
     "class": "neutral",
     "type": "token",
@@ -14938,6 +15598,18 @@
     "defense": "-",
     "effect": "This card can only be played if there are at least 3 Goblinoid followers on your field. ---------- Select an enemy follower on the field. Destroy it and deal 2 damage to its leader.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
+  },
+  "Goblin's Gratitude": {
+    "class": "neutral",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Academic / Goblinoid",
+    "rarity": "Silver",
+    "cost": "3",
+    "attack": "-",
+    "defense": "-",
+    "effect": "Look at the top 4 cards of your deck. You may reveal up to 2 Academic cards from among them and add them to your hand. Put the rest on the bottom of your deck in any order. Recover 1 play point.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Goblinmount Demon": {
     "class": "neutral",
@@ -15359,6 +16031,30 @@
     "effect": "Ward. [lastwords] Add 2 to a Stack on your field.",
     "cardSet": "Booster Set #2 “Reign of Bahamut”"
   },
+  "Grand Slam Tamer": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Dragonheart / Academic",
+    "rarity": "Gold",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[evolve] [cost01]: Evolve this. [fanfare] If Overflow is active for you, look at the top 3 cards of your deck. You may reveal an Academic card from among them and add it to your hand. Put the rest on the bottom of your deck in any order.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
+  "Grand Slam Tamer Evolved": {
+    "class": "dragon",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Dragonheart / Academic",
+    "rarity": "Gold",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3",
+    "effect": "On Evolve - Select an enemy follower on the field, deal it 2 damage. If there's a card in your EX area with at least 4 passion counters, deal it 4 damage instead. If it has at least 10, give this [defense]+6.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Grand Spire": {
     "class": "rune",
     "type": "base",
@@ -15478,6 +16174,30 @@
     "defense": "-",
     "effect": "[quick] Select an enemy follower on the field and deal it 2 damage. If there are at least 5 Academic cards in your cemetery, deal 3 damage instead.",
     "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\""
+  },
+  "Grea, Crimson Promise": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Mage / Academic / Princess",
+    "rarity": "Gold",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[evolve] [cost01]: Evolve this. [fanfare] Discard an Academic card: Draw a card.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
+  "Grea, Crimson Promise Evolved": {
+    "class": "rune",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Mage / Academic / Princess",
+    "rarity": "Gold",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3",
+    "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage. If there are at least 10 Academic cards in your cemetery, deal 4 damage instead and 1 damage to its leader.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Grea, Mysterian Dragoness": {
     "class": "rune",
@@ -15623,6 +16343,18 @@
     "effect": "Ward. [fanfare] Bury the top 2 cards of your deck. [act] [cost01]: Summon this card from your cemetery. Give it \"[lastwords] Banish this card.\" Activate only if there are at least 10 cards in your cemetery and no cards named Gremory, Death Teller on your field.",
     "cardSet": "EX Beginner Deck \"Abysscraft\""
   },
+  "Gretina, Champion Fighter": {
+    "class": "neutral",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Machina / Academic / Supreme",
+    "rarity": "Legendary",
+    "cost": "4",
+    "attack": "4",
+    "defense": "4",
+    "effect": "While you don't have a Super Evolution Point, this has Storm. [act] Discard an Academic card: Select an enemy follower on the field. Deal it 5 damage and draw a card. Activate only once per turn",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Grim Reaper": {
     "class": "abyss",
     "type": "base",
@@ -15706,6 +16438,30 @@
     "defense": "2",
     "effect": "[fanfare] Deal 1 damage to each enemy leader. If Sanguine is active for you, deal 3 damage instead.",
     "cardSet": "Booster Set \"Bullet of Fate\""
+  },
+  "Gruinne, Leonardian Provost": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Mage / Academic",
+    "rarity": "Silver",
+    "cost": "1",
+    "attack": "1",
+    "defense": "1",
+    "effect": "[evolve] [cost01]: Evolve this. [fanfare] Add 1 to a Stack on your field. (If there are no cards on your field with Stack, summon a Magic Sediment token with 1 Stack counter.) [act] [engage], Earth Rite (2): Deal 1 damage to each enemy follower on the field",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
+  "Gruinne, Leonardian Provost Evolved": {
+    "class": "rune",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Mage / Academic",
+    "rarity": "Silver",
+    "cost": "-",
+    "attack": "2",
+    "defense": "2",
+    "effect": "On Evolve - Add 1 to a Stack on your field. [act] [engage], Earth Rite (2): Deal 1 damage to each enemy follower on the field.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Guardform Golem TOKEN": {
     "class": "rune",
@@ -15814,6 +16570,18 @@
     "defense": "5",
     "effect": "On Evolve - Choose one. (1) Select an enemy follower on the field and deal it 5 damage. (2) Give each other Machina follower on your field [attack]+1/[defense]+1. [act], banish 2 cards named Repair Mode from your EX area: Give this follower Storm.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
+  },
+  "Gunbein, Lofty Dragonewt": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Dragonewt / Academic",
+    "rarity": "Silver",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3",
+    "effect": "Ward. [fanfare] [cost02]: Search your deck for a Gunbein, Lofty Dragonewt, summon it, then shuffle. [act] [engage]: Select an enemy follower on the field. If there's a card in your EX area with at least 4 passion counters, deal it 4 damage. If it has at least 10, give this [defense]+6.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Gunner Maid Seria": {
     "class": "sword",
@@ -16607,6 +17375,18 @@
     "effect": "Rush. [fanfare] If there's an amulet on your field, deal 2 damage to each enemy leader.",
     "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\""
   },
+  "Hierophant's Implements": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Amulet",
+    "trait": "Faith",
+    "rarity": "Bronze",
+    "cost": "3",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[act] [engage], bury an amulet: Deal 1 damage to each enemy leader. Give your leader [defense]+1.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "High Dog Breeder, Akane": {
     "class": "sword",
     "type": "base",
@@ -16871,6 +17651,18 @@
     "effect": "On Evolve - Draw a card.",
     "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\""
   },
+  "Holy Armored Cheetah": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Faith / Beast",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "2",
+    "defense": "3",
+    "effect": "Whenever your leader gains 🛡️, give this Storm.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Holy Bear Knight": {
     "class": "sword",
     "type": "base",
@@ -16894,6 +17686,18 @@
     "defense": "-",
     "effect": "The follower equipped with this has \"Strike - Refresh this follower. Draw a card. Activate only once per turn.\"",
     "cardSet": "Crossover Set \"Princess Connect! Re:Dive\""
+  },
+  "Holy Cavalier TOKEN": {
+    "class": "haven",
+    "type": "token",
+    "cardType": "Follower / Token",
+    "trait": "Luminary",
+    "rarity": "-",
+    "cost": "1",
+    "attack": "1",
+    "defense": "2",
+    "effect": "Ward. Whenever this gains 🗡️, give it Rush.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Holy Counterattack": {
     "class": "haven",
@@ -17950,6 +18754,30 @@
     "defense": "4",
     "effect": "[Union Burst] [act] [cost01]: Each opponent buries a follower. Activate only once per turn. ------- [fanfare] Sarch your deck for a 3-cost or less Lucent Academy follower and a 1-cost Lucent Academy follower, summon them, then shuffle. Their [fanfare] abilities don't activate.",
     "cardSet": "Crossover Set \"Princess Connect! Re:Dive\""
+  },
+  "Ipupiara": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Marine",
+    "rarity": "Bronze",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3",
+    "effect": "[evolve] [cost02]: Evolve this. [fanfare] If this wasn't put onto the field from hand, evolve it.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
+  "Ipupiara Evolved": {
+    "class": "dragon",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Marine",
+    "rarity": "Bronze",
+    "cost": "-",
+    "attack": "3",
+    "defense": "5",
+    "effect": "Assail. Bane. Strike - Deal 2 damage to each enemy leader.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Irene, Harvest Defender": {
     "class": "forest",
@@ -19283,6 +20111,18 @@
     "effect": "If there's a Commander follower and Officer follower on your field, draw 2 cards.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
   },
+  "Kira, Resilient Maiden": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Faith / Academic / Lightborne",
+    "rarity": "Gold",
+    "cost": "1",
+    "attack": "1",
+    "defense": "2",
+    "effect": "Ward. [fanfare] [cost03]: Search your deck for an Elluvia, Graceful Lady, summon it, then shuffle. [act] [engage]: Give your leader [defense]+1. Activate only if there's another Academic follower on your field.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Kirari Moroboshi": {
     "class": "sword",
     "type": "base",
@@ -19330,6 +20170,30 @@
     "defense": "1",
     "effect": "When this is discarded, you may put it into your EX area. ---------- Rush. [fanfare] If Overflow is active for you, give this [attack]+1 and Assail.",
     "cardSet": "Booster Set \"New World Genesis\""
+  },
+  "Kitty Sergeant": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Commander / Beast",
+    "rarity": "Bronze",
+    "cost": "4",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[evolve] [cost01]: Evolve this. Whenever another follower is put onto your field, give your leader [defense]+1.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
+  "Kitty Sergeant Evolved": {
+    "class": "sword",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Commander / Beast",
+    "rarity": "Bronze",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3",
+    "effect": "Whenever another follower is put onto your field, give your leader [defense]+1. On Evolve - Look at the top 4 cards of your deck. You may summon a follower that costs 4 or less from among them. Put the rest on the bottom of your deck in any order.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Knight Neilan the Lazy": {
     "class": "sword",
@@ -19775,6 +20639,18 @@
     "effect": "Whenever a follower on your field evolves, deal 1 damage to each enemy leader. If it's the 1st time a follower on your field has evolved this turn, draw a card. If it's the 2nd, give this Storm. If it's the 3rd, give this [attack]+2/[defense]+2.",
     "cardSet": "Booster Set \"Neometropolis\""
   },
+  "Kyrie, Fragment of Hope": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Supreme",
+    "rarity": "Silver",
+    "cost": "4",
+    "attack": "1",
+    "defense": "1",
+    "effect": "Ward. [fanfare] Draw a card. Recover 3 play points.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Kyrzael, Killshot Enforcer": {
     "class": "rune",
     "type": "base",
@@ -19858,6 +20734,18 @@
     "defense": "4",
     "effect": "[Union Burst] [fanfare] Select up to three 2-cost or less followers with different names in your cemetery and summon them. ------- When the [Union Burst] ability of another follower on your field activates, give it [attack]+1/[defense]+1.",
     "cardSet": "Crossover Set \"Princess Connect! Re:Dive\""
+  },
+  "Lainecrest Academy": {
+    "class": "neutral",
+    "type": "base",
+    "cardType": "Amulet",
+    "trait": "Academic",
+    "rarity": "Gold",
+    "cost": "1",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[fanfare] Look at the top 3 cards of your deck. You may reveal an Academic card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. [act] [engage], bury this: Give your leader [defense]+1. Activate only if there at least 2 Academic followers on your field.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Lair of Usurpation": {
     "class": "sword",
@@ -20015,6 +20903,18 @@
     "effect": "Ward. [lastwords] Give your leader [defense]+1. Draw a card.",
     "cardSet": "Booster Set \"New World Genesis\""
   },
+  "Lecia & Nano, Twilight Trainees": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Commander / Officer / Academic / Supreme",
+    "rarity": "Legendary",
+    "cost": "3",
+    "attack": "2",
+    "defense": "3",
+    "effect": "While there's another Academic follower on your field, this has Bane. [fanfare] Search your deck for a 1-cost follower, summon it, then shuffle.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Lecia, Sky Saber": {
     "class": "sword",
     "type": "base",
@@ -20026,6 +20926,18 @@
     "defense": "3",
     "effect": "[fanfare] Search your deck for a Nano, the Dawnblade, summon it, then shuffle. Whenever a Nano, the Dawnblade on your field evolves, choose one. (1) Put a Twilight Blade token into your EX area. (2) Give your leader [defense]+2.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
+  },
+  "Leeds, Pining Witch": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Mage / Academic",
+    "rarity": "Silver",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[fanfare] Banish the top card of your deck. [act] [engage], banish this: Select an enemy follower on the field. Deal it 4 damage and draw a card. Activate only if there are at least 5 cards in your banished zone.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Lelouch, Leader of the Black Knights": {
     "class": "abyss",
@@ -20159,6 +21071,18 @@
     "effect": "[fanfare] Select an enemy follower on the field. It doesn't refresh during its controller's next start phase. At the start of your end phase, select an engaged enemy follower on the field and deal it 2 damage. If Overflow is active for you, deal 4 damage instead.",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
   },
+  "Levin Archer": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Officer / Levin",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[fanfare] Look at the top 2 cards of your deck. You may reveal a Levin card from among them and add it to your hand. Bury the rest. [act] [engage]: Select an enemy follower on the field and, if there are at least 5 Levin cards in your cemetery, deal it 3 damage.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Levin Justice": {
     "class": "sword",
     "type": "base",
@@ -20266,6 +21190,18 @@
     "defense": "2",
     "effect": "On Evolve - If Sanguine is active for you, give your leader [defense]+2 and draw a card.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
+  },
+  "Lieutenant's Report": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Commander",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "-",
+    "defense": "-",
+    "effect": "Select up to 2 Officer followers in your cemetery and add them to your hand.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Light Signals Penguin Soldier": {
     "class": "forest",
@@ -20422,6 +21358,54 @@
     "defense": "3",
     "effect": "Strike: Give your leader [defense]+2.",
     "cardSet": "Starter Deck #5 “Waltz of the Undying Night”"
+  },
+  "Lilium's Dragon TOKEN": {
+    "class": "dragon",
+    "type": "token",
+    "cardType": "Follower / Token",
+    "trait": "Wyrmkin / Academic",
+    "rarity": "-",
+    "cost": "2",
+    "attack": "5",
+    "defense": "5",
+    "effect": "Rush. Assail. Follower Strike - Change the enemy follower's attack and defense to 1.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
+  "Lilium's Hatchling TOKEN": {
+    "class": "dragon",
+    "type": "token",
+    "cardType": "Follower / Token",
+    "trait": "Wyrmkin / Academic",
+    "rarity": "-",
+    "cost": "1",
+    "attack": "1",
+    "defense": "1",
+    "effect": "Ward. [lastwords] Give your leader [defense]+1.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
+  "Lilium, the Witchwyrm Evolved": {
+    "class": "dragon",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Dragonheart / Academic",
+    "rarity": "Legendary",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3",
+    "effect": "At the start of your end phase, if there are at least 3 Academic followers on your field, summon a Lilium's Hatchling token. On Evolve - Search your deck for an Academic follower not named Lilium, the Wyrmwitch, reveal it, add it to your hand, then shuffle. On Super-Evolve - Summon a Lilium's Dragon token.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
+  "Lilium, the Wyrmwitch": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Dragonheart / Academic",
+    "rarity": "Legendary",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[evolve] [cost01]: Evolve this.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Lilje, Butler of the Mists": {
     "class": "sword",
@@ -20867,6 +21851,30 @@
     "effect": "On Evolve - Select an enemy follower on the field and deal it damage equal to this follower's attack.",
     "cardSet": "Booster Set \"Neometropolis\""
   },
+  "Lou, Lady-in-Training": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Faith / Academic / Lightborne",
+    "rarity": "Gold",
+    "cost": "1",
+    "attack": "1",
+    "defense": "1",
+    "effect": "[evolve] [cost01]: Evolve this. Activate only if this gained defense this turn. [fanfare] If there's another Academic follower on your field, give your leader [defense]+1.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
+  "Lou, Lady-in-Training Evolved": {
+    "class": "haven",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Faith / Academic / Lightborne",
+    "rarity": "Gold",
+    "cost": "-",
+    "attack": "2",
+    "defense": "2",
+    "effect": "On Evolve - Select an enemy follower on the field and deal it damage equal to this follower's attack.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Lounes, Levin Apprentice": {
     "class": "sword",
     "type": "base",
@@ -20999,6 +22007,30 @@
     "effect": "[fanfare] [cost03]: Select an enemy follower on the field and destroy it.",
     "cardSet": "Booster Set \"Neometropolis\""
   },
+  "Lucius, Travelled Trainer": {
+    "class": "neutral",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Academic",
+    "rarity": "Legendary",
+    "cost": "3",
+    "attack": "2",
+    "defense": "4",
+    "effect": "[evolve] [cost01]: Evolve this. [fanfare] Give your leader [defense]+1. Draw a card.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
+  "Lucius, Travelled Trainer Evolved": {
+    "class": "neutral",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Academic",
+    "rarity": "Legendary",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3",
+    "effect": "On Evolve - Discard an Academic card: Select an enemy follower on the field and deal it 4 damage.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Luck Bird": {
     "class": "haven",
     "type": "base",
@@ -21119,6 +22151,18 @@
     "effect": "[fanfare] Search your deck for a Luminous Commander, Luminous Magus, and Luminous Lancetrooper, reveal them, add them to your hand, then shuffle. [act] [engage], bury this: Select a Commander follower on your field and give it [attack]+1/[defense]+1.",
     "cardSet": "Booster Set \"Neometropolis\""
   },
+  "Lumiore, Prestigious Gold": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Dragonewt",
+    "rarity": "Legendary",
+    "cost": "6",
+    "attack": "4",
+    "defense": "4",
+    "effect": "At the start of your end phase, if there are at least 3 Dragonewt followers on your field, deal 3 damage to each enemy leader and enemy follower on the field. [fanfare] Discard a card: Search your deck for a 2-cost Dragonewt follower and a 1-cost Dragonewt follower, summon them, then shuffle",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Luna's Doll TOKEN": {
     "class": "abyss",
     "type": "token",
@@ -21214,6 +22258,42 @@
     "defense": "3",
     "effect": "Bane. During your turn, whenever an enemy follower is put from the field into the cemetery, deal 1 damage to its leader. [act] [engage]: Select another follower on your field and give it Bane.",
     "cardSet": "Booster Set #8 \"Alterchaotica\""
+  },
+  "Lyelth's Marionette TOKEN": {
+    "class": "forest",
+    "type": "token",
+    "cardType": "Follower / Token",
+    "trait": "Puppetry / Academic",
+    "rarity": "-",
+    "cost": "0",
+    "attack": "1",
+    "defense": "1",
+    "effect": "While this card is on the field, its name is also Puppet. Storm. Bane. Ward.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
+  "Lyelth, Immaculate Idol": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Puppetry / Academic",
+    "rarity": "Legendary",
+    "cost": "2",
+    "attack": "1",
+    "defense": "3",
+    "effect": "[evolve] [cost01]: Evolve this. [fanfare] Discard a Puppetry card: Draw 2 cards.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
+  "Lyelth, Immaculate Idol Evolved": {
+    "class": "forest",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Puppetry / Academic",
+    "rarity": "Legendary",
+    "cost": "-",
+    "attack": "2",
+    "defense": "4",
+    "effect": "On Evolve - Put a Lyelth's Marionette token into your EX area. On Super-Evolve - Select a Puppetry token follower in your EX area and, if there are at least 3 Puppetry cards in your cemetery, give it [attack]+4/[defense]+4.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Lymaga, Forest Champion": {
     "class": "forest",
@@ -21382,6 +22462,30 @@
     "defense": "4",
     "effect": "On Evolve: Select an enemy follower on the field and deal it 2 damage. If there are at least 2 Heroic cards in your cemetery, deal 4 damage instead.",
     "cardSet": "Booster Set #3 “Flame of Lævateinn”"
+  },
+  "Mach-Speed Maron": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon / Academic",
+    "rarity": "Silver",
+    "cost": "1",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[evolve] [cost03]: Evolve this. [fanfare] Roll a 6-sided die. If you rolled a 6 when rolling a die this turn, evolve this.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
+  "Mach-Speed Maron Evolved": {
+    "class": "abyss",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Demon / Academic",
+    "rarity": "Silver",
+    "cost": "-",
+    "attack": "4",
+    "defense": "2",
+    "effect": "Storm.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Madlance Centaur": {
     "class": "sword",
@@ -22006,6 +23110,18 @@
     "defense": "3",
     "effect": "Ward. [fanfare] Bury the top card of your deck. If you buried a follower with Ward, give this follower Bane.",
     "cardSet": "Booster Set #8 \"Alterchaotica\""
+  },
+  "Malicious Blader": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Cutthroat",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "2",
+    "defense": "3",
+    "effect": "[fanfare] If there are at least five 2-cost cards in your cemetery, recover 2 play points.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Mallet Monkey": {
     "class": "forest",
@@ -23062,6 +24178,18 @@
     "defense": "3",
     "effect": "At the start of your end phase, select an enemy follower on the field. If there are at least 3 Machina cards in your EX area, deal it 3 damage and draw a card. [lastwords] Put an Assembly Droid token into your EX area.",
     "cardSet": "Booster Set \"Convergent Destinies\""
+  },
+  "Megalorca Rider": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Marine / Academic",
+    "rarity": "Bronze",
+    "cost": "1",
+    "attack": "1",
+    "defense": "1",
+    "effect": "Ward. [lastwords] Draw a card. [act] [engage]: If there's a card in your EX area with at least 4 passion counters, give your leader [defense]+2. If it has at least 10, give this [defense]+6",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Megalorca TOKEN": {
     "class": "dragon",
@@ -24875,6 +26003,18 @@
     "effect": "On Evolve - Select an enemy follower on the field and deal it 3 damage. While this card is on your field, any Academic follower you play costs 1 less.",
     "cardSet": "Booster Set #6 “Paragons of the Colosseum”"
   },
+  "Mysterian Exchange Party": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Mage / Academic / Princess",
+    "rarity": "Gold",
+    "cost": "7",
+    "attack": "-",
+    "defense": "-",
+    "effect": "When this is discarded by the ability of an Academic card you control, draw a card. ---------- Look at the top 5 cards of your deck. You may summon up to 3 Academic followers that cost a total of 6 or less from among them. Put the rest on the bottom of your deck in any order.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Mysterian Knowledge": {
     "class": "rune",
     "type": "base",
@@ -24994,6 +26134,18 @@
     "defense": "-",
     "effect": "[quick] Put a card from your hand on the bottom of your deck. Draw a card.",
     "cardSet": "Booster Set #4 “Cosmic Mythos”"
+  },
+  "Mystic Rune": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Amulet",
+    "trait": "Alchemist / Earth Sigil",
+    "rarity": "Gold",
+    "cost": "2",
+    "attack": "-",
+    "defense": "-",
+    "effect": "Stack. [fanfare] Put an Emergency Summoning token or a Reactive Barrier token into your EX area.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Mythril Golem": {
     "class": "rune",
@@ -25991,6 +27143,18 @@
     "effect": "While this card is on your field, any Puppet you play costs 1 less. Whenever a Puppet is put onto your field, give it [attack]+1 and Storm.",
     "cardSet": "Booster Set #5 “Omens Eternal”"
   },
+  "Noble Demoness": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon",
+    "rarity": "Silver",
+    "cost": "2",
+    "attack": "2",
+    "defense": "3",
+    "effect": "Whenever another 2-cost follower is put onto your field, deal 1 damage to each enemy leader.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Noble Fairy": {
     "class": "forest",
     "type": "base",
@@ -26626,6 +27790,18 @@
     "defense": "4",
     "effect": "On Evolve - Select an enemy follower on the field and deal it damage equal to 2 times the number of Festive cards and/or Mage cards you've played this turn.",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
+  },
+  "Orchid's Examination Hall": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Amulet",
+    "trait": "Faith / Academic / Lightborne",
+    "rarity": "Gold",
+    "cost": "2",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[act] [engage]: Select an Academic follower on your field and give it [attack]+1/[defense]+1. Activate only if your leader gained 🛡️ this turn. [act] [cost01], discard an Academic amulet: Search your deck for a 1-cost Academic follower, reveal it, add it to your hand, then shuffle. Activate only once per turn",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Orchis, Newfound Heart": {
     "class": "forest",
@@ -28283,6 +29459,42 @@
     "effect": "[fanfare] Search your deck for a Draconic Duelist follower that costs 4 or less, summon it, then shuffle your deck. If Overflow is active for you, give your leader [defense]+3.",
     "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\""
   },
+  "Pureflame Lady": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Faith / Academic / Lightborne",
+    "rarity": "Silver",
+    "cost": "3",
+    "attack": "1",
+    "defense": "1",
+    "effect": "[evolve] [cost01]: Evolve this. Whenever this gains 🛡️, deal 1 damage to each enemy follower on the field. [fanfare] If there's another Academic follower on your field, give this [attack]+1/[defense]+1.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
+  "Pureflame Lady Evolved": {
+    "class": "haven",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Faith / Academic / Lightborne",
+    "rarity": "Silver",
+    "cost": "-",
+    "attack": "2",
+    "defense": "2",
+    "effect": "Whenever this gains🛡️, deal 1 damage to each enemy follower on the field. On Evolve - Select your leader or a follower on your field and give it [defense]+2.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
+  "Pureflower Maiden": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Faith / Academic / Lightborne / Beast",
+    "rarity": "Silver",
+    "cost": "2",
+    "attack": "2",
+    "defense": "1",
+    "effect": "Once per turn, when this gains 🛡️, draw a card. [act] [engage]: Give your leader [defense]+1. Activate only if there's another Academic follower on your field.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Purehearted Singer": {
     "class": "neutral",
     "type": "base",
@@ -29002,6 +30214,18 @@
     "defense": "-",
     "effect": "[quick] Deal 2 damage to your leader. Select an enemy leader or enemy follower on the field and deal it 3 damage.",
     "cardSet": "Booster Set #1 “Advent of Genesis”"
+  },
+  "Reactive Barrier TOKEN": {
+    "class": "rune",
+    "type": "token",
+    "cardType": "Amulet / Token",
+    "trait": "Alchemist / Earth Sigil",
+    "rarity": "-",
+    "cost": "0",
+    "attack": "-",
+    "defense": "-",
+    "effect": "Stack. [fanfare] Draw a card. If there's an Alchemist follower that costs at least 3 on your field, draw 2 instead.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Realm of Repose": {
     "class": "haven",
@@ -31763,6 +32987,18 @@
     "effect": "Choose one. (1) Select an enemy card that costs 2 or less on the field and destroy it. (2) [cost02]: Select an enemy card that costs 6 or less on the field and destroy it.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
   },
+  "Serenading Succubus": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon",
+    "rarity": "Bronze",
+    "cost": "6",
+    "attack": "5",
+    "defense": "5",
+    "effect": "At the start of your end phase, select up to 2 enemy followers on the field and engage them. They doesn't refresh during their controller's next start phase. Give your leader [defense]+3.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Serene Sanctuary": {
     "class": "haven",
     "type": "base",
@@ -32182,6 +33418,18 @@
     "defense": "3",
     "effect": "[fanfare] Recover 5 play points. [act] [engage]: Choose up to 2. (1) Select an enemy follower on the field. It can't attack enemies during its controller's next turn. (2) The next time 1 or more followers are put onto your field this turn, give one [attack]+1/[defense]+1. (3) Give your leader [defense]+2. (4) Draw a card.",
     "cardSet": "Special Set \"Seaside Memories\""
+  },
+  "Sharp Strategist": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Commander / Academic",
+    "rarity": "Silver",
+    "cost": "2",
+    "attack": "2",
+    "defense": "3",
+    "effect": "[act] XPP, [engage]: Select an Academic follower that costs X or less in your cemetery not named Sharp Strategist and summon it.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Sheena, Maid of the Mists": {
     "class": "sword",
@@ -33755,6 +35003,18 @@
     "effect": "[fanfare] Choose one. (1) Put a Ghost token into your EX area. (2) If there's a follower with \"Ghost\" in its name in your EX area, look at the top 3 cards of your deck. You may reveal an [abysscraft] card from among them and add it to your hand. Put the rest on the bottom of your deck in any order.",
     "cardSet": "Booster Set #10 \"Gods of the Arcana\""
   },
+  "Spirit Invasion": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Departed",
+    "rarity": "Bronze",
+    "cost": "4",
+    "attack": "-",
+    "defense": "-",
+    "effect": "Choose up to 2. (1) Banish an [abysscraft] follower from your cemetery: Select an enemy follower on the field and deal it damage equal to 2 times the attack of the [abysscraft] follower banished this way. (2) Banish a non-[abysscraft] follower from your cemetery: Select an enemy follower on the field and deal it damage equal to the attack of the non-[abysscraft] follower banished this way.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Spirit of the Spring": {
     "class": "forest",
     "type": "base",
@@ -33790,6 +35050,18 @@
     "defense": "5",
     "effect": "On Evolve - Select a 5-cost or less non-[abysscraft] follower and a 3-cost or less non-[abysscraft] follower in your cemetery and summon them.",
     "cardSet": "Booster Set \"Omens and Heirs\""
+  },
+  "Spiritelementalist": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Elf",
+    "rarity": "Bronze",
+    "cost": "6",
+    "attack": "5",
+    "defense": "3",
+    "effect": "[fanfare] Deal 5 damage to each enemy follower on the field",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Spiritshine": {
     "class": "forest",
@@ -34463,6 +35735,18 @@
     "effect": "On Evolve - Search your deck for a follower with both the Condemned and Thief traits, reveal it, add it to your hand, then shuffle.",
     "cardSet": "Booster Set \"Eightfold Retribution\""
   },
+  "Stormscale": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Wyrmkin",
+    "rarity": "Bronze",
+    "cost": "6",
+    "attack": "5",
+    "defense": "5",
+    "effect": "Whenever a non-[dragoncraft] card is put into your EX area, select an enemy follower on the field. Deal it 5 damage and give your leader [defense]+2. [fanfare] Do the following 2 times. \"Put the top card of your deck into your EX area.\"",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Story of a Lifetime": {
     "class": "rune",
     "type": "base",
@@ -34534,6 +35818,18 @@
     "defense": "6",
     "effect": "",
     "cardSet": "Booster Set \"Neometropolis\""
+  },
+  "Sublime Talisman": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Amulet",
+    "trait": "Faith",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "-",
+    "defense": "-",
+    "effect": "When your leader takes ability damage, bury this: Give your leader [defense]+4 and draw a card.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Substitution": {
     "class": "forest",
@@ -36167,6 +37463,18 @@
     "effect": "[fanfare] Give each Pixie token on your field [attack]+1/[defense]+1. While this card is on your field, your Pixie tokens have Assail. Whenever a Pixie token is put onto your field, give it [attack]+1/[defense]+1.",
     "cardSet": "EX Beginner Deck \"Forestcraft\""
   },
+  "Titania, Queen of Fairies": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Pixie / Princess",
+    "rarity": "Legendary",
+    "cost": "3",
+    "attack": "1",
+    "defense": "1",
+    "effect": "[fanfare] If there are at least 2 Pixie cards in your EX area, search your deck for a Pixie follower not named Titania, Queen of Fairies that costs 3 or less, summon it, then shuffle. [act] [cost01], [engage], bury this: Select an enemy follower on the field, destroy it, and its controller summons a Fairy token. Activate only if there are 5 Pixie cards in your EX area.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Titanic Showdown": {
     "class": "neutral",
     "type": "base",
@@ -36274,6 +37582,30 @@
     "defense": "4",
     "effect": "[fanfare] The next Passion spell that costs 3 or less you play this turn costs 3 less. Once per turn, when you play a Passion spell, deal 2 damage to each enemy leader.",
     "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\""
+  },
+  "Tony, Plucky Polliwog": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Officer / Academic",
+    "rarity": "Silver",
+    "cost": "1",
+    "attack": "1",
+    "defense": "2",
+    "effect": "[evolve] [cost02]: Evolve this. [fanfare] If this was put onto the field by an ability, evolve it.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
+  "Tony, Plucky Polliwog Evolved": {
+    "class": "sword",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Officer / Academic",
+    "rarity": "Silver",
+    "cost": "-",
+    "attack": "2",
+    "defense": "3",
+    "effect": "On Evolve - Draw a card.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Topaz Swordian": {
     "class": "haven",
@@ -36874,6 +38206,18 @@
     "defense": "-",
     "effect": "As an additional cost to play this card, engage a Lecia, Sky Saber and Nano, the Dawnblade on your field. ---------- Deal 10 damage to each enemy leader and enemy follower on the field.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
+  },
+  "Twilight and Silver": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Commander",
+    "rarity": "Gold",
+    "cost": "4",
+    "attack": "-",
+    "defense": "-",
+    "effect": "You may play this for 2 more play points. Choose 1. If you played this for 2 more play points, choose up to 2 instead. (1) Search your deck for a follower with \"Amelia\" in its name, summon it, then shuffle. (2) Search your deck for a follower with \"Lecia\" in its name, summon it, then shuffle.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Twin Turbo": {
     "class": "abyss",
@@ -37691,6 +39035,18 @@
     "effect": "[fanfare] Look at the top 3 cards of your deck. You may reveal a Vampire card from among them and add it to your hand. Put the remaining cards on the bottom of your deck in any order. [act][cost01], [engage], put this card into its owner's cemetery: Summon a Forest Bat token.",
     "cardSet": "Booster Set #2 “Reign of Bahamut”"
   },
+  "Vanguard Tigress": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Beast",
+    "rarity": "Bronze",
+    "cost": "4",
+    "attack": "4",
+    "defense": "3",
+    "effect": "Storm. Strike - Banish 3 Beast cards from your cemetery: Select an enemy follower on the field and deal it 4 damage.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Vania, Crimson Majesty": {
     "class": "abyss",
     "type": "base",
@@ -38027,6 +39383,18 @@
     "effect": "[evolve] [cost01]: Evolve this. Whenever a Condemned follower on your field evolves, Combo (3) - Draw a card.",
     "cardSet": "Booster Set \"Eightfold Retribution\""
   },
+  "Verdant Prayer TOKEN": {
+    "class": "forest",
+    "type": "token",
+    "cardType": "Spell / Token",
+    "trait": "Elf / Academic / Supreme",
+    "rarity": "-",
+    "cost": "5",
+    "attack": "-",
+    "defense": "-",
+    "effect": "Look at the top 7 cards of your deck. You may summon up to 3 Academic and/or Beast followers that cost a total of 5 or less from among them. Put the rest on the bottom of your deck in any order. Give each follower on your field [attack]+1/[defense]+1.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Verdant Rebirth": {
     "class": "dragon",
     "type": "base",
@@ -38038,6 +39406,30 @@
     "defense": "-",
     "effect": "This costs X less to play. X equals the number of cards named Naterran Great Tree that left your field this turn. ---------- Select an enemy follower on the field and deal it 5 damage.",
     "cardSet": "Booster Set \"Convergent Destinies\""
+  },
+  "Verdilia, Rogue Professor": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Luminary / Academic",
+    "rarity": "Legendary",
+    "cost": "1",
+    "attack": "1",
+    "defense": "1",
+    "effect": "[evolve] [cost01]: Evolve this. Ward. [fanfare] Select an enemy follower on the field and, if this was put onto the field by an ability, deal it 2 damage.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
+  "Verdilia, Rogue Professor Evolved": {
+    "class": "haven",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Luminary / Academic",
+    "rarity": "Legendary",
+    "cost": "-",
+    "attack": "2",
+    "defense": "2",
+    "effect": "Ward. On Evolve - Give your leader [defense]+1. Draw a card. On Super-Evolve - Put a Cyclical Guidance token into your EX area.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Veridic Discovery": {
     "class": "rune",
@@ -38362,6 +39754,18 @@
     "defense": "3",
     "effect": "[act] [cost01]: Reveal the top card of your deck. If it's a 2-cost card, put it into your EX area. It costs 2 less to play this turn. Activate only once per turn.",
     "cardSet": "Booster Set #8 \"Alterchaotica\""
+  },
+  "Vulgus, Infernal Headmistress": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon / Academic",
+    "rarity": "Legendary",
+    "cost": "3",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[fanfare] Look at the top 2 cards of your deck. You may reveal an Academic card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. The next Academic card that costs 2 or less you play this turn costs 2 less. [act] [engage], bury another card on your field: Select an enemy follower on the field. Deal it 3 damage and draw a card. Activate only if you rolled a 6-sided die this turn.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Waltzing Fairy": {
     "class": "forest",
@@ -38699,6 +40103,18 @@
     "effect": "Declare any card name. Reveal the top card of your deck. If it has the declared name, draw 2 cards. If not, draw 1 card.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
   },
+  "Weiss, Discerning Professor": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Academic / Supreme / Cutthroat",
+    "rarity": "Gold",
+    "cost": "5",
+    "attack": "4",
+    "defense": "4",
+    "effect": "At the start of your end phase, select an enemy leader or enemy follower on the field and deal it damage equal to the number of other Academic followers on your field. [fanfare] Look at the top 5 cards of your deck. You may summon up to 2 Academic followers that cost a total of 4 or less from among them. Put the rest on the bottom of your deck in any order.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Westmuenster Abbey": {
     "class": "haven",
     "type": "base",
@@ -38939,6 +40355,30 @@
     "effect": "[fanfare] Put the top card of your deck into your EX area. If it's a follower, give it [attack]+1/[defense]+1.",
     "cardSet": "Booster Set \"Omens and Heirs\""
   },
+  "Wilbert, Desolate Paladin": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Arena / Luminary",
+    "rarity": "Legendary",
+    "cost": "3",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[evolve] [cost01]: Evolve this. Ward. [fanfare] Summon a Holy Cavalier token.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
+  "Wilbert, Desolate Paladin Evolved": {
+    "class": "haven",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Arena / Luminary",
+    "rarity": "Legendary",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3",
+    "effect": "Ward. On Evolve - Choose 1. (1) Summon a Holy Cavalier token. Give each Holy Cavalier on your field [attack]+1 and Assail. (2) Put a Crest: Wilbert, Desolate Paladin token into your EX area.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Wilbert, Grand Knight": {
     "class": "haven",
     "type": "base",
@@ -38962,6 +40402,18 @@
     "defense": "4",
     "effect": "Ward. [fanfare] Look at the top 5 cards of your deck. You may summon a follower with Ward that costs 2 or less from among them. Put the rest on the bottom of your deck in any order. [act] [engage]: Select an enemy follower on the field and destroy it. Activate only if there are at least 3 followers on your field with Ward.",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
+  },
+  "Wild Profusion": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Amulet",
+    "trait": "Pixie",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[fanfare] Summon a Fairy token. [act] [engage], bury this: Select an enemy follower on the field and deal it X damage. X equals the total number of Pixie token followers on your field and in your EX area.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Wildfang Dragonewt": {
     "class": "dragon",
@@ -39454,6 +40906,30 @@
     "defense": "3",
     "effect": "Bane. [act] [cost04]: Give this follower [attack]+2/[defense]+2 and Storm.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
+  },
+  "Wolf Whisperer": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Mage / Beast",
+    "rarity": "Bronze",
+    "cost": "6",
+    "attack": "3",
+    "defense": "3",
+    "effect": "[evolve] [cost01]: Evolve this.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
+  "Wolf Whisperer Evolved": {
+    "class": "rune",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Mage / Beast",
+    "rarity": "Bronze",
+    "cost": "-",
+    "attack": "4",
+    "defense": "4",
+    "effect": "On Evolve - Look at the top 5 cards of your deck. You may summon up to 2 followers with different classes that costs 4 or less from among them. Put the rest on the bottom of your deck in any order.",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Wolfling's Struggle": {
     "class": "abyss",
@@ -40259,6 +41735,18 @@
     "effect": "[Union Burst] [fanfare] Search your deck for up to 2 Friendship Club cards with different names, put them into your EX area, then shuffle. They cost 2 less to play this turn. --------- When the [Union Burst] ability of another follower on your field activates, the next Princess Connect spell you play costs 2 less to play.",
     "cardSet": "Crossover Set \"Princess Connect! Re:Dive\""
   },
+  "Yurius, Levin Authority": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Noble / Levin",
+    "rarity": "Legendary",
+    "cost": "3",
+    "attack": "3",
+    "defense": "4",
+    "effect": "[fanfare] Reveal 2 Levin cards from your hand: Choose 1 of the following. If there are at least 5 Levin cards in your cemetery, choose up to 3 instead. (1) Select an enemy follower on the field and destroy it. (2) Deal 3 damage to each enemy leader. (3) Draw 2 cards and discard a card.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
   "Yurius, Levin Duke": {
     "class": "sword",
     "type": "base",
@@ -40654,6 +42142,30 @@
     "defense": "4",
     "effect": "On Evolve - Select an enemy follower on the field and deal it damage equal to 2 times the number of Festive followers on your field. At the start of your end phase, deal each enemy leader damage equal to the number of other Festive followers on your field.",
     "cardSet": "Booster Set \"New World Genesis\""
+  },
+  "Zlatorog": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Lightborne / Beast",
+    "rarity": "Bronze",
+    "cost": "5",
+    "attack": "4",
+    "defense": "4",
+    "effect": "[evolve] [cost02]: Evolve this. Ward. [fanfare] Draw a card. If this wasn't put onto the field from hand, give it [attack]+2/[defense]+2.",
+    "cardSet": "Booster Set \"Academy Royale\""
+  },
+  "Zlatorog Evolved": {
+    "class": "haven",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Lightborne / Beast",
+    "rarity": "Bronze",
+    "cost": "-",
+    "attack": "5",
+    "defense": "5",
+    "effect": "Ward. On Evolve - You may summon a follower with Ward that costs 5 or less from your hand",
+    "cardSet": "Booster Set \"Academy Royale\""
   },
   "Zodiac Demon": {
     "class": "neutral",

@@ -145,6 +145,14 @@ for (let col = 1; col < numRow.length; col++) {
   // display and uses it to register advanced-evolve cards); tokens use " TOKEN".
   if (isAdvanced && !/ ADVANCED$/.test(name)) name += " ADVANCED";
   else if (type === "token" && !/ TOKEN$/.test(name)) name += " TOKEN";
+  // Evolved cards must end in " Evolved" — that suffix is what separates the
+  // evolve-deck card from its base card, which shares every other identifier.
+  // fixName only supplies it when the sheet wrote "(Evolved)" in the NAME, but
+  // a sheet can mark a card evolved in the Card Type column and still print the
+  // plain name (BP21-PR01, an alt-art promo of "Mono, Garnet Rebel Evolved",
+  // did exactly that). Left alone, the printing attaches to the BASE card's
+  // name and drags it into the main-deck pool for this set.
+  else if (type === "evolved" && !/ Evolved$/.test(name)) name += " Evolved";
 
   cards.push({
     cardNo,

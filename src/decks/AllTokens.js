@@ -185,4 +185,15 @@ export const allTokens = [
   "Chie Sasaki [Step to Mirai] TOKEN",
   "Arisu Tachibana [Ikenai GO AHEAD] TOKEN",
   "Yukimi Sajo [Hands and Days Together] TOKEN",
+
+  "Lyelth's Marionette TOKEN",
+  "Verdant Prayer TOKEN",
+  "Curse of Suffering TOKEN",
+  "Emergency Summoning TOKEN",
+  "Reactive Barrier TOKEN",
+  "Lilium's Hatchling TOKEN",
+  "Lilium's Dragon TOKEN",
+  "Holy Cavalier TOKEN",
+  "Cyclical Guidance TOKEN",
+  "Crest: Wilbert, Desolate Paladin TOKEN",
 ];

@@ -1,4 +1,30 @@
 export const allCardsEvo = [
+  "Lyelth, Immaculate Idol Evolved",
+  "Cleaver Cat Evolved",
+  "Elven Farmhand Evolved",
+  "Bladebunny Evolved",
+  "Galdr, Heroic Headmaster Evolved",
+  "Agile Twinblader Evolved",
+  "Tony, Plucky Polliwog Evolved",
+  "Kitty Sergeant Evolved",
+  "Anne, Brilliant Mage Evolved",
+  "Grea, Crimson Promise Evolved",
+  "Gruinne, Leonardian Provost Evolved",
+  "Wolf Whisperer Evolved",
+  "Lilium, the Witchwyrm Evolved",
+  "Grand Slam Tamer Evolved",
+  "Dragonborn Striker Evolved",
+  "Ipupiara Evolved",
+  "Cornelius, the Corpse King Evolved",
+  "Arka, Sin Spinner Evolved",
+  "Mach-Speed Maron Evolved",
+  "Bonebreaker Bladesman Evolved",
+  "Verdilia, Rogue Professor Evolved",
+  "Wilbert, Desolate Paladin Evolved",
+  "Lou, Lady-in-Training Evolved",
+  "Pureflame Lady Evolved",
+  "Zlatorog Evolved",
+  "Lucius, Travelled Trainer Evolved",
   "Princess Knight Evolved",
   "Krulle, Heir to Unkilling Evolved",
   "Windbloom Sylph Evolved",
@@ -1568,6 +1594,11 @@ export const forestEvo = [
   "Windbloom Sylph Evolved",
   "Supplicant of Unkilling Evolved",
   "Bearer of the Fairy Blade Evolved",
+
+  "Lyelth, Immaculate Idol Evolved",
+  "Cleaver Cat Evolved",
+  "Elven Farmhand Evolved",
+  "Bladebunny Evolved",
 ];
 
 export const swordEvo = [
@@ -1684,6 +1715,11 @@ export const swordEvo = [
   "Congregant of Usurpation Evolved",
   "Peppy Scout Evolved",
   "Comrade of the Swordmaster Evolved",
+
+  "Galdr, Heroic Headmaster Evolved",
+  "Agile Twinblader Evolved",
+  "Tony, Plucky Polliwog Evolved",
+  "Kitty Sergeant Evolved",
 ];
 
 export const runeEvo = [
@@ -1800,6 +1836,11 @@ export const runeEvo = [
   "Raio, Elimination Manifest Evolved",
   "Congregant of Truth Evolved",
   "Devotee of Destruction Evolved",
+
+  "Anne, Brilliant Mage Evolved",
+  "Grea, Crimson Promise Evolved",
+  "Gruinne, Leonardian Provost Evolved",
+  "Wolf Whisperer Evolved",
 ];
 
 export const dragonEvo = [
@@ -1923,6 +1964,11 @@ export const dragonEvo = [
   "Spoiled Mermanager Evolved",
   "Supplicant of Disdain Evolved",
   "Snowstorm Dragonewt Evolved",
+
+  "Lilium, the Witchwyrm Evolved",
+  "Grand Slam Tamer Evolved",
+  "Dragonborn Striker Evolved",
+  "Ipupiara Evolved",
 ];
 
 export const abyssEvo = [
@@ -2037,6 +2083,11 @@ export const abyssEvo = [
   "Congregant of Entwining Evolved",
   "Spirited Gravekeeper Evolved",
   "Ephemeral Demon Princess Evolved",
+
+  "Cornelius, the Corpse King Evolved",
+  "Arka, Sin Spinner Evolved",
+  "Mach-Speed Maron Evolved",
+  "Bonebreaker Bladesman Evolved",
 ];
 
 export const havenEvo = [
@@ -2149,6 +2200,12 @@ export const havenEvo = [
   "Congregant of Repose Evolved",
   "Supplicant of Repose Evolved",
   "Knight of the Holy Order Evolved",
+
+  "Verdilia, Rogue Professor Evolved",
+  "Wilbert, Desolate Paladin Evolved",
+  "Lou, Lady-in-Training Evolved",
+  "Pureflame Lady Evolved",
+  "Zlatorog Evolved",
 ];
 
 export const neutralEvo = [
@@ -2246,6 +2303,8 @@ export const neutralEvo = [
   "Apostle of Voracity Evolved",
 
   "Princess Knight Evolved",
+
+  "Lucius, Travelled Trainer Evolved",
 ];
 
 export const set17Evo = [
@@ -2673,6 +2732,35 @@ export const set01Evo = [
   "Mysteria, Magic Founder Evolved",
   "Vayle, Mysterian Summoner Evolved",
   "Craig, Wizard of Mysteria Evolved",
+];
+
+export const set21Evo = [
+  "Lyelth, Immaculate Idol Evolved",
+  "Cleaver Cat Evolved",
+  "Elven Farmhand Evolved",
+  "Bladebunny Evolved",
+  "Galdr, Heroic Headmaster Evolved",
+  "Agile Twinblader Evolved",
+  "Tony, Plucky Polliwog Evolved",
+  "Kitty Sergeant Evolved",
+  "Anne, Brilliant Mage Evolved",
+  "Grea, Crimson Promise Evolved",
+  "Gruinne, Leonardian Provost Evolved",
+  "Wolf Whisperer Evolved",
+  "Lilium, the Witchwyrm Evolved",
+  "Grand Slam Tamer Evolved",
+  "Dragonborn Striker Evolved",
+  "Ipupiara Evolved",
+  "Cornelius, the Corpse King Evolved",
+  "Arka, Sin Spinner Evolved",
+  "Mach-Speed Maron Evolved",
+  "Bonebreaker Bladesman Evolved",
+  "Verdilia, Rogue Professor Evolved",
+  "Wilbert, Desolate Paladin Evolved",
+  "Lou, Lady-in-Training Evolved",
+  "Pureflame Lady Evolved",
+  "Zlatorog Evolved",
+  "Lucius, Travelled Trainer Evolved",
 ];
 
 export const set03Evo = [

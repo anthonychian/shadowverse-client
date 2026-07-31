@@ -49,6 +49,7 @@ export const CLASS_COLORS = {
 // Human-readable set names, keyed by the filter value used in CreateDeck.
 export const SET_LABELS = {
   main: "Main Sets (BP01–18)",
+  "set 21": "Academy Royale",
   "set 20": "Omens and Heirs",
   "set 19": "Eightfold Retribution",
   "set 18": "Neometropolis",
@@ -90,10 +91,10 @@ export const SET_ORDER = [
 // Order = newest boosters first, then crossovers, special, gloryfinder, worlds
 // beyond, showdown/starter decks, then promos.
 export const SET_CODE_ORDER = [
-  "SCS01",
+  "BP21",
   "BP20", "BP19", "BP18", "BP17", "BP16", "BP15", "BP14", "BP13", "BP12", "BP11", "BP10", "BP09",
   "BP08", "BP07", "BP06", "BP05", "BP04", "BP03", "BP02", "BP01",
-  "ECP02", "ECP01", "PCS01", "CP04", "CP03", "CP02", "CP01", "SP01",
+  "ECP02", "ECP01", "PCS01", "CP04", "CP03", "CP02", "CP01", "SP01", "SCS01",
   "GFB01", "GFD02", "GFD01", "SS02", "SS01",
   "SDD06", "SDD05", "SDD04", "SDD03", "SDD02", "SDD01",
   "EBD04", "EBD03", "EBD02", "EBD01",
@@ -108,6 +109,7 @@ export const SET_CODE_ORDER = [
 export const displayName = (n) => (n || "").replace(/ ADVANCED$/, "");
 
 export const SET_CODE_LABELS = {
+  BP21: "Academy Royale",
   BP20: "Omens and Heirs",
   BP19: "Eightfold Retribution",
   BP18: "Neometropolis",

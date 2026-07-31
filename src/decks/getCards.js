@@ -7074,6 +7074,258 @@ export const cardImage = (cardName) => {
       return "../textures/ECP02-T13EN.png";
     case "Yukimi Sajo [Hands and Days Together] TOKEN":
       return "../textures/ECP02-T14EN.png";
+    case "Castelle, Budding Mage":
+      return "../textures/BP21-001EN.png";
+    case "Lyelth, Immaculate Idol":
+      return "../textures/BP21-002EN.png";
+    case "Lyelth, Immaculate Idol Evolved":
+      return "../textures/BP21-003EN.png";
+    case "Titania, Queen of Fairies":
+      return "../textures/BP21-004EN.png";
+    case "Cleaver Cat":
+      return "../textures/BP21-005EN.png";
+    case "Cleaver Cat Evolved":
+      return "../textures/BP21-006EN.png";
+    case "Cynthia, Chivalrous Elf":
+      return "../textures/BP21-007EN.png";
+    case "Dwarven Lumberjack":
+      return "../textures/BP21-008EN.png";
+    case "Elven Farmhand":
+      return "../textures/BP21-009EN.png";
+    case "Elven Farmhand Evolved":
+      return "../textures/BP21-010EN.png";
+    case "Fauna Handler":
+      return "../textures/BP21-011EN.png";
+    case "Fairy Funfact":
+      return "../textures/BP21-012EN.png";
+    case "Bladebunny":
+      return "../textures/BP21-013EN.png";
+    case "Bladebunny Evolved":
+      return "../textures/BP21-014EN.png";
+    case "Vanguard Tigress":
+      return "../textures/BP21-015EN.png";
+    case "Flying Mistletoe Squirrel":
+      return "../textures/BP21-016EN.png";
+    case "Spiritelementalist":
+      return "../textures/BP21-017EN.png";
+    case "Wild Profusion":
+      return "../textures/BP21-018EN.png";
+    case "Lecia & Nano, Twilight Trainees":
+      return "../textures/BP21-019EN.png";
+    case "Galdr, Heroic Headmaster":
+      return "../textures/BP21-020EN.png";
+    case "Galdr, Heroic Headmaster Evolved":
+      return "../textures/BP21-021EN.png";
+    case "Yurius, Levin Authority":
+      return "../textures/BP21-022EN.png";
+    case "Agile Twinblader":
+      return "../textures/BP21-023EN.png";
+    case "Agile Twinblader Evolved":
+      return "../textures/BP21-024EN.png";
+    case "Weiss, Discerning Professor":
+      return "../textures/BP21-025EN.png";
+    case "Twilight and Silver":
+      return "../textures/BP21-026EN.png";
+    case "Tony, Plucky Polliwog":
+      return "../textures/BP21-027EN.png";
+    case "Tony, Plucky Polliwog Evolved":
+      return "../textures/BP21-028EN.png";
+    case "Deadeye Trainee":
+      return "../textures/BP21-029EN.png";
+    case "Sharp Strategist":
+      return "../textures/BP21-030EN.png";
+    case "Kitty Sergeant":
+      return "../textures/BP21-031EN.png";
+    case "Kitty Sergeant Evolved":
+      return "../textures/BP21-032EN.png";
+    case "Fervent Fist-Fighter":
+      return "../textures/BP21-033EN.png";
+    case "Levin Archer":
+      return "../textures/BP21-034EN.png";
+    case "Aggressive Advance":
+      return "../textures/BP21-035EN.png";
+    case "Lieutenant's Report":
+      return "../textures/BP21-036EN.png";
+    case "Amaryllis, the Princess":
+      return "../textures/BP21-037EN.png";
+    case "Anne, Brilliant Mage":
+      return "../textures/BP21-038EN.png";
+    case "Anne, Brilliant Mage Evolved":
+      return "../textures/BP21-039EN.png";
+    case "Ceridwen, Eternal Duality":
+      return "../textures/BP21-040EN.png";
+    case "Grea, Crimson Promise":
+      return "../textures/BP21-041EN.png";
+    case "Grea, Crimson Promise Evolved":
+      return "../textures/BP21-042EN.png";
+    case "Mysterian Exchange Party":
+      return "../textures/BP21-043EN.png";
+    case "Mystic Rune":
+      return "../textures/BP21-044EN.png";
+    case "Gruinne, Leonardian Provost":
+      return "../textures/BP21-045EN.png";
+    case "Gruinne, Leonardian Provost Evolved":
+      return "../textures/BP21-046EN.png";
+    case "Leeds, Pining Witch":
+      return "../textures/BP21-047EN.png";
+    case "Bell Witch":
+      return "../textures/BP21-048EN.png";
+    case "Wolf Whisperer":
+      return "../textures/BP21-049EN.png";
+    case "Wolf Whisperer Evolved":
+      return "../textures/BP21-050EN.png";
+    case "Evamia, Spinner of Threads":
+      return "../textures/BP21-051EN.png";
+    case "Arcane Instruction":
+      return "../textures/BP21-052EN.png";
+    case "Aqueous Sphere":
+      return "../textures/BP21-053EN.png";
+    case "Binding Ritual":
+      return "../textures/BP21-054EN.png";
+    case "Lilium, the Wyrmwitch":
+      return "../textures/BP21-055EN.png";
+    case "Lilium, the Witchwyrm Evolved":
+      return "../textures/BP21-056EN.png";
+    case "Coach Joe, Fiery Counselor":
+      return "../textures/BP21-057EN.png";
+    case "Lumiore, Prestigious Gold":
+      return "../textures/BP21-058EN.png";
+    case "Grand Slam Tamer":
+      return "../textures/BP21-059EN.png";
+    case "Grand Slam Tamer Evolved":
+      return "../textures/BP21-060EN.png";
+    case "Dion, Scarlet Scion":
+      return "../textures/BP21-061EN.png";
+    case "Argente, Purest Silver":
+      return "../textures/BP21-062EN.png";
+    case "Dragonborn Striker":
+      return "../textures/BP21-063EN.png";
+    case "Dragonborn Striker Evolved":
+      return "../textures/BP21-064EN.png";
+    case "Gunbein, Lofty Dragonewt":
+      return "../textures/BP21-065EN.png";
+    case "Charlotte, Dragonewt":
+      return "../textures/BP21-066EN.png";
+    case "Ipupiara":
+      return "../textures/BP21-067EN.png";
+    case "Ipupiara Evolved":
+      return "../textures/BP21-068EN.png";
+    case "Megalorca Rider":
+      return "../textures/BP21-069EN.png";
+    case "Augite Wyrm":
+      return "../textures/BP21-070EN.png";
+    case "Stormscale":
+      return "../textures/BP21-071EN.png";
+    case "Dragon Hunt":
+      return "../textures/BP21-072EN.png";
+    case "Cornelius, the Corpse King":
+      return "../textures/BP21-073EN.png";
+    case "Cornelius, the Corpse King Evolved":
+      return "../textures/BP21-074EN.png";
+    case "Galom, Empress Fist":
+      return "../textures/BP21-075EN.png";
+    case "Vulgus, Infernal Headmistress":
+      return "../textures/BP21-076EN.png";
+    case "Arka, Sin Spinner":
+      return "../textures/BP21-077EN.png";
+    case "Arka, Sin Spinner Evolved":
+      return "../textures/BP21-078EN.png";
+    case "Exella, Nocturnal General":
+      return "../textures/BP21-079EN.png";
+    case "Bad-Girl Life":
+      return "../textures/BP21-080EN.png";
+    case "Mach-Speed Maron":
+      return "../textures/BP21-081EN.png";
+    case "Mach-Speed Maron Evolved":
+      return "../textures/BP21-082EN.png";
+    case "Demon-Eyed Gangster":
+      return "../textures/BP21-083EN.png";
+    case "Noble Demoness":
+      return "../textures/BP21-084EN.png";
+    case "Bonebreaker Bladesman":
+      return "../textures/BP21-085EN.png";
+    case "Bonebreaker Bladesman Evolved":
+      return "../textures/BP21-086EN.png";
+    case "Denan, Big Bad Boss":
+      return "../textures/BP21-087EN.png";
+    case "Malicious Blader":
+      return "../textures/BP21-088EN.png";
+    case "Serenading Succubus":
+      return "../textures/BP21-089EN.png";
+    case "Spirit Invasion":
+      return "../textures/BP21-090EN.png";
+    case "Verdilia, Rogue Professor":
+      return "../textures/BP21-091EN.png";
+    case "Verdilia, Rogue Professor Evolved":
+      return "../textures/BP21-092EN.png";
+    case "Elluvia, Graceful Lady":
+      return "../textures/BP21-093EN.png";
+    case "Wilbert, Desolate Paladin":
+      return "../textures/BP21-094EN.png";
+    case "Wilbert, Desolate Paladin Evolved":
+      return "../textures/BP21-095EN.png";
+    case "Lou, Lady-in-Training":
+      return "../textures/BP21-096EN.png";
+    case "Lou, Lady-in-Training Evolved":
+      return "../textures/BP21-097EN.png";
+    case "Kira, Resilient Maiden":
+      return "../textures/BP21-098EN.png";
+    case "Orchid's Examination Hall":
+      return "../textures/BP21-099EN.png";
+    case "Pureflame Lady":
+      return "../textures/BP21-100EN.png";
+    case "Pureflame Lady Evolved":
+      return "../textures/BP21-101EN.png";
+    case "Kyrie, Fragment of Hope":
+      return "../textures/BP21-102EN.png";
+    case "Pureflower Maiden":
+      return "../textures/BP21-103EN.png";
+    case "Zlatorog":
+      return "../textures/BP21-104EN.png";
+    case "Zlatorog Evolved":
+      return "../textures/BP21-105EN.png";
+    case "Aqua Priestess":
+      return "../textures/BP21-106EN.png";
+    case "Holy Armored Cheetah":
+      return "../textures/BP21-107EN.png";
+    case "Hierophant's Implements":
+      return "../textures/BP21-108EN.png";
+    case "Sublime Talisman":
+      return "../textures/BP21-109EN.png";
+    case "Lucius, Travelled Trainer":
+      return "../textures/BP21-110EN.png";
+    case "Lucius, Travelled Trainer Evolved":
+      return "../textures/BP21-111EN.png";
+    case "Gretina, Champion Fighter":
+      return "../textures/BP21-112EN.png";
+    case "Arriet, Luxvoice Learner":
+      return "../textures/BP21-113EN.png";
+    case "Lainecrest Academy":
+      return "../textures/BP21-114EN.png";
+    case "Goblin Genius":
+      return "../textures/BP21-115EN.png";
+    case "Goblin's Gratitude":
+      return "../textures/BP21-116EN.png";
+    case "Lyelth's Marionette TOKEN":
+      return "../textures/BP21-T01EN.png";
+    case "Verdant Prayer TOKEN":
+      return "../textures/BP21-T02EN.png";
+    case "Curse of Suffering TOKEN":
+      return "../textures/BP21-T03EN.png";
+    case "Emergency Summoning TOKEN":
+      return "../textures/BP21-T04EN.png";
+    case "Reactive Barrier TOKEN":
+      return "../textures/BP21-T05EN.png";
+    case "Lilium's Hatchling TOKEN":
+      return "../textures/BP21-T06EN.png";
+    case "Lilium's Dragon TOKEN":
+      return "../textures/BP21-T07EN.png";
+    case "Holy Cavalier TOKEN":
+      return "../textures/BP21-T08EN.png";
+    case "Cyclical Guidance TOKEN":
+      return "../textures/BP21-T09EN.png";
+    case "Crest: Wilbert, Desolate Paladin TOKEN":
+      return "../textures/BP21-T10EN.png";
     default: {
       const cardNo = cardNoFromStatsName(cardName);
       return cardNo ? `../textures/${cardNo}.png` : "";
