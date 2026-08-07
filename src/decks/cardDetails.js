@@ -5,8 +5,13 @@
 
 import cardData from "./cardData.json";
 import cardPrintings from "./cardPrintings.json";
+import { doubleEvoDetails } from "./doubleEvo";
 
-export const getDetails = (name) => cardData[name] || null;
+// Dual-sided evolve cards aren't in the scraped data under their in-game names
+// (only as "<A-side> Evolved") — doubleEvoDetails covers both of their faces.
+const lookup = (name) => cardData[name] || doubleEvoDetails(name);
+
+export const getDetails = (name) => lookup(name) || null;
 
 // Some cards exist under more than one name but are the very same card — alt-art
 // collab cards, e.g. "Anastasia" and "Anastasia [All-Out Vacation]". They share
@@ -47,7 +52,8 @@ export const sameNameCards = (name) => SAME_CARD_NAMES[name] || [name];
 // craft (often neutral) — but they're identifiable by trait. Detect them so a
 // collab deck is labelled by its collab rather than its base craft.
 const collabClass = (name) => {
-  const t = (cardData[name] && cardData[name].trait) || "";
+  const d = lookup(name);
+  const t = (d && d.trait) || "";
   if (/Vanguard/i.test(t)) return "vanguard";
   if (/iM@S/i.test(t)) return "idolmaster";
   if (/Umamusume|Tracen Academy/i.test(t)) return "umamusume";
@@ -57,7 +63,7 @@ const collabClass = (name) => {
 // A card's class for deck-identity purposes: its collab class if it is a collab
 // card, otherwise its base craft (forest/sword/.../neutral).
 export const cardClass = (name) =>
-  collabClass(name) || (cardData[name] && cardData[name].class) || "";
+  collabClass(name) || (lookup(name) && lookup(name).class) || "";
 
 // A deck's overall class = its most common non-neutral card class. Most decks
 // are mono-class; for a rare multi-class deck the majority wins (e.g. 21 dragon
@@ -84,7 +90,7 @@ export const computeDeckClass = (cards) => {
 // Numeric cost, or null for cards that show "-"/"X"/no cost (leaders, most
 // evolved followers, tokens). Used for cost bucketing + the mana curve.
 export const getCost = (name) => {
-  const d = cardData[name];
+  const d = lookup(name);
   if (!d) return null;
   const n = parseInt(d.cost, 10);
   return Number.isNaN(n) ? null : n;
@@ -93,7 +99,7 @@ export const getCost = (name) => {
 // The site lists composite card types ("Follower / Evolved", "Spell / Token").
 // We filter on the primary (first) segment.
 export const primaryType = (name) => {
-  const d = cardData[name];
+  const d = lookup(name);
   if (!d || !d.cardType) return "";
   return d.cardType.split("/")[0].trim();
 };
@@ -101,7 +107,7 @@ export const primaryType = (name) => {
 // Traits are "/"-separated composites ("Arcana / Mage / Cutthroat"). Atomic
 // tokens are far more useful for filtering than the 400+ raw combinations.
 export const traitTokens = (name) => {
-  const d = cardData[name];
+  const d = lookup(name);
   if (!d || !d.trait || d.trait === "-") return [];
   return d.trait.split("/").map((t) => t.trim()).filter(Boolean);
 };
@@ -158,7 +164,7 @@ const bucket = (n) => (n == null ? null : n >= 8 ? "8+" : String(n));
 export const matchesFilters = (name, filters) => {
   if (!filters) return true;
   const { types = [], traits = [], rarities = [], costs = [], attacks = [], defenses = [] } = filters;
-  const d = cardData[name];
+  const d = lookup(name);
   if (types.length) {
     if (!d || !types.includes(primaryType(name))) return false;
   }

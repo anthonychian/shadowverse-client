@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { socket } from "../sockets";
 import { getDetails, primaryType } from "../decks/cardDetails";
+import { doubleEvoOtherSide } from "../decks/doubleEvo";
 
 // Seed a field slot's Atk/Def overlay from a follower's printed stats — the same
 // `customValues` the "Modify Atk/Def" menu drives, so they stay adjustable with
@@ -2953,29 +2954,65 @@ export const CardSlice = createSlice({
     switchEvoCard: (state, action) => {
       const card = action.payload.name;
       const idx = action.payload.idx;
-      let newCard;
-      if (card === "Orchis, Resolute Puppet")
-        newCard = "Orchis, Vengeful Puppet";
-      else if (card === "Orchis, Vengeful Puppet")
-        newCard = "Orchis, Resolute Puppet";
-      else if (card === "Paula, Gentle Warmth")
-        newCard = "Paula, Passionate Warmth";
-      else if (card === "Paula, Passionate Warmth")
-        newCard = "Paula, Gentle Warmth";
-      else if (card === "Celia, Hope's Strategist")
-        newCard = "Celia, Despair's Messenger";
-      else if (card === "Celia, Despair's Messenger")
-        newCard = "Celia, Hope's Strategist";
-      else if (card === "Mysterian Whitewyrm") newCard = "Mysterian Blackwyrm";
-      else if (card === "Mysterian Blackwyrm") newCard = "Mysterian Whitewyrm";
-      else if (card === "Virtuous Lindworm") newCard = "Iniquitous Lindworm";
-      else if (card === "Iniquitous Lindworm") newCard = "Virtuous Lindworm";
-      else if (card === "Vania, Kind Queen") newCard = "Vania, Blood Queen";
-      else if (card === "Vania, Blood Queen") newCard = "Vania, Kind Queen";
-      else if (card === "Ceryneian Lighthind") newCard = "Ceryneian Darkhind";
-      else if (card === "Ceryneian Darkhind") newCard = "Ceryneian Lighthind";
+      const newCard = doubleEvoOtherSide(card);
+      if (!newCard) return;
 
       state.evoDeck[idx].card = newCard;
+
+      // Keep the opponent's copy of our evolve deck in step (it's public info,
+      // same as flipEvoCard above).
+      socket.emit("send msg", {
+        type: "switchEvoCard",
+        updates: [{ type: "evoDeck", data: state.evoDeck }],
+        room: state.room,
+      });
+    },
+    // Switch an already-evolved dual-sided card on the field to its other side
+    // (e.g. Orchis, Resolute Puppet <-> Orchis, Vengeful Puppet). It's the same
+    // physical card, so counters/engage/equipment stay put; the Atk/Def overlay
+    // shifts by the printed delta between sides (Vania 4/4 -> Blood Queen 6/6),
+    // carrying any current buff/reduction — same rule as evolving.
+    switchEvoCardOnField: (state, action) => {
+      const index = action.payload.index;
+      const card = state.evoField[index];
+      const newCard = doubleEvoOtherSide(card);
+      if (!newCard) return;
+
+      state.evoField = [
+        ...state.evoField.slice(0, index),
+        newCard,
+        ...state.evoField.slice(index + 1),
+      ];
+
+      const valuesChanged = seedEvolveStats(state, card, newCard, index);
+
+      const date = new Date().toLocaleTimeString("it-IT", {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+
+      state.gameLog = [
+        ...state.gameLog,
+        {
+          text: `[${date}] (Me): Switched ${card} to ${newCard}`,
+          card: newCard,
+        },
+      ];
+
+      socket.emit("send msg", {
+        type: "switchEvoCardOnField",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Switched ${card} to ${newCard}`, card: newCard },
+          },
+          { type: "evoField", data: state.evoField },
+          ...(valuesChanged
+            ? [{ type: "values", data: state.customValues }]
+            : []),
+        ],
+        room: state.room,
+      });
     },
     createLessonTokens: (state) => {
       let cardsInEX = false;
@@ -3554,6 +3591,7 @@ export const {
   advancedBackToEvolveDeck,
   flipEvoCard,
   switchEvoCard,
+  switchEvoCardOnField,
   clearEngagedAtIndex,
   moveEngagedAtIndex,
   clearCountersAtIndex,

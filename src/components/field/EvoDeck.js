@@ -12,6 +12,7 @@ import {
   evolveCardOnField,
 } from "../../redux/CardSlice";
 import { useUiModalOpen } from "../hooks/useUiChromeVisible";
+import { isDoubleEvo } from "../../decks/doubleEvo";
 import { ModalHideUiRow } from "../ui/HideUiButton";
 import { triggerCardReveal } from "./cardRevealBus";
 import { triggerGameAnimation } from "./animationBus";
@@ -126,25 +127,6 @@ export default function EvoDeck({
 
   const isAdvanced = (cardName) => {
     return cardName.slice(-8) === "ADVANCED";
-  };
-
-  const isDoubleEvo = (cardName) => {
-    return (
-      cardName === "Orchis, Resolute Puppet" ||
-      cardName === "Orchis, Vengeful Puppet" ||
-      cardName === "Paula, Gentle Warmth" ||
-      cardName === "Paula, Passionate Warmth" ||
-      cardName === "Celia, Hope's Strategist" ||
-      cardName === "Celia, Despair's Messenger" ||
-      cardName === "Mysterian Whitewyrm" ||
-      cardName === "Mysterian Blackwyrm" ||
-      cardName === "Virtuous Lindworm" ||
-      cardName === "Iniquitous Lindworm" ||
-      cardName === "Vania, Kind Queen" ||
-      cardName === "Vania, Blood Queen" ||
-      cardName === "Ceryneian Lighthind" ||
-      cardName === "Ceryneian Darkhind"
-    );
   };
 
   const handleContextMenu = (event, card, idx) => {

@@ -27,6 +27,7 @@ import {
   DialogTitle, Snackbar, SnackbarContent, IconButton, CircularProgress, Divider,
 } from "@mui/material";
 import { matchesFilters, hasActiveFilters, getCost, getDetails, sameNameCards } from "../decks/cardDetails";
+import { doubleEvoOtherSide, isDoubleEvo } from "../decks/doubleEvo";
 import cardPrintings from "../decks/cardPrintings.json";
 import jpCardMap from "../decks/jpCardMap.json";
 import FilterBar from "../components/deckbuilder/FilterBar";
@@ -201,25 +202,9 @@ export default function CreateDeck() {
   const isEvoCard = (n) => evoNameSet.has(n);
 
   // ---------- double-sided evolved swap ----------
-  const DOUBLE_EVO_PAIRS = {
-    "Orchis, Resolute Puppet": "Orchis, Vengeful Puppet",
-    "Orchis, Vengeful Puppet": "Orchis, Resolute Puppet",
-    "Paula, Gentle Warmth": "Paula, Passionate Warmth",
-    "Paula, Passionate Warmth": "Paula, Gentle Warmth",
-    "Celia, Hope's Strategist": "Celia, Despair's Messenger",
-    "Celia, Despair's Messenger": "Celia, Hope's Strategist",
-    "Mysterian Whitewyrm": "Mysterian Blackwyrm",
-    "Mysterian Blackwyrm": "Mysterian Whitewyrm",
-    "Virtuous Lindworm": "Iniquitous Lindworm",
-    "Iniquitous Lindworm": "Virtuous Lindworm",
-    "Vania, Kind Queen": "Vania, Blood Queen",
-    "Vania, Blood Queen": "Vania, Kind Queen",
-    "Ceryneian Lighthind": "Ceryneian Darkhind",
-    "Ceryneian Darkhind": "Ceryneian Lighthind",
-  };
-  const isDoubleEvo = (n) => !!DOUBLE_EVO_PAIRS[n];
   const handleDoubleEvoClick = () => {
-    if (DOUBLE_EVO_PAIRS[cardName]) setCardName(DOUBLE_EVO_PAIRS[cardName]);
+    const other = doubleEvoOtherSide(cardName);
+    if (other) setCardName(other);
   };
 
   // ---------- deck mutation (limits preserved from the original) ----------

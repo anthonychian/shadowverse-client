@@ -37,9 +37,10 @@ import "../../css/Card.css";
 // deliberate drag relocates the card.
 const FIELD_DRAG_THRESHOLD = 10;
 
-// Large, very transparent +/- targets that overlay each Atk/Def icon ("+" over
-// the top half, "−" over the bottom). Green tint = increment, red tint =
-// decrement, so the direction is obvious. Only rendered for the player's cards.
+// Large, very transparent +/- targets that overlay each Atk/Def icon and the
+// counter badge ("+" over the top half, "−" over the bottom). Green tint =
+// increment, red tint = decrement, so the direction is obvious. Only rendered
+// for the player's cards.
 const statStepBtnStyle = (kind) => ({
   width: "100%",
   height: "100%",
@@ -105,6 +106,8 @@ export default function Card({
   const [showAtkDec, setShowAtkDec] = useState(false);
   const [showDefInc, setShowDefInc] = useState(false);
   const [showDefDec, setShowDefDec] = useState(false);
+  const [showCounterInc, setShowCounterInc] = useState(false);
+  const [showCounterDec, setShowCounterDec] = useState(false);
   // Keyword status badges show compact (inside the card) by default and expand
   // to large vertical labels beside the card on hover.
   const [kwHover, setKwHover] = useState(false);
@@ -391,16 +394,19 @@ export default function Card({
     dispatch(modifyDef({ value: String(v), index: idx }));
   };
 
-  const handleCounterInput = (event) => {
-    const num = event.target.value;
-    if (Number(num) === 0) setHoverInput(false);
-    setCounter(Number(num));
-    dispatch(
-      modifyCounter({
-        value: num,
-        index: idx,
-      })
-    );
+  // Step the counter up or down by `delta` (clamped at 0). Stepping to 0
+  // removes the badge, so also reset the hover state it would otherwise leave
+  // stuck (no mouseleave fires for an unmounted element).
+  const changeCounter = (delta) => {
+    if (opponentField) return;
+    const v = Math.max(0, Number(counter || 0) + delta);
+    setCounter(v);
+    dispatch(modifyCounter({ value: v, index: idx }));
+    if (v === 0) {
+      setHoverInput(false);
+      setShowCounterInc(false);
+      setShowCounterDec(false);
+    }
   };
 
   const handleHoverStart = () => {
@@ -428,14 +434,6 @@ export default function Card({
   const handleHoverEnd = () => {
     setKwHover(false);
     setHovering(false);
-  };
-
-  const handleStartHoverInput = () => {
-    setHoverInput(true);
-  };
-
-  const handleEndHoverInput = () => {
-    setHoverInput(false);
   };
 
   const updateNumberOfCarrots = () => {
@@ -619,34 +617,49 @@ export default function Card({
           </div>
         )}
         {counterVal > 0 && (
-          <>
-            <input
-              disabled={opponentField ? true : false}
-              value={counter}
-              onChange={handleCounterInput}
-              type="number"
-              min={0}
-              className={"counterInput"}
-              onMouseEnter={handleStartHoverInput}
-              onMouseLeave={handleEndHoverInput}
-            />
-            <div
-              style={{
-                position: "absolute",
-                top: "25%",
-                right: "30%",
-                borderRadius: "50px",
-                color: "white",
-                fontSize: "30px",
-                fontFamily: "Noto Serif JP, serif",
-                backgroundColor: "rgba(0, 0, 0, 0.5)",
-                height: "50px",
-                width: "50px",
-              }}
-            >
-              {counter}
-            </div>
-          </>
+          // Counter badge with the same hover +/- controls as the Atk/Def
+          // icons: "+" over the top half, "−" over the bottom (see
+          // statStepBtnStyle). Replaces the old invisible number input.
+          <div
+            style={{
+              position: "absolute",
+              top: "25%",
+              right: "30%",
+              borderRadius: "50px",
+              color: "white",
+              fontSize: "30px",
+              fontFamily: "Noto Serif JP, serif",
+              backgroundColor: "rgba(0, 0, 0, 0.5)",
+              height: "50px",
+              width: "50px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              zIndex: 90,
+            }}
+          >
+            {counter}
+            {!opponentField && (
+              <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", zIndex: 100 }}>
+                <div
+                  onMouseEnter={() => { setHoverInput(true); setShowCounterInc(true); }}
+                  onMouseLeave={() => { setHoverInput(false); setShowCounterInc(false); }}
+                  onPointerDown={(e) => e.stopPropagation()}
+                  style={{ flex: 1, display: "flex" }}
+                >
+                  {showCounterInc && <button type="button" onClick={() => changeCounter(1)} style={statStepBtnStyle("inc")}>+</button>}
+                </div>
+                <div
+                  onMouseEnter={() => { setHoverInput(true); setShowCounterDec(true); }}
+                  onMouseLeave={() => { setHoverInput(false); setShowCounterDec(false); }}
+                  onPointerDown={(e) => e.stopPropagation()}
+                  style={{ flex: 1, display: "flex" }}
+                >
+                  {showCounterDec && <button type="button" onClick={() => changeCounter(-1)} style={statStepBtnStyle("dec")}>−</button>}
+                </div>
+              </div>
+            )}
+          </div>
         )}
         {(numOfCarrots > 0 && name !== "Carrot") ||
         (name === "Drive Point" && onField) ? (

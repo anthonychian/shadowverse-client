@@ -21,6 +21,7 @@ import {
   rideCardOnField,
   backToEvolveDeck,
   advancedBackToEvolveDeck,
+  switchEvoCardOnField,
   setEnemyField,
   setEnemyEvoField,
   setEnemyEngaged,
@@ -97,6 +98,7 @@ import {
 } from "../../redux/CardSlice";
 import { artImage } from "../../decks/getCards";
 import { primaryType } from "../../decks/cardDetails";
+import { doubleEvoOtherSide } from "../../decks/doubleEvo";
 import { motion, MotionConfig } from "framer-motion";
 import CardMUI from "@mui/material/Card";
 import { useDispatch, useSelector } from "react-redux";
@@ -200,7 +202,16 @@ const MIN_SCALE = 0.4;
 const MAX_SCALE = 1.3;
 
 // Keyword statuses offered by "Add Status", shown as black boxes on the card.
-const KEYWORDS = ["Aura", "Ward", "Bane", "Storm", "Rush", "Intimidate"];
+const KEYWORDS = [
+  "Aura",
+  "Ward",
+  "Bane",
+  "Drain",
+  "Storm",
+  "Rush",
+  "Assail",
+  "Intimidate",
+];
 
 // White Psalm's [lastwords] summons a Black Psalm, so its context menu gets a
 // dedicated one-click swap (see handleSummonBlackPsalm).
@@ -1354,7 +1365,8 @@ export default function Field({
     dispatch(hideStatus(index));
   };
 
-  // Toggle a keyword status (Aura/Ward/Bane/Storm/Rush/Intimidate) on the card,
+  // Toggle a keyword status (Aura/Ward/Bane/Drain/Storm/Rush/Assail/
+  // Intimidate) on the card,
   // shown as a black box. The context menu is deliberately left OPEN here so
   // several keywords can be checked in one go; other menu items still close it.
   const handleToggleKeyword = (keyword) => {
@@ -1533,6 +1545,17 @@ export default function Field({
         index: index,
       }),
     );
+  };
+  // Dual-sided evolved cards (e.g. Orchis Resolute/Vengeful): flip the evolved
+  // card on the field to its other side. Same physical card, so stats/counters/
+  // engage stay put; the reveal shows the opponent the new face (Psalm-style).
+  const handleSwitchEvoSide = () => {
+    handleEvoClose();
+    const newCard = doubleEvoOtherSide(name);
+    if (!newCard) return;
+    dispatch(switchEvoCardOnField({ index }));
+    if (index < 5)
+      triggerCardReveal(newCard, reduxCurrentRoom, index, fieldSlotCenter(index));
   };
   const handleReturnAdvancedToEvolveDeck = () => {
     handleClose();
@@ -1936,6 +1959,9 @@ export default function Field({
         }
       >
         <MenuItem onClick={() => handleReturnToEvolveDeck()}>Return</MenuItem>
+        {doubleEvoOtherSide(name) && (
+          <MenuItem onClick={handleSwitchEvoSide}>Switch Side</MenuItem>
+        )}
         {hasEquipAt(index) && (
           <MenuItem onClick={handleRemoveEquipment}>Remove Equipment</MenuItem>
         )}
