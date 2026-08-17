@@ -8,13 +8,13 @@
       "format": "Any",
       "class": "Forestcraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Gourmet Guild",
+      "trait": "PriConne / Gourmet Guild",
       "rarity": "Legendary",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "1",
       "attack": "1",
       "defense": "1",
-      "effect": "[Union Burst] [fanfare] Give your leader [defense]+1. ------- [evolve] [cost01]: Evolve this. [fanfare] [cost02]: Equip an Ames Amulet token to this."
+      "effect": "[Union Burst][fanfare] Give your leader [defense]+1. ---------- [evolve] [cost01]: Evolve this. [fanfare] [cost02]: Equip this with an Ameth Amulet token."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-001EN.png"
   },
@@ -27,13 +27,13 @@
       "format": "Any",
       "class": "Forestcraft",
       "cardType": "Follower / Evolved",
-      "trait": "Princess Connect / Gourmet Guild",
+      "trait": "PriConne / Gourmet Guild",
       "rarity": "Legendary",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "-",
       "attack": "2",
       "defense": "2",
-      "effect": "On Evolve - Draw a card. On Super Evolve - Give your leader [defense]+2. Draw a card."
+      "effect": "On Evolve - Draw a card. On Super-Evolve - Give your leader [defense]+2. Draw a card."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-002EN.png"
   },
@@ -46,32 +46,32 @@
       "format": "Any",
       "class": "Forestcraft",
       "cardType": "Follower",
-      "trait": "Princess Connect",
+      "trait": "PriConne",
       "rarity": "Legendary",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "4",
       "attack": "4",
       "defense": "3",
-      "effect": "[Union Burst] [act] [engage]: Select another Princess Connect card on your field and give it [attack]+1/[defense]+1. If you've activated at least 2 other [Union Burst] abilities this turn, give it Storm. ------ [fanfare] Look at the top 4 cards of your deck. You may reveal a Princess Connect card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. The next Princess Connect card you play this turn costs 2 less to play."
+      "effect": "[Union Burst][act] [engage]: Select another PriConne follower on your field. Give it [attack]+1/[defense]+1 and, if [Union Burst] abilities you control have executed at least 3 other times this turn, give it Storm. ---------- [fanfare] Look at the top 4 cards of your deck. You may reveal a PriConne card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. The next PriConne card you play this turn costs 2 less."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-003EN.png"
   },
   {
     "cardNo": "CP04-004EN",
-    "name": "Nephi=Nela",
+    "name": "Nephi Nela",
     "type": "base",
     "class": "forest",
     "details": {
       "format": "Any",
       "class": "Forestcraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Gio Gehenna",
+      "trait": "PriConne / Geo Gehenna",
       "rarity": "Legendary",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "5",
       "attack": "3",
       "defense": "4",
-      "effect": "[Union Burst] [fanfare] Select an enemy follower on the field and deal it 4 damage. Put the top card of your deck into your EX area. --------- 1-cost Princess Connect followers in your EX area cost 1 less to play. When the [Union Burst] ability of another follower on your field activates, put the top card of your deck into your EX area."
+      "effect": "[Union Burst][fanfare] Select an enemy follower on the field. Deal it 4 damage and put the top card of your deck into your EX area. ---------- Any 1-cost PriConne follower you play from the EX area costs 1 less. Whenever a [Union Burst] ability of another follower on your field is executed, put the top card of your deck into your EX area."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-004EN.png"
   },
@@ -84,13 +84,13 @@
       "format": "Any",
       "class": "Forestcraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Elizabeth Park",
+      "trait": "PriConne / Elizabeth Park",
       "rarity": "Gold",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "2",
       "defense": "2",
-      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Select a Princess Connect follower on your field and refresh it. It can't attack enemies this turn."
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Select a PriConne follower on your field and refresh it. For the rest of this turn, it can't attack enemies."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-005EN.png"
   },
@@ -103,9 +103,9 @@
       "format": "Any",
       "class": "Forestcraft",
       "cardType": "Follower / Evolved",
-      "trait": "Princess Connect / Elizabeth Park",
+      "trait": "PriConne / Elizabeth Park",
       "rarity": "Gold",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "-",
       "attack": "3",
       "defense": "3",
@@ -122,13 +122,13 @@
       "format": "Any",
       "class": "Forestcraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Gio Gehenna",
+      "trait": "PriConne / Geo Gehenna",
       "rarity": "Gold",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "1",
       "attack": "1",
       "defense": "2",
-      "effect": "[Union Burst] [fanfare] Deal 1 damage to each enemy leader and give your leader [defense]+1. ------- Ward. When this is put into your EX area, deal 1 damage to each enemy leader and give your leader [defense]+1."
+      "effect": "[Union Burst][fanfare] Deal 1 damage to each enemy leader. Give your leader [defense]+1. ---------- Ward. When this is put into your EX area, deal 1 damage to each enemy leader and give your leader [defense]+1."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-007EN.png"
   },
@@ -141,13 +141,13 @@
       "format": "Any",
       "class": "Forestcraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Caon",
+      "trait": "PriConne / Caon",
       "rarity": "Gold",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "3",
       "defense": "2",
-      "effect": "[Union Burst] [fanfare] Engage 3 cards on your field: Selet an enemy follower on the field. Deal it 4 damage and deal 2 damage to its leader."
+      "effect": "[Union Burst][fanfare] [engage] 3 cards on your field: Select an enemy follower on the field. Deal 4 damage to it and 2 damage to its leader."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-008EN.png"
   },
@@ -160,13 +160,13 @@
       "format": "Any",
       "class": "Forestcraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Labyrinth",
+      "trait": "PriConne / Labyrinth",
       "rarity": "Silver",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "1",
       "attack": "1",
       "defense": "1",
-      "effect": "[evolve] [cost02]: Evolve this. [fanfare] If this was played from the EX area, evolve this follower."
+      "effect": "[evolve] [cost02]: Evolve this. [fanfare] If this was played from the EX area, evolve it."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-009EN.png"
   },
@@ -179,9 +179,9 @@
       "format": "Any",
       "class": "Forestcraft",
       "cardType": "Follower / Evolved",
-      "trait": "Princess Connect / Labyrinth",
+      "trait": "PriConne / Labyrinth",
       "rarity": "Silver",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "-",
       "attack": "2",
       "defense": "2",
@@ -191,20 +191,20 @@
   },
   {
     "cardNo": "CP04-011EN",
-    "name": "Kururu",
+    "name": "Cleuru",
     "type": "base",
     "class": "forest",
     "details": {
       "format": "Any",
       "class": "Forestcraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Gio Teogonia",
+      "trait": "PriConne / Geo Theogonia",
       "rarity": "Silver",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "0",
       "defense": "4",
-      "effect": "[Union Burst] [act] Remove 2 Kababan-kun counters from this: Give your leader [defense]+2. Draw a card. ------------ At the start of your end phase, put a Kababan-kun counter on this. [fanfare] If this wasn't put onto the field from the hand, put 2 Kababan-kun counters on it."
+      "effect": "[Union Burst][act] Remove 2 Bunclie counters from this: Give your leader [defense]+2. Draw a card. ---------- [fanfare] If this wasn't put onto the field from hand, place 2 Bunclie counters on it. At the start of your end phase, place a Bunclie counter on this."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-011EN.png"
   },
@@ -217,13 +217,13 @@
       "format": "Any",
       "class": "Forestcraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Rage Legion",
+      "trait": "PriConne / Rage Legion",
       "rarity": "Silver",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "2",
       "defense": "3",
-      "effect": "[Union Burst] [act] [engage] card: Until the end of your opponent's next turn, this has \"While this is engaged, each enemy follower on the field must attack once per turn if able.\" -------- Ward. [lastwords] Select an enemy follower on the field. It doesn't refresh during its controller's next start phase."
+      "effect": "[Union Burst][act] [engage]: During each opponent's next turn, this has \"While this is engaged, each enemy follower on the field must attack once per turn if able.\" ---------- Ward. [lastwords] Select an enemy follower on the field. It doesn't refresh during its controller's next start phase."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-012EN.png"
   },
@@ -236,13 +236,13 @@
       "format": "Any",
       "class": "Forestcraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Elizabeth Park",
+      "trait": "PriConne / Elizabeth Park",
       "rarity": "Bronze",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "1",
       "attack": "3",
       "defense": "3",
-      "effect": "This can only be played if it's your 5th turn or later. [evolve] [cost01]: Evolve this. Ward."
+      "effect": "This can only be played if it's your 5th turn or later. ---------- [evolve] [cost01]: Evolve this. Ward."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-013EN.png"
   },
@@ -255,13 +255,13 @@
       "format": "Any",
       "class": "Forestcraft",
       "cardType": "Follower / Evolved",
-      "trait": "Princess Connect / Elizabeth Park",
+      "trait": "PriConne / Elizabeth Park",
       "rarity": "Bronze",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "-",
       "attack": "4",
       "defense": "4",
-      "effect": "[Union Burst] On Evolve - Give your leader [defense]+3. --------- Ward."
+      "effect": "[Union Burst] On Evolve - Give your leader [defense]+3. ---------- Ward."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-014EN.png"
   },
@@ -274,13 +274,13 @@
       "format": "Any",
       "class": "Forestcraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Forestier",
+      "trait": "PriConne / Forestier",
       "rarity": "Bronze",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "1",
       "attack": "2",
       "defense": "1",
-      "effect": "[Union Burst] [act] [engage]: Select an enemy follower on the field and give it 🗡️-1/🛡️-1."
+      "effect": "[Union Burst][act] [engage]: Select an enemy follower on the field and give it [attack]-1/[defense]-1."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-015EN.png"
   },
@@ -293,13 +293,13 @@
       "format": "Any",
       "class": "Forestcraft",
       "cardType": "Follower",
-      "trait": "Princess Connect",
+      "trait": "PriConne",
       "rarity": "Bronze",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "3",
       "defense": "2",
-      "effect": "[Union Burst] Strike - For the rest of this turn, this doesn't take damage. ---------- Rush. [fanfare] Put another card on your field into its owner's EX area: Select an enemy follower on the field and engage it."
+      "effect": "[Union Burst] Strike - For the rest of this turn, this doesn't take damage. ---------- Rush. [fanfare] Put another card from your field into its owner's EX area: Select an enemy follower on the field and engage it."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-016EN.png"
   },
@@ -312,13 +312,13 @@
       "format": "Any",
       "class": "Forestcraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Lucent Academy",
+      "trait": "PriConne / Lucent Academy",
       "rarity": "Bronze",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "3",
       "attack": "5",
       "defense": "5",
-      "effect": "[Union Burst] [act] [engage]: Select an enemy follower on the field and deal it 3 damage. --------- [fanfare] Discard a card."
+      "effect": "[Union Burst][act] [engage]: Select an enemy follower on the field and deal it 3 damage. ---------- [fanfare] Discard a card."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-017EN.png"
   },
@@ -331,13 +331,13 @@
       "format": "Any",
       "class": "Forestcraft",
       "cardType": "Spell",
-      "trait": "Princess Connect / Gourmet Guild",
+      "trait": "PriConne / Gourmet Guild",
       "rarity": "Bronze",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "1",
       "attack": "-",
       "defense": "-",
-      "effect": "Select a Princess Connect follower on your field and refresh it. It can't attack enemies this turn. If it's a 1-cost follower, draw a card."
+      "effect": "Select a PriConne follower on your field and refresh it. For the rest of this turn, it can't attack enemies. If it costs 1, draw a card."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-018EN.png"
   },
@@ -350,13 +350,13 @@
       "format": "Any",
       "class": "Swordcraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Gourmet Guild",
+      "trait": "PriConne / Gourmet Guild",
       "rarity": "Legendary",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "3",
       "attack": "3",
       "defense": "3",
-      "effect": "[evolve] [cost01]: Evolve this. Ward. [fanfare] [cost02]: Equip a Princess Sword token to this."
+      "effect": "[evolve] [cost01]: Evolve this. Ward. [fanfare] [cost02]: Equip this with a Princess Sword token."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-019EN.png"
   },
@@ -369,13 +369,13 @@
       "format": "Any",
       "class": "Swordcraft",
       "cardType": "Follower / Evolved",
-      "trait": "Princess Connect / Gourmet Guild",
+      "trait": "PriConne / Gourmet Guild",
       "rarity": "Legendary",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "-",
       "attack": "4",
       "defense": "4",
-      "effect": "[Union Burst] On Evolve - Select an enemy follower on the field and deal it 4 damage. ------- Ward. On Super Evolve - Deal 4 damage to each enemy leader."
+      "effect": "[Union Burst] On Evolve - Select an enemy follower on the field and deal it 4 damage. ---------- Ward. On Super-Evolve - Deal 4 damage to each enemy leader."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-020EN.png"
   },
@@ -388,13 +388,13 @@
       "format": "Any",
       "class": "Swordcraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / NIGHTMARE / Seven Crowns",
+      "trait": "PriConne / Nightmare / Seven Crowns",
       "rarity": "Legendary",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "5",
       "attack": "4",
       "defense": "4",
-      "effect": "[Union Burst] Strike - Discard a card: Select an enemy follower on the field and deal it 5 damage. ------ Storm. [fanfare] [cost02]: Equip a Holy Castle Sword, Avalon token to this."
+      "effect": "[Union Burst] Strike - Discard a card: Select an enemy follower on the field and deal it 5 damage. ---------- Storm. [fanfare] [cost02]: Equip this with a Sanctum Blade Avalon token."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-021EN.png"
   },
@@ -407,13 +407,13 @@
       "format": "Any",
       "class": "Swordcraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Labyrinth / Seven Crowns",
+      "trait": "PriConne / Labyrinth / Seven Crowns",
       "rarity": "Legendary",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "1",
       "attack": "2",
       "defense": "2",
-      "effect": "[Union Burst] [act] [engage]: Give this follower [attack]+1. --------- At the start of your end phase, if the total attack of the 1-cost followers on your field is at least 10, deal 2 damage to each enemy follower on the field. [fanfare] If you have at least 4 followers on your field, equip a Queen's Console token to this."
+      "effect": "[Union Burst][act] [engage]: Give this [attack]+1. ---------- [fanfare] If there are at least 4 followers on your field, equip this with a Queen's Console token. At the start of your end phase, if the total attack of 1-cost followers on your field is at least 10, deal 2 damage to each enemy follower on the field."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-022EN.png"
   },
@@ -426,9 +426,9 @@
       "format": "Any",
       "class": "Swordcraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / NIGHTMARE",
+      "trait": "PriConne / Nightmare",
       "rarity": "Gold",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "4",
       "attack": "3",
       "defense": "4",
@@ -445,32 +445,32 @@
       "format": "Any",
       "class": "Swordcraft",
       "cardType": "Follower / Evolved",
-      "trait": "Princess Connect / NIGHTMARE",
+      "trait": "PriConne / Nightmare",
       "rarity": "Gold",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "-",
       "attack": "4",
       "defense": "5",
-      "effect": "[Union Burst] On Evolve - Search your deck for up to 2 NIGHTMARE followers not named Jun, put them into your EX area, then shuffle. They cost 2 less to play this turn. ------ Ward."
+      "effect": "[Union Burst] On Evolve - Search your deck for up to 2 Nightmare followers not named Jun, put them into your EX area, then shuffle. The next Nightmare follower you play this turn costs 2 less. ---------- Ward."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-024EN.png"
   },
   {
     "cardNo": "CP04-025EN",
-    "name": "Riri",
+    "name": "Lily",
     "type": "base",
     "class": "sword",
     "details": {
       "format": "Any",
       "class": "Swordcraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Alter Maiden",
+      "trait": "PriConne / Alter Maiden",
       "rarity": "Gold",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "5",
       "attack": "4",
       "defense": "3",
-      "effect": "[Union Burst] [fanfare] / Strike - Draw a card. You may summon a 2-cost or less follower from your hand. -------- Rush."
+      "effect": "[Union Burst][fanfare]/Strike - Draw a card. You may summon a follower that costs 2 or less from your hand. ---------- Rush."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-025EN.png"
   },
@@ -483,13 +483,13 @@
       "format": "Any",
       "class": "Swordcraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Richmond Trade Association",
+      "trait": "PriConne / Richmond Corporation",
       "rarity": "Gold",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "4",
       "attack": "3",
       "defense": "4",
-      "effect": "[Union Burst] [act] [engage]: Select an enemy follower on the field. For the rest of this turn, increase damage deal to it by 2. ---------- [fanfare] Search your deck for a follower with \"Pecorine\" in its name and put it into your EX area. It costs 3 less to play this turn."
+      "effect": "[Union Burst][act] [engage]: Select an enemy follower on the field. For the rest of this turn, if it would take damage, it takes that much +2 instead. ---------- [fanfare] Search your deck for a follower with \"Pecorine\" in its name, put it into your EX area, then shuffle. It costs 3 less to play this turn."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-026EN.png"
   },
@@ -502,13 +502,13 @@
       "format": "Any",
       "class": "Swordcraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / NIGHTMARE",
+      "trait": "PriConne / Nightmare",
       "rarity": "Silver",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "2",
       "defense": "1",
-      "effect": "[evolve] [cost02]: Evolve this. Storm. [fanfare] If there are at least 4 Princess Connect followers on your field, evolve this."
+      "effect": "[evolve] [cost02]: Evolve this. Storm. [fanfare] If there are at least 4 PriConne followers on your field, evolve this."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-027EN.png"
   },
@@ -521,13 +521,13 @@
       "format": "Any",
       "class": "Swordcraft",
       "cardType": "Follower / Evolved",
-      "trait": "Princess Connect / NIGHTMARE",
+      "trait": "PriConne / Nightmare",
       "rarity": "Silver",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "-",
       "attack": "3",
       "defense": "2",
-      "effect": "[Union Burst] On Evolve - Select an enemy follower on the field and deal it 2 damage. ------- Storm."
+      "effect": "[Union Burst] Strike - Select an enemy follower on the field and deal it 2 damage. ---------- Storm."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-028EN.png"
   },
@@ -540,13 +540,13 @@
       "format": "Any",
       "class": "Swordcraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Labyrinth",
+      "trait": "PriConne / Labyrinth",
       "rarity": "Silver",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "3",
       "attack": "2",
       "defense": "4",
-      "effect": "[Union Burst] [act] [engage]: Select an enemy follower on the field and deal it 1 damage. Give your leader [defense]+1. ---------- Ward. [fanfare] Search your deck for 1-cost Princess Connect follower with Evolve, put it into your EX area, then shuffle."
+      "effect": "[Union Burst][act] [engage]: Select an enemy follower on the field. Deal it 1 damage and give your leader [defense]+1. ---------- Ward. [fanfare] Search your deck for a 1-cost PriConne follower with [evolve], put it into your EX area, then shuffle."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-029EN.png"
   },
@@ -559,13 +559,13 @@
       "format": "Any",
       "class": "Swordcraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Twilight Caravan",
+      "trait": "PriConne / Twilight Caravan",
       "rarity": "Silver",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "3",
       "defense": "3",
-      "effect": "[Union Burst] [act] [cost01], [engage]: Select an enemy follower on the field and deal it 2 damage. ---------- Ward."
+      "effect": "[Union Burst][act] [cost01], [engage]: Select an enemy follower on the field and deal it 2 damage. ---------- Ward."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-030EN.png"
   },
@@ -578,9 +578,9 @@
       "format": "Any",
       "class": "Swordcraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Mercuris Foundation",
+      "trait": "PriConne / Mercurius Foundation",
       "rarity": "Bronze",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "1",
       "attack": "1",
       "defense": "1",
@@ -597,13 +597,13 @@
       "format": "Any",
       "class": "Swordcraft",
       "cardType": "Follower / Evolved",
-      "trait": "Princess Connect / Mercuris Foundation",
+      "trait": "PriConne / Mercurius Foundation",
       "rarity": "Bronze",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "-",
       "attack": "2",
       "defense": "2",
-      "effect": "[Union Burst] Strike - Select an enemy follower on the field with at least 3 attack and deal it 2 damage. --------- Storm."
+      "effect": "[Union Burst] Strike - Select an enemy follower on the field with at least 3 attack and deal it 2 damage. ---------- Storm."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-032EN.png"
   },
@@ -616,13 +616,13 @@
       "format": "Any",
       "class": "Swordcraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Twilight Caravan",
+      "trait": "PriConne / Twilight Caravan",
       "rarity": "Bronze",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "4",
       "attack": "4",
       "defense": "4",
-      "effect": "[Union Burst] [fanfare] Select up to 2 enemy followers on the field and give them 🗡️-2/🛡️-2. --------- When the [Union Burst] ability of another follower on your field activates, select an enemy follower on the field and give it 🗡️-1/🛡️-1."
+      "effect": "[Union Burst][fanfare] Select up to 2 enemy followers on the field and give them [attack]-2/[defense]-2. ---------- Whenever a [Union Burst] ability of another follower on your field is executed, select an enemy follower on the field and give it [attack]-1/[defense]-1."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-033EN.png"
   },
@@ -635,13 +635,13 @@
       "format": "Any",
       "class": "Swordcraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / NIGHTMARE",
+      "trait": "PriConne / Nightmare",
       "rarity": "Bronze",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "3",
       "defense": "2",
-      "effect": "[Union Burst] Strike - Select an enemy follower on the field and deal it 1 damage. ------- Rush. If you have another NIGHTMARE follower on your field, this has Assail."
+      "effect": "[Union Burst] Strike - Select an enemy follower on the field and deal it 1 damage. ---------- Rush. While there's another Nightmare follower on your field, this has Assail."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-034EN.png"
   },
@@ -654,13 +654,13 @@
       "format": "Any",
       "class": "Swordcraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Weiße Flügel",
+      "trait": "PriConne / Weissflugel",
       "rarity": "Bronze",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "2",
       "defense": "2",
-      "effect": "[Union Burst] [act] [cost04], [engage]: Select an enemy follower on the field and deal it 5 damage. Refresh this follower. Activate only once per turn. --------- Whenever the [Union Burst] ability of another follower on your field activates, give this [attack]+1/[defense]+1."
+      "effect": "[Union Burst][act] [cost04], [engage]: Select an enemy follower on the field. Deal it 5 damage and refresh this. Activate only once per turn. ---------- Whenever a [Union Burst] ability of another follower on your field is executed, give this [attack]+1/[defense]+1."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-035EN.png"
   },
@@ -673,13 +673,13 @@
       "format": "Any",
       "class": "Swordcraft",
       "cardType": "Spell",
-      "trait": "Princess Connect / Gourmet Guild",
+      "trait": "PriConne / Gourmet Guild",
       "rarity": "Bronze",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "3",
       "attack": "-",
       "defense": "-",
-      "effect": "When playing this card, engage a follower on your field with \"Pecorine\" in its name: This card costs 3 less to play. Select an enemy follower on the field. Deal it 5 damage and deal 2 damage to its leader."
+      "effect": "When playing this, [engage] a follower on your field with \"Pecorine\" in its name: This costs 3 less to play. ---------- Select an enemy follower on the field. Deal 5 damage to it and 2 damage to its leader."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-036EN.png"
   },
@@ -692,13 +692,13 @@
       "format": "Any",
       "class": "Runecraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Gourmet Guild",
+      "trait": "PriConne / Gourmet Guild",
       "rarity": "Legendary",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "4",
       "attack": "3",
       "defense": "4",
-      "effect": "[Union Burst] [fanfare] Discard a spell: Select an enemy follower on the field and deal it 3 damage. Draw a card. -------- [evolve] [cost01]: Evolve this. [fanfare] [cost02]: Equip a Chaos Grimoire token to this."
+      "effect": "[Union Burst][fanfare] Discard a spell: Select an enemy follower on the field. Deal it 3 damage and draw a card. ---------- [evolve] [cost01]: Evolve this. [fanfare] [cost02]: Equip this with a Chaos Grimoire token."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-037EN.png"
   },
@@ -711,13 +711,13 @@
       "format": "Any",
       "class": "Runecraft",
       "cardType": "Follower / Evolved",
-      "trait": "Princess Connect / Gourmet Guild",
+      "trait": "PriConne / Gourmet Guild",
       "rarity": "Legendary",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "-",
       "attack": "4",
       "defense": "5",
-      "effect": "On Evolve - Select an enemy follower on the field and deal it 5 damage. On Super Evolve - Select up to 2 spells with different names in your cemetery and put them into your EX area. They cost 2 less to play this turn."
+      "effect": "On Evolve - Select an enemy follower on the field and deal it 5 damage. On Super-Evolve - Select up to 2 spells in your cemetery with different names and put them into your EX area. They cost 2 less to play this turn."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-038EN.png"
   },
@@ -730,13 +730,13 @@
       "format": "Any",
       "class": "Runecraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Friendship Club",
+      "trait": "PriConne / Friendship Club",
       "rarity": "Legendary",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "5",
       "attack": "4",
       "defense": "4",
-      "effect": "[Union Burst] [fanfare] Search your deck for up to 2 Friendship Club cards with different names, put them into your EX area, then shuffle. They cost 2 less to play this turn. --------- When the [Union Burst] ability of another follower on your field activates, the next Princess Connect spell you play costs 2 less to play."
+      "effect": "[Union Burst][fanfare] Search your deck for up to 2 Friendship Club cards with different names that cost 2 or less, put them into your EX area, then shuffle. They cost 2 less to play this turn. ---------- Whenever a [Union Burst] ability of another follower on your field is executed, the next PriConne spell you play this turn costs 2 less."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-039EN.png"
   },
@@ -749,13 +749,13 @@
       "format": "Any",
       "class": "Runecraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Seven Crowns",
+      "trait": "PriConne / Seven Crowns",
       "rarity": "Legendary",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "0",
       "defense": "1",
-      "effect": "[Union Burst] [fanfare] If there's no Neneka, Mirror Image on your field, summon one. ------- [fanfare] [cost02]: Equip a Wand of Mirage token to this. [act] [engage]: Select an enemy follower on the field and deal it 1 damage."
+      "effect": "[Union Burst][fanfare] If there's no Mirror Image Neneka on your field, summon one. ---------- [fanfare] [cost02]: Equip this with a Mirage Wand token. [act] [engage]: Select an enemy follower on the field and deal it 1 damage."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-040EN.png"
   },
@@ -768,13 +768,13 @@
       "format": "Any",
       "class": "Runecraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Caon",
+      "trait": "PriConne / Caon",
       "rarity": "Gold",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "2",
       "defense": "2",
-      "effect": "[Union Burst] [fanfare] Select your leader or a follower on your field and give it [defense]+1. ------ [evolve] [cost01]: Evolve this."
+      "effect": "[Union Burst][fanfare] Select your leader or another follower on your field and give it [defense]+1. ---------- [evolve] [cost01]: Evolve this."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-041EN.png"
   },
@@ -787,13 +787,13 @@
       "format": "Any",
       "class": "Runecraft",
       "cardType": "Follower / Evolved",
-      "trait": "Princess Connect / Caon",
+      "trait": "PriConne / Caon",
       "rarity": "Gold",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "-",
       "attack": "3",
       "defense": "3",
-      "effect": "On Evolve - Look at the top 4 cards of your deck. You may put a card from among them into your EX area. Put the rest on the bottom of your deck in any order."
+      "effect": "On Evolve - Look at the top 4 cards of your deck. You may put one of them into your EX area. Put the rest on the bottom of your deck in any order."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-042EN.png"
   },
@@ -806,32 +806,32 @@
       "format": "Any",
       "class": "Runecraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Alter Maiden",
+      "trait": "PriConne / Alter Maiden",
       "rarity": "Gold",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "2",
       "defense": "3",
-      "effect": "[Union Burst] [fanfare] Select an enemy follower on the field and deal it damage equal to the number of other followers on your field. If you've activate at least 2 other [Union Burst] abilities this turn, draw a card."
+      "effect": "[Union Burst][fanfare] Select an enemy follower on the field. Deal it damage equal to the number of other followers on your field and, if [Union Burst] abilities you control have executed at least 2 other times this turn, draw a card."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-043EN.png"
   },
   {
     "cardNo": "CP04-044EN",
-    "name": "The Shared Illusion of Truth and Existence",
+    "name": "Construct of Truth and Being",
     "type": "base",
     "class": "rune",
     "details": {
       "format": "Any",
       "class": "Runecraft",
       "cardType": "Spell",
-      "trait": "Princess Connect / Friendship Club",
+      "trait": "PriConne / Friendship Club",
       "rarity": "Gold",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "-",
       "defense": "-",
-      "effect": "[quick]. Discard a Princess Connect spell: Draw 2 cards. If you have a Friendship Club follower on your field, give your leader [defense]+2."
+      "effect": "[quick] Discard a PriConne card: Draw 2 cards. If there's a Friendship Club follower on your field, give your leader [defense]+2."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-044EN.png"
   },
@@ -844,13 +844,13 @@
       "format": "Any",
       "class": "Runecraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Little Lyrical",
+      "trait": "PriConne / Little Lyrical",
       "rarity": "Silver",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "2",
       "defense": "2",
-      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Select a Princess Connect spell in your cemetery and put it into your EX area. Give it \"At the start of your end phase, bury this card if it's in the EX area.\""
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Select a PriConne spell in your cemetery. Put it into your EX area and give it \"At the start of your end phase, if this is in your EX area, bury it.\""
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-045EN.png"
   },
@@ -863,13 +863,13 @@
       "format": "Any",
       "class": "Runecraft",
       "cardType": "Follower / Evolved",
-      "trait": "Princess Connect / Little Lyrical",
+      "trait": "PriConne / Little Lyrical",
       "rarity": "Silver",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "-",
       "attack": "3",
       "defense": "3",
-      "effect": "[Union Burst] On Evolve - Select an enemy follower on the field and deal it 2 damage. If you played a spell this turn, deal 2 damage to its leader."
+      "effect": "[Union Burst] On Evolve - Select an enemy follower on the field. Deal it 2 damage and, if you've played a spell this turn, deal 2 damage to its leader."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-046EN.png"
   },
@@ -882,13 +882,13 @@
       "format": "Any",
       "class": "Runecraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Friendship Club",
+      "trait": "PriConne / Friendship Club",
       "rarity": "Silver",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "2",
       "defense": "3",
-      "effect": "[Union Burst] [fanfare] Look at the top 4 cards of your deck. You may reveal a Friendship Club card or a Princess Connect spell from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
+      "effect": "[Union Burst][fanfare] Look at the top 4 cards of your deck. You may reveal a Friendship Club card or PriConne spell from among them and add it to your hand. Put the rest on the bottom of your deck in any order."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-047EN.png"
   },
@@ -901,13 +901,13 @@
       "format": "Any",
       "class": "Runecraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Friendship Club",
+      "trait": "PriConne / Friendship Club",
       "rarity": "Silver",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "3",
       "defense": "2",
-      "effect": "[Union Burst] [fanfare] Select an enemy follower on the field and deal it damage equal to the number of Friendship Club followers on your field. ------ Whenever you play a Friendship Club card or Princess Connect spell, deal 1 damage to each enemy leader."
+      "effect": "[Union Burst][fanfare] Select an enemy follower on the field and deal it damage equal to the number of Friendship Club followers on your field. ---------- Whenever you play a Friendship Club card or PriConne spell, deal 1 damage to each enemy leader."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-048EN.png"
   },
@@ -920,9 +920,9 @@
       "format": "Any",
       "class": "Runecraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Weiße Flügel",
+      "trait": "PriConne / Weissflugel",
       "rarity": "Bronze",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "3",
       "attack": "3",
       "defense": "3",
@@ -939,13 +939,13 @@
       "format": "Any",
       "class": "Runecraft",
       "cardType": "Follower / Evolved",
-      "trait": "Princess Connect / Weiße Flügel",
+      "trait": "PriConne / Weissflugel",
       "rarity": "Bronze",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "-",
       "attack": "4",
       "defense": "4",
-      "effect": "[Union Burst] On Evolve - Select an enemy follower on the field and give 🗡️-2/🛡️-2."
+      "effect": "[Union Burst] On Evolve - Select an enemy follower on the field and give it [attack]-2/[defense]-2."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-050EN.png"
   },
@@ -958,13 +958,13 @@
       "format": "Any",
       "class": "Runecraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Forestier",
+      "trait": "PriConne / Forestier",
       "rarity": "Bronze",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "3",
       "attack": "2",
       "defense": "5",
-      "effect": "[Union Burst] [act] [engage]: Deal each enemy leader and enemy follower on the field 2 damage. ----------- Ward. [fanfare] [engage] card."
+      "effect": "[Union Burst][act] [engage]: Deal 2 damage to each enemy leader and enemy follower on the field. ---------- Ward. [fanfare] Engage this."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-051EN.png"
   },
@@ -977,32 +977,32 @@
       "format": "Any",
       "class": "Runecraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Twilight Caravan",
+      "trait": "PriConne / Twilight Caravan",
       "rarity": "Bronze",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "3",
       "attack": "3",
       "defense": "3",
-      "effect": "[Union Burst] [fanfare] Discard a spell: Select an enemy follower on the field and deal it 5 damage. --------- Once per turn, when the [Union Burst] ability of another follower on your field activates, select a Princess Connect spell in your cemetery and put it into your EX area."
+      "effect": "[Union Burst][fanfare] Discard a spell: Select an enemy follower on the field and deal it 5 damage. ---------- Once per turn, when a [Union Burst] ability of another follower on your field is executed, select a PriConne spell in your cemetery and put it into your EX area."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-052EN.png"
   },
   {
     "cardNo": "CP04-053EN",
-    "name": "Cheru Cheru☆Carnival",
+    "name": "Chellerific Carnival",
     "type": "base",
     "class": "rune",
     "details": {
       "format": "Any",
       "class": "Runecraft",
       "cardType": "Spell",
-      "trait": "Princess Connect / Friendship Club",
+      "trait": "PriConne / Friendship Club",
       "rarity": "Bronze",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "-",
       "defense": "-",
-      "effect": "[quick]. Select an enemy follower on the field and deal it 3 damage. If there's a Friendship Club follower on your field, draw a card."
+      "effect": "[quick] Select an enemy follower on the field. Deal it 3 damage and, if there's a Friendship Club follower on your field, draw a card."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-053EN.png"
   },
@@ -1015,13 +1015,13 @@
       "format": "Any",
       "class": "Runecraft",
       "cardType": "Spell",
-      "trait": "Princess Connect / Gourmet Guild",
+      "trait": "PriConne / Gourmet Guild",
       "rarity": "Bronze",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "-",
       "defense": "-",
-      "effect": "When this card is discarded, select an enemy follower on the field and deal it 1 damage. ---------- Select a Princess Connect follower on your field. Give it [attack]+3, Rush and Assail."
+      "effect": "When this is discarded, select an enemy follower on the field and deal it 1 damage. ---------- Select a PriConne follower on your field and give it [attack]+3, Rush, and Assail."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-054EN.png"
   },
@@ -1034,13 +1034,13 @@
       "format": "Any",
       "class": "Dragoncraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Gourmet Guild",
+      "trait": "PriConne / Gourmet Guild",
       "rarity": "Legendary",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "2",
       "defense": "2",
-      "effect": "[Union Burst] [fanfare] Select an enemy follower on the field. It doesn't refresh during its controller's next start phase. ------- [evolve] [cost01]: Evolve this. [fanfare] If Overflow is active for you, equip an Ice Drachen token to this follower."
+      "effect": "[Union Burst][fanfare] Select an enemy follower on the field. It doesn't refresh during its controller's next start phase. ---------- [evolve] [cost01]: Evolve this. [fanfare] If Overflow is active for you, equip this with an Eisdrache token."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-055EN.png"
   },
@@ -1053,13 +1053,13 @@
       "format": "Any",
       "class": "Dragoncraft",
       "cardType": "Follower / Evolved",
-      "trait": "Princess Connect / Gourmet Guild",
+      "trait": "PriConne / Gourmet Guild",
       "rarity": "Legendary",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "-",
       "attack": "3",
       "defense": "3",
-      "effect": "On Evolve - Select up to 2 enemy followers on the field and deal 2 damage divided between them. On Super Evolve - Deal 3 damage to each enemy follower on the field."
+      "effect": "On Evolve - Select up to 2 enemy followers on the field and deal 2 damage divided between them. On Super-Evolve - Deal 3 damage to each enemy follower on the field."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-056EN.png"
   },
@@ -1072,13 +1072,13 @@
       "format": "Any",
       "class": "Dragoncraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Dragon's Nest",
+      "trait": "PriConne / Dragon's Nest",
       "rarity": "Legendary",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "5",
       "attack": "4",
       "defense": "5",
-      "effect": "[Union Burst] [act] [engage]: Select an enemy follower on the field and deal it 5 damage. If Overflow is active for you, recover 2 play points. -------- When the [Union Burst] ability of another follower on your field activates, increase your max play points by 1. [fanfare] Increase your max play points by 1."
+      "effect": "[Union Burst][act] [engage]: Select an enemy follower on the field. Deal it 5 damage and, if Overflow is active for you, recover 2 play points. ---------- [fanfare] Increase your max play points by 1. Whenever a [Union Burst] ability of another follower on your field is executed, increase your max play points by 1."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-057EN.png"
   },
@@ -1091,13 +1091,13 @@
       "format": "Any",
       "class": "Dragoncraft",
       "cardType": "Follower",
-      "trait": "Princess Connect",
+      "trait": "PriConne",
       "rarity": "Legendary",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "2",
       "defense": "3",
-      "effect": "[Union Burst] [fanfare] Draw a card, then discard a card. If Overflow is active for you, equip a Proof of Bonds to this. If you have 10 max play points, give this follower [attack]+3."
+      "effect": "[Union Burst][fanfare] Draw a card. Discard a card. If Overflow is active for you, equip this with a Precious Memento token. If you have 10 max play points, give this [attack]+3."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-058EN.png"
   },
@@ -1110,13 +1110,13 @@
       "format": "Any",
       "class": "Dragoncraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Dragon's Nest",
+      "trait": "PriConne / Dragon's Nest",
       "rarity": "Gold",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "6",
       "attack": "4",
       "defense": "4",
-      "effect": "[evolve] [cost01]: Evolve this. Storm. When the [Union Burst] ability of another follower on your field activates, deal 2 damage to each enemy leader. [fanfare] Select an enemy follower on the field and deal it 4 damage. If you have 10 max play points, evolve this."
+      "effect": "[evolve] [cost01]: Evolve this. Storm. [fanfare] Select an enemy follower on the field. Deal it 4 damage and, if you have 10 max play points, evolve this. Whenever a [Union Burst] ability of another follower on your field is executed, deal 2 damage to each enemy leader."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-059EN.png"
   },
@@ -1129,13 +1129,13 @@
       "format": "Any",
       "class": "Dragoncraft",
       "cardType": "Follower / Evolved",
-      "trait": "Princess Connect / Dragon's Nest",
+      "trait": "PriConne / Dragon's Nest",
       "rarity": "Gold",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "-",
       "attack": "5",
       "defense": "5",
-      "effect": "[Union Burst] On Evolve - Search your deck for a Dragon's Nest card not named Kaya, put it into your EX area, then shuffle. It costs 2 less to play this turn. --------- Storm. When the [Union Burst] ability of another follower on your field activates, deal 2 damage to each enemy leader."
+      "effect": "[Union Burst] On Evolve - Search your deck for a Dragon's Nest card not named Kaya, put it into your EX area, then shuffle. It costs 2 less to play this turn. ---------- Storm. Whenever a [Union Burst] ability of another follower on your field is executed, deal 2 damage to each enemy leader."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-060EN.png"
   },
@@ -1148,32 +1148,32 @@
       "format": "Any",
       "class": "Dragoncraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Twinkle Wish",
+      "trait": "PriConne / Twinkle Wish",
       "rarity": "Gold",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "4",
       "attack": "4",
       "defense": "4",
-      "effect": "[Union Burst] Strike - Select an enemy follower on the field. Deal it 2 damage and deal 2 damage to its leader. If you have 10 max play points, deal 4 damage instead. --------- Rush. [fanfare] Search your deck for a 1-cost Twinkle Wish follower, put it into your EX area, then shuffle."
+      "effect": "[Union Burst] Strike - Select an enemy follower on the field. Deal 2 damage to it and its leader. If you have 10 max play points, deal 4 damage instead. ---------- Rush. [fanfare] Search your deck for a 1-cost Twinkle Wish follower, put it into your EX area, then shuffle."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-061EN.png"
   },
   {
     "cardNo": "CP04-062EN",
-    "name": "Someday, We'll Meet Again in the Future",
+    "name": "Until We Meet Again",
     "type": "base",
     "class": "dragon",
     "details": {
       "format": "Any",
       "class": "Dragoncraft",
       "cardType": "Spell",
-      "trait": "Princess Connect",
+      "trait": "PriConne",
       "rarity": "Gold",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "3",
       "attack": "-",
       "defense": "-",
-      "effect": "Choose 1. (1) Increase your max play points by 1. Give your leader [defense]+1. (2) If you have 10 max play points, search your deck for a 2-cost Princess Connect follower, summon it, then shuffle."
+      "effect": "Choose 1. (1) Increase your max play points by 1. Give your leader [defense]+1. (2) If you have 10 max play points, search your deck for a 2-cost PriConne follower, summon it, then shuffle."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-062EN.png"
   },
@@ -1186,13 +1186,13 @@
       "format": "Any",
       "class": "Dragoncraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Dragon's Nest",
+      "trait": "PriConne / Dragon's Nest",
       "rarity": "Silver",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "2",
       "defense": "2",
-      "effect": "[Union Burst] [act] [engage]: Deal 1 damage to each enemy leader and enemy follower on the field. Activate only if Overflow is active for you. -------- Evolve (1): Evolve this follower."
+      "effect": "[Union Burst][act] [engage]: Deal 1 damage to each enemy leader and enemy follower on the field. Activate only if Overflow is active for you. ---------- [evolve] [cost01]: Evolve this."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-063EN.png"
   },
@@ -1205,13 +1205,13 @@
       "format": "Any",
       "class": "Dragoncraft",
       "cardType": "Follower / Evolved",
-      "trait": "Princess Connect / Dragon's Nest",
+      "trait": "PriConne / Dragon's Nest",
       "rarity": "Silver",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "-",
       "attack": "3",
       "defense": "3",
-      "effect": "[Union Burst] [act] [engage]: Deal 1 damage to each enemy leader and enemy follower on the field. Activate only if Overflow is active for you. -------- On Evolve - Search your deck for a Dragon's Nest card not named Inori, reveal it, add it to your hand, then shuffle."
+      "effect": "[Union Burst][act] [engage]: Deal 1 damage to each enemy leader and enemy follower on the field. Activate only if Overflow is active for you. ---------- On Evolve - Search your deck for a Dragon's Nest card not named Inori, reveal it, add it to your hand, then shuffle."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-064EN.png"
   },
@@ -1224,13 +1224,13 @@
       "format": "Any",
       "class": "Dragoncraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Gio Teogonia",
+      "trait": "PriConne / Geo Theogonia",
       "rarity": "Silver",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "2",
       "defense": "3",
-      "effect": "[Union Burst] [act] [engage]: Select a Geo Teogonia follower on your field not named Lind, give it [attack]+1/[defense]+1 and refresh it. It can't attack enemies this turn. ----------- Ward."
+      "effect": "[Union Burst][act] [engage]: Select a Geo Theogonia follower on your field not named Lind. Give it [attack]+1/[defense]+1 and refresh it. For the rest of this turn, it can't attack enemies. ---------- Ward."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-065EN.png"
   },
@@ -1243,13 +1243,13 @@
       "format": "Any",
       "class": "Dragoncraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Gio Teogonia",
+      "trait": "PriConne / Geo Theogonia",
       "rarity": "Silver",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "3",
       "defense": "2",
-      "effect": "[Union Burst] [act] [engage]: Select an enemy follower on the field and deal it 3 damage. If there's a 7-cost follower on your field, deal 3 damage to the selected enemy follower's leader. ---------- [fanfare] If there isn't another Gio Teogonia follower on your field, [engage] card."
+      "effect": "[Union Burst][act] [engage]: Select an enemy follower on the field. Deal it 3 damage and, if there's a follower on your field that costs 7 or more, deal 3 damage to its leader. ---------- [fanfare] If there are no other Geo Theogonia followers on your field, engage this."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-066EN.png"
   },
@@ -1262,13 +1262,13 @@
       "format": "Any",
       "class": "Dragoncraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Mercurius Foundation",
+      "trait": "PriConne / Mercurius Foundation",
       "rarity": "Bronze",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "2",
       "defense": "3",
-      "effect": "If Overflow is active for you, this card costs 2 less to play. [evolve] [cost01]: Evolve this. Ward."
+      "effect": "This costs 2 less to play if Overflow is active for you. ---------- [evolve] [cost01]: Evolve this. Ward."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-067EN.png"
   },
@@ -1281,13 +1281,13 @@
       "format": "Any",
       "class": "Dragoncraft",
       "cardType": "Follower / Evolved",
-      "trait": "Princess Connect / Mercurius Foundation",
+      "trait": "PriConne / Mercurius Foundation",
       "rarity": "Bronze",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "-",
       "attack": "3",
       "defense": "4",
-      "effect": "[Union Burst] On Evolve - Select an enemy amulet on the field and destroy it. ------- Ward."
+      "effect": "[Union Burst] On Evolve - Select an enemy amulet on the field and destroy it. ---------- Ward."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-068EN.png"
   },
@@ -1300,13 +1300,13 @@
       "format": "Any",
       "class": "Dragoncraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Caon",
+      "trait": "PriConne / Caon",
       "rarity": "Bronze",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "3",
       "attack": "3",
       "defense": "3",
-      "effect": "[Union Burst] Strike - [cost02]: Deal 3 damage to each enemy leader. ------ Rush. While another Princess Connect follower is on your field, this follower has Storm."
+      "effect": "[Union Burst] Strike - [cost02]: Deal 3 damage to each enemy leader. ---------- Rush. While there's another PriConne follower on your field, this has Storm."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-069EN.png"
   },
@@ -1319,13 +1319,13 @@
       "format": "Any",
       "class": "Dragoncraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Sarendia Orphanage",
+      "trait": "PriConne / Sarendia Orphanage",
       "rarity": "Bronze",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "3",
       "defense": "2",
-      "effect": "[Union Burst] Follower Strike - Put the opposing follower into its owner's EX area. -------- While there's another Sarendia Orphanage follower on your field, this follower has Rush."
+      "effect": "[Union Burst] Follower Strike - Put the attack target into its owner's EX area. ---------- While there's another Sarendia Orphanage follower on your field, this has Rush."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-070EN.png"
   },
@@ -1338,9 +1338,9 @@
       "format": "Any",
       "class": "Dragoncraft",
       "cardType": "Spell",
-      "trait": "Princess Connect / Dragon's Nest",
+      "trait": "PriConne / Dragon's Nest",
       "rarity": "Bronze",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "-",
       "defense": "-",
@@ -1350,16 +1350,16 @@
   },
   {
     "cardNo": "CP04-072EN",
-    "name": "Prank Declaration",
+    "name": "Prank Proclamation",
     "type": "base",
     "class": "dragon",
     "details": {
       "format": "Any",
       "class": "Dragoncraft",
       "cardType": "Amulet",
-      "trait": "Princess Connect / Little Lyrical",
+      "trait": "PriConne / Little Lyrical",
       "rarity": "Bronze",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "1",
       "attack": "-",
       "defense": "-",
@@ -1376,13 +1376,13 @@
       "format": "Any",
       "class": "Abysscraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Diabolos",
+      "trait": "PriConne / Diabolos",
       "rarity": "Legendary",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "2",
       "defense": "2",
-      "effect": "[Union Burst] [act] [engage] and banish 5 cards from your cemetery: Select an enemy follower on the field and deal it 3 damage. Give your leader [defense]+3. --------- [evolve] [cost01]: Evolve this. [fanfare] [cost02]: Equip a Dark Axe Nachtfang token to this."
+      "effect": "[Union Burst][act] [engage], banish 5 cards from your cemetery: Select an enemy follower on the field. Deal it 3 damage and give your leader [defense]+3. ---------- [evolve] [cost01]: Evolve this. [fanfare] [cost02]: Equip this with a Dark Axe Nachtfang token."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-073EN.png"
   },
@@ -1395,13 +1395,13 @@
       "format": "Any",
       "class": "Abysscraft",
       "cardType": "Follower / Evolved",
-      "trait": "Princess Connect / Diabolos",
+      "trait": "PriConne / Diabolos",
       "rarity": "Legendary",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "-",
       "attack": "3",
       "defense": "3",
-      "effect": "[Union Burst] [act] [engage] and banish 5 cards from your cemetery: Select an enemy follower on the field and deal it 3 damage. Give your leader [defense]+3. --------- On Evolve - Search your deck for a Princess Connect card, bury it, then shuffle. Onn Super Evolve - Select an enemy follower on the field and deal it 5 damage."
+      "effect": "[Union Burst][act] [engage], banish 5 cards from your cemetery: Select an enemy follower on the field. Deal it 3 damage and give your leader [defense]+3. ---------- On Evolve - Search your deck for a PriConne card, bury it, then shuffle. On Super-Evolve - Select an enemy follower on the field and deal it 5 damage."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-074EN.png"
   },
@@ -1414,13 +1414,13 @@
       "format": "Any",
       "class": "Abysscraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Rage Legion",
+      "trait": "PriConne / Rage Legion",
       "rarity": "Legendary",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "4",
       "attack": "3",
       "defense": "5",
-      "effect": "[Union Burst] [fanfare] Select an enemy follower on the field and deal it 5 damage. If this follower was put onto the field from anywhere other than the hand, recover 2 play points. -------- When the [Union Burst] ability of another follower on your field activates, choose one that you haven't chosen this turn. (1) Deal 2 damage to each enemy leader. (2) Give your leader [defense]+2."
+      "effect": "[Union Burst][fanfare] Select an enemy follower on the field. Deal it 5 damage and, if this wasn't put onto the field from hand, recover 2 play points. ---------- Whenever a [Union Burst] ability of another follower on your field is executed, choose 1 that you haven't chosen this turn. (1) Deal 2 damage to each enemy leader. (2) Give your leader [defense]+2."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-075EN.png"
   },
@@ -1433,13 +1433,13 @@
       "format": "Any",
       "class": "Abysscraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Gio Niflhel",
+      "trait": "PriConne / Geo Niflhel",
       "rarity": "Legendary",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "4",
       "attack": "3",
       "defense": "4",
-      "effect": "[Union Burst] [fanfare] Select a 3-cost or less Princess Connect follower in your cemetery and summon it. ----------- [act] Discard 2 cards: Put this card from your cemetery into your EX area."
+      "effect": "[Union Burst][fanfare] Select a PriConne follower in your cemetery that costs 3 or less and summon it. ---------- [act] Discard 2 cards: Put this from your cemetery into your EX area."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-076EN.png"
   },
@@ -1452,13 +1452,13 @@
       "format": "Any",
       "class": "Abysscraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Diabolos",
+      "trait": "PriConne / Diabolos",
       "rarity": "Gold",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "3",
       "attack": "3",
       "defense": "3",
-      "effect": "[Union Burst] [fanfare] Select an enemy follower on the field and deal damage to it equal to the number of Diabolos followers on your field. ----------- [evolve] [cost01]: Evolve this. Whenever the [Union Burst] ability of another follower on your field activates, bury the top card of your deck."
+      "effect": "[Union Burst][fanfare] Select an enemy follower on the field and deal it damage equal to the number of Diabolos followers on your field. ---------- [evolve] [cost01]: Evolve this. Whenever a [Union Burst] ability of another follower on your field is executed, bury the top card of your deck."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-077EN.png"
   },
@@ -1471,13 +1471,13 @@
       "format": "Any",
       "class": "Abysscraft",
       "cardType": "Follower / Evolved",
-      "trait": "Princess Connect / Diabolos",
+      "trait": "PriConne / Diabolos",
       "rarity": "Gold",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "-",
       "attack": "4",
       "defense": "4",
-      "effect": "Whenever the [Union Burst] ability of another follower on your field activates, bury the top card of your deck. On Evolve - Summon a Skullfather token."
+      "effect": "On Evolve - Summon a Skullfather token. Whenever a [Union Burst] ability of another follower on your field is executed, bury the top card of your deck."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-078EN.png"
   },
@@ -1490,13 +1490,13 @@
       "format": "Any",
       "class": "Abysscraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Gio Niflhel",
+      "trait": "PriConne / Geo Niflhel",
       "rarity": "Gold",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "1",
       "attack": "2",
       "defense": "1",
-      "effect": "[Union Burst] [fanfare] Draw a card. Discard a card. Bury the top 2 cards of your deck. ----------- If there's another Gio Niflhel follower on your field, give this follower Ward."
+      "effect": "[Union Burst][fanfare] Draw a card. Discard a card. Bury the top 2 cards of your deck. ---------- While there's another Geo Niflhel follower on your field, this has Ward."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-079EN.png"
   },
@@ -1509,13 +1509,13 @@
       "format": "Any",
       "class": "Abysscraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Twinkle Wish",
+      "trait": "PriConne / Twinkle Wish",
       "rarity": "Gold",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "1",
       "attack": "1",
       "defense": "2",
-      "effect": "[Union Burst] Strike - Give this [attack]+1. If you've activated at least 2 [Union Burst] abilities this turn, give [attack]+2 instead. -------- Rush."
+      "effect": "[Union Burst] Strike - Give this [attack]+1. If [Union Burst] abilities you control have executed at least 2 other times this turn, give [attack]+2 instead. ---------- Rush."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-080EN.png"
   },
@@ -1528,13 +1528,13 @@
       "format": "Any",
       "class": "Abysscraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Diabolos",
+      "trait": "PriConne / Diabolos",
       "rarity": "Silver",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "2",
       "defense": "2",
-      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Select an enemy follower on the field and, if this wasn't put onto the field from the hand, deal it 2 damage."
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Select an enemy follower on the field and, if this wasn't put onto the field from hand, deal it 2 damage."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-081EN.png"
   },
@@ -1547,9 +1547,9 @@
       "format": "Any",
       "class": "Abysscraft",
       "cardType": "Follower / Evolved",
-      "trait": "Princess Connect / Diabolos",
+      "trait": "PriConne / Diabolos",
       "rarity": "Silver",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "-",
       "attack": "3",
       "defense": "3",
@@ -1566,13 +1566,13 @@
       "format": "Any",
       "class": "Abysscraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Diabolos",
+      "trait": "PriConne / Diabolos",
       "rarity": "Silver",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "3",
       "attack": "2",
       "defense": "2",
-      "effect": "[Union Burst] [act] [cost00]: Select another Diabolos follower on your field and give it [attack]+1. Activate only once per turn. --------- [fanfare] Select a Diabolos follower not named Akari in your cemetery and put it into your EX area. It costs 2 less to play this turn."
+      "effect": "[Union Burst][act] [cost00]: Select another Diabolos follower on your field and give it [attack]+1. Activate only once per turn. ---------- [fanfare] Select a Diabolos follower in your cemetery not named Akari and put it into your EX area. It costs 2 less to play this turn."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-083EN.png"
   },
@@ -1585,13 +1585,13 @@
       "format": "Any",
       "class": "Abysscraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Diabolos",
+      "trait": "PriConne / Diabolos",
       "rarity": "Silver",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "1",
       "attack": "2",
       "defense": "2",
-      "effect": "[Union Burst] [act] [cost04]: Select an enemy follower on the field and banish it. Give your leader [defense]+2. ------------ [fanfare] Look at the top 5 cards of your deck. You may reveal a Diabolos follower from among them and add it to your hand. Put the rest on the bottom of your deck in any order. If you revealed Diabolos follower, discard a card."
+      "effect": "[Union Burst][act] [cost04]: Select an enemy follower on the field. Banish it and give your leader [defense]+2. ---------- [fanfare] Look at the top 5 cards of your deck. You may reveal a Diabolos follower from among them and add it to your hand. Put the rest on the bottom of your deck in any order. If you revealed a Diabolos follower, discard a card."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-084EN.png"
   },
@@ -1604,9 +1604,9 @@
       "format": "Any",
       "class": "Abysscraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Lucent Academy",
+      "trait": "PriConne / Lucent Academy",
       "rarity": "Bronze",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "1",
       "attack": "1",
       "defense": "1",
@@ -1623,9 +1623,9 @@
       "format": "Any",
       "class": "Abysscraft",
       "cardType": "Follower / Evolved",
-      "trait": "Princess Connect / Lucent Academy",
+      "trait": "PriConne / Lucent Academy",
       "rarity": "Bronze",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "-",
       "attack": "2",
       "defense": "2",
@@ -1635,20 +1635,20 @@
   },
   {
     "cardNo": "CP04-087EN",
-    "name": "Kuuka",
+    "name": "Kuka",
     "type": "base",
     "class": "abyss",
     "details": {
       "format": "Any",
       "class": "Abysscraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Weiße Flügel",
+      "trait": "PriConne / Weissflugel",
       "rarity": "Bronze",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "2",
       "defense": "3",
-      "effect": "[Union Burst] [act] [engage]: Give this Ward. ------- Whenever an opponent selects one or more cards as the target of an ability, if they can select this, they must select it."
+      "effect": "[Union Burst][act] [engage]: Give this Ward. ---------- While this is on the field, your opponents must select it for abilities if able."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-087EN.png"
   },
@@ -1661,13 +1661,13 @@
       "format": "Any",
       "class": "Abysscraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Lucent Academy",
+      "trait": "PriConne / Lucent Academy",
       "rarity": "Bronze",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "5",
       "attack": "3",
       "defense": "4",
-      "effect": "[Union Burst] [act] [cost01]: Each opponent buries a follower. Activate only once per turn. ------- [fanfare] Sarch your deck for a 3-cost or less Lucent Academy follower and a 1-cost Lucent Academy follower, summon them, then shuffle. Their [fanfare] abilities don't activate."
+      "effect": "[Union Burst][act] [cost01]: Each opponent buries a follower. Activate only once per turn. ---------- [fanfare] Search your deck for a Lucent Academy follower that costs 3 or less and a 1-cost Lucent Academy follower, summon them, then shuffle. Their [fanfare] abilities don't trigger."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-088EN.png"
   },
@@ -1680,32 +1680,32 @@
       "format": "Any",
       "class": "Abysscraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Twilight Caravan",
+      "trait": "PriConne / Twilight Caravan",
       "rarity": "Bronze",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "1",
       "attack": "2",
       "defense": "2",
-      "effect": "[Union Burst] [fanfare] Select an enemy follower on the field and deal it 1 damage. If you've activated at least 2 other [Union Burst] abilities this turn, deal it 3 damage instead."
+      "effect": "[Union Burst][fanfare] Select an enemy follower on the field and deal it 1 damage. If [Union Burst] abilities you control have executed at least 2 other times this turn, deal 3 damage instead."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-089EN.png"
   },
   {
     "cardNo": "CP04-090EN",
-    "name": "Infinite Break - Code: Null",
+    "name": "Demonic Salvation: Infinity",
     "type": "base",
     "class": "abyss",
     "details": {
       "format": "Any",
       "class": "Abysscraft",
       "cardType": "Spell",
-      "trait": "Princess Connect / Twilight Caravan",
+      "trait": "PriConne / Twilight Caravan",
       "rarity": "Bronze",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "1",
       "attack": "-",
       "defense": "-",
-      "effect": "[quick]. Select an enemy follower on the field and deal it 2 damage. Look at the top card of your deck. If it's a Princess Connect card, you may bury it."
+      "effect": "[quick] Select an enemy follower on the field. Deal it 2 damage and look at the top card of your deck. If it's a PriConne card, you may bury it."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-090EN.png"
   },
@@ -1718,13 +1718,13 @@
       "format": "Any",
       "class": "Havencraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Sarendia Orphanage",
+      "trait": "PriConne / Sarendia Orphanage",
       "rarity": "Legendary",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "5",
       "attack": "3",
       "defense": "3",
-      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Choose one. If your leader's defense is 10 or less, choose up to two instead. (1) Equip a Glorious Feather token to this follower. (2) Search your deck for up to 2 Sarendia Orphanage followers that cost a total of 3 or less, summon them, then shuffle."
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Choose 1. If your leader's defense is 10 or less, choose up to 2 instead. (1) Equip this with a Glorious Feather token. (2) Search your deck for up to 2 Sarendia Orphanage followers that cost a total of 3 or less, summon them, then shuffle."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-091EN.png"
   },
@@ -1737,13 +1737,13 @@
       "format": "Any",
       "class": "Havencraft",
       "cardType": "Follower / Evolved",
-      "trait": "Princess Connect / Sarendia Orphanage",
+      "trait": "PriConne / Sarendia Orphanage",
       "rarity": "Legendary",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "-",
       "attack": "4",
       "defense": "4",
-      "effect": "[Union Burst] On Evolve - Select an enemy follower on the field and deal it 4 damage. Deal each other enemy follower on the field 1 damage. -------- On Super Evolve - Deal 2 damage to each enemy leader and enemy follower on the field."
+      "effect": "[Union Burst] On Evolve - Select an enemy follower on the field. Deal 4 damage to it and 1 damage to each other enemy follower on the field. ---------- On Super-Evolve - Deal 2 damage to each enemy leader and enemy follower on the field."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-092EN.png"
   },
@@ -1756,13 +1756,13 @@
       "format": "Any",
       "class": "Havencraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Carmina",
+      "trait": "PriConne / Carmina",
       "rarity": "Legendary",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "3",
       "attack": "1",
       "defense": "3",
-      "effect": "[Union Burst] [fanfare] - Search your deck for an amulet, reveal it, add it to your hand, then shuffle. ---------- [act] Engage an amulet on your field: Select an enemy follower on the field and deal it 1 damage. [act] [engage] and bury 3 amulets: Select an enemy follower on the field. Deal 3 damage to it and its leader."
+      "effect": "[Union Burst][fanfare] Search your deck for an amulet, reveal it, add it to your hand, then shuffle. ---------- [act] [engage] an amulet on your field: Select an enemy follower on the field and deal it 1 damage. [act] [engage], bury 3 amulets: Select an enemy follower on the field. Deal 3 damage to it and its leader."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-093EN.png"
   },
@@ -1775,13 +1775,13 @@
       "format": "Any",
       "class": "Havencraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Mercurius Foundation",
+      "trait": "PriConne / Mercurius Foundation",
       "rarity": "Legendary",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "7",
       "attack": "6",
       "defense": "6",
-      "effect": "[Union Burst] [act] [engage]: Select up to 2 enemy followers on the field and deal damage to them equal to the number of cards in your hand. -------- Ward. [fanfare] Give your leader [defense]+3. Draw 3 cards."
+      "effect": "[Union Burst][act] [engage]: Select up to 2 enemy followers on the field and deal them damage equal to the number of cards in your hand. ---------- Ward. [fanfare] Give your leader [defense]+3. Draw 3 cards."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-094EN.png"
   },
@@ -1794,9 +1794,9 @@
       "format": "Any",
       "class": "Havencraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Twinkle Wish",
+      "trait": "PriConne / Twinkle Wish",
       "rarity": "Gold",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "1",
       "attack": "1",
       "defense": "1",
@@ -1806,39 +1806,39 @@
   },
   {
     "cardNo": "CP04-096EN",
-    "name": "Yui",
+    "name": "Yui Evolved",
     "type": "evolved",
     "class": "haven",
     "details": {
       "format": "Any",
       "class": "Havencraft",
       "cardType": "Follower / Evolved",
-      "trait": "Princess Connect / Twinkle Wish",
+      "trait": "PriConne / Twinkle Wish",
       "rarity": "Gold",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "-",
       "attack": "2",
       "defense": "2",
-      "effect": "[Union Burst] On Evolve - XPP: Select an X-cost or less Princess Connect follower in your cemetery and summon it. X equals a number of your choice. --------- Whenever the [Union Burst] ability of another follower on your field activates, give your leader [defense]+1."
+      "effect": "[Union Burst] On Evolve - [costX]: Select a PriConne follower in your cemetery that costs X or less and summon it. ---------- Whenever a [Union Burst] ability of another follower on your field is executed, give your leader [defense]+1."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-096EN.png"
   },
   {
     "cardNo": "CP04-097EN",
-    "name": "Quria",
+    "name": "Clear",
     "type": "base",
     "class": "haven",
     "details": {
       "format": "Any",
       "class": "Havencraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Alter Maiden",
+      "trait": "PriConne / Alter Maiden",
       "rarity": "Gold",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "3",
       "defense": "2",
-      "effect": "[Union Burst] [fanfare] Deal 1 damage to each enemy leader. ----------- When the [Union Burst] ability of another follower on your field is activated, deal 1 damage to each enemy leader."
+      "effect": "[Union Burst][fanfare] Deal 1 damage to each enemy leader. ---------- Whenever a [Union Burst] ability of another follower on your field is executed, deal 1 damage to each enemy leader."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-097EN.png"
   },
@@ -1851,13 +1851,13 @@
       "format": "Any",
       "class": "Havencraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Mercurius Foundation",
+      "trait": "PriConne / Mercurius Foundation",
       "rarity": "Gold",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "2",
       "defense": "3",
-      "effect": "[Union Burst] [fanfare] Engage an amulet on your field: Select another follower on your field and give it [defense]+2. ----------- Ward. [act] [engage]: Refresh each amulet on your field."
+      "effect": "[Union Burst][fanfare] [engage] an amulet on your field: Select another follower on your field and give it [defense]+2. ---------- Ward. [act] [engage]: Refresh each amulet on your field."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-098EN.png"
   },
@@ -1870,13 +1870,13 @@
       "format": "Any",
       "class": "Havencraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Carmina",
+      "trait": "PriConne / Carmina",
       "rarity": "Silver",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "2",
       "defense": "2",
-      "effect": "[evolve] [cost01]: Evolve this. [act] Engage an amulet on your field: Select another follower on your field and give it Rush, Bane or Ward."
+      "effect": "[evolve] [cost01]: Evolve this. [act] [engage] an amulet on your field: Select another follower on your field and give it Rush, Bane, or Ward."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-099EN.png"
   },
@@ -1889,13 +1889,13 @@
       "format": "Any",
       "class": "Havencraft",
       "cardType": "Follower / Evolved",
-      "trait": "Princess Connect / Carmina",
+      "trait": "PriConne / Carmina",
       "rarity": "Silver",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "-",
       "attack": "3",
       "defense": "3",
-      "effect": "[Union Burst] On Evolve - Search for your deck for a Carmina card, reveal it, add it to your hand, then shuffle. ------------ [act] Engage an amulet on your field: Select another follower on your field and give it Rush, Bane or Ward."
+      "effect": "[Union Burst] On Evolve - Search your deck for a Carmina card, reveal it, add it to your hand, then shuffle. ---------- [act] [engage] an amulet on your field: Select another follower on your field and give it Rush, Bane, or Ward."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-100EN.png"
   },
@@ -1908,32 +1908,32 @@
       "format": "Any",
       "class": "Havencraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Forestier",
+      "trait": "PriConne / Forestier",
       "rarity": "Silver",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "1",
       "attack": "2",
       "defense": "2",
-      "effect": "[Union Burst] [fanfare] Bury an amulet: Give your leader [defense]+2. ------------ Ward."
+      "effect": "[Union Burst][fanfare] Bury an amulet: Give your leader [defense]+2. ---------- Ward."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-101EN.png"
   },
   {
     "cardNo": "CP04-102EN",
-    "name": "Capture String",
+    "name": "Threading Snare",
     "type": "base",
     "class": "haven",
     "details": {
       "format": "Any",
       "class": "Havencraft",
       "cardType": "Amulet",
-      "trait": "Princess Connect / Carmina",
+      "trait": "PriConne / Carmina",
       "rarity": "Silver",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "-",
       "defense": "-",
-      "effect": "When this amulet is engaged, select an enemy leader or enemy follower on the field an deal it 1 damage. [fanfare] Select an enemy follower on the field and deal it 3 damage. [lastwords] Select an enemy leader or enemy follower on the field and deal it 1 damage."
+      "effect": "[fanfare] Select an enemy follower on the field and deal it 3 damage. Whenever this becomes engaged, select an enemy leader or enemy follower on the field and deal it 1 damage. [lastwords] Select an enemy leader or enemy follower on the field and deal it 1 damage."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-102EN.png"
   },
@@ -1946,13 +1946,13 @@
       "format": "Any",
       "class": "Havencraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Little Lyrical",
+      "trait": "PriConne / Little Lyrical",
       "rarity": "Bronze",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "2",
       "defense": "2",
-      "effect": "[evolve] [cost02]: Evolve this. [fanfare] Search your deck for a Prank Declaration, reveal it, add it to your hand, then shuffle."
+      "effect": "[evolve] [cost02]: Evolve this. [fanfare] Search your deck for a Prank Proclamation, reveal it, add it to your hand, then shuffle."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-103EN.png"
   },
@@ -1965,13 +1965,13 @@
       "format": "Any",
       "class": "Havencraft",
       "cardType": "Follower / Evolved",
-      "trait": "Princess Connect / Little Lyrical",
+      "trait": "PriConne / Little Lyrical",
       "rarity": "Bronze",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "-",
       "attack": "3",
       "defense": "3",
-      "effect": "[Union Burst] On Evolve - Engage X amulets on your field: Select up to X enemy followers on your field and deal them 2 damage. X equals a number of your choice."
+      "effect": "[Union Burst] On Evolve - [engage] X amulets on your field: Select up to X enemy followers on the field and deal them 2 damage."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-104EN.png"
   },
@@ -1984,13 +1984,13 @@
       "format": "Any",
       "class": "Havencraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Sarendia Orphanage",
+      "trait": "PriConne / Sarendia Orphanage",
       "rarity": "Bronze",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "2",
       "defense": "3",
-      "effect": "[Union Burst] [fanfare] Give your leader [defense]+2."
+      "effect": "[Union Burst][fanfare] Give your leader [defense]+2."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-105EN.png"
   },
@@ -2003,13 +2003,13 @@
       "format": "Any",
       "class": "Havencraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Elizabeth Park",
+      "trait": "PriConne / Elizabeth Park",
       "rarity": "Bronze",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "3",
       "attack": "3",
       "defense": "3",
-      "effect": "[Union Burst] [act] [engage] and 1 other card on your field: Select an enemy follower on the field and put it into its owner's EX area. ----- [fanfare] Search your deck for an Elizabeth Park card not named Mahiru, put it into your EX area, then shuffle."
+      "effect": "[Union Burst][act] [engage] this and another card on your field: Select an enemy follower on the field and put it into its owner's EX area. ---------- [fanfare] Search your deck for an Elizabeth Park card not named Mahiru, put it into your EX area, then shuffle."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-106EN.png"
   },
@@ -2022,32 +2022,32 @@
       "format": "Any",
       "class": "Havencraft",
       "cardType": "Follower",
-      "trait": "Princess Connect / Sarendia Orphanage",
+      "trait": "PriConne / Sarendia Orphanage",
       "rarity": "Bronze",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "1",
       "attack": "2",
       "defense": "2",
-      "effect": "[Union Burst] [fanfare] Select an enemy follower on the field and engage it."
+      "effect": "[Union Burst][fanfare] Select an enemy follower on the field and engage it."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-107EN.png"
   },
   {
     "cardNo": "CP04-108EN",
-    "name": "Donguri Charge",
+    "name": "Amped on Acorns",
     "type": "base",
     "class": "haven",
     "details": {
       "format": "Any",
       "class": "Havencraft",
       "cardType": "Amulet",
-      "trait": "Princess Connect / Elizabeth Park",
+      "trait": "PriConne / Elizabeth Park",
       "rarity": "Bronze",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "1",
       "attack": "-",
       "defense": "-",
-      "effect": "When this card is engaged, give your leader [defense]+1. [fanfare] Look at the top card of you deck. If it's a Princess Connect card, you may reveal it and add it to your hand."
+      "effect": "[fanfare] Look at the top card of your deck. If it's a PriConne card, you may reveal it and add it to your hand. Whenever this becomes engaged, give your leader [defense]+1."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-108EN.png"
   },
@@ -2060,13 +2060,13 @@
       "format": "Any",
       "class": "Neutral",
       "cardType": "Follower",
-      "trait": "Princess Connect / Seven Crowns",
+      "trait": "PriConne / Seven Crowns",
       "rarity": "Legendary",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "7",
       "attack": "6",
       "defense": "6",
-      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Discard 2 Princess Connect cards: Draw 2 cards. Each opponent discards 2 cards."
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Discard 2 PriConne cards: Draw 2 cards. Each opponent discards 2 cards."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-109EN.png"
   },
@@ -2079,9 +2079,9 @@
       "format": "Any",
       "class": "Neutral",
       "cardType": "Follower / Evolved",
-      "trait": "Princess Connect / Seven Crowns",
+      "trait": "PriConne / Seven Crowns",
       "rarity": "Legendary",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "-",
       "attack": "7",
       "defense": "7",
@@ -2098,37 +2098,75 @@
       "format": "Any",
       "class": "Neutral",
       "cardType": "Follower",
-      "trait": "Princess Connect / Rage Legion",
+      "trait": "PriConne / Rage Legion",
       "rarity": "Legendary",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "6",
       "attack": "6",
       "defense": "6",
-      "effect": "[Union Burst] [fanfare] Select any number of enemy followers on the field and deal 8 damage divided between them. -------- [lastwords] Search your deck for a 4-cost Princess Connect follower, put it into your EX area, then shuffle."
+      "effect": "[Union Burst][fanfare] Select any number of enemy followers on the field and deal 8 damage divided between them. ---------- [lastwords] Search your deck for a 4-cost PriConne follower, put it into your EX area, then shuffle."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-111EN.png"
   },
   {
     "cardNo": "CP04-112EN",
-    "name": "Lailael",
+    "name": "Lyrael",
     "type": "base",
     "class": "neutral",
     "details": {
       "format": "Any",
       "class": "Neutral",
       "cardType": "Follower",
-      "trait": "Princess Connect / Gio Teogonia",
+      "trait": "PriConne / Geo Theogonia",
       "rarity": "Legendary",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "7",
       "attack": "3",
       "defense": "4",
-      "effect": "[Union Burst] [fanfare] Select up to three 2-cost or less followers with different names in your cemetery and summon them. ------- When the [Union Burst] ability of another follower on your field activates, give it [attack]+1/[defense]+1."
+      "effect": "[Union Burst][fanfare] Select up to 3 followers in your cemetery with different names that cost 2 or less and summon them. ---------- Whenever a [Union Burst] ability of another follower on your field is executed, give that follower [attack]+1/[defense]+1."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-112EN.png"
   },
   {
     "cardNo": "CP04-113EN",
+    "name": "Princess Knight",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "PriConne",
+      "rarity": "Legendary",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
+      "cost": "8",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this. Each other PriConne follower on your field has Ward. [fanfare] Reveal the top card of your deck. If it's a PriConne follower, summon it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-113EN.png"
+  },
+  {
+    "cardNo": "CP04-114EN",
+    "name": "Princess Knight Evolved",
+    "type": "evolved",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower / Evolved",
+      "trait": "PriConne",
+      "rarity": "Legendary",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "Each other PriConne follower on your field has Ward. On Evolve - Select another PriConne follower on your field and give it [attack]+10/[defense]+10."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-114EN.png"
+  },
+  {
+    "cardNo": "CP04-115EN",
     "name": "Ameth",
     "type": "base",
     "class": "neutral",
@@ -2136,18 +2174,18 @@
       "format": "Any",
       "class": "Neutral",
       "cardType": "Follower",
-      "trait": "Princess Connect",
+      "trait": "PriConne",
       "rarity": "Gold",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "2",
       "defense": "2",
-      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Look at the top card of your deck. If it's a Princess Connect card, you may reveal it and add it to your hand."
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Look at the top card of your deck. If it's a PriConne card, you may reveal it and add it to your hand."
     },
-    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-113EN.png"
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-115EN.png"
   },
   {
-    "cardNo": "CP04-114EN",
+    "cardNo": "CP04-116EN",
     "name": "Ameth Evolved",
     "type": "evolved",
     "class": "neutral",
@@ -2155,18 +2193,18 @@
       "format": "Any",
       "class": "Neutral",
       "cardType": "Follower / Evolved",
-      "trait": "Princess Connect",
+      "trait": "PriConne",
       "rarity": "Gold",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "-",
       "attack": "3",
       "defense": "3",
-      "effect": "[Union Burst] On Evolve - Choose one. (1) Select another follower on your field and give it Ward. (2) Select another Princess Connect follower on your field not named Ameth and, if you have activated at least 2 other [Union Burst] abilities this turn, activate that follower's [Union Burst] without paying the cost."
+      "effect": "[Union Burst] On Evolve - Choose 1. (1) Select another follower on your field and give it Ward. (2) Select a PriConne follower on your field not named Ameth and, if [Union Burst] abilities you control have executed at least 2 other times this turn, execute 1 of its [Union Burst] abilities without paying its cost."
     },
-    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-114EN.png"
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-116EN.png"
   },
   {
-    "cardNo": "CP04-115EN",
+    "cardNo": "CP04-117EN",
     "name": "Croce",
     "type": "base",
     "class": "neutral",
@@ -2174,18 +2212,18 @@
       "format": "Any",
       "class": "Neutral",
       "cardType": "Follower",
-      "trait": "Princess Connect / Gio Teogonia",
+      "trait": "PriConne / Geo Theogonia",
       "rarity": "Gold",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "1",
       "attack": "2",
       "defense": "2",
-      "effect": "[Union Burst] [fanfare] Put X battery counters on this card. X equals your max play points. ------- This card may have up to 7 battery counters. [act] XPP, [engage] card, remove X battery counters from this card: Search your deck for an X-cost or less Gio Teogonia follower not named Croce, summon it, then shuffle. X equals a number of your choice."
+      "effect": "[Union Burst][fanfare] Place X battery counters on this. X equals your max play points. ---------- This can't have more than 7 battery counters. [act] [costX], [engage], remove X battery counters from this: Search your deck for a Geo Theogonia follower not named Croce that costs X or less, summon it, then shuffle."
     },
-    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-115EN.png"
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-117EN.png"
   },
   {
-    "cardNo": "CP04-116EN",
+    "cardNo": "CP04-118EN",
     "name": "Kasumi",
     "type": "base",
     "class": "neutral",
@@ -2193,18 +2231,18 @@
       "format": "Any",
       "class": "Neutral",
       "cardType": "Follower",
-      "trait": "Princess Connect / Caon",
+      "trait": "PriConne / Caon",
       "rarity": "Silver",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "1",
       "defense": "3",
-      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Put a Princess Connect card from your hand into your EX area: Look at the top 3 cards of your deck. Put any number of cards from among them on the top of your deck in any order. Put the rest on the bottom of your deck in any order."
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Put a PriConne card from your hand into your EX area: Look at the top 2 cards of your deck. Put any number of them on the top of your deck in any order. Put the rest on the bottom in any order."
     },
-    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-116EN.png"
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-118EN.png"
   },
   {
-    "cardNo": "CP04-117EN",
+    "cardNo": "CP04-119EN",
     "name": "Kasumi Evolved",
     "type": "evolved",
     "class": "neutral",
@@ -2212,18 +2250,18 @@
       "format": "Any",
       "class": "Neutral",
       "cardType": "Follower / Evolved",
-      "trait": "Princess Connect / Caon",
+      "trait": "PriConne / Caon",
       "rarity": "Silver",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "-",
       "attack": "2",
       "defense": "4",
       "effect": "[Union Burst] On Evolve - Select an enemy follower on the field and engage it. It doesn't refresh during its controller's next start phase."
     },
-    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-117EN.png"
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-119EN.png"
   },
   {
-    "cardNo": "CP04-118EN",
+    "cardNo": "CP04-120EN",
     "name": "Call of the Guild",
     "type": "base",
     "class": "neutral",
@@ -2231,18 +2269,18 @@
       "format": "Any",
       "class": "Neutral",
       "cardType": "Spell",
-      "trait": "Princess Connect / Guild Management Association",
+      "trait": "PriConne / Guild Association",
       "rarity": "Silver",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "1",
       "attack": "-",
       "defense": "-",
-      "effect": "Look at the top 4 cards of your deck. You may put a Princess Connect follower from among them into your EX area. Put the rest on the bottom of your deck in any order."
+      "effect": "Look at the top 4 cards of your deck. You may put a PriConne follower from among them into your EX area. Put the rest on the bottom of your deck in any order."
     },
-    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-118EN.png"
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-120EN.png"
   },
   {
-    "cardNo": "CP04-119EN",
+    "cardNo": "CP04-121EN",
     "name": "Ayumi",
     "type": "base",
     "class": "neutral",
@@ -2250,32 +2288,298 @@
       "format": "Any",
       "class": "Neutral",
       "cardType": "Follower",
-      "trait": "Princess Connect / Weiße Flügel",
+      "trait": "PriConne / Weissflugel",
       "rarity": "Bronze",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "1",
       "attack": "2",
       "defense": "2",
       "effect": "[Union Burst] Strike - Select an enemy follower on the field. It doesn't refresh during its controller's next start phase."
     },
-    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-119EN.png"
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-121EN.png"
+  },
+  {
+    "cardNo": "CP04-EP01EN",
+    "name": "Ever-Lively Table",
+    "type": "base",
+    "class": "",
+    "details": {
+      "format": "Any",
+      "class": "-",
+      "cardType": "Evolution Point",
+      "trait": "-",
+      "rarity": "Super Legendary",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-EP01EN.png"
+  },
+  {
+    "cardNo": "CP04-P06EN",
+    "name": "Shizuru & Rino Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "PriConne / Labyrinth",
+      "rarity": "Silver / Premium",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[Union Burst] On Evolve - Deal 1 damage to each enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-P06EN.png"
+  },
+  {
+    "cardNo": "CP04-P34EN",
+    "name": "Misogi, Mimi & Kyoka Evolved",
+    "type": "evolved",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower / Evolved",
+      "trait": "PriConne / Little Lyrical",
+      "rarity": "Silver / Premium",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[Union Burst] On Evolve - Select an enemy follower on the field. Deal it 2 damage and, if you've played a spell this turn, deal 2 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-P34EN.png"
+  },
+  {
+    "cardNo": "CP04-PR01EN",
+    "name": "Kokkoro [Princess Form]",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Leader",
+      "trait": "",
+      "rarity": "-",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-PR01EN.png"
+  },
+  {
+    "cardNo": "CP04-PR02EN",
+    "name": "Pecorine [Princess Form]",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Leader",
+      "trait": "",
+      "rarity": "-",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-PR02EN.png"
+  },
+  {
+    "cardNo": "CP04-PR03EN",
+    "name": "Karyl [Princess Form]",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Leader",
+      "trait": "",
+      "rarity": "-",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-PR03EN.png"
+  },
+  {
+    "cardNo": "CP04-PR04EN",
+    "name": "Sheffy [Princess Form]",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Leader",
+      "trait": "",
+      "rarity": "-",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-PR04EN.png"
+  },
+  {
+    "cardNo": "CP04-PR05EN",
+    "name": "Hiyori [Princess Form]",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Leader",
+      "trait": "",
+      "rarity": "-",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-PR05EN.png"
+  },
+  {
+    "cardNo": "CP04-PR06EN",
+    "name": "Rei [Princess Form]",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Leader",
+      "trait": "",
+      "rarity": "-",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-PR06EN.png"
+  },
+  {
+    "cardNo": "CP04-PR07EN",
+    "name": "Yui [Princess Form]",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Leader",
+      "trait": "",
+      "rarity": "-",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
+      "cost": "-",
+      "attack": "-",
+      "defense": "-",
+      "effect": ""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-PR07EN.png"
+  },
+  {
+    "cardNo": "CP04-SL22EN",
+    "name": "Akino & Saren Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "PriConne / Sarendia Orphanage",
+      "rarity": "Super Legendary",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[Union Burst] On Evolve - Select an enemy follower on the field. Deal 4 damage to it and 1 damage to each other enemy follower on the field. ---------- On Super-Evolve - Deal 2 damage to each enemy leader and enemy follower on the field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-SL22EN.png"
+  },
+  {
+    "cardNo": "CP04-SP06aEN",
+    "name": "Yuni, Chloe & Chieru",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "PriConne / Friendship Club",
+      "rarity": "Special",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
+      "cost": "5",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[Union Burst][fanfare] Search your deck for up to 2 Friendship Club cards with different names that cost 2 or less, put them into your EX area, then shuffle. They cost 2 less to play this turn. ---------- Whenever a [Union Burst] ability of another follower on your field is executed, the next PriConne spell you play this turn costs 2 less."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-SP06aEN.png"
+  },
+  {
+    "cardNo": "CP04-SP10aEN",
+    "name": "Ranpha & Misora",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "PriConne / Rage Legion",
+      "rarity": "Special",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
+      "cost": "4",
+      "attack": "3",
+      "defense": "5",
+      "effect": "[Union Burst][fanfare] Select an enemy follower on the field. Deal it 5 damage and, if this wasn't put onto the field from hand, recover 2 play points. ---------- Whenever a [Union Burst] ability of another follower on your field is executed, choose 1 that you haven't chosen this turn. (1) Deal 2 damage to each enemy leader. (2) Give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-SP10aEN.png"
+  },
+  {
+    "cardNo": "CP04-SP12aEN",
+    "name": "Nozomi, Chika & Tsumugi",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "PriConne / Carmina",
+      "rarity": "Special",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
+      "cost": "3",
+      "attack": "1",
+      "defense": "3",
+      "effect": "[Union Burst][fanfare] Search your deck for an amulet, reveal it, add it to your hand, then shuffle. ---------- [act] [engage] an amulet on your field: Select an enemy follower on the field and deal it 1 damage. [act] [engage], bury 3 amulets: Select an enemy follower on the field. Deal 3 damage to it and its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-SP12aEN.png"
   },
   {
     "cardNo": "CP04-T01EN",
-    "name": "Ames Amulet TOKEN",
+    "name": "Ameth Amulet TOKEN",
     "type": "token",
     "class": "forest",
     "details": {
       "format": "Any",
       "class": "Forestcraft",
       "cardType": "Equipment / Token",
-      "trait": "Princess Connect / Gourmet Guild",
+      "trait": "PriConne / Gourmet Guild",
       "rarity": "-",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "-",
       "defense": "-",
-      "effect": "The follower equipped with this has \"[act] [engage] card: Give each follower on your field [attack]+1/[defense]+1.\""
+      "effect": "The equipped follower has \"[act] [engage]: Give each follower on your field [attack]+1/[defense]+1.\" ---------- (Place this beneath the equipped follower.)"
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-T01EN.png"
   },
@@ -2288,32 +2592,32 @@
       "format": "Any",
       "class": "Swordcraft",
       "cardType": "Equipment / Token",
-      "trait": "Princess Connect / Gourmet Guild",
+      "trait": "PriConne / Gourmet Guild",
       "rarity": "-",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "-",
       "defense": "-",
-      "effect": "The follower equipped with this deals 2 more damage and takes 2 less damage."
+      "effect": "If the equipped follower would deal damage, it deals that much +2 instead. If the equipped follower would take damage, it takes that much -2 instead. ---------- (Place this beneath the equipped follower.)"
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-T02EN.png"
   },
   {
     "cardNo": "CP04-T03EN",
-    "name": "Holy Castle Sword, Avalon TOKEN",
+    "name": "Sanctum Blade Avalon TOKEN",
     "type": "token",
     "class": "sword",
     "details": {
       "format": "Any",
       "class": "Swordcraft",
       "cardType": "Equipment / Token",
-      "trait": "Princess Connect / NIGHTMARE / Seven Crowns",
+      "trait": "PriConne / Nightmare / Seven Crowns",
       "rarity": "-",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "-",
       "defense": "-",
-      "effect": "The follower equipped with this has \"Strike - Refresh this follower. Draw a card. Activate only once per turn.\""
+      "effect": "The equipped follower has \"Strike - Refresh this. Draw a card. Perform only once per turn.\" ---------- (Place this beneath the equipped follower.)"
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-T03EN.png"
   },
@@ -2326,28 +2630,28 @@
       "format": "Any",
       "class": "Swordcraft",
       "cardType": "Equipment / Token",
-      "trait": "Princess Connect / Labyrinth / Seven Crowns",
+      "trait": "PriConne / Labyrinth / Seven Crowns",
       "rarity": "-",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "-",
       "defense": "-",
-      "effect": "The follower equipped with this has \"[Union Burst] [act] [cost01], [engage] card: Give each 1-cost follower on your field [attack]+1.\""
+      "effect": "The equipped follower has \"[Union Burst][act] [cost01], [engage]: Give each 1-cost follower on your field [attack]+1.\" ---------- (Place this beneath the equipped follower.)"
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-T04EN.png"
   },
   {
     "cardNo": "CP04-T05EN",
-    "name": "Neneka, Mirror Image TOKEN",
+    "name": "Mirror Image Neneka TOKEN",
     "type": "token",
     "class": "rune",
     "details": {
       "format": "Any",
       "class": "Runecraft",
       "cardType": "Follower / Token",
-      "trait": "Princess Connect / Seven Crowns",
+      "trait": "PriConne / Seven Crowns",
       "rarity": "-",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "0",
       "defense": "1",
@@ -2364,70 +2668,70 @@
       "format": "Any",
       "class": "Runecraft",
       "cardType": "Equipment / Token",
-      "trait": "Princess Connect / Gourmet Guild",
+      "trait": "PriConne / Gourmet Guild",
       "rarity": "-",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "-",
       "defense": "-",
-      "effect": "The follower equipped with this has \"Twice per turn, when you play a spell, deal damage equal to half this follower's attack (rounded up) to each enemy leader.\""
+      "effect": "The equipped follower has \"2 times per turn, when you play a spell, deal each enemy leader damage equal to half this follower's attack (rounded up).\" ---------- (Place this beneath the equipped follower.)"
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-T06EN.png"
   },
   {
     "cardNo": "CP04-T07EN",
-    "name": "Wand of Mirage TOKEN",
+    "name": "Mirage Wand TOKEN",
     "type": "token",
     "class": "rune",
     "details": {
       "format": "Any",
       "class": "Runecraft",
       "cardType": "Equipment / Token",
-      "trait": "Princess Connect / Seven Crowns",
+      "trait": "PriConne / Seven Crowns",
       "rarity": "-",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "-",
       "defense": "-",
-      "effect": "The follower equipped with this has \"The ability damage dealt by this follower and each Neneka, Mirror Image on your field is increased by 1.\""
+      "effect": "The equipped follower has \"If this or a Mirror Image Neneka on your field would deal ability damage, it deals that much +1 instead.\" ---------- (Place this beneath the equipped follower.)"
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-T07EN.png"
   },
   {
     "cardNo": "CP04-T08EN",
-    "name": "Ice Drachen TOKEN",
+    "name": "Eisdrache TOKEN",
     "type": "token",
     "class": "dragon",
     "details": {
       "format": "Any",
       "class": "Dragoncraft",
       "cardType": "Equipment / Token",
-      "trait": "Princess Connect / Gourmet Guild",
+      "trait": "PriConne / Gourmet Guild",
       "rarity": "-",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "-",
       "defense": "-",
-      "effect": "When this card is equipped, select an enemy follower on the field and engage it. Give the follower equipped with this [attack]+2/[defense]+2."
+      "effect": "When a follower equips this, select an enemy follower on the field. Engage it and give the equipped follower [attack]+2/[defense]+2. ---------- (Place this beneath the equipped follower.)"
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-T08EN.png"
   },
   {
     "cardNo": "CP04-T09EN",
-    "name": "Proof of Bonds TOKEN",
+    "name": "Precious Memento TOKEN",
     "type": "token",
     "class": "dragon",
     "details": {
       "format": "Any",
       "class": "Dragoncraft",
       "cardType": "Equipment / Token",
-      "trait": "Princess Connect",
+      "trait": "PriConne",
       "rarity": "-",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "-",
       "defense": "-",
-      "effect": "The follower equipped with this has Storm and \"Strike - Select up to 2 enemy followers on the field and deal them 3 damage.\""
+      "effect": "The equipped follower has Storm and \"Strike - Select up to 2 enemy followers on the field and deal them 3 damage.\" ---------- (Place this beneath the equipped follower.)"
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-T09EN.png"
   },
@@ -2440,9 +2744,9 @@
       "format": "Any",
       "class": "Abysscraft",
       "cardType": "Follower / Token",
-      "trait": "Princess Connect / Diabolos",
+      "trait": "PriConne / Diabolos",
       "rarity": "-",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "1",
       "attack": "2",
       "defense": "1",
@@ -2459,13 +2763,13 @@
       "format": "Any",
       "class": "Abysscraft",
       "cardType": "Equipment / Token",
-      "trait": "Princess Connect / Diabolos",
+      "trait": "PriConne / Diabolos",
       "rarity": "-",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "-",
       "defense": "-",
-      "effect": "The follower equipped with this has \"Whenever this deals ability damage to an enemy follower on the field, deal 3 damage to each enemy leader.\""
+      "effect": "The equipped follower has \"Whenever this deals ability damage to 1 or more enemy followers on the field, deal 3 damage to each enemy leader.\" ---------- (Place this beneath the equipped follower.)"
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-T11EN.png"
   },
@@ -2478,603 +2782,14 @@
       "format": "Any",
       "class": "Havencraft",
       "cardType": "Equipment / Token",
-      "trait": "Princess Connect / Sarendia Orphanage",
+      "trait": "PriConne / Sarendia Orphanage",
       "rarity": "-",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
+      "cardSet": "Crossover Set \"Princess Connect! Re: Dive\"",
       "cost": "2",
       "attack": "-",
       "defense": "-",
-      "effect": "The follower equipped with this deals 1 more damage and has \"At the start of your end phase, give your leader [defense]+3.\""
+      "effect": "The equipped follower has \"At the start of your end phase, give your leader [defense]+3.\" If the equipped follower would deal damage, it deals that much +1 instead. ---------- (Place this beneath the equipped follower.)"
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-T12EN.png"
-  },
-  {
-    "cardNo": "CP04-U01EN",
-    "name": "Kokkoro Evolved",
-    "type": "evolved",
-    "class": "forest",
-    "details": {
-      "format": "Any",
-      "class": "Forestcraft",
-      "cardType": "Follower / Evolved",
-      "trait": "Princess Connect / Gourmet Guild",
-      "rarity": "Ultimate",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
-      "cost": "-",
-      "attack": "2",
-      "defense": "2",
-      "effect": "On Evolve - Draw a card. On Super Evolve - Give your leader [defense]+2. Draw a card."
-    },
-    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-U01EN.png"
-  },
-  {
-    "cardNo": "CP04-U02EN",
-    "name": "Eris",
-    "type": "base",
-    "class": "forest",
-    "details": {
-      "format": "Any",
-      "class": "Forestcraft",
-      "cardType": "Follower",
-      "trait": "Princess Connect",
-      "rarity": "Ultimate",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
-      "cost": "4",
-      "attack": "4",
-      "defense": "3",
-      "effect": "[Union Burst] [act] [engage]: Select another Princess Connect card on your field and give it [attack]+1/[defense]+1. If you've activated at least 2 other [Union Burst] abilities this turn, give it Storm. ------ [fanfare] Look at the top 4 cards of your deck. You may reveal a Princess Connect card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. The next Princess Connect card you play this turn costs 2 less to play."
-    },
-    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-U02EN.png"
-  },
-  {
-    "cardNo": "CP04-U03EN",
-    "name": "Pecorine Evolved",
-    "type": "evolved",
-    "class": "sword",
-    "details": {
-      "format": "Any",
-      "class": "Swordcraft",
-      "cardType": "Follower / Evolved",
-      "trait": "Princess Connect / Gourmet Guild",
-      "rarity": "Ultimate",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
-      "cost": "-",
-      "attack": "4",
-      "defense": "4",
-      "effect": "[Union Burst] On Evolve - Select an enemy follower on the field and deal it 4 damage. ------- Ward. On Super Evolve - Deal 4 damage to each enemy leader."
-    },
-    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-U03EN.png"
-  },
-  {
-    "cardNo": "CP04-U04EN",
-    "name": "Christina",
-    "type": "base",
-    "class": "sword",
-    "details": {
-      "format": "Any",
-      "class": "Swordcraft",
-      "cardType": "Follower",
-      "trait": "Princess Connect / NIGHTMARE / Seven Crowns",
-      "rarity": "Ultimate",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
-      "cost": "5",
-      "attack": "4",
-      "defense": "4",
-      "effect": "[Union Burst] Strike - Discard a card: Select an enemy follower on the field and deal it 5 damage. ------ Storm. [fanfare] [cost02]: Equip a Holy Castle Sword, Avalon token to this."
-    },
-    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-U04EN.png"
-  },
-  {
-    "cardNo": "CP04-U05EN",
-    "name": "Karyl Evolved",
-    "type": "evolved",
-    "class": "rune",
-    "details": {
-      "format": "Any",
-      "class": "Runecraft",
-      "cardType": "Follower / Evolved",
-      "trait": "Princess Connect / Gourmet Guild",
-      "rarity": "Ultimate",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
-      "cost": "-",
-      "attack": "4",
-      "defense": "5",
-      "effect": "On Evolve - Select an enemy follower on the field and deal it 5 damage. On Super Evolve - Select up to 2 spells with different names in your cemetery and put them into your EX area. They cost 2 less to play this turn."
-    },
-    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-U05EN.png"
-  },
-  {
-    "cardNo": "CP04-U06EN",
-    "name": "Yuni, Chloe & Chieru",
-    "type": "base",
-    "class": "rune",
-    "details": {
-      "format": "Any",
-      "class": "Runecraft",
-      "cardType": "Follower",
-      "trait": "Princess Connect / Friendship Club",
-      "rarity": "Ultimate",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
-      "cost": "5",
-      "attack": "4",
-      "defense": "4",
-      "effect": "[Union Burst] [fanfare] Search your deck for up to 2 Friendship Club cards with different names, put them into your EX area, then shuffle. They cost 2 less to play this turn. --------- When the [Union Burst] ability of another follower on your field activates, the next Princess Connect spell you play costs 2 less to play."
-    },
-    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-U06EN.png"
-  },
-  {
-    "cardNo": "CP04-U07EN",
-    "name": "Sheffy Evolved",
-    "type": "evolved",
-    "class": "dragon",
-    "details": {
-      "format": "Any",
-      "class": "Dragoncraft",
-      "cardType": "Follower / Evolved",
-      "trait": "Princess Connect / Gourmet Guild",
-      "rarity": "Ultimate",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
-      "cost": "-",
-      "attack": "3",
-      "defense": "3",
-      "effect": "On Evolve - Select up to 2 enemy followers on the field and deal 2 damage divided between them. On Super Evolve - Deal 3 damage to each enemy follower on the field."
-    },
-    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-U07EN.png"
-  },
-  {
-    "cardNo": "CP04-U08EN",
-    "name": "Muimi",
-    "type": "base",
-    "class": "dragon",
-    "details": {
-      "format": "Any",
-      "class": "Dragoncraft",
-      "cardType": "Follower",
-      "trait": "Princess Connect",
-      "rarity": "Ultimate",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
-      "cost": "2",
-      "attack": "2",
-      "defense": "3",
-      "effect": "[Union Burst] [fanfare] Draw a card, then discard a card. If Overflow is active for you, equip a Proof of Bonds to this. If you have 10 max play points, give this follower [attack]+3."
-    },
-    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-U08EN.png"
-  },
-  {
-    "cardNo": "CP04-U09EN",
-    "name": "Illya Evolved",
-    "type": "evolved",
-    "class": "abyss",
-    "details": {
-      "format": "Any",
-      "class": "Abysscraft",
-      "cardType": "Follower / Evolved",
-      "trait": "Princess Connect / Diabolos",
-      "rarity": "Ultimate",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
-      "cost": "-",
-      "attack": "3",
-      "defense": "3",
-      "effect": "[Union Burst] [act] [engage] and banish 5 cards from your cemetery: Select an enemy follower on the field and deal it 3 damage. Give your leader [defense]+3. --------- On Evolve - Search your deck for a Princess Connect card, bury it, then shuffle. Onn Super Evolve - Select an enemy follower on the field and deal it 5 damage."
-    },
-    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-U09EN.png"
-  },
-  {
-    "cardNo": "CP04-U10EN",
-    "name": "Ranpha & Misora",
-    "type": "base",
-    "class": "abyss",
-    "details": {
-      "format": "Any",
-      "class": "Abysscraft",
-      "cardType": "Follower",
-      "trait": "Princess Connect / Rage Legion",
-      "rarity": "Ultimate",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
-      "cost": "4",
-      "attack": "3",
-      "defense": "5",
-      "effect": "[Union Burst] [fanfare] Select an enemy follower on the field and deal it 5 damage. If this follower was put onto the field from anywhere other than the hand, recover 2 play points. -------- When the [Union Burst] ability of another follower on your field activates, choose one that you haven't chosen this turn. (1) Deal 2 damage to each enemy leader. (2) Give your leader [defense]+2."
-    },
-    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-U10EN.png"
-  },
-  {
-    "cardNo": "CP04-U11EN",
-    "name": "Saren Evolved",
-    "type": "evolved",
-    "class": "haven",
-    "details": {
-      "format": "Any",
-      "class": "Havencraft",
-      "cardType": "Follower / Evolved",
-      "trait": "Princess Connect / Sarendia Orphanage",
-      "rarity": "Ultimate",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
-      "cost": "-",
-      "attack": "4",
-      "defense": "4",
-      "effect": "[Union Burst] On Evolve - Select an enemy follower on the field and deal it 4 damage. Deal each other enemy follower on the field 1 damage. -------- On Super Evolve - Deal 2 damage to each enemy leader and enemy follower on the field."
-    },
-    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-U11EN.png"
-  },
-  {
-    "cardNo": "CP04-U12EN",
-    "name": "Nozomi, Chika & Tsumugi",
-    "type": "base",
-    "class": "haven",
-    "details": {
-      "format": "Any",
-      "class": "Havencraft",
-      "cardType": "Follower",
-      "trait": "Princess Connect / Carmina",
-      "rarity": "Ultimate",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
-      "cost": "3",
-      "attack": "1",
-      "defense": "3",
-      "effect": "[Union Burst] [fanfare] - Search your deck for an amulet, reveal it, add it to your hand, then shuffle. ---------- [act] Engage an amulet on your field: Select an enemy follower on the field and deal it 1 damage. [act] [engage] and bury 3 amulets: Select an enemy follower on the field. Deal 3 damage to it and its leader."
-    },
-    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-U12EN.png"
-  },
-  {
-    "cardNo": "CP04-U13EN",
-    "name": "Lailael",
-    "type": "base",
-    "class": "neutral",
-    "details": {
-      "format": "Any",
-      "class": "Neutral",
-      "cardType": "Follower",
-      "trait": "Princess Connect / Gio Teogonia",
-      "rarity": "Ultimate",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
-      "cost": "7",
-      "attack": "3",
-      "defense": "4",
-      "effect": "[Union Burst] [fanfare] Select up to three 2-cost or less followers with different names in your cemetery and summon them. ------- When the [Union Burst] ability of another follower on your field activates, give it [attack]+1/[defense]+1."
-    },
-    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-U13EN.png"
-  },
-  {
-    "cardNo": "CP04-SP01EN",
-    "name": "Kokkoro Evolved",
-    "type": "evolved",
-    "class": "forest",
-    "details": {
-      "format": "Any",
-      "class": "Forestcraft",
-      "cardType": "Follower / Evolved",
-      "trait": "Princess Connect / Gourmet Guild",
-      "rarity": "Special",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
-      "cost": "-",
-      "attack": "2",
-      "defense": "2",
-      "effect": "On Evolve - Draw a card. On Super Evolve - Give your leader [defense]+2. Draw a card."
-    },
-    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-SP01EN.png"
-  },
-  {
-    "cardNo": "CP04-SP02EN",
-    "name": "Eris",
-    "type": "base",
-    "class": "forest",
-    "details": {
-      "format": "Any",
-      "class": "Forestcraft",
-      "cardType": "Follower",
-      "trait": "Princess Connect",
-      "rarity": "Special",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
-      "cost": "4",
-      "attack": "4",
-      "defense": "3",
-      "effect": "[Union Burst] [act] [engage]: Select another Princess Connect card on your field and give it [attack]+1/[defense]+1. If you've activated at least 2 other [Union Burst] abilities this turn, give it Storm. ------ [fanfare] Look at the top 4 cards of your deck. You may reveal a Princess Connect card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. The next Princess Connect card you play this turn costs 2 less to play."
-    },
-    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-SP02EN.png"
-  },
-  {
-    "cardNo": "CP04-SP03EN",
-    "name": "Pecorine Evolved",
-    "type": "evolved",
-    "class": "sword",
-    "details": {
-      "format": "Any",
-      "class": "Swordcraft",
-      "cardType": "Follower / Evolved",
-      "trait": "Princess Connect / Gourmet Guild",
-      "rarity": "Special",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
-      "cost": "-",
-      "attack": "4",
-      "defense": "4",
-      "effect": "[Union Burst] On Evolve - Select an enemy follower on the field and deal it 4 damage. ------- Ward. On Super Evolve - Deal 4 damage to each enemy leader."
-    },
-    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-SP03EN.png"
-  },
-  {
-    "cardNo": "CP04-SP04EN",
-    "name": "Christina",
-    "type": "base",
-    "class": "sword",
-    "details": {
-      "format": "Any",
-      "class": "Swordcraft",
-      "cardType": "Follower",
-      "trait": "Princess Connect / NIGHTMARE / Seven Crowns",
-      "rarity": "Special",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
-      "cost": "5",
-      "attack": "4",
-      "defense": "4",
-      "effect": "[Union Burst] Strike - Discard a card: Select an enemy follower on the field and deal it 5 damage. ------ Storm. [fanfare] [cost02]: Equip a Holy Castle Sword, Avalon token to this."
-    },
-    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-SP04EN.png"
-  },
-  {
-    "cardNo": "CP04-SP05EN",
-    "name": "Karyl Evolved",
-    "type": "evolved",
-    "class": "rune",
-    "details": {
-      "format": "Any",
-      "class": "Runecraft",
-      "cardType": "Follower / Evolved",
-      "trait": "Princess Connect / Gourmet Guild",
-      "rarity": "Special",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
-      "cost": "-",
-      "attack": "4",
-      "defense": "5",
-      "effect": "On Evolve - Select an enemy follower on the field and deal it 5 damage. On Super Evolve - Select up to 2 spells with different names in your cemetery and put them into your EX area. They cost 2 less to play this turn."
-    },
-    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-SP05EN.png"
-  },
-  {
-    "cardNo": "CP04-SP06aEN",
-    "name": "Yuni, Chloe & Chieru",
-    "type": "base",
-    "class": "rune",
-    "details": {
-      "format": "Any",
-      "class": "Runecraft",
-      "cardType": "Follower",
-      "trait": "Princess Connect / Friendship Club",
-      "rarity": "Special",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
-      "cost": "5",
-      "attack": "4",
-      "defense": "4",
-      "effect": "[Union Burst] [fanfare] Search your deck for up to 2 Friendship Club cards with different names, put them into your EX area, then shuffle. They cost 2 less to play this turn. --------- When the [Union Burst] ability of another follower on your field activates, the next Princess Connect spell you play costs 2 less to play."
-    },
-    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-SP06aEN.png"
-  },
-  {
-    "cardNo": "CP04-SP06bEN",
-    "name": "Yuni, Chloe & Chieru",
-    "type": "base",
-    "class": "rune",
-    "details": {
-      "format": "Any",
-      "class": "Runecraft",
-      "cardType": "Follower",
-      "trait": "Princess Connect / Friendship Club",
-      "rarity": "Special",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
-      "cost": "5",
-      "attack": "4",
-      "defense": "4",
-      "effect": "[Union Burst] [fanfare] Search your deck for up to 2 Friendship Club cards with different names, put them into your EX area, then shuffle. They cost 2 less to play this turn. --------- When the [Union Burst] ability of another follower on your field activates, the next Princess Connect spell you play costs 2 less to play."
-    },
-    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-SP06bEN.png"
-  },
-  {
-    "cardNo": "CP04-SP06cEN",
-    "name": "Yuni, Chloe & Chieru",
-    "type": "base",
-    "class": "rune",
-    "details": {
-      "format": "Any",
-      "class": "Runecraft",
-      "cardType": "Follower",
-      "trait": "Princess Connect / Friendship Club",
-      "rarity": "Special",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
-      "cost": "5",
-      "attack": "4",
-      "defense": "4",
-      "effect": "[Union Burst] [fanfare] Search your deck for up to 2 Friendship Club cards with different names, put them into your EX area, then shuffle. They cost 2 less to play this turn. --------- When the [Union Burst] ability of another follower on your field activates, the next Princess Connect spell you play costs 2 less to play."
-    },
-    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-SP06cEN.png"
-  },
-  {
-    "cardNo": "CP04-SP07EN",
-    "name": "Sheffy Evolved",
-    "type": "evolved",
-    "class": "dragon",
-    "details": {
-      "format": "Any",
-      "class": "Dragoncraft",
-      "cardType": "Follower / Evolved",
-      "trait": "Princess Connect / Gourmet Guild",
-      "rarity": "Special",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
-      "cost": "-",
-      "attack": "3",
-      "defense": "3",
-      "effect": "On Evolve - Select up to 2 enemy followers on the field and deal 2 damage divided between them. On Super Evolve - Deal 3 damage to each enemy follower on the field."
-    },
-    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-SP07EN.png"
-  },
-  {
-    "cardNo": "CP04-SP08EN",
-    "name": "Muimi",
-    "type": "base",
-    "class": "dragon",
-    "details": {
-      "format": "Any",
-      "class": "Dragoncraft",
-      "cardType": "Follower",
-      "trait": "Princess Connect",
-      "rarity": "Special",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
-      "cost": "2",
-      "attack": "2",
-      "defense": "3",
-      "effect": "[Union Burst] [fanfare] Draw a card, then discard a card. If Overflow is active for you, equip a Proof of Bonds to this. If you have 10 max play points, give this follower [attack]+3."
-    },
-    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-SP08EN.png"
-  },
-  {
-    "cardNo": "CP04-SP09EN",
-    "name": "Illya Evolved",
-    "type": "evolved",
-    "class": "abyss",
-    "details": {
-      "format": "Any",
-      "class": "Abysscraft",
-      "cardType": "Follower / Evolved",
-      "trait": "Princess Connect / Diabolos",
-      "rarity": "Special",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
-      "cost": "-",
-      "attack": "3",
-      "defense": "3",
-      "effect": "[Union Burst] [act] [engage] and banish 5 cards from your cemetery: Select an enemy follower on the field and deal it 3 damage. Give your leader [defense]+3. --------- On Evolve - Search your deck for a Princess Connect card, bury it, then shuffle. Onn Super Evolve - Select an enemy follower on the field and deal it 5 damage."
-    },
-    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-SP09EN.png"
-  },
-  {
-    "cardNo": "CP04-SP10aEN",
-    "name": "Ranpha & Misora",
-    "type": "base",
-    "class": "abyss",
-    "details": {
-      "format": "Any",
-      "class": "Abysscraft",
-      "cardType": "Follower",
-      "trait": "Princess Connect / Rage Legion",
-      "rarity": "Special",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
-      "cost": "4",
-      "attack": "3",
-      "defense": "5",
-      "effect": "[Union Burst] [fanfare] Select an enemy follower on the field and deal it 5 damage. If this follower was put onto the field from anywhere other than the hand, recover 2 play points. -------- When the [Union Burst] ability of another follower on your field activates, choose one that you haven't chosen this turn. (1) Deal 2 damage to each enemy leader. (2) Give your leader [defense]+2."
-    },
-    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-SP10aEN.png"
-  },
-  {
-    "cardNo": "CP04-SP10bEN",
-    "name": "Ranpha & Misora",
-    "type": "base",
-    "class": "abyss",
-    "details": {
-      "format": "Any",
-      "class": "Abysscraft",
-      "cardType": "Follower",
-      "trait": "Princess Connect / Rage Legion",
-      "rarity": "Special",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
-      "cost": "4",
-      "attack": "3",
-      "defense": "5",
-      "effect": "[Union Burst] [fanfare] Select an enemy follower on the field and deal it 5 damage. If this follower was put onto the field from anywhere other than the hand, recover 2 play points. -------- When the [Union Burst] ability of another follower on your field activates, choose one that you haven't chosen this turn. (1) Deal 2 damage to each enemy leader. (2) Give your leader [defense]+2."
-    },
-    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-SP10bEN.png"
-  },
-  {
-    "cardNo": "CP04-SP11EN",
-    "name": "Saren Evolved",
-    "type": "evolved",
-    "class": "haven",
-    "details": {
-      "format": "Any",
-      "class": "Havencraft",
-      "cardType": "Follower / Evolved",
-      "trait": "Princess Connect / Sarendia Orphanage",
-      "rarity": "Special",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
-      "cost": "-",
-      "attack": "4",
-      "defense": "4",
-      "effect": "[Union Burst] On Evolve - Select an enemy follower on the field and deal it 4 damage. Deal each other enemy follower on the field 1 damage. -------- On Super Evolve - Deal 2 damage to each enemy leader and enemy follower on the field."
-    },
-    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-SP11EN.png"
-  },
-  {
-    "cardNo": "CP04-SP12aEN",
-    "name": "Nozomi, Chika & Tsumugi",
-    "type": "base",
-    "class": "haven",
-    "details": {
-      "format": "Any",
-      "class": "Havencraft",
-      "cardType": "Follower",
-      "trait": "Princess Connect / Carmina",
-      "rarity": "Special",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
-      "cost": "3",
-      "attack": "1",
-      "defense": "3",
-      "effect": "[Union Burst] [fanfare] - Search your deck for an amulet, reveal it, add it to your hand, then shuffle. ---------- [act] Engage an amulet on your field: Select an enemy follower on the field and deal it 1 damage. [act] [engage] and bury 3 amulets: Select an enemy follower on the field. Deal 3 damage to it and its leader."
-    },
-    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-SP12aEN.png"
-  },
-  {
-    "cardNo": "CP04-SP12bEN",
-    "name": "Nozomi, Chika & Tsumugi",
-    "type": "base",
-    "class": "haven",
-    "details": {
-      "format": "Any",
-      "class": "Havencraft",
-      "cardType": "Follower",
-      "trait": "Princess Connect / Carmina",
-      "rarity": "Special",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
-      "cost": "3",
-      "attack": "1",
-      "defense": "3",
-      "effect": "[Union Burst] [fanfare] - Search your deck for an amulet, reveal it, add it to your hand, then shuffle. ---------- [act] Engage an amulet on your field: Select an enemy follower on the field and deal it 1 damage. [act] [engage] and bury 3 amulets: Select an enemy follower on the field. Deal 3 damage to it and its leader."
-    },
-    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-SP12bEN.png"
-  },
-  {
-    "cardNo": "CP04-SP12cEN",
-    "name": "Nozomi, Chika & Tsumugi",
-    "type": "base",
-    "class": "haven",
-    "details": {
-      "format": "Any",
-      "class": "Havencraft",
-      "cardType": "Follower",
-      "trait": "Princess Connect / Carmina",
-      "rarity": "Special",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
-      "cost": "3",
-      "attack": "1",
-      "defense": "3",
-      "effect": "[Union Burst] [fanfare] - Search your deck for an amulet, reveal it, add it to your hand, then shuffle. ---------- [act] Engage an amulet on your field: Select an enemy follower on the field and deal it 1 damage. [act] [engage] and bury 3 amulets: Select an enemy follower on the field. Deal 3 damage to it and its leader."
-    },
-    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-SP12cEN.png"
-  },
-  {
-    "cardNo": "CP04-SP13EN",
-    "name": "Lailael",
-    "type": "base",
-    "class": "neutral",
-    "details": {
-      "format": "Any",
-      "class": "Neutral",
-      "cardType": "Follower",
-      "trait": "Princess Connect / Gio Teogonia",
-      "rarity": "Special",
-      "cardSet": "Crossover Set \"Princess Connect! Re:Dive\"",
-      "cost": "7",
-      "attack": "3",
-      "defense": "4",
-      "effect": "[Union Burst] [fanfare] Select up to three 2-cost or less followers with different names in your cemetery and summon them. ------- When the [Union Burst] ability of another follower on your field activates, give it [attack]+1/[defense]+1."
-    },
-    "imgSrc": "/wordpress/wp-content/images/cardlist/CP04/CP04-SP13EN.png"
   }
 ]

@@ -1,4 +1,25 @@
 export const allCards = [
+  "Nephi Nela",
+  "Cleuru",
+  "Lily",
+  "Construct of Truth and Being",
+  "Chellerific Carnival",
+  "Until We Meet Again",
+  "Prank Proclamation",
+  "Kuka",
+  "Demonic Salvation: Infinity",
+  "Clear",
+  "Threading Snare",
+  "Amped on Acorns",
+  "Lyrael",
+  "Ever-Lively Table",
+  "Kokkoro [Princess Form]",
+  "Pecorine [Princess Form]",
+  "Karyl [Princess Form]",
+  "Sheffy [Princess Form]",
+  "Hiyori [Princess Form]",
+  "Rei [Princess Form]",
+  "Yui [Princess Form]",
   "Castelle, Budding Mage",
   "Lyelth, Immaculate Idol",
   "Titania, Queen of Fairies",
@@ -5441,6 +5462,10 @@ export const forest = [
   "Flying Mistletoe Squirrel",
   "Spiritelementalist",
   "Wild Profusion",
+
+  "Nephi Nela",
+  "Cleuru",
+  "Kokkoro [Princess Form]",
 ];
 
 export const sword = [
@@ -5882,6 +5907,9 @@ export const sword = [
   "Levin Archer",
   "Aggressive Advance",
   "Lieutenant's Report",
+
+  "Lily",
+  "Pecorine [Princess Form]",
 ];
 
 export const rune = [
@@ -6314,6 +6342,10 @@ export const rune = [
   "Arcane Instruction",
   "Aqueous Sphere",
   "Binding Ritual",
+
+  "Construct of Truth and Being",
+  "Chellerific Carnival",
+  "Karyl [Princess Form]",
 ];
 
 export const dragon = [
@@ -6752,6 +6784,11 @@ export const dragon = [
   "Augite Wyrm",
   "Stormscale",
   "Dragon Hunt",
+
+  "Until We Meet Again",
+  "Prank Proclamation",
+  "Sheffy [Princess Form]",
+  "Hiyori [Princess Form]",
 ];
 
 export const abyss = [
@@ -7168,6 +7205,10 @@ export const abyss = [
   "Malicious Blader",
   "Serenading Succubus",
   "Spirit Invasion",
+
+  "Kuka",
+  "Demonic Salvation: Infinity",
+  "Rei [Princess Form]",
 ];
 
 export const haven = [
@@ -7585,6 +7626,11 @@ export const haven = [
   "Holy Armored Cheetah",
   "Hierophant's Implements",
   "Sublime Talisman",
+
+  "Clear",
+  "Threading Snare",
+  "Amped on Acorns",
+  "Yui [Princess Form]",
 ];
 
 export const neutral = [
@@ -7875,6 +7921,8 @@ export const neutral = [
   "Lainecrest Academy",
   "Goblin Genius",
   "Goblin's Gratitude",
+
+  "Lyrael",
 ];
 
 export const setSD01 = [

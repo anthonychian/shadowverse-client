@@ -196,4 +196,11 @@ export const allTokens = [
   "Holy Cavalier TOKEN",
   "Cyclical Guidance TOKEN",
   "Crest: Wilbert, Desolate Paladin TOKEN",
+
+  "Ameth Amulet TOKEN",
+  "Sanctum Blade Avalon TOKEN",
+  "Mirror Image Neneka TOKEN",
+  "Mirage Wand TOKEN",
+  "Eisdrache TOKEN",
+  "Precious Memento TOKEN",
 ];

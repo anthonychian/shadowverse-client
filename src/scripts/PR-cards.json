@@ -7902,5 +7902,556 @@
       "effect": "Ward. [fanfare] Look at the top 2 cards of your deck. You may reveal a Machina card from among them and add it to your hand. Bury the rest."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/PR/PR-480EN.png"
+  },
+  {
+    "cardNo": "PR-481EN",
+    "name": "Sowing Paradise",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Spell",
+      "trait": "Togh Keyoh / Verdant",
+      "rarity": "Promo",
+      "cardSet": "Promo Cards",
+      "cost": "5",
+      "attack": "-",
+      "defense": "-",
+      "effect": "This costs X less to play. X equals the number of faceup evolved Togh Keyoh followers in your evolve deck. ---------- Select up to 2 Togh Keyoh followers in your cemetery and add them to your hand."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/PR/PR-481EN.png"
+  },
+  {
+    "cardNo": "PR-482EN",
+    "name": "Unorthodox Assistance",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Spell",
+      "trait": "Togh Keyoh / Detective",
+      "rarity": "Promo",
+      "cardSet": "Promo Cards",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Search your deck for a Shinra, All-Discerning, reveal it, add it to your hand, then shuffle. Place 2 gigabyte counters on each Gigabyte Blade on your field."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/PR/PR-482EN.png"
+  },
+  {
+    "cardNo": "PR-483EN",
+    "name": "Aleister, Argenteum Astrum",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "Mage",
+      "rarity": "Promo",
+      "cardSet": "Promo Cards",
+      "cost": "3",
+      "attack": "2",
+      "defense": "4",
+      "effect": "Rush. Drain. [fanfare] Banish the top 2 cards of your deck. Then, if there are at least 5 cards in your banished zone, give this Assail. If there are at least 10, give this [attack]+1/[defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/PR/PR-483EN.png"
+  },
+  {
+    "cardNo": "PR-484EN",
+    "name": "Prophetic Dragon",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Wyrmkin",
+      "rarity": "Promo",
+      "cardSet": "Promo Cards",
+      "cost": "9",
+      "attack": "5",
+      "defense": "6",
+      "effect": "Ward. [fanfare] Select up to 2 cards named Prophetic Dragon in your cemetery and summon them. At the start of your end phase, select an enemy follower on the field. Deal it 5 damage and give your leader [defense]+1. [act] [cost02], discard this: Draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/PR/PR-484EN.png"
+  },
+  {
+    "cardNo": "PR-485EN",
+    "name": "Veight, Twilit Highborn",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vampire",
+      "rarity": "Promo",
+      "cardSet": "Promo Cards",
+      "cost": "2",
+      "attack": "2",
+      "defense": "1",
+      "effect": "[fanfare] Look at the top 3 cards of your deck. You may reveal a Vampire card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. If you revealed a follower with \"Vania\" in its name, summon a Forest Bat token. [act] [cost00]: Give each Forest Bat on your field [attack]+1/[defense]+1. Activate only if there are at least 5 Vampire cards in your cemetery, and only once per turn."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/PR/PR-485EN.png"
+  },
+  {
+    "cardNo": "PR-486EN",
+    "name": "Guiding Words",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Togh Keyoh / Faith",
+      "rarity": "Promo",
+      "cardSet": "Promo Cards",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Draw a card. If there's a Togh Keyoh follower on your field, give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/PR/PR-486EN.png"
+  },
+  {
+    "cardNo": "PR-487EN",
+    "name": "After-School Break",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Spell",
+      "trait": "Togh Keyoh / Dragonewt / Draconic Duelist",
+      "rarity": "Promo",
+      "cardSet": "Promo Cards",
+      "cost": "7",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Search your deck for up to 3 Togh Keyoh followers with different names that cost 3 or less, summon them, then shuffle. Give your leader [defense]+2."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/PR/PR-487EN.png"
+  },
+  {
+    "cardNo": "PR-488EN",
+    "name": "A-Class Pyromancy",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Togh Keyoh / Ward Office",
+      "rarity": "Promo",
+      "cardSet": "Promo Cards",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field. Deal it 2 damage and, if there's a Saito, Mao Ward Officer on your field, deal 1 damage to its leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/PR/PR-488EN.png"
+  },
+  {
+    "cardNo": "PR-489EN",
+    "name": "Darksaber Melissa",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "Commander / Princess",
+      "rarity": "Promo",
+      "cardSet": "Promo Cards",
+      "cost": "4",
+      "attack": "6",
+      "defense": "4",
+      "effect": "Rush. Assail. [fanfare] Select an enemy follower on the field. If there are at least 3 cards on its controller's field, destroy it and give this Aura and, for the rest of this turn, \"This doesn't take damage.\""
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/PR/PR-489EN.png"
+  },
+  {
+    "cardNo": "PR-490EN",
+    "name": "Togh Keyoh, Neometropolis",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Amulet",
+      "trait": "Togh Keyoh",
+      "rarity": "Promo",
+      "cardSet": "Promo Cards",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[fanfare] Look at the top 3 cards of your deck. You may reveal a Togh Keyoh card not named Togh Keyoh, Neometropolis from among them and add it to your hand. Put the rest on the bottom of your deck in any order. [act] [cost01], [engage], banish this: Select a Togh Keyoh follower on your field. Give it [attack]+1/[defense]+1 and your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/PR/PR-490EN.png"
+  },
+  {
+    "cardNo": "PR-491EN",
+    "name": "Warped Progress",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Togh Keyoh",
+      "rarity": "Promo",
+      "cardSet": "Promo Cards",
+      "cost": "2",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] As an additional cost to play this, discard a Togh Keyoh card. ---------- Select an enemy follower on the field. Deal it 4 damage, give your leader [defense]+1, and draw a card."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/PR/PR-491EN.png"
+  },
+  {
+    "cardNo": "PR-494EN",
+    "name": "Travelers' Respite",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Spell",
+      "trait": "Wasteland / Natura",
+      "rarity": "Promo",
+      "cardSet": "Promo Cards",
+      "cost": "1",
+      "attack": "-",
+      "defense": "-",
+      "effect": "Look at the top 3 cards of your deck. You may reveal a Wasteland card or Natura card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. If there's a Wasteland card on your field or in your EX area, give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/PR/PR-494EN.png"
+  },
+  {
+    "cardNo": "PR-495EN",
+    "name": "Spiritual Blow",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Spell",
+      "trait": "Faith",
+      "rarity": "Promo",
+      "cardSet": "Promo Cards",
+      "cost": "3",
+      "attack": "-",
+      "defense": "-",
+      "effect": "[quick] Select an enemy follower on the field and banish it."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/PR/PR-495EN.png"
+  },
+  {
+    "cardNo": "PR-496EN",
+    "name": "Jerva, Wyrm Transcendent",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "Dragonheart",
+      "rarity": "Promo",
+      "cardSet": "Promo Cards",
+      "cost": "9",
+      "attack": "6",
+      "defense": "6",
+      "effect": "When this is discarded, you may put it into your EX area. ---------- Ward. [fanfare] Deal 6 damage to each other follower on the field and each enemy leader. [act] [cost03], bury this from your EX area: Select an enemy follower on the field and deal it 6 damage. Activate only if Overflow is active for you."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/PR/PR-496EN.png"
+  },
+  {
+    "cardNo": "PR-501EN",
+    "name": "Orchis, Puppet Girl",
+    "type": "base",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower",
+      "trait": "Puppetry",
+      "rarity": "Promo",
+      "cardSet": "Promo Cards",
+      "cost": "3",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[evolve] [cost01]: Evolve this into an Orchis, Resolute Puppet. [evolve] [cost04]: Evolve this into an Orchis, Vengeful Puppet. Activate only if there are at least 3 Puppetry cards in your cemetery."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/PR/PR-501EN.png"
+  },
+  {
+    "cardNo": "PR-502EN",
+    "name": "Orchis, Resolute Puppet Evolved",
+    "type": "evolved",
+    "class": "forest",
+    "details": {
+      "format": "Any",
+      "class": "Forestcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Puppetry / Lightborne",
+      "rarity": "Promo",
+      "cardSet": "Promo Cards",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "On Evolve - Summon 2 Puppet tokens. Once on each of your turns, when a Puppet you control leaves the field, put a Lloyd token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/PR/PR-502EN.png"
+  },
+  {
+    "cardNo": "PR-504EN",
+    "name": "Celia, Hope's Strategist Evolved",
+    "type": "evolved",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Commander / Lightborne",
+      "rarity": "Promo",
+      "cardSet": "Promo Cards",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "On Evolve - Summon a Shield Guardian token."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/PR/PR-504EN.png"
+  },
+  {
+    "cardNo": "PR-505EN",
+    "name": "Vania, Nightshade Vampire",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "Vampire / Princess",
+      "rarity": "Promo",
+      "cardSet": "Promo Cards",
+      "cost": "3",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this into a Vania, Kind Queen. [evolve] [cost03]: Evolve this into a Vania, Blood Queen. Activate only if there are at least 5 Vampire cards in your cemetery. [fanfare] Put a Forest Bat token into your EX area."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/PR/PR-505EN.png"
+  },
+  {
+    "cardNo": "PR-506EN",
+    "name": "Vania, Kind Queen Evolved",
+    "type": "evolved",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower / Evolved",
+      "trait": "Vampire / Princess / Lightborne",
+      "rarity": "Promo",
+      "cardSet": "Promo Cards",
+      "cost": "-",
+      "attack": "4",
+      "defense": "4",
+      "effect": "Any Forest Bat you play costs 1 less. On Evolve - Draw a card. Discard a card. Whenever a Forest Bat is put onto your field, give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/PR/PR-506EN.png"
+  },
+  {
+    "cardNo": "PR-507EN",
+    "name": "Mitsuki",
+    "type": "base",
+    "class": "sword",
+    "details": {
+      "format": "Any",
+      "class": "Swordcraft",
+      "cardType": "Follower",
+      "trait": "PriConne / Twilight Caravan",
+      "rarity": "Promo",
+      "cardSet": "Promo Cards",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[Union Burst][fanfare] Select up to 2 enemy followers on the field and give them [attack]-2/[defense]-2. ---------- Whenever a [Union Burst] ability of another follower on your field is executed, select an enemy follower on the field and give it [attack]-1/[defense]-1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/PR/PR-507EN.png"
+  },
+  {
+    "cardNo": "PR-508EN",
+    "name": "Chloe",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "PriConne / Friendship Club",
+      "rarity": "Promo",
+      "cardSet": "Promo Cards",
+      "cost": "2",
+      "attack": "3",
+      "defense": "2",
+      "effect": "[Union Burst][fanfare] Select an enemy follower on the field and deal it damage equal to the number of Friendship Club followers on your field. ---------- Whenever you play a Friendship Club card or PriConne spell, deal 1 damage to each enemy leader."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/PR/PR-508EN.png"
+  },
+  {
+    "cardNo": "PR-509EN",
+    "name": "Hiyori",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "PriConne / Twinkle Wish",
+      "rarity": "Promo",
+      "cardSet": "Promo Cards",
+      "cost": "4",
+      "attack": "4",
+      "defense": "4",
+      "effect": "[Union Burst] Strike - Select an enemy follower on the field. Deal 2 damage to it and its leader. If you have 10 max play points, deal 4 damage instead. ---------- Rush. [fanfare] Search your deck for a 1-cost Twinkle Wish follower, put it into your EX area, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/PR/PR-509EN.png"
+  },
+  {
+    "cardNo": "PR-510EN",
+    "name": "Inori Evolved",
+    "type": "evolved",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower / Evolved",
+      "trait": "PriConne / Dragon's Nest",
+      "rarity": "Promo",
+      "cardSet": "Promo Cards",
+      "cost": "-",
+      "attack": "3",
+      "defense": "3",
+      "effect": "[Union Burst][act] [engage]: Deal 1 damage to each enemy leader and enemy follower on the field. Activate only if Overflow is active for you. ---------- On Evolve - Search your deck for a Dragon's Nest card not named Inori, reveal it, add it to your hand, then shuffle."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/PR/PR-510EN.png"
+  },
+  {
+    "cardNo": "PR-511EN",
+    "name": "Rei",
+    "type": "base",
+    "class": "abyss",
+    "details": {
+      "format": "Any",
+      "class": "Abysscraft",
+      "cardType": "Follower",
+      "trait": "PriConne / Twinkle Wish",
+      "rarity": "Promo",
+      "cardSet": "Promo Cards",
+      "cost": "1",
+      "attack": "1",
+      "defense": "2",
+      "effect": "[Union Burst] Strike - Give this [attack]+1. If [Union Burst] abilities you control have executed at least 2 other times this turn, give [attack]+2 instead. ---------- Rush."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/PR/PR-511EN.png"
+  },
+  {
+    "cardNo": "PR-512EN",
+    "name": "Yui Evolved",
+    "type": "evolved",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower / Evolved",
+      "trait": "PriConne / Twinkle Wish",
+      "rarity": "Promo",
+      "cardSet": "Promo Cards",
+      "cost": "-",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[Union Burst] On Evolve - [costX]: Select a PriConne follower in your cemetery that costs X or less and summon it. ---------- Whenever a [Union Burst] ability of another follower on your field is executed, give your leader [defense]+1."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/PR/PR-512EN.png"
+  },
+  {
+    "cardNo": "PR-513EN",
+    "name": "Misato",
+    "type": "base",
+    "class": "haven",
+    "details": {
+      "format": "Any",
+      "class": "Havencraft",
+      "cardType": "Follower",
+      "trait": "PriConne / Forestier",
+      "rarity": "Promo",
+      "cardSet": "Promo Cards",
+      "cost": "1",
+      "attack": "2",
+      "defense": "2",
+      "effect": "[Union Burst][fanfare] Bury an amulet: Give your leader [defense]+2. ---------- Ward."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/PR/PR-513EN.png"
+  },
+  {
+    "cardNo": "PR-514EN",
+    "name": "Neneka",
+    "type": "base",
+    "class": "rune",
+    "details": {
+      "format": "Any",
+      "class": "Runecraft",
+      "cardType": "Follower",
+      "trait": "PriConne / Seven Crowns",
+      "rarity": "Promo",
+      "cardSet": "Promo Cards",
+      "cost": "2",
+      "attack": "0",
+      "defense": "1",
+      "effect": "[Union Burst][fanfare] If there's no Mirror Image Neneka on your field, summon one. ---------- [fanfare] [cost02]: Equip this with a Mirage Wand token. [act] [engage]: Select an enemy follower on the field and deal it 1 damage."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/PR/PR-514EN.png"
+  },
+  {
+    "cardNo": "PR-515EN",
+    "name": "Muimi",
+    "type": "base",
+    "class": "dragon",
+    "details": {
+      "format": "Any",
+      "class": "Dragoncraft",
+      "cardType": "Follower",
+      "trait": "PriConne",
+      "rarity": "Promo",
+      "cardSet": "Promo Cards",
+      "cost": "2",
+      "attack": "2",
+      "defense": "3",
+      "effect": "[Union Burst][fanfare] Draw a card. Discard a card. If Overflow is active for you, equip this with a Precious Memento token. If you have 10 max play points, give this [attack]+3."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/PR/PR-515EN.png"
+  },
+  {
+    "cardNo": "PR-516EN",
+    "name": "Kasumi",
+    "type": "base",
+    "class": "neutral",
+    "details": {
+      "format": "Any",
+      "class": "Neutral",
+      "cardType": "Follower",
+      "trait": "PriConne / Caon",
+      "rarity": "Promo",
+      "cardSet": "Promo Cards",
+      "cost": "2",
+      "attack": "1",
+      "defense": "3",
+      "effect": "[evolve] [cost01]: Evolve this. [fanfare] Put a PriConne card from your hand into your EX area: Look at the top 2 cards of your deck. Put any number of them on the top of your deck in any order. Put the rest on the bottom in any order."
+    },
+    "imgSrc": "/wordpress/wp-content/images/cardlist/PR/PR-516EN.png"
   }
 ]

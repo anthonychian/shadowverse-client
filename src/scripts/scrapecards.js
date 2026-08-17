@@ -36,6 +36,7 @@
 const fs = require("fs");
 const path = require("path");
 const https = require("https");
+const { normalizeEffectTokens } = require("./scrape-utils");
 
 const EXPANSION = process.argv[2];
 const SKIP_IMAGES = process.argv.includes("--no-images");
@@ -135,7 +136,7 @@ function statValue(html, headingClass) {
 // The card's ability/effect text, with keyword icons rendered as their labels.
 function detailText(html) {
   const m = html.match(/<div class="detail">([\s\S]*?)<\/div>/i);
-  return m ? decodeEntities(stripTags(m[1])) : "";
+  return normalizeEffectTokens(m ? decodeEntities(stripTags(m[1])) : "");
 }
 
 // Collect every keyword/stat icon used on a detail page (Evolve, Cost##,
@@ -300,7 +301,8 @@ async function scrapeCards() {
     }
     detail = { format: "", trait: "", rarity: "", cardSet: "", cost: "", attack: "", defense: "", effect: "", icons: [], ...detail };
     for (const ic of detail.icons) {
-      if (!iconMap.has(ic.src)) iconMap.set(ic.src, ic.alt);
+      const alt = ic.alt === "[UB]" ? "[Union Burst]" : ic.alt;
+      if (!iconMap.has(ic.src)) iconMap.set(ic.src, alt);
     }
     const baseName = detail.name || c.listName;
     const ct = (detail.cardType || "").toLowerCase();

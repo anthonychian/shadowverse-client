@@ -93,15 +93,17 @@ function parseCardText(html) {
   for (const [icon, keyword] of Object.entries(KEYWORD_ICON_MAP)) {
     if (block.includes(icon)) keywords.push(keyword);
   }
-  const text = decodeEntities(
-    block
-      .replace(/<br\s*\/?>/gi, "\n")
-      .replace(/<img[^>]*alt="\[([^\]]+)\]"[^>]*>/gi, "[$1] ")
-      .replace(/<img[^>]*>/gi, "")
-      .replace(/<[^>]+>/g, "")
-      .replace(/\s+\n/g, "\n")
-      .replace(/\n{3,}/g, "\n\n")
-      .trim(),
+  const text = normalizeEffectTokens(
+    decodeEntities(
+      block
+        .replace(/<br\s*\/?>/gi, "\n")
+        .replace(/<img[^>]*alt="\[([^\]]+)\]"[^>]*>/gi, "[$1] ")
+        .replace(/<img[^>]*>/gi, "")
+        .replace(/<[^>]+>/g, "")
+        .replace(/\s+\n/g, "\n")
+        .replace(/\n{3,}/g, "\n\n")
+        .trim(),
+    ),
   );
   return { text, keywords: [...new Set(keywords)] };
 }
@@ -113,6 +115,12 @@ function parseRelatedCards(html) {
   if (!relationBlock) return [];
   const links = relationBlock[1].match(/cardno=([A-Z0-9-]+)/gi) || [];
   return [...new Set(links.map((l) => l.replace(/^cardno=/i, "")))];
+}
+
+// EN site text view uses [UB]; the app renders Union Burst via [Union Burst].
+function normalizeEffectTokens(text) {
+  if (!text) return text;
+  return text.replace(/\[UB\]/g, "[Union Burst]");
 }
 
 function normalizeCardType(raw) {
@@ -277,6 +285,7 @@ function applyReprintInheritance(cards, expansion) {
 module.exports = {
   fetchDetail,
   normalizeCardType,
+  normalizeEffectTokens,
   CLASS_MAP,
   decodeEntities,
   normalizeIdentityName,

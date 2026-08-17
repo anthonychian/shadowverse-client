@@ -1,4 +1,7 @@
 export const allCardsEvo = [
+  "Shizuru & Rino Evolved",
+  "Misogi, Mimi & Kyoka Evolved",
+  "Akino & Saren Evolved",
   "Lyelth, Immaculate Idol Evolved",
   "Cleaver Cat Evolved",
   "Elven Farmhand Evolved",
@@ -1599,6 +1602,8 @@ export const forestEvo = [
   "Cleaver Cat Evolved",
   "Elven Farmhand Evolved",
   "Bladebunny Evolved",
+
+  "Shizuru & Rino Evolved",
 ];
 
 export const swordEvo = [
@@ -1841,6 +1846,8 @@ export const runeEvo = [
   "Grea, Crimson Promise Evolved",
   "Gruinne, Leonardian Provost Evolved",
   "Wolf Whisperer Evolved",
+
+  "Misogi, Mimi & Kyoka Evolved",
 ];
 
 export const dragonEvo = [
@@ -2206,6 +2213,8 @@ export const havenEvo = [
   "Lou, Lady-in-Training Evolved",
   "Pureflame Lady Evolved",
   "Zlatorog Evolved",
+
+  "Akino & Saren Evolved",
 ];
 
 export const neutralEvo = [

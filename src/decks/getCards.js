@@ -7326,6 +7326,66 @@ export const cardImage = (cardName) => {
       return "../textures/BP21-T09EN.png";
     case "Crest: Wilbert, Desolate Paladin TOKEN":
       return "../textures/BP21-T10EN.png";
+    case "Nephi Nela":
+      return "../textures/CP04-004EN.png";
+    case "Cleuru":
+      return "../textures/CP04-011EN.png";
+    case "Lily":
+      return "../textures/CP04-025EN.png";
+    case "Construct of Truth and Being":
+      return "../textures/CP04-044EN.png";
+    case "Chellerific Carnival":
+      return "../textures/CP04-053EN.png";
+    case "Until We Meet Again":
+      return "../textures/CP04-062EN.png";
+    case "Prank Proclamation":
+      return "../textures/CP04-072EN.png";
+    case "Kuka":
+      return "../textures/CP04-087EN.png";
+    case "Demonic Salvation: Infinity":
+      return "../textures/CP04-090EN.png";
+    case "Clear":
+      return "../textures/CP04-097EN.png";
+    case "Threading Snare":
+      return "../textures/CP04-102EN.png";
+    case "Amped on Acorns":
+      return "../textures/CP04-108EN.png";
+    case "Lyrael":
+      return "../textures/CP04-112EN.png";
+    case "Ever-Lively Table":
+      return "../textures/CP04-EP01EN.png";
+    case "Shizuru & Rino Evolved":
+      return "../textures/CP04-P06EN.png";
+    case "Misogi, Mimi & Kyoka Evolved":
+      return "../textures/CP04-P34EN.png";
+    case "Kokkoro [Princess Form]":
+      return "../textures/CP04-PR01EN.png";
+    case "Pecorine [Princess Form]":
+      return "../textures/CP04-PR02EN.png";
+    case "Karyl [Princess Form]":
+      return "../textures/CP04-PR03EN.png";
+    case "Sheffy [Princess Form]":
+      return "../textures/CP04-PR04EN.png";
+    case "Hiyori [Princess Form]":
+      return "../textures/CP04-PR05EN.png";
+    case "Rei [Princess Form]":
+      return "../textures/CP04-PR06EN.png";
+    case "Yui [Princess Form]":
+      return "../textures/CP04-PR07EN.png";
+    case "Akino & Saren Evolved":
+      return "../textures/CP04-SL22EN.png";
+    case "Ameth Amulet TOKEN":
+      return "../textures/CP04-T01EN.png";
+    case "Sanctum Blade Avalon TOKEN":
+      return "../textures/CP04-T03EN.png";
+    case "Mirror Image Neneka TOKEN":
+      return "../textures/CP04-T05EN.png";
+    case "Mirage Wand TOKEN":
+      return "../textures/CP04-T07EN.png";
+    case "Eisdrache TOKEN":
+      return "../textures/CP04-T08EN.png";
+    case "Precious Memento TOKEN":
+      return "../textures/CP04-T09EN.png";
     default: {
       const cardNo = cardNoFromStatsName(cardName);
       return cardNo ? `../textures/${cardNo}.png` : "";
