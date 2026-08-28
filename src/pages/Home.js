@@ -37,6 +37,7 @@ import {
   clearSavedState,
 } from "../sockets";
 import { setGameMode } from "../redux/GameStateSlice";
+import { shuffle } from "../lib/shuffle";
 import ActiveGamesBoard from "../components/ui/ActiveGamesBoard";
 import { ensureShare } from "../lib/shares";
 
@@ -514,7 +515,7 @@ export default function Home() {
     }
     setShowSelected(res);
 
-    dispatch(setDeck(newDeck.deck.toSorted(() => Math.random() - 0.5)));
+    dispatch(setDeck(shuffle(newDeck.deck)));
     // Carry the deck's rarity/art choices into the game so cards render with the
     // chosen printing (synced to the opponent via full-state). Game-safe: only
     // affects which texture is shown, never card identity.
