@@ -28,6 +28,7 @@ const renameDeck = (d) => ({
   ...d,
   deck: (d.deck || []).map(renameCard),
   evoDeck: (d.evoDeck || []).map(renameCard),
+  favoriteTokens: (d.favoriteTokens || []).map(renameCard),
   art: d.art
     ? Object.fromEntries(
         Object.entries(d.art).map(([n, no]) => [renameCard(n), no])

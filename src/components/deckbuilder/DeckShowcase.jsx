@@ -47,6 +47,8 @@ export default function DeckShowcase({
   const accent = CLASS_COLORS[deckClass] || COLORS.glow;
   const mainLen = deck?.deck ? deck.deck.length : 0;
   const evoLen = deck?.evoDeck ? deck.evoDeck.length : 0;
+  const favLen = deck?.favoriteTokens ? deck.favoriteTokens.length : 0;
+  const favoriteTokenMap = new Map((deck?.favoriteTokens || []).map((n) => [n, 1]));
   const columns = isMobile ? COLUMNS_MOBILE : COLUMNS_DESKTOP;
 
   return (
@@ -136,6 +138,19 @@ export default function DeckShowcase({
           columns={columns}
           fullArt={fullArt}
         />
+        {favLen > 0 && (
+          <>
+            <div style={{ height: 14 }} />
+            <SectionHeading title="Favorite Tokens" count={favLen} />
+            <DeckArtGrid
+              map={favoriteTokenMap}
+              art={deck?.art}
+              onInspect={onInspect}
+              columns={columns}
+              fullArt={fullArt}
+            />
+          </>
+        )}
       </div>
     </div>
   );

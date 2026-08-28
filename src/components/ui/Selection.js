@@ -134,6 +134,7 @@ export default function Selection({ setSelectedOption }) {
         evoDeck: savedDeck.evoDeck || [],
         art: savedDeck.art || {},
         deckClass,
+        favoriteTokens: savedDeck.favoriteTokens || [],
       }),
     );
     const leader = randomLeaderForClass(deckClass);

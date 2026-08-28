@@ -65,6 +65,7 @@ const snapshotOf = (deck) => ({
   class: deck.class || computeDeckClass(deck.deck) || "",
   deck: deck.deck || [],
   evoDeck: deck.evoDeck || [],
+  favoriteTokens: deck.favoriteTokens || [],
   art: deck.art || {},
 });
 

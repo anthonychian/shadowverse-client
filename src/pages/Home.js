@@ -22,6 +22,7 @@ import {
   setActiveUsers,
   setDeckClass,
   setMyArt,
+  setFavoriteTokens,
 } from "../redux/CardSlice";
 import { deleteDeck, selectDecks } from "../redux/DeckSlice";
 import { useAuth, discordName } from "../auth/AuthProvider";
@@ -520,6 +521,7 @@ export default function Home() {
     // chosen printing (synced to the opponent via full-state). Game-safe: only
     // affects which texture is shown, never card identity.
     dispatch(setMyArt(newDeck.art || {}));
+    dispatch(setFavoriteTokens(newDeck.favoriteTokens || []));
 
     dispatch(
       setEvoDeck(

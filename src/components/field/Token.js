@@ -37,13 +37,21 @@ export default function Token({ ready, setReady, setTokenReady, setHovering }) {
   const modalOpen = useUiModalOpen(open);
   const [contextMenu, setContextMenu] = React.useState(null);
   const [textInput, setTextInput] = useState("");
-  const [filteredTokens, setFilteredTokens] = useState(allTokens);
-
   const reduxField = useSelector((state) => state.card.field);
   const reduxEquipField = useSelector((state) => state.card.equipField);
   const reduxRoom = useSelector((state) => state.card.room);
+  const favoriteTokens = useSelector((state) => state.card.favoriteTokens) || [];
   const gameMode = useSelector((state) => state.gameState.gameMode);
   const automated = gameMode === "automated";
+
+  const defaultTokens = () => {
+    if (!favoriteTokens.length) return allTokens;
+    const known = new Set(allTokens);
+    const favs = favoriteTokens.filter((n) => known.has(n));
+    return favs.length ? favs : allTokens;
+  };
+
+  const [filteredTokens, setFilteredTokens] = useState(allTokens);
 
   // Drag a token straight out of this modal onto the board. Mirrors the
   // deck/cemetery modal drag — the modal hides while dragging and a ghost follows
@@ -82,7 +90,11 @@ export default function Token({ ready, setReady, setTokenReady, setHovering }) {
   });
 
   const handleModalOpen = () => {
-    if (!ready) setOpen(true);
+    if (!ready) {
+      setTextInput("");
+      setFilteredTokens(defaultTokens());
+      setOpen(true);
+    }
   };
   const handleModalClose = () => setOpen(false);
 
@@ -112,11 +124,14 @@ export default function Token({ ready, setReady, setTokenReady, setHovering }) {
 
   const handleTextInput = (text) => {
     setTextInput(text);
-
-    const filtered = allTokens.filter((card) =>
-      card.toLowerCase().includes(text.toLowerCase())
+    const q = text.trim().toLowerCase();
+    if (!q) {
+      setFilteredTokens(defaultTokens());
+      return;
+    }
+    setFilteredTokens(
+      allTokens.filter((card) => card.toLowerCase().includes(q)),
     );
-    setFilteredTokens(filtered);
   };
 
   return (
@@ -161,7 +176,11 @@ export default function Token({ ready, setReady, setTokenReady, setHovering }) {
             type="text"
             value={textInput}
             onChange={(event) => handleTextInput(event.target.value)}
-            placeholder="Search for tokens..."
+            placeholder={
+              favoriteTokens.length && !textInput.trim()
+                ? "Favorites — search all tokens…"
+                : "Search for tokens..."
+            }
           />
           <CardMUI
             sx={{

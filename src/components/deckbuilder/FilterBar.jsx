@@ -65,7 +65,7 @@ const toggleInArray = (arr, v, setter) =>
   setter(arr.includes(v) ? arr.filter((x) => x !== v) : [...arr, v]);
 
 export default function FilterBar({
-  mainSelected, onToggleDeck,
+  poolMode, onPoolMode,
   search, onSearch,
   set, onSet, setOptions = [],
   klass, onClass,
@@ -95,8 +95,8 @@ export default function FilterBar({
           stays on one row (no wrap); the Filters button is icon-only. */}
       <div style={{ display: "flex", gap: m ? 6 : 12, alignItems: "center", flexWrap: m ? "nowrap" : "wrap" }}>
         <ToggleButtonGroup
-          size="small" exclusive value={mainSelected ? "main" : "evo"}
-          onChange={(_, v) => v && onToggleDeck(v === "main")}
+          size="small" exclusive value={poolMode}
+          onChange={(_, v) => v && onPoolMode(v)}
           sx={{
             flexShrink: 0,
             "& .MuiToggleButton-root": { color: COLORS.textDim, borderColor: COLORS.border, fontFamily: FONT, textTransform: "none", padding: m ? "2px 8px" : "4px 14px", fontSize: m ? 11 : 14 },
@@ -106,6 +106,7 @@ export default function FilterBar({
         >
           <ToggleButton value="main">Main</ToggleButton>
           <ToggleButton value="evo">Evolve</ToggleButton>
+          <ToggleButton value="tokens">Tokens</ToggleButton>
         </ToggleButtonGroup>
 
         <TextField size="small" placeholder="Search name or text…" value={search}

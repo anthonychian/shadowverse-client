@@ -150,6 +150,7 @@ export default function SharedDeck() {
         class: deckClass,
         deck: deck.deck,
         evoDeck: deck.evoDeck,
+        favoriteTokens: deck.favoriteTokens || [],
         art: deck.art || {},
       }),
     );

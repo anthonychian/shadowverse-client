@@ -249,17 +249,19 @@ const SectionHeader = ({ title, count, max }) => (
       <span style={{ width: 4, height: 16, background: COLORS.glow, borderRadius: 2 }} />
       <span style={{ color: COLORS.text, fontFamily: FONT, fontSize: 15, fontWeight: 700 }}>{title}</span>
     </span>
-    <span style={{ color: count >= max ? COLORS.gold : COLORS.textDim, fontFamily: FONT, fontSize: 13 }}>
-      {count}/{max}
+    <span style={{ color: max != null && count >= max ? COLORS.gold : COLORS.textDim, fontFamily: FONT, fontSize: 13 }}>
+      {max != null ? `${count}/${max}` : count}
     </span>
   </div>
 );
 
 export default function DeckPanel({
   deckMap, evoDeckMap, deckLen, evoLen,
+  favoriteTokenMap, favoriteLen,
   artNoOf,
   onInspect, onAdd, onAddEvo, onRemove, onRemoveEvo,
-  isAtLimit, isEvoAtLimit, copyMaxOf, evoCopyMaxOf, isMobile,
+  onAddToken, onRemoveToken,
+  isAtLimit, isEvoAtLimit, isTokenAtLimit, copyMaxOf, evoCopyMaxOf, isMobile,
   name, onNameChange, deckClass, onDeckClass, canCreate, onCreate, onImport, onExport,
   readOnly = false,
 }) {
@@ -361,6 +363,26 @@ export default function DeckPanel({
               <DeckRow key={n} name={n} count={c} artNo={artNoOf ? artNoOf(n) : null}
                 onInspect={onInspect} onAdd={onAddEvo} onRemove={onRemoveEvo}
                 addDisabled={isEvoAtLimit ? isEvoAtLimit(n) : false} />
+            ))}
+          </div>
+        )}
+
+        <div style={{ height: 8 }} />
+        <SectionHeader title="Favorite Tokens" count={favoriteLen || 0} />
+        {(favoriteLen || 0) === 0 && <Empty>Pick tokens in the Tokens tab — they open first in a match</Empty>}
+        {isMobile ? (
+          <div style={deckGrid}>
+            {sortedEntries(favoriteTokenMap || new Map()).map(([n, c]) => (
+              <DeckCard key={n} name={n} count={c} copyMax={1}
+                artNo={artNoOf ? artNoOf(n) : null} onInspect={onInspect} onAdd={onAddToken} onRemove={onRemoveToken} readOnly={readOnly} />
+            ))}
+          </div>
+        ) : (
+          <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+            {sortedEntries(favoriteTokenMap || new Map()).map(([n, c]) => (
+              <DeckRow key={n} name={n} count={c} artNo={artNoOf ? artNoOf(n) : null}
+                onInspect={onInspect} onAdd={onAddToken} onRemove={onRemoveToken}
+                addDisabled={isTokenAtLimit ? isTokenAtLimit(n) : true} />
             ))}
           </div>
         )}

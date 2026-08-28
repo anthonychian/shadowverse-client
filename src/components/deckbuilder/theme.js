@@ -106,7 +106,8 @@ export const SET_CODE_ORDER = [
 // Card names carry an " ADVANCED" suffix so the Game can register Advanced
 // evolve cards (it matches name.slice(-8) === "ADVANCED"). That suffix is an
 // internal marker, not part of the printed card name, so strip it for display.
-export const displayName = (n) => (n || "").replace(/ ADVANCED$/, "");
+export const displayName = (n) =>
+  (n || "").replace(/ ADVANCED$/, "").replace(/ TOKEN$/, "");
 
 export const SET_CODE_LABELS = {
   BP21: "Academy Royale",

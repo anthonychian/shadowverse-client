@@ -76,6 +76,9 @@ export const CardSlice = createSlice({
     // these only pick which texture to render, so gameplay/logic are unaffected.
     myArt: {},
     enemyArt: {},
+    // Tokens chosen in the deck builder; Token.js shows these first (search
+    // still finds every token). Local-only — not synced to the opponent.
+    favoriteTokens: [],
     cardback: "",
     enemyCardback: "",
     hand: [],
@@ -3115,10 +3118,14 @@ export const CardSlice = createSlice({
     setEnemyArt: (state, action) => {
       state.enemyArt = action.payload || {};
     },
+    setFavoriteTokens: (state, action) => {
+      state.favoriteTokens = Array.isArray(action.payload) ? action.payload : [];
+    },
     restoreOwnState: (state, action) => {
       const s = action.payload;
       if (s.myArt !== undefined) state.myArt = s.myArt;
       if (s.enemyArt !== undefined) state.enemyArt = s.enemyArt;
+      if (s.favoriteTokens !== undefined) state.favoriteTokens = s.favoriteTokens;
       if (s.field !== undefined) state.field = s.field;
       if (s.evoField !== undefined) state.evoField = s.evoField;
       if (s.equipField !== undefined) state.equipField = s.equipField;
@@ -3435,9 +3442,9 @@ export const CardSlice = createSlice({
     // fresh start, then pushes that cleared state to the opponent so their view
     // of me matches. The opponent's own board/hand/health are left untouched —
     // a mutual reset is what the Rematch handshake is for.
-    // payload: { deck: [names], evoDeck: [names], art: {name->cardNo}, deckClass }
+    // payload: { deck: [names], evoDeck: [names], art: {name->cardNo}, deckClass, favoriteTokens?: [names] }
     swapDeck: (state, action) => {
-      const { deck, evoDeck, art, deckClass } = action.payload;
+      const { deck, evoDeck, art, deckClass, favoriteTokens } = action.payload;
       const date = new Date().toLocaleTimeString("it-IT", {
         hour: "2-digit",
         minute: "2-digit",
@@ -3453,6 +3460,7 @@ export const CardSlice = createSlice({
       state.evoDeck = evo;
       state.initialEvoDeck = evo;
       state.myArt = art || {};
+      state.favoriteTokens = Array.isArray(favoriteTokens) ? favoriteTokens : [];
       if (deckClass) state.deckClass = deckClass;
 
       // Clear MY side to a fresh start.
@@ -3617,6 +3625,7 @@ export const {
   shuffleCards,
   setMyArt,
   setEnemyArt,
+  setFavoriteTokens,
   toggleKeyword,
   setEnemyKeyword,
   restoreOwnState,

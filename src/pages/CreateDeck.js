@@ -26,7 +26,8 @@ import {
   Button, TextField, Dialog, DialogActions, DialogContent, DialogContentText,
   DialogTitle, Snackbar, SnackbarContent, IconButton, CircularProgress, Divider,
 } from "@mui/material";
-import { matchesFilters, hasActiveFilters, getCost, getDetails, sameNameCards } from "../decks/cardDetails";
+import { matchesFilters, hasActiveFilters, getCost, getDetails, sameNameCards, cardClass } from "../decks/cardDetails";
+import { allTokens } from "../decks/AllTokens";
 import { doubleEvoOtherSide, isDoubleEvo } from "../decks/doubleEvo";
 import cardPrintings from "../decks/cardPrintings.json";
 import jpCardMap from "../decks/jpCardMap.json";
@@ -134,7 +135,9 @@ export default function CreateDeck() {
   const [evoDeck, setEvoDeck] = useState([]);
   const [deckMap, setDeckMap] = useState(new Map());
   const [evoDeckMap, setEvoDeckMap] = useState(new Map());
-  const [mainSelected, setMainSelected] = useState(true);
+  const [favoriteTokens, setFavoriteTokens] = useState([]);
+  const [favoriteTokenMap, setFavoriteTokenMap] = useState(new Map());
+  const [poolMode, setPoolMode] = useState("main"); // "main" | "evo" | "tokens"
   const [name, setName] = useState(deckName || "");
   const [deckClass, setDeckClass] = useState("");
   const [cardName, setCardName] = useState(null); // inspected card (by name)
@@ -240,6 +243,33 @@ export default function CreateDeck() {
       setEvoDeck(evoDeck.filter((_, idx) => idx !== cardIndex));
     }
   };
+  const isTokenCard = (n) => typeof n === "string" && n.endsWith(" TOKEN");
+  const tokenAtLimit = (card) => favoriteTokenMap.has(card);
+  const handleTokenSelection = (card) => {
+    if (!isTokenCard(card) || tokenAtLimit(card)) return;
+    favoriteTokenMap.set(card, 1);
+    setFavoriteTokenMap(new Map(favoriteTokenMap));
+    setFavoriteTokens((t) => [...t, card]);
+  };
+  const handleTokenRemove = (card) => {
+    if (!favoriteTokenMap.has(card)) return;
+    favoriteTokenMap.delete(card);
+    setFavoriteTokenMap(new Map(favoriteTokenMap));
+    setFavoriteTokens((t) => t.filter((n) => n !== card));
+  };
+  const handleFillFavoriteTokens = (cards) => {
+    const seen = new Set();
+    const next = [];
+    const map = new Map();
+    for (const c of cards || []) {
+      if (!isTokenCard(c) || seen.has(c)) continue;
+      seen.add(c);
+      next.push(c);
+      map.set(c, 1);
+    }
+    setFavoriteTokens(next);
+    setFavoriteTokenMap(map);
+  };
 
   // copy-limit predicates (the single source of truth for the handlers above and
   // for greying / disabling UI). The default 3-copy cap counts copies across a
@@ -283,6 +313,22 @@ export default function CreateDeck() {
     if (cardNo) setArtByName((m) => (m.has(name) ? m : new Map(m).set(name, cardNo)));
     handleEvoCardSelection(name);
   };
+  const addToken = (name, cardNo) => {
+    if (cardNo) setArtByName((m) => (m.has(name) ? m : new Map(m).set(name, cardNo)));
+    handleTokenSelection(name);
+  };
+  const addInspected = (name, cardNo) => {
+    if (!name) return;
+    if (isTokenCard(name)) addToken(name, cardNo);
+    else if (isEvoCard(name)) addEvo(name, cardNo);
+    else addMain(name, cardNo);
+  };
+  const removeInspected = (name) => {
+    if (!name) return;
+    if (isTokenCard(name)) handleTokenRemove(name);
+    else if (isEvoCard(name)) handleEvoCardRemove(name);
+    else handleCardRemove(name);
+  };
 
   const handleFillDeckMap = (cards) => cards.forEach((c) => handleCardSelection(c));
   const handleFillEvoDeckMap = (cards) => cards.forEach((c) => handleEvoCardSelection(c));
@@ -293,6 +339,7 @@ export default function CreateDeck() {
       const d = deckEdit[0];
       if (d.deck?.length) handleFillDeckMap(d.deck);
       if (d.evoDeck?.length) handleFillEvoDeckMap(d.evoDeck);
+      if (d.favoriteTokens?.length) handleFillFavoriteTokens(d.favoriteTokens);
       if (d.class) setDeckClass(d.class);
       if (d.art) setArtByName(new Map(Object.entries(d.art)));
     }
@@ -301,6 +348,7 @@ export default function CreateDeck() {
         const decoded = JSON.parse(atob(id));
         if (decoded[0].deck?.length) handleFillDeckMap(decoded[0].deck);
         if (decoded[0].evoDeck?.length) handleFillEvoDeckMap(decoded[0].evoDeck);
+        if (decoded[0].favoriteTokens?.length) handleFillFavoriteTokens(decoded[0].favoriteTokens);
         if (decoded[0].name) setName(decoded[0].name);
         if (decoded[0].class) setDeckClass(decoded[0].class);
         if (decoded[0].art) setArtByName(new Map(Object.entries(decoded[0].art)));
@@ -412,18 +460,29 @@ export default function CreateDeck() {
   // ---------- filtered pool (set ∩ class ∩ search ∩ detail filters) ----------
   // Each entry is { name, cardNo?, key }: `name` drives selection/limits (the
   // deck is keyed by name), `cardNo` (printings view only) picks which art to
-  // show. Tokens are never listed in the deck builder.
+  // show. The Tokens tab lists token cards for the favorite-tokens list.
   const displayed = useMemo(() => {
-    const main = mainSelected;
-    const base = main ? allCards : allCardsEvo;
-    const classKey = buttonFilterClass === "all" ? (main ? "all" : "all evo") : main ? buttonFilterClass : buttonFilterClass + " evo";
-    const classSet = new Set(getCardsFromName(classKey));
-    let names = base.filter((n) => classSet.has(n) && !n.endsWith(" TOKEN") && !HIDDEN_NAMES.has(n));
+    const tokensMode = poolMode === "tokens";
+    const main = poolMode === "main";
+    let names;
+    if (tokensMode) {
+      names = allTokens.filter((n) => !HIDDEN_NAMES.has(n));
+      if (buttonFilterClass !== "all") {
+        names = names.filter((n) => cardClass(n) === buttonFilterClass);
+      }
+    } else {
+      const base = main ? allCards : allCardsEvo;
+      const classKey = buttonFilterClass === "all" ? (main ? "all" : "all evo") : main ? buttonFilterClass : buttonFilterClass + " evo";
+      const classSet = new Set(getCardsFromName(classKey));
+      names = base.filter((n) => classSet.has(n) && !n.endsWith(" TOKEN") && !HIDDEN_NAMES.has(n));
+    }
     // Set filter: "all" = no constraint, "main" = the BP01–17 boosters,
     // otherwise a specific set family (card has a printing in that set).
     if (buttonFilterSet === "main") {
-      const mainSet = new Set(getCardsFromName(main ? "main" : "main evo"));
-      names = names.filter((n) => mainSet.has(n));
+      if (!tokensMode) {
+        const mainSet = new Set(getCardsFromName(main ? "main" : "main evo"));
+        names = names.filter((n) => mainSet.has(n));
+      }
     } else if (buttonFilterSet !== "all") {
       names = names.filter((n) => {
         const f = setsByName.get(n);
@@ -520,7 +579,7 @@ export default function CreateDeck() {
     }
     return sortItems(items);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [mainSelected, buttonFilterSet, buttonFilterClass, search, types, traits, rarities, costs, attacks, defenses, excludeDupes, printingsByName, canonicalNoByName, setsByName]);
+  }, [poolMode, buttonFilterSet, buttonFilterClass, search, types, traits, rarities, costs, attacks, defenses, excludeDupes, printingsByName, canonicalNoByName, setsByName]);
 
   useEffect(() => setVisibleCount(CARD_PAGE_SIZE), [displayed]);
 
@@ -573,11 +632,18 @@ export default function CreateDeck() {
   }, [deck, evoDeck, displayed, cardName, willLoadDeck, isMobile]);
 
   // ---------- inspector ----------
+  const inspectedIsToken = cardName ? isTokenCard(cardName) : false;
   const inspectedIsEvo = cardName ? isEvoCard(cardName) : false;
   const inspectedCount = cardName
-    ? groupCount(inspectedIsEvo ? evoDeckMap : deckMap, cardName)
+    ? inspectedIsToken
+      ? (favoriteTokenMap.get(cardName) || 0)
+      : groupCount(inspectedIsEvo ? evoDeckMap : deckMap, cardName)
     : 0;
-  const inspectedAtLimit = cardName ? (inspectedIsEvo ? evoAtLimit(cardName) : mainAtLimit(cardName)) : true;
+  const inspectedAtLimit = cardName
+    ? inspectedIsToken
+      ? tokenAtLimit(cardName)
+      : inspectedIsEvo ? evoAtLimit(cardName) : mainAtLimit(cardName)
+    : true;
   const navInspect = (dir) => {
     let idx = displayed.findIndex((it) => (it.key ?? it.name) === inspectedKey);
     if (idx === -1) idx = displayed.findIndex((it) => it.name === cardName);
@@ -608,6 +674,7 @@ export default function CreateDeck() {
   };
   const handleClearImport = () => {
     setDeck([]); setDeckMap(new Map()); setEvoDeck([]); setEvoDeckMap(new Map());
+    setFavoriteTokens([]); setFavoriteTokenMap(new Map());
     setImportTextFieldVal("");
   };
 
@@ -719,8 +786,8 @@ export default function CreateDeck() {
     // `art` (name -> chosen printing card number) is an additive field; the Game
     // ignores it and continues to read `deck`/`evoDeck` as name lists.
     const art = {};
-    for (const [n, no] of artByName) if (deckMap.has(n) || evoDeckMap.has(n)) art[n] = no;
-    const saved = { name, class: deckClass, deck, evoDeck, art };
+    for (const [n, no] of artByName) if (deckMap.has(n) || evoDeckMap.has(n) || favoriteTokenMap.has(n)) art[n] = no;
+    const saved = { name, class: deckClass, deck, evoDeck, favoriteTokens, art };
 
     // Every deck gets its URL at save time, so Preview always has one page to
     // open. The share starts private — it 404s for anyone but the owner until
@@ -793,8 +860,8 @@ export default function CreateDeck() {
       count={inspectedCount}
       atLimit={inspectedAtLimit}
       isDouble={cardName ? isDoubleEvo(cardName) : false}
-      onAdd={() => cardName && (inspectedIsEvo ? addEvo(cardName, inspectedCardNo) : addMain(cardName, inspectedCardNo))}
-      onRemove={() => cardName && (inspectedIsEvo ? handleEvoCardRemove(cardName) : handleCardRemove(cardName))}
+      onAdd={() => addInspected(cardName, inspectedCardNo)}
+      onRemove={() => removeInspected(cardName)}
       onPrev={() => navInspect(-1)}
       onNext={() => navInspect(1)}
       onSwap={handleDoubleEvoClick}
@@ -806,11 +873,13 @@ export default function CreateDeck() {
     <DeckPanel
       deckMap={deckMap} evoDeckMap={evoDeckMap}
       deckLen={deck.length} evoLen={evoDeck.length}
+      favoriteTokenMap={favoriteTokenMap} favoriteLen={favoriteTokens.length}
       artNoOf={(n) => artByName.get(n) || null}
       onInspect={handleDeckInspect}
       onAdd={handleCardSelection} onAddEvo={handleEvoCardSelection}
       onRemove={handleCardRemove} onRemoveEvo={handleEvoCardRemove}
-      isAtLimit={mainAtLimit} isEvoAtLimit={evoAtLimit}
+      onAddToken={handleTokenSelection} onRemoveToken={handleTokenRemove}
+      isAtLimit={mainAtLimit} isEvoAtLimit={evoAtLimit} isTokenAtLimit={tokenAtLimit}
       copyMaxOf={mainCopyMax} evoCopyMaxOf={evoCopyMax} isMobile={isMobile}
       name={name} onNameChange={setName}
       deckClass={deckClass} onDeckClass={setDeckClass}
@@ -855,7 +924,7 @@ export default function CreateDeck() {
         {/* CENTER — filters + pool */}
         <main style={{ flex: 1, minWidth: 0, display: "flex", flexDirection: "column", background: COLORS.panel, borderRadius: 12, overflow: "hidden" }}>
           <FilterBar
-            mainSelected={mainSelected} onToggleDeck={setMainSelected}
+            poolMode={poolMode} onPoolMode={setPoolMode}
             search={search} onSearch={setSearch}
             set={buttonFilterSet} onSet={setButtonFilterSet} setOptions={setOptions}
             klass={buttonFilterClass} onClass={setButtonFilterClass}
@@ -879,11 +948,11 @@ export default function CreateDeck() {
               inspectedKey={inspectedKey}
               onInspect={handleInspect}
               onSelect={inspect}
-              onAdd={mainSelected ? addMain : addEvo}
-              onRemove={mainSelected ? handleCardRemove : handleEvoCardRemove}
-              isAtLimit={mainSelected ? mainAtLimit : evoAtLimit}
-              countOf={mainSelected ? (n) => groupCount(deckMap, n) : (n) => groupCount(evoDeckMap, n)}
-              copyMaxOf={mainSelected ? mainCopyMax : evoCopyMax}
+              onAdd={poolMode === "tokens" ? addToken : poolMode === "main" ? addMain : addEvo}
+              onRemove={poolMode === "tokens" ? handleTokenRemove : poolMode === "main" ? handleCardRemove : handleEvoCardRemove}
+              isAtLimit={poolMode === "tokens" ? tokenAtLimit : poolMode === "main" ? mainAtLimit : evoAtLimit}
+              countOf={poolMode === "tokens" ? (n) => favoriteTokenMap.get(n) || 0 : poolMode === "main" ? (n) => groupCount(deckMap, n) : (n) => groupCount(evoDeckMap, n)}
+              copyMaxOf={poolMode === "tokens" ? () => 1 : poolMode === "main" ? mainCopyMax : evoCopyMax}
               isMobile={isMobile}
             />
           </div>

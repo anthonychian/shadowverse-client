@@ -4,7 +4,7 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "prestart": "npm run build --prefix ../packages/sve-engine",
+    "prestart": "npm run build -w sve-engine",
     "start": "node index.js",
     "dev": "node index.js"
   },
