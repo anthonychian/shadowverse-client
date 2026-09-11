@@ -7414,6 +7414,6 @@ export function getCardNoFromName(cardName) {
   if (!cardName) return null;
   const path = cardImage(cardName);
   if (!path || path.includes("default.png")) return null;
-  const match = path.match(/\/([^/\?#]+)\.png(?:\?.*)?$/);
+  const match = path.match(/\/([^/?#]+)\.png(?:\?.*)?$/);
   return match ? match[1] : null;
 }
