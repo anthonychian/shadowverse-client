@@ -5,6 +5,7 @@ import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import { cardImage, toThumb } from "../../decks/getCards";
+import { ART_VERSION } from "../../decks/artVersion";
 import { getCost, primaryType } from "../../decks/cardDetails";
 import { COLORS, FONT, CLASS_ORDER, DECK_CLASS_ORDER, CLASS_LABELS, CLASS_COLORS, displayName } from "./theme";
 import { classIcon } from "./icons";
@@ -30,12 +31,12 @@ const DeckCard = ({ name, count, copyMax, artNo, onInspect, onAdd, onRemove, rea
     }}
   >
     <img
-      src={artNo ? `../textures/thumbs/${artNo}.png` : toThumb(cardImage(name))}
+      src={artNo ? `../textures/thumbs/${artNo}.png?v=${ART_VERSION}` : toThumb(cardImage(name))}
       loading="lazy" decoding="async"
       onError={(e) => {
         // Fall back to the full chosen-art image, then the default art.
         if (artNo && e.currentTarget.src.indexOf("/thumbs/") !== -1) {
-          e.currentTarget.src = `../textures/${artNo}.png`;
+          e.currentTarget.src = `../textures/${artNo}.png?v=${ART_VERSION}`;
         } else if (e.currentTarget.src.indexOf("/textures/") !== -1 && artNo) {
           e.currentTarget.src = cardImage(name);
         }
@@ -99,12 +100,12 @@ const DeckRow = ({ name, count, artNo, onInspect, onAdd, onRemove, addDisabled }
     onMouseLeave={(e) => (e.currentTarget.style.background = COLORS.row)}
   >
     <img
-      src={artNo ? `../textures/thumbs/${artNo}.png` : toThumb(cardImage(name))}
+      src={artNo ? `../textures/thumbs/${artNo}.png?v=${ART_VERSION}` : toThumb(cardImage(name))}
       loading="lazy" decoding="async"
       onError={(e) => {
         // Fall back to the full chosen-art image, then the default art.
         if (artNo && e.currentTarget.src.indexOf("/thumbs/") !== -1) {
-          e.currentTarget.src = `../textures/${artNo}.png`;
+          e.currentTarget.src = `../textures/${artNo}.png?v=${ART_VERSION}`;
         } else if (e.currentTarget.src.indexOf("/textures/") !== -1 && artNo) {
           e.currentTarget.src = cardImage(name);
         }

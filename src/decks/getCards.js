@@ -1,4 +1,12 @@
 import cardStats from "../engine/card-stats.json";
+import { ART_VERSION } from "./artVersion";
+
+// Card art is served with a year-long immutable cache, so a URL can never be a
+// stable identity for bytes that get replaced (e.g. a set's art swapped to the
+// EN version). Every texture URL here carries ?v=<ART_VERSION>; bump the
+// constant when art changes to force a refetch.
+const withVersion = (src) =>
+  src && !src.includes("?v=") ? `${src}?v=${ART_VERSION}` : src;
 
 let statsNameToCardNo = null;
 function cardNoFromStatsName(cardName) {
@@ -16,21 +24,25 @@ function cardNoFromStatsName(cardName) {
 // chosen printing, use that printing's texture, else fall back to the default
 // name-keyed art. The Game keeps using names, so this only affects display.
 export const artImage = (cardName, art) =>
-  art && art[cardName] ? `../textures/${art[cardName]}.png` : cardImage(cardName);
+  withVersion(
+    art && art[cardName] ? `../textures/${art[cardName]}.png` : cardImage(cardName),
+  );
 
 // Rewrite a "../textures/X.png" path to its lightweight thumbnail
 // ("../textures/thumbs/X.png"). Non-texture paths (require()'d assets, etc.)
 // pass through unchanged. Use for many-at-once card displays (hand/field/etc.);
 // keep the full-size image for the large hover preview.
 export const toThumb = (src) =>
-  src && src.includes("/textures/") && !src.includes("/textures/thumbs/")
-    ? src.replace("/textures/", "/textures/thumbs/")
-    : src;
+  withVersion(
+    src && src.includes("/textures/") && !src.includes("/textures/thumbs/")
+      ? src.replace("/textures/", "/textures/thumbs/")
+      : src,
+  );
 
 // Thumbnail variant of artImage, honoring the per-card art choice.
 export const artThumb = (cardName, art) => toThumb(artImage(cardName, art));
 
-export const cardImage = (cardName) => {
+const rawCardImage = (cardName) => {
   switch (cardName) {
     case "Aria, Lady of the Woods":
       return "../textures/BP16-001EN.png";
@@ -7393,11 +7405,15 @@ export const cardImage = (cardName) => {
   }
 };
 
+// Raw name-keyed path without the cache-busting query — used where the result is
+// matched/parsed rather than rendered (e.g. getCardNoFromName, adapter lookups).
+export const cardImage = (cardName) => withVersion(rawCardImage(cardName));
+
 /** Resolve official card number from a deck-builder card name via texture path. */
 export function getCardNoFromName(cardName) {
   if (!cardName) return null;
   const path = cardImage(cardName);
   if (!path || path.includes("default.png")) return null;
-  const match = path.match(/\/([^/]+)\.png$/);
+  const match = path.match(/\/([^/\?#]+)\.png(?:\?.*)?$/);
   return match ? match[1] : null;
 }

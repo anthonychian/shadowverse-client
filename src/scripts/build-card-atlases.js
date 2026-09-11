@@ -36,6 +36,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const crypto = require("crypto");
 const UPNG = require("upng-js");
 
 const ROOT = path.join(__dirname, "..", "..");
@@ -175,6 +176,7 @@ const SHEET_H = TILE_H * GRID_ROWS;
 let mismatched = 0;
 let bytesOut = 0;
 let bytesIn = 0;
+const sheetHash = new Map();
 
 for (let s = 0; s < sheetCount; s++) {
   const slice = sheets[s].cards;
@@ -219,6 +221,7 @@ for (let s = 0; s < sheetCount; s++) {
 
   const enc = Buffer.from(UPNG.encode([sheet.buffer], SHEET_W, SHEET_H, COLORS));
   bytesOut += enc.length;
+  sheetHash.set(sheets[s].name, crypto.createHash("md5").update(enc).digest("hex").slice(0, 8));
   if (!DRY_RUN) {
     fs.writeFileSync(path.join(OUT_DIR, `${sheets[s].name}.png`), enc);
   }
@@ -234,6 +237,10 @@ if (!DRY_RUN && LIMIT === Infinity) {
     tile: [TILE_W, TILE_H],
     grid: [GRID_COLS, GRID_ROWS],
     sheets: Object.fromEntries(sheets.map((sh) => [sh.name, sh.cards])),
+    // sheetName -> content hash of the sheet's bytes. The sheets are served
+    // immutable, so the runtime appends this as ?v= to force a refetch only
+    // when a sheet is actually rebuilt.
+    versions: Object.fromEntries(sheets.map((sh) => [sh.name, sheetHash.get(sh.name)])),
   });
   fs.writeFileSync(path.join(OUT_DIR, "index.json"), index);
   // A second copy under src/ so the app can `import` it: CRA can't import out

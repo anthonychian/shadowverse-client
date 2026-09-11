@@ -1,5 +1,6 @@
 import React from "react";
 import { cardImage, artThumb, artImage } from "../../decks/getCards";
+import { ART_VERSION } from "../../decks/artVersion";
 
 import { getCost, primaryType } from "../../decks/cardDetails";
 import { CLASS_LABELS, CLASS_COLORS } from "./theme";
@@ -90,7 +91,7 @@ const Grid = ({ entries, art }) => (
           onError={(e) => {
             const chosen = art && art[name];
             if (chosen && e.currentTarget.src.indexOf("/thumbs/") !== -1) {
-              e.currentTarget.src = `/textures/${chosen}.png`;
+              e.currentTarget.src = `/textures/${chosen}.png?v=${ART_VERSION}`;
             } else if (chosen) {
               e.currentTarget.src = abs(cardImage(name));
             }

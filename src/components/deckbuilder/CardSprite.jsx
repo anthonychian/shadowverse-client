@@ -29,10 +29,17 @@ const position = (() => {
 
 export const hasSprite = (cardNo) => !!cardNo && position.has(cardNo);
 
+// Sheets are served immutable for a year, so their URL must encode their
+// content. atlasIndex.versions[sheet] is a hash of the sheet's bytes computed
+// at build time: an unchanged sheet keeps its `?v=`, a rebuilt one changes it
+// and forces the browser/edge to fetch the new art.
+const sheetUrl = (sheet) =>
+  `/atlases/${sheet}.png?v=${atlasIndex.versions?.[sheet] || "0"}`;
+
 // Public so a caller can warm the sheet a card lives on.
 export const atlasUrlFor = (cardNo) => {
   const p = position.get(cardNo);
-  return p ? `/atlases/${p.sheet}.png` : null;
+  return p ? sheetUrl(p.sheet) : null;
 };
 
 /**
@@ -58,7 +65,7 @@ export default function CardSprite({
 
   const col = p.cell % COLS;
   const row = Math.floor(p.cell / COLS);
-  const url = `/atlases/${p.sheet}.png`;
+  const url = sheetUrl(p.sheet);
 
   // Percentage-free positioning: shift by whole tiles at the rendered size.
   // Numeric width/height are px; a string (e.g. "100%") means the tile is

@@ -8,6 +8,7 @@ import RemoveIcon from "@mui/icons-material/Remove";
 import SearchIcon from "@mui/icons-material/Search";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import { cardImage } from "../../decks/getCards";
+import { ART_VERSION } from "../../decks/artVersion";
 import CardSprite, { hasSprite } from "./CardSprite";
 import { COLORS, FONT } from "./theme";
 
@@ -82,7 +83,7 @@ function CardTile({ name, cardNo, cardKey, count, copyMax, maxed, selected, onIn
   const [hover, setHover] = React.useState(false);
   // In the "show all printings" view a specific printing is requested by card
   // number; otherwise fall back to the name-keyed image used everywhere else.
-  const fullSrc = cardNo ? `../textures/${cardNo}.png` : cardImage(name);
+  const fullSrc = cardNo ? `../textures/${cardNo}.png?v=${ART_VERSION}` : cardImage(name);
   // Mobile pool tiles render much larger than desktop ones, so the downscaled
   // thumbs look soft there — load the full-size originals on mobile; desktop
   // keeps the lighter thumbnails.

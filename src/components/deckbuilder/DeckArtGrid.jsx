@@ -1,5 +1,6 @@
 import React from "react";
 import { artThumb, artImage, cardImage } from "../../decks/getCards";
+import { ART_VERSION } from "../../decks/artVersion";
 import { getCost } from "../../decks/cardDetails";
 import { COLORS, FONT, displayName } from "./theme";
 
@@ -114,7 +115,7 @@ export default function DeckArtGrid({
             onError={(e) => {
               const chosen = art && art[name];
               if (chosen && e.currentTarget.src.indexOf("/thumbs/") !== -1) {
-                e.currentTarget.src = `../textures/${chosen}.png`;
+                e.currentTarget.src = `../textures/${chosen}.png?v=${ART_VERSION}`;
               } else if (chosen) {
                 e.currentTarget.src = cardImage(name);
               }
