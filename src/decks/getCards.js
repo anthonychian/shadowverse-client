@@ -6398,8 +6398,6 @@ const rawCardImage = (cardName) => {
       return "../textures/CP04-060EN.png";
     case "Hiyori":
       return "../textures/CP04-061EN.png";
-    case "Someday, We'll Meet Again in the Future":
-      return "../textures/CP04-062EN.png";
     case "Inori":
       return "../textures/CP04-063EN.png";
     case "Inori Evolved":
@@ -6501,19 +6499,19 @@ const rawCardImage = (cardName) => {
     case "Lailael":
       return "../textures/CP04-112EN.png";
     case "Ameth":
-      return "../textures/CP04-113EN.png";
-    case "Ameth Evolved":
-      return "../textures/CP04-114EN.png";
-    case "Croce":
       return "../textures/CP04-115EN.png";
-    case "Kasumi":
+    case "Ameth Evolved":
       return "../textures/CP04-116EN.png";
-    case "Kasumi Evolved":
+    case "Croce":
       return "../textures/CP04-117EN.png";
-    case "Call of the Guild":
+    case "Kasumi":
       return "../textures/CP04-118EN.png";
-    case "Ayumi":
+    case "Kasumi Evolved":
       return "../textures/CP04-119EN.png";
+    case "Call of the Guild":
+      return "../textures/CP04-120EN.png";
+    case "Ayumi":
+      return "../textures/CP04-121EN.png";
     case "Ames Amulet TOKEN":
       return "../textures/CP04-T01EN.png";
     case "Princess Sword TOKEN":
@@ -7053,9 +7051,9 @@ const rawCardImage = (cardName) => {
     case "Rulenye, Echoing Scream TOKEN":
       return "../textures/EBD03-T03EN.png";
     case "Princess Knight":
-      return "../textures/PCS01-048EN.png";
+      return "../textures/CP04-113EN.png";
     case "Princess Knight Evolved":
-      return "../textures/PCS01-049EN.png";
+      return "../textures/CP04-114EN.png";
     case "miroir":
       return "../textures/CP02-SP04aEN.png";
     case "Kyoko Igarashi [Love Letter] TOKEN":
