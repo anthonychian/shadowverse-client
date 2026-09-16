@@ -47,3 +47,26 @@ canvas {
 canvas:active {
   cursor: grabbing;
 }
+
+/* Card description (effect-text) scroll panels — the deck-page preview dialog
+   and inspector. A visible, draggable scrollbar even on small windows, where the
+   box itself is short: an overlay/auto scrollbar can hide itself and leave the
+   rest of the description unreachable. */
+.card-effect-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.4) rgba(255, 255, 255, 0.07);
+}
+.card-effect-scroll::-webkit-scrollbar {
+  width: 10px;
+}
+.card-effect-scroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 8px;
+}
+.card-effect-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+}
+.card-effect-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.6);
+}

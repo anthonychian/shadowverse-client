@@ -119,20 +119,25 @@ export default function CardInspector({
 }) {
   // In `fitEffect` previews (e.g. the in-game hover) the height is fixed, so on
   // smaller screens shrink the chrome — name, traits, stats, icons, badges — to
-  // keep the (vh-capped) art and the description as large as possible. metaScale
-  // is 1 on tall screens and scales down with viewport height below ~900px.
+  // keep the (vh-capped) art and the description as large as possible. `fill`
+  // (the deck-page preview dialog) does the same: its dialog is viewport-capped
+  // and needs to fit art + description on a short window, so the chrome gives up
+  // its share first while the description text keeps its full size. metaScale is
+  // 1 on tall screens and scales down with viewport height below ~820–900px.
   const [vpH, setVpH] = useState(typeof window !== "undefined" ? window.innerHeight : 1080);
   useEffect(() => {
-    if (!fitEffect) return;
+    if (!fitEffect && !fill) return;
     const onResize = () => setVpH(window.innerHeight);
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
-  }, [fitEffect]);
+  }, [fitEffect, fill]);
   // Everything sized off metaScale — name, meta text, stat values, cost/atk/def
   // icons, gaps, the stat banner — rides `textScale` too, so one knob moves the
   // whole block together rather than leaving the icons behind the text.
   const metaScale =
-    (fitEffect ? Math.max(0.6, Math.min(1, vpH / 900)) : 1) * textScale;
+    fitEffect || fill
+      ? Math.max(fill ? 0.65 : 0.6, Math.min(1, vpH / (fill ? 820 : 900))) * textScale
+      : textScale;
 
   // In the fullscreen mobile preview there's plenty of room, so scale the image,
   // text and stepper up; the desktop column keeps the compact sizes. In `fill`
@@ -168,7 +173,13 @@ export default function CardInspector({
   // off whichever dimension binds: height on the portrait mobile/preview crops,
   // width on the desktop column.
   const artBox = fill
-    ? { height: imageMaxHeight || "min(58vh, 620px)", maxWidth: "100%" }
+    ? {
+        // Short/medium windows scale the art down — art + chrome + a usable
+        // description box (its clamp floor) must fit inside the dialog's
+        // ~94vh budget. Only genuinely tall windows keep the big art.
+        height: imageMaxHeight || (vpH < 1100 ? "min(26vh, 380px)" : "min(52vh, 560px)"),
+        maxWidth: "100%",
+      }
     : large
     ? { height: "32vh", maxWidth: imgMax }
     : imageMaxHeight
@@ -205,7 +216,20 @@ export default function CardInspector({
   const showPicker = printings.length > 1 && typeof onSelectPrinting === "function";
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", height: fill ? "auto" : "100%", gap }}>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        height: fill ? "auto" : "100%",
+        gap,
+        // In `fill` (the deck-page preview dialog) the root is a flexible child
+        // of the dialog's viewport-clamped flex column: on a short window the
+        // clamp squeezes it so the description box (flex: 1 1 auto) absorbs the
+        // overflow instead of the whole dialog growing past the screen.
+        flex: fill ? "1 1 auto" : undefined,
+        minHeight: fill ? 0 : undefined,
+      }}
+    >
       {/* Card image with navigation. In large mode a side gutter keeps the
           arrows off the card art. */}
       <div style={{ position: "relative", display: "flex", justifyContent: "center", padding: 0 }}>
@@ -319,18 +343,25 @@ export default function CardInspector({
       {/* Effect text */}
       {d.effect && (
         <div
+          className="card-effect-scroll"
           style={{
             fontFamily: FONT, color: COLORS.text, fontSize: effectSize, lineHeight: 1.45,
             background: COLORS.inset, borderRadius: 8, padding: gameStyle ? "12px 14px" : "10px 12px",
             ...gamePanel,
             // In `fill` mode the box grows to its natural height (no inner
-            // scrollbar) so any overflow falls to the dialog, which scrolls only
-            // when it's too small to fit everything. `fitEffect` clips and the
-            // text auto-scales to fit. Elsewhere it scrolls itself.
-            overflowY: fitEffect ? "hidden" : fill ? "visible" : "auto",
-            flex: fill ? "0 0 auto" : "1 1 auto",
+            // scrollbar) when the dialog has room, and takes whichever height is
+            // left when a short window clamps the outer flex chain — scrolling
+            // inside instead of pushing the description off-screen. A
+            // viewport-scaled floor keeps that box usable on small screens: a
+            // scrollbar you can actually grab, and text you can scroll to.
+            // `fitEffect` clips and the text auto-scales to fit; elsewhere the
+            // box scrolls itself. Overscroll stays in the box so the wheel
+            // scrolls the description, not the dialog behind it.
+            overflowY: fitEffect ? "hidden" : "auto",
+            overscrollBehavior: "contain",
+            flex: "1 1 auto",
             // Description box stays large in the mobile preview — never small.
-            minHeight: fitEffect ? 0 : fill ? 0 : large ? "30vh" : 0,
+            minHeight: fitEffect ? 0 : fill ? (vpH < 1100 ? "clamp(110px, 24vh, 300px)" : 0) : large ? "30vh" : 0,
           }}
         >
           {fitEffect ? (

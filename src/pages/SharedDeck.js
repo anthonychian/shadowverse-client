@@ -330,8 +330,21 @@ export default function SharedDeck() {
         {/* No fixed height and no clipping: the inspector sizes itself, and if
             a card is genuinely too tall for the window the Paper scrolls rather
             than cutting the text off. Bottom padding runs a little heavier than
-            top, which reads as balanced rather than bottom-tight. */}
-        <div style={{ position: "relative", padding: "26px 28px 34px", boxSizing: "border-box" }}>
+            top, which reads as balanced rather than bottom-tight. On short
+            windows this wrapper clamps at the viewport budget and the inspector's
+            description box (a flexible child) absorbs the overflow with its own
+            scrollbar — the whole box stays visible instead of being cut off. */}
+        <div
+          style={{
+            position: "relative",
+            padding: "26px 28px 34px",
+            boxSizing: "border-box",
+            display: "flex",
+            flexDirection: "column",
+            minHeight: 0,
+            maxHeight: "calc(94vh - 60px)",
+          }}
+        >
           <IconButton
             onClick={() => setInspectOpen(false)}
             sx={{
@@ -348,8 +361,10 @@ export default function SharedDeck() {
           </IconButton>
           {/* The measure, not the dialog, is what keeps this readable: cap the
               content column and centre it, so the effect text stays a sane line
-              length and the whitespace lands in even gutters either side. */}
-          <div style={{ maxWidth: 660, margin: "0 auto" }}>
+              length and the whitespace lands in even gutters either side. A flex
+              child of the clamping wrapper, so it reaches down to the clamped
+              height and lets the description box take the overflow. */}
+          <div style={{ maxWidth: 660, margin: "0 auto", width: "100%", display: "flex", flexDirection: "column", minHeight: 0 }}>
             <CardInspector
             name={inspectName}
             cardNo={inspectCardNo}
@@ -358,14 +373,15 @@ export default function SharedDeck() {
             // `fill`, not `fitEffect`. fitEffect scales the text down to fit
             // the height left over after the art, so any misjudgement of that
             // budget shrinks the text toward invisible. `fill` is the mode
-            // meant for a roomy preview dialog: the effect box takes its
-            // natural height and the text is never scaled, so it's always
-            // readable — the dialog absorbs the difference instead.
+            // meant for a preview dialog: the text is never scaled, the effect
+            // box takes its natural height when there's room, and on a short
+            // window it scrolls inside itself instead of cutting off.
             fill
             // Undo `fill`'s type shrink and then some — this dialog has the
-            // room, and the card text is the reason it's open.
+            // room, and the card text is the reason it's open. On short windows
+            // the chrome still scales down and the art gives up height so the
+            // description box stays readable and on-screen.
             textScale={1.45}
-            imageMaxHeight="min(52vh, 560px)"
             />
           </div>
         </div>
