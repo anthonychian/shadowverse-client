@@ -152,6 +152,7 @@ export default function SharedDeck() {
         evoDeck: deck.evoDeck,
         favoriteTokens: deck.favoriteTokens || [],
         art: deck.art || {},
+        cover: deck.cover || "",
       }),
     );
     setSnack(

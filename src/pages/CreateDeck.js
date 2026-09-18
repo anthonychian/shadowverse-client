@@ -140,6 +140,8 @@ export default function CreateDeck() {
   const [poolMode, setPoolMode] = useState("main"); // "main" | "evo" | "tokens"
   const [name, setName] = useState(deckName || "");
   const [deckClass, setDeckClass] = useState("");
+  // Which card is the deck's cover (tile show on Home); "" = auto (middle card).
+  const [cover, setCover] = useState("");
   const [cardName, setCardName] = useState(null); // inspected card (by name)
   // Which pool tile is highlighted. In the "show all printings" view several
   // tiles share a name, so the highlight is keyed by the tile (card number),
@@ -342,6 +344,7 @@ export default function CreateDeck() {
       if (d.favoriteTokens?.length) handleFillFavoriteTokens(d.favoriteTokens);
       if (d.class) setDeckClass(d.class);
       if (d.art) setArtByName(new Map(Object.entries(d.art)));
+      if (d.cover) setCover(d.cover);
     }
     if (id) {
       try {
@@ -352,6 +355,7 @@ export default function CreateDeck() {
         if (decoded[0].name) setName(decoded[0].name);
         if (decoded[0].class) setDeckClass(decoded[0].class);
         if (decoded[0].art) setArtByName(new Map(Object.entries(decoded[0].art)));
+        if (decoded[0].cover) setCover(decoded[0].cover);
       } catch {
         navigate("/deck");
       }
@@ -787,7 +791,10 @@ export default function CreateDeck() {
     // ignores it and continues to read `deck`/`evoDeck` as name lists.
     const art = {};
     for (const [n, no] of artByName) if (deckMap.has(n) || evoDeckMap.has(n) || favoriteTokenMap.has(n)) art[n] = no;
-    const saved = { name, class: deckClass, deck, evoDeck, favoriteTokens, art };
+    // Keep the cover pointing at a card actually in the deck (main or evolve);
+    // otherwise it resets to auto so Home doesn't render a dead image.
+    const coverInDeck = deck.includes(cover) || evoDeck.includes(cover);
+    const saved = { name, class: deckClass, deck, evoDeck, favoriteTokens, art, cover: coverInDeck ? cover : "" };
 
     // Every deck gets its URL at save time, so Preview always has one page to
     // open. The share starts private — it 404s for anyone but the owner until
@@ -883,6 +890,7 @@ export default function CreateDeck() {
       copyMaxOf={mainCopyMax} evoCopyMaxOf={evoCopyMax} isMobile={isMobile}
       name={name} onNameChange={setName}
       deckClass={deckClass} onDeckClass={setDeckClass}
+      cover={cover} onCoverChange={setCover}
       canCreate={canCreate} onCreate={handleSubmit}
       onImport={() => setOpenImport(true)} onExport={handleOpenSnack}
     />

@@ -155,7 +155,12 @@ export default function DeckShareCard({ deck, ownerName, url }) {
     .map((t) => `${types[t]} ${t}${types[t] === 1 ? "" : "s"}`)
     .join("  •  ");
 
-  const hero = keyCard(deck?.deck);
+  // The deck's own hero art: the chosen cover card when set (main or evolve),
+  // otherwise the most expensive card overall — a decent stand-in for "what this
+  // deck is about".
+  const allNames = [...(deck?.deck || []), ...(deck?.evoDeck || [])];
+  const hero =
+    deck?.cover && allNames.includes(deck.cover) ? deck.cover : keyCard(allNames);
   const heroSrc = hero ? abs(artImage(hero, art)) : null;
   const clsIcon = abs(classIcon(cls));
 

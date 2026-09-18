@@ -27,7 +27,7 @@ import {
 import { deleteDeck, selectDecks } from "../redux/DeckSlice";
 import { useAuth, discordName } from "../auth/AuthProvider";
 import AccountBadge from "../components/AccountBadge";
-import { cardImage, artThumb } from "../decks/getCards";
+import { cardImage, artThumb, deckCoverName } from "../decks/getCards";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { computeDeckClass } from "../decks/cardDetails";
 import {
@@ -662,7 +662,7 @@ export default function Home() {
         }}
       >
         <img
-          src={artThumb(it.deck.deck[Math.floor(it.deck.deck.length / 2)], it.deck.art)}
+          src={artThumb(deckCoverName(it.deck), it.deck.art)}
           alt={it.deck.name}
           draggable={false}
           style={{
@@ -768,7 +768,7 @@ export default function Home() {
                   style={{ ...tileStyle, width: 110 }}
                 >
                   <img
-                    src={artThumb(it.deck.deck[Math.floor(it.deck.deck.length / 2)], it.deck.art)}
+                    src={artThumb(deckCoverName(it.deck), it.deck.art)}
                     alt={it.deck.name}
                     loading="lazy"
                     style={{

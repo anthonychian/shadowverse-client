@@ -144,6 +144,59 @@ const RowBtn = ({ children, onClick, disabled }) => (
   </button>
 );
 
+// Tiny deck-card art shown in the Cover selector. Same fallback ladder as
+// DeckCard: a chosen printing's thumb -> its full art -> the card's default art.
+const CardThumb = ({ name, artNo, height = 22 }) => (
+  <img
+    src={artNo ? `../textures/thumbs/${artNo}.png?v=${ART_VERSION}` : toThumb(cardImage(name))}
+    onError={(e) => {
+      const el = e.currentTarget;
+      if (artNo && el.src.indexOf("/thumbs/") !== -1) {
+        el.src = `../textures/${artNo}.png?v=${ART_VERSION}`;
+      } else if (artNo) {
+        el.src = cardImage(name);
+      }
+    }}
+    alt=""
+    style={{ height, borderRadius: 3, flexShrink: 0, display: "block" }}
+  />
+);
+
+// Cover Card dropdown: which card's art is the deck's tile. "Auto" (empty)
+// falls back to the middle main-deck card. Options are the deck's own cards,
+// unique names across main + evolve decks, ordered cheapest first.
+const CoverSelect = ({ cover, onCoverChange, options, artNoOf, inputSx }) => {
+  const value = cover && options.includes(cover) ? cover : "";
+  return (
+    <FormControl size="small" sx={inputSx}>
+      <InputLabel>Cover Card</InputLabel>
+      <Select
+        label="Cover Card"
+        value={value}
+        onChange={(e) => onCoverChange(e.target.value)}
+        renderValue={(v) => (
+          <span style={{ display: "inline-flex", alignItems: "center", gap: 8, minWidth: 0 }}>
+            {v ? <CardThumb name={v} artNo={artNoOf ? artNoOf(v) : null} /> : null}
+            <span style={{ overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>
+              {v ? displayName(v) : "Auto (middle card)"}
+            </span>
+          </span>
+        )}
+      >
+        <MenuItem value="">Auto (middle card)</MenuItem>
+        {options.map((n) => (
+          <MenuItem key={n} value={n}>
+            <span style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
+              <CardThumb name={n} artNo={artNoOf ? artNoOf(n) : null} />
+              {displayName(n)}
+            </span>
+          </MenuItem>
+        ))}
+      </Select>
+    </FormControl>
+  );
+};
+
 // Cost (mana) curve, styled after Deck Log: a "Cost" heading, a row of count
 // pills (always shown, including 0) above salmon bars rising from a common
 // baseline, with the 0–8+ axis below.
@@ -264,6 +317,7 @@ export default function DeckPanel({
   onAddToken, onRemoveToken,
   isAtLimit, isEvoAtLimit, isTokenAtLimit, copyMaxOf, evoCopyMaxOf, isMobile,
   name, onNameChange, deckClass, onDeckClass, canCreate, onCreate, onImport, onExport,
+  cover, onCoverChange,
   readOnly = false,
 }) {
   const inputSx = {
@@ -272,6 +326,13 @@ export default function DeckPanel({
     "& .MuiOutlinedInput-notchedOutline": { borderColor: COLORS.border },
     "& .MuiSvgIcon-root": { color: COLORS.textDim },
   };
+  // Cards eligible to be the cover: every unique card in the deck, main and
+  // evolve together, ordered cheapest first like the rest of the panel.
+  const coverNames = (() => {
+    const merged = new Map(deckMap);
+    for (const [n, c] of evoDeckMap) merged.set(n, (merged.get(n) || 0) + c);
+    return sortedEntries(merged).map(([n]) => n);
+  })();
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100%", gap: 10 }}>
       {/* scrollable deck contents (deck name + class scroll along with it) */}
@@ -323,6 +384,13 @@ export default function DeckPanel({
                 ))}
               </Select>
             </FormControl>
+            <CoverSelect
+              cover={cover}
+              onCoverChange={onCoverChange}
+              options={coverNames}
+              artNoOf={artNoOf}
+              inputSx={inputSx}
+            />
           </>
         )}
 

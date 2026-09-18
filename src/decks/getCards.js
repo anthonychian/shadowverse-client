@@ -42,6 +42,23 @@ export const toThumb = (src) =>
 // Thumbnail variant of artImage, honoring the per-card art choice.
 export const artThumb = (cardName, art) => toThumb(artImage(cardName, art));
 
+// The card shown as a deck's cover/tile art. Prefers the deck's chosen `cover`
+// when it's still in the main deck; otherwise the middle main-deck card, the
+// historical default. An empty string means "no cover picked" (Auto).
+export const deckCoverName = (deck) => {
+  const main = deck?.deck;
+  const evo = deck?.evoDeck;
+  // The chosen cover may live in the main or evolve deck (both are offered in
+  // the builder's cover picker), so honor it whenever it's actually in either.
+  if (deck?.cover) {
+    if (Array.isArray(main) && main.includes(deck.cover)) return deck.cover;
+    if (Array.isArray(evo) && evo.includes(deck.cover)) return deck.cover;
+  }
+  if (Array.isArray(main) && main.length) return main[Math.floor(main.length / 2)];
+  if (Array.isArray(evo) && evo.length) return evo[Math.floor(evo.length / 2)];
+  return "";
+};
+
 const rawCardImage = (cardName) => {
   switch (cardName) {
     case "Aria, Lady of the Woods":
