@@ -118,8 +118,8 @@ export const CardSlice = createSlice({
     // Manual turn counter (purely local — each player tracks their own, just
     // like play points / health). Auto-increments on "Next Turn"; +/- buttons
     // adjust it by hand. Synced so the opponent can read it (enemyTurn).
-    turn: 1,
-    enemyTurn: 1,
+    turn: 0,
+    enemyTurn: 0,
     playPoints: { available: 0, max: 0 },
     enemyPlayPoints: { available: 0, max: 0 },
     playerHealth: 20,
@@ -3266,8 +3266,8 @@ export const CardSlice = createSlice({
       state.leader = "";
       state.evoPoints = 0;
       state.enemyEvoPoints = 0;
-      state.turn = 1;
-      state.enemyTurn = 1;
+      state.turn = 0;
+      state.enemyTurn = 0;
       state.playPoints = { available: 0, max: 0 };
       state.enemyPlayPoints = { available: 0, max: 0 };
       state.playerHealth = 20;
@@ -3374,8 +3374,8 @@ export const CardSlice = createSlice({
       state.enemySuperEvoActive = false;
       state.evoPoints = 0;
       state.enemyEvoPoints = 0;
-      state.turn = 1;
-      state.enemyTurn = 1;
+      state.turn = 0;
+      state.enemyTurn = 0;
       state.playPoints = { available: 0, max: 0 };
       state.enemyPlayPoints = { available: 0, max: 0 };
       state.playerHealth = 20;
@@ -3549,7 +3549,7 @@ export const CardSlice = createSlice({
       state.superEvoActive = false;
       state.leaderActive = false;
       state.evoPoints = 0;
-      state.turn = 1;
+      state.turn = 0;
       state.playPoints = { available: 0, max: 0 };
       state.playerHealth = 20;
 

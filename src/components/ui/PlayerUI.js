@@ -148,7 +148,7 @@ export default function PlayerUI({ name, compact = false }) {
   };
 
   const handleTurn = (delta) => {
-    dispatch(setTurn(Math.max(1, reduxTurn + delta)));
+    dispatch(setTurn(Math.max(0, reduxTurn + delta)));
   };
 
   const handleSuperEvo = () => {
