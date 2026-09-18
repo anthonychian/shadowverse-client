@@ -38,6 +38,7 @@ import {
   clearSavedState,
 } from "../sockets";
 import { setGameMode } from "../redux/GameStateSlice";
+import { persistor } from "../redux/store";
 import { shuffle } from "../lib/shuffle";
 import ActiveGamesBoard from "../components/ui/ActiveGamesBoard";
 import { ensureShare } from "../lib/shares";
@@ -420,6 +421,10 @@ export default function Home() {
     handleClose();
     handleCloseDialogue();
     dispatch(deleteDeck(name));
+    // The deck list is persisted asynchronously (redux-persist writes on a
+    // timer, cloud decks push on a 400ms debounce). Flush now so a reload
+    // moments after deleting still loads without the deck.
+    persistor.flush();
   };
 
   const handleClose = () => {
@@ -852,6 +857,10 @@ export default function Home() {
         disableScrollLock
         PaperProps={{
           component: "form",
+          // The "Yes" button is type="submit"; without this the form POSTs the
+          // page and reloads it right after the delete is dispatched, racing the
+          // persistence write so the deck comes back on the reload.
+          onSubmit: (e) => e.preventDefault(),
         }}
       >
         <DialogTitle>Delete Deck</DialogTitle>
