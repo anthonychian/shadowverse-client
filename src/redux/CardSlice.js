@@ -3411,6 +3411,26 @@ export const CardSlice = createSlice({
         false,
         false,
       ];
+      state.auraField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      state.enemyAuraField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      state.baneField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      state.enemyBaneField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      state.wardField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      state.enemyWardField = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+      state.keywordField = [[], [], [], [], [], [], [], [], [], []];
+      state.enemyKeywordField = [[], [], [], [], [], [], [], [], [], []];
+      state.customStatus = [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+      ];
       state.customValues = [
         { showAtk: false, atk: 0, showDef: false, def: 0 },
         { showAtk: false, atk: 0, showDef: false, def: 0 },
