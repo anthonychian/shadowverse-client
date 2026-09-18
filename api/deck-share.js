@@ -12,14 +12,18 @@
 
 const { createClient } = require("@supabase/supabase-js");
 
-// Same public values as src/lib/supabase.js (RLS does the protecting). Kept
-// literal here because this file is bundled separately from the CRA app and
-// can't import from src/.
-const SUPABASE_URL =
-  process.env.SUPABASE_URL || "https://udylbxforcfsoumpfcun.supabase.co";
-const SUPABASE_PUBLISHABLE_KEY =
-  process.env.SUPABASE_PUBLISHABLE_KEY ||
-  "sb_publishable_I-iayZ6ZlGaW5yGin3MLbg_EsaWqXbM";
+// Same public values as src/lib/supabase.js (RLS does the protecting).
+// Sourced from env only (no hardcoded fallback) so a leaked/rotated key
+// can't linger in source or bundled deployments; this file is bundled
+// separately from the CRA app and can't import from src/.
+const SUPABASE_URL = process.env.SUPABASE_URL;
+const SUPABASE_PUBLISHABLE_KEY = process.env.SUPABASE_PUBLISHABLE_KEY;
+
+if (!SUPABASE_URL || !SUPABASE_PUBLISHABLE_KEY) {
+  throw new Error(
+    "deck-share: SUPABASE_URL and SUPABASE_PUBLISHABLE_KEY env vars are required",
+  );
+}
 
 const BUCKET = "deck-previews";
 const SITE_NAME = "Shadowverse Evolve Simulator";
