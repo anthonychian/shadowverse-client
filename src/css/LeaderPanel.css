@@ -231,12 +231,14 @@
   top: 50%;
   width: 20px;
   height: 20px;
+  min-width: 20px;
   padding: 0;
   color: white;
   background: rgba(255, 255, 255, 0.16);
   border: 1px solid rgba(255, 255, 255, 0.4);
   opacity: 0;
   pointer-events: none;
+  z-index: 1;
   transition:
     background 0.15s ease,
     transform 0.08s ease,
