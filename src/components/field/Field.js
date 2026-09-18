@@ -1452,6 +1452,14 @@ export default function Field({
       !isToken(baseCard) &&
       !isAdvanced(baseCard);
     if (dest.type === "cemetery") {
+      // Tokens can't be sent to the cemetery — dropping one there removes it
+      // from play instead (mirrors the right-click "Remove" action).
+      if (typeof baseCard === "string" && isToken(baseCard)) {
+        if (isEquipAttached) dispatch(clearEquipmentAtIndex(fromIndex));
+        dispatch(removeTokenOnField({ card: baseCard, index: fromIndex }));
+        clearFieldSlot(fromIndex);
+        return;
+      }
       if (!canReturn) return;
       if (isEquipAttached) dispatch(clearEquipmentAtIndex(fromIndex));
       dispatch(placeToCemeteryFromField({ card: baseCard, index: fromIndex }));

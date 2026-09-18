@@ -159,6 +159,10 @@ export default function Card({
     onField &&
     typeof name === "string" &&
     (name.slice(-5) === "TOKEN" || name.slice(-8) === "ADVANCED");
+  const isTokenFieldCard =
+    onField &&
+    typeof name === "string" &&
+    name.slice(-5) === "TOKEN";
 
   const handleTap = () => {
     if (gameMode === "automated") return;
@@ -197,8 +201,12 @@ export default function Card({
   // Base field cards can go to the cemetery, hand, or deck. Evolved cards can
   // too: the base card goes to the chosen zone and the evolved card flips
   // face-down back into the evolve deck (see handleFieldDrop). Only tokens and
-  // advanced cards are restricted to slot-to-slot moves.
+  // advanced cards are restricted to slot-to-slot moves...
   const fieldExtraTargets = !isSpecialFieldCard;
+  // ...except tokens: dragging one onto the cemetery pile removes it (mirrors
+  // the right-click "Remove" action), so the cemetery is an extra drop target
+  // just for them.
+  const fieldCemeteryTarget = fieldExtraTargets || isTokenFieldCard;
   // Dragging an Equipment token over a follower attaches it — flag the drag so
   // FieldDropHints highlights followers green instead of red.
   const isEquipmentDrag =
@@ -214,7 +222,7 @@ export default function Card({
       hand: false,
       deck: null,
       equip: isEquipmentDrag,
-      showCemetery: fieldExtraTargets,
+      showCemetery: fieldCemeteryTarget,
       showHand: fieldExtraTargets,
       showDeck: fieldExtraTargets,
     });
@@ -229,7 +237,7 @@ export default function Card({
     setDragHover({
       active: true,
       index: fieldIndexAt(x, y),
-      cemetery: fieldExtraTargets && isOverCemetery(x, y),
+      cemetery: fieldCemeteryTarget && isOverCemetery(x, y),
       hand: fieldExtraTargets && isOverHand(x, y),
       deck: fieldExtraTargets ? deckHalfAt(x, y) : null,
       equip: isEquipmentDrag,
@@ -256,7 +264,7 @@ export default function Card({
     const y = info.point.y * s;
     const deckHalf = fieldExtraTargets ? deckHalfAt(x, y) : null;
     let dest;
-    if (fieldExtraTargets && isOverCemetery(x, y)) dest = { type: "cemetery" };
+    if (fieldCemeteryTarget && isOverCemetery(x, y)) dest = { type: "cemetery" };
     else if (fieldExtraTargets && isOverHand(x, y)) dest = { type: "hand" };
     else if (deckHalf) dest = { type: "deck", half: deckHalf };
     else dest = { type: "field", index: fieldIndexAt(x, y) };
