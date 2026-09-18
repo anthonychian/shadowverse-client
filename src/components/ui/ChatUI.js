@@ -3,9 +3,12 @@ import ChatIcon from "@mui/icons-material/Chat";
 import SendIcon from "@mui/icons-material/Send";
 import MinimizeIcon from "@mui/icons-material/Minimize";
 import CloseIcon from "@mui/icons-material/Close";
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
 import { IconButton, InputBase, Button } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { setChat, setCurrentCard } from "../../redux/CardSlice";
+import { setChatExpanded } from "../../redux/GameStateSlice";
 import { artImage, artThumb } from "../../decks/getCards";
 import HideUiButton from "./HideUiButton";
 import "../../css/Chat.css";
@@ -355,6 +358,42 @@ export default function ChatUI({ scale = 1, setHovering, expanded = false }) {
             </button>
           );
         })}
+
+        {/* Expand / collapse the log: + swaps the Game Log into the Expanded Log
+            View at the far right of the header; − returns to the floating
+            panel. */}
+        {activeTab === "log" && !expanded && (
+          <IconButton
+            size="small"
+            aria-label="expand log"
+            onClick={() => dispatch(setChatExpanded(true))}
+            sx={{
+              color: META,
+              marginLeft: "auto",
+              border: `1px solid ${BORDER}`,
+              borderRadius: "8px",
+              "&:hover": { color: "#fff", borderColor: ACCENT },
+            }}
+          >
+            <AddIcon fontSize="small" />
+          </IconButton>
+        )}
+        {activeTab === "log" && expanded && (
+          <IconButton
+            size="small"
+            aria-label="collapse log"
+            onClick={() => dispatch(setChatExpanded(false))}
+            sx={{
+              color: META,
+              marginLeft: "auto",
+              border: `1px solid ${BORDER}`,
+              borderRadius: "8px",
+              "&:hover": { color: "#fff", borderColor: ACCENT },
+            }}
+          >
+            <RemoveIcon fontSize="small" />
+          </IconButton>
+        )}
       </div>
 
       {/* Message log */}

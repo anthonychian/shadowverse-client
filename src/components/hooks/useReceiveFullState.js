@@ -17,6 +17,7 @@ import {
   setEnemyEvoField,
   setEnemyEquipField,
   setEnemyEvoPoints,
+  setEnemyTurn,
   setEnemyField,
   setEnemyHand,
   setEnemyHealth,
@@ -44,6 +45,7 @@ const applyEnemyState = (dispatch, s) => {
   if (s.playerHealth !== undefined) dispatch(setEnemyHealth(s.playerHealth));
   if (s.playPoints !== undefined) dispatch(setEnemyPlayPoints(s.playPoints));
   if (s.evoPoints !== undefined) dispatch(setEnemyEvoPoints(s.evoPoints));
+  if (s.turn !== undefined) dispatch(setEnemyTurn(s.turn));
   if (s.evoDeck !== undefined) dispatch(setEnemyEvoDeck(s.evoDeck));
   if (s.deck !== undefined) dispatch(setEnemyDeckSize(s.deck.length));
   if (s.cemetery !== undefined) dispatch(setEnemyCemetery(s.cemetery));

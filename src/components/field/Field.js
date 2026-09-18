@@ -51,6 +51,7 @@ import {
   setEnemyCard,
   setEnemyDeckSize,
   setEnemyEvoPoints,
+  setEnemyTurn,
   setEnemyPlayPoints,
   setEnemyHealth,
   setEnemyLeader,
@@ -102,13 +103,12 @@ import { doubleEvoOtherSide } from "../../decks/doubleEvo";
 import { motion, MotionConfig } from "framer-motion";
 import CardMUI from "@mui/material/Card";
 import { useDispatch, useSelector } from "react-redux";
-import { Menu, MenuItem, Modal, Box, Typography, Tooltip } from "@mui/material";
+import { Menu, MenuItem, Modal, Box, Typography } from "@mui/material";
 import Card from "../hand/Card";
 import Deck from "./Deck";
 import Cemetery from "./Cemetery";
 import EnemyCemetery from "./EnemyCemetery";
 // import cardback from "../../assets/cardbacks/default.png";
-import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 import EvoDeck from "./EvoDeck";
 import EnemyEvoDeck from "./EnemyEvoDeck";
 import img from "../../assets/pin_bellringer_angel.png";
@@ -491,6 +491,9 @@ export default function Field({
         case "evoPoints":
           dispatch(setEnemyEvoPoints(update.data));
           break;
+        case "turn":
+          dispatch(setEnemyTurn(update.data));
+          break;
         case "playPoints":
           dispatch(setEnemyPlayPoints(update.data));
           break;
@@ -677,6 +680,8 @@ export default function Field({
                 dispatch(setEnemyPlayPoints(fullState.enemyPlayPoints));
               if (fullState.enemyEvoPoints !== undefined)
                 dispatch(setEnemyEvoPoints(fullState.enemyEvoPoints));
+              if (fullState.enemyTurn !== undefined)
+                dispatch(setEnemyTurn(fullState.enemyTurn));
               if (fullState.enemyDeckSize !== undefined)
                 dispatch(setEnemyDeckSize(fullState.enemyDeckSize));
               if (fullState.enemyCemetery !== undefined)
@@ -1816,34 +1821,6 @@ export default function Field({
 
   return (
     <>
-      <Tooltip title="Copy" placement="top">
-        <div
-          style={{
-            backgroundColor: "black",
-            color: "white",
-            height: "40px",
-            minWidth: "150px",
-            position: "absolute",
-            fontSize: "20px ",
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: ".5em",
-            bottom: 3,
-            left: 0,
-            // pointerEvents: "auto",
-            cursor: "pointer",
-          }}
-          onClick={() => {
-            navigator.clipboard.writeText(reduxCurrentRoom);
-          }}
-        >
-          <div>{reduxCurrentRoom}</div>
-
-          <ContentCopyIcon sx={{ fontSize: "20px" }} />
-        </div>
-      </Tooltip>
       <Menu
         open={chromeVisible && automatedFieldMenu !== null}
         onClose={closeAutomatedFieldMenu}

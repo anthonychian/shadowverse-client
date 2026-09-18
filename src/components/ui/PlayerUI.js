@@ -7,6 +7,7 @@ import {
   setHealth,
   setEvoPoints,
   setSuperEvoActive,
+  setTurn,
   logHealthDiff,
 } from "../../redux/CardSlice";
 import { socket } from "../../sockets";
@@ -58,6 +59,7 @@ export default function PlayerUI({ name, compact = false }) {
     (state) => state.card.superEvoActive,
   );
   const reduxCurrentEP = useSelector((state) => state.card.evoPoints);
+  const reduxTurn = useSelector((state) => state.card.turn);
   const reduxCurrentHealth = useSelector((state) => state.card.playerHealth);
   const reduxMaxPlayPoints = useSelector((state) => state.card.playPoints.max);
   const reduxCurrentPlayPoints = useSelector(
@@ -143,6 +145,10 @@ export default function PlayerUI({ name, compact = false }) {
     setEP(newValue);
     dispatch(setEvoPoints(newValue));
     console.log(newValue);
+  };
+
+  const handleTurn = (delta) => {
+    dispatch(setTurn(Math.max(1, reduxTurn + delta)));
   };
 
   const handleSuperEvo = () => {
@@ -345,7 +351,6 @@ export default function PlayerUI({ name, compact = false }) {
           {reduxCurrentPlayPoints} / {reduxMaxPlayPoints}
         </div>
         <div className="epRow">
-          <span className="epLabel">EP</span>
           <StyledRating
             name="customized-color"
             value={ep}
@@ -357,6 +362,24 @@ export default function PlayerUI({ name, compact = false }) {
             emptyIcon={<FiberManualRecordOutlinedIcon fontSize="inherit" />}
           />
         </div>
+        <div className="turnRow">
+          <span className="turnLabel">Turn</span>
+          <IconButton
+            size="small"
+            className="turnAdjust decButton"
+            onClick={() => handleTurn(-1)}
+          >
+            <RemoveIcon sx={{ color: "white", width: "16px", height: "16px" }} />
+          </IconButton>
+          <span className="turnValue">{reduxTurn}</span>
+          <IconButton
+            size="small"
+            className="turnAdjust incButton"
+            onClick={() => handleTurn(1)}
+          >
+            <AddIcon sx={{ color: "white", width: "16px", height: "16px" }} />
+          </IconButton>
+        </div>
       </div>
 
       <div
@@ -365,7 +388,11 @@ export default function PlayerUI({ name, compact = false }) {
         title="Super Evolve"
         style={automated ? { cursor: "default" } : undefined}
       >
-        <img src={sepLit ? sepOn : sepOff} alt="super evo" />
+        <img
+          src={sepLit ? sepOn : sepOff}
+          className={sepLit ? undefined : "sepOff"}
+          alt="super evo"
+        />
       </div>
 
       {compact && wifiBadge(true)}

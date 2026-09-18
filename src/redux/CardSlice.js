@@ -115,6 +115,11 @@ export const CardSlice = createSlice({
     deckClass: "",
     evoPoints: 0,
     enemyEvoPoints: 0,
+    // Manual turn counter (purely local — each player tracks their own, just
+    // like play points / health). Auto-increments on "Next Turn"; +/- buttons
+    // adjust it by hand. Synced so the opponent can read it (enemyTurn).
+    turn: 1,
+    enemyTurn: 1,
     playPoints: { available: 0, max: 0 },
     enemyPlayPoints: { available: 0, max: 0 },
     playerHealth: 20,
@@ -331,6 +336,17 @@ export const CardSlice = createSlice({
         data: state.evoPoints,
         room: state.room,
       });
+    },
+    setTurn: (state, action) => {
+      state.turn = action.payload;
+      socket.emit("send msg", {
+        type: "turn",
+        data: state.turn,
+        room: state.room,
+      });
+    },
+    setEnemyTurn: (state, action) => {
+      state.enemyTurn = action.payload;
     },
     setRematchStatus: (state, action) => {
       state.rematchStatus = action.payload;
@@ -3133,6 +3149,8 @@ export const CardSlice = createSlice({
       if (s.playerHealth !== undefined) state.playerHealth = s.playerHealth;
       if (s.playPoints !== undefined) state.playPoints = s.playPoints;
       if (s.evoPoints !== undefined) state.evoPoints = s.evoPoints;
+      if (s.turn !== undefined) state.turn = s.turn;
+      if (s.enemyTurn !== undefined) state.enemyTurn = s.enemyTurn;
       if (s.leader !== undefined) state.leader = s.leader;
       if (s.leaderActive !== undefined) state.leaderActive = s.leaderActive;
       if (s.superEvoActive !== undefined)
@@ -3248,6 +3266,8 @@ export const CardSlice = createSlice({
       state.leader = "";
       state.evoPoints = 0;
       state.enemyEvoPoints = 0;
+      state.turn = 1;
+      state.enemyTurn = 1;
       state.playPoints = { available: 0, max: 0 };
       state.enemyPlayPoints = { available: 0, max: 0 };
       state.playerHealth = 20;
@@ -3354,6 +3374,8 @@ export const CardSlice = createSlice({
       state.enemySuperEvoActive = false;
       state.evoPoints = 0;
       state.enemyEvoPoints = 0;
+      state.turn = 1;
+      state.enemyTurn = 1;
       state.playPoints = { available: 0, max: 0 };
       state.enemyPlayPoints = { available: 0, max: 0 };
       state.playerHealth = 20;
@@ -3527,6 +3549,7 @@ export const CardSlice = createSlice({
       state.superEvoActive = false;
       state.leaderActive = false;
       state.evoPoints = 0;
+      state.turn = 1;
       state.playPoints = { available: 0, max: 0 };
       state.playerHealth = 20;
 
@@ -3692,6 +3715,8 @@ export const {
   setViewingCardsLog,
   setViewingDeckLog,
   setEvoPoints,
+  setTurn,
+  setEnemyTurn,
   logHealthDiff,
   setPlayPoints,
   setHealth,

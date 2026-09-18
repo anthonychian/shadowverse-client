@@ -7,7 +7,7 @@ import IconButton from "@mui/material/IconButton";
 import "../../css/PlayPoints.css";
 import { setLeaderActive } from "../../redux/CardSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { setPlayPoints } from "../../redux/CardSlice";
+import { setPlayPoints, setTurn } from "../../redux/CardSlice";
 import HideUiButton from "./HideUiButton";
 
 export default function Scoreboard({ name }) {
@@ -20,11 +20,13 @@ export default function Scoreboard({ name }) {
     (state) => state.card.playPoints.available,
   );
   const reduxRoom = useSelector((state) => state.card.room);
+  const reduxTurn = useSelector((state) => state.card.turn);
 
   const buttonBackgroundColor = "rgba(0, 0, 0, 0.6)";
 
   const nextTurn = () => {
     incrementBoth();
+    dispatch(setTurn(reduxTurn + 1));
     dispatch(setLeaderActive(true));
     // dispatch(drawFromDeck());
     socket.emit("send msg", {

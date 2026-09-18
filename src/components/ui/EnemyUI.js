@@ -48,6 +48,7 @@ export default function EnemyUI({ compact = false }) {
   const reduxEnemyHealth = useSelector((state) => state.card.enemyHealth);
   const reduxEnemyLeader = useSelector((state) => state.card.enemyLeader);
   const reduxEnemyEvoPoints = useSelector((state) => state.card.enemyEvoPoints);
+  const reduxEnemyTurn = useSelector((state) => state.card.enemyTurn);
   const reduxEnemyLeaderActive = useSelector(
     (state) => state.card.enemyLeaderActive,
   );
@@ -375,7 +376,6 @@ export default function EnemyUI({ compact = false }) {
           {reduxCurrentEnemyPlayPoints} / {reduxMaxEnemyPlayPoints}
         </div>
         <div className="epRow">
-          <span className="epLabel">EP</span>
           <StyledRating
             name="customized-color"
             value={reduxEnemyEvoPoints}
@@ -385,10 +385,18 @@ export default function EnemyUI({ compact = false }) {
             emptyIcon={<FiberManualRecordOutlinedIcon fontSize="inherit" />}
           />
         </div>
+        <div className="turnRow">
+          <span className="turnLabel">Turn</span>
+          <span className="turnValue">{reduxEnemyTurn}</span>
+        </div>
       </div>
 
       <div className="evoBlock evoStatic">
-        <img src={reduxEnemySuperEvo ? sepOn : sepOff} alt="super evo" />
+        <img
+          src={reduxEnemySuperEvo ? sepOn : sepOff}
+          className={reduxEnemySuperEvo ? undefined : "sepOff"}
+          alt="super evo"
+        />
       </div>
 
       {compact && !reduxEnemyOnlineStatus && (
