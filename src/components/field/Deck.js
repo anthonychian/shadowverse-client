@@ -20,6 +20,7 @@ import {
   setViewingTopCards,
   setViewingCardsLog,
   setViewingDeckLog,
+  setViewingOpponentTopCards,
 } from "../../redux/CardSlice";
 import { Menu, MenuItem, Modal, Box, Popover } from "@mui/material";
 import { useUiModalOpen } from "../hooks/useUiChromeVisible";
@@ -367,6 +368,15 @@ export default function Deck({
     }
   };
 
+  const handleRevealAll = () => {
+    socket.emit("send msg", {
+      type: "revealTopCards",
+      data: partialDeck,
+      room: reduxRoom,
+    });
+    dispatch(setViewingOpponentTopCards(true));
+  };
+
   useEffect(() => {
     switch (reduxCardBack) {
       case "Aenea":
@@ -596,6 +606,18 @@ export default function Deck({
                 onChange={(event) => handleTextInput(event.target.value)}
                 placeholder="# of Cards"
               />
+              {partialDeck.length > 0 && (
+                <button
+                  onClick={handleRevealAll}
+                  style={{
+                    fontFamily: "Noto Serif JP, serif",
+                    height: "30px",
+                    width: "120px",
+                  }}
+                >
+                  Reveal All
+                </button>
+              )}
               <button
                 onClick={handleSubmit}
                 style={{

@@ -1,6 +1,7 @@
 import React from "react";
 import { Snackbar, SnackbarContent } from "@mui/material/";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { setViewingOpponentTopCards } from "../../redux/CardSlice";
 import Leader from "./Leader";
 import sword from "../../assets/logo/sword.png";
 import forest from "../../assets/logo/forest.png";
@@ -70,6 +71,10 @@ export default function EnemyUI({ compact = false }) {
   const reduxEnemyViewingTopCards = useSelector(
     (state) => state.card.enemyViewingTopCards,
   );
+  const reduxViewingOpponentTopCards = useSelector(
+    (state) => state.card.viewingOpponentTopCards,
+  );
+  const dispatch = useDispatch();
   const reduxEnemyViewingHand = useSelector(
     (state) => state.card.enemyViewingHand,
   );
@@ -319,6 +324,26 @@ export default function EnemyUI({ compact = false }) {
             fontFamily: "Noto Serif JP, serif",
           }}
           message={"Viewing Top Cards"}
+        />
+      </Snackbar>
+      <Snackbar
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+        open={reduxViewingOpponentTopCards}
+        onClick={() => dispatch(setViewingOpponentTopCards(false))}
+      >
+        <SnackbarContent
+          style={{
+            backgroundColor: "rgba(0, 0, 0, 0.7)",
+            color: "white",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            fontSize: "30px",
+            fontWeight: "bold",
+            fontFamily: "Noto Serif JP, serif",
+            cursor: "pointer",
+          }}
+          message={"Viewing Opponent's Top Cards"}
         />
       </Snackbar>
       <Snackbar

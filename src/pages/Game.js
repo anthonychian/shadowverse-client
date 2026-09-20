@@ -21,8 +21,9 @@ import ChoiceModal from "../components/automated/ChoiceModal";
 import AutomatedControls from "../components/automated/AutomatedControls";
 import UiChromeRestore from "../components/ui/UiChromeRestore";
 import { useEngineSync } from "../components/hooks/useEngineSync";
-import { setLeader } from "../redux/CardSlice";
+import { setLeader, setMatchStart } from "../redux/CardSlice";
 import { randomLeaderForClass } from "../decks/classLeaders";
+import MatchTimer from "../components/ui/MatchTimer";
 import initialWallpaper from "../../src/assets/wallpapers/3.png";
 
 export default function Game(callback) {
@@ -67,7 +68,12 @@ export default function Game(callback) {
   }, []);
   const constraintsRef = useRef(null);
   const [ready, setReady] = useState(false);
-  // const [dragging, setDragging] = useState(false);
+  // Start the match clock when players enter the room for a fresh game.
+  // Resets happen in the CardSlice `reset` reducer on rematch.
+  useEffect(() => {
+    if (!location.state?.fresh) return;
+    dispatch(setMatchStart(Date.now()));
+  }, []);
   const [hovering, setHovering] = useState(false);
   const [readyToPlaceOnFieldFromHand, setReadyToPlaceOnFieldFromHand] =
     useState(false);
@@ -170,6 +176,7 @@ export default function Game(callback) {
       }}
     >
       <UiChromeRestore />
+      <MatchTimer />
       {!uiChromeHidden && (
         <Selection
           setSelectedOption={setSelectedOption}

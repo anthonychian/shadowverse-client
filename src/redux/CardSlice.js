@@ -89,6 +89,8 @@ export const CardSlice = createSlice({
     enemyHand: [],
     showDice: false,
     showEnemyHand: false,
+    enemyRevealedCards: [],
+    enemyRevealedCardsOpen: false,
     cardSelectedInHand: -1,
     enemyCardSelectedInHand: -1,
     enemyArrow: { idx: -1, show: false },
@@ -100,6 +102,7 @@ export const CardSlice = createSlice({
     enemyLeftGame: false,
     enemyViewingDeck: false,
     enemyViewingTopCards: false,
+    viewingOpponentTopCards: false,
     enemyViewingCemetery: false,
     enemyViewingEvoDeck: false,
     enemyViewingCemeteryOpponent: false,
@@ -109,6 +112,7 @@ export const CardSlice = createSlice({
     enemyDice: { show: false, roll: 1 },
     rematchStatus: false,
     enemyRematchStatus: false,
+    matchStartEpoch: 0,
     leader: "",
     // The selected deck's class, stashed on game entry so the game can auto-pick
     // a matching leader. Not synced to the opponent (purely local).
@@ -359,6 +363,9 @@ export const CardSlice = createSlice({
     setEnemyRematchStatus: (state, action) => {
       state.enemyRematchStatus = action.payload;
     },
+    setMatchStart: (state, action) => {
+      state.matchStartEpoch = action.payload;
+    },
     setShowEnemyHand: (state, action) => {
       state.showEnemyHand = action.payload;
       socket.emit("send msg", {
@@ -452,6 +459,15 @@ export const CardSlice = createSlice({
     },
     setEnemyCard: (state, action) => {
       state.enemyCard = action.payload;
+    },
+    setEnemyRevealedCards: (state, action) => {
+      state.enemyRevealedCards = action.payload;
+    },
+    setEnemyRevealedCardsOpen: (state, action) => {
+      state.enemyRevealedCardsOpen = action.payload;
+    },
+    setViewingOpponentTopCards: (state, action) => {
+      state.viewingOpponentTopCards = action.payload;
     },
     setViewingDeck: (state, action) => {
       socket.emit("send msg", {
@@ -3237,6 +3253,7 @@ export const CardSlice = createSlice({
       state.enemyOnlineStatus = true;
       state.enemyLeftGame = false;
       state.gameLog = [];
+      state.matchStartEpoch = 0;
       state.chatLog = [];
       state.lastChatMessage = "";
       state.enemyName = "";
@@ -3255,6 +3272,9 @@ export const CardSlice = createSlice({
       state.showEnemyHand = false;
       state.showEnemyCard = false;
       state.enemyCard = "";
+      state.enemyRevealedCards = [];
+      state.enemyRevealedCardsOpen = false;
+      state.viewingOpponentTopCards = false;
       state.enemyDeckSize = 0;
       state.enemyLeader = "";
       state.leaderActive = false;
@@ -3353,6 +3373,7 @@ export const CardSlice = createSlice({
     reset: (state) => {
       state.enemyLeftGame = false;
       state.gameLog = [];
+      state.matchStartEpoch = Date.now();
       state.deck = state.initialDeck;
       state.deck = state.deck.toSorted(() => Math.random() - 0.5);
       state.evoDeck = state.initialEvoDeck;
@@ -3363,6 +3384,9 @@ export const CardSlice = createSlice({
       state.showEnemyHand = false;
       state.showEnemyCard = false;
       state.enemyCard = "";
+      state.enemyRevealedCards = [];
+      state.enemyRevealedCardsOpen = false;
+      state.viewingOpponentTopCards = false;
       state.cardSelectedInHand = -1;
       state.enemyCardSelectedInHand = -1;
       state.cardSelectedOnField = -1;
@@ -3680,6 +3704,7 @@ export const {
   setEnemySuperEvoActive,
   setRematchStatus,
   setEnemyRematchStatus,
+  setMatchStart,
   setCurrentCard,
   setCurrentCardIndex,
   setCurrentEvo,
@@ -3751,6 +3776,9 @@ export const {
   setEnemyCardSelectedOnField,
   setShowEnemyCard,
   setEnemyCard,
+  setEnemyRevealedCards,
+  setEnemyRevealedCardsOpen,
+  setViewingOpponentTopCards,
   setDice,
   setShowDice,
   setEnemyDice,

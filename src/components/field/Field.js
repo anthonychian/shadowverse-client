@@ -49,6 +49,9 @@ import {
   setShowEnemyHand,
   setShowEnemyCard,
   setEnemyCard,
+  setEnemyRevealedCards,
+  setEnemyRevealedCardsOpen,
+  setViewingOpponentTopCards,
   setEnemyDeckSize,
   setEnemyEvoPoints,
   setEnemyTurn,
@@ -277,6 +280,15 @@ export default function Field({
   const reduxShowEnemyHand = useSelector((state) => state.card.showEnemyHand);
   const reduxShowEnemyCard = useSelector((state) => state.card.showEnemyCard);
   const reduxEnemyCard = useSelector((state) => state.card.enemyCard);
+  const reduxEnemyRevealedCards = useSelector(
+    (state) => state.card.enemyRevealedCards,
+  );
+  const reduxEnemyRevealedCardsOpen = useSelector(
+    (state) => state.card.enemyRevealedCardsOpen,
+  );
+  const reduxViewingOpponentTopCards = useSelector(
+    (state) => state.card.viewingOpponentTopCards,
+  );
   const reduxEnemyArt = useSelector((state) => state.card.enemyArt);
   const reduxCounterField = useSelector((state) => state.card.counterField);
   const reduxExPlayCostField = useSelector((state) => state.card.exPlayCostField);
@@ -317,6 +329,9 @@ export default function Field({
   const chromeVisible = useUiChromeVisible();
   const enemyHandModalOpen = useUiModalOpen(reduxShowEnemyHand);
   const enemyCardModalOpen = useUiModalOpen(reduxShowEnemyCard);
+  const enemyRevealedCardsModalOpen = useUiModalOpen(
+    reduxEnemyRevealedCardsOpen,
+  );
 
   // useState
   const [cardback, setCardback] = useState();
@@ -505,6 +520,17 @@ export default function Field({
           break;
         case "showHand":
           dispatch(setShowEnemyHand(update.data));
+          break;
+        case "revealTopCards":
+          // Only the revealer sees the "Viewing Opponent's Top Cards" toast, so
+          // the viewer just opens the modal with the revealed cards.
+          if (reduxEnemyRevealedCardsOpen) break;
+          dispatch(setEnemyRevealedCards(update.data));
+          dispatch(setEnemyRevealedCardsOpen(true));
+          break;
+        case "revealTopCardsClose":
+          dispatch(setEnemyRevealedCardsOpen(false));
+          dispatch(setViewingOpponentTopCards(false));
           break;
         case "showCard":
           dispatch(setShowEnemyCard(update.data));
@@ -722,7 +748,7 @@ export default function Field({
           console.warn("Unknown update type:", update.type);
       }
     },
-    [dispatch],
+    [dispatch, reduxEnemyRevealedCardsOpen],
   );
 
   // Apply a single message (which may carry one update or a batch of updates).
@@ -883,6 +909,16 @@ export default function Field({
 
   const handleShowCardModalClose = () => {
     dispatch(setShowEnemyCard(false));
+  };
+
+  const handleShowRevealedCardsModalClose = () => {
+    socket.emit("send msg", {
+      type: "revealTopCardsClose",
+      data: true,
+      room: reduxRoom,
+    });
+    dispatch(setEnemyRevealedCardsOpen(false));
+    dispatch(setViewingOpponentTopCards(false));
   };
 
   const cardPos = (idx) => {
@@ -2092,6 +2128,60 @@ export default function Field({
                 alt={reduxEnemyCard}
               />
             </motion.div>
+          </CardMUI>
+        </Box>
+      </Modal>
+
+      {/* Show Enemy Revealed Top Cards Modal */}
+
+      <Modal
+        open={enemyRevealedCardsModalOpen}
+        onClose={handleShowRevealedCardsModalClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+        sx={{
+          "& > .MuiBackdrop-root": {
+            backgroundColor: "transparent",
+          },
+        }}
+      >
+        <Box sx={style}>
+          <ModalHideUiRow />
+          <Typography
+            sx={{
+              color: "white",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              fontFamily: "Noto Serif JP, serif",
+              fontSize: "20px",
+              margin: "0 0 1em 0",
+            }}
+            id="modal-modal-title"
+            variant="h6"
+            component="h2"
+          >
+            Viewing Opponent's Top Cards
+          </Typography>
+          <CardMUI
+            sx={{
+              backgroundColor: "rgba(0, 0, 0, 0.7)",
+              minHeight: "250px",
+              padding: "3%",
+              width: "100%",
+              display: "flex",
+              flexDirection: "row",
+              flexWrap: "wrap",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+            variant="outlined"
+          >
+            {reduxEnemyRevealedCards.map((card, idx) => (
+              <div key={`card-${idx}`}>
+                <Card name={card} setHovering={setHovering} />
+              </div>
+            ))}
           </CardMUI>
         </Box>
       </Modal>
