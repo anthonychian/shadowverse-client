@@ -596,7 +596,7 @@ export default function Deck({
             >
               <input
                 style={{
-                  width: "15%",
+                  width: "10%",
                   fontSize: "18px",
                   fontFamily: "Noto Serif JP, serif",
                 }}
@@ -606,18 +606,6 @@ export default function Deck({
                 onChange={(event) => handleTextInput(event.target.value)}
                 placeholder="# of Cards"
               />
-              {partialDeck.length > 0 && (
-                <button
-                  onClick={handleRevealAll}
-                  style={{
-                    fontFamily: "Noto Serif JP, serif",
-                    height: "30px",
-                    width: "120px",
-                  }}
-                >
-                  Reveal All
-                </button>
-              )}
               <button
                 onClick={handleSubmit}
                 style={{
@@ -628,6 +616,7 @@ export default function Deck({
               >
                 Submit
               </button>
+              <div style={{ width: "30px" }} />
               {partialDeck.length > 0 && (
                 <button
                   onClick={handleBotDeckAll}
@@ -663,6 +652,18 @@ export default function Deck({
                   }}
                 >
                   Banish All
+                </button>
+              )}
+              {partialDeck.length > 0 && (
+                <button
+                  onClick={handleRevealAll}
+                  style={{
+                    fontFamily: "Noto Serif JP, serif",
+                    height: "30px",
+                    width: "120px",
+                  }}
+                >
+                  Reveal All
                 </button>
               )}
             </div>
