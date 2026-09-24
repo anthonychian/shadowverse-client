@@ -39503,6 +39503,18 @@
     "effect": "[evolve] [cost01]: Evolve this. Whenever a Condemned follower on your field evolves, Combo (3) - Draw a card.",
     "cardSet": "Booster Set \"Eightfold Retribution\""
   },
+  "Verdant Lieutenant Evolved": {
+    "class": "forest",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Condemned / Elf",
+    "rarity": "Gold",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3",
+    "effect": "Whenever a Condemned follower on your field evolves, Combo (3) - Draw a card. On Evolve - Select an enemy follower on the field and deal it 2 damage.",
+    "cardSet": "Booster Set \"Eightfold Retribution\""
+  },
   "Verdant Prayer TOKEN": {
     "class": "forest",
     "type": "token",
