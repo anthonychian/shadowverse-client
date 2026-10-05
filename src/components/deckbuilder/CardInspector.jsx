@@ -1,6 +1,7 @@
 import React, { useRef, useLayoutEffect, useState, useEffect } from "react";
 import { cardImage } from "../../decks/getCards";
 import { ART_VERSION } from "../../decks/artVersion";
+import { TEXTURES_BASE } from "../../decks/assetBase";
 import { getDetails } from "../../decks/cardDetails";
 import EffectText from "./EffectText";
 import { COLORS, FONT, CLASS_LABELS, displayName } from "./theme";
@@ -236,7 +237,7 @@ export default function CardInspector({
         {/* Nav arrows are desktop-only — the mobile (large) preview has none. */}
         {!readOnly && !large && <ArrowBackIosNew onClick={onPrev} sx={arrowSx("left", large)} />}
         <CardArt
-          src={cardNo ? `../textures/${cardNo}.png?v=${ART_VERSION}` : cardImage(name)}
+          src={cardNo ? `${TEXTURES_BASE}${cardNo}.png?v=${ART_VERSION}` : cardImage(name)}
           alt={name}
           boxStyle={artBox}
         />

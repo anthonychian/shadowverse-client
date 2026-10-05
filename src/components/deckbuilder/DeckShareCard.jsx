@@ -1,6 +1,7 @@
 import React from "react";
 import { cardImage, artThumb, artImage } from "../../decks/getCards";
 import { ART_VERSION } from "../../decks/artVersion";
+import { TEXTURES_BASE } from "../../decks/assetBase";
 
 import { getCost, primaryType } from "../../decks/cardDetails";
 import { CLASS_LABELS, CLASS_COLORS } from "./theme";
@@ -9,12 +10,13 @@ import { classIcon } from "./icons";
 // The social preview card: what a shared deck looks like when its link is
 // unfurled in Discord/Twitter. This is rendered off-screen at a fixed size and
 // screenshotted (see src/lib/deckImage.js) — it is never shown in the app, so
-// it deliberately ignores the viewport and uses only inline styles and
-// same-origin images, both of which html2canvas needs to capture cleanly.
+// it deliberately ignores the viewport and uses only inline styles.
 //
-// Layout follows the convention other Shadowverse deck sites use: a header with
-// the deck's key card, name, class and card-type breakdown, then the main and
-// evolve decks as art grids with copy-count badges.
+// Card art is cross-origin (R2) and html2canvas fetches it with useCORS, so the
+// bucket must serve Access-Control-Allow-Origin or the capture drops every card
+// image. Layout follows the convention other Shadowverse deck sites use: a
+// header with the deck's key card, name, class and card-type breakdown, then the
+// main and evolve decks as art grids with copy-count badges.
 
 export const SHARE_CARD_WIDTH = 1200;
 
@@ -23,11 +25,6 @@ const COLUMNS = 8;
 const GAP = 12;
 const CARD_W = Math.floor((SHARE_CARD_WIDTH - PAD * 2 - GAP * (COLUMNS - 1)) / COLUMNS);
 const CARD_H = Math.round((CARD_W * 173) / 124);
-
-// Card art is referenced app-wide as "../textures/…", which resolves relative
-// to the current route. The capture runs off-screen where that's fragile, so
-// pin every image to an absolute path.
-const abs = (src) => (src && src.startsWith("../") ? src.slice(2) : src);
 
 // name -> copies, in the deck's stored order collapsed to unique cards.
 const countsOf = (names = []) => {
@@ -84,16 +81,16 @@ const Grid = ({ entries, art }) => (
         }}
       >
         <img
-          src={abs(artThumb(name, art))}
+          src={artThumb(name, art)}
           alt=""
           // Same ladder as DeckPanel: a chosen printing without a thumbnail on
           // disk falls back to its full art, then to the card's default art.
           onError={(e) => {
             const chosen = art && art[name];
             if (chosen && e.currentTarget.src.indexOf("/thumbs/") !== -1) {
-              e.currentTarget.src = `/textures/${chosen}.png?v=${ART_VERSION}`;
+              e.currentTarget.src = `${TEXTURES_BASE}${chosen}.png?v=${ART_VERSION}`;
             } else if (chosen) {
-              e.currentTarget.src = abs(cardImage(name));
+              e.currentTarget.src = cardImage(name);
             }
           }}
           style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
@@ -161,8 +158,8 @@ export default function DeckShareCard({ deck, ownerName, url }) {
   const allNames = [...(deck?.deck || []), ...(deck?.evoDeck || [])];
   const hero =
     deck?.cover && allNames.includes(deck.cover) ? deck.cover : keyCard(allNames);
-  const heroSrc = hero ? abs(artImage(hero, art)) : null;
-  const clsIcon = abs(classIcon(cls));
+  const heroSrc = hero ? artImage(hero, art) : null;
+  const clsIcon = classIcon(cls);
 
   return (
     <div

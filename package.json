@@ -51,7 +51,7 @@
   ],
   "scripts": {
     "start": "react-scripts start",
-    "build": "npm run build:engine && react-scripts build",
+    "build": "npm run build:engine && react-scripts build && npm run build:strip-textures",
     "build:engine": "npm run build -w sve-engine && node src/scripts/sync-card-stats.js",
     "sync:cards": "node src/scripts/backfill-reprints.js",
     "test": "react-scripts test",
@@ -70,6 +70,7 @@
     "eval:scenarios": "node src/scripts/eval-card.js --validate-scenarios",
     "build:atlases": "node src/scripts/build-card-atlases.js",
     "build:icons": "node src/scripts/inline-icons.js",
+    "build:strip-textures": "node src/scripts/strip-textures-from-build.js",
     "generate:manifest": "node src/scripts/generate-manifest.js",
     "fix:review-stubs": "node src/scripts/fix-review-stubs.js && node src/scripts/regenerate-deck-cards.js && node src/scripts/generate-manifest.js",
     "fix:all-noops": "node src/scripts/fix-all-noops.js && node src/scripts/generate-manifest.js",

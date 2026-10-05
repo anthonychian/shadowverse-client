@@ -339,9 +339,10 @@ function updateGetCards() {
     return;
   }
 
-  // Build new switch cases (EOL-aware so CRLF files stay CRLF).
+  // Build new switch cases (EOL-aware so CRLF files stay CRLF). Texture URLs go
+  // through ${TEXTURES_BASE} (the R2 bucket), matching the existing cases.
   const newCases = newCards
-    .map((c) => `    case "${c.name}":${EOL}      return "../textures/${c.cardNo}.png";`)
+    .map((c) => `    case "${c.name}":${EOL}      return \`\${TEXTURES_BASE}${c.cardNo}.png\`;`)
     .join(EOL);
 
   // Insert immediately before the cardImage switch's `default:` case. Match both

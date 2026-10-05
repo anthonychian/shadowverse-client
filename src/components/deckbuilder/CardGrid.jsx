@@ -9,16 +9,17 @@ import SearchIcon from "@mui/icons-material/Search";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import { cardImage } from "../../decks/getCards";
 import { ART_VERSION } from "../../decks/artVersion";
+import { TEXTURES_BASE } from "../../decks/assetBase";
 import CardSprite, { hasSprite } from "./CardSprite";
 import { COLORS, FONT } from "./theme";
 
 const W = 124;
 const H = 173;
 
-// The card LIST uses downscaled thumbnails (public/textures/thumbs/) to keep the
-// pool light; the inspector/deck still load the full-size originals. Rewrite a
-// "../textures/X.png" path to its thumb; if a thumb is ever missing the <img>
-// onError swaps back to the full image.
+// The card LIST uses downscaled thumbnails (textures/thumbs/ on the R2 bucket)
+// to keep the pool light; the inspector/deck still load the full-size
+// originals. Rewrite a "…/textures/X.png" URL to its thumb; if a thumb is ever
+// missing the <img> onError swaps back to the full image.
 const thumbSrc = (src) =>
   src && src.includes("/textures/") && !src.includes("/textures/thumbs/")
     ? src.replace("/textures/", "/textures/thumbs/")
@@ -83,7 +84,7 @@ function CardTile({ name, cardNo, cardKey, count, copyMax, maxed, selected, onIn
   const [hover, setHover] = React.useState(false);
   // In the "show all printings" view a specific printing is requested by card
   // number; otherwise fall back to the name-keyed image used everywhere else.
-  const fullSrc = cardNo ? `../textures/${cardNo}.png?v=${ART_VERSION}` : cardImage(name);
+  const fullSrc = cardNo ? `${TEXTURES_BASE}${cardNo}.png?v=${ART_VERSION}` : cardImage(name);
   // Mobile pool tiles render much larger than desktop ones, so the downscaled
   // thumbs look soft there — load the full-size originals on mobile; desktop
   // keeps the lighter thumbnails.

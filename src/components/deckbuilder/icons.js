@@ -1,14 +1,13 @@
 // Helpers to resolve the scraped keyword/stat/class icons (manifest in
-// src/decks/icons.json, images under public/textures/icons/). Card images are
-// referenced app-wide as "../textures/<file>", so icons share that base.
+// src/decks/icons.json, images under textures/icons/ on the R2 bucket). Card
+// images share that base, so icons come from the same place.
 import icons from "../../decks/icons.json";
 import iconData from "../../decks/iconData.json";
+import { TEXTURES_BASE } from "../../decks/assetBase";
 import idolmaster from "../../assets/logo/idolmaster.png";
 import umamusume from "../../assets/logo/umamusume.png";
 import vanguard from "../../assets/logo/vanguard.png";
 import priconne from "../../assets/logo/priconne.webp";
-
-const BASE = "../textures/";
 
 // The small icons ship as data URIs (src/scripts/inline-icons.js) so they cost
 // no requests: a single inspector view would otherwise fetch a cost gem, two
@@ -26,7 +25,7 @@ export const iconUrl = (token) => {
   if (iconData[token]) return iconData[token];
   if (iconData[lower]) return iconData[lower];
   const file = icons[token] || icons[lower];
-  return file ? BASE + file : null;
+  return file ? TEXTURES_BASE + file : null;
 };
 
 const CLASS_TOKEN = {

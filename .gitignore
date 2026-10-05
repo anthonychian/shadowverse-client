@@ -11,6 +11,12 @@
 # production
 /build
 
+# card art now lives in a Cloudflare R2 bucket (see src/decks/assetBase.js).
+# public/textures/ is kept locally as the staging dir the fetch-*/makethumbs/
+# scripts write to and the source for `wrangler r2 object put` uploads, but it is
+# ~14k PNGs / >1GB of duplicated bytes and must never enter the repo.
+/public/textures/
+
 # misc
 .DS_Store
 .env.local
