@@ -1,4 +1,31 @@
 export const allCardsEvo = [
+  "Aerin, Forever Brilliant Evolved",
+  "Flower Fox Evolved",
+  "Wellspring Elf Princess Evolved",
+  "Coldhearted Dark Elf Evolved",
+  "Armelize, Opulent Strategist Evolved",
+  "Assault Knight Evolved",
+  "Axe Pirate Evolved",
+  "Calculating Captain Evolved",
+  "Chrono Witch Evolved",
+  "Levi, Wizard of Ages Evolved",
+  "Witching Moggy Evolved",
+  "Elina, Winged Evangelist Evolved",
+  "Blade Mage Evolved",
+  "Ignis Dragon Evolved",
+  "Noir & Blanc, Brothers Evolved",
+  "Coral Spirit Evolved",
+  "Hailwyrm Evolved",
+  "Dark Emperor Evolved",
+  "Suzy, Hexcaster Evolved",
+  "Scarlet Vampire Evolved",
+  "Thunderbolt Fiend Evolved",
+  "Holy Saber Evolved",
+  "Sacred Lion Evolved",
+  "Carmia, Miracle Optimist Evolved",
+  "Holy Kitty Evolved",
+  "Goblin Leader Evolved",
+  "Oguri Cap [Surging Beast] Evolved",
   "Shizuru & Rino Evolved",
   "Misogi, Mimi & Kyoka Evolved",
   "Akino & Saren Evolved",
@@ -1604,6 +1631,11 @@ export const forestEvo = [
   "Bladebunny Evolved",
 
   "Shizuru & Rino Evolved",
+
+  "Aerin, Forever Brilliant Evolved",
+  "Flower Fox Evolved",
+  "Wellspring Elf Princess Evolved",
+  "Coldhearted Dark Elf Evolved",
 ];
 
 export const swordEvo = [
@@ -1725,6 +1757,11 @@ export const swordEvo = [
   "Agile Twinblader Evolved",
   "Tony, Plucky Polliwog Evolved",
   "Kitty Sergeant Evolved",
+
+  "Armelize, Opulent Strategist Evolved",
+  "Assault Knight Evolved",
+  "Axe Pirate Evolved",
+  "Calculating Captain Evolved",
 ];
 
 export const runeEvo = [
@@ -1848,6 +1885,12 @@ export const runeEvo = [
   "Wolf Whisperer Evolved",
 
   "Misogi, Mimi & Kyoka Evolved",
+
+  "Chrono Witch Evolved",
+  "Levi, Wizard of Ages Evolved",
+  "Witching Moggy Evolved",
+  "Elina, Winged Evangelist Evolved",
+  "Blade Mage Evolved",
 ];
 
 export const dragonEvo = [
@@ -1976,6 +2019,12 @@ export const dragonEvo = [
   "Grand Slam Tamer Evolved",
   "Dragonborn Striker Evolved",
   "Ipupiara Evolved",
+
+  "Ignis Dragon Evolved",
+  "Noir & Blanc, Brothers Evolved",
+  "Coral Spirit Evolved",
+  "Hailwyrm Evolved",
+  "Oguri Cap [Surging Beast] Evolved",
 ];
 
 export const abyssEvo = [
@@ -2095,6 +2144,11 @@ export const abyssEvo = [
   "Arka, Sin Spinner Evolved",
   "Mach-Speed Maron Evolved",
   "Bonebreaker Bladesman Evolved",
+
+  "Dark Emperor Evolved",
+  "Suzy, Hexcaster Evolved",
+  "Scarlet Vampire Evolved",
+  "Thunderbolt Fiend Evolved",
 ];
 
 export const havenEvo = [
@@ -2215,6 +2269,11 @@ export const havenEvo = [
   "Zlatorog Evolved",
 
   "Akino & Saren Evolved",
+
+  "Holy Saber Evolved",
+  "Sacred Lion Evolved",
+  "Carmia, Miracle Optimist Evolved",
+  "Holy Kitty Evolved",
 ];
 
 export const neutralEvo = [
@@ -2314,6 +2373,8 @@ export const neutralEvo = [
   "Princess Knight Evolved",
 
   "Lucius, Travelled Trainer Evolved",
+
+  "Goblin Leader Evolved",
 ];
 
 export const set17Evo = [
@@ -2799,4 +2860,34 @@ export const set07Evo = [
   "Zirconia, Ironcrown Ward Evolved",
   "Lounes, Levin Apprentice Evolved",
   "Mina, Levin Vice Leader Evolved",
+];
+
+export const set22Evo = [
+  "Aerin, Forever Brilliant Evolved",
+  "Flower Fox Evolved",
+  "Wellspring Elf Princess Evolved",
+  "Coldhearted Dark Elf Evolved",
+  "Armelize, Opulent Strategist Evolved",
+  "Assault Knight Evolved",
+  "Axe Pirate Evolved",
+  "Calculating Captain Evolved",
+  "Chrono Witch Evolved",
+  "Levi, Wizard of Ages Evolved",
+  "Witching Moggy Evolved",
+  "Elina, Winged Evangelist Evolved",
+  "Blade Mage Evolved",
+  "Ignis Dragon Evolved",
+  "Noir & Blanc, Brothers Evolved",
+  "Coral Spirit Evolved",
+  "Hailwyrm Evolved",
+  "Dark Emperor Evolved",
+  "Suzy, Hexcaster Evolved",
+  "Scarlet Vampire Evolved",
+  "Thunderbolt Fiend Evolved",
+  "Holy Saber Evolved",
+  "Sacred Lion Evolved",
+  "Carmia, Miracle Optimist Evolved",
+  "Holy Kitty Evolved",
+  "Goblin Leader Evolved",
+  "Oguri Cap [Surging Beast] Evolved",
 ];

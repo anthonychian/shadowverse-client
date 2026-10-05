@@ -1134,6 +1134,20 @@
     "defense": "2"
   },
   {
+    "name": "Advent of Peace",
+    "cardNo": "BP22-111EN",
+    "set": "BP22",
+    "class": "neutral",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Supreme",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "3",
+    "attack": "-",
+    "defense": "-"
+  },
+  {
     "name": "Aenea, Amethyst Rebel",
     "cardNo": "BP07-072EN",
     "set": "BP07",
@@ -1330,6 +1344,34 @@
     "defense": "4"
   },
   {
+    "name": "Aerin, Forever Brilliant",
+    "cardNo": "BP22-003EN",
+    "set": "BP22",
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Crystalian",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "4",
+    "attack": "2",
+    "defense": "4"
+  },
+  {
+    "name": "Aerin, Forever Brilliant Evolved",
+    "cardNo": "BP22-004EN",
+    "set": "BP22",
+    "class": "forest",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Crystalian",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "-",
+    "attack": "3",
+    "defense": "5"
+  },
+  {
     "name": "Aether of the Warrior Wing",
     "cardNo": "BP08-018EN",
     "set": "BP08",
@@ -1468,6 +1510,20 @@
     "cost": "7",
     "attack": "3",
     "defense": "5"
+  },
+  {
+    "name": "Aether, Guardian of Light",
+    "cardNo": "BP22-095EN",
+    "set": "BP22",
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Faith / Luminary / Lightborne",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "4",
+    "attack": "2",
+    "defense": "3"
   },
   {
     "name": "After-School Break",
@@ -5992,6 +6048,20 @@
     "defense": "4"
   },
   {
+    "name": "Aqua Fairy",
+    "cardNo": "BP22-011EN",
+    "set": "BP22",
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Pixie",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "1",
+    "attack": "2",
+    "defense": "1"
+  },
+  {
     "name": "Aqua Nereid",
     "cardNo": "BP04-074EN",
     "set": "BP04",
@@ -7070,6 +7140,48 @@
     "defense": "6"
   },
   {
+    "name": "Armed Butler",
+    "cardNo": "BP22-029EN",
+    "set": "BP22",
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Officer",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "2",
+    "attack": "1",
+    "defense": "3"
+  },
+  {
+    "name": "Armelize, Opulent Strategist",
+    "cardNo": "BP22-021EN",
+    "set": "BP22",
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Commander / Noble",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2"
+  },
+  {
+    "name": "Armelize, Opulent Strategist Evolved",
+    "cardNo": "BP22-022EN",
+    "set": "BP22",
+    "class": "sword",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Commander / Noble",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3"
+  },
+  {
     "name": "Armor Burst",
     "cardNo": "BP03-072EN",
     "set": "BP03",
@@ -7336,6 +7448,20 @@
     "defense": "3"
   },
   {
+    "name": "Ascended Prism Priestess",
+    "cardNo": "BP22-102EN",
+    "set": "BP22",
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Luminary / Avian",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "2",
+    "attack": "2",
+    "defense": "3"
+  },
+  {
     "name": "Ascetic of Wuxing",
     "cardNo": "BP20-054EN",
     "set": "BP20",
@@ -7404,6 +7530,34 @@
     "cost": "3",
     "attack": "4",
     "defense": "1"
+  },
+  {
+    "name": "Assault Knight",
+    "cardNo": "BP22-023EN",
+    "set": "BP22",
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Officer",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "1",
+    "attack": "2",
+    "defense": "2"
+  },
+  {
+    "name": "Assault Knight Evolved",
+    "cardNo": "BP22-024EN",
+    "set": "BP22",
+    "class": "sword",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Officer",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3"
   },
   {
     "name": "Aston Machan",
@@ -7908,6 +8062,34 @@
     "cost": "-",
     "attack": "3",
     "defense": "3"
+  },
+  {
+    "name": "Axe Pirate",
+    "cardNo": "BP22-027EN",
+    "set": "BP22",
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Thief",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "3",
+    "attack": "2",
+    "defense": "3"
+  },
+  {
+    "name": "Axe Pirate Evolved",
+    "cardNo": "BP22-028EN",
+    "set": "BP22",
+    "class": "sword",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Thief",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "-",
+    "attack": "3",
+    "defense": "4"
   },
   {
     "name": "Axe Princess",
@@ -9744,6 +9926,20 @@
     "defense": "3"
   },
   {
+    "name": "Bejeweled Dragon",
+    "cardNo": "BP22-062EN",
+    "set": "BP22",
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Wyrmkin",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "1",
+    "attack": "1",
+    "defense": "1"
+  },
+  {
     "name": "Bejeweled Shrine",
     "cardNo": "BP03-106EN",
     "set": "BP03",
@@ -10542,6 +10738,34 @@
     "defense": "3"
   },
   {
+    "name": "Blade Mage",
+    "cardNo": "BP22-050EN",
+    "set": "BP22",
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Mage",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "6",
+    "attack": "2",
+    "defense": "2"
+  },
+  {
+    "name": "Blade Mage Evolved",
+    "cardNo": "BP22-051EN",
+    "set": "BP22",
+    "class": "rune",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Mage",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "-",
+    "attack": "4",
+    "defense": "4"
+  },
+  {
     "name": "Bladebunny",
     "cardNo": "BP21-013EN",
     "set": "BP21",
@@ -10650,6 +10874,20 @@
     "rarity": "Promo",
     "cardSet": "Promo Cards",
     "cost": "2",
+    "attack": "1",
+    "defense": "1"
+  },
+  {
+    "name": "Blast Fairy",
+    "cardNo": "BP22-008EN",
+    "set": "BP22",
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Pixie / Cutthroat",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "1",
     "attack": "1",
     "defense": "1"
   },
@@ -11732,6 +11970,20 @@
     "defense": "-"
   },
   {
+    "name": "Breath of the Salamander",
+    "cardNo": "BP22-072EN",
+    "set": "BP22",
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Wyrmkin",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "2",
+    "attack": "-",
+    "defense": "-"
+  },
+  {
     "name": "Briared Vampire",
     "cardNo": "BP14-078EN",
     "set": "BP14",
@@ -11872,6 +12124,34 @@
     "defense": "-"
   },
   {
+    "name": "Brilliant Fairy",
+    "cardNo": "BP22-001EN",
+    "set": "BP22",
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Pixie",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "3",
+    "attack": "3",
+    "defense": "4"
+  },
+  {
+    "name": "Brilliant Fairy",
+    "cardNo": "BP22-U01EN",
+    "set": "BP22",
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Pixie",
+    "rarity": "Ultimate",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3"
+  },
+  {
     "name": "Bring 'Em Home, Please!",
     "cardNo": "ECP01-054EN",
     "set": "ECP01",
@@ -11914,6 +12194,20 @@
     "defense": "-"
   },
   {
+    "name": "Brutal Dragonewt",
+    "cardNo": "BP22-058EN",
+    "set": "BP22",
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Dragonewt",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "4",
+    "attack": "4",
+    "defense": "3"
+  },
+  {
     "name": "Bubbleborne Mermaid",
     "cardNo": "BP07-059EN",
     "set": "BP07",
@@ -11926,6 +12220,20 @@
     "cost": "2",
     "attack": "2",
     "defense": "3"
+  },
+  {
+    "name": "Bubbly Reaper",
+    "cardNo": "BP22-090EN",
+    "set": "BP22",
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "4",
+    "attack": "4",
+    "defense": "4"
   },
   {
     "name": "Budding Initiate",
@@ -12236,6 +12544,34 @@
     "defense": "6"
   },
   {
+    "name": "Calculating Captain",
+    "cardNo": "BP22-031EN",
+    "set": "BP22",
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Commander",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "6",
+    "attack": "4",
+    "defense": "4"
+  },
+  {
+    "name": "Calculating Captain Evolved",
+    "cardNo": "BP22-032EN",
+    "set": "BP22",
+    "class": "sword",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Commander",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "-",
+    "attack": "5",
+    "defense": "5"
+  },
+  {
     "name": "Call of Cocytus",
     "cardNo": "BP02-113EN",
     "set": "BP02",
@@ -12358,6 +12694,20 @@
     "rarity": "Bronze",
     "cardSet": "Booster Set \"Eightfold Retribution\"",
     "cost": "3",
+    "attack": "-",
+    "defense": "-"
+  },
+  {
+    "name": "Canyon of the Dragons",
+    "cardNo": "BP22-073EN",
+    "set": "BP22",
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Amulet",
+    "trait": "Wyrmkin",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "8",
     "attack": "-",
     "defense": "-"
   },
@@ -12486,6 +12836,48 @@
     "cost": "-",
     "attack": "4",
     "defense": "4"
+  },
+  {
+    "name": "Carmia, Miracle Optimist",
+    "cardNo": "BP22-100EN",
+    "set": "BP22",
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Lightborne",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2"
+  },
+  {
+    "name": "Carmia, Miracle Optimist Evolved",
+    "cardNo": "BP22-101EN",
+    "set": "BP22",
+    "class": "haven",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Lightborne",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "-",
+    "attack": "4",
+    "defense": "4"
+  },
+  {
+    "name": "Carnelia, Servant of Darkness",
+    "cardNo": "BP22-049EN",
+    "set": "BP22",
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Supreme",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "3",
+    "attack": "1",
+    "defense": "3"
   },
   {
     "name": "Carrot",
@@ -13424,6 +13816,48 @@
     "cost": "-",
     "attack": "4",
     "defense": "4"
+  },
+  {
+    "name": "Cernunnos",
+    "cardNo": "BP22-077EN",
+    "set": "BP22",
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "2",
+    "attack": "2",
+    "defense": "3"
+  },
+  {
+    "name": "Cernunnos",
+    "cardNo": "BP22-SP01EN",
+    "set": "BP22",
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon",
+    "rarity": "Special",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2"
+  },
+  {
+    "name": "Cernunnos",
+    "cardNo": "BP22-U05EN",
+    "set": "BP22",
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon",
+    "rarity": "Ultimate",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2"
   },
   {
     "name": "Ceryneian Hind",
@@ -14588,6 +15022,34 @@
     "defense": "4"
   },
   {
+    "name": "Chrono Witch",
+    "cardNo": "BP22-037EN",
+    "set": "BP22",
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Mage",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "5",
+    "attack": "4",
+    "defense": "4"
+  },
+  {
+    "name": "Chrono Witch Evolved",
+    "cardNo": "BP22-038EN",
+    "set": "BP22",
+    "class": "rune",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Mage",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "-",
+    "attack": "5",
+    "defense": "5"
+  },
+  {
     "name": "Cinderella",
     "cardNo": "BP03-018EN",
     "set": "BP03",
@@ -14712,6 +15174,20 @@
     "cost": "3",
     "attack": "-",
     "defense": "-"
+  },
+  {
+    "name": "Claymore Master",
+    "cardNo": "BP22-026EN",
+    "set": "BP22",
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Commander",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "5",
+    "attack": "4",
+    "defense": "4"
   },
   {
     "name": "Clear",
@@ -14894,6 +15370,34 @@
     "cost": "-",
     "attack": "4",
     "defense": "2"
+  },
+  {
+    "name": "Coldhearted Dark Elf",
+    "cardNo": "BP22-013EN",
+    "set": "BP22",
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Elf / Cutthroat",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "5",
+    "attack": "3",
+    "defense": "3"
+  },
+  {
+    "name": "Coldhearted Dark Elf Evolved",
+    "cardNo": "BP22-014EN",
+    "set": "BP22",
+    "class": "forest",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Elf / Cutthroat",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "-",
+    "attack": "4",
+    "defense": "4"
   },
   {
     "name": "Colette, Holy Gunner",
@@ -15358,7 +15862,7 @@
     "defense": "4"
   },
   {
-    "name": "Congregant of Usurpation Evolved",
+    "name": "Congregant of Usurpation",
     "cardNo": "BP20-024EN",
     "set": "BP20",
     "class": "sword",
@@ -15454,6 +15958,34 @@
     "cost": "2",
     "attack": "3",
     "defense": "1"
+  },
+  {
+    "name": "Coral Spirit",
+    "cardNo": "BP22-064EN",
+    "set": "BP22",
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Marine",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3"
+  },
+  {
+    "name": "Coral Spirit Evolved",
+    "cardNo": "BP22-065EN",
+    "set": "BP22",
+    "class": "dragon",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Marine",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "-",
+    "attack": "4",
+    "defense": "4"
   },
   {
     "name": "Cornelius, the Corpse King",
@@ -16702,6 +17234,20 @@
     "defense": "5"
   },
   {
+    "name": "Cursed Maiden",
+    "cardNo": "BP22-098EN",
+    "set": "BP22",
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Zealot",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2"
+  },
+  {
     "name": "Cursed Stone",
     "cardNo": "BP05-060EN",
     "set": "BP05",
@@ -17724,6 +18270,34 @@
     "defense": "-"
   },
   {
+    "name": "Dark Emperor",
+    "cardNo": "BP22-075EN",
+    "set": "BP22",
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "7",
+    "attack": "4",
+    "defense": "6"
+  },
+  {
+    "name": "Dark Emperor Evolved",
+    "cardNo": "BP22-076EN",
+    "set": "BP22",
+    "class": "abyss",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Demon",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "-",
+    "attack": "5",
+    "defense": "7"
+  },
+  {
     "name": "Dark General",
     "cardNo": "BP01-113EN",
     "set": "BP01",
@@ -18366,6 +18940,20 @@
     "cost": "-",
     "attack": "8",
     "defense": "8"
+  },
+  {
+    "name": "Deathcat Reaper",
+    "cardNo": "BP22-084EN",
+    "set": "BP22",
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon / Beast",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2"
   },
   {
     "name": "Deathscythe Nun",
@@ -20032,6 +20620,20 @@
     "cost": "-",
     "attack": "3",
     "defense": "3"
+  },
+  {
+    "name": "Dog of the Dead",
+    "cardNo": "BP22-080EN",
+    "set": "BP22",
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Departed / Beast",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "2",
+    "attack": "3",
+    "defense": "2"
   },
   {
     "name": "Dogged Detective",
@@ -22260,6 +22862,20 @@
     "defense": "-"
   },
   {
+    "name": "Dungeoncrawl Fairy",
+    "cardNo": "BP22-017EN",
+    "set": "BP22",
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Pixie",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "1",
+    "attack": "2",
+    "defense": "2"
+  },
+  {
     "name": "Duramente",
     "cardNo": "ECP01-040EN",
     "set": "ECP01",
@@ -22960,6 +23576,20 @@
     "defense": "1"
   },
   {
+    "name": "Electrodrake",
+    "cardNo": "BP22-071EN",
+    "set": "BP22",
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Wyrmkin",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "7",
+    "attack": "5",
+    "defense": "7"
+  },
+  {
     "name": "Electrokitty",
     "cardNo": "BP19-050EN",
     "set": "BP19",
@@ -23420,6 +24050,34 @@
     "cost": "6",
     "attack": "-",
     "defense": "-"
+  },
+  {
+    "name": "Elina, Winged Evangelist",
+    "cardNo": "BP22-046EN",
+    "set": "BP22",
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Supreme",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2"
+  },
+  {
+    "name": "Elina, Winged Evangelist Evolved",
+    "cardNo": "BP22-047EN",
+    "set": "BP22",
+    "class": "rune",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Supreme",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3"
   },
   {
     "name": "Elios, Loyal Dragoon",
@@ -24626,6 +25284,20 @@
     "defense": "6"
   },
   {
+    "name": "Ethica, Firebrand Claw",
+    "cardNo": "BP22-063EN",
+    "set": "BP22",
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Dragonewt",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2"
+  },
+  {
     "name": "Eudie, Maiden Reborn",
     "cardNo": "BP19-112EN",
     "set": "BP19",
@@ -25100,6 +25772,20 @@
     "cost": "5",
     "attack": "5",
     "defense": "5"
+  },
+  {
+    "name": "Fairy Bringer",
+    "cardNo": "BP22-015EN",
+    "set": "BP22",
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Elf",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "2",
+    "attack": "1",
+    "defense": "3"
   },
   {
     "name": "Fairy Caster",
@@ -25774,6 +26460,20 @@
     "defense": "-"
   },
   {
+    "name": "Fangblade Slayer",
+    "cardNo": "BP22-025EN",
+    "set": "BP22",
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Officer",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "8",
+    "attack": "3",
+    "defense": "9"
+  },
+  {
     "name": "Fashionista Nelcha",
     "cardNo": "BP04-007EN",
     "set": "BP04",
@@ -26093,6 +26793,20 @@
     "cardSet": "Special Set \"Seaside Memories\"",
     "cost": "2",
     "attack": "3",
+    "defense": "2"
+  },
+  {
+    "name": "Feena, Super Cute Hunter",
+    "cardNo": "BP22-112EN",
+    "set": "BP22",
+    "class": "neutral",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Mercenary",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "3",
+    "attack": "2",
     "defense": "2"
   },
   {
@@ -27384,6 +28098,34 @@
     "defense": "3"
   },
   {
+    "name": "Flower Fox",
+    "cardNo": "BP22-005EN",
+    "set": "BP22",
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Verdant / Beast",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "1",
+    "attack": "1",
+    "defense": "1"
+  },
+  {
+    "name": "Flower Fox Evolved",
+    "cardNo": "BP22-006EN",
+    "set": "BP22",
+    "class": "forest",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Verdant / Beast",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "-",
+    "attack": "2",
+    "defense": "2"
+  },
+  {
     "name": "Flower of Fairies",
     "cardNo": "BP09-017EN",
     "set": "BP09",
@@ -27617,6 +28359,20 @@
     "trait": "Machina / Departed",
     "rarity": "Premium",
     "cardSet": "Booster Set #7 \"Verdant Steel\"",
+    "cost": "2",
+    "attack": "-",
+    "defense": "-"
+  },
+  {
+    "name": "Forbidden Ritual",
+    "cardNo": "BP22-109EN",
+    "set": "BP22",
+    "class": "haven",
+    "type": "base",
+    "cardType": "Amulet",
+    "trait": "Zealot",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
     "cost": "2",
     "attack": "-",
     "defense": "-"
@@ -28616,6 +29372,20 @@
     "defense": "-"
   },
   {
+    "name": "Frost Golem",
+    "cardNo": "BP22-052EN",
+    "set": "BP22",
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Golem",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "8",
+    "attack": "7",
+    "defense": "7"
+  },
+  {
     "name": "Frostbite Dragon",
     "cardNo": "BP14-056EN",
     "set": "BP14",
@@ -29608,6 +30378,20 @@
     "cost": "-",
     "attack": "6",
     "defense": "6"
+  },
+  {
+    "name": "Garuda, Winged Sentinel",
+    "cardNo": "BP22-099EN",
+    "set": "BP22",
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Avian / Lightborne",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "3",
+    "attack": "3",
+    "defense": "4"
   },
   {
     "name": "Garuel, Seraphic Leo",
@@ -31164,6 +31948,20 @@
     "defense": "1"
   },
   {
+    "name": "Giselle, Ocean Star",
+    "cardNo": "BP22-059EN",
+    "set": "BP22",
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Marine",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "6",
+    "attack": "2",
+    "defense": "4"
+  },
+  {
     "name": "Giving Gourmet",
     "cardNo": "BP12-110EN",
     "set": "BP12",
@@ -31528,6 +32326,34 @@
     "defense": "-"
   },
   {
+    "name": "Goblin Emperor",
+    "cardNo": "BP22-110EN",
+    "set": "BP22",
+    "class": "neutral",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Goblinoid",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "5",
+    "attack": "3",
+    "defense": "3"
+  },
+  {
+    "name": "Goblin Emperor",
+    "cardNo": "BP22-U07EN",
+    "set": "BP22",
+    "class": "neutral",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Goblinoid",
+    "rarity": "Ultimate",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "5",
+    "attack": "3",
+    "defense": "3"
+  },
+  {
     "name": "Goblin Evolved",
     "cardNo": "BP01-172EN",
     "set": "BP01",
@@ -31582,6 +32408,48 @@
     "cost": "1",
     "attack": "2",
     "defense": "2"
+  },
+  {
+    "name": "Goblin Leader",
+    "cardNo": "BP22-113EN",
+    "set": "BP22",
+    "class": "neutral",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Goblinoid",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "2",
+    "attack": "1",
+    "defense": "1"
+  },
+  {
+    "name": "Goblin Leader Evolved",
+    "cardNo": "BP22-114EN",
+    "set": "BP22",
+    "class": "neutral",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Goblinoid",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "-",
+    "attack": "2",
+    "defense": "2"
+  },
+  {
+    "name": "Goblin Mage",
+    "cardNo": "BP22-115EN",
+    "set": "BP22",
+    "class": "neutral",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Goblinoid",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "2",
+    "attack": "2",
+    "defense": "3"
   },
   {
     "name": "Goblin Princess",
@@ -31640,6 +32508,20 @@
     "defense": "3"
   },
   {
+    "name": "Goblin Reaper",
+    "cardNo": "BP22-081EN",
+    "set": "BP22",
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon / Goblinoid",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "4",
+    "attack": "4",
+    "defense": "3"
+  },
+  {
     "name": "Goblin Warpack",
     "cardNo": "BP12-111EN",
     "set": "BP12",
@@ -31652,6 +32534,20 @@
     "cost": "2",
     "attack": "-",
     "defense": "-"
+  },
+  {
+    "name": "Goblin Zombie",
+    "cardNo": "BP22-089EN",
+    "set": "BP22",
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Departed / Goblinoid",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "1",
+    "attack": "2",
+    "defense": "2"
   },
   {
     "name": "Goblin's Gratitude",
@@ -31736,6 +32632,20 @@
     "cost": "6",
     "attack": "7",
     "defense": "7"
+  },
+  {
+    "name": "God of Curses",
+    "cardNo": "BP22-092EN",
+    "set": "BP22",
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Zealot",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "9",
+    "attack": "1",
+    "defense": "5"
   },
   {
     "name": "Goddess by the Sunlit Sea",
@@ -32298,6 +33208,20 @@
     "defense": "-"
   },
   {
+    "name": "Golden Warrior",
+    "cardNo": "BP22-020EN",
+    "set": "BP22",
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Officer / Noble",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "4",
+    "attack": "3",
+    "defense": "4"
+  },
+  {
     "name": "Goldennote Melody",
     "cardNo": "BP16-076EN",
     "set": "BP16",
@@ -32322,6 +33246,20 @@
     "rarity": "Premium",
     "cardSet": "Booster Set \"New World Genesis\"",
     "cost": "3",
+    "attack": "-",
+    "defense": "-"
+  },
+  {
+    "name": "Golem Assault",
+    "cardNo": "BP22-054EN",
+    "set": "BP22",
+    "class": "rune",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Alchemist / Golem",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "1",
     "attack": "-",
     "defense": "-"
   },
@@ -33194,6 +34132,20 @@
     "defense": "-"
   },
   {
+    "name": "Great Magician",
+    "cardNo": "BP22-044EN",
+    "set": "BP22",
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Mage",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2"
+  },
+  {
     "name": "Great Mother's Embrace",
     "cardNo": "BP17-112EN",
     "set": "BP17",
@@ -34034,6 +34986,34 @@
     "defense": "3"
   },
   {
+    "name": "Hailwyrm",
+    "cardNo": "BP22-068EN",
+    "set": "BP22",
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Wyrmkin",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "6",
+    "attack": "4",
+    "defense": "6"
+  },
+  {
+    "name": "Hailwyrm Evolved",
+    "cardNo": "BP22-069EN",
+    "set": "BP22",
+    "class": "dragon",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Wyrmkin",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "-",
+    "attack": "5",
+    "defense": "7"
+  },
+  {
     "name": "Hajime Fujiwara [Pink Blossom Dream]",
     "cardNo": "ECP02-003EN",
     "set": "ECP02",
@@ -34424,6 +35404,34 @@
     "cost": "2",
     "attack": "2",
     "defense": "2"
+  },
+  {
+    "name": "Haru Urara [I'll Win Someday!]",
+    "cardNo": "BP22-116EN",
+    "set": "BP22",
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Umamusume",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "2",
+    "attack": "1",
+    "defense": "3"
+  },
+  {
+    "name": "Haru Urara [I'll Win Someday!]",
+    "cardNo": "BP22-SSP01EN",
+    "set": "BP22",
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Umamusume",
+    "rarity": "Super Special",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "2",
+    "attack": "1",
+    "defense": "3"
   },
   {
     "name": "Haru Urara [Sunny Passion ♪]",
@@ -36120,6 +37128,34 @@
     "defense": "4"
   },
   {
+    "name": "Holy Kitty",
+    "cardNo": "BP22-104EN",
+    "set": "BP22",
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Lightborne / Beast",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "2",
+    "attack": "2",
+    "defense": "3"
+  },
+  {
+    "name": "Holy Kitty Evolved",
+    "cardNo": "BP22-105EN",
+    "set": "BP22",
+    "class": "haven",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Lightborne / Beast",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "-",
+    "attack": "3",
+    "defense": "4"
+  },
+  {
     "name": "Holy Lancer",
     "cardNo": "BP06-093EN",
     "set": "BP06",
@@ -36174,6 +37210,48 @@
     "cost": "-",
     "attack": "4",
     "defense": "5"
+  },
+  {
+    "name": "Holy Saber",
+    "cardNo": "BP22-093EN",
+    "set": "BP22",
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Luminary",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2"
+  },
+  {
+    "name": "Holy Saber Evolved",
+    "cardNo": "BP22-094EN",
+    "set": "BP22",
+    "class": "haven",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Luminary",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3"
+  },
+  {
+    "name": "Holy Saber Evolved",
+    "cardNo": "BP22-U06EN",
+    "set": "BP22",
+    "class": "haven",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Luminary",
+    "rarity": "Ultimate",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3"
   },
   {
     "name": "Holy Sanctuary",
@@ -36806,6 +37884,20 @@
     "defense": "3"
   },
   {
+    "name": "Huginn & Muninn",
+    "cardNo": "BP22-085EN",
+    "set": "BP22",
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2"
+  },
+  {
     "name": "Hulking Giant",
     "cardNo": "BP06-040EN",
     "set": "BP06",
@@ -37212,6 +38304,20 @@
     "defense": "6"
   },
   {
+    "name": "Iceshard Beast",
+    "cardNo": "BP22-053EN",
+    "set": "BP22",
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Golem / Arcanaform",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "4",
+    "attack": "4",
+    "defense": "4"
+  },
+  {
     "name": "Icyclone",
     "cardNo": "BP13-034EN",
     "set": "BP13",
@@ -37238,6 +38344,48 @@
     "cost": "2",
     "attack": "1",
     "defense": "4"
+  },
+  {
+    "name": "Ignis Dragon",
+    "cardNo": "BP22-056EN",
+    "set": "BP22",
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Wyrmkin",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "7",
+    "attack": "4",
+    "defense": "6"
+  },
+  {
+    "name": "Ignis Dragon",
+    "cardNo": "BP22-U04EN",
+    "set": "BP22",
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Wyrmkin",
+    "rarity": "Ultimate",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "7",
+    "attack": "4",
+    "defense": "6"
+  },
+  {
+    "name": "Ignis Dragon Evolved",
+    "cardNo": "BP22-057EN",
+    "set": "BP22",
+    "class": "dragon",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Wyrmkin",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "-",
+    "attack": "5",
+    "defense": "7"
   },
   {
     "name": "Ignominious Samurai",
@@ -38288,6 +39436,20 @@
     "cost": "2",
     "attack": "2",
     "defense": "3"
+  },
+  {
+    "name": "Ironscale Serpent Drake",
+    "cardNo": "BP22-070EN",
+    "set": "BP22",
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Wyrmkin",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "2",
+    "attack": "3",
+    "defense": "2"
   },
   {
     "name": "Ironwrought Defender",
@@ -41160,6 +42322,20 @@
     "defense": "5"
   },
   {
+    "name": "Khonsu",
+    "cardNo": "BP22-108EN",
+    "set": "BP22",
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Luminary",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3"
+  },
+  {
     "name": "Killer Instincts",
     "cardNo": "BP17-026EN",
     "set": "BP17",
@@ -41268,6 +42444,20 @@
     "rarity": "Legendary",
     "cardSet": "Crossover Starter Deck \"Sanctuary Knight Brigade\"",
     "cost": "-",
+    "attack": "4",
+    "defense": "4"
+  },
+  {
+    "name": "King of Vines",
+    "cardNo": "BP22-007EN",
+    "set": "BP22",
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Verdant",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "7",
     "attack": "4",
     "defense": "4"
   },
@@ -43050,6 +44240,20 @@
     "defense": "5"
   },
   {
+    "name": "Lazuli, Gateway Homunculus",
+    "cardNo": "BP22-045EN",
+    "set": "BP22",
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Supreme",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "2",
+    "attack": "2",
+    "defense": "3"
+  },
+  {
     "name": "Leafshade Assassin",
     "cardNo": "BP19-011EN",
     "set": "BP19",
@@ -43398,6 +44602,48 @@
     "cost": "-",
     "attack": "3",
     "defense": "3"
+  },
+  {
+    "name": "Levi, Wizard of Ages",
+    "cardNo": "BP22-040EN",
+    "set": "BP22",
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Mage",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "4",
+    "attack": "4",
+    "defense": "4"
+  },
+  {
+    "name": "Levi, Wizard of Ages Evolved",
+    "cardNo": "BP22-041EN",
+    "set": "BP22",
+    "class": "rune",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Mage",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "-",
+    "attack": "5",
+    "defense": "5"
+  },
+  {
+    "name": "Levi, Wizard of Ages Evolved",
+    "cardNo": "BP22-U03EN",
+    "set": "BP22",
+    "class": "rune",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Mage",
+    "rarity": "Ultimate",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "-",
+    "attack": "5",
+    "defense": "5"
   },
   {
     "name": "Leviathan, the Furious",
@@ -44056,6 +45302,20 @@
     "cost": "5",
     "attack": "4",
     "defense": "3"
+  },
+  {
+    "name": "Lily, Crystalian Conductor",
+    "cardNo": "BP22-012EN",
+    "set": "BP22",
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Crystalian",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "1",
+    "attack": "1",
+    "defense": "1"
   },
   {
     "name": "Lily, Crystalian Innocence",
@@ -45582,6 +46842,20 @@
     "cost": "2",
     "attack": "2",
     "defense": "3"
+  },
+  {
+    "name": "Lurching Corpse",
+    "cardNo": "BP22-088EN",
+    "set": "BP22",
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Departed",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2"
   },
   {
     "name": "Lycaon",
@@ -51100,6 +52374,20 @@
     "defense": "3"
   },
   {
+    "name": "Mirrored Summoning",
+    "cardNo": "BP22-055EN",
+    "set": "BP22",
+    "class": "rune",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Alchemist / Golem",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "2",
+    "attack": "-",
+    "defense": "-"
+  },
+  {
     "name": "Miru Biru",
     "cardNo": "CP03-031EN",
     "set": "CP03",
@@ -55636,6 +56924,34 @@
     "defense": "5"
   },
   {
+    "name": "Noir & Blanc, Brothers",
+    "cardNo": "BP22-060EN",
+    "set": "BP22",
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Dragonewt",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "1",
+    "attack": "2",
+    "defense": "2"
+  },
+  {
+    "name": "Noir & Blanc, Brothers Evolved",
+    "cardNo": "BP22-061EN",
+    "set": "BP22",
+    "class": "dragon",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Dragonewt",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "-",
+    "attack": "4",
+    "defense": "4"
+  },
+  {
     "name": "Nomadic Conductor",
     "cardNo": "BP15-123EN",
     "set": "BP15",
@@ -55815,6 +57131,20 @@
     "cardSet": "Worlds Beyond Swordcraft Starter Set",
     "cost": "3",
     "attack": "3",
+    "defense": "3"
+  },
+  {
+    "name": "Noxious Elf",
+    "cardNo": "BP22-002EN",
+    "set": "BP22",
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Elf / Cutthroat",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "3",
+    "attack": "1",
     "defense": "3"
   },
   {
@@ -56250,6 +57580,48 @@
     "cost": "6",
     "attack": "4",
     "defense": "4"
+  },
+  {
+    "name": "Oguri Cap [Surging Beast]",
+    "cardNo": "BP22-117EN",
+    "set": "BP22",
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Umamusume",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "9",
+    "attack": "2",
+    "defense": "2"
+  },
+  {
+    "name": "Oguri Cap [Surging Beast] Evolved",
+    "cardNo": "BP22-118EN",
+    "set": "BP22",
+    "class": "dragon",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Umamusume",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3"
+  },
+  {
+    "name": "Oguri Cap [Surging Beast] Evolved",
+    "cardNo": "BP22-SSP02EN",
+    "set": "BP22",
+    "class": "dragon",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Umamusume",
+    "rarity": "Super Special",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3"
   },
   {
     "name": "Okami",
@@ -57736,6 +59108,20 @@
     "defense": "3"
   },
   {
+    "name": "Parasol Witch",
+    "cardNo": "BP22-048EN",
+    "set": "BP22",
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Mage",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "4",
+    "attack": "3",
+    "defense": "3"
+  },
+  {
     "name": "Parkour Werewolf",
     "cardNo": "BP14-084EN",
     "set": "BP14",
@@ -58558,6 +59944,20 @@
     "rarity": "Gold",
     "cardSet": "Booster Set #1 “Advent of Genesis”",
     "cost": "5",
+    "attack": "-",
+    "defense": "-"
+  },
+  {
+    "name": "Piercing Roar",
+    "cardNo": "BP22-067EN",
+    "set": "BP22",
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Wyrmkin",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "7",
     "attack": "-",
     "defense": "-"
   },
@@ -60464,6 +61864,20 @@
     "cost": "2",
     "attack": "2",
     "defense": "3"
+  },
+  {
+    "name": "Pursuer Golem",
+    "cardNo": "BP22-039EN",
+    "set": "BP22",
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Golem",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "9",
+    "attack": "6",
+    "defense": "6"
   },
   {
     "name": "Pyne, Twisted Justice",
@@ -62564,6 +63978,20 @@
     "cost": "1",
     "attack": "-",
     "defense": "-"
+  },
+  {
+    "name": "Resplendent Knight",
+    "cardNo": "BP22-035EN",
+    "set": "BP22",
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Commander",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "1",
+    "attack": "2",
+    "defense": "2"
   },
   {
     "name": "Resplendent Phoenix",
@@ -65520,6 +66948,48 @@
     "defense": "5"
   },
   {
+    "name": "Sacred Ice-Crusher",
+    "cardNo": "BP22-106EN",
+    "set": "BP22",
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Lightborne / Beast",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "7",
+    "attack": "5",
+    "defense": "8"
+  },
+  {
+    "name": "Sacred Lion",
+    "cardNo": "BP22-096EN",
+    "set": "BP22",
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Lightborne / Beast",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "5",
+    "attack": "0",
+    "defense": "5"
+  },
+  {
+    "name": "Sacred Lion Evolved",
+    "cardNo": "BP22-097EN",
+    "set": "BP22",
+    "class": "haven",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Lightborne / Beast",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "-",
+    "attack": "0",
+    "defense": "5"
+  },
+  {
     "name": "Sacred Plea",
     "cardNo": "BP01-133EN",
     "set": "BP01",
@@ -66962,6 +68432,34 @@
     "defense": "7"
   },
   {
+    "name": "Scarlet Vampire",
+    "cardNo": "BP22-082EN",
+    "set": "BP22",
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Vampire",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "5",
+    "attack": "3",
+    "defense": "4"
+  },
+  {
+    "name": "Scarlet Vampire Evolved",
+    "cardNo": "BP22-083EN",
+    "set": "BP22",
+    "class": "abyss",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Vampire",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "-",
+    "attack": "4",
+    "defense": "5"
+  },
+  {
     "name": "Scavenge",
     "cardNo": "BP11-017EN",
     "set": "BP11",
@@ -67294,6 +68792,20 @@
     "rarity": "Ultimate",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
     "cost": "0",
+    "attack": "-",
+    "defense": "-"
+  },
+  {
+    "name": "Seed Barrage",
+    "cardNo": "BP22-018EN",
+    "set": "BP22",
+    "class": "forest",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Elf / Verdant",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "2",
     "attack": "-",
     "defense": "-"
   },
@@ -68833,6 +70345,34 @@
     "trait": "Officer",
     "rarity": "Bronze",
     "cardSet": "Booster Set \"Omens and Heirs\"",
+    "cost": "1",
+    "attack": "-",
+    "defense": "-"
+  },
+  {
+    "name": "Shield Dragon",
+    "cardNo": "BP22-066EN",
+    "set": "BP22",
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Wyrmkin",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "3",
+    "attack": "1",
+    "defense": "3"
+  },
+  {
+    "name": "Shield Phalanx",
+    "cardNo": "BP22-030EN",
+    "set": "BP22",
+    "class": "sword",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Officer",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
     "cost": "1",
     "attack": "-",
     "defense": "-"
@@ -70420,6 +71960,20 @@
     "defense": "2"
   },
   {
+    "name": "Skeleton Raider",
+    "cardNo": "BP22-074EN",
+    "set": "BP22",
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Departed",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "2",
+    "attack": "4",
+    "defense": "4"
+  },
+  {
     "name": "Skewer",
     "cardNo": "BP10-052EN",
     "set": "BP10",
@@ -71020,6 +72574,20 @@
     "cost": "2",
     "attack": "-",
     "defense": "-"
+  },
+  {
+    "name": "Sonia, Protector of Hope",
+    "cardNo": "BP22-103EN",
+    "set": "BP22",
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Faith",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "2",
+    "attack": "2",
+    "defense": "3"
   },
   {
     "name": "Soothing Dragonspring",
@@ -73472,6 +75040,20 @@
     "defense": "6"
   },
   {
+    "name": "Suave Bandit",
+    "cardNo": "BP22-033EN",
+    "set": "BP22",
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Thief",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "1",
+    "attack": "2",
+    "defense": "2"
+  },
+  {
     "name": "Sublime Talisman",
     "cardNo": "BP21-109EN",
     "set": "BP21",
@@ -74298,6 +75880,34 @@
     "defense": "5"
   },
   {
+    "name": "Suzy, Hexcaster",
+    "cardNo": "BP22-078EN",
+    "set": "BP22",
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2"
+  },
+  {
+    "name": "Suzy, Hexcaster Evolved",
+    "cardNo": "BP22-079EN",
+    "set": "BP22",
+    "class": "abyss",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Demon",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3"
+  },
+  {
     "name": "Sweep Tosho",
     "cardNo": "ECP01-026EN",
     "set": "ECP01",
@@ -74562,6 +76172,20 @@
     "cost": "5",
     "attack": "4",
     "defense": "4"
+  },
+  {
+    "name": "Sword-Swinging Bandit",
+    "cardNo": "BP22-034EN",
+    "set": "BP22",
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Thief",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3"
   },
   {
     "name": "Swordflash Panther",
@@ -76090,6 +77714,20 @@
     "defense": "3"
   },
   {
+    "name": "Tender Rabbit Healer",
+    "cardNo": "BP22-107EN",
+    "set": "BP22",
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Beast",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "1",
+    "attack": "1",
+    "defense": "1"
+  },
+  {
     "name": "Tenka, Hot-Blooded Vice-Prez",
     "cardNo": "BP18-060EN",
     "set": "BP18",
@@ -76619,6 +78257,34 @@
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\"",
     "cost": "7",
     "attack": "5",
+    "defense": "5"
+  },
+  {
+    "name": "Thunderbolt Fiend",
+    "cardNo": "BP22-086EN",
+    "set": "BP22",
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "5",
+    "attack": "3",
+    "defense": "4"
+  },
+  {
+    "name": "Thunderbolt Fiend Evolved",
+    "cardNo": "BP22-087EN",
+    "set": "BP22",
+    "class": "abyss",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Demon",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "-",
+    "attack": "4",
     "defense": "5"
   },
   {
@@ -78776,6 +80442,20 @@
     "cost": "6",
     "attack": "6",
     "defense": "6"
+  },
+  {
+    "name": "Undead Stampede",
+    "cardNo": "BP22-091EN",
+    "set": "BP22",
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Demon / Departed",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "8",
+    "attack": "-",
+    "defense": "-"
   },
   {
     "name": "Underworld Lieutenant",
@@ -81228,6 +82908,34 @@
     "defense": "2"
   },
   {
+    "name": "Victorious Blader",
+    "cardNo": "BP22-019EN",
+    "set": "BP22",
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Commander",
+    "rarity": "Legendary",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "6",
+    "attack": "4",
+    "defense": "8"
+  },
+  {
+    "name": "Victorious Blader",
+    "cardNo": "BP22-U02EN",
+    "set": "BP22",
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Commander",
+    "rarity": "Ultimate",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "6",
+    "attack": "4",
+    "defense": "8"
+  },
+  {
     "name": "Victorious Grappler",
     "cardNo": "BP17-034EN",
     "set": "BP17",
@@ -81984,6 +83692,20 @@
     "defense": "3"
   },
   {
+    "name": "Wandering Knight",
+    "cardNo": "BP22-036EN",
+    "set": "BP22",
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Officer",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "2",
+    "attack": "3",
+    "defense": "1"
+  },
+  {
     "name": "War Hero",
     "cardNo": "BP14-028EN",
     "set": "BP14",
@@ -82402,6 +84124,34 @@
     "cost": "5",
     "attack": "4",
     "defense": "4"
+  },
+  {
+    "name": "Wellspring Elf Princess",
+    "cardNo": "BP22-009EN",
+    "set": "BP22",
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Elf / Princess",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2"
+  },
+  {
+    "name": "Wellspring Elf Princess Evolved",
+    "cardNo": "BP22-010EN",
+    "set": "BP22",
+    "class": "forest",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Elf / Princess",
+    "rarity": "Silver",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3"
   },
   {
     "name": "Westmuenster Abbey",
@@ -83216,6 +84966,20 @@
     "defense": "5"
   },
   {
+    "name": "Wily Puck",
+    "cardNo": "BP22-016EN",
+    "set": "BP22",
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Fae-Touched",
+    "rarity": "Bronze",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "4",
+    "attack": "4",
+    "defense": "4"
+  },
+  {
     "name": "Wimael, Redolent Enforcer",
     "cardNo": "BP19-003EN",
     "set": "BP19",
@@ -83872,6 +85636,34 @@
     "cost": "3",
     "attack": "-",
     "defense": "-"
+  },
+  {
+    "name": "Witching Moggy",
+    "cardNo": "BP22-042EN",
+    "set": "BP22",
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Arcanaform / Beast",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "2",
+    "attack": "2",
+    "defense": "1"
+  },
+  {
+    "name": "Witching Moggy Evolved",
+    "cardNo": "BP22-043EN",
+    "set": "BP22",
+    "class": "rune",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Arcanaform / Beast",
+    "rarity": "Gold",
+    "cardSet": "Booster Set \"Dusk of Calamity\"",
+    "cost": "-",
+    "attack": "3",
+    "defense": "2"
   },
   {
     "name": "Wizardess of Oz",

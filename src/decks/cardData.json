@@ -503,6 +503,18 @@
     "effect": "For the rest of this turn, you may play cards from your banished zone.",
     "cardSet": "Booster Set \"Neometropolis\""
   },
+  "Advent of Peace": {
+    "class": "neutral",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Supreme",
+    "rarity": "Legendary",
+    "cost": "3",
+    "attack": "-",
+    "defense": "-",
+    "effect": "Select an enemy card on the field. Destroy it and, if you have 0 Super-Evolution Points, summon a Shadow General token",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Aenea, Amethyst Rebel": {
     "class": "abyss",
     "type": "base",
@@ -599,6 +611,30 @@
     "effect": "Ward. On Evolve - Search your deck for a Crystalian follower that costs 2 or less, put it into your EX area, then shuffle. It costs 2 less to play this turn.",
     "cardSet": "Booster Set \"New World Genesis\""
   },
+  "Aerin, Forever Brilliant": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Crystalian",
+    "rarity": "Legendary",
+    "cost": "4",
+    "attack": "2",
+    "defense": "4",
+    "effect": "[evolve] [cost01]: Evolve this. [fanfare] Look at the top 4 cards of your deck. You may reveal a Crystalian card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. Whenever a Crystalian follower not named Aerin, Forever Brilliant is put onto your field, evolve it.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
+  "Aerin, Forever Brilliant Evolved": {
+    "class": "forest",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Crystalian",
+    "rarity": "Legendary",
+    "cost": "-",
+    "attack": "3",
+    "defense": "5",
+    "effect": "On Evolve - The next Crystalian card you play this turn costs 3 less. Whenever a Crystalian follower not named Aerin, Forever Brilliant is put onto your field, evolve it.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Aether of the Warrior Wing": {
     "class": "sword",
     "type": "base",
@@ -622,6 +658,18 @@
     "defense": "5",
     "effect": "Ward. [fanfare] Search your deck for a [havencraft] follower with a different name from this card that costs less than your maximum play points and put it onto your field.",
     "cardSet": "Booster Set #4 “Cosmic Mythos”"
+  },
+  "Aether, Guardian of Light": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Faith / Luminary / Lightborne",
+    "rarity": "Legendary",
+    "cost": "4",
+    "attack": "2",
+    "defense": "3",
+    "effect": "Ward. [fanfare] Discard a follower with Ward: Search your deck for a 2-cost follower with Ward and a 1-cost follower with Ward, summon them, then shuffle.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "After-School Break": {
     "class": "dragon",
@@ -2543,6 +2591,18 @@
     "effect": "On Evolve - Select another follower on the field and give it [attack]+2/🛡️-2.",
     "cardSet": "Booster Set \"Omens and Heirs\""
   },
+  "Aqua Fairy": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Pixie",
+    "rarity": "Silver",
+    "cost": "1",
+    "attack": "2",
+    "defense": "1",
+    "effect": "[fanfare] Put a Fairy token into your EX area. Then, if there are 5 Pixie cards in your EX area, give your leader [defense]+1 and draw a card",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Aqua Nereid": {
     "class": "dragon",
     "type": "base",
@@ -3059,6 +3119,42 @@
     "effect": "[fanfare] Select an enemy follower on the field. Destroy it and give your leader [defense]+3.",
     "cardSet": "Booster Set \"Neometropolis\""
   },
+  "Armed Butler": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Officer",
+    "rarity": "Silver",
+    "cost": "2",
+    "attack": "1",
+    "defense": "3",
+    "effect": "[fanfare] Look at the top 3 cards of your deck. You may reveal a Commander card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. [act] [engage]: Select an enemy follower on the field and deal it 1 damage. Activate only if there's a Commander card on your field.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
+  "Armelize, Opulent Strategist": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Commander / Noble",
+    "rarity": "Legendary",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[evolve] [cost01]: Evolve this. [fanfare] Put a Glittering Gold token into your EX area. Give your leader [defense]+2.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
+  "Armelize, Opulent Strategist Evolved": {
+    "class": "sword",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Commander / Noble",
+    "rarity": "Legendary",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3",
+    "effect": "On Super-Evolve - Give this \"Whenever a Glittering Gold is put into your EX area, deal 1 damage to each enemy leader and enemy follower on the field\". Put a Glittering Gold token into your EX area. [act] Banish 2 cards named Glittering Gold from your EX area: Choose 1. (1) Select an enemy follower on the field and deal it 3 damage. (2) Draw 2 cards. Put a card from your hand on the bottom of your deck.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Armor Burst": {
     "class": "dragon",
     "type": "base",
@@ -3227,6 +3323,18 @@
     "effect": "[fanfare] Summon 2 Forest Bat tokens. [act] [engage]: Select a Vampire token follower on your field and give it [attack]+1/[defense]+1, Rush, and Drain.",
     "cardSet": "Booster Set \"New World Genesis\""
   },
+  "Ascended Prism Priestess": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Luminary / Avian",
+    "rarity": "Silver",
+    "cost": "2",
+    "attack": "2",
+    "defense": "3",
+    "effect": "[fanfare] You may summon an amulet that costs 2 or less from your hand. [act] Engage 3 amulets on your field: Give this [attack]+1/[defense]+1and your leader [defense]+2.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Ascetic of Wuxing": {
     "class": "rune",
     "type": "base",
@@ -3274,6 +3382,30 @@
     "defense": "1",
     "effect": "Rush. [lastwords] Look at the top 2 cards of your deck. You may reveal a Hunter card from among them and add it to your hand. Bury the rest.",
     "cardSet": "Booster Set #6 “Paragons of the Colosseum”"
+  },
+  "Assault Knight": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Officer",
+    "rarity": "Gold",
+    "cost": "1",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[evolve] [cost02]: Evolve this. [fanfare] If there's a Victorious Blader on your field, evolve this.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
+  "Assault Knight Evolved": {
+    "class": "sword",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Officer",
+    "rarity": "Gold",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3",
+    "effect": "Assail. On Evolve - Select a follower on your field. For the rest of this turn, it has \"This doesn't take combat damage.\"",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Assault Tentacle TOKEN": {
     "class": "rune",
@@ -3598,6 +3730,30 @@
     "defense": "3",
     "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage. [lastwords] Put a Repair Mode token into your EX area.",
     "cardSet": "Booster Set \"Convergent Destinies\""
+  },
+  "Axe Pirate": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Thief",
+    "rarity": "Silver",
+    "cost": "3",
+    "attack": "2",
+    "defense": "3",
+    "effect": "[evolve] [cost01]: Evolve this. [fanfare] If there's a follower on your field with both the Commander and Thief traits, evolve this.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
+  "Axe Pirate Evolved": {
+    "class": "sword",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Thief",
+    "rarity": "Silver",
+    "cost": "-",
+    "attack": "3",
+    "defense": "4",
+    "effect": "On Evolve - Summon a Viking token.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Axe Princess": {
     "class": "sword",
@@ -4547,6 +4703,18 @@
     "effect": "Storm. Strike - Give this [attack]+1/[defense]+1 for every 5 cards in your banished zone.",
     "cardSet": "Booster Set \"Neometropolis\""
   },
+  "Bejeweled Dragon": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Wyrmkin",
+    "rarity": "Gold",
+    "cost": "1",
+    "attack": "1",
+    "defense": "1",
+    "effect": "Each Ignis Dragon on your field has Assail. [fanfare] Choose up to 2. (1) Select a Piercing Roar in your cemetery and put it into your EX area. (2) [cost05]: Select an Ignis Dragon in your cemetery and summon it.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Bejeweled Shrine": {
     "class": "haven",
     "type": "base",
@@ -4991,6 +5159,30 @@
     "effect": "Storm. Strike - Select an enemy follower on the field and, if there's a follower with \"Cutthroat\" in its name on your field or in your cemetery, deal it 4 damage.",
     "cardSet": "Booster Set \"Eightfold Retribution\""
   },
+  "Blade Mage": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Mage",
+    "rarity": "Bronze",
+    "cost": "6",
+    "attack": "2",
+    "defense": "2",
+    "effect": "This costs 6 less to play if there are at least 6 cards in your cemetery with different base costs. [evolve] [cost03]: Evolve this. [fanfare] Select an enemy follower on the field and deal it 2 damage.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
+  "Blade Mage Evolved": {
+    "class": "rune",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Mage",
+    "rarity": "Bronze",
+    "cost": "-",
+    "attack": "4",
+    "defense": "4",
+    "effect": "Storm.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Bladebunny": {
     "class": "forest",
     "type": "base",
@@ -5050,6 +5242,18 @@
     "defense": "1",
     "effect": "[fanfare] Summon a Shield Guardian and Knight token. Put a Steelclad Knight token into your EX area.",
     "cardSet": "Booster Set \"Convergent Destinies\""
+  },
+  "Blast Fairy": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Pixie / Cutthroat",
+    "rarity": "Gold",
+    "cost": "1",
+    "attack": "1",
+    "defense": "1",
+    "effect": "[fanfare] Select an enemy follower on the field and deal it damage equal to the number of Pixie cards in your EX area.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Blaster Blade": {
     "class": "sword",
@@ -5555,6 +5759,18 @@
     "effect": "[engage] a [swordcraft] follower on your field: Select an enemy follower on the field and destroy it.",
     "cardSet": "Booster Set #6 “Paragons of the Colosseum”"
   },
+  "Breath of the Salamander": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Wyrmkin",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "-",
+    "defense": "-",
+    "effect": "You may play this for 2 more play points. ---------- Select an enemy follower on the field. Deal it 4 damage and, if you played this for 2 more play points, deal 1 damage to each enemy follower on the field.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Briared Vampire": {
     "class": "abyss",
     "type": "base",
@@ -5591,6 +5807,18 @@
     "effect": "Choose 1. (1) Select an enemy follower on the field and, if there are at least 10 cards in your banished zone, deal 2 damage to it and its leader. (2) Draw a card. Banish the top card of your deck.",
     "cardSet": "Booster Set \"Neometropolis\""
   },
+  "Brilliant Fairy": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Pixie",
+    "rarity": "Legendary",
+    "cost": "3",
+    "attack": "3",
+    "defense": "4",
+    "effect": "Each Pixie token follower on your field has Storm. [act] [cost00]: Select an enemy follower on the field and deal it X damage. X equals the number of cards you've played this turn. Activate only once per turn.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Bring 'Em Home, Please!": {
     "class": "haven",
     "type": "base",
@@ -5615,6 +5843,18 @@
     "effect": "Select a follower on your field with \"Bayleon\" in its name. Give it [attack]+1/[defense]+1, then you may put a Naterran Great Tree token onto your field or into your EX area.",
     "cardSet": "Booster Set \"Convergent Destinies\""
   },
+  "Brutal Dragonewt": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Dragonewt",
+    "rarity": "Legendary",
+    "cost": "4",
+    "attack": "4",
+    "defense": "3",
+    "effect": "Storm. [fanfare] If there are at least 2 Dragonewt cards in your EX area, recover 2 play points.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Bubbleborne Mermaid": {
     "class": "dragon",
     "type": "base",
@@ -5626,6 +5866,18 @@
     "defense": "3",
     "effect": "[fanfare] Give your leader [defense]+1 for every Marine follower on your field.",
     "cardSet": "Booster Set #7 \"Verdant Steel\""
+  },
+  "Bubbly Reaper": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon",
+    "rarity": "Bronze",
+    "cost": "4",
+    "attack": "4",
+    "defense": "4",
+    "effect": "[fanfare] Choose 1. Necrocharge (10) - Choose up to 2 instead. (1) Bury the top 2 cards of your deck. (2) Recover 2 play points.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Budding Initiate": {
     "class": "forest",
@@ -5819,6 +6071,30 @@
     "effect": "Rush. [fanfare] Bury an amulet: Give this Storm.",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
   },
+  "Calculating Captain": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Commander",
+    "rarity": "Bronze",
+    "cost": "6",
+    "attack": "4",
+    "defense": "4",
+    "effect": "[evolve] [cost01]: Evolve this. Ward. [fanfare] Look at the top 4 cards of your deck. You may summon a follower that costs 3 or less and a follower that costs 2 or less from among them. Put the rest on the bottom of your deck in any order.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
+  "Calculating Captain Evolved": {
+    "class": "sword",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Commander",
+    "rarity": "Bronze",
+    "cost": "-",
+    "attack": "5",
+    "defense": "5",
+    "effect": "Ward. On Evolve - Select an enemy follower on the field and deal it 5 damage.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Call of Cocytus": {
     "class": "neutral",
     "type": "base",
@@ -5902,6 +6178,18 @@
     "defense": "-",
     "effect": "Select an enemy follower on the field. Summon a Shield Guardian and a Knight token. Deal damage to the selected follower equal to the number of [swordcraft] followers on your field.",
     "cardSet": "Booster Set \"Eightfold Retribution\""
+  },
+  "Canyon of the Dragons": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Amulet",
+    "trait": "Wyrmkin",
+    "rarity": "Bronze",
+    "cost": "8",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[fanfare] Look at the top 3 cards of your deck. You may summon a [dragoncraft] follower from among them. Put the rest on the bottom of your deck in any order. Whenever a [dragoncraft] follower is put onto your field, select an enemy follower on the field and deal it damage equal to the attack of the follower put onto the field.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Captain Meteo": {
     "class": "sword",
@@ -5998,6 +6286,42 @@
     "defense": "4",
     "effect": "On Evolve - Put a Carbuncle's Sparkle token into your EX area. Give each Carbuncle's Sparkle in your EX area \"This card costs 2 less to play.\"",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
+  },
+  "Carmia, Miracle Optimist": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Lightborne",
+    "rarity": "Silver",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[evolve] [cost04]: Evolve this. [fanfare] If there are 5 cards on your field, evolve this.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
+  "Carmia, Miracle Optimist Evolved": {
+    "class": "haven",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Lightborne",
+    "rarity": "Silver",
+    "cost": "-",
+    "attack": "4",
+    "defense": "4",
+    "effect": "On Evolve - Draw 2 cards. Discard a card.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
+  "Carnelia, Servant of Darkness": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Supreme",
+    "rarity": "Silver",
+    "cost": "3",
+    "attack": "1",
+    "defense": "3",
+    "effect": "Whenever a Golem follower is put onto your field, select an enemy follower on the field. Deal 2 damage to it and 1 damage to its leader. [fanfare] Put a Strikeform Golem token into your EX area. [act] [cost03]: For the rest of this turn, Golem cards you play from your EX area cost 3 less.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Carrot": {
     "class": "neutral",
@@ -6298,6 +6622,18 @@
     "defense": "4",
     "effect": "On Evolve - Earth Rite: Put an Eternal Potion token into your EX area. While this card is on your field, the 1st Forbidden token you play each turn costs 2 less.",
     "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\""
+  },
+  "Cernunnos": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon",
+    "rarity": "Legendary",
+    "cost": "2",
+    "attack": "2",
+    "defense": "3",
+    "effect": "[fanfare] Discard a 2-cost card from your hand: Draw a card. [act] [cost04], [engage]: Select up to two 2-cost [abysscraft] followers not named Cernunnos in your cemetery with different names and summon them. Activate only if there are at least ten 2-cost cards in your cemetery",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Ceryneian Hind": {
     "class": "haven",
@@ -6923,6 +7259,30 @@
     "effect": "[Union Burst] Strike - Discard a card: Select an enemy follower on the field and deal it 5 damage. ---------- Storm. [fanfare] [cost02]: Equip this with a Sanctum Blade Avalon token.",
     "cardSet": "Crossover Set \"Princess Connect! Re: Dive\""
   },
+  "Chrono Witch": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Mage",
+    "rarity": "Legendary",
+    "cost": "5",
+    "attack": "4",
+    "defense": "4",
+    "effect": "[evolve] [cost01]: Evolve this. During your turn, whenever a card is put into your banished zone, select an enemy follower on the field and deal it 1 damage. [fanfare] If there are at least 10 cards in your banished zone, the next time 1 or more [runecraft] followers are put onto your field this turn, evolve 1 of them.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
+  "Chrono Witch Evolved": {
+    "class": "rune",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Mage",
+    "rarity": "Legendary",
+    "cost": "-",
+    "attack": "5",
+    "defense": "5",
+    "effect": "During your turn, whenever a card is put into your banished zone, select an enemy follower on the field and deal it 1 damage. On Evolve - Select up to 2 [runecraft] followers that cost a total of 4 or less in your banished zone and put them into your EX area. They cost 0 to play this turn",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Cinderella": {
     "class": "sword",
     "type": "base",
@@ -6970,6 +7330,18 @@
     "defense": "-",
     "effect": "[fanfare] Give your leader [defense]+2. Draw a card. [q][act] [cost02], [engage], bury this card: Select an iM@S CG follower in your cemetery and add it to your hand.",
     "cardSet": "Crossover Set “THE IDOLM@STER CINDERELLA GIRLS”"
+  },
+  "Claymore Master": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Commander",
+    "rarity": "Gold",
+    "cost": "5",
+    "attack": "4",
+    "defense": "4",
+    "effect": "This costs 3 less to play if there are at least 5 faceup evolved followers in your evolve deck. If there are 10, it costs 5 less instead. Storm.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Clear": {
     "class": "haven",
@@ -7126,6 +7498,30 @@
     "defense": "2",
     "effect": "Assail. Strike - Place 2 gigabyte counters on each Gigabyte Blade on your field.",
     "cardSet": "Booster Set \"Neometropolis\""
+  },
+  "Coldhearted Dark Elf": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Elf / Cutthroat",
+    "rarity": "Bronze",
+    "cost": "5",
+    "attack": "3",
+    "defense": "3",
+    "effect": "[evolve] [cost01]: Evolve this. [fanfare] Banish 2 Pixie cards from your EX area: Select an enemy follower on the field. Deal it 5 damage and draw a card.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
+  "Coldhearted Dark Elf Evolved": {
+    "class": "forest",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Elf / Cutthroat",
+    "rarity": "Bronze",
+    "cost": "-",
+    "attack": "4",
+    "defense": "4",
+    "effect": "On Evolve - Select an enemy follower on the field and destroy it.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Colette, Holy Gunner": {
     "class": "haven",
@@ -7391,18 +7787,6 @@
     "effect": "[evolve] [cost01]: Evolve this.",
     "cardSet": "Booster Set \"Omens and Heirs\""
   },
-  "Congregant of Usurpation Evolved": {
-    "class": "sword",
-    "type": "evolved",
-    "cardType": "Follower / Evolved",
-    "trait": "Omen / Thief",
-    "rarity": "Gold",
-    "cost": "-",
-    "attack": "5",
-    "defense": "5",
-    "effect": "On Evolve - Select an enemy follower on the field and deal it 5 damage. The next Loot card you play this turn costs 2 less. Whenever an enemy follower is put from the field into the cemetery, put a Gilded Blade, Gilded Goblet, or Gilded Boots token into your EX area.",
-    "cardSet": "Booster Set \"Omens and Heirs\""
-  },
   "Congregrant of Unkilling": {
     "class": "forest",
     "type": "base",
@@ -7498,6 +7882,30 @@
     "defense": "1",
     "effect": "Rush. [fanfare] Give this follower [attack]+X, where X is the number of other Marine followers on your field.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
+  },
+  "Coral Spirit": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Marine",
+    "rarity": "Silver",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3",
+    "effect": "[evolve] [cost01]: Evolve this.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
+  "Coral Spirit Evolved": {
+    "class": "dragon",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Marine",
+    "rarity": "Silver",
+    "cost": "-",
+    "attack": "4",
+    "defense": "4",
+    "effect": "On Evolve - Put a Marine card from your hand into your EX area: Select an enemy follower on the field. Deal it 4 damage and give your leader [defense]+1",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Cornelius, the Corpse King": {
     "class": "abyss",
@@ -8267,6 +8675,18 @@
     "effect": "[fanfare] Give your leader [defense]+3. Bury the top 2 cards of your deck. At the start of your end phase, select an enemy follower on the field and, if there are at least 10 Shadow Paladin cards in your cemetery, destroy it.",
     "cardSet": "Crossover Set \"Cardfight!! Vanguard\""
   },
+  "Cursed Maiden": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Zealot",
+    "rarity": "Gold",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[fanfare] Search your deck for a God of Curses, reveal it, add it to your hand, then shuffle. [act] [engage], bury this: Give each enemy follower on the field 🗡️-2/🛡️-2. Activate only if there's a God of Curses on your field",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Cursed Stone": {
     "class": "dragon",
     "type": "base",
@@ -8747,6 +9167,30 @@
     "effect": "When this is discarded, select an enemy follower on the field and deal it 1 damage. ---------- Select a PriConne follower on your field and give it [attack]+3, Rush, and Assail.",
     "cardSet": "Crossover Set \"Princess Connect! Re: Dive\""
   },
+  "Dark Emperor": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon",
+    "rarity": "Legendary",
+    "cost": "7",
+    "attack": "4",
+    "defense": "6",
+    "effect": "[evolve] [cost01]: Evolve this. Aura. [fanfare] If your leader's defense is 10 or less, evolve this.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
+  "Dark Emperor Evolved": {
+    "class": "abyss",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Demon",
+    "rarity": "Legendary",
+    "cost": "-",
+    "attack": "5",
+    "defense": "7",
+    "effect": "Aura. On Evolve - Select up to 2 enemy followers on the field. Destroy them and give your leader [defense]+5. [lastwords] Deal each enemy leader 5 damage.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Dark General": {
     "class": "abyss",
     "type": "base",
@@ -9046,6 +9490,18 @@
     "defense": "8",
     "effect": "On Evolve - Select an enemy follower on the field. Destroy it, deal 2 damage to its leader, and give your leader [defense]+2.",
     "cardSet": "Booster Set #10 \"Gods of the Arcana\""
+  },
+  "Deathcat Reaper": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon / Beast",
+    "rarity": "Silver",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[fanfare] Bury another follower: Select an enemy follower on the field. Deal 5 damage to it and 1 damage to its leader, and, give your leader [defense]+1.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Deathscythe Nun": {
     "class": "haven",
@@ -9970,6 +10426,18 @@
     "defense": "3",
     "effect": "On Evolve - Discard 2 Natura cards: Increase your max play points by 1. On Super-Evolve - Look at the top 4 cards of your deck. From among them, you may reveal up to 2 Natura cards and add them to your hand. Put the rest on the bottom of your deck in any order.",
     "cardSet": "Booster Set \"Convergent Destinies\""
+  },
+  "Dog of the Dead": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Departed / Beast",
+    "rarity": "Gold",
+    "cost": "2",
+    "attack": "3",
+    "defense": "2",
+    "effect": "Rush. Strike - If there are 2 Dog of the Dead in your cemetery, give this [attack]+2/[defense]+2 and deal 2 damage to each enemy leader. [lastwords] Search your deck for a Dog of the Dead, put it into your EX area, then shuffle.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Dogged Detective": {
     "class": "neutral",
@@ -11147,6 +11615,18 @@
     "effect": "[act] Banish this card from your cemetery: Select a Lævateinn Dragon and 2 cards named Draconic Weapon on your field. Destroy them, then you may summon an advanced follower with \"Dual Form\" in its name from your evolve deck. ---------- Search your deck for an Armed follower, reveal it, add it to your hand, then shuffle. You may summon an Armed follower from your hand.",
     "cardSet": "Booster Set #10 \"Gods of the Arcana\""
   },
+  "Dungeoncrawl Fairy": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Pixie",
+    "rarity": "Bronze",
+    "cost": "1",
+    "attack": "2",
+    "defense": "2",
+    "effect": "Once on each of your turns, when at least 1 Pixie card you control leaves the EX area, put X Fairy tokens into your EX area. X equals the number of Pixie cards had left the EX area.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Duramente": {
     "class": "abyss",
     "type": "base",
@@ -11471,6 +11951,18 @@
     "effect": "[fanfare] Banish a [runecraft] card from your cemetery: Draw a card. [act] [engage]: Select an enemy follower on the field and, if there are at least 5 cards in your banished zone, deal it 1 damage. If there are at least 10, deal 4 damage instead.",
     "cardSet": "Booster Set \"Convergent Destinies\""
   },
+  "Electrodrake": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Wyrmkin",
+    "rarity": "Bronze",
+    "cost": "7",
+    "attack": "5",
+    "defense": "7",
+    "effect": "Storm. [fanfare] Select an enemy follower on the field. Deal it 5 damage and draw a card.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Electrokitty": {
     "class": "rune",
     "type": "base",
@@ -11698,6 +12190,30 @@
     "defense": "-",
     "effect": "Select up to 3 followers in your cemetery with both the Omen and Mage traits that cost a total of 9 or less. Summon them and give them \"At the start of your end phase, destroy this.\"",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
+  },
+  "Elina, Winged Evangelist": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Supreme",
+    "rarity": "Silver",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[evolve] [cost01]: Evolve this. [fanfare] Banish the top card of your deck.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
+  "Elina, Winged Evangelist Evolved": {
+    "class": "rune",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Supreme",
+    "rarity": "Silver",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3",
+    "effect": "On Evolve - Summon an Ancient Artifact token. If there are at least 10 cards in your banished zone, summon a Keenedge Artifact token instead",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Elios, Loyal Dragoon": {
     "class": "dragon",
@@ -12395,6 +12911,18 @@
     "effect": "Ward. [fanfare] If this card was played from the EX area, recover 4 play points. [lastwords] Deal 2 damage to each enemy leader. Put this card into its owner's deck 2nd from the top or on the bottom.",
     "cardSet": "Booster Set #10 \"Gods of the Arcana\""
   },
+  "Ethica, Firebrand Claw": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Dragonewt",
+    "rarity": "Gold",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2",
+    "effect": "Rush. Strike - Select an enemy follower on the field and deal it damage equal to the number of Dragonewt cards in your EX area. [fanfare] Look at the top 2 cards of your deck. You may put a Dragonewt follower from among them into your EX area. Put the rest on the bottom of your deck in any order.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Eudie, Maiden Reborn": {
     "class": "neutral",
     "type": "base",
@@ -12682,6 +13210,18 @@
     "defense": "5",
     "effect": "[act] Banish a Pixie follower in your EX area: Give your leader [defense]+3 and draw a card. This ability can be activated once per turn.",
     "cardSet": "Booster Set #1 “Advent of Genesis”"
+  },
+  "Fairy Bringer": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Elf",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "1",
+    "defense": "3",
+    "effect": "Ward. [fanfare] Put 2 Fairy tokens into your EX area. Draw a card. Discard a card",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Fairy Caster": {
     "class": "forest",
@@ -12971,6 +13511,18 @@
     "effect": "[act] [engage], bury this: Summon a Megalorca token. [act] [cost01], [engage], bury this: Select an enemy follower on the field and deal it 4 damage. Activate only if there's a Marine follower on your field.",
     "cardSet": "Booster Set \"New World Genesis\""
   },
+  "Fangblade Slayer": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Officer",
+    "rarity": "Gold",
+    "cost": "8",
+    "attack": "3",
+    "defense": "9",
+    "effect": "Rush. Assail. Bane. During your turn, whenever an enemy follower is put from the field into the cemetery, deal its leader damage equal to its attack.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Fangs of Ardent Destruction TOKEN": {
     "class": "dragon",
     "type": "token",
@@ -13114,6 +13666,18 @@
     "defense": "2",
     "effect": "[fanfare] Choose one of the following. (1) Look at the top 5 cards of your deck. You may reveal a follower that costs 1 play point from among them and add it to your hand. Put the remaining cards on the bottom of your deck in any order. (2) Select an enemy follower that costs 1 play point on the field and destroy it.",
     "cardSet": "Booster Set #5 “Omens Eternal”"
+  },
+  "Feena, Super Cute Hunter": {
+    "class": "neutral",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Mercenary",
+    "rarity": "Gold",
+    "cost": "3",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[fanfare] Look at the top 4 cards of your deck. You may reveal a Goblinoid card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. You may summon a Goblinoid follower that costs 2 or less from your hand",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Feline Magic": {
     "class": "rune",
@@ -13691,6 +14255,30 @@
     "effect": "[lastwords] Select up to 1 Puppetry follower in your cemetery (including this one) and add it to your hand.",
     "cardSet": "Booster Set #5 “Omens Eternal”"
   },
+  "Flower Fox": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Verdant / Beast",
+    "rarity": "Gold",
+    "cost": "1",
+    "attack": "1",
+    "defense": "1",
+    "effect": "This costs 1 less to play if there's a Brilliant Fairy on your field. [evolve] [cost01]: Evolve this.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
+  "Flower Fox Evolved": {
+    "class": "forest",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Verdant / Beast",
+    "rarity": "Gold",
+    "cost": "-",
+    "attack": "2",
+    "defense": "2",
+    "effect": "On Evolve - Put a Fairy Wisp token into your EX area. If there's a Brilliant Fairy on your field, give each Pixie token follower in your EX area [attack]+1/[defense]+1.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Flower Princess": {
     "class": "forest",
     "type": "base",
@@ -13810,6 +14398,18 @@
     "defense": "-",
     "effect": "Select an enemy follower on the field and deal it 4 damage. If there's a Nicola, Forbidden Strength on your field, deal 6 damage instead.",
     "cardSet": "Booster Set #7 \"Verdant Steel\""
+  },
+  "Forbidden Ritual": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Amulet",
+    "trait": "Zealot",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[fanfare] Select an enemy follower on the field and destroy it. At the start of your end phase, deal 2 damage to your leader.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Force of the Dragonewt": {
     "class": "dragon",
@@ -14327,6 +14927,18 @@
     "effect": "[q][act] [engage], bury this card: Select an enemy follower on the field and deal it 3 damage.",
     "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\""
   },
+  "Frost Golem": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Golem",
+    "rarity": "Bronze",
+    "cost": "8",
+    "attack": "7",
+    "defense": "7",
+    "effect": "[fanfare] Search your deck for a Golem follower not named Frost Golem, summon it, then shuffle.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Frostbite Dragon": {
     "class": "dragon",
     "type": "base",
@@ -14746,6 +15358,18 @@
     "defense": "6",
     "effect": "Storm. On Evolve - Select an enemy follower on the field and deal it 8 damage.",
     "cardSet": "Booster Set \"Eightfold Retribution\""
+  },
+  "Garuda, Winged Sentinel": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Avian / Lightborne",
+    "rarity": "Gold",
+    "cost": "3",
+    "attack": "3",
+    "defense": "4",
+    "effect": "Whenever an Avian follower is put onto your field, select an enemy follower on the field and deal it 3 damage. [act] [cost01]: Summon a Holy Falcon token. Activate only once per turn.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Garuel, Seraphic Leo": {
     "class": "neutral",
@@ -15443,6 +16067,18 @@
     "effect": "While Overflow is active for you, each other Marine follower on your field has Rush and Assail. [fanfare] Give your leader [defense]+2.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
   },
+  "Giselle, Ocean Star": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Marine",
+    "rarity": "Legendary",
+    "cost": "6",
+    "attack": "2",
+    "defense": "4",
+    "effect": "Whenever another Marine follower is put onto your field, give it [attack]+1/[defense]+1. [fanfare] Search your deck for a Marine follower with \"Whale\" in its name, put it into your EX area, then shuffle. It costs 5 less to play this turn.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Giving Gourmet": {
     "class": "neutral",
     "type": "base",
@@ -15623,6 +16259,18 @@
     "effect": "When playing this, discard a Goblinoid card: This costs 2 less to play. ---------- Select an enemy follower on the field and deal it 3 damage.",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
   },
+  "Goblin Emperor": {
+    "class": "neutral",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Goblinoid",
+    "rarity": "Legendary",
+    "cost": "5",
+    "attack": "3",
+    "defense": "3",
+    "effect": "Whenever another Goblinoid follower is put onto your field, select an enemy follower on the field and deal it 2 damage. [fanfare] Look at the top 5 cards of your deck. You may put up to 2 Goblinoid cards that cost a total of 4 or less from among them into your EX area. They cost 0 to play this turn. Put the rest on the bottom of your deck in any order.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Goblin Evolved": {
     "class": "neutral",
     "type": "evolved",
@@ -15658,6 +16306,42 @@
     "defense": "6",
     "effect": "Ward. [fanfare] Give each other Goblinoid follower on your field [attack]+1/[defense]+1.",
     "cardSet": "Booster Set #4 “Cosmic Mythos”"
+  },
+  "Goblin Leader": {
+    "class": "neutral",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Goblinoid",
+    "rarity": "Silver",
+    "cost": "2",
+    "attack": "1",
+    "defense": "1",
+    "effect": "[evolve] [cost01]: Evolve this. Whenever another Goblinoid follower is put onto your field, give it [attack]+1.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
+  "Goblin Leader Evolved": {
+    "class": "neutral",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Goblinoid",
+    "rarity": "Silver",
+    "cost": "-",
+    "attack": "2",
+    "defense": "2",
+    "effect": "Whenever another Goblinoid follower is put onto your field, give it [attack]+1. On Evolve - Look at the top 4 cards of your deck. You may put a Goblinoid card that costs 2 or less from among them into your EX area. It costs 2 less to play this turn. Put the rest on the bottom of your deck in any order.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
+  "Goblin Mage": {
+    "class": "neutral",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Goblinoid",
+    "rarity": "Silver",
+    "cost": "2",
+    "attack": "2",
+    "defense": "3",
+    "effect": "[fanfare] Look at the top 2 cards of your deck. You may reveal a Goblinoid card from among them and add it to your hand. Bury the rest.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Goblin Princess": {
     "class": "neutral",
@@ -15695,6 +16379,18 @@
     "effect": "[fanfare] Look at the top 5 cards of your deck. You may reveal a Goblinoid card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. [act] [engage], banish 3 Goblinoid cards from your cemetery: Select an enemy follower on the field. Destroy it and deal 3 damage to its leader.",
     "cardSet": "Booster Set \"Bullet of Fate\""
   },
+  "Goblin Reaper": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon / Goblinoid",
+    "rarity": "Gold",
+    "cost": "4",
+    "attack": "4",
+    "defense": "3",
+    "effect": "Storm. During your turn, whenever a Goblinoid follower is put from your field into the cemetery, deal each enemy leader 1 damage and give your leader [defense]+1. [fanfare] Bury another Goblinoid follower: Select an enemy follower on the field and destroy it.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Goblin Warpack": {
     "class": "neutral",
     "type": "base",
@@ -15706,6 +16402,18 @@
     "defense": "-",
     "effect": "This card can only be played if there are at least 3 Goblinoid followers on your field. ---------- Select an enemy follower on the field. Destroy it and deal 2 damage to its leader.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
+  },
+  "Goblin Zombie": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Departed / Goblinoid",
+    "rarity": "Bronze",
+    "cost": "1",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[fanfare] Discard a Goblinoid card: Draw a card. If there are at least 3 Goblinoid cards in your cemetery, give this [attack]+1.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Goblin's Gratitude": {
     "class": "neutral",
@@ -15754,6 +16462,18 @@
     "defense": "7",
     "effect": "This follower can't attack enemy leaders. [act] [engage], put another follower from your field into its owner's cemetery: Select an enemy leader or enemy follower on the field and deal it X damage. X equals the attack of the follower you put into the cemetery.",
     "cardSet": "Booster Set #5 “Omens Eternal”"
+  },
+  "God of Curses": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Zealot",
+    "rarity": "Legendary",
+    "cost": "9",
+    "attack": "1",
+    "defense": "5",
+    "effect": "This costs X less to play. X equals your turn number. [fanfare] Select an enemy follower on the field and give it 🗡️-5/🛡️-5. At the start of your end phase, deal 2 damage to each enemy leader and give your leader [defense]+2.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Goddess by the Sunlit Sea": {
     "class": "forest",
@@ -15983,6 +16703,18 @@
     "effect": "[fanfare] Draw a card. [act] [cost02], [engage]: Bury this. [lastwords] Give your leader [defense]+1.",
     "cardSet": "Booster Set \"Neometropolis\""
   },
+  "Golden Warrior": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Officer / Noble",
+    "rarity": "Legendary",
+    "cost": "4",
+    "attack": "3",
+    "defense": "4",
+    "effect": "Whenever a Glittering Gold token is put into your EX area, select an enemy follower on the field and deal it 1 damage. [fanfare] Put a Glittering Gold token into your EX area. Then, if there are at least 4 cards named Glittering Gold in your EX area, recover 3 play points.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Goldennote Melody": {
     "class": "dragon",
     "type": "base",
@@ -15994,6 +16726,18 @@
     "defense": "-",
     "effect": "Choose 1. If a follower on your field evolved this turn, choose up to 2 instead. (1) Give your leader [defense]+3. (2) Draw 2 cards.",
     "cardSet": "Booster Set \"New World Genesis\""
+  },
+  "Golem Assault": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Alchemist / Golem",
+    "rarity": "Bronze",
+    "cost": "1",
+    "attack": "-",
+    "defense": "-",
+    "effect": "Put a Guardform Golem and Strikeform Golem token into your EX area. Earth Rite: Give each Golem follower in your EX area [attack]+1/[defense]+1.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Golem Marshal": {
     "class": "rune",
@@ -16342,6 +17086,18 @@
     "defense": "2",
     "effect": "[fanfare] Discard an Academic card: Draw a card. If there are at least 5 Academic cards in your cemetery, put a Resentful Blaze token into your EX area. [act] [engage]: Select an enemy follower on the field and deal it 1 damage.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
+  },
+  "Great Magician": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Mage",
+    "rarity": "Gold",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[fanfare] Add 1 to a Stack on your field. (If there are no cards on your field with Stack, summon a Magic Sediment token with Stack counters equal to the number you would have added.) [act] [engage], Earth Rite (3): Add 6 to a Stack on your field.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Great Mother's Embrace": {
     "class": "neutral",
@@ -16787,6 +17543,30 @@
     "effect": "When playing this card, discard 3 iM@S CG cards: This card costs 6 less to play. ---------- [fanfare] Select an enemy follower on the field. Deal it 4 damage and draw 2 cards.",
     "cardSet": "Crossover Set “THE IDOLM@STER CINDERELLA GIRLS”"
   },
+  "Hailwyrm": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Wyrmkin",
+    "rarity": "Bronze",
+    "cost": "6",
+    "attack": "4",
+    "defense": "6",
+    "effect": "[evolve] [cost01]: Evolve this. [fanfare] Discard a [dragoncraft] card that costs 7 or more: Select up to 2 enemy followers on the field and engage them. They doesn't refresh during their controller's next start phase.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
+  "Hailwyrm Evolved": {
+    "class": "dragon",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Wyrmkin",
+    "rarity": "Bronze",
+    "cost": "-",
+    "attack": "5",
+    "defense": "7",
+    "effect": "On Evolve - Select an enemy follower on the field and deal it 5 damage.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Hajime Fujiwara [Pink Blossom Dream]": {
     "class": "forest",
     "type": "base",
@@ -16978,6 +17758,18 @@
     "defense": "2",
     "effect": "[feed][cost01]: Race this follower. On Race: Give this follower [attack]+1/[defense]+1. For the rest of this turn, this follower doesn't take damage.",
     "cardSet": "Crossover Set “Umamusume: Pretty Derby”"
+  },
+  "Haru Urara [I'll Win Someday!]": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Umamusume",
+    "rarity": "Gold",
+    "cost": "2",
+    "attack": "1",
+    "defense": "3",
+    "effect": "When this is discarded by the ability of an Umamusume card you control, draw a card. Serve (1): Race this. [fanfare] Select another Umamusume follower on your field and give it [attack]+1/[defense]+1.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Haru Urara [Sunny Passion ♪]": {
     "class": "forest",
@@ -17254,6 +18046,18 @@
     "defense": "3",
     "effect": "Rush.",
     "cardSet": "Promo Cards"
+  },
+  "Her Holiness's Decree TOKEN": {
+    "class": "haven",
+    "type": "token",
+    "cardType": "Spell / Token",
+    "trait": "Luminary",
+    "rarity": "-",
+    "cost": "1",
+    "attack": "-",
+    "defense": "-",
+    "effect": "Select up to 2 followers on your field with Ward and give them Storm.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Hermit of Destruction": {
     "class": "rune",
@@ -17831,6 +18635,30 @@
     "effect": "Ward. [fanfare] If there's an amulet on your field, give your leader [defense]+2.",
     "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\""
   },
+  "Holy Kitty": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Lightborne / Beast",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "2",
+    "defense": "3",
+    "effect": "[evolve] [cost01]: Evolve this. [fanfare] If there's an amulet on your field, evolve this.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
+  "Holy Kitty Evolved": {
+    "class": "haven",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Lightborne / Beast",
+    "rarity": "Bronze",
+    "cost": "-",
+    "attack": "3",
+    "defense": "4",
+    "effect": "(No text.)",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Holy Lancer": {
     "class": "haven",
     "type": "base",
@@ -17854,6 +18682,30 @@
     "defense": "5",
     "effect": "Ward. On Evolve - Select an enemy follower on the field and deal it 4 damage.",
     "cardSet": "Booster Set #6 “Paragons of the Colosseum”"
+  },
+  "Holy Saber": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Luminary",
+    "rarity": "Legendary",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[evolve] [cost01]: Evolve this. Ward. [fanfare] Select an enemy follower on the field and, if there are at least 3 followers on your field with Ward, deal it 2 damage.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
+  "Holy Saber Evolved": {
+    "class": "haven",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Luminary",
+    "rarity": "Legendary",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3",
+    "effect": "Ward. On Evolve - Select an enemy follower on the field and deal it 2 damage. On Super-Evolve - Put a Her Holiness's Decree token into your EX area.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Holy Sanctuary": {
     "class": "haven",
@@ -18239,6 +19091,18 @@
     "effect": "[act] [cost02], banish another Festive card from your field: Search your deck for a follower that costs 7 or less, summon it, then shuffle. Activate only if you've played at least 3 cards this turn, and only once per turn.",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
   },
+  "Huginn & Muninn": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon",
+    "rarity": "Silver",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[fanfare] Choose 1. (1) Give this [attack]+1. (2) Give this Storm. (3) [cost01]: Search your deck for a Huginn & Muninn, summon it, then shuffle.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Hulking Giant": {
     "class": "rune",
     "type": "base",
@@ -18395,6 +19259,18 @@
     "effect": "On Evolve - Discard a card: Select 2 followers in your cemetery and add them to your hand. Whenever this card becomes engaged, each opponent discards a card. During your turn, whenever a player discards a card, select an enemy follower on the field and engage it.",
     "cardSet": "Booster Set \"Bullet of Fate\""
   },
+  "Iceshard Beast": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Golem / Arcanaform",
+    "rarity": "Bronze",
+    "cost": "4",
+    "attack": "4",
+    "defense": "4",
+    "effect": "Rush. Strike - Summon a Strikeform Golem token. [fanfare] Select up to 2 enemy followers on the field and engage them.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Icyclone": {
     "class": "sword",
     "type": "base",
@@ -18406,6 +19282,30 @@
     "defense": "4",
     "effect": "[fanfare] Select an enemy follower on the field and deal it 1 damage. If there's another Heroic follower on your field, deal 4 damage instead. [lastwords] Look at the top card of your deck. If it's a Heroic card, you may put it into your EX area.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
+  },
+  "Ignis Dragon": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Wyrmkin",
+    "rarity": "Legendary",
+    "cost": "7",
+    "attack": "4",
+    "defense": "6",
+    "effect": "When this is discarded, [cost02]: Increase your max play points by 1 [evolve] [cost01]: Evolve this. [fanfare] If there are 3 or less cards in your hand, evolve this.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
+  "Ignis Dragon Evolved": {
+    "class": "dragon",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Wyrmkin",
+    "rarity": "Legendary",
+    "cost": "-",
+    "attack": "5",
+    "defense": "7",
+    "effect": "Strike - Deal each enemy follower on the field damage equal to this follower's attack.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Ignominious Samurai": {
     "class": "sword",
@@ -18994,6 +19894,18 @@
     "defense": "3",
     "effect": "Ward. [fanfare][lastwords] Put a Repair Mode token into your EX area.",
     "cardSet": "Booster Set #7 \"Verdant Steel\""
+  },
+  "Ironscale Serpent Drake": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Wyrmkin",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "3",
+    "defense": "2",
+    "effect": "Rush. [lastwords] [cost02]: Search your deck for an Ironscale Serpent Drake, summon it, then shuffle",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Ironwrought Defender": {
     "class": "sword",
@@ -20111,6 +21023,18 @@
     "effect": "Rush. Drain.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
   },
+  "Khonsu": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Luminary",
+    "rarity": "Bronze",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3",
+    "effect": "[fanfare] [cost02], bury an amulet: Select an enemy follower on the field. Destroy it and give this [attack]+2/[defense]+2",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Killer Instincts": {
     "class": "sword",
     "type": "base",
@@ -20170,6 +21094,18 @@
     "defense": "4",
     "effect": "Storm. Twin Drive. (Whenever a follower with Twin Drive attacks, it performs 2 drive checks.) On Evolve - Search your deck for a Royal Paladin follower that costs 3 or less, summon it, then shuffle. If there are at least 15 Royal Paladin cards in your cemetery, give it and this follower [attack]+1/[defense]+1.",
     "cardSet": "Crossover Starter Deck \"Sanctuary Knight Brigade\""
+  },
+  "King of Vines": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Verdant",
+    "rarity": "Gold",
+    "cost": "7",
+    "attack": "4",
+    "defense": "4",
+    "effect": "This costs X less to play. X equals the number of Pixie cards in your EX area. [fanfare] Select an enemy follower on the field. Destroy it, draw 2 cards, then discard a card",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "King's Might": {
     "class": "sword",
@@ -20939,6 +21875,18 @@
     "effect": "On Evolve - Search your deck for a Cool follower and Passion follower, reveal them, add them to your hand, then shuffle your deck.",
     "cardSet": "Crossover Set “THE IDOLM@STER CINDERELLA GIRLS”"
   },
+  "Lazuli, Gateway Homunculus": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Supreme",
+    "rarity": "Gold",
+    "cost": "2",
+    "attack": "2",
+    "defense": "3",
+    "effect": "[fanfare] Banish the top 2 cards of your deck. [act] [cost02], [engage]: Summon an Ancient Artifact and Radiant Artifact token. Activate only if there are at least 10 cards in your banished zone.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Leafshade Assassin": {
     "class": "forest",
     "type": "base",
@@ -21118,6 +22066,30 @@
     "defense": "3",
     "effect": "Strike: Summon a Ghost token.",
     "cardSet": "Starter Deck #5 “Waltz of the Undying Night”"
+  },
+  "Levi, Wizard of Ages": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Mage",
+    "rarity": "Legendary",
+    "cost": "4",
+    "attack": "4",
+    "defense": "4",
+    "effect": "[evolve] [cost01]: Evolve this. [fanfare], Earth Rite: Select an enemy follower on the field and deal it 5 damage.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
+  "Levi, Wizard of Ages Evolved": {
+    "class": "rune",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Mage",
+    "rarity": "Legendary",
+    "cost": "-",
+    "attack": "5",
+    "defense": "5",
+    "effect": "On Evolve - Select an enemy leader or enemy follower on the field and deal it 3 damage. [act] [cost01], Earth Rite: Select an enemy leader or enemy follower on the field and deal it 3 damage. Activate only once per turn.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Leviathan, the Furious": {
     "class": "dragon",
@@ -21502,6 +22474,18 @@
     "defense": "3",
     "effect": "[Union Burst][fanfare]/Strike - Draw a card. You may summon a follower that costs 2 or less from your hand. ---------- Rush.",
     "cardSet": "Crossover Set \"Princess Connect! Re: Dive\""
+  },
+  "Lily, Crystalian Conductor": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Crystalian",
+    "rarity": "Silver",
+    "cost": "1",
+    "attack": "1",
+    "defense": "1",
+    "effect": "[act] [engage]: Select another Crystalian follower on your field and give it Storm. Activate only if there are at least 3 Crystalian cards in your cemetery",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Lily, Crystalian Innocence": {
     "class": "forest",
@@ -22294,6 +23278,18 @@
     "defense": "3",
     "effect": "[fanfare] You may put a Naterran Great Tree token onto your field or into your EX area. [act] [engage] this card and any number of cards named Naterran Great Tree on your field: Select an enemy follower on the field and deal it damage equal to the number of cards named Naterran Great Tree engaged this way.",
     "cardSet": "Booster Set #7 \"Verdant Steel\""
+  },
+  "Lurching Corpse": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Departed",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[fanfare] If this was put onto the field from the cemetery, give it [attack]+1/[defense]+1. [lastwords] Each opponent buries a follower.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Lycaon": {
     "class": "haven",
@@ -25295,6 +26291,18 @@
     "effect": "Stack. [fanfare] Select an Alchemist follower that costs 3 or less in your cemetery and summon it.",
     "cardSet": "Booster Set #6 “Paragons of the Colosseum”"
   },
+  "Mirrored Summoning": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Alchemist / Golem",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "-",
+    "defense": "-",
+    "effect": "Select a token follower on your field that costs 5 or less and summon a token of the same name.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Miru Biru": {
     "class": "sword",
     "type": "base",
@@ -27323,6 +28331,30 @@
     "effect": "Ward. This doesn't take ability damage. [fanfare] Deal 5 damage to each enemy leader and enemy follower on the field.",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
   },
+  "Noir & Blanc, Brothers": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Dragonewt",
+    "rarity": "Gold",
+    "cost": "1",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[evolve] [cost04]: Evolve this. [evolve] [cost01]: Evolve this. Activate only if there's a Lumiore, Prestigious Gold on your field.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
+  "Noir & Blanc, Brothers Evolved": {
+    "class": "dragon",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Dragonewt",
+    "rarity": "Gold",
+    "cost": "-",
+    "attack": "4",
+    "defense": "4",
+    "effect": "Ward. While this is engaged, it can't be destroyed by abilities or take ability damage. (Can be destroyed by combat damage)",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Nomadic Conductor": {
     "class": "neutral",
     "type": "base",
@@ -27406,6 +28438,18 @@
     "defense": "3",
     "effect": "Storm.",
     "cardSet": "Booster Set #1 “Advent of Genesis”"
+  },
+  "Noxious Elf": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Elf / Cutthroat",
+    "rarity": "Legendary",
+    "cost": "3",
+    "attack": "1",
+    "defense": "3",
+    "effect": "Bane. [fanfare] Banish X Pixie cards from your EX area: Draw X cards. Discard X cards. [act] [engage]: Deal 6 damage to each enemy leader and each enemy follower on the field. Activate only if there are at least 20 [forestcraft] cards in your cemetery.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Nozomi": {
     "class": "haven",
@@ -27622,6 +28666,30 @@
     "defense": "4",
     "effect": "[feed][cost01]: Race this follower. [feed][feed][cost02]: Race this follower 2 times. [feed][feed][feed][cost03]: Race this follower 3 times. On Race: Give this follower [attack]+2/[defense]+1. [fanfare] Discard 2 cards: Give this follower Storm. Strike: Deal 3 damage to each enemy follower on the field.",
     "cardSet": "Crossover Set “Umamusume: Pretty Derby”"
+  },
+  "Oguri Cap [Surging Beast]": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Umamusume",
+    "rarity": "Legendary",
+    "cost": "9",
+    "attack": "2",
+    "defense": "2",
+    "effect": "This costs X less to play. X equals 2 times the number of Umamusume cards on your field. [evolve] [cost01]: Evolve this. Serve (1): Race this. Storm.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
+  "Oguri Cap [Surging Beast] Evolved": {
+    "class": "dragon",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Umamusume",
+    "rarity": "Legendary",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3",
+    "effect": "Storm. On Evolve - Select an enemy follower on the field and deal it 4 damage. On Super-Evolve - Engage X other Umamusume cards on your field: Give this 🗡️+X/🛡️+X.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Okami": {
     "class": "forest",
@@ -28271,6 +29339,18 @@
     "effect": "On Evolve - Select an enemy follower that costs 4 or less on the field and banish it.",
     "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\""
   },
+  "Parasol Witch": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Mage",
+    "rarity": "Silver",
+    "cost": "4",
+    "attack": "3",
+    "defense": "3",
+    "effect": "[fanfare] Select an enemy follower on the field. If there are at least 6 cards in your cemetery with different base costs, deal it 3 damage, give your leader [defense]+3, and, recover 3 play points.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Parkour Werewolf": {
     "class": "abyss",
     "type": "base",
@@ -28726,6 +29806,18 @@
     "defense": "-",
     "effect": "At the start of each player's main phase, that player looks at the top card of their deck. If it's a follower, they may put it onto their field.",
     "cardSet": "Booster Set #1 “Advent of Genesis”"
+  },
+  "Piercing Roar": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Wyrmkin",
+    "rarity": "Silver",
+    "cost": "7",
+    "attack": "-",
+    "defense": "-",
+    "effect": "This costs 7 less to play if there's a card named Ignis Dragon on your field. Deal 2 damage to each enemy leader. Draw 2 cards.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Piercye, Queen of Frost": {
     "class": "forest",
@@ -29687,6 +30779,18 @@
     "effect": "[fanfare] Choose one. (1) Draw a card. Banish a card from your hand. (2) Select a Pale Moon follower on your field and, if there are at least 5 cards in your banished zone, give it Storm.",
     "cardSet": "Crossover Set \"Cardfight!! Vanguard\""
   },
+  "Pursuer Golem": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Golem",
+    "rarity": "Legendary",
+    "cost": "9",
+    "attack": "6",
+    "defense": "6",
+    "effect": "When playing this, Earth Rite (9): This costs 1. Ward. [fanfare] Select up to 3 enemy followers on the field. Destroy them, deal 3 damage to each enemy leader, and give your leader [defense]+3.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Pyne, Twisted Justice": {
     "class": "haven",
     "type": "base",
@@ -29962,6 +31066,18 @@
     "defense": "5",
     "effect": "Ward. On Evolve: Give your leader [defense]+2.",
     "cardSet": "Booster Set #2 “Reign of Bahamut”"
+  },
+  "Radiant Artifact TOKEN": {
+    "class": "neutral",
+    "type": "token",
+    "cardType": "Follower / Token",
+    "trait": "Supreme",
+    "rarity": "-",
+    "cost": "5",
+    "attack": "4",
+    "defense": "3",
+    "effect": "Storm.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Radical Gunslinger": {
     "class": "sword",
@@ -30694,6 +31810,18 @@
     "defense": "-",
     "effect": "Choose up to 2. (1) Select a Sekka, Ninefold Blaze on your field and, if there are at least 9 cards in your banished zone, give it [attack]+2/[defense]+2 and Storm. (2) Select a follower with \"Sekka\" in its name on your field and an enemy follower on the field. Give the first follower [attack]+2/[defense]+2 and deal the second follower damage equal to the first's attack.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
+  },
+  "Resplendent Knight": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Commander",
+    "rarity": "Bronze",
+    "cost": "1",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[fanfare] Banish an Officer follower from your EX area: Draw a card.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Resplendent Phoenix": {
     "class": "dragon",
@@ -31991,6 +33119,42 @@
     "effect": "Ward. [fanfare] If this follower wasn't put onto the field from hand, give it [attack]+2.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
   },
+  "Sacred Ice-Crusher": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Lightborne / Beast",
+    "rarity": "Bronze",
+    "cost": "7",
+    "attack": "5",
+    "defense": "8",
+    "effect": "Ward. Each follower on your field has Rush. Whenever a follower on your field attacks, give your leader [defense]+2.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
+  "Sacred Lion": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Lightborne / Beast",
+    "rarity": "Gold",
+    "cost": "5",
+    "attack": "0",
+    "defense": "5",
+    "effect": "Evolve (1), bury an amulet: Evolve this. Assail. Bane. This doesn't take combat damage.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
+  "Sacred Lion Evolved": {
+    "class": "haven",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Lightborne / Beast",
+    "rarity": "Gold",
+    "cost": "-",
+    "attack": "0",
+    "defense": "5",
+    "effect": "Assail. Bane. This doesn't take combat damage. Strike - Draw 2 cards. Discard a card. If a follower was discarded this way, deal 3 damage to each enemy leader. If an amulet was discarded this way, deal 3 damage to each enemy follower on the field.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Sacred Plea": {
     "class": "haven",
     "type": "base",
@@ -32615,6 +33779,30 @@
     "effect": "Rush. Whenever this follower takes damage, give it [attack]+2/[defense]+2.",
     "cardSet": "Booster Set #4 “Cosmic Mythos”"
   },
+  "Scarlet Vampire": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Vampire",
+    "rarity": "Silver",
+    "cost": "5",
+    "attack": "3",
+    "defense": "4",
+    "effect": "[evolve] [cost01]: Evolve this.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
+  "Scarlet Vampire Evolved": {
+    "class": "abyss",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Vampire",
+    "rarity": "Silver",
+    "cost": "-",
+    "attack": "4",
+    "defense": "5",
+    "effect": "On Evolve - Deal 2 damage to each enemy leader and enemy follower on the field. If there are at least 5 Vampire cards in your cemetery, deal 4 damage instead.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Scavenge": {
     "class": "forest",
     "type": "base",
@@ -32818,6 +34006,18 @@
     "defense": "-",
     "effect": "As an additional cost to play this, reveal 2 Onmyoji cards from your hand. ---------- [costX]: Search your deck for an Onmyoji follower that costs X or less, summon it, then shuffle. If there are at least 7 spells and/or Onmyoji cards in your cemetery, put a Paper Shikigami token into your EX area and give it \"This costs 1 less to play.\" X equals a number of your choice.",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
+  },
+  "Seed Barrage": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Elf / Verdant",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[quick]. Select an enemy follower on the field and deal it 3 damage. If there's a Verdant follower on your field, deal 1 damage to each enemy leader and draw a card",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Seeds of Salvation TOKEN": {
     "class": "forest",
@@ -33347,6 +34547,18 @@
     "effect": "Ward. On Evolve - Select a follower that costs 3 or less in your cemetery and summon it. At the start of your end phase, give your leader [defense]+4 and, if a follower was put from your field into the cemetery this turn, give this follower [attack]+2/[defense]+2.",
     "cardSet": "Booster Set #7 \"Verdant Steel\""
   },
+  "Shadow General TOKEN": {
+    "class": "neutral",
+    "type": "token",
+    "cardType": "Follower / Token",
+    "trait": "Supreme",
+    "rarity": "-",
+    "cost": "5",
+    "attack": "2",
+    "defense": "8",
+    "effect": "Bane. Ward.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Shadow Witch": {
     "class": "rune",
     "type": "base",
@@ -33611,6 +34823,18 @@
     "effect": "Select a follower on your field. Give it Assail and, for the rest of this turn, \"This doesn't take damage.\"",
     "cardSet": "Booster Set \"Omens and Heirs\""
   },
+  "Shield Dragon": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Wyrmkin",
+    "rarity": "Silver",
+    "cost": "3",
+    "attack": "1",
+    "defense": "3",
+    "effect": "Ward. Once on each of your turns, when you discard a card, select an enemy follower on the field and deal it 2 damage. [fanfare] Discard a [dragoncraft] card that costs 7 or more: Recover 2 play points.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Shield Guardian TOKEN": {
     "class": "sword",
     "type": "token",
@@ -33622,6 +34846,18 @@
     "defense": "1",
     "effect": "Ward.",
     "cardSet": "Booster Set #2 “Reign of Bahamut”"
+  },
+  "Shield Phalanx": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Officer",
+    "rarity": "Silver",
+    "cost": "1",
+    "attack": "-",
+    "defense": "-",
+    "effect": "Put a Steelclad Knight, Shield Guardian, and Knight token into your EX area. If there are 5 cards in your EX area, the next [swordcraft] token follower you play this turn costs 2 less.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Shiki Ichinose": {
     "class": "rune",
@@ -34379,6 +35615,18 @@
     "effect": "[fanfare] If Sanguine is active for you, give this follower [attack]+1/[defense]+1.",
     "cardSet": "Booster Set #1 “Advent of Genesis”"
   },
+  "Skeleton Raider": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Departed",
+    "rarity": "Legendary",
+    "cost": "2",
+    "attack": "4",
+    "defense": "4",
+    "effect": "This can't attack enemies if there are 9 or less 2-cost cards in your cemetery. [fanfare] Choose up to 1 for every ten 2-cost cards in your cemetery. (1) Select an enemy follower on the field. Destroy it and deal 1 damage to each enemy leader and each enemy follower on the field. (2) Give this Storm.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Skewer": {
     "class": "rune",
     "type": "base",
@@ -34726,6 +35974,18 @@
     "defense": "-",
     "effect": "Select a Rulenye, Omen of Silence in your cemetery. Summon it. Necrocharge (10) - Each opponent discards a random card.",
     "cardSet": "Booster Set #8 \"Alterchaotica\""
+  },
+  "Sonia, Protector of Hope": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Faith",
+    "rarity": "Silver",
+    "cost": "2",
+    "attack": "2",
+    "defense": "3",
+    "effect": "Ward. [fanfare] Look at the top 3 cards of your deck. You may reveal a follower with Ward from among them and add it to your hand. Put the rest on the bottom of your deck in any order.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Soothing Dragonspring": {
     "class": "dragon",
@@ -35927,6 +37187,18 @@
     "effect": "",
     "cardSet": "Booster Set \"Neometropolis\""
   },
+  "Suave Bandit": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Thief",
+    "rarity": "Bronze",
+    "cost": "1",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[fanfare]/[lastwords] Put a Glittering Gold token into your EX area.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Sublime Talisman": {
     "class": "haven",
     "type": "base",
@@ -36359,6 +37631,30 @@
     "effect": "[Union Burst][act] [engage]: Select an enemy follower on the field and deal it 3 damage. ---------- [fanfare] Discard a card.",
     "cardSet": "Crossover Set \"Princess Connect! Re: Dive\""
   },
+  "Suzy, Hexcaster": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon",
+    "rarity": "Gold",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[evolve] [cost01]: Evolve this. Activate only if there are at least 10 cards in your cemetery that cost 2. [fanfare] Bury the top 2 cards of your deck.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
+  "Suzy, Hexcaster Evolved": {
+    "class": "abyss",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Demon",
+    "rarity": "Gold",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3",
+    "effect": "On Evolve - Select an enemy follower on the field. Deal it 6 damage and give your leader [defense]+2.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Sweep Tosho": {
     "class": "rune",
     "type": "base",
@@ -36490,6 +37786,18 @@
     "defense": "4",
     "effect": "Ward. [fanfare] Draw a card. You may summon up to 2 Officer followers that cost 2 or less from your hand.",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
+  },
+  "Sword-Swinging Bandit": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Thief",
+    "rarity": "Bronze",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3",
+    "effect": "Storm. [fanfare] Put a Glittering Gold token into your EX area.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Swordflash Panther": {
     "class": "sword",
@@ -37187,6 +38495,18 @@
     "effect": "[fanfare] Look at the top 3 cards of your deck. You may reveal a card with Omen and Zealot traits from among them and add it to your hand. Put the rest on the bottom of your deck in any order. Quick/[act] [cost01], [engage], bury this: Reduce the next damage your leader takes this turn by 2. Activate only if you have at least 3 Crests in your EX area.",
     "cardSet": "Booster Set \"Omens and Heirs\""
   },
+  "Tender Rabbit Healer": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Beast",
+    "rarity": "Bronze",
+    "cost": "1",
+    "attack": "1",
+    "defense": "1",
+    "effect": "[fanfare] Select a Beast follower on your field and give it [attack]+1/[defense]+1. [act] [cost04]: Select a Beast follower on your field and give it [attack]+4/[defense]+4.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Tenka, Hot-Blooded Vice-Prez": {
     "class": "dragon",
     "type": "base",
@@ -37426,6 +38746,30 @@
     "defense": "5",
     "effect": "[fanfare] Choose up to 2. (1) Select an enemy amulet on the field and destroy it. (2) Deal 3 damage to each enemy follower on the field. (3) Give this Storm. (4) Draw 2 cards.",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
+  },
+  "Thunderbolt Fiend": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Demon",
+    "rarity": "Bronze",
+    "cost": "5",
+    "attack": "3",
+    "defense": "4",
+    "effect": "[evolve] [cost01]: Evolve this. [fanfare] Select an enemy follower on the field. Deal it 2 damage, give your leader [defense]+2, and, draw a card.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
+  "Thunderbolt Fiend Evolved": {
+    "class": "abyss",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Demon",
+    "rarity": "Bronze",
+    "cost": "-",
+    "attack": "4",
+    "defense": "5",
+    "effect": "On Evolve - Select an enemy follower on the field. Deal it 2 damage, give your leader [defense]+2, and, draw a card.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Thundering Roar": {
     "class": "abyss",
@@ -38518,6 +39862,18 @@
     "defense": "6",
     "effect": "[fanfare] Select up to 2 followers in your cemetery and add them to your hand.",
     "cardSet": "Booster Set #1 “Advent of Genesis”"
+  },
+  "Undead Stampede": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Demon / Departed",
+    "rarity": "Bronze",
+    "cost": "8",
+    "attack": "-",
+    "defense": "-",
+    "effect": "Select up to 3 Departed followers in your cemetery that cost a total of 6 or less. Summon them and give them Rush.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Underworld Lieutenant": {
     "class": "abyss",
@@ -39647,6 +41003,18 @@
     "effect": "Rush. Assail. [fanfare] Draw a card. While this card is on the field, its name is also Puppet.",
     "cardSet": "Promo Cards"
   },
+  "Victorious Blader": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Commander",
+    "rarity": "Legendary",
+    "cost": "6",
+    "attack": "4",
+    "defense": "8",
+    "effect": "Rush. Assail. 10 times during your turn, when this deals combat damage, refresh it. Strike - Give this [defense]+1. Recover 1 play point.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
   "Victorious Grappler": {
     "class": "sword",
     "type": "base",
@@ -39934,6 +41302,18 @@
     "defense": "3",
     "effect": "On Evolve - Look at the top 4 cards of your deck. You may reveal a Wasteland card from among them and add it to your hand. Put the rest on the bottom of your deck in any order.",
     "cardSet": "Booster Set \"Bullet of Fate\""
+  },
+  "Wandering Knight": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Officer",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "3",
+    "defense": "1",
+    "effect": "Rush. [lastwords] Put a Knight token into your EX area.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "War Hero": {
     "class": "sword",
@@ -40234,6 +41614,30 @@
     "defense": "4",
     "effect": "At the start of your end phase, select an enemy leader or enemy follower on the field and deal it damage equal to the number of other Academic followers on your field. [fanfare] Look at the top 5 cards of your deck. You may summon up to 2 Academic followers that cost a total of 4 or less from among them. Put the rest on the bottom of your deck in any order.",
     "cardSet": "Booster Set \"Academy Royale\""
+  },
+  "Wellspring Elf Princess": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Elf / Princess",
+    "rarity": "Silver",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[evolve] [cost01]: Evolve this. [fanfare] Put 2 Fairy tokens into your EX area.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
+  "Wellspring Elf Princess Evolved": {
+    "class": "forest",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Elf / Princess",
+    "rarity": "Silver",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3",
+    "effect": "On Evolve - Look at the top 4 cards of your deck. You may reveal a Pixie or Elf card from among them and add it to your hand. Put the rest on the bottom of your deck in any order.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Westmuenster Abbey": {
     "class": "haven",
@@ -40606,6 +42010,18 @@
     "defense": "5",
     "effect": "[fanfare] Select an enemy follower on the field and deal it 4 damage. [act] [cost02], [engage]: Select an enemy follower on the field and deal it 4 damage.",
     "cardSet": "Booster Set \"New World Genesis\""
+  },
+  "Wily Puck": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Fae-Touched",
+    "rarity": "Bronze",
+    "cost": "4",
+    "attack": "4",
+    "defense": "4",
+    "effect": "[fanfare] Put 2 Fairy tokens into your EX area. [act] Banish 2 cards named Fairy from your EX area: Select an enemy follower on the field and return it to its owner's hand.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Wimael, Redolent Enforcer": {
     "class": "forest",
@@ -41002,6 +42418,30 @@
     "defense": "-",
     "effect": "Select an enemy follower on the field. Deal it 5 damage and, if there is an evolved follower on your field, draw a card.",
     "cardSet": "Booster Set #2 “Reign of Bahamut”"
+  },
+  "Witching Moggy": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Arcanaform / Beast",
+    "rarity": "Gold",
+    "cost": "2",
+    "attack": "2",
+    "defense": "1",
+    "effect": "[evolve] [cost02]: Evolve this. [fanfare] Banish 2 [runecraft] cards from your cemetery: Evolve this.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
+  },
+  "Witching Moggy Evolved": {
+    "class": "rune",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Arcanaform / Beast",
+    "rarity": "Gold",
+    "cost": "-",
+    "attack": "3",
+    "defense": "2",
+    "effect": "Assail. On Evolve - Draw a card.",
+    "cardSet": "Booster Set \"Dusk of Calamity\""
   },
   "Wizardess of Oz": {
     "class": "rune",

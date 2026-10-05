@@ -203,4 +203,8 @@ export const allTokens = [
   "Mirage Wand TOKEN",
   "Eisdrache TOKEN",
   "Precious Memento TOKEN",
+
+  "Her Holiness's Decree TOKEN",
+  "Shadow General TOKEN",
+  "Radiant Artifact TOKEN",
 ];

@@ -57,7 +57,8 @@ const CLASS_SHORT = {
 // Single-letter CSV rarity -> the full label the deck builder expects.
 const RARITY = {
   L: "Legendary", G: "Gold", S: "Silver", B: "Bronze",
-  Token: "-", U: "Ultimate", SP: "Special", PR: "Promo", SEP: "-",
+  Token: "-", U: "Ultimate", SP: "Special", SSP: "Super Special",
+  PR: "Promo", SEP: "-",
 };
 const CRAFTS = ["Forestcraft", "Swordcraft", "Runecraft", "Dragoncraft", "Abysscraft", "Havencraft"];
 
