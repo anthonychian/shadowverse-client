@@ -68,51 +68,71 @@ const Grid = ({ entries, art }) => (
       gap: GAP,
     }}
   >
-    {entries.map(([name, count]) => (
-      <div
-        key={name}
-        style={{
-          position: "relative",
-          width: CARD_W,
-          height: CARD_H,
-          borderRadius: 6,
-          overflow: "hidden",
-          background: "rgba(0, 0, 0, 0.55)",
-        }}
-      >
-        <img
-          src={artThumb(name, art)}
-          alt=""
-          // Same ladder as DeckPanel: a chosen printing without a thumbnail on
-          // disk falls back to its full art, then to the card's default art.
-          onError={(e) => {
-            const chosen = art && art[name];
-            if (chosen && e.currentTarget.src.indexOf("/thumbs/") !== -1) {
-              e.currentTarget.src = `${TEXTURES_BASE}${chosen}.png?v=${ART_VERSION}`;
-            } else if (chosen) {
-              e.currentTarget.src = cardImage(name);
-            }
-          }}
-          style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
-        />
+    {entries.map(([name, count]) => {
+      // getCards resolves to "" for a card it can't map to art. An <img src="">
+      // resolves against the page URL instead, so skip the element and let the
+      // cell's own background stand in rather than pay for a failed request.
+      const src = artThumb(name, art);
+      return (
         <div
+          key={name}
           style={{
-            position: "absolute",
-            top: 4,
-            right: 4,
-            minWidth: 26,
-            padding: "1px 6px",
-            borderRadius: 5,
-            background: "rgba(0, 0, 0, 0.82)",
-            color: "#ffffff",
-            font: "700 15px/1.4 Arial, Helvetica, sans-serif",
-            textAlign: "center",
+            position: "relative",
+            width: CARD_W,
+            height: CARD_H,
+            borderRadius: 6,
+            overflow: "hidden",
+            background: "rgba(0, 0, 0, 0.55)",
           }}
         >
-          x{count}
+          {src && (
+            <img
+              src={src}
+              alt=""
+              // Required, not decorative: html2canvas reloads every image with
+              // crossOrigin="anonymous". If this <img> loaded without it, the
+              // response sits in the HTTP cache as a non-CORS entry and Chrome
+              // refuses to reuse it for the CORS request instead of refetching —
+              // so the clone errors, html2canvas skips drawImage, and the cell
+              // captures as an empty box. Fetching in CORS mode up front makes
+              // the cached entry usable by both.
+              crossOrigin="anonymous"
+              // Same ladder as DeckPanel: a chosen printing without a thumbnail
+              // on disk falls back to its full art, then to the card's default
+              // art. Stops once the src is unchanged so a card with no art at
+              // all can't spin onError forever.
+              onError={(e) => {
+                const chosen = art && art[name];
+                const next =
+                  chosen && e.currentTarget.src.indexOf("/thumbs/") !== -1
+                    ? `${TEXTURES_BASE}${chosen}.png?v=${ART_VERSION}`
+                    : cardImage(name);
+                if (next && next !== e.currentTarget.src) {
+                  e.currentTarget.src = next;
+                }
+              }}
+              style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+            />
+          )}
+          <div
+            style={{
+              position: "absolute",
+              top: 4,
+              right: 4,
+              minWidth: 26,
+              padding: "1px 6px",
+              borderRadius: 5,
+              background: "rgba(0, 0, 0, 0.82)",
+              color: "#ffffff",
+              font: "700 15px/1.4 Arial, Helvetica, sans-serif",
+              textAlign: "center",
+            }}
+          >
+            x{count}
+          </div>
         </div>
-      </div>
-    ))}
+      );
+    })}
   </div>
 );
 
@@ -182,6 +202,7 @@ export default function DeckShareCard({ deck, ownerName, url }) {
           <img
             src={heroSrc}
             alt=""
+            crossOrigin="anonymous"
             style={{
               width: 150,
               height: Math.round((150 * 173) / 124),
