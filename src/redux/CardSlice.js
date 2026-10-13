@@ -89,6 +89,7 @@ export const CardSlice = createSlice({
     enemyHand: [],
     showDice: false,
     showEnemyHand: false,
+    showHand: false,
     enemyRevealedCards: [],
     enemyRevealedCardsOpen: false,
     cardSelectedInHand: -1,
@@ -370,6 +371,16 @@ export const CardSlice = createSlice({
       state.showEnemyHand = action.payload;
       socket.emit("send msg", {
         type: "viewingHand",
+        data: action.payload,
+        room: state.room,
+      });
+    },
+    // Toggle revealing my own hand to the opponent. When on, the opponent's
+    // board renders my face-up cards in place of the usual cardbacks.
+    setShowHand: (state, action) => {
+      state.showHand = action.payload;
+      socket.emit("send msg", {
+        type: "showHand",
         data: action.payload,
         room: state.room,
       });
@@ -1981,6 +1992,36 @@ export const CardSlice = createSlice({
         room: state.room,
       });
     },
+    addToBanishFromTopOfDeck: (state) => {
+      const card = state.deck[0];
+      state.deck = state.deck.slice(1);
+      state.banish = [card, ...state.banish];
+      const date = new Date().toLocaleTimeString("it-IT", {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+
+      state.gameLog = [
+        ...state.gameLog,
+        {
+          text: `[${date}] (Me): Banished ${card} from top of deck`,
+          card,
+        },
+      ];
+
+      socket.emit("send msg", {
+        type: "addToBanishFromTopOfDeck",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Banished ${card} from top of deck`, card },
+          },
+          { type: "banish", data: state.banish },
+          { type: "deckSize", data: state.deck.length },
+        ],
+        room: state.room,
+      });
+    },
     addToHandFromDeck: (state, action) => {
       const card = action.payload.card;
       const cardIndex = action.payload.index;
@@ -2293,6 +2334,97 @@ export const CardSlice = createSlice({
             data: { text: `Added ${card} to hand from banished`, card },
           },
           { type: "hand", data: state.hand },
+          { type: "banish", data: state.banish },
+        ],
+        room: state.room,
+      });
+    },
+    addToCemeteryFromBanish: (state, action) => {
+      const card = action.payload.name;
+      const cardIndex = action.payload.index;
+      state.banish = state.banish.filter((_, i) => i !== cardIndex);
+      const date = new Date().toLocaleTimeString("it-IT", {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+      state.cemetery = [card, ...state.cemetery];
+
+      state.gameLog = [
+        ...state.gameLog,
+        {
+          text: `[${date}] (Me): Added ${card} to cemetery from banished`,
+          card,
+        },
+      ];
+
+      socket.emit("send msg", {
+        type: "addToCemeteryFromBanish",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Added ${card} to cemetery from banished`, card },
+          },
+          { type: "cemetery", data: state.cemetery },
+          { type: "banish", data: state.banish },
+        ],
+        room: state.room,
+      });
+    },
+    placeToTopOfDeckFromBanish: (state, action) => {
+      const card = action.payload.name;
+      const cardIndex = action.payload.index;
+      state.banish = state.banish.filter((_, i) => i !== cardIndex);
+      const date = new Date().toLocaleTimeString("it-IT", {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+      state.deck = [card, ...state.deck];
+
+      state.gameLog = [
+        ...state.gameLog,
+        {
+          text: `[${date}] (Me): Added ${card} to top of deck from banished`,
+          card,
+        },
+      ];
+      socket.emit("send msg", {
+        type: "placeToTopOfDeckFromBanish",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Added ${card} to top of deck from banished`, card },
+          },
+          { type: "deckSize", data: state.deck.length },
+          { type: "banish", data: state.banish },
+        ],
+        room: state.room,
+      });
+    },
+    placeToBotOfDeckFromBanish: (state, action) => {
+      const card = action.payload.name;
+      const cardIndex = action.payload.index;
+      state.banish = state.banish.filter((_, i) => i !== cardIndex);
+      const date = new Date().toLocaleTimeString("it-IT", {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+      state.deck = [...state.deck, card];
+
+      state.gameLog = [
+        ...state.gameLog,
+        {
+          text: `[${date}] (Me): Added ${card} to bot of deck from banished`,
+          card,
+        },
+      ];
+      socket.emit("send msg", {
+        type: "placeToBotOfDeckFromBanish",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Added ${card} to bot of deck from banished`, card },
+          },
+          { type: "deckSize", data: state.deck.length },
           { type: "banish", data: state.banish },
         ],
         room: state.room,
@@ -3270,6 +3402,7 @@ export const CardSlice = createSlice({
       state.showDice = false;
       state.enemyDice = { show: false, roll: 1 };
       state.showEnemyHand = false;
+      state.showHand = false;
       state.showEnemyCard = false;
       state.enemyCard = "";
       state.enemyRevealedCards = [];
@@ -3382,6 +3515,7 @@ export const CardSlice = createSlice({
       state.showDice = false;
       state.enemyDice = { show: false, roll: 1 };
       state.showEnemyHand = false;
+      state.showHand = false;
       state.showEnemyCard = false;
       state.enemyCard = "";
       state.enemyRevealedCards = [];
@@ -3631,6 +3765,9 @@ export const {
   addToHandFromCemetery,
   addToBanishFromCemetery,
   addToHandFromBanish,
+  addToCemeteryFromBanish,
+  placeToTopOfDeckFromBanish,
+  placeToBotOfDeckFromBanish,
   placeToTopOfDeckFromHand,
   placeToBotOfDeckFromHand,
   placeToTopOfDeckFromCemetery,
@@ -3647,6 +3784,7 @@ export const {
   addToCemeteryFromDeck,
   addToCemeteryFromTopOfDeck,
   addToBanishFromDeck,
+  addToBanishFromTopOfDeck,
   removeTokenOnField,
   moveCardOnField,
   moveEvoAndBaseOnField,
@@ -3752,6 +3890,7 @@ export const {
   setEnemyCardBack,
   setEnemyLeader,
   setShowEnemyHand,
+  setShowHand,
   setViewingDeck,
   setViewingTopCards,
   setViewingCemetery,

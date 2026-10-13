@@ -357,7 +357,9 @@ export default function PlayReveal() {
     (evt) => {
       const id = ++idRef.current;
       const art = evt.side === "enemy" ? enemyArt : myArt;
-      const src = artImage(evt.name, art);
+      // Hidden reveals pass an explicit cardback src; every other reveal resolves
+      // the card art from its name.
+      const src = evt.src || artImage(evt.name, art);
       setItems((cur) => [
         ...cur,
         {

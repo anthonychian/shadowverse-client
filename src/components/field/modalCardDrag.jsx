@@ -70,6 +70,10 @@ export function useModalCardDrag({
   // them without a re-render race.
   const gestureRef = useRef(null);
   const destRef = useRef(null);
+  // True once the in-flight gesture has crossed the drag threshold. Reset on
+  // each press and left set until the next press, so a caller's click handler
+  // (fired just after pointerup) can ignore the click that ends a drag.
+  const movedRef = useRef(false);
 
   const resolveDest = (x, y) => {
     if (targets.hand && isOverHand(x, y)) return { type: "hand" };
@@ -87,6 +91,7 @@ export function useModalCardDrag({
 
   const handlePointerDown = (e, card, index) => {
     if (e.button !== 0) return; // left button only; right-click opens the menu
+    movedRef.current = false;
     gestureRef.current = {
       card,
       index,
@@ -107,6 +112,7 @@ export function useModalCardDrag({
     if (!g.active) {
       if (Math.hypot(x - g.startX, y - g.startY) < DRAG_THRESHOLD) return;
       g.active = true;
+      movedRef.current = true;
       setDragCard({ name: g.card, index: g.index });
     }
     setDragPos({ x, y });
@@ -162,6 +168,7 @@ export function useModalCardDrag({
     dragProps,
     dragStyle: DRAG_STYLE,
     isDragging: !!dragCard,
+    movedRef,
   };
 }
 

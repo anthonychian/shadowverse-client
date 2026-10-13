@@ -48,12 +48,23 @@ export const isHidden = (side, index) =>
 // Play the reveal locally. `kind` is "field" (played to a slot — particles, and
 // the slot stays hidden until the reveal lands), "hand" (added to hand), "mill"
 // (top of deck sinks into the cemetery) or "banish" (a field card disintegrates
-// in place at its slot `source`). `source`/`size` are used by "banish".
-export const playCardReveal = ({ name, side, index, target, source, size, kind = "field" }) => {
+// in place at its slot `source`). `source`/`size` are used by "banish". An
+// explicit `src` overrides the art resolved from `name` — used by the hidden
+// "added to hand" reveal to show that side's cardback instead of the card face.
+export const playCardReveal = ({
+  name,
+  side,
+  index,
+  target,
+  source,
+  size,
+  kind = "field",
+  src,
+}) => {
   if (!name || name === 0) return;
   if (kind === "field") hideSlot(side, index);
   revealListeners.forEach((cb) =>
-    cb({ id: ++nextId, name, side, target, source, size, kind }),
+    cb({ id: ++nextId, name, side, target, source, size, kind, src }),
   );
 };
 
@@ -72,6 +83,16 @@ export const triggerHandReveal = (name, room) => {
   if (!name || name === 0) return;
   playCardReveal({ name, side: "player", kind: "hand", target: handCenter() });
   if (room) socket.emit("send msg", { type: "cardToHand", data: { name }, room });
+};
+
+// "Added to hand" *without revealing*: the same flight as triggerHandReveal, but
+// the card renders face-down — `src` is the acting side's cardback, so the card's
+// identity never leaves this machine. Only the fact a card was added travels;
+// the opponent replays it face-down using their copy of our cardback.
+export const triggerHiddenHandReveal = (name, room, src) => {
+  if (!name || name === 0) return;
+  playCardReveal({ name, side: "player", kind: "hand", target: handCenter(), src });
+  if (room) socket.emit("send msg", { type: "cardToHand", data: { faceDown: true }, room });
 };
 
 // Mill reveal: the top card flips up centre-screen, then sinks into the cemetery

@@ -20,10 +20,13 @@ import {
   addToHandFromCemetery,
   addToHandFromBanish,
   addToBanishFromCemetery,
+  addToCemeteryFromBanish,
   placeToFieldFromCemetery,
   placeToFieldFromBanish,
   placeToTopOfDeckFromCemetery,
   placeToBotOfDeckFromCemetery,
+  placeToTopOfDeckFromBanish,
+  placeToBotOfDeckFromBanish,
   setCurrentCard,
   setCurrentCardIndex,
   setViewingCemetery,
@@ -46,11 +49,14 @@ export default function Cemetery({
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
   const modalOpen = useUiModalOpen(open, { persistWhenChromeHidden: true });
-  const [name, setName] = useState("");
   const [contextMenu, setContextMenu] = React.useState(null);
   const [cemeterySelected, setCemeterySelected] = useState(true);
   const [banishSelected, setBanishSelected] = useState(false);
   const [cardIndex, setCardIndex] = useState(-1);
+  // Indices (into the active tab's pile) that are multi-selected. Right-click
+  // toggles a card in here; left-click opens the options menu, which then
+  // applies to every selected card.
+  const [selected, setSelected] = useState(() => new Set());
 
   const reduxCemetery = useSelector((state) => state.card.cemetery);
   const cemeteryInstanceIds = useSelector((state) => state.card.cemeteryInstanceIds);
@@ -74,35 +80,79 @@ export default function Cemetery({
   const handleModalClose = () => {
     setOpen(false);
     dispatch(setViewingCemetery(false));
-  };
-
-  const handleContextMenu = (event, name, index) => {
-    setName(name);
-    setCardIndex(index);
-    dispatch(setCurrentCard(name));
-    dispatch(setCurrentCardIndex(index));
-    event.preventDefault();
-    setContextMenu(
-      contextMenu === null
-        ? {
-            mouseX: event.clientX + 2,
-            mouseY: event.clientY - 6,
-          }
-        : null
-    );
+    setSelected(new Set());
   };
 
   const handleClose = () => {
     setContextMenu(null);
   };
 
-  const handleToTopOfDeckFromCemetery = () => {
-    handleClose();
-    dispatch(placeToTopOfDeckFromCemetery({ name: name, index: cardIndex }));
+  // The pile backing the active radio tab (cemetery vs banish).
+  const activePile = cemeterySelected ? reduxCemetery : reduxBanish;
+  const multi = selected.size > 1;
+
+  // Selected indices in click order (a Set keeps insertion order), dropping any
+  // stale entries. This is what makes the click order drive deck placement.
+  const selectedOrder = [...selected].filter(
+    (i) => i >= 0 && i < activePile.length,
+  );
+
+  // Act on the selected cards in the given index order. Each card's original
+  // index is translated to its current position *after* the cards already acted
+  // on have been removed, so earlier removals don't shift later cards out from
+  // under us. `fn(name, currentIndex)`.
+  const runSelected = (order, fn) => {
+    const removed = [];
+    order.forEach((orig) => {
+      const idx = orig - removed.reduce((n, r) => n + (r < orig ? 1 : 0), 0);
+      removed.push(orig);
+      fn(activePile[orig], idx);
+    });
   };
+
+  // Left-click toggles a card in/out of the multi-selection (a click that ends
+  // a drag is ignored by the caller, so dragging still moves cards).
+  const handleCardClick = (event, index) => {
+    setSelected((cur) => {
+      const next = new Set(cur);
+      if (next.has(index)) next.delete(index);
+      else next.add(index);
+      return next;
+    });
+  };
+
+  // Right-click opens the options menu, which applies to every selected card.
+  // Right-clicking a card that isn't already selected starts a fresh
+  // single-card selection so the menu targets just it.
+  const handleCardContext = (event, index) => {
+    event.preventDefault();
+    const pile = activePile;
+    const cardName = pile[index];
+    setCardIndex(index);
+    dispatch(setCurrentCard(cardName));
+    dispatch(setCurrentCardIndex(index));
+    setSelected((cur) => (cur.has(index) ? cur : new Set([index])));
+    setContextMenu({ mouseX: event.clientX + 2, mouseY: event.clientY - 6 });
+  };
+
+  // To the top: the first-clicked card ends up on top, so the deck is built
+  // bottom-up by dispatching in reverse click order (each dispatch prepends).
+  const handleToTopOfDeckFromCemetery = () => {
+    const order = [...selectedOrder].reverse();
+    handleClose();
+    setSelected(new Set());
+    runSelected(order, (card, index) =>
+      dispatch(placeToTopOfDeckFromCemetery({ name: card, index })),
+    );
+  };
+  // To the bottom: dispatching in click order appends them so the first-clicked
+  // sits above the rest of the block (and is drawn first).
   const handleToBotOfDeckFromCemetery = () => {
     handleClose();
-    dispatch(placeToBotOfDeckFromCemetery({ name: name, index: cardIndex }));
+    setSelected(new Set());
+    runSelected(selectedOrder, (card, index) =>
+      dispatch(placeToBotOfDeckFromCemetery({ name: card, index })),
+    );
   };
 
   const handleCardToFieldFromCemetery = () => {
@@ -114,7 +164,10 @@ export default function Cemetery({
 
   const handleCardToBanishFromCemetery = () => {
     handleClose();
-    dispatch(addToBanishFromCemetery({ name: name, index: cardIndex }));
+    setSelected(new Set());
+    runSelected(selectedOrder, (card, index) =>
+      dispatch(addToBanishFromCemetery({ name: card, index })),
+    );
   };
 
   const handleAutomatedActivateFromCemetery = () => {
@@ -137,8 +190,10 @@ export default function Cemetery({
   const handleCardToHandFromCemetery = () => {
     handleModalClose();
     handleClose();
-    dispatch(addToHandFromCemetery({ name: name, index: cardIndex }));
-    triggerHandReveal(name, reduxRoom);
+    runSelected(selectedOrder, (card, index) => {
+      dispatch(addToHandFromCemetery({ name: card, index }));
+      triggerHandReveal(card, reduxRoom);
+    });
   };
 
   const handleCardToFieldFromBanish = () => {
@@ -151,17 +206,48 @@ export default function Cemetery({
   const handleCardToHandFromBanish = () => {
     handleModalClose();
     handleClose();
-    dispatch(addToHandFromBanish({ name: name, index: cardIndex }));
-    triggerHandReveal(name, reduxRoom);
+    runSelected(selectedOrder, (card, index) => {
+      dispatch(addToHandFromBanish({ name: card, index }));
+      triggerHandReveal(card, reduxRoom);
+    });
+  };
+
+  const handleCardToCemeteryFromBanish = () => {
+    handleClose();
+    setSelected(new Set());
+    runSelected(selectedOrder, (card, index) =>
+      dispatch(addToCemeteryFromBanish({ name: card, index })),
+    );
+  };
+
+  // Same click-order rules as the cemetery deck moves: to the top, the
+  // first-clicked card ends up on top (dispatched in reverse click order); to
+  // the bottom, dispatched in click order so the first-clicked is drawn first.
+  const handleToTopOfDeckFromBanish = () => {
+    const order = [...selectedOrder].reverse();
+    handleClose();
+    setSelected(new Set());
+    runSelected(order, (card, index) =>
+      dispatch(placeToTopOfDeckFromBanish({ name: card, index })),
+    );
+  };
+  const handleToBotOfDeckFromBanish = () => {
+    handleClose();
+    setSelected(new Set());
+    runSelected(selectedOrder, (card, index) =>
+      dispatch(placeToBotOfDeckFromBanish({ name: card, index })),
+    );
   };
 
   const handleCemeterySelected = () => {
     setCemeterySelected(true);
     setBanishSelected(false);
+    setSelected(new Set());
   };
   const handleBanishSelected = () => {
     setCemeterySelected(false);
     setBanishSelected(true);
+    setSelected(new Set());
   };
 
   // ---- drag a cemetery/banish card onto the field or back to hand ----
@@ -174,6 +260,10 @@ export default function Cemetery({
     field: reduxField,
     onDrop: (card, index, dest) => {
       if (automated) return;
+      // A drop removes the card from the pile, shifting every index after it —
+      // so drop any multi-selection rather than leave it pointing at the wrong
+      // cards.
+      setSelected(new Set());
       if (dest.type === "deck") {
         if (!cemeterySelected) return;
         if (dest.half === "top")
@@ -328,9 +418,19 @@ export default function Cemetery({
                 <div
                   key={`card-${index}`}
                   onContextMenu={(e) => {
-                    handleContextMenu(e, card, index);
+                    handleCardContext(e, index);
+                  }}
+                  onClick={(e) => {
+                    // A click that ends a drag must not toggle selection.
+                    if (cemeteryDrag.movedRef.current) return;
+                    handleCardClick(e, index);
                   }}
                   {...(automated ? {} : cemeteryDrag.dragProps(card, index))}
+                  className={selected.has(index) ? "multiSelected" : "none"}
+                  style={{
+                    position: "relative",
+                    ...(automated ? {} : cemeteryDrag.dragStyle),
+                  }}
                 >
                   <Card
                     //   key={`card-${idx}`}
@@ -338,6 +438,35 @@ export default function Cemetery({
                     name={card}
                     setHovering={setHovering}
                   />
+                  {selected.has(index) && (
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: -8,
+                        right: -8,
+                        minWidth: 26,
+                        height: 26,
+                        padding: "0 6px",
+                        borderRadius: 13,
+                        background: "#1565c0",
+                        border: "2px solid #ffffff",
+                        color: "#ffffff",
+                        fontFamily: "Noto Serif JP, serif",
+                        fontSize: 16,
+                        fontWeight: 800,
+                        lineHeight: 1,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        zIndex: 1002,
+                        pointerEvents: "none",
+                        textShadow: "0 1px 3px rgba(0,0,0,0.95)",
+                        boxShadow: "0 2px 6px rgba(0,0,0,0.85)",
+                      }}
+                    >
+                      {selectedOrder.indexOf(index) + 1}
+                    </div>
+                  )}
                 </div>
               ))}
             {banishSelected &&
@@ -346,10 +475,17 @@ export default function Cemetery({
                 <div
                   key={`card-${index}`}
                   onContextMenu={(e) => {
-                    handleContextMenu(e, card, index);
+                    handleCardContext(e, index);
+                  }}
+                  onClick={(e) => {
+                    // A click that ends a drag must not toggle selection.
+                    if (cemeteryDrag.movedRef.current) return;
+                    handleCardClick(e, index);
                   }}
                   {...(automated ? {} : cemeteryDrag.dragProps(card, index))}
+                  className={selected.has(index) ? "multiSelected" : "none"}
                   style={{
+                    position: "relative",
                     width: "115px",
                     ...(automated ? {} : cemeteryDrag.dragStyle),
                   }}
@@ -360,6 +496,35 @@ export default function Cemetery({
                     name={card}
                     setHovering={setHovering}
                   />
+                  {selected.has(index) && (
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: -8,
+                        right: -8,
+                        minWidth: 26,
+                        height: 26,
+                        padding: "0 6px",
+                        borderRadius: 13,
+                        background: "#1565c0",
+                        border: "2px solid #ffffff",
+                        color: "#ffffff",
+                        fontFamily: "Noto Serif JP, serif",
+                        fontSize: 16,
+                        fontWeight: 800,
+                        lineHeight: 1,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        zIndex: 1002,
+                        pointerEvents: "none",
+                        textShadow: "0 1px 3px rgba(0,0,0,0.95)",
+                        boxShadow: "0 2px 6px rgba(0,0,0,0.85)",
+                      }}
+                    >
+                      {selectedOrder.indexOf(index) + 1}
+                    </div>
+                  )}
                 </div>
               ))}
           </CardMUI>
@@ -385,13 +550,16 @@ export default function Cemetery({
             horizontal: "left",
           }}
         >
-          {cemeterySelected && canActivateFromCemetery && (
+          {multi && (
+            <MenuItem disabled>{selected.size} cards selected</MenuItem>
+          )}
+          {cemeterySelected && canActivateFromCemetery && !multi && (
             <MenuItem onClick={handleAutomatedActivateFromCemetery}>Activate</MenuItem>
           )}
           {cemeterySelected && !automated && (
             <MenuItem onClick={handleCardToHandFromCemetery}>Hand</MenuItem>
           )}
-          {cemeterySelected && !automated && (
+          {cemeterySelected && !automated && !multi && (
             <MenuItem onClick={handleCardToFieldFromCemetery}>Field</MenuItem>
           )}
           {cemeterySelected && !automated && (
@@ -410,8 +578,23 @@ export default function Cemetery({
           {banishSelected && !automated && (
             <MenuItem onClick={handleCardToHandFromBanish}>Hand</MenuItem>
           )}
-          {banishSelected && !automated && (
+          {banishSelected && !automated && !multi && (
             <MenuItem onClick={handleCardToFieldFromBanish}>Field</MenuItem>
+          )}
+          {banishSelected && !automated && (
+            <MenuItem onClick={handleCardToCemeteryFromBanish}>
+              Cemetery
+            </MenuItem>
+          )}
+          {banishSelected && !automated && (
+            <MenuItem onClick={handleToTopOfDeckFromBanish}>
+              Top of Deck
+            </MenuItem>
+          )}
+          {banishSelected && !automated && (
+            <MenuItem onClick={handleToBotOfDeckFromBanish}>
+              Bot of Deck
+            </MenuItem>
           )}
         </Menu>
       )}

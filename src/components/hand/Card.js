@@ -81,7 +81,6 @@ export default function Card({
   bane,
   ward,
   keywords = [],
-  handLength,
   inHand = false,
   inHandIndex = -1,
   constraintsRef,
@@ -491,9 +490,7 @@ export default function Card({
             ? "box2"
             : reduxEnemyCardSelectedOnField === idx && !opponentField
             ? "box2"
-            : inHand &&
-              (reduxEnemyCardSelectedInHand - handLength + 1) * -1 ===
-                inHandIndex
+            : inHand && reduxEnemyCardSelectedInHand === inHandIndex
             ? "box2"
             : "none"
         }

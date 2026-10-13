@@ -81,6 +81,30 @@
   }
 }
 
+/* Multi-select highlight for the cemetery/banish modal: a static accent ring
+   (no animation) so the click-order numbers stay legible. Kept separate from
+   the shared `.box2` class so the opponent's selected-card pulse is unaffected.
+   Same footprint as `.none` so selecting never nudges layout. */
+.multiSelected {
+  position: relative;
+  height: 161px;
+  width: 115px;
+}
+
+.multiSelected::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 3px solid #3ea6ff;
+  border-radius: 10px;
+  box-shadow:
+    0 0 10px 1px rgba(62, 166, 255, 0.8),
+    0 0 22px 4px rgba(62, 166, 255, 0.4);
+  pointer-events: none;
+  /* Above the card's own hover-lift (zIndex 999) so the ring never vanishes. */
+  z-index: 1000;
+}
+
 .aura {
   display: flex;
   align-items: center;

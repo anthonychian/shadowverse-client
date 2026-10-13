@@ -327,7 +327,6 @@ export default function Field({
   const playerSlot = useSelector((state) => state.gameState.playerSlot);
   const { sendAction } = useEngineSync();
   const chromeVisible = useUiChromeVisible();
-  const enemyHandModalOpen = useUiModalOpen(reduxShowEnemyHand);
   const enemyCardModalOpen = useUiModalOpen(reduxShowEnemyCard);
   const enemyRevealedCardsModalOpen = useUiModalOpen(
     reduxEnemyRevealedCardsOpen,
@@ -621,16 +620,20 @@ export default function Field({
           // Replay it on their half of our board so both players see it.
           playGameAnimation({ kind: update.data, side: "enemy" });
           break;
-        case "cardToHand":
-          // Opponent added a card to hand — reveal it centre-screen and fly it
-          // up to their hand (the top hand on our screen).
+        case "cardToHand": {
+          // Opponent added a card to hand — fly it up to their hand (the top
+          // hand on our screen). A face-down add shows their cardback instead
+          // of the card face, so the card's identity stays hidden.
+          const handData = update.data || {};
           playCardReveal({
-            name: (update.data || {}).name,
+            name: handData.name ?? "Card",
             side: "enemy",
             kind: "hand",
             target: enemyHandCenter(),
+            src: handData.faceDown ? cardback : undefined,
           });
           break;
+        }
         case "cardMilled":
           // Opponent milled their top card — reveal it centre-screen and sink
           // it into their (top) cemetery pile.
@@ -748,7 +751,7 @@ export default function Field({
           console.warn("Unknown update type:", update.type);
       }
     },
-    [dispatch, reduxEnemyRevealedCardsOpen],
+    [dispatch, reduxEnemyRevealedCardsOpen, cardback],
   );
 
   // Apply a single message (which may carry one update or a batch of updates).
@@ -902,10 +905,6 @@ export default function Field({
   useEffect(() => {
     dispatch(setCardSelectedOnField(-1));
   }, [reduxEnemyField, dispatch]);
-
-  const handleModalClose = () => {
-    dispatch(setShowEnemyHand(false));
-  };
 
   const handleShowCardModalClose = () => {
     dispatch(setShowEnemyCard(false));
@@ -2011,59 +2010,6 @@ export default function Field({
           ))}
       </Menu>
 
-      {/* Show Enemy Hand Modal */}
-
-      <Modal
-        open={enemyHandModalOpen}
-        onClose={handleModalClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-        sx={{
-          "& > .MuiBackdrop-root": {
-            backgroundColor: "transparent",
-          },
-        }}
-      >
-        <Box sx={style}>
-          <ModalHideUiRow />
-          <Typography
-            sx={{
-              color: "white",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              fontFamily: "Noto Serif JP, serif",
-              fontSize: "20px",
-            }}
-            id="modal-modal-title"
-            variant="h6"
-            component="h2"
-          >
-            Viewing Opponent's Hand
-          </Typography>
-          <CardMUI
-            sx={{
-              backgroundColor: "rgba(0, 0, 0, 0.7)",
-              minHeight: "250px",
-              padding: "3%",
-              width: "100%",
-              display: "flex",
-              flexDirection: "row",
-              flexWrap: "wrap",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-            variant="outlined"
-          >
-            {reduxEnemyHand.map((card, idx) => (
-              <div key={`card-${idx}`}>
-                <Card name={card} setHovering={setHovering} />
-              </div>
-            ))}
-          </CardMUI>
-        </Box>
-      </Modal>
-
       {/* Show Enemy Card Modal */}
 
       <Modal
@@ -2228,7 +2174,7 @@ export default function Field({
               paddingBottom: "2em",
             }}
           >
-            {reduxEnemyHand.map((_, idx) => {
+            {reduxEnemyHand.map((card, idx) => {
               // Keep the opponent's hand within the board width: while the cards
               // fit they sit side by side, but once they'd overflow (cardbacks
               // are 115px wide, so ~10 cards for the BASE_WIDTH board) a shared
@@ -2257,8 +2203,14 @@ export default function Field({
                   }
                   key={idx}
                   className={"cardStyle"}
-                  src={cardback}
-                  alt={"cardback"}
+                  // When the opponent has shown their hand, render the actual
+                  // cards face-up in place of the usual cardbacks.
+                  src={
+                    reduxShowEnemyHand
+                      ? artImage(card, reduxEnemyArt)
+                      : cardback
+                  }
+                  alt={reduxShowEnemyHand ? card : "cardback"}
                   onClick={() => handleSelectEnemyCardInHand(idx)}
                 />
               );

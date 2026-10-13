@@ -14,6 +14,7 @@ import {
   addToCemeteryFromDeck,
   addToCemeteryFromTopOfDeck,
   addToBanishFromDeck,
+  addToBanishFromTopOfDeck,
   placeToFieldFromDeck,
   placeToExFromTopOfDeck,
   setViewingDeck,
@@ -28,6 +29,7 @@ import { ModalHideUiRow } from "../ui/HideUiButton";
 import { triggerGameAnimation } from "./animationBus";
 import {
   triggerHandReveal,
+  triggerHiddenHandReveal,
   triggerCardReveal,
   triggerMillReveal,
 } from "./cardRevealBus";
@@ -91,6 +93,10 @@ export default function Deck({
   const [reveal, setReveal] = useState(false);
   const [textInput, setTextInput] = useState("");
   const [partialDeck, setPartialDeck] = useState([]);
+  // Indices (into the active list) that are multi-selected in the View Deck
+  // modal. Left-click toggles a card in here; right-click opens the options menu,
+  // which then applies to every selected card. A Set preserves click order.
+  const [selected, setSelected] = useState(() => new Set());
 
   const [cardback, setCardback] = useState();
   const reduxCardBack = useSelector((state) => state.card.cardback);
@@ -103,6 +109,41 @@ export default function Deck({
   const shufflingDeck = useShuffleDeckActive("player");
   const gameMode = useSelector((state) => state.gameState.gameMode);
   const automated = gameMode === "automated";
+
+  // The list backing the open modal (Look At Top -> partialDeck, View Deck ->
+  // reduxDeck). Multi-select only applies to the View Deck list.
+  const activePile = reveal ? partialDeck : reduxDeck;
+  const multi = selected.size > 1;
+
+  // Selected indices in click order, dropping any stale entries. Click order
+  // drives the order multi-actions are applied in.
+  const selectedOrder = [...selected].filter(
+    (i) => i >= 0 && i < activePile.length,
+  );
+
+  // Act on the selected cards in the given index order. Each card's original
+  // index is translated to its current position *after* the cards already acted
+  // on have been removed, so earlier removals don't shift later cards out from
+  // under us. `fn(card, currentIndex)`.
+  const runSelected = (order, fn) => {
+    const removed = [];
+    order.forEach((orig) => {
+      const idx = orig - removed.reduce((n, r) => n + (r < orig ? 1 : 0), 0);
+      removed.push(orig);
+      fn(activePile[orig], idx);
+    });
+  };
+
+  // Left-click toggles a card in/out of the multi-selection (a click that ends a
+  // drag is ignored by the caller, so dragging still moves cards).
+  const handleCardClick = (event, idx) => {
+    setSelected((cur) => {
+      const next = new Set(cur);
+      if (next.has(idx)) next.delete(idx);
+      else next.add(idx);
+      return next;
+    });
+  };
 
   // popover
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -118,17 +159,20 @@ export default function Deck({
   const handleModalOpen = () => {
     if (automated || reduxDeck.length === 0 || ready) return;
     setOpen(true);
+    setSelected(new Set());
     dispatch(setViewingDeck(true));
   };
 
   const handleModalRevealOpen = () => {
     if (automated || reduxDeck.length === 0 || ready) return;
     setOpen(true);
+    setSelected(new Set());
     dispatch(setViewingTopCards(true));
   };
 
   const handleModalClose = () => {
     setOpen(false);
+    setSelected(new Set());
     if (reveal) {
       setReveal(false);
       setTextInput("");
@@ -159,6 +203,11 @@ export default function Deck({
     setName(name);
     setIndex(index);
     setDeckIndex(index);
+    // Right-click selects the card if it isn't already part of the selection, so
+    // the menu targets it (and everything else selected) — View Deck only.
+    if (!reveal) {
+      setSelected((cur) => (cur.has(index) ? cur : new Set([index])));
+    }
     // console.log(index);
     event.preventDefault();
     setCardContextMenu(
@@ -220,34 +269,23 @@ export default function Deck({
     if (reduxHand.length > 0) triggerGameAnimation("shuffleHand", reduxRoom);
   };
 
-  const handleShowHand = () => {
-    socket.emit("send msg", {
-      type: "showHand",
-      data: true,
-      room: reduxRoom,
-    });
-  };
-
   const handleAddFromDeckToHand = () => {
     handleCardClose();
     handleModalClose();
-    dispatch(addToHandFromDeck({ card: name, index: index }));
-    triggerHandReveal(name, reduxRoom);
+    runSelected(selectedOrder, (card, i) => {
+      dispatch(addToHandFromDeck({ card, index: i }));
+      triggerHandReveal(card, reduxRoom);
+    });
+    setSelected(new Set());
   };
   const handleAddFromDeckToHandWithoutRevealing = () => {
     handleCardClose();
     handleModalClose();
-    dispatch(addToHandFromDeckWithoutRevealing({ card: name, index: index }));
-    socket.emit("send msg", {
-      type: "showCard",
-      data: true,
-      room: reduxRoom,
+    runSelected(selectedOrder, (card, i) => {
+      dispatch(addToHandFromDeckWithoutRevealing({ card, index: i }));
+      triggerHiddenHandReveal(card, reduxRoom, cardback);
     });
-    socket.emit("send msg", {
-      type: "cardRevealed",
-      data: "Card",
-      room: reduxRoom,
-    });
+    setSelected(new Set());
   };
 
   const handleCardToFieldFromDeck = () => {
@@ -266,8 +304,17 @@ export default function Deck({
 
   const handleToBanish = () => {
     handleCardClose();
-    setPartialDeck(partialDeck.filter((_, i) => i !== index));
-    dispatch(addToBanishFromDeck({ card: name, index: index }));
+    if (reveal) {
+      // Look At Top list: single card out of the local partial deck.
+      setPartialDeck(partialDeck.filter((_, i) => i !== index));
+      dispatch(addToBanishFromDeck({ card: name, index }));
+    } else {
+      // View Deck: banish every selected card.
+      runSelected(selectedOrder, (card, i) =>
+        dispatch(addToBanishFromDeck({ card, index: i })),
+      );
+      setSelected(new Set());
+    }
   };
 
   const handleBanishAll = () => {
@@ -296,6 +343,13 @@ export default function Deck({
     const card = reduxDeck[0];
     if (!card) return;
     dispatch(addToCemeteryFromTopOfDeck());
+    triggerMillReveal(card, reduxRoom);
+  };
+
+  const handleBanishFromTop = () => {
+    const card = reduxDeck[0];
+    if (!card) return;
+    dispatch(addToBanishFromTopOfDeck());
     triggerMillReveal(card, reduxRoom);
   };
 
@@ -340,6 +394,9 @@ export default function Deck({
     targets: { field: true, hand: true, cemetery: true },
     field: reduxField,
     onDrop: (card, index, dest) => {
+      // A drop removes the card, shifting every index after it — drop any
+      // multi-selection rather than leave it pointing at the wrong cards.
+      setSelected(new Set());
       if (reveal) setPartialDeck((prev) => prev.filter((_, i) => i !== index));
       if (dest.type === "hand") {
         dispatch(addToHandFromDeck({ card, index }));
@@ -497,13 +554,13 @@ export default function Deck({
           <div onMouseLeave={() => handlePopoverClose()}>
             <MenuItem onClick={() => handleDraw()}>Draw</MenuItem>
             <MenuItem onClick={() => handleMill()}>Mill</MenuItem>
+            <MenuItem onClick={() => handleBanishFromTop()}>Banish</MenuItem>
             <MenuItem onClick={() => handleCardToEx()} disabled={exAreaFull}>
               Card to EX
             </MenuItem>
             <MenuItem onClick={() => handleShuffle()}>Shuffle Deck</MenuItem>
             <MenuItem onClick={() => handleViewDeck()}>View Deck</MenuItem>
             <MenuItem onClick={() => handleRevealDeck()}>Look At Top</MenuItem>
-            <MenuItem onClick={() => handleShowHand()}>Show Hand</MenuItem>
             <MenuItem onClick={() => handleDrawFour()}>Draw Four</MenuItem>
             <MenuItem onClick={() => handleMulligan()}>Mulligan Four</MenuItem>
             <MenuItem onClick={() => handleShuffleHand()}>
@@ -536,10 +593,11 @@ export default function Deck({
           horizontal: "left",
         }}
       >
+        {multi && <MenuItem disabled>{selected.size} cards selected</MenuItem>}
         {!reveal && (
           <MenuItem onClick={() => handleAddFromDeckToHand()}>Hand</MenuItem>
         )}
-        {!reveal && (
+        {!reveal && !multi && (
           <MenuItem onClick={() => handleCardToFieldFromDeck()}>Field</MenuItem>
         )}
         {reveal && (
@@ -691,9 +749,45 @@ export default function Deck({
                   onContextMenu={(e) => {
                     handleCardContextMenu(e, card, idx);
                   }}
+                  onClick={(e) => {
+                    // A click that ends a drag must not toggle selection.
+                    if (deckDrag.movedRef.current) return;
+                    handleCardClick(e, idx);
+                  }}
                   {...deckDrag.dragProps(card, idx)}
+                  className={selected.has(idx) ? "multiSelected" : "none"}
+                  style={{ position: "relative", ...deckDrag.dragStyle }}
                 >
                   <Card ready={ready} name={card} setHovering={setHovering} />
+                  {selected.has(idx) && (
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: -8,
+                        right: -8,
+                        minWidth: 26,
+                        height: 26,
+                        padding: "0 6px",
+                        borderRadius: 13,
+                        background: "#1565c0",
+                        border: "2px solid #ffffff",
+                        color: "#ffffff",
+                        fontFamily: "Noto Serif JP, serif",
+                        fontSize: 16,
+                        fontWeight: 800,
+                        lineHeight: 1,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        zIndex: 1002,
+                        pointerEvents: "none",
+                        textShadow: "0 1px 3px rgba(0,0,0,0.95)",
+                        boxShadow: "0 2px 6px rgba(0,0,0,0.85)",
+                      }}
+                    >
+                      {selectedOrder.indexOf(idx) + 1}
+                    </div>
+                  )}
                 </div>
               ))}
             {reveal &&
