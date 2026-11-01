@@ -7,6 +7,7 @@ import {
   getCemeteryRect,
   getHandRect,
   getDeckRect,
+  getPlayedZoneRect,
 } from "./handDrag";
 import { primaryType } from "../../decks/cardDetails";
 
@@ -32,9 +33,12 @@ export default function FieldDropHints() {
   const cem = getCemeteryRect();
   const hand = getHandRect();
   const deck = getDeckRect();
+  const played = getPlayedZoneRect();
 
   // Outlined drop zone; highlights green when it's the one under the cursor.
-  const zoneStyle = (rect, hovered) => ({
+  // A `label` also renders the zone name with the same typography as the deck's
+  // top/bottom hints.
+  const zoneStyle = (rect, hovered, label) => ({
     position: "fixed",
     left: rect.left,
     top: rect.top,
@@ -48,6 +52,20 @@ export default function FieldDropHints() {
     background: hovered ? "rgba(120, 230, 140, 0.18)" : "transparent",
     boxShadow: hovered ? "0 0 18px rgba(120, 230, 140, 0.6)" : "none",
     transition: "border-color 80ms, background 80ms, box-shadow 80ms",
+    ...(label
+      ? {
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          background: hovered ? "rgba(120, 230, 140, 0.3)" : "rgba(0, 0, 0, 0.6)",
+          color: "#fff",
+          fontFamily: "Noto Serif JP, serif",
+          fontSize: 13,
+          fontWeight: 700,
+          letterSpacing: 0.5,
+          textShadow: "0 1px 3px #000",
+        }
+      : {}),
   });
 
   // The deck pile split into top/bottom halves. `half` is "top" | "bottom"; the
@@ -80,7 +98,14 @@ export default function FieldDropHints() {
 
   return createPortal(
     <div style={{ position: "fixed", inset: 0, pointerEvents: "none", zIndex: 99999 }}>
-      {cem && drag.showCemetery && <div style={zoneStyle(cem, drag.cemetery)} />}
+      {cem && drag.showCemetery && (
+        <div style={zoneStyle(cem, drag.cemetery, "Cemetery")}>
+          {!drag.cemetery && "Cemetery"}
+        </div>
+      )}
+      {played && drag.showPlayed && (
+        <div style={zoneStyle(played, drag.played)} />
+      )}
       {hand && drag.showHand && <div style={zoneStyle(hand, drag.hand)} />}
       {deck && drag.showDeck && (
         <>

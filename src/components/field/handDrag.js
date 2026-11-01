@@ -77,6 +77,20 @@ export const isOverCemetery = (x, y) => {
   return !!r && x >= r.left && x <= r.right && y >= r.top && y <= r.bottom;
 };
 
+// The shared "played" zone above the cemetery, registered by PlayedZone. Both
+// players can drop cards here; the pile itself is synced so both see the same
+// cards.
+let playedZoneEl = null;
+export const registerPlayedZone = (el) => {
+  playedZoneEl = el || null;
+};
+export const getPlayedZoneRect = () =>
+  playedZoneEl ? playedZoneEl.getBoundingClientRect() : null;
+export const isOverPlayedZone = (x, y) => {
+  const r = getPlayedZoneRect();
+  return !!r && x >= r.left && x <= r.right && y >= r.top && y <= r.bottom;
+};
+
 // The player's hand row, registered by Hand via a ref callback. A drop target
 // for returning a field card to hand.
 let handEl = null;

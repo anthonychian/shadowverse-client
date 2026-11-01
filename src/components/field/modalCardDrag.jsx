@@ -5,6 +5,7 @@ import {
   fieldIndexAt,
   isOverHand,
   isOverCemetery,
+  isOverPlayedZone,
   deckHalfAt,
   setDragHover,
 } from "./handDrag";
@@ -14,7 +15,7 @@ import {
 // scrolling modal; pressing and dragging a card hides the modal (the caller sets
 // opacity:0 while `isDragging`) and floats a ghost that follows the cursor, with
 // the shared FieldDropHints overlay highlighting the allowed drop zones (field
-// slots / hand / cemetery). On release the resolved target is handed to
+// slots / hand / cemetery / played). On release the resolved target is handed to
 // `onDrop(card, index, dest)`.
 //
 // We take explicit pointer capture on the card's wrapper so every
@@ -30,10 +31,12 @@ const CLEARED_HOVER = {
   index: -1,
   cemetery: false,
   hand: false,
+  played: false,
   deck: null,
   showCemetery: false,
   showHand: false,
   showDeck: false,
+  showPlayed: false,
 };
 
 // Cursor + native-drag suppression applied to each draggable wrapper. Exposed
@@ -43,7 +46,7 @@ const DRAG_STYLE = { cursor: "grab", touchAction: "none", userSelect: "none" };
 
 /**
  * @param {object} opts
- * @param {{field?: boolean, hand?: boolean, cemetery?: boolean, deck?: boolean}} opts.targets
+ * @param {{field?: boolean, hand?: boolean, cemetery?: boolean, played?: boolean, deck?: boolean}} opts.targets
  *        which drop zones this modal allows. `deck` adds the split top/bottom-of-
  *        deck pile (dest `{type: "deck", half: "top"|"bottom"}`).
  * @param {Array} [opts.field] the player's field array, so occupied slots reject
@@ -77,6 +80,7 @@ export function useModalCardDrag({
 
   const resolveDest = (x, y) => {
     if (targets.hand && isOverHand(x, y)) return { type: "hand" };
+    if (targets.played && isOverPlayedZone(x, y)) return { type: "played" };
     if (targets.cemetery && isOverCemetery(x, y)) return { type: "cemetery" };
     if (targets.deck) {
       const half = deckHalfAt(x, y);
@@ -123,12 +127,14 @@ export function useModalCardDrag({
       index: dest && dest.type === "field" ? dest.index : -1,
       cemetery: !!dest && dest.type === "cemetery",
       hand: !!dest && dest.type === "hand",
+      played: !!dest && dest.type === "played",
       deck: dest && dest.type === "deck" ? dest.half : null,
       evolve,
       equip: typeof equip === "function" ? !!equip(g.card) : !!equip,
       showCemetery: !!targets.cemetery,
       showHand: !!targets.hand,
       showDeck: !!targets.deck,
+      showPlayed: !!targets.played,
     });
   };
 

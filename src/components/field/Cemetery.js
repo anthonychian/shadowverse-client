@@ -27,6 +27,7 @@ import {
   placeToBotOfDeckFromCemetery,
   placeToTopOfDeckFromBanish,
   placeToBotOfDeckFromBanish,
+  playCardToSharedZone,
   setCurrentCard,
   setCurrentCardIndex,
   setViewingCemetery,
@@ -162,6 +163,15 @@ export default function Cemetery({
     setReadyFromCemetery(true);
   };
 
+  const handleCardToPlayedFromCemetery = () => {
+    handleClose();
+    setSelected(new Set());
+    runSelected(selectedOrder, (card, index) =>
+      dispatch(playCardToSharedZone({ card, index, from: "cemetery" })),
+    );
+    handleModalClose();
+  };
+
   const handleCardToBanishFromCemetery = () => {
     handleClose();
     setSelected(new Set());
@@ -212,6 +222,15 @@ export default function Cemetery({
     });
   };
 
+  const handleCardToPlayedFromBanish = () => {
+    handleClose();
+    setSelected(new Set());
+    runSelected(selectedOrder, (card, index) =>
+      dispatch(playCardToSharedZone({ card, index, from: "banish" })),
+    );
+    handleModalClose();
+  };
+
   const handleCardToCemeteryFromBanish = () => {
     handleClose();
     setSelected(new Set());
@@ -250,13 +269,13 @@ export default function Cemetery({
     setSelected(new Set());
   };
 
-  // ---- drag a cemetery/banish card onto the field or back to hand ----
+  // ---- drag a cemetery/banish card onto the field, played zone, hand or deck ----
   // The modal hides while dragging and reappears on release. Which source pile a
   // card came from depends on the active radio (cemetery vs banish).
   const cemeteryDrag = useModalCardDrag({
     // Deck (top/bottom) is only a valid target for cemetery cards — there's no
     // banish→deck action — so it's gated on the active radio.
-    targets: { field: true, hand: true, deck: cemeterySelected },
+    targets: { field: true, hand: true, played: true, deck: cemeterySelected },
     field: reduxField,
     onDrop: (card, index, dest) => {
       if (automated) return;
@@ -264,7 +283,15 @@ export default function Cemetery({
       // so drop any multi-selection rather than leave it pointing at the wrong
       // cards.
       setSelected(new Set());
-      if (dest.type === "deck") {
+      if (dest.type === "played") {
+        dispatch(
+          playCardToSharedZone({
+            card,
+            index,
+            from: cemeterySelected ? "cemetery" : "banish",
+          }),
+        );
+      } else if (dest.type === "deck") {
         if (!cemeterySelected) return;
         if (dest.half === "top")
           dispatch(placeToTopOfDeckFromCemetery({ name: card, index }));
@@ -563,6 +590,9 @@ export default function Cemetery({
             <MenuItem onClick={handleCardToFieldFromCemetery}>Field</MenuItem>
           )}
           {cemeterySelected && !automated && (
+            <MenuItem onClick={handleCardToPlayedFromCemetery}>Play</MenuItem>
+          )}
+          {cemeterySelected && !automated && (
             <MenuItem onClick={handleToTopOfDeckFromCemetery}>
               Top of Deck
             </MenuItem>
@@ -580,6 +610,9 @@ export default function Cemetery({
           )}
           {banishSelected && !automated && !multi && (
             <MenuItem onClick={handleCardToFieldFromBanish}>Field</MenuItem>
+          )}
+          {banishSelected && !automated && (
+            <MenuItem onClick={handleCardToPlayedFromBanish}>Play</MenuItem>
           )}
           {banishSelected && !automated && (
             <MenuItem onClick={handleCardToCemeteryFromBanish}>

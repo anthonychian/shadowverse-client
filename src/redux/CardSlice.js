@@ -183,6 +183,9 @@ export const CardSlice = createSlice({
     enemyCemetery: [],
     banish: [],
     enemyBanish: [],
+    // Shared "played" pile shown above each player's cemetery. Both players can
+    // drop cards here and move them back out; the array itself is synced.
+    played: [],
     enemyEvoDeck: [
       { card: "", status: false },
       { card: "", status: false },
@@ -802,7 +805,7 @@ export const CardSlice = createSlice({
         state.gameLog = [
           ...state.gameLog,
           {
-            text: `[${date}] (Me): (Draw) Added ${card} to hand`,
+            text: `[${date}] (Me): (Draw) Added ${card} to Hand`,
             card,
           },
         ];
@@ -864,7 +867,7 @@ export const CardSlice = createSlice({
             state.gameLog = [
               ...state.gameLog,
               {
-                text: `[${date}] (Me): (Mulligan) Added ${card} to deck`,
+                text: `[${date}] (Me): (Mulligan) ${card} to Deck`,
                 card,
               },
             ];
@@ -1316,7 +1319,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Added ${card} to top of deck from hand`,
+          text: `[${date}] (Me): ${card} to Top of Deck from Hand`,
           card,
         },
       ];
@@ -1325,7 +1328,7 @@ export const CardSlice = createSlice({
         updates: [
           {
             type: "log",
-            data: { text: `Added 1 card to top of deck from hand` },
+            data: { text: `Added 1 card to Top of Deck from Hand` },
           },
           { type: "deckSize", data: state.deck.length },
           { type: "hand", data: state.hand },
@@ -1347,7 +1350,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Added ${card} to bot of deck from hand`,
+          text: `[${date}] (Me): ${card} to Bot of Deck from Hand`,
           card,
         },
       ];
@@ -1357,7 +1360,7 @@ export const CardSlice = createSlice({
         updates: [
           {
             type: "log",
-            data: { text: `Added 1 card to bot of deck from hand` },
+            data: { text: `Added 1 card to Bot of Deck from Hand` },
           },
           { type: "deckSize", data: state.deck.length },
           { type: "hand", data: state.hand },
@@ -1378,7 +1381,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Added ${card} to top of deck from cemetery`,
+          text: `[${date}] (Me): ${card} to Top of Deck from Cemetery`,
           card,
         },
       ];
@@ -1387,7 +1390,7 @@ export const CardSlice = createSlice({
         updates: [
           {
             type: "log",
-            data: { text: `Added ${card} to top of deck from cemetery`, card },
+            data: { text: `${card} to Top of Deck from Cemetery`, card },
           },
           { type: "deckSize", data: state.deck.length },
           { type: "cemetery", data: state.cemetery },
@@ -1409,7 +1412,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Added ${card} to bot of deck from cemetery`,
+          text: `[${date}] (Me): ${card} to Bot of Deck from Cemetery`,
           card,
         },
       ];
@@ -1418,7 +1421,7 @@ export const CardSlice = createSlice({
         updates: [
           {
             type: "log",
-            data: { text: `Added ${card} to bot of deck from cemetery`, card },
+            data: { text: `${card} to Bot of Deck from Cemetery`, card },
           },
           { type: "cemetery", data: state.cemetery },
         ],
@@ -1443,7 +1446,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Added ${card} to top of deck from ${rowName(cardIndex)}`,
+          text: `[${date}] (Me): ${card} to Top of Deck from ${rowName(cardIndex)}`,
           card,
         },
       ];
@@ -1454,7 +1457,7 @@ export const CardSlice = createSlice({
           {
             type: "log",
             data: {
-              text: `Added ${card} to top of deck from ${rowName(cardIndex)}`,
+              text: `${card} to Top of Deck from ${rowName(cardIndex)}`,
               card,
             },
           },
@@ -1482,7 +1485,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Added ${card} to bot of deck from ${rowName(cardIndex)}`,
+          text: `[${date}] (Me): ${card} to Bot of Deck from ${rowName(cardIndex)}`,
           card,
         },
       ];
@@ -1493,7 +1496,7 @@ export const CardSlice = createSlice({
           {
             type: "log",
             data: {
-              text: `Added ${card} to bot of deck from ${rowName(cardIndex)}`,
+              text: `${card} to Bot of Deck from ${rowName(cardIndex)}`,
               card,
             },
           },
@@ -1524,7 +1527,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Added ${card} to ${rowName(newIndex)}`,
+          text: `[${date}] (Me): ${card} to ${rowName(newIndex)}`,
           card,
         },
       ];
@@ -1533,7 +1536,7 @@ export const CardSlice = createSlice({
         updates: [
           {
             type: "log",
-            data: { text: `Added ${card} to ${rowName(newIndex)}`, card },
+            data: { text: `${card} to ${rowName(newIndex)}`, card },
           },
           { type: "field", data: state.field },
           ...(valuesChanged
@@ -1560,7 +1563,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Removed ${card} from ${rowName(prevIndex)}`,
+          text: `[${date}] (Me): ${card} to Cemetery from ${rowName(prevIndex)}`,
           card,
         },
       ];
@@ -1569,7 +1572,7 @@ export const CardSlice = createSlice({
         updates: [
           {
             type: "log",
-            data: { text: `Removed ${card} from ${rowName(prevIndex)}`, card },
+            data: { text: `${card} to Cemetery from ${rowName(prevIndex)}`, card },
           },
           { type: "field", data: state.field },
         ],
@@ -1603,8 +1606,8 @@ export const CardSlice = createSlice({
       const shouldLog = (prevIndex >= 5) !== (newIndex >= 5);
       const moveText =
         prevIndex >= 5
-          ? `Moved ${card} from EX area to field`
-          : `Moved ${card} from field to EX area`;
+          ? `Moved ${card} to Field from EX Area`
+          : `Moved ${card} to EX Area from Field`;
       if (shouldLog) {
         state.gameLog = [
           ...state.gameLog,
@@ -1667,8 +1670,8 @@ export const CardSlice = createSlice({
       const shouldLog = (prevIndex >= 5) !== (newIndex >= 5);
       const moveText =
         prevIndex >= 5
-          ? `Moved ${evoCard} from EX area to field`
-          : `Moved ${evoCard} from field to EX area`;
+          ? `Moved ${evoCard} to Field from EX Area`
+          : `Moved ${evoCard} to EX Area from Field`;
       if (shouldLog) {
         state.gameLog = [
           ...state.gameLog,
@@ -1773,7 +1776,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Added ${card} to ${rowName(newIndex)} from deck`,
+          text: `[${date}] (Me): ${card} to ${rowName(newIndex)} from Deck`,
           card,
         },
       ];
@@ -1867,7 +1870,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Added ${card} to cemetery from deck`,
+          text: `[${date}] (Me): ${card} to Cemetery from Deck`,
           card,
         },
       ];
@@ -1877,7 +1880,7 @@ export const CardSlice = createSlice({
         updates: [
           {
             type: "log",
-            data: { text: `Added ${card} to cemetery from deck`, card },
+            data: { text: `${card} to Cemetery from Deck`, card },
           },
           { type: "cemetery", data: state.cemetery },
           { type: "deckSize", data: state.deck.length },
@@ -2037,7 +2040,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Added ${card} to hand from deck`,
+          text: `[${date}] (Me): Added ${card} to Hand from Deck`,
           card,
         },
       ];
@@ -2047,7 +2050,7 @@ export const CardSlice = createSlice({
         updates: [
           {
             type: "log",
-            data: { text: `Added ${card} to hand from deck`, card },
+            data: { text: `Added ${card} to Hand from Deck`, card },
           },
           { type: "hand", data: state.hand },
           { type: "deckSize", data: state.deck.length },
@@ -2070,7 +2073,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Added ${card} to hand from deck`,
+          text: `[${date}] (Me): Added ${card} to Hand from Deck`,
           card,
         },
       ];
@@ -2080,7 +2083,7 @@ export const CardSlice = createSlice({
         updates: [
           {
             type: "log",
-            data: { text: `Added 1 card to hand from deck`, card: "Card" },
+            data: { text: `Added 1 card to Hand from Deck`, card: "Card" },
           },
           { type: "hand", data: state.hand },
           { type: "deckSize", data: state.deck.length },
@@ -2107,7 +2110,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Added ${card} to hand from ${rowName(cardIndex)}`,
+          text: `[${date}] (Me): Added ${card} to Hand from ${rowName(cardIndex)}`,
           card,
         },
       ];
@@ -2118,7 +2121,7 @@ export const CardSlice = createSlice({
           {
             type: "log",
             data: {
-              text: `Added ${card} to hand from ${rowName(cardIndex)}`,
+              text: `Added ${card} to Hand from ${rowName(cardIndex)}`,
               card,
             },
           },
@@ -2140,7 +2143,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Discarded ${card} from hand`,
+          text: `[${date}] (Me): Discarded ${card} from Hand`,
           card,
         },
       ];
@@ -2152,7 +2155,7 @@ export const CardSlice = createSlice({
           {
             type: "log",
             data: {
-              text: `Discarded ${card} from hand`,
+              text: `Discarded ${card} from Hand`,
               card,
             },
           },
@@ -2174,7 +2177,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Banished ${card} from hand`,
+          text: `[${date}] (Me): Banished ${card} from Hand`,
           card,
         },
       ];
@@ -2186,7 +2189,7 @@ export const CardSlice = createSlice({
           {
             type: "log",
             data: {
-              text: `Banished ${card} from hand`,
+              text: `Banished ${card} from Hand`,
               card,
             },
           },
@@ -2219,7 +2222,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Added ${card} to ${rowName(newIndex)} from hand`,
+          text: `[${date}] (Me): ${card} to ${newIndex >= 5 ? "EX area" : "Field"} from Hand`,
           card,
         },
       ];
@@ -2230,7 +2233,7 @@ export const CardSlice = createSlice({
           {
             type: "log",
             data: {
-              text: `Added ${card} to ${rowName(newIndex)} from hand`,
+              text: `${card} to ${newIndex >= 5 ? "EX area" : "Field"} from Hand`,
               card,
             },
           },
@@ -2259,7 +2262,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Added ${card} to hand from cemetery`,
+          text: `[${date}] (Me): ${card} to Hand from Cemetery`,
           card,
         },
       ];
@@ -2269,7 +2272,7 @@ export const CardSlice = createSlice({
         updates: [
           {
             type: "log",
-            data: { text: `Added ${card} to hand from cemetery`, card },
+            data: { text: `${card} to Hand from Cemetery`, card },
           },
           { type: "cemetery", data: state.cemetery },
           { type: "hand", data: state.hand },
@@ -2290,7 +2293,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Banished ${card} from cemetery`,
+          text: `[${date}] (Me): Banished ${card} from Cemetery`,
           card,
         },
       ];
@@ -2300,7 +2303,7 @@ export const CardSlice = createSlice({
         updates: [
           {
             type: "log",
-            data: { text: `Banished ${card} from cemetery`, card },
+            data: { text: `Banished ${card} from Cemetery`, card },
           },
           { type: "cemetery", data: state.cemetery },
           { type: "banish", data: state.banish },
@@ -2321,7 +2324,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Added ${card} to hand from banished`,
+          text: `[${date}] (Me): Added ${card} to hand from Banished`,
           card,
         },
       ];
@@ -2331,7 +2334,7 @@ export const CardSlice = createSlice({
         updates: [
           {
             type: "log",
-            data: { text: `Added ${card} to hand from banished`, card },
+            data: { text: `Added ${card} to hand from Banished`, card },
           },
           { type: "hand", data: state.hand },
           { type: "banish", data: state.banish },
@@ -2352,7 +2355,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Added ${card} to cemetery from banished`,
+          text: `[${date}] (Me): Added ${card} to Cemetery from Banished`,
           card,
         },
       ];
@@ -2362,7 +2365,7 @@ export const CardSlice = createSlice({
         updates: [
           {
             type: "log",
-            data: { text: `Added ${card} to cemetery from banished`, card },
+            data: { text: `Added ${card} to Cemetery from Banished`, card },
           },
           { type: "cemetery", data: state.cemetery },
           { type: "banish", data: state.banish },
@@ -2383,7 +2386,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Added ${card} to top of deck from banished`,
+          text: `[${date}] (Me): ${card} to Top of Deck from Banished`,
           card,
         },
       ];
@@ -2392,7 +2395,7 @@ export const CardSlice = createSlice({
         updates: [
           {
             type: "log",
-            data: { text: `Added ${card} to top of deck from banished`, card },
+            data: { text: `${card} to Top of Deck from Banished`, card },
           },
           { type: "deckSize", data: state.deck.length },
           { type: "banish", data: state.banish },
@@ -2413,7 +2416,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Added ${card} to bot of deck from banished`,
+          text: `[${date}] (Me): ${card} to Bot of Deck from Banished`,
           card,
         },
       ];
@@ -2422,7 +2425,7 @@ export const CardSlice = createSlice({
         updates: [
           {
             type: "log",
-            data: { text: `Added ${card} to bot of deck from banished`, card },
+            data: { text: `${card} to Bot of Deck from Banished`, card },
           },
           { type: "deckSize", data: state.deck.length },
           { type: "banish", data: state.banish },
@@ -2449,7 +2452,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Added ${card} to cemetery from ${rowName(cardIndex)}`,
+          text: `[${date}] (Me): ${card} to Cemetery from ${rowName(cardIndex)}`,
           card,
         },
       ];
@@ -2459,7 +2462,7 @@ export const CardSlice = createSlice({
           {
             type: "log",
             data: {
-              text: `Added ${card} to cemetery from ${rowName(cardIndex)}`,
+              text: `${card} to Cemetery from ${rowName(cardIndex)}`,
               card,
             },
           },
@@ -2486,7 +2489,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Shuffled cards in hand`,
+          text: `[${date}] (Me): Shuffled cards in Hand`,
         },
       ];
       socket.emit("send msg", {
@@ -2494,7 +2497,7 @@ export const CardSlice = createSlice({
         updates: [
           {
             type: "log",
-            data: { text: `Shuffled cards in hand` },
+            data: { text: `Shuffled cards in Hand` },
           },
           { type: "hand", data: state.hand },
         ],
@@ -2524,7 +2527,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Added ${card} to ${rowName(newIndex)} from deck`,
+          text: `[${date}] (Me): ${card} to ${rowName(newIndex)} from Deck`,
           card,
         },
       ];
@@ -2534,7 +2537,10 @@ export const CardSlice = createSlice({
         updates: [
           {
             type: "log",
-            data: { text: `Shuffled cards in hand` },
+            data: { 
+              text: `${card} to ${rowName(newIndex)} from Deck`, 
+              card 
+            },
           },
           { type: "field", data: state.field },
           { type: "deckSize", data: state.deck.length },
@@ -2545,6 +2551,7 @@ export const CardSlice = createSlice({
         room: state.room,
       });
     },
+
     placeToFieldFromCemetery: (state, action) => {
       const card = action.payload.card;
       const cardIndex = action.payload.indexInHand;
@@ -2569,7 +2576,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Added ${card} to ${rowName(newIndex)} from cemetery`,
+          text: `[${date}] (Me): ${card} to ${rowName(newIndex)} from Cemetery`,
           card,
         },
       ];
@@ -2580,7 +2587,7 @@ export const CardSlice = createSlice({
           {
             type: "log",
             data: {
-              text: `Added ${card} to ${rowName(newIndex)} from cemetery`,
+              text: `${card} to ${rowName(newIndex)} from Cemetery`,
               card,
             },
           },
@@ -2617,7 +2624,7 @@ export const CardSlice = createSlice({
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): Added ${card} to ${rowName(newIndex)} from banished`,
+          text: `[${date}] (Me): ${card} to ${rowName(newIndex)} from Banished`,
           card,
         },
       ];
@@ -2628,7 +2635,7 @@ export const CardSlice = createSlice({
           {
             type: "log",
             data: {
-              text: `Added ${card} to ${rowName(newIndex)} from banished`,
+              text: `${card} to ${rowName(newIndex)} from Banished`,
               card,
             },
           },
@@ -2673,6 +2680,293 @@ export const CardSlice = createSlice({
             data: { text: `Banished ${card} from ${rowName(cardIndex)}`, card },
           },
           { type: "field", data: state.field },
+          { type: "banish", data: state.banish },
+        ],
+        room: state.room,
+      });
+    },
+    setPlayed: (state, action) => {
+      state.played = Array.isArray(action.payload)
+        ? action.payload.slice(0, 1)
+        : [];
+    },
+    playCardToSharedZone: (state, action) => {
+      const { card, index, from } = action.payload;
+      if (!card) return;
+      const date = new Date().toLocaleTimeString("it-IT", {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+      if (from === "hand") {
+        state.hand = state.hand.filter((_, i) => i !== index);
+      } else if (from === "field") {
+        state.field = [
+          ...state.field.slice(0, index),
+          0,
+          ...state.field.slice(index + 1),
+        ];
+      } else if (from === "cemetery") {
+        state.cemetery = state.cemetery.filter((_, i) => i !== index);
+      } else if (from === "banish") {
+        state.banish = state.banish.filter((_, i) => i !== index);
+      } else if (from === "deck") {
+        state.deck = state.deck.filter((_, i) => i !== index);
+      }
+
+      // Single-slot zone: if a card is already there, it goes to the cemetery
+      // so the new card can take its place.
+      const previous = state.played[0];
+      if (previous) state.cemetery = [previous, ...state.cemetery];
+      state.played = [card];
+
+      if (previous) {
+        state.gameLog = [
+          ...state.gameLog,
+          {
+            text: `[${date}] (Me): ${previous} to Cemetery from Played`,
+            card: previous,
+          },
+        ];
+      }
+      state.gameLog = [
+        ...state.gameLog,
+        { text: `[${date}] (Me): Played ${card}`, card },
+      ];
+
+      const updates = [
+        { type: "log", data: { text: `Played ${card}`, card } },
+        { type: "played", data: state.played },
+      ];
+      if (previous) {
+        updates.push({
+          type: "log",
+          data: {
+            text: `${previous} to Cemetery from Played`,
+            card: previous,
+          },
+        });
+        updates.push({ type: "cemetery", data: state.cemetery });
+      }
+      if (from === "hand") updates.push({ type: "hand", data: state.hand });
+      else if (from === "field")
+        updates.push({ type: "field", data: state.field });
+      else if (from === "cemetery" && !previous)
+        updates.push({ type: "cemetery", data: state.cemetery });
+      else if (from === "banish")
+        updates.push({ type: "banish", data: state.banish });
+      else if (from === "deck")
+        updates.push({ type: "deckSize", data: state.deck.length });
+
+      socket.emit("send msg", {
+        type: "playCardToSharedZone",
+        updates,
+        room: state.room,
+      });
+    },
+    movePlayedToHand: (state, action) => {
+      const card = state.played[action.payload.index];
+      if (!card) return;
+      const date = new Date().toLocaleTimeString("it-IT", {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+      state.played = state.played.filter((_, i) => i !== action.payload.index);
+      state.hand = [...state.hand, card];
+
+      state.gameLog = [
+        ...state.gameLog,
+        {
+          text: `[${date}] (Me): ${card} to Hand from Played`,
+          card,
+        },
+      ];
+
+      socket.emit("send msg", {
+        type: "movePlayedToHand",
+        updates: [
+          {
+            type: "log",
+            data: { text: `${card} to Hand from Played`, card },
+          },
+          { type: "played", data: state.played },
+          { type: "hand", data: state.hand },
+        ],
+        room: state.room,
+      });
+    },
+    movePlayedToField: (state, action) => {
+      const card = state.played[action.payload.indexInPlayed];
+      const newIndex = action.payload.index;
+      if (!card || newIndex === undefined) return;
+      const date = new Date().toLocaleTimeString("it-IT", {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+      state.played = state.played.filter(
+        (_, i) => i !== action.payload.indexInPlayed,
+      );
+      state.field = [
+        ...state.field.slice(0, newIndex),
+        card,
+        ...state.field.slice(newIndex + 1),
+      ];
+      const valuesChanged = seedFollowerStats(state, card, newIndex);
+
+      state.gameLog = [
+        ...state.gameLog,
+        {
+          text: `[${date}] (Me): ${card} to ${rowName(newIndex)} from Played`,
+          card,
+        },
+      ];
+
+      socket.emit("send msg", {
+        type: "movePlayedToField",
+        updates: [
+          {
+            type: "log",
+            data: {
+              text: `${card} to ${rowName(newIndex)} from Played`,
+              card,
+            },
+          },
+          { type: "played", data: state.played },
+          { type: "field", data: state.field },
+          ...(valuesChanged
+            ? [{ type: "values", data: state.customValues }]
+            : []),
+        ],
+        room: state.room,
+      });
+    },
+    movePlayedToTopOfDeck: (state, action) => {
+      const card = state.played[action.payload.index];
+      if (!card) return;
+      const date = new Date().toLocaleTimeString("it-IT", {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+      state.played = state.played.filter((_, i) => i !== action.payload.index);
+      state.deck = [card, ...state.deck];
+
+      state.gameLog = [
+        ...state.gameLog,
+        {
+          text: `[${date}] (Me): ${card} to Top of Deck from Played`,
+          card,
+        },
+      ];
+
+      socket.emit("send msg", {
+        type: "movePlayedToTopOfDeck",
+        updates: [
+          {
+            type: "log",
+            data: {
+              text: `${card} to Top of Deck from Played`,
+              card,
+            },
+          },
+          { type: "played", data: state.played },
+          { type: "deckSize", data: state.deck.length },
+        ],
+        room: state.room,
+      });
+    },
+    movePlayedToBotOfDeck: (state, action) => {
+      const card = state.played[action.payload.index];
+      if (!card) return;
+      const date = new Date().toLocaleTimeString("it-IT", {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+      state.played = state.played.filter((_, i) => i !== action.payload.index);
+      state.deck = [...state.deck, card];
+
+      state.gameLog = [
+        ...state.gameLog,
+        {
+          text: `[${date}] (Me): ${card} to Bot of Deck from Played`,
+          card,
+        },
+      ];
+
+      socket.emit("send msg", {
+        type: "movePlayedToBotOfDeck",
+        updates: [
+          {
+            type: "log",
+            data: {
+              text: `${card} to Bot of Deck from Played`,
+              card,
+            },
+          },
+          { type: "played", data: state.played },
+          { type: "deckSize", data: state.deck.length },
+        ],
+        room: state.room,
+      });
+    },
+    movePlayedToCemetery: (state, action) => {
+      const card = state.played[action.payload.index];
+      if (!card) return;
+      const date = new Date().toLocaleTimeString("it-IT", {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+      state.played = state.played.filter((_, i) => i !== action.payload.index);
+      state.cemetery = [card, ...state.cemetery];
+
+      state.gameLog = [
+        ...state.gameLog,
+        {
+          text: `[${date}] (Me): ${card} to Cemetery from Played`,
+          card,
+        },
+      ];
+
+      socket.emit("send msg", {
+        type: "movePlayedToCemetery",
+        updates: [
+          {
+            type: "log",
+            data: {
+              text: `${card} to Cemetery from Played`,
+              card,
+            },
+          },
+          { type: "played", data: state.played },
+          { type: "cemetery", data: state.cemetery },
+        ],
+        room: state.room,
+      });
+    },
+    movePlayedToBanish: (state, action) => {
+      const card = state.played[action.payload.index];
+      if (!card) return;
+      const date = new Date().toLocaleTimeString("it-IT", {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+      state.played = state.played.filter((_, i) => i !== action.payload.index);
+      state.banish = [card, ...state.banish];
+
+      state.gameLog = [
+        ...state.gameLog,
+        {
+          text: `[${date}] (Me): Banished ${card} from Played`,
+          card,
+        },
+      ];
+
+      socket.emit("send msg", {
+        type: "movePlayedToBanish",
+        updates: [
+          {
+            type: "log",
+            data: { text: `Banished ${card} from Played`, card },
+          },
+          { type: "played", data: state.played },
           { type: "banish", data: state.banish },
         ],
         room: state.room,
@@ -3255,6 +3549,8 @@ export const CardSlice = createSlice({
       }
       if (s.cemetery !== undefined) state.cemetery = s.cemetery;
       if (s.cemeteryInstanceIds !== undefined) state.cemeteryInstanceIds = s.cemeteryInstanceIds;
+      if (s.played !== undefined)
+        state.played = Array.isArray(s.played) ? s.played.slice(0, 1) : [];
       if (s.evoDeck !== undefined) state.evoDeck = s.evoDeck;
       if (s.deck !== undefined) state.deck = s.deck;
       if (s.playPoints !== undefined) state.playPoints = s.playPoints;
@@ -3306,6 +3602,8 @@ export const CardSlice = createSlice({
       if (s.cardback !== undefined) state.cardback = s.cardback;
       if (s.cemetery !== undefined) state.cemetery = s.cemetery;
       if (s.banish !== undefined) state.banish = s.banish;
+      if (s.played !== undefined)
+        state.played = Array.isArray(s.played) ? s.played.slice(0, 1) : [];
       if (s.evoDeck !== undefined) state.evoDeck = s.evoDeck;
       if (s.deck !== undefined) state.deck = s.deck;
       if (s.engagedField !== undefined) state.engagedField = s.engagedField;
@@ -3441,6 +3739,7 @@ export const CardSlice = createSlice({
       state.enemyBanish = [];
       state.cemetery = [];
       state.enemyCemetery = [];
+      state.played = [];
       state.enemyArrow = { idx: -1, show: false };
       state.enemyEvoDeck = [
         { card: "", status: false },
@@ -3554,6 +3853,7 @@ export const CardSlice = createSlice({
       state.enemyBanish = [];
       state.cemetery = [];
       state.enemyCemetery = [];
+      state.played = [];
       state.enemyArrow = { idx: -1, show: false };
       state.enemyEvoDeck = [
         { card: "", status: false },
@@ -3701,6 +4001,7 @@ export const CardSlice = createSlice({
       state.cemetery = [];
       state.cemeteryInstanceIds = [];
       state.banish = [];
+      state.played = [];
       state.currentCard = "";
       state.currentEvo = "";
       state.currentCardIndex = -1;
@@ -3779,6 +4080,14 @@ export const {
   placeToBanishFromHand,
   placeTokenOnField,
   placeToBanishFromField,
+  setPlayed,
+  playCardToSharedZone,
+  movePlayedToHand,
+  movePlayedToField,
+  movePlayedToTopOfDeck,
+  movePlayedToBotOfDeck,
+  movePlayedToCemetery,
+  movePlayedToBanish,
   addToTopOfDeckFromDeck,
   addToBotOfDeckFromDeck,
   addToCemeteryFromDeck,

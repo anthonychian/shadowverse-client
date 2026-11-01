@@ -29,6 +29,7 @@ import {
   setEnemyKeyword,
   setEnemyIdentity,
   restoreOwnState,
+  setPlayed,
   setSelfResyncing,
 } from "../../redux/CardSlice";
 
@@ -49,6 +50,7 @@ const applyEnemyState = (dispatch, s) => {
   if (s.evoDeck !== undefined) dispatch(setEnemyEvoDeck(s.evoDeck));
   if (s.deck !== undefined) dispatch(setEnemyDeckSize(s.deck.length));
   if (s.cemetery !== undefined) dispatch(setEnemyCemetery(s.cemetery));
+  if (s.played !== undefined) dispatch(setPlayed(s.played));
   if (s.cardback !== undefined) dispatch(setEnemyCardBack(s.cardback));
   if (s.currentCard !== undefined) dispatch(setEnemyCard(s.currentCard));
   if (s.banish !== undefined) dispatch(setEnemyBanish(s.banish));

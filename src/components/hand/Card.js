@@ -12,12 +12,14 @@ import {
   placeToCemeteryFromHand,
   placeToTopOfDeckFromHand,
   placeToBotOfDeckFromHand,
+  playCardToSharedZone,
 } from "../../redux/CardSlice";
 import { useDispatch, useSelector } from "react-redux";
 import {
   fieldIndexAt,
   isOverCemetery,
   isOverHand,
+  isOverPlayedZone,
   deckHalfAt,
   fieldSlotCenter,
   setDragHover,
@@ -219,11 +221,13 @@ export default function Card({
       index: -1,
       cemetery: false,
       hand: false,
+      played: false,
       deck: null,
       equip: isEquipmentDrag,
       showCemetery: fieldCemeteryTarget,
       showHand: fieldExtraTargets,
       showDeck: fieldExtraTargets,
+      showPlayed: fieldExtraTargets,
     });
   };
   const handleFieldDrag = (_event, info) => {
@@ -238,11 +242,13 @@ export default function Card({
       index: fieldIndexAt(x, y),
       cemetery: fieldCemeteryTarget && isOverCemetery(x, y),
       hand: fieldExtraTargets && isOverHand(x, y),
+      played: fieldExtraTargets && isOverPlayedZone(x, y),
       deck: fieldExtraTargets ? deckHalfAt(x, y) : null,
       equip: isEquipmentDrag,
       showCemetery: fieldExtraTargets,
       showHand: fieldExtraTargets,
       showDeck: fieldExtraTargets,
+      showPlayed: fieldExtraTargets,
     });
   };
   const handleFieldDragEnd = (_event, info) => {
@@ -251,10 +257,12 @@ export default function Card({
       index: -1,
       cemetery: false,
       hand: false,
+      played: false,
       deck: null,
       showCemetery: false,
       showHand: false,
       showDeck: false,
+      showPlayed: false,
     });
     if (!onFieldDrop) return;
     // See handleFieldDrag: convert board-local point back to viewport coords.
@@ -263,7 +271,8 @@ export default function Card({
     const y = info.point.y * s;
     const deckHalf = fieldExtraTargets ? deckHalfAt(x, y) : null;
     let dest;
-    if (fieldCemeteryTarget && isOverCemetery(x, y)) dest = { type: "cemetery" };
+    if (fieldExtraTargets && isOverPlayedZone(x, y)) dest = { type: "played" };
+    else if (fieldCemeteryTarget && isOverCemetery(x, y)) dest = { type: "cemetery" };
     else if (fieldExtraTargets && isOverHand(x, y)) dest = { type: "hand" };
     else if (deckHalf) dest = { type: "deck", half: deckHalf };
     else dest = { type: "field", index: fieldIndexAt(x, y) };
@@ -282,10 +291,12 @@ export default function Card({
       index: -1,
       cemetery: false,
       hand: false,
+      played: false,
       deck: null,
       showCemetery: true,
       showHand: false,
       showDeck: true,
+      showPlayed: true,
     });
   };
   const handleCardDrag = (_event, info) => {
@@ -300,10 +311,12 @@ export default function Card({
       index: fieldIndexAt(x, y),
       cemetery: isOverCemetery(x, y),
       hand: false,
+      played: isOverPlayedZone(x, y),
       deck: deckHalfAt(x, y),
       showCemetery: true,
       showHand: false,
       showDeck: true,
+      showPlayed: true,
     });
   };
   const handleCardDragEnd = (_event, info) => {
@@ -312,10 +325,12 @@ export default function Card({
       index: -1,
       cemetery: false,
       hand: false,
+      played: false,
       deck: null,
       showCemetery: false,
       showHand: false,
       showDeck: false,
+      showPlayed: false,
     });
     if (onCardDragEnd) onCardDragEnd();
     // See handleCardDrag: convert hand-local point back to viewport coords.
@@ -329,6 +344,16 @@ export default function Card({
     }
     if (deckHalf === "bottom") {
       dispatch(placeToBotOfDeckFromHand({ name: name, index: inHandIndex }));
+      return;
+    }
+    if (isOverPlayedZone(x, y)) {
+      dispatch(
+        playCardToSharedZone({
+          card: name,
+          index: inHandIndex,
+          from: "hand",
+        })
+      );
       return;
     }
     if (isOverCemetery(x, y)) {

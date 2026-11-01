@@ -14,6 +14,9 @@ import {
   placeToFieldFromBanish,
   placeTokenOnField,
   placeToBanishFromField,
+  playCardToSharedZone,
+  movePlayedToField,
+  setPlayed,
   removeTokenOnField,
   evolveCardOnField,
   advancedToField,
@@ -110,6 +113,7 @@ import { Menu, MenuItem, Modal, Box, Typography } from "@mui/material";
 import Card from "../hand/Card";
 import Deck from "./Deck";
 import Cemetery from "./Cemetery";
+import PlayedZone from "./PlayedZone";
 import EnemyCemetery from "./EnemyCemetery";
 // import cardback from "../../assets/cardbacks/default.png";
 import EvoDeck from "./EvoDeck";
@@ -345,6 +349,7 @@ export default function Field({
   const [readyFromDeck, setReadyFromDeck] = useState(false);
   const [readyFromCemetery, setReadyFromCemetery] = useState(false);
   const [readyFromBanish, setReadyFromBanish] = useState(false);
+  const [readyFromPlayed, setReadyFromPlayed] = useState(false);
   const [readyToEvo, setReadyToEvo] = useState(false);
   const [readyToAdvanced, setReadyToAdvanced] = useState(false);
   const [readyToFeed, setReadyToFeed] = useState(false);
@@ -489,6 +494,9 @@ export default function Field({
           break;
         case "cemetery":
           dispatch(setEnemyCemetery(update.data));
+          break;
+        case "played":
+          dispatch(setPlayed(update.data));
           break;
         case "evoDeck":
           dispatch(setEnemyEvoDeck(update.data));
@@ -715,6 +723,8 @@ export default function Field({
                 dispatch(setEnemyDeckSize(fullState.enemyDeckSize));
               if (fullState.enemyCemetery !== undefined)
                 dispatch(setEnemyCemetery(fullState.enemyCemetery));
+              if (fullState.played !== undefined)
+                dispatch(setPlayed(fullState.played));
               if (fullState.enemyCardBack !== undefined)
                 dispatch(setEnemyCardBack(fullState.enemyCardBack));
               if (fullState.enemyCounter !== undefined)
@@ -1127,6 +1137,16 @@ export default function Field({
         );
         playedCard = name;
       }
+      if (readyFromPlayed) {
+        setReadyFromPlayed(false);
+        dispatch(
+          movePlayedToField({
+            indexInPlayed: reduxCurrentCardIndex,
+            index: indexClicked,
+          }),
+        );
+        playedCard = name;
+      }
       // Reveal a card played to the field (top row only; EX area 5-9 is silent).
       if (playedCard !== null && indexClicked < 5)
         triggerCardReveal(
@@ -1204,6 +1224,7 @@ export default function Field({
       setReadyToFeed(false);
       setReadyFromCemetery(false);
       setReadyFromBanish(false);
+      setReadyFromPlayed(false);
       setReadyToPlaceOnFieldFromHand(false);
       setReadyToMoveOnField(false);
       setReadyToMoveEvoOnField(false);
@@ -1220,6 +1241,7 @@ export default function Field({
     setReadyToFeed(false);
     setReadyFromCemetery(false);
     setReadyFromBanish(false);
+    setReadyFromPlayed(false);
     setReadyToPlaceOnFieldFromHand(false);
     setReadyToMoveOnField(false);
     setReadyToMoveEvoOnField(false);
@@ -1349,6 +1371,23 @@ export default function Field({
       placeToCemeteryFromField({
         card: name,
         index: index,
+      }),
+    );
+    dispatch(clearEquipmentAtIndex(index));
+    dispatch(clearValuesAtIndex(index));
+    dispatch(clearEngagedAtIndex(index));
+    dispatch(clearCountersAtIndex(index));
+    dispatch(clearStatusAtIndex(index));
+  };
+  const handleCardToPlayedZone = () => {
+    handleClose();
+    if (reduxEvoField[index] !== 0)
+      dispatch(backToEvolveDeck({ card: reduxEvoField[index], index }));
+    dispatch(
+      playCardToSharedZone({
+        card: name,
+        index: index,
+        from: "field",
       }),
     );
     dispatch(clearEquipmentAtIndex(index));
@@ -1514,6 +1553,20 @@ export default function Field({
       returnEvoToDeckIfEvolved(fromIndex);
       clearFieldSlot(fromIndex);
       triggerHandReveal(baseCard, reduxCurrentRoom);
+      return;
+    }
+    if (dest.type === "played") {
+      if (!canReturn) return;
+      if (isEquipAttached) dispatch(clearEquipmentAtIndex(fromIndex));
+      dispatch(
+        playCardToSharedZone({
+          card: baseCard,
+          index: fromIndex,
+          from: "field",
+        }),
+      );
+      returnEvoToDeckIfEvolved(fromIndex);
+      clearFieldSlot(fromIndex);
       return;
     }
     if (dest.type === "deck") {
@@ -1921,6 +1974,9 @@ export default function Field({
         )}
         {isToken(name) && (
           <MenuItem onClick={handleDuplicateToken}>Duplicate</MenuItem>
+        )}
+        {!isToken(name) && !isAdvanced(name) && (
+          <MenuItem onClick={handleCardToPlayedZone}>Play</MenuItem>
         )}
         {!isToken(name) && !isAdvanced(name) && (
           <MenuItem onClick={handleCardToCemetery}>Cemetery</MenuItem>
@@ -2639,8 +2695,8 @@ export default function Field({
                       handleEvoContextMenu(e, idx, reduxEvoField[idx]);
                   }}
                   key={`player2-${idx}`}
-                  style={fieldCombatStyle(idx, false)}
-                  className={"cardStyle"}
+                  style={fieldCombatStyle(idx, false) }
+                  className={"cardStyle"} 
                 >
                   {reduxField[idx] !== 0 && reduxEvoField[idx] === 0 && (
                     <Card
@@ -2701,7 +2757,6 @@ export default function Field({
         {/* Player Deck and Cementery */}
         <div
           style={{
-            height: "35vh",
             minHeight: "330px",
             width: "140px",
             flexShrink: 0,
@@ -2714,9 +2769,17 @@ export default function Field({
             // backgroundColor: "rgba(0, 0, 0, 0.60)",
             alignItems: "center",
             justifyContent: "space-evenly",
+            gap: "8px",
+            padding: "6px 0",
             // cursor: `url(${img}) 55 55, auto`,
           }}
         >
+          <PlayedZone
+            setReadyFromPlayed={setReadyFromPlayed}
+            setReady={setReady}
+            setHovering={setHovering}
+            ready={ready}
+          />
           <Cemetery
             setReadyFromCemetery={setReadyFromCemetery}
             setReadyFromBanish={setReadyFromBanish}
