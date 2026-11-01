@@ -4,6 +4,7 @@
 import icons from "../../decks/icons.json";
 import iconData from "../../decks/iconData.json";
 import { TEXTURES_BASE } from "../../decks/assetBase";
+import { optimizeIcon } from "../../decks/vercelImage";
 import idolmaster from "../../assets/logo/idolmaster.png";
 import umamusume from "../../assets/logo/umamusume.png";
 import vanguard from "../../assets/logo/vanguard.png";
@@ -25,7 +26,7 @@ export const iconUrl = (token) => {
   if (iconData[token]) return iconData[token];
   if (iconData[lower]) return iconData[lower];
   const file = icons[token] || icons[lower];
-  return file ? TEXTURES_BASE + file : null;
+  return file ? optimizeIcon(TEXTURES_BASE + file) : null;
 };
 
 const CLASS_TOKEN = {

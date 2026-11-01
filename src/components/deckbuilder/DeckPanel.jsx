@@ -4,9 +4,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
-import { cardImage, toThumb } from "../../decks/getCards";
-import { ART_VERSION } from "../../decks/artVersion";
-import { TEXTURES_BASE } from "../../decks/assetBase";
+import { cardImage, cardImageSrc, cardNoImage, cardNoThumb, toThumb } from "../../decks/getCards";
 import { getCost, primaryType } from "../../decks/cardDetails";
 import { COLORS, FONT, CLASS_ORDER, DECK_CLASS_ORDER, CLASS_LABELS, CLASS_COLORS, displayName } from "./theme";
 import { classIcon } from "./icons";
@@ -32,14 +30,14 @@ const DeckCard = ({ name, count, copyMax, artNo, onInspect, onAdd, onRemove, rea
     }}
   >
     <img
-      src={artNo ? `${TEXTURES_BASE}thumbs/${artNo}.png?v=${ART_VERSION}` : toThumb(cardImage(name))}
+      src={artNo ? cardNoThumb(artNo) : toThumb(cardImage(name))}
       loading="lazy" decoding="async"
       onError={(e) => {
         // Fall back to the full chosen-art image, then the default art.
         if (artNo && e.currentTarget.src.indexOf("/thumbs/") !== -1) {
-          e.currentTarget.src = `${TEXTURES_BASE}${artNo}.png?v=${ART_VERSION}`;
+          e.currentTarget.src = cardNoImage(artNo);
         } else if (e.currentTarget.src.indexOf("/textures/") !== -1 && artNo) {
-          e.currentTarget.src = cardImage(name);
+          e.currentTarget.src = cardImageSrc(name);
         }
       }}
       alt={name}
@@ -101,14 +99,14 @@ const DeckRow = ({ name, count, artNo, onInspect, onAdd, onRemove, addDisabled }
     onMouseLeave={(e) => (e.currentTarget.style.background = COLORS.row)}
   >
     <img
-      src={artNo ? `${TEXTURES_BASE}thumbs/${artNo}.png?v=${ART_VERSION}` : toThumb(cardImage(name))}
+      src={artNo ? cardNoThumb(artNo) : toThumb(cardImage(name))}
       loading="lazy" decoding="async"
       onError={(e) => {
         // Fall back to the full chosen-art image, then the default art.
         if (artNo && e.currentTarget.src.indexOf("/thumbs/") !== -1) {
-          e.currentTarget.src = `${TEXTURES_BASE}${artNo}.png?v=${ART_VERSION}`;
+          e.currentTarget.src = cardNoImage(artNo);
         } else if (e.currentTarget.src.indexOf("/textures/") !== -1 && artNo) {
-          e.currentTarget.src = cardImage(name);
+          e.currentTarget.src = cardImageSrc(name);
         }
       }}
       alt={name} width={34} height={48} style={{ borderRadius: 3, flexShrink: 0 }}
@@ -149,13 +147,13 @@ const RowBtn = ({ children, onClick, disabled }) => (
 // DeckCard: a chosen printing's thumb -> its full art -> the card's default art.
 const CardThumb = ({ name, artNo, height = 22 }) => (
   <img
-    src={artNo ? `${TEXTURES_BASE}thumbs/${artNo}.png?v=${ART_VERSION}` : toThumb(cardImage(name))}
+    src={artNo ? cardNoThumb(artNo) : toThumb(cardImage(name))}
     onError={(e) => {
       const el = e.currentTarget;
       if (artNo && el.src.indexOf("/thumbs/") !== -1) {
-        el.src = `${TEXTURES_BASE}${artNo}.png?v=${ART_VERSION}`;
+        el.src = cardNoImage(artNo);
       } else if (artNo) {
-        el.src = cardImage(name);
+        el.src = cardImageSrc(name);
       }
     }}
     alt=""

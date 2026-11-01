@@ -7,7 +7,7 @@ import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import SearchIcon from "@mui/icons-material/Search";
 import DeleteOutlineIcon from "@mui/icons-material/DeleteOutline";
-import { cardImage } from "../../decks/getCards";
+import { cardImage, cardImageSrc, cardNoImage, toThumb } from "../../decks/getCards";
 import { ART_VERSION } from "../../decks/artVersion";
 import { TEXTURES_BASE } from "../../decks/assetBase";
 import CardSprite, { hasSprite } from "./CardSprite";
@@ -15,15 +15,6 @@ import { COLORS, FONT } from "./theme";
 
 const W = 124;
 const H = 173;
-
-// The card LIST uses downscaled thumbnails (textures/thumbs/ on the R2 bucket)
-// to keep the pool light; the inspector/deck still load the full-size
-// originals. Rewrite a "…/textures/X.png" URL to its thumb; if a thumb is ever
-// missing the <img> onError swaps back to the full image.
-const thumbSrc = (src) =>
-  src && src.includes("/textures/") && !src.includes("/textures/thumbs/")
-    ? src.replace("/textures/", "/textures/thumbs/")
-    : src;
 
 export default function CardGrid({
   items, visibleCount, onLoadMore, hasMore, scrollTargetId,
@@ -84,11 +75,12 @@ function CardTile({ name, cardNo, cardKey, count, copyMax, maxed, selected, onIn
   const [hover, setHover] = React.useState(false);
   // In the "show all printings" view a specific printing is requested by card
   // number; otherwise fall back to the name-keyed image used everywhere else.
-  const fullSrc = cardNo ? `${TEXTURES_BASE}${cardNo}.png?v=${ART_VERSION}` : cardImage(name);
+  const rawFullSrc = cardNo ? `${TEXTURES_BASE}${cardNo}.png?v=${ART_VERSION}` : cardImage(name);
+  const fullSrc = cardNo ? cardNoImage(cardNo) : cardImageSrc(name);
   // Mobile pool tiles render much larger than desktop ones, so the downscaled
   // thumbs look soft there — load the full-size originals on mobile; desktop
   // keeps the lighter thumbnails.
-  const src = isMobile ? fullSrc : thumbSrc(fullSrc);
+  const src = isMobile ? fullSrc : toThumb(rawFullSrc);
   // The sprite sheets are packed at thumbnail resolution, so they're a match for
   // desktop tiles but would look soft at mobile's larger size — mobile keeps the
   // full-size originals. A card with no sheet entry (a set added since the last

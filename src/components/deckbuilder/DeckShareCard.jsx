@@ -1,7 +1,5 @@
 import React from "react";
-import { cardImage, artThumb, artImage } from "../../decks/getCards";
-import { ART_VERSION } from "../../decks/artVersion";
-import { TEXTURES_BASE } from "../../decks/assetBase";
+import { cardImageSrc, cardNoImage, artThumb, artImage } from "../../decks/getCards";
 
 import { getCost, primaryType } from "../../decks/cardDetails";
 import { CLASS_LABELS, CLASS_COLORS } from "./theme";
@@ -105,8 +103,8 @@ const Grid = ({ entries, art }) => (
                 const chosen = art && art[name];
                 const next =
                   chosen && e.currentTarget.src.indexOf("/thumbs/") !== -1
-                    ? `${TEXTURES_BASE}${chosen}.png?v=${ART_VERSION}`
-                    : cardImage(name);
+                    ? cardNoImage(chosen)
+                    : cardImageSrc(name);
                 if (next && next !== e.currentTarget.src) {
                   e.currentTarget.src = next;
                 }

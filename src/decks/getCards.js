@@ -1,6 +1,7 @@
 import cardStats from "../engine/card-stats.json";
 import { ART_VERSION } from "./artVersion";
 import { TEXTURES_BASE } from "./assetBase";
+import { optimizeFull, optimizeThumb } from "./vercelImage";
 
 // Card art is served with a long immutable cache, so a URL can never be a
 // stable identity for bytes that get replaced (e.g. a set's art swapped to the
@@ -20,16 +21,20 @@ function cardNoFromStatsName(cardName) {
   return statsNameToCardNo.get(cardName) ?? null;
 }
 
-// Resolve a deck card's image honoring a per-deck rarity/art choice. `art` is the
+// Raw (unoptimized) art path honoring a per-deck rarity/art choice. `art` is the
 // deck's optional { name: cardNo } map saved by the builder; when a card has a
 // chosen printing, use that printing's texture, else fall back to the default
 // name-keyed art. The Game keeps using names, so this only affects display.
-export const artImage = (cardName, art) =>
+const rawArtImage = (cardName, art) =>
   withVersion(
     art && art[cardName]
       ? `${TEXTURES_BASE}${art[cardName]}.png`
       : cardImage(cardName),
   );
+
+// Same-origin Vercel image optimization, at the card's native full width.
+export const artImage = (cardName, art) =>
+  optimizeFull(rawArtImage(cardName, art));
 
 // Rewrite a full-size texture URL to its lightweight thumbnail
 // (".../textures/thumbs/X.png"). Non-texture paths (require()'d assets, etc.)
@@ -38,14 +43,24 @@ export const artImage = (cardName, art) =>
 // "/textures/" segment rather than the origin is what lets this work for both
 // the R2 bucket and a same-origin fallback.
 export const toThumb = (src) =>
-  withVersion(
-    src && src.includes("/textures/") && !src.includes("/textures/thumbs/")
-      ? src.replace("/textures/", "/textures/thumbs/")
-      : src,
+  optimizeThumb(
+    withVersion(
+      src && src.includes("/textures/") && !src.includes("/textures/thumbs/")
+        ? src.replace("/textures/", "/textures/thumbs/")
+        : src,
+    ),
   );
 
 // Thumbnail variant of artImage, honoring the per-card art choice.
-export const artThumb = (cardName, art) => toThumb(artImage(cardName, art));
+export const artThumb = (cardName, art) => toThumb(rawArtImage(cardName, art));
+
+// Optimized variants for callers that have a card name/card number instead of
+// an art map. Keep `cardImage` itself raw: getCardNoFromName parses its path.
+export const cardImageSrc = (cardName) => optimizeFull(cardImage(cardName));
+export const cardNoImage = (cardNo) =>
+  optimizeFull(withVersion(`${TEXTURES_BASE}${cardNo}.png`));
+export const cardNoThumb = (cardNo) =>
+  optimizeThumb(withVersion(`${TEXTURES_BASE}thumbs/${cardNo}.png`));
 
 // The card shown as a deck's cover/tile art. Prefers the deck's chosen `cover`
 // when it's still in the main deck; otherwise the middle main-deck card, the

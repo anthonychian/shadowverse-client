@@ -25,7 +25,7 @@ import { setCurrentCard } from "../../redux/CardSlice";
 
 import { useEngineSync } from "../hooks/useEngineSync";
 
-import { cardImage } from "../../decks/getCards";
+import { cardImageSrc } from "../../decks/getCards";
 
 import { getNameByCardNoClient } from "../../engine/cardLookup";
 import HideUiButton from "../ui/HideUiButton";
@@ -44,7 +44,7 @@ function CardChoiceButton({
 
   const name = cardNo ? getNameByCardNoClient(cardNo) || label : label;
 
-  const imgSrc = cardNo ? cardImage(name) : cardImage(label);
+  const imgSrc = cardNo ? cardImageSrc(name) : cardImageSrc(label);
 
   return (
 
@@ -418,7 +418,7 @@ export default function ChoiceModal({ setHovering }) {
 
                   component="img"
 
-                  src={cardImage(name)}
+                  src={cardImageSrc(name)}
 
                   alt={name}
 

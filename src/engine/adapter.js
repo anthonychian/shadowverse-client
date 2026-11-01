@@ -4,7 +4,7 @@ import {
   getNameByCardNoClient,
   getCardStatsClient,
 } from "./cardLookup";
-import { cardImage, getCardNoFromName } from "../decks/getCards";
+import { cardImageSrc, getCardNoFromName } from "../decks/getCards";
 import { detectDeckIdentity } from "../decks/detectDeck";
 
 /** SEP is usable once turn threshold is met (7 for first player, 6 for second). */
@@ -240,5 +240,5 @@ export function defaultMvpDeck() {
 }
 
 export function resolveCardImage(cardName) {
-  return cardImage(cardName) || "";
+  return cardImageSrc(cardName) || "";
 }
