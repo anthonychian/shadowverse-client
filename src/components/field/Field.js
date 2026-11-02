@@ -199,14 +199,17 @@ const style = {
 };
 
 // Responsive board-scaling constants (see the scaling effect in Field).
-const BASE_WIDTH = 1200; // design width of the board in px. Wide enough that the 5 field cards clear the side piles (deck/cemetery/evolve-deck) on both edges; the whole board scales down to fit narrow screens, so this only trades a little card size for edge spacing when width-limited.
+// Both rows use the same side-column width so the player's Field/EX slots line
+// up exactly under the opponent's. The player's three piles share one column
+// via a 2x2 grid; keeping every side column at this width preserves the full
+// 5-card slot spacing instead of squeezing the field on one side.
+const SIDE_COLUMN_WIDTH = 240;
+const BASE_WIDTH = 1400; // 240 + 920 field + 240
 // Horizontal inset applied inside each field grid so the outermost cards don't
 // touch the side piles. Scales with the board like everything else.
 const FIELD_GRID_PADDING_X = 40;
-const TOP_RESERVE = 200; // vertical space kept above the field for the opponent's hand
-const BOTTOM_RESERVE = 210; // vertical space kept below the field for the player's hand
-const MIN_SCALE = 0.4;
-const MAX_SCALE = 1.3;
+const MIN_SCALE = 0.45;
+const MAX_SCALE = 1.5;
 
 // Keyword statuses offered by "Add Status", shown as black boxes on the card.
 const KEYWORDS = [
@@ -394,8 +397,13 @@ export default function Field({
     if (!wrapper || !board) return;
 
     const update = () => {
+      // The wrapper already excludes both hands: the opponent's hand is a
+      // sibling above it and the player's hand is outside Field entirely. Using
+      // its real size (instead of fixed viewport reserves) lets the board fill
+      // all the space between the hands and keeps the field large at every
+      // resolution.
       const availWidth = wrapper.clientWidth;
-      const availHeight = window.innerHeight - TOP_RESERVE - BOTTOM_RESERVE;
+      const availHeight = wrapper.clientHeight;
       const naturalHeight = board.offsetHeight; // field rows, unaffected by the transform
       if (!availWidth || !naturalHeight) return;
       const fit = Math.min(availWidth / BASE_WIDTH, availHeight / naturalHeight);
@@ -2310,9 +2318,8 @@ export default function Field({
 
         <div
           style={{
-            height: "35vh",
             minHeight: "330px",
-            width: "140px",
+            width: `${SIDE_COLUMN_WIDTH}px`,
             flexShrink: 0,
             display: "flex",
             flexDirection: "column",
@@ -2361,7 +2368,6 @@ export default function Field({
         <div
           ref={(el) => registerEnemyFieldGrid(el)}
           style={{
-            height: "35vh",
             minHeight: "330px",
             flex: 1,
             minWidth: 0,
@@ -2478,9 +2484,8 @@ export default function Field({
         {/* Enemy Evolve Deck */}
         <div
           style={{
-            height: "35vh",
             minHeight: "330px",
-            width: "140px",
+            width: `${SIDE_COLUMN_WIDTH}px`,
             flexShrink: 0,
             display: "flex",
             flexDirection: "column",
@@ -2489,12 +2494,19 @@ export default function Field({
             // background: "linear-gradient(to bottom, #09203f 0%, #537895 100%)",
             // backgroundColor: "rgba(0, 0, 0, 0.60)",
             alignItems: "center",
-            justifyContent: "space-evenly",
+            justifyContent: "space-between",
+            gap: "8px",
 
             // cursor: `url(${img}) 55 55, auto`,
           }}
         >
           <EnemyEvoDeck setHovering={setHovering} ready={ready} />
+          <PlayedZone
+            setReadyFromPlayed={setReadyFromPlayed}
+            setReady={setReady}
+            setHovering={setHovering}
+            ready={ready}
+          />
         </div>
       </div>
 
@@ -2512,9 +2524,8 @@ export default function Field({
         {/* Player Evolve Deck */}
         <div
           style={{
-            height: "35vh",
             minHeight: "330px",
-            width: "140px",
+            width: `${SIDE_COLUMN_WIDTH}px`,
             flexShrink: 0,
             display: "flex",
             flexDirection: "column",
@@ -2557,7 +2568,6 @@ export default function Field({
         <div
           ref={(el) => registerFieldGrid(el)}
           style={{
-            height: "35vh",
             minHeight: "330px",
             flex: 1,
             minWidth: 0,
@@ -2754,11 +2764,12 @@ export default function Field({
         </div>
         </MotionConfig>
 
-        {/* Player Deck and Cementery */}
+        {/* Player Deck and Cemetery - stacked so the Cemetery sits directly
+            below the shared Played zone and the Deck stays in the same row. */}
         <div
           style={{
             minHeight: "330px",
-            width: "140px",
+            width: `${SIDE_COLUMN_WIDTH}px`,
             flexShrink: 0,
             display: "flex",
             flexDirection: "column",
@@ -2768,18 +2779,11 @@ export default function Field({
             // background: "linear-gradient(to top, #09203f 0%, #537895 100%)",
             // backgroundColor: "rgba(0, 0, 0, 0.60)",
             alignItems: "center",
-            justifyContent: "space-evenly",
+            justifyContent: "space-between",
             gap: "8px",
-            padding: "6px 0",
             // cursor: `url(${img}) 55 55, auto`,
           }}
         >
-          <PlayedZone
-            setReadyFromPlayed={setReadyFromPlayed}
-            setReady={setReady}
-            setHovering={setHovering}
-            ready={ready}
-          />
           <Cemetery
             setReadyFromCemetery={setReadyFromCemetery}
             setReadyFromBanish={setReadyFromBanish}

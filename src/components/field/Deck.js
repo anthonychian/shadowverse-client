@@ -93,9 +93,9 @@ export default function Deck({
   const [reveal, setReveal] = useState(false);
   const [textInput, setTextInput] = useState("");
   const [partialDeck, setPartialDeck] = useState([]);
-  // Indices (into the active list) that are multi-selected in the View Deck
-  // modal. Left-click toggles a card in here; right-click opens the options menu,
-  // which then applies to every selected card. A Set preserves click order.
+  // Indices (into the active list) that are multi-selected in the deck modal.
+  // Left-click toggles a card in here; right-click opens the options menu, which
+  // then applies to every selected card. A Set preserves click order.
   const [selected, setSelected] = useState(() => new Set());
 
   const [cardback, setCardback] = useState();
@@ -111,7 +111,7 @@ export default function Deck({
   const automated = gameMode === "automated";
 
   // The list backing the open modal (Look At Top -> partialDeck, View Deck ->
-  // reduxDeck). Multi-select only applies to the View Deck list.
+  // reduxDeck). Multi-select applies to both lists.
   const activePile = reveal ? partialDeck : reduxDeck;
   const multi = selected.size > 1;
 
@@ -204,10 +204,8 @@ export default function Deck({
     setIndex(index);
     setDeckIndex(index);
     // Right-click selects the card if it isn't already part of the selection, so
-    // the menu targets it (and everything else selected) — View Deck only.
-    if (!reveal) {
-      setSelected((cur) => (cur.has(index) ? cur : new Set([index])));
-    }
+    // the menu targets it (and everything else selected).
+    setSelected((cur) => (cur.has(index) ? cur : new Set([index])));
     // console.log(index);
     event.preventDefault();
     setCardContextMenu(
@@ -297,24 +295,26 @@ export default function Deck({
 
   const handleToHandFromRevealed = () => {
     handleCardClose();
-    setPartialDeck(partialDeck.filter((_, i) => i !== index));
-    dispatch(addToHandFromDeck({ card: name, index: index }));
-    triggerHandReveal(name, reduxRoom);
+    const order = selectedOrder;
+    setPartialDeck(partialDeck.filter((_, i) => !order.includes(i)));
+    setSelected(new Set());
+    runSelected(order, (card, i) => {
+      dispatch(addToHandFromDeck({ card, index: i }));
+      triggerHandReveal(card, reduxRoom);
+    });
   };
 
   const handleToBanish = () => {
     handleCardClose();
-    if (reveal) {
-      // Look At Top list: single card out of the local partial deck.
-      setPartialDeck(partialDeck.filter((_, i) => i !== index));
-      dispatch(addToBanishFromDeck({ card: name, index }));
-    } else {
-      // View Deck: banish every selected card.
-      runSelected(selectedOrder, (card, i) =>
-        dispatch(addToBanishFromDeck({ card, index: i })),
-      );
-      setSelected(new Set());
-    }
+    const order = selectedOrder;
+    setSelected(new Set());
+    // Look At Top cards also leave the local partial deck; View Deck already
+    // reflects the reducer's deck changes.
+    if (reveal)
+      setPartialDeck(partialDeck.filter((_, i) => !order.includes(i)));
+    runSelected(order, (card, i) =>
+      dispatch(addToBanishFromDeck({ card, index: i })),
+    );
   };
 
   const handleBanishAll = () => {
@@ -369,20 +369,50 @@ export default function Deck({
     triggerCardReveal(card, reduxRoom, exIndex, fieldSlotCenter(exIndex));
   };
 
+  // Move every selected Look At Top card to the top/bottom of the deck. The
+  // deck is both source and destination, so each move reorders the cards that
+  // later moves index into — track a simulated deck by original index so every
+  // dispatch targets the right card despite duplicate card names.
   const handleToTopOfDeck = () => {
     handleCardClose();
-    let deck = partialDeck.filter((_, i) => i !== index);
-    setPartialDeck([name, ...deck]);
-    dispatch(addToTopOfDeckFromDeck({ card: name, index: index }));
+    const order = selectedOrder;
+    if (order.length === 0) return;
+    const moving = order.map((i) => partialDeck[i]);
+    setPartialDeck([
+      ...moving,
+      ...partialDeck.filter((_, i) => !order.includes(i)),
+    ]);
+    setSelected(new Set());
+    const working = reduxDeck.map((card, key) => ({ card, key }));
+    [...order].reverse().forEach((orig) => {
+      const idx = working.findIndex((item) => item.key === orig);
+      if (idx === -1) return;
+      const [item] = working.splice(idx, 1);
+      working.unshift(item);
+      dispatch(addToTopOfDeckFromDeck({ card: item.card, index: idx }));
+    });
   };
 
   const handleToBotOfDeck = () => {
     handleCardClose();
-    let deck = partialDeck.filter((_, i) => i !== index);
-    if (partialDeck.length === reduxDeck.length)
-      setPartialDeck([...deck, name]);
-    else setPartialDeck([...deck]);
-    dispatch(addToBotOfDeckFromDeck({ card: name, index: index }));
+    const order = selectedOrder;
+    if (order.length === 0) return;
+    const moving = order.map((i) => partialDeck[i]);
+    const remaining = partialDeck.filter((_, i) => !order.includes(i));
+    setPartialDeck(
+      partialDeck.length === reduxDeck.length
+        ? [...remaining, ...moving]
+        : remaining,
+    );
+    setSelected(new Set());
+    const working = reduxDeck.map((card, key) => ({ card, key }));
+    order.forEach((orig) => {
+      const idx = working.findIndex((item) => item.key === orig);
+      if (idx === -1) return;
+      const [item] = working.splice(idx, 1);
+      working.push(item);
+      dispatch(addToBotOfDeckFromDeck({ card: item.card, index: idx }));
+    });
   };
 
   // ---- drag a card out of the deck modal (Look At Top or View Deck) ----
@@ -797,9 +827,45 @@ export default function Deck({
                   onContextMenu={(e) => {
                     handleCardContextMenu(e, card, idx);
                   }}
+                  onClick={(e) => {
+                    // A click that ends a drag must not toggle selection.
+                    if (deckDrag.movedRef.current) return;
+                    handleCardClick(e, idx);
+                  }}
                   {...deckDrag.dragProps(card, idx)}
+                  className={selected.has(idx) ? "multiSelected" : "none"}
+                  style={{ position: "relative", ...deckDrag.dragStyle }}
                 >
                   <Card ready={ready} name={card} setHovering={setHovering} />
+                  {selected.has(idx) && (
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: -8,
+                        right: -8,
+                        minWidth: 26,
+                        height: 26,
+                        padding: "0 6px",
+                        borderRadius: 13,
+                        background: "#1565c0",
+                        border: "2px solid #ffffff",
+                        color: "#ffffff",
+                        fontFamily: "Noto Serif JP, serif",
+                        fontSize: 16,
+                        fontWeight: 800,
+                        lineHeight: 1,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        zIndex: 1002,
+                        pointerEvents: "none",
+                        textShadow: "0 1px 3px rgba(0,0,0,0.95)",
+                        boxShadow: "0 2px 6px rgba(0,0,0,0.85)",
+                      }}
+                    >
+                      {selectedOrder.indexOf(idx) + 1}
+                    </div>
+                  )}
                 </div>
               ))}
           </CardMUI>

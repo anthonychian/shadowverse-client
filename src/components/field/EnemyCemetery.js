@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { artImage, artThumb } from "../../decks/getCards";
+import { primaryType } from "../../decks/cardDetails";
 import {
   Modal,
   Box,
@@ -25,9 +26,7 @@ const style = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   backgroundColor: "transparent",
-  boxShadow: 24,
-  p: 3,
-  width: "55%",
+  width: "40%",
   display: "flex",
   flexDirection: "column",
   justifyContent: "center",
@@ -44,6 +43,17 @@ export default function EnemyCemetery({ setHovering, ready }) {
   const reduxEnemyCemetery = useSelector((state) => state.card.enemyCemetery);
   const reduxEnemyArt = useSelector((state) => state.card.enemyArt);
   const reduxEnemyBanish = useSelector((state) => state.card.enemyBanish);
+
+  const cemeteryTypeCounts = reduxEnemyCemetery.reduce(
+    (counts, card) => {
+      const type = primaryType(card);
+      if (type === "Follower") counts.Follower += 1;
+      else if (type === "Spell") counts.Spell += 1;
+      else if (type === "Amulet") counts.Amulet += 1;
+      return counts;
+    },
+    { Follower: 0, Spell: 0, Amulet: 0 },
+  );
 
   const handleModalOpen = () => {
     if (
@@ -147,11 +157,29 @@ export default function EnemyCemetery({ setHovering, ready }) {
               />
             </RadioGroup>
           </FormControl>
+          {cemeterySelected && (
+            <Box
+              sx={{
+                display: "flex",
+                gap: "18px",
+                marginBottom: "8px",
+                color: "white",
+                fontFamily: "Noto Serif JP, serif",
+                fontSize: "18px",
+              }}
+            >
+              <span>Followers: {cemeteryTypeCounts.Follower}</span>
+              <span>Spells: {cemeteryTypeCounts.Spell}</span>
+              <span>Amulets: {cemeteryTypeCounts.Amulet}</span>
+            </Box>
+          )}
           <CardMUI
             sx={{
               backgroundColor: "rgba(0, 0, 0, 0.7)",
               minHeight: "250px",
-              padding: "3%",
+              padding: "7%",
+              height: "500px",
+              overflowY: "scroll",
               width: "100%",
               display: "flex",
               flexDirection: "row",

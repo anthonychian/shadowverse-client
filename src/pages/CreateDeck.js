@@ -279,7 +279,6 @@ export default function CreateDeck() {
   const mainAtLimit = (card) => {
     if (deck.length >= 50) return true;
     if (card === "Rapid Fire") return (deckMap.get(card) || 0) >= 6;
-    if (card === "Shenlong" || card === "Curse Crafter") return (deckMap.get(card) || 0) >= 1;
     if (card === "Onion Patch") return false;
     return groupCount(deckMap, card) >= 3;
   };

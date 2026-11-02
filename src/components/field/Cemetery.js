@@ -4,6 +4,7 @@ import { useEngineSync } from "../hooks/useEngineSync";
 import { useUiModalOpen } from "../hooks/useUiChromeVisible";
 import { ModalHideUiRow } from "../ui/HideUiButton";
 import { artImage, artThumb } from "../../decks/getCards";
+import { primaryType } from "../../decks/cardDetails";
 import {
   Menu,
   MenuItem,
@@ -91,6 +92,17 @@ export default function Cemetery({
   // The pile backing the active radio tab (cemetery vs banish).
   const activePile = cemeterySelected ? reduxCemetery : reduxBanish;
   const multi = selected.size > 1;
+
+  const cemeteryTypeCounts = reduxCemetery.reduce(
+    (counts, card) => {
+      const type = primaryType(card);
+      if (type === "Follower") counts.Follower += 1;
+      else if (type === "Spell") counts.Spell += 1;
+      else if (type === "Amulet") counts.Amulet += 1;
+      return counts;
+    },
+    { Follower: 0, Spell: 0, Amulet: 0 },
+  );
 
   // Selected indices in click order (a Set keeps insertion order), dropping any
   // stale entries. This is what makes the click order drive deck placement.
@@ -424,6 +436,22 @@ export default function Cemetery({
               />
             </RadioGroup>
           </FormControl>
+          {cemeterySelected && (
+            <Box
+              sx={{
+                display: "flex",
+                gap: "18px",
+                marginBottom: "8px",
+                color: "white",
+                fontFamily: "Noto Serif JP, serif",
+                fontSize: "18px",
+              }}
+            >
+              <span>Followers: {cemeteryTypeCounts.Follower}</span>
+              <span>Spells: {cemeteryTypeCounts.Spell}</span>
+              <span>Amulets: {cemeteryTypeCounts.Amulet}</span>
+            </Box>
+          )}
           <CardMUI
             sx={{
               backgroundColor: "rgba(0, 0, 0, 0.7)",

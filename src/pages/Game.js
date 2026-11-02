@@ -26,6 +26,10 @@ import { randomLeaderForClass } from "../decks/classLeaders";
 import MatchTimer from "../components/ui/MatchTimer";
 import initialWallpaper from "../../src/assets/wallpapers/3.png";
 
+const RIGHT_CHAT_MIN_HEIGHT = 360;
+const RIGHT_COLUMN_CHROME = 80;
+const RIGHT_UI_MIN_SCALE = 0.25;
+
 export default function Game(callback) {
   useEngineSync();
   const [wallpaper, setWallpaper] = useState(initialWallpaper);
@@ -134,12 +138,17 @@ export default function Game(callback) {
       let fit = 1;
       const maxW = Math.max(e.w, p.w);
       if (maxW > 0) fit = Math.min(fit, (colRect.width - 4) / maxW);
-      // Height budget: the column also holds the chat footprint row and two
-      // flex gaps — leave ~90px for those.
+      // Height budget: reserve space for the docked chat panel between the two
+      // UIs, plus the column's gaps/padding, so it can never cover them.
       const totalH = e.h + p.h;
-      if (totalH > 0) fit = Math.min(fit, (colRect.height - 90) / totalH);
-      // Readability floor; below this we're at near-mobile sizes anyway.
-      setRightFitScale(Math.max(fit, 0.5));
+      if (totalH > 0) {
+        fit = Math.min(
+          fit,
+          (colRect.height - RIGHT_CHAT_MIN_HEIGHT - RIGHT_COLUMN_CHROME) / totalH,
+        );
+      }
+      // Keep enough room for the chat down to very short viewports.
+      setRightFitScale(Math.max(fit, RIGHT_UI_MIN_SCALE));
     };
     measure();
     window.addEventListener("resize", measure);
@@ -149,16 +158,17 @@ export default function Game(callback) {
   const rightUiScale = Math.min(sideScale, rightFitScale);
 
   // Shrinks the wrapper's layout box along with the visual scale; the inner
-  // div is pinned to the top-right so the panel hugs the column edge.
+  // div sits slightly in from the right so both leader panels shift left.
   const fitWrapStyle = (size) => ({
     position: "relative",
+    flexShrink: 0,
     width: size ? size.w * rightUiScale : undefined,
     height: size ? size.h * rightUiScale : undefined,
   });
   const fitInnerStyle = {
     position: "absolute",
     top: 0,
-    right: 0,
+    right: 10,
     transform: `scale(${rightUiScale})`,
     transformOrigin: "top right",
   };
@@ -285,15 +295,13 @@ export default function Game(callback) {
             </div>
           </div>
 
+          <ChatUI docked setHovering={setHovering} />
+
           <div style={fitWrapStyle(playerSize)}>
             <div ref={playerUiRef} style={fitInnerStyle}>
               <PlayerUI name={selectedOption} />
             </div>
           </div>
-          {/* ChatUI renders its own in-flow footprint (the 3rd column slot, so
-              EnemyUI/PlayerUI keep their positions) plus the chat panel, which
-              it absolutely-positions against this (relative) container. */}
-          <ChatUI scale={sideScale} setHovering={setHovering} />
         </div>
       )}
     </div>

@@ -158,7 +158,11 @@ export default function PlayedZone({
         style={{
           ...(canDragFromZone ? playedDrag.dragStyle : {}),
           borderRadius: "10px",
-          border: "4px solid #c9a227",
+          border:
+            dragActive || playedDrag.isDragging
+              ? "4px solid #c9a227"
+              : "none",
+          boxSizing: "border-box",
           position: "relative",
           overflow: "hidden",
           cursor: canDragFromZone
