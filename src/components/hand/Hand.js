@@ -15,6 +15,7 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { useEngineSync } from "../hooks/useEngineSync";
 import { registerHand } from "../field/handDrag";
+import { triggerPlayedZoneReveal } from "../field/cardRevealBus";
 import { HandFx, useShuffleHandActive } from "../field/GameFx";
 
 export default function Hand({
@@ -25,6 +26,7 @@ export default function Hand({
   setHovering,
 }) {
   const reduxHand = useSelector((state) => state.card.hand);
+  const reduxRoom = useSelector((state) => state.card.room);
   const reduxShowHand = useSelector((state) => state.card.showHand);
   const handInstanceIds = useSelector((state) => state.card.handInstanceIds);
   const leaderActive = useSelector((state) => state.card.leaderActive);
@@ -90,6 +92,7 @@ export default function Hand({
     dispatch(
       playCardToSharedZone({ card: name, index: cardIndex, from: "hand" }),
     );
+    triggerPlayedZoneReveal(name, reduxRoom);
   };
   const handleCardToCemetery = () => {
     handleClose();

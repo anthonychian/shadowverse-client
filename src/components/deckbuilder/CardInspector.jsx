@@ -109,6 +109,13 @@ export default function CardInspector({
   // the type so the art stays dominant; a caller that would rather have
   // readable text than the smallest possible chrome can scale it back up.
   textScale = 1,
+  // Optional per-part multipliers so a caller can bump just the card name or
+  // just the description without resizing the rest of the chrome.
+  nameScale = 1,
+  effectScale = 1,
+  // Optional override for the description box's inner padding (any CSS padding
+  // value). Lets the in-game hover preview give its text a little more room.
+  effectPadding,
   readOnly = false,
   // In-game hover preview: restyle the chrome into Shadowverse-like floating
   // pieces — a blue gradient name banner and translucent dark, cut-corner stat
@@ -144,11 +151,11 @@ export default function CardInspector({
   // card art stays the largest, screen-scaled element.
   const imgMax = large ? 380 : 360;
   const gap = (fill ? 8 : large ? 10 : 12) * metaScale;
-  const nameSize = (fill ? 18 : large ? 22 : 19) * metaScale;
+  const nameSize = (fill ? 18 : large ? 22 : 19) * metaScale * nameScale;
   const metaSize = (fill ? 12 : large ? 14 : 13) * metaScale;
   // The description keeps its base size — FitScale shrinks it only if needed —
   // so it stays prioritized over the chrome on small screens.
-  const effectSize = (fill ? 12.5 : large ? 13 : 14) * textScale;
+  const effectSize = (fill ? 12.5 : large ? 13 : 14) * textScale * effectScale;
   const statValSize = (fill ? 18 : large ? 20 : 23) * metaScale;
   const stepSize = large ? 52 : 44;
   const countSize = large ? 26 : 22;
@@ -345,7 +352,7 @@ export default function CardInspector({
           className="card-effect-scroll"
           style={{
             fontFamily: FONT, color: COLORS.text, fontSize: effectSize, lineHeight: 1.45,
-            background: COLORS.inset, borderRadius: 8, padding: gameStyle ? "12px 14px" : "10px 12px",
+            background: COLORS.inset, borderRadius: 8, padding: effectPadding || (gameStyle ? "12px 14px" : "10px 12px"),
             ...gamePanel,
             // In `fill` mode the box grows to its natural height (no inner
             // scrollbar) when the dialog has room, and takes whichever height is

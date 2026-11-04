@@ -36,7 +36,11 @@ import {
 import { registerCemetery, fieldSlotCenter } from "./handDrag";
 import { useModalCardDrag, ModalDragGhost } from "./modalCardDrag";
 // import cardback from "../../assets/cardbacks/default.png";
-import { triggerHandReveal, triggerCardReveal } from "./cardRevealBus";
+import {
+  triggerHandReveal,
+  triggerCardReveal,
+  triggerPlayedZoneReveal,
+} from "./cardRevealBus";
 import "../../css/Card.css";
 
 const img = require("../../assets/pin_bellringer_angel.png");
@@ -178,9 +182,10 @@ export default function Cemetery({
   const handleCardToPlayedFromCemetery = () => {
     handleClose();
     setSelected(new Set());
-    runSelected(selectedOrder, (card, index) =>
-      dispatch(playCardToSharedZone({ card, index, from: "cemetery" })),
-    );
+    runSelected(selectedOrder, (card, index) => {
+      dispatch(playCardToSharedZone({ card, index, from: "cemetery" }));
+      triggerPlayedZoneReveal(card, reduxRoom);
+    });
     handleModalClose();
   };
 
@@ -237,9 +242,10 @@ export default function Cemetery({
   const handleCardToPlayedFromBanish = () => {
     handleClose();
     setSelected(new Set());
-    runSelected(selectedOrder, (card, index) =>
-      dispatch(playCardToSharedZone({ card, index, from: "banish" })),
-    );
+    runSelected(selectedOrder, (card, index) => {
+      dispatch(playCardToSharedZone({ card, index, from: "banish" }));
+      triggerPlayedZoneReveal(card, reduxRoom);
+    });
     handleModalClose();
   };
 
@@ -303,6 +309,7 @@ export default function Cemetery({
             from: cemeterySelected ? "cemetery" : "banish",
           }),
         );
+        triggerPlayedZoneReveal(card, reduxRoom);
       } else if (dest.type === "deck") {
         if (!cemeterySelected) return;
         if (dest.half === "top")

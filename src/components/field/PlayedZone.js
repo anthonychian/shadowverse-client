@@ -23,7 +23,12 @@ import {
   getBoardScale,
 } from "./handDrag";
 import { useModalCardDrag, ModalDragGhost } from "./modalCardDrag";
-import { triggerHandReveal, triggerCardReveal } from "./cardRevealBus";
+import {
+  triggerHandReveal,
+  triggerCardReveal,
+  onPlayedHideChange,
+  isPlayedHidden,
+} from "./cardRevealBus";
 import "../../css/Card.css";
 
 const img = require("../../assets/pin_bellringer_angel.png");
@@ -47,6 +52,13 @@ export default function PlayedZone({
   const gameMode = useSelector((state) => state.gameState.gameMode);
   const automated = gameMode === "automated";
   const [dragActive, setDragActive] = useState(false);
+  // Re-render when the played-pile reveal hides/reveals the top card, so the
+  // card only appears once the centre-screen animation lands.
+  const [, bumpPlayedHidden] = useState(0);
+  useEffect(
+    () => onPlayedHideChange(() => bumpPlayedHidden((n) => n + 1)),
+    [],
+  );
 
   useEffect(
     () =>
@@ -180,6 +192,7 @@ export default function PlayedZone({
           <img
             className={"cardStyle"}
             src={artThumb(played[0], reduxMyArt)}
+            style={{ visibility: isPlayedHidden() ? "hidden" : "visible" }}
             onError={(e) => {
               if (e.currentTarget.src.indexOf("/thumbs/") !== -1)
                 e.currentTarget.src = artImage(played[0], reduxMyArt);

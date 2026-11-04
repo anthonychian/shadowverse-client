@@ -1,5 +1,11 @@
 import { socket } from "../../sockets";
-import { handCenter, cemeteryCenter, fieldSlotCenter, getBoardScale } from "./handDrag";
+import {
+  handCenter,
+  cemeteryCenter,
+  fieldSlotCenter,
+  playedZoneCenter,
+  getBoardScale,
+} from "./handDrag";
 
 // On-board card height in px (matches .cardStyle: 161px) before the board scale.
 const CARD_PX = 161;
@@ -15,13 +21,31 @@ export const REVEAL_MS = 1100;
 
 const revealListeners = new Set();
 const hideListeners = new Set();
+const playedHideListeners = new Set();
 let nextId = 0;
 
 // Field indices currently hidden mid-reveal, per board.
 const hiddenMine = new Set();
 const hiddenEnemy = new Set();
 
+// The shared played pile is hidden while its reveal is in flight, so the card
+// materialises there exactly when the animation lands (same as a field slot).
+let playedHidden = false;
+let playedHideTimer = null;
+
 const notifyHide = () => hideListeners.forEach((cb) => cb());
+const notifyPlayedHide = () => playedHideListeners.forEach((cb) => cb());
+
+const hidePlayed = () => {
+  playedHidden = true;
+  notifyPlayedHide();
+  if (playedHideTimer) clearTimeout(playedHideTimer);
+  playedHideTimer = setTimeout(() => {
+    playedHidden = false;
+    playedHideTimer = null;
+    notifyPlayedHide();
+  }, REVEAL_MS);
+};
 
 const hideSlot = (side, index) => {
   if (typeof index !== "number" || index < 0) return;
@@ -42,13 +66,19 @@ export const onHideChange = (cb) => {
   hideListeners.add(cb);
   return () => hideListeners.delete(cb);
 };
+export const onPlayedHideChange = (cb) => {
+  playedHideListeners.add(cb);
+  return () => playedHideListeners.delete(cb);
+};
 export const isHidden = (side, index) =>
   (side === "enemy" ? hiddenEnemy : hiddenMine).has(index);
+export const isPlayedHidden = () => playedHidden;
 
 // Play the reveal locally. `kind` is "field" (played to a slot — particles, and
-// the slot stays hidden until the reveal lands), "hand" (added to hand), "mill"
-// (top of deck sinks into the cemetery) or "banish" (a field card disintegrates
-// in place at its slot `source`). `source`/`size` are used by "banish". An
+// the slot stays hidden until the reveal lands), "played" (the same reveal
+// aimed at the shared played pile), "hand" (added to hand), "mill" (top of deck
+// sinks into the cemetery) or "banish" (a field card disintegrates in place at
+// its slot `source`). `source`/`size` are used by "banish". An
 // explicit `src` overrides the art resolved from `name` — used by the hidden
 // "added to hand" reveal to show that side's cardback instead of the card face.
 export const playCardReveal = ({
@@ -63,6 +93,7 @@ export const playCardReveal = ({
 }) => {
   if (!name || name === 0) return;
   if (kind === "field") hideSlot(side, index);
+  if (kind === "played") hidePlayed();
   revealListeners.forEach((cb) =>
     cb({ id: ++nextId, name, side, target, source, size, kind, src }),
   );
@@ -83,6 +114,25 @@ export const triggerHandReveal = (name, room) => {
   if (!name || name === 0) return;
   playCardReveal({ name, side: "player", kind: "hand", target: handCenter() });
   if (room) socket.emit("send msg", { type: "cardToHand", data: { name }, room });
+};
+
+// "Played to shared zone" reveal: the same centre-screen flip + particle stream
+// used when a card hits the field, but aimed at the shared played pile. Each
+// side targets its own played-zone element; only the card name travels.
+export const triggerPlayedZoneReveal = (name, room) => {
+  if (!name || name === 0) return;
+  playCardReveal({
+    name,
+    side: "player",
+    kind: "played",
+    target: playedZoneCenter(),
+  });
+  if (room)
+    socket.emit("send msg", {
+      type: "cardToPlayedZone",
+      data: { name },
+      room,
+    });
 };
 
 // "Added to hand" *without revealing*: the same flight as triggerHandReveal, but

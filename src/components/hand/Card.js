@@ -25,7 +25,10 @@ import {
   setDragHover,
   getBoardScale,
 } from "../field/handDrag";
-import { triggerCardReveal } from "../field/cardRevealBus";
+import {
+  triggerCardReveal,
+  triggerPlayedZoneReveal,
+} from "../field/cardRevealBus";
 import cancel from "../../assets/logo/cancel.png";
 import carrot from "../../assets/logo/carrot.png";
 import drive from "../../assets/logo/drive.png";
@@ -164,6 +167,11 @@ export default function Card({
     onField &&
     typeof name === "string" &&
     name.slice(-5) === "TOKEN";
+  // Spells can't be placed on the front row — only the played zone or the EX
+  // area. Used by the hand drag to hide the front-row drop hints and reject a
+  // drop there (it snaps back to the hand).
+  const isSpellHandCard =
+    inHand && typeof name === "string" && primaryType(name) === "Spell";
 
   const handleTap = () => {
     if (gameMode === "automated") return;
@@ -293,6 +301,7 @@ export default function Card({
       hand: false,
       played: false,
       deck: null,
+      hideFrontRow: isSpellHandCard,
       showCemetery: true,
       showHand: false,
       showDeck: true,
@@ -301,18 +310,22 @@ export default function Card({
   };
   const handleCardDrag = (_event, info) => {
     // The hand is scaled by boardScale (see Game.js MotionConfig), so info.point
-    // is in hand-local space — scale it back to viewport coords to match the
+    // is in hand-local space — scale it back up to viewport coords to match the
     // field/cemetery/deck rects.
     const s = getBoardScale();
     const x = info.point.x * s;
     const y = info.point.y * s;
+    const dropIndex = fieldIndexAt(x, y);
     setDragHover({
       active: true,
-      index: fieldIndexAt(x, y),
+      // Spells can only target the EX area (5-9), so never highlight a front-row
+      // slot while dragging one.
+      index: isSpellHandCard && dropIndex < 5 ? -1 : dropIndex,
       cemetery: isOverCemetery(x, y),
       hand: false,
       played: isOverPlayedZone(x, y),
       deck: deckHalfAt(x, y),
+      hideFrontRow: isSpellHandCard,
       showCemetery: true,
       showHand: false,
       showDeck: true,
@@ -327,6 +340,7 @@ export default function Card({
       hand: false,
       played: false,
       deck: null,
+      hideFrontRow: false,
       showCemetery: false,
       showHand: false,
       showDeck: false,
@@ -354,6 +368,7 @@ export default function Card({
           from: "hand",
         })
       );
+      triggerPlayedZoneReveal(name, reduxRoom);
       return;
     }
     if (isOverCemetery(x, y)) {
@@ -361,6 +376,9 @@ export default function Card({
       return;
     }
     const dropIndex = fieldIndexAt(x, y);
+    // Spells are only valid in the played zone or the EX area — a drop on the
+    // front row is ignored (dragSnapToOrigin returns the card to the hand).
+    if (isSpellHandCard && dropIndex >= 0 && dropIndex < 5) return;
     if (dropIndex >= 0 && reduxField[dropIndex] === 0) {
       dispatch(
         placeToFieldFromHand({

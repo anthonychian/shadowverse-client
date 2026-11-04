@@ -138,6 +138,7 @@ export const handCenter = () => rectCenter(getHandRect());
 export const enemyHandCenter = () =>
   rectCenter(enemyHandEl ? enemyHandEl.getBoundingClientRect() : null);
 export const cemeteryCenter = () => rectCenter(getCemeteryRect());
+export const playedZoneCenter = () => rectCenter(getPlayedZoneRect());
 export const enemyCemeteryCenter = () =>
   rectCenter(enemyCemeteryEl ? enemyCemeteryEl.getBoundingClientRect() : null);
 

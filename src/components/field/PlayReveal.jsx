@@ -265,6 +265,8 @@ function RevealCard({ src, side, target, source, size, kind }) {
     );
   }
 
+  // Default: "field" and "played" — the card flips in at centre, then streams
+  // into particles that gather at the target slot.
   return (
     <div style={{ position: "fixed", left: "50%", top: "50%", width: 0, height: 0 }}>
       {/* Card: flips in at centre, holds, then dissolves. */}

@@ -116,6 +116,9 @@ export default function FieldDropHints() {
         </>
       )}
       {Array.from({ length: 10 }).map((_, idx) => {
+        // Spells can only be placed in the EX area, so don't outline the front
+        // row at all while one is being dragged.
+        if (drag.hideFrontRow && idx < 5) return null;
         const col = idx % 5;
         const row = idx < 5 ? 0 : 1;
         const occupied = field[idx] !== 0;

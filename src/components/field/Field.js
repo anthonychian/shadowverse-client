@@ -150,6 +150,7 @@ import {
   enemyFieldSlotCenter,
   enemyHandCenter,
   enemyCemeteryCenter,
+  playedZoneCenter,
   getBoardScale,
 } from "./handDrag";
 import FieldDropHints from "./FieldDropHints";
@@ -158,6 +159,7 @@ import PlayReveal from "./PlayReveal";
 import {
   triggerCardReveal,
   triggerHandReveal,
+  triggerPlayedZoneReveal,
   triggerBanishReveal,
   triggerEquipReveal,
   playCardReveal,
@@ -679,6 +681,17 @@ export default function Field({
             side: "enemy",
             index: playedIndex,
             target: enemyFieldSlotCenter(cell),
+          });
+          break;
+        }
+        case "cardToPlayedZone": {
+          // Opponent played a card to the shared played zone — reveal it
+          // centre-screen and stream it onto the played pile.
+          playCardReveal({
+            name: (update.data || {}).name,
+            side: "enemy",
+            kind: "played",
+            target: playedZoneCenter(),
           });
           break;
         }
@@ -1390,6 +1403,7 @@ export default function Field({
         from: "field",
       }),
     );
+    triggerPlayedZoneReveal(name, reduxCurrentRoom);
     dispatch(clearEquipmentAtIndex(index));
     dispatch(clearValuesAtIndex(index));
     dispatch(clearEngagedAtIndex(index));
@@ -1565,6 +1579,7 @@ export default function Field({
           from: "field",
         }),
       );
+      triggerPlayedZoneReveal(baseCard, reduxCurrentRoom);
       returnEvoToDeckIfEvolved(fromIndex);
       clearFieldSlot(fromIndex);
       return;

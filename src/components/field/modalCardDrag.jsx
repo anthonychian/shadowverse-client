@@ -9,6 +9,7 @@ import {
   deckHalfAt,
   setDragHover,
 } from "./handDrag";
+import { primaryType } from "../../decks/cardDetails";
 
 // Shared "drag a card out of a modal onto the board" behaviour, used by the deck
 // (Look At Top / View Deck) and cemetery modals. The card list lives inside a
@@ -33,6 +34,7 @@ const CLEARED_HOVER = {
   hand: false,
   played: false,
   deck: null,
+  hideFrontRow: false,
   showCemetery: false,
   showHand: false,
   showDeck: false,
@@ -57,6 +59,9 @@ const DRAG_STYLE = { cursor: "grab", touchAction: "none", userSelect: "none" };
  * @param {boolean|((card: any) => boolean)} [opts.equip] marks the drag as an
  *        equipment attach (green target = top-row follower with nothing
  *        attached). Pass a function to decide per dragged card.
+ * @param {boolean} [opts.spellFrontRowLocked] when true, spells can't be
+ *        dropped on the front row (0-4) — only the EX area — and its hints are
+ *        hidden while one is dragged.
  * @param {(card: any, index: number, dest: {type: string, index?: number}) => void} opts.onDrop
  */
 export function useModalCardDrag({
@@ -64,6 +69,7 @@ export function useModalCardDrag({
   field,
   evolve = false,
   equip = false,
+  spellFrontRowLocked = false,
   onDrop,
 }) {
   const [dragCard, setDragCard] = useState(null);
@@ -78,7 +84,12 @@ export function useModalCardDrag({
   // (fired just after pointerup) can ignore the click that ends a drag.
   const movedRef = useRef(false);
 
-  const resolveDest = (x, y) => {
+  const locksFrontRow = (card) =>
+    spellFrontRowLocked &&
+    typeof card === "string" &&
+    primaryType(card) === "Spell";
+
+  const resolveDest = (x, y, card) => {
     if (targets.hand && isOverHand(x, y)) return { type: "hand" };
     if (targets.played && isOverPlayedZone(x, y)) return { type: "played" };
     if (targets.cemetery && isOverCemetery(x, y)) return { type: "cemetery" };
@@ -88,7 +99,9 @@ export function useModalCardDrag({
     }
     if (targets.field) {
       const fi = fieldIndexAt(x, y);
-      if (fi >= 0) return { type: "field", index: fi };
+      // Spells may only land in the EX area (5-9), never the front row.
+      if (fi >= 0 && !(locksFrontRow(card) && fi < 5))
+        return { type: "field", index: fi };
     }
     return null;
   };
@@ -120,7 +133,7 @@ export function useModalCardDrag({
       setDragCard({ name: g.card, index: g.index });
     }
     setDragPos({ x, y });
-    const dest = resolveDest(x, y);
+    const dest = resolveDest(x, y, g.card);
     destRef.current = dest;
     setDragHover({
       active: true,
@@ -129,6 +142,7 @@ export function useModalCardDrag({
       hand: !!dest && dest.type === "hand",
       played: !!dest && dest.type === "played",
       deck: dest && dest.type === "deck" ? dest.half : null,
+      hideFrontRow: locksFrontRow(g.card),
       evolve,
       equip: typeof equip === "function" ? !!equip(g.card) : !!equip,
       showCemetery: !!targets.cemetery,
