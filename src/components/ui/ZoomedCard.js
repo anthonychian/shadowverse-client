@@ -18,28 +18,36 @@ export default function ZoomedCard({ hovering, name, art }) {
         // Above the fixed top-left menu/hide-UI buttons (zIndex 1000), so the
         // preview is never covered while hovering a card.
         zIndex: 1100,
-        // One solid (non-transparent) container holding the whole preview — the
-        // card, the name header and the text panels all sit inside it, like the
-        // in-game description box, rather than floating as separate pieces.
+        // Full-bleed container that covers the entire left column: no padding,
+        // border or rounding, so the panel's background reaches every edge of
+        // leftSideCanvas instead of floating as an inset card.
         background:
           "linear-gradient(180deg, rgba(30,36,47,0.99) 0%, rgba(18,22,30,0.99) 100%)",
-        border: "1px solid rgba(120,150,190,0.35)",
-        borderRadius: 12,
-        padding: 14,
         display: "flex",
         flexDirection: "column",
         overflow: "hidden",
         pointerEvents: "none",
-        boxShadow: "0 8px 30px rgba(0,0,0,0.7)",
         // The Game's .canvas container sets text-align:center, which the preview
         // would otherwise inherit. Force left so the text matches CreateDeck.
         textAlign: "left",
       }}
     >
-      {/* Cap the card art at ~half the screen height and auto-scale the effect
-          text to fit — the preview must never need a scrollbar (the viewer is
-          holding a hover and can't scroll). */}
-      <CardInspector name={name} cardNo={cardNo} readOnly imageMaxHeight="50vh" fitEffect gameStyle />
+      {/* Inset the content while the panel itself stays edge-to-edge. Cap the
+          card art at ~half the screen height and auto-scale the effect text to
+          fit — the preview must never need a scrollbar (the viewer is holding a
+          hover and can't scroll). */}
+      <div
+        style={{
+          flex: 1,
+          minHeight: 0,
+          padding: 14,
+          boxSizing: "border-box",
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        <CardInspector name={name} cardNo={cardNo} readOnly imageMaxHeight="50vh" fitEffect gameStyle />
+      </div>
     </div>
   );
 }

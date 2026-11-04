@@ -36,7 +36,7 @@ const StyledRating = styled(Rating)({
   },
 });
 
-export default function EnemyUI({ compact = false }) {
+export default function EnemyUI({ compact = false, stageScale }) {
   const reduxCurrentEnemyPlayPoints = useSelector(
     (state) => state.card.enemyPlayPoints.available,
   );
@@ -443,35 +443,66 @@ export default function EnemyUI({ compact = false }) {
     );
   }
 
+  const leaderStage = (
+    <div className="leaderStageWrap">
+      <Leader
+        name={reduxEnemyLeader}
+        active={reduxEnemyLeaderActive}
+        width={300}
+        height={300}
+        side="enemy"
+      />
+
+      <div className="classBadge">
+        <img
+          src={getClassFromLeader(reduxEnemyLeader)}
+          alt={reduxEnemyLeader}
+        />
+      </div>
+
+      {!reduxEnemyOnlineStatus && (
+        <div className="wifiBadge wifiOff" title="Disconnected">
+          <WifiOffIcon sx={{ height: 22, width: 22 }} />
+          <span className="wifiBadgeLabel">Disconnected</span>
+        </div>
+      )}
+    </div>
+  );
+
   return (
-    <div className="leaderPanel" style={{ position: "relative" }}>
+    <div
+      className="leaderPanel"
+      style={{
+        position: "relative",
+        ...(stageScale != null ? { width: "100%" } : {}),
+      }}
+    >
       <HideUiButton sx={{ position: "absolute", top: 0, right: 0, zIndex: 2 }} />
       {snackbars}
 
-      {/* Hero: the animated leader with its class logo (and the wifi badge). */}
-      <div className="leaderStageWrap">
-        <Leader
-          name={reduxEnemyLeader}
-          active={reduxEnemyLeaderActive}
-          width={300}
-          height={300}
-          side="enemy"
-        />
-
-        <div className="classBadge">
-          <img
-            src={getClassFromLeader(reduxEnemyLeader)}
-            alt={reduxEnemyLeader}
-          />
-        </div>
-
-        {!reduxEnemyOnlineStatus && (
-          <div className="wifiBadge wifiOff" title="Disconnected">
-            <WifiOffIcon sx={{ height: 22, width: 22 }} />
-            <span className="wifiBadgeLabel">Disconnected</span>
+      {/* Hero: the animated leader with its class logo (and the wifi badge).
+          Only the art scales; the stat ribbon below stays at its expanded-log
+          size. */}
+      {stageScale != null ? (
+        <div
+          className="leaderStageScaleBox"
+          style={{
+            width: 300 * stageScale,
+            height: 300 * stageScale,
+          }}
+        >
+          <div
+            style={{
+              transform: `scale(${stageScale})`,
+              transformOrigin: "top left",
+            }}
+          >
+            {leaderStage}
           </div>
-        )}
-      </div>
+        </div>
+      ) : (
+        leaderStage
+      )}
 
       {/* Secondary: HP, play points, EP, super-evo grouped together (read-only). */}
       {statRibbon}

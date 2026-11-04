@@ -26,8 +26,9 @@ import { randomLeaderForClass } from "../decks/classLeaders";
 import MatchTimer from "../components/ui/MatchTimer";
 import initialWallpaper from "../../src/assets/wallpapers/3.png";
 
-const RIGHT_CHAT_MIN_HEIGHT = 360;
-const RIGHT_COLUMN_CHROME = 80;
+const RIGHT_CHAT_MIN_HEIGHT = 160;
+const RIGHT_COLUMN_PADDING = 32;
+const ENEMY_UI_LIFT = 16;
 const RIGHT_UI_MIN_SCALE = 0.25;
 
 export default function Game(callback) {
@@ -108,11 +109,9 @@ export default function Game(callback) {
     transformOrigin: "center left",
   };
 
-  // Fit EnemyUI + PlayerUI to the right column on every screen size: measure
-  // their natural (unscaled) sizes and the column, then cap the scale so both
-  // panels fit the column's width and, stacked, its height. The wrappers below
-  // also shrink their LAYOUT footprint (width/height = natural × scale) —
-  // a bare CSS transform wouldn't, and the column would still overflow.
+  // Fit the leader art + stat ribbons to the right column on every screen size.
+  // Only the leader art scales; the stat ribbon (HP, play points, turn counter)
+  // always renders at the same 1:1 size as the expanded log.
   const enemyUiRef = useRef(null);
   const playerUiRef = useRef(null);
   const rightColRef = useRef(null);
@@ -129,22 +128,34 @@ export default function Game(callback) {
       const pEl = playerUiRef.current;
       const col = rightColRef.current;
       if (!eEl || !pEl || !col) return;
-      // offsetWidth/offsetHeight ignore transforms → natural size.
-      const e = { w: eEl.offsetWidth, h: eEl.offsetHeight };
-      const p = { w: pEl.offsetWidth, h: pEl.offsetHeight };
+      // offsetWidth/offsetHeight ignore transforms → natural stage size. The
+      // scale box's height is the scaled leader-art footprint, so the rest of
+      // the panel (the stat ribbon) can be excluded from the scale math.
+      const read = (el) => {
+        const stage = el.querySelector(".leaderStageWrap");
+        const box = el.querySelector(".leaderStageScaleBox") || stage;
+        const stageW = stage?.offsetWidth ?? 0;
+        const stageH = stage?.offsetHeight ?? 0;
+        const restH = Math.max(0, el.offsetHeight - (box?.offsetHeight ?? 0));
+        return { stageW, stageH, restH };
+      };
+      const e = read(eEl);
+      const p = read(pEl);
       setEnemySize(e);
       setPlayerSize(p);
       const colRect = col.getBoundingClientRect();
-      let fit = 1;
-      const maxW = Math.max(e.w, p.w);
-      if (maxW > 0) fit = Math.min(fit, (colRect.width - 4) / maxW);
-      // Height budget: reserve space for the docked chat panel between the two
-      // UIs, plus the column's gaps/padding, so it can never cover them.
-      const totalH = e.h + p.h;
-      if (totalH > 0) {
+      // Match the width of the expanded log's player/enemy bars: scale the
+      // leader art up to the column width (not capped at its natural size).
+      const maxStageW = Math.max(e.stageW, p.stageW);
+      let fit = maxStageW > 0 ? (colRect.width - 4) / maxStageW : 1;
+      // Height budget: only the scaled leader art counts against it; the
+      // fixed-size stat ribbons are subtracted first.
+      const stageTotalH = e.stageH + p.stageH;
+      const restTotalH = e.restH + p.restH;
+      if (stageTotalH > 0) {
         fit = Math.min(
           fit,
-          (colRect.height - RIGHT_CHAT_MIN_HEIGHT - RIGHT_COLUMN_CHROME) / totalH,
+          (colRect.height - RIGHT_CHAT_MIN_HEIGHT - restTotalH) / stageTotalH,
         );
       }
       // Keep enough room for the chat down to very short viewports.
@@ -157,20 +168,26 @@ export default function Game(callback) {
 
   const rightUiScale = Math.min(sideScale, rightFitScale);
 
-  // Shrinks the wrapper's layout box along with the visual scale; the inner
-  // div sits slightly in from the right so both leader panels shift left.
-  const fitWrapStyle = (size) => ({
+  // Free vertical space between the enemy and player panels after fitting. The
+  // floating chat/game-log panel is capped to this so it can never cover either
+  // leader panel.
+  const rightChatGapHeight = Math.max(
+    0,
+    window.innerHeight -
+      RIGHT_COLUMN_PADDING -
+      (enemySize ? enemySize.stageH * rightUiScale + enemySize.restH : 0) -
+      (playerSize ? playerSize.stageH * rightUiScale + playerSize.restH : 0),
+  );
+
+  const fitWrapStyle = {
     position: "relative",
     flexShrink: 0,
-    width: size ? size.w * rightUiScale : undefined,
-    height: size ? size.h * rightUiScale : undefined,
-  });
-  const fitInnerStyle = {
-    position: "absolute",
-    top: 0,
-    right: 10,
-    transform: `scale(${rightUiScale})`,
-    transformOrigin: "top right",
+    width: "100%",
+  };
+  const fitInnerStyle = { width: "100%" };
+  const enemyWrapStyle = {
+    ...fitWrapStyle,
+    transform: `translateY(-${ENEMY_UI_LIFT}px)`,
   };
 
   return (
@@ -289,17 +306,23 @@ export default function Game(callback) {
           ref={rightColRef}
           style={{ position: "relative" }}
         >
-          <div style={fitWrapStyle(enemySize)}>
+          <div style={enemyWrapStyle}>
             <div ref={enemyUiRef} style={fitInnerStyle}>
-              <EnemyUI />
+              <EnemyUI stageScale={rightUiScale} />
             </div>
           </div>
 
-          <ChatUI docked setHovering={setHovering} />
+          {/* Chat/game log floats at the field's right edge, vertically
+              centred, instead of filling the column between the two UIs. */}
+          <ChatUI
+            scale={sideScale}
+            availableHeight={rightChatGapHeight}
+            setHovering={setHovering}
+          />
 
-          <div style={fitWrapStyle(playerSize)}>
+          <div style={fitWrapStyle}>
             <div ref={playerUiRef} style={fitInnerStyle}>
-              <PlayerUI name={selectedOption} />
+              <PlayerUI stageScale={rightUiScale} name={selectedOption} />
             </div>
           </div>
         </div>

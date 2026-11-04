@@ -18,9 +18,14 @@
   height: 300px;
 }
 
+/* The player's portrait sits a little higher than the opponent's. */
+.playerLeaderStage .LeaderStage {
+  transform: translateY(-24px);
+}
+
 .classBadge {
   position: absolute;
-  top: 4px;
+  top: 56px;
   left: 4px;
   z-index: 4;
   width: 46px;
@@ -113,8 +118,12 @@
   justify-content: center;
   gap: 8px;
   width: 100%;
-  /* Generous, even separation from the leader so it reads as balanced padding. */
-  margin-top: 52px;
+  flex-wrap: wrap;
+  /* Overlap the bottom of the leader portrait and paint above it so the stats
+     stay readable over the art. */
+  position: relative;
+  z-index: 5;
+  margin-top: -48px;
 }
 
 /* Modern surfaces: soft rounded panels with a subtle top highlight + drop

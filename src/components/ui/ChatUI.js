@@ -35,12 +35,28 @@ const META = "#7da7bd";
 const SERIF = "Noto Serif JP, serif";
 const MONO = "Share Tech Mono, monospace";
 
-// Unscaled panel width — must match the width in panelInner below. Used to
-// work out how far the panel can scale before it would spill out of the gap
-// between the Field and the right column (covering EnemyUI / PlayerUI).
+// Fallback unscaled panel width, used before the right column has been
+// measured. The live panel width is derived from that column so the floating
+// log visually matches the large (expanded) log. Game-log rows always use the
+// expanded type and thumbnail sizes; the default panel is just shorter and
+// sits between the full Player/Enemy leader images instead of replacing them.
 const PANEL_WIDTH = 320;
-// Breathing room kept between the panel's right edge and the enemy/player UI.
+const LOG_THUMB_W = 44;
+const LOG_THUMB_H = 61;
+const LOG_NAME_SIZE = 12.5;
+const LOG_TEXT_SIZE = 16;
+// Header / composer chrome subtracted from the gap between leader images so
+// the default log can stay at 1:1 type size instead of scaling the whole panel.
+const PANEL_HEADER = 48;
+const CHAT_COMPOSER = 62;
+const MIN_LIST_HEIGHT = 80;
+const DEFAULT_LOG_LIST = 240;
+const DEFAULT_CHAT_LIST = 200;
+// Breathing room kept above/below the panel so it stays clear of the leader
+// panels when it fills the gap between them.
 const GAP_MARGIN = 10;
+// Nudge the floating log slightly above the column's vertical centre.
+const FLOATING_LIFT = 16;
 // Never shrink below this fraction of the normal side-column scale: staying
 // usable beats strictly never overlapping on very narrow (near-mobile) windows.
 const MIN_FIT_FRACTION = 0.75;
@@ -112,6 +128,7 @@ const parseMessage = (raw) => {
 // disabled there — the whole point of the mode is a large, always-open log.
 export default function ChatUI({
   scale = 1,
+  availableHeight = 0,
   setHovering,
   expanded = false,
   docked = false,
@@ -135,10 +152,10 @@ export default function ChatUI({
   // 50% − height/2) so the panel still sits centred, while the minimized chat
   // icon lands exactly where the header's minimize button was.
   const [panelHeight, setPanelHeight] = useState(0);
-  // Width of the gap between the Field's right edge and the right column, and
-  // the viewport height — both cap the panel's scale so the open chat never
-  // covers EnemyUI/PlayerUI (or runs off screen vertically).
-  const [gapWidth, setGapWidth] = useState(0);
+  // Width of the right column and the viewport height — the column width sets
+  // the floating panel's visual width (matching the expanded log), while the
+  // viewport height (plus the caller-provided gap) caps its scale.
+  const [containerWidth, setContainerWidth] = useState(0);
   const [viewportHeight, setViewportHeight] = useState(0);
 
   const reduxChatLog = useSelector((state) => state.card.chatLog);
@@ -204,32 +221,23 @@ export default function ChatUI({
   }, [openSnack, reduxLastChatMessage]);
 
   // Pin the panel's left edge to the Field's right edge: offset = Field right −
-  // container left (negative, i.e. shifted left into the gap). Re-measured on
-  // resize, on scale changes, and when the panel re-appears after being expanded.
+  // container left (negative, i.e. shifted left into the gap). Used by both the
+  // floating (small) log and the expanded (large) log so they share the same
+  // horizontal alignment. Re-measured on resize and when the panel re-appears.
   const inline = expanded || docked;
 
   useLayoutEffect(() => {
-    // Inline modes are laid out by flex - nothing to measure or anchor.
-    if (inline) return undefined;
+    // Docked-only (no expand) is laid out by flex with no field pinning.
+    if (docked && !expanded) return undefined;
     const measure = () => {
       const panel = panelRef.current;
       const container = panel && panel.parentElement;
       const center = document.querySelector(".centerCanvas");
       if (panel && container && center) {
         const centerRight = center.getBoundingClientRect().right;
-        const containerLeft = container.getBoundingClientRect().left;
-        setLeftOffset(centerRight - containerLeft);
-        // Free space runs up to where EnemyUI/PlayerUI actually start — they
-        // sit inset within the right column, so this is wider than the column
-        // edge. Use the leftmost of their edges; fall back to the column edge
-        // if they aren't rendered.
-        const uiPanels = Array.from(
-          document.querySelectorAll(".rightSideCanvas .leaderPanel"),
-        );
-        const obstacleLeft = uiPanels.length
-          ? Math.min(...uiPanels.map((el) => el.getBoundingClientRect().left))
-          : containerLeft;
-        setGapWidth(obstacleLeft - centerRight);
+        const containerRect = container.getBoundingClientRect();
+        setLeftOffset(centerRight - containerRect.left);
+        setContainerWidth(containerRect.width);
       }
       setViewportHeight(window.innerHeight);
       // Remember the open panel's height (offsetHeight ignores the scale
@@ -240,17 +248,25 @@ export default function ChatUI({
     window.addEventListener("resize", measure);
     return () => window.removeEventListener("resize", measure);
     // activeTab: the composer is hidden on the log tab, changing panel height.
-  }, [scale, minimized, activeTab, inline]);
+  }, [scale, availableHeight, containerWidth, minimized, activeTab, docked, expanded]);
 
-  // The scale the panel actually renders at: the side-column scale, shrunk
-  // only as much as needed so the panel stays clear of EnemyUI/PlayerUI and
-  // fits the viewport height — but never below MIN_FIT_FRACTION of the normal
-  // size, so it always stays usable.
-  let effectiveScale = scale;
-  if (gapWidth > 0) {
+  // Match the expanded log's pixel sizes (type, thumbs) instead of inheriting
+  // the board/side-column scale. The list is shortened to the gap between the
+  // Player/Enemy leader images; only shrink the whole panel if even that min
+  // height would overlap them or the viewport.
+  const listChrome = PANEL_HEADER + (activeTab === "chat" ? CHAT_COMPOSER : 0);
+  const floatingListHeight =
+    availableHeight > 0
+      ? Math.max(MIN_LIST_HEIGHT, availableHeight - GAP_MARGIN - listChrome)
+      : activeTab === "log"
+        ? DEFAULT_LOG_LIST
+        : DEFAULT_CHAT_LIST;
+
+  let effectiveScale = 1;
+  if (availableHeight > 0 && panelHeight > 0) {
     effectiveScale = Math.min(
       effectiveScale,
-      (gapWidth - GAP_MARGIN) / PANEL_WIDTH,
+      (availableHeight - GAP_MARGIN) / panelHeight,
     );
   }
   if (panelHeight > 0 && viewportHeight > 0) {
@@ -259,7 +275,12 @@ export default function ChatUI({
       (viewportHeight - 24) / panelHeight,
     );
   }
-  effectiveScale = Math.max(effectiveScale, scale * MIN_FIT_FRACTION);
+  effectiveScale = Math.max(effectiveScale, MIN_FIT_FRACTION);
+
+  // Visually match the right column's width: divide by the render scale so the
+  // transform cancels out and the panel ends up as wide as the expanded log.
+  const floatingWidth =
+    containerWidth > 0 ? containerWidth / effectiveScale : PANEL_WIDTH;
 
   const sendMessage = () => {
     if (chatMessage.trim() !== "") {
@@ -295,7 +316,7 @@ export default function ChatUI({
     <div
       ref={innerRef}
       style={{
-        width: inline ? "100%" : PANEL_WIDTH,
+        width: inline ? "100%" : floatingWidth,
         ...(inline ? { flex: 1, minHeight: 0 } : {}),
         display: "flex",
         flexDirection: "column",
@@ -379,6 +400,7 @@ export default function ChatUI({
           }}
         >
           {docked && <HideUiButton />}
+          {!inline && <HideUiButton />}
           {activeTab === "log" && !expanded && (
             <IconButton
               size="small"
@@ -417,12 +439,11 @@ export default function ChatUI({
         ref={logRef}
         style={{
           // Expanded mode: fill whatever height the flex column grants the
-          // panel. Normal mode: fixed heights — the log tab has no composer
-          // below, so give the list that space back (keeps the overall panel
-          // height about the same on both tabs).
+          // panel. Default mode: a shorter list that fits between the leader
+          // images, at the same type size as the expanded log.
           ...(inline
             ? { flex: 1, minHeight: 0 }
-            : { height: activeTab === "log" ? "660px" : "600px" }),
+            : { height: floatingListHeight }),
           overflowY: "auto",
           display: "flex",
           flexDirection: "column",
@@ -471,8 +492,8 @@ export default function ChatUI({
                     }}
                     onMouseLeave={() => setHovering?.(false)}
                     style={{
-                      width: expanded ? 44 : 26,
-                      height: expanded ? 61 : 36,
+                      width: LOG_THUMB_W,
+                      height: LOG_THUMB_H,
                       objectFit: "cover",
                       borderRadius: 4,
                       border: "1px solid rgba(255, 255, 255, 0.2)",
@@ -493,7 +514,7 @@ export default function ChatUI({
                   <span
                     style={{
                       fontFamily: MONO,
-                      fontSize: expanded ? 12.5 : 10.5,
+                      fontSize: LOG_NAME_SIZE,
                       letterSpacing: 0.4,
                     }}
                   >
@@ -506,7 +527,7 @@ export default function ChatUI({
                     style={{
                       color: "#eaf6ff",
                       fontFamily: SERIF,
-                      fontSize: expanded ? 16 : 13,
+                      fontSize: LOG_TEXT_SIZE,
                       lineHeight: 1.35,
                       wordBreak: "break-word",
                     }}
@@ -691,13 +712,24 @@ export default function ChatUI({
 
   // Inline views (expanded log or the docked right-column layout): just the
   // panel, in-flow, stretching to fill the space between the enemy/player UI.
+  // Expanded: same left-edge (Field) and width as the small floating log, so
+  // toggling +/− doesn't shift the panel horizontally.
   if (inline) {
     return (
       <div
+        ref={panelRef}
         style={{
           flex: 1,
           minHeight: 0,
           width: "100%",
+          ...(expanded
+            ? {
+                marginLeft: leftOffset,
+                alignSelf: "flex-start",
+                position: "relative",
+                zIndex: 10,
+              }
+            : {}),
           display: "flex",
           flexDirection: "column",
         }}
@@ -736,7 +768,7 @@ export default function ChatUI({
           // panel stays centred, and the minimized icon — which replaces the
           // header — appears at that same top spot (where the minimize button
           // was) rather than jumping to the vertical centre.
-          top: `calc(50% - ${(panelHeight * effectiveScale) / 2}px)`,
+          top: `calc(50% - ${(panelHeight * effectiveScale) / 2 + FLOATING_LIFT}px)`,
           transform: `scale(${effectiveScale})`,
           transformOrigin: "top left",
           zIndex: 10,

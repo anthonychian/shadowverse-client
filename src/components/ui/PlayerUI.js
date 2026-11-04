@@ -46,7 +46,7 @@ const StyledRating = styled(Rating)({
   },
 });
 
-export default function PlayerUI({ name, compact = false }) {
+export default function PlayerUI({ name, compact = false, stageScale }) {
   const dispatch = useDispatch();
   const [ep, setEP] = useState(0);
   const [superEvo, setSEP] = useState(false);
@@ -409,25 +409,56 @@ export default function PlayerUI({ name, compact = false }) {
     );
   }
 
-  return (
-    <div className="leaderPanel" style={{ position: "relative" }}>
-      <HideUiButton sx={{ position: "absolute", top: 0, right: 0, zIndex: 2 }} />
-      {/* Hero: the animated leader with its class logo (and the wifi badge). */}
-      <div className="leaderStageWrap">
-        <Leader
-          name={name}
-          active={reduxLeaderActive}
-          width={300}
-          height={300}
-          side="mine"
-        />
+  const leaderStage = (
+    <div className="leaderStageWrap playerLeaderStage">
+      <Leader
+        name={name}
+        active={reduxLeaderActive}
+        width={300}
+        height={300}
+        side="mine"
+      />
 
-        <div className="classBadge">
-          <img src={getClassFromLeader(name)} alt={name} />
-        </div>
-
-        {wifiBadge(false)}
+      <div className="classBadge">
+        <img src={getClassFromLeader(name)} alt={name} />
       </div>
+
+      {wifiBadge(false)}
+    </div>
+  );
+
+  return (
+    <div
+      className="leaderPanel"
+      style={{
+        position: "relative",
+        ...(stageScale != null ? { width: "100%" } : {}),
+      }}
+    >
+      <HideUiButton sx={{ position: "absolute", top: 0, right: 0, zIndex: 2 }} />
+      {/* Hero: the animated leader with its class logo (and the wifi badge).
+          Only the art scales; the stat ribbon below stays at its expanded-log
+          size. */}
+      {stageScale != null ? (
+        <div
+          className="leaderStageScaleBox"
+          style={{
+            width: 300 * stageScale,
+            height: 300 * stageScale,
+          }}
+        >
+          <div
+            style={{
+              transform: `scale(${stageScale})`,
+              transformOrigin: "top left",
+            }}
+          >
+            {leaderStage}
+          </div>
+        </div>
+      ) : (
+        leaderStage
+      )}
 
       {/* Secondary: HP, play points, EP, super-evo grouped together. */}
       {statRibbon}
