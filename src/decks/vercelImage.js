@@ -13,7 +13,7 @@ const QUALITY = 75;
 
 // `/_vercel/image` only exists on a Vercel deployment. In local dev / tests we
 // keep the direct R2 URLs so `npm start` and Jest don't request a 404.
-const ENABLED = FALSE;
+const ENABLED = false;
 
 // The source URL is a query parameter, so its own query string (`?v=…`) must be
 // escaped. Slashes and colons are left unescaped so the result still contains the
