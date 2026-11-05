@@ -10,13 +10,15 @@ import {
   setViewingEvoDeck,
   setCurrentCardIndex,
   evolveCardOnField,
+  advancedToField,
 } from "../../redux/CardSlice";
 import { useUiModalOpen } from "../hooks/useUiChromeVisible";
 import { isDoubleEvo } from "../../decks/doubleEvo";
+import { primaryType } from "../../decks/cardDetails";
 import { ModalHideUiRow } from "../ui/HideUiButton";
 import { triggerCardReveal } from "./cardRevealBus";
 import { triggerGameAnimation } from "./animationBus";
-import { fieldSlotCenter } from "./handDrag";
+import { fieldSlotCenter, registerEvoDeck } from "./handDrag";
 import { useModalCardDrag, ModalDragGhost } from "./modalCardDrag";
 
 import defaultCardBack from "../../assets/cardbacks/default.png";
@@ -90,25 +92,34 @@ export default function EvoDeck({
   const gameMode = useSelector((state) => state.gameState.gameMode);
   const automated = gameMode === "automated";
 
-  // Only normal evolve cards drag-to-evolve; Advanced ("… ADVANCED"), Carrot
-  // (Feed) and Drive Point (Ride) keep their dedicated right-click actions.
+  // Normal evolve cards drag onto a follower to evolve; Advanced ("… ADVANCED")
+  // cards drag onto an empty field slot to play. Carrot (Feed) and Drive Point
+  // (Ride) keep their dedicated right-click actions.
   const canDragEvo = (cardName) =>
     !automated &&
     typeof cardName === "string" &&
-    cardName.slice(-8) !== "ADVANCED" &&
     cardName !== "Carrot" &&
     cardName !== "Drive Point";
 
-  // Drag a card out of the modal onto a field follower to evolve it — mirrors
-  // the deck/cemetery modals (the panel hides while dragging, a ghost follows
-  // the cursor). No `field` is passed so the drop can land on an occupied slot;
-  // we validate the target (a follower, not already evolved) here instead.
+  // Drag a card out of the modal onto the field — mirrors the deck/cemetery
+  // modals (the panel hides while dragging, a ghost follows the cursor). Normal
+  // evolves drop onto a follower; Advanced cards drop onto an empty slot. No
+  // `field` is passed so the drop can land on an occupied slot; both cases are
+  // validated here instead.
   const evoDrag = useModalCardDrag({
     targets: { field: true },
-    evolve: true,
+    evolve: (card) =>
+      typeof card !== "string" || card.slice(-8) !== "ADVANCED",
     onDrop: (card, index, dest) => {
       if (dest.type !== "field") return;
       const i = dest.index;
+      if (typeof card === "string" && card.slice(-8) === "ADVANCED") {
+        if (reduxField[i] !== 0) return;
+        dispatch(advancedToField({ card, indexInEvolveDeck: index, index: i }));
+        if (i < 5) triggerCardReveal(card, reduxRoom, i, fieldSlotCenter(i));
+        handleModalClose();
+        return;
+      }
       if (reduxField[i] === 0 || reduxEvoField[i] !== 0) return;
       dispatch(evolveCardOnField({ card, indexInEvolveDeck: index, index: i }));
       triggerCardReveal(card, reduxRoom, i, fieldSlotCenter(i));
@@ -266,6 +277,7 @@ export default function EvoDeck({
   return (
     <>
       <div
+        ref={registerEvoDeck}
         onClick={handleModalOpen}
         style={{
           // height: "160px",
@@ -375,7 +387,7 @@ export default function EvoDeck({
           {showEvo && !evoStatus && !advanced && (
             <MenuItem onClick={handleEvolve}>Evolve</MenuItem>
           )}
-          {advanced && !evoStatus && (
+          {advanced && !evoStatus && primaryType(name) !== "Spell" && (
             <MenuItem onClick={handleAdvanced}>Field</MenuItem>
           )}
           {<MenuItem onClick={handleFlipEvo}>Flip</MenuItem>}

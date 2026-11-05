@@ -20,6 +20,7 @@ import {
   isOverCemetery,
   isOverHand,
   isOverPlayedZone,
+  isOverEvoDeck,
   deckHalfAt,
   fieldSlotCenter,
   setDragHover,
@@ -157,21 +158,23 @@ export default function Card({
   const fieldDraggable = onField && !opponentField && !ready;
   // Evolved cards (have a base beneath) can be dropped to the cemetery/hand/deck
   // — the base returns to that zone and the evolved card flips back into the
-  // evolve deck. Tokens and advanced cards remain slot-move-only.
+  // evolve deck. Advanced cards can go to the cemetery or back to the evolve
+  // deck (flipped); tokens remain slot-move-only apart from the cemetery remove.
   const isEvoFieldCard = onField && !!cardBeneath && cardBeneath !== 0;
-  const isSpecialFieldCard =
-    onField &&
-    typeof name === "string" &&
-    (name.slice(-5) === "TOKEN" || name.slice(-8) === "ADVANCED");
   const isTokenFieldCard =
     onField &&
     typeof name === "string" &&
     name.slice(-5) === "TOKEN";
+  const isAdvancedFieldCard =
+    onField &&
+    typeof name === "string" &&
+    name.slice(-8) === "ADVANCED";
+  const isSpecialFieldCard = isTokenFieldCard || isAdvancedFieldCard;
   // Spells can't be placed on the front row — only the played zone or the EX
-  // area. Used by the hand drag to hide the front-row drop hints and reject a
-  // drop there (it snaps back to the hand).
-  const isSpellHandCard =
-    inHand && typeof name === "string" && primaryType(name) === "Spell";
+  // area. Applies wherever a spell is dragged from, so hide the front-row drop
+  // hints and reject a drop there (it snaps back to its origin).
+  const isSpellCard =
+    typeof name === "string" && primaryType(name) === "Spell";
 
   const handleTap = () => {
     if (gameMode === "automated") return;
@@ -213,9 +216,11 @@ export default function Card({
   // advanced cards are restricted to slot-to-slot moves...
   const fieldExtraTargets = !isSpecialFieldCard;
   // ...except tokens: dragging one onto the cemetery pile removes it (mirrors
-  // the right-click "Remove" action), so the cemetery is an extra drop target
-  // just for them.
-  const fieldCemeteryTarget = fieldExtraTargets || isTokenFieldCard;
+  // the right-click "Remove" action). Advanced cards can also be discarded to
+  // the cemetery, and dragged onto the evolve-deck pile to return there flipped.
+  const fieldCemeteryTarget =
+    fieldExtraTargets || isTokenFieldCard || isAdvancedFieldCard;
+  const fieldEvoDeckTarget = isAdvancedFieldCard;
   // Dragging an Equipment token over a follower attaches it — flag the drag so
   // FieldDropHints highlights followers green instead of red.
   const isEquipmentDrag =
@@ -231,11 +236,14 @@ export default function Card({
       hand: false,
       played: false,
       deck: null,
+      evoDeck: false,
       equip: isEquipmentDrag,
+      hideFrontRow: isSpellCard,
       showCemetery: fieldCemeteryTarget,
       showHand: fieldExtraTargets,
       showDeck: fieldExtraTargets,
       showPlayed: fieldExtraTargets,
+      showEvoDeck: fieldEvoDeckTarget,
     });
   };
   const handleFieldDrag = (_event, info) => {
@@ -245,18 +253,24 @@ export default function Card({
     const s = getBoardScale();
     const x = info.point.x * s;
     const y = info.point.y * s;
+    const dropIndex = fieldIndexAt(x, y);
     setDragHover({
       active: true,
-      index: fieldIndexAt(x, y),
+      // Spells can only target the EX area (5-9), so never highlight a front-row
+      // slot while dragging one.
+      index: isSpellCard && dropIndex < 5 ? -1 : dropIndex,
       cemetery: fieldCemeteryTarget && isOverCemetery(x, y),
       hand: fieldExtraTargets && isOverHand(x, y),
       played: fieldExtraTargets && isOverPlayedZone(x, y),
       deck: fieldExtraTargets ? deckHalfAt(x, y) : null,
+      evoDeck: fieldEvoDeckTarget && isOverEvoDeck(x, y),
       equip: isEquipmentDrag,
-      showCemetery: fieldExtraTargets,
+      hideFrontRow: isSpellCard,
+      showCemetery: fieldCemeteryTarget,
       showHand: fieldExtraTargets,
       showDeck: fieldExtraTargets,
       showPlayed: fieldExtraTargets,
+      showEvoDeck: fieldEvoDeckTarget,
     });
   };
   const handleFieldDragEnd = (_event, info) => {
@@ -267,10 +281,13 @@ export default function Card({
       hand: false,
       played: false,
       deck: null,
+      evoDeck: false,
+      hideFrontRow: false,
       showCemetery: false,
       showHand: false,
       showDeck: false,
       showPlayed: false,
+      showEvoDeck: false,
     });
     if (!onFieldDrop) return;
     // See handleFieldDrag: convert board-local point back to viewport coords.
@@ -279,11 +296,18 @@ export default function Card({
     const y = info.point.y * s;
     const deckHalf = fieldExtraTargets ? deckHalfAt(x, y) : null;
     let dest;
-    if (fieldExtraTargets && isOverPlayedZone(x, y)) dest = { type: "played" };
+    if (fieldEvoDeckTarget && isOverEvoDeck(x, y)) dest = { type: "evoDeck" };
+    else if (fieldExtraTargets && isOverPlayedZone(x, y)) dest = { type: "played" };
     else if (fieldCemeteryTarget && isOverCemetery(x, y)) dest = { type: "cemetery" };
     else if (fieldExtraTargets && isOverHand(x, y)) dest = { type: "hand" };
     else if (deckHalf) dest = { type: "deck", half: deckHalf };
-    else dest = { type: "field", index: fieldIndexAt(x, y) };
+    else {
+      const dropIndex = fieldIndexAt(x, y);
+      // Spells are only valid in the EX area — a drop on the front row is
+      // ignored (the card snaps back to its original slot).
+      if (isSpellCard && dropIndex >= 0 && dropIndex < 5) return;
+      dest = { type: "field", index: dropIndex };
+    }
     onFieldDrop(idx, dest);
   };
 
@@ -301,7 +325,7 @@ export default function Card({
       hand: false,
       played: false,
       deck: null,
-      hideFrontRow: isSpellHandCard,
+      hideFrontRow: isSpellCard,
       showCemetery: true,
       showHand: false,
       showDeck: true,
@@ -320,12 +344,12 @@ export default function Card({
       active: true,
       // Spells can only target the EX area (5-9), so never highlight a front-row
       // slot while dragging one.
-      index: isSpellHandCard && dropIndex < 5 ? -1 : dropIndex,
+      index: isSpellCard && dropIndex < 5 ? -1 : dropIndex,
       cemetery: isOverCemetery(x, y),
       hand: false,
       played: isOverPlayedZone(x, y),
       deck: deckHalfAt(x, y),
-      hideFrontRow: isSpellHandCard,
+      hideFrontRow: isSpellCard,
       showCemetery: true,
       showHand: false,
       showDeck: true,
@@ -378,7 +402,7 @@ export default function Card({
     const dropIndex = fieldIndexAt(x, y);
     // Spells are only valid in the played zone or the EX area — a drop on the
     // front row is ignored (dragSnapToOrigin returns the card to the hand).
-    if (isSpellHandCard && dropIndex >= 0 && dropIndex < 5) return;
+    if (isSpellCard && dropIndex >= 0 && dropIndex < 5) return;
     if (dropIndex >= 0 && reduxField[dropIndex] === 0) {
       dispatch(
         placeToFieldFromHand({

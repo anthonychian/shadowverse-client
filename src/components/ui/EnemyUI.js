@@ -75,9 +75,6 @@ export default function EnemyUI({ compact = false, stageScale }) {
     (state) => state.card.viewingOpponentTopCards,
   );
   const dispatch = useDispatch();
-  const reduxEnemyViewingHand = useSelector(
-    (state) => state.card.enemyViewingHand,
-  );
   const reduxEnemyLeftGame = useSelector(
     (state) => state.card.enemyLeftGame,
   );
@@ -344,24 +341,6 @@ export default function EnemyUI({ compact = false, stageScale }) {
             cursor: "pointer",
           }}
           message={"Viewing Opponent's Top Cards"}
-        />
-      </Snackbar>
-      <Snackbar
-        anchorOrigin={{ vertical: "top", horizontal: "center" }}
-        open={reduxEnemyViewingHand}
-      >
-        <SnackbarContent
-          style={{
-            backgroundColor: "rgba(0, 0, 0, 0.7)",
-            color: "white",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            fontSize: "30px",
-            fontWeight: "bold",
-            fontFamily: "Noto Serif JP, serif",
-          }}
-          message={"Viewing Opponent's Hand"}
         />
       </Snackbar>
       <Snackbar

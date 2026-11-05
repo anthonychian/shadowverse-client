@@ -34,11 +34,13 @@ const CLEARED_HOVER = {
   hand: false,
   played: false,
   deck: null,
+  evoDeck: false,
   hideFrontRow: false,
   showCemetery: false,
   showHand: false,
   showDeck: false,
   showPlayed: false,
+  showEvoDeck: false,
 };
 
 // Cursor + native-drag suppression applied to each draggable wrapper. Exposed
@@ -54,8 +56,9 @@ const DRAG_STYLE = { cursor: "grab", touchAction: "none", userSelect: "none" };
  * @param {Array} [opts.field] the player's field array, so occupied slots reject
  *        a drop (mirrors the click-to-place flow). Omit for evolve, where the
  *        drop must land ON a follower — the caller validates in onDrop instead.
- * @param {boolean} [opts.evolve] marks the drag as an evolve so FieldDropHints
- *        flips its highlight (a follower slot becomes the valid/green target).
+ * @param {boolean|((card: any) => boolean)} [opts.evolve] marks the drag as an
+ *        evolve so FieldDropHints flips its highlight (a follower slot becomes
+ *        the valid/green target). Pass a function to decide per dragged card.
  * @param {boolean|((card: any) => boolean)} [opts.equip] marks the drag as an
  *        equipment attach (green target = top-row follower with nothing
  *        attached). Pass a function to decide per dragged card.
@@ -143,7 +146,7 @@ export function useModalCardDrag({
       played: !!dest && dest.type === "played",
       deck: dest && dest.type === "deck" ? dest.half : null,
       hideFrontRow: locksFrontRow(g.card),
-      evolve,
+      evolve: typeof evolve === "function" ? !!evolve(g.card) : !!evolve,
       equip: typeof equip === "function" ? !!equip(g.card) : !!equip,
       showCemetery: !!targets.cemetery,
       showHand: !!targets.hand,

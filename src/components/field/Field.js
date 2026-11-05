@@ -88,6 +88,7 @@ import {
   setEnemySuperEvoActive,
   setField,
   setEnemyCardBack,
+  setCurrentCard,
   setCardSelectedInHand,
   setEnemyCardSelectedInHand,
   setCardSelectedOnField,
@@ -1529,10 +1530,12 @@ export default function Field({
   //   { type: "cemetery" }     -> send to cemetery
   //   { type: "hand" }         -> return to hand
   //   { type: "deck", half }   -> top/bottom of deck
+  //   { type: "evoDeck" }      -> return an Advanced card, flipped
   // Anything invalid is a no-op (the card snaps back). Cemetery/Hand/Deck mirror
-  // the right-click menu. Tokens and advanced cards can't be returned. Evolved
-  // followers can: the base card goes to the zone and the evolved card flips
-  // back into the evolve deck (returnEvoToDeckIfEvolved).
+  // the right-click menu. Tokens can't be returned; advanced cards can only go
+  // to the cemetery or back to the evolve deck. Evolved followers can go to any
+  // zone: the base card goes there and the evolved card flips back into the
+  // evolve deck (returnEvoToDeckIfEvolved).
   const handleFieldDrop = (fromIndex, dest) => {
     // Equipment (in its own equipField) never affects what the follower can
     // do — it just tags along on moves and, being a token, disappears when the
@@ -1540,10 +1543,21 @@ export default function Field({
     const isEquipAttached = hasEquipAt(fromIndex);
     const isEvo = reduxEvoField[fromIndex] !== 0;
     const baseCard = reduxField[fromIndex];
+    const isAdvancedCard =
+      typeof baseCard === "string" && isAdvanced(baseCard);
     const canReturn =
       typeof baseCard === "string" &&
       !isToken(baseCard) &&
-      !isAdvanced(baseCard);
+      !isAdvancedCard;
+    if (dest.type === "evoDeck") {
+      if (!isAdvancedCard) return;
+      if (isEquipAttached) dispatch(clearEquipmentAtIndex(fromIndex));
+      dispatch(
+        advancedBackToEvolveDeck({ card: baseCard, index: fromIndex }),
+      );
+      clearFieldSlot(fromIndex);
+      return;
+    }
     if (dest.type === "cemetery") {
       // Tokens can't be sent to the cemetery — dropping one there removes it
       // from play instead (mirrors the right-click "Remove" action).
@@ -1553,7 +1567,7 @@ export default function Field({
         clearFieldSlot(fromIndex);
         return;
       }
-      if (!canReturn) return;
+      if (!canReturn && !isAdvancedCard) return;
       if (isEquipAttached) dispatch(clearEquipmentAtIndex(fromIndex));
       dispatch(placeToCemeteryFromField({ card: baseCard, index: fromIndex }));
       returnEvoToDeckIfEvolved(fromIndex);
@@ -2256,34 +2270,41 @@ export default function Field({
                 n > 1
                   ? Math.max(0, (n * ENEMY_CARD_W - BASE_WIDTH) / (n - 1))
                   : 0;
-              const baseStyle = {
-                cursor: `url(${img}) 55 55, auto`,
-                marginLeft: idx === 0 ? 0 : -overlap,
-                visibility: enemyShuffling ? "hidden" : "visible",
-              };
+              const selected = reduxCardSelectedInHand === idx;
               return (
-                <img
-                  style={
-                    reduxCardSelectedInHand === idx
-                      ? {
-                          ...baseStyle,
-                          filter:
-                            "sepia() saturate(4) hue-rotate(315deg) brightness(100%) opacity(5)",
-                        }
-                      : baseStyle
-                  }
+                <div
                   key={idx}
-                  className={"cardStyle"}
-                  // When the opponent has shown their hand, render the actual
-                  // cards face-up in place of the usual cardbacks.
-                  src={
-                    reduxShowEnemyHand
-                      ? artImage(card, reduxEnemyArt)
-                      : cardback
-                  }
-                  alt={reduxShowEnemyHand ? card : "cardback"}
+                  // Same crimson target pulse used when selecting a card on the
+                  // field; keep the unselected footprint identical so selecting
+                  // never shifts the hand row.
+                  className={selected ? "box2" : "none"}
+                  style={{
+                    marginLeft: idx === 0 ? 0 : -overlap,
+                    visibility: enemyShuffling ? "hidden" : "visible",
+                    zIndex: selected ? 5 : undefined,
+                  }}
+                  onMouseEnter={() => {
+                    if (!reduxShowEnemyHand || !card || ready) return;
+                    dispatch(setCurrentCard(card));
+                    setHovering(true);
+                  }}
+                  onMouseLeave={() => {
+                    if (reduxShowEnemyHand) setHovering(false);
+                  }}
                   onClick={() => handleSelectEnemyCardInHand(idx)}
-                />
+                >
+                  <img
+                    className={"cardStyle"}
+                    // When the opponent has shown their hand, render the actual
+                    // cards face-up in place of the usual cardbacks.
+                    src={
+                      reduxShowEnemyHand
+                        ? artImage(card, reduxEnemyArt)
+                        : cardback
+                    }
+                    alt={reduxShowEnemyHand ? card : "cardback"}
+                  />
+                </div>
               );
             })}
             <HandFx side="enemy" />
@@ -2497,19 +2518,25 @@ export default function Field({
             minHeight: "330px",
             width: "140px",
             flexShrink: 0,
-            display: "flex",
-            flexDirection: "column",
+            display: "grid",
+            gridTemplateRows: "1fr 1fr",
+            justifyItems: "center",
+            alignItems: "center",
             // backgroundColor: "black",
             // backgroundColor: "#131219",
             // background: "linear-gradient(to bottom, #09203f 0%, #537895 100%)",
             // backgroundColor: "rgba(0, 0, 0, 0.60)",
-            alignItems: "center",
-            justifyContent: "space-evenly",
 
             // cursor: `url(${img}) 55 55, auto`,
           }}
         >
           <EnemyEvoDeck setHovering={setHovering} ready={ready} />
+          <PlayedZone
+            setReadyFromPlayed={setReadyFromPlayed}
+            setReady={setReady}
+            setHovering={setHovering}
+            ready={ready}
+          />
         </div>
       </div>
 
@@ -2772,29 +2799,23 @@ export default function Field({
         {/* Player Deck and Cementery */}
         <div
           style={{
+            height: "35vh",
             minHeight: "330px",
             width: "140px",
             flexShrink: 0,
-            display: "flex",
-            flexDirection: "column",
+            display: "grid",
+            gridTemplateRows: "1fr 1fr",
+            justifyItems: "center",
+            alignItems: "center",
             // backgroundColor: "black",
             // backgroundColor: "#131219",
             zIndex: 0,
             // background: "linear-gradient(to top, #09203f 0%, #537895 100%)",
             // backgroundColor: "rgba(0, 0, 0, 0.60)",
-            alignItems: "center",
-            justifyContent: "space-evenly",
-            gap: "8px",
-            padding: "6px 0",
+
             // cursor: `url(${img}) 55 55, auto`,
           }}
         >
-          <PlayedZone
-            setReadyFromPlayed={setReadyFromPlayed}
-            setReady={setReady}
-            setHovering={setHovering}
-            ready={ready}
-          />
           <Cemetery
             setReadyFromCemetery={setReadyFromCemetery}
             setReadyFromBanish={setReadyFromBanish}

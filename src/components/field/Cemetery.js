@@ -294,6 +294,7 @@ export default function Cemetery({
     // Deck (top/bottom) is only a valid target for cemetery cards — there's no
     // banish→deck action — so it's gated on the active radio.
     targets: { field: true, hand: true, played: true, deck: cemeterySelected },
+    spellFrontRowLocked: true,
     field: reduxField,
     onDrop: (card, index, dest) => {
       if (automated) return;
@@ -621,9 +622,14 @@ export default function Cemetery({
           {cemeterySelected && !automated && (
             <MenuItem onClick={handleCardToHandFromCemetery}>Hand</MenuItem>
           )}
-          {cemeterySelected && !automated && !multi && (
-            <MenuItem onClick={handleCardToFieldFromCemetery}>Field</MenuItem>
-          )}
+          {cemeterySelected &&
+            !automated &&
+            !multi &&
+            primaryType(activePile[cardIndex]) !== "Spell" && (
+              <MenuItem onClick={handleCardToFieldFromCemetery}>
+                Field
+              </MenuItem>
+            )}
           {cemeterySelected && !automated && (
             <MenuItem onClick={handleCardToPlayedFromCemetery}>Play</MenuItem>
           )}
@@ -643,9 +649,12 @@ export default function Cemetery({
           {banishSelected && !automated && (
             <MenuItem onClick={handleCardToHandFromBanish}>Hand</MenuItem>
           )}
-          {banishSelected && !automated && !multi && (
-            <MenuItem onClick={handleCardToFieldFromBanish}>Field</MenuItem>
-          )}
+          {banishSelected &&
+            !automated &&
+            !multi &&
+            primaryType(activePile[cardIndex]) !== "Spell" && (
+              <MenuItem onClick={handleCardToFieldFromBanish}>Field</MenuItem>
+            )}
           {banishSelected && !automated && (
             <MenuItem onClick={handleCardToPlayedFromBanish}>Play</MenuItem>
           )}

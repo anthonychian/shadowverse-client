@@ -8,6 +8,7 @@ import {
   getHandRect,
   getDeckRect,
   getPlayedZoneRect,
+  getEvoDeckRect,
 } from "./handDrag";
 import { primaryType } from "../../decks/cardDetails";
 
@@ -34,6 +35,7 @@ export default function FieldDropHints() {
   const hand = getHandRect();
   const deck = getDeckRect();
   const played = getPlayedZoneRect();
+  const evoDeck = getEvoDeckRect();
 
   // Outlined drop zone; highlights green when it's the one under the cursor.
   // A `label` also renders the zone name with the same typography as the deck's
@@ -105,6 +107,11 @@ export default function FieldDropHints() {
       )}
       {played && drag.showPlayed && (
         <div style={zoneStyle(played, drag.played)} />
+      )}
+      {evoDeck && drag.showEvoDeck && (
+        <div style={zoneStyle(evoDeck, drag.evoDeck, "Evolve Deck")}>
+          {!drag.evoDeck && "Evolve Deck"}
+        </div>
       )}
       {hand && drag.showHand && <div style={zoneStyle(hand, drag.hand)} />}
       {deck && drag.showDeck && (

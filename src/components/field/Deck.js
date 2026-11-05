@@ -16,6 +16,7 @@ import {
   addToBanishFromDeck,
   addToBanishFromTopOfDeck,
   placeToFieldFromDeck,
+  playCardToSharedZone,
   placeToExFromTopOfDeck,
   setViewingDeck,
   setViewingTopCards,
@@ -27,11 +28,13 @@ import { Menu, MenuItem, Modal, Box, Popover } from "@mui/material";
 import { useUiModalOpen } from "../hooks/useUiChromeVisible";
 import { ModalHideUiRow } from "../ui/HideUiButton";
 import { triggerGameAnimation } from "./animationBus";
+import { primaryType } from "../../decks/cardDetails";
 import {
   triggerHandReveal,
   triggerHiddenHandReveal,
   triggerCardReveal,
   triggerMillReveal,
+  triggerPlayedZoneReveal,
 } from "./cardRevealBus";
 import { fieldSlotCenter, registerDeck } from "./handDrag";
 import { useModalCardDrag, ModalDragGhost } from "./modalCardDrag";
@@ -421,14 +424,18 @@ export default function Deck({
   // drops apply. The modal hides while dragging and reappears on release with the
   // dropped card removed. For revealed cards we also drop it from partialDeck.
   const deckDrag = useModalCardDrag({
-    targets: { field: true, hand: true, cemetery: true },
+    targets: { field: true, hand: true, cemetery: true, played: true },
+    spellFrontRowLocked: true,
     field: reduxField,
     onDrop: (card, index, dest) => {
       // A drop removes the card, shifting every index after it — drop any
       // multi-selection rather than leave it pointing at the wrong cards.
       setSelected(new Set());
       if (reveal) setPartialDeck((prev) => prev.filter((_, i) => i !== index));
-      if (dest.type === "hand") {
+      if (dest.type === "played") {
+        dispatch(playCardToSharedZone({ card, index, from: "deck" }));
+        triggerPlayedZoneReveal(card, reduxRoom);
+      } else if (dest.type === "hand") {
         dispatch(addToHandFromDeck({ card, index }));
         triggerHandReveal(card, reduxRoom);
       } else if (dest.type === "cemetery") {
@@ -627,8 +634,10 @@ export default function Deck({
         {!reveal && (
           <MenuItem onClick={() => handleAddFromDeckToHand()}>Hand</MenuItem>
         )}
-        {!reveal && !multi && (
-          <MenuItem onClick={() => handleCardToFieldFromDeck()}>Field</MenuItem>
+        {!reveal && !multi && primaryType(name) !== "Spell" && (
+          <MenuItem onClick={() => handleCardToFieldFromDeck()}>
+            Field
+          </MenuItem>
         )}
         {reveal && (
           <MenuItem onClick={() => handleToHandFromRevealed()}>Hand</MenuItem>

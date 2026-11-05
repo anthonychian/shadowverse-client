@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useUiModalOpen } from "../hooks/useUiChromeVisible";
 import { ModalHideUiRow } from "../ui/HideUiButton";
 import { artImage, artThumb } from "../../decks/getCards";
+import { primaryType } from "../../decks/cardDetails";
 import { Menu, MenuItem, Modal, Box, Typography } from "@mui/material";
 import CardMUI from "@mui/material/Card";
 import Card from "../hand/Card";
@@ -124,6 +125,7 @@ export default function PlayedZone({
 
   const playedDrag = useModalCardDrag({
     targets: { field: true, hand: true, deck: true, cemetery: true },
+    spellFrontRowLocked: true,
     field: reduxField,
     onDrop: (card, index, dest) => {
       if (automated) return;
@@ -320,7 +322,9 @@ export default function PlayedZone({
         }}
       >
         {!automated && <MenuItem onClick={handleToHand}>Hand</MenuItem>}
-        {!automated && <MenuItem onClick={handleToField}>Field</MenuItem>}
+        {!automated && primaryType(played[cardIndex]) !== "Spell" && (
+          <MenuItem onClick={handleToField}>Field</MenuItem>
+        )}
         {!automated && (
           <MenuItem onClick={handleToTopOfDeck}>Top of Deck</MenuItem>
         )}

@@ -7,6 +7,7 @@ import {
   setCurrentCard,
   placeTokenOnField,
   attachEquipmentOnField,
+  playCardToSharedZone,
 } from "../../redux/CardSlice";
 import { primaryType } from "../../decks/cardDetails";
 import CardMUI from "@mui/material/Card";
@@ -16,7 +17,11 @@ import { useUiModalOpen } from "../hooks/useUiChromeVisible";
 import { ModalHideUiRow } from "../ui/HideUiButton";
 import { useModalCardDrag, ModalDragGhost } from "./modalCardDrag";
 import { fieldSlotCenter } from "./handDrag";
-import { triggerCardReveal, triggerEquipReveal } from "./cardRevealBus";
+import {
+  triggerCardReveal,
+  triggerEquipReveal,
+  triggerPlayedZoneReveal,
+} from "./cardRevealBus";
 
 const style = {
   position: "relative",
@@ -36,6 +41,7 @@ export default function Token({ ready, setReady, setTokenReady, setHovering }) {
   const [open, setOpen] = useState(false);
   const modalOpen = useUiModalOpen(open);
   const [contextMenu, setContextMenu] = React.useState(null);
+  const [contextCard, setContextCard] = useState("");
   const [textInput, setTextInput] = useState("");
   const reduxField = useSelector((state) => state.card.field);
   const reduxEquipField = useSelector((state) => state.card.equipField);
@@ -60,11 +66,18 @@ export default function Token({ ready, setReady, setTokenReady, setHovering }) {
   // Equipment tokens may be dropped ON a top-row follower to attach to it, so
   // occupancy is validated here instead.
   const tokenDrag = useModalCardDrag({
-    targets: { field: true },
+    targets: { field: true, played: true },
+    // Spell tokens may only land in the EX area, never the front row.
+    spellFrontRowLocked: true,
     // Equipment tokens highlight followers green (attach) instead of red.
     equip: (card) => primaryType(card) === "Equipment",
     onDrop: (card, index, dest) => {
       if (automated) return;
+      if (dest.type === "played") {
+        dispatch(playCardToSharedZone({ card, index, from: "token" }));
+        triggerPlayedZoneReveal(card, reduxRoom);
+        return;
+      }
       const occupant = reduxField[dest.index];
       if (occupant !== 0) {
         // Occupied slot: only an Equipment token dropped onto a top-row
@@ -100,6 +113,7 @@ export default function Token({ ready, setReady, setTokenReady, setHovering }) {
 
   const handleContextMenu = (event, name) => {
     dispatch(setCurrentCard(name));
+    setContextCard(name);
     event.preventDefault();
     setContextMenu(
       contextMenu === null
@@ -241,7 +255,9 @@ export default function Token({ ready, setReady, setTokenReady, setHovering }) {
           horizontal: "left",
         }}
       >
-        <MenuItem onClick={handleCardToField}>Field</MenuItem>
+        {primaryType(contextCard) !== "Spell" && (
+          <MenuItem onClick={handleCardToField}>Field</MenuItem>
+        )}
       </Menu>
 
       <ModalDragGhost drag={tokenDrag} ready={ready} setHovering={setHovering} />

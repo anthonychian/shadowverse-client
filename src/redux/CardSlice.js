@@ -1197,12 +1197,28 @@ export const CardSlice = createSlice({
     moveValuesAtIndex: (state, action) => {
       const prevIndex = action.payload.prevIndex;
       const index = action.payload.index;
-      // Promoting a card from the EX area (5-9) up to the field (0-4): the EX
-      // slot carried no stats, so seed the follower's printed Atk/Def exactly
-      // like a card entering the field normally. The field/evoField arrays were
-      // already updated by the move reducer dispatched before this one, so the
-      // card now at `index` is the one being promoted (evo form on top).
+      // Promoting a card from the EX area (5-9) up to the field (0-4): if its
+      // EX slot had manually adjusted Atk/Def (the "Modify Atk/Def" overlay),
+      // carry those values over instead of discarding them. Otherwise seed the
+      // follower's printed Atk/Def exactly like a card entering the field
+      // normally. The field/evoField arrays were already updated by the move
+      // reducer dispatched before this one, so the card now at `index` is the
+      // one being promoted (evo form on top).
       if (prevIndex >= 5 && index < 5) {
+        const prevItem = state.customValues[prevIndex];
+        if (prevItem && (prevItem.showAtk || prevItem.showDef)) {
+          state.customValues = [
+            ...state.customValues.slice(0, index),
+            { ...prevItem },
+            ...state.customValues.slice(index + 1),
+          ];
+          socket.emit("send msg", {
+            type: "values",
+            data: state.customValues,
+            room: state.room,
+          });
+          return;
+        }
         const movedCard = state.evoField[index] || state.field[index];
         if (seedFollowerStats(state, movedCard, index)) {
           socket.emit("send msg", {

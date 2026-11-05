@@ -17,6 +17,7 @@ import { useEngineSync } from "../hooks/useEngineSync";
 import { registerHand } from "../field/handDrag";
 import { triggerPlayedZoneReveal } from "../field/cardRevealBus";
 import { HandFx, useShuffleHandActive } from "../field/GameFx";
+import { primaryType } from "../../decks/cardDetails";
 
 export default function Hand({
   constraintsRef,
@@ -59,10 +60,48 @@ export default function Hand({
   const [contextMenu, setContextMenu] = React.useState(null);
   const [name, setName] = useState("");
   const [cardIndex, setCardIndex] = useState(-1);
-  // While a card is being dragged out of the hand we must not clip it: the hand
-  // becomes a scroll/clip container once it holds >9 cards, which would cut off
-  // a card dragged upward toward the field.
+  // While a card is being dragged out of the hand we must not clip it: once the
+  // cards overflow, the hand becomes a scroll/clip container, which would cut
+  // off a card dragged upward toward the field.
   const [dragging, setDragging] = useState(false);
+  // The hand only becomes a horizontal scroller once its cards no longer fit.
+  // Measuring (rather than hard-coding >9) keeps the layout correct on narrow
+  // windows too, where fewer cards already overflow the 50vw row.
+  const handScrollRef = useRef(null);
+  const [handOverflowing, setHandOverflowing] = useState(false);
+
+  useEffect(() => {
+    const el = handScrollRef.current;
+    if (!el) return;
+    const checkOverflow = () =>
+      setHandOverflowing(el.scrollWidth > el.clientWidth + 1);
+    checkOverflow();
+    const observer = new ResizeObserver(checkOverflow);
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [reduxHand.length]);
+
+  // Let the mouse wheel (and trackpad) shift the hand horizontally while it
+  // overflows, so browsing a large hand doesn't require the thin scrollbar.
+  useEffect(() => {
+    const el = handScrollRef.current;
+    if (!el) return;
+    const handleWheel = (event) => {
+      if (el.scrollWidth <= el.clientWidth) return;
+      const delta =
+        Math.abs(event.deltaY) > Math.abs(event.deltaX)
+          ? event.deltaY
+          : event.deltaX;
+      if (!delta) return;
+      const max = el.scrollWidth - el.clientWidth;
+      const next = Math.max(0, Math.min(max, el.scrollLeft + delta));
+      if (next === el.scrollLeft) return;
+      event.preventDefault();
+      el.scrollLeft = next;
+    };
+    el.addEventListener("wheel", handleWheel, { passive: false });
+    return () => el.removeEventListener("wheel", handleWheel);
+  }, []);
 
   const handleContextMenu = (event, name, index) => {
     setName(name);
@@ -243,7 +282,9 @@ export default function Hand({
           </>
         ) : (
           <>
-            <MenuItem onClick={handleCardToField}>Field</MenuItem>
+            {primaryType(name) !== "Spell" && (
+              <MenuItem onClick={handleCardToField}>Field</MenuItem>
+            )}
             <MenuItem onClick={handleCardToPlayedZone}>Play</MenuItem>
             <MenuItem onClick={handleCardToCemetery}>Cemetery</MenuItem>
             <MenuItem onClick={handleCardToBanish}>Banish</MenuItem>
@@ -256,7 +297,10 @@ export default function Hand({
         )}
       </Menu>
       <div
-        ref={(el) => registerHand(el)}
+        ref={(el) => {
+          handScrollRef.current = el;
+          registerHand(el);
+        }}
         style={{
           zIndex: 100,
           position: "relative",
@@ -270,10 +314,15 @@ export default function Hand({
           height: "161px",
           width: "50vw",
           alignItems: "start",
-          justifyContent: "center",
-          // justifyContent: "flex-start",
-          overflowX: dragging ? "visible" : reduxHand.length > 9 ? "scroll" : "visible",
-          overflowY: dragging ? "visible" : reduxHand.length > 9 ? "clip" : "visible",
+          // "safe center" keeps the hand centered when it fits, but falls back
+          // to flex-start when the cards overflow. Plain "center" made the
+          // leftmost cards unreachable: their overflow sat in the negative
+          // scroll area, which a scroll container cannot reach.
+          justifyContent: "safe center",
+          padding: "0 8px",
+          boxSizing: "border-box",
+          overflowX: dragging ? "visible" : handOverflowing ? "auto" : "visible",
+          overflowY: dragging ? "visible" : handOverflowing ? "clip" : "visible",
         }}
       >
         {items.map((card, index) => (

@@ -91,6 +91,19 @@ export const isOverPlayedZone = (x, y) => {
   return !!r && x >= r.left && x <= r.right && y >= r.top && y <= r.bottom;
 };
 
+// The player's evolve-deck pile, registered by EvoDeck via a ref callback. A
+// drop target for returning an Advanced card (flipped) to the evolve deck.
+let evoDeckEl = null;
+export const registerEvoDeck = (el) => {
+  evoDeckEl = el || null;
+};
+export const getEvoDeckRect = () =>
+  evoDeckEl ? evoDeckEl.getBoundingClientRect() : null;
+export const isOverEvoDeck = (x, y) => {
+  const r = getEvoDeckRect();
+  return !!r && x >= r.left && x <= r.right && y >= r.top && y <= r.bottom;
+};
+
 // The player's hand row, registered by Hand via a ref callback. A drop target
 // for returning a field card to hand.
 let handEl = null;
