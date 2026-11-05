@@ -2005,9 +2005,6 @@ export default function Field({
           <MenuItem onClick={handleDuplicateToken}>Duplicate</MenuItem>
         )}
         {!isToken(name) && !isAdvanced(name) && (
-          <MenuItem onClick={handleCardToPlayedZone}>Play</MenuItem>
-        )}
-        {!isToken(name) && !isAdvanced(name) && (
           <MenuItem onClick={handleCardToCemetery}>Cemetery</MenuItem>
         )}
         {hasEquipAt(index) && (
