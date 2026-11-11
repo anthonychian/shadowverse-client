@@ -285,7 +285,7 @@ export default function Hand({
             {primaryType(name) !== "Spell" && (
               <MenuItem onClick={handleCardToField}>Field</MenuItem>
             )}
-            {primaryType(name) == "Spell" && (
+            {primaryType(name) === "Spell" && (
               <MenuItem onClick={handleCardToPlayedZone}>Play</MenuItem>
             )}
             <MenuItem onClick={handleCardToCemetery}>Cemetery</MenuItem>
