@@ -56,7 +56,8 @@ export const artThumb = (cardName, art) => toThumb(rawArtImage(cardName, art));
 
 // Optimized variants for callers that have a card name/card number instead of
 // an art map. Keep `cardImage` itself raw: getCardNoFromName parses its path.
-export const cardImageSrc = (cardName) => optimizeFull(cardImage(cardName));
+export const cardImageSrc = (cardName) =>
+  optimizeFull(withVersion(cardImage(cardName)));
 export const cardNoImage = (cardNo) =>
   optimizeFull(withVersion(`${TEXTURES_BASE}${cardNo}.png`));
 export const cardNoThumb = (cardNo) =>

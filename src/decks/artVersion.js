@@ -5,4 +5,4 @@
 // bump this constant whenever card artwork is swapped.
 // The deck-builder pool is versioned per sheet via content hashes instead
 // (src/scripts/build-card-atlases.js), so it needs no manual bump.
-export const ART_VERSION = 2;
+export const ART_VERSION = 3;
