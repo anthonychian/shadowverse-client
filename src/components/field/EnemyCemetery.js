@@ -1,42 +1,31 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { artImage, artThumb } from "../../decks/getCards";
-import { primaryType } from "../../decks/cardDetails";
-import {
-  Modal,
-  Box,
-  Radio,
-  RadioGroup,
-  FormControlLabel,
-  FormControl,
-} from "@mui/material";
+import { countCardTypes } from "../../decks/cardDetails";
+import { Modal, Box, Button } from "@mui/material";
 import CardMUI from "@mui/material/Card";
 import Card from "../hand/Card";
 import { setViewingCemeteryOpponent } from "../../redux/CardSlice";
 import { registerEnemyCemetery } from "./handDrag";
+import {
+  deckModalCards,
+  deckModalCount,
+  deckModalTitle,
+  deckModalToolbar,
+  ghostButtonSx,
+  useDeckModalBoxStyle,
+} from "./deckModalStyles";
 import "../../css/Card.css";
 import { useUiModalOpen } from "../hooks/useUiChromeVisible";
 import { ModalHideUiRow } from "../ui/HideUiButton";
 
 const img = require("../../assets/pin_bellringer_angel.png");
 
-const style = {
-  position: "relative",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  backgroundColor: "transparent",
-  width: "40%",
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  alignItems: "center",
-};
-
 export default function EnemyCemetery({ setHovering, ready }) {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
   const modalOpen = useUiModalOpen(open);
+  const modalBoxStyle = useDeckModalBoxStyle(modalOpen);
   const [cemeterySelected, setCemeterySelected] = useState(true);
   const [banishSelected, setBanishSelected] = useState(false);
 
@@ -44,16 +33,11 @@ export default function EnemyCemetery({ setHovering, ready }) {
   const reduxEnemyArt = useSelector((state) => state.card.enemyArt);
   const reduxEnemyBanish = useSelector((state) => state.card.enemyBanish);
 
-  const cemeteryTypeCounts = reduxEnemyCemetery.reduce(
-    (counts, card) => {
-      const type = primaryType(card);
-      if (type === "Follower") counts.Follower += 1;
-      else if (type === "Spell") counts.Spell += 1;
-      else if (type === "Amulet") counts.Amulet += 1;
-      return counts;
-    },
-    { Follower: 0, Spell: 0, Amulet: 0 },
-  );
+  const cemeteryTypeCounts = countCardTypes(reduxEnemyCemetery);
+  const banishTypeCounts = countCardTypes(reduxEnemyBanish);
+  const activeTypeCounts = cemeterySelected
+    ? cemeteryTypeCounts
+    : banishTypeCounts;
 
   const handleModalOpen = () => {
     if (
@@ -131,64 +115,31 @@ export default function EnemyCemetery({ setHovering, ready }) {
           },
         }}
       >
-        <Box sx={style}>
+        <Box sx={modalBoxStyle}>
           <ModalHideUiRow />
-          <FormControl>
-            <RadioGroup
-              row
-              aria-labelledby="demo-row-radio-buttons-group-label"
-              name="row-radio-buttons-group"
+          <div style={deckModalToolbar}>
+            <span style={deckModalTitle}>
+              {cemeterySelected ? "CEMETERY" : "BANISH"}
+            </span>
+            <Button
+              onClick={
+                cemeterySelected ? handleBanishSelected : handleCemeterySelected
+              }
+              sx={ghostButtonSx}
             >
-              <FormControlLabel
-                checked={cemeterySelected}
-                onChange={handleCemeterySelected}
-                sx={{ fontFamily: "Noto Serif JP, serif", color: "white" }}
-                value={cemeterySelected}
-                control={<Radio />}
-                label="Cemetery"
-              />
-              <FormControlLabel
-                checked={banishSelected}
-                onChange={handleBanishSelected}
-                sx={{ fontFamily: "Noto Serif JP, serif", color: "white" }}
-                value={banishSelected}
-                control={<Radio />}
-                label="Banish"
-              />
-            </RadioGroup>
-          </FormControl>
-          {cemeterySelected && (
-            <Box
-              sx={{
-                display: "flex",
-                gap: "18px",
-                marginBottom: "8px",
-                color: "white",
-                fontFamily: "Noto Serif JP, serif",
-                fontSize: "18px",
-              }}
-            >
-              <span>Followers: {cemeteryTypeCounts.Follower}</span>
-              <span>Spells: {cemeteryTypeCounts.Spell}</span>
-              <span>Amulets: {cemeteryTypeCounts.Amulet}</span>
-            </Box>
-          )}
-          <CardMUI
-            sx={{
-              backgroundColor: "rgba(0, 0, 0, 0.7)",
-              minHeight: "250px",
-              padding: "7%",
-              height: "500px",
-              overflowY: "scroll",
-              width: "100%",
-              display: "flex",
-              flexDirection: "row",
-              flexWrap: "wrap",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-            variant="outlined"
-          >
+              {cemeterySelected ? "Banish" : "Cemetery"}
+            </Button>
+            <span style={deckModalCount}>
+              {activeTypeCounts.Follower} FOLLOWERS
+            </span>
+            <span style={deckModalCount}>
+              {activeTypeCounts.Spell} SPELLS
+            </span>
+            <span style={deckModalCount}>
+              {activeTypeCounts.Amulet} AMULETS
+            </span>
+          </div>
+          <CardMUI sx={deckModalCards} variant="outlined">
             {cemeterySelected &&
               reduxEnemyCemetery.map((card, idx) => (
                 <div key={`card-${idx}`}>

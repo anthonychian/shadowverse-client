@@ -859,12 +859,18 @@ export default function Card({
             src={cancel}
             alt={"cancel"}
             style={{
-              position: "relative",
+              // Absolute (not relative): a relative icon sits on a second line
+              // below the 161px card, adding ~60px of scrollable overflow that
+              // made the Banish deck drawer show a scrollbar with only a few
+              // cards. Top 10% reproduces the old `bottom: 90%` visual spot
+              // without contributing to layout height.
+              position: "absolute",
+              top: "10%",
+              left: "7%",
               height: "100px",
               width: "100px",
               opacity: 0.65,
-              left: "7%",
-              bottom: "90%",
+              pointerEvents: "none",
             }}
           />
         )}

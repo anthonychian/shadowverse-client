@@ -70,3 +70,14 @@ canvas:active {
 .card-effect-scroll::-webkit-scrollbar-thumb:hover {
   background: rgba(255, 255, 255, 0.6);
 }
+
+/* Hide the native up/down spinners on number inputs (e.g. Look At Top). */
+.no-number-spin {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+.no-number-spin::-webkit-outer-spin-button,
+.no-number-spin::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

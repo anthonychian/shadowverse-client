@@ -180,7 +180,7 @@ export default function PlayedZone({
           position: "relative",
           overflow: "hidden",
           cursor: canDragFromZone
-            ? "grab"
+            ? "default"
             : automated
               ? "default"
               : `url(${img}) 55 55, auto`,

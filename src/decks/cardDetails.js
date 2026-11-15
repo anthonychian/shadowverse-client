@@ -104,6 +104,19 @@ export const primaryType = (name) => {
   return d.cardType.split("/")[0].trim();
 };
 
+// Tally cards by primary type, for the deck/cemetery/banish count badges.
+export const countCardTypes = (cards = []) =>
+  cards.reduce(
+    (counts, name) => {
+      const type = primaryType(name);
+      if (type === "Follower") counts.Follower += 1;
+      else if (type === "Spell") counts.Spell += 1;
+      else if (type === "Amulet") counts.Amulet += 1;
+      return counts;
+    },
+    { Follower: 0, Spell: 0, Amulet: 0 },
+  );
+
 // Traits are "/"-separated composites ("Arcana / Mage / Cutthroat"). Atomic
 // tokens are far more useful for filtering than the 400+ raw combinations.
 export const traitTokens = (name) => {

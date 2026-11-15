@@ -4,17 +4,8 @@ import { useEngineSync } from "../hooks/useEngineSync";
 import { useUiModalOpen } from "../hooks/useUiChromeVisible";
 import { ModalHideUiRow } from "../ui/HideUiButton";
 import { artImage, artThumb } from "../../decks/getCards";
-import { primaryType } from "../../decks/cardDetails";
-import {
-  Menu,
-  MenuItem,
-  Modal,
-  Box,
-  Radio,
-  RadioGroup,
-  FormControlLabel,
-  FormControl,
-} from "@mui/material";
+import { countCardTypes, primaryType } from "../../decks/cardDetails";
+import { Menu, MenuItem, Modal, Box, Button } from "@mui/material";
 import CardMUI from "@mui/material/Card";
 import Card from "../hand/Card";
 import {
@@ -34,6 +25,14 @@ import {
   setViewingCemetery,
 } from "../../redux/CardSlice";
 import { registerCemetery, fieldSlotCenter } from "./handDrag";
+import {
+  deckModalCards,
+  deckModalCount,
+  deckModalTitle,
+  deckModalToolbar,
+  ghostButtonSx,
+  useDeckModalBoxStyle,
+} from "./deckModalStyles";
 import { useModalCardDrag, ModalDragGhost } from "./modalCardDrag";
 // import cardback from "../../assets/cardbacks/default.png";
 import {
@@ -55,6 +54,7 @@ export default function Cemetery({
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
   const modalOpen = useUiModalOpen(open, { persistWhenChromeHidden: true });
+  const modalBoxStyle = useDeckModalBoxStyle(modalOpen);
   const [contextMenu, setContextMenu] = React.useState(null);
   const [cemeterySelected, setCemeterySelected] = useState(true);
   const [banishSelected, setBanishSelected] = useState(false);
@@ -97,22 +97,23 @@ export default function Cemetery({
   const activePile = cemeterySelected ? reduxCemetery : reduxBanish;
   const multi = selected.size > 1;
 
-  const cemeteryTypeCounts = reduxCemetery.reduce(
-    (counts, card) => {
-      const type = primaryType(card);
-      if (type === "Follower") counts.Follower += 1;
-      else if (type === "Spell") counts.Spell += 1;
-      else if (type === "Amulet") counts.Amulet += 1;
-      return counts;
-    },
-    { Follower: 0, Spell: 0, Amulet: 0 },
-  );
+  const cemeteryTypeCounts = countCardTypes(reduxCemetery);
+  const banishTypeCounts = countCardTypes(reduxBanish);
+  const activeTypeCounts = cemeterySelected
+    ? cemeteryTypeCounts
+    : banishTypeCounts;
 
   // Selected indices in click order (a Set keeps insertion order), dropping any
   // stale entries. This is what makes the click order drive deck placement.
   const selectedOrder = [...selected].filter(
     (i) => i >= 0 && i < activePile.length,
   );
+
+  // Playing is only valid for Spell cards, so hide the Play option unless every
+  // selected card is a Spell.
+  const selectedAreSpells =
+    selectedOrder.length > 0 &&
+    selectedOrder.every((i) => primaryType(activePile[i]) === "Spell");
 
   // Act on the selected cards in the given index order. Each card's original
   // index is translated to its current position *after* the cards already acted
@@ -402,80 +403,36 @@ export default function Cemetery({
       >
         <Box
           sx={{
-            position: "relative",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            backgroundColor: "transparent",
-            // boxShadow: 24,
-            // p: 3,
-            width: "40%",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
+            ...modalBoxStyle,
             // Hidden with opacity (not visibility/display) while dragging so the
             // dragged card's wrapper keeps its pointer capture.
             opacity: cemeteryDrag.isDragging ? 0 : 1,
           }}
         >
           <ModalHideUiRow />
-          <FormControl>
-            <RadioGroup
-              row
-              aria-labelledby="demo-row-radio-buttons-group-label"
-              name="row-radio-buttons-group"
+          <div style={deckModalToolbar}>
+            <span style={deckModalTitle}>
+              {cemeterySelected ? "CEMETERY" : "BANISH"}
+            </span>
+            <Button
+              onClick={
+                cemeterySelected ? handleBanishSelected : handleCemeterySelected
+              }
+              sx={ghostButtonSx}
             >
-              <FormControlLabel
-                checked={cemeterySelected}
-                onChange={handleCemeterySelected}
-                sx={{ fontFamily: "Noto Serif JP, serif", color: "white" }}
-                value={cemeterySelected}
-                control={<Radio />}
-                label="Cemetery"
-              />
-              <FormControlLabel
-                checked={banishSelected}
-                onChange={handleBanishSelected}
-                sx={{ fontFamily: "Noto Serif JP, serif", color: "white" }}
-                value={banishSelected}
-                control={<Radio />}
-                label="Banish"
-              />
-            </RadioGroup>
-          </FormControl>
-          {cemeterySelected && (
-            <Box
-              sx={{
-                display: "flex",
-                gap: "18px",
-                marginBottom: "8px",
-                color: "white",
-                fontFamily: "Noto Serif JP, serif",
-                fontSize: "18px",
-              }}
-            >
-              <span>Followers: {cemeteryTypeCounts.Follower}</span>
-              <span>Spells: {cemeteryTypeCounts.Spell}</span>
-              <span>Amulets: {cemeteryTypeCounts.Amulet}</span>
-            </Box>
-          )}
-          <CardMUI
-            sx={{
-              backgroundColor: "rgba(0, 0, 0, 0.7)",
-              minHeight: "250px",
-              padding: "7%",
-              height: "500px",
-              overflowY: "scroll",
-              width: "100%",
-              display: "flex",
-              flexDirection: "row",
-              flexWrap: "wrap",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-            variant="outlined"
-          >
+              {cemeterySelected ? "Banish" : "Cemetery"}
+            </Button>
+            <span style={deckModalCount}>
+              {activeTypeCounts.Follower} FOLLOWERS
+            </span>
+            <span style={deckModalCount}>
+              {activeTypeCounts.Spell} SPELLS
+            </span>
+            <span style={deckModalCount}>
+              {activeTypeCounts.Amulet} AMULETS
+            </span>
+          </div>
+          <CardMUI sx={deckModalCards} variant="outlined">
             {cemeterySelected &&
               reduxCemetery.map((card, index) => (
                 <div
@@ -630,7 +587,7 @@ export default function Cemetery({
                 Field
               </MenuItem>
             )}
-          {cemeterySelected && !automated && (
+          {cemeterySelected && !automated && selectedAreSpells && (
             <MenuItem onClick={handleCardToPlayedFromCemetery}>Play</MenuItem>
           )}
           {cemeterySelected && !automated && (
@@ -655,7 +612,7 @@ export default function Cemetery({
             primaryType(activePile[cardIndex]) !== "Spell" && (
               <MenuItem onClick={handleCardToFieldFromBanish}>Field</MenuItem>
             )}
-          {banishSelected && !automated && (
+          {banishSelected && !automated && selectedAreSpells && (
             <MenuItem onClick={handleCardToPlayedFromBanish}>Play</MenuItem>
           )}
           {banishSelected && !automated && (

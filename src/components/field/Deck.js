@@ -24,11 +24,11 @@ import {
   setViewingDeckLog,
   setViewingOpponentTopCards,
 } from "../../redux/CardSlice";
-import { Menu, MenuItem, Modal, Box, Popover } from "@mui/material";
+import { Menu, MenuItem, Modal, Box, Popover, Button } from "@mui/material";
 import { useUiModalOpen } from "../hooks/useUiChromeVisible";
 import { ModalHideUiRow } from "../ui/HideUiButton";
 import { triggerGameAnimation } from "./animationBus";
-import { primaryType } from "../../decks/cardDetails";
+import { countCardTypes, primaryType } from "../../decks/cardDetails";
 import {
   triggerHandReveal,
   triggerHiddenHandReveal,
@@ -37,6 +37,15 @@ import {
   triggerPlayedZoneReveal,
 } from "./cardRevealBus";
 import { fieldSlotCenter, registerDeck } from "./handDrag";
+import {
+  deckModalCards,
+  deckModalCount,
+  deckModalTitle,
+  deckModalToolbar,
+  ghostButtonSx,
+  primaryButtonSx,
+  useDeckModalBoxStyle,
+} from "./deckModalStyles";
 import { useModalCardDrag, ModalDragGhost } from "./modalCardDrag";
 import { DeckFx, useShuffleDeckActive } from "./GameFx";
 
@@ -66,19 +75,6 @@ import viridiaCardBack from "../../assets/cardbacks/viridia.png";
 import wilbertCardBack from "../../assets/cardbacks/wilbert.png";
 import "../../css/Card.css";
 
-const style = {
-  position: "relative",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  backgroundColor: "transparent",
-  width: "40%",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  flexDirection: "column",
-};
-
 export default function Deck({
   ready,
   setHovering,
@@ -94,17 +90,24 @@ export default function Deck({
   const [contextMenu, setContextMenu] = React.useState(null);
   const [cardContextMenu, setCardContextMenu] = React.useState(null);
   const [reveal, setReveal] = useState(false);
-  const [textInput, setTextInput] = useState("");
+  const [textInput, setTextInput] = useState("0");
   const [partialDeck, setPartialDeck] = useState([]);
+  // Whether the current Look At Top cards are revealed to the opponent. The
+  // Reveal All button toggles between revealing and hiding them.
+  const [revealAllActive, setRevealAllActive] = useState(false);
   // Indices (into the active list) that are multi-selected in the deck modal.
   // Left-click toggles a card in here; right-click opens the options menu, which
   // then applies to every selected card. A Set preserves click order.
   const [selected, setSelected] = useState(() => new Set());
 
+  // Top-anchored drawer bounds, measured from the live (CSS-scaled) board.
+  const deckModalBoxStyle = useDeckModalBoxStyle(modalOpen);
+
   const [cardback, setCardback] = useState();
   const reduxCardBack = useSelector((state) => state.card.cardback);
 
   const reduxDeck = useSelector((state) => state.card.deck);
+  const deckTypeCounts = countCardTypes(reduxDeck);
   const reduxField = useSelector((state) => state.card.field);
   const reduxHand = useSelector((state) => state.card.hand);
   const reduxRoom = useSelector((state) => state.card.room);
@@ -123,6 +126,12 @@ export default function Deck({
   const selectedOrder = [...selected].filter(
     (i) => i >= 0 && i < activePile.length,
   );
+
+  // Playing is only valid for Spell cards, so hide the Play option unless every
+  // selected card is a Spell.
+  const selectedAreSpells =
+    selectedOrder.length > 0 &&
+    selectedOrder.every((i) => primaryType(activePile[i]) === "Spell");
 
   // Act on the selected cards in the given index order. Each card's original
   // index is translated to its current position *after* the cards already acted
@@ -170,6 +179,7 @@ export default function Deck({
     if (automated || reduxDeck.length === 0 || ready) return;
     setOpen(true);
     setSelected(new Set());
+    setTextInput("0");
     dispatch(setViewingTopCards(true));
   };
 
@@ -180,6 +190,7 @@ export default function Deck({
       setReveal(false);
       setTextInput("");
       setPartialDeck([]);
+      setRevealAllActive(false);
       dispatch(setViewingTopCards(false));
     } else {
       dispatch(setViewingDeck(false));
@@ -296,6 +307,16 @@ export default function Deck({
     setReadyFromDeck(true);
   };
 
+  const handleCardToPlayedFromDeck = () => {
+    handleCardClose();
+    handleModalClose();
+    setSelected(new Set());
+    runSelected(selectedOrder, (card, i) => {
+      dispatch(playCardToSharedZone({ card, index: i, from: "deck" }));
+      triggerPlayedZoneReveal(card, reduxRoom);
+    });
+  };
+
   const handleToHandFromRevealed = () => {
     handleCardClose();
     const order = selectedOrder;
@@ -325,6 +346,7 @@ export default function Deck({
     for (let i = 0; i < length; i++)
       dispatch(addToBanishFromDeck({ card: partialDeck[i], index: 0 }));
     setPartialDeck([]);
+    setTextInput("0");
   };
 
   const handleCemeteryAll = () => {
@@ -333,6 +355,7 @@ export default function Deck({
     for (let i = 0; i < length; i++)
       dispatch(addToCemeteryFromDeck({ card: partialDeck[i], index: 0 }));
     setPartialDeck([]);
+    setTextInput("0");
   };
 
   const handleBotDeckAll = () => {
@@ -340,6 +363,7 @@ export default function Deck({
     for (let i = 0; i < length; i++)
       dispatch(addToBotOfDeckFromDeck({ card: partialDeck[i], index: 0 }));
     setPartialDeck([]);
+    setTextInput("0");
   };
 
   const handleMill = () => {
@@ -451,8 +475,8 @@ export default function Deck({
     },
   });
 
-  const handleSubmit = () => {
-    const num = Number(textInput);
+  const submitCount = (rawNum) => {
+    const num = Math.max(0, Number(rawNum) || 0);
     dispatch(setViewingCardsLog({ number: num }));
 
     if (num < reduxDeck.length) {
@@ -462,13 +486,38 @@ export default function Deck({
     }
   };
 
+  const handleSubmit = () => {
+    submitCount(textInput);
+  };
+
+  // +/- step the count and submit immediately, clamped to the deck size so the
+  // buttons never log a no-op at the ends.
+  const handleStepCount = (delta) => {
+    const current = Number(textInput) || 0;
+    const next = Math.min(Math.max(current + delta, 0), reduxDeck.length);
+    if (next === current) return;
+    setTextInput(String(next));
+    submitCount(next);
+  };
+
   const handleRevealAll = () => {
+    if (revealAllActive) {
+      socket.emit("send msg", {
+        type: "revealTopCardsClose",
+        data: true,
+        room: reduxRoom,
+      });
+      dispatch(setViewingOpponentTopCards(false));
+      setRevealAllActive(false);
+      return;
+    }
     socket.emit("send msg", {
       type: "revealTopCards",
       data: partialDeck,
       room: reduxRoom,
     });
     dispatch(setViewingOpponentTopCards(true));
+    setRevealAllActive(true);
   };
 
   useEffect(() => {
@@ -639,6 +688,9 @@ export default function Deck({
             Field
           </MenuItem>
         )}
+        {!reveal && selectedAreSpells && (
+          <MenuItem onClick={() => handleCardToPlayedFromDeck()}>Play</MenuItem>
+        )}
         {reveal && (
           <MenuItem onClick={() => handleToHandFromRevealed()}>Hand</MenuItem>
         )}
@@ -671,7 +723,7 @@ export default function Deck({
       >
         <Box
           sx={{
-            ...style,
+            ...deckModalBoxStyle,
             // Hidden with opacity (not visibility/display) while dragging so the
             // dragged card's wrapper stays rendered and keeps its pointer
             // capture — otherwise the browser would release it and drop tracking.
@@ -679,108 +731,90 @@ export default function Deck({
           }}
         >
           <ModalHideUiRow />
-          {reveal && (
-            <div
-              style={{
-                padding: "1em",
-                width: "100%",
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "center",
-                alignItems: "center",
-                gap: ".5em",
-              }}
-            >
-              <input
-                style={{
-                  width: "10%",
-                  fontSize: "18px",
-                  fontFamily: "Noto Serif JP, serif",
-                }}
-                type="number"
-                min={0}
-                value={textInput}
-                onChange={(event) => handleTextInput(event.target.value)}
-                placeholder="# of Cards"
-              />
-              <button
-                onClick={handleSubmit}
-                style={{
-                  fontFamily: "Noto Serif JP, serif",
-                  height: "30px",
-                  width: "80px",
-                }}
-              >
-                Submit
-              </button>
-              <div style={{ width: "30px" }} />
-              {partialDeck.length > 0 && (
-                <button
-                  onClick={handleBotDeckAll}
-                  style={{
-                    fontFamily: "Noto Serif JP, serif",
-                    height: "30px",
-                    width: "120px",
-                  }}
+          <div style={deckModalToolbar}>
+            <span style={deckModalTitle}>
+              {reveal ? "LOOK AT TOP" : "VIEW DECK"}
+            </span>
+            {!reveal && (
+              <>
+                <span style={deckModalCount}>
+                  {deckTypeCounts.Follower} FOLLOWERS
+                </span>
+                <span style={deckModalCount}>
+                  {deckTypeCounts.Spell} SPELLS
+                </span>
+                <span style={deckModalCount}>
+                  {deckTypeCounts.Amulet} AMULETS
+                </span>
+              </>
+            )}
+            {reveal && (
+              <>
+                <Button
+                  onClick={() => handleStepCount(-1)}
+                  sx={{ ...ghostButtonSx, minWidth: 34, padding: "4px 0" }}
+                  aria-label="Decrease cards"
                 >
-                  Bot Deck All
-                </button>
-              )}
-
-              {partialDeck.length > 0 && (
-                <button
-                  onClick={handleCemeteryAll}
+                  −
+                </Button>
+                <input
+                  className="no-number-spin"
                   style={{
+                    width: 92,
+                    fontSize: 14,
                     fontFamily: "Noto Serif JP, serif",
-                    height: "30px",
-                    width: "120px",
+                    color: "#daf6ff",
+                    background: "rgba(10, 14, 20, 0.75)",
+                    border: "1px solid rgba(72, 171, 224, 0.5)",
+                    borderRadius: 8,
+                    outline: "none",
+                    padding: "4px 8px",
+                    textAlign: "center",
+                    boxSizing: "border-box",
                   }}
-                >
-                  Cemetery All
-                </button>
-              )}
-              {partialDeck.length > 0 && (
-                <button
-                  onClick={handleBanishAll}
-                  style={{
-                    fontFamily: "Noto Serif JP, serif",
-                    height: "30px",
-                    width: "120px",
+                  type="number"
+                  min={0}
+                  value={textInput}
+                  onChange={(event) => handleTextInput(event.target.value)}
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter") handleSubmit();
                   }}
+                  placeholder="# of Cards"
+                />
+                <Button
+                  onClick={() => handleStepCount(1)}
+                  sx={{ ...primaryButtonSx, minWidth: 34, padding: "4px 0" }}
+                  aria-label="Increase cards"
                 >
-                  Banish All
-                </button>
-              )}
-              {partialDeck.length > 0 && (
-                <button
-                  onClick={handleRevealAll}
-                  style={{
-                    fontFamily: "Noto Serif JP, serif",
-                    height: "30px",
-                    width: "120px",
-                  }}
-                >
-                  Reveal All
-                </button>
-              )}
-            </div>
-          )}
-          <CardMUI
-            sx={{
-              backgroundColor: "rgba(0, 0, 0, 0.7)",
-              minHeight: "250px",
-              padding: "7%",
-              height: "500px",
-              overflowY: "scroll",
-              width: "100%",
-              display: "flex",
-              flexDirection: "row",
-              flexWrap: "wrap",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-            variant="outlined"
-          >
+                  +
+                </Button>
+                {(partialDeck.length > 0 || revealAllActive) && (
+                  <>
+                    {partialDeck.length > 0 && (
+                      <>
+                        <Button onClick={handleBotDeckAll} sx={ghostButtonSx}>
+                          Bot Deck All
+                        </Button>
+                        <Button onClick={handleCemeteryAll} sx={ghostButtonSx}>
+                          Cemetery All
+                        </Button>
+                        <Button onClick={handleBanishAll} sx={ghostButtonSx}>
+                          Banish All
+                        </Button>
+                      </>
+                    )}
+                    <Button
+                      onClick={handleRevealAll}
+                      sx={revealAllActive ? ghostButtonSx : primaryButtonSx}
+                    >
+                      {revealAllActive ? "Hide All" : "Reveal All"}
+                    </Button>
+                  </>
+                )}
+              </>
+            )}
+          </div>
+          <CardMUI sx={deckModalCards} variant="outlined">
             {!reveal &&
               reduxDeck.map((card, idx) => (
                 <div
