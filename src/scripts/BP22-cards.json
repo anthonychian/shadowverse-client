@@ -830,7 +830,7 @@
       "cardSet": "Combined Set \"Academy Royale & Dusk of Calamity\"",
       "cost": "2",
       "attack": "2",
-      "defense": "2",
+      "defense": "3",
       "effect": "[fanfare] Add 1 to a Stack on your field. (If there are no cards on your field with Stack, summon a Magic Sediment token with Stack counters equal to the number you would have added.) [act] [engage], Earth Rite (3): Add 6 to a Stack on your field."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/BP22/BP22-044EN.png"
@@ -925,7 +925,7 @@
       "cardSet": "Combined Set \"Academy Royale & Dusk of Calamity\"",
       "cost": "3",
       "attack": "1",
-      "defense": "3",
+      "defense": "5",
       "effect": "Whenever a Golem follower is put onto your field, select an enemy follower on the field. Deal 2 damage to it and 1 damage to its leader. [fanfare] Put a Strikeform Golem token into your EX area. [act] [cost03]: For the rest of this turn, Golem cards you play from your EX area cost 3 less."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/BP22/BP22-049EN.png"

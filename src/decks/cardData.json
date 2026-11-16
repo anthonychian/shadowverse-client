@@ -6319,7 +6319,7 @@
     "rarity": "Silver",
     "cost": "3",
     "attack": "1",
-    "defense": "3",
+    "defense": "5",
     "effect": "Whenever a Golem follower is put onto your field, select an enemy follower on the field. Deal 2 damage to it and 1 damage to its leader. [fanfare] Put a Strikeform Golem token into your EX area. [act] [cost03]: For the rest of this turn, Golem cards you play from your EX area cost 3 less.",
     "cardSet": "Combined Set \"Academy Royale & Dusk of Calamity\""
   },
@@ -17095,7 +17095,7 @@
     "rarity": "Gold",
     "cost": "2",
     "attack": "2",
-    "defense": "2",
+    "defense": "3",
     "effect": "[fanfare] Add 1 to a Stack on your field. (If there are no cards on your field with Stack, summon a Magic Sediment token with Stack counters equal to the number you would have added.) [act] [engage], Earth Rite (3): Add 6 to a Stack on your field.",
     "cardSet": "Combined Set \"Academy Royale & Dusk of Calamity\""
   },
@@ -17215,7 +17215,7 @@
     "rarity": "Legendary",
     "cost": "4",
     "attack": "4",
-    "defense": "4",
+    "defense": "5",
     "effect": "While you don't have a Super Evolution Point, this has Storm. [act] Discard an Academic card: Select an enemy follower on the field. Deal it 5 damage and draw a card. Activate only once per turn",
     "cardSet": "Combined Set \"Academy Royale & Dusk of Calamity\""
   },
@@ -30703,7 +30703,7 @@
     "rarity": "Silver",
     "cost": "2",
     "attack": "2",
-    "defense": "1",
+    "defense": "3",
     "effect": "Once per turn, when this gains 🛡️, draw a card. [act] [engage]: Give your leader [defense]+1. Activate only if there's another Academic follower on your field.",
     "cardSet": "Combined Set \"Academy Royale & Dusk of Calamity\""
   },

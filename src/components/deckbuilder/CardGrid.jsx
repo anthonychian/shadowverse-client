@@ -118,7 +118,12 @@ function CardTile({ name, cardNo, cardKey, count, copyMax, maxed, selected, onIn
       onHoverStart={() => setHover(true)}
       onHoverEnd={() => setHover(false)}
       onClick={handleBodyClick}
-      onDoubleClick={() => { if (!isMobile && !maxed && onAdd) onAdd(name, cardNo); }}
+      onDoubleClick={(e) => {
+        // A double-click on the hover +/- buttons already fires two onClick
+        // adds; letting it bubble here would add a third copy.
+        if (e.target.closest("button")) return;
+        if (!isMobile && !maxed && onAdd) onAdd(name, cardNo);
+      }}
       style={{
         position: "relative", ...tileSize, cursor: "pointer", borderRadius: 8,
         // The blue selection highlight is desktop-only; on mobile a tap adds a

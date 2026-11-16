@@ -132,17 +132,22 @@ export default function CardInspector({
   // 1 on tall screens and scales down with viewport height below ~820–900px.
   const [vpH, setVpH] = useState(typeof window !== "undefined" ? window.innerHeight : 1080);
   useEffect(() => {
-    if (!fitEffect && !fill) return;
     const onResize = () => setVpH(window.innerHeight);
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
-  }, [fitEffect, fill]);
+  }, []);
+  // The deck builder's left inspector (neither a preview `fill` nor the mobile
+  // `large` layout): it must fit the whole column with no scrollbar, giving the
+  // description whatever height the art doesn't need.
+  const compactInspector = !fitEffect && !fill && !large;
   // Everything sized off metaScale — name, meta text, stat values, cost/atk/def
   // icons, gaps, the stat banner — rides `textScale` too, so one knob moves the
   // whole block together rather than leaving the icons behind the text.
   const metaScale =
     fitEffect || fill
       ? Math.max(fill ? 0.65 : 0.6, Math.min(1, vpH / (fill ? 820 : 900))) * textScale
+      : compactInspector
+      ? Math.max(0.72, Math.min(1, vpH / 900)) * textScale
       : textScale;
 
   // In the fullscreen mobile preview there's plenty of room, so scale the image,
@@ -150,6 +155,7 @@ export default function CardInspector({
   // mode (roomy desktop preview dialog) the text/icons are scaled DOWN so the
   // card art stays the largest, screen-scaled element.
   const imgMax = large ? 380 : 360;
+  const artMaxH = Math.round((imgMax * 641) / 459);
   const gap = (fill ? 8 : large ? 10 : 12) * metaScale;
   const nameSize = (fill ? 18 : large ? 22 : 19) * metaScale * nameScale;
   const metaSize = (fill ? 12 : large ? 14 : 13) * metaScale;
@@ -190,7 +196,15 @@ export default function CardInspector({
     ? { height: "32vh", maxWidth: imgMax }
     : imageMaxHeight
     ? { height: imageMaxHeight, maxWidth: imageMaxWidth || "100%" }
-    : { width: "100%", maxWidth: imageMaxWidth || imgMax };
+    : {
+        // Fills the flexible art area (see the image container below), capped to
+        // the original 360px-wide art. Short windows shrink it height-first so
+        // the description keeps its space and the column never needs a scroll.
+        height: "100%",
+        maxHeight: artMaxH,
+        width: "auto",
+        maxWidth: imageMaxWidth || imgMax,
+      };
 
   if (!name) {
     return (
@@ -238,7 +252,16 @@ export default function CardInspector({
     >
       {/* Card image with navigation. In large mode a side gutter keeps the
           arrows off the card art. */}
-      <div style={{ position: "relative", display: "flex", justifyContent: "center", padding: 0 }}>
+      <div
+        style={{
+          position: "relative", display: "flex", justifyContent: "center",
+          width: "fit-content", maxWidth: "100%", margin: "0 auto", padding: 0,
+          // The deck inspector's art is the only flexible row: everything else
+          // keeps its natural height, so on short windows the art gives way
+          // instead of pushing the description out (or needing a scrollbar).
+          ...(compactInspector ? { flex: "1 1 0", minHeight: 0, alignItems: "center" } : null),
+        }}
+      >
         {/* Nav arrows are desktop-only — the mobile (large) preview has none. */}
         {!readOnly && !large && <ArrowBackIosNew onClick={onPrev} sx={arrowSx("left", large)} />}
         <CardArt
@@ -365,9 +388,16 @@ export default function CardInspector({
             // scrolls the description, not the dialog behind it.
             overflowY: fitEffect ? "hidden" : "auto",
             overscrollBehavior: "contain",
-            flex: "1 1 auto",
+            flex: compactInspector ? "0 1 auto" : "1 1 auto",
+            maxHeight: compactInspector ? "clamp(140px, 34vh, 380px)" : undefined,
             // Description box stays large in the mobile preview — never small.
-            minHeight: fitEffect ? 0 : fill ? (vpH < 1100 ? "clamp(110px, 24vh, 300px)" : 0) : large ? "30vh" : 0,
+            minHeight: fitEffect
+              ? 0
+              : fill
+              ? (vpH < 1100 ? "clamp(110px, 24vh, 300px)" : 0)
+              : large
+              ? "30vh"
+              : "clamp(110px, 16vh, 220px)",
           }}
         >
           {fitEffect ? (

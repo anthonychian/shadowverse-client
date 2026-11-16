@@ -6,6 +6,7 @@ import {
   isOverHand,
   isOverCemetery,
   isOverPlayedZone,
+  isOverSpellPlayedStrip,
   deckHalfAt,
   setDragHover,
 } from "./handDrag";
@@ -41,6 +42,8 @@ const CLEARED_HOVER = {
   showDeck: false,
   showPlayed: false,
   showEvoDeck: false,
+  showSpellPlayedStrip: false,
+  spellPlayedStrip: false,
 };
 
 // Cursor + native-drag suppression applied to each draggable wrapper. Exposed
@@ -93,18 +96,30 @@ export function useModalCardDrag({
     primaryType(card) === "Spell";
 
   const resolveDest = (x, y, card) => {
+    const fieldIdx = fieldIndexAt(x, y);
+    const overSpellStrip =
+      locksFrontRow(card) && fieldIdx >= 0 && fieldIdx < 5;
     if (targets.hand && isOverHand(x, y)) return { type: "hand" };
-    if (targets.played && isOverPlayedZone(x, y)) return { type: "played" };
+    if (
+      targets.played &&
+      !locksFrontRow(card) &&
+      isOverPlayedZone(x, y)
+    )
+      return { type: "played" };
+    if (
+      targets.played &&
+      (overSpellStrip || (locksFrontRow(card) && isOverSpellPlayedStrip(x, y)))
+    )
+      return { type: "played" };
     if (targets.cemetery && isOverCemetery(x, y)) return { type: "cemetery" };
     if (targets.deck) {
       const half = deckHalfAt(x, y);
       if (half) return { type: "deck", half };
     }
     if (targets.field) {
-      const fi = fieldIndexAt(x, y);
       // Spells may only land in the EX area (5-9), never the front row.
-      if (fi >= 0 && !(locksFrontRow(card) && fi < 5))
-        return { type: "field", index: fi };
+      if (fieldIdx >= 0 && !(locksFrontRow(card) && fieldIdx < 5))
+        return { type: "field", index: fieldIdx };
     }
     return null;
   };
@@ -138,6 +153,9 @@ export function useModalCardDrag({
     setDragPos({ x, y });
     const dest = resolveDest(x, y, g.card);
     destRef.current = dest;
+    const fieldIdx = fieldIndexAt(x, y);
+    const overSpellRow =
+      locksFrontRow(g.card) && fieldIdx >= 0 && fieldIdx < 5;
     setDragHover({
       active: true,
       index: dest && dest.type === "field" ? dest.index : -1,
@@ -151,7 +169,12 @@ export function useModalCardDrag({
       showCemetery: !!targets.cemetery,
       showHand: !!targets.hand,
       showDeck: !!targets.deck,
-      showPlayed: !!targets.played,
+      showPlayed: !!targets.played && !locksFrontRow(g.card),
+      showSpellPlayedStrip: !!targets.played && locksFrontRow(g.card),
+      spellPlayedStrip:
+        !!targets.played &&
+        locksFrontRow(g.card) &&
+        (overSpellRow || isOverSpellPlayedStrip(x, y)),
     });
   };
 

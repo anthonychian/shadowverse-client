@@ -1549,6 +1549,13 @@ export default function Field({
       typeof baseCard === "string" &&
       !isToken(baseCard) &&
       !isAdvancedCard;
+    // Token spells may still be played to the shared played zone, while other
+    // tokens stay restricted to cemetery/field moves.
+    const canPlayToZone =
+      canReturn ||
+      (typeof baseCard === "string" &&
+        isToken(baseCard) &&
+        primaryType(baseCard) === "Spell");
     if (dest.type === "evoDeck") {
       if (!isAdvancedCard) return;
       if (isEquipAttached) dispatch(clearEquipmentAtIndex(fromIndex));
@@ -1584,7 +1591,7 @@ export default function Field({
       return;
     }
     if (dest.type === "played") {
-      if (!canReturn) return;
+      if (!canPlayToZone) return;
       if (isEquipAttached) dispatch(clearEquipmentAtIndex(fromIndex));
       dispatch(
         playCardToSharedZone({
@@ -2596,6 +2603,7 @@ export default function Field({
         <div
           ref={(el) => registerFieldGrid(el)}
           style={{
+            position: "relative",
             height: "35vh",
             minHeight: "330px",
             flex: 1,
@@ -2621,8 +2629,10 @@ export default function Field({
               color: "#E0FFFF",
               textShadow: "1px 1px 10px #E0FFFF, 1px 1px 10px #ccc",
               position: "absolute",
-              bottom: "45%",
-              width: "50px",
+              top: "25%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              whiteSpace: "nowrap",
               pointerEvents: "none",
               zIndex: 0,
             }}
@@ -2636,8 +2646,10 @@ export default function Field({
               color: "#E0FFFF",
               textShadow: "1px 1px 10px #E0FFFF, 1px 1px 10px #ccc",
               position: "absolute",
-              bottom: "28%",
-              width: "100px",
+              top: "75%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              whiteSpace: "nowrap",
               pointerEvents: "none",
             }}
           >

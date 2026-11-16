@@ -9,6 +9,7 @@ import {
   getDeckRect,
   getPlayedZoneRect,
   getEvoDeckRect,
+  getSpellPlayedStripRect,
 } from "./handDrag";
 import { primaryType } from "../../decks/cardDetails";
 
@@ -36,6 +37,7 @@ export default function FieldDropHints() {
   const deck = getDeckRect();
   const played = getPlayedZoneRect();
   const evoDeck = getEvoDeckRect();
+  const spellStrip = getSpellPlayedStripRect();
 
   // Outlined drop zone; highlights green when it's the one under the cursor.
   // A `label` also renders the zone name with the same typography as the deck's
@@ -114,6 +116,9 @@ export default function FieldDropHints() {
         </div>
       )}
       {hand && drag.showHand && <div style={zoneStyle(hand, drag.hand)} />}
+      {spellStrip && drag.showSpellPlayedStrip && (
+        <div style={zoneStyle(spellStrip, drag.spellPlayedStrip)} />
+      )}
       {deck && drag.showDeck && (
         <>
           <div style={deckHalfStyle(deck, "top", drag.deck === "top")}>Top</div>
@@ -123,8 +128,8 @@ export default function FieldDropHints() {
         </>
       )}
       {Array.from({ length: 10 }).map((_, idx) => {
-        // Spells can only be placed in the EX area, so don't outline the front
-        // row at all while one is being dragged.
+        // Spells go to the played zone via the spell strip, so don't outline the
+        // front row while one is being dragged.
         if (drag.hideFrontRow && idx < 5) return null;
         const col = idx % 5;
         const row = idx < 5 ? 0 : 1;

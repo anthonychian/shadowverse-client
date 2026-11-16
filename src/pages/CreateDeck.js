@@ -926,7 +926,7 @@ export default function CreateDeck() {
       {/* body — 3 columns on desktop; pool-only on mobile (sides become modals) */}
       <div style={{ flex: 1, minHeight: 0, display: "flex", gap: 10, padding: isMobile ? "0 0 6px" : "0 12px 12px" }}>
         {/* LEFT — inspector (desktop only) */}
-        {!isMobile && <aside style={col(420)}>{inspectorEl}</aside>}
+        {!isMobile && <aside style={{ ...col(420), overflowY: "hidden" }}>{inspectorEl}</aside>}
 
         {/* CENTER — filters + pool */}
         <main style={{ flex: 1, minWidth: 0, display: "flex", flexDirection: "column", background: COLORS.panel, borderRadius: 12, overflow: "hidden" }}>

@@ -1951,7 +1951,7 @@
       "cardSet": "Combined Set \"Academy Royale & Dusk of Calamity\"",
       "cost": "2",
       "attack": "2",
-      "defense": "1",
+      "defense": "3",
       "effect": "Once per turn, when this gains 🛡️, draw a card. [act] [engage]: Give your leader [defense]+1. Activate only if there's another Academic follower on your field."
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/BP21/BP21-103EN.png"
@@ -2122,7 +2122,7 @@
       "cardSet": "Combined Set \"Academy Royale & Dusk of Calamity\"",
       "cost": "4",
       "attack": "4",
-      "defense": "4",
+      "defense": "5",
       "effect": "While you don't have a Super Evolution Point, this has Storm. [act] Discard an Academic card: Select an enemy follower on the field. Deal it 5 damage and draw a card. Activate only once per turn"
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/BP21/BP21-112EN.png"
@@ -2559,7 +2559,7 @@
       "cardSet": "Combined Set \"Academy Royale & Dusk of Calamity\"",
       "cost": "4",
       "attack": "4",
-      "defense": "4",
+      "defense": "5",
       "effect": "While you don't have a Super Evolution Point, this has Storm. [act] Discard an Academic card: Select an enemy follower on the field. Deal it 5 damage and draw a card. Activate only once per turn"
     },
     "imgSrc": "/wordpress/wp-content/images/cardlist/BP21/BP21-U07EN.png"

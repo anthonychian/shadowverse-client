@@ -132,6 +132,24 @@ export const deckHalfAt = (x, y) => {
   return y - r.top < r.height / 2 ? "top" : "bottom";
 };
 
+// A long strip spanning the front row (zones 0-4, directly above the EX area)
+// used as an alternate drop target for spells: dropping there plays the spell to
+// the played zone.
+export const getSpellPlayedStripRect = () => {
+  const r = getFieldGridRect();
+  if (!r) return null;
+  return {
+    left: r.left + 6,
+    top: r.top + 6,
+    width: r.width - 12,
+    height: r.height / 2 - 12,
+  };
+};
+export const isOverSpellPlayedStrip = (x, y) => {
+  const r = getSpellPlayedStripRect();
+  return !!r && x >= r.left && x <= r.right && y >= r.top && y <= r.bottom;
+};
+
 // The opponent's hand row (top of the screen), registered by Field. Lets the
 // "added to hand" reveal fly toward the right hand on each screen.
 let enemyHandEl = null;

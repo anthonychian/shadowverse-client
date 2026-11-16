@@ -92,6 +92,12 @@ export default function Deck({
   const [reveal, setReveal] = useState(false);
   const [textInput, setTextInput] = useState("0");
   const [partialDeck, setPartialDeck] = useState([]);
+  // Deck indices for each card in `partialDeck`, so Look At Bottom's cards can
+  // be acted on from the far end of the deck just like Look At Top's.
+  const [partialIndices, setPartialIndices] = useState([]);
+  // Whether the Look At modal is peeking at the bottom of the deck instead of
+  // the top. Same modal, same controls — only the viewed end changes.
+  const [lookBottom, setLookBottom] = useState(false);
   // Whether the current Look At Top cards are revealed to the opponent. The
   // Reveal All button toggles between revealing and hiding them.
   const [revealAllActive, setRevealAllActive] = useState(false);
@@ -146,6 +152,99 @@ export default function Deck({
     });
   };
 
+  // Load `num` cards from one end of the deck into the Look At modal. Top cards
+  // run top-down; bottom cards run bottom-up, so the first tile is always the
+  // card at the looked-at end. Keeps a parallel deck-index map for bottom mode.
+  const applyLookSide = (bottom, num) => {
+    const n = Math.min(Math.max(0, Math.floor(Number(num)) || 0), reduxDeck.length);
+    if (bottom) {
+      const start = reduxDeck.length - n;
+      const cards = [];
+      const indices = [];
+      for (let i = reduxDeck.length - 1; i >= start; i -= 1) {
+        cards.push(reduxDeck[i]);
+        indices.push(i);
+      }
+      setPartialDeck(cards);
+      setPartialIndices(indices);
+    } else {
+      setPartialDeck(reduxDeck.slice(0, n));
+      setPartialIndices(Array.from({ length: n }, (_, i) => i));
+    }
+    setSelected(new Set());
+  };
+
+  // Remove revealed cards (by modal position) from the deck and from the
+  // displayed list, translating each position to its current deck index first.
+  const removePartial = (positions, fn) => {
+    const entries = positions
+      .map((position) => ({ position, deckIndex: partialIndices[position] }))
+      .filter((entry) => entry.deckIndex != null)
+      .sort((a, b) => a.deckIndex - b.deckIndex);
+    const removed = [];
+    entries.forEach(({ position, deckIndex }) => {
+      const current = deckIndex - removed.filter((r) => r < deckIndex).length;
+      fn(partialDeck[position], current);
+      removed.push(deckIndex);
+    });
+    const removedPositions = new Set(positions);
+    setPartialDeck((prev) => prev.filter((_, i) => !removedPositions.has(i)));
+    setPartialIndices((prev) =>
+      prev
+        .map((deckIndex, position) => ({ deckIndex, position }))
+        .filter(({ position }) => !removedPositions.has(position))
+        .map(
+          ({ deckIndex }) =>
+            deckIndex - removed.filter((r) => r < deckIndex).length,
+        ),
+    );
+    setSelected(new Set());
+  };
+
+  // Move revealed cards to the top or bottom of the deck, keeping the displayed
+  // list's deck-index map in sync. Cards that leave the viewed end drop out of
+  // the window (unless the whole deck is being viewed).
+  const movePartialToEdge = (toTop) => {
+    const order = selectedOrder;
+    if (order.length === 0) return;
+    const remainingPositions = partialDeck
+      .map((_, i) => i)
+      .filter((i) => !order.includes(i));
+    const working = reduxDeck.map((card, key) => ({ card, key }));
+    const move = (position) => {
+      const key = partialIndices[position];
+      if (key == null) return;
+      const idx = working.findIndex((item) => item.key === key);
+      if (idx === -1) return;
+      const [item] = working.splice(idx, 1);
+      if (toTop) {
+        working.unshift(item);
+        dispatch(addToTopOfDeckFromDeck({ card: item.card, index: idx }));
+      } else {
+        working.push(item);
+        dispatch(addToBotOfDeckFromDeck({ card: item.card, index: idx }));
+      }
+    };
+    if (toTop) [...order].reverse().forEach(move);
+    else order.forEach(move);
+
+    const staysInWindow = lookBottom ? !toTop : toTop;
+    const fullDeck = partialDeck.length === reduxDeck.length;
+    let nextOrder;
+    if (staysInWindow) nextOrder = [...order, ...remainingPositions];
+    else if (fullDeck) nextOrder = [...remainingPositions, ...order];
+    else nextOrder = remainingPositions;
+
+    setPartialDeck(nextOrder.map((position) => partialDeck[position]));
+    setPartialIndices(
+      nextOrder.map((position) => {
+        const key = partialIndices[position];
+        return working.findIndex((item) => item.key === key);
+      }),
+    );
+    setSelected(new Set());
+  };
+
   // Left-click toggles a card in/out of the multi-selection (a click that ends a
   // drag is ignored by the caller, so dragging still moves cards).
   const handleCardClick = (event, idx) => {
@@ -180,6 +279,9 @@ export default function Deck({
     setOpen(true);
     setSelected(new Set());
     setTextInput("0");
+    setPartialDeck([]);
+    setPartialIndices([]);
+    setLookBottom(false);
     dispatch(setViewingTopCards(true));
   };
 
@@ -190,6 +292,8 @@ export default function Deck({
       setReveal(false);
       setTextInput("");
       setPartialDeck([]);
+      setPartialIndices([]);
+      setLookBottom(false);
       setRevealAllActive(false);
       dispatch(setViewingTopCards(false));
     } else {
@@ -319,50 +423,79 @@ export default function Deck({
 
   const handleToHandFromRevealed = () => {
     handleCardClose();
-    const order = selectedOrder;
-    setPartialDeck(partialDeck.filter((_, i) => !order.includes(i)));
-    setSelected(new Set());
-    runSelected(order, (card, i) => {
-      dispatch(addToHandFromDeck({ card, index: i }));
+    removePartial(selectedOrder, (card, deckIndex) => {
+      dispatch(addToHandFromDeck({ card, index: deckIndex }));
       triggerHandReveal(card, reduxRoom);
     });
   };
 
   const handleToBanish = () => {
     handleCardClose();
+    if (reveal) {
+      removePartial(selectedOrder, (card, deckIndex) => {
+        dispatch(addToBanishFromDeck({ card, index: deckIndex }));
+      });
+      return;
+    }
     const order = selectedOrder;
     setSelected(new Set());
-    // Look At Top cards also leave the local partial deck; View Deck already
-    // reflects the reducer's deck changes.
-    if (reveal)
-      setPartialDeck(partialDeck.filter((_, i) => !order.includes(i)));
     runSelected(order, (card, i) =>
       dispatch(addToBanishFromDeck({ card, index: i })),
     );
   };
 
   const handleBanishAll = () => {
-    const length = partialDeck.length;
-    for (let i = 0; i < length; i++)
-      dispatch(addToBanishFromDeck({ card: partialDeck[i], index: 0 }));
-    setPartialDeck([]);
+    if (partialDeck.length === 0) return;
+    removePartial(
+      partialDeck.map((_, i) => i),
+      (card, deckIndex) => {
+        dispatch(addToBanishFromDeck({ card, index: deckIndex }));
+      },
+    );
     setTextInput("0");
   };
 
   const handleCemeteryAll = () => {
-    const length = partialDeck.length;
-    console.log("length", length);
-    for (let i = 0; i < length; i++)
-      dispatch(addToCemeteryFromDeck({ card: partialDeck[i], index: 0 }));
-    setPartialDeck([]);
+    if (partialDeck.length === 0) return;
+    removePartial(
+      partialDeck.map((_, i) => i),
+      (card, deckIndex) => {
+        dispatch(addToCemeteryFromDeck({ card, index: deckIndex }));
+      },
+    );
     setTextInput("0");
   };
 
-  const handleBotDeckAll = () => {
-    const length = partialDeck.length;
-    for (let i = 0; i < length; i++)
-      dispatch(addToBotOfDeckFromDeck({ card: partialDeck[i], index: 0 }));
+  const handleAllToDeckEdge = (toTop) => {
+    if (partialDeck.length === 0) return;
+    // Default order is the order the cards are shown in the modal.
+    const defaultOrder = partialDeck.map((_, i) => i);
+    // Selected cards move first, in click order; the rest follow in the default
+    // display order. Pushing reaches the bottom in order, unshifting reverses it.
+    const selected = selectedOrder;
+    const order =
+      selected.length > 0
+        ? [...selected, ...defaultOrder.filter((p) => !selected.includes(p))]
+        : defaultOrder;
+    const dispatchOrder = toTop ? [...order].reverse() : order;
+    const working = reduxDeck.map((card, key) => ({ card, key }));
+    dispatchOrder.forEach((position) => {
+      const key = partialIndices[position];
+      if (key == null) return;
+      const idx = working.findIndex((item) => item.key === key);
+      if (idx === -1) return;
+      const [item] = working.splice(idx, 1);
+      if (toTop) {
+        working.unshift(item);
+        dispatch(addToTopOfDeckFromDeck({ card: item.card, index: idx }));
+      } else {
+        working.push(item);
+        dispatch(addToBotOfDeckFromDeck({ card: item.card, index: idx }));
+      }
+    });
     setPartialDeck([]);
+    setPartialIndices([]);
+    setSelected(new Set());
     setTextInput("0");
   };
 
@@ -396,57 +529,21 @@ export default function Deck({
     triggerCardReveal(card, reduxRoom, exIndex, fieldSlotCenter(exIndex));
   };
 
-  // Move every selected Look At Top card to the top/bottom of the deck. The
-  // deck is both source and destination, so each move reorders the cards that
-  // later moves index into — track a simulated deck by original index so every
-  // dispatch targets the right card despite duplicate card names.
+  // Move every selected Look At card to the top/bottom of the deck.
   const handleToTopOfDeck = () => {
     handleCardClose();
-    const order = selectedOrder;
-    if (order.length === 0) return;
-    const moving = order.map((i) => partialDeck[i]);
-    setPartialDeck([
-      ...moving,
-      ...partialDeck.filter((_, i) => !order.includes(i)),
-    ]);
-    setSelected(new Set());
-    const working = reduxDeck.map((card, key) => ({ card, key }));
-    [...order].reverse().forEach((orig) => {
-      const idx = working.findIndex((item) => item.key === orig);
-      if (idx === -1) return;
-      const [item] = working.splice(idx, 1);
-      working.unshift(item);
-      dispatch(addToTopOfDeckFromDeck({ card: item.card, index: idx }));
-    });
+    movePartialToEdge(true);
   };
 
   const handleToBotOfDeck = () => {
     handleCardClose();
-    const order = selectedOrder;
-    if (order.length === 0) return;
-    const moving = order.map((i) => partialDeck[i]);
-    const remaining = partialDeck.filter((_, i) => !order.includes(i));
-    setPartialDeck(
-      partialDeck.length === reduxDeck.length
-        ? [...remaining, ...moving]
-        : remaining,
-    );
-    setSelected(new Set());
-    const working = reduxDeck.map((card, key) => ({ card, key }));
-    order.forEach((orig) => {
-      const idx = working.findIndex((item) => item.key === orig);
-      if (idx === -1) return;
-      const [item] = working.splice(idx, 1);
-      working.push(item);
-      dispatch(addToBotOfDeckFromDeck({ card: item.card, index: idx }));
-    });
+    movePartialToEdge(false);
   };
 
-  // ---- drag a card out of the deck modal (Look At Top or View Deck) ----
-  // Works for both the revealed top cards (partialDeck) and the full View Deck
-  // list (reduxDeck) — in both the card's index is its deck index, so the same
-  // drops apply. The modal hides while dragging and reappears on release with the
-  // dropped card removed. For revealed cards we also drop it from partialDeck.
+  // ---- drag a card out of the deck modal (Look At Top/Bottom or View Deck) ----
+  // The modal hides while dragging and reappears on release with the dropped
+  // card removed. Revealed cards translate their list position to a deck index
+  // (Look At Bottom views the far end) before dispatching.
   const deckDrag = useModalCardDrag({
     targets: { field: true, hand: true, cemetery: true, played: true },
     spellFrontRowLocked: true,
@@ -455,18 +552,31 @@ export default function Deck({
       // A drop removes the card, shifting every index after it — drop any
       // multi-selection rather than leave it pointing at the wrong cards.
       setSelected(new Set());
-      if (reveal) setPartialDeck((prev) => prev.filter((_, i) => i !== index));
+      const deckIndex = reveal ? partialIndices[index] : index;
+      if (reveal && deckIndex != null) {
+        setPartialDeck((prev) => prev.filter((_, i) => i !== index));
+        setPartialIndices((prev) =>
+          prev
+            .filter((_, i) => i !== index)
+            .map((di) => (di > deckIndex ? di - 1 : di)),
+        );
+      }
+      if (deckIndex == null) return;
       if (dest.type === "played") {
-        dispatch(playCardToSharedZone({ card, index, from: "deck" }));
+        dispatch(playCardToSharedZone({ card, index: deckIndex, from: "deck" }));
         triggerPlayedZoneReveal(card, reduxRoom);
       } else if (dest.type === "hand") {
-        dispatch(addToHandFromDeck({ card, index }));
+        dispatch(addToHandFromDeck({ card, index: deckIndex }));
         triggerHandReveal(card, reduxRoom);
       } else if (dest.type === "cemetery") {
-        dispatch(addToCemeteryFromDeck({ card, index }));
+        dispatch(addToCemeteryFromDeck({ card, index: deckIndex }));
       } else {
         dispatch(
-          placeToFieldFromDeck({ card, deckIndex: index, index: dest.index }),
+          placeToFieldFromDeck({
+            card,
+            deckIndex,
+            index: dest.index,
+          }),
         );
         // Reveal only when played to the field row (0-4), not the EX area.
         if (dest.index < 5)
@@ -478,12 +588,27 @@ export default function Deck({
   const submitCount = (rawNum) => {
     const num = Math.max(0, Number(rawNum) || 0);
     dispatch(setViewingCardsLog({ number: num }));
+    applyLookSide(lookBottom, num);
+  };
 
-    if (num < reduxDeck.length) {
-      setPartialDeck(reduxDeck.slice(0, num));
-    } else {
-      setPartialDeck(reduxDeck);
+  const handleToggleLookSide = () => {
+    const nextBottom = !lookBottom;
+    setLookBottom(nextBottom);
+    if (revealAllActive) {
+      socket.emit("send msg", {
+        type: "revealTopCardsClose",
+        data: true,
+        room: reduxRoom,
+      });
+      dispatch(setViewingOpponentTopCards(false));
+      setRevealAllActive(false);
     }
+    const num =
+      partialDeck.length > 0
+        ? partialDeck.length
+        : Math.max(0, Number(textInput) || 0);
+    setTextInput(String(num));
+    applyLookSide(nextBottom, num);
   };
 
   const handleSubmit = () => {
@@ -731,9 +856,34 @@ export default function Deck({
           }}
         >
           <ModalHideUiRow />
-          <div style={deckModalToolbar}>
+          {reveal && (
+            <Button
+              onClick={handleToggleLookSide}
+              aria-label={lookBottom ? "Look at top of deck" : "Look at bottom of deck"}
+              sx={{
+                ...ghostButtonSx,
+                position: "absolute",
+                top: 8,
+                right: 10,
+                zIndex: 2,
+                padding: "3px 12px",
+              }}
+            >
+              {lookBottom ? "Top" : "Bottom"}
+            </Button>
+          )}
+          <div
+            style={{
+              ...deckModalToolbar,
+              ...(reveal ? { paddingRight: 82 } : {}),
+            }}
+          >
             <span style={deckModalTitle}>
-              {reveal ? "LOOK AT TOP" : "VIEW DECK"}
+              {reveal
+                ? lookBottom
+                  ? "LOOK AT BOTTOM"
+                  : "LOOK AT TOP"
+                : "VIEW DECK"}
             </span>
             {!reveal && (
               <>
@@ -792,8 +942,11 @@ export default function Deck({
                   <>
                     {partialDeck.length > 0 && (
                       <>
-                        <Button onClick={handleBotDeckAll} sx={ghostButtonSx}>
-                          Bot Deck All
+                        <Button
+                          onClick={() => handleAllToDeckEdge(lookBottom)}
+                          sx={ghostButtonSx}
+                        >
+                          {lookBottom ? "Top Deck All" : "Bot Deck All"}
                         </Button>
                         <Button onClick={handleCemeteryAll} sx={ghostButtonSx}>
                           Cemetery All

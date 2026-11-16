@@ -21,7 +21,6 @@ import {
   registerPlayedZone,
   fieldSlotCenter,
   onDragHover,
-  getBoardScale,
 } from "./handDrag";
 import { useModalCardDrag, ModalDragGhost } from "./modalCardDrag";
 import {
@@ -123,8 +122,18 @@ export default function PlayedZone({
     handleModalClose();
   };
 
+  // Token spells can't be returned to hand or shuffled back into the deck from
+  // the played zone; they may only go to the field (EX area) or cemetery.
+  const playedTop = played[0];
+  const playedTopIsTokenSpell =
+    typeof playedTop === "string" &&
+    playedTop.slice(-5) === "TOKEN" &&
+    primaryType(playedTop) === "Spell";
+
   const playedDrag = useModalCardDrag({
-    targets: { field: true, hand: true, deck: true, cemetery: true },
+    targets: playedTopIsTokenSpell
+      ? { field: true, cemetery: true }
+      : { field: true, hand: true, deck: true, cemetery: true },
     spellFrontRowLocked: true,
     field: reduxField,
     onDrop: (card, index, dest) => {
@@ -157,7 +166,16 @@ export default function PlayedZone({
   });
 
   const canDragFromZone = played.length > 0 && !automated;
-  const boardScale = getBoardScale() || 1;
+
+  // Hovering the pile's top card previews it in the left-column ZoomedCard, the
+  // same way hovering a hand/field card does. Skip while the reveal animation is
+  // still hiding the card or while it's being dragged.
+  const handlePreviewStart = () => {
+    if (played.length === 0 || isPlayedHidden() || playedDrag.isDragging) return;
+    dispatch(setCurrentCard(played[0]));
+    setHovering?.(true);
+  };
+  const handlePreviewEnd = () => setHovering?.(false);
 
   return (
     <>
@@ -184,7 +202,6 @@ export default function PlayedZone({
             : automated
               ? "default"
               : `url(${img}) 55 55, auto`,
-          opacity: playedDrag.isDragging ? 0.3 : 1,
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -195,39 +212,14 @@ export default function PlayedZone({
             className={"cardStyle"}
             src={artThumb(played[0], reduxMyArt)}
             style={{ visibility: isPlayedHidden() ? "hidden" : "visible" }}
+            onMouseEnter={handlePreviewStart}
+            onMouseLeave={handlePreviewEnd}
             onError={(e) => {
               if (e.currentTarget.src.indexOf("/thumbs/") !== -1)
                 e.currentTarget.src = artImage(played[0], reduxMyArt);
             }}
             alt={played[0]}
           />
-        )}
-        {dragActive && (
-          <div
-            style={{
-              position: "absolute",
-              inset: 0,
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              pointerEvents: "none",
-              zIndex: 2,
-              background: "rgba(0, 0, 0, 0.45)",
-            }}
-          >
-            <span
-              style={{
-                color: "#fff",
-                fontFamily: "Noto Serif JP, serif",
-                fontSize: 13 / boardScale,
-                fontWeight: 700,
-                letterSpacing: 0.5,
-                textShadow: "0 1px 3px #000",
-              }}
-            >
-              Spell
-            </span>
-          </div>
         )}
       </div>
 

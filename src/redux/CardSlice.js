@@ -2730,16 +2730,21 @@ export const CardSlice = createSlice({
       }
 
       // Single-slot zone: if a card is already there, it goes to the cemetery
-      // so the new card can take its place.
+      // so the new card can take its place. Tokens cease to exist instead.
       const previous = state.played[0];
-      if (previous) state.cemetery = [previous, ...state.cemetery];
+      const previousIsToken =
+        typeof previous === "string" && previous.slice(-5) === "TOKEN";
+      if (previous && !previousIsToken)
+        state.cemetery = [previous, ...state.cemetery];
       state.played = [card];
 
       if (previous) {
         state.gameLog = [
           ...state.gameLog,
           {
-            text: `[${date}] (Me): ${previous} to Cemetery from Played`,
+            text: `[${date}] (Me): ${previous} ${
+              previousIsToken ? "removed from" : "to Cemetery from"
+            } Played`,
             card: previous,
           },
         ];
@@ -2757,11 +2762,14 @@ export const CardSlice = createSlice({
         updates.push({
           type: "log",
           data: {
-            text: `${previous} to Cemetery from Played`,
+            text: `${previous} ${
+              previousIsToken ? "removed from" : "to Cemetery from"
+            } Played`,
             card: previous,
           },
         });
-        updates.push({ type: "cemetery", data: state.cemetery });
+        if (!previousIsToken)
+          updates.push({ type: "cemetery", data: state.cemetery });
       }
       if (from === "hand") updates.push({ type: "hand", data: state.hand });
       else if (from === "field")
@@ -2931,29 +2939,36 @@ export const CardSlice = createSlice({
         minute: "2-digit",
       });
       state.played = state.played.filter((_, i) => i !== action.payload.index);
-      state.cemetery = [card, ...state.cemetery];
+      const isToken = card.slice(-5) === "TOKEN";
+      if (!isToken) state.cemetery = [card, ...state.cemetery];
 
       state.gameLog = [
         ...state.gameLog,
         {
-          text: `[${date}] (Me): ${card} to Cemetery from Played`,
+          text: `[${date}] (Me): ${card} ${
+            isToken ? "removed from" : "to Cemetery from"
+          } Played`,
           card,
         },
       ];
 
+      const updates = [
+        {
+          type: "log",
+          data: {
+            text: `${card} ${
+              isToken ? "removed from" : "to Cemetery from"
+            } Played`,
+            card,
+          },
+        },
+        { type: "played", data: state.played },
+      ];
+      if (!isToken) updates.push({ type: "cemetery", data: state.cemetery });
+
       socket.emit("send msg", {
         type: "movePlayedToCemetery",
-        updates: [
-          {
-            type: "log",
-            data: {
-              text: `${card} to Cemetery from Played`,
-              card,
-            },
-          },
-          { type: "played", data: state.played },
-          { type: "cemetery", data: state.cemetery },
-        ],
+        updates,
         room: state.room,
       });
     },
