@@ -18,8 +18,6 @@ import { styled } from "@mui/material/styles";
 import Rating from "@mui/material/Rating";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import FiberManualRecordOutlinedIcon from "@mui/icons-material/FiberManualRecordOutlined";
-import WifiOffIcon from "@mui/icons-material/WifiOff";
-import WifiIcon from "@mui/icons-material/Wifi";
 import sepOn from "../../assets/logo/sep_on.png";
 import sepOff from "../../assets/logo/sep_off.png";
 import "../../css/EnemyUI.css";
@@ -77,9 +75,6 @@ export default function EnemyUI({ compact = false, stageScale }) {
   const dispatch = useDispatch();
   const reduxEnemyLeftGame = useSelector(
     (state) => state.card.enemyLeftGame,
-  );
-  const reduxEnemyOnlineStatus = useSelector(
-    (state) => state.card.enemyOnlineStatus,
   );
 
   const getColorFromLeader = (name) => {
@@ -403,12 +398,6 @@ export default function EnemyUI({ compact = false, stageScale }) {
         />
       </div>
 
-      {compact && !reduxEnemyOnlineStatus && (
-        <div className="wifiBadge wifiOff wifiInline" title="Disconnected">
-          <WifiOffIcon sx={{ height: 22, width: 22 }} />
-          <span className="wifiBadgeLabel">Disconnected</span>
-        </div>
-      )}
     </div>
   );
 
@@ -439,12 +428,6 @@ export default function EnemyUI({ compact = false, stageScale }) {
         />
       </div>
 
-      {!reduxEnemyOnlineStatus && (
-        <div className="wifiBadge wifiOff" title="Disconnected">
-          <WifiOffIcon sx={{ height: 22, width: 22 }} />
-          <span className="wifiBadgeLabel">Disconnected</span>
-        </div>
-      )}
     </div>
   );
 

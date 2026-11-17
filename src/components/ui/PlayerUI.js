@@ -25,8 +25,6 @@ import priconne from "../../assets/logo/priconne.webp";
 
 import { styled } from "@mui/material/styles";
 import Rating from "@mui/material/Rating";
-import WifiOffIcon from "@mui/icons-material/WifiOff";
-import WifiIcon from "@mui/icons-material/Wifi";
 import SyncIcon from "@mui/icons-material/Sync";
 import "../../css/EnemyUI.css";
 import "../../css/LeaderPanel.css";
@@ -66,12 +64,6 @@ export default function PlayerUI({ name, compact = false, stageScale }) {
   );
   const reduxLeaderActive = useSelector((state) => state.card.leaderActive);
   const reduxRoom = useSelector((state) => state.card.room);
-  const reduxSelfOnlineStatus = useSelector(
-    (state) => state.card.selfOnlineStatus,
-  );
-  const reduxSelfConnectionState = useSelector(
-    (state) => state.card.selfConnectionState,
-  );
   const reduxSelfResyncing = useSelector(
     (state) => state.card.selfResyncing,
   );
@@ -298,16 +290,6 @@ export default function PlayerUI({ name, compact = false, stageScale }) {
   // instead of pinned to the leader stage's corner.
   const wifiBadge = (inline) => {
     const inlineClass = inline ? " wifiInline" : "";
-    if (!reduxSelfOnlineStatus) {
-      const reconnecting = reduxSelfConnectionState === "reconnecting";
-      const label = reconnecting ? "Reconnecting" : "Disconnected";
-      return (
-        <div className={`wifiBadge wifiOff${inlineClass}`} title={label}>
-          <WifiOffIcon sx={{ height: 22, width: 22 }} />
-          <span className="wifiBadgeLabel">{label}</span>
-        </div>
-      );
-    }
     if (reduxSelfResyncing) {
       // Still connected, but repairing a detected desync (sequence gap).
       return (
