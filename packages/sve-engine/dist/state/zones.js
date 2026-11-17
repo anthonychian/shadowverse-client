@@ -32,7 +32,7 @@ function moveCard(state, instanceId, toZone, toPlayer) {
     const [card] = fromList.splice(idx, 1);
     let actualZone = toZone;
     if (toZone === "cemetery") {
-        actualZone = (0, tokens_1.destinationForDestroyedCard)(card.cardNo);
+        actualZone = (0, tokens_1.destinationForDestroyedCard)(card);
     }
     const leftField = foundAfter.zone === "field" && toZone !== "field";
     if (leftField) {
@@ -41,8 +41,11 @@ function moveCard(state, instanceId, toZone, toPlayer) {
     if (leftField && actualZone !== "cemetery" && actualZone !== "banish") {
         (0, card_reset_1.resetFieldInstanceState)(card);
     }
-    card.controller = toPlayer;
-    const toList = next.players[toPlayer].zones[actualZone];
+    const destPlayer = actualZone === "evolveDeck" ? foundAfter.player : toPlayer;
+    card.controller = destPlayer;
+    if (actualZone === "evolveDeck")
+        card.evoSpent = true;
+    const toList = next.players[destPlayer].zones[actualZone];
     toList.push(card);
     if (actualZone === "cemetery" || actualZone === "banish") {
         (0, card_reset_1.resetCardInstanceState)(card);
@@ -70,7 +73,7 @@ function removeFromField(state, instanceId) {
         return null;
     const [card] = p.zones.field.splice(idx, 1);
     const cardNo = (0, queries_1.resolveCardNo)(next, card);
-    const dest = (0, tokens_1.destinationForDestroyedCard)(cardNo);
+    const dest = (0, tokens_1.destinationForDestroyedCard)(card);
     if (dest === "cemetery" || dest === "banish") {
         (0, trigger_queue_1.queueOnEnemyFollowerLeaveField)(next, instanceId, found.player, next.activePlayer);
         const def = (0, registry_1.getCardDef)(cardNo);
@@ -79,6 +82,8 @@ function removeFromField(state, instanceId) {
         }
     }
     (0, card_reset_1.resetCardInstanceState)(card);
+    if (dest === "evolveDeck")
+        card.evoSpent = true;
     p.zones[dest].push(card);
     return { state: next, card, player: found.player };
 }

@@ -18,6 +18,7 @@ import {
   setEnemyEquipField,
   setEnemyEvoPoints,
   setEnemyTurn,
+  setEnemyEndTurnTaken,
   setEnemyField,
   setEnemyHand,
   setEnemyHealth,
@@ -39,8 +40,10 @@ const applyEnemyState = (dispatch, s) => {
   if (s.equipField !== undefined) dispatch(setEnemyEquipField(s.equipField));
   if (s.hand !== undefined) dispatch(setEnemyHand(s.hand));
   if (s.leader !== undefined) dispatch(setEnemyLeader(s.leader));
-  if (s.leaderActive !== undefined)
+  if (s.leaderActive !== undefined) {
     dispatch(setEnemyLeaderActive(s.leaderActive));
+    if (s.leaderActive === false) dispatch(setEnemyEndTurnTaken(true));
+  }
   if (s.superEvoActive !== undefined)
     dispatch(setEnemySuperEvoActive(s.superEvoActive));
   if (s.playerHealth !== undefined) dispatch(setEnemyHealth(s.playerHealth));

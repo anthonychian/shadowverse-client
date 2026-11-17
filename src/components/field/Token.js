@@ -9,7 +9,7 @@ import {
   attachEquipmentOnField,
   playCardToSharedZone,
 } from "../../redux/CardSlice";
-import { primaryType } from "../../decks/cardDetails";
+import { countCardTypes, primaryType } from "../../decks/cardDetails";
 import CardMUI from "@mui/material/Card";
 import Card from "../hand/Card";
 import img from "../../assets/pin_bellringer_angel.png";
@@ -18,28 +18,23 @@ import { ModalHideUiRow } from "../ui/HideUiButton";
 import { useModalCardDrag, ModalDragGhost } from "./modalCardDrag";
 import { fieldSlotCenter } from "./handDrag";
 import {
+  useDeckModalBoxStyle,
+  deckModalToolbar,
+  deckModalTitle,
+  deckModalCount,
+  deckModalCards,
+} from "./deckModalStyles";
+import {
   triggerCardReveal,
   triggerEquipReveal,
   triggerPlayedZoneReveal,
 } from "./cardRevealBus";
 
-const style = {
-  position: "relative",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  backgroundColor: "transparent",
-  width: "40%",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  flexDirection: "column",
-};
-
 export default function Token({ ready, setReady, setTokenReady, setHovering }) {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
   const modalOpen = useUiModalOpen(open);
+  const modalBoxStyle = useDeckModalBoxStyle(modalOpen);
   const [contextMenu, setContextMenu] = React.useState(null);
   const [contextCard, setContextCard] = useState("");
   const [textInput, setTextInput] = useState("");
@@ -148,6 +143,8 @@ export default function Token({ ready, setReady, setTokenReady, setHovering }) {
     );
   };
 
+  const tokenTypeCounts = countCardTypes(filteredTokens);
+
   return (
     <>
       <div
@@ -177,41 +174,49 @@ export default function Token({ ready, setReady, setTokenReady, setHovering }) {
           },
         }}
       >
-        <Box sx={{ ...style, opacity: tokenDrag.isDragging ? 0 : 1 }}>
+        <Box
+          sx={{
+            ...modalBoxStyle,
+            opacity: tokenDrag.isDragging ? 0 : 1,
+          }}
+        >
           <ModalHideUiRow />
-          <input
-            style={{
-              padding: ".3em",
-              marginTop: "1%",
-              width: "30%",
-              fontSize: "20px",
-              fontFamily: "Noto Serif JP, serif",
-            }}
-            type="text"
-            value={textInput}
-            onChange={(event) => handleTextInput(event.target.value)}
-            placeholder={
-              favoriteTokens.length && !textInput.trim()
-                ? "Favorites — search all tokens…"
-                : "Search for tokens..."
-            }
-          />
-          <CardMUI
-            sx={{
-              backgroundColor: "rgba(0, 0, 0, 0.7)",
-              minHeight: "250px",
-              height: "500px",
-              padding: "7%",
-              width: "100%",
-              display: "flex",
-              flexDirection: "row",
-              flexWrap: "wrap",
-              justifyContent: "center",
-              alignItems: "center",
-              overflowY: "scroll",
-            }}
-            variant="outlined"
-          >
+          <div style={deckModalToolbar}>
+            <span style={deckModalTitle}>TOKEN</span>
+            <span style={deckModalCount}>
+              {tokenTypeCounts.Follower} FOLLOWERS
+            </span>
+            <span style={deckModalCount}>
+              {tokenTypeCounts.Spell} SPELLS
+            </span>
+            <span style={deckModalCount}>
+              {tokenTypeCounts.Amulet} AMULETS
+            </span>
+            <input
+              style={{
+                flex: "0 1 220px",
+                minWidth: 140,
+                padding: "4px 8px",
+                fontSize: 14,
+                fontFamily: "Noto Serif JP, serif",
+                color: "#daf6ff",
+                background: "rgba(10, 14, 20, 0.75)",
+                border: "1px solid rgba(72, 171, 224, 0.5)",
+                borderRadius: 8,
+                outline: "none",
+                boxSizing: "border-box",
+              }}
+              type="text"
+              value={textInput}
+              onChange={(event) => handleTextInput(event.target.value)}
+              placeholder={
+                favoriteTokens.length && !textInput.trim()
+                  ? "Favorites — search all tokens…"
+                  : "Search for tokens..."
+              }
+            />
+          </div>
+          <CardMUI sx={deckModalCards} variant="outlined">
             {filteredTokens.map((card, idx) =>
               card ? (
                 <div
@@ -220,6 +225,10 @@ export default function Token({ ready, setReady, setTokenReady, setHovering }) {
                     handleContextMenu(e, card);
                   }}
                   {...(automated ? {} : tokenDrag.dragProps(card, idx))}
+                  style={{
+                    position: "relative",
+                    ...(automated ? {} : tokenDrag.dragStyle),
+                  }}
                 >
                   <Card ready={ready} name={card} setHovering={setHovering} />
                 </div>

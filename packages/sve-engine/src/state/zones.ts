@@ -32,7 +32,7 @@ export function moveCard(
 
   let actualZone = toZone;
   if (toZone === "cemetery") {
-    actualZone = destinationForDestroyedCard(card.cardNo);
+    actualZone = destinationForDestroyedCard(card);
   }
 
   const leftField = foundAfter.zone === "field" && toZone !== "field";
@@ -43,8 +43,10 @@ export function moveCard(
     resetFieldInstanceState(card);
   }
 
-  card.controller = toPlayer;
-  const toList = next.players[toPlayer].zones[actualZone] as CardInstance[];
+  const destPlayer = actualZone === "evolveDeck" ? foundAfter.player : toPlayer;
+  card.controller = destPlayer;
+  if (actualZone === "evolveDeck") card.evoSpent = true;
+  const toList = next.players[destPlayer].zones[actualZone] as CardInstance[];
   toList.push(card);
 
   if (actualZone === "cemetery" || actualZone === "banish") {
@@ -73,7 +75,7 @@ export function removeFromField(
   if (idx < 0) return null;
   const [card] = p.zones.field.splice(idx, 1);
   const cardNo = resolveCardNo(next, card);
-  const dest = destinationForDestroyedCard(cardNo);
+  const dest = destinationForDestroyedCard(card);
 
   if (dest === "cemetery" || dest === "banish") {
     queueOnEnemyFollowerLeaveField(next, instanceId, found.player, next.activePlayer);
@@ -84,6 +86,7 @@ export function removeFromField(
   }
 
   resetCardInstanceState(card);
+  if (dest === "evolveDeck") card.evoSpent = true;
   p.zones[dest].push(card);
   return { state: next, card, player: found.player };
 }

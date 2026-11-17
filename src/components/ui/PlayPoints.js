@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
@@ -5,9 +6,15 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { socket } from "../../sockets";
 import IconButton from "@mui/material/IconButton";
 import "../../css/PlayPoints.css";
-import { setLeaderActive } from "../../redux/CardSlice";
+import {
+  drawFromDeck,
+  setFirstNextTurnTaken,
+  setLeaderActive,
+  setPlayPoints,
+  setTurn,
+} from "../../redux/CardSlice";
 import { useDispatch, useSelector } from "react-redux";
-import { setPlayPoints, setTurn } from "../../redux/CardSlice";
+import { triggerGameAnimation } from "../field/animationBus";
 import HideUiButton from "./HideUiButton";
 
 export default function Scoreboard({ name }) {
@@ -21,14 +28,42 @@ export default function Scoreboard({ name }) {
   );
   const reduxRoom = useSelector((state) => state.card.room);
   const reduxTurn = useSelector((state) => state.card.turn);
+  const firstNextTurnTaken = useSelector(
+    (state) => state.card.firstNextTurnTaken,
+  );
+  const reduxDeckSize = useSelector((state) => state.card.deck.length);
+  const leaderActive = useSelector((state) => state.card.leaderActive);
+  const enemyLeaderActive = useSelector(
+    (state) => state.card.enemyLeaderActive,
+  );
+  const enemyEndTurnTaken = useSelector(
+    (state) => state.card.enemyEndTurnTaken,
+  );
+
+  const canEndTurn = leaderActive;
+  const canNextTurn =
+    !leaderActive &&
+    (!firstNextTurnTaken ||
+      (enemyEndTurnTaken && !enemyLeaderActive));
 
   const buttonBackgroundColor = "rgba(0, 0, 0, 0.6)";
 
   const nextTurn = () => {
+    if (!canNextTurn) return;
     incrementBoth();
     dispatch(setTurn(reduxTurn + 1));
     dispatch(setLeaderActive(true));
-    // dispatch(drawFromDeck());
+    if (!firstNextTurnTaken) {
+      dispatch(setFirstNextTurnTaken(true));
+      socket.emit("send msg", {
+        type: "firstNextTurnTaken",
+        data: true,
+        room: reduxRoom,
+      });
+    } else if (reduxDeckSize > 0) {
+      dispatch(drawFromDeck());
+      triggerGameAnimation("draw", reduxRoom);
+    }
     socket.emit("send msg", {
       type: "leaderActive",
       data: true,
@@ -36,6 +71,7 @@ export default function Scoreboard({ name }) {
     });
   };
   const endTurn = () => {
+    if (!canEndTurn) return;
     dispatch(setLeaderActive(false));
     socket.emit("send msg", {
       type: "leaderActive",
@@ -43,6 +79,23 @@ export default function Scoreboard({ name }) {
       room: reduxRoom,
     });
   };
+
+  useEffect(() => {
+    if (automated) return undefined;
+    const handleKeyDown = (event) => {
+      if (event.repeat || (event.code !== "Space" && event.key !== " ")) return;
+      const target = event.target;
+      const tag = target?.tagName?.toLowerCase();
+      if (tag === "input" || tag === "textarea" || target?.isContentEditable) {
+        return;
+      }
+      event.preventDefault();
+      if (canNextTurn) nextTurn();
+      else if (canEndTurn) endTurn();
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [automated, canNextTurn, canEndTurn, nextTurn, endTurn]);
 
   const incrementCurrent = () => {
     if (reduxCurrentPlayPoints < reduxMaxPlayPoints) {
@@ -262,10 +315,16 @@ export default function Scoreboard({ name }) {
       </div>}
       {!automated && (
       <div className="turnContainer">
-        <div className="nextTurnContainer" onClick={() => nextTurn()}>
+        <div
+          className={`nextTurnContainer${canNextTurn ? "" : " turnDisabled"}`}
+          onClick={() => canNextTurn && nextTurn()}
+        >
           <div className="buttonText">Next Turn</div>
         </div>
-        <div className="endTurnContainer" onClick={() => endTurn()}>
+        <div
+          className={`endTurnContainer${canEndTurn ? "" : " turnDisabled"}`}
+          onClick={() => canEndTurn && endTurn()}
+        >
           <div className="buttonText">End Turn</div>
         </div>
       </div>

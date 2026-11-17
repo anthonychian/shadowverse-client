@@ -750,6 +750,7 @@ export interface CardInstance {
     evolvedThisTurn: boolean;
     superEvolved: boolean;
     linkedEvoInstanceId?: string;
+    advancedFromEvolveDeck?: boolean;
     /** Evolve card was used and returned to evolve deck; cannot evolve again. */
     evoSpent?: boolean;
     onFieldSinceTurnStart: boolean;

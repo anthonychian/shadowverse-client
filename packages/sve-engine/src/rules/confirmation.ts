@@ -98,14 +98,16 @@ function enforceFieldLimits(state: GameState): GameState {
     const p = next.players[pid];
     while (p.zones.field.length > p.fieldLimit) {
       const excess = p.zones.field.pop()!;
-      const dest = destinationForDestroyedCard(excess.cardNo);
+      const dest = destinationForDestroyedCard(excess);
       resetCardInstanceState(excess);
+      if (dest === "evolveDeck") excess.evoSpent = true;
       p.zones[dest].push(excess);
     }
     while (p.zones.exArea.length > p.exLimit) {
       const excess = p.zones.exArea.pop()!;
-      const dest = destinationForDestroyedCard(excess.cardNo);
+      const dest = destinationForDestroyedCard(excess);
       resetCardInstanceState(excess);
+      if (dest === "evolveDeck") excess.evoSpent = true;
       p.zones[dest].push(excess);
     }
   }

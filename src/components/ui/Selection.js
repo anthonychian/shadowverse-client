@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 import { motion } from "framer-motion";
 import imageSiLong from "../../assets/leaders/SiLong.png";
@@ -57,6 +57,7 @@ import {
   Box,
   Modal,
   Card,
+  ButtonBase,
   IconButton,
   ListItem,
   ListItemButton,
@@ -93,10 +94,25 @@ import {
 } from "../../redux/CardSlice";
 import { selectDecks } from "../../redux/DeckSlice";
 import { computeDeckClass } from "../../decks/cardDetails";
+import { classIcon } from "../deckbuilder/icons";
 import { randomLeaderForClass } from "../../decks/classLeaders";
 import { setChatExpanded } from "../../redux/GameStateSlice";
 import StyleIcon from "@mui/icons-material/Style";
-import HideUiButton from "./HideUiButton";
+import HideUiButton, { ModalHideUiRow } from "./HideUiButton";
+import {
+  deckModalCards,
+  deckModalCount,
+  deckModalTitle,
+  deckModalToolbar,
+  ghostButtonSx,
+  useDeckModalBoxStyle,
+} from "../field/deckModalStyles";
+import {
+  artThumb,
+  cardImageSrc,
+  cardNoImage,
+  deckCoverName,
+} from "../../decks/getCards";
 
 export default function Selection({ setSelectedOption }) {
   // redux state
@@ -111,6 +127,7 @@ export default function Selection({ setSelectedOption }) {
   const [open, setOpen] = useState(false);
   const [openCardBack, setOpenCardBack] = useState(false);
   const [openSwapDeck, setOpenSwapDeck] = useState(false);
+  const swapDeckModalStyle = useDeckModalBoxStyle(openSwapDeck);
 
   // The player's saved decks (cloud when logged in, local otherwise) — the pool
   // to swap into mid-room.
@@ -177,13 +194,7 @@ export default function Selection({ setSelectedOption }) {
     dispatch(setCardBack(cardback));
   };
 
-  const handleRematch = () => {
-    if (acceptRematch && reduxEnemyRematchStatus) {
-      dispatch(reset());
-      setAcceptRematch(false);
-      // setRematchNotify(true);
-    }
-  };
+  const rematchHandledRef = useRef(false);
 
   const exitToHome = () => {
     dispatch(exitGame());
@@ -224,12 +235,15 @@ export default function Selection({ setSelectedOption }) {
   }, [reduxEnemyRematchStatus]);
 
   useEffect(() => {
-    handleRematch();
-  }, [acceptRematch]);
-
-  useEffect(() => {
-    handleRematch();
-  }, [reduxEnemyRematchStatus]);
+    if (!acceptRematch || !reduxEnemyRematchStatus) {
+      rematchHandledRef.current = false;
+      return;
+    }
+    if (rematchHandledRef.current) return;
+    rematchHandledRef.current = true;
+    dispatch(reset());
+    setAcceptRematch(false);
+  }, [acceptRematch, reduxEnemyRematchStatus]);
 
   return (
     <>
@@ -496,61 +510,141 @@ export default function Selection({ setSelectedOption }) {
         open={openSwapDeck}
         onClose={handleSwapDeckClose}
         aria-labelledby="swap-deck-title"
-        aria-describedby="swap-deck-description"
+        sx={{ "& > .MuiBackdrop-root": { backgroundColor: "transparent" } }}
       >
-        <Box
-          sx={{
-            position: "relative",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            backgroundColor: "rgba(0, 0, 0, 1)",
-            boxShadow: 24,
-            p: 4,
-            width: "40%",
-            maxHeight: "80vh",
-            overflowY: "auto",
-          }}
-        >
-          <DialogContentText
-            id="swap-deck-description"
-            sx={{ color: "white", mb: 2, textAlign: "center" }}
-          >
-            Swap to another deck — this resets your board, hand, and life for a
-            fresh start. Your opponent is unaffected.
-          </DialogContentText>
-          {savedDecks.length === 0 ? (
-            <DialogContentText
-              sx={{ color: "rgba(255,255,255,0.7)", textAlign: "center" }}
+        <Box sx={swapDeckModalStyle}>
+          <ModalHideUiRow />
+          <div style={deckModalToolbar}>
+            <span id="swap-deck-title" style={deckModalTitle}>
+              SWAP DECK
+            </span>
+            <span style={deckModalCount}>{savedDecks.length} SAVED</span>
+            <Button
+              onClick={handleSwapDeckClose}
+              sx={{ ...ghostButtonSx, marginLeft: "auto" }}
             >
-              No saved decks found.
-            </DialogContentText>
-          ) : (
-            <Stack spacing={1}>
-              {savedDecks.map((d, i) => (
-                <Button
-                  key={`${d.name}-${i}`}
-                  variant="outlined"
-                  onClick={() => handleSwapDeck(d)}
-                  sx={{
-                    color: "white",
-                    borderColor: "rgba(255,255,255,0.3)",
-                    justifyContent: "space-between",
-                    textTransform: "none",
-                    "&:hover": {
-                      borderColor: "white",
-                      backgroundColor: "rgba(255,255,255,0.08)",
-                    },
-                  }}
-                >
-                  <span>{d.name || "Unnamed deck"}</span>
-                  <span style={{ opacity: 0.6, fontSize: "0.8rem" }}>
-                    {d.class || computeDeckClass(d.deck) || ""}
-                  </span>
-                </Button>
-              ))}
-            </Stack>
-          )}
+              Close
+            </Button>
+          </div>
+          <Card
+            variant="outlined"
+            sx={{
+              ...deckModalCards,
+              gap: "0.9em",
+              alignContent: "flex-start",
+            }}
+          >
+            {savedDecks.length === 0 ? (
+              <div
+                style={{
+                  color: "rgba(218, 246, 255, 0.7)",
+                  fontFamily: "Share Tech Mono, monospace",
+                  fontSize: 13,
+                  textAlign: "center",
+                  padding: "2em 0",
+                }}
+              >
+                No saved decks found.
+              </div>
+            ) : (
+              savedDecks.map((d, i) => {
+                const coverName = deckCoverName(d);
+                const chosenArt = d.art?.[coverName];
+                const deckClass = d.class || computeDeckClass(d.deck) || "";
+                const classIconSrc = classIcon(deckClass);
+                return (
+                  <ButtonBase
+                    key={`${d.name}-${i}`}
+                    onClick={() => handleSwapDeck(d)}
+                    sx={{
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                      gap: "6px",
+                      width: 112,
+                      padding: "8px 6px",
+                      borderRadius: "10px",
+                      color: "#eafaff",
+                      fontFamily: "Noto Serif JP, serif",
+                      textTransform: "none",
+                      border: "1px solid rgba(72, 171, 224, 0.4)",
+                      background: "rgba(10, 14, 20, 0.65)",
+                      transition:
+                        "border-color 0.12s ease, box-shadow 0.12s ease, background 0.12s ease",
+                      "&:hover": {
+                        borderColor: "#8cdcff",
+                        background: "rgba(72, 171, 224, 0.16)",
+                        boxShadow: "0 0 16px rgba(72, 171, 224, 0.45)",
+                      },
+                    }}
+                  >
+                    <img
+                      src={artThumb(coverName, d.art)}
+                      alt={`${d.name || "Unnamed deck"} cover`}
+                      draggable={false}
+                      loading="lazy"
+                      decoding="async"
+                      onError={(e) => {
+                        const img = e.currentTarget;
+                        if (img.dataset.fallback === "full") return;
+                        if (chosenArt && img.src.includes("/thumbs/")) {
+                          img.dataset.fallback = "full";
+                          img.src = cardNoImage(chosenArt);
+                        } else {
+                          img.dataset.fallback = "full";
+                          img.src = cardImageSrc(coverName);
+                        }
+                      }}
+                      style={{
+                        width: 88,
+                        height: 123,
+                        objectFit: "cover",
+                        borderRadius: 6,
+                        boxShadow: "0 2px 8px rgba(0, 0, 0, 0.7)",
+                      }}
+                    />
+                    <span
+                      style={{
+                        maxWidth: 100,
+                        whiteSpace: "nowrap",
+                        overflow: "hidden",
+                        textOverflow: "ellipsis",
+                        fontSize: 13,
+                        lineHeight: 1.3,
+                      }}
+                    >
+                      {d.name || "Unnamed deck"}
+                    </span>
+                    <span
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 4,
+                        fontFamily: "Share Tech Mono, monospace",
+                        fontSize: 11,
+                        letterSpacing: "0.06em",
+                        color: "#8cdcff",
+                        opacity: 0.85,
+                      }}
+                    >
+                      {classIconSrc && (
+                        <img
+                          src={classIconSrc}
+                          alt=""
+                          style={{
+                            width: 13,
+                            height: 13,
+                            objectFit: "contain",
+                          }}
+                        />
+                      )}
+                      <span>{deckClass.toUpperCase() || "—"}</span>
+                    </span>
+                  </ButtonBase>
+                );
+              })
+            )}
+          </Card>
         </Box>
       </Modal>
 

@@ -1,5 +1,6 @@
 import { getCardDef, resolveCardNoByIdentity } from "../cards/registry";
 import { normalizeIdentityName } from "../cards/reprints";
+import { destinationForDestroyedCard } from "../cards/tokens";
 
 import { onCardEntersExArea, onFollowerEntersField, queueLastWords } from "../rules/confirmation";
 
@@ -755,6 +756,7 @@ export function moveZoneCardTo(
         card.enteredFromCemetery = true;
         card.enteredFromHand = false;
       }
+      if (fromZone === "evolveDeck") card.advancedFromEvolveDeck = true;
       p.zones.field.push(card);
       onFollowerEntersField(next, card.instanceId, player);
       next.resolutionContext = {
@@ -939,7 +941,9 @@ export function resolveEffect(
         if (idx < 0) continue;
         const [buried] = p.zones.field.splice(idx, 1);
         resetCardInstanceState(buried);
-        p.zones.cemetery.push(buried);
+        const buriedDest = destinationForDestroyedCard(buried);
+        if (buriedDest === "evolveDeck") buried.evoSpent = true;
+        p.zones[buriedDest].push(buried);
         next.eventLog.push({ type: "bury", player: opp });
       }
       break;

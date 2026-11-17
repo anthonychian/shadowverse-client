@@ -14,12 +14,19 @@ import {
 } from "../../redux/CardSlice";
 import { useUiModalOpen } from "../hooks/useUiChromeVisible";
 import { isDoubleEvo } from "../../decks/doubleEvo";
-import { primaryType } from "../../decks/cardDetails";
+import { countCardTypes, primaryType } from "../../decks/cardDetails";
 import { ModalHideUiRow } from "../ui/HideUiButton";
 import { triggerCardReveal } from "./cardRevealBus";
 import { triggerGameAnimation } from "./animationBus";
 import { fieldSlotCenter, registerEvoDeck } from "./handDrag";
 import { useModalCardDrag, ModalDragGhost } from "./modalCardDrag";
+import {
+  useDeckModalBoxStyle,
+  deckModalToolbar,
+  deckModalTitle,
+  deckModalCount,
+  deckModalCards,
+} from "./deckModalStyles";
 
 import defaultCardBack from "../../assets/cardbacks/default.png";
 import aeneaCardBack from "../../assets/cardbacks/aenea.png";
@@ -44,24 +51,6 @@ import viridiaCardBack from "../../assets/cardbacks/viridia.png";
 import wilbertCardBack from "../../assets/cardbacks/wilbert.png";
 import "../../css/Card.css";
 
-const style = {
-  position: "relative",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  backgroundColor: "transparent",
-  // boxShadow: 24,
-  // p: 3,
-  width: "55%",
-  display: "flex",
-  // Stack the hide-UI row above the card grid (column), so the grid stays
-  // horizontally centred. Without this the default row layout places the
-  // hide-UI row beside the grid and shoves the grid right of centre.
-  flexDirection: "column",
-  justifyContent: "center",
-  alignItems: "center",
-};
-
 export default function EvoDeck({
   setHovering,
   setReadyToEvo,
@@ -74,6 +63,7 @@ export default function EvoDeck({
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
   const modalOpen = useUiModalOpen(open, { persistWhenChromeHidden: true });
+  const modalBoxStyle = useDeckModalBoxStyle(modalOpen);
   const [showEvo, setShowEvo] = useState(false);
   const [showFeed, setShowFeed] = useState(false);
   const [showRide, setShowRide] = useState(false);
@@ -95,11 +85,13 @@ export default function EvoDeck({
   // Normal evolve cards drag onto a follower to evolve; Advanced ("… ADVANCED")
   // cards drag onto an empty field slot to play. Carrot (Feed) and Drive Point
   // (Ride) keep their dedicated right-click actions.
-  const canDragEvo = (cardName) =>
+  const canDragEvo = (card) =>
     !automated &&
-    typeof cardName === "string" &&
-    cardName !== "Carrot" &&
-    cardName !== "Drive Point";
+    card &&
+    typeof card.card === "string" &&
+    !card.status &&
+    card.card !== "Carrot" &&
+    card.card !== "Drive Point";
 
   // Drag a card out of the modal onto the field — mirrors the deck/cemetery
   // modals (the panel hides while dragging, a ghost follows the cursor). Normal
@@ -274,6 +266,8 @@ export default function EvoDeck({
     }
   }, [reduxCardBack]);
 
+  const evoTypeCounts = countCardTypes(reduxEvoDeck.map((entry) => entry.card));
+
   return (
     <>
       <div
@@ -303,7 +297,7 @@ export default function EvoDeck({
       >
         <Box
           sx={{
-            ...style,
+            ...modalBoxStyle,
             // Hidden with opacity (not display) while dragging so the dragged
             // card's wrapper stays rendered and keeps pointer capture — the
             // ghost (ModalDragGhost) follows the cursor over the board instead.
@@ -311,22 +305,17 @@ export default function EvoDeck({
           }}
         >
           <ModalHideUiRow />
-          <CardMUI
-            sx={{
-              //   backgroundColor: "rgba(255, 255, 255, 0.1)",
-              backgroundColor: "rgba(0, 0, 0, 0.7)",
-              //   backgroundColor: "black",
-              minHeight: "250px",
-              padding: "3%",
-              width: "90%",
-              display: "flex",
-              flexDirection: "row",
-              flexWrap: "wrap",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-            variant="outlined"
-          >
+          <div style={deckModalToolbar}>
+            <span style={deckModalTitle}>EVOLVE DECK</span>
+            <span style={deckModalCount}>
+              {evoTypeCounts.Follower} FOLLOWERS
+            </span>
+            <span style={deckModalCount}>{evoTypeCounts.Spell} SPELLS</span>
+            <span style={deckModalCount}>
+              {evoTypeCounts.Amulet} AMULETS
+            </span>
+          </div>
+          <CardMUI sx={deckModalCards} variant="outlined">
             {reduxEvoDeck.map((card, idx) => (
               <div
                 key={`card-${idx}`}
@@ -337,12 +326,13 @@ export default function EvoDeck({
                         handleContextMenu(e, card, idx);
                       }
                 }
-                {...(canDragEvo(card.card)
+                {...(canDragEvo(card)
                   ? evoDrag.dragProps(card.card, idx)
                   : {})}
                 style={{
                   width: "115px",
-                  ...(canDragEvo(card.card) ? evoDrag.dragStyle : {}),
+                  position: "relative",
+                  ...(canDragEvo(card) ? evoDrag.dragStyle : {}),
                 }}
               >
                 <Card

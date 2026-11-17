@@ -58,6 +58,8 @@ import {
   setEnemyDeckSize,
   setEnemyEvoPoints,
   setEnemyTurn,
+  setFirstNextTurnTaken,
+  setEnemyEndTurnTaken,
   setEnemyPlayPoints,
   setEnemyHealth,
   setEnemyLeader,
@@ -139,6 +141,7 @@ import { setSelectedAttackerId } from "../../redux/GameStateSlice";
 import { getNameByCardNoClient } from "../../engine/cardLookup";
 
 import Token from "./Token";
+import ShowHandButton from "./ShowHandButton";
 import ShowDice from "./ShowDice";
 import { playGameAnimation, triggerGameAnimation } from "./animationBus";
 import { DeckFx, HandFx, useShuffleHandActive, useShuffleDeckActive } from "./GameFx";
@@ -519,6 +522,9 @@ export default function Field({
         case "turn":
           dispatch(setEnemyTurn(update.data));
           break;
+        case "firstNextTurnTaken":
+          dispatch(setFirstNextTurnTaken(update.data));
+          break;
         case "playPoints":
           dispatch(setEnemyPlayPoints(update.data));
           break;
@@ -600,6 +606,7 @@ export default function Field({
           break;
         case "leaderActive":
           dispatch(setEnemyLeaderActive(update.data));
+          if (update.data === false) dispatch(setEnemyEndTurnTaken(true));
           break;
         case "superEvoActive":
           dispatch(setEnemySuperEvoActive(update.data));
@@ -1532,10 +1539,10 @@ export default function Field({
   //   { type: "deck", half }   -> top/bottom of deck
   //   { type: "evoDeck" }      -> return an Advanced card, flipped
   // Anything invalid is a no-op (the card snaps back). Cemetery/Hand/Deck mirror
-  // the right-click menu. Tokens can't be returned; advanced cards can only go
-  // to the cemetery or back to the evolve deck. Evolved followers can go to any
-  // zone: the base card goes there and the evolved card flips back into the
-  // evolve deck (returnEvoToDeckIfEvolved).
+  // the right-click menu. Tokens can't be returned; advanced cards go back to
+  // the evolve deck whether dropped there or on the cemetery. Evolved followers
+  // can go to any zone: the base card goes there and the evolved card flips back
+  // into the evolve deck (returnEvoToDeckIfEvolved).
   const handleFieldDrop = (fromIndex, dest) => {
     // Equipment (in its own equipField) never affects what the follower can
     // do — it just tags along on moves and, being a token, disappears when the
@@ -1566,6 +1573,14 @@ export default function Field({
       return;
     }
     if (dest.type === "cemetery") {
+      if (isAdvancedCard) {
+        if (isEquipAttached) dispatch(clearEquipmentAtIndex(fromIndex));
+        dispatch(
+          advancedBackToEvolveDeck({ card: baseCard, index: fromIndex }),
+        );
+        clearFieldSlot(fromIndex);
+        return;
+      }
       // Tokens can't be sent to the cemetery — dropping one there removes it
       // from play instead (mirrors the right-click "Remove" action).
       if (typeof baseCard === "string" && isToken(baseCard)) {
@@ -2550,6 +2565,7 @@ export default function Field({
         style={{
           display: "flex",
           flexDirection: "row",
+          alignItems: "flex-start",
           width: "100%",
           minHeight: "330px",
           cursor: ready && `url(${img}) 55 55, auto`,
@@ -2559,13 +2575,13 @@ export default function Field({
         <div
           style={{
             height: "35vh",
-            minHeight: "330px",
+            minHeight: "460px",
             width: "140px",
             flexShrink: 0,
-            display: "flex",
-            flexDirection: "column",
+            display: "grid",
+            gridTemplateRows: "161px 1fr",
+            justifyItems: "center",
             alignItems: "center",
-            justifyContent: "space-evenly",
           }}
         >
           <EvoDeck
@@ -2577,21 +2593,26 @@ export default function Field({
             setHovering={setHovering}
             ready={ready}
           />
-          <ShowDice />
           <div
             style={{
               display: "flex",
-              justifyContent: "space-evenly",
-              flexDirection: "row",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              alignSelf: "end",
+              gap: 18,
+              paddingBottom: 8,
               width: "100%",
             }}
           >
+            <ShowDice />
             <Token
               setReady={setReady}
               setHovering={setHovering}
               ready={ready}
               setTokenReady={setTokenReady}
             />
+            <ShowHandButton />
             {/* <Lesson /> */}
           </div>
         </div>

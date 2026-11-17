@@ -159,8 +159,8 @@ export default function Card({
   const fieldDraggable = onField && !opponentField && !ready;
   // Evolved cards (have a base beneath) can be dropped to the cemetery/hand/deck
   // — the base returns to that zone and the evolved card flips back into the
-  // evolve deck. Advanced cards can go to the cemetery or back to the evolve
-  // deck (flipped); tokens remain slot-move-only apart from the cemetery remove.
+  // evolve deck. Advanced cards return to the evolve deck from either drop zone;
+  // tokens remain slot-move-only apart from the cemetery remove.
   const isEvoFieldCard = onField && !!cardBeneath && cardBeneath !== 0;
   const isTokenFieldCard =
     onField &&
@@ -220,8 +220,8 @@ export default function Card({
   // advanced cards are restricted to slot-to-slot moves...
   const fieldExtraTargets = !isSpecialFieldCard;
   // ...except tokens: dragging one onto the cemetery pile removes it (mirrors
-  // the right-click "Remove" action). Advanced cards can also be discarded to
-  // the cemetery, and dragged onto the evolve-deck pile to return there flipped.
+  // the right-click "Remove" action). Advanced cards return to the evolve deck
+  // from either the cemetery or the evolve-deck pile, flipped.
   const fieldCemeteryTarget =
     fieldExtraTargets || isTokenFieldCard || isAdvancedFieldCard;
   // Token spells may be played to the shared played zone from the field.

@@ -183,6 +183,17 @@
   transform: translateY(-1px);
   filter: brightness(1.12);
 }
+.nextTurnContainer.turnDisabled,
+.endTurnContainer.turnDisabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  filter: grayscale(0.6);
+}
+.nextTurnContainer.turnDisabled:hover,
+.endTurnContainer.turnDisabled:hover {
+  transform: none;
+  filter: grayscale(0.6);
+}
 .buttonText {
   font-family: "Noto Serif JP", serif;
   color: white;

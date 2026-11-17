@@ -9,6 +9,7 @@ exports.canPlayCardFromZones = canPlayCardFromZones;
 exports.resolveSpell = resolveSpell;
 const registry_1 = require("../cards/registry");
 const reprints_1 = require("../cards/reprints");
+const tokens_1 = require("../cards/tokens");
 const confirmation_1 = require("../rules/confirmation");
 const confirmation_2 = require("../rules/confirmation");
 const trigger_queue_1 = require("../rules/trigger-queue");
@@ -533,6 +534,8 @@ function moveZoneCardTo(state, player, instanceId, fromZone, to) {
                 card.enteredFromCemetery = true;
                 card.enteredFromHand = false;
             }
+            if (fromZone === "evolveDeck")
+                card.advancedFromEvolveDeck = true;
             p.zones.field.push(card);
             (0, confirmation_1.onFollowerEntersField)(next, card.instanceId, player);
             next.resolutionContext = {
@@ -655,7 +658,10 @@ function resolveEffect(state, effect, player, options) {
                     continue;
                 const [buried] = p.zones.field.splice(idx, 1);
                 (0, card_reset_1.resetCardInstanceState)(buried);
-                p.zones.cemetery.push(buried);
+                const buriedDest = (0, tokens_1.destinationForDestroyedCard)(buried);
+                if (buriedDest === "evolveDeck")
+                    buried.evoSpent = true;
+                p.zones[buriedDest].push(buried);
                 next.eventLog.push({ type: "bury", player: opp });
             }
             break;

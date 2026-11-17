@@ -1,3 +1,4 @@
+import { CardInstance } from "../types";
 import { getCardDef } from "./registry";
 
 export function isTokenCard(cardNo: string): boolean {
@@ -10,6 +11,15 @@ export function isTokenCard(cardNo: string): boolean {
   );
 }
 
-export function destinationForDestroyedCard(cardNo: string): "banish" | "cemetery" {
-  return isTokenCard(cardNo) ? "banish" : "cemetery";
+export function isAdvancedCard(card: CardInstance): boolean {
+  if (card.advancedFromEvolveDeck) return true;
+  const def = getCardDef(card.cardNo);
+  return def?.specialType === "advanced" || /\sADVANCED$/i.test(def?.name ?? "");
+}
+
+export function destinationForDestroyedCard(
+  card: CardInstance,
+): "banish" | "cemetery" | "evolveDeck" {
+  if (isAdvancedCard(card)) return "evolveDeck";
+  return isTokenCard(card.cardNo) ? "banish" : "cemetery";
 }

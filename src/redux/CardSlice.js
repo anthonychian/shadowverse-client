@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { socket } from "../sockets";
+import { socket, saveState } from "../sockets";
 import { getDetails, primaryType } from "../decks/cardDetails";
 import { doubleEvoOtherSide } from "../decks/doubleEvo";
+import { shuffle } from "../lib/shuffle";
 
 // Seed a field slot's Atk/Def overlay from a follower's printed stats — the same
 // `customValues` the "Modify Atk/Def" menu drives, so they stay adjustable with
@@ -97,8 +98,8 @@ export const CardSlice = createSlice({
     enemyArrow: { idx: -1, show: false },
     leaderActive: false,
     enemyLeaderActive: false,
-    superEvoActive: false,
-    enemySuperEvoActive: false,
+    superEvoActive: true,
+    enemySuperEvoActive: true,
     enemyViewingHand: false,
     enemyLeftGame: false,
     enemyViewingDeck: false,
@@ -125,6 +126,8 @@ export const CardSlice = createSlice({
     // adjust it by hand. Synced so the opponent can read it (enemyTurn).
     turn: 0,
     enemyTurn: 0,
+    firstNextTurnTaken: false,
+    enemyEndTurnTaken: false,
     playPoints: { available: 0, max: 0 },
     enemyPlayPoints: { available: 0, max: 0 },
     playerHealth: 20,
@@ -355,6 +358,12 @@ export const CardSlice = createSlice({
     },
     setEnemyTurn: (state, action) => {
       state.enemyTurn = action.payload;
+    },
+    setFirstNextTurnTaken: (state, action) => {
+      state.firstNextTurnTaken = action.payload;
+    },
+    setEnemyEndTurnTaken: (state, action) => {
+      state.enemyEndTurnTaken = action.payload;
     },
     setRematchStatus: (state, action) => {
       state.rematchStatus = action.payload;
@@ -3614,6 +3623,17 @@ export const CardSlice = createSlice({
     },
     restoreOwnState: (state, action) => {
       const s = action.payload;
+      if (!s) return;
+      if (
+        s.matchStartEpoch !== undefined &&
+        state.matchStartEpoch &&
+        s.matchStartEpoch < state.matchStartEpoch
+      ) {
+        return;
+      }
+      if (s.matchStartEpoch !== undefined) {
+        state.matchStartEpoch = s.matchStartEpoch;
+      }
       if (s.myArt !== undefined) state.myArt = s.myArt;
       if (s.enemyArt !== undefined) state.enemyArt = s.enemyArt;
       if (s.favoriteTokens !== undefined) state.favoriteTokens = s.favoriteTokens;
@@ -3626,6 +3646,12 @@ export const CardSlice = createSlice({
       if (s.evoPoints !== undefined) state.evoPoints = s.evoPoints;
       if (s.turn !== undefined) state.turn = s.turn;
       if (s.enemyTurn !== undefined) state.enemyTurn = s.enemyTurn;
+      if (s.firstNextTurnTaken !== undefined) {
+        state.firstNextTurnTaken = s.firstNextTurnTaken;
+      }
+      if (s.enemyEndTurnTaken !== undefined) {
+        state.enemyEndTurnTaken = s.enemyEndTurnTaken;
+      }
       if (s.leader !== undefined) state.leader = s.leader;
       if (s.leaderActive !== undefined) state.leaderActive = s.leaderActive;
       if (s.superEvoActive !== undefined)
@@ -3635,8 +3661,24 @@ export const CardSlice = createSlice({
       if (s.banish !== undefined) state.banish = s.banish;
       if (s.played !== undefined)
         state.played = Array.isArray(s.played) ? s.played.slice(0, 1) : [];
-      if (s.evoDeck !== undefined) state.evoDeck = s.evoDeck;
-      if (s.deck !== undefined) state.deck = s.deck;
+      if (s.evoDeck !== undefined) {
+        state.evoDeck = s.evoDeck;
+        if (Array.isArray(s.initialEvoDeck)) {
+          state.initialEvoDeck = s.initialEvoDeck.length
+            ? s.initialEvoDeck
+            : s.evoDeck;
+        } else if (!state.initialEvoDeck?.length) {
+          state.initialEvoDeck = s.evoDeck;
+        }
+      }
+      if (s.deck !== undefined) {
+        state.deck = s.deck;
+        if (Array.isArray(s.initialDeck)) {
+          state.initialDeck = s.initialDeck.length ? s.initialDeck : s.deck;
+        } else if (!state.initialDeck?.length) {
+          state.initialDeck = s.deck;
+        }
+      }
       if (s.engagedField !== undefined) state.engagedField = s.engagedField;
       if (s.counterField !== undefined) state.counterField = s.counterField;
       if (s.auraField !== undefined) state.auraField = s.auraField;
@@ -3741,8 +3783,8 @@ export const CardSlice = createSlice({
       state.enemyLeader = "";
       state.leaderActive = false;
       state.enemyLeaderActive = false;
-      state.superEvoActive = false;
-      state.enemySuperEvoActive = false;
+      state.superEvoActive = true;
+      state.enemySuperEvoActive = true;
       state.cardback = "";
       state.enemyCardback = "";
       state.leader = "";
@@ -3750,6 +3792,8 @@ export const CardSlice = createSlice({
       state.enemyEvoPoints = 0;
       state.turn = 0;
       state.enemyTurn = 0;
+      state.firstNextTurnTaken = false;
+      state.enemyEndTurnTaken = false;
       state.playPoints = { available: 0, max: 0 };
       state.enemyPlayPoints = { available: 0, max: 0 };
       state.playerHealth = 20;
@@ -3837,9 +3881,14 @@ export const CardSlice = createSlice({
       state.enemyLeftGame = false;
       state.gameLog = [];
       state.matchStartEpoch = Date.now();
-      state.deck = state.initialDeck;
-      state.deck = state.deck.toSorted(() => Math.random() - 0.5);
-      state.evoDeck = state.initialEvoDeck;
+      const deckSeed =
+        state.initialDeck?.length ? state.initialDeck : state.deck || [];
+      const evoSeed =
+        state.initialEvoDeck?.length ? state.initialEvoDeck : state.evoDeck || [];
+      state.initialDeck = deckSeed;
+      state.initialEvoDeck = evoSeed;
+      state.deck = shuffle(deckSeed);
+      state.evoDeck = Array.isArray(evoSeed) ? [...evoSeed] : [];
       state.hand = [];
       state.enemyHand = [];
       state.showDice = false;
@@ -3858,12 +3907,14 @@ export const CardSlice = createSlice({
       state.enemyDeckSize = 0;
       state.leaderActive = false;
       state.enemyLeaderActive = false;
-      state.superEvoActive = false;
-      state.enemySuperEvoActive = false;
+      state.superEvoActive = true;
+      state.enemySuperEvoActive = true;
       state.evoPoints = 0;
       state.enemyEvoPoints = 0;
       state.turn = 0;
       state.enemyTurn = 0;
+      state.firstNextTurnTaken = false;
+      state.enemyEndTurnTaken = false;
       state.playPoints = { available: 0, max: 0 };
       state.enemyPlayPoints = { available: 0, max: 0 };
       state.playerHealth = 20;
@@ -3966,6 +4017,7 @@ export const CardSlice = createSlice({
         { showAtk: false, atk: 0, showDef: false, def: 0 },
         { showAtk: false, atk: 0, showDef: false, def: 0 },
       ];
+      saveState(state.room, state);
     },
     // Swap in a different saved deck WITHOUT leaving the room. Unlike `reset`
     // (a symmetric rematch that wipes both boards), this is one-sided: it loads
@@ -4036,10 +4088,12 @@ export const CardSlice = createSlice({
       state.currentCard = "";
       state.currentEvo = "";
       state.currentCardIndex = -1;
-      state.superEvoActive = false;
+      state.superEvoActive = true;
       state.leaderActive = false;
       state.evoPoints = 0;
       state.turn = 0;
+      state.firstNextTurnTaken = false;
+      state.enemyEndTurnTaken = false;
       state.playPoints = { available: 0, max: 0 };
       state.playerHealth = 20;
 
@@ -4220,6 +4274,8 @@ export const {
   setEvoPoints,
   setTurn,
   setEnemyTurn,
+  setFirstNextTurnTaken,
+  setEnemyEndTurnTaken,
   logHealthDiff,
   setPlayPoints,
   setHealth,

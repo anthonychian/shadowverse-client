@@ -49,7 +49,6 @@ const StyledRating = styled(Rating)({
 export default function PlayerUI({ name, compact = false, stageScale }) {
   const dispatch = useDispatch();
   const [ep, setEP] = useState(0);
-  const [superEvo, setSEP] = useState(false);
   const [playerHealth, setPlayerHealth] = useState(20);
   // Guard so we don't push the local default (20) into shared state on mount —
   // that would clobber a health value just restored from a saved/recovered game
@@ -78,11 +77,7 @@ export default function PlayerUI({ name, compact = false, stageScale }) {
   );
   const gameMode = useSelector((state) => state.gameState.gameMode);
   const automated = gameMode === "automated";
-  const sepLit = automated ? reduxCurrentSuperEvo : superEvo;
-
-  useEffect(() => {
-    if (automated) setSEP(reduxCurrentSuperEvo);
-  }, [automated, reduxCurrentSuperEvo]);
+  const sepLit = reduxCurrentSuperEvo;
 
   useEffect(() => {
     if (!healthDidMount.current) {
@@ -152,11 +147,11 @@ export default function PlayerUI({ name, compact = false, stageScale }) {
   };
 
   const handleSuperEvo = () => {
-    setSEP(!superEvo);
-    dispatch(setSuperEvoActive(!superEvo));
+    const next = !reduxCurrentSuperEvo;
+    dispatch(setSuperEvoActive(next));
     socket.emit("send msg", {
       type: "superEvoActive",
-      data: !superEvo,
+      data: next,
       room: reduxRoom,
     });
   };
@@ -273,8 +268,9 @@ export default function PlayerUI({ name, compact = false, stageScale }) {
         return "linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(247, 30, 30) 100.3%)";
       case "Amy":
         return "linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(247, 30, 30) 100.3%)";
+      case "Lishenna":
+      case "Ceridwen":
       case "Kuon":
-        return "linear-gradient(181deg, rgb(2, 0, 97) 15%, rgb(97, 149, 219) 158.5%)";
       case "Daria":
         return "linear-gradient(181deg, rgb(2, 0, 97) 15%, rgb(97, 149, 219) 158.5%)";
       case "Manhatten Cafe":

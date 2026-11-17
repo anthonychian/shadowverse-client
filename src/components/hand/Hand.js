@@ -9,7 +9,6 @@ import {
   placeToCemeteryFromHand,
   placeToBanishFromHand,
   playCardToSharedZone,
-  setShowHand,
 } from "../../redux/CardSlice";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
@@ -28,7 +27,6 @@ export default function Hand({
 }) {
   const reduxHand = useSelector((state) => state.card.hand);
   const reduxRoom = useSelector((state) => state.card.room);
-  const reduxShowHand = useSelector((state) => state.card.showHand);
   const handInstanceIds = useSelector((state) => state.card.handInstanceIds);
   const leaderActive = useSelector((state) => state.card.leaderActive);
   const gameMode = useSelector((state) => state.gameState.gameMode);
@@ -150,11 +148,6 @@ export default function Hand({
     handleClose();
     dispatch(placeToBotOfDeckFromHand({ name: name, index: cardIndex }));
   };
-  // Toggle: reveal my hand face-up to the opponent (instead of cardbacks).
-  const handleToggleShowHand = () => {
-    dispatch(setShowHand(!reduxShowHand));
-  };
-
   const getPlayMode = (index) => {
     if (!automated || pendingChoices) return null;
     const instanceId = handInstanceIds[index];
@@ -292,9 +285,6 @@ export default function Hand({
             <MenuItem onClick={handleCardToBanish}>Banish</MenuItem>
             <MenuItem onClick={handleCardToTopOfDeck}>Top of Deck</MenuItem>
             <MenuItem onClick={handleCardToBotOfDeck}>Bot of Deck</MenuItem>
-            <MenuItem onClick={handleToggleShowHand}>
-              {reduxShowHand ? "✓ " : ""}Show Hand
-            </MenuItem>
           </>
         )}
       </Menu>
