@@ -4,6 +4,7 @@ import { Modal, Box } from "@mui/material";
 import CardMUI from "@mui/material/Card";
 import Card from "../hand/Card";
 import { setViewingEvoDeckOpponent } from "../../redux/CardSlice";
+import { countCardTypes } from "../../decks/cardDetails";
 
 import defaultCardBack from "../../assets/cardbacks/default.png";
 import aeneaCardBack from "../../assets/cardbacks/aenea.png";
@@ -30,29 +31,19 @@ import wilbertCardBack from "../../assets/cardbacks/wilbert.png";
 import "../../css/Card.css";
 import { useUiModalOpen } from "../hooks/useUiChromeVisible";
 import { ModalHideUiRow } from "../ui/HideUiButton";
-
-
-const style = {
-  position: "relative",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  backgroundColor: "transparent",
-  // boxShadow: 24,
-  // p: 3,
-  width: "55%",
-  display: "flex",
-  // Stack the hide-UI row above the card grid (column) so the grid stays
-  // horizontally centred (matches EvoDeck; default row layout shoves it right).
-  flexDirection: "column",
-  justifyContent: "center",
-  alignItems: "center",
-};
+import {
+  useDeckModalBoxStyle,
+  deckModalToolbar,
+  deckModalTitle,
+  deckModalCount,
+  deckModalCards,
+} from "./deckModalStyles";
 
 export default function EnemyEvoDeck({ setHovering, ready }) {
   const dispatch = useDispatch();
   const [open, setOpen] = useState(false);
   const modalOpen = useUiModalOpen(open);
+  const modalBoxStyle = useDeckModalBoxStyle(modalOpen);
   const [cardback, setCardback] = useState();
   const reduxEnemyCardBack = useSelector((state) => state.card.enemyCardback);
   const reduxEnemyEvoDeck = useSelector((state) => state.card.enemyEvoDeck);
@@ -133,6 +124,11 @@ export default function EnemyEvoDeck({ setHovering, ready }) {
     }
   }, [reduxEnemyCardBack]);
 
+  const revealedEvoCards = reduxEnemyEvoDeck
+    .filter((entry) => entry.status)
+    .map((entry) => entry.card);
+  const evoTypeCounts = countCardTypes(revealedEvoCards);
+
   return (
     <>
       <div
@@ -158,22 +154,19 @@ export default function EnemyEvoDeck({ setHovering, ready }) {
           },
         }}
       >
-        <Box sx={style}>
+        <Box sx={modalBoxStyle}>
           <ModalHideUiRow />
-          <CardMUI
-            sx={{
-              backgroundColor: "rgba(0, 0, 0, 0.7)",
-              minHeight: "250px",
-              padding: "3%",
-              width: "100%",
-              display: "flex",
-              flexDirection: "row",
-              flexWrap: "wrap",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-            variant="outlined"
-          >
+          <div style={deckModalToolbar}>
+            <span style={deckModalTitle}>OPPONENT EVOLVE DECK</span>
+            <span style={deckModalCount}>
+              {evoTypeCounts.Follower} FOLLOWERS
+            </span>
+            <span style={deckModalCount}>{evoTypeCounts.Spell} SPELLS</span>
+            <span style={deckModalCount}>
+              {evoTypeCounts.Amulet} AMULETS
+            </span>
+          </div>
+          <CardMUI sx={deckModalCards} variant="outlined">
             {reduxEnemyEvoDeck.map((card, idx) => (
               <div style={{ width: "115px" }} key={`card-${idx}`}>
                 {card.status && (
