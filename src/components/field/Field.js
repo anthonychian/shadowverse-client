@@ -7,7 +7,6 @@ import {
   placeToBotOfDeckFromField,
   moveCardOnField,
   moveEvoAndBaseOnField,
-  transferToOpponentField,
   placeToCemeteryFromField,
   placeToFieldFromDeck,
   placeToFieldFromCemetery,
@@ -34,6 +33,8 @@ import {
   setEnemyCustomValues,
   showAtk,
   showDef,
+  modifyAtk,
+  modifyDef,
   hideAtk,
   hideDef,
   modifyCounter,
@@ -107,7 +108,7 @@ import {
   setEnemyEquipField,
 } from "../../redux/CardSlice";
 import { artImage } from "../../decks/getCards";
-import { primaryType } from "../../decks/cardDetails";
+import { getDetails, primaryType } from "../../decks/cardDetails";
 import { doubleEvoOtherSide } from "../../decks/doubleEvo";
 import { motion, MotionConfig } from "framer-motion";
 import CardMUI from "@mui/material/Card";
@@ -148,8 +149,10 @@ import { DeckFx, HandFx, useShuffleHandActive, useShuffleDeckActive } from "./Ga
 import {
   registerFieldGrid,
   registerBoardScale,
+  registerRevealZone,
   registerEnemyFieldGrid,
   registerEnemyHand,
+  revealZoneCenter,
   fieldSlotCenter,
   enemyFieldSlotCenter,
   enemyHandCenter,
@@ -554,9 +557,6 @@ export default function Field({
         case "cardRevealed":
           dispatch(setEnemyCard(update.data));
           break;
-        case "transfer":
-          dispatch(setField(update.data));
-          break;
         case "counter":
           dispatch(setEnemyCounter(update.data));
           break;
@@ -703,6 +703,14 @@ export default function Field({
           });
           break;
         }
+        case "revealZoneCard":
+          playCardReveal({
+            name: (update.data || {}).name,
+            side: "enemy",
+            kind: "reveal",
+            target: revealZoneCenter(),
+          });
+          break;
         case "cardEquipped": {
           // Opponent attached an equipment token to a follower — fly it onto
           // that follower's slot on their (top) board with the golden flash.
@@ -1443,6 +1451,18 @@ export default function Field({
   const handleShowAtkDef = () => {
     handleClose();
     handleEvoClose();
+    const current = reduxCustomValues[index] || {};
+    const details = getDetails(name);
+    if (details && Number(current.atk) === 0 && Number(current.def) === 0) {
+      const atkValue = Number(details.attack);
+      const defValue = Number(details.defense);
+      if (Number.isFinite(atkValue)) {
+        dispatch(modifyAtk({ value: String(atkValue), index }));
+      }
+      if (Number.isFinite(defValue)) {
+        dispatch(modifyDef({ value: String(defValue), index }));
+      }
+    }
     dispatch(showAtk(index));
     dispatch(showDef(index));
   };
@@ -1676,17 +1696,6 @@ export default function Field({
     handleEvoClose();
     setReady(true);
     setReadyToMoveEvoOnField(true);
-  };
-
-  const handleTransfer = () => {
-    handleClose();
-    dispatch(clearEquipmentAtIndex(index));
-    dispatch(
-      transferToOpponentField({
-        card: name,
-        prevIndex: index,
-      }),
-    );
   };
 
   const handleReturnToEvolveDeck = () => {
@@ -2055,9 +2064,6 @@ export default function Field({
           <MenuItem onClick={handleCardToBanish}>Banish</MenuItem>
         )}
 
-        {!isToken(name) && !isAdvanced(name) && (
-          <MenuItem onClick={handleTransfer}>Transfer</MenuItem>
-        )}
         {!reduxCustomStatus[index] && (
           <MenuItem onClick={handleShowStatus}>Add Status</MenuItem>
         )}
@@ -2643,6 +2649,18 @@ export default function Field({
             // zIndex: 0,
           }}
         >
+          <div
+            ref={(el) => registerRevealZone(el)}
+            style={{
+              position: "absolute",
+              left: 6,
+              right: 6,
+              bottom: "calc(100% + 6px)",
+              height: "calc(50% - 12px)",
+              pointerEvents: "none",
+              visibility: "hidden",
+            }}
+          />
           <span
             style={{
               fontFamily: "Noto Serif JP, serif",

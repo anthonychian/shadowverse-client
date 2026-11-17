@@ -600,6 +600,23 @@ export const CardSlice = createSlice({
         ];
       }
     },
+    logRevealedCard: (state, action) => {
+      const card = action.payload.card;
+      if (!card) return;
+      const date = new Date().toLocaleTimeString("it-IT", {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+      state.gameLog = [
+        ...state.gameLog,
+        { text: `[${date}] (Me): Revealed ${card}`, card },
+      ];
+      socket.emit("send msg", {
+        type: "cardRevealLog",
+        updates: [{ type: "log", data: { text: `Revealed ${card}`, card } }],
+        room: state.room,
+      });
+    },
     // Chat entries are objects { time, mine, text, name, avatar } — name and
     // avatar are the sender's Discord identity (empty when not signed in) and
     // travel with the message so the opponent sees them too.
@@ -1718,65 +1735,6 @@ export const CardSlice = createSlice({
         room: state.room,
       });
     },
-    transferToOpponentField: (state, action) => {
-      if (
-        state.enemyField[0] === 0 ||
-        state.enemyField[1] === 0 ||
-        state.enemyField[2] === 0 ||
-        state.enemyField[3] === 0 ||
-        state.enemyField[4] === 0
-      ) {
-        const card = action.payload.card;
-        const prevIndex = action.payload.prevIndex;
-        const field = [
-          ...state.field.slice(0, prevIndex),
-          0,
-          ...state.field.slice(prevIndex + 1),
-        ];
-        state.field = field;
-        const date = new Date().toLocaleTimeString("it-IT", {
-          hour: "2-digit",
-          minute: "2-digit",
-        });
-
-        let index;
-        for (let i = 0; i < 5; i++) {
-          if (state.enemyField[i] === 0) {
-            index = i;
-            break;
-          }
-        }
-        const newField = [
-          ...state.enemyField.slice(0, index),
-          card,
-          ...state.enemyField.slice(index + 1),
-        ];
-        state.enemyField = newField;
-
-        state.gameLog = [
-          ...state.gameLog,
-          {
-            text: `[${date}] (Me): Transfered ${card} to enemy field`,
-            card,
-          },
-        ];
-        socket.emit("send msg", {
-          type: "transferToOpponentField",
-          updates: [
-            {
-              type: "log",
-              data: { text: `Transfered ${card} to your field`, card },
-            },
-            { type: "field", data: state.field },
-            { type: "transfer", data: state.enemyField },
-          ],
-          room: state.room,
-        });
-      } else {
-        console.log("there are no open slots to transfer");
-      }
-    },
-
     addToFieldFromDeck: (state, action) => {
       const card = action.payload.card;
       const cardIndex = action.payload.cardIndex;
@@ -4182,7 +4140,6 @@ export const {
   removeTokenOnField,
   moveCardOnField,
   moveEvoAndBaseOnField,
-  transferToOpponentField,
   mulliganFour,
   shuffleDeck,
   evolveCardOnField,
@@ -4260,6 +4217,7 @@ export const {
   setEnemyPlayPoints,
   setEnemyHealth,
   setEnemyLog,
+  logRevealedCard,
   setChat,
   setEnemyOnlineStatus,
   setSelfOnlineStatus,

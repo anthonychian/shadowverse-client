@@ -91,6 +91,28 @@ export const isOverPlayedZone = (x, y) => {
   return !!r && x >= r.left && x <= r.right && y >= r.top && y <= r.bottom;
 };
 
+let revealZoneEl = null;
+export const registerRevealZone = (el) => {
+  revealZoneEl = el || null;
+};
+export const getRevealZoneRect = () => {
+  if (revealZoneEl) return revealZoneEl.getBoundingClientRect();
+  const r = getFieldGridRect();
+  if (!r) return null;
+  const height = r.height / 2 - 12;
+  return {
+    left: r.left + 6,
+    top: r.top - height - 6,
+    width: r.width - 12,
+    height,
+  };
+};
+export const isOverRevealZone = (x, y) => {
+  const r = getRevealZoneRect();
+  return !!r && x >= r.left && x <= r.right && y >= r.top && y <= r.bottom;
+};
+export const revealZoneCenter = () => rectCenter(getRevealZoneRect());
+
 // The player's evolve-deck pile, registered by EvoDeck via a ref callback. A
 // drop target for returning an Advanced card (flipped) to the evolve deck.
 let evoDeckEl = null;

@@ -13,6 +13,7 @@ import {
   placeToTopOfDeckFromHand,
   placeToBotOfDeckFromHand,
   playCardToSharedZone,
+  logRevealedCard,
 } from "../../redux/CardSlice";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -20,6 +21,7 @@ import {
   isOverCemetery,
   isOverHand,
   isOverPlayedZone,
+  isOverRevealZone,
   isOverSpellPlayedStrip,
   isOverEvoDeck,
   deckHalfAt,
@@ -30,6 +32,7 @@ import {
 import {
   triggerCardReveal,
   triggerPlayedZoneReveal,
+  triggerRevealZoneReveal,
 } from "../field/cardRevealBus";
 import cancel from "../../assets/logo/cancel.png";
 import carrot from "../../assets/logo/carrot.png";
@@ -43,6 +46,18 @@ import "../../css/Card.css";
 // the gesture is treated as a tap (engage), so tapping stays reliable and only a
 // deliberate drag relocates the card.
 const FIELD_DRAG_THRESHOLD = 10;
+
+const viewportPointFromDragEvent = (event, info) => {
+  const touch = event?.touches?.[0] || event?.changedTouches?.[0];
+  if (touch && Number.isFinite(touch.clientX)) {
+    return { x: touch.clientX, y: touch.clientY };
+  }
+  if (Number.isFinite(event?.clientX)) {
+    return { x: event.clientX, y: event.clientY };
+  }
+  const s = getBoardScale();
+  return { x: info.point.x * s, y: info.point.y * s };
+};
 
 // Large, very transparent +/- targets that overlay each Atk/Def icon and the
 // counter badge ("+" over the top half, "−" over the bottom). Green tint =
@@ -352,12 +367,14 @@ export default function Card({
       cemetery: false,
       hand: false,
       played: false,
+      reveal: false,
       deck: null,
       hideFrontRow: isSpellCard,
       showCemetery: true,
       showHand: false,
       showDeck: true,
       showPlayed: isSpellCard ? false : true,
+      showReveal: true,
       showSpellPlayedStrip: isSpellCard,
       spellPlayedStrip: false,
     });
@@ -370,24 +387,31 @@ export default function Card({
     const x = info.point.x * s;
     const y = info.point.y * s;
     const dropIndex = fieldIndexAt(x, y);
+    const revealPoint = viewportPointFromDragEvent(_event, info);
+    const overRevealZone = isOverRevealZone(
+      revealPoint.x,
+      revealPoint.y
+    );
     const overSpellRow = isSpellCard && dropIndex >= 0 && dropIndex < 5;
     setDragHover({
       active: true,
       // Spells can only target the EX area (5-9), so never highlight a front-row
       // slot while dragging one.
-      index: isSpellCard && dropIndex < 5 ? -1 : dropIndex,
+      index: overRevealZone || (isSpellCard && dropIndex < 5) ? -1 : dropIndex,
       cemetery: isOverCemetery(x, y),
       hand: false,
       played:
         (!isSpellCard && isOverPlayedZone(x, y)) ||
         overSpellRow ||
         (isSpellCard && isOverSpellPlayedStrip(x, y)),
+      reveal: overRevealZone,
       deck: deckHalfAt(x, y),
       hideFrontRow: isSpellCard,
       showCemetery: true,
       showHand: false,
       showDeck: true,
       showPlayed: !isSpellCard,
+      showReveal: true,
       showSpellPlayedStrip: isSpellCard,
       spellPlayedStrip:
         isSpellCard && (overSpellRow || isOverSpellPlayedStrip(x, y)),
@@ -400,12 +424,14 @@ export default function Card({
       cemetery: false,
       hand: false,
       played: false,
+      reveal: false,
       deck: null,
       hideFrontRow: false,
       showCemetery: false,
       showHand: false,
       showDeck: false,
       showPlayed: false,
+      showReveal: false,
       showSpellPlayedStrip: false,
       spellPlayedStrip: false,
     });
@@ -417,6 +443,16 @@ export default function Card({
     const deckHalf = deckHalfAt(x, y);
     const dropIndex = fieldIndexAt(x, y);
     const overSpellStrip = isSpellCard && dropIndex >= 0 && dropIndex < 5;
+    const revealPoint = viewportPointFromDragEvent(_event, info);
+    const overRevealZone = isOverRevealZone(
+      revealPoint.x,
+      revealPoint.y
+    );
+    if (overRevealZone) {
+      dispatch(logRevealedCard({ card: name }));
+      triggerRevealZoneReveal(name, reduxRoom);
+      return;
+    }
     if (deckHalf === "top") {
       dispatch(placeToTopOfDeckFromHand({ name: name, index: inHandIndex }));
       return;

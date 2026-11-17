@@ -4,6 +4,7 @@ import {
   cemeteryCenter,
   fieldSlotCenter,
   playedZoneCenter,
+  revealZoneCenter,
   getBoardScale,
 } from "./handDrag";
 
@@ -139,6 +140,18 @@ export const triggerPlayedZoneReveal = (name, room) => {
 // the card renders face-down — `src` is the acting side's cardback, so the card's
 // identity never leaves this machine. Only the fact a card was added travels;
 // the opponent replays it face-down using their copy of our cardback.
+export const triggerRevealZoneReveal = (name, room) => {
+  if (!name || name === 0) return;
+  playCardReveal({
+    name,
+    side: "player",
+    kind: "reveal",
+    target: revealZoneCenter(),
+  });
+  if (room)
+    socket.emit("send msg", { type: "revealZoneCard", data: { name }, room });
+};
+
 export const triggerHiddenHandReveal = (name, room, src) => {
   if (!name || name === 0) return;
   playCardReveal({ name, side: "player", kind: "hand", target: handCenter(), src });

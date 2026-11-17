@@ -231,6 +231,58 @@ function RevealCard({ src, side, target, source, size, kind }) {
     );
   }
 
+  if (kind === "reveal") {
+    return (
+      <div style={{ position: "fixed", left: "50%", top: "50%", width: 0, height: 0 }}>
+        <div style={{ position: "absolute", transform: "translate(-50%, -50%)", perspective: 1200 }}>
+          <motion.div
+            style={{ transformStyle: "preserve-3d" }}
+            initial={{ opacity: 0, scale: 0.6, rotateY: 180, x: 0, y: 0 }}
+            animate={{
+              opacity: [0, 1, 1, 0],
+              scale: [0.6, 1, 1, 0.45],
+              rotateY: [180, 0, 0, 0],
+              x: [0, 0, 0, dx * 0.35],
+              y: [0, 0, 0, dy * 0.35],
+              filter: [
+                "brightness(1)",
+                "brightness(1)",
+                "brightness(1.25)",
+                "brightness(1.6)",
+              ],
+            }}
+            transition={{ duration: DUR, times: [0, 0.16, 0.8, 1], ease: "easeInOut" }}
+          >
+            <img
+              src={src}
+              alt="revealed card"
+              style={{
+                height: "42vh",
+                width: "auto",
+                borderRadius: 12,
+                boxShadow: "0 16px 48px rgba(0,0,0,0.75), 0 0 30px rgba(120,220,255,0.55)",
+              }}
+            />
+            <div
+              style={{
+                marginTop: 10,
+                textAlign: "center",
+                fontFamily: "Share Tech Mono, monospace",
+                fontSize: 14,
+                fontWeight: 700,
+                letterSpacing: "0.25em",
+                color: "#8cdcff",
+                textShadow: "0 2px 6px #000",
+              }}
+            >
+              REVEALED
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    );
+  }
+
   // "Added to hand": no particles — the card itself flips in, then shrinks and
   // flies toward the hand (down to yours, up to the opponent's) and fades.
   if (kind === "hand") {

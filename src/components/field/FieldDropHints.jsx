@@ -8,6 +8,7 @@ import {
   getHandRect,
   getDeckRect,
   getPlayedZoneRect,
+  getRevealZoneRect,
   getEvoDeckRect,
   getSpellPlayedStripRect,
 } from "./handDrag";
@@ -36,13 +37,14 @@ export default function FieldDropHints() {
   const hand = getHandRect();
   const deck = getDeckRect();
   const played = getPlayedZoneRect();
+  const reveal = getRevealZoneRect();
   const evoDeck = getEvoDeckRect();
   const spellStrip = getSpellPlayedStripRect();
 
   // Outlined drop zone; highlights green when it's the one under the cursor.
   // A `label` also renders the zone name with the same typography as the deck's
   // top/bottom hints.
-  const zoneStyle = (rect, hovered, label) => ({
+  const zoneStyle = (rect, hovered, label, darkLabel = true) => ({
     position: "fixed",
     left: rect.left,
     top: rect.top,
@@ -61,7 +63,11 @@ export default function FieldDropHints() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: hovered ? "rgba(120, 230, 140, 0.3)" : "rgba(0, 0, 0, 0.6)",
+          background: hovered
+            ? "rgba(120, 230, 140, 0.3)"
+            : darkLabel
+              ? "rgba(0, 0, 0, 0.6)"
+              : "transparent",
           color: "#fff",
           fontFamily: "Noto Serif JP, serif",
           fontSize: 13,
@@ -109,6 +115,11 @@ export default function FieldDropHints() {
       )}
       {played && drag.showPlayed && (
         <div style={zoneStyle(played, drag.played)} />
+      )}
+      {reveal && drag.showReveal && (
+        <div style={zoneStyle(reveal, drag.reveal, "Reveal", false)}>
+          {!drag.reveal && "Reveal"}
+        </div>
       )}
       {evoDeck && drag.showEvoDeck && (
         <div style={zoneStyle(evoDeck, drag.evoDeck, "Evolve Deck")}>
