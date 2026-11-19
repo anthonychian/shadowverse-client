@@ -80,6 +80,7 @@ export default function Game(callback) {
     dispatch(setMatchStart(Date.now()));
   }, []);
   const [hovering, setHovering] = useState(false);
+  const [previewDeck, setPreviewDeck] = useState(null);
   const [readyToPlaceOnFieldFromHand, setReadyToPlaceOnFieldFromHand] =
     useState(false);
   const reduxCurrentCard = useSelector((state) => state.card.currentCard);
@@ -89,6 +90,9 @@ export default function Game(callback) {
   const reduxEnemyArt = useSelector((state) => state.card.enemyArt);
   // The zoomed card can be either player's; my own choices take precedence.
   const zoomArt = { ...reduxEnemyArt, ...reduxMyArt };
+  useEffect(() => {
+    if (uiChromeHidden) setPreviewDeck(null);
+  }, [uiChromeHidden]);
 
   // The board reports the scale it computed; the side panels (HP, leader, play
   // points, chat) shrink by the same factor so everything matches. Capped at 1
@@ -207,6 +211,8 @@ export default function Game(callback) {
       {!uiChromeHidden && (
         <Selection
           setSelectedOption={setSelectedOption}
+          setHovering={setHovering}
+          setPreviewDeck={setPreviewDeck}
           // setWallpaper={setWallpaper}
         />
       )}
@@ -224,6 +230,7 @@ export default function Game(callback) {
           name={reduxCurrentCard}
           hovering={hovering}
           art={zoomArt}
+          deck={previewDeck}
         />
       </div>
 

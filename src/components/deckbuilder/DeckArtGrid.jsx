@@ -1,6 +1,6 @@
 import React from "react";
 import { artThumb, artImage, cardImageSrc, cardNoImage } from "../../decks/getCards";
-import { getCost } from "../../decks/cardDetails";
+import { compareCardsByCost } from "../../decks/cardDetails";
 import { COLORS, FONT, displayName } from "./theme";
 
 // Full-art deck grid: the look of Home's Preview modal (big card art with a
@@ -14,14 +14,7 @@ import { COLORS, FONT, displayName } from "./theme";
 // Either way, clicking a card inspects it at full size.
 
 const sortedEntries = (map) =>
-  [...map.entries()].sort((a, b) => {
-    const ca = getCost(a[0]);
-    const cb = getCost(b[0]);
-    const va = ca == null ? 99 : ca;
-    const vb = cb == null ? 99 : cb;
-    if (va !== vb) return va - vb;
-    return a[0].localeCompare(b[0]);
-  });
+  [...map.entries()].sort((a, b) => compareCardsByCost(a[0], b[0]));
 
 const badge = {
   position: "absolute",

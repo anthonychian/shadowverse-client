@@ -114,7 +114,7 @@ import {
   deckCoverName,
 } from "../../decks/getCards";
 
-export default function Selection({ setSelectedOption }) {
+export default function Selection({ setSelectedOption, setHovering, setPreviewDeck }) {
   // redux state
   const reduxEnemyRematchStatus = useSelector(
     (state) => state.card.enemyRematchStatus,
@@ -138,6 +138,16 @@ export default function Selection({ setSelectedOption }) {
 
   const handleSwapDeckOpen = () => setOpenSwapDeck(true);
   const handleSwapDeckClose = () => setOpenSwapDeck(false);
+
+  const handleDeckPreviewStart = (deck) => {
+    setHovering?.(false);
+    setPreviewDeck?.(deck);
+  };
+  const handleDeckPreviewEnd = () => setPreviewDeck?.(null);
+
+  useEffect(() => {
+    if (!openSwapDeck) setPreviewDeck?.(null);
+  }, [openSwapDeck, setPreviewDeck]);
 
   // Load a different saved deck without leaving the room: swapDeck re-seeds my
   // draw pile + evolve deck and resets only my side to a fresh start (the
@@ -556,6 +566,8 @@ export default function Selection({ setSelectedOption }) {
                   <ButtonBase
                     key={`${d.name}-${i}`}
                     onClick={() => handleSwapDeck(d)}
+                    onMouseEnter={() => handleDeckPreviewStart(d)}
+                    onMouseLeave={handleDeckPreviewEnd}
                     sx={{
                       display: "flex",
                       flexDirection: "column",

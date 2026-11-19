@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Modal, Box } from "@mui/material";
 import CardMUI from "@mui/material/Card";
 import Card from "../hand/Card";
 import { setViewingEvoDeckOpponent } from "../../redux/CardSlice";
-import { countCardTypes } from "../../decks/cardDetails";
+import { countCardTypes, compareCardsByCost } from "../../decks/cardDetails";
 
 import defaultCardBack from "../../assets/cardbacks/default.png";
 import aeneaCardBack from "../../assets/cardbacks/aenea.png";
@@ -47,6 +47,10 @@ export default function EnemyEvoDeck({ setHovering, ready }) {
   const [cardback, setCardback] = useState();
   const reduxEnemyCardBack = useSelector((state) => state.card.enemyCardback);
   const reduxEnemyEvoDeck = useSelector((state) => state.card.enemyEvoDeck);
+  const orderedEnemyEvoDeck = useMemo(
+    () => [...reduxEnemyEvoDeck].sort((a, b) => compareCardsByCost(a.card, b.card)),
+    [reduxEnemyEvoDeck],
+  );
 
   const handleModalOpen = () => {
     setOpen(true);
@@ -167,7 +171,7 @@ export default function EnemyEvoDeck({ setHovering, ready }) {
             </span>
           </div>
           <CardMUI sx={deckModalCards} variant="outlined">
-            {reduxEnemyEvoDeck.map((card, idx) => (
+            {orderedEnemyEvoDeck.map((card, idx) => (
               <div style={{ width: "115px" }} key={`card-${idx}`}>
                 {card.status && (
                   <Card

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Menu, MenuItem, Modal, Box } from "@mui/material";
 import CardMUI from "@mui/material/Card";
@@ -14,7 +14,11 @@ import {
 } from "../../redux/CardSlice";
 import { useUiModalOpen } from "../hooks/useUiChromeVisible";
 import { isDoubleEvo } from "../../decks/doubleEvo";
-import { countCardTypes, primaryType } from "../../decks/cardDetails";
+import {
+  countCardTypes,
+  primaryType,
+  compareCardsByCost,
+} from "../../decks/cardDetails";
 import { ModalHideUiRow } from "../ui/HideUiButton";
 import { triggerCardReveal } from "./cardRevealBus";
 import { triggerGameAnimation } from "./animationBus";
@@ -75,6 +79,13 @@ export default function EvoDeck({
   const [idx, setIdx] = useState(0);
   const [cardback, setCardback] = useState();
   const reduxEvoDeck = useSelector((state) => state.card.evoDeck);
+  const orderedEvoDeck = useMemo(
+    () =>
+      reduxEvoDeck
+        .map((entry, index) => ({ entry, index }))
+        .sort((a, b) => compareCardsByCost(a.entry.card, b.entry.card)),
+    [reduxEvoDeck],
+  );
   const reduxField = useSelector((state) => state.card.field);
   const reduxEvoField = useSelector((state) => state.card.evoField);
   const reduxRoom = useSelector((state) => state.card.room);
@@ -316,18 +327,18 @@ export default function EvoDeck({
             </span>
           </div>
           <CardMUI sx={deckModalCards} variant="outlined">
-            {reduxEvoDeck.map((card, idx) => (
+            {orderedEvoDeck.map(({ entry: card, index }) => (
               <div
-                key={`card-${idx}`}
+                key={`card-${index}`}
                 onContextMenu={
                   automated
                     ? undefined
                     : (e) => {
-                        handleContextMenu(e, card, idx);
+                        handleContextMenu(e, card, index);
                       }
                 }
                 {...(canDragEvo(card)
-                  ? evoDrag.dragProps(card.card, idx)
+                  ? evoDrag.dragProps(card.card, index)
                   : {})}
                 style={{
                   width: "115px",

@@ -96,6 +96,18 @@ export const getCost = (name) => {
   return Number.isNaN(n) ? null : n;
 };
 
+// Display order shared by deck previews and the in-game deck modals: cheapest
+// first, then alphabetical. Cards without a cost (tokens, evolved faces, "…
+// ADVANCED" entries) go last.
+export const compareCardsByCost = (a, b) => {
+  const ca = getCost(a);
+  const cb = getCost(b);
+  const va = ca == null ? 99 : ca;
+  const vb = cb == null ? 99 : cb;
+  if (va !== vb) return va - vb;
+  return a.localeCompare(b);
+};
+
 // The site lists composite card types ("Follower / Evolved", "Spell / Token").
 // We filter on the primary (first) segment.
 export const primaryType = (name) => {
