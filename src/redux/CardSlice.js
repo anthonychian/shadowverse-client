@@ -2231,6 +2231,37 @@ export const CardSlice = createSlice({
         room: state.room,
       });
     },
+    sortSelectedInPile: (state, action) => {
+      const key = action.payload.pile === "banish" ? "banish" : "cemetery";
+      const cards = state[key];
+      if (!Array.isArray(cards)) return;
+      const order = [...new Set(action.payload.order)].filter(
+        (i) => Number.isInteger(i) && i >= 0 && i < cards.length,
+      );
+      if (order.length < 2) return;
+
+      const original = [...cards];
+      state[key] = [
+        ...order.map((i) => original[i]),
+        ...original.filter((_, i) => !order.includes(i)),
+      ];
+      if (
+        key === "cemetery" &&
+        state.cemeteryInstanceIds.length === original.length
+      ) {
+        const ids = [...state.cemeteryInstanceIds];
+        state.cemeteryInstanceIds = [
+          ...order.map((i) => ids[i]),
+          ...ids.filter((_, i) => !order.includes(i)),
+        ];
+      }
+
+      socket.emit("send msg", {
+        type: "sortSelectedInPile",
+        updates: [{ type: key, data: state[key] }],
+        room: state.room,
+      });
+    },
     addToHandFromCemetery: (state, action) => {
       const card = action.payload.name;
       const cardIndex = action.payload.index;
@@ -4107,6 +4138,7 @@ export const {
   addToHandFromDeckWithoutRevealing,
   addToHandFromField,
   addToHandFromCemetery,
+  sortSelectedInPile,
   addToBanishFromCemetery,
   addToHandFromBanish,
   addToCemeteryFromBanish,

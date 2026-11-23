@@ -10,6 +10,7 @@ import CardMUI from "@mui/material/Card";
 import Card from "../hand/Card";
 import {
   addToHandFromCemetery,
+  sortSelectedInPile,
   addToHandFromBanish,
   addToBanishFromCemetery,
   addToCemeteryFromBanish,
@@ -151,6 +152,18 @@ export default function Cemetery({
     dispatch(setCurrentCardIndex(index));
     setSelected((cur) => (cur.has(index) ? cur : new Set([index])));
     setContextMenu({ mouseX: event.clientX + 2, mouseY: event.clientY - 6 });
+  };
+
+  const handleSortSelected = () => {
+    const order = selectedOrder;
+    handleClose();
+    dispatch(
+      sortSelectedInPile({
+        pile: cemeterySelected ? "cemetery" : "banish",
+        order,
+      }),
+    );
+    setSelected(new Set());
   };
 
   // To the top: the first-clicked card ends up on top, so the deck is built
@@ -572,6 +585,9 @@ export default function Cemetery({
         >
           {multi && (
             <MenuItem disabled>{selected.size} cards selected</MenuItem>
+          )}
+          {multi && !automated && (
+            <MenuItem onClick={handleSortSelected}>Sort</MenuItem>
           )}
           {cemeterySelected && canActivateFromCemetery && !multi && (
             <MenuItem onClick={handleAutomatedActivateFromCemetery}>Activate</MenuItem>
