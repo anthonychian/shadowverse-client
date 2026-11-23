@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { socket } from "../../sockets";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -28,7 +28,12 @@ import { Menu, MenuItem, Modal, Box, Popover, Button } from "@mui/material";
 import { useUiModalOpen } from "../hooks/useUiChromeVisible";
 import { ModalHideUiRow } from "../ui/HideUiButton";
 import { triggerGameAnimation } from "./animationBus";
-import { countCardTypes, primaryType } from "../../decks/cardDetails";
+import {
+  countCardTypes,
+  matchesFilters,
+  primaryType,
+  traitsInCards,
+} from "../../decks/cardDetails";
 import {
   triggerHandReveal,
   triggerHiddenHandReveal,
@@ -44,6 +49,7 @@ import {
   deckModalToolbar,
   ghostButtonSx,
   primaryButtonSx,
+  traitButtonSx,
   useDeckModalBoxStyle,
 } from "./deckModalStyles";
 import { useModalCardDrag, ModalDragGhost } from "./modalCardDrag";
@@ -105,6 +111,8 @@ export default function Deck({
   // Left-click toggles a card in here; right-click opens the options menu, which
   // then applies to every selected card. A Set preserves click order.
   const [selected, setSelected] = useState(() => new Set());
+  const [traits, setTraits] = useState([]);
+  const [traitMenuAnchor, setTraitMenuAnchor] = useState(null);
 
   // Top-anchored drawer bounds, measured from the live (CSS-scaled) board.
   const deckModalBoxStyle = useDeckModalBoxStyle(modalOpen);
@@ -113,7 +121,6 @@ export default function Deck({
   const reduxCardBack = useSelector((state) => state.card.cardback);
 
   const reduxDeck = useSelector((state) => state.card.deck);
-  const deckTypeCounts = countCardTypes(reduxDeck);
   const reduxField = useSelector((state) => state.card.field);
   const reduxHand = useSelector((state) => state.card.hand);
   const reduxRoom = useSelector((state) => state.card.room);
@@ -127,10 +134,31 @@ export default function Deck({
   const activePile = reveal ? partialDeck : reduxDeck;
   const multi = selected.size > 1;
 
+  const availableTraits = useMemo(() => traitsInCards(activePile), [activePile]);
+  const visibleIndices = useMemo(
+    () =>
+      activePile.reduce((indices, card, index) => {
+        if (matchesFilters(card, { traits })) indices.push(index);
+        return indices;
+      }, []),
+    [activePile, traits],
+  );
+
+  useEffect(() => {
+    if (!traits.every((trait) => availableTraits.includes(trait))) {
+      setTraits(traits.filter((trait) => availableTraits.includes(trait)));
+      setSelected(new Set());
+    }
+  }, [availableTraits, traits]);
+
+  const activeTypeCounts = countCardTypes(
+    visibleIndices.map((index) => activePile[index]),
+  );
+
   // Selected indices in click order, dropping any stale entries. Click order
   // drives the order multi-actions are applied in.
   const selectedOrder = [...selected].filter(
-    (i) => i >= 0 && i < activePile.length,
+    (i) => i >= 0 && i < activePile.length && visibleIndices.includes(i),
   );
 
   // Playing is only valid for Spell cards, so hide the Play option unless every
@@ -271,6 +299,8 @@ export default function Deck({
     if (automated || reduxDeck.length === 0 || ready) return;
     setOpen(true);
     setSelected(new Set());
+    setTraits([]);
+    setTraitMenuAnchor(null);
     dispatch(setViewingDeck(true));
   };
 
@@ -278,6 +308,8 @@ export default function Deck({
     if (automated || reduxDeck.length === 0 || ready) return;
     setOpen(true);
     setSelected(new Set());
+    setTraits([]);
+    setTraitMenuAnchor(null);
     setTextInput("0");
     setPartialDeck([]);
     setPartialIndices([]);
@@ -288,6 +320,8 @@ export default function Deck({
   const handleModalClose = () => {
     setOpen(false);
     setSelected(new Set());
+    setTraits([]);
+    setTraitMenuAnchor(null);
     if (reveal) {
       setReveal(false);
       setTextInput("");
@@ -338,6 +372,12 @@ export default function Deck({
 
   const handleCardClose = () => {
     setCardContextMenu(null);
+  };
+
+  const handleTraitSelect = (value) => {
+    setTraits(value ? [value] : []);
+    setSelected(new Set());
+    setTraitMenuAnchor(null);
   };
 
   const handleViewDeck = () => {
@@ -834,6 +874,26 @@ export default function Deck({
       </Menu>
       )}
 
+      <Menu
+        anchorEl={traitMenuAnchor}
+        open={Boolean(traitMenuAnchor)}
+        onClose={() => setTraitMenuAnchor(null)}
+        PaperProps={{ style: { maxHeight: 420 } }}
+      >
+        <MenuItem selected={traits.length === 0} onClick={() => handleTraitSelect(null)}>
+          All Traits
+        </MenuItem>
+        {availableTraits.map((trait) => (
+          <MenuItem
+            key={trait}
+            selected={traits[0] === trait}
+            onClick={() => handleTraitSelect(trait)}
+          >
+            {trait}
+          </MenuItem>
+        ))}
+      </Menu>
+
       {!automated && (
       <Modal
         open={modalOpen}
@@ -885,16 +945,23 @@ export default function Deck({
                   : "LOOK AT TOP"
                 : "VIEW DECK"}
             </span>
+            <Button
+              onClick={(e) => setTraitMenuAnchor(e.currentTarget)}
+              sx={traitButtonSx}
+              title={traits[0] || "All Traits"}
+            >
+              {traits[0] ? `Trait: ${traits[0]}` : "Trait: All"}
+            </Button>
             {!reveal && (
               <>
                 <span style={deckModalCount}>
-                  {deckTypeCounts.Follower} FOLLOWERS
+                  {activeTypeCounts.Follower} FOLLOWERS
                 </span>
                 <span style={deckModalCount}>
-                  {deckTypeCounts.Spell} SPELLS
+                  {activeTypeCounts.Spell} SPELLS
                 </span>
                 <span style={deckModalCount}>
-                  {deckTypeCounts.Amulet} AMULETS
+                  {activeTypeCounts.Amulet} AMULETS
                 </span>
               </>
             )}
@@ -969,101 +1036,107 @@ export default function Deck({
           </div>
           <CardMUI sx={deckModalCards} variant="outlined">
             {!reveal &&
-              reduxDeck.map((card, idx) => (
-                <div
-                  key={`card-${idx}`}
-                  onContextMenu={(e) => {
-                    handleCardContextMenu(e, card, idx);
-                  }}
-                  onClick={(e) => {
-                    // A click that ends a drag must not toggle selection.
-                    if (deckDrag.movedRef.current) return;
-                    handleCardClick(e, idx);
-                  }}
-                  {...deckDrag.dragProps(card, idx)}
-                  className={selected.has(idx) ? "multiSelected" : "none"}
-                  style={{ position: "relative", ...deckDrag.dragStyle }}
-                >
-                  <Card ready={ready} name={card} setHovering={setHovering} />
-                  {selected.has(idx) && (
-                    <div
-                      style={{
-                        position: "absolute",
-                        top: -8,
-                        right: -8,
-                        minWidth: 26,
-                        height: 26,
-                        padding: "0 6px",
-                        borderRadius: 13,
-                        background: "#1565c0",
-                        border: "2px solid #ffffff",
-                        color: "#ffffff",
-                        fontFamily: "Noto Serif JP, serif",
-                        fontSize: 16,
-                        fontWeight: 800,
-                        lineHeight: 1,
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        zIndex: 1002,
-                        pointerEvents: "none",
-                        textShadow: "0 1px 3px rgba(0,0,0,0.95)",
-                        boxShadow: "0 2px 6px rgba(0,0,0,0.85)",
-                      }}
-                    >
-                      {selectedOrder.indexOf(idx) + 1}
-                    </div>
-                  )}
-                </div>
-              ))}
+              visibleIndices.map((idx) => {
+                const card = reduxDeck[idx];
+                return (
+                  <div
+                    key={`card-${idx}`}
+                    onContextMenu={(e) => {
+                      handleCardContextMenu(e, card, idx);
+                    }}
+                    onClick={(e) => {
+                      // A click that ends a drag must not toggle selection.
+                      if (deckDrag.movedRef.current) return;
+                      handleCardClick(e, idx);
+                    }}
+                    {...deckDrag.dragProps(card, idx)}
+                    className={selected.has(idx) ? "multiSelected" : "none"}
+                    style={{ position: "relative", ...deckDrag.dragStyle }}
+                  >
+                    <Card ready={ready} name={card} setHovering={setHovering} />
+                    {selected.has(idx) && (
+                      <div
+                        style={{
+                          position: "absolute",
+                          top: -8,
+                          right: -8,
+                          minWidth: 26,
+                          height: 26,
+                          padding: "0 6px",
+                          borderRadius: 13,
+                          background: "#1565c0",
+                          border: "2px solid #ffffff",
+                          color: "#ffffff",
+                          fontFamily: "Noto Serif JP, serif",
+                          fontSize: 16,
+                          fontWeight: 800,
+                          lineHeight: 1,
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          zIndex: 1002,
+                          pointerEvents: "none",
+                          textShadow: "0 1px 3px rgba(0,0,0,0.95)",
+                          boxShadow: "0 2px 6px rgba(0,0,0,0.85)",
+                        }}
+                      >
+                        {selectedOrder.indexOf(idx) + 1}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
             {reveal &&
-              partialDeck.map((card, idx) => (
-                <div
-                  key={`card-${idx}`}
-                  onContextMenu={(e) => {
-                    handleCardContextMenu(e, card, idx);
-                  }}
-                  onClick={(e) => {
-                    // A click that ends a drag must not toggle selection.
-                    if (deckDrag.movedRef.current) return;
-                    handleCardClick(e, idx);
-                  }}
-                  {...deckDrag.dragProps(card, idx)}
-                  className={selected.has(idx) ? "multiSelected" : "none"}
-                  style={{ position: "relative", ...deckDrag.dragStyle }}
-                >
-                  <Card ready={ready} name={card} setHovering={setHovering} />
-                  {selected.has(idx) && (
-                    <div
-                      style={{
-                        position: "absolute",
-                        top: -8,
-                        right: -8,
-                        minWidth: 26,
-                        height: 26,
-                        padding: "0 6px",
-                        borderRadius: 13,
-                        background: "#1565c0",
-                        border: "2px solid #ffffff",
-                        color: "#ffffff",
-                        fontFamily: "Noto Serif JP, serif",
-                        fontSize: 16,
-                        fontWeight: 800,
-                        lineHeight: 1,
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        zIndex: 1002,
-                        pointerEvents: "none",
-                        textShadow: "0 1px 3px rgba(0,0,0,0.95)",
-                        boxShadow: "0 2px 6px rgba(0,0,0,0.85)",
-                      }}
-                    >
-                      {selectedOrder.indexOf(idx) + 1}
-                    </div>
-                  )}
-                </div>
-              ))}
+              visibleIndices.map((idx) => {
+                const card = partialDeck[idx];
+                return (
+                  <div
+                    key={`card-${idx}`}
+                    onContextMenu={(e) => {
+                      handleCardContextMenu(e, card, idx);
+                    }}
+                    onClick={(e) => {
+                      // A click that ends a drag must not toggle selection.
+                      if (deckDrag.movedRef.current) return;
+                      handleCardClick(e, idx);
+                    }}
+                    {...deckDrag.dragProps(card, idx)}
+                    className={selected.has(idx) ? "multiSelected" : "none"}
+                    style={{ position: "relative", ...deckDrag.dragStyle }}
+                  >
+                    <Card ready={ready} name={card} setHovering={setHovering} />
+                    {selected.has(idx) && (
+                      <div
+                        style={{
+                          position: "absolute",
+                          top: -8,
+                          right: -8,
+                          minWidth: 26,
+                          height: 26,
+                          padding: "0 6px",
+                          borderRadius: 13,
+                          background: "#1565c0",
+                          border: "2px solid #ffffff",
+                          color: "#ffffff",
+                          fontFamily: "Noto Serif JP, serif",
+                          fontSize: 16,
+                          fontWeight: 800,
+                          lineHeight: 1,
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          zIndex: 1002,
+                          pointerEvents: "none",
+                          textShadow: "0 1px 3px rgba(0,0,0,0.95)",
+                          boxShadow: "0 2px 6px rgba(0,0,0,0.85)",
+                        }}
+                      >
+                        {selectedOrder.indexOf(idx) + 1}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
           </CardMUI>
         </Box>
       </Modal>

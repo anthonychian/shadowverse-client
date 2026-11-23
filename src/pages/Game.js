@@ -13,6 +13,7 @@ import ChatUI from "../components/ui/ChatUI";
 import PlayPoints from "../components/ui/PlayPoints";
 import Hand from "../components/hand/Hand";
 import Field from "../components/field/Field";
+import ShowHandButton from "../components/field/ShowHandButton";
 import { motion, MotionConfig } from "framer-motion";
 import { useSelector, useDispatch } from "react-redux";
 import { useLocation } from "react-router-dom";
@@ -72,6 +73,8 @@ export default function Game(callback) {
     return () => clearTimeout(t);
   }, []);
   const constraintsRef = useRef(null);
+  const leftColRef = useRef(null);
+  const [showHandEdgeOffset, setShowHandEdgeOffset] = useState(0);
   const [ready, setReady] = useState(false);
   // Start the match clock when players enter the room for a fresh game.
   // Resets happen in the CardSlice `reset` reducer on rematch.
@@ -93,6 +96,26 @@ export default function Game(callback) {
   useEffect(() => {
     if (uiChromeHidden) setPreviewDeck(null);
   }, [uiChromeHidden]);
+
+  // Mirror the game-log launcher's board-edge anchor on the left side. Measure
+  // the gap from the left column to the field so the button can sit just outside
+  // the board regardless of column width/chat layout.
+  useLayoutEffect(() => {
+    const measure = () => {
+      const left = leftColRef.current;
+      const center = document.querySelector(".centerCanvas");
+      if (!left || !center) return;
+      setShowHandEdgeOffset(
+        Math.max(
+          0,
+          center.getBoundingClientRect().left - left.getBoundingClientRect().left,
+        ),
+      );
+    };
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, [uiChromeHidden, chatExpanded]);
 
   // The board reports the scale it computed; the side panels (HP, leader, play
   // points, chat) shrink by the same factor so everything matches. Capped at 1
@@ -217,7 +240,11 @@ export default function Game(callback) {
         />
       )}
       {/* Left side  */}
-      <div className={"leftSideCanvas"} style={{ position: "relative" }}>
+      <div
+        className={"leftSideCanvas"}
+        ref={leftColRef}
+        style={{ position: "relative" }}
+      >
         {!uiChromeHidden && (
           <div style={leftScaleStyle}>
             <PlayPoints name={selectedOption} />
@@ -232,6 +259,17 @@ export default function Game(callback) {
           art={zoomArt}
           deck={previewDeck}
         />
+        <div
+          style={{
+            position: "absolute",
+            left: showHandEdgeOffset,
+            bottom: 24,
+            zIndex: 6,
+            transform: "translateX(-100%)",
+          }}
+        >
+          <ShowHandButton />
+        </div>
       </div>
 
       {/* Center Field */}

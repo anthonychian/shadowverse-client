@@ -1,11 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useEngineSync } from "../hooks/useEngineSync";
 import { useUiModalOpen } from "../hooks/useUiChromeVisible";
 import { ModalHideUiRow } from "../ui/HideUiButton";
 import { artImage, artThumb } from "../../decks/getCards";
-import { countCardTypes, primaryType } from "../../decks/cardDetails";
+import {
+  countCardTypes,
+  matchesFilters,
+  primaryType,
+  traitsInCards,
+} from "../../decks/cardDetails";
 import { Menu, MenuItem, Modal, Box, Button } from "@mui/material";
+import { COLORS, FONT } from "../deckbuilder/theme";
 import CardMUI from "@mui/material/Card";
 import Card from "../hand/Card";
 import {
@@ -32,6 +38,7 @@ import {
   deckModalTitle,
   deckModalToolbar,
   ghostButtonSx,
+  traitButtonSx,
   useDeckModalBoxStyle,
 } from "./deckModalStyles";
 import { useModalCardDrag, ModalDragGhost } from "./modalCardDrag";
@@ -60,6 +67,8 @@ export default function Cemetery({
   const [cemeterySelected, setCemeterySelected] = useState(true);
   const [banishSelected, setBanishSelected] = useState(false);
   const [cardIndex, setCardIndex] = useState(-1);
+  const [traits, setTraits] = useState([]);
+  const [traitMenuAnchor, setTraitMenuAnchor] = useState(null);
   // Indices (into the active tab's pile) that are multi-selected. Right-click
   // toggles a card in here; left-click opens the options menu, which then
   // applies to every selected card.
@@ -88,6 +97,7 @@ export default function Cemetery({
     setOpen(false);
     dispatch(setViewingCemetery(false));
     setSelected(new Set());
+    setTraitMenuAnchor(null);
   };
 
   const handleClose = () => {
@@ -98,16 +108,31 @@ export default function Cemetery({
   const activePile = cemeterySelected ? reduxCemetery : reduxBanish;
   const multi = selected.size > 1;
 
-  const cemeteryTypeCounts = countCardTypes(reduxCemetery);
-  const banishTypeCounts = countCardTypes(reduxBanish);
-  const activeTypeCounts = cemeterySelected
-    ? cemeteryTypeCounts
-    : banishTypeCounts;
+  const availableTraits = useMemo(() => traitsInCards(activePile), [activePile]);
+  const visibleIndices = useMemo(
+    () =>
+      activePile.reduce((indices, card, index) => {
+        if (matchesFilters(card, { traits })) indices.push(index);
+        return indices;
+      }, []),
+    [activePile, traits],
+  );
+
+  useEffect(() => {
+    if (!traits.every((trait) => availableTraits.includes(trait))) {
+      setTraits(traits.filter((trait) => availableTraits.includes(trait)));
+      setSelected(new Set());
+    }
+  }, [availableTraits, traits]);
+
+  const activeTypeCounts = countCardTypes(
+    visibleIndices.map((index) => activePile[index]),
+  );
 
   // Selected indices in click order (a Set keeps insertion order), dropping any
   // stale entries. This is what makes the click order drive deck placement.
   const selectedOrder = [...selected].filter(
-    (i) => i >= 0 && i < activePile.length,
+    (i) => i >= 0 && i < activePile.length && visibleIndices.includes(i),
   );
 
   // Playing is only valid for Spell cards, so hide the Play option unless every
@@ -290,15 +315,31 @@ export default function Cemetery({
     );
   };
 
+  const handleTraitSelect = (value) => {
+    setTraits(value ? [value] : []);
+    setSelected(new Set());
+    setCardIndex(-1);
+    setContextMenu(null);
+    setTraitMenuAnchor(null);
+  };
+
   const handleCemeterySelected = () => {
     setCemeterySelected(true);
     setBanishSelected(false);
+    setTraits([]);
     setSelected(new Set());
+    setCardIndex(-1);
+    setContextMenu(null);
+    setTraitMenuAnchor(null);
   };
   const handleBanishSelected = () => {
     setCemeterySelected(false);
     setBanishSelected(true);
+    setTraits([]);
     setSelected(new Set());
+    setCardIndex(-1);
+    setContextMenu(null);
+    setTraitMenuAnchor(null);
   };
 
   // ---- drag a cemetery/banish card onto the field, played zone, hand or deck ----
@@ -423,17 +464,32 @@ export default function Cemetery({
           }}
         >
           <ModalHideUiRow />
-          <div style={deckModalToolbar}>
+          <Button
+            onClick={
+              cemeterySelected ? handleBanishSelected : handleCemeterySelected
+            }
+            aria-label={cemeterySelected ? "View banish" : "View cemetery"}
+            sx={{
+              ...ghostButtonSx,
+              position: "absolute",
+              top: 8,
+              right: 10,
+              zIndex: 2,
+              padding: "3px 12px",
+            }}
+          >
+            {cemeterySelected ? "Banish" : "Cemetery"}
+          </Button>
+          <div style={{ ...deckModalToolbar, paddingRight: 82 }}>
             <span style={deckModalTitle}>
               {cemeterySelected ? "CEMETERY" : "BANISH"}
             </span>
             <Button
-              onClick={
-                cemeterySelected ? handleBanishSelected : handleCemeterySelected
-              }
-              sx={ghostButtonSx}
+              onClick={(e) => setTraitMenuAnchor(e.currentTarget)}
+              sx={traitButtonSx}
+              title={traits[0] || "All Traits"}
             >
-              {cemeterySelected ? "Banish" : "Cemetery"}
+              {traits[0] ? `Trait: ${traits[0]}` : "Trait: All"}
             </Button>
             <span style={deckModalCount}>
               {activeTypeCounts.Follower} FOLLOWERS
@@ -447,122 +503,154 @@ export default function Cemetery({
           </div>
           <CardMUI sx={deckModalCards} variant="outlined">
             {cemeterySelected &&
-              reduxCemetery.map((card, index) => (
-                <div
-                  key={`card-${index}`}
-                  onContextMenu={(e) => {
-                    handleCardContext(e, index);
-                  }}
-                  onClick={(e) => {
-                    // A click that ends a drag must not toggle selection.
-                    if (cemeteryDrag.movedRef.current) return;
-                    handleCardClick(e, index);
-                  }}
-                  {...(automated ? {} : cemeteryDrag.dragProps(card, index))}
-                  className={selected.has(index) ? "multiSelected" : "none"}
-                  style={{
-                    position: "relative",
-                    ...(automated ? {} : cemeteryDrag.dragStyle),
-                  }}
-                >
-                  <Card
-                    //   key={`card-${idx}`}
-                    ready={ready}
-                    name={card}
-                    setHovering={setHovering}
-                  />
-                  {selected.has(index) && (
-                    <div
-                      style={{
-                        position: "absolute",
-                        top: -8,
-                        right: -8,
-                        minWidth: 26,
-                        height: 26,
-                        padding: "0 6px",
-                        borderRadius: 13,
-                        background: "#1565c0",
-                        border: "2px solid #ffffff",
-                        color: "#ffffff",
-                        fontFamily: "Noto Serif JP, serif",
-                        fontSize: 16,
-                        fontWeight: 800,
-                        lineHeight: 1,
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        zIndex: 1002,
-                        pointerEvents: "none",
-                        textShadow: "0 1px 3px rgba(0,0,0,0.95)",
-                        boxShadow: "0 2px 6px rgba(0,0,0,0.85)",
-                      }}
-                    >
-                      {selectedOrder.indexOf(index) + 1}
-                    </div>
-                  )}
-                </div>
-              ))}
+              visibleIndices.map((index) => {
+                const card = reduxCemetery[index];
+                return (
+                  <div
+                    key={`card-${index}`}
+                    onContextMenu={(e) => {
+                      handleCardContext(e, index);
+                    }}
+                    onClick={(e) => {
+                      // A click that ends a drag must not toggle selection.
+                      if (cemeteryDrag.movedRef.current) return;
+                      handleCardClick(e, index);
+                    }}
+                    {...(automated ? {} : cemeteryDrag.dragProps(card, index))}
+                    className={selected.has(index) ? "multiSelected" : "none"}
+                    style={{
+                      position: "relative",
+                      ...(automated ? {} : cemeteryDrag.dragStyle),
+                    }}
+                  >
+                    <Card
+                      ready={ready}
+                      name={card}
+                      setHovering={setHovering}
+                    />
+                    {selected.has(index) && (
+                      <div
+                        style={{
+                          position: "absolute",
+                          top: -8,
+                          right: -8,
+                          minWidth: 26,
+                          height: 26,
+                          padding: "0 6px",
+                          borderRadius: 13,
+                          background: "#1565c0",
+                          border: "2px solid #ffffff",
+                          color: "#ffffff",
+                          fontFamily: "Noto Serif JP, serif",
+                          fontSize: 16,
+                          fontWeight: 800,
+                          lineHeight: 1,
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          zIndex: 1002,
+                          pointerEvents: "none",
+                          textShadow: "0 1px 3px rgba(0,0,0,0.95)",
+                          boxShadow: "0 2px 6px rgba(0,0,0,0.85)",
+                        }}
+                      >
+                        {selectedOrder.indexOf(index) + 1}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
             {banishSelected &&
-              reduxBanish.map((card, index) => (
-                //<div key={`card-${idx}`} style={{ width: "115px" }}>
-                <div
-                  key={`card-${index}`}
-                  onContextMenu={(e) => {
-                    handleCardContext(e, index);
-                  }}
-                  onClick={(e) => {
-                    // A click that ends a drag must not toggle selection.
-                    if (cemeteryDrag.movedRef.current) return;
-                    handleCardClick(e, index);
-                  }}
-                  {...(automated ? {} : cemeteryDrag.dragProps(card, index))}
-                  className={selected.has(index) ? "multiSelected" : "none"}
-                  style={{
-                    position: "relative",
-                    width: "115px",
-                    ...(automated ? {} : cemeteryDrag.dragStyle),
-                  }}
-                >
-                  <Card
-                    evolvedUsed={true}
-                    ready={ready}
-                    name={card}
-                    setHovering={setHovering}
-                  />
-                  {selected.has(index) && (
-                    <div
-                      style={{
-                        position: "absolute",
-                        top: -8,
-                        right: -8,
-                        minWidth: 26,
-                        height: 26,
-                        padding: "0 6px",
-                        borderRadius: 13,
-                        background: "#1565c0",
-                        border: "2px solid #ffffff",
-                        color: "#ffffff",
-                        fontFamily: "Noto Serif JP, serif",
-                        fontSize: 16,
-                        fontWeight: 800,
-                        lineHeight: 1,
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        zIndex: 1002,
-                        pointerEvents: "none",
-                        textShadow: "0 1px 3px rgba(0,0,0,0.95)",
-                        boxShadow: "0 2px 6px rgba(0,0,0,0.85)",
-                      }}
-                    >
-                      {selectedOrder.indexOf(index) + 1}
-                    </div>
-                  )}
-                </div>
-              ))}
+              visibleIndices.map((index) => {
+                const card = reduxBanish[index];
+                return (
+                  <div
+                    key={`card-${index}`}
+                    onContextMenu={(e) => {
+                      handleCardContext(e, index);
+                    }}
+                    onClick={(e) => {
+                      // A click that ends a drag must not toggle selection.
+                      if (cemeteryDrag.movedRef.current) return;
+                      handleCardClick(e, index);
+                    }}
+                    {...(automated ? {} : cemeteryDrag.dragProps(card, index))}
+                    className={selected.has(index) ? "multiSelected" : "none"}
+                    style={{
+                      position: "relative",
+                      width: "115px",
+                      ...(automated ? {} : cemeteryDrag.dragStyle),
+                    }}
+                  >
+                    <Card
+                      evolvedUsed={true}
+                      ready={ready}
+                      name={card}
+                      setHovering={setHovering}
+                    />
+                    {selected.has(index) && (
+                      <div
+                        style={{
+                          position: "absolute",
+                          top: -8,
+                          right: -8,
+                          minWidth: 26,
+                          height: 26,
+                          padding: "0 6px",
+                          borderRadius: 13,
+                          background: "#1565c0",
+                          border: "2px solid #ffffff",
+                          color: "#ffffff",
+                          fontFamily: "Noto Serif JP, serif",
+                          fontSize: 16,
+                          fontWeight: 800,
+                          lineHeight: 1,
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          zIndex: 1002,
+                          pointerEvents: "none",
+                          textShadow: "0 1px 3px rgba(0,0,0,0.95)",
+                          boxShadow: "0 2px 6px rgba(0,0,0,0.85)",
+                        }}
+                      >
+                        {selectedOrder.indexOf(index) + 1}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            {traits.length > 0 && visibleIndices.length === 0 && (
+              <div style={{ fontFamily: FONT, color: COLORS.textDim, padding: 40 }}>
+                No cards match these filters.
+              </div>
+            )}
           </CardMUI>
         </Box>
       </Modal>
+
+      <Menu
+        anchorEl={traitMenuAnchor}
+        open={Boolean(traitMenuAnchor)}
+        onClose={() => setTraitMenuAnchor(null)}
+        PaperProps={{ style: { maxHeight: 420 } }}
+      >
+        <MenuItem
+          selected={traits.length === 0}
+          onClick={() => handleTraitSelect(null)}
+        >
+          All Traits
+        </MenuItem>
+        {availableTraits.map((trait) => (
+          <MenuItem
+            key={trait}
+            selected={traits[0] === trait}
+            onClick={() => handleTraitSelect(trait)}
+          >
+            {trait}
+          </MenuItem>
+        ))}
+      </Menu>
 
       {(reduxCemetery.length > 0 || reduxBanish.length > 0) && (
         <Menu

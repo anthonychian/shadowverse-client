@@ -1,8 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { artImage, artThumb } from "../../decks/getCards";
-import { countCardTypes } from "../../decks/cardDetails";
-import { Modal, Box, Button } from "@mui/material";
+import {
+  countCardTypes,
+  matchesFilters,
+  traitsInCards,
+} from "../../decks/cardDetails";
+import { Menu, MenuItem, Modal, Box, Button } from "@mui/material";
 import CardMUI from "@mui/material/Card";
 import Card from "../hand/Card";
 import { setViewingCemeteryOpponent } from "../../redux/CardSlice";
@@ -13,6 +17,7 @@ import {
   deckModalTitle,
   deckModalToolbar,
   ghostButtonSx,
+  traitButtonSx,
   useDeckModalBoxStyle,
 } from "./deckModalStyles";
 import "../../css/Card.css";
@@ -28,16 +33,33 @@ export default function EnemyCemetery({ setHovering, ready }) {
   const modalBoxStyle = useDeckModalBoxStyle(modalOpen);
   const [cemeterySelected, setCemeterySelected] = useState(true);
   const [banishSelected, setBanishSelected] = useState(false);
+  const [traits, setTraits] = useState([]);
+  const [traitMenuAnchor, setTraitMenuAnchor] = useState(null);
 
   const reduxEnemyCemetery = useSelector((state) => state.card.enemyCemetery);
   const reduxEnemyArt = useSelector((state) => state.card.enemyArt);
   const reduxEnemyBanish = useSelector((state) => state.card.enemyBanish);
 
-  const cemeteryTypeCounts = countCardTypes(reduxEnemyCemetery);
-  const banishTypeCounts = countCardTypes(reduxEnemyBanish);
-  const activeTypeCounts = cemeterySelected
-    ? cemeteryTypeCounts
-    : banishTypeCounts;
+  const activePile = cemeterySelected ? reduxEnemyCemetery : reduxEnemyBanish;
+  const availableTraits = useMemo(() => traitsInCards(activePile), [activePile]);
+  const visibleIndices = useMemo(
+    () =>
+      activePile.reduce((indices, card, index) => {
+        if (matchesFilters(card, { traits })) indices.push(index);
+        return indices;
+      }, []),
+    [activePile, traits],
+  );
+
+  useEffect(() => {
+    if (!traits.every((trait) => availableTraits.includes(trait))) {
+      setTraits(traits.filter((trait) => availableTraits.includes(trait)));
+    }
+  }, [availableTraits, traits]);
+
+  const activeTypeCounts = countCardTypes(
+    visibleIndices.map((index) => activePile[index]),
+  );
 
   const handleModalOpen = () => {
     if (
@@ -45,20 +67,32 @@ export default function EnemyCemetery({ setHovering, ready }) {
       !ready
     ) {
       setOpen(true);
+      setTraits([]);
+      setTraitMenuAnchor(null);
       dispatch(setViewingCemeteryOpponent(true));
     }
   };
   const handleModalClose = () => {
     setOpen(false);
+    setTraits([]);
+    setTraitMenuAnchor(null);
     dispatch(setViewingCemeteryOpponent(false));
+  };
+  const handleTraitSelect = (value) => {
+    setTraits(value ? [value] : []);
+    setTraitMenuAnchor(null);
   };
   const handleCemeterySelected = () => {
     setCemeterySelected(true);
     setBanishSelected(false);
+    setTraits([]);
+    setTraitMenuAnchor(null);
   };
   const handleBanishSelected = () => {
     setCemeterySelected(false);
     setBanishSelected(true);
+    setTraits([]);
+    setTraitMenuAnchor(null);
   };
 
   return (
@@ -117,17 +151,32 @@ export default function EnemyCemetery({ setHovering, ready }) {
       >
         <Box sx={modalBoxStyle}>
           <ModalHideUiRow />
-          <div style={deckModalToolbar}>
+          <Button
+            onClick={
+              cemeterySelected ? handleBanishSelected : handleCemeterySelected
+            }
+            aria-label={cemeterySelected ? "View banish" : "View cemetery"}
+            sx={{
+              ...ghostButtonSx,
+              position: "absolute",
+              top: 8,
+              right: 10,
+              zIndex: 2,
+              padding: "3px 12px",
+            }}
+          >
+            {cemeterySelected ? "Banish" : "Cemetery"}
+          </Button>
+          <div style={{ ...deckModalToolbar, paddingRight: 82 }}>
             <span style={deckModalTitle}>
               {cemeterySelected ? "CEMETERY" : "BANISH"}
             </span>
             <Button
-              onClick={
-                cemeterySelected ? handleBanishSelected : handleCemeterySelected
-              }
-              sx={ghostButtonSx}
+              onClick={(e) => setTraitMenuAnchor(e.currentTarget)}
+              sx={traitButtonSx}
+              title={traits[0] || "All Traits"}
             >
-              {cemeterySelected ? "Banish" : "Cemetery"}
+              {traits[0] ? `Trait: ${traits[0]}` : "Trait: All"}
             </Button>
             <span style={deckModalCount}>
               {activeTypeCounts.Follower} FOLLOWERS
@@ -141,17 +190,21 @@ export default function EnemyCemetery({ setHovering, ready }) {
           </div>
           <CardMUI sx={deckModalCards} variant="outlined">
             {cemeterySelected &&
-              reduxEnemyCemetery.map((card, idx) => (
+              visibleIndices.map((idx) => (
                 <div key={`card-${idx}`}>
-                  <Card ready={ready} name={card} setHovering={setHovering} />
+                  <Card
+                    ready={ready}
+                    name={reduxEnemyCemetery[idx]}
+                    setHovering={setHovering}
+                  />
                 </div>
               ))}
             {banishSelected &&
-              reduxEnemyBanish.map((card, idx) => (
+              visibleIndices.map((idx) => (
                 <div key={`card-${idx}`} style={{ width: "115px" }}>
                   <Card
                     ready={ready}
-                    name={card}
+                    name={reduxEnemyBanish[idx]}
                     evolvedUsed={true}
                     setHovering={setHovering}
                   />
@@ -160,6 +213,26 @@ export default function EnemyCemetery({ setHovering, ready }) {
           </CardMUI>
         </Box>
       </Modal>
+
+      <Menu
+        anchorEl={traitMenuAnchor}
+        open={Boolean(traitMenuAnchor)}
+        onClose={() => setTraitMenuAnchor(null)}
+        PaperProps={{ style: { maxHeight: 420 } }}
+      >
+        <MenuItem selected={traits.length === 0} onClick={() => handleTraitSelect(null)}>
+          All Traits
+        </MenuItem>
+        {availableTraits.map((trait) => (
+          <MenuItem
+            key={trait}
+            selected={traits[0] === trait}
+            onClick={() => handleTraitSelect(trait)}
+          >
+            {trait}
+          </MenuItem>
+        ))}
+      </Menu>
     </>
   );
 }

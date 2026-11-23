@@ -51,6 +51,14 @@ export const ghostButtonSx = {
   },
 };
 
+export const traitButtonSx = {
+  ...ghostButtonSx,
+  maxWidth: 220,
+  overflow: "hidden",
+  whiteSpace: "nowrap",
+  textOverflow: "ellipsis",
+};
+
 // Header bar shared by the deck drawers (Look At Top / View Deck / Cemetery).
 export const deckModalToolbar = {
   display: "flex",

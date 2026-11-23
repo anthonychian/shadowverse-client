@@ -137,6 +137,9 @@ export const traitTokens = (name) => {
   return d.trait.split("/").map((t) => t.trim()).filter(Boolean);
 };
 
+export const traitsInCards = (cards = []) =>
+  [...new Set((cards || []).flatMap(traitTokens))].sort();
+
 // ---- Distinct filter option lists (computed once) ----
 
 export const CARD_TYPES = ["Follower", "Spell", "Amulet"];

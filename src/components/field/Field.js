@@ -142,7 +142,6 @@ import { setSelectedAttackerId } from "../../redux/GameStateSlice";
 import { getNameByCardNoClient } from "../../engine/cardLookup";
 
 import Token from "./Token";
-import ShowHandButton from "./ShowHandButton";
 import ShowDice from "./ShowDice";
 import { playGameAnimation, triggerGameAnimation } from "./animationBus";
 import { DeckFx, HandFx, useShuffleHandActive, useShuffleDeckActive } from "./GameFx";
@@ -214,6 +213,9 @@ const BASE_WIDTH = 1200; // design width of the board in px. Wide enough that th
 const FIELD_GRID_PADDING_X = 40;
 const TOP_RESERVE = 200; // vertical space kept above the field for the opponent's hand
 const BOTTOM_RESERVE = 210; // vertical space kept below the field for the player's hand
+const EVO_DECK_ALIGN_OFFSET = "calc((max(35vh, 330px) - 322px) / 4)";
+const BUTTONS_TOP_PADDING = "calc(72px + (max(35vh, 330px) - 322px) / 4)";
+const BUTTONS_GAP = 48;
 const MIN_SCALE = 0.4;
 const MAX_SCALE = 1.3;
 
@@ -2581,7 +2583,7 @@ export default function Field({
         <div
           style={{
             height: "35vh",
-            minHeight: "460px",
+            minHeight: "480px",
             width: "140px",
             flexShrink: 0,
             display: "grid",
@@ -2590,24 +2592,30 @@ export default function Field({
             alignItems: "center",
           }}
         >
-          <EvoDeck
-            setReadyToEvo={setReadyToEvo}
-            setReadyToAdvanced={setReadyToAdvanced}
-            setReadyToFeed={setReadyToFeed}
-            setReadyToRide={setReadyToRide}
-            setReady={setReady}
-            setHovering={setHovering}
-            ready={ready}
-          />
+          <div style={{ transform: `translateY(${EVO_DECK_ALIGN_OFFSET})` }}>
+            <EvoDeck
+              setReadyToEvo={setReadyToEvo}
+              setReadyToAdvanced={setReadyToAdvanced}
+              setReadyToFeed={setReadyToFeed}
+              setReadyToRide={setReadyToRide}
+              setReady={setReady}
+              setHovering={setHovering}
+              ready={ready}
+            />
+          </div>
           <div
             style={{
+              position: "relative",
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
-              justifyContent: "center",
-              alignSelf: "end",
-              gap: 18,
+              justifyContent: "flex-start",
+              alignSelf: "stretch",
+              gap: BUTTONS_GAP,
+              paddingTop: BUTTONS_TOP_PADDING,
               paddingBottom: 8,
+              boxSizing: "border-box",
+              height: "100%",
               width: "100%",
             }}
           >
@@ -2618,7 +2626,6 @@ export default function Field({
               ready={ready}
               setTokenReady={setTokenReady}
             />
-            <ShowHandButton />
             {/* <Lesson /> */}
           </div>
         </div>
