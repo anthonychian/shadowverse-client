@@ -7676,6 +7676,258 @@ const rawCardImage = (cardName) => {
       return `${TEXTURES_BASE}BP22-T02EN.png`;
     case "Radiant Artifact TOKEN":
       return `${TEXTURES_BASE}BP22-T03EN.png`;
+    case "Tweyen, Dark Huntress":
+      return `${TEXTURES_BASE}CP05-001EN.png`;
+    case "Yuel & Societte, Dancing Duo":
+      return `${TEXTURES_BASE}CP05-002EN.png`;
+    case "Ewiyar, Wind Personified":
+      return `${TEXTURES_BASE}CP05-003EN.png`;
+    case "Ewiyar, Wind Personified Evolved":
+      return `${TEXTURES_BASE}CP05-004EN.png`;
+    case "Korwa, Ravishing Designer":
+      return `${TEXTURES_BASE}CP05-005EN.png`;
+    case "Korwa, Ravishing Designer Evolved":
+      return `${TEXTURES_BASE}CP05-006EN.png`;
+    case "Silva, Ardent Sniper":
+      return `${TEXTURES_BASE}CP05-007EN.png`;
+    case "Cupitan, Iridescent Archer":
+      return `${TEXTURES_BASE}CP05-008EN.png`;
+    case "Cucouroux, Green Gunsmith":
+      return `${TEXTURES_BASE}CP05-009EN.png`;
+    case "Cucouroux, Green Gunsmith Evolved":
+      return `${TEXTURES_BASE}CP05-010EN.png`;
+    case "Metera, Peerless Shot":
+      return `${TEXTURES_BASE}CP05-011EN.png`;
+    case "Chloe, What a Gal":
+      return `${TEXTURES_BASE}CP05-012EN.png`;
+    case "Anthuria, Toe-Tapping Torch":
+      return `${TEXTURES_BASE}CP05-013EN.png`;
+    case "Anthuria, Toe-Tapping Torch Evolved":
+      return `${TEXTURES_BASE}CP05-014EN.png`;
+    case "Walder, Forest Ranger":
+      return `${TEXTURES_BASE}CP05-015EN.png`;
+    case "Kou & You, Love and Hatred":
+      return `${TEXTURES_BASE}CP05-016EN.png`;
+    case "Manamel, Super Cutest":
+      return `${TEXTURES_BASE}CP05-017EN.png`;
+    case "Comet Drive":
+      return `${TEXTURES_BASE}CP05-018EN.png`;
+    case "Seofon, Star Sword Sovereign":
+      return `${TEXTURES_BASE}CP05-019EN.png`;
+    case "Eahta, God of the Blade":
+      return `${TEXTURES_BASE}CP05-020EN.png`;
+    case "Lu Woh, Light Personified":
+      return `${TEXTURES_BASE}CP05-021EN.png`;
+    case "Lu Woh, Light Personified Evolved":
+      return `${TEXTURES_BASE}CP05-022EN.png`;
+    case "Narmaya, Ephemeral Blade":
+      return `${TEXTURES_BASE}CP05-023EN.png`;
+    case "Narmaya, Ephemeral Blade Evolved":
+      return `${TEXTURES_BASE}CP05-024EN.png`;
+    case "Zeta, Crimson Lancer":
+      return `${TEXTURES_BASE}CP05-025EN.png`;
+    case "Dragon Knights":
+      return `${TEXTURES_BASE}CP05-026EN.png`;
+    case "Mirin, Samurai Dreamer":
+      return `${TEXTURES_BASE}CP05-027EN.png`;
+    case "Mirin, Samurai Dreamer Evolved":
+      return `${TEXTURES_BASE}CP05-028EN.png`;
+    case "Beatrix, Undying Blue":
+      return `${TEXTURES_BASE}CP05-029EN.png`;
+    case "Aglovale, Lord of Frost":
+      return `${TEXTURES_BASE}CP05-030EN.png`;
+    case "Fiorito, Muscles in Bloom":
+      return `${TEXTURES_BASE}CP05-031EN.png`;
+    case "Fiorito, Muscles in Bloom Evolved":
+      return `${TEXTURES_BASE}CP05-032EN.png`;
+    case "Arthur, Slumbering Dragon":
+      return `${TEXTURES_BASE}CP05-033EN.png`;
+    case "Mordred, Slumbering Lion":
+      return `${TEXTURES_BASE}CP05-034EN.png`;
+    case "Feather, Bombastic Brawler":
+      return `${TEXTURES_BASE}CP05-035EN.png`;
+    case "Randall, Feet Fighter":
+      return `${TEXTURES_BASE}CP05-036EN.png`;
+    case "Tien, Treacherous Trigger":
+      return `${TEXTURES_BASE}CP05-037EN.png`;
+    case "Feower, Double Blade Flash":
+      return `${TEXTURES_BASE}CP05-038EN.png`;
+    case "Wamdus, Water Personified":
+      return `${TEXTURES_BASE}CP05-039EN.png`;
+    case "Wamdus, Water Personified Evolved":
+      return `${TEXTURES_BASE}CP05-040EN.png`;
+    case "Cagliostro, Adorable Genius":
+      return `${TEXTURES_BASE}CP05-041EN.png`;
+    case "Cagliostro, Adorable Genius Evolved":
+      return `${TEXTURES_BASE}CP05-042EN.png`;
+    case "Cassius, Sky-Yearning Arrival":
+      return `${TEXTURES_BASE}CP05-043EN.png`;
+    case "Colossus Omega":
+      return `${TEXTURES_BASE}CP05-044EN.png`;
+    case "Arulumaya, Mystic Seer":
+      return `${TEXTURES_BASE}CP05-045EN.png`;
+    case "Arulumaya, Mystic Seer Evolved":
+      return `${TEXTURES_BASE}CP05-046EN.png`;
+    case "Pholia, Retired Sovereign":
+      return `${TEXTURES_BASE}CP05-047EN.png`;
+    case "Alchemic Flare":
+      return `${TEXTURES_BASE}CP05-048EN.png`;
+    case "Lunalu, Fangirl A":
+      return `${TEXTURES_BASE}CP05-049EN.png`;
+    case "Lunalu, Fangirl A Evolved":
+      return `${TEXTURES_BASE}CP05-050EN.png`;
+    case "Elmott, Pyrestarter":
+      return `${TEXTURES_BASE}CP05-051EN.png`;
+    case "Isaac, Congenial Engineer":
+      return `${TEXTURES_BASE}CP05-052EN.png`;
+    case "Ars Gloria":
+      return `${TEXTURES_BASE}CP05-053EN.png`;
+    case "Threo, Divine Havoc":
+      return `${TEXTURES_BASE}CP05-054EN.png`;
+    case "Zooey, Arbiter of the Skies":
+      return `${TEXTURES_BASE}CP05-055EN.png`;
+    case "Wilnas, Flame Personified":
+      return `${TEXTURES_BASE}CP05-056EN.png`;
+    case "Wilnas, Flame Personified Evolved":
+      return `${TEXTURES_BASE}CP05-057EN.png`;
+    case "Meg, Girl Next Door":
+      return `${TEXTURES_BASE}CP05-058EN.png`;
+    case "Meg, Girl Next Door Evolved":
+      return `${TEXTURES_BASE}CP05-059EN.png`;
+    case "Razia, Vengeful Cannonlancer":
+      return `${TEXTURES_BASE}CP05-060EN.png`;
+    case "Tiamat Omega":
+      return `${TEXTURES_BASE}CP05-061EN.png`;
+    case "Mugen, Steel-Bodied Honesty":
+      return `${TEXTURES_BASE}CP05-062EN.png`;
+    case "Mugen, Steel-Bodied Honesty Evolved":
+      return `${TEXTURES_BASE}CP05-063EN.png`;
+    case "Scathacha, True Dragon":
+      return `${TEXTURES_BASE}CP05-064EN.png`;
+    case "Mari, Meg's Bestie":
+      return `${TEXTURES_BASE}CP05-065EN.png`;
+    case "Aliza, Pugilist Princess":
+      return `${TEXTURES_BASE}CP05-066EN.png`;
+    case "Aliza, Pugilist Princess Evolved":
+      return `${TEXTURES_BASE}CP05-067EN.png`;
+    case "Ghandagoza, Fist of Rage":
+      return `${TEXTURES_BASE}CP05-068EN.png`;
+    case "Ayer, Ashen Brawler":
+      return `${TEXTURES_BASE}CP05-069EN.png`;
+    case "Only One Wish":
+      return `${TEXTURES_BASE}CP05-070EN.png`;
+    case "Albacore":
+      return `${TEXTURES_BASE}CP05-071EN.png`;
+    case "Seox, Heavenly Howl":
+      return `${TEXTURES_BASE}CP05-072EN.png`;
+    case "Niyon, Mystic Musician":
+      return `${TEXTURES_BASE}CP05-073EN.png`;
+    case "Fediel, Darkness Personified":
+      return `${TEXTURES_BASE}CP05-074EN.png`;
+    case "Fediel, Darkness Personified Evolved":
+      return `${TEXTURES_BASE}CP05-075EN.png`;
+    case "Ferry, Spirit Maiden":
+      return `${TEXTURES_BASE}CP05-076EN.png`;
+    case "Ferry, Spirit Maiden Evolved":
+      return `${TEXTURES_BASE}CP05-077EN.png`;
+    case "Nehan, Dispenser of Samsara":
+      return `${TEXTURES_BASE}CP05-078EN.png`;
+    case "Celeste Omega":
+      return `${TEXTURES_BASE}CP05-079EN.png`;
+    case "Danua, Grim Puppetmaster":
+      return `${TEXTURES_BASE}CP05-080EN.png`;
+    case "Danua, Grim Puppetmaster Evolved":
+      return `${TEXTURES_BASE}CP05-081EN.png`;
+    case "Vaseraga, Shadowed Scythe":
+      return `${TEXTURES_BASE}CP05-082EN.png`;
+    case "Corruption":
+      return `${TEXTURES_BASE}CP05-083EN.png`;
+    case "Lady Grey, Deathweaver":
+      return `${TEXTURES_BASE}CP05-084EN.png`;
+    case "Lady Grey, Deathweaver Evolved":
+      return `${TEXTURES_BASE}CP05-085EN.png`;
+    case "Skull, Freedom Raider":
+      return `${TEXTURES_BASE}CP05-086EN.png`;
+    case "Ewige Freundschaft":
+      return `${TEXTURES_BASE}CP05-087EN.png`;
+    case "Stone Breaker":
+      return `${TEXTURES_BASE}CP05-088EN.png`;
+    case "Anre, the Enlightened One":
+      return `${TEXTURES_BASE}CP05-089EN.png`;
+    case "Fif, Prodigious Sorcerer":
+      return `${TEXTURES_BASE}CP05-090EN.png`;
+    case "Galleon, Earth Personified":
+      return `${TEXTURES_BASE}CP05-091EN.png`;
+    case "Galleon, Earth Personified Evolved":
+      return `${TEXTURES_BASE}CP05-092EN.png`;
+    case "Vira, Knight Fanatic":
+      return `${TEXTURES_BASE}CP05-093EN.png`;
+    case "Vira, Knight Fanatic Evolved":
+      return `${TEXTURES_BASE}CP05-094EN.png`;
+    case "De La Fille, Gem Princess":
+      return `${TEXTURES_BASE}CP05-095EN.png`;
+    case "Luminiera Omega":
+      return `${TEXTURES_BASE}CP05-096EN.png`;
+    case "Tikoh, Asclepian Surgeon":
+      return `${TEXTURES_BASE}CP05-097EN.png`;
+    case "Tikoh, Asclepian Surgeon Evolved":
+      return `${TEXTURES_BASE}CP05-098EN.png`;
+    case "Noa, Primal Shipwright":
+      return `${TEXTURES_BASE}CP05-099EN.png`;
+    case "Petra, Ether of the Wind":
+      return `${TEXTURES_BASE}CP05-100EN.png`;
+    case "Sophia, Pious Pilgrim":
+      return `${TEXTURES_BASE}CP05-101EN.png`;
+    case "Sophia, Pious Pilgrim Evolved":
+      return `${TEXTURES_BASE}CP05-102EN.png`;
+    case "Troue, Heroic Visionary":
+      return `${TEXTURES_BASE}CP05-103EN.png`;
+    case "Affection Oath":
+      return `${TEXTURES_BASE}CP05-104EN.png`;
+    case "Sandalphon, Primarch Successor":
+      return `${TEXTURES_BASE}CP05-105EN.png`;
+    case "Sandalphon, Primarch Successor Evolved":
+      return `${TEXTURES_BASE}CP05-106EN.png`;
+    case "Gran & Djeeta":
+      return `${TEXTURES_BASE}CP05-107EN.png`;
+    case "Vyrn, Li'l Red Dragon":
+      return `${TEXTURES_BASE}CP05-108EN.png`;
+    case "Vyrn, Li'l Red Dragon Evolved":
+      return `${TEXTURES_BASE}CP05-109EN.png`;
+    case "Lyria, Azure Maiden":
+      return `${TEXTURES_BASE}CP05-110EN.png`;
+    case "Katalina, Sky Guardian":
+      return `${TEXTURES_BASE}CP05-111EN.png`;
+    case "Camieux, Gunpowder Gal TOKEN":
+      return `${TEXTURES_BASE}CP05-T01EN.png`;
+    case "Fil TOKEN":
+      return `${TEXTURES_BASE}CP05-T02EN.png`;
+    case "Lancelot, Twinfang Prodigy TOKEN":
+      return `${TEXTURES_BASE}CP05-T03EN.png`;
+    case "Vane, Indomitable Knight TOKEN":
+      return `${TEXTURES_BASE}CP05-T04EN.png`;
+    case "Siegfried, Dragonslayer TOKEN":
+      return `${TEXTURES_BASE}CP05-T05EN.png`;
+    case "Percival, Lord of Flames TOKEN":
+      return `${TEXTURES_BASE}CP05-T06EN.png`;
+    case "Bai Ze TOKEN":
+      return `${TEXTURES_BASE}CP05-T07EN.png`;
+    case "Ars Magna TOKEN":
+      return `${TEXTURES_BASE}CP05-T08EN.png`;
+    case "Fire Quartz TOKEN":
+      return `${TEXTURES_BASE}CP05-T09EN.png`;
+    case "Water Quartz TOKEN":
+      return `${TEXTURES_BASE}CP05-T10EN.png`;
+    case "Earth Quartz TOKEN":
+      return `${TEXTURES_BASE}CP05-T11EN.png`;
+    case "Wind Quartz TOKEN":
+      return `${TEXTURES_BASE}CP05-T12EN.png`;
+    case "Light Quartz TOKEN":
+      return `${TEXTURES_BASE}CP05-T13EN.png`;
+    case "Dark Quartz TOKEN":
+      return `${TEXTURES_BASE}CP05-T14EN.png`;
+    case "Gold Brick TOKEN":
+      return `${TEXTURES_BASE}CP05-T15EN.png`;
     default: {
       const cardNo = cardNoFromStatsName(cardName);
       return cardNo ? `${TEXTURES_BASE}${cardNo}.png` : "";

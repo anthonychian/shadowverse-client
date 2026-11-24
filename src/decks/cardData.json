@@ -671,6 +671,18 @@
     "effect": "Ward. [fanfare] Discard a follower with Ward: Search your deck for a 2-cost follower with Ward and a 1-cost follower with Ward, summon them, then shuffle.",
     "cardSet": "Combined Set \"Academy Royale & Dusk of Calamity\""
   },
+  "Affection Oath": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Granblue / Light",
+    "rarity": "Bronze",
+    "cost": "1",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[quick]. Select an enemy follower on the field. Deal it 2 damage, put a Light Quartz token into your EX area, and, you may discard a 5-cost Granblue follower. If you do, search your deck for a Vira, Knight Fanatic, reveal it, add it to your hand, then shuffle.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "After-School Break": {
     "class": "dragon",
     "type": "base",
@@ -766,6 +778,18 @@
     "defense": "3",
     "effect": "Strike - [cost02]: If there's another Academic follower on your field, refresh this. Activate only once per turn.",
     "cardSet": "Combined Set \"Academy Royale & Dusk of Calamity\""
+  },
+  "Aglovale, Lord of Frost": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Water",
+    "rarity": "Silver",
+    "cost": "6",
+    "attack": "5",
+    "defense": "5",
+    "effect": "[fanfare] Deal each enemy follower on the field damage equal to the number of followers in your cemetery with Quick-Activate. Quick-[act] [cost03], discard this: Select an enemy follower on the field and destroy it.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Agnes Digital": {
     "class": "rune",
@@ -1163,6 +1187,18 @@
     "effect": "Ward. [fanfare] Look at the top 5 cards of your deck. You may put one of them into your EX area. If it's a Beast follower that costs 4 or less, it costs 4 less to play this turn. Put the rest on the bottom of your deck in any order.",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
   },
+  "Albacore": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Amulet",
+    "trait": "Granblue / Dark",
+    "rarity": "Bronze",
+    "cost": "4",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[fanfare] Select an enemy card on the field and destroy it. [act] [engage], bury this: Put a Dark Quartz token into your EX area. Draw a card. Activate only if you've discarded a Dark card this turn.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Albert, Levin Saber": {
     "class": "sword",
     "type": "base",
@@ -1222,6 +1258,18 @@
     "defense": "6",
     "effect": "Storm. Strike - Select up to 1 enemy follower on the field and destroy it. Give this follower [attack]+X/[defense]+X, where X equals the number of followers that were put from the field into the cemetery this turn. [act] [cost02]: Refresh this follower. Activate only if there are at least 10 Levin cards in your cemetery.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
+  },
+  "Alchemic Flare": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Granblue / Fire",
+    "rarity": "Silver",
+    "cost": "2",
+    "attack": "-",
+    "defense": "-",
+    "effect": "When this is revealed from your hand, put a Fire Quartz token into your EX area. Select an enemy follower on the field. Deal it 4 damage and put a Fire Quartz token into your EX area.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Alchemical Lore": {
     "class": "rune",
@@ -1354,6 +1402,30 @@
     "defense": "4",
     "effect": "On Evolve: Look at the top 4 cards of your deck. You may put up to 2 Fable cards from among them into your EX area. Put the remaining cards on the bottom of your deck in any order. [act] Remove a Fable counter from this card: Select a Fable follower on your field or in your EX area and put a Fable counter on it.",
     "cardSet": "Booster Set #3 “Flame of Lævateinn”"
+  },
+  "Aliza, Pugilist Princess": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Fire",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[evolve] [cost01]: Evolve this. [fanfare] Look at the top card of your deck. If it's a Fire card, you may reveal it and add it to your hand.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
+  "Aliza, Pugilist Princess Evolved": {
+    "class": "dragon",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Granblue / Fire",
+    "rarity": "Bronze",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3",
+    "effect": "On Evolve - Select an enemy follower on the field and engage it. Strike - Put a Fire Quartz token into your EX area.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "All-Access Search TOKEN": {
     "class": "sword",
@@ -2267,6 +2339,18 @@
     "effect": "If there are at least 6 Hunter cards in your cemetery, deal 6 damage to each enemy leader.",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
   },
+  "Anre, the Enlightened One": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Eternals / Water",
+    "rarity": "Legendary",
+    "cost": "1",
+    "attack": "1",
+    "defense": "1",
+    "effect": "Ward. Full Uncap Unlocked. When this becomes uncapped, draw a card, then discard a card. When this becomes fully uncapped, select an enemy follower on the field and deal it 4 damage. Quick-[act] [cost01], [engage]: Give your leader [defense]+1.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Antelope Pelt Warrior": {
     "class": "abyss",
     "type": "base",
@@ -2290,6 +2374,30 @@
     "defense": "5",
     "effect": "This can't be played from the EX area. [fanfare] Bury 2 Condemned cards in your EX area: Give this Storm and Drain. [lastwords] Put this into its owner's EX area.",
     "cardSet": "Booster Set \"Eightfold Retribution\""
+  },
+  "Anthuria, Toe-Tapping Torch": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Fire",
+    "rarity": "Bronze",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3",
+    "effect": "[evolve] [cost01]: Evolve this. [fanfare] Reveal 3 Fire cards from your hand: Put a Fire Quartz token into your EX area. Give your leader [defense]+2.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
+  "Anthuria, Toe-Tapping Torch Evolved": {
+    "class": "forest",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Granblue / Fire",
+    "rarity": "Bronze",
+    "cost": "-",
+    "attack": "4",
+    "defense": "4",
+    "effect": "On Evolve - Select an enemy follower on the field. Deal it 3 damage and put a Fire Quartz token into your EX area.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Anvelt, Judgment's Cannon": {
     "class": "haven",
@@ -3239,6 +3347,30 @@
     "effect": "[fanfare] Select an engaged follower on your field. Give it [attack]+2/[defense]+2 and refresh it. For the rest of this turn, it can't attack enemies.",
     "cardSet": "Booster Set #4 “Cosmic Mythos”"
   },
+  "Ars Gloria": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Granblue / Earth / Light / Dark",
+    "rarity": "Bronze",
+    "cost": "1",
+    "attack": "-",
+    "defense": "-",
+    "effect": "Look at the top 4 cards of your deck. You may reveal an Earth, Light, or Dark card from among them and add it to your hand. Put the rest on the bottom of your deck in any order.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
+  "Ars Magna TOKEN": {
+    "class": "rune",
+    "type": "token",
+    "cardType": "Spell / Token",
+    "trait": "Granblue / Earth / Light / Dark",
+    "rarity": "-",
+    "cost": "1",
+    "attack": "-",
+    "defense": "-",
+    "effect": "Select an enemy follower on your field. Deal 2 damage to it and its leader and give your leader [defense]+2.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Arsène Lupin": {
     "class": "sword",
     "type": "base",
@@ -3275,6 +3407,18 @@
     "effect": "[fanfare] Put the top card of your deck into your EX area. Give your leader [defense]+X, where X equals the card's cost.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
   },
+  "Arthur, Slumbering Dragon": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Wind",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "1",
+    "defense": "2",
+    "effect": "While followers you control have become uncapped and/or fully uncapped at least 3 times this turn, this has Rush, Assail, and, Bane. [fanfare] If there are no cards named Mordred, Slumbering Lion on your field, search your deck for a Mordred, Slumbering Lion, summon it, then shuffle.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Arthurian Light": {
     "class": "sword",
     "type": "base",
@@ -3310,6 +3454,30 @@
     "defense": "6",
     "effect": "Bane. Drain. On Evolve - Select an enemy follower on the field and put it into its owner's EX area. [act] Earth Rite: Select another follower on your field and give it Rush, Bane, or Drain.",
     "cardSet": "Booster Set \"Bullet of Fate\""
+  },
+  "Arulumaya, Mystic Seer": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Earth",
+    "rarity": "Silver",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3",
+    "effect": "[evolve] [cost01]: Evolve this. [fanfare] Put an Earth Quartz token into your EX area. Give your leader [defense]+2. You may turn a facedown evolved Earth follower in your evolve deck faceup.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
+  "Arulumaya, Mystic Seer Evolved": {
+    "class": "rune",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Granblue / Earth",
+    "rarity": "Silver",
+    "cost": "-",
+    "attack": "4",
+    "defense": "4",
+    "effect": "On Evolve - Select an enemy follower on the field. Deal it damage equal to the number of faceup evolved Earth followers in your evolve deck and put an Earth Quartz token into your EX area.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Aryll, Moonstruck Vampire": {
     "class": "abyss",
@@ -3815,6 +3983,18 @@
     "effect": "[Union Burst] Follower Strike - Put the attack target into its owner's EX area. ---------- While there's another Sarendia Orphanage follower on your field, this has Rush.",
     "cardSet": "Crossover Set \"Princess Connect! Re: Dive\""
   },
+  "Ayer, Ashen Brawler": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Earth",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "3",
+    "defense": "2",
+    "effect": "Rush. [fanfare] You may turn a facedown evolved Earth follower in your evolve deck faceup. Then, if there are at least 4 faceup evolved Earth followers in your evolve deck, give this [attack]+2 and Assail. Strike - Draw a card.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Ayumi": {
     "class": "neutral",
     "type": "base",
@@ -4102,6 +4282,18 @@
     "defense": "11",
     "effect": "On Evolve: Destroy each amulet on the field. If there are at least 2 enemy followers on the field, this follower can't attack enemy leaders.",
     "cardSet": "Booster Set #2 “Reign of Bahamut”"
+  },
+  "Bai Ze TOKEN": {
+    "class": "rune",
+    "type": "token",
+    "cardType": "Follower / Token",
+    "trait": "Granblue / Water",
+    "rarity": "-",
+    "cost": "4",
+    "attack": "4",
+    "defense": "6",
+    "effect": "Rush. Assail. Ward. Quick-[act] [cost01]: Give your leader [defense]+2. Activate only once per turn.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Balance and Obliteration": {
     "class": "haven",
@@ -4618,6 +4810,18 @@
     "defense": "-",
     "effect": "As an additional cost to play this card, bury a Dragonewt follower. ---------- Select an enemy follower on the field. Deal it 4 damage and draw a card.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
+  },
+  "Beatrix, Undying Blue": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Earth",
+    "rarity": "Silver",
+    "cost": "6",
+    "attack": "2",
+    "defense": "2",
+    "effect": "Storm. When this becomes uncapped, choose 1. (1) Search your deck for a Zeta, Crimson Lancer, summon it, then shuffle. (2) Recover 4 play points.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Beauty and the Beast": {
     "class": "forest",
@@ -6059,6 +6263,30 @@
     "effect": "[fanfare] Put a Dutiful Steed token into your EX area. [lastwords] Select an enemy follower on the field and, if there are at least 3 Mount cards on your field and/or in your EX area, deal it 3 damage.",
     "cardSet": "Booster Set \"Bullet of Fate\""
   },
+  "Cagliostro, Adorable Genius": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Earth / Light / Dark",
+    "rarity": "Gold",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[evolve] [cost01]: Evolve this. [fanfare] If you have at least 7 max play points, put an Ars Magna and Gold Brick token into your EX area. [act] [engage], discard a Granblue card: Select an enemy follower on the field and deal it 2 damage.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
+  "Cagliostro, Adorable Genius Evolved": {
+    "class": "rune",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Granblue / Earth / Light / Dark",
+    "rarity": "Gold",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3",
+    "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage. [act] [engage], discard a Granblue card: Select an enemy follower on the field and deal it 2 damage.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Caladrius": {
     "class": "haven",
     "type": "base",
@@ -6142,6 +6370,18 @@
     "defense": "5",
     "effect": "Rush. Once per turn, when an amulet you control leaves the field, give this follower [attack]+2/[defense]+2 and Assail.",
     "cardSet": "Booster Set #4 “Cosmic Mythos”"
+  },
+  "Camieux, Gunpowder Gal TOKEN": {
+    "class": "forest",
+    "type": "token",
+    "cardType": "Follower / Token",
+    "trait": "Granblue / Earth",
+    "rarity": "-",
+    "cost": "3",
+    "attack": "3",
+    "defense": "2",
+    "effect": "Rush. Assail. [lastwords] Deal 2 damage to each enemy leader.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Candelabra of Prayers": {
     "class": "haven",
@@ -6347,6 +6587,18 @@
     "effect": "[fanfare] Select any number of enemy followers on the field and deal X damage divided between them. X equals the total number of cards in your hand and EX area.",
     "cardSet": "Booster Set #4 “Cosmic Mythos”"
   },
+  "Cassius, Sky-Yearning Arrival": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Water",
+    "rarity": "Gold",
+    "cost": "4",
+    "attack": "3",
+    "defense": "3",
+    "effect": "[fanfare] Draw a card. If there are at least 7 followers in your cemetery with Quick-Activate, recover 3 play points. Quick-[act] [cost01], discard this: Look at the top 3 cards of your deck. You may reveal a follower with Quick-[act] from among them and add it to your hand. Put the rest on the bottom of your deck in any order.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Castelle, Budding Mage": {
     "class": "forest",
     "type": "base",
@@ -6442,6 +6694,18 @@
     "defense": "2",
     "effect": "[fanfare] Select a Beast or Arcanaform follower that costs 2 or less in your cemetery and summon it.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
+  },
+  "Celeste Omega": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Amulet",
+    "trait": "Granblue / Dark",
+    "rarity": "Gold",
+    "cost": "1",
+    "attack": "-",
+    "defense": "-",
+    "effect": "Once per turn, when you discard a Dark card, select an enemy follower on the field and deal it 1 damage. [act] [engage], discard a Dark card: Look at the top card of your deck. You may put it on the bottom of your deck.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Celestial Dragoon": {
     "class": "dragon",
@@ -7199,6 +7463,18 @@
     "effect": "[Union Burst][fanfare] Select an enemy follower on the field and deal it damage equal to the number of Friendship Club followers on your field. ---------- Whenever you play a Friendship Club card or PriConne spell, deal 1 damage to each enemy leader.",
     "cardSet": "Crossover Set \"Princess Connect! Re: Dive\""
   },
+  "Chloe, What a Gal": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Dark",
+    "rarity": "Silver",
+    "cost": "1",
+    "attack": "1",
+    "defense": "1",
+    "effect": "[fanfare] Discard a Dark card: Draw a card. [act] [engage]: Select a Dark card in your cemetery and put it on the bottom of your deck.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Chorus of Prayer": {
     "class": "haven",
     "type": "base",
@@ -7595,6 +7871,30 @@
     "effect": "[fanfare] Each player looks at the top 3 cards of their deck. They may summon a follower from among them. They bury the rest. While this card is on the field, if a follower on the field can attack a follower, it can't attack leaders.",
     "cardSet": "Booster Set #6 “Paragons of the Colosseum”"
   },
+  "Colossus Omega": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Amulet",
+    "trait": "Granblue / Fire",
+    "rarity": "Gold",
+    "cost": "1",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[fanfare] Reveal 3 Fire cards from your hand: Select an enemy follower on the field and deal it 2 damage. [act] [cost01], [engage], reveal a Fire card from your hand: Select an enemy follower on the field and deal it 1 damage.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
+  "Comet Drive": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Granblue / Wind",
+    "rarity": "Bronze",
+    "cost": "3",
+    "attack": "-",
+    "defense": "-",
+    "effect": "This costs X less to play. X equals the number of times followers you control have become uncapped and/or fully uncapped this turn. ---------- Select an enemy follower on the field. Deal it 4 damage and put a Wind Quartz token into your EX area.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Comrade of the Swordmaster": {
     "class": "sword",
     "type": "base",
@@ -7942,6 +8242,18 @@
     "defense": "-",
     "effect": "Select any number of Pixie tokens on your field. For the rest of this turn, they have \"[act] [engage]: Select an enemy follower on the field. Deal 3 damage to it and 1 damage to its leader.\"",
     "cardSet": "Booster Set \"Bullet of Fate\""
+  },
+  "Corruption": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Granblue / Dark",
+    "rarity": "Silver",
+    "cost": "5",
+    "attack": "-",
+    "defense": "-",
+    "effect": "As an additional cost to play this, discard a Dark card. ---------- Deal 5 damage to each enemy follower on the field and 2 damage to each enemy leader.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Corruption Guardian": {
     "class": "neutral",
@@ -8579,6 +8891,42 @@
     "effect": "On Evolve: Select a Crystalia Eve token on your field. Give it [attack]+1/[defense]+1 and Rush.",
     "cardSet": "Booster Set #2 “Reign of Bahamut”"
   },
+  "Cucouroux, Green Gunsmith": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Water",
+    "rarity": "Silver",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[evolve] [cost01]: Evolve this. [fanfare] If there are at least 7 followers in your cemetery with Quick-Activate, summon a Camieux, Gunpowder Gal token. Quick-[act] [cost01], discard this: Deal 2 damage to each enemy leader.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
+  "Cucouroux, Green Gunsmith Evolved": {
+    "class": "forest",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Granblue / Water",
+    "rarity": "Silver",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3",
+    "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
+  "Cupitan, Iridescent Archer": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Water",
+    "rarity": "Gold",
+    "cost": "2",
+    "attack": "0",
+    "defense": "4",
+    "effect": "[fanfare] Put a Water Quartz token into your EX area. Quick-[act] [engage]: Select an enemy follower on the field and deal it 1 damage. If there are at least 7 followers in your cemetery with Quick-Activate, deal 7 damage instead and deal 2 damage to its leader.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Curate": {
     "class": "haven",
     "type": "base",
@@ -8987,6 +9335,30 @@
     "effect": "[fanfare] Search your deck for a follower with \"Nao Kamiya\" in its name, reveal it, add it to your hand, then shuffle. [act] [engage], bury this: Select a Cool follower on your field and give it Rush and Assail.",
     "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\""
   },
+  "Danua, Grim Puppetmaster": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Light",
+    "rarity": "Silver",
+    "cost": "1",
+    "attack": "1",
+    "defense": "1",
+    "effect": "[evolve] [cost01]: Evolve this.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
+  "Danua, Grim Puppetmaster Evolved": {
+    "class": "abyss",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Granblue / Light",
+    "rarity": "Silver",
+    "cost": "-",
+    "attack": "2",
+    "defense": "2",
+    "effect": "On Evolve - Search your deck for a 5-cost Granblue follower, reveal it, add it to your hand, then shuffle.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Daria, Dimensional Witch": {
     "class": "rune",
     "type": "base",
@@ -9263,6 +9635,18 @@
     "effect": "[quick] Select a card on your field. Destroy it, give your leader [defense]+3, and draw a card.",
     "cardSet": "Booster Set #1 “Advent of Genesis”"
   },
+  "Dark Quartz TOKEN": {
+    "class": "neutral",
+    "type": "token",
+    "cardType": "Treasure / Token",
+    "trait": "Granblue / Dark",
+    "rarity": "-",
+    "cost": "-",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[act] [cost00]: Select a Dark follower on your field and uncap it. If it has Full Uncap Unlocked and is uncapped, fully uncap it instead. (Put this from your EX area underneath the selected follower. Uncapped followers get [attack]+1. Fully uncapped followers get [attack]+1/[defense]+1)",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Dark Shield, Mac Lir": {
     "class": "abyss",
     "type": "base",
@@ -9406,6 +9790,18 @@
     "defense": "3",
     "effect": "On Evolve: Spellchain (5) - Give your leader [defense]+2.",
     "cardSet": "Booster Set #4 “Cosmic Mythos”"
+  },
+  "De La Fille, Gem Princess": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Light",
+    "rarity": "Gold",
+    "cost": "5",
+    "attack": "3",
+    "defense": "5",
+    "effect": "Ward. [fanfare] Select an enemy follower on the field. Banish it and put a Light Quartz token into your EX area. At the start of your end phase, give your leader [defense]+1. If there are at least three 5-cost Granblue followers on your field, give [defense]+3 instead.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Dead to Rights": {
     "class": "abyss",
@@ -10847,6 +11243,18 @@
     "effect": "[ride] [cost01]: Give this follower Drive. On Drive - Select up to 1 enemy follower on the field. Deal it 2 damage and give this follower [attack]+1/[defense]+1. Strike - Deal 1 damage to each enemy leader.",
     "cardSet": "Crossover Starter Deck \"Apocalyptic Fire\""
   },
+  "Dragon Knights": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Granblue / Fire / Water / Wind / Earth",
+    "rarity": "Gold",
+    "cost": "5",
+    "attack": "-",
+    "defense": "-",
+    "effect": "You may play this for 2 more play points. ---------- Choose up to 2. If you played this for 2 more play points, choose up to 4 instead. (1) Summon a Lancelot, Twinfang Prodigy token. (2) Summon a Vane, Indomitable Knight token. (3) Summon a Siegfried, Dragonslayer token. (4) Summon a Percival, Lord of Flames token.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Dragon Monk, Genjo": {
     "class": "dragon",
     "type": "base",
@@ -11699,6 +12107,30 @@
     "effect": "[fanfare] Banish the top card of your deck. If there are at least 5 cards in your banished zone, deal 2 damage to each enemy leader. ---------- (If this card is revealed by a drive check, give a follower on your field [attack]+2.)",
     "cardSet": "Crossover Set \"Cardfight!! Vanguard\""
   },
+  "Eahta, God of the Blade": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Eternals / Earth",
+    "rarity": "Legendary",
+    "cost": "8",
+    "attack": "5",
+    "defense": "5",
+    "effect": "This costs 2 less to play for every 2 faceup evolved Earth followers in your evolve deck. ---------- Full Uncap Unlocked. When this becomes uncapped, give it Rush and Assail. When this becomes fully uncapped, [cost01]: Select an enemy follower on the field. Destroy it and deal 3 damage to its leader.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
+  "Earth Quartz TOKEN": {
+    "class": "neutral",
+    "type": "token",
+    "cardType": "Treasure / Token",
+    "trait": "Granblue / Earth",
+    "rarity": "-",
+    "cost": "-",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[act] [cost00]: Select a Earth follower on your field and uncap it. If it has Full Uncap Unlocked and is uncapped, fully uncap it instead. (Put this from your EX area underneath the selected follower. Uncapped followers get [attack]+1. Fully uncapped followers get [attack]+1/[defense]+1)",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Earthen Dragonewt": {
     "class": "dragon",
     "type": "base",
@@ -12250,6 +12682,18 @@
     "defense": "3",
     "effect": "Twice per turn, when your leader gains 🛡️, give each other follower on your field [attack]+1/[defense]+1. [fanfare] You may summon an Academic follower not named Elluvia, Graceful Lady that costs X or less from your hand. X equals your remaining play points.",
     "cardSet": "Combined Set \"Academy Royale & Dusk of Calamity\""
+  },
+  "Elmott, Pyrestarter": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Fire",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2",
+    "effect": "When this becomes uncapped, deal each enemy leader 1 damage. [fanfare] Reveal 3 Fire cards from your hand: Select an enemy follower on the field and deal it 3 damage.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Elusa, Magic Wunderkind": {
     "class": "rune",
@@ -13043,6 +13487,42 @@
     "effect": "At the start of the game, the player going second gets 3 Evolution Points. When paying an [evolve] cost, you may use an Evolution Point in lieu of 1 play point by turning it facedown. (Only one can be used per evolution.)",
     "cardSet": "Promo Cards"
   },
+  "Ewige Freundschaft": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Granblue / Dark",
+    "rarity": "Bronze",
+    "cost": "1",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[quick]. Discard a Dark card: Put 2 Dark Quartz tokens into your EX area. Draw a card.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
+  "Ewiyar, Wind Personified": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Six-Dragon / Wind",
+    "rarity": "Legendary",
+    "cost": "1",
+    "attack": "1",
+    "defense": "1",
+    "effect": "[evolve] [cost01]: Evolve this. [fanfare] Put a Wind Quartz token into your EX area.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
+  "Ewiyar, Wind Personified Evolved": {
+    "class": "forest",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Granblue / Six-Dragon / Wind",
+    "rarity": "Legendary",
+    "cost": "-",
+    "attack": "2",
+    "defense": "2",
+    "effect": "On Evolve - Put a Wind Quartz token into your EX area. Draw a card. On Super-Evolve - Put a Gold Brick token into your EX area. Draw a card.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Execution": {
     "class": "neutral",
     "type": "base",
@@ -13643,6 +14123,18 @@
     "effect": "[fanfare] Summon a Holy Falcon token. [act] [engage], bury an amulet: Summon a Holy Falcon token.",
     "cardSet": "Booster Set #6 “Paragons of the Colosseum”"
   },
+  "Feather, Bombastic Brawler": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Light",
+    "rarity": "Bronze",
+    "cost": "3",
+    "attack": "4",
+    "defense": "4",
+    "effect": "Rush. Ward. [fanfare] Put a Light Quartz token into your EX area.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Featherfolk Courier": {
     "class": "haven",
     "type": "base",
@@ -13654,6 +14146,30 @@
     "defense": "4",
     "effect": "Storm. Strike - Draw a card. [fanfare] [cost02]: Search your deck for a follower with Storm and 3 or less attack, summon it, then shuffle.",
     "cardSet": "Booster Set \"Omens and Heirs\""
+  },
+  "Fediel, Darkness Personified": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Six-Dragon / Dark",
+    "rarity": "Legendary",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3",
+    "effect": "[evolve] [cost01]: Evolve this. Whenever you discard a Dark card, deal 1 damage to each enemy leader and enemy follower on the field.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
+  "Fediel, Darkness Personified Evolved": {
+    "class": "abyss",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Granblue / Six-Dragon / Dark",
+    "rarity": "Legendary",
+    "cost": "-",
+    "attack": "4",
+    "defense": "4",
+    "effect": "On Evolve - Discard 2 cards: Draw 2 cards. On Super-Evolve - Select up to 2 differently named cards in your cemetery not named Fediel, Darkness Personified. Add them to your hand, then discard a card. Whenever you discard a Dark card, deal 1 damage to each enemy leader and enemy follower on the field.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Feena, Dynamite Daredevil": {
     "class": "neutral",
@@ -13763,6 +14279,18 @@
     "effect": "During your turn, whenever this follower takes damage, select an enemy follower on the field and deal it 3 damage.",
     "cardSet": "Booster Set #4 “Cosmic Mythos”"
   },
+  "Feower, Double Blade Flash": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Eternals / Water",
+    "rarity": "Legendary",
+    "cost": "3",
+    "attack": "4",
+    "defense": "2",
+    "effect": "Full Uncap Unlocked. When this becomes uncapped, select an enemy follower on the field and deal it 4 damage. When this becomes fully uncapped, deal 4 damage to each enemy leader. Quick-[act] [cost03], discard this: Select an enemy follower on the field. Deal it 4 damage and draw a card.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Feral Aether": {
     "class": "dragon",
     "type": "base",
@@ -13786,6 +14314,30 @@
     "defense": "-",
     "effect": "Select a follower on your field and an enemy follower on the field. Deal 1 damage to the first follower and 4 damage to the second. Draw a card. If you have a follower on your field with \"Galmieux\" in its name, increase your max play points by 1.",
     "cardSet": "Booster Set \"Omens and Heirs\""
+  },
+  "Ferry, Spirit Maiden": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Dark",
+    "rarity": "Gold",
+    "cost": "1",
+    "attack": "1",
+    "defense": "1",
+    "effect": "During your turn, when this is discarded by the ability of a Dark card you control, summon this. ---------- [evolve] [cost01]: Evolve this. Full Uncap Unlocked. When this becomes fully uncapped, [cost03]: Select up to 2 other Dark followers on your field and refresh them.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
+  "Ferry, Spirit Maiden Evolved": {
+    "class": "abyss",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Granblue / Dark",
+    "rarity": "Gold",
+    "cost": "-",
+    "attack": "1",
+    "defense": "1",
+    "effect": "Full Uncap Unlocked. On Evolve - Draw a card. When this becomes fully uncapped, [cost03]: Select up to 2 other Dark followers on your field and refresh them.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Fertile Aether": {
     "class": "forest",
@@ -13895,6 +14447,18 @@
     "effect": "[fanfare] Put a Holy Tiger token into your EX area. [act] [engage]: Select a Holy Tiger on your field and give it Storm.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
   },
+  "Fif, Prodigious Sorcerer": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Eternals / Light",
+    "rarity": "Legendary",
+    "cost": "5",
+    "attack": "2",
+    "defense": "3",
+    "effect": "Full Uncap Unlocked. When this becomes uncapped, you may summon a 5-cost Granblue follower from your hand. When this becomes fully uncapped, [cost02]: Look at the top 5 cards of your deck. You may summon a 5-cost Granblue follower not named Fif, Prodigious Sorcerer from among them. Put the rest on the bottom of your deck in any order.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Fighter": {
     "class": "neutral",
     "type": "base",
@@ -13906,6 +14470,18 @@
     "defense": "3",
     "effect": "",
     "cardSet": "Booster Set #1 “Advent of Genesis”"
+  },
+  "Fil TOKEN": {
+    "class": "forest",
+    "type": "token",
+    "cardType": "Spell / Token",
+    "trait": "Granblue / Wind",
+    "rarity": "-",
+    "cost": "0",
+    "attack": "-",
+    "defense": "-",
+    "effect": "Select a Granblue follower on your field and give it [attack]+2/[defense]+2.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Filene, Blizzardous Heart": {
     "class": "dragon",
@@ -13955,6 +14531,30 @@
     "effect": "[feed][cost01]: Race this follower. On Race: Give this follower [attack]+1/[defense]+1. Give your leader [defense]+2. Put the top 2 cards of your deck into your cemetery.",
     "cardSet": "Crossover Set “Umamusume: Pretty Derby”"
   },
+  "Fiorito, Muscles in Bloom": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Earth",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "1",
+    "defense": "3",
+    "effect": "[evolve] [cost00]: Evolve this. Activate only if there are at least 4 faceup evolved Earth followers in your evolve deck. Ward. [fanfare] Put an Earth Quartz token into your EX area. You may turn a facedown evolved Earth follower in your evolve deck faceup.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
+  "Fiorito, Muscles in Bloom Evolved": {
+    "class": "sword",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Granblue / Earth",
+    "rarity": "Bronze",
+    "cost": "-",
+    "attack": "4",
+    "defense": "6",
+    "effect": "Assail. Bane. Ward.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Fire Chain": {
     "class": "rune",
     "type": "base",
@@ -13990,6 +14590,18 @@
     "defense": "2",
     "effect": "[fanfare] Select an enemy leader or enemy follower on the field and deal it 1 damage.",
     "cardSet": "Booster Set #1 “Advent of Genesis”"
+  },
+  "Fire Quartz TOKEN": {
+    "class": "neutral",
+    "type": "token",
+    "cardType": "Treasure / Token",
+    "trait": "Granblue / Fire",
+    "rarity": "-",
+    "cost": "-",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[act] [cost00]: Select a Fire follower on your field and uncap it. If it has Full Uncap Unlocked and is uncapped, fully uncap it instead. (Put this from your EX area underneath the selected follower. Uncapped followers get [attack]+1. Fully uncapped followers get [attack]+1/[defense]+1)",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Fita the Gentle Elf": {
     "class": "forest",
@@ -15203,6 +15815,30 @@
     "effect": "[fanfare] Look at the top 2 cards of your deck. You may reveal an Armed card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. If there are at least 3 Armed cards in your cemetery, summon a Draconic Weapon token and recover 1 play point.",
     "cardSet": "Booster Set #10 \"Gods of the Arcana\""
   },
+  "Galleon, Earth Personified": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Six-Dragon / Earth",
+    "rarity": "Legendary",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[evolve] [cost01]: Evolve this. [fanfare] You may turn a facedown evolved Earth follower in your evolve deck faceup. Then, if there are at least 4 faceup evolved Earth followers in your evolve deck, draw a card.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
+  "Galleon, Earth Personified Evolved": {
+    "class": "haven",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Granblue / Six-Dragon / Earth",
+    "rarity": "Legendary",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3",
+    "effect": "On Evolve - Look at the top 4 cards of your deck. You may reveal a Granblue card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. On Super-Evolve - Put X Earth Quartz tokens into your EX area. Give your leader 🛡️+X. X equals half the number of faceup evolved Earth followers in your evolve deck (rounded up).",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Galmieux, Ardent Disdain": {
     "class": "dragon",
     "type": "base",
@@ -15646,6 +16282,18 @@
     "defense": "3",
     "effect": "On Evolve: Search your deck for a Floral Breeze, reveal it, and add it to your hand. Whenever a card on your field is returned to hand, give your leader [defense]+1.",
     "cardSet": "Booster Set #3 “Flame of Lævateinn”"
+  },
+  "Ghandagoza, Fist of Rage": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Fire",
+    "rarity": "Bronze",
+    "cost": "7",
+    "attack": "6",
+    "defense": "5",
+    "effect": "Whenever this is revealed from your hand, select a Fire follower on your field. Give it Rush and Assail. ---------- Rush. Assail. Strike - Reveal 3 Fire cards from your hand: Select an enemy follower on the field. Deal 6 damage to it and its leader.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Ghastly Banishment": {
     "class": "abyss",
@@ -16631,6 +17279,18 @@
     "effect": "When this leaves the field, give your leader [defense]+1 and recover 1 play point.",
     "cardSet": "Booster Set \"New World Genesis\""
   },
+  "Gold Brick TOKEN": {
+    "class": "neutral",
+    "type": "token",
+    "cardType": "Treasure / Token",
+    "trait": "Granblue",
+    "rarity": "-",
+    "cost": "-",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[act] [cost00]: Select a Granblue follower on your field and uncap it. If it has Full Uncap Unlocked, fully uncap it as well. (Put this from your EX area underneath the selected follower. Uncapped followers get [attack]+1. Fully uncapped followers get [attack]+1/[defense]+1)",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Gold City": {
     "class": "forest",
     "type": "base",
@@ -16834,6 +17494,18 @@
     "defense": "1",
     "effect": "[Union Burst][fanfare] Draw a card. Discard a card. Bury the top 2 cards of your deck. ---------- While there's another Geo Niflhel follower on your field, this has Ward.",
     "cardSet": "Crossover Set \"Princess Connect! Re: Dive\""
+  },
+  "Gran & Djeeta": {
+    "class": "neutral",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / All-Element",
+    "rarity": "Legendary",
+    "cost": "2",
+    "attack": "2",
+    "defense": "3",
+    "effect": "[fanfare] Discard a Granblue card: Draw 2 cards. When this becomes uncapped, [cost03]: Select an enemy follower on the field. Deal 4 damage to it and 2 damage to its leader, and, put a Gold Brick token into your EX area.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Grand Acquisition": {
     "class": "sword",
@@ -19919,6 +20591,18 @@
     "effect": "[fanfare] If there are at least 2 Heroic cards in your cemetery, give this follower [defense]+1 and Ward.",
     "cardSet": "Booster Set #3 “Flame of Lævateinn”"
   },
+  "Isaac, Congenial Engineer": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Water",
+    "rarity": "Bronze",
+    "cost": "1",
+    "attack": "1",
+    "defense": "1",
+    "effect": "[fanfare] Put a Water Quartz token into your EX area. Quick-[act] [engage]: Look at the top card of your deck. You may bury it.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Isabelle, Intrepid Mage": {
     "class": "rune",
     "type": "base",
@@ -20963,6 +21647,18 @@
     "effect": "On Evolve - Look at the top 4 cards of your deck. You may reveal a Draconic Duelist follower from among them and add it to your hand. Put the rest on the bottom of your deck in any order.",
     "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\""
   },
+  "Katalina, Sky Guardian": {
+    "class": "neutral",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Water",
+    "rarity": "Silver",
+    "cost": "3",
+    "attack": "2",
+    "defense": "1",
+    "effect": "Ward. [fanfare] Search your deck for a 1-cost follower with Quick-Activate, summon it, then shuffle. Put a Water Quartz token into your EX area. Quick-[act] [cost01], discard this: Put a Water Quartz token into your EX area. Draw a card.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Katsuragi Ace": {
     "class": "dragon",
     "type": "base",
@@ -21407,6 +22103,30 @@
     "effect": "On Evolve - Draw a card. On Super-Evolve - Give your leader [defense]+2. Draw a card.",
     "cardSet": "Crossover Set \"Princess Connect! Re: Dive\""
   },
+  "Korwa, Ravishing Designer": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Wind",
+    "rarity": "Gold",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[evolve] [cost01]: Evolve this. [fanfare] Put a Wind Quartz token into your EX area. At the start of your end phase, if followers you control have become uncapped and/or fully uncapped at least 3 times this turn, put a Fil token into your EX area.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
+  "Korwa, Ravishing Designer Evolved": {
+    "class": "forest",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Granblue / Wind",
+    "rarity": "Gold",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3",
+    "effect": "On Evolve - Search your deck for a 1-cost Wind card, reveal it, add it to your hand, then shuffle. At the start of your end phase, if followers you control have become uncapped and/or fully uncapped at least 3 times this turn, put a Fil token into your EX area.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Kotoka Saionji [Pure Euphoria]": {
     "class": "haven",
     "type": "base",
@@ -21430,6 +22150,18 @@
     "defense": "5",
     "effect": "On Evolve - Select an enemy follower on the field and banish it.",
     "cardSet": "EX Crossover Set \"THE IDOLM@STER CINDERELLA GIRLS\""
+  },
+  "Kou & You, Love and Hatred": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Light / Dark",
+    "rarity": "Bronze",
+    "cost": "7",
+    "attack": "7",
+    "defense": "6",
+    "effect": "Rush. Assail. Strike - Reveal the top card of your deck. If you revealed a 5-cost Granblue follower, summon it. If not, add it to your hand.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Koume Shirasaka [Haunted Gown]": {
     "class": "abyss",
@@ -21731,6 +22463,30 @@
     "effect": "Storm. Whenever a Naterran Great Tree is put onto your field, recover 1 play point.",
     "cardSet": "Booster Set #7 \"Verdant Steel\""
   },
+  "Lady Grey, Deathweaver": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Dark",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "0",
+    "defense": "2",
+    "effect": "[evolve] [cost01]: Evolve this. Drain. [fanfare] Put a Dark Quartz token into your EX area. Whenever you discard a Dark card, give this [attack]+1.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
+  "Lady Grey, Deathweaver Evolved": {
+    "class": "abyss",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Granblue / Dark",
+    "rarity": "Bronze",
+    "cost": "-",
+    "attack": "1",
+    "defense": "3",
+    "effect": "Drain. On Evolve - Discard a Dark card: Draw a card. Whenever you discard a Dark card, give this [attack]+1.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Lainecrest Academy": {
     "class": "neutral",
     "type": "base",
@@ -21790,6 +22546,18 @@
     "defense": "4",
     "effect": "[fanfare] If Overflow is active for you, summon a Draconic Weapon token. Once on each of your turns, when this follower is selected for an ability, give it [attack]+1 and deal 1 damage to each enemy leader.",
     "cardSet": "Booster Set #3 “Flame of Lævateinn”"
+  },
+  "Lancelot, Twinfang Prodigy TOKEN": {
+    "class": "sword",
+    "type": "token",
+    "cardType": "Follower / Token",
+    "trait": "Granblue / Water",
+    "rarity": "-",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3",
+    "effect": "Storm. [fanfare] Put a Water Quartz token into your EX area. Draw a card. Discard a card.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Lapis, Glorious Seraph": {
     "class": "haven",
@@ -22234,6 +23002,18 @@
     "defense": "-",
     "effect": "Select up to 2 Officer followers in your cemetery and add them to your hand.",
     "cardSet": "Combined Set \"Academy Royale & Dusk of Calamity\""
+  },
+  "Light Quartz TOKEN": {
+    "class": "neutral",
+    "type": "token",
+    "cardType": "Treasure / Token",
+    "trait": "Granblue / Light",
+    "rarity": "-",
+    "cost": "-",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[act] [cost00]: Select a Light follower on your field and uncap it. If it has Full Uncap Unlocked and is uncapped, fully uncap it instead. (Put this from your EX area underneath the selected follower. Uncapped followers get [attack]+1. Fully uncapped followers get [attack]+1/[defense]+1)",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Light Signals Penguin Soldier": {
     "class": "forest",
@@ -23015,6 +23795,30 @@
     "effect": "Ward. [fanfare] Look at the top 2 cards of your deck. Put any number of them on the top of your deck in any order. Put the rest on the bottom in any order. Whenever you drive check a Trigger, give your leader [defense]+1. ---------- (If this card is revealed by a drive check, give your leader [defense]+3.)",
     "cardSet": "Crossover Set \"Cardfight!! Vanguard\""
   },
+  "Lu Woh, Light Personified": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Six-Dragon / Light",
+    "rarity": "Legendary",
+    "cost": "5",
+    "attack": "3",
+    "defense": "3",
+    "effect": "[evolve] [cost01]: Evolve this. [fanfare] Put a Light Quartz token into your EX area.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
+  "Lu Woh, Light Personified Evolved": {
+    "class": "sword",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Granblue / Six-Dragon / Light",
+    "rarity": "Legendary",
+    "cost": "-",
+    "attack": "4",
+    "defense": "3",
+    "effect": "On Evolve - Select a 5-cost Granblue follower in your cemetery and summon it. On Super-Evolve - Give this Aura and \"Whenever an enemy follower on the field with Storm attacks, give it 🗡️-5.\"",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Lucifer": {
     "class": "neutral",
     "type": "base",
@@ -23135,6 +23939,18 @@
     "effect": "[lastwords] Give your leader [defense]+1.",
     "cardSet": "Booster Set \"Eightfold Retribution\""
   },
+  "Luminiera Omega": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Amulet",
+    "trait": "Granblue / Light",
+    "rarity": "Gold",
+    "cost": "3",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[fanfare] Reveal the top card of your deck. If you revealed a Light card, increase your max play points by 1. [act] [engage], bury this: Put a Light Quartz token into your EX area. Draw a card. Activate only if there are at least three 5-cost Granblue followers on your field.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Luminous Commander": {
     "class": "sword",
     "type": "base",
@@ -23242,6 +24058,30 @@
     "defense": "2",
     "effect": "[fanfare] Put a Luna's Doll token into your EX area. [act] [engage]: Select an [abysscraft] follower in your cemetery not named Luna, Soul Keeper that costs 2 or less and add it to your hand. Activate only if there are at least 10 cards in your cemetery.",
     "cardSet": "Booster Set \"Convergent Destinies\""
+  },
+  "Lunalu, Fangirl A": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Dark",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[evolve] [cost02]: Evolve this. When this becomes uncapped, select a Granblue follower in your cemetery and add it to your hand.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
+  "Lunalu, Fangirl A Evolved": {
+    "class": "rune",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Granblue / Dark",
+    "rarity": "Bronze",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3",
+    "effect": "On Evolve - Select another Granblue follower on your field. Search your deck for a card of the same name, summon it, give it \"At the start of your end phase, banish this.\", then shuffle. When this becomes uncapped, select a Granblue follower in your cemetery and add it to your hand.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Lunerian Paladin": {
     "class": "haven",
@@ -23410,6 +24250,18 @@
     "defense": "1",
     "effect": "Ward. [fanfare] Put a Steelclad Knight and Shield Guardian token into your EX area. [act] [cost00]: Give your leader [defense]+2. Activate only if there are at least 3 Officer token followers on your field with different names, and only once per turn.",
     "cardSet": "Booster Set \"New World Genesis\""
+  },
+  "Lyria, Azure Maiden": {
+    "class": "neutral",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / All-Element",
+    "rarity": "Gold",
+    "cost": "1",
+    "attack": "1",
+    "defense": "1",
+    "effect": "Full Uncap Unlocked. [fanfare] Look at the top 3 cards of your deck. You may reveal a Granblue card from among them and add it to your hand. Put the rest on the bottom of your deck in any order.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Lyrial, Archer Throne": {
     "class": "neutral",
@@ -24323,6 +25175,18 @@
     "effect": "On Evolve - Select an enemy follower on the field and deal it damage equal to the number of cards in your hand.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
   },
+  "Manamel, Super Cutest": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Dark",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "1",
+    "defense": "1",
+    "effect": "When this becomes uncapped, discard a Dark card: Draw a card. At the start of your end phase, select an enemy follower on the field. If you've discarded a Dark card this turn, deal 2 damage to it and 1 damage to its leader.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Manhattan Cafe": {
     "class": "abyss",
     "type": "base",
@@ -24490,6 +25354,18 @@
     "defense": "1",
     "effect": "[fanfare]/[lastwords] Draw a card. Bury the top card of your deck.",
     "cardSet": "Booster Set \"Neometropolis\""
+  },
+  "Mari, Meg's Bestie": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Dark",
+    "rarity": "Silver",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2",
+    "effect": "When this is discarded by the ability of a Dark card you control, put a Dark Quartz token into your EX area and draw a card. ---------- [fanfare] Put a Dark Quartz token into your EX area. If there's a Meg, Girl Next Door on your field, give your leader [defense]+2.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Marian the Mummy": {
     "class": "abyss",
@@ -25247,6 +26123,30 @@
     "effect": "You may play this card for 4 more play points. ---------- Search your deck for a Mina, Levin Vice Leader; Mona, Levin Mage; or Mena, Levin Duelist, reveal it, add it to your hand, then shuffle. If you played this card for 4 more play points, search for 1 of each instead, summon them, then shuffle.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
   },
+  "Meg, Girl Next Door": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Dark",
+    "rarity": "Gold",
+    "cost": "2",
+    "attack": "1",
+    "defense": "1",
+    "effect": "[evolve] [cost01]: Evolve this. [fanfare] Discard a Dark card: Draw a card.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
+  "Meg, Girl Next Door Evolved": {
+    "class": "dragon",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Granblue / Dark",
+    "rarity": "Gold",
+    "cost": "-",
+    "attack": "2",
+    "defense": "2",
+    "effect": "On Evolve - Select a Dark follower in your cemetery not named Meg, Girl Next Door that costs 2 or less and summon it.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Mega Enforcer": {
     "class": "rune",
     "type": "base",
@@ -25666,6 +26566,18 @@
     "defense": "-",
     "effect": "[quick] Look at the top 2 cards of your deck. You may reveal a spell from among them and add it to your hand. Put the remaining cards on the bottom of your deck in any order.",
     "cardSet": "Booster Set #5 “Omens Eternal”"
+  },
+  "Metera, Peerless Shot": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Wind",
+    "rarity": "Silver",
+    "cost": "4",
+    "attack": "3",
+    "defense": "3",
+    "effect": "When this becomes uncapped, select an enemy follower on the field and deal it 5 damage. At the start of your end phase, if followers you control have become uncapped and/or fully uncapped at least 3 times this turn, deal 5 damage to each enemy leader.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Meus Gourmand": {
     "class": "haven",
@@ -26254,6 +27166,30 @@
     "defense": "4",
     "effect": "On Evolve - Bury another follower: Summon a Keenedge Artifact token. During your turn, whenever a follower is put from your field into the cemetery, deal 1 damage to each enemy leader.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
+  },
+  "Mirin, Samurai Dreamer": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Wind",
+    "rarity": "Silver",
+    "cost": "2",
+    "attack": "2",
+    "defense": "2",
+    "effect": "[evolve] [cost01]: Evolve this. At the start of your end phase, if followers you control have become uncapped and/or fully uncapped at least 3 times this turn, deal 2 damage to each enemy leader.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
+  "Mirin, Samurai Dreamer Evolved": {
+    "class": "sword",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Granblue / Wind",
+    "rarity": "Silver",
+    "cost": "-",
+    "attack": "3",
+    "defense": "3",
+    "effect": "On Evolve - Select an enemy follower on the field and deal it 2 damage. If this is uncapped, deal 4 damage instead. At the start of your end phase, if followers you control have become uncapped and/or fully uncapped at least 3 times this turn, deal 2 damage to each enemy leader.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Mirror Image Neneka TOKEN": {
     "class": "rune",
@@ -26855,6 +27791,18 @@
     "effect": "[lastwords] Give your leader [defense]-3: Put this follower onto its owner's field.",
     "cardSet": "Booster Set #1 “Advent of Genesis”"
   },
+  "Mordred, Slumbering Lion": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Wind",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "2",
+    "defense": "1",
+    "effect": "While followers you control have become uncapped and/or fully uncapped at least 3 times this turn, this has Storm. [fanfare] If there are no cards named Arthur, Slumbering Dragon on your field, search your deck for an Arthur, Slumbering Dragon, summon it, then shuffle.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Moriae Encomium": {
     "class": "haven",
     "type": "base",
@@ -26986,6 +27934,30 @@
     "defense": "4",
     "effect": "[fanfare] Search your deck for any card, add it to your hand, then shuffle your deck.",
     "cardSet": "Booster Set #8 \"Alterchaotica\""
+  },
+  "Mugen, Steel-Bodied Honesty": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Light",
+    "rarity": "Silver",
+    "cost": "5",
+    "attack": "5",
+    "defense": "5",
+    "effect": "[evolve] [cost01]: Evolve this.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
+  "Mugen, Steel-Bodied Honesty Evolved": {
+    "class": "dragon",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Granblue / Light",
+    "rarity": "Silver",
+    "cost": "-",
+    "attack": "6",
+    "defense": "6",
+    "effect": "On Evolve - Select up to 2 enemy followers on the field. Destroy them and put a Light Quartz token into your EX area.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Mugnier, Purifying Light": {
     "class": "haven",
@@ -27515,6 +28487,30 @@
     "effect": "[feed] [cost01]: Race this follower. Storm. On Race - Give this follower [attack]+1/[defense]+1. Strike - Banish 3 Umamusume followers with Storm from your cemetery: Deal each enemy follower on the field damage equal to this follower's attack.",
     "cardSet": "EX Crossover Set \"Umamusume: Pretty Derby\""
   },
+  "Narmaya, Ephemeral Blade": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Wind / Dark",
+    "rarity": "Gold",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3",
+    "effect": "[evolve] [cost01]: Evolve this. Bane. [fanfare] Discard a Granblue card: Put a Wind Quartz or Dark Quartz token into your EX area. Draw a card.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
+  "Narmaya, Ephemeral Blade Evolved": {
+    "class": "sword",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Granblue / Wind / Dark",
+    "rarity": "Gold",
+    "cost": "-",
+    "attack": "4",
+    "defense": "4",
+    "effect": "Bane. On Evolve - Select an enemy follower on the field. Deal it 4 damage and put a Gold Brick token into your EX area.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Natalia": {
     "class": "haven",
     "type": "base",
@@ -27718,6 +28714,18 @@
     "defense": "-",
     "effect": "This can't be played unless there are at least 3 Machina cards in your EX area. You may play this for 2 more play points. ---------- Search your deck for a follower with \"Belphomet\" in its name, reveal it, add it to your hand, then shuffle. Summon an Armored Tentacle token. If you played this for 2 more play points, summon an Assault Tentacle token.",
     "cardSet": "Booster Set \"Convergent Destinies\""
+  },
+  "Nehan, Dispenser of Samsara": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Light",
+    "rarity": "Gold",
+    "cost": "5",
+    "attack": "2",
+    "defense": "3",
+    "effect": "[fanfare] Look at the top 5 cards of your deck. You may summon a 5-cost Granblue follower not named Nehan, Dispenser of Samsara from among them. Put the rest on the bottom of your deck in any order.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Nekhbet": {
     "class": "haven",
@@ -28211,6 +29219,18 @@
     "effect": "While there are at least 5 cards in your banished zone, this follower has Bane and Ward. [fanfare] Look at the top 5 cards of your deck. You may banish up to 2 of them. Put the rest on the bottom of your deck in any order.",
     "cardSet": "Crossover Set \"Cardfight!! Vanguard\""
   },
+  "Niyon, Mystic Musician": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Eternals / Wind",
+    "rarity": "Legendary",
+    "cost": "1",
+    "attack": "1",
+    "defense": "1",
+    "effect": "Full Uncap Unlocked. When this becomes uncapped, select an enemy follower on the field and give it 🗡️-1/🛡️-1. When this becomes fully uncapped, select an enemy follower on the field and give it 🗡️-2/🛡️-2.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Noa Takamine": {
     "class": "dragon",
     "type": "base",
@@ -28234,6 +29254,18 @@
     "defense": "5",
     "effect": "On Evolve - Select an enemy follower on the field and deal it damage equal to your max play points.",
     "cardSet": "Crossover Set “THE IDOLM@STER CINDERELLA GIRLS”"
+  },
+  "Noa, Primal Shipwright": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Light",
+    "rarity": "Silver",
+    "cost": "5",
+    "attack": "1",
+    "defense": "1",
+    "effect": "Ward. [fanfare] Give this 🗡️+X/🛡️+X. X equals your max play points.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Noah, Vengeful Puppeteer": {
     "class": "forest",
@@ -28834,6 +29866,18 @@
     "defense": "1",
     "effect": "Rush. While there are at least 5 cards named Onion Patch in your cemetery, this follower has Storm and \"Strike - Select an enemy follower on the field and deal it 1 damage.\" ---------- You can put up to 50 of this card into your deck.",
     "cardSet": "Booster Set #9 \"Duet of Dawn and Dusk\""
+  },
+  "Only One Wish": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Granblue / Light",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "-",
+    "defense": "-",
+    "effect": "Reveal the top card of your deck. If you revealed a Light card, put a Light Quartz token into your EX area, increase your max play points by 1, then, if you have 10 max play points, search your deck for a Zooey, Arbiter of the Skies, reveal it, add it to your hand, then shuffle.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Onslaught": {
     "class": "sword",
@@ -29615,6 +30659,18 @@
     "effect": "Once per turn, when an Officer follower is put onto your field, draw a card. On Evolve - Search your deck for a 3-cost or less Officer follower, summon it, then shuffle.",
     "cardSet": "Booster Set \"Omens and Heirs\""
   },
+  "Percival, Lord of Flames TOKEN": {
+    "class": "sword",
+    "type": "token",
+    "cardType": "Follower / Token",
+    "trait": "Granblue / Fire",
+    "rarity": "-",
+    "cost": "3",
+    "attack": "4",
+    "defense": "3",
+    "effect": "[fanfare] Select an enemy follower on the field. Deal it 4 damage and put a Fire Quartz token into your EX area.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Perpetual Despair": {
     "class": "haven",
     "type": "base",
@@ -29662,6 +30718,18 @@
     "defense": "5",
     "effect": "[fanfare] Select an enemy follower on the field. Destroy it and draw a card.",
     "cardSet": "Booster Set #6 “Paragons of the Colosseum”"
+  },
+  "Petra, Ether of the Wind": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Wind",
+    "rarity": "Silver",
+    "cost": "1",
+    "attack": "1",
+    "defense": "2",
+    "effect": "[fanfare] Select an enemy follower on the field. It doesn't refresh during its controller's next start phase and put a Wind Quartz token into your EX area.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Phantom Assassin": {
     "class": "sword",
@@ -29806,6 +30874,18 @@
     "defense": "-",
     "effect": "At the start of each player's main phase, that player looks at the top card of their deck. If it's a follower, they may put it onto their field.",
     "cardSet": "Booster Set #1 “Advent of Genesis”"
+  },
+  "Pholia, Retired Sovereign": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Water",
+    "rarity": "Silver",
+    "cost": "4",
+    "attack": "3",
+    "defense": "5",
+    "effect": "[fanfare] If there are at least 7 followers in your cemetery with Quick-Activate, summon a Bai Ze token. Quick-[act] [cost00]: The next Quick-[act] ability you play this turn costs 1 less. Activate only once per turn.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Piercing Roar": {
     "class": "dragon",
@@ -31247,6 +32327,18 @@
     "effect": "[fanfare] Search your deck for up to 2 Wasteland cards not named Rana, Dual Cannon Abbess that cost a total of 6 or less, put them into your EX area, then shuffle. They cost 0 to play this turn. Summon a Bullet Bike token. [act] [cost00]: Deal 1 damage to each enemy follower on the field. Activate only once per turn.",
     "cardSet": "Booster Set \"New World Genesis\""
   },
+  "Randall, Feet Fighter": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Wind",
+    "rarity": "Bronze",
+    "cost": "4",
+    "attack": "2",
+    "defense": "1",
+    "effect": "This costs X less to play. X equals the number of times followers you control have become uncapped and/or fully uncapped this turn. ---------- Storm. At the start of your end phase, return this to its owner's hand.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Ranko Kanzaki": {
     "class": "abyss",
     "type": "base",
@@ -31414,6 +32506,18 @@
     "defense": "2",
     "effect": "[fanfare] Select another follower on your field and give it [attack]+1, Rush, and for the rest of this turn, \"This doesn't take damage.\"",
     "cardSet": "Booster Set \"Neometropolis\""
+  },
+  "Razia, Vengeful Cannonlancer": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Earth",
+    "rarity": "Gold",
+    "cost": "3",
+    "attack": "1",
+    "defense": "5",
+    "effect": "[fanfare] Draw a card. You may turn a facedown evolved Earth follower in your evolve deck faceup. When this becomes uncapped, select an enemy follower on the field and deal it X damage. X equals the number of faceup evolved Earth followers in your evolve deck. If X is at least 4, deal 2 damage to the selected follower's leader.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Razor-Clawed Thief": {
     "class": "dragon",
@@ -33623,6 +34727,30 @@
     "effect": "The equipped follower has \"Strike - Refresh this. Draw a card. Perform only once per turn.\" ---------- (Place this beneath the equipped follower.)",
     "cardSet": "Crossover Set \"Princess Connect! Re: Dive\""
   },
+  "Sandalphon, Primarch Successor": {
+    "class": "neutral",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Light",
+    "rarity": "Legendary",
+    "cost": "5",
+    "attack": "4",
+    "defense": "4",
+    "effect": "[evolve] [cost01]: Evolve this. Ward. [fanfare] Select up to 2 enemy followers on the field. Deal 2 damage to them and each enemy leader, and, if you have 0 Super Evolution Point, evolve this and give your leader [defense]+2.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
+  "Sandalphon, Primarch Successor Evolved": {
+    "class": "neutral",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Granblue / Light",
+    "rarity": "Legendary",
+    "cost": "-",
+    "attack": "5",
+    "defense": "5",
+    "effect": "Ward. On Evolve - Select up to 2 enemy followers on the field. Deal 2 damage to them and each enemy leader, and, if there are at least three 5-cost Granblue followers on your field, deal 2 more damage to the selected followers and each enemy leader.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Sanguine Core": {
     "class": "abyss",
     "type": "base",
@@ -33802,6 +34930,18 @@
     "defense": "5",
     "effect": "On Evolve - Deal 2 damage to each enemy leader and enemy follower on the field. If there are at least 5 Vampire cards in your cemetery, deal 4 damage instead.",
     "cardSet": "Combined Set \"Academy Royale & Dusk of Calamity\""
+  },
+  "Scathacha, True Dragon": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Wind",
+    "rarity": "Silver",
+    "cost": "4",
+    "attack": "3",
+    "defense": "3",
+    "effect": "This costs X less to play. X equals the number of times followers you control have become uncapped and/or fully uncapped this turn. ---------- [fanfare] Put a Wind Quartz token into your EX area. Draw a card.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Scavenge": {
     "class": "forest",
@@ -34222,6 +35362,30 @@
     "defense": "-",
     "effect": "Whenever an enemy follower on the field attacks, its controller may pay [cost02] to destroy this amulet. If they don't pay, deal 2 damage to the follower.",
     "cardSet": "Booster Set #6 “Paragons of the Colosseum”"
+  },
+  "Seofon, Star Sword Sovereign": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Eternals / Wind",
+    "rarity": "Legendary",
+    "cost": "5",
+    "attack": "3",
+    "defense": "3",
+    "effect": "Full Uncap Unlocked. When this becomes uncapped, draw 2 cards, then put a card from your hand on the bottom of your deck. When this becomes fully uncapped, search your deck for up to 2 differently named followers that costs 2 or less, summon them, then shuffle.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
+  "Seox, Heavenly Howl": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Eternals / Dark",
+    "rarity": "Legendary",
+    "cost": "6",
+    "attack": "3",
+    "defense": "2",
+    "effect": "During your turn, when this is discarded by the ability of a Dark card you control, [cost03]: Summon this. --------- Full Uncap Unlocked. When this becomes uncapped, give this Storm. When this becomes fully uncapped, [cost02]: Search your deck for a Seox, Heavenly Howl, summon it, then shuffle.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Sephie, Depraved Convict": {
     "class": "rune",
@@ -35303,6 +36467,18 @@
     "effect": "On Evolve: Select an enemy follower with 3 defense or less on the field and destroy it.",
     "cardSet": "Booster Set #2 “Reign of Bahamut”"
   },
+  "Siegfried, Dragonslayer TOKEN": {
+    "class": "sword",
+    "type": "token",
+    "cardType": "Follower / Token",
+    "trait": "Granblue / Earth",
+    "rarity": "-",
+    "cost": "3",
+    "attack": "3",
+    "defense": "4",
+    "effect": "Ward. [fanfare] Select an engaged enemy follower on the field. Destroy it and put an Earth Quartz token into your EX area.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Silence Suzuka": {
     "class": "forest",
     "type": "base",
@@ -35374,6 +36550,18 @@
     "defense": "4",
     "effect": "Single Drive. On Evolve - Discard an Oracle Think Tank card: Select an enemy follower with 5 defense or less on the field and banish it.",
     "cardSet": "Crossover Set \"Cardfight!! Vanguard\""
+  },
+  "Silva, Ardent Sniper": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Water",
+    "rarity": "Gold",
+    "cost": "7",
+    "attack": "5",
+    "defense": "5",
+    "effect": "Storm. When this uncaps, select up to 2 followers in your cemetery with Quick-[act] that cost a total of 6 or less and summon them. Quick-[act] [cost02], discard this: Select an enemy follower on the field and deal it 4 damage.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Silver Automaton": {
     "class": "dragon",
@@ -35662,6 +36850,18 @@
     "defense": "3",
     "effect": "[ride] [cost01]: Give this follower Drive. On Drive - Give this follower [attack]+1/[defense]+1. Look at the top 3 cards of your deck. You may reveal a Shadow Paladin card from among them and add it to your hand. Bury the rest. [fanfare] Select an enemy follower on the field and deal it 4 damage.",
     "cardSet": "Crossover Set \"Cardfight!! Vanguard\""
+  },
+  "Skull, Freedom Raider": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Earth",
+    "rarity": "Bronze",
+    "cost": "1",
+    "attack": "2",
+    "defense": "2",
+    "effect": "While there are at least 4 faceup evolved Earth followers in your evolve deck, this has Storm. [fanfare] You may turn a facedown evolved Earth follower in your evolve deck faceup.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Skullfane": {
     "class": "haven",
@@ -36010,6 +37210,30 @@
     "defense": "2",
     "effect": "Ward. [lastwords] Select an enemy follower on the field and deal it 2 damage.",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
+  },
+  "Sophia, Pious Pilgrim": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Water",
+    "rarity": "Bronze",
+    "cost": "4",
+    "attack": "3",
+    "defense": "3",
+    "effect": "[evolve] [cost01]: Evolve this. Ward. [fanfare] Put a Water Quartz token into your EX area. Quick-[act] [cost03], discard this: Draw 2 cards.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
+  "Sophia, Pious Pilgrim Evolved": {
+    "class": "haven",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Granblue / Water",
+    "rarity": "Bronze",
+    "cost": "-",
+    "attack": "4",
+    "defense": "4",
+    "effect": "Ward. On Evolve - Search your deck for a follower with Quick-[act] that costs 3 or less, summon it, then shuffle.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Sorcery Cache": {
     "class": "rune",
@@ -37006,6 +38230,18 @@
     "defense": "5",
     "effect": "On Evolve: Summon a Serpent token. Whenever a Serpent is put onto your field, select an enemy follower on the field and deal it 2 damage.",
     "cardSet": "Booster Set #4 “Cosmic Mythos”"
+  },
+  "Stone Breaker": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Spell",
+    "trait": "Granblue / Dark",
+    "rarity": "Bronze",
+    "cost": "1",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[quick]. Choose 1. (1) Select an enemy follower on the field and deal it 2 damage. (2) Discard a Dark card: Select an enemy follower on the field. Deal 3 damage to it and 1 damage to its leader.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Stone Merchant": {
     "class": "sword",
@@ -38735,6 +39971,18 @@
     "effect": "[act] [engage]: Put a Puppet token into your EX area. [act] [engage], banish a Puppet from your EX area: Draw a card.",
     "cardSet": "Booster Set \"Convergent Destinies\""
   },
+  "Threo, Divine Havoc": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Eternals / Earth",
+    "rarity": "Legendary",
+    "cost": "4",
+    "attack": "3",
+    "defense": "3",
+    "effect": "Full Uncap Unlocked. When this becomes uncapped, you may turn up to 2 facedown evolved Earth followers in your evolve deck faceup. When this becomes fully uncapped, deal 1 damage to each enemy leader and enemy follower on the field for every 2 faceup evolved Earth followers in your evolve deck.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Thunder God of the Tempest": {
     "class": "neutral",
     "type": "base",
@@ -38807,6 +40055,18 @@
     "effect": "[fanfare] Put a Crystalia Eve token into your EX area. Once on each of your turns, when a Crystalian card is put into your EX area, draw a card. [act] [engage]: Select a Crystalia Eve in your EX area. It costs X less to play this turn. X equals the number of cards you've played this turn.",
     "cardSet": "Booster Set \"Neometropolis\""
   },
+  "Tiamat Omega": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Amulet",
+    "trait": "Granblue / Wind",
+    "rarity": "Gold",
+    "cost": "1",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[fanfare] Put 2 Wind Quartz tokens into your EX area. [act] [engage], bury this: Look at the top card of your deck. If it's a Wind card, you may reveal it and add it to your hand. [act] this only if followers you control have become uncapped and/or fully uncapped at least 3 times this turn.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Tico, Mysterian Spellnerd": {
     "class": "rune",
     "type": "base",
@@ -38842,6 +40102,42 @@
     "defense": "-",
     "effect": "Select an enemy follower on the field and deal it 4 damage. If Overflow is active for you, deal 6 damage instead.",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
+  },
+  "Tien, Treacherous Trigger": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Eternals / Fire",
+    "rarity": "Legendary",
+    "cost": "3",
+    "attack": "2",
+    "defense": "4",
+    "effect": "Whenever this is revealed from your hand, select an enemy follower on the field and deal it 1 damage. ---------- Full Uncap Unlocked. When this becomes uncapped, select an enemy follower on the field and deal it 4 damage. When this becomes fully uncapped, select a follower on your field that costs 3 or less and give it Storm.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
+  "Tikoh, Asclepian Surgeon": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Light",
+    "rarity": "Silver",
+    "cost": "1",
+    "attack": "1",
+    "defense": "1",
+    "effect": "[evolve] [cost01]: Evolve this. [fanfare] Put a Light Quartz token into your EX area. If there's a 5-cost Granblue follower on your field, give your leader [defense]+2.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
+  "Tikoh, Asclepian Surgeon Evolved": {
+    "class": "haven",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Granblue / Light",
+    "rarity": "Silver",
+    "cost": "-",
+    "attack": "2",
+    "defense": "2",
+    "effect": "On Evolve - Put a Light Quartz token into your EX area. If there's a 5-cost Granblue follower on your field, give your leader [defense]+2.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Tilting at Windmills": {
     "class": "dragon",
@@ -39467,6 +40763,18 @@
     "effect": "[fanfare] Select another Marine follower on your field and give it [attack]+1/[defense]+1. If this was played from the EX area, give [attack]+2/[defense]+2, Rush, and Assail instead.",
     "cardSet": "Combined Set \"Banquet of Dreams & Trial of the Omens\""
   },
+  "Troue, Heroic Visionary": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Water",
+    "rarity": "Bronze",
+    "cost": "2",
+    "attack": "1",
+    "defense": "3",
+    "effect": "Ward. [fanfare] Put a Water Quartz token into your EX area. Draw a card. Quick-[act] [engage]: Put a Water Quartz token into your EX area.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Troya, Thunder of Hagelberg": {
     "class": "sword",
     "type": "base",
@@ -39646,6 +40954,18 @@
     "defense": "3",
     "effect": "On Evolve: Look at the top 4 cards of your deck. You may reveal a card that costs 1 play point from among them and add it to your hand. Put the remaining cards on the bottom of your deck in any order.",
     "cardSet": "Booster Set #3 “Flame of Lævateinn”"
+  },
+  "Tweyen, Dark Huntress": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Eternals / Light",
+    "rarity": "Legendary",
+    "cost": "5",
+    "attack": "3",
+    "defense": "3",
+    "effect": "When playing this, engage two 5-cost Granblue followers on your field: This costs 5 less. ---------- Full Uncap Unlocked. When this becomes uncapped, draw 2 cards, then discard a card. When this becomes fully uncapped, give this Storm.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Twilight Blade TOKEN": {
     "class": "sword",
@@ -40511,6 +41831,18 @@
     "effect": "[fanfare] Look at the top 3 cards of your deck. You may reveal a Vampire card from among them and add it to your hand. Put the remaining cards on the bottom of your deck in any order. [act][cost01], [engage], put this card into its owner's cemetery: Summon a Forest Bat token.",
     "cardSet": "Booster Set #2 “Reign of Bahamut”"
   },
+  "Vane, Indomitable Knight TOKEN": {
+    "class": "sword",
+    "type": "token",
+    "cardType": "Follower / Token",
+    "trait": "Granblue / Wind",
+    "rarity": "-",
+    "cost": "3",
+    "attack": "2",
+    "defense": "5",
+    "effect": "[fanfare] Put a Wind Quartz token into your EX area. Give your leader [defense]+3.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Vanguard Tigress": {
     "class": "forest",
     "type": "base",
@@ -40606,6 +41938,18 @@
     "defense": "4",
     "effect": "On Evolve - Put a Dutiful Steed token into your EX area. During your turn, whenever a Mount card is put into your EX area, select an enemy follower on the field and deal it 3 damage.",
     "cardSet": "Booster Set \"Bullet of Fate\""
+  },
+  "Vaseraga, Shadowed Scythe": {
+    "class": "abyss",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Dark",
+    "rarity": "Silver",
+    "cost": "7",
+    "attack": "4",
+    "defense": "7",
+    "effect": "When this is discarded by the ability of a Dark card you control, [cost01]: Select an enemy follower on the field and deal it 3 damage. ---------- [fanfare] Select an enemy follower on the field and destroy it. When this becomes uncapped, give this \"[lastwords] Put this onto its owner's field.\"",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Vayle, Mysterian Summoner": {
     "class": "rune",
@@ -41111,6 +42455,30 @@
     "effect": "[quick] Select an enemy follower on the field. Deal it 5 damage, summon a Serpent token, and put a Serpent token into your EX area.",
     "cardSet": "Combined Set \"Worldreaver's Descent & Dominion of Darkness\""
   },
+  "Vira, Knight Fanatic": {
+    "class": "haven",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Light",
+    "rarity": "Gold",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3",
+    "effect": "[evolve] [cost01]: Evolve this. Ward. While you have at least 7 max play points, if this would take damage, it takes that much -1 instead. [fanfare] Put a Light Quartz token into your EX area.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
+  "Vira, Knight Fanatic Evolved": {
+    "class": "haven",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Granblue / Light",
+    "rarity": "Gold",
+    "cost": "-",
+    "attack": "4",
+    "defense": "4",
+    "effect": "Ward. While you have at least 7 max play points, if this would take damage, it takes that much -1 instead. On Evolve - Select an enemy follower on the field. Reveal the top 3 cards of your deck, deal damage equal to the number of Light cards revealed this way to the selected follower, add 1 of the revealed cards to your hand, and, put the rest on the bottom of your deck in any order.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Viridia Magna": {
     "class": "neutral",
     "type": "base",
@@ -41267,6 +42635,42 @@
     "effect": "[fanfare] Look at the top 2 cards of your deck. You may reveal an Academic card from among them and add it to your hand. Put the rest on the bottom of your deck in any order. The next Academic card that costs 2 or less you play this turn costs 2 less. [act] [engage], bury another card on your field: Select an enemy follower on the field. Deal it 3 damage and draw a card. Activate only if you rolled a 6-sided die this turn.",
     "cardSet": "Combined Set \"Academy Royale & Dusk of Calamity\""
   },
+  "Vyrn, Li'l Red Dragon": {
+    "class": "neutral",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / All-Element",
+    "rarity": "Gold",
+    "cost": "1",
+    "attack": "1",
+    "defense": "1",
+    "effect": "[evolve] [cost01]: Evolve this. [fanfare] If there's a Gran & Djeeta on your field, evolve this.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
+  "Vyrn, Li'l Red Dragon Evolved": {
+    "class": "neutral",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Granblue / All-Element",
+    "rarity": "Gold",
+    "cost": "-",
+    "attack": "2",
+    "defense": "2",
+    "effect": "On Evolve - Put a Gold Brick token into your EX area.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
+  "Walder, Forest Ranger": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Earth",
+    "rarity": "Bronze",
+    "cost": "1",
+    "attack": "2",
+    "defense": "1",
+    "effect": "While there are at least 4 faceup evolved Earth followers in your evolve deck, this has Rush and \"Strike - Put an Earth Quartz token into your EX area.\" [fanfare] Put an Earth Quartz token into your EX area. You may turn a facedown evolved Earth follower in your evolve deck faceup.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Waltzing Fairy": {
     "class": "forest",
     "type": "base",
@@ -41278,6 +42682,30 @@
     "defense": "3",
     "effect": "[fanfare][lastwords] Put a Fairy token into your EX area.",
     "cardSet": "Starter Deck #1 “Regal Fairy Princess”"
+  },
+  "Wamdus, Water Personified": {
+    "class": "rune",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Six-Dragon / Earth",
+    "rarity": "Legendary",
+    "cost": "3",
+    "attack": "1",
+    "defense": "3",
+    "effect": "[evolve] [cost01]: Evolve this. [fanfare] Look at the top 3 cards of your deck. You may reveal up to 2 spells with Quick and/or followers with Quick-[act] from among them and add them to your hand. Bury the rest. Quick-[act] [cost01], discard this: Select an enemy follower on the field and deal it 2 damage.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
+  "Wamdus, Water Personified Evolved": {
+    "class": "rune",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Granblue / Six-Dragon / Earth",
+    "rarity": "Legendary",
+    "cost": "-",
+    "attack": "2",
+    "defense": "4",
+    "effect": "On Super-Evolve - Give this \"Any spell with Quick, follower with Quick-Activate, or Quick-[act] ability you play costs 1 less.\" At the start of your end phase, recover 3 play points.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Wandering Chef": {
     "class": "neutral",
@@ -41554,6 +42982,18 @@
     "defense": "3",
     "effect": "[ride] [cost01]: Give this follower Drive. On Drive - Give this follower [attack]+1/[defense]+1. Search your deck for up to two 1-cost Aqua Force followers with different names, reveal them, add them to your hand, then shuffle.",
     "cardSet": "Crossover Set \"Cardfight!! Vanguard\""
+  },
+  "Water Quartz TOKEN": {
+    "class": "neutral",
+    "type": "token",
+    "cardType": "Treasure / Token",
+    "trait": "Granblue / Water",
+    "rarity": "-",
+    "cost": "-",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[act] [cost00]: Select a Water follower on your field and uncap it. If it has Full Uncap Unlocked and is uncapped, fully uncap it instead. (Put this from your EX area underneath the selected follower. Uncapped followers get [attack]+1. Fully uncapped followers get [attack]+1/[defense]+1)",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Waters of the Megalorca": {
     "class": "dragon",
@@ -42011,6 +43451,30 @@
     "effect": "[fanfare] Select an enemy follower on the field and deal it 4 damage. [act] [cost02], [engage]: Select an enemy follower on the field and deal it 4 damage.",
     "cardSet": "Booster Set \"New World Genesis\""
   },
+  "Wilnas, Flame Personified": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Six-Dragon / Fire",
+    "rarity": "Legendary",
+    "cost": "4",
+    "attack": "4",
+    "defense": "4",
+    "effect": "[evolve] [cost01]: Evolve this. [fanfare] Look at the top card of your deck. If it's a Fire card, you may reveal it and add it to your hand.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
+  "Wilnas, Flame Personified Evolved": {
+    "class": "dragon",
+    "type": "evolved",
+    "cardType": "Follower / Evolved",
+    "trait": "Granblue / Six Dragons / Fire",
+    "rarity": "Legendary",
+    "cost": "-",
+    "attack": "5",
+    "defense": "5",
+    "effect": "On Evolve - Reveal X Fire cards from your hand: Select up to 2 enemy followers on the field and deal X damage divided between them. On Super-Evolve - Reveal X Fire cards from your hand: Select an enemy follower on the field. Deal X damage to it and its leader.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Wily Puck": {
     "class": "forest",
     "type": "base",
@@ -42070,6 +43534,18 @@
     "defense": "5",
     "effect": "[fanfare] Select a follower on your field and give it [attack]+1. At the start of your end phase, give each follower on your field [attack]+1.",
     "cardSet": "Booster Set #1 “Advent of Genesis”"
+  },
+  "Wind Quartz TOKEN": {
+    "class": "neutral",
+    "type": "token",
+    "cardType": "Treasure / Token",
+    "trait": "Granblue / Wind",
+    "rarity": "-",
+    "cost": "-",
+    "attack": "-",
+    "defense": "-",
+    "effect": "[act] [cost00]: Select a Wind follower on your field and uncap it. If it has Full Uncap Unlocked and is uncapped, fully uncap it instead. (Put this from your EX area underneath the selected follower. Uncapped followers get [attack]+1. Fully uncapped followers get [attack]+1/[defense]+1)",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Windbloom Sylph": {
     "class": "forest",
@@ -43019,6 +44495,18 @@
     "effect": "Select an enemy follower on the field and a Togh Keyoh follower on your field. Destroy the first follower and give the second Storm.",
     "cardSet": "Booster Set \"Neometropolis\""
   },
+  "Yuel & Societte, Dancing Duo": {
+    "class": "forest",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Fire / Water",
+    "rarity": "Legendary",
+    "cost": "3",
+    "attack": "3",
+    "defense": "3",
+    "effect": "[fanfare] Reveal 3 Fire cards from your hand: Select an enemy follower on the field. Deal 3 to it and its leader. Quick-[act] [cost01], discard this: Select an enemy follower on the field and deal it 4 damage. Activate only if another Quick-[act] you control has executed this turn.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Yui": {
     "class": "haven",
     "type": "base",
@@ -43643,6 +45131,18 @@
     "effect": "[fanfare] If you have 2 or less cards in your hand, search your deck for up to 1 Paracelise, Demon of Greed and put it into your EX area. It costs 3 less to play this turn if you have no cards in your hand. [act] [cost01]: Put this card from your hand into your EX area: Give your leader [defense]+1.",
     "cardSet": "Booster Set \"Eightfold Retribution\""
   },
+  "Zeta, Crimson Lancer": {
+    "class": "sword",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Fire",
+    "rarity": "Gold",
+    "cost": "5",
+    "attack": "4",
+    "defense": "4",
+    "effect": "Storm. Full Uncap Unlocked. When this becomes uncapped, give this \"Strike - Select an enemy follower on the field and deal it 5 damage.\" When this becomes fully uncapped, give this \"Strike - Deal 2 damage to each enemy follower on the field.\"",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
+  },
   "Zirconia, Ironcrown Ward": {
     "class": "sword",
     "type": "base",
@@ -43798,6 +45298,18 @@
     "defense": "1",
     "effect": "[fanfare] Select an enemy follower on the field. If your leader has gained at least 4 defense this turn, destroy it and draw a card.",
     "cardSet": "Showdown Deck: Havencraft"
+  },
+  "Zooey, Arbiter of the Skies": {
+    "class": "dragon",
+    "type": "base",
+    "cardType": "Follower",
+    "trait": "Granblue / Light",
+    "rarity": "Legendary",
+    "cost": "5",
+    "attack": "5",
+    "defense": "5",
+    "effect": "Full Uncap Unlocked. When this becomes uncapped, select an enemy follower on the field and deal it 5 damage. Increase your max play points by 1. When this becomes fully uncapped, [cost01]: Give each other 5-cost Granblue follower on your field [attack]+2/[defense]+2.",
+    "cardSet": "Crossover Set \"Granblue Fantasy\""
   },
   "Zwei, Murderous Puppet": {
     "class": "forest",

@@ -9,7 +9,7 @@
  * includes alt-art Ultimate/Special/Super-Legend/Premium/Promo versions) and
  * falls back to the deduped <SET>-cards.json. Entries are keyed/de-duped by card
  * NUMBER, so a card bundled into more than one expansion's search results is
- * counted once. Tokens are excluded: they're never shown in the deck builder.
+ * counted once. Tokens are included so the Tokens tab can be filtered by Set.
  *
  * The Game does not read this file; it only feeds the deck-builder pool view.
  *
@@ -52,7 +52,6 @@ for (const f of files) {
   const cards = JSON.parse(fs.readFileSync(path.join(SCRIPTS_DIR, f), "utf8"));
   for (const c of cards) {
     if (!c.cardNo || !c.name) continue;
-    if (c.type === "token" || c.name.endsWith(" TOKEN")) continue; // never in the builder
     const dc = c.details || {};
     if ((dc.cardType || "").toLowerCase().includes("leader")) continue; // leaders aren't deckable
     if (byNo[c.cardNo]) continue;

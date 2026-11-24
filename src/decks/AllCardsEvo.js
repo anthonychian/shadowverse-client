@@ -1,4 +1,30 @@
 export const allCardsEvo = [
+  "Ewiyar, Wind Personified Evolved",
+  "Korwa, Ravishing Designer Evolved",
+  "Cucouroux, Green Gunsmith Evolved",
+  "Anthuria, Toe-Tapping Torch Evolved",
+  "Lu Woh, Light Personified Evolved",
+  "Narmaya, Ephemeral Blade Evolved",
+  "Mirin, Samurai Dreamer Evolved",
+  "Fiorito, Muscles in Bloom Evolved",
+  "Wamdus, Water Personified Evolved",
+  "Cagliostro, Adorable Genius Evolved",
+  "Arulumaya, Mystic Seer Evolved",
+  "Lunalu, Fangirl A Evolved",
+  "Wilnas, Flame Personified Evolved",
+  "Meg, Girl Next Door Evolved",
+  "Mugen, Steel-Bodied Honesty Evolved",
+  "Aliza, Pugilist Princess Evolved",
+  "Fediel, Darkness Personified Evolved",
+  "Ferry, Spirit Maiden Evolved",
+  "Danua, Grim Puppetmaster Evolved",
+  "Lady Grey, Deathweaver Evolved",
+  "Galleon, Earth Personified Evolved",
+  "Vira, Knight Fanatic Evolved",
+  "Tikoh, Asclepian Surgeon Evolved",
+  "Sophia, Pious Pilgrim Evolved",
+  "Sandalphon, Primarch Successor Evolved",
+  "Vyrn, Li'l Red Dragon Evolved",
   "Aerin, Forever Brilliant Evolved",
   "Flower Fox Evolved",
   "Wellspring Elf Princess Evolved",
@@ -1636,6 +1662,11 @@ export const forestEvo = [
   "Flower Fox Evolved",
   "Wellspring Elf Princess Evolved",
   "Coldhearted Dark Elf Evolved",
+
+  "Ewiyar, Wind Personified Evolved",
+  "Korwa, Ravishing Designer Evolved",
+  "Cucouroux, Green Gunsmith Evolved",
+  "Anthuria, Toe-Tapping Torch Evolved",
 ];
 
 export const swordEvo = [
@@ -1762,6 +1793,11 @@ export const swordEvo = [
   "Assault Knight Evolved",
   "Axe Pirate Evolved",
   "Calculating Captain Evolved",
+
+  "Lu Woh, Light Personified Evolved",
+  "Narmaya, Ephemeral Blade Evolved",
+  "Mirin, Samurai Dreamer Evolved",
+  "Fiorito, Muscles in Bloom Evolved",
 ];
 
 export const runeEvo = [
@@ -1891,6 +1927,11 @@ export const runeEvo = [
   "Witching Moggy Evolved",
   "Elina, Winged Evangelist Evolved",
   "Blade Mage Evolved",
+
+  "Wamdus, Water Personified Evolved",
+  "Cagliostro, Adorable Genius Evolved",
+  "Arulumaya, Mystic Seer Evolved",
+  "Lunalu, Fangirl A Evolved",
 ];
 
 export const dragonEvo = [
@@ -2025,6 +2066,11 @@ export const dragonEvo = [
   "Coral Spirit Evolved",
   "Hailwyrm Evolved",
   "Oguri Cap [Surging Beast] Evolved",
+
+  "Wilnas, Flame Personified Evolved",
+  "Meg, Girl Next Door Evolved",
+  "Mugen, Steel-Bodied Honesty Evolved",
+  "Aliza, Pugilist Princess Evolved",
 ];
 
 export const abyssEvo = [
@@ -2149,6 +2195,11 @@ export const abyssEvo = [
   "Suzy, Hexcaster Evolved",
   "Scarlet Vampire Evolved",
   "Thunderbolt Fiend Evolved",
+
+  "Fediel, Darkness Personified Evolved",
+  "Ferry, Spirit Maiden Evolved",
+  "Danua, Grim Puppetmaster Evolved",
+  "Lady Grey, Deathweaver Evolved",
 ];
 
 export const havenEvo = [
@@ -2274,6 +2325,12 @@ export const havenEvo = [
   "Sacred Lion Evolved",
   "Carmia, Miracle Optimist Evolved",
   "Holy Kitty Evolved",
+
+  "Galleon, Earth Personified Evolved",
+  "Vira, Knight Fanatic Evolved",
+  "Tikoh, Asclepian Surgeon Evolved",
+  "Sophia, Pious Pilgrim Evolved",
+
 ];
 
 export const neutralEvo = [
@@ -2375,6 +2432,10 @@ export const neutralEvo = [
   "Lucius, Travelled Trainer Evolved",
 
   "Goblin Leader Evolved",
+
+  "Sandalphon, Primarch Successor Evolved",
+  "Vyrn, Li'l Red Dragon Evolved",
+
 ];
 
 export const set17Evo = [
@@ -2890,4 +2951,35 @@ export const set22Evo = [
   "Holy Kitty Evolved",
   "Goblin Leader Evolved",
   "Oguri Cap [Surging Beast] Evolved",
+];
+
+export const set05Evo = [
+  "Ewiyar, Wind Personified Evolved",
+  "Korwa, Ravishing Designer Evolved",
+  "Cucouroux, Green Gunsmith Evolved",
+  "Anthuria, Toe-Tapping Torch Evolved",
+  "Lu Woh, Light Personified Evolved",
+  "Narmaya, Ephemeral Blade Evolved",
+  "Mirin, Samurai Dreamer Evolved",
+  "Fiorito, Muscles in Bloom Evolved",
+  "Wamdus, Water Personified Evolved",
+  "Cagliostro, Adorable Genius Evolved",
+  "Arulumaya, Mystic Seer Evolved",
+  "Lunalu, Fangirl A Evolved",
+  "Wilnas, Flame Personified Evolved",
+  "Meg, Girl Next Door Evolved",
+  "Mugen, Steel-Bodied Honesty Evolved",
+  "Aliza, Pugilist Princess Evolved",
+  "Fediel, Darkness Personified Evolved",
+  "Ferry, Spirit Maiden Evolved",
+  "Danua, Grim Puppetmaster Evolved",
+  "Lady Grey, Deathweaver Evolved",
+  "Galleon, Earth Personified Evolved",
+  "Vira, Knight Fanatic Evolved",
+  "Tikoh, Asclepian Surgeon Evolved",
+  "Sophia, Pious Pilgrim Evolved",
+  "Sandalphon, Primarch Successor Evolved",
+  "Vyrn, Li'l Red Dragon Evolved",
+
+
 ];

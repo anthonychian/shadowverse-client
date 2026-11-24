@@ -28,6 +28,7 @@ import {
 } from "@mui/material";
 import { matchesFilters, hasActiveFilters, getCost, getDetails, sameNameCards, cardClass } from "../decks/cardDetails";
 import { allTokens } from "../decks/AllTokens";
+import { getCardNoFromName } from "../decks/getCards";
 import { doubleEvoOtherSide, isDoubleEvo } from "../decks/doubleEvo";
 import cardPrintings from "../decks/cardPrintings.json";
 import jpCardMap from "../decks/jpCardMap.json";
@@ -405,12 +406,34 @@ export default function CreateDeck() {
   };
 
   // card NAME -> its printings (one per set/rarity it was released in), used to
-  // expand the pool when "Exclude duplicates" is off. Tokens are excluded.
+  // expand the pool when "Exclude duplicates" is off. Tokens are included so
+  // they can be filtered by Set; a few legacy tokens have no scraped printing,
+  // so fall back to the card number used for their art.
   const printingsByName = useMemo(() => {
     const m = new Map();
     for (const p of cardPrintings) {
       if (!m.has(p.name)) m.set(p.name, []);
       m.get(p.name).push(p);
+    }
+    for (const name of allTokens) {
+      if (m.has(name)) continue;
+      const cardNo = getCardNoFromName(name);
+      if (!cardNo) continue;
+      const d = getDetails(name) || {};
+      m.set(name, [{
+        name,
+        cardNo,
+        set: cardNo.split("-")[0],
+        class: "",
+        type: "token",
+        cardType: d.cardType || "",
+        trait: d.trait || "",
+        rarity: d.rarity || "",
+        cardSet: d.cardSet || "",
+        cost: "",
+        attack: "",
+        defense: "",
+      }]);
     }
     return m;
   }, []);
@@ -418,29 +441,31 @@ export default function CreateDeck() {
   // the printing being viewed (these differ across reprints of the same card).
   const printingByNo = useMemo(() => {
     const m = new Map();
-    for (const p of cardPrintings) m.set(p.cardNo, p);
+    for (const list of printingsByName.values()) for (const p of list) m.set(p.cardNo, p);
     return m;
-  }, []);
+  }, [printingsByName]);
   // Set family of a printing: the card-number prefix with any sub-bundle letter
   // dropped (e.g. "GFB01a"/"CSD02b" -> "GFB01"/"CSD02").
   const setFamily = (code) => code.replace(/[a-z]+$/, "");
   // card NAME -> set families it has a printing in (drives the Set filter).
   const setsByName = useMemo(() => {
     const m = new Map();
-    for (const p of cardPrintings) {
-      if (!m.has(p.name)) m.set(p.name, new Set());
-      m.get(p.name).add(setFamily(p.set));
+    for (const list of printingsByName.values()) {
+      for (const p of list) {
+        if (!m.has(p.name)) m.set(p.name, new Set());
+        m.get(p.name).add(setFamily(p.set));
+      }
     }
     return m;
-  }, []);
+  }, [printingsByName]);
   // Ordered Set-filter options for the families actually present in the data.
   const setOptions = useMemo(() => {
     const present = new Set();
-    for (const p of cardPrintings) present.add(setFamily(p.set));
+    for (const list of printingsByName.values()) for (const p of list) present.add(setFamily(p.set));
     const opts = SET_CODE_ORDER.filter((c) => present.has(c)).map((c) => ({ code: c, label: SET_CODE_LABELS[c] || c }));
     for (const c of [...present].sort()) if (!SET_CODE_ORDER.includes(c)) opts.push({ code: c, label: c });
     return opts;
-  }, []);
+  }, [printingsByName]);
   const inspectedPrinting = inspectedCardNo ? printingByNo.get(inspectedCardNo) : null;
   // Every printing of the inspected card, so its rarity/art can be chosen.
   const inspectedPrintings = cardName ? printingsByName.get(cardName) || [] : [];
