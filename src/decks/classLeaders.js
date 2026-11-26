@@ -10,14 +10,15 @@
 export const CLASS_LEADERS = {
   forest: ["Sekka", "CC", "Piercye"],
   sword: ["Bunny", "Albert"],
-  rune: ["Lishenna", "Ceridwen", "Kuon"],
+  rune: ["Lishenna", "Ceridwen", "Kuon", "Amaryllis"],
   dragon: ["SiLong", "Forte", "Galmieux", "Lumiore"],
-  abyss: ["Icy", "Anisage", "Vania", "Mono", "Amy"],
-  haven: ["Rola", "Jeanne"],
+  abyss: ["Icy", "Anisage", "Vania", "Mono", "Amy", "Cernunnos"],
+  haven: ["Rola", "Jeanne", "Alexiel", "Holy Saber"],
   umamusume: ["Manhatten Cafe", "Maruzensky"],
   vanguard: ["Vanguard"],
   idolmaster: ["Rin", "Uzuki", "Mio"],
   priconne: ["Pecorine", "Karyl"],
+  grandblue: ["Korwa", "Vira", "Cagliostro", "Threo", "Silva", "Tweyen", "Feower", "Tien"],
 };
 
 // A random leader from the class's pool, or "" if the class is unknown/empty

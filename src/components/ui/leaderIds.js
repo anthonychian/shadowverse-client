@@ -32,6 +32,18 @@ export const LEADER_SPINE_IDS = {
   Mio: "3104", // Mio Honda
   Pecorine: "1002", // Princess Connect! Re:Dive
   Karyl: "1003", // Princess Connect! Re:Dive
+  Korwa: "701", // Granblue Fantasy
+  Vira: "706", // Granblue Fantasy
+  Cagliostro: "703", // Granblue Fantasy
+  Threo: "2904", // Granblue Fantasy
+  Silva: "708", // Granblue Fantasy
+  Tweyen: "2901", // Granblue Fantasy
+  Feower: "2918", // Granblue Fantasy
+  Tien: "2908", // Granblue Fantasy
+  Alexiel: "807", // Havencraft
+  "Holy Saber": "3917", // Havencraft
+  Cernunnos: "3905", // Abysscraft
+  Amaryllis: "4103", // Runecraft
 };
 
 // Per-leader size multiplier applied on top of the auto fit-to-box scaling.
@@ -57,7 +69,15 @@ export const LEADER_SPINE_SCALE = {
   Kuon: 1.2,
   Icy: 1.2, // Iceschillendrig
   Jeanne: 2.45,
+  Cernunnos: 5.50,
+  Amaryllis: 1.20,
   Rin: 1.9,
+  Tien: 3.00,
+  Tweyen: 1.80,
+  Korwa: 1.20,
+  Vira: 1.20,
+  Threo: 1.30,
+  Silva: 1.30,
 };
 
 export const leaderSpineScale = (name) => LEADER_SPINE_SCALE[name] || 1;
@@ -67,6 +87,12 @@ export const leaderSpineScale = (name) => LEADER_SPINE_SCALE[name] || 1;
 // when a skeleton's bounding box doesn't sit where the visible character is.
 export const LEADER_SPINE_OFFSET_Y = {
   Galmieux: -0.54,
+  Amaryllis: 0.10,
+  Tien: 0.20,
+  Tweyen: -0.70,
+  Threo: -0.30,
+  Cagliostro: 0.10,
+  Feower: 0.10,
 };
 
 export const leaderSpineOffsetY = (name) => LEADER_SPINE_OFFSET_Y[name] || 0;
@@ -77,6 +103,11 @@ export const LEADER_SPINE_OFFSET_X = {
   Galmieux: 0.76,
   Icy: -0.3,
   Rin: -0.7,
+  Amaryllis: -0.10,
+  Tien: 0.90,
+  Tweyen: 0.30,
+  Cagliostro: -0.10,
+  Korwa: -0.10,
 };
 
 export const leaderSpineOffsetX = (name) => LEADER_SPINE_OFFSET_X[name] || 0;
@@ -97,6 +128,18 @@ export const SVGDB_LEADER_PORTRAIT = {
   Amy: "https://svgdb.me/assets/leader/class_3305_base.png",
   Pecorine: "https://svgdb.me/assets/leader/class_1002_base.png",
   Karyl: "https://svgdb.me/assets/leader/class_1003_base.png",
+  Korwa: "https://svgdb.me/assets/leader/class_701_base.png",
+  Vira: "https://svgdb.me/assets/leader/class_706_base.png",
+  Cagliostro: "https://svgdb.me/assets/leader/class_703_base.png",
+  Threo: "https://svgdb.me/assets/leader/class_2904_base.png",
+  Silva: "https://svgdb.me/assets/leader/class_708_base.png",
+  Tweyen: "https://svgdb.me/assets/leader/class_2901_base.png",
+  Feower: "https://svgdb.me/assets/leader/class_2918_base.png",
+  Tien: "https://svgdb.me/assets/leader/class_2908_base.png",
+  Alexiel: "https://svgdb.me/assets/leader/class_807_base.png",
+  "Holy Saber": "https://svgdb.me/assets/leader/class_3917_base.png",
+  Cernunnos: "https://svgdb.me/assets/leader/class_3905_base.png",
+  Amaryllis: "https://svgdb.me/assets/leader/class_4103_base.png",
 };
 
 export const SPINE_ANIM_BASE = "https://svgdb.me/assets/anim";

@@ -57,6 +57,7 @@ const collabClass = (name) => {
   if (/Vanguard/i.test(t)) return "vanguard";
   if (/iM@S/i.test(t)) return "idolmaster";
   if (/Umamusume|Tracen Academy/i.test(t)) return "umamusume";
+  if (/Granblue/i.test(t)) return "grandblue";
   return null;
 };
 

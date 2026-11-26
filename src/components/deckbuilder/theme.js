@@ -29,6 +29,7 @@ export const CLASS_LABELS = {
   umamusume: "Umamusume: Pretty Derby",
   vanguard: "Cardfight!! Vanguard",
   priconne: "Princess Connect! Re:Dive",
+  grandblue: "Grandblue Fantasy",
 };
 
 // Class accent colors for chips / borders.
@@ -44,6 +45,7 @@ export const CLASS_COLORS = {
   umamusume: "#e8913a",
   vanguard: "#e02020",
   priconne: "#f06ba8",
+  grandblue: "#5da9e9",
 };
 
 // Human-readable set names, keyed by the filter value used in CreateDeck.
@@ -156,5 +158,5 @@ export const CLASS_ORDER = [
 // Deck Class dropdown: crafts plus the collab classes (a whole deck can be a
 // collab class even though the pool filter doesn't need a pill for them).
 export const DECK_CLASS_ORDER = [
-  ...CLASS_ORDER, "idolmaster", "umamusume", "vanguard", "priconne",
+  ...CLASS_ORDER, "idolmaster", "umamusume", "vanguard", "priconne", "grandblue",
 ];

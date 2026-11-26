@@ -11,6 +11,8 @@ import haven from "../../assets/logo/haven.png";
 import idolmaster from "../../assets/logo/idolmaster.png";
 import umamusume from "../../assets/logo/umamusume.png";
 import vanguard from "../../assets/logo/vanguard.png";
+import priconne from "../../assets/logo/priconne.webp";
+import grandblue from "../../assets/logo/grandblue.png";
 
 // Map a deck's `class` field to its craft/collab icon. Unknown/neutral has no
 // entry and falls back to a neutral placeholder in classIcon().
@@ -24,6 +26,8 @@ const CLASS_ICONS = {
   idolmaster,
   umamusume,
   vanguard,
+  priconne,
+  grandblue,
 };
 
 function classIcon(deckClass) {

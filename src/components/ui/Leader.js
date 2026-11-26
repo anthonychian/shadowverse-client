@@ -133,6 +133,42 @@ export default function Leader({
     case "Karyl":
       image = SVGDB_LEADER_PORTRAIT.Karyl;
       break;
+    case "Korwa":
+      image = SVGDB_LEADER_PORTRAIT.Korwa;
+      break;
+    case "Vira":
+      image = SVGDB_LEADER_PORTRAIT.Vira;
+      break;
+    case "Cagliostro":
+      image = SVGDB_LEADER_PORTRAIT.Cagliostro;
+      break;
+    case "Threo":
+      image = SVGDB_LEADER_PORTRAIT.Threo;
+      break;
+    case "Silva":
+      image = SVGDB_LEADER_PORTRAIT.Silva;
+      break;
+    case "Tweyen":
+      image = SVGDB_LEADER_PORTRAIT.Tweyen;
+      break;
+    case "Feower":
+      image = SVGDB_LEADER_PORTRAIT.Feower;
+      break;
+    case "Tien":
+      image = SVGDB_LEADER_PORTRAIT.Tien;
+      break;
+    case "Alexiel":
+      image = SVGDB_LEADER_PORTRAIT.Alexiel;
+      break;
+    case "Holy Saber":
+      image = SVGDB_LEADER_PORTRAIT["Holy Saber"];
+      break;
+    case "Cernunnos":
+      image = SVGDB_LEADER_PORTRAIT.Cernunnos;
+      break;
+    case "Amaryllis":
+      image = SVGDB_LEADER_PORTRAIT.Amaryllis;
+      break;
     default:
       image = imageGalmieux;
   }

@@ -11,6 +11,7 @@ import {
   setIDOL,
   setIDOL2,
   setVG,
+  set05,
 } from "./AllCards";
 import {
   forestEvo,
@@ -25,6 +26,7 @@ import {
   setIDOLEvo,
   setIDOL2Evo,
   setVGEvo,
+  set05Evo,
 } from "./AllCardsEvo";
 
 const CRAFT_LEADERS = {
@@ -40,6 +42,7 @@ const UNIVERSE_LEADERS = {
   umamusume: "Maruzensky",
   idolmaster: "Rin",
   vanguard: "Albert",
+  grandblue: "Korwa",
 };
 
 function buildNameSet(lists) {
@@ -78,6 +81,7 @@ const universeSets = {
   umamusume: buildNameSet([setUMA, setUMA2, setUMAEvo, setUMA2Evo]),
   idolmaster: buildNameSet([setIDOL, setIDOL2, setIDOLEvo, setIDOL2Evo]),
   vanguard: buildNameSet([setVG, setVGEvo]),
+  grandblue: buildNameSet([set05, set05Evo]),
 };
 
 function leaderForCraft(craft) {

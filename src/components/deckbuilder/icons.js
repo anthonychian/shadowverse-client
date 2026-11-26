@@ -9,6 +9,7 @@ import idolmaster from "../../assets/logo/idolmaster.png";
 import umamusume from "../../assets/logo/umamusume.png";
 import vanguard from "../../assets/logo/vanguard.png";
 import priconne from "../../assets/logo/priconne.webp";
+import grandblue from "../../assets/logo/grandblue.png";
 
 // The small icons ship as data URIs (src/scripts/inline-icons.js) so they cost
 // no requests: a single inspector view would otherwise fetch a cost gem, two
@@ -41,7 +42,7 @@ const CLASS_TOKEN = {
 
 // Collab classes aren't in the scraped icon manifest — use the official logos
 // bundled under assets/logo.
-const COLLAB_ICON = { idolmaster, umamusume, vanguard, priconne };
+const COLLAB_ICON = { idolmaster, umamusume, vanguard, priconne, grandblue };
 
 export const classIcon = (cls) => COLLAB_ICON[cls] || iconUrl(CLASS_TOKEN[cls]);
 export const ATTACK_ICON = iconUrl("[attack]");

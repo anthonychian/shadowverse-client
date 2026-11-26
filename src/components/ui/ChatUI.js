@@ -23,6 +23,7 @@ import umamusume from "../../assets/logo/umamusume.png";
 import idolmaster from "../../assets/logo/idolmaster.png";
 import vanguard from "../../assets/logo/vanguard.png";
 import priconne from "../../assets/logo/priconne.webp";
+import grandblue from "../../assets/logo/grandblue.png";
 
 // Shared palette, lifted from the Home "Announcements" board so the in-game chat
 // reads as the same product surface: a dark translucent panel with a cyan-blue
@@ -87,6 +88,8 @@ const CLASS_LOGO = {
   Galmieux: dragon,
   Jeanne: haven,
   Rola: haven,
+  Alexiel: haven,
+  "Holy Saber": haven,
   Sekka: forest,
   Hozumi: forest,
   CC: forest,
@@ -99,10 +102,12 @@ const CLASS_LOGO = {
   Vania: abyss,
   Mono: abyss,
   Amy: abyss,
+  Cernunnos: abyss,
   Lishenna: rune,
   Ceridwen: rune,
   Kuon: rune,
   Daria: rune,
+  Amaryllis: rune,
   "Manhatten Cafe": umamusume,
   Maruzensky: umamusume,
   Rin: idolmaster,
@@ -111,6 +116,14 @@ const CLASS_LOGO = {
   Vanguard: vanguard,
   Pecorine: priconne,
   Karyl: priconne,
+  Korwa: grandblue,
+  Vira: grandblue,
+  Cagliostro: grandblue,
+  Threo: grandblue,
+  Silva: grandblue,
+  Tweyen: grandblue,
+  Feower: grandblue,
+  Tien: grandblue,
 };
 const classLogo = (leader) => CLASS_LOGO[leader] || dragon;
 

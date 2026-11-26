@@ -864,6 +864,22 @@ export default function Selection({ setSelectedOption, setHovering, setPreviewDe
                 selectLeader(e);
               }}
             >
+              <img
+                width="100px"
+                src={SVGDB_LEADER_PORTRAIT.Amaryllis}
+                alt="Amaryllis"
+              />
+            </IconButton>
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectLeader(e);
+              }}
+            >
               <img width="100px" src={imageSekka} alt="Sekka" />
             </IconButton>
             <IconButton
@@ -964,6 +980,22 @@ export default function Selection({ setSelectedOption, setHovering, setPreviewDe
                 selectLeader(e);
               }}
             >
+              <img
+                width="100px"
+                src={SVGDB_LEADER_PORTRAIT.Cernunnos}
+                alt="Cernunnos"
+              />
+            </IconButton>
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectLeader(e);
+              }}
+            >
               <img width="100px" src={imageRola} alt="Rola" />
             </IconButton>
             <IconButton
@@ -977,6 +1009,38 @@ export default function Selection({ setSelectedOption, setHovering, setPreviewDe
               }}
             >
               <img width="100px" src={imageJeanne} alt="Jeanne" />
+            </IconButton>
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectLeader(e);
+              }}
+            >
+              <img
+                width="100px"
+                src={SVGDB_LEADER_PORTRAIT.Alexiel}
+                alt="Alexiel"
+              />
+            </IconButton>
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectLeader(e);
+              }}
+            >
+              <img
+                width="100px"
+                src={SVGDB_LEADER_PORTRAIT["Holy Saber"]}
+                alt="Holy Saber"
+              />
             </IconButton>
             <IconButton
               sx={{
@@ -1052,7 +1116,7 @@ export default function Selection({ setSelectedOption, setHovering, setPreviewDe
                 selectLeader(e);
               }}
             >
-              <img width="100px" src={imageVanguard} alt="Vanguard" />
+              <img width="84px" src={imageVanguard} alt="Vanguard" />
             </IconButton>
             <IconButton
               sx={{
@@ -1084,6 +1148,134 @@ export default function Selection({ setSelectedOption, setHovering, setPreviewDe
                 width="100px"
                 src={SVGDB_LEADER_PORTRAIT.Karyl}
                 alt="Karyl"
+              />
+            </IconButton>
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectLeader(e);
+              }}
+            >
+              <img
+                width="100px"
+                src={SVGDB_LEADER_PORTRAIT.Korwa}
+                alt="Korwa"
+              />
+            </IconButton>
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectLeader(e);
+              }}
+            >
+              <img
+                width="100px"
+                src={SVGDB_LEADER_PORTRAIT.Vira}
+                alt="Vira"
+              />
+            </IconButton>
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectLeader(e);
+              }}
+            >
+              <img
+                width="100px"
+                src={SVGDB_LEADER_PORTRAIT.Cagliostro}
+                alt="Cagliostro"
+              />
+            </IconButton>
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectLeader(e);
+              }}
+            >
+              <img
+                width="100px"
+                src={SVGDB_LEADER_PORTRAIT.Threo}
+                alt="Threo"
+              />
+            </IconButton>
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectLeader(e);
+              }}
+            >
+              <img
+                width="100px"
+                src={SVGDB_LEADER_PORTRAIT.Silva}
+                alt="Silva"
+              />
+            </IconButton>
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectLeader(e);
+              }}
+            >
+              <img
+                width="100px"
+                src={SVGDB_LEADER_PORTRAIT.Tweyen}
+                alt="Tweyen"
+              />
+            </IconButton>
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectLeader(e);
+              }}
+            >
+              <img
+                width="100px"
+                src={SVGDB_LEADER_PORTRAIT.Feower}
+                alt="Feower"
+              />
+            </IconButton>
+            <IconButton
+              sx={{
+                "&:hover": { backgroundColor: "rgba(255, 255, 255, 0.2)" },
+                color: "white",
+                backgroundColor: "rgba(0, 0, 0, 0.6)",
+              }}
+              onClick={(e) => {
+                selectLeader(e);
+              }}
+            >
+              <img
+                width="100px"
+                src={SVGDB_LEADER_PORTRAIT.Tien}
+                alt="Tien"
               />
             </IconButton>
           </Card>

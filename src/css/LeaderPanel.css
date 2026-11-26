@@ -23,30 +23,13 @@
   transform: translateY(-24px);
 }
 
-.classBadge {
-  position: absolute;
-  top: 56px;
-  left: 4px;
-  z-index: 4;
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: radial-gradient(
-    circle at 50% 35%,
-    rgba(45, 45, 62, 0.82),
-    rgba(0, 0, 0, 0.8)
-  );
-  box-shadow:
-    0 0 0 2px rgba(255, 255, 255, 0.16),
-    0 3px 10px rgba(0, 0, 0, 0.55);
-}
-.classBadge img {
-  width: 32px;
-  height: 32px;
-  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.6));
+.classIconInline {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  align-self: center;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6));
 }
 
 .wifiBadge {

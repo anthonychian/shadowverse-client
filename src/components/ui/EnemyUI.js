@@ -13,6 +13,7 @@ import umamusume from "../../assets/logo/umamusume.png";
 import idolmaster from "../../assets/logo/idolmaster.png";
 import vanguard from "../../assets/logo/vanguard.png";
 import priconne from "../../assets/logo/priconne.webp";
+import grandblue from "../../assets/logo/grandblue.png";
 
 import { styled } from "@mui/material/styles";
 import Rating from "@mui/material/Rating";
@@ -91,6 +92,10 @@ export default function EnemyUI({ compact = false, stageScale }) {
         return "linear-gradient(to top, #c79081 0%, #dfa579 100%)";
       case "Rola":
         return "linear-gradient(to top, #c79081 0%, #dfa579 100%)";
+      case "Alexiel":
+        return "linear-gradient(to top, #c79081 0%, #dfa579 100%)";
+      case "Holy Saber":
+        return "linear-gradient(to top, #c79081 0%, #dfa579 100%)";
       case "CC":
         return "linear-gradient(-60deg, #16a085 0%, #f4d03f 100%)";
       case "Orchis":
@@ -115,9 +120,13 @@ export default function EnemyUI({ compact = false, stageScale }) {
         return "linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(247, 30, 30) 100.3%)";
       case "Amy":
         return "linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(247, 30, 30) 100.3%)";
+      case "Cernunnos":
+        return "linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(247, 30, 30) 100.3%)";
       case "Kuon":
         return "linear-gradient(181deg, rgb(2, 0, 97) 15%, rgb(97, 149, 219) 158.5%)";
       case "Daria":
+        return "linear-gradient(181deg, rgb(2, 0, 97) 15%, rgb(97, 149, 219) 158.5%)";
+      case "Amaryllis":
         return "linear-gradient(181deg, rgb(2, 0, 97) 15%, rgb(97, 149, 219) 158.5%)";
       case "Manhatten Cafe":
         return "linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(247, 30, 30) 100.3%)";
@@ -135,6 +144,22 @@ export default function EnemyUI({ compact = false, stageScale }) {
         return "linear-gradient(120deg, #f6a6c1 0%, #f06ba8 100%)";
       case "Karyl":
         return "linear-gradient(120deg, #f6a6c1 0%, #f06ba8 100%)";
+      case "Korwa":
+        return "linear-gradient(to right, #1f6fba, #5da9e9)";
+      case "Vira":
+        return "linear-gradient(to right, #1f6fba, #5da9e9)";
+      case "Cagliostro":
+        return "linear-gradient(to right, #1f6fba, #5da9e9)";
+      case "Threo":
+        return "linear-gradient(to right, #1f6fba, #5da9e9)";
+      case "Silva":
+        return "linear-gradient(to right, #1f6fba, #5da9e9)";
+      case "Tweyen":
+        return "linear-gradient(to right, #1f6fba, #5da9e9)";
+      case "Feower":
+        return "linear-gradient(to right, #1f6fba, #5da9e9)";
+      case "Tien":
+        return "linear-gradient(to right, #1f6fba, #5da9e9)";
       default:
         return "linear-gradient(to right, rgb(252, 74, 26), rgb(247, 183, 51))";
     }
@@ -153,6 +178,10 @@ export default function EnemyUI({ compact = false, stageScale }) {
         return haven;
       case "Rola":
         return haven;
+      case "Alexiel":
+        return haven;
+      case "Holy Saber":
+        return haven;
       case "Sekka":
         return forest;
       case "Hozumi":
@@ -177,6 +206,8 @@ export default function EnemyUI({ compact = false, stageScale }) {
         return abyss;
       case "Amy":
         return abyss;
+      case "Cernunnos":
+        return abyss;
       case "Lishenna":
         return rune;
       case "Ceridwen":
@@ -184,6 +215,8 @@ export default function EnemyUI({ compact = false, stageScale }) {
       case "Kuon":
         return rune;
       case "Daria":
+        return rune;
+      case "Amaryllis":
         return rune;
       case "Manhatten Cafe":
         return umamusume;
@@ -201,6 +234,22 @@ export default function EnemyUI({ compact = false, stageScale }) {
         return priconne;
       case "Karyl":
         return priconne;
+      case "Korwa":
+        return grandblue;
+      case "Vira":
+        return grandblue;
+      case "Cagliostro":
+        return grandblue;
+      case "Threo":
+        return grandblue;
+      case "Silva":
+        return grandblue;
+      case "Tweyen":
+        return grandblue;
+      case "Feower":
+        return grandblue;
+      case "Tien":
+        return grandblue;
       default:
         return dragon;
     }
@@ -370,6 +419,12 @@ export default function EnemyUI({ compact = false, stageScale }) {
         <span className="hpValue">{reduxEnemyHealth}</span>
       </div>
 
+      <img
+        className="classIconInline"
+        src={getClassFromLeader(reduxEnemyLeader)}
+        alt={reduxEnemyLeader}
+      />
+
       <div className="ppEpStack">
         <div className="ppPill">
           {reduxCurrentEnemyPlayPoints} / {reduxMaxEnemyPlayPoints}
@@ -421,12 +476,7 @@ export default function EnemyUI({ compact = false, stageScale }) {
         side="enemy"
       />
 
-      <div className="classBadge">
-        <img
-          src={getClassFromLeader(reduxEnemyLeader)}
-          alt={reduxEnemyLeader}
-        />
-      </div>
+
 
     </div>
   );
