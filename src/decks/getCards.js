@@ -36,20 +36,32 @@ const rawArtImage = (cardName, art) =>
 export const artImage = (cardName, art) =>
   optimizeFull(rawArtImage(cardName, art));
 
+const SETS_WITHOUT_THUMBNAILS = new Set(["CP05"]);
+const isSetWithoutThumbnails = (setCode) =>
+  SETS_WITHOUT_THUMBNAILS.has(
+    (setCode || "").toUpperCase().match(/^[A-Z]+0*\d+/)?.[0] || "",
+  );
+
 // Rewrite a full-size texture URL to its lightweight thumbnail
 // (".../textures/thumbs/X.png"). Non-texture paths (require()'d assets, etc.)
 // pass through unchanged. Use for many-at-once card displays (hand/field/etc.);
 // keep the full-size image for the large hover preview. Matching on the
 // "/textures/" segment rather than the origin is what lets this work for both
 // the R2 bucket and a same-origin fallback.
-export const toThumb = (src) =>
-  optimizeThumb(
-    withVersion(
-      src && src.includes("/textures/") && !src.includes("/textures/thumbs/")
-        ? src.replace("/textures/", "/textures/thumbs/")
-        : src,
-    ),
-  );
+export const toThumb = (src) => {
+  if (!src) return src;
+  const versioned = withVersion(src);
+  if (
+    !versioned.includes("/textures/") ||
+    versioned.includes("/textures/thumbs/")
+  ) {
+    return optimizeThumb(versioned);
+  }
+  const cardNo = versioned.match(/\/textures\/([^/?#]+)\.png/)?.[1] || "";
+  return isSetWithoutThumbnails(cardNo)
+    ? optimizeFull(versioned)
+    : optimizeThumb(versioned.replace("/textures/", "/textures/thumbs/"));
+};
 
 // Thumbnail variant of artImage, honoring the per-card art choice.
 export const artThumb = (cardName, art) => toThumb(rawArtImage(cardName, art));
@@ -61,7 +73,9 @@ export const cardImageSrc = (cardName) =>
 export const cardNoImage = (cardNo) =>
   optimizeFull(withVersion(`${TEXTURES_BASE}${cardNo}.png`));
 export const cardNoThumb = (cardNo) =>
-  optimizeThumb(withVersion(`${TEXTURES_BASE}thumbs/${cardNo}.png`));
+  isSetWithoutThumbnails(cardNo)
+    ? cardNoImage(cardNo)
+    : optimizeThumb(withVersion(`${TEXTURES_BASE}thumbs/${cardNo}.png`));
 
 // The card shown as a deck's cover/tile art. Prefers the deck's chosen `cover`
 // when it's still in the main deck; otherwise the middle main-deck card, the

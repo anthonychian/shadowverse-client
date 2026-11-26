@@ -27,7 +27,7 @@ import {
 import { deleteDeck, selectDecks } from "../redux/DeckSlice";
 import { useAuth, discordName } from "../auth/AuthProvider";
 import AccountBadge from "../components/AccountBadge";
-import { cardImage, artThumb, deckCoverName } from "../decks/getCards";
+import { cardImage, artImage, artThumb, deckCoverName } from "../decks/getCards";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { computeDeckClass } from "../decks/cardDetails";
 import {
@@ -655,6 +655,12 @@ export default function Home() {
           src={artThumb(deckCoverName(it.deck), it.deck.art)}
           alt={it.deck.name}
           draggable={false}
+          onError={(e) => {
+            const img = e.currentTarget;
+            if (img.dataset.fallback) return;
+            img.dataset.fallback = "1";
+            img.src = artImage(deckCoverName(it.deck), it.deck.art);
+          }}
           style={{
             borderRadius: 8,
             outline: selected ? "3px solid #48abe0" : "none",
@@ -761,6 +767,12 @@ export default function Home() {
                     src={artThumb(deckCoverName(it.deck), it.deck.art)}
                     alt={it.deck.name}
                     loading="lazy"
+                    onError={(e) => {
+                      const img = e.currentTarget;
+                      if (img.dataset.fallback) return;
+                      img.dataset.fallback = "1";
+                      img.src = artImage(deckCoverName(it.deck), it.deck.art);
+                    }}
                     style={{
                       width: "100%",
                       borderRadius: 8,

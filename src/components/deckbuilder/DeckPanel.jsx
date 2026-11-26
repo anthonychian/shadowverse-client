@@ -150,11 +150,13 @@ const CardThumb = ({ name, artNo, height = 22 }) => (
     src={artNo ? cardNoThumb(artNo) : toThumb(cardImage(name))}
     onError={(e) => {
       const el = e.currentTarget;
-      if (artNo && el.src.indexOf("/thumbs/") !== -1) {
-        el.src = cardNoImage(artNo);
-      } else if (artNo) {
-        el.src = cardImageSrc(name);
-      }
+      if (el.dataset.fallback) return;
+      el.dataset.fallback = "1";
+      const next =
+        artNo && el.src.includes("/thumbs/")
+          ? cardNoImage(artNo)
+          : cardImageSrc(name);
+      if (next && next !== el.src) el.src = next;
     }}
     alt=""
     style={{ height, borderRadius: 3, flexShrink: 0, display: "block" }}
